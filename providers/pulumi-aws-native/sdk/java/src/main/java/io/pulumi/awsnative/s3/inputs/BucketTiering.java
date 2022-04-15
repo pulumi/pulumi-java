@@ -20,7 +20,7 @@ public final class BucketTiering extends io.pulumi.resources.InvokeArgs {
     @Import(name="accessTier", required=true)
       private final BucketTieringAccessTier accessTier;
 
-    public BucketTieringAccessTier getAccessTier() {
+    public BucketTieringAccessTier accessTier() {
         return this.accessTier;
     }
 
@@ -31,7 +31,7 @@ public final class BucketTiering extends io.pulumi.resources.InvokeArgs {
     @Import(name="days", required=true)
       private final Integer days;
 
-    public Integer getDays() {
+    public Integer days() {
         return this.days;
     }
 

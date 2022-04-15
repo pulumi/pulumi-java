@@ -21,35 +21,35 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoPublish")
       private final @Nullable Output<Boolean> autoPublish;
 
-    public Output<Boolean> getAutoPublish() {
+    public Output<Boolean> autoPublish() {
         return this.autoPublish == null ? Codegen.empty() : this.autoPublish;
     }
 
     @Import(name="functionCode")
       private final @Nullable Output<String> functionCode;
 
-    public Output<String> getFunctionCode() {
+    public Output<String> functionCode() {
         return this.functionCode == null ? Codegen.empty() : this.functionCode;
     }
 
     @Import(name="functionConfig")
       private final @Nullable Output<FunctionConfigArgs> functionConfig;
 
-    public Output<FunctionConfigArgs> getFunctionConfig() {
+    public Output<FunctionConfigArgs> functionConfig() {
         return this.functionConfig == null ? Codegen.empty() : this.functionConfig;
     }
 
     @Import(name="functionMetadata")
       private final @Nullable Output<FunctionMetadataArgs> functionMetadata;
 
-    public Output<FunctionMetadataArgs> getFunctionMetadata() {
+    public Output<FunctionMetadataArgs> functionMetadata() {
         return this.functionMetadata == null ? Codegen.empty() : this.functionMetadata;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

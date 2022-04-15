@@ -30,16 +30,16 @@ public final class GetEC2FleetResult {
         this.targetCapacitySpecification = targetCapacitySpecification;
     }
 
-    public Optional<String> getContext() {
+    public Optional<String> context() {
         return Optional.ofNullable(this.context);
     }
-    public Optional<EC2FleetExcessCapacityTerminationPolicy> getExcessCapacityTerminationPolicy() {
+    public Optional<EC2FleetExcessCapacityTerminationPolicy> excessCapacityTerminationPolicy() {
         return Optional.ofNullable(this.excessCapacityTerminationPolicy);
     }
-    public Optional<String> getFleetId() {
+    public Optional<String> fleetId() {
         return Optional.ofNullable(this.fleetId);
     }
-    public Optional<EC2FleetTargetCapacitySpecificationRequest> getTargetCapacitySpecification() {
+    public Optional<EC2FleetTargetCapacitySpecificationRequest> targetCapacitySpecification() {
         return Optional.ofNullable(this.targetCapacitySpecification);
     }
 

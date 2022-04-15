@@ -26,7 +26,7 @@ public final class DataSourceAthenaParameters {
      * <p>The workgroup that Amazon Athena uses.</p>
      * 
     */
-    public Optional<String> getWorkGroup() {
+    public Optional<String> workGroup() {
         return Optional.ofNullable(this.workGroup);
     }
 

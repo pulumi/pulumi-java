@@ -16,14 +16,14 @@ public final class FilterStringFilter extends io.pulumi.resources.InvokeArgs {
     @Import(name="comparison", required=true)
       private final FilterStringComparison comparison;
 
-    public FilterStringComparison getComparison() {
+    public FilterStringComparison comparison() {
         return this.comparison;
     }
 
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

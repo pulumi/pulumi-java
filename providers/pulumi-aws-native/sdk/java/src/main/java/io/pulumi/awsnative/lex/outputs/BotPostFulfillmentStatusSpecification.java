@@ -25,13 +25,13 @@ public final class BotPostFulfillmentStatusSpecification {
         this.timeoutResponse = timeoutResponse;
     }
 
-    public Optional<BotResponseSpecification> getFailureResponse() {
+    public Optional<BotResponseSpecification> failureResponse() {
         return Optional.ofNullable(this.failureResponse);
     }
-    public Optional<BotResponseSpecification> getSuccessResponse() {
+    public Optional<BotResponseSpecification> successResponse() {
         return Optional.ofNullable(this.successResponse);
     }
-    public Optional<BotResponseSpecification> getTimeoutResponse() {
+    public Optional<BotResponseSpecification> timeoutResponse() {
         return Optional.ofNullable(this.timeoutResponse);
     }
 

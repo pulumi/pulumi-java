@@ -24,7 +24,7 @@ public final class FrameworkControl extends io.pulumi.resources.InvokeArgs {
     @Import(name="controlInputParameters")
       private final @Nullable List<FrameworkControlInputParameter> controlInputParameters;
 
-    public List<FrameworkControlInputParameter> getControlInputParameters() {
+    public List<FrameworkControlInputParameter> controlInputParameters() {
         return this.controlInputParameters == null ? List.of() : this.controlInputParameters;
     }
 
@@ -35,7 +35,7 @@ public final class FrameworkControl extends io.pulumi.resources.InvokeArgs {
     @Import(name="controlName", required=true)
       private final String controlName;
 
-    public String getControlName() {
+    public String controlName() {
         return this.controlName;
     }
 
@@ -46,7 +46,7 @@ public final class FrameworkControl extends io.pulumi.resources.InvokeArgs {
     @Import(name="controlScope")
       private final @Nullable FrameworkControlControlScopeProperties controlScope;
 
-    public Optional<FrameworkControlControlScopeProperties> getControlScope() {
+    public Optional<FrameworkControlControlScopeProperties> controlScope() {
         return this.controlScope == null ? Optional.empty() : Optional.ofNullable(this.controlScope);
     }
 

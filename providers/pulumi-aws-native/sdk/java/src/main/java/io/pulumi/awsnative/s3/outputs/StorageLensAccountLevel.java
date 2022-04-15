@@ -23,10 +23,10 @@ public final class StorageLensAccountLevel {
         this.bucketLevel = bucketLevel;
     }
 
-    public Optional<StorageLensActivityMetrics> getActivityMetrics() {
+    public Optional<StorageLensActivityMetrics> activityMetrics() {
         return Optional.ofNullable(this.activityMetrics);
     }
-    public StorageLensBucketLevel getBucketLevel() {
+    public StorageLensBucketLevel bucketLevel() {
         return this.bucketLevel;
     }
 

@@ -33,14 +33,14 @@ public final class DashboardStringParameter {
      * <p>A display name for a string parameter.</p>
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * <p>The values of a string parameter.</p>
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

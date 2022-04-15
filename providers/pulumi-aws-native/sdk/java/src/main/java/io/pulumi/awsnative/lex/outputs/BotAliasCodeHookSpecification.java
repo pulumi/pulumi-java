@@ -16,7 +16,7 @@ public final class BotAliasCodeHookSpecification {
         this.lambdaCodeHook = lambdaCodeHook;
     }
 
-    public BotAliasLambdaCodeHook getLambdaCodeHook() {
+    public BotAliasLambdaCodeHook lambdaCodeHook() {
         return this.lambdaCodeHook;
     }
 

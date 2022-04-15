@@ -15,7 +15,7 @@ public final class GetNetworkInsightsAccessScopeArgs extends io.pulumi.resources
     @Import(name="networkInsightsAccessScopeId", required=true)
       private final String networkInsightsAccessScopeId;
 
-    public String getNetworkInsightsAccessScopeId() {
+    public String networkInsightsAccessScopeId() {
         return this.networkInsightsAccessScopeId;
     }
 

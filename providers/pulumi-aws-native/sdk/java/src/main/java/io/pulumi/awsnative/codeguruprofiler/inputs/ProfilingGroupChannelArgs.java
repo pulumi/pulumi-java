@@ -22,14 +22,14 @@ public final class ProfilingGroupChannelArgs extends io.pulumi.resources.Resourc
     @Import(name="channelId")
       private final @Nullable Output<String> channelId;
 
-    public Output<String> getChannelId() {
+    public Output<String> channelId() {
         return this.channelId == null ? Codegen.empty() : this.channelId;
     }
 
     @Import(name="channelUri", required=true)
       private final Output<String> channelUri;
 
-    public Output<String> getChannelUri() {
+    public Output<String> channelUri() {
         return this.channelUri;
     }
 

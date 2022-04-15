@@ -24,7 +24,7 @@ public final class HookDefaultVersionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="typeName")
       private final @Nullable Output<String> typeName;
 
-    public Output<String> getTypeName() {
+    public Output<String> typeName() {
         return this.typeName == null ? Codegen.empty() : this.typeName;
     }
 
@@ -35,7 +35,7 @@ public final class HookDefaultVersionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="typeVersionArn")
       private final @Nullable Output<String> typeVersionArn;
 
-    public Output<String> getTypeVersionArn() {
+    public Output<String> typeVersionArn() {
         return this.typeVersionArn == null ? Codegen.empty() : this.typeVersionArn;
     }
 
@@ -46,7 +46,7 @@ public final class HookDefaultVersionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="versionId")
       private final @Nullable Output<String> versionId;
 
-    public Output<String> getVersionId() {
+    public Output<String> versionId() {
         return this.versionId == null ? Codegen.empty() : this.versionId;
     }
 

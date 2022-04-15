@@ -20,28 +20,28 @@ public final class RuleGroupRateBasedStatement extends io.pulumi.resources.Invok
     @Import(name="aggregateKeyType", required=true)
       private final RuleGroupRateBasedStatementAggregateKeyType aggregateKeyType;
 
-    public RuleGroupRateBasedStatementAggregateKeyType getAggregateKeyType() {
+    public RuleGroupRateBasedStatementAggregateKeyType aggregateKeyType() {
         return this.aggregateKeyType;
     }
 
     @Import(name="forwardedIPConfig")
       private final @Nullable RuleGroupForwardedIPConfiguration forwardedIPConfig;
 
-    public Optional<RuleGroupForwardedIPConfiguration> getForwardedIPConfig() {
+    public Optional<RuleGroupForwardedIPConfiguration> forwardedIPConfig() {
         return this.forwardedIPConfig == null ? Optional.empty() : Optional.ofNullable(this.forwardedIPConfig);
     }
 
     @Import(name="limit", required=true)
       private final Integer limit;
 
-    public Integer getLimit() {
+    public Integer limit() {
         return this.limit;
     }
 
     @Import(name="scopeDownStatement")
       private final @Nullable RuleGroupStatement scopeDownStatement;
 
-    public Optional<RuleGroupStatement> getScopeDownStatement() {
+    public Optional<RuleGroupStatement> scopeDownStatement() {
         return this.scopeDownStatement == null ? Optional.empty() : Optional.ofNullable(this.scopeDownStatement);
     }
 

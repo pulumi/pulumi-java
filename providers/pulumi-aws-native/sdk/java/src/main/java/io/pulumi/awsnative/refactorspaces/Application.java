@@ -25,67 +25,67 @@ public class Application extends io.pulumi.resources.CustomResource {
     @Export(name="apiGatewayId", type=String.class, parameters={})
     private Output<String> apiGatewayId;
 
-    public Output<String> getApiGatewayId() {
+    public Output<String> apiGatewayId() {
         return this.apiGatewayId;
     }
     @Export(name="apiGatewayProxy", type=ApplicationApiGatewayProxyInput.class, parameters={})
     private Output</* @Nullable */ ApplicationApiGatewayProxyInput> apiGatewayProxy;
 
-    public Output</* @Nullable */ ApplicationApiGatewayProxyInput> getApiGatewayProxy() {
+    public Output</* @Nullable */ ApplicationApiGatewayProxyInput> apiGatewayProxy() {
         return this.apiGatewayProxy;
     }
     @Export(name="applicationIdentifier", type=String.class, parameters={})
     private Output<String> applicationIdentifier;
 
-    public Output<String> getApplicationIdentifier() {
+    public Output<String> applicationIdentifier() {
         return this.applicationIdentifier;
     }
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="environmentIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> environmentIdentifier;
 
-    public Output</* @Nullable */ String> getEnvironmentIdentifier() {
+    public Output</* @Nullable */ String> environmentIdentifier() {
         return this.environmentIdentifier;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     @Export(name="nlbArn", type=String.class, parameters={})
     private Output<String> nlbArn;
 
-    public Output<String> getNlbArn() {
+    public Output<String> nlbArn() {
         return this.nlbArn;
     }
     @Export(name="nlbName", type=String.class, parameters={})
     private Output<String> nlbName;
 
-    public Output<String> getNlbName() {
+    public Output<String> nlbName() {
         return this.nlbName;
     }
     @Export(name="proxyType", type=ApplicationProxyType.class, parameters={})
     private Output</* @Nullable */ ApplicationProxyType> proxyType;
 
-    public Output</* @Nullable */ ApplicationProxyType> getProxyType() {
+    public Output</* @Nullable */ ApplicationProxyType> proxyType() {
         return this.proxyType;
     }
     @Export(name="proxyUrl", type=String.class, parameters={})
     private Output<String> proxyUrl;
 
-    public Output<String> getProxyUrl() {
+    public Output<String> proxyUrl() {
         return this.proxyUrl;
     }
     @Export(name="stageName", type=String.class, parameters={})
     private Output<String> stageName;
 
-    public Output<String> getStageName() {
+    public Output<String> stageName() {
         return this.stageName;
     }
     /**
@@ -99,19 +99,19 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationTag>> getTags() {
+    public Output</* @Nullable */ List<ApplicationTag>> tags() {
         return this.tags;
     }
     @Export(name="vpcId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpcId;
 
-    public Output</* @Nullable */ String> getVpcId() {
+    public Output</* @Nullable */ String> vpcId() {
         return this.vpcId;
     }
     @Export(name="vpcLinkId", type=String.class, parameters={})
     private Output<String> vpcLinkId;
 
-    public Output<String> getVpcLinkId() {
+    public Output<String> vpcLinkId() {
         return this.vpcLinkId;
     }
 

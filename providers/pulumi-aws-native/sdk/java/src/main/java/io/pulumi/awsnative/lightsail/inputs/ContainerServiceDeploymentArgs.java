@@ -28,7 +28,7 @@ public final class ContainerServiceDeploymentArgs extends io.pulumi.resources.Re
     @Import(name="containers")
       private final @Nullable Output<List<ContainerArgs>> containers;
 
-    public Output<List<ContainerArgs>> getContainers() {
+    public Output<List<ContainerArgs>> containers() {
         return this.containers == null ? Codegen.empty() : this.containers;
     }
 
@@ -39,7 +39,7 @@ public final class ContainerServiceDeploymentArgs extends io.pulumi.resources.Re
     @Import(name="publicEndpoint")
       private final @Nullable Output<ContainerPublicEndpointArgs> publicEndpoint;
 
-    public Output<ContainerPublicEndpointArgs> getPublicEndpoint() {
+    public Output<ContainerPublicEndpointArgs> publicEndpoint() {
         return this.publicEndpoint == null ? Codegen.empty() : this.publicEndpoint;
     }
 

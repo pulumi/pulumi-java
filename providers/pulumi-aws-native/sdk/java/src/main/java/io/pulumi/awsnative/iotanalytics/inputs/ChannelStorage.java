@@ -18,14 +18,14 @@ public final class ChannelStorage extends io.pulumi.resources.InvokeArgs {
     @Import(name="customerManagedS3")
       private final @Nullable ChannelCustomerManagedS3 customerManagedS3;
 
-    public Optional<ChannelCustomerManagedS3> getCustomerManagedS3() {
+    public Optional<ChannelCustomerManagedS3> customerManagedS3() {
         return this.customerManagedS3 == null ? Optional.empty() : Optional.ofNullable(this.customerManagedS3);
     }
 
     @Import(name="serviceManagedS3")
       private final @Nullable ChannelServiceManagedS3 serviceManagedS3;
 
-    public Optional<ChannelServiceManagedS3> getServiceManagedS3() {
+    public Optional<ChannelServiceManagedS3> serviceManagedS3() {
         return this.serviceManagedS3 == null ? Optional.empty() : Optional.ofNullable(this.serviceManagedS3);
     }
 

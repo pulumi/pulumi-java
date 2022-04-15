@@ -19,7 +19,7 @@ public final class GetPrimaryTaskSetArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="cluster", required=true)
       private final String cluster;
 
-    public String getCluster() {
+    public String cluster() {
         return this.cluster;
     }
 
@@ -30,7 +30,7 @@ public final class GetPrimaryTaskSetArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="service", required=true)
       private final String service;
 
-    public String getService() {
+    public String service() {
         return this.service;
     }
 

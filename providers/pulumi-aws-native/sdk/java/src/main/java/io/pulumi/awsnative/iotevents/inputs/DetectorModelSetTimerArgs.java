@@ -27,7 +27,7 @@ public final class DetectorModelSetTimerArgs extends io.pulumi.resources.Resourc
     @Import(name="durationExpression")
       private final @Nullable Output<String> durationExpression;
 
-    public Output<String> getDurationExpression() {
+    public Output<String> durationExpression() {
         return this.durationExpression == null ? Codegen.empty() : this.durationExpression;
     }
 
@@ -38,7 +38,7 @@ public final class DetectorModelSetTimerArgs extends io.pulumi.resources.Resourc
     @Import(name="seconds")
       private final @Nullable Output<Integer> seconds;
 
-    public Output<Integer> getSeconds() {
+    public Output<Integer> seconds() {
         return this.seconds == null ? Codegen.empty() : this.seconds;
     }
 
@@ -49,7 +49,7 @@ public final class DetectorModelSetTimerArgs extends io.pulumi.resources.Resourc
     @Import(name="timerName", required=true)
       private final Output<String> timerName;
 
-    public Output<String> getTimerName() {
+    public Output<String> timerName() {
         return this.timerName;
     }
 

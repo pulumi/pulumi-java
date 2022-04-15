@@ -18,7 +18,7 @@ public final class FlowS3InputFormatConfig {
         this.s3InputFileType = s3InputFileType;
     }
 
-    public Optional<FlowS3InputFormatConfigS3InputFileType> getS3InputFileType() {
+    public Optional<FlowS3InputFormatConfigS3InputFileType> s3InputFileType() {
         return Optional.ofNullable(this.s3InputFileType);
     }
 

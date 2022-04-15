@@ -25,13 +25,13 @@ public final class DeliveryStreamCopyCommand {
         this.dataTableName = dataTableName;
     }
 
-    public Optional<String> getCopyOptions() {
+    public Optional<String> copyOptions() {
         return Optional.ofNullable(this.copyOptions);
     }
-    public Optional<String> getDataTableColumns() {
+    public Optional<String> dataTableColumns() {
         return Optional.ofNullable(this.dataTableColumns);
     }
-    public String getDataTableName() {
+    public String dataTableName() {
         return this.dataTableName;
     }
 

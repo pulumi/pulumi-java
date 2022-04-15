@@ -34,7 +34,7 @@ public class FirewallRuleGroupAssociation extends io.pulumi.resources.CustomReso
      * @return Arn
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -48,7 +48,7 @@ public class FirewallRuleGroupAssociation extends io.pulumi.resources.CustomReso
      * @return Rfc3339TimeString
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -62,7 +62,7 @@ public class FirewallRuleGroupAssociation extends io.pulumi.resources.CustomReso
      * @return The id of the creator request.
      * 
      */
-    public Output<String> getCreatorRequestId() {
+    public Output<String> creatorRequestId() {
         return this.creatorRequestId;
     }
     /**
@@ -76,7 +76,7 @@ public class FirewallRuleGroupAssociation extends io.pulumi.resources.CustomReso
      * @return FirewallRuleGroupId
      * 
      */
-    public Output<String> getFirewallRuleGroupId() {
+    public Output<String> firewallRuleGroupId() {
         return this.firewallRuleGroupId;
     }
     /**
@@ -90,7 +90,7 @@ public class FirewallRuleGroupAssociation extends io.pulumi.resources.CustomReso
      * @return ServicePrincipal
      * 
      */
-    public Output<String> getManagedOwnerName() {
+    public Output<String> managedOwnerName() {
         return this.managedOwnerName;
     }
     /**
@@ -104,7 +104,7 @@ public class FirewallRuleGroupAssociation extends io.pulumi.resources.CustomReso
      * @return Rfc3339TimeString
      * 
      */
-    public Output<String> getModificationTime() {
+    public Output<String> modificationTime() {
         return this.modificationTime;
     }
     /**
@@ -118,7 +118,7 @@ public class FirewallRuleGroupAssociation extends io.pulumi.resources.CustomReso
      * @return MutationProtectionStatus
      * 
      */
-    public Output</* @Nullable */ FirewallRuleGroupAssociationMutationProtection> getMutationProtection() {
+    public Output</* @Nullable */ FirewallRuleGroupAssociationMutationProtection> mutationProtection() {
         return this.mutationProtection;
     }
     /**
@@ -132,7 +132,7 @@ public class FirewallRuleGroupAssociation extends io.pulumi.resources.CustomReso
      * @return FirewallRuleGroupAssociationName
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -146,7 +146,7 @@ public class FirewallRuleGroupAssociation extends io.pulumi.resources.CustomReso
      * @return Priority
      * 
      */
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
     /**
@@ -160,7 +160,7 @@ public class FirewallRuleGroupAssociation extends io.pulumi.resources.CustomReso
      * @return ResolverFirewallRuleGroupAssociation, possible values are COMPLETE, DELETING, UPDATING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
      * 
      */
-    public Output<FirewallRuleGroupAssociationStatus> getStatus() {
+    public Output<FirewallRuleGroupAssociationStatus> status() {
         return this.status;
     }
     /**
@@ -174,7 +174,7 @@ public class FirewallRuleGroupAssociation extends io.pulumi.resources.CustomReso
      * @return FirewallDomainListAssociationStatus
      * 
      */
-    public Output<String> getStatusMessage() {
+    public Output<String> statusMessage() {
         return this.statusMessage;
     }
     /**
@@ -188,7 +188,7 @@ public class FirewallRuleGroupAssociation extends io.pulumi.resources.CustomReso
      * @return Tags
      * 
      */
-    public Output</* @Nullable */ List<FirewallRuleGroupAssociationTag>> getTags() {
+    public Output</* @Nullable */ List<FirewallRuleGroupAssociationTag>> tags() {
         return this.tags;
     }
     /**
@@ -202,7 +202,7 @@ public class FirewallRuleGroupAssociation extends io.pulumi.resources.CustomReso
      * @return VpcId
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

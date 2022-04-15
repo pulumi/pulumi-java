@@ -24,28 +24,28 @@ public final class QuickConnectConfig extends io.pulumi.resources.InvokeArgs {
     @Import(name="phoneConfig")
       private final @Nullable QuickConnectPhoneNumberQuickConnectConfig phoneConfig;
 
-    public Optional<QuickConnectPhoneNumberQuickConnectConfig> getPhoneConfig() {
+    public Optional<QuickConnectPhoneNumberQuickConnectConfig> phoneConfig() {
         return this.phoneConfig == null ? Optional.empty() : Optional.ofNullable(this.phoneConfig);
     }
 
     @Import(name="queueConfig")
       private final @Nullable QuickConnectQueueQuickConnectConfig queueConfig;
 
-    public Optional<QuickConnectQueueQuickConnectConfig> getQueueConfig() {
+    public Optional<QuickConnectQueueQuickConnectConfig> queueConfig() {
         return this.queueConfig == null ? Optional.empty() : Optional.ofNullable(this.queueConfig);
     }
 
     @Import(name="quickConnectType", required=true)
       private final QuickConnectType quickConnectType;
 
-    public QuickConnectType getQuickConnectType() {
+    public QuickConnectType quickConnectType() {
         return this.quickConnectType;
     }
 
     @Import(name="userConfig")
       private final @Nullable QuickConnectUserQuickConnectConfig userConfig;
 
-    public Optional<QuickConnectUserQuickConnectConfig> getUserConfig() {
+    public Optional<QuickConnectUserQuickConnectConfig> userConfig() {
         return this.userConfig == null ? Optional.empty() : Optional.ofNullable(this.userConfig);
     }
 

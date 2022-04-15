@@ -25,13 +25,13 @@ public final class BudgetsActionSsmActionDefinition {
         this.subtype = subtype;
     }
 
-    public List<String> getInstanceIds() {
+    public List<String> instanceIds() {
         return this.instanceIds;
     }
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
-    public BudgetsActionSsmActionDefinitionSubtype getSubtype() {
+    public BudgetsActionSsmActionDefinitionSubtype subtype() {
         return this.subtype;
     }
 

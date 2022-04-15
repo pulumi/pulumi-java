@@ -16,14 +16,14 @@ public final class ResponseHeadersPolicyFrameOptions extends io.pulumi.resources
     @Import(name="frameOption", required=true)
       private final String frameOption;
 
-    public String getFrameOption() {
+    public String frameOption() {
         return this.frameOption;
     }
 
     @Import(name="override", required=true)
       private final Boolean override;
 
-    public Boolean getOverride() {
+    public Boolean override() {
         return this.override;
     }
 

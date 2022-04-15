@@ -21,10 +21,10 @@ public final class ResponseHeadersPolicyReferrerPolicy {
         this.referrerPolicy = referrerPolicy;
     }
 
-    public Boolean getOverride() {
+    public Boolean override() {
         return this.override;
     }
-    public String getReferrerPolicy() {
+    public String referrerPolicy() {
         return this.referrerPolicy;
     }
 

@@ -33,19 +33,19 @@ public final class DataSourceColumnConfiguration {
         this.fieldMappings = fieldMappings;
     }
 
-    public List<String> getChangeDetectingColumns() {
+    public List<String> changeDetectingColumns() {
         return this.changeDetectingColumns;
     }
-    public String getDocumentDataColumnName() {
+    public String documentDataColumnName() {
         return this.documentDataColumnName;
     }
-    public String getDocumentIdColumnName() {
+    public String documentIdColumnName() {
         return this.documentIdColumnName;
     }
-    public Optional<String> getDocumentTitleColumnName() {
+    public Optional<String> documentTitleColumnName() {
         return Optional.ofNullable(this.documentTitleColumnName);
     }
-    public List<DataSourceToIndexFieldMapping> getFieldMappings() {
+    public List<DataSourceToIndexFieldMapping> fieldMappings() {
         return this.fieldMappings == null ? List.of() : this.fieldMappings;
     }
 

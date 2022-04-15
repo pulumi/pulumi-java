@@ -15,7 +15,7 @@ public final class GetJobTemplateArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="jobTemplateId", required=true)
       private final String jobTemplateId;
 
-    public String getJobTemplateId() {
+    public String jobTemplateId() {
         return this.jobTemplateId;
     }
 

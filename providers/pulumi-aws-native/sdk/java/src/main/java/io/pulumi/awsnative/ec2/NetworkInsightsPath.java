@@ -25,61 +25,61 @@ public class NetworkInsightsPath extends io.pulumi.resources.CustomResource {
     @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate;
     }
     @Export(name="destination", type=String.class, parameters={})
     private Output<String> destination;
 
-    public Output<String> getDestination() {
+    public Output<String> destination() {
         return this.destination;
     }
     @Export(name="destinationIp", type=String.class, parameters={})
     private Output</* @Nullable */ String> destinationIp;
 
-    public Output</* @Nullable */ String> getDestinationIp() {
+    public Output</* @Nullable */ String> destinationIp() {
         return this.destinationIp;
     }
     @Export(name="destinationPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> destinationPort;
 
-    public Output</* @Nullable */ Integer> getDestinationPort() {
+    public Output</* @Nullable */ Integer> destinationPort() {
         return this.destinationPort;
     }
     @Export(name="networkInsightsPathArn", type=String.class, parameters={})
     private Output<String> networkInsightsPathArn;
 
-    public Output<String> getNetworkInsightsPathArn() {
+    public Output<String> networkInsightsPathArn() {
         return this.networkInsightsPathArn;
     }
     @Export(name="networkInsightsPathId", type=String.class, parameters={})
     private Output<String> networkInsightsPathId;
 
-    public Output<String> getNetworkInsightsPathId() {
+    public Output<String> networkInsightsPathId() {
         return this.networkInsightsPathId;
     }
     @Export(name="protocol", type=NetworkInsightsPathProtocol.class, parameters={})
     private Output<NetworkInsightsPathProtocol> protocol;
 
-    public Output<NetworkInsightsPathProtocol> getProtocol() {
+    public Output<NetworkInsightsPathProtocol> protocol() {
         return this.protocol;
     }
     @Export(name="source", type=String.class, parameters={})
     private Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source;
     }
     @Export(name="sourceIp", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceIp;
 
-    public Output</* @Nullable */ String> getSourceIp() {
+    public Output</* @Nullable */ String> sourceIp() {
         return this.sourceIp;
     }
     @Export(name="tags", type=List.class, parameters={NetworkInsightsPathTag.class})
     private Output</* @Nullable */ List<NetworkInsightsPathTag>> tags;
 
-    public Output</* @Nullable */ List<NetworkInsightsPathTag>> getTags() {
+    public Output</* @Nullable */ List<NetworkInsightsPathTag>> tags() {
         return this.tags;
     }
 

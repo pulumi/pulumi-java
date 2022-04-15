@@ -30,16 +30,16 @@ public final class DistributionCustomErrorResponse {
         this.responsePagePath = responsePagePath;
     }
 
-    public Optional<Double> getErrorCachingMinTTL() {
+    public Optional<Double> errorCachingMinTTL() {
         return Optional.ofNullable(this.errorCachingMinTTL);
     }
-    public Integer getErrorCode() {
+    public Integer errorCode() {
         return this.errorCode;
     }
-    public Optional<Integer> getResponseCode() {
+    public Optional<Integer> responseCode() {
         return Optional.ofNullable(this.responseCode);
     }
-    public Optional<String> getResponsePagePath() {
+    public Optional<String> responsePagePath() {
         return Optional.ofNullable(this.responsePagePath);
     }
 

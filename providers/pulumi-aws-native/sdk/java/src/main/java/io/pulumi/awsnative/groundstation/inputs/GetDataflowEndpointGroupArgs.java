@@ -15,7 +15,7 @@ public final class GetDataflowEndpointGroupArgs extends io.pulumi.resources.Invo
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

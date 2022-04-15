@@ -22,14 +22,14 @@ public final class CertificateAuthorityAccessDescriptionArgs extends io.pulumi.r
     @Import(name="accessLocation", required=true)
       private final Output<CertificateAuthorityGeneralNameArgs> accessLocation;
 
-    public Output<CertificateAuthorityGeneralNameArgs> getAccessLocation() {
+    public Output<CertificateAuthorityGeneralNameArgs> accessLocation() {
         return this.accessLocation;
     }
 
     @Import(name="accessMethod", required=true)
       private final Output<CertificateAuthorityAccessMethodArgs> accessMethod;
 
-    public Output<CertificateAuthorityAccessMethodArgs> getAccessMethod() {
+    public Output<CertificateAuthorityAccessMethodArgs> accessMethod() {
         return this.accessMethod;
     }
 

@@ -17,28 +17,28 @@ public final class IndexSearch extends io.pulumi.resources.InvokeArgs {
     @Import(name="displayable")
       private final @Nullable Boolean displayable;
 
-    public Optional<Boolean> getDisplayable() {
+    public Optional<Boolean> displayable() {
         return this.displayable == null ? Optional.empty() : Optional.ofNullable(this.displayable);
     }
 
     @Import(name="facetable")
       private final @Nullable Boolean facetable;
 
-    public Optional<Boolean> getFacetable() {
+    public Optional<Boolean> facetable() {
         return this.facetable == null ? Optional.empty() : Optional.ofNullable(this.facetable);
     }
 
     @Import(name="searchable")
       private final @Nullable Boolean searchable;
 
-    public Optional<Boolean> getSearchable() {
+    public Optional<Boolean> searchable() {
         return this.searchable == null ? Optional.empty() : Optional.ofNullable(this.searchable);
     }
 
     @Import(name="sortable")
       private final @Nullable Boolean sortable;
 
-    public Optional<Boolean> getSortable() {
+    public Optional<Boolean> sortable() {
         return this.sortable == null ? Optional.empty() : Optional.ofNullable(this.sortable);
     }
 

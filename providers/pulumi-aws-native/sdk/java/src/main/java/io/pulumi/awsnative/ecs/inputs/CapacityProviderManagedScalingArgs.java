@@ -23,35 +23,35 @@ public final class CapacityProviderManagedScalingArgs extends io.pulumi.resource
     @Import(name="instanceWarmupPeriod")
       private final @Nullable Output<Integer> instanceWarmupPeriod;
 
-    public Output<Integer> getInstanceWarmupPeriod() {
+    public Output<Integer> instanceWarmupPeriod() {
         return this.instanceWarmupPeriod == null ? Codegen.empty() : this.instanceWarmupPeriod;
     }
 
     @Import(name="maximumScalingStepSize")
       private final @Nullable Output<Integer> maximumScalingStepSize;
 
-    public Output<Integer> getMaximumScalingStepSize() {
+    public Output<Integer> maximumScalingStepSize() {
         return this.maximumScalingStepSize == null ? Codegen.empty() : this.maximumScalingStepSize;
     }
 
     @Import(name="minimumScalingStepSize")
       private final @Nullable Output<Integer> minimumScalingStepSize;
 
-    public Output<Integer> getMinimumScalingStepSize() {
+    public Output<Integer> minimumScalingStepSize() {
         return this.minimumScalingStepSize == null ? Codegen.empty() : this.minimumScalingStepSize;
     }
 
     @Import(name="status")
       private final @Nullable Output<CapacityProviderManagedScalingStatus> status;
 
-    public Output<CapacityProviderManagedScalingStatus> getStatus() {
+    public Output<CapacityProviderManagedScalingStatus> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
     @Import(name="targetCapacity")
       private final @Nullable Output<Integer> targetCapacity;
 
-    public Output<Integer> getTargetCapacity() {
+    public Output<Integer> targetCapacity() {
         return this.targetCapacity == null ? Codegen.empty() : this.targetCapacity;
     }
 

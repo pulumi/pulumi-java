@@ -24,10 +24,10 @@ public final class DataSourceSalesforceStandardObjectAttachmentConfiguration {
         this.fieldMappings = fieldMappings;
     }
 
-    public Optional<String> getDocumentTitleFieldName() {
+    public Optional<String> documentTitleFieldName() {
         return Optional.ofNullable(this.documentTitleFieldName);
     }
-    public List<DataSourceToIndexFieldMapping> getFieldMappings() {
+    public List<DataSourceToIndexFieldMapping> fieldMappings() {
         return this.fieldMappings == null ? List.of() : this.fieldMappings;
     }
 

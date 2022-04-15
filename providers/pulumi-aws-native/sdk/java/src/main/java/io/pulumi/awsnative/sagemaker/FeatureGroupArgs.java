@@ -27,7 +27,7 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -38,7 +38,7 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventTimeFeatureName", required=true)
       private final Output<String> eventTimeFeatureName;
 
-    public Output<String> getEventTimeFeatureName() {
+    public Output<String> eventTimeFeatureName() {
         return this.eventTimeFeatureName;
     }
 
@@ -49,7 +49,7 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="featureDefinitions", required=true)
       private final Output<List<FeatureGroupFeatureDefinitionArgs>> featureDefinitions;
 
-    public Output<List<FeatureGroupFeatureDefinitionArgs>> getFeatureDefinitions() {
+    public Output<List<FeatureGroupFeatureDefinitionArgs>> featureDefinitions() {
         return this.featureDefinitions;
     }
 
@@ -60,21 +60,21 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="featureGroupName")
       private final @Nullable Output<String> featureGroupName;
 
-    public Output<String> getFeatureGroupName() {
+    public Output<String> featureGroupName() {
         return this.featureGroupName == null ? Codegen.empty() : this.featureGroupName;
     }
 
     @Import(name="offlineStoreConfig")
       private final @Nullable Output<OfflineStoreConfigPropertiesArgs> offlineStoreConfig;
 
-    public Output<OfflineStoreConfigPropertiesArgs> getOfflineStoreConfig() {
+    public Output<OfflineStoreConfigPropertiesArgs> offlineStoreConfig() {
         return this.offlineStoreConfig == null ? Codegen.empty() : this.offlineStoreConfig;
     }
 
     @Import(name="onlineStoreConfig")
       private final @Nullable Output<OnlineStoreConfigPropertiesArgs> onlineStoreConfig;
 
-    public Output<OnlineStoreConfigPropertiesArgs> getOnlineStoreConfig() {
+    public Output<OnlineStoreConfigPropertiesArgs> onlineStoreConfig() {
         return this.onlineStoreConfig == null ? Codegen.empty() : this.onlineStoreConfig;
     }
 
@@ -85,7 +85,7 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="recordIdentifierFeatureName", required=true)
       private final Output<String> recordIdentifierFeatureName;
 
-    public Output<String> getRecordIdentifierFeatureName() {
+    public Output<String> recordIdentifierFeatureName() {
         return this.recordIdentifierFeatureName;
     }
 
@@ -96,7 +96,7 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
@@ -107,7 +107,7 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<FeatureGroupTagArgs>> tags;
 
-    public Output<List<FeatureGroupTagArgs>> getTags() {
+    public Output<List<FeatureGroupTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

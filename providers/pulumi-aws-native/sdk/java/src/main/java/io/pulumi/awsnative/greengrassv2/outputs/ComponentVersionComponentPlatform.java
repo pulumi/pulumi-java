@@ -23,10 +23,10 @@ public final class ComponentVersionComponentPlatform {
         this.name = name;
     }
 
-    public Optional<Object> getAttributes() {
+    public Optional<Object> attributes() {
         return Optional.ofNullable(this.attributes);
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

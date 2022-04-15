@@ -24,7 +24,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="device")
       private final @Nullable Output<io.pulumi.awsnative.sagemaker.inputs.DeviceArgs> device;
 
-    public Output<io.pulumi.awsnative.sagemaker.inputs.DeviceArgs> getDevice() {
+    public Output<io.pulumi.awsnative.sagemaker.inputs.DeviceArgs> device() {
         return this.device == null ? Codegen.empty() : this.device;
     }
 
@@ -35,7 +35,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deviceFleetName", required=true)
       private final Output<String> deviceFleetName;
 
-    public Output<String> getDeviceFleetName() {
+    public Output<String> deviceFleetName() {
         return this.deviceFleetName;
     }
 
@@ -46,7 +46,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DeviceTagArgs>> tags;
 
-    public Output<List<DeviceTagArgs>> getTags() {
+    public Output<List<DeviceTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

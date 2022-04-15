@@ -18,7 +18,7 @@ public final class GlobalTablePointInTimeRecoverySpecification {
         this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
     }
 
-    public Optional<Boolean> getPointInTimeRecoveryEnabled() {
+    public Optional<Boolean> pointInTimeRecoveryEnabled() {
         return Optional.ofNullable(this.pointInTimeRecoveryEnabled);
     }
 

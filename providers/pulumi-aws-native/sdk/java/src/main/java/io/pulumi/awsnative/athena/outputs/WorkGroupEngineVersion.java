@@ -22,10 +22,10 @@ public final class WorkGroupEngineVersion {
         this.selectedEngineVersion = selectedEngineVersion;
     }
 
-    public Optional<String> getEffectiveEngineVersion() {
+    public Optional<String> effectiveEngineVersion() {
         return Optional.ofNullable(this.effectiveEngineVersion);
     }
-    public Optional<String> getSelectedEngineVersion() {
+    public Optional<String> selectedEngineVersion() {
         return Optional.ofNullable(this.selectedEngineVersion);
     }
 

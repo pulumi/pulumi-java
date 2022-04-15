@@ -23,31 +23,31 @@ public class StoredQuery extends io.pulumi.resources.CustomResource {
     @Export(name="queryArn", type=String.class, parameters={})
     private Output<String> queryArn;
 
-    public Output<String> getQueryArn() {
+    public Output<String> queryArn() {
         return this.queryArn;
     }
     @Export(name="queryDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> queryDescription;
 
-    public Output</* @Nullable */ String> getQueryDescription() {
+    public Output</* @Nullable */ String> queryDescription() {
         return this.queryDescription;
     }
     @Export(name="queryExpression", type=String.class, parameters={})
     private Output<String> queryExpression;
 
-    public Output<String> getQueryExpression() {
+    public Output<String> queryExpression() {
         return this.queryExpression;
     }
     @Export(name="queryId", type=String.class, parameters={})
     private Output<String> queryId;
 
-    public Output<String> getQueryId() {
+    public Output<String> queryId() {
         return this.queryId;
     }
     @Export(name="queryName", type=String.class, parameters={})
     private Output<String> queryName;
 
-    public Output<String> getQueryName() {
+    public Output<String> queryName() {
         return this.queryName;
     }
     /**
@@ -61,7 +61,7 @@ public class StoredQuery extends io.pulumi.resources.CustomResource {
      * @return The tags for the stored query.
      * 
      */
-    public Output</* @Nullable */ List<StoredQueryTag>> getTags() {
+    public Output</* @Nullable */ List<StoredQueryTag>> tags() {
         return this.tags;
     }
 

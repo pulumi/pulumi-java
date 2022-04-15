@@ -23,10 +23,10 @@ public final class OnlineStoreConfigProperties {
         this.securityConfig = securityConfig;
     }
 
-    public Optional<Boolean> getEnableOnlineStore() {
+    public Optional<Boolean> enableOnlineStore() {
         return Optional.ofNullable(this.enableOnlineStore);
     }
-    public Optional<FeatureGroupOnlineStoreSecurityConfig> getSecurityConfig() {
+    public Optional<FeatureGroupOnlineStoreSecurityConfig> securityConfig() {
         return Optional.ofNullable(this.securityConfig);
     }
 

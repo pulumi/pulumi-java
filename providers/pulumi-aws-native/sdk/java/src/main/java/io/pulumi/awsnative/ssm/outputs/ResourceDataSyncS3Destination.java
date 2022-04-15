@@ -31,19 +31,19 @@ public final class ResourceDataSyncS3Destination {
         this.syncFormat = syncFormat;
     }
 
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
-    public Optional<String> getBucketPrefix() {
+    public Optional<String> bucketPrefix() {
         return Optional.ofNullable(this.bucketPrefix);
     }
-    public String getBucketRegion() {
+    public String bucketRegion() {
         return this.bucketRegion;
     }
-    public Optional<String> getKMSKeyArn() {
+    public Optional<String> kMSKeyArn() {
         return Optional.ofNullable(this.kMSKeyArn);
     }
-    public String getSyncFormat() {
+    public String syncFormat() {
         return this.syncFormat;
     }
 

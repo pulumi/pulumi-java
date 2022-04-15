@@ -17,21 +17,21 @@ public final class SpotFleetFleetLaunchTemplateSpecification extends io.pulumi.r
     @Import(name="launchTemplateId")
       private final @Nullable String launchTemplateId;
 
-    public Optional<String> getLaunchTemplateId() {
+    public Optional<String> launchTemplateId() {
         return this.launchTemplateId == null ? Optional.empty() : Optional.ofNullable(this.launchTemplateId);
     }
 
     @Import(name="launchTemplateName")
       private final @Nullable String launchTemplateName;
 
-    public Optional<String> getLaunchTemplateName() {
+    public Optional<String> launchTemplateName() {
         return this.launchTemplateName == null ? Optional.empty() : Optional.ofNullable(this.launchTemplateName);
     }
 
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

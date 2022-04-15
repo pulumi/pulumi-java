@@ -23,14 +23,14 @@ public final class PresignedUrlConfigPropertiesArgs extends io.pulumi.resources.
     @Import(name="expiresInSec")
       private final @Nullable Output<Integer> expiresInSec;
 
-    public Output<Integer> getExpiresInSec() {
+    public Output<Integer> expiresInSec() {
         return this.expiresInSec == null ? Codegen.empty() : this.expiresInSec;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 

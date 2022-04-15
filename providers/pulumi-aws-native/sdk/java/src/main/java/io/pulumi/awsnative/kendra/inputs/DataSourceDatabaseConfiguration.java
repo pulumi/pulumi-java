@@ -22,42 +22,42 @@ public final class DataSourceDatabaseConfiguration extends io.pulumi.resources.I
     @Import(name="aclConfiguration")
       private final @Nullable DataSourceAclConfiguration aclConfiguration;
 
-    public Optional<DataSourceAclConfiguration> getAclConfiguration() {
+    public Optional<DataSourceAclConfiguration> aclConfiguration() {
         return this.aclConfiguration == null ? Optional.empty() : Optional.ofNullable(this.aclConfiguration);
     }
 
     @Import(name="columnConfiguration", required=true)
       private final DataSourceColumnConfiguration columnConfiguration;
 
-    public DataSourceColumnConfiguration getColumnConfiguration() {
+    public DataSourceColumnConfiguration columnConfiguration() {
         return this.columnConfiguration;
     }
 
     @Import(name="connectionConfiguration", required=true)
       private final DataSourceConnectionConfiguration connectionConfiguration;
 
-    public DataSourceConnectionConfiguration getConnectionConfiguration() {
+    public DataSourceConnectionConfiguration connectionConfiguration() {
         return this.connectionConfiguration;
     }
 
     @Import(name="databaseEngineType", required=true)
       private final DataSourceDatabaseEngineType databaseEngineType;
 
-    public DataSourceDatabaseEngineType getDatabaseEngineType() {
+    public DataSourceDatabaseEngineType databaseEngineType() {
         return this.databaseEngineType;
     }
 
     @Import(name="sqlConfiguration")
       private final @Nullable DataSourceSqlConfiguration sqlConfiguration;
 
-    public Optional<DataSourceSqlConfiguration> getSqlConfiguration() {
+    public Optional<DataSourceSqlConfiguration> sqlConfiguration() {
         return this.sqlConfiguration == null ? Optional.empty() : Optional.ofNullable(this.sqlConfiguration);
     }
 
     @Import(name="vpcConfiguration")
       private final @Nullable DataSourceVpcConfiguration vpcConfiguration;
 
-    public Optional<DataSourceVpcConfiguration> getVpcConfiguration() {
+    public Optional<DataSourceVpcConfiguration> vpcConfiguration() {
         return this.vpcConfiguration == null ? Optional.empty() : Optional.ofNullable(this.vpcConfiguration);
     }
 

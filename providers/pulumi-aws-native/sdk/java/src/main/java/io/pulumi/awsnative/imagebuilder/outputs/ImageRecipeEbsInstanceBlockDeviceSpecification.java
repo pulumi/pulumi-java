@@ -79,56 +79,56 @@ public final class ImageRecipeEbsInstanceBlockDeviceSpecification {
      * Use to configure delete on termination of the associated device.
      * 
     */
-    public Optional<Boolean> getDeleteOnTermination() {
+    public Optional<Boolean> deleteOnTermination() {
         return Optional.ofNullable(this.deleteOnTermination);
     }
     /**
      * Use to configure device encryption.
      * 
     */
-    public Optional<Boolean> getEncrypted() {
+    public Optional<Boolean> encrypted() {
         return Optional.ofNullable(this.encrypted);
     }
     /**
      * Use to configure device IOPS.
      * 
     */
-    public Optional<Integer> getIops() {
+    public Optional<Integer> iops() {
         return Optional.ofNullable(this.iops);
     }
     /**
      * Use to configure the KMS key to use when encrypting the device.
      * 
     */
-    public Optional<String> getKmsKeyId() {
+    public Optional<String> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
     /**
      * The snapshot that defines the device contents.
      * 
     */
-    public Optional<String> getSnapshotId() {
+    public Optional<String> snapshotId() {
         return Optional.ofNullable(this.snapshotId);
     }
     /**
      * For GP3 volumes only – The throughput in MiB/s that the volume supports.
      * 
     */
-    public Optional<Integer> getThroughput() {
+    public Optional<Integer> throughput() {
         return Optional.ofNullable(this.throughput);
     }
     /**
      * Use to override the device's volume size.
      * 
     */
-    public Optional<Integer> getVolumeSize() {
+    public Optional<Integer> volumeSize() {
         return Optional.ofNullable(this.volumeSize);
     }
     /**
      * Use to override the device's volume type.
      * 
     */
-    public Optional<ImageRecipeEbsInstanceBlockDeviceSpecificationVolumeType> getVolumeType() {
+    public Optional<ImageRecipeEbsInstanceBlockDeviceSpecificationVolumeType> volumeType() {
         return Optional.ofNullable(this.volumeType);
     }
 

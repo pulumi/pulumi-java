@@ -25,7 +25,7 @@ public final class AlertSNSConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -36,7 +36,7 @@ public final class AlertSNSConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="snsTopicArn", required=true)
       private final Output<String> snsTopicArn;
 
-    public Output<String> getSnsTopicArn() {
+    public Output<String> snsTopicArn() {
         return this.snsTopicArn;
     }
 

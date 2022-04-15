@@ -31,10 +31,10 @@ public final class SecurityProfileMetricToRetain {
      * What is measured by the behavior.
      * 
     */
-    public String getMetric() {
+    public String metric() {
         return this.metric;
     }
-    public Optional<SecurityProfileMetricDimension> getMetricDimension() {
+    public Optional<SecurityProfileMetricDimension> metricDimension() {
         return Optional.ofNullable(this.metricDimension);
     }
 

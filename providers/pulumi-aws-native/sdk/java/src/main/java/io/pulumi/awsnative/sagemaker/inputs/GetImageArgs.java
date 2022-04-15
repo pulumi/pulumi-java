@@ -15,7 +15,7 @@ public final class GetImageArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="imageArn", required=true)
       private final String imageArn;
 
-    public String getImageArn() {
+    public String imageArn() {
         return this.imageArn;
     }
 

@@ -26,7 +26,7 @@ public final class InfrastructureConfigurationS3LogsArgs extends io.pulumi.resou
     @Import(name="s3BucketName")
       private final @Nullable Output<String> s3BucketName;
 
-    public Output<String> getS3BucketName() {
+    public Output<String> s3BucketName() {
         return this.s3BucketName == null ? Codegen.empty() : this.s3BucketName;
     }
 
@@ -37,7 +37,7 @@ public final class InfrastructureConfigurationS3LogsArgs extends io.pulumi.resou
     @Import(name="s3KeyPrefix")
       private final @Nullable Output<String> s3KeyPrefix;
 
-    public Output<String> getS3KeyPrefix() {
+    public Output<String> s3KeyPrefix() {
         return this.s3KeyPrefix == null ? Codegen.empty() : this.s3KeyPrefix;
     }
 

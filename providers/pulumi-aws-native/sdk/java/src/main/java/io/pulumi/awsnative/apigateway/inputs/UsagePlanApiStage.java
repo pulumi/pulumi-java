@@ -22,7 +22,7 @@ public final class UsagePlanApiStage extends io.pulumi.resources.InvokeArgs {
     @Import(name="apiId")
       private final @Nullable String apiId;
 
-    public Optional<String> getApiId() {
+    public Optional<String> apiId() {
         return this.apiId == null ? Optional.empty() : Optional.ofNullable(this.apiId);
     }
 
@@ -33,7 +33,7 @@ public final class UsagePlanApiStage extends io.pulumi.resources.InvokeArgs {
     @Import(name="stage")
       private final @Nullable String stage;
 
-    public Optional<String> getStage() {
+    public Optional<String> stage() {
         return this.stage == null ? Optional.empty() : Optional.ofNullable(this.stage);
     }
 
@@ -44,7 +44,7 @@ public final class UsagePlanApiStage extends io.pulumi.resources.InvokeArgs {
     @Import(name="throttle")
       private final @Nullable Object throttle;
 
-    public Optional<Object> getThrottle() {
+    public Optional<Object> throttle() {
         return this.throttle == null ? Optional.empty() : Optional.ofNullable(this.throttle);
     }
 

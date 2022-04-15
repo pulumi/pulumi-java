@@ -32,14 +32,14 @@ public final class WorkflowS3Tag {
      * The name assigned to the tag that you create.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * The value that corresponds to the key.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

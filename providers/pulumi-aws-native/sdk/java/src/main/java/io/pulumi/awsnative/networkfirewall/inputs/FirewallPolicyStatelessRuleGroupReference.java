@@ -16,14 +16,14 @@ public final class FirewallPolicyStatelessRuleGroupReference extends io.pulumi.r
     @Import(name="priority", required=true)
       private final Integer priority;
 
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
 
     @Import(name="resourceArn", required=true)
       private final String resourceArn;
 
-    public String getResourceArn() {
+    public String resourceArn() {
         return this.resourceArn;
     }
 

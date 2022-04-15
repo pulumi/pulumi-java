@@ -111,17 +111,17 @@ public final class GetDataSetResult {
      * <p>The Amazon Resource Name (ARN) of the resource.</p>
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * <p>Groupings of columns that work together in certain QuickSight features. Currently, only geospatial hierarchy is supported.</p>
      * 
     */
-    public List<DataSetColumnGroup> getColumnGroups() {
+    public List<DataSetColumnGroup> columnGroups() {
         return this.columnGroups == null ? List.of() : this.columnGroups;
     }
-    public List<DataSetColumnLevelPermissionRule> getColumnLevelPermissionRules() {
+    public List<DataSetColumnLevelPermissionRule> columnLevelPermissionRules() {
         return this.columnLevelPermissionRules == null ? List.of() : this.columnLevelPermissionRules;
     }
     /**
@@ -129,34 +129,34 @@ public final class GetDataSetResult {
      *             imported into SPICE.</p>
      * 
     */
-    public Optional<Double> getConsumedSpiceCapacityInBytes() {
+    public Optional<Double> consumedSpiceCapacityInBytes() {
         return Optional.ofNullable(this.consumedSpiceCapacityInBytes);
     }
     /**
      * <p>The time that this dataset was created.</p>
      * 
     */
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
-    public Optional<DataSetImportMode> getImportMode() {
+    public Optional<DataSetImportMode> importMode() {
         return Optional.ofNullable(this.importMode);
     }
     /**
      * <p>The last time that this dataset was updated.</p>
      * 
     */
-    public Optional<String> getLastUpdatedTime() {
+    public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
-    public Optional<DataSetLogicalTableMap> getLogicalTableMap() {
+    public Optional<DataSetLogicalTableMap> logicalTableMap() {
         return Optional.ofNullable(this.logicalTableMap);
     }
     /**
      * <p>The display name for the dataset.</p>
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
@@ -164,27 +164,27 @@ public final class GetDataSetResult {
      *             analyses, and dashboards.</p>
      * 
     */
-    public List<DataSetOutputColumn> getOutputColumns() {
+    public List<DataSetOutputColumn> outputColumns() {
         return this.outputColumns == null ? List.of() : this.outputColumns;
     }
     /**
      * <p>A list of resource permissions on the dataset.</p>
      * 
     */
-    public List<DataSetResourcePermission> getPermissions() {
+    public List<DataSetResourcePermission> permissions() {
         return this.permissions == null ? List.of() : this.permissions;
     }
-    public Optional<DataSetPhysicalTableMap> getPhysicalTableMap() {
+    public Optional<DataSetPhysicalTableMap> physicalTableMap() {
         return Optional.ofNullable(this.physicalTableMap);
     }
-    public Optional<DataSetRowLevelPermissionDataSet> getRowLevelPermissionDataSet() {
+    public Optional<DataSetRowLevelPermissionDataSet> rowLevelPermissionDataSet() {
         return Optional.ofNullable(this.rowLevelPermissionDataSet);
     }
     /**
      * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the dataset.</p>
      * 
     */
-    public List<DataSetTag> getTags() {
+    public List<DataSetTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

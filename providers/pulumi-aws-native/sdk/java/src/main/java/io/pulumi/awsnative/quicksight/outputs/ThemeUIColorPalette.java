@@ -142,7 +142,7 @@ public final class ThemeUIColorPalette {
      * <p>This color is that applies to selected states and buttons.</p>
      * 
     */
-    public Optional<String> getAccent() {
+    public Optional<String> accent() {
         return Optional.ofNullable(this.accent);
     }
     /**
@@ -150,14 +150,14 @@ public final class ThemeUIColorPalette {
      *             accent color.</p>
      * 
     */
-    public Optional<String> getAccentForeground() {
+    public Optional<String> accentForeground() {
         return Optional.ofNullable(this.accentForeground);
     }
     /**
      * <p>The color that applies to error messages.</p>
      * 
     */
-    public Optional<String> getDanger() {
+    public Optional<String> danger() {
         return Optional.ofNullable(this.danger);
     }
     /**
@@ -165,7 +165,7 @@ public final class ThemeUIColorPalette {
      *             error color.</p>
      * 
     */
-    public Optional<String> getDangerForeground() {
+    public Optional<String> dangerForeground() {
         return Optional.ofNullable(this.dangerForeground);
     }
     /**
@@ -173,7 +173,7 @@ public final class ThemeUIColorPalette {
      *             dimensions.</p>
      * 
     */
-    public Optional<String> getDimension() {
+    public Optional<String> dimension() {
         return Optional.ofNullable(this.dimension);
     }
     /**
@@ -181,14 +181,14 @@ public final class ThemeUIColorPalette {
      *             dimension color.</p>
      * 
     */
-    public Optional<String> getDimensionForeground() {
+    public Optional<String> dimensionForeground() {
         return Optional.ofNullable(this.dimensionForeground);
     }
     /**
      * <p>The color that applies to the names of fields that are identified as measures.</p>
      * 
     */
-    public Optional<String> getMeasure() {
+    public Optional<String> measure() {
         return Optional.ofNullable(this.measure);
     }
     /**
@@ -196,14 +196,14 @@ public final class ThemeUIColorPalette {
      *             measure color.</p>
      * 
     */
-    public Optional<String> getMeasureForeground() {
+    public Optional<String> measureForeground() {
         return Optional.ofNullable(this.measureForeground);
     }
     /**
      * <p>The background color that applies to visuals and other high emphasis UI.</p>
      * 
     */
-    public Optional<String> getPrimaryBackground() {
+    public Optional<String> primaryBackground() {
         return Optional.ofNullable(this.primaryBackground);
     }
     /**
@@ -211,14 +211,14 @@ public final class ThemeUIColorPalette {
      *             background regions, such as grid lines, borders, table banding, icons, and so on.</p>
      * 
     */
-    public Optional<String> getPrimaryForeground() {
+    public Optional<String> primaryForeground() {
         return Optional.ofNullable(this.primaryForeground);
     }
     /**
      * <p>The background color that applies to the sheet background and sheet controls.</p>
      * 
     */
-    public Optional<String> getSecondaryBackground() {
+    public Optional<String> secondaryBackground() {
         return Optional.ofNullable(this.secondaryBackground);
     }
     /**
@@ -226,7 +226,7 @@ public final class ThemeUIColorPalette {
      *             appears over the secondary background.</p>
      * 
     */
-    public Optional<String> getSecondaryForeground() {
+    public Optional<String> secondaryForeground() {
         return Optional.ofNullable(this.secondaryForeground);
     }
     /**
@@ -234,7 +234,7 @@ public final class ThemeUIColorPalette {
      *             successful download.</p>
      * 
     */
-    public Optional<String> getSuccess() {
+    public Optional<String> success() {
         return Optional.ofNullable(this.success);
     }
     /**
@@ -242,14 +242,14 @@ public final class ThemeUIColorPalette {
      *             success color.</p>
      * 
     */
-    public Optional<String> getSuccessForeground() {
+    public Optional<String> successForeground() {
         return Optional.ofNullable(this.successForeground);
     }
     /**
      * <p>This color that applies to warning and informational messages.</p>
      * 
     */
-    public Optional<String> getWarning() {
+    public Optional<String> warning() {
         return Optional.ofNullable(this.warning);
     }
     /**
@@ -257,7 +257,7 @@ public final class ThemeUIColorPalette {
      *             warning color.</p>
      * 
     */
-    public Optional<String> getWarningForeground() {
+    public Optional<String> warningForeground() {
         return Optional.ofNullable(this.warningForeground);
     }
 

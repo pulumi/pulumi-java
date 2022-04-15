@@ -17,28 +17,28 @@ public final class LaunchGroupObject extends io.pulumi.resources.InvokeArgs {
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
     @Import(name="feature", required=true)
       private final String feature;
 
-    public String getFeature() {
+    public String feature() {
         return this.feature;
     }
 
     @Import(name="groupName", required=true)
       private final String groupName;
 
-    public String getGroupName() {
+    public String groupName() {
         return this.groupName;
     }
 
     @Import(name="variation", required=true)
       private final String variation;
 
-    public String getVariation() {
+    public String variation() {
         return this.variation;
     }
 

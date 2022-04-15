@@ -28,16 +28,16 @@ public final class GetRouteCalculatorResult {
         this.updateTime = updateTime;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getCalculatorArn() {
+    public Optional<String> calculatorArn() {
         return Optional.ofNullable(this.calculatorArn);
     }
-    public Optional<String> getCreateTime() {
+    public Optional<String> createTime() {
         return Optional.ofNullable(this.createTime);
     }
-    public Optional<String> getUpdateTime() {
+    public Optional<String> updateTime() {
         return Optional.ofNullable(this.updateTime);
     }
 

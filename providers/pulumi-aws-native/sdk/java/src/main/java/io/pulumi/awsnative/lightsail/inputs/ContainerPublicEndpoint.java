@@ -27,7 +27,7 @@ public final class ContainerPublicEndpoint extends io.pulumi.resources.InvokeArg
     @Import(name="containerName")
       private final @Nullable String containerName;
 
-    public Optional<String> getContainerName() {
+    public Optional<String> containerName() {
         return this.containerName == null ? Optional.empty() : Optional.ofNullable(this.containerName);
     }
 
@@ -38,7 +38,7 @@ public final class ContainerPublicEndpoint extends io.pulumi.resources.InvokeArg
     @Import(name="containerPort")
       private final @Nullable Integer containerPort;
 
-    public Optional<Integer> getContainerPort() {
+    public Optional<Integer> containerPort() {
         return this.containerPort == null ? Optional.empty() : Optional.ofNullable(this.containerPort);
     }
 
@@ -49,7 +49,7 @@ public final class ContainerPublicEndpoint extends io.pulumi.resources.InvokeArg
     @Import(name="healthCheckConfig")
       private final @Nullable ContainerHealthCheckConfig healthCheckConfig;
 
-    public Optional<ContainerHealthCheckConfig> getHealthCheckConfig() {
+    public Optional<ContainerHealthCheckConfig> healthCheckConfig() {
         return this.healthCheckConfig == null ? Optional.empty() : Optional.ofNullable(this.healthCheckConfig);
     }
 

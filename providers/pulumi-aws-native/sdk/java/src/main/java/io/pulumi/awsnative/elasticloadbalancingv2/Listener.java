@@ -25,49 +25,49 @@ public class Listener extends io.pulumi.resources.CustomResource {
     @Export(name="alpnPolicy", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> alpnPolicy;
 
-    public Output</* @Nullable */ List<String>> getAlpnPolicy() {
+    public Output</* @Nullable */ List<String>> alpnPolicy() {
         return this.alpnPolicy;
     }
     @Export(name="certificates", type=List.class, parameters={ListenerCertificate.class})
     private Output</* @Nullable */ List<ListenerCertificate>> certificates;
 
-    public Output</* @Nullable */ List<ListenerCertificate>> getCertificates() {
+    public Output</* @Nullable */ List<ListenerCertificate>> certificates() {
         return this.certificates;
     }
     @Export(name="defaultActions", type=List.class, parameters={ListenerAction.class})
     private Output<List<ListenerAction>> defaultActions;
 
-    public Output<List<ListenerAction>> getDefaultActions() {
+    public Output<List<ListenerAction>> defaultActions() {
         return this.defaultActions;
     }
     @Export(name="listenerArn", type=String.class, parameters={})
     private Output<String> listenerArn;
 
-    public Output<String> getListenerArn() {
+    public Output<String> listenerArn() {
         return this.listenerArn;
     }
     @Export(name="loadBalancerArn", type=String.class, parameters={})
     private Output<String> loadBalancerArn;
 
-    public Output<String> getLoadBalancerArn() {
+    public Output<String> loadBalancerArn() {
         return this.loadBalancerArn;
     }
     @Export(name="port", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> port;
 
-    public Output</* @Nullable */ Integer> getPort() {
+    public Output</* @Nullable */ Integer> port() {
         return this.port;
     }
     @Export(name="protocol", type=String.class, parameters={})
     private Output</* @Nullable */ String> protocol;
 
-    public Output</* @Nullable */ String> getProtocol() {
+    public Output</* @Nullable */ String> protocol() {
         return this.protocol;
     }
     @Export(name="sslPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> sslPolicy;
 
-    public Output</* @Nullable */ String> getSslPolicy() {
+    public Output</* @Nullable */ String> sslPolicy() {
         return this.sslPolicy;
     }
 

@@ -19,7 +19,7 @@ public final class GetPublicTypeVersionArgs extends io.pulumi.resources.InvokeAr
     @Import(name="publicTypeArn", required=true)
       private final String publicTypeArn;
 
-    public String getPublicTypeArn() {
+    public String publicTypeArn() {
         return this.publicTypeArn;
     }
 

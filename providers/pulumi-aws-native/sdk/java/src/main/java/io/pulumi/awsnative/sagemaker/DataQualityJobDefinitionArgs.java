@@ -27,49 +27,49 @@ public final class DataQualityJobDefinitionArgs extends io.pulumi.resources.Reso
     @Import(name="dataQualityAppSpecification", required=true)
       private final Output<DataQualityJobDefinitionDataQualityAppSpecificationArgs> dataQualityAppSpecification;
 
-    public Output<DataQualityJobDefinitionDataQualityAppSpecificationArgs> getDataQualityAppSpecification() {
+    public Output<DataQualityJobDefinitionDataQualityAppSpecificationArgs> dataQualityAppSpecification() {
         return this.dataQualityAppSpecification;
     }
 
     @Import(name="dataQualityBaselineConfig")
       private final @Nullable Output<DataQualityJobDefinitionDataQualityBaselineConfigArgs> dataQualityBaselineConfig;
 
-    public Output<DataQualityJobDefinitionDataQualityBaselineConfigArgs> getDataQualityBaselineConfig() {
+    public Output<DataQualityJobDefinitionDataQualityBaselineConfigArgs> dataQualityBaselineConfig() {
         return this.dataQualityBaselineConfig == null ? Codegen.empty() : this.dataQualityBaselineConfig;
     }
 
     @Import(name="dataQualityJobInput", required=true)
       private final Output<DataQualityJobDefinitionDataQualityJobInputArgs> dataQualityJobInput;
 
-    public Output<DataQualityJobDefinitionDataQualityJobInputArgs> getDataQualityJobInput() {
+    public Output<DataQualityJobDefinitionDataQualityJobInputArgs> dataQualityJobInput() {
         return this.dataQualityJobInput;
     }
 
     @Import(name="dataQualityJobOutputConfig", required=true)
       private final Output<DataQualityJobDefinitionMonitoringOutputConfigArgs> dataQualityJobOutputConfig;
 
-    public Output<DataQualityJobDefinitionMonitoringOutputConfigArgs> getDataQualityJobOutputConfig() {
+    public Output<DataQualityJobDefinitionMonitoringOutputConfigArgs> dataQualityJobOutputConfig() {
         return this.dataQualityJobOutputConfig;
     }
 
     @Import(name="jobDefinitionName")
       private final @Nullable Output<String> jobDefinitionName;
 
-    public Output<String> getJobDefinitionName() {
+    public Output<String> jobDefinitionName() {
         return this.jobDefinitionName == null ? Codegen.empty() : this.jobDefinitionName;
     }
 
     @Import(name="jobResources", required=true)
       private final Output<DataQualityJobDefinitionMonitoringResourcesArgs> jobResources;
 
-    public Output<DataQualityJobDefinitionMonitoringResourcesArgs> getJobResources() {
+    public Output<DataQualityJobDefinitionMonitoringResourcesArgs> jobResources() {
         return this.jobResources;
     }
 
     @Import(name="networkConfig")
       private final @Nullable Output<DataQualityJobDefinitionNetworkConfigArgs> networkConfig;
 
-    public Output<DataQualityJobDefinitionNetworkConfigArgs> getNetworkConfig() {
+    public Output<DataQualityJobDefinitionNetworkConfigArgs> networkConfig() {
         return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
     }
 
@@ -80,14 +80,14 @@ public final class DataQualityJobDefinitionArgs extends io.pulumi.resources.Reso
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="stoppingCondition")
       private final @Nullable Output<DataQualityJobDefinitionStoppingConditionArgs> stoppingCondition;
 
-    public Output<DataQualityJobDefinitionStoppingConditionArgs> getStoppingCondition() {
+    public Output<DataQualityJobDefinitionStoppingConditionArgs> stoppingCondition() {
         return this.stoppingCondition == null ? Codegen.empty() : this.stoppingCondition;
     }
 
@@ -98,7 +98,7 @@ public final class DataQualityJobDefinitionArgs extends io.pulumi.resources.Reso
     @Import(name="tags")
       private final @Nullable Output<List<DataQualityJobDefinitionTagArgs>> tags;
 
-    public Output<List<DataQualityJobDefinitionTagArgs>> getTags() {
+    public Output<List<DataQualityJobDefinitionTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

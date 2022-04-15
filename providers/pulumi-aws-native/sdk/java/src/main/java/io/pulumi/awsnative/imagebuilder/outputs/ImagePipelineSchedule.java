@@ -35,14 +35,14 @@ public final class ImagePipelineSchedule {
      * The condition configures when the pipeline should trigger a new image build.
      * 
     */
-    public Optional<ImagePipelineSchedulePipelineExecutionStartCondition> getPipelineExecutionStartCondition() {
+    public Optional<ImagePipelineSchedulePipelineExecutionStartCondition> pipelineExecutionStartCondition() {
         return Optional.ofNullable(this.pipelineExecutionStartCondition);
     }
     /**
      * The expression determines how often EC2 Image Builder evaluates your pipelineExecutionStartCondition.
      * 
     */
-    public Optional<String> getScheduleExpression() {
+    public Optional<String> scheduleExpression() {
         return Optional.ofNullable(this.scheduleExpression);
     }
 

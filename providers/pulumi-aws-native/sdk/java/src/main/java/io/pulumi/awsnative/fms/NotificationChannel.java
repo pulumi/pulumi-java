@@ -21,13 +21,13 @@ public class NotificationChannel extends io.pulumi.resources.CustomResource {
     @Export(name="snsRoleName", type=String.class, parameters={})
     private Output<String> snsRoleName;
 
-    public Output<String> getSnsRoleName() {
+    public Output<String> snsRoleName() {
         return this.snsRoleName;
     }
     @Export(name="snsTopicArn", type=String.class, parameters={})
     private Output<String> snsTopicArn;
 
-    public Output<String> getSnsTopicArn() {
+    public Output<String> snsTopicArn() {
         return this.snsTopicArn;
     }
 

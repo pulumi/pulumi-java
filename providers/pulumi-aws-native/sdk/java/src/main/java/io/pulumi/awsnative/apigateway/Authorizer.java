@@ -31,7 +31,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * @return Optional customer-defined field, used in OpenAPI imports and exports without functional impact.
      * 
      */
-    public Output</* @Nullable */ String> getAuthType() {
+    public Output</* @Nullable */ String> authType() {
         return this.authType;
     }
     /**
@@ -45,13 +45,13 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * @return Specifies the required credentials as an IAM role for API Gateway to invoke the authorizer.
      * 
      */
-    public Output</* @Nullable */ String> getAuthorizerCredentials() {
+    public Output</* @Nullable */ String> authorizerCredentials() {
         return this.authorizerCredentials;
     }
     @Export(name="authorizerId", type=String.class, parameters={})
     private Output<String> authorizerId;
 
-    public Output<String> getAuthorizerId() {
+    public Output<String> authorizerId() {
         return this.authorizerId;
     }
     /**
@@ -65,7 +65,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * @return The TTL in seconds of cached authorizer results.
      * 
      */
-    public Output</* @Nullable */ Integer> getAuthorizerResultTtlInSeconds() {
+    public Output</* @Nullable */ Integer> authorizerResultTtlInSeconds() {
         return this.authorizerResultTtlInSeconds;
     }
     /**
@@ -79,7 +79,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * @return Specifies the authorizer's Uniform Resource Identifier (URI).
      * 
      */
-    public Output</* @Nullable */ String> getAuthorizerUri() {
+    public Output</* @Nullable */ String> authorizerUri() {
         return this.authorizerUri;
     }
     /**
@@ -93,7 +93,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * @return The identity source for which authorization is requested.
      * 
      */
-    public Output</* @Nullable */ String> getIdentitySource() {
+    public Output</* @Nullable */ String> identitySource() {
         return this.identitySource;
     }
     /**
@@ -107,7 +107,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * @return A validation expression for the incoming identity token.
      * 
      */
-    public Output</* @Nullable */ String> getIdentityValidationExpression() {
+    public Output</* @Nullable */ String> identityValidationExpression() {
         return this.identityValidationExpression;
     }
     /**
@@ -121,7 +121,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * @return The name of the authorizer.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -135,7 +135,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * @return A list of the Amazon Cognito user pool ARNs for the COGNITO_USER_POOLS authorizer.
      * 
      */
-    public Output</* @Nullable */ List<String>> getProviderARNs() {
+    public Output</* @Nullable */ List<String>> providerARNs() {
         return this.providerARNs;
     }
     /**
@@ -149,7 +149,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * @return The identifier of the API.
      * 
      */
-    public Output<String> getRestApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
     /**
@@ -163,7 +163,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * @return The authorizer type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

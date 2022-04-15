@@ -18,7 +18,7 @@ public final class ConfigAntennaDownlinkConfig {
         this.spectrumConfig = spectrumConfig;
     }
 
-    public Optional<ConfigSpectrumConfig> getSpectrumConfig() {
+    public Optional<ConfigSpectrumConfig> spectrumConfig() {
         return Optional.ofNullable(this.spectrumConfig);
     }
 

@@ -27,7 +27,7 @@ public final class AssetPropertyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alias")
       private final @Nullable Output<String> alias;
 
-    public Output<String> getAlias() {
+    public Output<String> alias() {
         return this.alias == null ? Codegen.empty() : this.alias;
     }
 
@@ -38,7 +38,7 @@ public final class AssetPropertyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logicalId", required=true)
       private final Output<String> logicalId;
 
-    public Output<String> getLogicalId() {
+    public Output<String> logicalId() {
         return this.logicalId;
     }
 
@@ -49,7 +49,7 @@ public final class AssetPropertyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationState")
       private final @Nullable Output<AssetPropertyNotificationState> notificationState;
 
-    public Output<AssetPropertyNotificationState> getNotificationState() {
+    public Output<AssetPropertyNotificationState> notificationState() {
         return this.notificationState == null ? Codegen.empty() : this.notificationState;
     }
 

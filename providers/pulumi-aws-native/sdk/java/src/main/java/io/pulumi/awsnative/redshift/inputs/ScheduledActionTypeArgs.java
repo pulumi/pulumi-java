@@ -20,21 +20,21 @@ public final class ScheduledActionTypeArgs extends io.pulumi.resources.ResourceA
     @Import(name="pauseCluster")
       private final @Nullable Output<ScheduledActionPauseClusterMessageArgs> pauseCluster;
 
-    public Output<ScheduledActionPauseClusterMessageArgs> getPauseCluster() {
+    public Output<ScheduledActionPauseClusterMessageArgs> pauseCluster() {
         return this.pauseCluster == null ? Codegen.empty() : this.pauseCluster;
     }
 
     @Import(name="resizeCluster")
       private final @Nullable Output<ScheduledActionResizeClusterMessageArgs> resizeCluster;
 
-    public Output<ScheduledActionResizeClusterMessageArgs> getResizeCluster() {
+    public Output<ScheduledActionResizeClusterMessageArgs> resizeCluster() {
         return this.resizeCluster == null ? Codegen.empty() : this.resizeCluster;
     }
 
     @Import(name="resumeCluster")
       private final @Nullable Output<ScheduledActionResumeClusterMessageArgs> resumeCluster;
 
-    public Output<ScheduledActionResumeClusterMessageArgs> getResumeCluster() {
+    public Output<ScheduledActionResumeClusterMessageArgs> resumeCluster() {
         return this.resumeCluster == null ? Codegen.empty() : this.resumeCluster;
     }
 

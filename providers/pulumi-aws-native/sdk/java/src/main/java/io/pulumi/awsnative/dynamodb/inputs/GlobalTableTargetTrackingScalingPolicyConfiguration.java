@@ -19,28 +19,28 @@ public final class GlobalTableTargetTrackingScalingPolicyConfiguration extends i
     @Import(name="disableScaleIn")
       private final @Nullable Boolean disableScaleIn;
 
-    public Optional<Boolean> getDisableScaleIn() {
+    public Optional<Boolean> disableScaleIn() {
         return this.disableScaleIn == null ? Optional.empty() : Optional.ofNullable(this.disableScaleIn);
     }
 
     @Import(name="scaleInCooldown")
       private final @Nullable Integer scaleInCooldown;
 
-    public Optional<Integer> getScaleInCooldown() {
+    public Optional<Integer> scaleInCooldown() {
         return this.scaleInCooldown == null ? Optional.empty() : Optional.ofNullable(this.scaleInCooldown);
     }
 
     @Import(name="scaleOutCooldown")
       private final @Nullable Integer scaleOutCooldown;
 
-    public Optional<Integer> getScaleOutCooldown() {
+    public Optional<Integer> scaleOutCooldown() {
         return this.scaleOutCooldown == null ? Optional.empty() : Optional.ofNullable(this.scaleOutCooldown);
     }
 
     @Import(name="targetValue", required=true)
       private final Double targetValue;
 
-    public Double getTargetValue() {
+    public Double targetValue() {
         return this.targetValue;
     }
 

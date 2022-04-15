@@ -58,21 +58,21 @@ public final class DataSourceCredentialPair {
      *                 <code>Credentials</code> is automatically allowed.</p>
      * 
     */
-    public List<DataSourceParameters> getAlternateDataSourceParameters() {
+    public List<DataSourceParameters> alternateDataSourceParameters() {
         return this.alternateDataSourceParameters == null ? List.of() : this.alternateDataSourceParameters;
     }
     /**
      * <p>Password.</p>
      * 
     */
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
     /**
      * <p>User name.</p>
      * 
     */
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

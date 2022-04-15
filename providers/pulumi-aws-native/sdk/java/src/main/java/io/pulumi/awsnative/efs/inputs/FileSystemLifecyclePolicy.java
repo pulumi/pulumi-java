@@ -17,14 +17,14 @@ public final class FileSystemLifecyclePolicy extends io.pulumi.resources.InvokeA
     @Import(name="transitionToIA")
       private final @Nullable String transitionToIA;
 
-    public Optional<String> getTransitionToIA() {
+    public Optional<String> transitionToIA() {
         return this.transitionToIA == null ? Optional.empty() : Optional.ofNullable(this.transitionToIA);
     }
 
     @Import(name="transitionToPrimaryStorageClass")
       private final @Nullable String transitionToPrimaryStorageClass;
 
-    public Optional<String> getTransitionToPrimaryStorageClass() {
+    public Optional<String> transitionToPrimaryStorageClass() {
         return this.transitionToPrimaryStorageClass == null ? Optional.empty() : Optional.ofNullable(this.transitionToPrimaryStorageClass);
     }
 

@@ -18,7 +18,7 @@ public final class SchemaProperties {
         this.attributes = attributes;
     }
 
-    public List<AttributesItemProperties> getAttributes() {
+    public List<AttributesItemProperties> attributes() {
         return this.attributes == null ? List.of() : this.attributes;
     }
 

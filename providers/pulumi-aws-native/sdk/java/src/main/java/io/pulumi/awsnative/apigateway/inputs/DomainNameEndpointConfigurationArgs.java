@@ -19,7 +19,7 @@ public final class DomainNameEndpointConfigurationArgs extends io.pulumi.resourc
     @Import(name="types")
       private final @Nullable Output<List<String>> types;
 
-    public Output<List<String>> getTypes() {
+    public Output<List<String>> types() {
         return this.types == null ? Codegen.empty() : this.types;
     }
 

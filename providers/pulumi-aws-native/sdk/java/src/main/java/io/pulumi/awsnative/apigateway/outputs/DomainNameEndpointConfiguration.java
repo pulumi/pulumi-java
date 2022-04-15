@@ -18,7 +18,7 @@ public final class DomainNameEndpointConfiguration {
         this.types = types;
     }
 
-    public List<String> getTypes() {
+    public List<String> types() {
         return this.types == null ? List.of() : this.types;
     }
 

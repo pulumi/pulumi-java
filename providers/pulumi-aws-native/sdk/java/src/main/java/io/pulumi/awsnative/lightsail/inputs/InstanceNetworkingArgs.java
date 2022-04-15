@@ -24,7 +24,7 @@ public final class InstanceNetworkingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="monthlyTransfer")
       private final @Nullable Output<InstanceMonthlyTransferArgs> monthlyTransfer;
 
-    public Output<InstanceMonthlyTransferArgs> getMonthlyTransfer() {
+    public Output<InstanceMonthlyTransferArgs> monthlyTransfer() {
         return this.monthlyTransfer == null ? Codegen.empty() : this.monthlyTransfer;
     }
 
@@ -35,7 +35,7 @@ public final class InstanceNetworkingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="ports", required=true)
       private final Output<List<InstancePortArgs>> ports;
 
-    public Output<List<InstancePortArgs>> getPorts() {
+    public Output<List<InstancePortArgs>> ports() {
         return this.ports;
     }
 

@@ -25,7 +25,7 @@ public final class InstanceMonthlyTransfer extends io.pulumi.resources.InvokeArg
     @Import(name="gbPerMonthAllocated")
       private final @Nullable String gbPerMonthAllocated;
 
-    public Optional<String> getGbPerMonthAllocated() {
+    public Optional<String> gbPerMonthAllocated() {
         return this.gbPerMonthAllocated == null ? Optional.empty() : Optional.ofNullable(this.gbPerMonthAllocated);
     }
 

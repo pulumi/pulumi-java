@@ -20,42 +20,42 @@ public final class TopicRulePayload extends io.pulumi.resources.InvokeArgs {
     @Import(name="actions", required=true)
       private final List<TopicRuleAction> actions;
 
-    public List<TopicRuleAction> getActions() {
+    public List<TopicRuleAction> actions() {
         return this.actions;
     }
 
     @Import(name="awsIotSqlVersion")
       private final @Nullable String awsIotSqlVersion;
 
-    public Optional<String> getAwsIotSqlVersion() {
+    public Optional<String> awsIotSqlVersion() {
         return this.awsIotSqlVersion == null ? Optional.empty() : Optional.ofNullable(this.awsIotSqlVersion);
     }
 
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
     @Import(name="errorAction")
       private final @Nullable TopicRuleAction errorAction;
 
-    public Optional<TopicRuleAction> getErrorAction() {
+    public Optional<TopicRuleAction> errorAction() {
         return this.errorAction == null ? Optional.empty() : Optional.ofNullable(this.errorAction);
     }
 
     @Import(name="ruleDisabled")
       private final @Nullable Boolean ruleDisabled;
 
-    public Optional<Boolean> getRuleDisabled() {
+    public Optional<Boolean> ruleDisabled() {
         return this.ruleDisabled == null ? Optional.empty() : Optional.ofNullable(this.ruleDisabled);
     }
 
     @Import(name="sql", required=true)
       private final String sql;
 
-    public String getSql() {
+    public String sql() {
         return this.sql;
     }
 

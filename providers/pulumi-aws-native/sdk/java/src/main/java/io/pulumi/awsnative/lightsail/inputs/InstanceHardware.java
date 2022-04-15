@@ -27,7 +27,7 @@ public final class InstanceHardware extends io.pulumi.resources.InvokeArgs {
     @Import(name="cpuCount")
       private final @Nullable Integer cpuCount;
 
-    public Optional<Integer> getCpuCount() {
+    public Optional<Integer> cpuCount() {
         return this.cpuCount == null ? Optional.empty() : Optional.ofNullable(this.cpuCount);
     }
 
@@ -38,7 +38,7 @@ public final class InstanceHardware extends io.pulumi.resources.InvokeArgs {
     @Import(name="disks")
       private final @Nullable List<InstanceDisk> disks;
 
-    public List<InstanceDisk> getDisks() {
+    public List<InstanceDisk> disks() {
         return this.disks == null ? List.of() : this.disks;
     }
 
@@ -49,7 +49,7 @@ public final class InstanceHardware extends io.pulumi.resources.InvokeArgs {
     @Import(name="ramSizeInGb")
       private final @Nullable Integer ramSizeInGb;
 
-    public Optional<Integer> getRamSizeInGb() {
+    public Optional<Integer> ramSizeInGb() {
         return this.ramSizeInGb == null ? Optional.empty() : Optional.ofNullable(this.ramSizeInGb);
     }
 

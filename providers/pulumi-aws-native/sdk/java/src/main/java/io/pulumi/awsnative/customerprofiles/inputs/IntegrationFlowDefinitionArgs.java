@@ -22,42 +22,42 @@ public final class IntegrationFlowDefinitionArgs extends io.pulumi.resources.Res
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="flowName", required=true)
       private final Output<String> flowName;
 
-    public Output<String> getFlowName() {
+    public Output<String> flowName() {
         return this.flowName;
     }
 
     @Import(name="kmsArn", required=true)
       private final Output<String> kmsArn;
 
-    public Output<String> getKmsArn() {
+    public Output<String> kmsArn() {
         return this.kmsArn;
     }
 
     @Import(name="sourceFlowConfig", required=true)
       private final Output<IntegrationSourceFlowConfigArgs> sourceFlowConfig;
 
-    public Output<IntegrationSourceFlowConfigArgs> getSourceFlowConfig() {
+    public Output<IntegrationSourceFlowConfigArgs> sourceFlowConfig() {
         return this.sourceFlowConfig;
     }
 
     @Import(name="tasks", required=true)
       private final Output<List<IntegrationTaskArgs>> tasks;
 
-    public Output<List<IntegrationTaskArgs>> getTasks() {
+    public Output<List<IntegrationTaskArgs>> tasks() {
         return this.tasks;
     }
 
     @Import(name="triggerConfig", required=true)
       private final Output<IntegrationTriggerConfigArgs> triggerConfig;
 
-    public Output<IntegrationTriggerConfigArgs> getTriggerConfig() {
+    public Output<IntegrationTriggerConfigArgs> triggerConfig() {
         return this.triggerConfig;
     }
 

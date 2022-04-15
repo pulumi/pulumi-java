@@ -15,14 +15,14 @@ public final class GetAssistantAssociationArgs extends io.pulumi.resources.Invok
     @Import(name="assistantAssociationId", required=true)
       private final String assistantAssociationId;
 
-    public String getAssistantAssociationId() {
+    public String assistantAssociationId() {
         return this.assistantAssociationId;
     }
 
     @Import(name="assistantId", required=true)
       private final String assistantId;
 
-    public String getAssistantId() {
+    public String assistantId() {
         return this.assistantId;
     }
 

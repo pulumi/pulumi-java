@@ -18,7 +18,7 @@ public final class IntegrationIncrementalPullConfig {
         this.datetimeTypeFieldName = datetimeTypeFieldName;
     }
 
-    public Optional<String> getDatetimeTypeFieldName() {
+    public Optional<String> datetimeTypeFieldName() {
         return Optional.ofNullable(this.datetimeTypeFieldName);
     }
 

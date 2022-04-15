@@ -26,13 +26,13 @@ public final class DataSourceConfluenceAttachmentToIndexFieldMapping {
         this.indexFieldName = indexFieldName;
     }
 
-    public DataSourceConfluenceAttachmentFieldName getDataSourceFieldName() {
+    public DataSourceConfluenceAttachmentFieldName dataSourceFieldName() {
         return this.dataSourceFieldName;
     }
-    public Optional<String> getDateFieldFormat() {
+    public Optional<String> dateFieldFormat() {
         return Optional.ofNullable(this.dateFieldFormat);
     }
-    public String getIndexFieldName() {
+    public String indexFieldName() {
         return this.indexFieldName;
     }
 

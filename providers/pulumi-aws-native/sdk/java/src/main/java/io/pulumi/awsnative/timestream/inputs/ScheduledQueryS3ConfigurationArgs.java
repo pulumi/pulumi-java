@@ -23,21 +23,21 @@ public final class ScheduledQueryS3ConfigurationArgs extends io.pulumi.resources
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
     @Import(name="encryptionOption")
       private final @Nullable Output<ScheduledQueryEncryptionOption> encryptionOption;
 
-    public Output<ScheduledQueryEncryptionOption> getEncryptionOption() {
+    public Output<ScheduledQueryEncryptionOption> encryptionOption() {
         return this.encryptionOption == null ? Codegen.empty() : this.encryptionOption;
     }
 
     @Import(name="objectKeyPrefix")
       private final @Nullable Output<String> objectKeyPrefix;
 
-    public Output<String> getObjectKeyPrefix() {
+    public Output<String> objectKeyPrefix() {
         return this.objectKeyPrefix == null ? Codegen.empty() : this.objectKeyPrefix;
     }
 

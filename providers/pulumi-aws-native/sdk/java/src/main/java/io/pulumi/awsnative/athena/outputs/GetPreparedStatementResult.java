@@ -34,14 +34,14 @@ public final class GetPreparedStatementResult {
      * The description of the prepared statement.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The query string for the prepared statement.
      * 
     */
-    public Optional<String> getQueryStatement() {
+    public Optional<String> queryStatement() {
         return Optional.ofNullable(this.queryStatement);
     }
 

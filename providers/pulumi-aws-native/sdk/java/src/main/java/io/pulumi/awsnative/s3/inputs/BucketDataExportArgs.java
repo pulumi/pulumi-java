@@ -22,7 +22,7 @@ public final class BucketDataExportArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="destination", required=true)
       private final Output<BucketDestinationArgs> destination;
 
-    public Output<BucketDestinationArgs> getDestination() {
+    public Output<BucketDestinationArgs> destination() {
         return this.destination;
     }
 
@@ -33,7 +33,7 @@ public final class BucketDataExportArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="outputSchemaVersion", required=true)
       private final Output<String> outputSchemaVersion;
 
-    public Output<String> getOutputSchemaVersion() {
+    public Output<String> outputSchemaVersion() {
         return this.outputSchemaVersion;
     }
 

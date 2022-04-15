@@ -36,14 +36,14 @@ public final class AnalysisSheet {
      *             console.</p>
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * <p>The unique identifier associated with a sheet.</p>
      * 
     */
-    public Optional<String> getSheetId() {
+    public Optional<String> sheetId() {
         return Optional.ofNullable(this.sheetId);
     }
 

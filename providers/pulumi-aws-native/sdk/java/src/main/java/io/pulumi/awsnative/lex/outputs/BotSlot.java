@@ -37,22 +37,22 @@ public final class BotSlot {
         this.valueElicitationSetting = valueElicitationSetting;
     }
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<BotMultipleValuesSetting> getMultipleValuesSetting() {
+    public Optional<BotMultipleValuesSetting> multipleValuesSetting() {
         return Optional.ofNullable(this.multipleValuesSetting);
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<BotObfuscationSetting> getObfuscationSetting() {
+    public Optional<BotObfuscationSetting> obfuscationSetting() {
         return Optional.ofNullable(this.obfuscationSetting);
     }
-    public String getSlotTypeName() {
+    public String slotTypeName() {
         return this.slotTypeName;
     }
-    public BotSlotValueElicitationSetting getValueElicitationSetting() {
+    public BotSlotValueElicitationSetting valueElicitationSetting() {
         return this.valueElicitationSetting;
     }
 

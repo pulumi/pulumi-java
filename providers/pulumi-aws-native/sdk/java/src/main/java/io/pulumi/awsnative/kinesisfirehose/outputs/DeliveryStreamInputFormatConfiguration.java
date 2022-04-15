@@ -18,7 +18,7 @@ public final class DeliveryStreamInputFormatConfiguration {
         this.deserializer = deserializer;
     }
 
-    public Optional<DeliveryStreamDeserializer> getDeserializer() {
+    public Optional<DeliveryStreamDeserializer> deserializer() {
         return Optional.ofNullable(this.deserializer);
     }
 

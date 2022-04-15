@@ -41,21 +41,21 @@ public final class SiteLocation {
      * The physical address.
      * 
     */
-    public Optional<String> getAddress() {
+    public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
     /**
      * The latitude.
      * 
     */
-    public Optional<String> getLatitude() {
+    public Optional<String> latitude() {
         return Optional.ofNullable(this.latitude);
     }
     /**
      * The longitude.
      * 
     */
-    public Optional<String> getLongitude() {
+    public Optional<String> longitude() {
         return Optional.ofNullable(this.longitude);
     }
 

@@ -26,7 +26,7 @@ public final class StackSetDeploymentTargets extends io.pulumi.resources.InvokeA
     @Import(name="accounts")
       private final @Nullable List<String> accounts;
 
-    public List<String> getAccounts() {
+    public List<String> accounts() {
         return this.accounts == null ? List.of() : this.accounts;
     }
 
@@ -37,7 +37,7 @@ public final class StackSetDeploymentTargets extends io.pulumi.resources.InvokeA
     @Import(name="organizationalUnitIds")
       private final @Nullable List<String> organizationalUnitIds;
 
-    public List<String> getOrganizationalUnitIds() {
+    public List<String> organizationalUnitIds() {
         return this.organizationalUnitIds == null ? List.of() : this.organizationalUnitIds;
     }
 

@@ -16,7 +16,7 @@ public final class PackagingConfigurationCmafEncryption {
         this.spekeKeyProvider = spekeKeyProvider;
     }
 
-    public PackagingConfigurationSpekeKeyProvider getSpekeKeyProvider() {
+    public PackagingConfigurationSpekeKeyProvider spekeKeyProvider() {
         return this.spekeKeyProvider;
     }
 

@@ -22,14 +22,14 @@ public final class GatewayCapabilitySummaryArgs extends io.pulumi.resources.Reso
     @Import(name="capabilityConfiguration")
       private final @Nullable Output<String> capabilityConfiguration;
 
-    public Output<String> getCapabilityConfiguration() {
+    public Output<String> capabilityConfiguration() {
         return this.capabilityConfiguration == null ? Codegen.empty() : this.capabilityConfiguration;
     }
 
     @Import(name="capabilityNamespace", required=true)
       private final Output<String> capabilityNamespace;
 
-    public Output<String> getCapabilityNamespace() {
+    public Output<String> capabilityNamespace() {
         return this.capabilityNamespace;
     }
 

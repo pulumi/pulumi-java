@@ -29,14 +29,14 @@ public final class BotFulfillmentUpdatesSpecificationArgs extends io.pulumi.reso
     @Import(name="active", required=true)
       private final Output<Boolean> active;
 
-    public Output<Boolean> getActive() {
+    public Output<Boolean> active() {
         return this.active;
     }
 
     @Import(name="startResponse")
       private final @Nullable Output<BotFulfillmentStartResponseSpecificationArgs> startResponse;
 
-    public Output<BotFulfillmentStartResponseSpecificationArgs> getStartResponse() {
+    public Output<BotFulfillmentStartResponseSpecificationArgs> startResponse() {
         return this.startResponse == null ? Codegen.empty() : this.startResponse;
     }
 
@@ -47,14 +47,14 @@ public final class BotFulfillmentUpdatesSpecificationArgs extends io.pulumi.reso
     @Import(name="timeoutInSeconds")
       private final @Nullable Output<Integer> timeoutInSeconds;
 
-    public Output<Integer> getTimeoutInSeconds() {
+    public Output<Integer> timeoutInSeconds() {
         return this.timeoutInSeconds == null ? Codegen.empty() : this.timeoutInSeconds;
     }
 
     @Import(name="updateResponse")
       private final @Nullable Output<BotFulfillmentUpdateResponseSpecificationArgs> updateResponse;
 
-    public Output<BotFulfillmentUpdateResponseSpecificationArgs> getUpdateResponse() {
+    public Output<BotFulfillmentUpdateResponseSpecificationArgs> updateResponse() {
         return this.updateResponse == null ? Codegen.empty() : this.updateResponse;
     }
 

@@ -23,7 +23,7 @@ public final class HoursOfOperationTimeSlice extends io.pulumi.resources.InvokeA
     @Import(name="hours", required=true)
       private final Integer hours;
 
-    public Integer getHours() {
+    public Integer hours() {
         return this.hours;
     }
 
@@ -34,7 +34,7 @@ public final class HoursOfOperationTimeSlice extends io.pulumi.resources.InvokeA
     @Import(name="minutes", required=true)
       private final Integer minutes;
 
-    public Integer getMinutes() {
+    public Integer minutes() {
         return this.minutes;
     }
 

@@ -26,7 +26,7 @@ public final class DistributionConfigurationTargetContainerRepository extends io
     @Import(name="repositoryName")
       private final @Nullable String repositoryName;
 
-    public Optional<String> getRepositoryName() {
+    public Optional<String> repositoryName() {
         return this.repositoryName == null ? Optional.empty() : Optional.ofNullable(this.repositoryName);
     }
 
@@ -37,7 +37,7 @@ public final class DistributionConfigurationTargetContainerRepository extends io
     @Import(name="service")
       private final @Nullable DistributionConfigurationTargetContainerRepositoryService service;
 
-    public Optional<DistributionConfigurationTargetContainerRepositoryService> getService() {
+    public Optional<DistributionConfigurationTargetContainerRepositoryService> service() {
         return this.service == null ? Optional.empty() : Optional.ofNullable(this.service);
     }
 

@@ -18,7 +18,7 @@ public final class DatastoreSchemaDefinition {
         this.columns = columns;
     }
 
-    public List<DatastoreColumn> getColumns() {
+    public List<DatastoreColumn> columns() {
         return this.columns == null ? List.of() : this.columns;
     }
 

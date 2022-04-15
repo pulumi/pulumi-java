@@ -33,84 +33,84 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="dialogCodeHook")
       private final @Nullable Output<BotDialogCodeHookSettingArgs> dialogCodeHook;
 
-    public Output<BotDialogCodeHookSettingArgs> getDialogCodeHook() {
+    public Output<BotDialogCodeHookSettingArgs> dialogCodeHook() {
         return this.dialogCodeHook == null ? Codegen.empty() : this.dialogCodeHook;
     }
 
     @Import(name="fulfillmentCodeHook")
       private final @Nullable Output<BotFulfillmentCodeHookSettingArgs> fulfillmentCodeHook;
 
-    public Output<BotFulfillmentCodeHookSettingArgs> getFulfillmentCodeHook() {
+    public Output<BotFulfillmentCodeHookSettingArgs> fulfillmentCodeHook() {
         return this.fulfillmentCodeHook == null ? Codegen.empty() : this.fulfillmentCodeHook;
     }
 
     @Import(name="inputContexts")
       private final @Nullable Output<List<BotInputContextArgs>> inputContexts;
 
-    public Output<List<BotInputContextArgs>> getInputContexts() {
+    public Output<List<BotInputContextArgs>> inputContexts() {
         return this.inputContexts == null ? Codegen.empty() : this.inputContexts;
     }
 
     @Import(name="intentClosingSetting")
       private final @Nullable Output<BotIntentClosingSettingArgs> intentClosingSetting;
 
-    public Output<BotIntentClosingSettingArgs> getIntentClosingSetting() {
+    public Output<BotIntentClosingSettingArgs> intentClosingSetting() {
         return this.intentClosingSetting == null ? Codegen.empty() : this.intentClosingSetting;
     }
 
     @Import(name="intentConfirmationSetting")
       private final @Nullable Output<BotIntentConfirmationSettingArgs> intentConfirmationSetting;
 
-    public Output<BotIntentConfirmationSettingArgs> getIntentConfirmationSetting() {
+    public Output<BotIntentConfirmationSettingArgs> intentConfirmationSetting() {
         return this.intentConfirmationSetting == null ? Codegen.empty() : this.intentConfirmationSetting;
     }
 
     @Import(name="kendraConfiguration")
       private final @Nullable Output<BotKendraConfigurationArgs> kendraConfiguration;
 
-    public Output<BotKendraConfigurationArgs> getKendraConfiguration() {
+    public Output<BotKendraConfigurationArgs> kendraConfiguration() {
         return this.kendraConfiguration == null ? Codegen.empty() : this.kendraConfiguration;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="outputContexts")
       private final @Nullable Output<List<BotOutputContextArgs>> outputContexts;
 
-    public Output<List<BotOutputContextArgs>> getOutputContexts() {
+    public Output<List<BotOutputContextArgs>> outputContexts() {
         return this.outputContexts == null ? Codegen.empty() : this.outputContexts;
     }
 
     @Import(name="parentIntentSignature")
       private final @Nullable Output<String> parentIntentSignature;
 
-    public Output<String> getParentIntentSignature() {
+    public Output<String> parentIntentSignature() {
         return this.parentIntentSignature == null ? Codegen.empty() : this.parentIntentSignature;
     }
 
     @Import(name="sampleUtterances")
       private final @Nullable Output<List<BotSampleUtteranceArgs>> sampleUtterances;
 
-    public Output<List<BotSampleUtteranceArgs>> getSampleUtterances() {
+    public Output<List<BotSampleUtteranceArgs>> sampleUtterances() {
         return this.sampleUtterances == null ? Codegen.empty() : this.sampleUtterances;
     }
 
     @Import(name="slotPriorities")
       private final @Nullable Output<List<BotSlotPriorityArgs>> slotPriorities;
 
-    public Output<List<BotSlotPriorityArgs>> getSlotPriorities() {
+    public Output<List<BotSlotPriorityArgs>> slotPriorities() {
         return this.slotPriorities == null ? Codegen.empty() : this.slotPriorities;
     }
 
@@ -121,7 +121,7 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="slots")
       private final @Nullable Output<List<BotSlotArgs>> slots;
 
-    public Output<List<BotSlotArgs>> getSlots() {
+    public Output<List<BotSlotArgs>> slots() {
         return this.slots == null ? Codegen.empty() : this.slots;
     }
 

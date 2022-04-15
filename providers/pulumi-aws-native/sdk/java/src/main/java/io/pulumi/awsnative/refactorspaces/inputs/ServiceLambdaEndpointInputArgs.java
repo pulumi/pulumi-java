@@ -17,7 +17,7 @@ public final class ServiceLambdaEndpointInputArgs extends io.pulumi.resources.Re
     @Import(name="arn", required=true)
       private final Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
 

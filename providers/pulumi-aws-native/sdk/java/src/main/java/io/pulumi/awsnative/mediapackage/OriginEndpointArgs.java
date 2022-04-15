@@ -27,7 +27,7 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorization")
       private final @Nullable Output<OriginEndpointAuthorizationArgs> authorization;
 
-    public Output<OriginEndpointAuthorizationArgs> getAuthorization() {
+    public Output<OriginEndpointAuthorizationArgs> authorization() {
         return this.authorization == null ? Codegen.empty() : this.authorization;
     }
 
@@ -38,21 +38,21 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="channelId", required=true)
       private final Output<String> channelId;
 
-    public Output<String> getChannelId() {
+    public Output<String> channelId() {
         return this.channelId;
     }
 
     @Import(name="cmafPackage")
       private final @Nullable Output<OriginEndpointCmafPackageArgs> cmafPackage;
 
-    public Output<OriginEndpointCmafPackageArgs> getCmafPackage() {
+    public Output<OriginEndpointCmafPackageArgs> cmafPackage() {
         return this.cmafPackage == null ? Codegen.empty() : this.cmafPackage;
     }
 
     @Import(name="dashPackage")
       private final @Nullable Output<OriginEndpointDashPackageArgs> dashPackage;
 
-    public Output<OriginEndpointDashPackageArgs> getDashPackage() {
+    public Output<OriginEndpointDashPackageArgs> dashPackage() {
         return this.dashPackage == null ? Codegen.empty() : this.dashPackage;
     }
 
@@ -63,14 +63,14 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="hlsPackage")
       private final @Nullable Output<OriginEndpointHlsPackageArgs> hlsPackage;
 
-    public Output<OriginEndpointHlsPackageArgs> getHlsPackage() {
+    public Output<OriginEndpointHlsPackageArgs> hlsPackage() {
         return this.hlsPackage == null ? Codegen.empty() : this.hlsPackage;
     }
 
@@ -81,14 +81,14 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="manifestName")
       private final @Nullable Output<String> manifestName;
 
-    public Output<String> getManifestName() {
+    public Output<String> manifestName() {
         return this.manifestName == null ? Codegen.empty() : this.manifestName;
     }
 
     @Import(name="mssPackage")
       private final @Nullable Output<OriginEndpointMssPackageArgs> mssPackage;
 
-    public Output<OriginEndpointMssPackageArgs> getMssPackage() {
+    public Output<OriginEndpointMssPackageArgs> mssPackage() {
         return this.mssPackage == null ? Codegen.empty() : this.mssPackage;
     }
 
@@ -99,7 +99,7 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="origination")
       private final @Nullable Output<OriginEndpointOrigination> origination;
 
-    public Output<OriginEndpointOrigination> getOrigination() {
+    public Output<OriginEndpointOrigination> origination() {
         return this.origination == null ? Codegen.empty() : this.origination;
     }
 
@@ -110,7 +110,7 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startoverWindowSeconds")
       private final @Nullable Output<Integer> startoverWindowSeconds;
 
-    public Output<Integer> getStartoverWindowSeconds() {
+    public Output<Integer> startoverWindowSeconds() {
         return this.startoverWindowSeconds == null ? Codegen.empty() : this.startoverWindowSeconds;
     }
 
@@ -121,7 +121,7 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<OriginEndpointTagArgs>> tags;
 
-    public Output<List<OriginEndpointTagArgs>> getTags() {
+    public Output<List<OriginEndpointTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -132,7 +132,7 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeDelaySeconds")
       private final @Nullable Output<Integer> timeDelaySeconds;
 
-    public Output<Integer> getTimeDelaySeconds() {
+    public Output<Integer> timeDelaySeconds() {
         return this.timeDelaySeconds == null ? Codegen.empty() : this.timeDelaySeconds;
     }
 
@@ -143,7 +143,7 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="whitelist")
       private final @Nullable Output<List<String>> whitelist;
 
-    public Output<List<String>> getWhitelist() {
+    public Output<List<String>> whitelist() {
         return this.whitelist == null ? Codegen.empty() : this.whitelist;
     }
 

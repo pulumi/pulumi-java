@@ -43,21 +43,21 @@ public final class GetRegistryResult {
      * Amazon Resource Name for the created Registry.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * A description of the registry. If description is not provided, there will not be any default value for this.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * List of tags to tag the Registry
      * 
     */
-    public List<RegistryTag> getTags() {
+    public List<RegistryTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

@@ -27,14 +27,14 @@ public final class BotAliasLocaleSettings {
         this.enabled = enabled;
     }
 
-    public Optional<BotAliasCodeHookSpecification> getCodeHookSpecification() {
+    public Optional<BotAliasCodeHookSpecification> codeHookSpecification() {
         return Optional.ofNullable(this.codeHookSpecification);
     }
     /**
      * Whether the Lambda code hook is enabled
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

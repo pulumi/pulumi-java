@@ -25,13 +25,13 @@ public final class JobS3Location {
         this.key = key;
     }
 
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
-    public Optional<String> getBucketOwner() {
+    public Optional<String> bucketOwner() {
         return Optional.ofNullable(this.bucketOwner);
     }
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
 

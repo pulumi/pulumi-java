@@ -19,7 +19,7 @@ public final class GetLicenseArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="licenseArn", required=true)
       private final String licenseArn;
 
-    public String getLicenseArn() {
+    public String licenseArn() {
         return this.licenseArn;
     }
 

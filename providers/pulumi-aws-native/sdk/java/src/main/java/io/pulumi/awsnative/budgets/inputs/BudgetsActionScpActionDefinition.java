@@ -16,14 +16,14 @@ public final class BudgetsActionScpActionDefinition extends io.pulumi.resources.
     @Import(name="policyId", required=true)
       private final String policyId;
 
-    public String getPolicyId() {
+    public String policyId() {
         return this.policyId;
     }
 
     @Import(name="targetIds", required=true)
       private final List<String> targetIds;
 
-    public List<String> getTargetIds() {
+    public List<String> targetIds() {
         return this.targetIds;
     }
 

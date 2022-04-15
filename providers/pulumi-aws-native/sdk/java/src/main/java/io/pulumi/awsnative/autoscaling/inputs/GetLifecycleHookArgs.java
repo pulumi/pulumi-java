@@ -19,7 +19,7 @@ public final class GetLifecycleHookArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="autoScalingGroupName", required=true)
       private final String autoScalingGroupName;
 
-    public String getAutoScalingGroupName() {
+    public String autoScalingGroupName() {
         return this.autoScalingGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetLifecycleHookArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="lifecycleHookName", required=true)
       private final String lifecycleHookName;
 
-    public String getLifecycleHookName() {
+    public String lifecycleHookName() {
         return this.lifecycleHookName;
     }
 

@@ -22,35 +22,35 @@ public final class AnomalyDetectorMetricSourceArgs extends io.pulumi.resources.R
     @Import(name="appFlowConfig")
       private final @Nullable Output<AnomalyDetectorAppFlowConfigArgs> appFlowConfig;
 
-    public Output<AnomalyDetectorAppFlowConfigArgs> getAppFlowConfig() {
+    public Output<AnomalyDetectorAppFlowConfigArgs> appFlowConfig() {
         return this.appFlowConfig == null ? Codegen.empty() : this.appFlowConfig;
     }
 
     @Import(name="cloudwatchConfig")
       private final @Nullable Output<AnomalyDetectorCloudwatchConfigArgs> cloudwatchConfig;
 
-    public Output<AnomalyDetectorCloudwatchConfigArgs> getCloudwatchConfig() {
+    public Output<AnomalyDetectorCloudwatchConfigArgs> cloudwatchConfig() {
         return this.cloudwatchConfig == null ? Codegen.empty() : this.cloudwatchConfig;
     }
 
     @Import(name="rDSSourceConfig")
       private final @Nullable Output<AnomalyDetectorRDSSourceConfigArgs> rDSSourceConfig;
 
-    public Output<AnomalyDetectorRDSSourceConfigArgs> getRDSSourceConfig() {
+    public Output<AnomalyDetectorRDSSourceConfigArgs> rDSSourceConfig() {
         return this.rDSSourceConfig == null ? Codegen.empty() : this.rDSSourceConfig;
     }
 
     @Import(name="redshiftSourceConfig")
       private final @Nullable Output<AnomalyDetectorRedshiftSourceConfigArgs> redshiftSourceConfig;
 
-    public Output<AnomalyDetectorRedshiftSourceConfigArgs> getRedshiftSourceConfig() {
+    public Output<AnomalyDetectorRedshiftSourceConfigArgs> redshiftSourceConfig() {
         return this.redshiftSourceConfig == null ? Codegen.empty() : this.redshiftSourceConfig;
     }
 
     @Import(name="s3SourceConfig")
       private final @Nullable Output<AnomalyDetectorS3SourceConfigArgs> s3SourceConfig;
 
-    public Output<AnomalyDetectorS3SourceConfigArgs> getS3SourceConfig() {
+    public Output<AnomalyDetectorS3SourceConfigArgs> s3SourceConfig() {
         return this.s3SourceConfig == null ? Codegen.empty() : this.s3SourceConfig;
     }
 

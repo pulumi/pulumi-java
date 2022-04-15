@@ -23,10 +23,10 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityBaselineCo
         this.constraintsResource = constraintsResource;
     }
 
-    public Optional<String> getBaseliningJobName() {
+    public Optional<String> baseliningJobName() {
         return Optional.ofNullable(this.baseliningJobName);
     }
-    public Optional<ModelExplainabilityJobDefinitionConstraintsResource> getConstraintsResource() {
+    public Optional<ModelExplainabilityJobDefinitionConstraintsResource> constraintsResource() {
         return Optional.ofNullable(this.constraintsResource);
     }
 

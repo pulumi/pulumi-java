@@ -31,17 +31,17 @@ public final class SchedulingPolicyFairsharePolicy {
         this.shareDistribution = shareDistribution;
     }
 
-    public Optional<Double> getComputeReservation() {
+    public Optional<Double> computeReservation() {
         return Optional.ofNullable(this.computeReservation);
     }
-    public Optional<Double> getShareDecaySeconds() {
+    public Optional<Double> shareDecaySeconds() {
         return Optional.ofNullable(this.shareDecaySeconds);
     }
     /**
      * List of Share Attributes
      * 
     */
-    public List<SchedulingPolicyShareAttributes> getShareDistribution() {
+    public List<SchedulingPolicyShareAttributes> shareDistribution() {
         return this.shareDistribution == null ? List.of() : this.shareDistribution;
     }
 

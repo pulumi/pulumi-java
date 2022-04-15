@@ -26,7 +26,7 @@ public final class SecurityProfileMachineLearningDetectionConfig {
      * The sensitivity of anomalous behavior evaluation. Can be Low, Medium, or High.
      * 
     */
-    public Optional<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> getConfidenceLevel() {
+    public Optional<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> confidenceLevel() {
         return Optional.ofNullable(this.confidenceLevel);
     }
 

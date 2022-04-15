@@ -19,28 +19,28 @@ public final class SpotFleetBlockDeviceMappingArgs extends io.pulumi.resources.R
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
     @Import(name="ebs")
       private final @Nullable Output<SpotFleetEbsBlockDeviceArgs> ebs;
 
-    public Output<SpotFleetEbsBlockDeviceArgs> getEbs() {
+    public Output<SpotFleetEbsBlockDeviceArgs> ebs() {
         return this.ebs == null ? Codegen.empty() : this.ebs;
     }
 
     @Import(name="noDevice")
       private final @Nullable Output<String> noDevice;
 
-    public Output<String> getNoDevice() {
+    public Output<String> noDevice() {
         return this.noDevice == null ? Codegen.empty() : this.noDevice;
     }
 
     @Import(name="virtualName")
       private final @Nullable Output<String> virtualName;
 
-    public Output<String> getVirtualName() {
+    public Output<String> virtualName() {
         return this.virtualName == null ? Codegen.empty() : this.virtualName;
     }
 

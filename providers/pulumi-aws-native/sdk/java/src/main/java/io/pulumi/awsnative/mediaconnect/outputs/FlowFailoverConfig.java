@@ -31,10 +31,10 @@ public final class FlowFailoverConfig {
      * Search window time to look for dash-7 packets
      * 
     */
-    public Optional<Integer> getRecoveryWindow() {
+    public Optional<Integer> recoveryWindow() {
         return Optional.ofNullable(this.recoveryWindow);
     }
-    public Optional<FlowFailoverConfigState> getState() {
+    public Optional<FlowFailoverConfigState> state() {
         return Optional.ofNullable(this.state);
     }
 

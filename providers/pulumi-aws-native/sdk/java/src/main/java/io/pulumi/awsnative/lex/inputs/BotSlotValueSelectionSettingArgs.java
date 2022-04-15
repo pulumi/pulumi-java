@@ -23,14 +23,14 @@ public final class BotSlotValueSelectionSettingArgs extends io.pulumi.resources.
     @Import(name="regexFilter")
       private final @Nullable Output<BotSlotValueRegexFilterArgs> regexFilter;
 
-    public Output<BotSlotValueRegexFilterArgs> getRegexFilter() {
+    public Output<BotSlotValueRegexFilterArgs> regexFilter() {
         return this.regexFilter == null ? Codegen.empty() : this.regexFilter;
     }
 
     @Import(name="resolutionStrategy", required=true)
       private final Output<BotSlotValueResolutionStrategy> resolutionStrategy;
 
-    public Output<BotSlotValueResolutionStrategy> getResolutionStrategy() {
+    public Output<BotSlotValueResolutionStrategy> resolutionStrategy() {
         return this.resolutionStrategy;
     }
 

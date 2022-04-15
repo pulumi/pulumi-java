@@ -18,14 +18,14 @@ public final class WebACLLabelMatchStatementArgs extends io.pulumi.resources.Res
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
     @Import(name="scope", required=true)
       private final Output<WebACLLabelMatchScope> scope;
 
-    public Output<WebACLLabelMatchScope> getScope() {
+    public Output<WebACLLabelMatchScope> scope() {
         return this.scope;
     }
 

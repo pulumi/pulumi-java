@@ -22,14 +22,14 @@ public final class JobSample extends io.pulumi.resources.InvokeArgs {
     @Import(name="mode")
       private final @Nullable JobSampleMode mode;
 
-    public Optional<JobSampleMode> getMode() {
+    public Optional<JobSampleMode> mode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
     }
 
     @Import(name="size")
       private final @Nullable Integer size;
 
-    public Optional<Integer> getSize() {
+    public Optional<Integer> size() {
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
     }
 

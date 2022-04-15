@@ -15,7 +15,7 @@ public final class GetStoredQueryArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="queryName", required=true)
       private final String queryName;
 
-    public String getQueryName() {
+    public String queryName() {
         return this.queryName;
     }
 

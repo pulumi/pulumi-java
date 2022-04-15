@@ -24,7 +24,7 @@ public final class MonitoringScheduleScheduleConfig {
      * A cron expression that describes details about the monitoring schedule.
      * 
     */
-    public String getScheduleExpression() {
+    public String scheduleExpression() {
         return this.scheduleExpression;
     }
 

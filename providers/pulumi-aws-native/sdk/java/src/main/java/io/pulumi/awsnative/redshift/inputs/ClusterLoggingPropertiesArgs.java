@@ -18,14 +18,14 @@ public final class ClusterLoggingPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
     @Import(name="s3KeyPrefix")
       private final @Nullable Output<String> s3KeyPrefix;
 
-    public Output<String> getS3KeyPrefix() {
+    public Output<String> s3KeyPrefix() {
         return this.s3KeyPrefix == null ? Codegen.empty() : this.s3KeyPrefix;
     }
 

@@ -17,42 +17,42 @@ public final class RuleGroupHeader extends io.pulumi.resources.InvokeArgs {
     @Import(name="destination", required=true)
       private final String destination;
 
-    public String getDestination() {
+    public String destination() {
         return this.destination;
     }
 
     @Import(name="destinationPort", required=true)
       private final String destinationPort;
 
-    public String getDestinationPort() {
+    public String destinationPort() {
         return this.destinationPort;
     }
 
     @Import(name="direction", required=true)
       private final RuleGroupHeaderDirection direction;
 
-    public RuleGroupHeaderDirection getDirection() {
+    public RuleGroupHeaderDirection direction() {
         return this.direction;
     }
 
     @Import(name="protocol", required=true)
       private final RuleGroupHeaderProtocol protocol;
 
-    public RuleGroupHeaderProtocol getProtocol() {
+    public RuleGroupHeaderProtocol protocol() {
         return this.protocol;
     }
 
     @Import(name="source", required=true)
       private final String source;
 
-    public String getSource() {
+    public String source() {
         return this.source;
     }
 
     @Import(name="sourcePort", required=true)
       private final String sourcePort;
 
-    public String getSourcePort() {
+    public String sourcePort() {
         return this.sourcePort;
     }
 

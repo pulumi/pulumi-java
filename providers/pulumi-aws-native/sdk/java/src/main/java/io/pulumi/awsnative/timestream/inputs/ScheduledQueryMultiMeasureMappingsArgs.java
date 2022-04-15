@@ -24,14 +24,14 @@ public final class ScheduledQueryMultiMeasureMappingsArgs extends io.pulumi.reso
     @Import(name="multiMeasureAttributeMappings", required=true)
       private final Output<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> multiMeasureAttributeMappings;
 
-    public Output<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> getMultiMeasureAttributeMappings() {
+    public Output<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> multiMeasureAttributeMappings() {
         return this.multiMeasureAttributeMappings;
     }
 
     @Import(name="targetMultiMeasureName")
       private final @Nullable Output<String> targetMultiMeasureName;
 
-    public Output<String> getTargetMultiMeasureName() {
+    public Output<String> targetMultiMeasureName() {
         return this.targetMultiMeasureName == null ? Codegen.empty() : this.targetMultiMeasureName;
     }
 

@@ -25,28 +25,28 @@ public final class BucketNotificationConfiguration extends io.pulumi.resources.I
     @Import(name="eventBridgeConfiguration")
       private final @Nullable BucketEventBridgeConfiguration eventBridgeConfiguration;
 
-    public Optional<BucketEventBridgeConfiguration> getEventBridgeConfiguration() {
+    public Optional<BucketEventBridgeConfiguration> eventBridgeConfiguration() {
         return this.eventBridgeConfiguration == null ? Optional.empty() : Optional.ofNullable(this.eventBridgeConfiguration);
     }
 
     @Import(name="lambdaConfigurations")
       private final @Nullable List<BucketLambdaConfiguration> lambdaConfigurations;
 
-    public List<BucketLambdaConfiguration> getLambdaConfigurations() {
+    public List<BucketLambdaConfiguration> lambdaConfigurations() {
         return this.lambdaConfigurations == null ? List.of() : this.lambdaConfigurations;
     }
 
     @Import(name="queueConfigurations")
       private final @Nullable List<BucketQueueConfiguration> queueConfigurations;
 
-    public List<BucketQueueConfiguration> getQueueConfigurations() {
+    public List<BucketQueueConfiguration> queueConfigurations() {
         return this.queueConfigurations == null ? List.of() : this.queueConfigurations;
     }
 
     @Import(name="topicConfigurations")
       private final @Nullable List<BucketTopicConfiguration> topicConfigurations;
 
-    public List<BucketTopicConfiguration> getTopicConfigurations() {
+    public List<BucketTopicConfiguration> topicConfigurations() {
         return this.topicConfigurations == null ? List.of() : this.topicConfigurations;
     }
 

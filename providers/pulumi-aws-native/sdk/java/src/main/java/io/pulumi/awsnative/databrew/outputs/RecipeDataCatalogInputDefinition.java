@@ -45,24 +45,24 @@ public final class RecipeDataCatalogInputDefinition {
      * Catalog id
      * 
     */
-    public Optional<String> getCatalogId() {
+    public Optional<String> catalogId() {
         return Optional.ofNullable(this.catalogId);
     }
     /**
      * Database name
      * 
     */
-    public Optional<String> getDatabaseName() {
+    public Optional<String> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
     /**
      * Table name
      * 
     */
-    public Optional<String> getTableName() {
+    public Optional<String> tableName() {
         return Optional.ofNullable(this.tableName);
     }
-    public Optional<RecipeS3Location> getTempDirectory() {
+    public Optional<RecipeS3Location> tempDirectory() {
         return Optional.ofNullable(this.tempDirectory);
     }
 

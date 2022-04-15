@@ -27,7 +27,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -41,7 +41,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return Frequency of data collection. This parameter is required for RELATED_TIME_SERIES
      * 
      */
-    public Output</* @Nullable */ String> getDataFrequency() {
+    public Output</* @Nullable */ String> dataFrequency() {
         return this.dataFrequency;
     }
     /**
@@ -55,7 +55,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return A name for the dataset
      * 
      */
-    public Output<String> getDatasetName() {
+    public Output<String> datasetName() {
         return this.datasetName;
     }
     /**
@@ -69,7 +69,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return The dataset type
      * 
      */
-    public Output<DatasetType> getDatasetType() {
+    public Output<DatasetType> datasetType() {
         return this.datasetType;
     }
     /**
@@ -83,25 +83,25 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return The domain associated with the dataset
      * 
      */
-    public Output<DatasetDomain> getDomain() {
+    public Output<DatasetDomain> domain() {
         return this.domain;
     }
     @Export(name="encryptionConfig", type=EncryptionConfigProperties.class, parameters={})
     private Output</* @Nullable */ EncryptionConfigProperties> encryptionConfig;
 
-    public Output</* @Nullable */ EncryptionConfigProperties> getEncryptionConfig() {
+    public Output</* @Nullable */ EncryptionConfigProperties> encryptionConfig() {
         return this.encryptionConfig;
     }
     @Export(name="schema", type=SchemaProperties.class, parameters={})
     private Output<SchemaProperties> schema;
 
-    public Output<SchemaProperties> getSchema() {
+    public Output<SchemaProperties> schema() {
         return this.schema;
     }
     @Export(name="tags", type=List.class, parameters={TagsItemProperties.class})
     private Output</* @Nullable */ List<TagsItemProperties>> tags;
 
-    public Output</* @Nullable */ List<TagsItemProperties>> getTags() {
+    public Output</* @Nullable */ List<TagsItemProperties>> tags() {
         return this.tags;
     }
 

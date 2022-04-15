@@ -30,16 +30,16 @@ public final class TaskDefinitionLoRaWANUpdateGatewayTaskCreate {
         this.updateVersion = updateVersion;
     }
 
-    public Optional<TaskDefinitionLoRaWANGatewayVersion> getCurrentVersion() {
+    public Optional<TaskDefinitionLoRaWANGatewayVersion> currentVersion() {
         return Optional.ofNullable(this.currentVersion);
     }
-    public Optional<Integer> getSigKeyCrc() {
+    public Optional<Integer> sigKeyCrc() {
         return Optional.ofNullable(this.sigKeyCrc);
     }
-    public Optional<String> getUpdateSignature() {
+    public Optional<String> updateSignature() {
         return Optional.ofNullable(this.updateSignature);
     }
-    public Optional<TaskDefinitionLoRaWANGatewayVersion> getUpdateVersion() {
+    public Optional<TaskDefinitionLoRaWANGatewayVersion> updateVersion() {
         return Optional.ofNullable(this.updateVersion);
     }
 

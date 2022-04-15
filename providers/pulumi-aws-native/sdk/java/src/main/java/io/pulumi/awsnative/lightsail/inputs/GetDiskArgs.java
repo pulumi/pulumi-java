@@ -19,7 +19,7 @@ public final class GetDiskArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="diskName", required=true)
       private final String diskName;
 
-    public String getDiskName() {
+    public String diskName() {
         return this.diskName;
     }
 

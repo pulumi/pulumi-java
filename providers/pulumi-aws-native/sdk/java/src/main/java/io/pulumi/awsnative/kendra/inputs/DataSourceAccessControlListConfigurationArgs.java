@@ -18,7 +18,7 @@ public final class DataSourceAccessControlListConfigurationArgs extends io.pulum
     @Import(name="keyPath")
       private final @Nullable Output<String> keyPath;
 
-    public Output<String> getKeyPath() {
+    public Output<String> keyPath() {
         return this.keyPath == null ? Codegen.empty() : this.keyPath;
     }
 

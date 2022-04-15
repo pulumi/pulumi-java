@@ -19,14 +19,14 @@ public final class BucketObjectLockConfigurationArgs extends io.pulumi.resources
     @Import(name="objectLockEnabled")
       private final @Nullable Output<String> objectLockEnabled;
 
-    public Output<String> getObjectLockEnabled() {
+    public Output<String> objectLockEnabled() {
         return this.objectLockEnabled == null ? Codegen.empty() : this.objectLockEnabled;
     }
 
     @Import(name="rule")
       private final @Nullable Output<BucketObjectLockRuleArgs> rule;
 
-    public Output<BucketObjectLockRuleArgs> getRule() {
+    public Output<BucketObjectLockRuleArgs> rule() {
         return this.rule == null ? Codegen.empty() : this.rule;
     }
 

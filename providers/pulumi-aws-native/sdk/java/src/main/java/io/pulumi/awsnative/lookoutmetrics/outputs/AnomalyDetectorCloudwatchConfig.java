@@ -16,7 +16,7 @@ public final class AnomalyDetectorCloudwatchConfig {
         this.roleArn = roleArn;
     }
 
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 

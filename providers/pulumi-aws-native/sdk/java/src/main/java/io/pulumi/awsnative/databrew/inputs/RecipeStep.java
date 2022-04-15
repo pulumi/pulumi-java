@@ -19,7 +19,7 @@ public final class RecipeStep extends io.pulumi.resources.InvokeArgs {
     @Import(name="action", required=true)
       private final RecipeAction action;
 
-    public RecipeAction getAction() {
+    public RecipeAction action() {
         return this.action;
     }
 
@@ -30,7 +30,7 @@ public final class RecipeStep extends io.pulumi.resources.InvokeArgs {
     @Import(name="conditionExpressions")
       private final @Nullable List<RecipeConditionExpression> conditionExpressions;
 
-    public List<RecipeConditionExpression> getConditionExpressions() {
+    public List<RecipeConditionExpression> conditionExpressions() {
         return this.conditionExpressions == null ? List.of() : this.conditionExpressions;
     }
 

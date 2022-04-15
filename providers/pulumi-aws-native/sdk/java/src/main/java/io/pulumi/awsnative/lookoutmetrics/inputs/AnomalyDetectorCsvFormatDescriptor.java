@@ -20,42 +20,42 @@ public final class AnomalyDetectorCsvFormatDescriptor extends io.pulumi.resource
     @Import(name="charset")
       private final @Nullable String charset;
 
-    public Optional<String> getCharset() {
+    public Optional<String> charset() {
         return this.charset == null ? Optional.empty() : Optional.ofNullable(this.charset);
     }
 
     @Import(name="containsHeader")
       private final @Nullable Boolean containsHeader;
 
-    public Optional<Boolean> getContainsHeader() {
+    public Optional<Boolean> containsHeader() {
         return this.containsHeader == null ? Optional.empty() : Optional.ofNullable(this.containsHeader);
     }
 
     @Import(name="delimiter")
       private final @Nullable String delimiter;
 
-    public Optional<String> getDelimiter() {
+    public Optional<String> delimiter() {
         return this.delimiter == null ? Optional.empty() : Optional.ofNullable(this.delimiter);
     }
 
     @Import(name="fileCompression")
       private final @Nullable AnomalyDetectorCsvFormatDescriptorFileCompression fileCompression;
 
-    public Optional<AnomalyDetectorCsvFormatDescriptorFileCompression> getFileCompression() {
+    public Optional<AnomalyDetectorCsvFormatDescriptorFileCompression> fileCompression() {
         return this.fileCompression == null ? Optional.empty() : Optional.ofNullable(this.fileCompression);
     }
 
     @Import(name="headerList")
       private final @Nullable List<String> headerList;
 
-    public List<String> getHeaderList() {
+    public List<String> headerList() {
         return this.headerList == null ? List.of() : this.headerList;
     }
 
     @Import(name="quoteSymbol")
       private final @Nullable String quoteSymbol;
 
-    public Optional<String> getQuoteSymbol() {
+    public Optional<String> quoteSymbol() {
         return this.quoteSymbol == null ? Optional.empty() : Optional.ofNullable(this.quoteSymbol);
     }
 

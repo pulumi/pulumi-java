@@ -31,112 +31,112 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="abortIncompleteMultipartUpload")
       private final @Nullable Output<BucketAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload;
 
-    public Output<BucketAbortIncompleteMultipartUploadArgs> getAbortIncompleteMultipartUpload() {
+    public Output<BucketAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload() {
         return this.abortIncompleteMultipartUpload == null ? Codegen.empty() : this.abortIncompleteMultipartUpload;
     }
 
     @Import(name="expirationDate")
       private final @Nullable Output<String> expirationDate;
 
-    public Output<String> getExpirationDate() {
+    public Output<String> expirationDate() {
         return this.expirationDate == null ? Codegen.empty() : this.expirationDate;
     }
 
     @Import(name="expirationInDays")
       private final @Nullable Output<Integer> expirationInDays;
 
-    public Output<Integer> getExpirationInDays() {
+    public Output<Integer> expirationInDays() {
         return this.expirationInDays == null ? Codegen.empty() : this.expirationInDays;
     }
 
     @Import(name="expiredObjectDeleteMarker")
       private final @Nullable Output<Boolean> expiredObjectDeleteMarker;
 
-    public Output<Boolean> getExpiredObjectDeleteMarker() {
+    public Output<Boolean> expiredObjectDeleteMarker() {
         return this.expiredObjectDeleteMarker == null ? Codegen.empty() : this.expiredObjectDeleteMarker;
     }
 
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
     @Import(name="noncurrentVersionExpiration")
       private final @Nullable Output<BucketNoncurrentVersionExpirationArgs> noncurrentVersionExpiration;
 
-    public Output<BucketNoncurrentVersionExpirationArgs> getNoncurrentVersionExpiration() {
+    public Output<BucketNoncurrentVersionExpirationArgs> noncurrentVersionExpiration() {
         return this.noncurrentVersionExpiration == null ? Codegen.empty() : this.noncurrentVersionExpiration;
     }
 
     @Import(name="noncurrentVersionExpirationInDays")
       private final @Nullable Output<Integer> noncurrentVersionExpirationInDays;
 
-    public Output<Integer> getNoncurrentVersionExpirationInDays() {
+    public Output<Integer> noncurrentVersionExpirationInDays() {
         return this.noncurrentVersionExpirationInDays == null ? Codegen.empty() : this.noncurrentVersionExpirationInDays;
     }
 
     @Import(name="noncurrentVersionTransition")
       private final @Nullable Output<BucketNoncurrentVersionTransitionArgs> noncurrentVersionTransition;
 
-    public Output<BucketNoncurrentVersionTransitionArgs> getNoncurrentVersionTransition() {
+    public Output<BucketNoncurrentVersionTransitionArgs> noncurrentVersionTransition() {
         return this.noncurrentVersionTransition == null ? Codegen.empty() : this.noncurrentVersionTransition;
     }
 
     @Import(name="noncurrentVersionTransitions")
       private final @Nullable Output<List<BucketNoncurrentVersionTransitionArgs>> noncurrentVersionTransitions;
 
-    public Output<List<BucketNoncurrentVersionTransitionArgs>> getNoncurrentVersionTransitions() {
+    public Output<List<BucketNoncurrentVersionTransitionArgs>> noncurrentVersionTransitions() {
         return this.noncurrentVersionTransitions == null ? Codegen.empty() : this.noncurrentVersionTransitions;
     }
 
     @Import(name="objectSizeGreaterThan")
       private final @Nullable Output<String> objectSizeGreaterThan;
 
-    public Output<String> getObjectSizeGreaterThan() {
+    public Output<String> objectSizeGreaterThan() {
         return this.objectSizeGreaterThan == null ? Codegen.empty() : this.objectSizeGreaterThan;
     }
 
     @Import(name="objectSizeLessThan")
       private final @Nullable Output<String> objectSizeLessThan;
 
-    public Output<String> getObjectSizeLessThan() {
+    public Output<String> objectSizeLessThan() {
         return this.objectSizeLessThan == null ? Codegen.empty() : this.objectSizeLessThan;
     }
 
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     @Import(name="status", required=true)
       private final Output<BucketRuleStatus> status;
 
-    public Output<BucketRuleStatus> getStatus() {
+    public Output<BucketRuleStatus> status() {
         return this.status;
     }
 
     @Import(name="tagFilters")
       private final @Nullable Output<List<BucketTagFilterArgs>> tagFilters;
 
-    public Output<List<BucketTagFilterArgs>> getTagFilters() {
+    public Output<List<BucketTagFilterArgs>> tagFilters() {
         return this.tagFilters == null ? Codegen.empty() : this.tagFilters;
     }
 
     @Import(name="transition")
       private final @Nullable Output<BucketTransitionArgs> transition;
 
-    public Output<BucketTransitionArgs> getTransition() {
+    public Output<BucketTransitionArgs> transition() {
         return this.transition == null ? Codegen.empty() : this.transition;
     }
 
     @Import(name="transitions")
       private final @Nullable Output<List<BucketTransitionArgs>> transitions;
 
-    public Output<List<BucketTransitionArgs>> getTransitions() {
+    public Output<List<BucketTransitionArgs>> transitions() {
         return this.transitions == null ? Codegen.empty() : this.transitions;
     }
 

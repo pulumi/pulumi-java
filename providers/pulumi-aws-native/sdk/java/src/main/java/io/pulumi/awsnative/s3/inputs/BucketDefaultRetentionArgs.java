@@ -23,21 +23,21 @@ public final class BucketDefaultRetentionArgs extends io.pulumi.resources.Resour
     @Import(name="days")
       private final @Nullable Output<Integer> days;
 
-    public Output<Integer> getDays() {
+    public Output<Integer> days() {
         return this.days == null ? Codegen.empty() : this.days;
     }
 
     @Import(name="mode")
       private final @Nullable Output<BucketDefaultRetentionMode> mode;
 
-    public Output<BucketDefaultRetentionMode> getMode() {
+    public Output<BucketDefaultRetentionMode> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     @Import(name="years")
       private final @Nullable Output<Integer> years;
 
-    public Output<Integer> getYears() {
+    public Output<Integer> years() {
         return this.years == null ? Codegen.empty() : this.years;
     }
 

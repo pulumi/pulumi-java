@@ -38,7 +38,7 @@ public class GameServerGroup extends io.pulumi.resources.CustomResource {
      * @return A generated unique ID for the EC2 Auto Scaling group that is associated with this game server group.
      * 
      */
-    public Output<String> getAutoScalingGroupArn() {
+    public Output<String> autoScalingGroupArn() {
         return this.autoScalingGroupArn;
     }
     /**
@@ -52,7 +52,7 @@ public class GameServerGroup extends io.pulumi.resources.CustomResource {
      * @return Configuration settings to define a scaling policy for the Auto Scaling group that is optimized for game hosting
      * 
      */
-    public Output</* @Nullable */ GameServerGroupAutoScalingPolicy> getAutoScalingPolicy() {
+    public Output</* @Nullable */ GameServerGroupAutoScalingPolicy> autoScalingPolicy() {
         return this.autoScalingPolicy;
     }
     /**
@@ -66,7 +66,7 @@ public class GameServerGroup extends io.pulumi.resources.CustomResource {
      * @return The fallback balancing method to use for the game server group when Spot Instances in a Region become unavailable or are not viable for game hosting.
      * 
      */
-    public Output</* @Nullable */ GameServerGroupBalancingStrategy> getBalancingStrategy() {
+    public Output</* @Nullable */ GameServerGroupBalancingStrategy> balancingStrategy() {
         return this.balancingStrategy;
     }
     /**
@@ -80,7 +80,7 @@ public class GameServerGroup extends io.pulumi.resources.CustomResource {
      * @return The type of delete to perform.
      * 
      */
-    public Output</* @Nullable */ GameServerGroupDeleteOption> getDeleteOption() {
+    public Output</* @Nullable */ GameServerGroupDeleteOption> deleteOption() {
         return this.deleteOption;
     }
     /**
@@ -94,7 +94,7 @@ public class GameServerGroup extends io.pulumi.resources.CustomResource {
      * @return A generated unique ID for the game server group.
      * 
      */
-    public Output<String> getGameServerGroupArn() {
+    public Output<String> gameServerGroupArn() {
         return this.gameServerGroupArn;
     }
     /**
@@ -108,7 +108,7 @@ public class GameServerGroup extends io.pulumi.resources.CustomResource {
      * @return An identifier for the new game server group.
      * 
      */
-    public Output<String> getGameServerGroupName() {
+    public Output<String> gameServerGroupName() {
         return this.gameServerGroupName;
     }
     /**
@@ -122,7 +122,7 @@ public class GameServerGroup extends io.pulumi.resources.CustomResource {
      * @return A flag that indicates whether instances in the game server group are protected from early termination.
      * 
      */
-    public Output</* @Nullable */ GameServerGroupGameServerProtectionPolicy> getGameServerProtectionPolicy() {
+    public Output</* @Nullable */ GameServerGroupGameServerProtectionPolicy> gameServerProtectionPolicy() {
         return this.gameServerProtectionPolicy;
     }
     /**
@@ -136,7 +136,7 @@ public class GameServerGroup extends io.pulumi.resources.CustomResource {
      * @return A set of EC2 instance types to use when creating instances in the group.
      * 
      */
-    public Output<List<GameServerGroupInstanceDefinition>> getInstanceDefinitions() {
+    public Output<List<GameServerGroupInstanceDefinition>> instanceDefinitions() {
         return this.instanceDefinitions;
     }
     /**
@@ -150,7 +150,7 @@ public class GameServerGroup extends io.pulumi.resources.CustomResource {
      * @return The EC2 launch template that contains configuration settings and game server code to be deployed to all instances in the game server group.
      * 
      */
-    public Output<GameServerGroupLaunchTemplate> getLaunchTemplate() {
+    public Output<GameServerGroupLaunchTemplate> launchTemplate() {
         return this.launchTemplate;
     }
     /**
@@ -164,7 +164,7 @@ public class GameServerGroup extends io.pulumi.resources.CustomResource {
      * @return The maximum number of instances allowed in the EC2 Auto Scaling group.
      * 
      */
-    public Output</* @Nullable */ Double> getMaxSize() {
+    public Output</* @Nullable */ Double> maxSize() {
         return this.maxSize;
     }
     /**
@@ -178,7 +178,7 @@ public class GameServerGroup extends io.pulumi.resources.CustomResource {
      * @return The minimum number of instances allowed in the EC2 Auto Scaling group.
      * 
      */
-    public Output</* @Nullable */ Double> getMinSize() {
+    public Output</* @Nullable */ Double> minSize() {
         return this.minSize;
     }
     /**
@@ -192,7 +192,7 @@ public class GameServerGroup extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for an IAM role that allows Amazon GameLift to access your EC2 Auto Scaling groups.
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     /**
@@ -206,7 +206,7 @@ public class GameServerGroup extends io.pulumi.resources.CustomResource {
      * @return A list of labels to assign to the new game server group resource.
      * 
      */
-    public Output</* @Nullable */ List<GameServerGroupTag>> getTags() {
+    public Output</* @Nullable */ List<GameServerGroupTag>> tags() {
         return this.tags;
     }
     /**
@@ -220,7 +220,7 @@ public class GameServerGroup extends io.pulumi.resources.CustomResource {
      * @return A list of virtual private cloud (VPC) subnets to use with instances in the game server group.
      * 
      */
-    public Output</* @Nullable */ List<String>> getVpcSubnets() {
+    public Output</* @Nullable */ List<String>> vpcSubnets() {
         return this.vpcSubnets;
     }
 

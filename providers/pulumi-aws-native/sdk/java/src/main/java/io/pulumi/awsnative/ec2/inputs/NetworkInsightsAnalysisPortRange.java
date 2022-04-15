@@ -17,14 +17,14 @@ public final class NetworkInsightsAnalysisPortRange extends io.pulumi.resources.
     @Import(name="from")
       private final @Nullable Integer from;
 
-    public Optional<Integer> getFrom() {
+    public Optional<Integer> from() {
         return this.from == null ? Optional.empty() : Optional.ofNullable(this.from);
     }
 
     @Import(name="to")
       private final @Nullable Integer to;
 
-    public Optional<Integer> getTo() {
+    public Optional<Integer> to() {
         return this.to == null ? Optional.empty() : Optional.ofNullable(this.to);
     }
 

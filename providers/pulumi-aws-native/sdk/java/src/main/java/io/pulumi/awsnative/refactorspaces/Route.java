@@ -25,43 +25,43 @@ public class Route extends io.pulumi.resources.CustomResource {
     @Export(name="applicationIdentifier", type=String.class, parameters={})
     private Output<String> applicationIdentifier;
 
-    public Output<String> getApplicationIdentifier() {
+    public Output<String> applicationIdentifier() {
         return this.applicationIdentifier;
     }
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="environmentIdentifier", type=String.class, parameters={})
     private Output<String> environmentIdentifier;
 
-    public Output<String> getEnvironmentIdentifier() {
+    public Output<String> environmentIdentifier() {
         return this.environmentIdentifier;
     }
     @Export(name="pathResourceToId", type=String.class, parameters={})
     private Output<String> pathResourceToId;
 
-    public Output<String> getPathResourceToId() {
+    public Output<String> pathResourceToId() {
         return this.pathResourceToId;
     }
     @Export(name="routeIdentifier", type=String.class, parameters={})
     private Output<String> routeIdentifier;
 
-    public Output<String> getRouteIdentifier() {
+    public Output<String> routeIdentifier() {
         return this.routeIdentifier;
     }
     @Export(name="routeType", type=RouteType.class, parameters={})
     private Output</* @Nullable */ RouteType> routeType;
 
-    public Output</* @Nullable */ RouteType> getRouteType() {
+    public Output</* @Nullable */ RouteType> routeType() {
         return this.routeType;
     }
     @Export(name="serviceIdentifier", type=String.class, parameters={})
     private Output<String> serviceIdentifier;
 
-    public Output<String> getServiceIdentifier() {
+    public Output<String> serviceIdentifier() {
         return this.serviceIdentifier;
     }
     /**
@@ -75,13 +75,13 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
      * 
      */
-    public Output</* @Nullable */ List<RouteTag>> getTags() {
+    public Output</* @Nullable */ List<RouteTag>> tags() {
         return this.tags;
     }
     @Export(name="uriPathRoute", type=RouteUriPathRouteInput.class, parameters={})
     private Output</* @Nullable */ RouteUriPathRouteInput> uriPathRoute;
 
-    public Output</* @Nullable */ RouteUriPathRouteInput> getUriPathRoute() {
+    public Output</* @Nullable */ RouteUriPathRouteInput> uriPathRoute() {
         return this.uriPathRoute;
     }
 

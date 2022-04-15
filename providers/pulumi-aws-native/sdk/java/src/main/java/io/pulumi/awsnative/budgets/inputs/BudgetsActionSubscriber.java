@@ -16,14 +16,14 @@ public final class BudgetsActionSubscriber extends io.pulumi.resources.InvokeArg
     @Import(name="address", required=true)
       private final String address;
 
-    public String getAddress() {
+    public String address() {
         return this.address;
     }
 
     @Import(name="type", required=true)
       private final BudgetsActionSubscriberType type;
 
-    public BudgetsActionSubscriberType getType() {
+    public BudgetsActionSubscriberType type() {
         return this.type;
     }
 

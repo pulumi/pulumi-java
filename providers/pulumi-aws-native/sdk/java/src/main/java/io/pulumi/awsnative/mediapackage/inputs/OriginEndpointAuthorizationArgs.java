@@ -25,7 +25,7 @@ public final class OriginEndpointAuthorizationArgs extends io.pulumi.resources.R
     @Import(name="cdnIdentifierSecret", required=true)
       private final Output<String> cdnIdentifierSecret;
 
-    public Output<String> getCdnIdentifierSecret() {
+    public Output<String> cdnIdentifierSecret() {
         return this.cdnIdentifierSecret;
     }
 
@@ -36,7 +36,7 @@ public final class OriginEndpointAuthorizationArgs extends io.pulumi.resources.R
     @Import(name="secretsRoleArn", required=true)
       private final Output<String> secretsRoleArn;
 
-    public Output<String> getSecretsRoleArn() {
+    public Output<String> secretsRoleArn() {
         return this.secretsRoleArn;
     }
 

@@ -21,7 +21,7 @@ public final class IPAMArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -32,7 +32,7 @@ public final class IPAMArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operatingRegions")
       private final @Nullable Output<List<IPAMIpamOperatingRegionArgs>> operatingRegions;
 
-    public Output<List<IPAMIpamOperatingRegionArgs>> getOperatingRegions() {
+    public Output<List<IPAMIpamOperatingRegionArgs>> operatingRegions() {
         return this.operatingRegions == null ? Codegen.empty() : this.operatingRegions;
     }
 
@@ -43,7 +43,7 @@ public final class IPAMArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<IPAMTagArgs>> tags;
 
-    public Output<List<IPAMTagArgs>> getTags() {
+    public Output<List<IPAMTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -22,7 +22,7 @@ public final class BucketStorageClassAnalysisArgs extends io.pulumi.resources.Re
     @Import(name="dataExport")
       private final @Nullable Output<BucketDataExportArgs> dataExport;
 
-    public Output<BucketDataExportArgs> getDataExport() {
+    public Output<BucketDataExportArgs> dataExport() {
         return this.dataExport == null ? Codegen.empty() : this.dataExport;
     }
 

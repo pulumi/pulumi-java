@@ -19,14 +19,14 @@ public final class DistributionCookiesArgs extends io.pulumi.resources.ResourceA
     @Import(name="forward", required=true)
       private final Output<String> forward;
 
-    public Output<String> getForward() {
+    public Output<String> forward() {
         return this.forward;
     }
 
     @Import(name="whitelistedNames")
       private final @Nullable Output<List<String>> whitelistedNames;
 
-    public Output<List<String>> getWhitelistedNames() {
+    public Output<List<String>> whitelistedNames() {
         return this.whitelistedNames == null ? Codegen.empty() : this.whitelistedNames;
     }
 

@@ -19,28 +19,28 @@ public final class ResponseHeadersPolicyStrictTransportSecurityArgs extends io.p
     @Import(name="accessControlMaxAgeSec", required=true)
       private final Output<Integer> accessControlMaxAgeSec;
 
-    public Output<Integer> getAccessControlMaxAgeSec() {
+    public Output<Integer> accessControlMaxAgeSec() {
         return this.accessControlMaxAgeSec;
     }
 
     @Import(name="includeSubdomains")
       private final @Nullable Output<Boolean> includeSubdomains;
 
-    public Output<Boolean> getIncludeSubdomains() {
+    public Output<Boolean> includeSubdomains() {
         return this.includeSubdomains == null ? Codegen.empty() : this.includeSubdomains;
     }
 
     @Import(name="override", required=true)
       private final Output<Boolean> override;
 
-    public Output<Boolean> getOverride() {
+    public Output<Boolean> override() {
         return this.override;
     }
 
     @Import(name="preload")
       private final @Nullable Output<Boolean> preload;
 
-    public Output<Boolean> getPreload() {
+    public Output<Boolean> preload() {
         return this.preload == null ? Codegen.empty() : this.preload;
     }
 

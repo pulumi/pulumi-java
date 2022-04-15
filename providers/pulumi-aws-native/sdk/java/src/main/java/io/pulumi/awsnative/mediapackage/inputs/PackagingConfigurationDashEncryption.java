@@ -19,7 +19,7 @@ public final class PackagingConfigurationDashEncryption extends io.pulumi.resour
     @Import(name="spekeKeyProvider", required=true)
       private final PackagingConfigurationSpekeKeyProvider spekeKeyProvider;
 
-    public PackagingConfigurationSpekeKeyProvider getSpekeKeyProvider() {
+    public PackagingConfigurationSpekeKeyProvider spekeKeyProvider() {
         return this.spekeKeyProvider;
     }
 

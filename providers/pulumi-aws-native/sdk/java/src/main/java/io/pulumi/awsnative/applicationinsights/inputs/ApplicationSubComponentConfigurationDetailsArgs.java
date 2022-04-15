@@ -29,7 +29,7 @@ public final class ApplicationSubComponentConfigurationDetailsArgs extends io.pu
     @Import(name="alarmMetrics")
       private final @Nullable Output<List<ApplicationAlarmMetricArgs>> alarmMetrics;
 
-    public Output<List<ApplicationAlarmMetricArgs>> getAlarmMetrics() {
+    public Output<List<ApplicationAlarmMetricArgs>> alarmMetrics() {
         return this.alarmMetrics == null ? Codegen.empty() : this.alarmMetrics;
     }
 
@@ -40,7 +40,7 @@ public final class ApplicationSubComponentConfigurationDetailsArgs extends io.pu
     @Import(name="logs")
       private final @Nullable Output<List<ApplicationLogArgs>> logs;
 
-    public Output<List<ApplicationLogArgs>> getLogs() {
+    public Output<List<ApplicationLogArgs>> logs() {
         return this.logs == null ? Codegen.empty() : this.logs;
     }
 
@@ -51,7 +51,7 @@ public final class ApplicationSubComponentConfigurationDetailsArgs extends io.pu
     @Import(name="windowsEvents")
       private final @Nullable Output<List<ApplicationWindowsEventArgs>> windowsEvents;
 
-    public Output<List<ApplicationWindowsEventArgs>> getWindowsEvents() {
+    public Output<List<ApplicationWindowsEventArgs>> windowsEvents() {
         return this.windowsEvents == null ? Codegen.empty() : this.windowsEvents;
     }
 

@@ -41,21 +41,21 @@ public final class OptionsProperties {
      * Indicates whether to enable Ipv6 Support for Vpc Attachment. Valid Values: enable | disable
      * 
     */
-    public Optional<String> getApplianceModeSupport() {
+    public Optional<String> applianceModeSupport() {
         return Optional.ofNullable(this.applianceModeSupport);
     }
     /**
      * Indicates whether to enable DNS Support for Vpc Attachment. Valid Values: enable | disable
      * 
     */
-    public Optional<String> getDnsSupport() {
+    public Optional<String> dnsSupport() {
         return Optional.ofNullable(this.dnsSupport);
     }
     /**
      * Indicates whether to enable Ipv6 Support for Vpc Attachment. Valid Values: enable | disable
      * 
     */
-    public Optional<String> getIpv6Support() {
+    public Optional<String> ipv6Support() {
         return Optional.ofNullable(this.ipv6Support);
     }
 

@@ -26,7 +26,7 @@ public final class ApplicationCustomComponentArgs extends io.pulumi.resources.Re
     @Import(name="componentName", required=true)
       private final Output<String> componentName;
 
-    public Output<String> getComponentName() {
+    public Output<String> componentName() {
         return this.componentName;
     }
 
@@ -37,7 +37,7 @@ public final class ApplicationCustomComponentArgs extends io.pulumi.resources.Re
     @Import(name="resourceList", required=true)
       private final Output<List<String>> resourceList;
 
-    public Output<List<String>> getResourceList() {
+    public Output<List<String>> resourceList() {
         return this.resourceList;
     }
 

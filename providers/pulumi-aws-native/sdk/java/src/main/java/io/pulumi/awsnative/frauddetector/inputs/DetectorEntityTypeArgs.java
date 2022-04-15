@@ -21,7 +21,7 @@ public final class DetectorEntityTypeArgs extends io.pulumi.resources.ResourceAr
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -32,7 +32,7 @@ public final class DetectorEntityTypeArgs extends io.pulumi.resources.ResourceAr
     @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime == null ? Codegen.empty() : this.createdTime;
     }
 
@@ -43,14 +43,14 @@ public final class DetectorEntityTypeArgs extends io.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="inline")
       private final @Nullable Output<Boolean> inline;
 
-    public Output<Boolean> getInline() {
+    public Output<Boolean> inline() {
         return this.inline == null ? Codegen.empty() : this.inline;
     }
 
@@ -61,14 +61,14 @@ public final class DetectorEntityTypeArgs extends io.pulumi.resources.ResourceAr
     @Import(name="lastUpdatedTime")
       private final @Nullable Output<String> lastUpdatedTime;
 
-    public Output<String> getLastUpdatedTime() {
+    public Output<String> lastUpdatedTime() {
         return this.lastUpdatedTime == null ? Codegen.empty() : this.lastUpdatedTime;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -79,7 +79,7 @@ public final class DetectorEntityTypeArgs extends io.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<List<DetectorTagArgs>> tags;
 
-    public Output<List<DetectorTagArgs>> getTags() {
+    public Output<List<DetectorTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

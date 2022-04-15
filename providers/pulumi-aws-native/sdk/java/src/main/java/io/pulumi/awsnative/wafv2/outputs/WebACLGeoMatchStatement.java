@@ -24,10 +24,10 @@ public final class WebACLGeoMatchStatement {
         this.forwardedIPConfig = forwardedIPConfig;
     }
 
-    public List<String> getCountryCodes() {
+    public List<String> countryCodes() {
         return this.countryCodes == null ? List.of() : this.countryCodes;
     }
-    public Optional<WebACLForwardedIPConfiguration> getForwardedIPConfig() {
+    public Optional<WebACLForwardedIPConfiguration> forwardedIPConfig() {
         return Optional.ofNullable(this.forwardedIPConfig);
     }
 

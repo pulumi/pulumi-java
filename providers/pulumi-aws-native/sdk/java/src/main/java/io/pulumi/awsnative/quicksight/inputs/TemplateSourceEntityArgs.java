@@ -23,14 +23,14 @@ public final class TemplateSourceEntityArgs extends io.pulumi.resources.Resource
     @Import(name="sourceAnalysis")
       private final @Nullable Output<TemplateSourceAnalysisArgs> sourceAnalysis;
 
-    public Output<TemplateSourceAnalysisArgs> getSourceAnalysis() {
+    public Output<TemplateSourceAnalysisArgs> sourceAnalysis() {
         return this.sourceAnalysis == null ? Codegen.empty() : this.sourceAnalysis;
     }
 
     @Import(name="sourceTemplate")
       private final @Nullable Output<TemplateSourceTemplateArgs> sourceTemplate;
 
-    public Output<TemplateSourceTemplateArgs> getSourceTemplate() {
+    public Output<TemplateSourceTemplateArgs> sourceTemplate() {
         return this.sourceTemplate == null ? Codegen.empty() : this.sourceTemplate;
     }
 

@@ -18,7 +18,7 @@ public final class DatastoreIotSiteWiseMultiLayerStorage {
         this.customerManagedS3Storage = customerManagedS3Storage;
     }
 
-    public Optional<DatastoreCustomerManagedS3Storage> getCustomerManagedS3Storage() {
+    public Optional<DatastoreCustomerManagedS3Storage> customerManagedS3Storage() {
         return Optional.ofNullable(this.customerManagedS3Storage);
     }
 

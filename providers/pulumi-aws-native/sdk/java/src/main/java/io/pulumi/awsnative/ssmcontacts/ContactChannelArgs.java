@@ -24,7 +24,7 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="channelAddress")
       private final @Nullable Output<String> channelAddress;
 
-    public Output<String> getChannelAddress() {
+    public Output<String> channelAddress() {
         return this.channelAddress == null ? Codegen.empty() : this.channelAddress;
     }
 
@@ -35,7 +35,7 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="channelName")
       private final @Nullable Output<String> channelName;
 
-    public Output<String> getChannelName() {
+    public Output<String> channelName() {
         return this.channelName == null ? Codegen.empty() : this.channelName;
     }
 
@@ -46,7 +46,7 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="channelType")
       private final @Nullable Output<ContactChannelChannelType> channelType;
 
-    public Output<ContactChannelChannelType> getChannelType() {
+    public Output<ContactChannelChannelType> channelType() {
         return this.channelType == null ? Codegen.empty() : this.channelType;
     }
 
@@ -57,7 +57,7 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contactId")
       private final @Nullable Output<String> contactId;
 
-    public Output<String> getContactId() {
+    public Output<String> contactId() {
         return this.contactId == null ? Codegen.empty() : this.contactId;
     }
 
@@ -68,7 +68,7 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deferActivation")
       private final @Nullable Output<Boolean> deferActivation;
 
-    public Output<Boolean> getDeferActivation() {
+    public Output<Boolean> deferActivation() {
         return this.deferActivation == null ? Codegen.empty() : this.deferActivation;
     }
 

@@ -20,7 +20,7 @@ public final class IPAMScopeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -31,7 +31,7 @@ public final class IPAMScopeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipamId", required=true)
       private final Output<String> ipamId;
 
-    public Output<String> getIpamId() {
+    public Output<String> ipamId() {
         return this.ipamId;
     }
 
@@ -42,7 +42,7 @@ public final class IPAMScopeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<IPAMScopeTagArgs>> tags;
 
-    public Output<List<IPAMScopeTagArgs>> getTags() {
+    public Output<List<IPAMScopeTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

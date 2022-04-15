@@ -24,7 +24,7 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="actionsEnabled")
       private final @Nullable Output<Boolean> actionsEnabled;
 
-    public Output<Boolean> getActionsEnabled() {
+    public Output<Boolean> actionsEnabled() {
         return this.actionsEnabled == null ? Codegen.empty() : this.actionsEnabled;
     }
 
@@ -35,7 +35,7 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alarmActions")
       private final @Nullable Output<List<String>> alarmActions;
 
-    public Output<List<String>> getAlarmActions() {
+    public Output<List<String>> alarmActions() {
         return this.alarmActions == null ? Codegen.empty() : this.alarmActions;
     }
 
@@ -46,7 +46,7 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alarmDescription")
       private final @Nullable Output<String> alarmDescription;
 
-    public Output<String> getAlarmDescription() {
+    public Output<String> alarmDescription() {
         return this.alarmDescription == null ? Codegen.empty() : this.alarmDescription;
     }
 
@@ -57,7 +57,7 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alarmName", required=true)
       private final Output<String> alarmName;
 
-    public Output<String> getAlarmName() {
+    public Output<String> alarmName() {
         return this.alarmName;
     }
 
@@ -68,7 +68,7 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alarmRule", required=true)
       private final Output<String> alarmRule;
 
-    public Output<String> getAlarmRule() {
+    public Output<String> alarmRule() {
         return this.alarmRule;
     }
 
@@ -79,7 +79,7 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="insufficientDataActions")
       private final @Nullable Output<List<String>> insufficientDataActions;
 
-    public Output<List<String>> getInsufficientDataActions() {
+    public Output<List<String>> insufficientDataActions() {
         return this.insufficientDataActions == null ? Codegen.empty() : this.insufficientDataActions;
     }
 
@@ -90,7 +90,7 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="oKActions")
       private final @Nullable Output<List<String>> oKActions;
 
-    public Output<List<String>> getOKActions() {
+    public Output<List<String>> oKActions() {
         return this.oKActions == null ? Codegen.empty() : this.oKActions;
     }
 

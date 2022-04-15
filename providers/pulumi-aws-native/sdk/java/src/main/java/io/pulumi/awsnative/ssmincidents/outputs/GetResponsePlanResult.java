@@ -66,41 +66,41 @@ public final class GetResponsePlanResult {
      * The list of actions.
      * 
     */
-    public List<ResponsePlanAction> getActions() {
+    public List<ResponsePlanAction> actions() {
         return this.actions == null ? List.of() : this.actions;
     }
     /**
      * The ARN of the response plan.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<ResponsePlanChatChannel> getChatChannel() {
+    public Optional<ResponsePlanChatChannel> chatChannel() {
         return Optional.ofNullable(this.chatChannel);
     }
     /**
      * The display name of the response plan.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The list of engagements to use.
      * 
     */
-    public List<String> getEngagements() {
+    public List<String> engagements() {
         return this.engagements == null ? List.of() : this.engagements;
     }
-    public Optional<ResponsePlanIncidentTemplate> getIncidentTemplate() {
+    public Optional<ResponsePlanIncidentTemplate> incidentTemplate() {
         return Optional.ofNullable(this.incidentTemplate);
     }
     /**
      * The tags to apply to the response plan.
      * 
     */
-    public List<ResponsePlanTag> getTags() {
+    public List<ResponsePlanTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

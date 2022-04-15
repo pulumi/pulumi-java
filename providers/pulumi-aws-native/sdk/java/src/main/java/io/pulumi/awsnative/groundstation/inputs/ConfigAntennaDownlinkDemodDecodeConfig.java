@@ -19,21 +19,21 @@ public final class ConfigAntennaDownlinkDemodDecodeConfig extends io.pulumi.reso
     @Import(name="decodeConfig")
       private final @Nullable ConfigDecodeConfig decodeConfig;
 
-    public Optional<ConfigDecodeConfig> getDecodeConfig() {
+    public Optional<ConfigDecodeConfig> decodeConfig() {
         return this.decodeConfig == null ? Optional.empty() : Optional.ofNullable(this.decodeConfig);
     }
 
     @Import(name="demodulationConfig")
       private final @Nullable ConfigDemodulationConfig demodulationConfig;
 
-    public Optional<ConfigDemodulationConfig> getDemodulationConfig() {
+    public Optional<ConfigDemodulationConfig> demodulationConfig() {
         return this.demodulationConfig == null ? Optional.empty() : Optional.ofNullable(this.demodulationConfig);
     }
 
     @Import(name="spectrumConfig")
       private final @Nullable ConfigSpectrumConfig spectrumConfig;
 
-    public Optional<ConfigSpectrumConfig> getSpectrumConfig() {
+    public Optional<ConfigSpectrumConfig> spectrumConfig() {
         return this.spectrumConfig == null ? Optional.empty() : Optional.ofNullable(this.spectrumConfig);
     }
 

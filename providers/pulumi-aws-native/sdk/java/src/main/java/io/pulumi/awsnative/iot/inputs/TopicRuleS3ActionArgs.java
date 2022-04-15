@@ -19,28 +19,28 @@ public final class TopicRuleS3ActionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
     @Import(name="cannedAcl")
       private final @Nullable Output<TopicRuleCannedAccessControlList> cannedAcl;
 
-    public Output<TopicRuleCannedAccessControlList> getCannedAcl() {
+    public Output<TopicRuleCannedAccessControlList> cannedAcl() {
         return this.cannedAcl == null ? Codegen.empty() : this.cannedAcl;
     }
 
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 

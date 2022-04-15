@@ -20,10 +20,10 @@ public final class IndexCapacityUnitsConfiguration {
         this.storageCapacityUnits = storageCapacityUnits;
     }
 
-    public Integer getQueryCapacityUnits() {
+    public Integer queryCapacityUnits() {
         return this.queryCapacityUnits;
     }
-    public Integer getStorageCapacityUnits() {
+    public Integer storageCapacityUnits() {
         return this.storageCapacityUnits;
     }
 

@@ -21,28 +21,28 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="overrides")
       private final @Nullable Output<List<ThemeValuesArgs>> overrides;
 
-    public Output<List<ThemeValuesArgs>> getOverrides() {
+    public Output<List<ThemeValuesArgs>> overrides() {
         return this.overrides == null ? Codegen.empty() : this.overrides;
     }
 
     @Import(name="tags")
       private final @Nullable Output<ThemeTagsArgs> tags;
 
-    public Output<ThemeTagsArgs> getTags() {
+    public Output<ThemeTagsArgs> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="values", required=true)
       private final Output<List<ThemeValuesArgs>> values;
 
-    public Output<List<ThemeValuesArgs>> getValues() {
+    public Output<List<ThemeValuesArgs>> values() {
         return this.values;
     }
 

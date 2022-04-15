@@ -16,7 +16,7 @@ public final class JobS3TableOutputOptions {
         this.location = location;
     }
 
-    public JobS3Location getLocation() {
+    public JobS3Location location() {
         return this.location;
     }
 

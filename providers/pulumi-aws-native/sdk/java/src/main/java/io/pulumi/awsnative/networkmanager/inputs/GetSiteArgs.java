@@ -19,7 +19,7 @@ public final class GetSiteArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="globalNetworkId", required=true)
       private final String globalNetworkId;
 
-    public String getGlobalNetworkId() {
+    public String globalNetworkId() {
         return this.globalNetworkId;
     }
 
@@ -30,7 +30,7 @@ public final class GetSiteArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="siteId", required=true)
       private final String siteId;
 
-    public String getSiteId() {
+    public String siteId() {
         return this.siteId;
     }
 

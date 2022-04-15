@@ -27,7 +27,7 @@ public final class ContainerServiceDeployment extends io.pulumi.resources.Invoke
     @Import(name="containers")
       private final @Nullable List<Container> containers;
 
-    public List<Container> getContainers() {
+    public List<Container> containers() {
         return this.containers == null ? List.of() : this.containers;
     }
 
@@ -38,7 +38,7 @@ public final class ContainerServiceDeployment extends io.pulumi.resources.Invoke
     @Import(name="publicEndpoint")
       private final @Nullable ContainerPublicEndpoint publicEndpoint;
 
-    public Optional<ContainerPublicEndpoint> getPublicEndpoint() {
+    public Optional<ContainerPublicEndpoint> publicEndpoint() {
         return this.publicEndpoint == null ? Optional.empty() : Optional.ofNullable(this.publicEndpoint);
     }
 

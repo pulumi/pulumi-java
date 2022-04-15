@@ -43,28 +43,28 @@ public final class CertificateAuthorityGeneralName {
         this.uniformResourceIdentifier = uniformResourceIdentifier;
     }
 
-    public Optional<CertificateAuthoritySubject> getDirectoryName() {
+    public Optional<CertificateAuthoritySubject> directoryName() {
         return Optional.ofNullable(this.directoryName);
     }
-    public Optional<String> getDnsName() {
+    public Optional<String> dnsName() {
         return Optional.ofNullable(this.dnsName);
     }
-    public Optional<CertificateAuthorityEdiPartyName> getEdiPartyName() {
+    public Optional<CertificateAuthorityEdiPartyName> ediPartyName() {
         return Optional.ofNullable(this.ediPartyName);
     }
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
-    public Optional<CertificateAuthorityOtherName> getOtherName() {
+    public Optional<CertificateAuthorityOtherName> otherName() {
         return Optional.ofNullable(this.otherName);
     }
-    public Optional<String> getRegisteredId() {
+    public Optional<String> registeredId() {
         return Optional.ofNullable(this.registeredId);
     }
-    public Optional<String> getRfc822Name() {
+    public Optional<String> rfc822Name() {
         return Optional.ofNullable(this.rfc822Name);
     }
-    public Optional<String> getUniformResourceIdentifier() {
+    public Optional<String> uniformResourceIdentifier() {
         return Optional.ofNullable(this.uniformResourceIdentifier);
     }
 

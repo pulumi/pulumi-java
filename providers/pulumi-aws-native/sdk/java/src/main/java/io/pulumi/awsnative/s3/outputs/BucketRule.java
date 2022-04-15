@@ -73,52 +73,52 @@ public final class BucketRule {
         this.transitions = transitions;
     }
 
-    public Optional<BucketAbortIncompleteMultipartUpload> getAbortIncompleteMultipartUpload() {
+    public Optional<BucketAbortIncompleteMultipartUpload> abortIncompleteMultipartUpload() {
         return Optional.ofNullable(this.abortIncompleteMultipartUpload);
     }
-    public Optional<String> getExpirationDate() {
+    public Optional<String> expirationDate() {
         return Optional.ofNullable(this.expirationDate);
     }
-    public Optional<Integer> getExpirationInDays() {
+    public Optional<Integer> expirationInDays() {
         return Optional.ofNullable(this.expirationInDays);
     }
-    public Optional<Boolean> getExpiredObjectDeleteMarker() {
+    public Optional<Boolean> expiredObjectDeleteMarker() {
         return Optional.ofNullable(this.expiredObjectDeleteMarker);
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<BucketNoncurrentVersionExpiration> getNoncurrentVersionExpiration() {
+    public Optional<BucketNoncurrentVersionExpiration> noncurrentVersionExpiration() {
         return Optional.ofNullable(this.noncurrentVersionExpiration);
     }
-    public Optional<Integer> getNoncurrentVersionExpirationInDays() {
+    public Optional<Integer> noncurrentVersionExpirationInDays() {
         return Optional.ofNullable(this.noncurrentVersionExpirationInDays);
     }
-    public Optional<BucketNoncurrentVersionTransition> getNoncurrentVersionTransition() {
+    public Optional<BucketNoncurrentVersionTransition> noncurrentVersionTransition() {
         return Optional.ofNullable(this.noncurrentVersionTransition);
     }
-    public List<BucketNoncurrentVersionTransition> getNoncurrentVersionTransitions() {
+    public List<BucketNoncurrentVersionTransition> noncurrentVersionTransitions() {
         return this.noncurrentVersionTransitions == null ? List.of() : this.noncurrentVersionTransitions;
     }
-    public Optional<String> getObjectSizeGreaterThan() {
+    public Optional<String> objectSizeGreaterThan() {
         return Optional.ofNullable(this.objectSizeGreaterThan);
     }
-    public Optional<String> getObjectSizeLessThan() {
+    public Optional<String> objectSizeLessThan() {
         return Optional.ofNullable(this.objectSizeLessThan);
     }
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
-    public BucketRuleStatus getStatus() {
+    public BucketRuleStatus status() {
         return this.status;
     }
-    public List<BucketTagFilter> getTagFilters() {
+    public List<BucketTagFilter> tagFilters() {
         return this.tagFilters == null ? List.of() : this.tagFilters;
     }
-    public Optional<BucketTransition> getTransition() {
+    public Optional<BucketTransition> transition() {
         return Optional.ofNullable(this.transition);
     }
-    public List<BucketTransition> getTransitions() {
+    public List<BucketTransition> transitions() {
         return this.transitions == null ? List.of() : this.transitions;
     }
 

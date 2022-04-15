@@ -18,14 +18,14 @@ public final class FilterPortRangeFilterArgs extends io.pulumi.resources.Resourc
     @Import(name="beginInclusive")
       private final @Nullable Output<Integer> beginInclusive;
 
-    public Output<Integer> getBeginInclusive() {
+    public Output<Integer> beginInclusive() {
         return this.beginInclusive == null ? Codegen.empty() : this.beginInclusive;
     }
 
     @Import(name="endInclusive")
       private final @Nullable Output<Integer> endInclusive;
 
-    public Output<Integer> getEndInclusive() {
+    public Output<Integer> endInclusive() {
         return this.endInclusive == null ? Codegen.empty() : this.endInclusive;
     }
 

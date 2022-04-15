@@ -57,35 +57,35 @@ public final class MethodIntegrationResponse {
      * Specifies how to handle request payload content type conversions.
      * 
     */
-    public Optional<MethodIntegrationResponseContentHandling> getContentHandling() {
+    public Optional<MethodIntegrationResponseContentHandling> contentHandling() {
         return Optional.ofNullable(this.contentHandling);
     }
     /**
      * The response parameters from the backend response that API Gateway sends to the method response.
      * 
     */
-    public Optional<Object> getResponseParameters() {
+    public Optional<Object> responseParameters() {
         return Optional.ofNullable(this.responseParameters);
     }
     /**
      * The templates that are used to transform the integration response body. Specify templates as key-value pairs (string-to-string mappings), with a content type as the key and a template as the value.
      * 
     */
-    public Optional<Object> getResponseTemplates() {
+    public Optional<Object> responseTemplates() {
         return Optional.ofNullable(this.responseTemplates);
     }
     /**
      * A regular expression that specifies which error strings or status codes from the backend map to the integration response.
      * 
     */
-    public Optional<String> getSelectionPattern() {
+    public Optional<String> selectionPattern() {
         return Optional.ofNullable(this.selectionPattern);
     }
     /**
      * The status code that API Gateway uses to map the integration response to a MethodResponse status code.
      * 
     */
-    public String getStatusCode() {
+    public String statusCode() {
         return this.statusCode;
     }
 

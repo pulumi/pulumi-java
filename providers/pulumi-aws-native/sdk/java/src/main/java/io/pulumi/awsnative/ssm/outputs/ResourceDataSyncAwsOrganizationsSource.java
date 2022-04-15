@@ -22,10 +22,10 @@ public final class ResourceDataSyncAwsOrganizationsSource {
         this.organizationalUnits = organizationalUnits;
     }
 
-    public String getOrganizationSourceType() {
+    public String organizationSourceType() {
         return this.organizationSourceType;
     }
-    public List<String> getOrganizationalUnits() {
+    public List<String> organizationalUnits() {
         return this.organizationalUnits == null ? List.of() : this.organizationalUnits;
     }
 

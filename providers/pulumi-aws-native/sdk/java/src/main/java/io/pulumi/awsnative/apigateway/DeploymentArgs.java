@@ -24,7 +24,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deploymentCanarySettings")
       private final @Nullable Output<DeploymentCanarySettingsArgs> deploymentCanarySettings;
 
-    public Output<DeploymentCanarySettingsArgs> getDeploymentCanarySettings() {
+    public Output<DeploymentCanarySettingsArgs> deploymentCanarySettings() {
         return this.deploymentCanarySettings == null ? Codegen.empty() : this.deploymentCanarySettings;
     }
 
@@ -35,7 +35,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,7 +46,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="restApiId", required=true)
       private final Output<String> restApiId;
 
-    public Output<String> getRestApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
 
@@ -57,7 +57,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stageDescription")
       private final @Nullable Output<DeploymentStageDescriptionArgs> stageDescription;
 
-    public Output<DeploymentStageDescriptionArgs> getStageDescription() {
+    public Output<DeploymentStageDescriptionArgs> stageDescription() {
         return this.stageDescription == null ? Codegen.empty() : this.stageDescription;
     }
 
@@ -68,7 +68,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stageName")
       private final @Nullable Output<String> stageName;
 
-    public Output<String> getStageName() {
+    public Output<String> stageName() {
         return this.stageName == null ? Codegen.empty() : this.stageName;
     }
 

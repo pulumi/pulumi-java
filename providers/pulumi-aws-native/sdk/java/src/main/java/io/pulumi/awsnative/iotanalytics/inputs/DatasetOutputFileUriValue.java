@@ -15,7 +15,7 @@ public final class DatasetOutputFileUriValue extends io.pulumi.resources.InvokeA
     @Import(name="fileName", required=true)
       private final String fileName;
 
-    public String getFileName() {
+    public String fileName() {
         return this.fileName;
     }
 

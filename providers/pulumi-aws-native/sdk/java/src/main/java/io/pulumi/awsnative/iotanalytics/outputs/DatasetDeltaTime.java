@@ -21,10 +21,10 @@ public final class DatasetDeltaTime {
         this.timeExpression = timeExpression;
     }
 
-    public Integer getOffsetSeconds() {
+    public Integer offsetSeconds() {
         return this.offsetSeconds;
     }
-    public String getTimeExpression() {
+    public String timeExpression() {
         return this.timeExpression;
     }
 

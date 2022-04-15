@@ -23,10 +23,10 @@ public final class CertificatePolicyInformation {
         this.policyQualifiers = policyQualifiers;
     }
 
-    public String getCertPolicyId() {
+    public String certPolicyId() {
         return this.certPolicyId;
     }
-    public List<CertificatePolicyQualifierInfo> getPolicyQualifiers() {
+    public List<CertificatePolicyQualifierInfo> policyQualifiers() {
         return this.policyQualifiers == null ? List.of() : this.policyQualifiers;
     }
 

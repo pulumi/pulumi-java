@@ -26,13 +26,13 @@ public final class DataSourceProxyConfiguration {
         this.port = port;
     }
 
-    public Optional<String> getCredentials() {
+    public Optional<String> credentials() {
         return Optional.ofNullable(this.credentials);
     }
-    public String getHost() {
+    public String host() {
         return this.host;
     }
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 

@@ -27,13 +27,13 @@ public final class GetVirtualMFADeviceResult {
         this.users = users;
     }
 
-    public Optional<String> getSerialNumber() {
+    public Optional<String> serialNumber() {
         return Optional.ofNullable(this.serialNumber);
     }
-    public List<VirtualMFADeviceTag> getTags() {
+    public List<VirtualMFADeviceTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
-    public List<String> getUsers() {
+    public List<String> users() {
         return this.users == null ? List.of() : this.users;
     }
 

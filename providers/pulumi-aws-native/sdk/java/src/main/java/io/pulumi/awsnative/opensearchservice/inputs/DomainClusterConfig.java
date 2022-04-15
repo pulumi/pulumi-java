@@ -20,70 +20,70 @@ public final class DomainClusterConfig extends io.pulumi.resources.InvokeArgs {
     @Import(name="dedicatedMasterCount")
       private final @Nullable Integer dedicatedMasterCount;
 
-    public Optional<Integer> getDedicatedMasterCount() {
+    public Optional<Integer> dedicatedMasterCount() {
         return this.dedicatedMasterCount == null ? Optional.empty() : Optional.ofNullable(this.dedicatedMasterCount);
     }
 
     @Import(name="dedicatedMasterEnabled")
       private final @Nullable Boolean dedicatedMasterEnabled;
 
-    public Optional<Boolean> getDedicatedMasterEnabled() {
+    public Optional<Boolean> dedicatedMasterEnabled() {
         return this.dedicatedMasterEnabled == null ? Optional.empty() : Optional.ofNullable(this.dedicatedMasterEnabled);
     }
 
     @Import(name="dedicatedMasterType")
       private final @Nullable String dedicatedMasterType;
 
-    public Optional<String> getDedicatedMasterType() {
+    public Optional<String> dedicatedMasterType() {
         return this.dedicatedMasterType == null ? Optional.empty() : Optional.ofNullable(this.dedicatedMasterType);
     }
 
     @Import(name="instanceCount")
       private final @Nullable Integer instanceCount;
 
-    public Optional<Integer> getInstanceCount() {
+    public Optional<Integer> instanceCount() {
         return this.instanceCount == null ? Optional.empty() : Optional.ofNullable(this.instanceCount);
     }
 
     @Import(name="instanceType")
       private final @Nullable String instanceType;
 
-    public Optional<String> getInstanceType() {
+    public Optional<String> instanceType() {
         return this.instanceType == null ? Optional.empty() : Optional.ofNullable(this.instanceType);
     }
 
     @Import(name="warmCount")
       private final @Nullable Integer warmCount;
 
-    public Optional<Integer> getWarmCount() {
+    public Optional<Integer> warmCount() {
         return this.warmCount == null ? Optional.empty() : Optional.ofNullable(this.warmCount);
     }
 
     @Import(name="warmEnabled")
       private final @Nullable Boolean warmEnabled;
 
-    public Optional<Boolean> getWarmEnabled() {
+    public Optional<Boolean> warmEnabled() {
         return this.warmEnabled == null ? Optional.empty() : Optional.ofNullable(this.warmEnabled);
     }
 
     @Import(name="warmType")
       private final @Nullable String warmType;
 
-    public Optional<String> getWarmType() {
+    public Optional<String> warmType() {
         return this.warmType == null ? Optional.empty() : Optional.ofNullable(this.warmType);
     }
 
     @Import(name="zoneAwarenessConfig")
       private final @Nullable DomainZoneAwarenessConfig zoneAwarenessConfig;
 
-    public Optional<DomainZoneAwarenessConfig> getZoneAwarenessConfig() {
+    public Optional<DomainZoneAwarenessConfig> zoneAwarenessConfig() {
         return this.zoneAwarenessConfig == null ? Optional.empty() : Optional.ofNullable(this.zoneAwarenessConfig);
     }
 
     @Import(name="zoneAwarenessEnabled")
       private final @Nullable Boolean zoneAwarenessEnabled;
 
-    public Optional<Boolean> getZoneAwarenessEnabled() {
+    public Optional<Boolean> zoneAwarenessEnabled() {
         return this.zoneAwarenessEnabled == null ? Optional.empty() : Optional.ofNullable(this.zoneAwarenessEnabled);
     }
 

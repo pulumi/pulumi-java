@@ -22,14 +22,14 @@ public final class PolicyIEMap extends io.pulumi.resources.InvokeArgs {
     @Import(name="aCCOUNT")
       private final @Nullable List<String> aCCOUNT;
 
-    public List<String> getACCOUNT() {
+    public List<String> aCCOUNT() {
         return this.aCCOUNT == null ? List.of() : this.aCCOUNT;
     }
 
     @Import(name="oRGUNIT")
       private final @Nullable List<String> oRGUNIT;
 
-    public List<String> getORGUNIT() {
+    public List<String> oRGUNIT() {
         return this.oRGUNIT == null ? List.of() : this.oRGUNIT;
     }
 

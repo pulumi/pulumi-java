@@ -36,19 +36,19 @@ public final class IndexRelevance {
         this.valueImportanceItems = valueImportanceItems;
     }
 
-    public Optional<String> getDuration() {
+    public Optional<String> duration() {
         return Optional.ofNullable(this.duration);
     }
-    public Optional<Boolean> getFreshness() {
+    public Optional<Boolean> freshness() {
         return Optional.ofNullable(this.freshness);
     }
-    public Optional<Integer> getImportance() {
+    public Optional<Integer> importance() {
         return Optional.ofNullable(this.importance);
     }
-    public Optional<IndexOrder> getRankOrder() {
+    public Optional<IndexOrder> rankOrder() {
         return Optional.ofNullable(this.rankOrder);
     }
-    public List<IndexValueImportanceItem> getValueImportanceItems() {
+    public List<IndexValueImportanceItem> valueImportanceItems() {
         return this.valueImportanceItems == null ? List.of() : this.valueImportanceItems;
     }
 

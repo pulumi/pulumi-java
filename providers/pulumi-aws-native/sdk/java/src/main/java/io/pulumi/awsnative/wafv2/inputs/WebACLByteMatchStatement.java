@@ -25,35 +25,35 @@ public final class WebACLByteMatchStatement extends io.pulumi.resources.InvokeAr
     @Import(name="fieldToMatch", required=true)
       private final WebACLFieldToMatch fieldToMatch;
 
-    public WebACLFieldToMatch getFieldToMatch() {
+    public WebACLFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
 
     @Import(name="positionalConstraint", required=true)
       private final WebACLPositionalConstraint positionalConstraint;
 
-    public WebACLPositionalConstraint getPositionalConstraint() {
+    public WebACLPositionalConstraint positionalConstraint() {
         return this.positionalConstraint;
     }
 
     @Import(name="searchString")
       private final @Nullable String searchString;
 
-    public Optional<String> getSearchString() {
+    public Optional<String> searchString() {
         return this.searchString == null ? Optional.empty() : Optional.ofNullable(this.searchString);
     }
 
     @Import(name="searchStringBase64")
       private final @Nullable String searchStringBase64;
 
-    public Optional<String> getSearchStringBase64() {
+    public Optional<String> searchStringBase64() {
         return this.searchStringBase64 == null ? Optional.empty() : Optional.ofNullable(this.searchStringBase64);
     }
 
     @Import(name="textTransformations", required=true)
       private final List<WebACLTextTransformation> textTransformations;
 
-    public List<WebACLTextTransformation> getTextTransformations() {
+    public List<WebACLTextTransformation> textTransformations() {
         return this.textTransformations;
     }
 

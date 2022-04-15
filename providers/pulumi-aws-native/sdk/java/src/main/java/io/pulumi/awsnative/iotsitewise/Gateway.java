@@ -33,7 +33,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return A list of gateway capability summaries that each contain a namespace and status.
      * 
      */
-    public Output</* @Nullable */ List<GatewayCapabilitySummary>> getGatewayCapabilitySummaries() {
+    public Output</* @Nullable */ List<GatewayCapabilitySummary>> gatewayCapabilitySummaries() {
         return this.gatewayCapabilitySummaries;
     }
     /**
@@ -47,7 +47,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return The ID of the gateway device.
      * 
      */
-    public Output<String> getGatewayId() {
+    public Output<String> gatewayId() {
         return this.gatewayId;
     }
     /**
@@ -61,7 +61,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return A unique, friendly name for the gateway.
      * 
      */
-    public Output<String> getGatewayName() {
+    public Output<String> gatewayName() {
         return this.gatewayName;
     }
     /**
@@ -75,7 +75,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return The gateway's platform. You can only specify one platform in a gateway.
      * 
      */
-    public Output<GatewayPlatform> getGatewayPlatform() {
+    public Output<GatewayPlatform> gatewayPlatform() {
         return this.gatewayPlatform;
     }
     /**
@@ -89,7 +89,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the gateway.
      * 
      */
-    public Output</* @Nullable */ List<GatewayTag>> getTags() {
+    public Output</* @Nullable */ List<GatewayTag>> tags() {
         return this.tags;
     }
 

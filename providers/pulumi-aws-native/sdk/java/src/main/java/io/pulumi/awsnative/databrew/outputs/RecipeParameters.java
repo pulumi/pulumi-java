@@ -328,311 +328,311 @@ public final class RecipeParameters {
         this.viewFrame = viewFrame;
     }
 
-    public Optional<String> getAggregateFunction() {
+    public Optional<String> aggregateFunction() {
         return Optional.ofNullable(this.aggregateFunction);
     }
-    public Optional<String> getBase() {
+    public Optional<String> base() {
         return Optional.ofNullable(this.base);
     }
-    public Optional<String> getCaseStatement() {
+    public Optional<String> caseStatement() {
         return Optional.ofNullable(this.caseStatement);
     }
-    public Optional<String> getCategoryMap() {
+    public Optional<String> categoryMap() {
         return Optional.ofNullable(this.categoryMap);
     }
-    public Optional<String> getCharsToRemove() {
+    public Optional<String> charsToRemove() {
         return Optional.ofNullable(this.charsToRemove);
     }
-    public Optional<String> getCollapseConsecutiveWhitespace() {
+    public Optional<String> collapseConsecutiveWhitespace() {
         return Optional.ofNullable(this.collapseConsecutiveWhitespace);
     }
-    public Optional<String> getColumnDataType() {
+    public Optional<String> columnDataType() {
         return Optional.ofNullable(this.columnDataType);
     }
-    public Optional<String> getColumnRange() {
+    public Optional<String> columnRange() {
         return Optional.ofNullable(this.columnRange);
     }
-    public Optional<String> getCount() {
+    public Optional<String> count() {
         return Optional.ofNullable(this.count);
     }
-    public Optional<String> getCustomCharacters() {
+    public Optional<String> customCharacters() {
         return Optional.ofNullable(this.customCharacters);
     }
-    public Optional<String> getCustomStopWords() {
+    public Optional<String> customStopWords() {
         return Optional.ofNullable(this.customStopWords);
     }
-    public Optional<String> getCustomValue() {
+    public Optional<String> customValue() {
         return Optional.ofNullable(this.customValue);
     }
-    public Optional<String> getDatasetsColumns() {
+    public Optional<String> datasetsColumns() {
         return Optional.ofNullable(this.datasetsColumns);
     }
-    public Optional<String> getDateAddValue() {
+    public Optional<String> dateAddValue() {
         return Optional.ofNullable(this.dateAddValue);
     }
-    public Optional<String> getDateTimeFormat() {
+    public Optional<String> dateTimeFormat() {
         return Optional.ofNullable(this.dateTimeFormat);
     }
-    public Optional<String> getDateTimeParameters() {
+    public Optional<String> dateTimeParameters() {
         return Optional.ofNullable(this.dateTimeParameters);
     }
-    public Optional<String> getDeleteOtherRows() {
+    public Optional<String> deleteOtherRows() {
         return Optional.ofNullable(this.deleteOtherRows);
     }
-    public Optional<String> getDelimiter() {
+    public Optional<String> delimiter() {
         return Optional.ofNullable(this.delimiter);
     }
-    public Optional<String> getEndPattern() {
+    public Optional<String> endPattern() {
         return Optional.ofNullable(this.endPattern);
     }
-    public Optional<String> getEndPosition() {
+    public Optional<String> endPosition() {
         return Optional.ofNullable(this.endPosition);
     }
-    public Optional<String> getEndValue() {
+    public Optional<String> endValue() {
         return Optional.ofNullable(this.endValue);
     }
-    public Optional<String> getExpandContractions() {
+    public Optional<String> expandContractions() {
         return Optional.ofNullable(this.expandContractions);
     }
-    public Optional<String> getExponent() {
+    public Optional<String> exponent() {
         return Optional.ofNullable(this.exponent);
     }
-    public Optional<String> getFalseString() {
+    public Optional<String> falseString() {
         return Optional.ofNullable(this.falseString);
     }
-    public Optional<String> getGroupByAggFunctionOptions() {
+    public Optional<String> groupByAggFunctionOptions() {
         return Optional.ofNullable(this.groupByAggFunctionOptions);
     }
-    public Optional<String> getGroupByColumns() {
+    public Optional<String> groupByColumns() {
         return Optional.ofNullable(this.groupByColumns);
     }
-    public Optional<String> getHiddenColumns() {
+    public Optional<String> hiddenColumns() {
         return Optional.ofNullable(this.hiddenColumns);
     }
-    public Optional<String> getIgnoreCase() {
+    public Optional<String> ignoreCase() {
         return Optional.ofNullable(this.ignoreCase);
     }
-    public Optional<String> getIncludeInSplit() {
+    public Optional<String> includeInSplit() {
         return Optional.ofNullable(this.includeInSplit);
     }
     /**
      * Input
      * 
     */
-    public Optional<RecipeParametersInputProperties> getInput() {
+    public Optional<RecipeParametersInputProperties> input() {
         return Optional.ofNullable(this.input);
     }
-    public Optional<String> getInterval() {
+    public Optional<String> interval() {
         return Optional.ofNullable(this.interval);
     }
-    public Optional<String> getIsText() {
+    public Optional<String> isText() {
         return Optional.ofNullable(this.isText);
     }
-    public Optional<String> getJoinKeys() {
+    public Optional<String> joinKeys() {
         return Optional.ofNullable(this.joinKeys);
     }
-    public Optional<String> getJoinType() {
+    public Optional<String> joinType() {
         return Optional.ofNullable(this.joinType);
     }
-    public Optional<String> getLeftColumns() {
+    public Optional<String> leftColumns() {
         return Optional.ofNullable(this.leftColumns);
     }
-    public Optional<String> getLimit() {
+    public Optional<String> limit() {
         return Optional.ofNullable(this.limit);
     }
-    public Optional<String> getLowerBound() {
+    public Optional<String> lowerBound() {
         return Optional.ofNullable(this.lowerBound);
     }
-    public Optional<String> getMapType() {
+    public Optional<String> mapType() {
         return Optional.ofNullable(this.mapType);
     }
-    public Optional<String> getModeType() {
+    public Optional<String> modeType() {
         return Optional.ofNullable(this.modeType);
     }
-    public Optional<Boolean> getMultiLine() {
+    public Optional<Boolean> multiLine() {
         return Optional.ofNullable(this.multiLine);
     }
-    public Optional<String> getNumRows() {
+    public Optional<String> numRows() {
         return Optional.ofNullable(this.numRows);
     }
-    public Optional<String> getNumRowsAfter() {
+    public Optional<String> numRowsAfter() {
         return Optional.ofNullable(this.numRowsAfter);
     }
-    public Optional<String> getNumRowsBefore() {
+    public Optional<String> numRowsBefore() {
         return Optional.ofNullable(this.numRowsBefore);
     }
-    public Optional<String> getOrderByColumn() {
+    public Optional<String> orderByColumn() {
         return Optional.ofNullable(this.orderByColumn);
     }
-    public Optional<String> getOrderByColumns() {
+    public Optional<String> orderByColumns() {
         return Optional.ofNullable(this.orderByColumns);
     }
-    public Optional<String> getOther() {
+    public Optional<String> other() {
         return Optional.ofNullable(this.other);
     }
-    public Optional<String> getPattern() {
+    public Optional<String> pattern() {
         return Optional.ofNullable(this.pattern);
     }
-    public Optional<String> getPatternOption1() {
+    public Optional<String> patternOption1() {
         return Optional.ofNullable(this.patternOption1);
     }
-    public Optional<String> getPatternOption2() {
+    public Optional<String> patternOption2() {
         return Optional.ofNullable(this.patternOption2);
     }
-    public Optional<String> getPatternOptions() {
+    public Optional<String> patternOptions() {
         return Optional.ofNullable(this.patternOptions);
     }
-    public Optional<String> getPeriod() {
+    public Optional<String> period() {
         return Optional.ofNullable(this.period);
     }
-    public Optional<String> getPosition() {
+    public Optional<String> position() {
         return Optional.ofNullable(this.position);
     }
-    public Optional<String> getRemoveAllPunctuation() {
+    public Optional<String> removeAllPunctuation() {
         return Optional.ofNullable(this.removeAllPunctuation);
     }
-    public Optional<String> getRemoveAllQuotes() {
+    public Optional<String> removeAllQuotes() {
         return Optional.ofNullable(this.removeAllQuotes);
     }
-    public Optional<String> getRemoveAllWhitespace() {
+    public Optional<String> removeAllWhitespace() {
         return Optional.ofNullable(this.removeAllWhitespace);
     }
-    public Optional<String> getRemoveCustomCharacters() {
+    public Optional<String> removeCustomCharacters() {
         return Optional.ofNullable(this.removeCustomCharacters);
     }
-    public Optional<String> getRemoveCustomValue() {
+    public Optional<String> removeCustomValue() {
         return Optional.ofNullable(this.removeCustomValue);
     }
-    public Optional<String> getRemoveLeadingAndTrailingPunctuation() {
+    public Optional<String> removeLeadingAndTrailingPunctuation() {
         return Optional.ofNullable(this.removeLeadingAndTrailingPunctuation);
     }
-    public Optional<String> getRemoveLeadingAndTrailingQuotes() {
+    public Optional<String> removeLeadingAndTrailingQuotes() {
         return Optional.ofNullable(this.removeLeadingAndTrailingQuotes);
     }
-    public Optional<String> getRemoveLeadingAndTrailingWhitespace() {
+    public Optional<String> removeLeadingAndTrailingWhitespace() {
         return Optional.ofNullable(this.removeLeadingAndTrailingWhitespace);
     }
-    public Optional<String> getRemoveLetters() {
+    public Optional<String> removeLetters() {
         return Optional.ofNullable(this.removeLetters);
     }
-    public Optional<String> getRemoveNumbers() {
+    public Optional<String> removeNumbers() {
         return Optional.ofNullable(this.removeNumbers);
     }
-    public Optional<String> getRemoveSourceColumn() {
+    public Optional<String> removeSourceColumn() {
         return Optional.ofNullable(this.removeSourceColumn);
     }
-    public Optional<String> getRemoveSpecialCharacters() {
+    public Optional<String> removeSpecialCharacters() {
         return Optional.ofNullable(this.removeSpecialCharacters);
     }
-    public Optional<String> getRightColumns() {
+    public Optional<String> rightColumns() {
         return Optional.ofNullable(this.rightColumns);
     }
-    public Optional<String> getSampleSize() {
+    public Optional<String> sampleSize() {
         return Optional.ofNullable(this.sampleSize);
     }
-    public Optional<String> getSampleType() {
+    public Optional<String> sampleType() {
         return Optional.ofNullable(this.sampleType);
     }
-    public Optional<String> getSecondInput() {
+    public Optional<String> secondInput() {
         return Optional.ofNullable(this.secondInput);
     }
-    public List<RecipeSecondaryInput> getSecondaryInputs() {
+    public List<RecipeSecondaryInput> secondaryInputs() {
         return this.secondaryInputs == null ? List.of() : this.secondaryInputs;
     }
-    public List<Integer> getSheetIndexes() {
+    public List<Integer> sheetIndexes() {
         return this.sheetIndexes == null ? List.of() : this.sheetIndexes;
     }
-    public List<String> getSheetNames() {
+    public List<String> sheetNames() {
         return this.sheetNames == null ? List.of() : this.sheetNames;
     }
-    public Optional<String> getSourceColumn() {
+    public Optional<String> sourceColumn() {
         return Optional.ofNullable(this.sourceColumn);
     }
-    public Optional<String> getSourceColumn1() {
+    public Optional<String> sourceColumn1() {
         return Optional.ofNullable(this.sourceColumn1);
     }
-    public Optional<String> getSourceColumn2() {
+    public Optional<String> sourceColumn2() {
         return Optional.ofNullable(this.sourceColumn2);
     }
-    public Optional<String> getSourceColumns() {
+    public Optional<String> sourceColumns() {
         return Optional.ofNullable(this.sourceColumns);
     }
-    public Optional<String> getStartColumnIndex() {
+    public Optional<String> startColumnIndex() {
         return Optional.ofNullable(this.startColumnIndex);
     }
-    public Optional<String> getStartPattern() {
+    public Optional<String> startPattern() {
         return Optional.ofNullable(this.startPattern);
     }
-    public Optional<String> getStartPosition() {
+    public Optional<String> startPosition() {
         return Optional.ofNullable(this.startPosition);
     }
-    public Optional<String> getStartValue() {
+    public Optional<String> startValue() {
         return Optional.ofNullable(this.startValue);
     }
-    public Optional<String> getStemmingMode() {
+    public Optional<String> stemmingMode() {
         return Optional.ofNullable(this.stemmingMode);
     }
-    public Optional<String> getStepCount() {
+    public Optional<String> stepCount() {
         return Optional.ofNullable(this.stepCount);
     }
-    public Optional<String> getStepIndex() {
+    public Optional<String> stepIndex() {
         return Optional.ofNullable(this.stepIndex);
     }
-    public Optional<String> getStopWordsMode() {
+    public Optional<String> stopWordsMode() {
         return Optional.ofNullable(this.stopWordsMode);
     }
-    public Optional<String> getStrategy() {
+    public Optional<String> strategy() {
         return Optional.ofNullable(this.strategy);
     }
-    public Optional<String> getTargetColumn() {
+    public Optional<String> targetColumn() {
         return Optional.ofNullable(this.targetColumn);
     }
-    public Optional<String> getTargetColumnNames() {
+    public Optional<String> targetColumnNames() {
         return Optional.ofNullable(this.targetColumnNames);
     }
-    public Optional<String> getTargetDateFormat() {
+    public Optional<String> targetDateFormat() {
         return Optional.ofNullable(this.targetDateFormat);
     }
-    public Optional<String> getTargetIndex() {
+    public Optional<String> targetIndex() {
         return Optional.ofNullable(this.targetIndex);
     }
-    public Optional<String> getTimeZone() {
+    public Optional<String> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }
-    public Optional<String> getTokenizerPattern() {
+    public Optional<String> tokenizerPattern() {
         return Optional.ofNullable(this.tokenizerPattern);
     }
-    public Optional<String> getTrueString() {
+    public Optional<String> trueString() {
         return Optional.ofNullable(this.trueString);
     }
-    public Optional<String> getUdfLang() {
+    public Optional<String> udfLang() {
         return Optional.ofNullable(this.udfLang);
     }
-    public Optional<String> getUnits() {
+    public Optional<String> units() {
         return Optional.ofNullable(this.units);
     }
-    public Optional<String> getUnpivotColumn() {
+    public Optional<String> unpivotColumn() {
         return Optional.ofNullable(this.unpivotColumn);
     }
-    public Optional<String> getUpperBound() {
+    public Optional<String> upperBound() {
         return Optional.ofNullable(this.upperBound);
     }
-    public Optional<String> getUseNewDataFrame() {
+    public Optional<String> useNewDataFrame() {
         return Optional.ofNullable(this.useNewDataFrame);
     }
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
-    public Optional<String> getValue1() {
+    public Optional<String> value1() {
         return Optional.ofNullable(this.value1);
     }
-    public Optional<String> getValue2() {
+    public Optional<String> value2() {
         return Optional.ofNullable(this.value2);
     }
-    public Optional<String> getValueColumn() {
+    public Optional<String> valueColumn() {
         return Optional.ofNullable(this.valueColumn);
     }
-    public Optional<String> getViewFrame() {
+    public Optional<String> viewFrame() {
         return Optional.ofNullable(this.viewFrame);
     }
 

@@ -26,7 +26,7 @@ public final class CanaryArtifactConfig {
      * Encryption configuration for uploading artifacts to S3
      * 
     */
-    public Optional<CanaryS3Encryption> getS3Encryption() {
+    public Optional<CanaryS3Encryption> s3Encryption() {
         return Optional.ofNullable(this.s3Encryption);
     }
 

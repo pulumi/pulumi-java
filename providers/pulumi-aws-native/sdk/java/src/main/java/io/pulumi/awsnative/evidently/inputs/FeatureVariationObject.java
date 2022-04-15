@@ -19,35 +19,35 @@ public final class FeatureVariationObject extends io.pulumi.resources.InvokeArgs
     @Import(name="booleanValue")
       private final @Nullable Boolean booleanValue;
 
-    public Optional<Boolean> getBooleanValue() {
+    public Optional<Boolean> booleanValue() {
         return this.booleanValue == null ? Optional.empty() : Optional.ofNullable(this.booleanValue);
     }
 
     @Import(name="doubleValue")
       private final @Nullable Double doubleValue;
 
-    public Optional<Double> getDoubleValue() {
+    public Optional<Double> doubleValue() {
         return this.doubleValue == null ? Optional.empty() : Optional.ofNullable(this.doubleValue);
     }
 
     @Import(name="longValue")
       private final @Nullable Double longValue;
 
-    public Optional<Double> getLongValue() {
+    public Optional<Double> longValue() {
         return this.longValue == null ? Optional.empty() : Optional.ofNullable(this.longValue);
     }
 
     @Import(name="stringValue")
       private final @Nullable String stringValue;
 
-    public Optional<String> getStringValue() {
+    public Optional<String> stringValue() {
         return this.stringValue == null ? Optional.empty() : Optional.ofNullable(this.stringValue);
     }
 
     @Import(name="variationName")
       private final @Nullable String variationName;
 
-    public Optional<String> getVariationName() {
+    public Optional<String> variationName() {
         return this.variationName == null ? Optional.empty() : Optional.ofNullable(this.variationName);
     }
 

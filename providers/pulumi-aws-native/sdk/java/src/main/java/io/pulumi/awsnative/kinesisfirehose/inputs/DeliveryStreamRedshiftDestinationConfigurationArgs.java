@@ -24,77 +24,77 @@ public final class DeliveryStreamRedshiftDestinationConfigurationArgs extends io
     @Import(name="cloudWatchLoggingOptions")
       private final @Nullable Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions;
 
-    public Output<DeliveryStreamCloudWatchLoggingOptionsArgs> getCloudWatchLoggingOptions() {
+    public Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions() {
         return this.cloudWatchLoggingOptions == null ? Codegen.empty() : this.cloudWatchLoggingOptions;
     }
 
     @Import(name="clusterJDBCURL", required=true)
       private final Output<String> clusterJDBCURL;
 
-    public Output<String> getClusterJDBCURL() {
+    public Output<String> clusterJDBCURL() {
         return this.clusterJDBCURL;
     }
 
     @Import(name="copyCommand", required=true)
       private final Output<DeliveryStreamCopyCommandArgs> copyCommand;
 
-    public Output<DeliveryStreamCopyCommandArgs> getCopyCommand() {
+    public Output<DeliveryStreamCopyCommandArgs> copyCommand() {
         return this.copyCommand;
     }
 
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
     @Import(name="processingConfiguration")
       private final @Nullable Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration;
 
-    public Output<DeliveryStreamProcessingConfigurationArgs> getProcessingConfiguration() {
+    public Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration() {
         return this.processingConfiguration == null ? Codegen.empty() : this.processingConfiguration;
     }
 
     @Import(name="retryOptions")
       private final @Nullable Output<DeliveryStreamRedshiftRetryOptionsArgs> retryOptions;
 
-    public Output<DeliveryStreamRedshiftRetryOptionsArgs> getRetryOptions() {
+    public Output<DeliveryStreamRedshiftRetryOptionsArgs> retryOptions() {
         return this.retryOptions == null ? Codegen.empty() : this.retryOptions;
     }
 
     @Import(name="roleARN", required=true)
       private final Output<String> roleARN;
 
-    public Output<String> getRoleARN() {
+    public Output<String> roleARN() {
         return this.roleARN;
     }
 
     @Import(name="s3BackupConfiguration")
       private final @Nullable Output<DeliveryStreamS3DestinationConfigurationArgs> s3BackupConfiguration;
 
-    public Output<DeliveryStreamS3DestinationConfigurationArgs> getS3BackupConfiguration() {
+    public Output<DeliveryStreamS3DestinationConfigurationArgs> s3BackupConfiguration() {
         return this.s3BackupConfiguration == null ? Codegen.empty() : this.s3BackupConfiguration;
     }
 
     @Import(name="s3BackupMode")
       private final @Nullable Output<DeliveryStreamRedshiftDestinationConfigurationS3BackupMode> s3BackupMode;
 
-    public Output<DeliveryStreamRedshiftDestinationConfigurationS3BackupMode> getS3BackupMode() {
+    public Output<DeliveryStreamRedshiftDestinationConfigurationS3BackupMode> s3BackupMode() {
         return this.s3BackupMode == null ? Codegen.empty() : this.s3BackupMode;
     }
 
     @Import(name="s3Configuration", required=true)
       private final Output<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration;
 
-    public Output<DeliveryStreamS3DestinationConfigurationArgs> getS3Configuration() {
+    public Output<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration() {
         return this.s3Configuration;
     }
 
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 

@@ -21,10 +21,10 @@ public final class DatasetRetentionPeriod {
         this.unlimited = unlimited;
     }
 
-    public Integer getNumberOfDays() {
+    public Integer numberOfDays() {
         return this.numberOfDays;
     }
-    public Boolean getUnlimited() {
+    public Boolean unlimited() {
         return this.unlimited;
     }
 

@@ -25,7 +25,7 @@ public final class OptionsProperties extends io.pulumi.resources.InvokeArgs {
     @Import(name="applianceModeSupport")
       private final @Nullable String applianceModeSupport;
 
-    public Optional<String> getApplianceModeSupport() {
+    public Optional<String> applianceModeSupport() {
         return this.applianceModeSupport == null ? Optional.empty() : Optional.ofNullable(this.applianceModeSupport);
     }
 
@@ -36,7 +36,7 @@ public final class OptionsProperties extends io.pulumi.resources.InvokeArgs {
     @Import(name="dnsSupport")
       private final @Nullable String dnsSupport;
 
-    public Optional<String> getDnsSupport() {
+    public Optional<String> dnsSupport() {
         return this.dnsSupport == null ? Optional.empty() : Optional.ofNullable(this.dnsSupport);
     }
 
@@ -47,7 +47,7 @@ public final class OptionsProperties extends io.pulumi.resources.InvokeArgs {
     @Import(name="ipv6Support")
       private final @Nullable String ipv6Support;
 
-    public Optional<String> getIpv6Support() {
+    public Optional<String> ipv6Support() {
         return this.ipv6Support == null ? Optional.empty() : Optional.ofNullable(this.ipv6Support);
     }
 

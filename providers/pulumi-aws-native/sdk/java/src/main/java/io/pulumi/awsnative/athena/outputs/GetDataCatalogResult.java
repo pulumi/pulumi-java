@@ -52,28 +52,28 @@ public final class GetDataCatalogResult {
      * A description of the data catalog to be created.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Specifies the Lambda function or functions to use for creating the data catalog. This is a mapping whose values depend on the catalog type.
      * 
     */
-    public Optional<Object> getParameters() {
+    public Optional<Object> parameters() {
         return Optional.ofNullable(this.parameters);
     }
     /**
      * A list of comma separated tags to add to the data catalog that is created.
      * 
     */
-    public List<DataCatalogTag> getTags() {
+    public List<DataCatalogTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The type of data catalog to create: LAMBDA for a federated catalog, GLUE for AWS Glue Catalog, or HIVE for an external hive metastore.
      * 
     */
-    public Optional<DataCatalogType> getType() {
+    public Optional<DataCatalogType> type() {
         return Optional.ofNullable(this.type);
     }
 

@@ -31,7 +31,7 @@ public class Table extends io.pulumi.resources.CustomResource {
     @Export(name="billingMode", type=TableBillingMode.class, parameters={})
     private Output</* @Nullable */ TableBillingMode> billingMode;
 
-    public Output</* @Nullable */ TableBillingMode> getBillingMode() {
+    public Output</* @Nullable */ TableBillingMode> billingMode() {
         return this.billingMode;
     }
     /**
@@ -45,7 +45,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return Clustering key columns of the table
      * 
      */
-    public Output</* @Nullable */ List<TableClusteringKeyColumn>> getClusteringKeyColumns() {
+    public Output</* @Nullable */ List<TableClusteringKeyColumn>> clusteringKeyColumns() {
         return this.clusteringKeyColumns;
     }
     /**
@@ -59,13 +59,13 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return Default TTL (Time To Live) in seconds, where zero is disabled. If the value is greater than zero, TTL is enabled for the entire table and an expiration timestamp is added to each column.
      * 
      */
-    public Output</* @Nullable */ Integer> getDefaultTimeToLive() {
+    public Output</* @Nullable */ Integer> defaultTimeToLive() {
         return this.defaultTimeToLive;
     }
     @Export(name="encryptionSpecification", type=TableEncryptionSpecification.class, parameters={})
     private Output</* @Nullable */ TableEncryptionSpecification> encryptionSpecification;
 
-    public Output</* @Nullable */ TableEncryptionSpecification> getEncryptionSpecification() {
+    public Output</* @Nullable */ TableEncryptionSpecification> encryptionSpecification() {
         return this.encryptionSpecification;
     }
     /**
@@ -79,7 +79,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return Name for Cassandra keyspace
      * 
      */
-    public Output<String> getKeyspaceName() {
+    public Output<String> keyspaceName() {
         return this.keyspaceName;
     }
     /**
@@ -93,7 +93,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return Partition key columns of the table
      * 
      */
-    public Output<List<TableColumn>> getPartitionKeyColumns() {
+    public Output<List<TableColumn>> partitionKeyColumns() {
         return this.partitionKeyColumns;
     }
     /**
@@ -107,7 +107,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return Indicates whether point in time recovery is enabled (true) or disabled (false) on the table
      * 
      */
-    public Output</* @Nullable */ Boolean> getPointInTimeRecoveryEnabled() {
+    public Output</* @Nullable */ Boolean> pointInTimeRecoveryEnabled() {
         return this.pointInTimeRecoveryEnabled;
     }
     /**
@@ -121,7 +121,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return Non-key columns of the table
      * 
      */
-    public Output</* @Nullable */ List<TableColumn>> getRegularColumns() {
+    public Output</* @Nullable */ List<TableColumn>> regularColumns() {
         return this.regularColumns;
     }
     /**
@@ -135,7 +135,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return Name for Cassandra table
      * 
      */
-    public Output</* @Nullable */ String> getTableName() {
+    public Output</* @Nullable */ String> tableName() {
         return this.tableName;
     }
     /**
@@ -149,7 +149,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource
      * 
      */
-    public Output</* @Nullable */ List<TableTag>> getTags() {
+    public Output</* @Nullable */ List<TableTag>> tags() {
         return this.tags;
     }
 

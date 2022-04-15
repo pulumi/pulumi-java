@@ -58,46 +58,46 @@ public final class CertificateAuthoritySubject {
         this.title = title;
     }
 
-    public Optional<String> getCommonName() {
+    public Optional<String> commonName() {
         return Optional.ofNullable(this.commonName);
     }
-    public Optional<String> getCountry() {
+    public Optional<String> country() {
         return Optional.ofNullable(this.country);
     }
-    public Optional<String> getDistinguishedNameQualifier() {
+    public Optional<String> distinguishedNameQualifier() {
         return Optional.ofNullable(this.distinguishedNameQualifier);
     }
-    public Optional<String> getGenerationQualifier() {
+    public Optional<String> generationQualifier() {
         return Optional.ofNullable(this.generationQualifier);
     }
-    public Optional<String> getGivenName() {
+    public Optional<String> givenName() {
         return Optional.ofNullable(this.givenName);
     }
-    public Optional<String> getInitials() {
+    public Optional<String> initials() {
         return Optional.ofNullable(this.initials);
     }
-    public Optional<String> getLocality() {
+    public Optional<String> locality() {
         return Optional.ofNullable(this.locality);
     }
-    public Optional<String> getOrganization() {
+    public Optional<String> organization() {
         return Optional.ofNullable(this.organization);
     }
-    public Optional<String> getOrganizationalUnit() {
+    public Optional<String> organizationalUnit() {
         return Optional.ofNullable(this.organizationalUnit);
     }
-    public Optional<String> getPseudonym() {
+    public Optional<String> pseudonym() {
         return Optional.ofNullable(this.pseudonym);
     }
-    public Optional<String> getSerialNumber() {
+    public Optional<String> serialNumber() {
         return Optional.ofNullable(this.serialNumber);
     }
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
-    public Optional<String> getSurname() {
+    public Optional<String> surname() {
         return Optional.ofNullable(this.surname);
     }
-    public Optional<String> getTitle() {
+    public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
 

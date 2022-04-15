@@ -18,7 +18,7 @@ public final class IntegrationTriggerProperties {
         this.scheduled = scheduled;
     }
 
-    public Optional<IntegrationScheduledTriggerProperties> getScheduled() {
+    public Optional<IntegrationScheduledTriggerProperties> scheduled() {
         return Optional.ofNullable(this.scheduled);
     }
 

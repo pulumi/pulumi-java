@@ -22,10 +22,10 @@ public final class DatastoreCustomerManagedS3Storage {
         this.keyPrefix = keyPrefix;
     }
 
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
-    public Optional<String> getKeyPrefix() {
+    public Optional<String> keyPrefix() {
         return Optional.ofNullable(this.keyPrefix);
     }
 

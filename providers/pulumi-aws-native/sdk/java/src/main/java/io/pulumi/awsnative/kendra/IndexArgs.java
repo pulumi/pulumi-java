@@ -30,7 +30,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="capacityUnits")
       private final @Nullable Output<IndexCapacityUnitsConfigurationArgs> capacityUnits;
 
-    public Output<IndexCapacityUnitsConfigurationArgs> getCapacityUnits() {
+    public Output<IndexCapacityUnitsConfigurationArgs> capacityUnits() {
         return this.capacityUnits == null ? Codegen.empty() : this.capacityUnits;
     }
 
@@ -41,7 +41,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -52,28 +52,28 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="documentMetadataConfigurations")
       private final @Nullable Output<List<IndexDocumentMetadataConfigurationArgs>> documentMetadataConfigurations;
 
-    public Output<List<IndexDocumentMetadataConfigurationArgs>> getDocumentMetadataConfigurations() {
+    public Output<List<IndexDocumentMetadataConfigurationArgs>> documentMetadataConfigurations() {
         return this.documentMetadataConfigurations == null ? Codegen.empty() : this.documentMetadataConfigurations;
     }
 
     @Import(name="edition", required=true)
       private final Output<IndexEdition> edition;
 
-    public Output<IndexEdition> getEdition() {
+    public Output<IndexEdition> edition() {
         return this.edition;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -84,7 +84,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverSideEncryptionConfiguration")
       private final @Nullable Output<IndexServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
 
-    public Output<IndexServerSideEncryptionConfigurationArgs> getServerSideEncryptionConfiguration() {
+    public Output<IndexServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration() {
         return this.serverSideEncryptionConfiguration == null ? Codegen.empty() : this.serverSideEncryptionConfiguration;
     }
 
@@ -95,21 +95,21 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<IndexTagArgs>> tags;
 
-    public Output<List<IndexTagArgs>> getTags() {
+    public Output<List<IndexTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="userContextPolicy")
       private final @Nullable Output<IndexUserContextPolicy> userContextPolicy;
 
-    public Output<IndexUserContextPolicy> getUserContextPolicy() {
+    public Output<IndexUserContextPolicy> userContextPolicy() {
         return this.userContextPolicy == null ? Codegen.empty() : this.userContextPolicy;
     }
 
     @Import(name="userTokenConfigurations")
       private final @Nullable Output<List<IndexUserTokenConfigurationArgs>> userTokenConfigurations;
 
-    public Output<List<IndexUserTokenConfigurationArgs>> getUserTokenConfigurations() {
+    public Output<List<IndexUserTokenConfigurationArgs>> userTokenConfigurations() {
         return this.userTokenConfigurations == null ? Codegen.empty() : this.userTokenConfigurations;
     }
 

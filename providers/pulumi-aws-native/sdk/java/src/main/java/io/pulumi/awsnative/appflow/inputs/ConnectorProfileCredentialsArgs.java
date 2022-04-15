@@ -37,112 +37,112 @@ public final class ConnectorProfileCredentialsArgs extends io.pulumi.resources.R
     @Import(name="amplitude")
       private final @Nullable Output<ConnectorProfileAmplitudeConnectorProfileCredentialsArgs> amplitude;
 
-    public Output<ConnectorProfileAmplitudeConnectorProfileCredentialsArgs> getAmplitude() {
+    public Output<ConnectorProfileAmplitudeConnectorProfileCredentialsArgs> amplitude() {
         return this.amplitude == null ? Codegen.empty() : this.amplitude;
     }
 
     @Import(name="datadog")
       private final @Nullable Output<ConnectorProfileDatadogConnectorProfileCredentialsArgs> datadog;
 
-    public Output<ConnectorProfileDatadogConnectorProfileCredentialsArgs> getDatadog() {
+    public Output<ConnectorProfileDatadogConnectorProfileCredentialsArgs> datadog() {
         return this.datadog == null ? Codegen.empty() : this.datadog;
     }
 
     @Import(name="dynatrace")
       private final @Nullable Output<ConnectorProfileDynatraceConnectorProfileCredentialsArgs> dynatrace;
 
-    public Output<ConnectorProfileDynatraceConnectorProfileCredentialsArgs> getDynatrace() {
+    public Output<ConnectorProfileDynatraceConnectorProfileCredentialsArgs> dynatrace() {
         return this.dynatrace == null ? Codegen.empty() : this.dynatrace;
     }
 
     @Import(name="googleAnalytics")
       private final @Nullable Output<ConnectorProfileGoogleAnalyticsConnectorProfileCredentialsArgs> googleAnalytics;
 
-    public Output<ConnectorProfileGoogleAnalyticsConnectorProfileCredentialsArgs> getGoogleAnalytics() {
+    public Output<ConnectorProfileGoogleAnalyticsConnectorProfileCredentialsArgs> googleAnalytics() {
         return this.googleAnalytics == null ? Codegen.empty() : this.googleAnalytics;
     }
 
     @Import(name="inforNexus")
       private final @Nullable Output<ConnectorProfileInforNexusConnectorProfileCredentialsArgs> inforNexus;
 
-    public Output<ConnectorProfileInforNexusConnectorProfileCredentialsArgs> getInforNexus() {
+    public Output<ConnectorProfileInforNexusConnectorProfileCredentialsArgs> inforNexus() {
         return this.inforNexus == null ? Codegen.empty() : this.inforNexus;
     }
 
     @Import(name="marketo")
       private final @Nullable Output<ConnectorProfileMarketoConnectorProfileCredentialsArgs> marketo;
 
-    public Output<ConnectorProfileMarketoConnectorProfileCredentialsArgs> getMarketo() {
+    public Output<ConnectorProfileMarketoConnectorProfileCredentialsArgs> marketo() {
         return this.marketo == null ? Codegen.empty() : this.marketo;
     }
 
     @Import(name="redshift")
       private final @Nullable Output<ConnectorProfileRedshiftConnectorProfileCredentialsArgs> redshift;
 
-    public Output<ConnectorProfileRedshiftConnectorProfileCredentialsArgs> getRedshift() {
+    public Output<ConnectorProfileRedshiftConnectorProfileCredentialsArgs> redshift() {
         return this.redshift == null ? Codegen.empty() : this.redshift;
     }
 
     @Import(name="sAPOData")
       private final @Nullable Output<ConnectorProfileSAPODataConnectorProfileCredentialsArgs> sAPOData;
 
-    public Output<ConnectorProfileSAPODataConnectorProfileCredentialsArgs> getSAPOData() {
+    public Output<ConnectorProfileSAPODataConnectorProfileCredentialsArgs> sAPOData() {
         return this.sAPOData == null ? Codegen.empty() : this.sAPOData;
     }
 
     @Import(name="salesforce")
       private final @Nullable Output<ConnectorProfileSalesforceConnectorProfileCredentialsArgs> salesforce;
 
-    public Output<ConnectorProfileSalesforceConnectorProfileCredentialsArgs> getSalesforce() {
+    public Output<ConnectorProfileSalesforceConnectorProfileCredentialsArgs> salesforce() {
         return this.salesforce == null ? Codegen.empty() : this.salesforce;
     }
 
     @Import(name="serviceNow")
       private final @Nullable Output<ConnectorProfileServiceNowConnectorProfileCredentialsArgs> serviceNow;
 
-    public Output<ConnectorProfileServiceNowConnectorProfileCredentialsArgs> getServiceNow() {
+    public Output<ConnectorProfileServiceNowConnectorProfileCredentialsArgs> serviceNow() {
         return this.serviceNow == null ? Codegen.empty() : this.serviceNow;
     }
 
     @Import(name="singular")
       private final @Nullable Output<ConnectorProfileSingularConnectorProfileCredentialsArgs> singular;
 
-    public Output<ConnectorProfileSingularConnectorProfileCredentialsArgs> getSingular() {
+    public Output<ConnectorProfileSingularConnectorProfileCredentialsArgs> singular() {
         return this.singular == null ? Codegen.empty() : this.singular;
     }
 
     @Import(name="slack")
       private final @Nullable Output<ConnectorProfileSlackConnectorProfileCredentialsArgs> slack;
 
-    public Output<ConnectorProfileSlackConnectorProfileCredentialsArgs> getSlack() {
+    public Output<ConnectorProfileSlackConnectorProfileCredentialsArgs> slack() {
         return this.slack == null ? Codegen.empty() : this.slack;
     }
 
     @Import(name="snowflake")
       private final @Nullable Output<ConnectorProfileSnowflakeConnectorProfileCredentialsArgs> snowflake;
 
-    public Output<ConnectorProfileSnowflakeConnectorProfileCredentialsArgs> getSnowflake() {
+    public Output<ConnectorProfileSnowflakeConnectorProfileCredentialsArgs> snowflake() {
         return this.snowflake == null ? Codegen.empty() : this.snowflake;
     }
 
     @Import(name="trendmicro")
       private final @Nullable Output<ConnectorProfileTrendmicroConnectorProfileCredentialsArgs> trendmicro;
 
-    public Output<ConnectorProfileTrendmicroConnectorProfileCredentialsArgs> getTrendmicro() {
+    public Output<ConnectorProfileTrendmicroConnectorProfileCredentialsArgs> trendmicro() {
         return this.trendmicro == null ? Codegen.empty() : this.trendmicro;
     }
 
     @Import(name="veeva")
       private final @Nullable Output<ConnectorProfileVeevaConnectorProfileCredentialsArgs> veeva;
 
-    public Output<ConnectorProfileVeevaConnectorProfileCredentialsArgs> getVeeva() {
+    public Output<ConnectorProfileVeevaConnectorProfileCredentialsArgs> veeva() {
         return this.veeva == null ? Codegen.empty() : this.veeva;
     }
 
     @Import(name="zendesk")
       private final @Nullable Output<ConnectorProfileZendeskConnectorProfileCredentialsArgs> zendesk;
 
-    public Output<ConnectorProfileZendeskConnectorProfileCredentialsArgs> getZendesk() {
+    public Output<ConnectorProfileZendeskConnectorProfileCredentialsArgs> zendesk() {
         return this.zendesk == null ? Codegen.empty() : this.zendesk;
     }
 

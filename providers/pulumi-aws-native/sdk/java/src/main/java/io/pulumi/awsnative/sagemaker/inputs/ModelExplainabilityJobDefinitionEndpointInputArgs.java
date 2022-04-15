@@ -24,7 +24,7 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
     @Import(name="endpointName", required=true)
       private final Output<String> endpointName;
 
-    public Output<String> getEndpointName() {
+    public Output<String> endpointName() {
         return this.endpointName;
     }
 
@@ -35,7 +35,7 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
     @Import(name="featuresAttribute")
       private final @Nullable Output<String> featuresAttribute;
 
-    public Output<String> getFeaturesAttribute() {
+    public Output<String> featuresAttribute() {
         return this.featuresAttribute == null ? Codegen.empty() : this.featuresAttribute;
     }
 
@@ -46,7 +46,7 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
     @Import(name="inferenceAttribute")
       private final @Nullable Output<String> inferenceAttribute;
 
-    public Output<String> getInferenceAttribute() {
+    public Output<String> inferenceAttribute() {
         return this.inferenceAttribute == null ? Codegen.empty() : this.inferenceAttribute;
     }
 
@@ -57,7 +57,7 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
     @Import(name="localPath", required=true)
       private final Output<String> localPath;
 
-    public Output<String> getLocalPath() {
+    public Output<String> localPath() {
         return this.localPath;
     }
 
@@ -68,7 +68,7 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
     @Import(name="probabilityAttribute")
       private final @Nullable Output<String> probabilityAttribute;
 
-    public Output<String> getProbabilityAttribute() {
+    public Output<String> probabilityAttribute() {
         return this.probabilityAttribute == null ? Codegen.empty() : this.probabilityAttribute;
     }
 
@@ -79,7 +79,7 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
     @Import(name="s3DataDistributionType")
       private final @Nullable Output<ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType;
 
-    public Output<ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType> getS3DataDistributionType() {
+    public Output<ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType() {
         return this.s3DataDistributionType == null ? Codegen.empty() : this.s3DataDistributionType;
     }
 
@@ -90,7 +90,7 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
     @Import(name="s3InputMode")
       private final @Nullable Output<ModelExplainabilityJobDefinitionEndpointInputS3InputMode> s3InputMode;
 
-    public Output<ModelExplainabilityJobDefinitionEndpointInputS3InputMode> getS3InputMode() {
+    public Output<ModelExplainabilityJobDefinitionEndpointInputS3InputMode> s3InputMode() {
         return this.s3InputMode == null ? Codegen.empty() : this.s3InputMode;
     }
 

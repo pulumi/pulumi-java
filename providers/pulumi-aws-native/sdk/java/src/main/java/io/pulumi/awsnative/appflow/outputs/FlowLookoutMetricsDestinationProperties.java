@@ -18,7 +18,7 @@ public final class FlowLookoutMetricsDestinationProperties {
         this.object = object;
     }
 
-    public Optional<String> getObject() {
+    public Optional<String> object() {
         return Optional.ofNullable(this.object);
     }
 

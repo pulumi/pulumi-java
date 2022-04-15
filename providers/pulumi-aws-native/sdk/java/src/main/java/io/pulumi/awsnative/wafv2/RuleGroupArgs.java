@@ -25,28 +25,28 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="capacity", required=true)
       private final Output<Integer> capacity;
 
-    public Output<Integer> getCapacity() {
+    public Output<Integer> capacity() {
         return this.capacity;
     }
 
     @Import(name="customResponseBodies")
       private final @Nullable Output<RuleGroupCustomResponseBodiesArgs> customResponseBodies;
 
-    public Output<RuleGroupCustomResponseBodiesArgs> getCustomResponseBodies() {
+    public Output<RuleGroupCustomResponseBodiesArgs> customResponseBodies() {
         return this.customResponseBodies == null ? Codegen.empty() : this.customResponseBodies;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -57,28 +57,28 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rules")
       private final @Nullable Output<List<RuleGroupRuleArgs>> rules;
 
-    public Output<List<RuleGroupRuleArgs>> getRules() {
+    public Output<List<RuleGroupRuleArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     @Import(name="scope", required=true)
       private final Output<RuleGroupScope> scope;
 
-    public Output<RuleGroupScope> getScope() {
+    public Output<RuleGroupScope> scope() {
         return this.scope;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<RuleGroupTagArgs>> tags;
 
-    public Output<List<RuleGroupTagArgs>> getTags() {
+    public Output<List<RuleGroupTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="visibilityConfig", required=true)
       private final Output<RuleGroupVisibilityConfigArgs> visibilityConfig;
 
-    public Output<RuleGroupVisibilityConfigArgs> getVisibilityConfig() {
+    public Output<RuleGroupVisibilityConfigArgs> visibilityConfig() {
         return this.visibilityConfig;
     }
 

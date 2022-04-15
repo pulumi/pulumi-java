@@ -20,21 +20,21 @@ public final class DataflowEndpointGroupDataflowEndpointArgs extends io.pulumi.r
     @Import(name="address")
       private final @Nullable Output<DataflowEndpointGroupSocketAddressArgs> address;
 
-    public Output<DataflowEndpointGroupSocketAddressArgs> getAddress() {
+    public Output<DataflowEndpointGroupSocketAddressArgs> address() {
         return this.address == null ? Codegen.empty() : this.address;
     }
 
     @Import(name="mtu")
       private final @Nullable Output<Integer> mtu;
 
-    public Output<Integer> getMtu() {
+    public Output<Integer> mtu() {
         return this.mtu == null ? Codegen.empty() : this.mtu;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

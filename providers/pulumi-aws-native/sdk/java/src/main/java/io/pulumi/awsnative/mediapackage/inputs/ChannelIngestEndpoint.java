@@ -25,7 +25,7 @@ public final class ChannelIngestEndpoint extends io.pulumi.resources.InvokeArgs 
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -36,7 +36,7 @@ public final class ChannelIngestEndpoint extends io.pulumi.resources.InvokeArgs 
     @Import(name="password")
       private final @Nullable String password;
 
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
@@ -47,7 +47,7 @@ public final class ChannelIngestEndpoint extends io.pulumi.resources.InvokeArgs 
     @Import(name="url")
       private final @Nullable String url;
 
-    public Optional<String> getUrl() {
+    public Optional<String> url() {
         return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
     }
 
@@ -58,7 +58,7 @@ public final class ChannelIngestEndpoint extends io.pulumi.resources.InvokeArgs 
     @Import(name="username")
       private final @Nullable String username;
 
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
     }
 

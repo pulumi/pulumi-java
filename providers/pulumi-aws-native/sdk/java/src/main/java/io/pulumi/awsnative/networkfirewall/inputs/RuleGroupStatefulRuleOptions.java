@@ -17,7 +17,7 @@ public final class RuleGroupStatefulRuleOptions extends io.pulumi.resources.Invo
     @Import(name="ruleOrder")
       private final @Nullable RuleGroupRuleOrder ruleOrder;
 
-    public Optional<RuleGroupRuleOrder> getRuleOrder() {
+    public Optional<RuleGroupRuleOrder> ruleOrder() {
         return this.ruleOrder == null ? Optional.empty() : Optional.ofNullable(this.ruleOrder);
     }
 

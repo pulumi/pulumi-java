@@ -26,7 +26,7 @@ public final class ResourceCollectionCloudFormationCollectionFilter extends io.p
     @Import(name="stackNames")
       private final @Nullable List<String> stackNames;
 
-    public List<String> getStackNames() {
+    public List<String> stackNames() {
         return this.stackNames == null ? List.of() : this.stackNames;
     }
 

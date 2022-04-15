@@ -22,35 +22,35 @@ public final class IntegrationSourceConnectorPropertiesArgs extends io.pulumi.re
     @Import(name="marketo")
       private final @Nullable Output<IntegrationMarketoSourcePropertiesArgs> marketo;
 
-    public Output<IntegrationMarketoSourcePropertiesArgs> getMarketo() {
+    public Output<IntegrationMarketoSourcePropertiesArgs> marketo() {
         return this.marketo == null ? Codegen.empty() : this.marketo;
     }
 
     @Import(name="s3")
       private final @Nullable Output<IntegrationS3SourcePropertiesArgs> s3;
 
-    public Output<IntegrationS3SourcePropertiesArgs> getS3() {
+    public Output<IntegrationS3SourcePropertiesArgs> s3() {
         return this.s3 == null ? Codegen.empty() : this.s3;
     }
 
     @Import(name="salesforce")
       private final @Nullable Output<IntegrationSalesforceSourcePropertiesArgs> salesforce;
 
-    public Output<IntegrationSalesforceSourcePropertiesArgs> getSalesforce() {
+    public Output<IntegrationSalesforceSourcePropertiesArgs> salesforce() {
         return this.salesforce == null ? Codegen.empty() : this.salesforce;
     }
 
     @Import(name="serviceNow")
       private final @Nullable Output<IntegrationServiceNowSourcePropertiesArgs> serviceNow;
 
-    public Output<IntegrationServiceNowSourcePropertiesArgs> getServiceNow() {
+    public Output<IntegrationServiceNowSourcePropertiesArgs> serviceNow() {
         return this.serviceNow == null ? Codegen.empty() : this.serviceNow;
     }
 
     @Import(name="zendesk")
       private final @Nullable Output<IntegrationZendeskSourcePropertiesArgs> zendesk;
 
-    public Output<IntegrationZendeskSourcePropertiesArgs> getZendesk() {
+    public Output<IntegrationZendeskSourcePropertiesArgs> zendesk() {
         return this.zendesk == null ? Codegen.empty() : this.zendesk;
     }
 

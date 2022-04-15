@@ -22,10 +22,10 @@ public final class TaskDefinitionRuntimePlatform {
         this.operatingSystemFamily = operatingSystemFamily;
     }
 
-    public Optional<String> getCpuArchitecture() {
+    public Optional<String> cpuArchitecture() {
         return Optional.ofNullable(this.cpuArchitecture);
     }
-    public Optional<String> getOperatingSystemFamily() {
+    public Optional<String> operatingSystemFamily() {
         return Optional.ofNullable(this.operatingSystemFamily);
     }
 

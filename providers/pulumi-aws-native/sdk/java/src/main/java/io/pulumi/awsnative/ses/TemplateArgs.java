@@ -17,7 +17,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="template")
       private final @Nullable Output<io.pulumi.awsnative.ses.inputs.TemplateArgs> template;
 
-    public Output<io.pulumi.awsnative.ses.inputs.TemplateArgs> getTemplate() {
+    public Output<io.pulumi.awsnative.ses.inputs.TemplateArgs> template() {
         return this.template == null ? Codegen.empty() : this.template;
     }
 

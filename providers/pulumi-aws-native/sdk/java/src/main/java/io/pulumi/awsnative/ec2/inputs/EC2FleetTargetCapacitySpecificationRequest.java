@@ -19,35 +19,35 @@ public final class EC2FleetTargetCapacitySpecificationRequest extends io.pulumi.
     @Import(name="defaultTargetCapacityType")
       private final @Nullable EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType defaultTargetCapacityType;
 
-    public Optional<EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType> getDefaultTargetCapacityType() {
+    public Optional<EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType> defaultTargetCapacityType() {
         return this.defaultTargetCapacityType == null ? Optional.empty() : Optional.ofNullable(this.defaultTargetCapacityType);
     }
 
     @Import(name="onDemandTargetCapacity")
       private final @Nullable Integer onDemandTargetCapacity;
 
-    public Optional<Integer> getOnDemandTargetCapacity() {
+    public Optional<Integer> onDemandTargetCapacity() {
         return this.onDemandTargetCapacity == null ? Optional.empty() : Optional.ofNullable(this.onDemandTargetCapacity);
     }
 
     @Import(name="spotTargetCapacity")
       private final @Nullable Integer spotTargetCapacity;
 
-    public Optional<Integer> getSpotTargetCapacity() {
+    public Optional<Integer> spotTargetCapacity() {
         return this.spotTargetCapacity == null ? Optional.empty() : Optional.ofNullable(this.spotTargetCapacity);
     }
 
     @Import(name="targetCapacityUnitType")
       private final @Nullable EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType targetCapacityUnitType;
 
-    public Optional<EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType> getTargetCapacityUnitType() {
+    public Optional<EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType> targetCapacityUnitType() {
         return this.targetCapacityUnitType == null ? Optional.empty() : Optional.ofNullable(this.targetCapacityUnitType);
     }
 
     @Import(name="totalTargetCapacity", required=true)
       private final Integer totalTargetCapacity;
 
-    public Integer getTotalTargetCapacity() {
+    public Integer totalTargetCapacity() {
         return this.totalTargetCapacity;
     }
 

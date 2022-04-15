@@ -23,56 +23,56 @@ public final class ListenerAction extends io.pulumi.resources.InvokeArgs {
     @Import(name="authenticateCognitoConfig")
       private final @Nullable ListenerAuthenticateCognitoConfig authenticateCognitoConfig;
 
-    public Optional<ListenerAuthenticateCognitoConfig> getAuthenticateCognitoConfig() {
+    public Optional<ListenerAuthenticateCognitoConfig> authenticateCognitoConfig() {
         return this.authenticateCognitoConfig == null ? Optional.empty() : Optional.ofNullable(this.authenticateCognitoConfig);
     }
 
     @Import(name="authenticateOidcConfig")
       private final @Nullable ListenerAuthenticateOidcConfig authenticateOidcConfig;
 
-    public Optional<ListenerAuthenticateOidcConfig> getAuthenticateOidcConfig() {
+    public Optional<ListenerAuthenticateOidcConfig> authenticateOidcConfig() {
         return this.authenticateOidcConfig == null ? Optional.empty() : Optional.ofNullable(this.authenticateOidcConfig);
     }
 
     @Import(name="fixedResponseConfig")
       private final @Nullable ListenerFixedResponseConfig fixedResponseConfig;
 
-    public Optional<ListenerFixedResponseConfig> getFixedResponseConfig() {
+    public Optional<ListenerFixedResponseConfig> fixedResponseConfig() {
         return this.fixedResponseConfig == null ? Optional.empty() : Optional.ofNullable(this.fixedResponseConfig);
     }
 
     @Import(name="forwardConfig")
       private final @Nullable ListenerForwardConfig forwardConfig;
 
-    public Optional<ListenerForwardConfig> getForwardConfig() {
+    public Optional<ListenerForwardConfig> forwardConfig() {
         return this.forwardConfig == null ? Optional.empty() : Optional.ofNullable(this.forwardConfig);
     }
 
     @Import(name="order")
       private final @Nullable Integer order;
 
-    public Optional<Integer> getOrder() {
+    public Optional<Integer> order() {
         return this.order == null ? Optional.empty() : Optional.ofNullable(this.order);
     }
 
     @Import(name="redirectConfig")
       private final @Nullable ListenerRedirectConfig redirectConfig;
 
-    public Optional<ListenerRedirectConfig> getRedirectConfig() {
+    public Optional<ListenerRedirectConfig> redirectConfig() {
         return this.redirectConfig == null ? Optional.empty() : Optional.ofNullable(this.redirectConfig);
     }
 
     @Import(name="targetGroupArn")
       private final @Nullable String targetGroupArn;
 
-    public Optional<String> getTargetGroupArn() {
+    public Optional<String> targetGroupArn() {
         return this.targetGroupArn == null ? Optional.empty() : Optional.ofNullable(this.targetGroupArn);
     }
 
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

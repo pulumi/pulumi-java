@@ -33,19 +33,19 @@ public final class EC2FleetTargetCapacitySpecificationRequest {
         this.totalTargetCapacity = totalTargetCapacity;
     }
 
-    public Optional<EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType> getDefaultTargetCapacityType() {
+    public Optional<EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType> defaultTargetCapacityType() {
         return Optional.ofNullable(this.defaultTargetCapacityType);
     }
-    public Optional<Integer> getOnDemandTargetCapacity() {
+    public Optional<Integer> onDemandTargetCapacity() {
         return Optional.ofNullable(this.onDemandTargetCapacity);
     }
-    public Optional<Integer> getSpotTargetCapacity() {
+    public Optional<Integer> spotTargetCapacity() {
         return Optional.ofNullable(this.spotTargetCapacity);
     }
-    public Optional<EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType> getTargetCapacityUnitType() {
+    public Optional<EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType> targetCapacityUnitType() {
         return Optional.ofNullable(this.targetCapacityUnitType);
     }
-    public Integer getTotalTargetCapacity() {
+    public Integer totalTargetCapacity() {
         return this.totalTargetCapacity;
     }
 

@@ -20,35 +20,35 @@ public final class VPCEConfigurationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="serviceDnsName", required=true)
       private final Output<String> serviceDnsName;
 
-    public Output<String> getServiceDnsName() {
+    public Output<String> serviceDnsName() {
         return this.serviceDnsName;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<VPCEConfigurationTagArgs>> tags;
 
-    public Output<List<VPCEConfigurationTagArgs>> getTags() {
+    public Output<List<VPCEConfigurationTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="vpceConfigurationDescription")
       private final @Nullable Output<String> vpceConfigurationDescription;
 
-    public Output<String> getVpceConfigurationDescription() {
+    public Output<String> vpceConfigurationDescription() {
         return this.vpceConfigurationDescription == null ? Codegen.empty() : this.vpceConfigurationDescription;
     }
 
     @Import(name="vpceConfigurationName", required=true)
       private final Output<String> vpceConfigurationName;
 
-    public Output<String> getVpceConfigurationName() {
+    public Output<String> vpceConfigurationName() {
         return this.vpceConfigurationName;
     }
 
     @Import(name="vpceServiceName", required=true)
       private final Output<String> vpceServiceName;
 
-    public Output<String> getVpceServiceName() {
+    public Output<String> vpceServiceName() {
         return this.vpceServiceName;
     }
 

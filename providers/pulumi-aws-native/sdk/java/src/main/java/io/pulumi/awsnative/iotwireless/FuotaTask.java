@@ -32,7 +32,7 @@ public class FuotaTask extends io.pulumi.resources.CustomResource {
      * @return FUOTA task arn. Returned after successful create.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -46,7 +46,7 @@ public class FuotaTask extends io.pulumi.resources.CustomResource {
      * @return Multicast group to associate. Only for update request.
      * 
      */
-    public Output</* @Nullable */ String> getAssociateMulticastGroup() {
+    public Output</* @Nullable */ String> associateMulticastGroup() {
         return this.associateMulticastGroup;
     }
     /**
@@ -60,7 +60,7 @@ public class FuotaTask extends io.pulumi.resources.CustomResource {
      * @return Wireless device to associate. Only for update request.
      * 
      */
-    public Output</* @Nullable */ String> getAssociateWirelessDevice() {
+    public Output</* @Nullable */ String> associateWirelessDevice() {
         return this.associateWirelessDevice;
     }
     /**
@@ -74,7 +74,7 @@ public class FuotaTask extends io.pulumi.resources.CustomResource {
      * @return FUOTA task description
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -88,7 +88,7 @@ public class FuotaTask extends io.pulumi.resources.CustomResource {
      * @return Multicast group to disassociate. Only for update request.
      * 
      */
-    public Output</* @Nullable */ String> getDisassociateMulticastGroup() {
+    public Output</* @Nullable */ String> disassociateMulticastGroup() {
         return this.disassociateMulticastGroup;
     }
     /**
@@ -102,7 +102,7 @@ public class FuotaTask extends io.pulumi.resources.CustomResource {
      * @return Wireless device to disassociate. Only for update request.
      * 
      */
-    public Output</* @Nullable */ String> getDisassociateWirelessDevice() {
+    public Output</* @Nullable */ String> disassociateWirelessDevice() {
         return this.disassociateWirelessDevice;
     }
     /**
@@ -116,7 +116,7 @@ public class FuotaTask extends io.pulumi.resources.CustomResource {
      * @return FUOTA task firmware update image binary S3 link
      * 
      */
-    public Output<String> getFirmwareUpdateImage() {
+    public Output<String> firmwareUpdateImage() {
         return this.firmwareUpdateImage;
     }
     /**
@@ -130,7 +130,7 @@ public class FuotaTask extends io.pulumi.resources.CustomResource {
      * @return FUOTA task firmware IAM role for reading S3
      * 
      */
-    public Output<String> getFirmwareUpdateRole() {
+    public Output<String> firmwareUpdateRole() {
         return this.firmwareUpdateRole;
     }
     /**
@@ -144,7 +144,7 @@ public class FuotaTask extends io.pulumi.resources.CustomResource {
      * @return FUOTA task status. Returned after successful read.
      * 
      */
-    public Output<String> getFuotaTaskStatus() {
+    public Output<String> fuotaTaskStatus() {
         return this.fuotaTaskStatus;
     }
     /**
@@ -158,7 +158,7 @@ public class FuotaTask extends io.pulumi.resources.CustomResource {
      * @return FUOTA task LoRaWAN
      * 
      */
-    public Output<FuotaTaskLoRaWAN> getLoRaWAN() {
+    public Output<FuotaTaskLoRaWAN> loRaWAN() {
         return this.loRaWAN;
     }
     /**
@@ -172,7 +172,7 @@ public class FuotaTask extends io.pulumi.resources.CustomResource {
      * @return Name of FUOTA task
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -186,7 +186,7 @@ public class FuotaTask extends io.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the FUOTA task.
      * 
      */
-    public Output</* @Nullable */ List<FuotaTaskTag>> getTags() {
+    public Output</* @Nullable */ List<FuotaTaskTag>> tags() {
         return this.tags;
     }
 

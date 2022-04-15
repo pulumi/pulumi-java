@@ -26,91 +26,91 @@ public final class DeliveryStreamElasticsearchDestinationConfigurationArgs exten
     @Import(name="bufferingHints")
       private final @Nullable Output<DeliveryStreamElasticsearchBufferingHintsArgs> bufferingHints;
 
-    public Output<DeliveryStreamElasticsearchBufferingHintsArgs> getBufferingHints() {
+    public Output<DeliveryStreamElasticsearchBufferingHintsArgs> bufferingHints() {
         return this.bufferingHints == null ? Codegen.empty() : this.bufferingHints;
     }
 
     @Import(name="cloudWatchLoggingOptions")
       private final @Nullable Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions;
 
-    public Output<DeliveryStreamCloudWatchLoggingOptionsArgs> getCloudWatchLoggingOptions() {
+    public Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions() {
         return this.cloudWatchLoggingOptions == null ? Codegen.empty() : this.cloudWatchLoggingOptions;
     }
 
     @Import(name="clusterEndpoint")
       private final @Nullable Output<String> clusterEndpoint;
 
-    public Output<String> getClusterEndpoint() {
+    public Output<String> clusterEndpoint() {
         return this.clusterEndpoint == null ? Codegen.empty() : this.clusterEndpoint;
     }
 
     @Import(name="domainARN")
       private final @Nullable Output<String> domainARN;
 
-    public Output<String> getDomainARN() {
+    public Output<String> domainARN() {
         return this.domainARN == null ? Codegen.empty() : this.domainARN;
     }
 
     @Import(name="indexName", required=true)
       private final Output<String> indexName;
 
-    public Output<String> getIndexName() {
+    public Output<String> indexName() {
         return this.indexName;
     }
 
     @Import(name="indexRotationPeriod")
       private final @Nullable Output<DeliveryStreamElasticsearchDestinationConfigurationIndexRotationPeriod> indexRotationPeriod;
 
-    public Output<DeliveryStreamElasticsearchDestinationConfigurationIndexRotationPeriod> getIndexRotationPeriod() {
+    public Output<DeliveryStreamElasticsearchDestinationConfigurationIndexRotationPeriod> indexRotationPeriod() {
         return this.indexRotationPeriod == null ? Codegen.empty() : this.indexRotationPeriod;
     }
 
     @Import(name="processingConfiguration")
       private final @Nullable Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration;
 
-    public Output<DeliveryStreamProcessingConfigurationArgs> getProcessingConfiguration() {
+    public Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration() {
         return this.processingConfiguration == null ? Codegen.empty() : this.processingConfiguration;
     }
 
     @Import(name="retryOptions")
       private final @Nullable Output<DeliveryStreamElasticsearchRetryOptionsArgs> retryOptions;
 
-    public Output<DeliveryStreamElasticsearchRetryOptionsArgs> getRetryOptions() {
+    public Output<DeliveryStreamElasticsearchRetryOptionsArgs> retryOptions() {
         return this.retryOptions == null ? Codegen.empty() : this.retryOptions;
     }
 
     @Import(name="roleARN", required=true)
       private final Output<String> roleARN;
 
-    public Output<String> getRoleARN() {
+    public Output<String> roleARN() {
         return this.roleARN;
     }
 
     @Import(name="s3BackupMode")
       private final @Nullable Output<DeliveryStreamElasticsearchDestinationConfigurationS3BackupMode> s3BackupMode;
 
-    public Output<DeliveryStreamElasticsearchDestinationConfigurationS3BackupMode> getS3BackupMode() {
+    public Output<DeliveryStreamElasticsearchDestinationConfigurationS3BackupMode> s3BackupMode() {
         return this.s3BackupMode == null ? Codegen.empty() : this.s3BackupMode;
     }
 
     @Import(name="s3Configuration", required=true)
       private final Output<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration;
 
-    public Output<DeliveryStreamS3DestinationConfigurationArgs> getS3Configuration() {
+    public Output<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration() {
         return this.s3Configuration;
     }
 
     @Import(name="typeName")
       private final @Nullable Output<String> typeName;
 
-    public Output<String> getTypeName() {
+    public Output<String> typeName() {
         return this.typeName == null ? Codegen.empty() : this.typeName;
     }
 
     @Import(name="vpcConfiguration")
       private final @Nullable Output<DeliveryStreamVpcConfigurationArgs> vpcConfiguration;
 
-    public Output<DeliveryStreamVpcConfigurationArgs> getVpcConfiguration() {
+    public Output<DeliveryStreamVpcConfigurationArgs> vpcConfiguration() {
         return this.vpcConfiguration == null ? Codegen.empty() : this.vpcConfiguration;
     }
 

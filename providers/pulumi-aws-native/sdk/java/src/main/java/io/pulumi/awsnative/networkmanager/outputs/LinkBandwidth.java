@@ -34,14 +34,14 @@ public final class LinkBandwidth {
      * Download speed in Mbps.
      * 
     */
-    public Optional<Integer> getDownloadSpeed() {
+    public Optional<Integer> downloadSpeed() {
         return Optional.ofNullable(this.downloadSpeed);
     }
     /**
      * Upload speed in Mbps.
      * 
     */
-    public Optional<Integer> getUploadSpeed() {
+    public Optional<Integer> uploadSpeed() {
         return Optional.ofNullable(this.uploadSpeed);
     }
 

@@ -49,27 +49,27 @@ public final class GetRegexPatternSetResult {
      * ARN of the WAF entity.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Description of the entity.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Id of the RegexPatternSet
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public List<String> getRegularExpressionList() {
+    public List<String> regularExpressionList() {
         return this.regularExpressionList == null ? List.of() : this.regularExpressionList;
     }
-    public List<RegexPatternSetTag> getTags() {
+    public List<RegexPatternSetTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

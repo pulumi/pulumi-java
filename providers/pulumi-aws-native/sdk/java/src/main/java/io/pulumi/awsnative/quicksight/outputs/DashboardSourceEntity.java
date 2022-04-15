@@ -18,7 +18,7 @@ public final class DashboardSourceEntity {
         this.sourceTemplate = sourceTemplate;
     }
 
-    public Optional<DashboardSourceTemplate> getSourceTemplate() {
+    public Optional<DashboardSourceTemplate> sourceTemplate() {
         return Optional.ofNullable(this.sourceTemplate);
     }
 

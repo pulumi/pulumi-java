@@ -56,35 +56,35 @@ public final class ApplicationLog {
      * The type of encoding of the logs to be monitored.
      * 
     */
-    public Optional<ApplicationLogEncoding> getEncoding() {
+    public Optional<ApplicationLogEncoding> encoding() {
         return Optional.ofNullable(this.encoding);
     }
     /**
      * The CloudWatch log group name to be associated to the monitored log.
      * 
     */
-    public Optional<String> getLogGroupName() {
+    public Optional<String> logGroupName() {
         return Optional.ofNullable(this.logGroupName);
     }
     /**
      * The path of the logs to be monitored.
      * 
     */
-    public Optional<String> getLogPath() {
+    public Optional<String> logPath() {
         return Optional.ofNullable(this.logPath);
     }
     /**
      * The log type decides the log patterns against which Application Insights analyzes the log.
      * 
     */
-    public String getLogType() {
+    public String logType() {
         return this.logType;
     }
     /**
      * The name of the log pattern set.
      * 
     */
-    public Optional<String> getPatternSet() {
+    public Optional<String> patternSet() {
         return Optional.ofNullable(this.patternSet);
     }
 

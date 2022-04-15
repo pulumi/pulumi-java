@@ -23,7 +23,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessPolicyIdentity", required=true)
       private final Output<AccessPolicyIdentityArgs> accessPolicyIdentity;
 
-    public Output<AccessPolicyIdentityArgs> getAccessPolicyIdentity() {
+    public Output<AccessPolicyIdentityArgs> accessPolicyIdentity() {
         return this.accessPolicyIdentity;
     }
 
@@ -34,7 +34,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessPolicyPermission", required=true)
       private final Output<String> accessPolicyPermission;
 
-    public Output<String> getAccessPolicyPermission() {
+    public Output<String> accessPolicyPermission() {
         return this.accessPolicyPermission;
     }
 
@@ -45,7 +45,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessPolicyResource", required=true)
       private final Output<AccessPolicyResourceArgs> accessPolicyResource;
 
-    public Output<AccessPolicyResourceArgs> getAccessPolicyResource() {
+    public Output<AccessPolicyResourceArgs> accessPolicyResource() {
         return this.accessPolicyResource;
     }
 

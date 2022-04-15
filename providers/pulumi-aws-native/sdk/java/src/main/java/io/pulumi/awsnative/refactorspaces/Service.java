@@ -26,49 +26,49 @@ public class Service extends io.pulumi.resources.CustomResource {
     @Export(name="applicationIdentifier", type=String.class, parameters={})
     private Output<String> applicationIdentifier;
 
-    public Output<String> getApplicationIdentifier() {
+    public Output<String> applicationIdentifier() {
         return this.applicationIdentifier;
     }
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="endpointType", type=ServiceEndpointType.class, parameters={})
     private Output</* @Nullable */ ServiceEndpointType> endpointType;
 
-    public Output</* @Nullable */ ServiceEndpointType> getEndpointType() {
+    public Output</* @Nullable */ ServiceEndpointType> endpointType() {
         return this.endpointType;
     }
     @Export(name="environmentIdentifier", type=String.class, parameters={})
     private Output<String> environmentIdentifier;
 
-    public Output<String> getEnvironmentIdentifier() {
+    public Output<String> environmentIdentifier() {
         return this.environmentIdentifier;
     }
     @Export(name="lambdaEndpoint", type=ServiceLambdaEndpointInput.class, parameters={})
     private Output</* @Nullable */ ServiceLambdaEndpointInput> lambdaEndpoint;
 
-    public Output</* @Nullable */ ServiceLambdaEndpointInput> getLambdaEndpoint() {
+    public Output</* @Nullable */ ServiceLambdaEndpointInput> lambdaEndpoint() {
         return this.lambdaEndpoint;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     @Export(name="serviceIdentifier", type=String.class, parameters={})
     private Output<String> serviceIdentifier;
 
-    public Output<String> getServiceIdentifier() {
+    public Output<String> serviceIdentifier() {
         return this.serviceIdentifier;
     }
     /**
@@ -82,19 +82,19 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
      * 
      */
-    public Output</* @Nullable */ List<ServiceTag>> getTags() {
+    public Output</* @Nullable */ List<ServiceTag>> tags() {
         return this.tags;
     }
     @Export(name="urlEndpoint", type=ServiceUrlEndpointInput.class, parameters={})
     private Output</* @Nullable */ ServiceUrlEndpointInput> urlEndpoint;
 
-    public Output</* @Nullable */ ServiceUrlEndpointInput> getUrlEndpoint() {
+    public Output</* @Nullable */ ServiceUrlEndpointInput> urlEndpoint() {
         return this.urlEndpoint;
     }
     @Export(name="vpcId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpcId;
 
-    public Output</* @Nullable */ String> getVpcId() {
+    public Output</* @Nullable */ String> vpcId() {
         return this.vpcId;
     }
 

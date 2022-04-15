@@ -23,10 +23,10 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentials {
         this.oAuthCredentials = oAuthCredentials;
     }
 
-    public Optional<ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsProperties> getBasicAuthCredentials() {
+    public Optional<ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsProperties> basicAuthCredentials() {
         return Optional.ofNullable(this.basicAuthCredentials);
     }
-    public Optional<ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsProperties> getOAuthCredentials() {
+    public Optional<ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsProperties> oAuthCredentials() {
         return Optional.ofNullable(this.oAuthCredentials);
     }
 

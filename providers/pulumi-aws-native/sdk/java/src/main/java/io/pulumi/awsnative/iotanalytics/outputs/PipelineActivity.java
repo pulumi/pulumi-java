@@ -55,34 +55,34 @@ public final class PipelineActivity {
         this.selectAttributes = selectAttributes;
     }
 
-    public Optional<PipelineAddAttributes> getAddAttributes() {
+    public Optional<PipelineAddAttributes> addAttributes() {
         return Optional.ofNullable(this.addAttributes);
     }
-    public Optional<PipelineChannel> getChannel() {
+    public Optional<PipelineChannel> channel() {
         return Optional.ofNullable(this.channel);
     }
-    public Optional<PipelineDatastore> getDatastore() {
+    public Optional<PipelineDatastore> datastore() {
         return Optional.ofNullable(this.datastore);
     }
-    public Optional<PipelineDeviceRegistryEnrich> getDeviceRegistryEnrich() {
+    public Optional<PipelineDeviceRegistryEnrich> deviceRegistryEnrich() {
         return Optional.ofNullable(this.deviceRegistryEnrich);
     }
-    public Optional<PipelineDeviceShadowEnrich> getDeviceShadowEnrich() {
+    public Optional<PipelineDeviceShadowEnrich> deviceShadowEnrich() {
         return Optional.ofNullable(this.deviceShadowEnrich);
     }
-    public Optional<PipelineFilter> getFilter() {
+    public Optional<PipelineFilter> filter() {
         return Optional.ofNullable(this.filter);
     }
-    public Optional<PipelineLambda> getLambda() {
+    public Optional<PipelineLambda> lambda() {
         return Optional.ofNullable(this.lambda);
     }
-    public Optional<PipelineMath> getMath() {
+    public Optional<PipelineMath> math() {
         return Optional.ofNullable(this.math);
     }
-    public Optional<PipelineRemoveAttributes> getRemoveAttributes() {
+    public Optional<PipelineRemoveAttributes> removeAttributes() {
         return Optional.ofNullable(this.removeAttributes);
     }
-    public Optional<PipelineSelectAttributes> getSelectAttributes() {
+    public Optional<PipelineSelectAttributes> selectAttributes() {
         return Optional.ofNullable(this.selectAttributes);
     }
 

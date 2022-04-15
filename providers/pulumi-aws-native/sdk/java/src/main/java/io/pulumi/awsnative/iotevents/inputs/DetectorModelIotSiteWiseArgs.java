@@ -27,7 +27,7 @@ public final class DetectorModelIotSiteWiseArgs extends io.pulumi.resources.Reso
     @Import(name="assetId")
       private final @Nullable Output<String> assetId;
 
-    public Output<String> getAssetId() {
+    public Output<String> assetId() {
         return this.assetId == null ? Codegen.empty() : this.assetId;
     }
 
@@ -38,7 +38,7 @@ public final class DetectorModelIotSiteWiseArgs extends io.pulumi.resources.Reso
     @Import(name="entryId")
       private final @Nullable Output<String> entryId;
 
-    public Output<String> getEntryId() {
+    public Output<String> entryId() {
         return this.entryId == null ? Codegen.empty() : this.entryId;
     }
 
@@ -49,7 +49,7 @@ public final class DetectorModelIotSiteWiseArgs extends io.pulumi.resources.Reso
     @Import(name="propertyAlias")
       private final @Nullable Output<String> propertyAlias;
 
-    public Output<String> getPropertyAlias() {
+    public Output<String> propertyAlias() {
         return this.propertyAlias == null ? Codegen.empty() : this.propertyAlias;
     }
 
@@ -60,14 +60,14 @@ public final class DetectorModelIotSiteWiseArgs extends io.pulumi.resources.Reso
     @Import(name="propertyId")
       private final @Nullable Output<String> propertyId;
 
-    public Output<String> getPropertyId() {
+    public Output<String> propertyId() {
         return this.propertyId == null ? Codegen.empty() : this.propertyId;
     }
 
     @Import(name="propertyValue", required=true)
       private final Output<DetectorModelAssetPropertyValueArgs> propertyValue;
 
-    public Output<DetectorModelAssetPropertyValueArgs> getPropertyValue() {
+    public Output<DetectorModelAssetPropertyValueArgs> propertyValue() {
         return this.propertyValue;
     }
 

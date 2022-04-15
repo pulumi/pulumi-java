@@ -46,31 +46,31 @@ public final class SecurityProfileBehavior {
         this.suppressAlerts = suppressAlerts;
     }
 
-    public Optional<SecurityProfileBehaviorCriteria> getCriteria() {
+    public Optional<SecurityProfileBehaviorCriteria> criteria() {
         return Optional.ofNullable(this.criteria);
     }
     /**
      * What is measured by the behavior.
      * 
     */
-    public Optional<String> getMetric() {
+    public Optional<String> metric() {
         return Optional.ofNullable(this.metric);
     }
-    public Optional<SecurityProfileMetricDimension> getMetricDimension() {
+    public Optional<SecurityProfileMetricDimension> metricDimension() {
         return Optional.ofNullable(this.metricDimension);
     }
     /**
      * The name for the behavior.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Manage Detect alarm SNS notifications by setting behavior notification to on or suppressed. Detect will continue to performing device behavior evaluations. However, suppressed alarms wouldn't be forwarded for SNS notification.
      * 
     */
-    public Optional<Boolean> getSuppressAlerts() {
+    public Optional<Boolean> suppressAlerts() {
         return Optional.ofNullable(this.suppressAlerts);
     }
 

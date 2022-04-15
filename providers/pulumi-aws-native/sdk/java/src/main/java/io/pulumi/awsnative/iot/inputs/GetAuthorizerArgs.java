@@ -15,7 +15,7 @@ public final class GetAuthorizerArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="authorizerName", required=true)
       private final String authorizerName;
 
-    public String getAuthorizerName() {
+    public String authorizerName() {
         return this.authorizerName;
     }
 

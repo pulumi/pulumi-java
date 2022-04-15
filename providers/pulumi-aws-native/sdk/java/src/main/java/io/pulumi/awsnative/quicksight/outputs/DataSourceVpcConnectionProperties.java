@@ -24,7 +24,7 @@ public final class DataSourceVpcConnectionProperties {
      * <p>The Amazon Resource Name (ARN) for the VPC connection.</p>
      * 
     */
-    public String getVpcConnectionArn() {
+    public String vpcConnectionArn() {
         return this.vpcConnectionArn;
     }
 

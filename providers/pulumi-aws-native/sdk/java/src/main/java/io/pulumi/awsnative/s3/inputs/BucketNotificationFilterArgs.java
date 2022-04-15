@@ -21,7 +21,7 @@ public final class BucketNotificationFilterArgs extends io.pulumi.resources.Reso
     @Import(name="s3Key", required=true)
       private final Output<BucketS3KeyFilterArgs> s3Key;
 
-    public Output<BucketS3KeyFilterArgs> getS3Key() {
+    public Output<BucketS3KeyFilterArgs> s3Key() {
         return this.s3Key;
     }
 

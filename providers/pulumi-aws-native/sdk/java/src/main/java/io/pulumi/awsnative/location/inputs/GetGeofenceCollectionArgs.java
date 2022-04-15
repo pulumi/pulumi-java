@@ -15,7 +15,7 @@ public final class GetGeofenceCollectionArgs extends io.pulumi.resources.InvokeA
     @Import(name="collectionName", required=true)
       private final String collectionName;
 
-    public String getCollectionName() {
+    public String collectionName() {
         return this.collectionName;
     }
 

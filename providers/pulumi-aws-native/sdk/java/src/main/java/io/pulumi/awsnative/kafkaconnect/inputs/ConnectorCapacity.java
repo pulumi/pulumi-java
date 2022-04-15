@@ -22,14 +22,14 @@ public final class ConnectorCapacity extends io.pulumi.resources.InvokeArgs {
     @Import(name="autoScaling")
       private final @Nullable ConnectorAutoScaling autoScaling;
 
-    public Optional<ConnectorAutoScaling> getAutoScaling() {
+    public Optional<ConnectorAutoScaling> autoScaling() {
         return this.autoScaling == null ? Optional.empty() : Optional.ofNullable(this.autoScaling);
     }
 
     @Import(name="provisionedCapacity")
       private final @Nullable ConnectorProvisionedCapacity provisionedCapacity;
 
-    public Optional<ConnectorProvisionedCapacity> getProvisionedCapacity() {
+    public Optional<ConnectorProvisionedCapacity> provisionedCapacity() {
         return this.provisionedCapacity == null ? Optional.empty() : Optional.ofNullable(this.provisionedCapacity);
     }
 

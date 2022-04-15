@@ -18,14 +18,14 @@ public final class DatastoreTimestampPartitionArgs extends io.pulumi.resources.R
     @Import(name="attributeName", required=true)
       private final Output<String> attributeName;
 
-    public Output<String> getAttributeName() {
+    public Output<String> attributeName() {
         return this.attributeName;
     }
 
     @Import(name="timestampFormat")
       private final @Nullable Output<String> timestampFormat;
 
-    public Output<String> getTimestampFormat() {
+    public Output<String> timestampFormat() {
         return this.timestampFormat == null ? Codegen.empty() : this.timestampFormat;
     }
 

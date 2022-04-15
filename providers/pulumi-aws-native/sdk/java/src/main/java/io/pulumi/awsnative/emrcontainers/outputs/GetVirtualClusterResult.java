@@ -35,21 +35,21 @@ public final class GetVirtualClusterResult {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Id of the virtual cluster.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * An array of key-value pairs to apply to this virtual cluster.
      * 
     */
-    public List<VirtualClusterTag> getTags() {
+    public List<VirtualClusterTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

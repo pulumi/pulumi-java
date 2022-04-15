@@ -16,7 +16,7 @@ public final class VirtualClusterEksInfo {
         this.namespace = namespace;
     }
 
-    public String getNamespace() {
+    public String namespace() {
         return this.namespace;
     }
 

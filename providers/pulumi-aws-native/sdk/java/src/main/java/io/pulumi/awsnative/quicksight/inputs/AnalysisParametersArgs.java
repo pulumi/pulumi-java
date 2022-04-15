@@ -30,7 +30,7 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dateTimeParameters")
       private final @Nullable Output<List<AnalysisDateTimeParameterArgs>> dateTimeParameters;
 
-    public Output<List<AnalysisDateTimeParameterArgs>> getDateTimeParameters() {
+    public Output<List<AnalysisDateTimeParameterArgs>> dateTimeParameters() {
         return this.dateTimeParameters == null ? Codegen.empty() : this.dateTimeParameters;
     }
 
@@ -41,7 +41,7 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
     @Import(name="decimalParameters")
       private final @Nullable Output<List<AnalysisDecimalParameterArgs>> decimalParameters;
 
-    public Output<List<AnalysisDecimalParameterArgs>> getDecimalParameters() {
+    public Output<List<AnalysisDecimalParameterArgs>> decimalParameters() {
         return this.decimalParameters == null ? Codegen.empty() : this.decimalParameters;
     }
 
@@ -52,7 +52,7 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
     @Import(name="integerParameters")
       private final @Nullable Output<List<AnalysisIntegerParameterArgs>> integerParameters;
 
-    public Output<List<AnalysisIntegerParameterArgs>> getIntegerParameters() {
+    public Output<List<AnalysisIntegerParameterArgs>> integerParameters() {
         return this.integerParameters == null ? Codegen.empty() : this.integerParameters;
     }
 
@@ -63,7 +63,7 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
     @Import(name="stringParameters")
       private final @Nullable Output<List<AnalysisStringParameterArgs>> stringParameters;
 
-    public Output<List<AnalysisStringParameterArgs>> getStringParameters() {
+    public Output<List<AnalysisStringParameterArgs>> stringParameters() {
         return this.stringParameters == null ? Codegen.empty() : this.stringParameters;
     }
 

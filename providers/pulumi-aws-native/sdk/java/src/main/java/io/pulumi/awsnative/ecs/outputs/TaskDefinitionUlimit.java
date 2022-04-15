@@ -24,13 +24,13 @@ public final class TaskDefinitionUlimit {
         this.softLimit = softLimit;
     }
 
-    public Integer getHardLimit() {
+    public Integer hardLimit() {
         return this.hardLimit;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Integer getSoftLimit() {
+    public Integer softLimit() {
         return this.softLimit;
     }
 

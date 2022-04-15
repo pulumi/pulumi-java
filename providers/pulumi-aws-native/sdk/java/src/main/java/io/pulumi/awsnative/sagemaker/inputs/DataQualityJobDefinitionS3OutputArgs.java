@@ -27,7 +27,7 @@ public final class DataQualityJobDefinitionS3OutputArgs extends io.pulumi.resour
     @Import(name="localPath", required=true)
       private final Output<String> localPath;
 
-    public Output<String> getLocalPath() {
+    public Output<String> localPath() {
         return this.localPath;
     }
 
@@ -38,7 +38,7 @@ public final class DataQualityJobDefinitionS3OutputArgs extends io.pulumi.resour
     @Import(name="s3UploadMode")
       private final @Nullable Output<DataQualityJobDefinitionS3OutputS3UploadMode> s3UploadMode;
 
-    public Output<DataQualityJobDefinitionS3OutputS3UploadMode> getS3UploadMode() {
+    public Output<DataQualityJobDefinitionS3OutputS3UploadMode> s3UploadMode() {
         return this.s3UploadMode == null ? Codegen.empty() : this.s3UploadMode;
     }
 
@@ -49,7 +49,7 @@ public final class DataQualityJobDefinitionS3OutputArgs extends io.pulumi.resour
     @Import(name="s3Uri", required=true)
       private final Output<String> s3Uri;
 
-    public Output<String> getS3Uri() {
+    public Output<String> s3Uri() {
         return this.s3Uri;
     }
 

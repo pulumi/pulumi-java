@@ -24,21 +24,21 @@ public final class BucketTransitionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="storageClass", required=true)
       private final Output<BucketTransitionStorageClass> storageClass;
 
-    public Output<BucketTransitionStorageClass> getStorageClass() {
+    public Output<BucketTransitionStorageClass> storageClass() {
         return this.storageClass;
     }
 
     @Import(name="transitionDate")
       private final @Nullable Output<String> transitionDate;
 
-    public Output<String> getTransitionDate() {
+    public Output<String> transitionDate() {
         return this.transitionDate == null ? Codegen.empty() : this.transitionDate;
     }
 
     @Import(name="transitionInDays")
       private final @Nullable Output<Integer> transitionInDays;
 
-    public Output<Integer> getTransitionInDays() {
+    public Output<Integer> transitionInDays() {
         return this.transitionInDays == null ? Codegen.empty() : this.transitionInDays;
     }
 

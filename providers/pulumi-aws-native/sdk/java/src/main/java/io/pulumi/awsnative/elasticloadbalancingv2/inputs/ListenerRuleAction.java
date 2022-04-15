@@ -23,56 +23,56 @@ public final class ListenerRuleAction extends io.pulumi.resources.InvokeArgs {
     @Import(name="authenticateCognitoConfig")
       private final @Nullable ListenerRuleAuthenticateCognitoConfig authenticateCognitoConfig;
 
-    public Optional<ListenerRuleAuthenticateCognitoConfig> getAuthenticateCognitoConfig() {
+    public Optional<ListenerRuleAuthenticateCognitoConfig> authenticateCognitoConfig() {
         return this.authenticateCognitoConfig == null ? Optional.empty() : Optional.ofNullable(this.authenticateCognitoConfig);
     }
 
     @Import(name="authenticateOidcConfig")
       private final @Nullable ListenerRuleAuthenticateOidcConfig authenticateOidcConfig;
 
-    public Optional<ListenerRuleAuthenticateOidcConfig> getAuthenticateOidcConfig() {
+    public Optional<ListenerRuleAuthenticateOidcConfig> authenticateOidcConfig() {
         return this.authenticateOidcConfig == null ? Optional.empty() : Optional.ofNullable(this.authenticateOidcConfig);
     }
 
     @Import(name="fixedResponseConfig")
       private final @Nullable ListenerRuleFixedResponseConfig fixedResponseConfig;
 
-    public Optional<ListenerRuleFixedResponseConfig> getFixedResponseConfig() {
+    public Optional<ListenerRuleFixedResponseConfig> fixedResponseConfig() {
         return this.fixedResponseConfig == null ? Optional.empty() : Optional.ofNullable(this.fixedResponseConfig);
     }
 
     @Import(name="forwardConfig")
       private final @Nullable ListenerRuleForwardConfig forwardConfig;
 
-    public Optional<ListenerRuleForwardConfig> getForwardConfig() {
+    public Optional<ListenerRuleForwardConfig> forwardConfig() {
         return this.forwardConfig == null ? Optional.empty() : Optional.ofNullable(this.forwardConfig);
     }
 
     @Import(name="order")
       private final @Nullable Integer order;
 
-    public Optional<Integer> getOrder() {
+    public Optional<Integer> order() {
         return this.order == null ? Optional.empty() : Optional.ofNullable(this.order);
     }
 
     @Import(name="redirectConfig")
       private final @Nullable ListenerRuleRedirectConfig redirectConfig;
 
-    public Optional<ListenerRuleRedirectConfig> getRedirectConfig() {
+    public Optional<ListenerRuleRedirectConfig> redirectConfig() {
         return this.redirectConfig == null ? Optional.empty() : Optional.ofNullable(this.redirectConfig);
     }
 
     @Import(name="targetGroupArn")
       private final @Nullable String targetGroupArn;
 
-    public Optional<String> getTargetGroupArn() {
+    public Optional<String> targetGroupArn() {
         return this.targetGroupArn == null ? Optional.empty() : Optional.ofNullable(this.targetGroupArn);
     }
 
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

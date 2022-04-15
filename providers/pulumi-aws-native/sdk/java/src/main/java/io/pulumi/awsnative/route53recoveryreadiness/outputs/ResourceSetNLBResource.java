@@ -26,7 +26,7 @@ public final class ResourceSetNLBResource {
      * A Network Load Balancer resource Amazon Resource Name (ARN).
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
 

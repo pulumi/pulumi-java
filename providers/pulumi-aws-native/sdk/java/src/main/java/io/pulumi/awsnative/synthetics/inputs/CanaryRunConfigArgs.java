@@ -24,7 +24,7 @@ public final class CanaryRunConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="activeTracing")
       private final @Nullable Output<Boolean> activeTracing;
 
-    public Output<Boolean> getActiveTracing() {
+    public Output<Boolean> activeTracing() {
         return this.activeTracing == null ? Codegen.empty() : this.activeTracing;
     }
 
@@ -35,7 +35,7 @@ public final class CanaryRunConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="environmentVariables")
       private final @Nullable Output<Object> environmentVariables;
 
-    public Output<Object> getEnvironmentVariables() {
+    public Output<Object> environmentVariables() {
         return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
@@ -46,7 +46,7 @@ public final class CanaryRunConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="memoryInMB")
       private final @Nullable Output<Integer> memoryInMB;
 
-    public Output<Integer> getMemoryInMB() {
+    public Output<Integer> memoryInMB() {
         return this.memoryInMB == null ? Codegen.empty() : this.memoryInMB;
     }
 
@@ -57,7 +57,7 @@ public final class CanaryRunConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="timeoutInSeconds")
       private final @Nullable Output<Integer> timeoutInSeconds;
 
-    public Output<Integer> getTimeoutInSeconds() {
+    public Output<Integer> timeoutInSeconds() {
         return this.timeoutInSeconds == null ? Codegen.empty() : this.timeoutInSeconds;
     }
 

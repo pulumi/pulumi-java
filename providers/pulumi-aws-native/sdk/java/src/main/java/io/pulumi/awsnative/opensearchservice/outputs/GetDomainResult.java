@@ -89,65 +89,65 @@ public final class GetDomainResult {
         this.vPCOptions = vPCOptions;
     }
 
-    public Optional<Object> getAccessPolicies() {
+    public Optional<Object> accessPolicies() {
         return Optional.ofNullable(this.accessPolicies);
     }
-    public Optional<Object> getAdvancedOptions() {
+    public Optional<Object> advancedOptions() {
         return Optional.ofNullable(this.advancedOptions);
     }
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<DomainClusterConfig> getClusterConfig() {
+    public Optional<DomainClusterConfig> clusterConfig() {
         return Optional.ofNullable(this.clusterConfig);
     }
-    public Optional<DomainCognitoOptions> getCognitoOptions() {
+    public Optional<DomainCognitoOptions> cognitoOptions() {
         return Optional.ofNullable(this.cognitoOptions);
     }
-    public Optional<String> getDomainArn() {
+    public Optional<String> domainArn() {
         return Optional.ofNullable(this.domainArn);
     }
-    public Optional<String> getDomainEndpoint() {
+    public Optional<String> domainEndpoint() {
         return Optional.ofNullable(this.domainEndpoint);
     }
-    public Optional<DomainEndpointOptions> getDomainEndpointOptions() {
+    public Optional<DomainEndpointOptions> domainEndpointOptions() {
         return Optional.ofNullable(this.domainEndpointOptions);
     }
-    public Optional<Object> getDomainEndpoints() {
+    public Optional<Object> domainEndpoints() {
         return Optional.ofNullable(this.domainEndpoints);
     }
-    public Optional<DomainEBSOptions> getEBSOptions() {
+    public Optional<DomainEBSOptions> eBSOptions() {
         return Optional.ofNullable(this.eBSOptions);
     }
-    public Optional<DomainEncryptionAtRestOptions> getEncryptionAtRestOptions() {
+    public Optional<DomainEncryptionAtRestOptions> encryptionAtRestOptions() {
         return Optional.ofNullable(this.encryptionAtRestOptions);
     }
-    public Optional<String> getEngineVersion() {
+    public Optional<String> engineVersion() {
         return Optional.ofNullable(this.engineVersion);
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<Object> getLogPublishingOptions() {
+    public Optional<Object> logPublishingOptions() {
         return Optional.ofNullable(this.logPublishingOptions);
     }
-    public Optional<DomainNodeToNodeEncryptionOptions> getNodeToNodeEncryptionOptions() {
+    public Optional<DomainNodeToNodeEncryptionOptions> nodeToNodeEncryptionOptions() {
         return Optional.ofNullable(this.nodeToNodeEncryptionOptions);
     }
-    public Optional<DomainServiceSoftwareOptions> getServiceSoftwareOptions() {
+    public Optional<DomainServiceSoftwareOptions> serviceSoftwareOptions() {
         return Optional.ofNullable(this.serviceSoftwareOptions);
     }
-    public Optional<DomainSnapshotOptions> getSnapshotOptions() {
+    public Optional<DomainSnapshotOptions> snapshotOptions() {
         return Optional.ofNullable(this.snapshotOptions);
     }
     /**
      * An arbitrary set of tags (key-value pairs) for this Domain.
      * 
     */
-    public List<DomainTag> getTags() {
+    public List<DomainTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
-    public Optional<DomainVPCOptions> getVPCOptions() {
+    public Optional<DomainVPCOptions> vPCOptions() {
         return Optional.ofNullable(this.vPCOptions);
     }
 

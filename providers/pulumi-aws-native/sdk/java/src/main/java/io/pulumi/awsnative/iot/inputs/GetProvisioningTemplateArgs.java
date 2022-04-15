@@ -15,7 +15,7 @@ public final class GetProvisioningTemplateArgs extends io.pulumi.resources.Invok
     @Import(name="templateName", required=true)
       private final String templateName;
 
-    public String getTemplateName() {
+    public String templateName() {
         return this.templateName;
     }
 

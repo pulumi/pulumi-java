@@ -57,35 +57,35 @@ public final class GetDataIntegrationResult {
      * The Amazon Resource Name (ARN) of the data integration.
      * 
     */
-    public Optional<String> getDataIntegrationArn() {
+    public Optional<String> dataIntegrationArn() {
         return Optional.ofNullable(this.dataIntegrationArn);
     }
     /**
      * The data integration description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The unique identifer of the data integration.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the data integration.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The tags (keys and values) associated with the data integration.
      * 
     */
-    public List<DataIntegrationTag> getTags() {
+    public List<DataIntegrationTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

@@ -17,14 +17,14 @@ public final class DatastorePartition extends io.pulumi.resources.InvokeArgs {
     @Import(name="partition")
       private final @Nullable DatastorePartition partition;
 
-    public Optional<DatastorePartition> getPartition() {
+    public Optional<DatastorePartition> partition() {
         return this.partition == null ? Optional.empty() : Optional.ofNullable(this.partition);
     }
 
     @Import(name="timestampPartition")
       private final @Nullable DatastoreTimestampPartition timestampPartition;
 
-    public Optional<DatastoreTimestampPartition> getTimestampPartition() {
+    public Optional<DatastoreTimestampPartition> timestampPartition() {
         return this.timestampPartition == null ? Optional.empty() : Optional.ofNullable(this.timestampPartition);
     }
 

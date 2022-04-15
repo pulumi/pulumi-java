@@ -23,14 +23,14 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="botAliasLocaleSettings")
       private final @Nullable Output<List<BotAliasLocaleSettingsItemArgs>> botAliasLocaleSettings;
 
-    public Output<List<BotAliasLocaleSettingsItemArgs>> getBotAliasLocaleSettings() {
+    public Output<List<BotAliasLocaleSettingsItemArgs>> botAliasLocaleSettings() {
         return this.botAliasLocaleSettings == null ? Codegen.empty() : this.botAliasLocaleSettings;
     }
 
     @Import(name="botAliasName")
       private final @Nullable Output<String> botAliasName;
 
-    public Output<String> getBotAliasName() {
+    public Output<String> botAliasName() {
         return this.botAliasName == null ? Codegen.empty() : this.botAliasName;
     }
 
@@ -41,35 +41,35 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="botAliasTags")
       private final @Nullable Output<List<BotAliasTagArgs>> botAliasTags;
 
-    public Output<List<BotAliasTagArgs>> getBotAliasTags() {
+    public Output<List<BotAliasTagArgs>> botAliasTags() {
         return this.botAliasTags == null ? Codegen.empty() : this.botAliasTags;
     }
 
     @Import(name="botId", required=true)
       private final Output<String> botId;
 
-    public Output<String> getBotId() {
+    public Output<String> botId() {
         return this.botId;
     }
 
     @Import(name="botVersion")
       private final @Nullable Output<String> botVersion;
 
-    public Output<String> getBotVersion() {
+    public Output<String> botVersion() {
         return this.botVersion == null ? Codegen.empty() : this.botVersion;
     }
 
     @Import(name="conversationLogSettings")
       private final @Nullable Output<BotAliasConversationLogSettingsArgs> conversationLogSettings;
 
-    public Output<BotAliasConversationLogSettingsArgs> getConversationLogSettings() {
+    public Output<BotAliasConversationLogSettingsArgs> conversationLogSettings() {
         return this.conversationLogSettings == null ? Codegen.empty() : this.conversationLogSettings;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -80,7 +80,7 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sentimentAnalysisSettings")
       private final @Nullable Output<SentimentAnalysisSettingsPropertiesArgs> sentimentAnalysisSettings;
 
-    public Output<SentimentAnalysisSettingsPropertiesArgs> getSentimentAnalysisSettings() {
+    public Output<SentimentAnalysisSettingsPropertiesArgs> sentimentAnalysisSettings() {
         return this.sentimentAnalysisSettings == null ? Codegen.empty() : this.sentimentAnalysisSettings;
     }
 

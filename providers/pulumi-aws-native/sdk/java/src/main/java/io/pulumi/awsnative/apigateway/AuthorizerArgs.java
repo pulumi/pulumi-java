@@ -24,7 +24,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authType")
       private final @Nullable Output<String> authType;
 
-    public Output<String> getAuthType() {
+    public Output<String> authType() {
         return this.authType == null ? Codegen.empty() : this.authType;
     }
 
@@ -35,7 +35,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizerCredentials")
       private final @Nullable Output<String> authorizerCredentials;
 
-    public Output<String> getAuthorizerCredentials() {
+    public Output<String> authorizerCredentials() {
         return this.authorizerCredentials == null ? Codegen.empty() : this.authorizerCredentials;
     }
 
@@ -46,7 +46,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizerResultTtlInSeconds")
       private final @Nullable Output<Integer> authorizerResultTtlInSeconds;
 
-    public Output<Integer> getAuthorizerResultTtlInSeconds() {
+    public Output<Integer> authorizerResultTtlInSeconds() {
         return this.authorizerResultTtlInSeconds == null ? Codegen.empty() : this.authorizerResultTtlInSeconds;
     }
 
@@ -57,7 +57,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizerUri")
       private final @Nullable Output<String> authorizerUri;
 
-    public Output<String> getAuthorizerUri() {
+    public Output<String> authorizerUri() {
         return this.authorizerUri == null ? Codegen.empty() : this.authorizerUri;
     }
 
@@ -68,7 +68,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identitySource")
       private final @Nullable Output<String> identitySource;
 
-    public Output<String> getIdentitySource() {
+    public Output<String> identitySource() {
         return this.identitySource == null ? Codegen.empty() : this.identitySource;
     }
 
@@ -79,7 +79,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identityValidationExpression")
       private final @Nullable Output<String> identityValidationExpression;
 
-    public Output<String> getIdentityValidationExpression() {
+    public Output<String> identityValidationExpression() {
         return this.identityValidationExpression == null ? Codegen.empty() : this.identityValidationExpression;
     }
 
@@ -90,7 +90,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -101,7 +101,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="providerARNs")
       private final @Nullable Output<List<String>> providerARNs;
 
-    public Output<List<String>> getProviderARNs() {
+    public Output<List<String>> providerARNs() {
         return this.providerARNs == null ? Codegen.empty() : this.providerARNs;
     }
 
@@ -112,7 +112,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="restApiId", required=true)
       private final Output<String> restApiId;
 
-    public Output<String> getRestApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
 
@@ -123,7 +123,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

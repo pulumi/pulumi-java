@@ -21,14 +21,14 @@ public final class TableProvisionedThroughputArgs extends io.pulumi.resources.Re
     @Import(name="readCapacityUnits", required=true)
       private final Output<Integer> readCapacityUnits;
 
-    public Output<Integer> getReadCapacityUnits() {
+    public Output<Integer> readCapacityUnits() {
         return this.readCapacityUnits;
     }
 
     @Import(name="writeCapacityUnits", required=true)
       private final Output<Integer> writeCapacityUnits;
 
-    public Output<Integer> getWriteCapacityUnits() {
+    public Output<Integer> writeCapacityUnits() {
         return this.writeCapacityUnits;
     }
 

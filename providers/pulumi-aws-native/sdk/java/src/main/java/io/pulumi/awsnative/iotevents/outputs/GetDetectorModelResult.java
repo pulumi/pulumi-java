@@ -53,28 +53,28 @@ public final class GetDetectorModelResult {
         this.tags = tags;
     }
 
-    public Optional<DetectorModelDefinition> getDetectorModelDefinition() {
+    public Optional<DetectorModelDefinition> detectorModelDefinition() {
         return Optional.ofNullable(this.detectorModelDefinition);
     }
     /**
      * A brief description of the detector model.
      * 
     */
-    public Optional<String> getDetectorModelDescription() {
+    public Optional<String> detectorModelDescription() {
         return Optional.ofNullable(this.detectorModelDescription);
     }
     /**
      * Information about the order in which events are evaluated and how actions are executed.
      * 
     */
-    public Optional<DetectorModelEvaluationMethod> getEvaluationMethod() {
+    public Optional<DetectorModelEvaluationMethod> evaluationMethod() {
         return Optional.ofNullable(this.evaluationMethod);
     }
     /**
      * The ARN of the role that grants permission to AWS IoT Events to perform its operations.
      * 
     */
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
     /**
@@ -83,7 +83,7 @@ public final class GetDetectorModelResult {
      * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
      * 
     */
-    public List<DetectorModelTag> getTags() {
+    public List<DetectorModelTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

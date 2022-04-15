@@ -25,13 +25,13 @@ public final class ConnectionHttpParameters {
         this.queryStringParameters = queryStringParameters;
     }
 
-    public List<ConnectionParameter> getBodyParameters() {
+    public List<ConnectionParameter> bodyParameters() {
         return this.bodyParameters == null ? List.of() : this.bodyParameters;
     }
-    public List<ConnectionParameter> getHeaderParameters() {
+    public List<ConnectionParameter> headerParameters() {
         return this.headerParameters == null ? List.of() : this.headerParameters;
     }
-    public List<ConnectionParameter> getQueryStringParameters() {
+    public List<ConnectionParameter> queryStringParameters() {
         return this.queryStringParameters == null ? List.of() : this.queryStringParameters;
     }
 

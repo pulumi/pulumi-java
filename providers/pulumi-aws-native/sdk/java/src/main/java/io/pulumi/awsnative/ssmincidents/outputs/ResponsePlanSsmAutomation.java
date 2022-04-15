@@ -58,35 +58,35 @@ public final class ResponsePlanSsmAutomation {
      * The document name to use when starting the SSM automation document.
      * 
     */
-    public String getDocumentName() {
+    public String documentName() {
         return this.documentName;
     }
     /**
      * The version of the document to use when starting the SSM automation document.
      * 
     */
-    public Optional<String> getDocumentVersion() {
+    public Optional<String> documentVersion() {
         return Optional.ofNullable(this.documentVersion);
     }
     /**
      * The parameters to set when starting the SSM automation document.
      * 
     */
-    public List<ResponsePlanSsmParameter> getParameters() {
+    public List<ResponsePlanSsmParameter> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
      * The role ARN to use when starting the SSM automation document.
      * 
     */
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
     /**
      * The account type to use when starting the SSM automation document.
      * 
     */
-    public Optional<ResponsePlanSsmAutomationTargetAccount> getTargetAccount() {
+    public Optional<ResponsePlanSsmAutomationTargetAccount> targetAccount() {
         return Optional.ofNullable(this.targetAccount);
     }
 

@@ -18,14 +18,14 @@ public final class RuleGroupRuleOption extends io.pulumi.resources.InvokeArgs {
     @Import(name="keyword", required=true)
       private final String keyword;
 
-    public String getKeyword() {
+    public String keyword() {
         return this.keyword;
     }
 
     @Import(name="settings")
       private final @Nullable List<String> settings;
 
-    public List<String> getSettings() {
+    public List<String> settings() {
         return this.settings == null ? List.of() : this.settings;
     }
 

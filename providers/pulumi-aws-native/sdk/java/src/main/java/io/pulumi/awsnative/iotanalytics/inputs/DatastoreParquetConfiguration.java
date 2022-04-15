@@ -17,7 +17,7 @@ public final class DatastoreParquetConfiguration extends io.pulumi.resources.Inv
     @Import(name="schemaDefinition")
       private final @Nullable DatastoreSchemaDefinition schemaDefinition;
 
-    public Optional<DatastoreSchemaDefinition> getSchemaDefinition() {
+    public Optional<DatastoreSchemaDefinition> schemaDefinition() {
         return this.schemaDefinition == null ? Optional.empty() : Optional.ofNullable(this.schemaDefinition);
     }
 

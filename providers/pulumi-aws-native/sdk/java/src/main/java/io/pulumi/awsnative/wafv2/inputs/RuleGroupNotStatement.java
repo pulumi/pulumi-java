@@ -15,7 +15,7 @@ public final class RuleGroupNotStatement extends io.pulumi.resources.InvokeArgs 
     @Import(name="statement", required=true)
       private final RuleGroupStatement statement;
 
-    public RuleGroupStatement getStatement() {
+    public RuleGroupStatement statement() {
         return this.statement;
     }
 

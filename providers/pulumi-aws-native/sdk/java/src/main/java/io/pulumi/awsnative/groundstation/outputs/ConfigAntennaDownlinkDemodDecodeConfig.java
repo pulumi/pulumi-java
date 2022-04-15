@@ -27,13 +27,13 @@ public final class ConfigAntennaDownlinkDemodDecodeConfig {
         this.spectrumConfig = spectrumConfig;
     }
 
-    public Optional<ConfigDecodeConfig> getDecodeConfig() {
+    public Optional<ConfigDecodeConfig> decodeConfig() {
         return Optional.ofNullable(this.decodeConfig);
     }
-    public Optional<ConfigDemodulationConfig> getDemodulationConfig() {
+    public Optional<ConfigDemodulationConfig> demodulationConfig() {
         return Optional.ofNullable(this.demodulationConfig);
     }
-    public Optional<ConfigSpectrumConfig> getSpectrumConfig() {
+    public Optional<ConfigSpectrumConfig> spectrumConfig() {
         return Optional.ofNullable(this.spectrumConfig);
     }
 

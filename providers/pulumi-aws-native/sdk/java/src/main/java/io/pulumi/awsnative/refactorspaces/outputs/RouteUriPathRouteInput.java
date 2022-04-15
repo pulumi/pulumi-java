@@ -32,16 +32,16 @@ public final class RouteUriPathRouteInput {
         this.sourcePath = sourcePath;
     }
 
-    public RouteActivationState getActivationState() {
+    public RouteActivationState activationState() {
         return this.activationState;
     }
-    public Optional<Boolean> getIncludeChildPaths() {
+    public Optional<Boolean> includeChildPaths() {
         return Optional.ofNullable(this.includeChildPaths);
     }
-    public List<RouteMethod> getMethods() {
+    public List<RouteMethod> methods() {
         return this.methods == null ? List.of() : this.methods;
     }
-    public Optional<String> getSourcePath() {
+    public Optional<String> sourcePath() {
         return Optional.ofNullable(this.sourcePath);
     }
 

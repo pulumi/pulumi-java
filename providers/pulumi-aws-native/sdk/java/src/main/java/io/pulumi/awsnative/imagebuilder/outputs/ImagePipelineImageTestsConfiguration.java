@@ -35,14 +35,14 @@ public final class ImagePipelineImageTestsConfiguration {
      * Defines if tests should be executed when building this image.
      * 
     */
-    public Optional<Boolean> getImageTestsEnabled() {
+    public Optional<Boolean> imageTestsEnabled() {
         return Optional.ofNullable(this.imageTestsEnabled);
     }
     /**
      * The maximum time in minutes that tests are permitted to run.
      * 
     */
-    public Optional<Integer> getTimeoutMinutes() {
+    public Optional<Integer> timeoutMinutes() {
         return Optional.ofNullable(this.timeoutMinutes);
     }
 

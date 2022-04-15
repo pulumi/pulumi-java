@@ -15,7 +15,7 @@ public final class GetServerArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="serverName", required=true)
       private final String serverName;
 
-    public String getServerName() {
+    public String serverName() {
         return this.serverName;
     }
 

@@ -19,7 +19,7 @@ public final class GetLocalGatewayRouteTableVPCAssociationArgs extends io.pulumi
     @Import(name="localGatewayRouteTableVpcAssociationId", required=true)
       private final String localGatewayRouteTableVpcAssociationId;
 
-    public String getLocalGatewayRouteTableVpcAssociationId() {
+    public String localGatewayRouteTableVpcAssociationId() {
         return this.localGatewayRouteTableVpcAssociationId;
     }
 

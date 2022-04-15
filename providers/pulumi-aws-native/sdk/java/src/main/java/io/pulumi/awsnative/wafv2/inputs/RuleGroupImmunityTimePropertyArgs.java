@@ -17,7 +17,7 @@ public final class RuleGroupImmunityTimePropertyArgs extends io.pulumi.resources
     @Import(name="immunityTime", required=true)
       private final Output<Integer> immunityTime;
 
-    public Output<Integer> getImmunityTime() {
+    public Output<Integer> immunityTime() {
         return this.immunityTime;
     }
 

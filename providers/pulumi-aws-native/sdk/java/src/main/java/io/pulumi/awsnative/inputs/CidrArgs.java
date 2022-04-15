@@ -16,21 +16,21 @@ public final class CidrArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="cidrBits", required=true)
       private final Integer cidrBits;
 
-    public Integer getCidrBits() {
+    public Integer cidrBits() {
         return this.cidrBits;
     }
 
     @Import(name="count", required=true)
       private final Integer count;
 
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
 
     @Import(name="ipBlock", required=true)
       private final String ipBlock;
 
-    public String getIpBlock() {
+    public String ipBlock() {
         return this.ipBlock;
     }
 

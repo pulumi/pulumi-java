@@ -18,14 +18,14 @@ public final class JobTemplateRateIncreaseCriteriaArgs extends io.pulumi.resourc
     @Import(name="numberOfNotifiedThings")
       private final @Nullable Output<Integer> numberOfNotifiedThings;
 
-    public Output<Integer> getNumberOfNotifiedThings() {
+    public Output<Integer> numberOfNotifiedThings() {
         return this.numberOfNotifiedThings == null ? Codegen.empty() : this.numberOfNotifiedThings;
     }
 
     @Import(name="numberOfSucceededThings")
       private final @Nullable Output<Integer> numberOfSucceededThings;
 
-    public Output<Integer> getNumberOfSucceededThings() {
+    public Output<Integer> numberOfSucceededThings() {
         return this.numberOfSucceededThings == null ? Codegen.empty() : this.numberOfSucceededThings;
     }
 

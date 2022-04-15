@@ -28,7 +28,7 @@ public final class DetectorModelOnInputArgs extends io.pulumi.resources.Resource
     @Import(name="events")
       private final @Nullable Output<List<DetectorModelEventArgs>> events;
 
-    public Output<List<DetectorModelEventArgs>> getEvents() {
+    public Output<List<DetectorModelEventArgs>> events() {
         return this.events == null ? Codegen.empty() : this.events;
     }
 
@@ -39,7 +39,7 @@ public final class DetectorModelOnInputArgs extends io.pulumi.resources.Resource
     @Import(name="transitionEvents")
       private final @Nullable Output<List<DetectorModelTransitionEventArgs>> transitionEvents;
 
-    public Output<List<DetectorModelTransitionEventArgs>> getTransitionEvents() {
+    public Output<List<DetectorModelTransitionEventArgs>> transitionEvents() {
         return this.transitionEvents == null ? Codegen.empty() : this.transitionEvents;
     }
 

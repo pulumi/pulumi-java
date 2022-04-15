@@ -23,7 +23,7 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat exten
     @Import(name="connectionBorrowTimeout")
       private final @Nullable Integer connectionBorrowTimeout;
 
-    public Optional<Integer> getConnectionBorrowTimeout() {
+    public Optional<Integer> connectionBorrowTimeout() {
         return this.connectionBorrowTimeout == null ? Optional.empty() : Optional.ofNullable(this.connectionBorrowTimeout);
     }
 
@@ -34,7 +34,7 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat exten
     @Import(name="initQuery")
       private final @Nullable String initQuery;
 
-    public Optional<String> getInitQuery() {
+    public Optional<String> initQuery() {
         return this.initQuery == null ? Optional.empty() : Optional.ofNullable(this.initQuery);
     }
 
@@ -45,7 +45,7 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat exten
     @Import(name="maxConnectionsPercent")
       private final @Nullable Integer maxConnectionsPercent;
 
-    public Optional<Integer> getMaxConnectionsPercent() {
+    public Optional<Integer> maxConnectionsPercent() {
         return this.maxConnectionsPercent == null ? Optional.empty() : Optional.ofNullable(this.maxConnectionsPercent);
     }
 
@@ -56,7 +56,7 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat exten
     @Import(name="maxIdleConnectionsPercent")
       private final @Nullable Integer maxIdleConnectionsPercent;
 
-    public Optional<Integer> getMaxIdleConnectionsPercent() {
+    public Optional<Integer> maxIdleConnectionsPercent() {
         return this.maxIdleConnectionsPercent == null ? Optional.empty() : Optional.ofNullable(this.maxIdleConnectionsPercent);
     }
 
@@ -67,7 +67,7 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat exten
     @Import(name="sessionPinningFilters")
       private final @Nullable List<String> sessionPinningFilters;
 
-    public List<String> getSessionPinningFilters() {
+    public List<String> sessionPinningFilters() {
         return this.sessionPinningFilters == null ? List.of() : this.sessionPinningFilters;
     }
 

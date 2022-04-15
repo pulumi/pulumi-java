@@ -45,28 +45,28 @@ public final class EC2FleetSpotOptionsRequest {
         this.singleInstanceType = singleInstanceType;
     }
 
-    public Optional<EC2FleetSpotOptionsRequestAllocationStrategy> getAllocationStrategy() {
+    public Optional<EC2FleetSpotOptionsRequestAllocationStrategy> allocationStrategy() {
         return Optional.ofNullable(this.allocationStrategy);
     }
-    public Optional<EC2FleetSpotOptionsRequestInstanceInterruptionBehavior> getInstanceInterruptionBehavior() {
+    public Optional<EC2FleetSpotOptionsRequestInstanceInterruptionBehavior> instanceInterruptionBehavior() {
         return Optional.ofNullable(this.instanceInterruptionBehavior);
     }
-    public Optional<Integer> getInstancePoolsToUseCount() {
+    public Optional<Integer> instancePoolsToUseCount() {
         return Optional.ofNullable(this.instancePoolsToUseCount);
     }
-    public Optional<EC2FleetMaintenanceStrategies> getMaintenanceStrategies() {
+    public Optional<EC2FleetMaintenanceStrategies> maintenanceStrategies() {
         return Optional.ofNullable(this.maintenanceStrategies);
     }
-    public Optional<String> getMaxTotalPrice() {
+    public Optional<String> maxTotalPrice() {
         return Optional.ofNullable(this.maxTotalPrice);
     }
-    public Optional<Integer> getMinTargetCapacity() {
+    public Optional<Integer> minTargetCapacity() {
         return Optional.ofNullable(this.minTargetCapacity);
     }
-    public Optional<Boolean> getSingleAvailabilityZone() {
+    public Optional<Boolean> singleAvailabilityZone() {
         return Optional.ofNullable(this.singleAvailabilityZone);
     }
-    public Optional<Boolean> getSingleInstanceType() {
+    public Optional<Boolean> singleInstanceType() {
         return Optional.ofNullable(this.singleInstanceType);
     }
 

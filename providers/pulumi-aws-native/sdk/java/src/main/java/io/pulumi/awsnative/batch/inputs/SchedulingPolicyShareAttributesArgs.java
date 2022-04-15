@@ -19,14 +19,14 @@ public final class SchedulingPolicyShareAttributesArgs extends io.pulumi.resourc
     @Import(name="shareIdentifier")
       private final @Nullable Output<String> shareIdentifier;
 
-    public Output<String> getShareIdentifier() {
+    public Output<String> shareIdentifier() {
         return this.shareIdentifier == null ? Codegen.empty() : this.shareIdentifier;
     }
 
     @Import(name="weightFactor")
       private final @Nullable Output<Double> weightFactor;
 
-    public Output<Double> getWeightFactor() {
+    public Output<Double> weightFactor() {
         return this.weightFactor == null ? Codegen.empty() : this.weightFactor;
     }
 

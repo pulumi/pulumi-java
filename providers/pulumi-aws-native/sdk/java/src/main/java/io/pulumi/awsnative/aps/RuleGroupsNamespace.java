@@ -31,7 +31,7 @@ public class RuleGroupsNamespace extends io.pulumi.resources.CustomResource {
      * @return The RuleGroupsNamespace ARN.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -45,7 +45,7 @@ public class RuleGroupsNamespace extends io.pulumi.resources.CustomResource {
      * @return The RuleGroupsNamespace data.
      * 
      */
-    public Output<String> getData() {
+    public Output<String> data() {
         return this.data;
     }
     /**
@@ -59,7 +59,7 @@ public class RuleGroupsNamespace extends io.pulumi.resources.CustomResource {
      * @return The RuleGroupsNamespace name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +73,7 @@ public class RuleGroupsNamespace extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<RuleGroupsNamespaceTag>> getTags() {
+    public Output</* @Nullable */ List<RuleGroupsNamespaceTag>> tags() {
         return this.tags;
     }
     /**
@@ -87,7 +87,7 @@ public class RuleGroupsNamespace extends io.pulumi.resources.CustomResource {
      * @return Required to identify a specific APS Workspace associated with this RuleGroupsNamespace.
      * 
      */
-    public Output<String> getWorkspace() {
+    public Output<String> workspace() {
         return this.workspace;
     }
 

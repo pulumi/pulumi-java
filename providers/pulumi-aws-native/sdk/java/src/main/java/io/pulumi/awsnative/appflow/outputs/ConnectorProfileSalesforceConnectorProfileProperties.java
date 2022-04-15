@@ -31,10 +31,10 @@ public final class ConnectorProfileSalesforceConnectorProfileProperties {
      * The location of the Salesforce resource
      * 
     */
-    public Optional<String> getInstanceUrl() {
+    public Optional<String> instanceUrl() {
         return Optional.ofNullable(this.instanceUrl);
     }
-    public Optional<Boolean> getIsSandboxEnvironment() {
+    public Optional<Boolean> isSandboxEnvironment() {
         return Optional.ofNullable(this.isSandboxEnvironment);
     }
 

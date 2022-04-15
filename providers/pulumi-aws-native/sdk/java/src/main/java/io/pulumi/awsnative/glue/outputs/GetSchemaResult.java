@@ -62,38 +62,38 @@ public final class GetSchemaResult {
      * Amazon Resource Name for the Schema.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<SchemaVersion> getCheckpointVersion() {
+    public Optional<SchemaVersion> checkpointVersion() {
         return Optional.ofNullable(this.checkpointVersion);
     }
     /**
      * Compatibility setting for the schema.
      * 
     */
-    public Optional<SchemaCompatibility> getCompatibility() {
+    public Optional<SchemaCompatibility> compatibility() {
         return Optional.ofNullable(this.compatibility);
     }
     /**
      * A description of the schema. If description is not provided, there will not be any default value for this.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Represents the version ID associated with the initial schema version.
      * 
     */
-    public Optional<String> getInitialSchemaVersionId() {
+    public Optional<String> initialSchemaVersionId() {
         return Optional.ofNullable(this.initialSchemaVersionId);
     }
     /**
      * List of tags to tag the schema
      * 
     */
-    public List<SchemaTag> getTags() {
+    public List<SchemaTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

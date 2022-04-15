@@ -41,25 +41,25 @@ public final class DataSourceOneDriveConfiguration {
         this.tenantDomain = tenantDomain;
     }
 
-    public Optional<Boolean> getDisableLocalGroups() {
+    public Optional<Boolean> disableLocalGroups() {
         return Optional.ofNullable(this.disableLocalGroups);
     }
-    public List<String> getExclusionPatterns() {
+    public List<String> exclusionPatterns() {
         return this.exclusionPatterns == null ? List.of() : this.exclusionPatterns;
     }
-    public List<DataSourceToIndexFieldMapping> getFieldMappings() {
+    public List<DataSourceToIndexFieldMapping> fieldMappings() {
         return this.fieldMappings == null ? List.of() : this.fieldMappings;
     }
-    public List<String> getInclusionPatterns() {
+    public List<String> inclusionPatterns() {
         return this.inclusionPatterns == null ? List.of() : this.inclusionPatterns;
     }
-    public DataSourceOneDriveUsers getOneDriveUsers() {
+    public DataSourceOneDriveUsers oneDriveUsers() {
         return this.oneDriveUsers;
     }
-    public String getSecretArn() {
+    public String secretArn() {
         return this.secretArn;
     }
-    public String getTenantDomain() {
+    public String tenantDomain() {
         return this.tenantDomain;
     }
 

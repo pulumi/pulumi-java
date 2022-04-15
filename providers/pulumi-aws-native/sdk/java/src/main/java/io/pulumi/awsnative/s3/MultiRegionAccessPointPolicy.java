@@ -31,7 +31,7 @@ public class MultiRegionAccessPointPolicy extends io.pulumi.resources.CustomReso
      * @return The name of the Multi Region Access Point to apply policy
      * 
      */
-    public Output<String> getMrapName() {
+    public Output<String> mrapName() {
         return this.mrapName;
     }
     /**
@@ -45,7 +45,7 @@ public class MultiRegionAccessPointPolicy extends io.pulumi.resources.CustomReso
      * @return Policy document to apply to a Multi Region Access Point
      * 
      */
-    public Output<Object> getPolicy() {
+    public Output<Object> policy() {
         return this.policy;
     }
     /**
@@ -59,7 +59,7 @@ public class MultiRegionAccessPointPolicy extends io.pulumi.resources.CustomReso
      * @return The Policy Status associated with this Multi Region Access Point
      * 
      */
-    public Output<PolicyStatusProperties> getPolicyStatus() {
+    public Output<PolicyStatusProperties> policyStatus() {
         return this.policyStatus;
     }
 

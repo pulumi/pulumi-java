@@ -26,7 +26,7 @@ public final class FlowOutputVpcInterfaceAttachmentArgs extends io.pulumi.resour
     @Import(name="vpcInterfaceName")
       private final @Nullable Output<String> vpcInterfaceName;
 
-    public Output<String> getVpcInterfaceName() {
+    public Output<String> vpcInterfaceName() {
         return this.vpcInterfaceName == null ? Codegen.empty() : this.vpcInterfaceName;
     }
 

@@ -49,31 +49,31 @@ public final class BackupPlanBackupRuleResourceType {
         this.targetBackupVault = targetBackupVault;
     }
 
-    public Optional<Double> getCompletionWindowMinutes() {
+    public Optional<Double> completionWindowMinutes() {
         return Optional.ofNullable(this.completionWindowMinutes);
     }
-    public List<BackupPlanCopyActionResourceType> getCopyActions() {
+    public List<BackupPlanCopyActionResourceType> copyActions() {
         return this.copyActions == null ? List.of() : this.copyActions;
     }
-    public Optional<Boolean> getEnableContinuousBackup() {
+    public Optional<Boolean> enableContinuousBackup() {
         return Optional.ofNullable(this.enableContinuousBackup);
     }
-    public Optional<BackupPlanLifecycleResourceType> getLifecycle() {
+    public Optional<BackupPlanLifecycleResourceType> lifecycle() {
         return Optional.ofNullable(this.lifecycle);
     }
-    public Optional<Object> getRecoveryPointTags() {
+    public Optional<Object> recoveryPointTags() {
         return Optional.ofNullable(this.recoveryPointTags);
     }
-    public String getRuleName() {
+    public String ruleName() {
         return this.ruleName;
     }
-    public Optional<String> getScheduleExpression() {
+    public Optional<String> scheduleExpression() {
         return Optional.ofNullable(this.scheduleExpression);
     }
-    public Optional<Double> getStartWindowMinutes() {
+    public Optional<Double> startWindowMinutes() {
         return Optional.ofNullable(this.startWindowMinutes);
     }
-    public String getTargetBackupVault() {
+    public String targetBackupVault() {
         return this.targetBackupVault;
     }
 

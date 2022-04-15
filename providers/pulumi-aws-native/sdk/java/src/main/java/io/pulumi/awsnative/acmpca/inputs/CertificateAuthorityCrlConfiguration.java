@@ -23,35 +23,35 @@ public final class CertificateAuthorityCrlConfiguration extends io.pulumi.resour
     @Import(name="customCname")
       private final @Nullable String customCname;
 
-    public Optional<String> getCustomCname() {
+    public Optional<String> customCname() {
         return this.customCname == null ? Optional.empty() : Optional.ofNullable(this.customCname);
     }
 
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
     @Import(name="expirationInDays")
       private final @Nullable Integer expirationInDays;
 
-    public Optional<Integer> getExpirationInDays() {
+    public Optional<Integer> expirationInDays() {
         return this.expirationInDays == null ? Optional.empty() : Optional.ofNullable(this.expirationInDays);
     }
 
     @Import(name="s3BucketName")
       private final @Nullable String s3BucketName;
 
-    public Optional<String> getS3BucketName() {
+    public Optional<String> s3BucketName() {
         return this.s3BucketName == null ? Optional.empty() : Optional.ofNullable(this.s3BucketName);
     }
 
     @Import(name="s3ObjectAcl")
       private final @Nullable String s3ObjectAcl;
 
-    public Optional<String> getS3ObjectAcl() {
+    public Optional<String> s3ObjectAcl() {
         return this.s3ObjectAcl == null ? Optional.empty() : Optional.ofNullable(this.s3ObjectAcl);
     }
 

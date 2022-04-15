@@ -44,28 +44,28 @@ public final class DeliveryStreamS3DestinationConfiguration {
         this.roleARN = roleARN;
     }
 
-    public String getBucketARN() {
+    public String bucketARN() {
         return this.bucketARN;
     }
-    public Optional<DeliveryStreamBufferingHints> getBufferingHints() {
+    public Optional<DeliveryStreamBufferingHints> bufferingHints() {
         return Optional.ofNullable(this.bufferingHints);
     }
-    public Optional<DeliveryStreamCloudWatchLoggingOptions> getCloudWatchLoggingOptions() {
+    public Optional<DeliveryStreamCloudWatchLoggingOptions> cloudWatchLoggingOptions() {
         return Optional.ofNullable(this.cloudWatchLoggingOptions);
     }
-    public Optional<DeliveryStreamS3DestinationConfigurationCompressionFormat> getCompressionFormat() {
+    public Optional<DeliveryStreamS3DestinationConfigurationCompressionFormat> compressionFormat() {
         return Optional.ofNullable(this.compressionFormat);
     }
-    public Optional<DeliveryStreamEncryptionConfiguration> getEncryptionConfiguration() {
+    public Optional<DeliveryStreamEncryptionConfiguration> encryptionConfiguration() {
         return Optional.ofNullable(this.encryptionConfiguration);
     }
-    public Optional<String> getErrorOutputPrefix() {
+    public Optional<String> errorOutputPrefix() {
         return Optional.ofNullable(this.errorOutputPrefix);
     }
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
-    public String getRoleARN() {
+    public String roleARN() {
         return this.roleARN;
     }
 

@@ -16,7 +16,7 @@ public final class DataPrivacyProperties {
         this.childDirected = childDirected;
     }
 
-    public Boolean getChildDirected() {
+    public Boolean childDirected() {
         return this.childDirected;
     }
 

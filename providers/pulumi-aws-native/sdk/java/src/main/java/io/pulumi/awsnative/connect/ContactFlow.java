@@ -35,7 +35,7 @@ public class ContactFlow extends io.pulumi.resources.CustomResource {
      * @return The identifier of the contact flow (ARN).
      * 
      */
-    public Output<String> getContactFlowArn() {
+    public Output<String> contactFlowArn() {
         return this.contactFlowArn;
     }
     /**
@@ -49,7 +49,7 @@ public class ContactFlow extends io.pulumi.resources.CustomResource {
      * @return The content of the contact flow in JSON format.
      * 
      */
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content;
     }
     /**
@@ -63,7 +63,7 @@ public class ContactFlow extends io.pulumi.resources.CustomResource {
      * @return The description of the contact flow.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -77,7 +77,7 @@ public class ContactFlow extends io.pulumi.resources.CustomResource {
      * @return The identifier of the Amazon Connect instance (ARN).
      * 
      */
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
     /**
@@ -91,7 +91,7 @@ public class ContactFlow extends io.pulumi.resources.CustomResource {
      * @return The name of the contact flow.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -105,7 +105,7 @@ public class ContactFlow extends io.pulumi.resources.CustomResource {
      * @return The state of the contact flow.
      * 
      */
-    public Output</* @Nullable */ ContactFlowState> getState() {
+    public Output</* @Nullable */ ContactFlowState> state() {
         return this.state;
     }
     /**
@@ -119,7 +119,7 @@ public class ContactFlow extends io.pulumi.resources.CustomResource {
      * @return One or more tags.
      * 
      */
-    public Output</* @Nullable */ List<ContactFlowTag>> getTags() {
+    public Output</* @Nullable */ List<ContactFlowTag>> tags() {
         return this.tags;
     }
     /**
@@ -133,7 +133,7 @@ public class ContactFlow extends io.pulumi.resources.CustomResource {
      * @return The type of the contact flow.
      * 
      */
-    public Output</* @Nullable */ ContactFlowType> getType() {
+    public Output</* @Nullable */ ContactFlowType> type() {
         return this.type;
     }
 

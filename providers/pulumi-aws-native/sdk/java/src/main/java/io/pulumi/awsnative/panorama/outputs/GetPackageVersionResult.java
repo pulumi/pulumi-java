@@ -43,28 +43,28 @@ public final class GetPackageVersionResult {
         this.updatedLatestPatchVersion = updatedLatestPatchVersion;
     }
 
-    public Optional<Boolean> getIsLatestPatch() {
+    public Optional<Boolean> isLatestPatch() {
         return Optional.ofNullable(this.isLatestPatch);
     }
-    public Optional<Boolean> getMarkLatest() {
+    public Optional<Boolean> markLatest() {
         return Optional.ofNullable(this.markLatest);
     }
-    public Optional<String> getPackageArn() {
+    public Optional<String> packageArn() {
         return Optional.ofNullable(this.packageArn);
     }
-    public Optional<String> getPackageName() {
+    public Optional<String> packageName() {
         return Optional.ofNullable(this.packageName);
     }
-    public Optional<Integer> getRegisteredTime() {
+    public Optional<Integer> registeredTime() {
         return Optional.ofNullable(this.registeredTime);
     }
-    public Optional<PackageVersionStatus> getStatus() {
+    public Optional<PackageVersionStatus> status() {
         return Optional.ofNullable(this.status);
     }
-    public Optional<String> getStatusDescription() {
+    public Optional<String> statusDescription() {
         return Optional.ofNullable(this.statusDescription);
     }
-    public Optional<String> getUpdatedLatestPatchVersion() {
+    public Optional<String> updatedLatestPatchVersion() {
         return Optional.ofNullable(this.updatedLatestPatchVersion);
     }
 

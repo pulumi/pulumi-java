@@ -26,7 +26,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="billingMode")
       private final @Nullable Output<TableBillingModeArgs> billingMode;
 
-    public Output<TableBillingModeArgs> getBillingMode() {
+    public Output<TableBillingModeArgs> billingMode() {
         return this.billingMode == null ? Codegen.empty() : this.billingMode;
     }
 
@@ -37,7 +37,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusteringKeyColumns")
       private final @Nullable Output<List<TableClusteringKeyColumnArgs>> clusteringKeyColumns;
 
-    public Output<List<TableClusteringKeyColumnArgs>> getClusteringKeyColumns() {
+    public Output<List<TableClusteringKeyColumnArgs>> clusteringKeyColumns() {
         return this.clusteringKeyColumns == null ? Codegen.empty() : this.clusteringKeyColumns;
     }
 
@@ -48,14 +48,14 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultTimeToLive")
       private final @Nullable Output<Integer> defaultTimeToLive;
 
-    public Output<Integer> getDefaultTimeToLive() {
+    public Output<Integer> defaultTimeToLive() {
         return this.defaultTimeToLive == null ? Codegen.empty() : this.defaultTimeToLive;
     }
 
     @Import(name="encryptionSpecification")
       private final @Nullable Output<TableEncryptionSpecificationArgs> encryptionSpecification;
 
-    public Output<TableEncryptionSpecificationArgs> getEncryptionSpecification() {
+    public Output<TableEncryptionSpecificationArgs> encryptionSpecification() {
         return this.encryptionSpecification == null ? Codegen.empty() : this.encryptionSpecification;
     }
 
@@ -66,7 +66,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyspaceName", required=true)
       private final Output<String> keyspaceName;
 
-    public Output<String> getKeyspaceName() {
+    public Output<String> keyspaceName() {
         return this.keyspaceName;
     }
 
@@ -77,7 +77,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="partitionKeyColumns", required=true)
       private final Output<List<TableColumnArgs>> partitionKeyColumns;
 
-    public Output<List<TableColumnArgs>> getPartitionKeyColumns() {
+    public Output<List<TableColumnArgs>> partitionKeyColumns() {
         return this.partitionKeyColumns;
     }
 
@@ -88,7 +88,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pointInTimeRecoveryEnabled")
       private final @Nullable Output<Boolean> pointInTimeRecoveryEnabled;
 
-    public Output<Boolean> getPointInTimeRecoveryEnabled() {
+    public Output<Boolean> pointInTimeRecoveryEnabled() {
         return this.pointInTimeRecoveryEnabled == null ? Codegen.empty() : this.pointInTimeRecoveryEnabled;
     }
 
@@ -99,7 +99,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="regularColumns")
       private final @Nullable Output<List<TableColumnArgs>> regularColumns;
 
-    public Output<List<TableColumnArgs>> getRegularColumns() {
+    public Output<List<TableColumnArgs>> regularColumns() {
         return this.regularColumns == null ? Codegen.empty() : this.regularColumns;
     }
 
@@ -110,7 +110,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName == null ? Codegen.empty() : this.tableName;
     }
 
@@ -121,7 +121,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<TableTagArgs>> tags;
 
-    public Output<List<TableTagArgs>> getTags() {
+    public Output<List<TableTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

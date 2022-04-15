@@ -19,21 +19,21 @@ public final class InAppTemplateHeaderConfigArgs extends io.pulumi.resources.Res
     @Import(name="alignment")
       private final @Nullable Output<InAppTemplateAlignment> alignment;
 
-    public Output<InAppTemplateAlignment> getAlignment() {
+    public Output<InAppTemplateAlignment> alignment() {
         return this.alignment == null ? Codegen.empty() : this.alignment;
     }
 
     @Import(name="header")
       private final @Nullable Output<String> header;
 
-    public Output<String> getHeader() {
+    public Output<String> header() {
         return this.header == null ? Codegen.empty() : this.header;
     }
 
     @Import(name="textColor")
       private final @Nullable Output<String> textColor;
 
-    public Output<String> getTextColor() {
+    public Output<String> textColor() {
         return this.textColor == null ? Codegen.empty() : this.textColor;
     }
 

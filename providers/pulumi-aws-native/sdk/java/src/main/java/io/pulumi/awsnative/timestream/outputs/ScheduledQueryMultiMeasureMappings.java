@@ -24,10 +24,10 @@ public final class ScheduledQueryMultiMeasureMappings {
         this.targetMultiMeasureName = targetMultiMeasureName;
     }
 
-    public List<ScheduledQueryMultiMeasureAttributeMapping> getMultiMeasureAttributeMappings() {
+    public List<ScheduledQueryMultiMeasureAttributeMapping> multiMeasureAttributeMappings() {
         return this.multiMeasureAttributeMappings;
     }
-    public Optional<String> getTargetMultiMeasureName() {
+    public Optional<String> targetMultiMeasureName() {
         return Optional.ofNullable(this.targetMultiMeasureName);
     }
 

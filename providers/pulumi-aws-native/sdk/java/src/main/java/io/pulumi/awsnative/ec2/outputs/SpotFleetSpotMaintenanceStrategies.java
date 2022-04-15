@@ -18,7 +18,7 @@ public final class SpotFleetSpotMaintenanceStrategies {
         this.capacityRebalance = capacityRebalance;
     }
 
-    public Optional<SpotFleetSpotCapacityRebalance> getCapacityRebalance() {
+    public Optional<SpotFleetSpotCapacityRebalance> capacityRebalance() {
         return Optional.ofNullable(this.capacityRebalance);
     }
 

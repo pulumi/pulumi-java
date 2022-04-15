@@ -21,21 +21,21 @@ public final class UserIdentityInfo extends io.pulumi.resources.InvokeArgs {
     @Import(name="email")
       private final @Nullable String email;
 
-    public Optional<String> getEmail() {
+    public Optional<String> email() {
         return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
     }
 
     @Import(name="firstName")
       private final @Nullable String firstName;
 
-    public Optional<String> getFirstName() {
+    public Optional<String> firstName() {
         return this.firstName == null ? Optional.empty() : Optional.ofNullable(this.firstName);
     }
 
     @Import(name="lastName")
       private final @Nullable String lastName;
 
-    public Optional<String> getLastName() {
+    public Optional<String> lastName() {
         return this.lastName == null ? Optional.empty() : Optional.ofNullable(this.lastName);
     }
 

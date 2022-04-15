@@ -32,19 +32,19 @@ public final class TopicRuleKafkaAction {
         this.topic = topic;
     }
 
-    public Object getClientProperties() {
+    public Object clientProperties() {
         return this.clientProperties;
     }
-    public String getDestinationArn() {
+    public String destinationArn() {
         return this.destinationArn;
     }
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
-    public Optional<String> getPartition() {
+    public Optional<String> partition() {
         return Optional.ofNullable(this.partition);
     }
-    public String getTopic() {
+    public String topic() {
         return this.topic;
     }
 

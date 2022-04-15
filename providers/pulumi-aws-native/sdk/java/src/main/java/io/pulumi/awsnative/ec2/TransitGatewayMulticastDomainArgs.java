@@ -25,7 +25,7 @@ public final class TransitGatewayMulticastDomainArgs extends io.pulumi.resources
     @Import(name="options")
       private final @Nullable Output<OptionsPropertiesArgs> options;
 
-    public Output<OptionsPropertiesArgs> getOptions() {
+    public Output<OptionsPropertiesArgs> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 
@@ -36,7 +36,7 @@ public final class TransitGatewayMulticastDomainArgs extends io.pulumi.resources
     @Import(name="tags")
       private final @Nullable Output<List<TransitGatewayMulticastDomainTagArgs>> tags;
 
-    public Output<List<TransitGatewayMulticastDomainTagArgs>> getTags() {
+    public Output<List<TransitGatewayMulticastDomainTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -47,7 +47,7 @@ public final class TransitGatewayMulticastDomainArgs extends io.pulumi.resources
     @Import(name="transitGatewayId", required=true)
       private final Output<String> transitGatewayId;
 
-    public Output<String> getTransitGatewayId() {
+    public Output<String> transitGatewayId() {
         return this.transitGatewayId;
     }
 

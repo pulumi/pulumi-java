@@ -21,10 +21,10 @@ public final class WirelessDeviceAbpV11 {
         this.sessionKeys = sessionKeys;
     }
 
-    public String getDevAddr() {
+    public String devAddr() {
         return this.devAddr;
     }
-    public WirelessDeviceSessionKeysAbpV11 getSessionKeys() {
+    public WirelessDeviceSessionKeysAbpV11 sessionKeys() {
         return this.sessionKeys;
     }
 

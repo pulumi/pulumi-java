@@ -20,21 +20,21 @@ public final class RulesetThresholdArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="type")
       private final @Nullable Output<RulesetThresholdType> type;
 
-    public Output<RulesetThresholdType> getType() {
+    public Output<RulesetThresholdType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
     @Import(name="unit")
       private final @Nullable Output<RulesetThresholdUnit> unit;
 
-    public Output<RulesetThresholdUnit> getUnit() {
+    public Output<RulesetThresholdUnit> unit() {
         return this.unit == null ? Codegen.empty() : this.unit;
     }
 
     @Import(name="value", required=true)
       private final Output<Double> value;
 
-    public Output<Double> getValue() {
+    public Output<Double> value() {
         return this.value;
     }
 

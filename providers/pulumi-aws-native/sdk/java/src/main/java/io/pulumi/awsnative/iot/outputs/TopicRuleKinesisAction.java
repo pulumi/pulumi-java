@@ -25,13 +25,13 @@ public final class TopicRuleKinesisAction {
         this.streamName = streamName;
     }
 
-    public Optional<String> getPartitionKey() {
+    public Optional<String> partitionKey() {
         return Optional.ofNullable(this.partitionKey);
     }
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
-    public String getStreamName() {
+    public String streamName() {
         return this.streamName;
     }
 

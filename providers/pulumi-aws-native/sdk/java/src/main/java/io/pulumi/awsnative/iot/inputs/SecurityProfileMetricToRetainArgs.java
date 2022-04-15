@@ -27,14 +27,14 @@ public final class SecurityProfileMetricToRetainArgs extends io.pulumi.resources
     @Import(name="metric", required=true)
       private final Output<String> metric;
 
-    public Output<String> getMetric() {
+    public Output<String> metric() {
         return this.metric;
     }
 
     @Import(name="metricDimension")
       private final @Nullable Output<SecurityProfileMetricDimensionArgs> metricDimension;
 
-    public Output<SecurityProfileMetricDimensionArgs> getMetricDimension() {
+    public Output<SecurityProfileMetricDimensionArgs> metricDimension() {
         return this.metricDimension == null ? Codegen.empty() : this.metricDimension;
     }
 

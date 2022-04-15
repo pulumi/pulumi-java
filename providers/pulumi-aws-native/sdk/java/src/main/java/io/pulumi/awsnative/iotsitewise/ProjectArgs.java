@@ -24,7 +24,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="assetIds")
       private final @Nullable Output<List<String>> assetIds;
 
-    public Output<List<String>> getAssetIds() {
+    public Output<List<String>> assetIds() {
         return this.assetIds == null ? Codegen.empty() : this.assetIds;
     }
 
@@ -35,7 +35,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="portalId", required=true)
       private final Output<String> portalId;
 
-    public Output<String> getPortalId() {
+    public Output<String> portalId() {
         return this.portalId;
     }
 
@@ -46,7 +46,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="projectDescription")
       private final @Nullable Output<String> projectDescription;
 
-    public Output<String> getProjectDescription() {
+    public Output<String> projectDescription() {
         return this.projectDescription == null ? Codegen.empty() : this.projectDescription;
     }
 
@@ -57,7 +57,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="projectName")
       private final @Nullable Output<String> projectName;
 
-    public Output<String> getProjectName() {
+    public Output<String> projectName() {
         return this.projectName == null ? Codegen.empty() : this.projectName;
     }
 
@@ -68,7 +68,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<ProjectTagArgs>> tags;
 
-    public Output<List<ProjectTagArgs>> getTags() {
+    public Output<List<ProjectTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

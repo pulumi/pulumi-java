@@ -27,7 +27,7 @@ public final class ApplicationComponentConfiguration extends io.pulumi.resources
     @Import(name="configurationDetails")
       private final @Nullable ApplicationConfigurationDetails configurationDetails;
 
-    public Optional<ApplicationConfigurationDetails> getConfigurationDetails() {
+    public Optional<ApplicationConfigurationDetails> configurationDetails() {
         return this.configurationDetails == null ? Optional.empty() : Optional.ofNullable(this.configurationDetails);
     }
 
@@ -38,7 +38,7 @@ public final class ApplicationComponentConfiguration extends io.pulumi.resources
     @Import(name="subComponentTypeConfigurations")
       private final @Nullable List<ApplicationSubComponentTypeConfiguration> subComponentTypeConfigurations;
 
-    public List<ApplicationSubComponentTypeConfiguration> getSubComponentTypeConfigurations() {
+    public List<ApplicationSubComponentTypeConfiguration> subComponentTypeConfigurations() {
         return this.subComponentTypeConfigurations == null ? List.of() : this.subComponentTypeConfigurations;
     }
 

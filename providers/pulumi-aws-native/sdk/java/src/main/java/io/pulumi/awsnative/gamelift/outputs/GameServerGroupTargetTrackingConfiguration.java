@@ -16,7 +16,7 @@ public final class GameServerGroupTargetTrackingConfiguration {
         this.targetValue = targetValue;
     }
 
-    public Double getTargetValue() {
+    public Double targetValue() {
         return this.targetValue;
     }
 

@@ -25,7 +25,7 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="platformId", required=true)
       private final Output<SigningProfilePlatformId> platformId;
 
-    public Output<SigningProfilePlatformId> getPlatformId() {
+    public Output<SigningProfilePlatformId> platformId() {
         return this.platformId;
     }
 
@@ -36,7 +36,7 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="signatureValidityPeriod")
       private final @Nullable Output<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod;
 
-    public Output<SigningProfileSignatureValidityPeriodArgs> getSignatureValidityPeriod() {
+    public Output<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod() {
         return this.signatureValidityPeriod == null ? Codegen.empty() : this.signatureValidityPeriod;
     }
 
@@ -47,7 +47,7 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<SigningProfileTagArgs>> tags;
 
-    public Output<List<SigningProfileTagArgs>> getTags() {
+    public Output<List<SigningProfileTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

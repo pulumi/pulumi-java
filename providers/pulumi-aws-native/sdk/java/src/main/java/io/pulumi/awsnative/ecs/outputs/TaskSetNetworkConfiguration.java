@@ -18,7 +18,7 @@ public final class TaskSetNetworkConfiguration {
         this.awsVpcConfiguration = awsVpcConfiguration;
     }
 
-    public Optional<TaskSetAwsVpcConfiguration> getAwsVpcConfiguration() {
+    public Optional<TaskSetAwsVpcConfiguration> awsVpcConfiguration() {
         return Optional.ofNullable(this.awsVpcConfiguration);
     }
 

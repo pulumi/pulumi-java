@@ -16,7 +16,7 @@ public final class GetAccountIdResult {
         this.accountId = accountId;
     }
 
-    public String getAccountId() {
+    public String accountId() {
         return this.accountId;
     }
 

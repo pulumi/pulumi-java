@@ -19,14 +19,14 @@ public final class TopicRuleDynamoDBv2ActionArgs extends io.pulumi.resources.Res
     @Import(name="putItem")
       private final @Nullable Output<TopicRulePutItemInputArgs> putItem;
 
-    public Output<TopicRulePutItemInputArgs> getPutItem() {
+    public Output<TopicRulePutItemInputArgs> putItem() {
         return this.putItem == null ? Codegen.empty() : this.putItem;
     }
 
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
