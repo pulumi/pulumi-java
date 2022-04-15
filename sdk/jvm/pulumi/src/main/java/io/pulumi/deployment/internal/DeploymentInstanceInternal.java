@@ -51,6 +51,11 @@ public final class DeploymentInstanceInternal implements DeploymentInstance {
     }
 
     @Override
+    public DeploymentImpl.Config getConfig() {
+        return deployment.getConfig();
+    }
+
+    @Override
     public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, @Nullable InvokeOptions options) {
         return deployment.invoke(token, targetType, args, options);
     }
