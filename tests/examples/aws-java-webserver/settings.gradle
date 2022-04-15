@@ -1,22 +1,2 @@
-// NOTE: includeBuild directives here help Gradle link against in-tree
-// projects regardless of version specifications in `build.gradle`.
-// When the example code moves to a separate repository these can be
-// removed.
-
-var root = System.getenv("PULUMI_REPO_ROOT") ?: "../../..";
-
-includeBuild(root + '/sdk/jvm') {
-  dependencySubstitution {
-    substitute module('io.pulumi:pulumi') using project(':pulumi')
-  }
-}
-
-includeBuild(root + '/providers/pulumi-aws/sdk/java') {
-  name = ':aws'
-  dependencySubstitution {
-    substitute module('io.pulumi:aws') using project(':')
-  }
-}
-
 rootProject.name = 'aws-java-webserver'
 include('app')
