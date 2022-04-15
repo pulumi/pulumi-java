@@ -6,6 +6,17 @@ on:
   push:
     branches:
       - main
+    tags:
+      - sdk/v*.*.*
+      - aws-native/v*.*.*
+      - aws/v*.*.*
+      - azure-native/v*.*.*
+      - docker/v*.*.*
+      - eks/v*.*.*
+      - gcp/v*.*.*
+      - google-native/v*.*.*
+      - kubernetes/v*.*.*
+      - random/v*.*.*
     paths-ignore:
       - 'CHANGELOG.md'
       - 'CHANGELOG_PENDING.md'
