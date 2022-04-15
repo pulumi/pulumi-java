@@ -25,7 +25,7 @@ public final class EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs extends
     @Import(name="labelName", required=true)
       private final Output<String> labelName;
 
-    public Output<String> getLabelName() {
+    public Output<String> labelName() {
         return this.labelName;
     }
 
@@ -36,7 +36,7 @@ public final class EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs extends
     @Import(name="labelValue", required=true)
       private final Output<String> labelValue;
 
-    public Output<String> getLabelValue() {
+    public Output<String> labelValue() {
         return this.labelValue;
     }
 

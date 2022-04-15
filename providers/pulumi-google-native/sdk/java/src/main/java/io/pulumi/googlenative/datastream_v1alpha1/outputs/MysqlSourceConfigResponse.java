@@ -32,14 +32,14 @@ public final class MysqlSourceConfigResponse {
      * MySQL objects to retrieve from the source.
      * 
     */
-    public MysqlRdbmsResponse getAllowlist() {
+    public MysqlRdbmsResponse allowlist() {
         return this.allowlist;
     }
     /**
      * MySQL objects to exclude from the stream.
      * 
     */
-    public MysqlRdbmsResponse getRejectlist() {
+    public MysqlRdbmsResponse rejectlist() {
         return this.rejectlist;
     }
 

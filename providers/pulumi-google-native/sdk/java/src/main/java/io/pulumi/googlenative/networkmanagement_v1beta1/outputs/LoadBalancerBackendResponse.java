@@ -54,35 +54,35 @@ public final class LoadBalancerBackendResponse {
      * Name of a Compute Engine instance or network endpoint.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * A list of firewall rule URIs allowing probes from health check IP ranges.
      * 
     */
-    public List<String> getHealthCheckAllowingFirewallRules() {
+    public List<String> healthCheckAllowingFirewallRules() {
         return this.healthCheckAllowingFirewallRules;
     }
     /**
      * A list of firewall rule URIs blocking probes from health check IP ranges.
      * 
     */
-    public List<String> getHealthCheckBlockingFirewallRules() {
+    public List<String> healthCheckBlockingFirewallRules() {
         return this.healthCheckBlockingFirewallRules;
     }
     /**
      * State of the health check firewall configuration.
      * 
     */
-    public String getHealthCheckFirewallState() {
+    public String healthCheckFirewallState() {
         return this.healthCheckFirewallState;
     }
     /**
      * URI of a Compute Engine instance or network endpoint.
      * 
     */
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

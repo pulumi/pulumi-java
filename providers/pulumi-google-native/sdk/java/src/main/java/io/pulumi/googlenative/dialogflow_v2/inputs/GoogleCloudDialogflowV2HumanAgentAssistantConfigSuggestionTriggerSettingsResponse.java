@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTri
     @Import(name="noSmalltalk", required=true)
       private final Boolean noSmalltalk;
 
-    public Boolean getNoSmalltalk() {
+    public Boolean noSmalltalk() {
         return this.noSmalltalk;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTri
     @Import(name="onlyEndUser", required=true)
       private final Boolean onlyEndUser;
 
-    public Boolean getOnlyEndUser() {
+    public Boolean onlyEndUser() {
         return this.onlyEndUser;
     }
 

@@ -113,91 +113,91 @@ public final class GetCaseResult {
      * The issue classification applicable to this case.
      * 
     */
-    public CaseClassificationResponse getClassification() {
+    public CaseClassificationResponse classification() {
         return this.classification;
     }
     /**
      * The time this case was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The user who created the case. Note: The name and email will be obfuscated if the case was created by Google Support.
      * 
     */
-    public ActorResponse getCreator() {
+    public ActorResponse creator() {
         return this.creator;
     }
     /**
      * A broad description of the issue.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The short summary of the issue reported in this case.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Whether the case is currently escalated.
      * 
     */
-    public Boolean getEscalated() {
+    public Boolean escalated() {
         return this.escalated;
     }
     /**
      * The resource name for the case.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The priority of this case. If this is set, do not set severity.
      * 
     */
-    public String getPriority() {
+    public String priority() {
         return this.priority;
     }
     /**
      * The current status of the support case.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The email addresses to receive updates on this case.
      * 
     */
-    public List<String> getSubscriberEmailAddresses() {
+    public List<String> subscriberEmailAddresses() {
         return this.subscriberEmailAddresses;
     }
     /**
      * Whether this case was created for internal API testing and should not be acted on by the support team.
      * 
     */
-    public Boolean getTestCase() {
+    public Boolean testCase() {
         return this.testCase;
     }
     /**
      * The timezone of the user who created the support case. It should be in a format IANA recognizes: https://www.iana.org/time-zones. There is no additional validation done by the API.
      * 
     */
-    public String getTimeZone() {
+    public String timeZone() {
         return this.timeZone;
     }
     /**
      * The time this case was last updated.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

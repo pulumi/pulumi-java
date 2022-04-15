@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2alphaIntervalResponse extends io.pulumi.re
     @Import(name="exclusiveMaximum", required=true)
       private final Double exclusiveMaximum;
 
-    public Double getExclusiveMaximum() {
+    public Double exclusiveMaximum() {
         return this.exclusiveMaximum;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudRetailV2alphaIntervalResponse extends io.pulumi.re
     @Import(name="exclusiveMinimum", required=true)
       private final Double exclusiveMinimum;
 
-    public Double getExclusiveMinimum() {
+    public Double exclusiveMinimum() {
         return this.exclusiveMinimum;
     }
 
@@ -45,7 +45,7 @@ public final class GoogleCloudRetailV2alphaIntervalResponse extends io.pulumi.re
     @Import(name="maximum", required=true)
       private final Double maximum;
 
-    public Double getMaximum() {
+    public Double maximum() {
         return this.maximum;
     }
 
@@ -56,7 +56,7 @@ public final class GoogleCloudRetailV2alphaIntervalResponse extends io.pulumi.re
     @Import(name="minimum", required=true)
       private final Double minimum;
 
-    public Double getMinimum() {
+    public Double minimum() {
         return this.minimum;
     }
 

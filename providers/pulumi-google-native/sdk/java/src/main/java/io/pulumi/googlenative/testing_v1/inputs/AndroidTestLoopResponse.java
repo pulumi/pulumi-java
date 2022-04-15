@@ -27,7 +27,7 @@ public final class AndroidTestLoopResponse extends io.pulumi.resources.InvokeArg
     @Import(name="appApk", required=true)
       private final FileReferenceResponse appApk;
 
-    public FileReferenceResponse getAppApk() {
+    public FileReferenceResponse appApk() {
         return this.appApk;
     }
 
@@ -38,7 +38,7 @@ public final class AndroidTestLoopResponse extends io.pulumi.resources.InvokeArg
     @Import(name="appBundle", required=true)
       private final AppBundleResponse appBundle;
 
-    public AppBundleResponse getAppBundle() {
+    public AppBundleResponse appBundle() {
         return this.appBundle;
     }
 
@@ -49,7 +49,7 @@ public final class AndroidTestLoopResponse extends io.pulumi.resources.InvokeArg
     @Import(name="appPackageId", required=true)
       private final String appPackageId;
 
-    public String getAppPackageId() {
+    public String appPackageId() {
         return this.appPackageId;
     }
 
@@ -60,7 +60,7 @@ public final class AndroidTestLoopResponse extends io.pulumi.resources.InvokeArg
     @Import(name="scenarioLabels", required=true)
       private final List<String> scenarioLabels;
 
-    public List<String> getScenarioLabels() {
+    public List<String> scenarioLabels() {
         return this.scenarioLabels;
     }
 
@@ -71,7 +71,7 @@ public final class AndroidTestLoopResponse extends io.pulumi.resources.InvokeArg
     @Import(name="scenarios", required=true)
       private final List<Integer> scenarios;
 
-    public List<Integer> getScenarios() {
+    public List<Integer> scenarios() {
         return this.scenarios;
     }
 

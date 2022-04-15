@@ -27,7 +27,7 @@ public final class ColumnLayoutArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="columns")
       private final @Nullable Output<List<ColumnArgs>> columns;
 
-    public Output<List<ColumnArgs>> getColumns() {
+    public Output<List<ColumnArgs>> columns() {
         return this.columns == null ? Codegen.empty() : this.columns;
     }
 

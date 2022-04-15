@@ -23,7 +23,7 @@ public final class DiscoveryNoteResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="analysisKind", required=true)
       private final String analysisKind;
 
-    public String getAnalysisKind() {
+    public String analysisKind() {
         return this.analysisKind;
     }
 

@@ -24,7 +24,7 @@ public final class IngressPolicyResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="ingressFrom", required=true)
       private final IngressFromResponse ingressFrom;
 
-    public IngressFromResponse getIngressFrom() {
+    public IngressFromResponse ingressFrom() {
         return this.ingressFrom;
     }
 
@@ -35,7 +35,7 @@ public final class IngressPolicyResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="ingressTo", required=true)
       private final IngressToResponse ingressTo;
 
-    public IngressToResponse getIngressTo() {
+    public IngressToResponse ingressTo() {
         return this.ingressTo;
     }
 

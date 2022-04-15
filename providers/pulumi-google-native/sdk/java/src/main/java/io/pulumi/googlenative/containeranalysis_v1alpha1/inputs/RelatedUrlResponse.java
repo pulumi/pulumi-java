@@ -23,7 +23,7 @@ public final class RelatedUrlResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="label", required=true)
       private final String label;
 
-    public String getLabel() {
+    public String label() {
         return this.label;
     }
 
@@ -34,7 +34,7 @@ public final class RelatedUrlResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

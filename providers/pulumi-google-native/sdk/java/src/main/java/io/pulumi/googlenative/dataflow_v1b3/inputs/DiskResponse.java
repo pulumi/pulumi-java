@@ -24,7 +24,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="diskType", required=true)
       private final String diskType;
 
-    public String getDiskType() {
+    public String diskType() {
         return this.diskType;
     }
 
@@ -35,7 +35,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="mountPoint", required=true)
       private final String mountPoint;
 
-    public String getMountPoint() {
+    public String mountPoint() {
         return this.mountPoint;
     }
 
@@ -46,7 +46,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sizeGb", required=true)
       private final Integer sizeGb;
 
-    public Integer getSizeGb() {
+    public Integer sizeGb() {
         return this.sizeGb;
     }
 

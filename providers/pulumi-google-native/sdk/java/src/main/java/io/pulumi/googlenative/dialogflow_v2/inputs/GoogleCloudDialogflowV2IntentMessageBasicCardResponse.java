@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse extends
     @Import(name="buttons", required=true)
       private final List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> buttons;
 
-    public List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> getButtons() {
+    public List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> buttons() {
         return this.buttons;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse extends
     @Import(name="formattedText", required=true)
       private final String formattedText;
 
-    public String getFormattedText() {
+    public String formattedText() {
         return this.formattedText;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse extends
     @Import(name="image", required=true)
       private final GoogleCloudDialogflowV2IntentMessageImageResponse image;
 
-    public GoogleCloudDialogflowV2IntentMessageImageResponse getImage() {
+    public GoogleCloudDialogflowV2IntentMessageImageResponse image() {
         return this.image;
     }
 
@@ -59,7 +59,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse extends
     @Import(name="subtitle", required=true)
       private final String subtitle;
 
-    public String getSubtitle() {
+    public String subtitle() {
         return this.subtitle;
     }
 
@@ -70,7 +70,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse extends
     @Import(name="title", required=true)
       private final String title;
 
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

@@ -26,7 +26,7 @@ public final class SubordinateConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="certificateAuthority", required=true)
       private final Output<String> certificateAuthority;
 
-    public Output<String> getCertificateAuthority() {
+    public Output<String> certificateAuthority() {
         return this.certificateAuthority;
     }
 
@@ -37,7 +37,7 @@ public final class SubordinateConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="pemIssuerChain", required=true)
       private final Output<SubordinateConfigChainArgs> pemIssuerChain;
 
-    public Output<SubordinateConfigChainArgs> getPemIssuerChain() {
+    public Output<SubordinateConfigChainArgs> pemIssuerChain() {
         return this.pemIssuerChain;
     }
 

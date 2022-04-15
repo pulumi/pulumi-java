@@ -33,7 +33,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * @return User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
      * 
      */
-    public Output<Map<String,String>> getAnnotations() {
+    public Output<Map<String,String>> annotations() {
         return this.annotations;
     }
     /**
@@ -47,7 +47,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * @return Approval state of the `Rollout`.
      * 
      */
-    public Output<String> getApprovalState() {
+    public Output<String> approvalState() {
         return this.approvalState;
     }
     /**
@@ -61,7 +61,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * @return Time at which the `Rollout` was approved.
      * 
      */
-    public Output<String> getApproveTime() {
+    public Output<String> approveTime() {
         return this.approveTime;
     }
     /**
@@ -75,7 +75,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * @return Time at which the `Rollout` was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -89,7 +89,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * @return Time at which the `Rollout` finished deploying.
      * 
      */
-    public Output<String> getDeployEndTime() {
+    public Output<String> deployEndTime() {
         return this.deployEndTime;
     }
     /**
@@ -103,7 +103,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * @return The reason this deploy failed. This will always be unspecified while the deploy in progress.
      * 
      */
-    public Output<String> getDeployFailureCause() {
+    public Output<String> deployFailureCause() {
         return this.deployFailureCause;
     }
     /**
@@ -117,7 +117,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * @return Time at which the `Rollout` started deploying.
      * 
      */
-    public Output<String> getDeployStartTime() {
+    public Output<String> deployStartTime() {
         return this.deployStartTime;
     }
     /**
@@ -131,7 +131,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * @return The resource name of the Cloud Build `Build` object that is used to deploy the Rollout. Format is `projects/{project}/locations/{location}/builds/{build}`.
      * 
      */
-    public Output<String> getDeployingBuild() {
+    public Output<String> deployingBuild() {
         return this.deployingBuild;
     }
     /**
@@ -145,7 +145,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * @return Description of the `Rollout` for user purposes. Max length is 255 characters.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -159,7 +159,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * @return Time at which the `Rollout` was enqueued.
      * 
      */
-    public Output<String> getEnqueueTime() {
+    public Output<String> enqueueTime() {
         return this.enqueueTime;
     }
     /**
@@ -173,7 +173,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * @return This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -187,7 +187,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * @return Reason the build failed. Empty if the build succeeded.
      * 
      */
-    public Output<String> getFailureReason() {
+    public Output<String> failureReason() {
         return this.failureReason;
     }
     /**
@@ -201,7 +201,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * @return Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be <= 128 bytes.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -215,7 +215,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * @return Optional. Name of the `Rollout`. Format is projects/{project}/ locations/{location}/deliveryPipelines/{deliveryPipeline}/ releases/{release}/rollouts/a-z{0,62}.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -229,7 +229,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * @return Current state of the `Rollout`.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -243,7 +243,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * @return The ID of Target to which this `Rollout` is deploying.
      * 
      */
-    public Output<String> getTargetId() {
+    public Output<String> targetId() {
         return this.targetId;
     }
     /**
@@ -257,7 +257,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * @return Unique identifier of the `Rollout`.
      * 
      */
-    public Output<String> getUid() {
+    public Output<String> uid() {
         return this.uid;
     }
 

@@ -25,7 +25,7 @@ public final class MetadataResponse {
      * Services that this ruleset has declarations for (e.g., "cloud.firestore"). There may be 0+ of these.
      * 
     */
-    public List<String> getServices() {
+    public List<String> services() {
         return this.services;
     }
 

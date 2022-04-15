@@ -25,7 +25,7 @@ public final class AwsAccessKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessKeyId", required=true)
       private final Output<String> accessKeyId;
 
-    public Output<String> getAccessKeyId() {
+    public Output<String> accessKeyId() {
         return this.accessKeyId;
     }
 
@@ -36,7 +36,7 @@ public final class AwsAccessKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretAccessKey", required=true)
       private final Output<String> secretAccessKey;
 
-    public Output<String> getSecretAccessKey() {
+    public Output<String> secretAccessKey() {
         return this.secretAccessKey;
     }
 

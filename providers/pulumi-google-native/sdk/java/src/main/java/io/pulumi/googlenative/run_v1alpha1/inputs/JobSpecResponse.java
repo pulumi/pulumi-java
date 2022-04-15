@@ -25,7 +25,7 @@ public final class JobSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="activeDeadlineSeconds", required=true)
       private final String activeDeadlineSeconds;
 
-    public String getActiveDeadlineSeconds() {
+    public String activeDeadlineSeconds() {
         return this.activeDeadlineSeconds;
     }
 
@@ -36,7 +36,7 @@ public final class JobSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="backoffLimit", required=true)
       private final Integer backoffLimit;
 
-    public Integer getBackoffLimit() {
+    public Integer backoffLimit() {
         return this.backoffLimit;
     }
 
@@ -47,7 +47,7 @@ public final class JobSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="completions", required=true)
       private final Integer completions;
 
-    public Integer getCompletions() {
+    public Integer completions() {
         return this.completions;
     }
 
@@ -58,7 +58,7 @@ public final class JobSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="parallelism", required=true)
       private final Integer parallelism;
 
-    public Integer getParallelism() {
+    public Integer parallelism() {
         return this.parallelism;
     }
 
@@ -69,7 +69,7 @@ public final class JobSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="template", required=true)
       private final InstanceTemplateSpecResponse template;
 
-    public InstanceTemplateSpecResponse getTemplate() {
+    public InstanceTemplateSpecResponse template() {
         return this.template;
     }
 
@@ -80,7 +80,7 @@ public final class JobSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="ttlSecondsAfterFinished", required=true)
       private final Integer ttlSecondsAfterFinished;
 
-    public Integer getTtlSecondsAfterFinished() {
+    public Integer ttlSecondsAfterFinished() {
         return this.ttlSecondsAfterFinished;
     }
 

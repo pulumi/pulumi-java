@@ -27,14 +27,14 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -45,7 +45,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -56,14 +56,14 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pipelineSources")
       private final @Nullable Output<Map<String,String>> pipelineSources;
 
-    public Output<Map<String,String>> getPipelineSources() {
+    public Output<Map<String,String>> pipelineSources() {
         return this.pipelineSources == null ? Codegen.empty() : this.pipelineSources;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -74,7 +74,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scheduleInfo")
       private final @Nullable Output<GoogleCloudDatapipelinesV1ScheduleSpecArgs> scheduleInfo;
 
-    public Output<GoogleCloudDatapipelinesV1ScheduleSpecArgs> getScheduleInfo() {
+    public Output<GoogleCloudDatapipelinesV1ScheduleSpecArgs> scheduleInfo() {
         return this.scheduleInfo == null ? Codegen.empty() : this.scheduleInfo;
     }
 
@@ -85,7 +85,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedulerServiceAccountEmail")
       private final @Nullable Output<String> schedulerServiceAccountEmail;
 
-    public Output<String> getSchedulerServiceAccountEmail() {
+    public Output<String> schedulerServiceAccountEmail() {
         return this.schedulerServiceAccountEmail == null ? Codegen.empty() : this.schedulerServiceAccountEmail;
     }
 
@@ -96,7 +96,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="state", required=true)
       private final Output<PipelineState> state;
 
-    public Output<PipelineState> getState() {
+    public Output<PipelineState> state() {
         return this.state;
     }
 
@@ -107,7 +107,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<PipelineType> type;
 
-    public Output<PipelineType> getType() {
+    public Output<PipelineType> type() {
         return this.type;
     }
 
@@ -118,7 +118,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workload")
       private final @Nullable Output<GoogleCloudDatapipelinesV1WorkloadArgs> workload;
 
-    public Output<GoogleCloudDatapipelinesV1WorkloadArgs> getWorkload() {
+    public Output<GoogleCloudDatapipelinesV1WorkloadArgs> workload() {
         return this.workload == null ? Codegen.empty() : this.workload;
     }
 

@@ -23,7 +23,7 @@ public final class ApigatewayApiConfigOpenApiDocumentResponse extends io.pulumi.
     @Import(name="document", required=true)
       private final ApigatewayApiConfigFileResponse document;
 
-    public ApigatewayApiConfigFileResponse getDocument() {
+    public ApigatewayApiConfigFileResponse document() {
         return this.document;
     }
 

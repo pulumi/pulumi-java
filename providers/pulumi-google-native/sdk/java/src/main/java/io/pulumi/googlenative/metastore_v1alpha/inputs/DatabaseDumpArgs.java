@@ -28,7 +28,7 @@ public final class DatabaseDumpArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseType")
       private final @Nullable Output<DatabaseDumpDatabaseType> databaseType;
 
-    public Output<DatabaseDumpDatabaseType> getDatabaseType() {
+    public Output<DatabaseDumpDatabaseType> databaseType() {
         return this.databaseType == null ? Codegen.empty() : this.databaseType;
     }
 
@@ -39,7 +39,7 @@ public final class DatabaseDumpArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gcsUri")
       private final @Nullable Output<String> gcsUri;
 
-    public Output<String> getGcsUri() {
+    public Output<String> gcsUri() {
         return this.gcsUri == null ? Codegen.empty() : this.gcsUri;
     }
 
@@ -50,7 +50,7 @@ public final class DatabaseDumpArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceDatabase")
       private final @Nullable Output<String> sourceDatabase;
 
-    public Output<String> getSourceDatabase() {
+    public Output<String> sourceDatabase() {
         return this.sourceDatabase == null ? Codegen.empty() : this.sourceDatabase;
     }
 
@@ -61,7 +61,7 @@ public final class DatabaseDumpArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<DatabaseDumpType> type;
 
-    public Output<DatabaseDumpType> getType() {
+    public Output<DatabaseDumpType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

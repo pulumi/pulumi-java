@@ -32,7 +32,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
     @Import(name="algorithm")
       private final @Nullable Output<GoogleCloudMlV1__HyperparameterSpecAlgorithm> algorithm;
 
-    public Output<GoogleCloudMlV1__HyperparameterSpecAlgorithm> getAlgorithm() {
+    public Output<GoogleCloudMlV1__HyperparameterSpecAlgorithm> algorithm() {
         return this.algorithm == null ? Codegen.empty() : this.algorithm;
     }
 
@@ -43,7 +43,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
     @Import(name="enableTrialEarlyStopping")
       private final @Nullable Output<Boolean> enableTrialEarlyStopping;
 
-    public Output<Boolean> getEnableTrialEarlyStopping() {
+    public Output<Boolean> enableTrialEarlyStopping() {
         return this.enableTrialEarlyStopping == null ? Codegen.empty() : this.enableTrialEarlyStopping;
     }
 
@@ -54,7 +54,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
     @Import(name="goal", required=true)
       private final Output<GoogleCloudMlV1__HyperparameterSpecGoal> goal;
 
-    public Output<GoogleCloudMlV1__HyperparameterSpecGoal> getGoal() {
+    public Output<GoogleCloudMlV1__HyperparameterSpecGoal> goal() {
         return this.goal;
     }
 
@@ -65,7 +65,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
     @Import(name="hyperparameterMetricTag")
       private final @Nullable Output<String> hyperparameterMetricTag;
 
-    public Output<String> getHyperparameterMetricTag() {
+    public Output<String> hyperparameterMetricTag() {
         return this.hyperparameterMetricTag == null ? Codegen.empty() : this.hyperparameterMetricTag;
     }
 
@@ -76,7 +76,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
     @Import(name="maxFailedTrials")
       private final @Nullable Output<Integer> maxFailedTrials;
 
-    public Output<Integer> getMaxFailedTrials() {
+    public Output<Integer> maxFailedTrials() {
         return this.maxFailedTrials == null ? Codegen.empty() : this.maxFailedTrials;
     }
 
@@ -87,7 +87,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
     @Import(name="maxParallelTrials")
       private final @Nullable Output<Integer> maxParallelTrials;
 
-    public Output<Integer> getMaxParallelTrials() {
+    public Output<Integer> maxParallelTrials() {
         return this.maxParallelTrials == null ? Codegen.empty() : this.maxParallelTrials;
     }
 
@@ -98,7 +98,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
     @Import(name="maxTrials")
       private final @Nullable Output<Integer> maxTrials;
 
-    public Output<Integer> getMaxTrials() {
+    public Output<Integer> maxTrials() {
         return this.maxTrials == null ? Codegen.empty() : this.maxTrials;
     }
 
@@ -109,7 +109,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
     @Import(name="params", required=true)
       private final Output<List<GoogleCloudMlV1__ParameterSpecArgs>> params;
 
-    public Output<List<GoogleCloudMlV1__ParameterSpecArgs>> getParams() {
+    public Output<List<GoogleCloudMlV1__ParameterSpecArgs>> params() {
         return this.params;
     }
 
@@ -120,7 +120,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
     @Import(name="resumePreviousJobId")
       private final @Nullable Output<String> resumePreviousJobId;
 
-    public Output<String> getResumePreviousJobId() {
+    public Output<String> resumePreviousJobId() {
         return this.resumePreviousJobId == null ? Codegen.empty() : this.resumePreviousJobId;
     }
 

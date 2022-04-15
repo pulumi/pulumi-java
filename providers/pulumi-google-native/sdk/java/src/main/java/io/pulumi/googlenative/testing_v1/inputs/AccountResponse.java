@@ -23,7 +23,7 @@ public final class AccountResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="googleAuto", required=true)
       private final GoogleAutoResponse googleAuto;
 
-    public GoogleAutoResponse getGoogleAuto() {
+    public GoogleAutoResponse googleAuto() {
         return this.googleAuto;
     }
 

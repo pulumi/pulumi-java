@@ -24,7 +24,7 @@ public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse 
      * Whether the classification task is multi-label or not.
      * 
     */
-    public Boolean getIsMultiLabel() {
+    public Boolean isMultiLabel() {
         return this.isMultiLabel;
     }
 

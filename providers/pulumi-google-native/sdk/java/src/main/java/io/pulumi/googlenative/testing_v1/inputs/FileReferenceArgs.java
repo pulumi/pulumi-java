@@ -26,7 +26,7 @@ public final class FileReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gcsPath")
       private final @Nullable Output<String> gcsPath;
 
-    public Output<String> getGcsPath() {
+    public Output<String> gcsPath() {
         return this.gcsPath == null ? Codegen.empty() : this.gcsPath;
     }
 

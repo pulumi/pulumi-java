@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3NluSettingsResponse extends io.pulum
     @Import(name="classificationThreshold", required=true)
       private final Double classificationThreshold;
 
-    public Double getClassificationThreshold() {
+    public Double classificationThreshold() {
         return this.classificationThreshold;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3NluSettingsResponse extends io.pulum
     @Import(name="modelTrainingMode", required=true)
       private final String modelTrainingMode;
 
-    public String getModelTrainingMode() {
+    public String modelTrainingMode() {
         return this.modelTrainingMode;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowCxV3NluSettingsResponse extends io.pulum
     @Import(name="modelType", required=true)
       private final String modelType;
 
-    public String getModelType() {
+    public String modelType() {
         return this.modelType;
     }
 

@@ -26,7 +26,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecResponse extends io.pulumi.re
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecResponse extends io.pulumi.re
     @Import(name="inheritFromParent", required=true)
       private final Boolean inheritFromParent;
 
-    public Boolean getInheritFromParent() {
+    public Boolean inheritFromParent() {
         return this.inheritFromParent;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecResponse extends io.pulumi.re
     @Import(name="reset", required=true)
       private final Boolean reset;
 
-    public Boolean getReset() {
+    public Boolean reset() {
         return this.reset;
     }
 
@@ -59,7 +59,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecResponse extends io.pulumi.re
     @Import(name="rules", required=true)
       private final List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse> rules;
 
-    public List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse> getRules() {
+    public List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse> rules() {
         return this.rules;
     }
 
@@ -70,7 +70,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecResponse extends io.pulumi.re
     @Import(name="updateTime", required=true)
       private final String updateTime;
 
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

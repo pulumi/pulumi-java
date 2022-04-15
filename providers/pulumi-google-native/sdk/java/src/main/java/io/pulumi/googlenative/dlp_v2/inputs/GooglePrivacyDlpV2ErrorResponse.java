@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2ErrorResponse extends io.pulumi.resources.I
     @Import(name="details", required=true)
       private final GoogleRpcStatusResponse details;
 
-    public GoogleRpcStatusResponse getDetails() {
+    public GoogleRpcStatusResponse details() {
         return this.details;
     }
 
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2ErrorResponse extends io.pulumi.resources.I
     @Import(name="timestamps", required=true)
       private final List<String> timestamps;
 
-    public List<String> getTimestamps() {
+    public List<String> timestamps() {
         return this.timestamps;
     }
 

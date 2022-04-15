@@ -29,10 +29,10 @@ public final class SubjectResponse {
      * "": "" Algorithms can be e.g. sha256, sha512 See https://github.com/in-toto/attestation/blob/main/spec/field_types.md#DigestSet
      * 
     */
-    public Map<String,String> getDigest() {
+    public Map<String,String> digest() {
         return this.digest;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

@@ -50,28 +50,28 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse {
      * Actions to execute at the completion of the job.
      * 
     */
-    public List<GooglePrivacyDlpV2ActionResponse> getActions() {
+    public List<GooglePrivacyDlpV2ActionResponse> actions() {
         return this.actions;
     }
     /**
      * How and what to scan for.
      * 
     */
-    public GooglePrivacyDlpV2InspectConfigResponse getInspectConfig() {
+    public GooglePrivacyDlpV2InspectConfigResponse inspectConfig() {
         return this.inspectConfig;
     }
     /**
      * If provided, will be used as the default for all values in InspectConfig. `inspect_config` will be merged into the values persisted as part of the template.
      * 
     */
-    public String getInspectTemplateName() {
+    public String inspectTemplateName() {
         return this.inspectTemplateName;
     }
     /**
      * The data to scan.
      * 
     */
-    public GooglePrivacyDlpV2StorageConfigResponse getStorageConfig() {
+    public GooglePrivacyDlpV2StorageConfigResponse storageConfig() {
         return this.storageConfig;
     }
 

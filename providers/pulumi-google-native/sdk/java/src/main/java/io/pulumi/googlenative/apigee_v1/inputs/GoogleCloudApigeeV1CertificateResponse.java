@@ -20,7 +20,7 @@ public final class GoogleCloudApigeeV1CertificateResponse extends io.pulumi.reso
     @Import(name="certInfo", required=true)
       private final List<GoogleCloudApigeeV1CertInfoResponse> certInfo;
 
-    public List<GoogleCloudApigeeV1CertInfoResponse> getCertInfo() {
+    public List<GoogleCloudApigeeV1CertInfoResponse> certInfo() {
         return this.certInfo;
     }
 

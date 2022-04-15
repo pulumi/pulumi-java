@@ -27,7 +27,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="kmsKey")
       private final @Nullable Output<String> kmsKey;
 
-    public Output<String> getKmsKey() {
+    public Output<String> kmsKey() {
         return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
     }
 
@@ -38,7 +38,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="networkTags")
       private final @Nullable Output<List<String>> networkTags;
 
-    public Output<List<String>> getNetworkTags() {
+    public Output<List<String>> networkTags() {
         return this.networkTags == null ? Codegen.empty() : this.networkTags;
     }
 
@@ -49,7 +49,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="networkUri")
       private final @Nullable Output<String> networkUri;
 
-    public Output<String> getNetworkUri() {
+    public Output<String> networkUri() {
         return this.networkUri == null ? Codegen.empty() : this.networkUri;
     }
 
@@ -60,7 +60,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
@@ -71,7 +71,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="subnetworkUri")
       private final @Nullable Output<String> subnetworkUri;
 
-    public Output<String> getSubnetworkUri() {
+    public Output<String> subnetworkUri() {
         return this.subnetworkUri == null ? Codegen.empty() : this.subnetworkUri;
     }
 

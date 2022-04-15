@@ -27,7 +27,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="accessConfigs", required=true)
       private final List<AccessConfigResponse> accessConfigs;
 
-    public List<AccessConfigResponse> getAccessConfigs() {
+    public List<AccessConfigResponse> accessConfigs() {
         return this.accessConfigs;
     }
 
@@ -38,7 +38,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="aliasIpRanges", required=true)
       private final List<AliasIpRangeResponse> aliasIpRanges;
 
-    public List<AliasIpRangeResponse> getAliasIpRanges() {
+    public List<AliasIpRangeResponse> aliasIpRanges() {
         return this.aliasIpRanges;
     }
 
@@ -49,7 +49,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="fingerprint", required=true)
       private final String fingerprint;
 
-    public String getFingerprint() {
+    public String fingerprint() {
         return this.fingerprint;
     }
 
@@ -60,7 +60,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="ipv6AccessConfigs", required=true)
       private final List<AccessConfigResponse> ipv6AccessConfigs;
 
-    public List<AccessConfigResponse> getIpv6AccessConfigs() {
+    public List<AccessConfigResponse> ipv6AccessConfigs() {
         return this.ipv6AccessConfigs;
     }
 
@@ -71,7 +71,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="ipv6AccessType", required=true)
       private final String ipv6AccessType;
 
-    public String getIpv6AccessType() {
+    public String ipv6AccessType() {
         return this.ipv6AccessType;
     }
 
@@ -82,7 +82,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="ipv6Address", required=true)
       private final String ipv6Address;
 
-    public String getIpv6Address() {
+    public String ipv6Address() {
         return this.ipv6Address;
     }
 
@@ -93,7 +93,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -104,7 +104,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -115,7 +115,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="network", required=true)
       private final String network;
 
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
 
@@ -126,7 +126,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="networkIP", required=true)
       private final String networkIP;
 
-    public String getNetworkIP() {
+    public String networkIP() {
         return this.networkIP;
     }
 
@@ -137,7 +137,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="nicType", required=true)
       private final String nicType;
 
-    public String getNicType() {
+    public String nicType() {
         return this.nicType;
     }
 
@@ -148,7 +148,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="queueCount", required=true)
       private final Integer queueCount;
 
-    public Integer getQueueCount() {
+    public Integer queueCount() {
         return this.queueCount;
     }
 
@@ -159,7 +159,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="stackType", required=true)
       private final String stackType;
 
-    public String getStackType() {
+    public String stackType() {
         return this.stackType;
     }
 
@@ -170,7 +170,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="subnetwork", required=true)
       private final String subnetwork;
 
-    public String getSubnetwork() {
+    public String subnetwork() {
         return this.subnetwork;
     }
 

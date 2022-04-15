@@ -23,7 +23,7 @@ public final class DeviceStateResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="binaryData", required=true)
       private final String binaryData;
 
-    public String getBinaryData() {
+    public String binaryData() {
         return this.binaryData;
     }
 
@@ -34,7 +34,7 @@ public final class DeviceStateResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="updateTime", required=true)
       private final String updateTime;
 
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

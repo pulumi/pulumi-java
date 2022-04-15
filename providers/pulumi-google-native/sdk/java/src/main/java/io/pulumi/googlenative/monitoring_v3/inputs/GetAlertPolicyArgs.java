@@ -17,14 +17,14 @@ public final class GetAlertPolicyArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="alertPolicyId", required=true)
       private final String alertPolicyId;
 
-    public String getAlertPolicyId() {
+    public String alertPolicyId() {
         return this.alertPolicyId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

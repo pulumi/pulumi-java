@@ -19,7 +19,7 @@ public final class ResourceStatusUpcomingMaintenanceResponse extends io.pulumi.r
     @Import(name="canReschedule", required=true)
       private final Boolean canReschedule;
 
-    public Boolean getCanReschedule() {
+    public Boolean canReschedule() {
         return this.canReschedule;
     }
 

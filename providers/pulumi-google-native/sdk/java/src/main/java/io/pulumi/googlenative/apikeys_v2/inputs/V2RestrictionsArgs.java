@@ -31,7 +31,7 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="androidKeyRestrictions")
       private final @Nullable Output<V2AndroidKeyRestrictionsArgs> androidKeyRestrictions;
 
-    public Output<V2AndroidKeyRestrictionsArgs> getAndroidKeyRestrictions() {
+    public Output<V2AndroidKeyRestrictionsArgs> androidKeyRestrictions() {
         return this.androidKeyRestrictions == null ? Codegen.empty() : this.androidKeyRestrictions;
     }
 
@@ -42,7 +42,7 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiTargets")
       private final @Nullable Output<List<V2ApiTargetArgs>> apiTargets;
 
-    public Output<List<V2ApiTargetArgs>> getApiTargets() {
+    public Output<List<V2ApiTargetArgs>> apiTargets() {
         return this.apiTargets == null ? Codegen.empty() : this.apiTargets;
     }
 
@@ -53,7 +53,7 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="browserKeyRestrictions")
       private final @Nullable Output<V2BrowserKeyRestrictionsArgs> browserKeyRestrictions;
 
-    public Output<V2BrowserKeyRestrictionsArgs> getBrowserKeyRestrictions() {
+    public Output<V2BrowserKeyRestrictionsArgs> browserKeyRestrictions() {
         return this.browserKeyRestrictions == null ? Codegen.empty() : this.browserKeyRestrictions;
     }
 
@@ -64,7 +64,7 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iosKeyRestrictions")
       private final @Nullable Output<V2IosKeyRestrictionsArgs> iosKeyRestrictions;
 
-    public Output<V2IosKeyRestrictionsArgs> getIosKeyRestrictions() {
+    public Output<V2IosKeyRestrictionsArgs> iosKeyRestrictions() {
         return this.iosKeyRestrictions == null ? Codegen.empty() : this.iosKeyRestrictions;
     }
 
@@ -75,7 +75,7 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverKeyRestrictions")
       private final @Nullable Output<V2ServerKeyRestrictionsArgs> serverKeyRestrictions;
 
-    public Output<V2ServerKeyRestrictionsArgs> getServerKeyRestrictions() {
+    public Output<V2ServerKeyRestrictionsArgs> serverKeyRestrictions() {
         return this.serverKeyRestrictions == null ? Codegen.empty() : this.serverKeyRestrictions;
     }
 

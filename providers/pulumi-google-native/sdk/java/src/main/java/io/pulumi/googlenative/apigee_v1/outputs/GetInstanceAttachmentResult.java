@@ -39,21 +39,21 @@ public final class GetInstanceAttachmentResult {
      * Time the attachment was created in milliseconds since epoch.
      * 
     */
-    public String getCreatedAt() {
+    public String createdAt() {
         return this.createdAt;
     }
     /**
      * ID of the attached environment.
      * 
     */
-    public String getEnvironment() {
+    public String environment() {
         return this.environment;
     }
     /**
      * ID of the attachment.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

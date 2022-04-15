@@ -24,7 +24,7 @@ public final class GoogleCloudPolicysimulatorV1ReplayConfigResponse extends io.p
     @Import(name="logSource", required=true)
       private final String logSource;
 
-    public String getLogSource() {
+    public String logSource() {
         return this.logSource;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudPolicysimulatorV1ReplayConfigResponse extends io.p
     @Import(name="policyOverlay", required=true)
       private final Map<String,String> policyOverlay;
 
-    public Map<String,String> getPolicyOverlay() {
+    public Map<String,String> policyOverlay() {
         return this.policyOverlay;
     }
 

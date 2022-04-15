@@ -82,63 +82,63 @@ public final class GetExecutionResult {
      * Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `'{"argument":"{\"firstName\":\"FIRST\",\"lastName\":\"LAST\"}"}'`
      * 
     */
-    public String getArgument() {
+    public String argument() {
         return this.argument;
     }
     /**
      * The call logging level associated to this execution.
      * 
     */
-    public String getCallLogLevel() {
+    public String callLogLevel() {
         return this.callLogLevel;
     }
     /**
      * Marks the end of execution, successful or not.
      * 
     */
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
     /**
      * The error which caused the execution to finish prematurely. The value is only present if the execution's state is `FAILED` or `CANCELLED`.
      * 
     */
-    public ErrorResponse getError() {
+    public ErrorResponse error() {
         return this.error;
     }
     /**
      * The resource name of the execution. Format: projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Output of the execution represented as a JSON string. The value can only be present if the execution's state is `SUCCEEDED`.
      * 
     */
-    public String getResult() {
+    public String result() {
         return this.result;
     }
     /**
      * Marks the beginning of execution.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
     /**
      * Current state of the execution.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Revision of the workflow this execution is using.
      * 
     */
-    public String getWorkflowRevisionId() {
+    public String workflowRevisionId() {
         return this.workflowRevisionId;
     }
 

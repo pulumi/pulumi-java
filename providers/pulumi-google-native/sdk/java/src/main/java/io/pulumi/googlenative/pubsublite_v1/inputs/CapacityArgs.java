@@ -26,7 +26,7 @@ public final class CapacityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publishMibPerSec")
       private final @Nullable Output<Integer> publishMibPerSec;
 
-    public Output<Integer> getPublishMibPerSec() {
+    public Output<Integer> publishMibPerSec() {
         return this.publishMibPerSec == null ? Codegen.empty() : this.publishMibPerSec;
     }
 
@@ -37,7 +37,7 @@ public final class CapacityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subscribeMibPerSec")
       private final @Nullable Output<Integer> subscribeMibPerSec;
 
-    public Output<Integer> getSubscribeMibPerSec() {
+    public Output<Integer> subscribeMibPerSec() {
         return this.subscribeMibPerSec == null ? Codegen.empty() : this.subscribeMibPerSec;
     }
 

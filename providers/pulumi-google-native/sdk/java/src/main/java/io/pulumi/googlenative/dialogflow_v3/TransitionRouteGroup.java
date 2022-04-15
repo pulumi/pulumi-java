@@ -31,7 +31,7 @@ public class TransitionRouteGroup extends io.pulumi.resources.CustomResource {
      * @return The human-readable name of the transition route group, unique within the Agent. The display name can be no longer than 30 characters.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -45,7 +45,7 @@ public class TransitionRouteGroup extends io.pulumi.resources.CustomResource {
      * @return The unique identifier of the transition route group. TransitionRouteGroups.CreateTransitionRouteGroup populates the name automatically. Format: `projects//locations//agents//flows//transitionRouteGroups/`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -59,7 +59,7 @@ public class TransitionRouteGroup extends io.pulumi.resources.CustomResource {
      * @return Transition routes associated with the TransitionRouteGroup.
      * 
      */
-    public Output<List<GoogleCloudDialogflowCxV3TransitionRouteResponse>> getTransitionRoutes() {
+    public Output<List<GoogleCloudDialogflowCxV3TransitionRouteResponse>> transitionRoutes() {
         return this.transitionRoutes;
     }
 

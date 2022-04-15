@@ -83,63 +83,63 @@ public final class CertificateResponse {
      * The issuer distinguished name in RFC 2253 format. Only present if parsed is true.
      * 
     */
-    public String getIssuer() {
+    public String issuer() {
         return this.issuer;
     }
     /**
      * The certificate is not valid after this time. Only present if parsed is true.
      * 
     */
-    public String getNotAfterTime() {
+    public String notAfterTime() {
         return this.notAfterTime;
     }
     /**
      * The certificate is not valid before this time. Only present if parsed is true.
      * 
     */
-    public String getNotBeforeTime() {
+    public String notBeforeTime() {
         return this.notBeforeTime;
     }
     /**
      * True if the certificate was parsed successfully.
      * 
     */
-    public Boolean getParsed() {
+    public Boolean parsed() {
         return this.parsed;
     }
     /**
      * The raw certificate bytes in DER format.
      * 
     */
-    public String getRawDer() {
+    public String rawDer() {
         return this.rawDer;
     }
     /**
      * The certificate serial number as a hex string. Only present if parsed is true.
      * 
     */
-    public String getSerialNumber() {
+    public String serialNumber() {
         return this.serialNumber;
     }
     /**
      * The SHA-256 certificate fingerprint as a hex string. Only present if parsed is true.
      * 
     */
-    public String getSha256Fingerprint() {
+    public String sha256Fingerprint() {
         return this.sha256Fingerprint;
     }
     /**
      * The subject distinguished name in RFC 2253 format. Only present if parsed is true.
      * 
     */
-    public String getSubject() {
+    public String subject() {
         return this.subject;
     }
     /**
      * The subject Alternative DNS names. Only present if parsed is true.
      * 
     */
-    public List<String> getSubjectAlternativeDnsNames() {
+    public List<String> subjectAlternativeDnsNames() {
         return this.subjectAlternativeDnsNames;
     }
 

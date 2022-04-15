@@ -31,7 +31,7 @@ public class PolicyTag extends io.pulumi.resources.CustomResource {
      * @return Resource names of child policy tags of this policy tag.
      * 
      */
-    public Output<List<String>> getChildPolicyTags() {
+    public Output<List<String>> childPolicyTags() {
         return this.childPolicyTags;
     }
     /**
@@ -45,7 +45,7 @@ public class PolicyTag extends io.pulumi.resources.CustomResource {
      * @return Description of this policy tag. If not set, defaults to empty. The description must contain only Unicode characters, tabs, newlines, carriage returns and page breaks, and be at most 2000 bytes long when encoded in UTF-8.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -59,7 +59,7 @@ public class PolicyTag extends io.pulumi.resources.CustomResource {
      * @return User-defined name of this policy tag. The name can't start or end with spaces and must be unique within the parent taxonomy, contain only Unicode letters, numbers, underscores, dashes and spaces, and be at most 200 bytes long when encoded in UTF-8.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -73,7 +73,7 @@ public class PolicyTag extends io.pulumi.resources.CustomResource {
      * @return Resource name of this policy tag in the URL format. The policy tag manager generates unique taxonomy IDs and policy tag IDs.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +87,7 @@ public class PolicyTag extends io.pulumi.resources.CustomResource {
      * @return Resource name of this policy tag's parent policy tag. If empty, this is a top level tag. If not set, defaults to an empty string. For example, for the "LatLong" policy tag in the example above, this field contains the resource name of the "Geolocation" policy tag, and, for "Geolocation", this field is empty.
      * 
      */
-    public Output<String> getParentPolicyTag() {
+    public Output<String> parentPolicyTag() {
         return this.parentPolicyTag;
     }
 

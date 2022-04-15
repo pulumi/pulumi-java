@@ -27,7 +27,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="profiles")
       private final @Nullable Output<List<String>> profiles;
 
-    public Output<List<String>> getProfiles() {
+    public Output<List<String>> profiles() {
         return this.profiles == null ? Codegen.empty() : this.profiles;
     }
 
@@ -38,7 +38,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetId")
       private final @Nullable Output<String> targetId;
 
-    public Output<String> getTargetId() {
+    public Output<String> targetId() {
         return this.targetId == null ? Codegen.empty() : this.targetId;
     }
 

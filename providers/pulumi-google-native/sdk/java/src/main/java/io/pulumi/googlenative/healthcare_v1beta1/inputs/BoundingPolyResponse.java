@@ -25,7 +25,7 @@ public final class BoundingPolyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="label", required=true)
       private final String label;
 
-    public String getLabel() {
+    public String label() {
         return this.label;
     }
 
@@ -36,7 +36,7 @@ public final class BoundingPolyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="vertices", required=true)
       private final List<VertexResponse> vertices;
 
-    public List<VertexResponse> getVertices() {
+    public List<VertexResponse> vertices() {
         return this.vertices;
     }
 

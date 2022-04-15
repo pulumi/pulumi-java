@@ -26,7 +26,7 @@ public final class PosixGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gid")
       private final @Nullable Output<String> gid;
 
-    public Output<String> getGid() {
+    public Output<String> gid() {
         return this.gid == null ? Codegen.empty() : this.gid;
     }
 
@@ -37,7 +37,7 @@ public final class PosixGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -48,7 +48,7 @@ public final class PosixGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="systemId")
       private final @Nullable Output<String> systemId;
 
-    public Output<String> getSystemId() {
+    public Output<String> systemId() {
         return this.systemId == null ? Codegen.empty() : this.systemId;
     }
 

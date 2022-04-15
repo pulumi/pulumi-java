@@ -46,28 +46,28 @@ public final class StageSourceResponse {
      * Dataflow service generated name for this source.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * User name for the original user transform or collection with which this source is most closely associated.
      * 
     */
-    public String getOriginalTransformOrCollection() {
+    public String originalTransformOrCollection() {
         return this.originalTransformOrCollection;
     }
     /**
      * Size of the source, if measurable.
      * 
     */
-    public String getSizeBytes() {
+    public String sizeBytes() {
         return this.sizeBytes;
     }
     /**
      * Human-readable name for this source; may be user or system generated.
      * 
     */
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

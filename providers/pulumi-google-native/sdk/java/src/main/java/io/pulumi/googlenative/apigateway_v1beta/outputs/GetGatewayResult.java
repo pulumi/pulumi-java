@@ -75,56 +75,56 @@ public final class GetGatewayResult {
      * Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}
      * 
     */
-    public String getApiConfig() {
+    public String apiConfig() {
         return this.apiConfig;
     }
     /**
      * Created time.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The default API Gateway host name of the form `{gateway_id}-{hash}.{region_code}.gateway.dev`.
      * 
     */
-    public String getDefaultHostname() {
+    public String defaultHostname() {
         return this.defaultHostname;
     }
     /**
      * Optional. Display name.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * Resource name of the Gateway. Format: projects/{project}/locations/{location}/gateways/{gateway}
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The current state of the Gateway.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Updated time.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

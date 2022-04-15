@@ -16,14 +16,14 @@ public final class FutureReservationTimeWindowResponse extends io.pulumi.resourc
     @Import(name="duration", required=true)
       private final DurationResponse duration;
 
-    public DurationResponse getDuration() {
+    public DurationResponse duration() {
         return this.duration;
     }
 
     @Import(name="endTime", required=true)
       private final String endTime;
 
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
 
@@ -34,7 +34,7 @@ public final class FutureReservationTimeWindowResponse extends io.pulumi.resourc
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

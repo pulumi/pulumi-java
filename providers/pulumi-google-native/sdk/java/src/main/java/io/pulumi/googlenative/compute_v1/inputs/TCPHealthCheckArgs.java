@@ -25,7 +25,7 @@ public final class TCPHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -36,7 +36,7 @@ public final class TCPHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="portName")
       private final @Nullable Output<String> portName;
 
-    public Output<String> getPortName() {
+    public Output<String> portName() {
         return this.portName == null ? Codegen.empty() : this.portName;
     }
 
@@ -47,7 +47,7 @@ public final class TCPHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="portSpecification")
       private final @Nullable Output<TCPHealthCheckPortSpecification> portSpecification;
 
-    public Output<TCPHealthCheckPortSpecification> getPortSpecification() {
+    public Output<TCPHealthCheckPortSpecification> portSpecification() {
         return this.portSpecification == null ? Codegen.empty() : this.portSpecification;
     }
 
@@ -58,7 +58,7 @@ public final class TCPHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="proxyHeader")
       private final @Nullable Output<TCPHealthCheckProxyHeader> proxyHeader;
 
-    public Output<TCPHealthCheckProxyHeader> getProxyHeader() {
+    public Output<TCPHealthCheckProxyHeader> proxyHeader() {
         return this.proxyHeader == null ? Codegen.empty() : this.proxyHeader;
     }
 
@@ -69,7 +69,7 @@ public final class TCPHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="request")
       private final @Nullable Output<String> request;
 
-    public Output<String> getRequest() {
+    public Output<String> request() {
         return this.request == null ? Codegen.empty() : this.request;
     }
 
@@ -80,7 +80,7 @@ public final class TCPHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="response")
       private final @Nullable Output<String> response;
 
-    public Output<String> getResponse() {
+    public Output<String> response() {
         return this.response == null ? Codegen.empty() : this.response;
     }
 

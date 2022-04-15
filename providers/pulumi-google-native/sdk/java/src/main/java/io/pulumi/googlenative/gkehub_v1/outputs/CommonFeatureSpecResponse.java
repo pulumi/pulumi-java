@@ -33,14 +33,14 @@ public final class CommonFeatureSpecResponse {
      * Appdevexperience specific spec.
      * 
     */
-    public AppDevExperienceFeatureSpecResponse getAppdevexperience() {
+    public AppDevExperienceFeatureSpecResponse appdevexperience() {
         return this.appdevexperience;
     }
     /**
      * Multicluster Ingress-specific spec.
      * 
     */
-    public MultiClusterIngressFeatureSpecResponse getMulticlusteringress() {
+    public MultiClusterIngressFeatureSpecResponse multiclusteringress() {
         return this.multiclusteringress;
     }
 

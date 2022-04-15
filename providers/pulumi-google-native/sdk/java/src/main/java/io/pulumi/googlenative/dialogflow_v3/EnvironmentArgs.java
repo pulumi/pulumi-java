@@ -21,7 +21,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="agentId", required=true)
       private final Output<String> agentId;
 
-    public Output<String> getAgentId() {
+    public Output<String> agentId() {
         return this.agentId;
     }
 
@@ -32,7 +32,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -43,14 +43,14 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -61,14 +61,14 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -79,7 +79,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="testCasesConfig")
       private final @Nullable Output<GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs> testCasesConfig;
 
-    public Output<GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs> getTestCasesConfig() {
+    public Output<GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs> testCasesConfig() {
         return this.testCasesConfig == null ? Codegen.empty() : this.testCasesConfig;
     }
 
@@ -90,7 +90,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="versionConfigs", required=true)
       private final Output<List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs>> versionConfigs;
 
-    public Output<List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs>> getVersionConfigs() {
+    public Output<List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs>> versionConfigs() {
         return this.versionConfigs;
     }
 

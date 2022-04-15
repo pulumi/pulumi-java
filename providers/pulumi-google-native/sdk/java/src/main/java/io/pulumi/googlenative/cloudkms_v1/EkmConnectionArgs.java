@@ -20,7 +20,7 @@ public final class EkmConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ekmConnectionId", required=true)
       private final Output<String> ekmConnectionId;
 
-    public Output<String> getEkmConnectionId() {
+    public Output<String> ekmConnectionId() {
         return this.ekmConnectionId;
     }
 
@@ -31,21 +31,21 @@ public final class EkmConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -56,7 +56,7 @@ public final class EkmConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceResolvers")
       private final @Nullable Output<List<ServiceResolverArgs>> serviceResolvers;
 
-    public Output<List<ServiceResolverArgs>> getServiceResolvers() {
+    public Output<List<ServiceResolverArgs>> serviceResolvers() {
         return this.serviceResolvers == null ? Codegen.empty() : this.serviceResolvers;
     }
 

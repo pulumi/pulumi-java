@@ -25,7 +25,7 @@ public final class MetadataFilterResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="filterLabels", required=true)
       private final List<MetadataFilterLabelMatchResponse> filterLabels;
 
-    public List<MetadataFilterLabelMatchResponse> getFilterLabels() {
+    public List<MetadataFilterLabelMatchResponse> filterLabels() {
         return this.filterLabels;
     }
 
@@ -36,7 +36,7 @@ public final class MetadataFilterResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="filterMatchCriteria", required=true)
       private final String filterMatchCriteria;
 
-    public String getFilterMatchCriteria() {
+    public String filterMatchCriteria() {
         return this.filterMatchCriteria;
     }
 

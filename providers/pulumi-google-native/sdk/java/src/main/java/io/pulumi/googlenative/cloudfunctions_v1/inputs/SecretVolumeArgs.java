@@ -28,7 +28,7 @@ public final class SecretVolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mountPath")
       private final @Nullable Output<String> mountPath;
 
-    public Output<String> getMountPath() {
+    public Output<String> mountPath() {
         return this.mountPath == null ? Codegen.empty() : this.mountPath;
     }
 
@@ -39,7 +39,7 @@ public final class SecretVolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -50,7 +50,7 @@ public final class SecretVolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secret")
       private final @Nullable Output<String> secret;
 
-    public Output<String> getSecret() {
+    public Output<String> secret() {
         return this.secret == null ? Codegen.empty() : this.secret;
     }
 
@@ -61,7 +61,7 @@ public final class SecretVolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="versions")
       private final @Nullable Output<List<SecretVersionArgs>> versions;
 
-    public Output<List<SecretVersionArgs>> getVersions() {
+    public Output<List<SecretVersionArgs>> versions() {
         return this.versions == null ? Codegen.empty() : this.versions;
     }
 

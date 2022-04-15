@@ -24,21 +24,21 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.p
     @Import(name="dailySchedule")
       private final @Nullable Output<ResourcePolicyDailyCycleArgs> dailySchedule;
 
-    public Output<ResourcePolicyDailyCycleArgs> getDailySchedule() {
+    public Output<ResourcePolicyDailyCycleArgs> dailySchedule() {
         return this.dailySchedule == null ? Codegen.empty() : this.dailySchedule;
     }
 
     @Import(name="hourlySchedule")
       private final @Nullable Output<ResourcePolicyHourlyCycleArgs> hourlySchedule;
 
-    public Output<ResourcePolicyHourlyCycleArgs> getHourlySchedule() {
+    public Output<ResourcePolicyHourlyCycleArgs> hourlySchedule() {
         return this.hourlySchedule == null ? Codegen.empty() : this.hourlySchedule;
     }
 
     @Import(name="weeklySchedule")
       private final @Nullable Output<ResourcePolicyWeeklyCycleArgs> weeklySchedule;
 
-    public Output<ResourcePolicyWeeklyCycleArgs> getWeeklySchedule() {
+    public Output<ResourcePolicyWeeklyCycleArgs> weeklySchedule() {
         return this.weeklySchedule == null ? Codegen.empty() : this.weeklySchedule;
     }
 

@@ -24,7 +24,7 @@ public final class GrafeasV1beta1PackageDetailsResponse {
      * Where the package was installed.
      * 
     */
-    public InstallationResponse getInstallation() {
+    public InstallationResponse installation() {
         return this.installation;
     }
 

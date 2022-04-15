@@ -27,7 +27,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs ex
     @Import(name="action")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs> action;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs> getAction() {
+    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs ex
     @Import(name="reply")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs> reply;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs> getReply() {
+    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs> reply() {
         return this.reply == null ? Codegen.empty() : this.reply;
     }
 

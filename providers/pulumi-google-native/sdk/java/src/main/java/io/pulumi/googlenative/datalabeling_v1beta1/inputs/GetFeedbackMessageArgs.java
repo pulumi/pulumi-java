@@ -17,35 +17,35 @@ public final class GetFeedbackMessageArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="annotatedDatasetId", required=true)
       private final String annotatedDatasetId;
 
-    public String getAnnotatedDatasetId() {
+    public String annotatedDatasetId() {
         return this.annotatedDatasetId;
     }
 
     @Import(name="datasetId", required=true)
       private final String datasetId;
 
-    public String getDatasetId() {
+    public String datasetId() {
         return this.datasetId;
     }
 
     @Import(name="feedbackMessageId", required=true)
       private final String feedbackMessageId;
 
-    public String getFeedbackMessageId() {
+    public String feedbackMessageId() {
         return this.feedbackMessageId;
     }
 
     @Import(name="feedbackThreadId", required=true)
       private final String feedbackThreadId;
 
-    public String getFeedbackThreadId() {
+    public String feedbackThreadId() {
         return this.feedbackThreadId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

@@ -25,7 +25,7 @@ public final class HiveMetastoreConfigResponse extends io.pulumi.resources.Invok
     @Import(name="auxiliaryVersions", required=true)
       private final Map<String,String> auxiliaryVersions;
 
-    public Map<String,String> getAuxiliaryVersions() {
+    public Map<String,String> auxiliaryVersions() {
         return this.auxiliaryVersions;
     }
 
@@ -36,7 +36,7 @@ public final class HiveMetastoreConfigResponse extends io.pulumi.resources.Invok
     @Import(name="configOverrides", required=true)
       private final Map<String,String> configOverrides;
 
-    public Map<String,String> getConfigOverrides() {
+    public Map<String,String> configOverrides() {
         return this.configOverrides;
     }
 
@@ -47,7 +47,7 @@ public final class HiveMetastoreConfigResponse extends io.pulumi.resources.Invok
     @Import(name="endpointProtocol", required=true)
       private final String endpointProtocol;
 
-    public String getEndpointProtocol() {
+    public String endpointProtocol() {
         return this.endpointProtocol;
     }
 
@@ -58,7 +58,7 @@ public final class HiveMetastoreConfigResponse extends io.pulumi.resources.Invok
     @Import(name="kerberosConfig", required=true)
       private final KerberosConfigResponse kerberosConfig;
 
-    public KerberosConfigResponse getKerberosConfig() {
+    public KerberosConfigResponse kerberosConfig() {
         return this.kerberosConfig;
     }
 
@@ -69,7 +69,7 @@ public final class HiveMetastoreConfigResponse extends io.pulumi.resources.Invok
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

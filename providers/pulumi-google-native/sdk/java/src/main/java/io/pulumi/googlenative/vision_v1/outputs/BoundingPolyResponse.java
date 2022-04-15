@@ -34,14 +34,14 @@ public final class BoundingPolyResponse {
      * The bounding polygon normalized vertices.
      * 
     */
-    public List<NormalizedVertexResponse> getNormalizedVertices() {
+    public List<NormalizedVertexResponse> normalizedVertices() {
         return this.normalizedVertices;
     }
     /**
      * The bounding polygon vertices.
      * 
     */
-    public List<VertexResponse> getVertices() {
+    public List<VertexResponse> vertices() {
         return this.vertices;
     }
 

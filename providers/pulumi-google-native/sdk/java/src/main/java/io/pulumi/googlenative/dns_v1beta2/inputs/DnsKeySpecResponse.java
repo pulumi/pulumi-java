@@ -24,7 +24,7 @@ public final class DnsKeySpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="algorithm", required=true)
       private final String algorithm;
 
-    public String getAlgorithm() {
+    public String algorithm() {
         return this.algorithm;
     }
 
@@ -35,7 +35,7 @@ public final class DnsKeySpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="keyLength", required=true)
       private final Integer keyLength;
 
-    public Integer getKeyLength() {
+    public Integer keyLength() {
         return this.keyLength;
     }
 
@@ -46,14 +46,14 @@ public final class DnsKeySpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="keyType", required=true)
       private final String keyType;
 
-    public String getKeyType() {
+    public String keyType() {
         return this.keyType;
     }
 
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 

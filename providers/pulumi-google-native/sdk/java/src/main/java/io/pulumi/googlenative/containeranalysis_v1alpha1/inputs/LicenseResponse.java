@@ -23,7 +23,7 @@ public final class LicenseResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="comments", required=true)
       private final String comments;
 
-    public String getComments() {
+    public String comments() {
         return this.comments;
     }
 
@@ -34,7 +34,7 @@ public final class LicenseResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="expression", required=true)
       private final String expression;
 
-    public String getExpression() {
+    public String expression() {
         return this.expression;
     }
 

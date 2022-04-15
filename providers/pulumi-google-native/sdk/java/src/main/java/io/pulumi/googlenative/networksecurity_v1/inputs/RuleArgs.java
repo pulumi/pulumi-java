@@ -28,7 +28,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinations")
       private final @Nullable Output<List<DestinationArgs>> destinations;
 
-    public Output<List<DestinationArgs>> getDestinations() {
+    public Output<List<DestinationArgs>> destinations() {
         return this.destinations == null ? Codegen.empty() : this.destinations;
     }
 
@@ -39,7 +39,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sources")
       private final @Nullable Output<List<SourceArgs>> sources;
 
-    public Output<List<SourceArgs>> getSources() {
+    public Output<List<SourceArgs>> sources() {
         return this.sources == null ? Codegen.empty() : this.sources;
     }
 

@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extend
     @Import(name="displayText")
       private final @Nullable Output<String> displayText;
 
-    public Output<String> getDisplayText() {
+    public Output<String> displayText() {
         return this.displayText == null ? Codegen.empty() : this.displayText;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extend
     @Import(name="ssml")
       private final @Nullable Output<String> ssml;
 
-    public Output<String> getSsml() {
+    public Output<String> ssml() {
         return this.ssml == null ? Codegen.empty() : this.ssml;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extend
     @Import(name="textToSpeech")
       private final @Nullable Output<String> textToSpeech;
 
-    public Output<String> getTextToSpeech() {
+    public Output<String> textToSpeech() {
         return this.textToSpeech == null ? Codegen.empty() : this.textToSpeech;
     }
 

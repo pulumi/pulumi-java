@@ -27,7 +27,7 @@ public final class GatewayConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gatewayAuthMethod")
       private final @Nullable Output<GatewayConfigGatewayAuthMethod> gatewayAuthMethod;
 
-    public Output<GatewayConfigGatewayAuthMethod> getGatewayAuthMethod() {
+    public Output<GatewayConfigGatewayAuthMethod> gatewayAuthMethod() {
         return this.gatewayAuthMethod == null ? Codegen.empty() : this.gatewayAuthMethod;
     }
 
@@ -38,7 +38,7 @@ public final class GatewayConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gatewayType")
       private final @Nullable Output<GatewayConfigGatewayType> gatewayType;
 
-    public Output<GatewayConfigGatewayType> getGatewayType() {
+    public Output<GatewayConfigGatewayType> gatewayType() {
         return this.gatewayType == null ? Codegen.empty() : this.gatewayType;
     }
 

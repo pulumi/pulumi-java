@@ -24,7 +24,7 @@ public final class GoogleCloudApigeeV1RateRangeResponse extends io.pulumi.resour
     @Import(name="end", required=true)
       private final String end;
 
-    public String getEnd() {
+    public String end() {
         return this.end;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudApigeeV1RateRangeResponse extends io.pulumi.resour
     @Import(name="fee", required=true)
       private final GoogleTypeMoneyResponse fee;
 
-    public GoogleTypeMoneyResponse getFee() {
+    public GoogleTypeMoneyResponse fee() {
         return this.fee;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudApigeeV1RateRangeResponse extends io.pulumi.resour
     @Import(name="start", required=true)
       private final String start;
 
-    public String getStart() {
+    public String start() {
         return this.start;
     }
 

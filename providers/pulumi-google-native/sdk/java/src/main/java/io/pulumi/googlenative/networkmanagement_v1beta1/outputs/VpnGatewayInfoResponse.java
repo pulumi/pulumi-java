@@ -60,42 +60,42 @@ public final class VpnGatewayInfoResponse {
      * Name of a VPN gateway.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * IP address of the VPN gateway.
      * 
     */
-    public String getIpAddress() {
+    public String ipAddress() {
         return this.ipAddress;
     }
     /**
      * URI of a Compute Engine network where the VPN gateway is configured.
      * 
     */
-    public String getNetworkUri() {
+    public String networkUri() {
         return this.networkUri;
     }
     /**
      * Name of a Google Cloud region where this VPN gateway is configured.
      * 
     */
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
     /**
      * URI of a VPN gateway.
      * 
     */
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
     /**
      * A VPN tunnel that is associated with this VPN gateway. There may be multiple VPN tunnels configured on a VPN gateway, and only the one relevant to the test is displayed.
      * 
     */
-    public String getVpnTunnelUri() {
+    public String vpnTunnelUri() {
         return this.vpnTunnelUri;
     }
 

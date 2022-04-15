@@ -27,7 +27,7 @@ public final class GoogleCloudDialogflowV2beta1NotificationConfigArgs extends io
     @Import(name="messageFormat")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1NotificationConfigMessageFormat> messageFormat;
 
-    public Output<GoogleCloudDialogflowV2beta1NotificationConfigMessageFormat> getMessageFormat() {
+    public Output<GoogleCloudDialogflowV2beta1NotificationConfigMessageFormat> messageFormat() {
         return this.messageFormat == null ? Codegen.empty() : this.messageFormat;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudDialogflowV2beta1NotificationConfigArgs extends io
     @Import(name="topic")
       private final @Nullable Output<String> topic;
 
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic == null ? Codegen.empty() : this.topic;
     }
 

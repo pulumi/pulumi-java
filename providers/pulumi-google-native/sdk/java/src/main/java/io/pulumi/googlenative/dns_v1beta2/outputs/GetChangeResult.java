@@ -59,38 +59,38 @@ public final class GetChangeResult {
      * Which ResourceRecordSets to add?
      * 
     */
-    public List<ResourceRecordSetResponse> getAdditions() {
+    public List<ResourceRecordSetResponse> additions() {
         return this.additions;
     }
     /**
      * Which ResourceRecordSets to remove? Must match existing data exactly.
      * 
     */
-    public List<ResourceRecordSetResponse> getDeletions() {
+    public List<ResourceRecordSetResponse> deletions() {
         return this.deletions;
     }
     /**
      * If the DNS queries for the zone will be served.
      * 
     */
-    public Boolean getIsServing() {
+    public Boolean isServing() {
         return this.isServing;
     }
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The time that this operation was started by the server (output only). This is in RFC3339 text format.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
     /**
      * Status of the operation (output only). A status of "done" means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

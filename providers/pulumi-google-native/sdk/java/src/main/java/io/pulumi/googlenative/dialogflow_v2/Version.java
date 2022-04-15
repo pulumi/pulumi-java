@@ -31,7 +31,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return The creation time of this version. This field is read-only, i.e., it cannot be set by create and update methods.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -45,7 +45,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return Optional. The developer-provided description of this version.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -59,7 +59,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return The unique identifier of this agent version. Supported formats: - `projects//agent/versions/` - `projects//locations//agent/versions/`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +73,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return The status of this version. This field is read-only and cannot be set by create and update methods.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -87,7 +87,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return The sequential number of this version. This field is read-only which means it cannot be set by create and update methods.
      * 
      */
-    public Output<Integer> getVersionNumber() {
+    public Output<Integer> versionNumber() {
         return this.versionNumber;
     }
 

@@ -44,24 +44,24 @@ public final class GetResponsePolicyResult {
      * User-provided description for this Response Policy.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * List of network names specifying networks to which this policy is applied.
      * 
     */
-    public List<ResponsePolicyNetworkResponse> getNetworks() {
+    public List<ResponsePolicyNetworkResponse> networks() {
         return this.networks;
     }
     /**
      * User assigned name for this Response Policy.
      * 
     */
-    public String getResponsePolicyName() {
+    public String responsePolicyName() {
         return this.responsePolicyName;
     }
 

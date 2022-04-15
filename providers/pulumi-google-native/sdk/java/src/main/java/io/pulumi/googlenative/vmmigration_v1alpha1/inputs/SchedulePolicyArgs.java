@@ -27,7 +27,7 @@ public final class SchedulePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="idleDuration")
       private final @Nullable Output<String> idleDuration;
 
-    public Output<String> getIdleDuration() {
+    public Output<String> idleDuration() {
         return this.idleDuration == null ? Codegen.empty() : this.idleDuration;
     }
 
@@ -38,7 +38,7 @@ public final class SchedulePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="skipOsAdaptation")
       private final @Nullable Output<Boolean> skipOsAdaptation;
 
-    public Output<Boolean> getSkipOsAdaptation() {
+    public Output<Boolean> skipOsAdaptation() {
         return this.skipOsAdaptation == null ? Codegen.empty() : this.skipOsAdaptation;
     }
 

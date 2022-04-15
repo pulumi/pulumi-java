@@ -27,7 +27,7 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhrasePartArgs extends i
     @Import(name="alias")
       private final @Nullable Output<String> alias;
 
-    public Output<String> getAlias() {
+    public Output<String> alias() {
         return this.alias == null ? Codegen.empty() : this.alias;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhrasePartArgs extends i
     @Import(name="entityType")
       private final @Nullable Output<String> entityType;
 
-    public Output<String> getEntityType() {
+    public Output<String> entityType() {
         return this.entityType == null ? Codegen.empty() : this.entityType;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhrasePartArgs extends i
     @Import(name="text", required=true)
       private final Output<String> text;
 
-    public Output<String> getText() {
+    public Output<String> text() {
         return this.text;
     }
 
@@ -60,7 +60,7 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhrasePartArgs extends i
     @Import(name="userDefined")
       private final @Nullable Output<Boolean> userDefined;
 
-    public Output<Boolean> getUserDefined() {
+    public Output<Boolean> userDefined() {
         return this.userDefined == null ? Codegen.empty() : this.userDefined;
     }
 

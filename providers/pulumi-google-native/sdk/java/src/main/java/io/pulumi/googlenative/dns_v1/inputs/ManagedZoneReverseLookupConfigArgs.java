@@ -18,7 +18,7 @@ public final class ManagedZoneReverseLookupConfigArgs extends io.pulumi.resource
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 

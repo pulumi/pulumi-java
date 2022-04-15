@@ -74,56 +74,56 @@ public final class GitHubEnterpriseSecretsResponse {
      * The resource name for the OAuth client ID secret in Secret Manager.
      * 
     */
-    public String getOauthClientIdName() {
+    public String oauthClientIdName() {
         return this.oauthClientIdName;
     }
     /**
      * The resource name for the OAuth client ID secret version in Secret Manager.
      * 
     */
-    public String getOauthClientIdVersionName() {
+    public String oauthClientIdVersionName() {
         return this.oauthClientIdVersionName;
     }
     /**
      * The resource name for the OAuth secret in Secret Manager.
      * 
     */
-    public String getOauthSecretName() {
+    public String oauthSecretName() {
         return this.oauthSecretName;
     }
     /**
      * The resource name for the OAuth secret secret version in Secret Manager.
      * 
     */
-    public String getOauthSecretVersionName() {
+    public String oauthSecretVersionName() {
         return this.oauthSecretVersionName;
     }
     /**
      * The resource name for the private key secret.
      * 
     */
-    public String getPrivateKeyName() {
+    public String privateKeyName() {
         return this.privateKeyName;
     }
     /**
      * The resource name for the private key secret version.
      * 
     */
-    public String getPrivateKeyVersionName() {
+    public String privateKeyVersionName() {
         return this.privateKeyVersionName;
     }
     /**
      * The resource name for the webhook secret in Secret Manager.
      * 
     */
-    public String getWebhookSecretName() {
+    public String webhookSecretName() {
         return this.webhookSecretName;
     }
     /**
      * The resource name for the webhook secret secret version in Secret Manager.
      * 
     */
-    public String getWebhookSecretVersionName() {
+    public String webhookSecretVersionName() {
         return this.webhookSecretVersionName;
     }
 

@@ -26,7 +26,7 @@ public final class AutomaticArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customerManagedEncryption")
       private final @Nullable Output<CustomerManagedEncryptionArgs> customerManagedEncryption;
 
-    public Output<CustomerManagedEncryptionArgs> getCustomerManagedEncryption() {
+    public Output<CustomerManagedEncryptionArgs> customerManagedEncryption() {
         return this.customerManagedEncryption == null ? Codegen.empty() : this.customerManagedEncryption;
     }
 

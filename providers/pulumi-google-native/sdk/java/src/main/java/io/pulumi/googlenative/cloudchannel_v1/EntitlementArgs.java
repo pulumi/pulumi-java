@@ -22,7 +22,7 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
 
@@ -33,7 +33,7 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="associationInfo")
       private final @Nullable Output<GoogleCloudChannelV1AssociationInfoArgs> associationInfo;
 
-    public Output<GoogleCloudChannelV1AssociationInfoArgs> getAssociationInfo() {
+    public Output<GoogleCloudChannelV1AssociationInfoArgs> associationInfo() {
         return this.associationInfo == null ? Codegen.empty() : this.associationInfo;
     }
 
@@ -44,14 +44,14 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="commitmentSettings")
       private final @Nullable Output<GoogleCloudChannelV1CommitmentSettingsArgs> commitmentSettings;
 
-    public Output<GoogleCloudChannelV1CommitmentSettingsArgs> getCommitmentSettings() {
+    public Output<GoogleCloudChannelV1CommitmentSettingsArgs> commitmentSettings() {
         return this.commitmentSettings == null ? Codegen.empty() : this.commitmentSettings;
     }
 
     @Import(name="customerId", required=true)
       private final Output<String> customerId;
 
-    public Output<String> getCustomerId() {
+    public Output<String> customerId() {
         return this.customerId;
     }
 
@@ -62,7 +62,7 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="offer", required=true)
       private final Output<String> offer;
 
-    public Output<String> getOffer() {
+    public Output<String> offer() {
         return this.offer;
     }
 
@@ -73,7 +73,7 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<List<GoogleCloudChannelV1ParameterArgs>> parameters;
 
-    public Output<List<GoogleCloudChannelV1ParameterArgs>> getParameters() {
+    public Output<List<GoogleCloudChannelV1ParameterArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -84,7 +84,7 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="purchaseOrderId")
       private final @Nullable Output<String> purchaseOrderId;
 
-    public Output<String> getPurchaseOrderId() {
+    public Output<String> purchaseOrderId() {
         return this.purchaseOrderId == null ? Codegen.empty() : this.purchaseOrderId;
     }
 
@@ -95,7 +95,7 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 

@@ -27,7 +27,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="datapathProvider", required=true)
       private final String datapathProvider;
 
-    public String getDatapathProvider() {
+    public String datapathProvider() {
         return this.datapathProvider;
     }
 
@@ -38,7 +38,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="defaultSnatStatus", required=true)
       private final DefaultSnatStatusResponse defaultSnatStatus;
 
-    public DefaultSnatStatusResponse getDefaultSnatStatus() {
+    public DefaultSnatStatusResponse defaultSnatStatus() {
         return this.defaultSnatStatus;
     }
 
@@ -49,7 +49,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="dnsConfig", required=true)
       private final DNSConfigResponse dnsConfig;
 
-    public DNSConfigResponse getDnsConfig() {
+    public DNSConfigResponse dnsConfig() {
         return this.dnsConfig;
     }
 
@@ -60,7 +60,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="enableIntraNodeVisibility", required=true)
       private final Boolean enableIntraNodeVisibility;
 
-    public Boolean getEnableIntraNodeVisibility() {
+    public Boolean enableIntraNodeVisibility() {
         return this.enableIntraNodeVisibility;
     }
 
@@ -71,7 +71,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="enableL4ilbSubsetting", required=true)
       private final Boolean enableL4ilbSubsetting;
 
-    public Boolean getEnableL4ilbSubsetting() {
+    public Boolean enableL4ilbSubsetting() {
         return this.enableL4ilbSubsetting;
     }
 
@@ -82,7 +82,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="network", required=true)
       private final String network;
 
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
 
@@ -93,7 +93,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="privateIpv6GoogleAccess", required=true)
       private final String privateIpv6GoogleAccess;
 
-    public String getPrivateIpv6GoogleAccess() {
+    public String privateIpv6GoogleAccess() {
         return this.privateIpv6GoogleAccess;
     }
 
@@ -104,7 +104,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="serviceExternalIpsConfig", required=true)
       private final ServiceExternalIPsConfigResponse serviceExternalIpsConfig;
 
-    public ServiceExternalIPsConfigResponse getServiceExternalIpsConfig() {
+    public ServiceExternalIPsConfigResponse serviceExternalIpsConfig() {
         return this.serviceExternalIpsConfig;
     }
 
@@ -115,7 +115,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="subnetwork", required=true)
       private final String subnetwork;
 
-    public String getSubnetwork() {
+    public String subnetwork() {
         return this.subnetwork;
     }
 

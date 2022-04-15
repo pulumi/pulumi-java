@@ -40,21 +40,21 @@ public final class StatefulPolicyPreservedStateResponse {
      * Disks created on the instances that will be preserved on instance delete, update, etc. This map is keyed with the device names of the disks.
      * 
     */
-    public Map<String,String> getDisks() {
+    public Map<String,String> disks() {
         return this.disks;
     }
     /**
      * External network IPs assigned to the instances that will be preserved on instance delete, update, etc. This map is keyed with the network interface name.
      * 
     */
-    public Map<String,String> getExternalIPs() {
+    public Map<String,String> externalIPs() {
         return this.externalIPs;
     }
     /**
      * Internal network IPs assigned to the instances that will be preserved on instance delete, update, etc. This map is keyed with the network interface name.
      * 
     */
-    public Map<String,String> getInternalIPs() {
+    public Map<String,String> internalIPs() {
         return this.internalIPs;
     }
 

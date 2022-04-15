@@ -23,7 +23,7 @@ public final class RequestUtilizationResponse extends io.pulumi.resources.Invoke
     @Import(name="targetConcurrentRequests", required=true)
       private final Integer targetConcurrentRequests;
 
-    public Integer getTargetConcurrentRequests() {
+    public Integer targetConcurrentRequests() {
         return this.targetConcurrentRequests;
     }
 
@@ -34,7 +34,7 @@ public final class RequestUtilizationResponse extends io.pulumi.resources.Invoke
     @Import(name="targetRequestCountPerSecond", required=true)
       private final Integer targetRequestCountPerSecond;
 
-    public Integer getTargetRequestCountPerSecond() {
+    public Integer targetRequestCountPerSecond() {
         return this.targetRequestCountPerSecond;
     }
 

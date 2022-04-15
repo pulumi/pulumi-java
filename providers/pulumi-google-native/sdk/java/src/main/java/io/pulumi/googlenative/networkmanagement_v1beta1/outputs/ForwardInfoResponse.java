@@ -32,14 +32,14 @@ public final class ForwardInfoResponse {
      * URI of the resource that the packet is forwarded to.
      * 
     */
-    public String getResourceUri() {
+    public String resourceUri() {
         return this.resourceUri;
     }
     /**
      * Target type where this packet is forwarded to.
      * 
     */
-    public String getTarget() {
+    public String target() {
         return this.target;
     }
 

@@ -26,7 +26,7 @@ public final class KubernetesResourceResponse extends io.pulumi.resources.Invoke
     @Import(name="connectResources", required=true)
       private final List<ResourceManifestResponse> connectResources;
 
-    public List<ResourceManifestResponse> getConnectResources() {
+    public List<ResourceManifestResponse> connectResources() {
         return this.connectResources;
     }
 
@@ -37,7 +37,7 @@ public final class KubernetesResourceResponse extends io.pulumi.resources.Invoke
     @Import(name="membershipCrManifest", required=true)
       private final String membershipCrManifest;
 
-    public String getMembershipCrManifest() {
+    public String membershipCrManifest() {
         return this.membershipCrManifest;
     }
 
@@ -48,7 +48,7 @@ public final class KubernetesResourceResponse extends io.pulumi.resources.Invoke
     @Import(name="membershipResources", required=true)
       private final List<ResourceManifestResponse> membershipResources;
 
-    public List<ResourceManifestResponse> getMembershipResources() {
+    public List<ResourceManifestResponse> membershipResources() {
         return this.membershipResources;
     }
 
@@ -59,7 +59,7 @@ public final class KubernetesResourceResponse extends io.pulumi.resources.Invoke
     @Import(name="resourceOptions", required=true)
       private final ResourceOptionsResponse resourceOptions;
 
-    public ResourceOptionsResponse getResourceOptions() {
+    public ResourceOptionsResponse resourceOptions() {
         return this.resourceOptions;
     }
 

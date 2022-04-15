@@ -29,7 +29,7 @@ public final class OSPolicyAssignmentInstanceFilterArgs extends io.pulumi.resour
     @Import(name="all")
       private final @Nullable Output<Boolean> all;
 
-    public Output<Boolean> getAll() {
+    public Output<Boolean> all() {
         return this.all == null ? Codegen.empty() : this.all;
     }
 
@@ -40,7 +40,7 @@ public final class OSPolicyAssignmentInstanceFilterArgs extends io.pulumi.resour
     @Import(name="exclusionLabels")
       private final @Nullable Output<List<OSPolicyAssignmentLabelSetArgs>> exclusionLabels;
 
-    public Output<List<OSPolicyAssignmentLabelSetArgs>> getExclusionLabels() {
+    public Output<List<OSPolicyAssignmentLabelSetArgs>> exclusionLabels() {
         return this.exclusionLabels == null ? Codegen.empty() : this.exclusionLabels;
     }
 
@@ -51,7 +51,7 @@ public final class OSPolicyAssignmentInstanceFilterArgs extends io.pulumi.resour
     @Import(name="inclusionLabels")
       private final @Nullable Output<List<OSPolicyAssignmentLabelSetArgs>> inclusionLabels;
 
-    public Output<List<OSPolicyAssignmentLabelSetArgs>> getInclusionLabels() {
+    public Output<List<OSPolicyAssignmentLabelSetArgs>> inclusionLabels() {
         return this.inclusionLabels == null ? Codegen.empty() : this.inclusionLabels;
     }
 
@@ -62,7 +62,7 @@ public final class OSPolicyAssignmentInstanceFilterArgs extends io.pulumi.resour
     @Import(name="inventories")
       private final @Nullable Output<List<OSPolicyAssignmentInstanceFilterInventoryArgs>> inventories;
 
-    public Output<List<OSPolicyAssignmentInstanceFilterInventoryArgs>> getInventories() {
+    public Output<List<OSPolicyAssignmentInstanceFilterInventoryArgs>> inventories() {
         return this.inventories == null ? Codegen.empty() : this.inventories;
     }
 

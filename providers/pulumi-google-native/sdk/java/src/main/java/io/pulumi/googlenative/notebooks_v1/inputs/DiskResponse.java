@@ -26,7 +26,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="autoDelete", required=true)
       private final Boolean autoDelete;
 
-    public Boolean getAutoDelete() {
+    public Boolean autoDelete() {
         return this.autoDelete;
     }
 
@@ -37,7 +37,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="boot", required=true)
       private final Boolean boot;
 
-    public Boolean getBoot() {
+    public Boolean boot() {
         return this.boot;
     }
 
@@ -48,7 +48,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="deviceName", required=true)
       private final String deviceName;
 
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
 
@@ -59,7 +59,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="diskSizeGb", required=true)
       private final String diskSizeGb;
 
-    public String getDiskSizeGb() {
+    public String diskSizeGb() {
         return this.diskSizeGb;
     }
 
@@ -70,7 +70,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="guestOsFeatures", required=true)
       private final List<GuestOsFeatureResponse> guestOsFeatures;
 
-    public List<GuestOsFeatureResponse> getGuestOsFeatures() {
+    public List<GuestOsFeatureResponse> guestOsFeatures() {
         return this.guestOsFeatures;
     }
 
@@ -81,7 +81,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="index", required=true)
       private final String index;
 
-    public String getIndex() {
+    public String index() {
         return this.index;
     }
 
@@ -92,7 +92,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="interface", required=true)
       private final String interface_;
 
-    public String getInterface_() {
+    public String interface_() {
         return this.interface_;
     }
 
@@ -103,7 +103,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -114,7 +114,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="licenses", required=true)
       private final List<String> licenses;
 
-    public List<String> getLicenses() {
+    public List<String> licenses() {
         return this.licenses;
     }
 
@@ -125,7 +125,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="mode", required=true)
       private final String mode;
 
-    public String getMode() {
+    public String mode() {
         return this.mode;
     }
 
@@ -136,7 +136,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="source", required=true)
       private final String source;
 
-    public String getSource() {
+    public String source() {
         return this.source;
     }
 
@@ -147,7 +147,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

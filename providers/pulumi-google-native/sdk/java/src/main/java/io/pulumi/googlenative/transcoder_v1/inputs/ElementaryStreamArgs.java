@@ -29,7 +29,7 @@ public final class ElementaryStreamArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="audioStream")
       private final @Nullable Output<AudioStreamArgs> audioStream;
 
-    public Output<AudioStreamArgs> getAudioStream() {
+    public Output<AudioStreamArgs> audioStream() {
         return this.audioStream == null ? Codegen.empty() : this.audioStream;
     }
 
@@ -40,7 +40,7 @@ public final class ElementaryStreamArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
@@ -51,7 +51,7 @@ public final class ElementaryStreamArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="textStream")
       private final @Nullable Output<TextStreamArgs> textStream;
 
-    public Output<TextStreamArgs> getTextStream() {
+    public Output<TextStreamArgs> textStream() {
         return this.textStream == null ? Codegen.empty() : this.textStream;
     }
 
@@ -62,7 +62,7 @@ public final class ElementaryStreamArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="videoStream")
       private final @Nullable Output<VideoStreamArgs> videoStream;
 
-    public Output<VideoStreamArgs> getVideoStream() {
+    public Output<VideoStreamArgs> videoStream() {
         return this.videoStream == null ? Codegen.empty() : this.videoStream;
     }
 

@@ -17,21 +17,21 @@ public final class GetInstanceGroupArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="instanceGroup", required=true)
       private final String instanceGroup;
 
-    public String getInstanceGroup() {
+    public String instanceGroup() {
         return this.instanceGroup;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="zone", required=true)
       private final String zone;
 
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

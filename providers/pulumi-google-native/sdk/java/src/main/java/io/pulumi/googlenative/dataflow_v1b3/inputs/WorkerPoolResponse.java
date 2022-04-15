@@ -31,7 +31,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="autoscalingSettings", required=true)
       private final AutoscalingSettingsResponse autoscalingSettings;
 
-    public AutoscalingSettingsResponse getAutoscalingSettings() {
+    public AutoscalingSettingsResponse autoscalingSettings() {
         return this.autoscalingSettings;
     }
 
@@ -42,7 +42,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="dataDisks", required=true)
       private final List<DiskResponse> dataDisks;
 
-    public List<DiskResponse> getDataDisks() {
+    public List<DiskResponse> dataDisks() {
         return this.dataDisks;
     }
 
@@ -53,7 +53,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="defaultPackageSet", required=true)
       private final String defaultPackageSet;
 
-    public String getDefaultPackageSet() {
+    public String defaultPackageSet() {
         return this.defaultPackageSet;
     }
 
@@ -64,7 +64,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="diskSizeGb", required=true)
       private final Integer diskSizeGb;
 
-    public Integer getDiskSizeGb() {
+    public Integer diskSizeGb() {
         return this.diskSizeGb;
     }
 
@@ -75,7 +75,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="diskSourceImage", required=true)
       private final String diskSourceImage;
 
-    public String getDiskSourceImage() {
+    public String diskSourceImage() {
         return this.diskSourceImage;
     }
 
@@ -86,7 +86,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="diskType", required=true)
       private final String diskType;
 
-    public String getDiskType() {
+    public String diskType() {
         return this.diskType;
     }
 
@@ -97,7 +97,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="ipConfiguration", required=true)
       private final String ipConfiguration;
 
-    public String getIpConfiguration() {
+    public String ipConfiguration() {
         return this.ipConfiguration;
     }
 
@@ -108,7 +108,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -119,7 +119,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="machineType", required=true)
       private final String machineType;
 
-    public String getMachineType() {
+    public String machineType() {
         return this.machineType;
     }
 
@@ -130,7 +130,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="metadata", required=true)
       private final Map<String,String> metadata;
 
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata;
     }
 
@@ -141,7 +141,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="network", required=true)
       private final String network;
 
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
 
@@ -152,7 +152,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="numThreadsPerWorker", required=true)
       private final Integer numThreadsPerWorker;
 
-    public Integer getNumThreadsPerWorker() {
+    public Integer numThreadsPerWorker() {
         return this.numThreadsPerWorker;
     }
 
@@ -163,7 +163,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="numWorkers", required=true)
       private final Integer numWorkers;
 
-    public Integer getNumWorkers() {
+    public Integer numWorkers() {
         return this.numWorkers;
     }
 
@@ -174,7 +174,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="onHostMaintenance", required=true)
       private final String onHostMaintenance;
 
-    public String getOnHostMaintenance() {
+    public String onHostMaintenance() {
         return this.onHostMaintenance;
     }
 
@@ -185,7 +185,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="packages", required=true)
       private final List<PackageResponse> packages;
 
-    public List<PackageResponse> getPackages() {
+    public List<PackageResponse> packages() {
         return this.packages;
     }
 
@@ -196,7 +196,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="poolArgs", required=true)
       private final Map<String,String> poolArgs;
 
-    public Map<String,String> getPoolArgs() {
+    public Map<String,String> poolArgs() {
         return this.poolArgs;
     }
 
@@ -207,7 +207,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sdkHarnessContainerImages", required=true)
       private final List<SdkHarnessContainerImageResponse> sdkHarnessContainerImages;
 
-    public List<SdkHarnessContainerImageResponse> getSdkHarnessContainerImages() {
+    public List<SdkHarnessContainerImageResponse> sdkHarnessContainerImages() {
         return this.sdkHarnessContainerImages;
     }
 
@@ -218,7 +218,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="subnetwork", required=true)
       private final String subnetwork;
 
-    public String getSubnetwork() {
+    public String subnetwork() {
         return this.subnetwork;
     }
 
@@ -229,7 +229,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="taskrunnerSettings", required=true)
       private final TaskRunnerSettingsResponse taskrunnerSettings;
 
-    public TaskRunnerSettingsResponse getTaskrunnerSettings() {
+    public TaskRunnerSettingsResponse taskrunnerSettings() {
         return this.taskrunnerSettings;
     }
 
@@ -240,7 +240,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="teardownPolicy", required=true)
       private final String teardownPolicy;
 
-    public String getTeardownPolicy() {
+    public String teardownPolicy() {
         return this.teardownPolicy;
     }
 
@@ -251,7 +251,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="zone", required=true)
       private final String zone;
 
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

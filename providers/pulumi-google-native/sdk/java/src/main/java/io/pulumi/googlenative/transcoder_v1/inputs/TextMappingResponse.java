@@ -24,7 +24,7 @@ public final class TextMappingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="atomKey", required=true)
       private final String atomKey;
 
-    public String getAtomKey() {
+    public String atomKey() {
         return this.atomKey;
     }
 
@@ -35,7 +35,7 @@ public final class TextMappingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="inputKey", required=true)
       private final String inputKey;
 
-    public String getInputKey() {
+    public String inputKey() {
         return this.inputKey;
     }
 
@@ -46,7 +46,7 @@ public final class TextMappingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="inputTrack", required=true)
       private final Integer inputTrack;
 
-    public Integer getInputTrack() {
+    public Integer inputTrack() {
         return this.inputTrack;
     }
 

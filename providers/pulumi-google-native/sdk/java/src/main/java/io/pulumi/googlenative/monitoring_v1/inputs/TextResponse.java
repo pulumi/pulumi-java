@@ -23,7 +23,7 @@ public final class TextResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="content", required=true)
       private final String content;
 
-    public String getContent() {
+    public String content() {
         return this.content;
     }
 
@@ -34,7 +34,7 @@ public final class TextResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="format", required=true)
       private final String format;
 
-    public String getFormat() {
+    public String format() {
         return this.format;
     }
 

@@ -53,31 +53,31 @@ public final class GooglePrivacyDlpV2StorageConfigResponse {
      * BigQuery options.
      * 
     */
-    public GooglePrivacyDlpV2BigQueryOptionsResponse getBigQueryOptions() {
+    public GooglePrivacyDlpV2BigQueryOptionsResponse bigQueryOptions() {
         return this.bigQueryOptions;
     }
     /**
      * Google Cloud Storage options.
      * 
     */
-    public GooglePrivacyDlpV2CloudStorageOptionsResponse getCloudStorageOptions() {
+    public GooglePrivacyDlpV2CloudStorageOptionsResponse cloudStorageOptions() {
         return this.cloudStorageOptions;
     }
     /**
      * Google Cloud Datastore options.
      * 
     */
-    public GooglePrivacyDlpV2DatastoreOptionsResponse getDatastoreOptions() {
+    public GooglePrivacyDlpV2DatastoreOptionsResponse datastoreOptions() {
         return this.datastoreOptions;
     }
     /**
      * Hybrid inspection options.
      * 
     */
-    public GooglePrivacyDlpV2HybridOptionsResponse getHybridOptions() {
+    public GooglePrivacyDlpV2HybridOptionsResponse hybridOptions() {
         return this.hybridOptions;
     }
-    public GooglePrivacyDlpV2TimespanConfigResponse getTimespanConfig() {
+    public GooglePrivacyDlpV2TimespanConfigResponse timespanConfig() {
         return this.timespanConfig;
     }
 

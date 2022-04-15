@@ -26,7 +26,7 @@ public final class TlsCertificatePathsArgs extends io.pulumi.resources.ResourceA
     @Import(name="certificatePath")
       private final @Nullable Output<String> certificatePath;
 
-    public Output<String> getCertificatePath() {
+    public Output<String> certificatePath() {
         return this.certificatePath == null ? Codegen.empty() : this.certificatePath;
     }
 
@@ -37,7 +37,7 @@ public final class TlsCertificatePathsArgs extends io.pulumi.resources.ResourceA
     @Import(name="privateKeyPath")
       private final @Nullable Output<String> privateKeyPath;
 
-    public Output<String> getPrivateKeyPath() {
+    public Output<String> privateKeyPath() {
         return this.privateKeyPath == null ? Codegen.empty() : this.privateKeyPath;
     }
 

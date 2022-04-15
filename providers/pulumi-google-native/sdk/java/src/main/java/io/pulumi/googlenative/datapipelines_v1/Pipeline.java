@@ -33,7 +33,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return Immutable. The timestamp when the pipeline was initially created. Set by the Data Pipelines service.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -47,7 +47,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return The display name of the pipeline. It can contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), and underscores (_).
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -61,7 +61,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return Number of jobs.
      * 
      */
-    public Output<Integer> getJobCount() {
+    public Output<Integer> jobCount() {
         return this.jobCount;
     }
     /**
@@ -75,7 +75,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return Immutable. The timestamp when the pipeline was last modified. Set by the Data Pipelines service.
      * 
      */
-    public Output<String> getLastUpdateTime() {
+    public Output<String> lastUpdateTime() {
         return this.lastUpdateTime;
     }
     /**
@@ -89,7 +89,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return The pipeline name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID`. * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), and periods (.). For more information, see [Identifying projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects). * `LOCATION_ID` is the canonical ID for the pipeline's location. The list of available locations can be obtained by calling `google.cloud.location.Locations.ListLocations`. Note that the Data Pipelines service is not available in all regions. It depends on Cloud Scheduler, an App Engine application, so it's only available in [App Engine regions](https://cloud.google.com/about/locations#region). * `PIPELINE_ID` is the ID of the pipeline. Must be unique for the selected project and location.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -103,7 +103,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return Immutable. The sources of the pipeline (for example, Dataplex). The keys and values are set by the corresponding sources during pipeline creation.
      * 
      */
-    public Output<Map<String,String>> getPipelineSources() {
+    public Output<Map<String,String>> pipelineSources() {
         return this.pipelineSources;
     }
     /**
@@ -117,7 +117,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return Internal scheduling information for a pipeline. If this information is provided, periodic jobs will be created per the schedule. If not, users are responsible for creating jobs externally.
      * 
      */
-    public Output<GoogleCloudDatapipelinesV1ScheduleSpecResponse> getScheduleInfo() {
+    public Output<GoogleCloudDatapipelinesV1ScheduleSpecResponse> scheduleInfo() {
         return this.scheduleInfo;
     }
     /**
@@ -131,7 +131,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return Optional. A service account email to be used with the Cloud Scheduler job. If not specified, the default compute engine service account will be used.
      * 
      */
-    public Output<String> getSchedulerServiceAccountEmail() {
+    public Output<String> schedulerServiceAccountEmail() {
         return this.schedulerServiceAccountEmail;
     }
     /**
@@ -145,7 +145,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return The state of the pipeline. When the pipeline is created, the state is set to 'PIPELINE_STATE_ACTIVE' by default. State changes can be requested by setting the state to stopping, paused, or resuming. State cannot be changed through UpdatePipeline requests.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -159,7 +159,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return The type of the pipeline. This field affects the scheduling of the pipeline and the type of metrics to show for the pipeline.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -173,7 +173,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return Workload information for creating new jobs.
      * 
      */
-    public Output<GoogleCloudDatapipelinesV1WorkloadResponse> getWorkload() {
+    public Output<GoogleCloudDatapipelinesV1WorkloadResponse> workload() {
         return this.workload;
     }
 

@@ -22,7 +22,7 @@ public final class AttestationAuthorityArgs extends io.pulumi.resources.Resource
     @Import(name="hint")
       private final @Nullable Output<AttestationAuthorityHintArgs> hint;
 
-    public Output<AttestationAuthorityHintArgs> getHint() {
+    public Output<AttestationAuthorityHintArgs> hint() {
         return this.hint == null ? Codegen.empty() : this.hint;
     }
 

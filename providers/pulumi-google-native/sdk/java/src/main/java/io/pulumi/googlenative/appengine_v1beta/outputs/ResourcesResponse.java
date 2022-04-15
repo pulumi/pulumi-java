@@ -56,35 +56,35 @@ public final class ResourcesResponse {
      * Number of CPU cores needed.
      * 
     */
-    public Double getCpu() {
+    public Double cpu() {
         return this.cpu;
     }
     /**
      * Disk size (GB) needed.
      * 
     */
-    public Double getDiskGb() {
+    public Double diskGb() {
         return this.diskGb;
     }
     /**
      * The name of the encryption key that is stored in Google Cloud KMS. Only should be used by Cloud Composer to encrypt the vm disk
      * 
     */
-    public String getKmsKeyReference() {
+    public String kmsKeyReference() {
         return this.kmsKeyReference;
     }
     /**
      * Memory (GB) needed.
      * 
     */
-    public Double getMemoryGb() {
+    public Double memoryGb() {
         return this.memoryGb;
     }
     /**
      * User specified volumes.
      * 
     */
-    public List<VolumeResponse> getVolumes() {
+    public List<VolumeResponse> volumes() {
         return this.volumes;
     }
 

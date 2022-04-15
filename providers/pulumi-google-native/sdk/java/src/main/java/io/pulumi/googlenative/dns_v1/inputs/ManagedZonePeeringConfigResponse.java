@@ -16,7 +16,7 @@ public final class ManagedZonePeeringConfigResponse extends io.pulumi.resources.
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -27,7 +27,7 @@ public final class ManagedZonePeeringConfigResponse extends io.pulumi.resources.
     @Import(name="targetNetwork", required=true)
       private final ManagedZonePeeringConfigTargetNetworkResponse targetNetwork;
 
-    public ManagedZonePeeringConfigTargetNetworkResponse getTargetNetwork() {
+    public ManagedZonePeeringConfigTargetNetworkResponse targetNetwork() {
         return this.targetNetwork;
     }
 

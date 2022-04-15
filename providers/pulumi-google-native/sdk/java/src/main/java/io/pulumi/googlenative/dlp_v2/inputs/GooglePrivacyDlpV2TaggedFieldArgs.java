@@ -29,7 +29,7 @@ public final class GooglePrivacyDlpV2TaggedFieldArgs extends io.pulumi.resources
     @Import(name="customTag")
       private final @Nullable Output<String> customTag;
 
-    public Output<String> getCustomTag() {
+    public Output<String> customTag() {
         return this.customTag == null ? Codegen.empty() : this.customTag;
     }
 
@@ -40,7 +40,7 @@ public final class GooglePrivacyDlpV2TaggedFieldArgs extends io.pulumi.resources
     @Import(name="field", required=true)
       private final Output<GooglePrivacyDlpV2FieldIdArgs> field;
 
-    public Output<GooglePrivacyDlpV2FieldIdArgs> getField() {
+    public Output<GooglePrivacyDlpV2FieldIdArgs> field() {
         return this.field;
     }
 
@@ -51,7 +51,7 @@ public final class GooglePrivacyDlpV2TaggedFieldArgs extends io.pulumi.resources
     @Import(name="inferred")
       private final @Nullable Output<GoogleProtobufEmptyArgs> inferred;
 
-    public Output<GoogleProtobufEmptyArgs> getInferred() {
+    public Output<GoogleProtobufEmptyArgs> inferred() {
         return this.inferred == null ? Codegen.empty() : this.inferred;
     }
 
@@ -62,7 +62,7 @@ public final class GooglePrivacyDlpV2TaggedFieldArgs extends io.pulumi.resources
     @Import(name="infoType")
       private final @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> infoType;
 
-    public Output<GooglePrivacyDlpV2InfoTypeArgs> getInfoType() {
+    public Output<GooglePrivacyDlpV2InfoTypeArgs> infoType() {
         return this.infoType == null ? Codegen.empty() : this.infoType;
     }
 

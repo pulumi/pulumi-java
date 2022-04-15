@@ -23,7 +23,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
     @Import(name="acceleratorCount", required=true)
       private final String acceleratorCount;
 
-    public String getAcceleratorCount() {
+    public String acceleratorCount() {
         return this.acceleratorCount;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
     @Import(name="acceleratorType", required=true)
       private final String acceleratorType;
 
-    public String getAcceleratorType() {
+    public String acceleratorType() {
         return this.acceleratorType;
     }
 

@@ -27,7 +27,7 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteArgs extends io.
     @Import(name="condition")
       private final @Nullable Output<String> condition;
 
-    public Output<String> getCondition() {
+    public Output<String> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteArgs extends io.
     @Import(name="intent")
       private final @Nullable Output<String> intent;
 
-    public Output<String> getIntent() {
+    public Output<String> intent() {
         return this.intent == null ? Codegen.empty() : this.intent;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteArgs extends io.
     @Import(name="targetFlow")
       private final @Nullable Output<String> targetFlow;
 
-    public Output<String> getTargetFlow() {
+    public Output<String> targetFlow() {
         return this.targetFlow == null ? Codegen.empty() : this.targetFlow;
     }
 
@@ -60,7 +60,7 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteArgs extends io.
     @Import(name="targetPage")
       private final @Nullable Output<String> targetPage;
 
-    public Output<String> getTargetPage() {
+    public Output<String> targetPage() {
         return this.targetPage == null ? Codegen.empty() : this.targetPage;
     }
 
@@ -71,7 +71,7 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteArgs extends io.
     @Import(name="triggerFulfillment")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> triggerFulfillment;
 
-    public Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> getTriggerFulfillment() {
+    public Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> triggerFulfillment() {
         return this.triggerFulfillment == null ? Codegen.empty() : this.triggerFulfillment;
     }
 

@@ -33,14 +33,14 @@ public final class TestDetailsResponse {
      * If the TestState is ERROR, then this string will contain human-readable details about the error.
      * 
     */
-    public String getErrorMessage() {
+    public String errorMessage() {
         return this.errorMessage;
     }
     /**
      * Human-readable, detailed descriptions of the test's progress. For example: "Provisioning a device", "Starting Test". During the course of execution new data may be appended to the end of progress_messages.
      * 
     */
-    public List<String> getProgressMessages() {
+    public List<String> progressMessages() {
         return this.progressMessages;
     }
 

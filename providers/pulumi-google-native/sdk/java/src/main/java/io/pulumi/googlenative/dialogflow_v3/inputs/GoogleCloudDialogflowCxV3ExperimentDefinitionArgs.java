@@ -27,7 +27,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentDefinitionArgs extends io.
     @Import(name="condition")
       private final @Nullable Output<String> condition;
 
-    public Output<String> getCondition() {
+    public Output<String> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentDefinitionArgs extends io.
     @Import(name="versionVariants")
       private final @Nullable Output<GoogleCloudDialogflowCxV3VersionVariantsArgs> versionVariants;
 
-    public Output<GoogleCloudDialogflowCxV3VersionVariantsArgs> getVersionVariants() {
+    public Output<GoogleCloudDialogflowCxV3VersionVariantsArgs> versionVariants() {
         return this.versionVariants == null ? Codegen.empty() : this.versionVariants;
     }
 

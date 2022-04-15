@@ -19,7 +19,7 @@ public final class ResourceStatusSchedulingResponse extends io.pulumi.resources.
     @Import(name="availabilityDomain", required=true)
       private final Integer availabilityDomain;
 
-    public Integer getAvailabilityDomain() {
+    public Integer availabilityDomain() {
         return this.availabilityDomain;
     }
 

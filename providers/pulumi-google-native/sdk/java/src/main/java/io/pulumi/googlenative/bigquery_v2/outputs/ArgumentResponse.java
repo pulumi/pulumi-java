@@ -47,28 +47,28 @@ public final class ArgumentResponse {
      * Optional. Defaults to FIXED_TYPE.
      * 
     */
-    public String getArgumentKind() {
+    public String argumentKind() {
         return this.argumentKind;
     }
     /**
      * Required unless argument_kind = ANY_TYPE.
      * 
     */
-    public StandardSqlDataTypeResponse getDataType() {
+    public StandardSqlDataTypeResponse dataType() {
         return this.dataType;
     }
     /**
      * Optional. Specifies whether the argument is input or output. Can be set for procedures only.
      * 
     */
-    public String getMode() {
+    public String mode() {
         return this.mode;
     }
     /**
      * Optional. The name of this argument. Can be absent for function return argument.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

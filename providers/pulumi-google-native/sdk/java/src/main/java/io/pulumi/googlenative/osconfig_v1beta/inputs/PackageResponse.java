@@ -23,7 +23,7 @@ public final class PackageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="desiredState", required=true)
       private final String desiredState;
 
-    public String getDesiredState() {
+    public String desiredState() {
         return this.desiredState;
     }
 
@@ -34,7 +34,7 @@ public final class PackageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="manager", required=true)
       private final String manager;
 
-    public String getManager() {
+    public String manager() {
         return this.manager;
     }
 
@@ -45,7 +45,7 @@ public final class PackageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

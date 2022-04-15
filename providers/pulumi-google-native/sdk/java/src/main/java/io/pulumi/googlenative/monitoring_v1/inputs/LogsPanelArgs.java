@@ -27,7 +27,7 @@ public final class LogsPanelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -38,7 +38,7 @@ public final class LogsPanelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceNames")
       private final @Nullable Output<List<String>> resourceNames;
 
-    public Output<List<String>> getResourceNames() {
+    public Output<List<String>> resourceNames() {
         return this.resourceNames == null ? Codegen.empty() : this.resourceNames;
     }
 

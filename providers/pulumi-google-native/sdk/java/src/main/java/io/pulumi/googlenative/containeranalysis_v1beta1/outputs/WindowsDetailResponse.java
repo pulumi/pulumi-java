@@ -48,28 +48,28 @@ public final class WindowsDetailResponse {
      * The CPE URI in [cpe format](https://cpe.mitre.org/specification/) in which the vulnerability manifests. Examples include distro or storage location for vulnerable jar.
      * 
     */
-    public String getCpeUri() {
+    public String cpeUri() {
         return this.cpeUri;
     }
     /**
      * The description of the vulnerability.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The names of the KBs which have hotfixes to mitigate this vulnerability. Note that there may be multiple hotfixes (and thus multiple KBs) that mitigate a given vulnerability. Currently any listed kb's presence is considered a fix.
      * 
     */
-    public List<KnowledgeBaseResponse> getFixingKbs() {
+    public List<KnowledgeBaseResponse> fixingKbs() {
         return this.fixingKbs;
     }
     /**
      * The name of the vulnerability.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

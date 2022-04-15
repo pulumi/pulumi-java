@@ -24,7 +24,7 @@ public final class DiscoveredResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="analysisStatus", required=true)
       private final String analysisStatus;
 
-    public String getAnalysisStatus() {
+    public String analysisStatus() {
         return this.analysisStatus;
     }
 
@@ -35,7 +35,7 @@ public final class DiscoveredResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="analysisStatusError", required=true)
       private final StatusResponse analysisStatusError;
 
-    public StatusResponse getAnalysisStatusError() {
+    public StatusResponse analysisStatusError() {
         return this.analysisStatusError;
     }
 
@@ -46,7 +46,7 @@ public final class DiscoveredResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="continuousAnalysis", required=true)
       private final String continuousAnalysis;
 
-    public String getContinuousAnalysis() {
+    public String continuousAnalysis() {
         return this.continuousAnalysis;
     }
 
@@ -57,7 +57,7 @@ public final class DiscoveredResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="cpe", required=true)
       private final String cpe;
 
-    public String getCpe() {
+    public String cpe() {
         return this.cpe;
     }
 

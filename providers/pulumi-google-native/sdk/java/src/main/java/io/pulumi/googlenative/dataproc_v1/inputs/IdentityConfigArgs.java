@@ -26,7 +26,7 @@ public final class IdentityConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userServiceAccountMapping", required=true)
       private final Output<Map<String,String>> userServiceAccountMapping;
 
-    public Output<Map<String,String>> getUserServiceAccountMapping() {
+    public Output<Map<String,String>> userServiceAccountMapping() {
         return this.userServiceAccountMapping;
     }
 

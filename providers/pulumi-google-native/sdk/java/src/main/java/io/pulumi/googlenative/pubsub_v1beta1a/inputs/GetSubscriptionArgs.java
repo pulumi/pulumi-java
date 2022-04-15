@@ -15,7 +15,7 @@ public final class GetSubscriptionArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="subscriptionId", required=true)
       private final String subscriptionId;
 
-    public String getSubscriptionId() {
+    public String subscriptionId() {
         return this.subscriptionId;
     }
 

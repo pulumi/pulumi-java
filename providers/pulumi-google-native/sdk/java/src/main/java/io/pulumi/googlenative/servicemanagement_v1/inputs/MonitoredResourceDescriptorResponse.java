@@ -25,7 +25,7 @@ public final class MonitoredResourceDescriptorResponse extends io.pulumi.resourc
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -36,7 +36,7 @@ public final class MonitoredResourceDescriptorResponse extends io.pulumi.resourc
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -47,7 +47,7 @@ public final class MonitoredResourceDescriptorResponse extends io.pulumi.resourc
     @Import(name="labels", required=true)
       private final List<LabelDescriptorResponse> labels;
 
-    public List<LabelDescriptorResponse> getLabels() {
+    public List<LabelDescriptorResponse> labels() {
         return this.labels;
     }
 
@@ -58,7 +58,7 @@ public final class MonitoredResourceDescriptorResponse extends io.pulumi.resourc
     @Import(name="launchStage", required=true)
       private final String launchStage;
 
-    public String getLaunchStage() {
+    public String launchStage() {
         return this.launchStage;
     }
 
@@ -69,7 +69,7 @@ public final class MonitoredResourceDescriptorResponse extends io.pulumi.resourc
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -80,7 +80,7 @@ public final class MonitoredResourceDescriptorResponse extends io.pulumi.resourc
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

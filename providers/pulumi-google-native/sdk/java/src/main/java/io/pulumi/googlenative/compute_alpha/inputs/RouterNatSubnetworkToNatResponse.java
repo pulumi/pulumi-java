@@ -24,7 +24,7 @@ public final class RouterNatSubnetworkToNatResponse extends io.pulumi.resources.
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -35,7 +35,7 @@ public final class RouterNatSubnetworkToNatResponse extends io.pulumi.resources.
     @Import(name="secondaryIpRangeNames", required=true)
       private final List<String> secondaryIpRangeNames;
 
-    public List<String> getSecondaryIpRangeNames() {
+    public List<String> secondaryIpRangeNames() {
         return this.secondaryIpRangeNames;
     }
 
@@ -46,7 +46,7 @@ public final class RouterNatSubnetworkToNatResponse extends io.pulumi.resources.
     @Import(name="sourceIpRangesToNat", required=true)
       private final List<String> sourceIpRangesToNat;
 
-    public List<String> getSourceIpRangesToNat() {
+    public List<String> sourceIpRangesToNat() {
         return this.sourceIpRangesToNat;
     }
 

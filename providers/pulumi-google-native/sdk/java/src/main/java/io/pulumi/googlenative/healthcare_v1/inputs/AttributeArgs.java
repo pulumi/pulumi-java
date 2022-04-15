@@ -27,7 +27,7 @@ public final class AttributeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attributeDefinitionId")
       private final @Nullable Output<String> attributeDefinitionId;
 
-    public Output<String> getAttributeDefinitionId() {
+    public Output<String> attributeDefinitionId() {
         return this.attributeDefinitionId == null ? Codegen.empty() : this.attributeDefinitionId;
     }
 
@@ -38,7 +38,7 @@ public final class AttributeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="values", required=true)
       private final Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values;
     }
 

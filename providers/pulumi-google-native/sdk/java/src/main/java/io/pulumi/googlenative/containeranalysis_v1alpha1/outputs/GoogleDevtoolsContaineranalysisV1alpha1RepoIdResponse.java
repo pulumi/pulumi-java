@@ -33,14 +33,14 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse {
      * A combination of a project ID and a repo name.
      * 
     */
-    public GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse getProjectRepoId() {
+    public GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse projectRepoId() {
         return this.projectRepoId;
     }
     /**
      * A server-assigned, globally unique identifier.
      * 
     */
-    public String getUid() {
+    public String uid() {
         return this.uid;
     }
 

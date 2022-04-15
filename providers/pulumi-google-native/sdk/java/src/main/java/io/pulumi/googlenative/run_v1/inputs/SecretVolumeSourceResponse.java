@@ -27,7 +27,7 @@ public final class SecretVolumeSourceResponse extends io.pulumi.resources.Invoke
     @Import(name="defaultMode", required=true)
       private final Integer defaultMode;
 
-    public Integer getDefaultMode() {
+    public Integer defaultMode() {
         return this.defaultMode;
     }
 
@@ -38,7 +38,7 @@ public final class SecretVolumeSourceResponse extends io.pulumi.resources.Invoke
     @Import(name="items", required=true)
       private final List<KeyToPathResponse> items;
 
-    public List<KeyToPathResponse> getItems() {
+    public List<KeyToPathResponse> items() {
         return this.items;
     }
 
@@ -49,7 +49,7 @@ public final class SecretVolumeSourceResponse extends io.pulumi.resources.Invoke
     @Import(name="optional", required=true)
       private final Boolean optional;
 
-    public Boolean getOptional() {
+    public Boolean optional() {
         return this.optional;
     }
 
@@ -60,7 +60,7 @@ public final class SecretVolumeSourceResponse extends io.pulumi.resources.Invoke
     @Import(name="secretName", required=true)
       private final String secretName;
 
-    public String getSecretName() {
+    public String secretName() {
         return this.secretName;
     }
 

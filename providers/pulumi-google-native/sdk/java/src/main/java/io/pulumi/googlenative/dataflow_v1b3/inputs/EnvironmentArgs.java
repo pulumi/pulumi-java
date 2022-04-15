@@ -31,7 +31,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterManagerApiService")
       private final @Nullable Output<String> clusterManagerApiService;
 
-    public Output<String> getClusterManagerApiService() {
+    public Output<String> clusterManagerApiService() {
         return this.clusterManagerApiService == null ? Codegen.empty() : this.clusterManagerApiService;
     }
 
@@ -42,7 +42,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataset")
       private final @Nullable Output<String> dataset;
 
-    public Output<String> getDataset() {
+    public Output<String> dataset() {
         return this.dataset == null ? Codegen.empty() : this.dataset;
     }
 
@@ -53,7 +53,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="debugOptions")
       private final @Nullable Output<DebugOptionsArgs> debugOptions;
 
-    public Output<DebugOptionsArgs> getDebugOptions() {
+    public Output<DebugOptionsArgs> debugOptions() {
         return this.debugOptions == null ? Codegen.empty() : this.debugOptions;
     }
 
@@ -64,7 +64,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="experiments")
       private final @Nullable Output<List<String>> experiments;
 
-    public Output<List<String>> getExperiments() {
+    public Output<List<String>> experiments() {
         return this.experiments == null ? Codegen.empty() : this.experiments;
     }
 
@@ -75,7 +75,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="flexResourceSchedulingGoal")
       private final @Nullable Output<EnvironmentFlexResourceSchedulingGoal> flexResourceSchedulingGoal;
 
-    public Output<EnvironmentFlexResourceSchedulingGoal> getFlexResourceSchedulingGoal() {
+    public Output<EnvironmentFlexResourceSchedulingGoal> flexResourceSchedulingGoal() {
         return this.flexResourceSchedulingGoal == null ? Codegen.empty() : this.flexResourceSchedulingGoal;
     }
 
@@ -86,7 +86,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="internalExperiments")
       private final @Nullable Output<Map<String,String>> internalExperiments;
 
-    public Output<Map<String,String>> getInternalExperiments() {
+    public Output<Map<String,String>> internalExperiments() {
         return this.internalExperiments == null ? Codegen.empty() : this.internalExperiments;
     }
 
@@ -97,7 +97,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sdkPipelineOptions")
       private final @Nullable Output<Map<String,String>> sdkPipelineOptions;
 
-    public Output<Map<String,String>> getSdkPipelineOptions() {
+    public Output<Map<String,String>> sdkPipelineOptions() {
         return this.sdkPipelineOptions == null ? Codegen.empty() : this.sdkPipelineOptions;
     }
 
@@ -108,7 +108,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccountEmail")
       private final @Nullable Output<String> serviceAccountEmail;
 
-    public Output<String> getServiceAccountEmail() {
+    public Output<String> serviceAccountEmail() {
         return this.serviceAccountEmail == null ? Codegen.empty() : this.serviceAccountEmail;
     }
 
@@ -119,7 +119,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceKmsKeyName")
       private final @Nullable Output<String> serviceKmsKeyName;
 
-    public Output<String> getServiceKmsKeyName() {
+    public Output<String> serviceKmsKeyName() {
         return this.serviceKmsKeyName == null ? Codegen.empty() : this.serviceKmsKeyName;
     }
 
@@ -130,7 +130,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceOptions")
       private final @Nullable Output<List<String>> serviceOptions;
 
-    public Output<List<String>> getServiceOptions() {
+    public Output<List<String>> serviceOptions() {
         return this.serviceOptions == null ? Codegen.empty() : this.serviceOptions;
     }
 
@@ -141,7 +141,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tempStoragePrefix")
       private final @Nullable Output<String> tempStoragePrefix;
 
-    public Output<String> getTempStoragePrefix() {
+    public Output<String> tempStoragePrefix() {
         return this.tempStoragePrefix == null ? Codegen.empty() : this.tempStoragePrefix;
     }
 
@@ -152,7 +152,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userAgent")
       private final @Nullable Output<Map<String,String>> userAgent;
 
-    public Output<Map<String,String>> getUserAgent() {
+    public Output<Map<String,String>> userAgent() {
         return this.userAgent == null ? Codegen.empty() : this.userAgent;
     }
 
@@ -163,7 +163,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<Map<String,String>> version;
 
-    public Output<Map<String,String>> getVersion() {
+    public Output<Map<String,String>> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 
@@ -174,7 +174,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workerPools")
       private final @Nullable Output<List<WorkerPoolArgs>> workerPools;
 
-    public Output<List<WorkerPoolArgs>> getWorkerPools() {
+    public Output<List<WorkerPoolArgs>> workerPools() {
         return this.workerPools == null ? Codegen.empty() : this.workerPools;
     }
 
@@ -185,7 +185,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workerRegion")
       private final @Nullable Output<String> workerRegion;
 
-    public Output<String> getWorkerRegion() {
+    public Output<String> workerRegion() {
         return this.workerRegion == null ? Codegen.empty() : this.workerRegion;
     }
 
@@ -196,7 +196,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workerZone")
       private final @Nullable Output<String> workerZone;
 
-    public Output<String> getWorkerZone() {
+    public Output<String> workerZone() {
         return this.workerZone == null ? Codegen.empty() : this.workerZone;
     }
 

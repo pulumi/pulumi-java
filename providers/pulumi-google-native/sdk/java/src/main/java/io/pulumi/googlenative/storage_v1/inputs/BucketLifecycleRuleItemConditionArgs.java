@@ -29,7 +29,7 @@ public final class BucketLifecycleRuleItemConditionArgs extends io.pulumi.resour
     @Import(name="age")
       private final @Nullable Output<Integer> age;
 
-    public Output<Integer> getAge() {
+    public Output<Integer> age() {
         return this.age == null ? Codegen.empty() : this.age;
     }
 
@@ -40,7 +40,7 @@ public final class BucketLifecycleRuleItemConditionArgs extends io.pulumi.resour
     @Import(name="createdBefore")
       private final @Nullable Output<String> createdBefore;
 
-    public Output<String> getCreatedBefore() {
+    public Output<String> createdBefore() {
         return this.createdBefore == null ? Codegen.empty() : this.createdBefore;
     }
 
@@ -51,7 +51,7 @@ public final class BucketLifecycleRuleItemConditionArgs extends io.pulumi.resour
     @Import(name="customTimeBefore")
       private final @Nullable Output<String> customTimeBefore;
 
-    public Output<String> getCustomTimeBefore() {
+    public Output<String> customTimeBefore() {
         return this.customTimeBefore == null ? Codegen.empty() : this.customTimeBefore;
     }
 
@@ -62,7 +62,7 @@ public final class BucketLifecycleRuleItemConditionArgs extends io.pulumi.resour
     @Import(name="daysSinceCustomTime")
       private final @Nullable Output<Integer> daysSinceCustomTime;
 
-    public Output<Integer> getDaysSinceCustomTime() {
+    public Output<Integer> daysSinceCustomTime() {
         return this.daysSinceCustomTime == null ? Codegen.empty() : this.daysSinceCustomTime;
     }
 
@@ -73,7 +73,7 @@ public final class BucketLifecycleRuleItemConditionArgs extends io.pulumi.resour
     @Import(name="daysSinceNoncurrentTime")
       private final @Nullable Output<Integer> daysSinceNoncurrentTime;
 
-    public Output<Integer> getDaysSinceNoncurrentTime() {
+    public Output<Integer> daysSinceNoncurrentTime() {
         return this.daysSinceNoncurrentTime == null ? Codegen.empty() : this.daysSinceNoncurrentTime;
     }
 
@@ -84,7 +84,7 @@ public final class BucketLifecycleRuleItemConditionArgs extends io.pulumi.resour
     @Import(name="isLive")
       private final @Nullable Output<Boolean> isLive;
 
-    public Output<Boolean> getIsLive() {
+    public Output<Boolean> isLive() {
         return this.isLive == null ? Codegen.empty() : this.isLive;
     }
 
@@ -95,7 +95,7 @@ public final class BucketLifecycleRuleItemConditionArgs extends io.pulumi.resour
     @Import(name="matchesPattern")
       private final @Nullable Output<String> matchesPattern;
 
-    public Output<String> getMatchesPattern() {
+    public Output<String> matchesPattern() {
         return this.matchesPattern == null ? Codegen.empty() : this.matchesPattern;
     }
 
@@ -106,7 +106,7 @@ public final class BucketLifecycleRuleItemConditionArgs extends io.pulumi.resour
     @Import(name="matchesStorageClass")
       private final @Nullable Output<List<String>> matchesStorageClass;
 
-    public Output<List<String>> getMatchesStorageClass() {
+    public Output<List<String>> matchesStorageClass() {
         return this.matchesStorageClass == null ? Codegen.empty() : this.matchesStorageClass;
     }
 
@@ -117,7 +117,7 @@ public final class BucketLifecycleRuleItemConditionArgs extends io.pulumi.resour
     @Import(name="noncurrentTimeBefore")
       private final @Nullable Output<String> noncurrentTimeBefore;
 
-    public Output<String> getNoncurrentTimeBefore() {
+    public Output<String> noncurrentTimeBefore() {
         return this.noncurrentTimeBefore == null ? Codegen.empty() : this.noncurrentTimeBefore;
     }
 
@@ -128,7 +128,7 @@ public final class BucketLifecycleRuleItemConditionArgs extends io.pulumi.resour
     @Import(name="numNewerVersions")
       private final @Nullable Output<Integer> numNewerVersions;
 
-    public Output<Integer> getNumNewerVersions() {
+    public Output<Integer> numNewerVersions() {
         return this.numNewerVersions == null ? Codegen.empty() : this.numNewerVersions;
     }
 

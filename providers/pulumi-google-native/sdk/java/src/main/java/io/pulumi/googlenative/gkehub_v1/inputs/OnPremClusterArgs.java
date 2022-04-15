@@ -27,7 +27,7 @@ public final class OnPremClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="adminCluster")
       private final @Nullable Output<Boolean> adminCluster;
 
-    public Output<Boolean> getAdminCluster() {
+    public Output<Boolean> adminCluster() {
         return this.adminCluster == null ? Codegen.empty() : this.adminCluster;
     }
 
@@ -38,7 +38,7 @@ public final class OnPremClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceLink")
       private final @Nullable Output<String> resourceLink;
 
-    public Output<String> getResourceLink() {
+    public Output<String> resourceLink() {
         return this.resourceLink == null ? Codegen.empty() : this.resourceLink;
     }
 

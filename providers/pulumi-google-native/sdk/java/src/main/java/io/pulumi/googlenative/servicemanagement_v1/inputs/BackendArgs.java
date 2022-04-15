@@ -27,7 +27,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rules")
       private final @Nullable Output<List<BackendRuleArgs>> rules;
 
-    public Output<List<BackendRuleArgs>> getRules() {
+    public Output<List<BackendRuleArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 

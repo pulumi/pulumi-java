@@ -23,7 +23,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse ext
     @Import(name="resourceId", required=true)
       private final String resourceId;
 
-    public String getResourceId() {
+    public String resourceId() {
         return this.resourceId;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse ext
     @Import(name="resourceType", required=true)
       private final String resourceType;
 
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
 

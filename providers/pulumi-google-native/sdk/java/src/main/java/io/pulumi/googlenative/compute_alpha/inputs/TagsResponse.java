@@ -24,7 +24,7 @@ public final class TagsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="fingerprint", required=true)
       private final String fingerprint;
 
-    public String getFingerprint() {
+    public String fingerprint() {
         return this.fingerprint;
     }
 
@@ -35,7 +35,7 @@ public final class TagsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="items", required=true)
       private final List<String> items;
 
-    public List<String> getItems() {
+    public List<String> items() {
         return this.items;
     }
 

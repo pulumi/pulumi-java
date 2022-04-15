@@ -26,7 +26,7 @@ public final class PipelineDescriptionResponse extends io.pulumi.resources.Invok
     @Import(name="displayData", required=true)
       private final List<DisplayDataResponse> displayData;
 
-    public List<DisplayDataResponse> getDisplayData() {
+    public List<DisplayDataResponse> displayData() {
         return this.displayData;
     }
 
@@ -37,7 +37,7 @@ public final class PipelineDescriptionResponse extends io.pulumi.resources.Invok
     @Import(name="executionPipelineStage", required=true)
       private final List<ExecutionStageSummaryResponse> executionPipelineStage;
 
-    public List<ExecutionStageSummaryResponse> getExecutionPipelineStage() {
+    public List<ExecutionStageSummaryResponse> executionPipelineStage() {
         return this.executionPipelineStage;
     }
 
@@ -48,7 +48,7 @@ public final class PipelineDescriptionResponse extends io.pulumi.resources.Invok
     @Import(name="originalPipelineTransform", required=true)
       private final List<TransformSummaryResponse> originalPipelineTransform;
 
-    public List<TransformSummaryResponse> getOriginalPipelineTransform() {
+    public List<TransformSummaryResponse> originalPipelineTransform() {
         return this.originalPipelineTransform;
     }
 

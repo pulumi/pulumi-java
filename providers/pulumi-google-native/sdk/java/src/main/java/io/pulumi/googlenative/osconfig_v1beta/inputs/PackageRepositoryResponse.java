@@ -26,7 +26,7 @@ public final class PackageRepositoryResponse extends io.pulumi.resources.InvokeA
     @Import(name="apt", required=true)
       private final AptRepositoryResponse apt;
 
-    public AptRepositoryResponse getApt() {
+    public AptRepositoryResponse apt() {
         return this.apt;
     }
 
@@ -37,7 +37,7 @@ public final class PackageRepositoryResponse extends io.pulumi.resources.InvokeA
     @Import(name="goo", required=true)
       private final GooRepositoryResponse goo;
 
-    public GooRepositoryResponse getGoo() {
+    public GooRepositoryResponse goo() {
         return this.goo;
     }
 
@@ -48,7 +48,7 @@ public final class PackageRepositoryResponse extends io.pulumi.resources.InvokeA
     @Import(name="yum", required=true)
       private final YumRepositoryResponse yum;
 
-    public YumRepositoryResponse getYum() {
+    public YumRepositoryResponse yum() {
         return this.yum;
     }
 
@@ -59,7 +59,7 @@ public final class PackageRepositoryResponse extends io.pulumi.resources.InvokeA
     @Import(name="zypper", required=true)
       private final ZypperRepositoryResponse zypper;
 
-    public ZypperRepositoryResponse getZypper() {
+    public ZypperRepositoryResponse zypper() {
         return this.zypper;
     }
 

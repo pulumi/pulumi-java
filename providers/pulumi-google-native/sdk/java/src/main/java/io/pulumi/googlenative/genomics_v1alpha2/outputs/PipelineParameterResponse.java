@@ -47,28 +47,28 @@ public final class PipelineParameterResponse {
      * The default value for this parameter. Can be overridden at runtime. If `localCopy` is present, then this must be a Google Cloud Storage path beginning with `gs://`.
      * 
     */
-    public String getDefaultValue() {
+    public String defaultValue() {
         return this.defaultValue;
     }
     /**
      * Human-readable description.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * If present, this parameter is marked for copying to and from the VM. `LocalCopy` indicates where on the VM the file should be. The value given to this parameter (either at runtime or using `defaultValue`) must be the remote path where the file should be.
      * 
     */
-    public LocalCopyResponse getLocalCopy() {
+    public LocalCopyResponse localCopy() {
         return this.localCopy;
     }
     /**
      * Name of the parameter - the pipeline runner uses this string as the key to the input and output maps in RunPipeline.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

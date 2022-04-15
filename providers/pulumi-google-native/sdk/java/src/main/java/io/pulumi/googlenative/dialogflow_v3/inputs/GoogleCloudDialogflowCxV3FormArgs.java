@@ -27,7 +27,7 @@ public final class GoogleCloudDialogflowCxV3FormArgs extends io.pulumi.resources
     @Import(name="parameters")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3FormParameterArgs>> parameters;
 
-    public Output<List<GoogleCloudDialogflowCxV3FormParameterArgs>> getParameters() {
+    public Output<List<GoogleCloudDialogflowCxV3FormParameterArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 

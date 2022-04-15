@@ -24,7 +24,7 @@ public final class FilterOptionsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="filter", required=true)
       private final FilterResponse filter;
 
-    public FilterResponse getFilter() {
+    public FilterResponse filter() {
         return this.filter;
     }
 
@@ -35,7 +35,7 @@ public final class FilterOptionsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="objectType", required=true)
       private final String objectType;
 
-    public String getObjectType() {
+    public String objectType() {
         return this.objectType;
     }
 

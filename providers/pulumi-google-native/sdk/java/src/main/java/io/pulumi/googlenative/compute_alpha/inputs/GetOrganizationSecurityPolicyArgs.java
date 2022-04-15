@@ -15,7 +15,7 @@ public final class GetOrganizationSecurityPolicyArgs extends io.pulumi.resources
     @Import(name="securityPolicy", required=true)
       private final String securityPolicy;
 
-    public String getSecurityPolicy() {
+    public String securityPolicy() {
         return this.securityPolicy;
     }
 

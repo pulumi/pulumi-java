@@ -27,7 +27,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     @Import(name="dayOfWeek")
       private final @Nullable Output<MaintenanceWindowDayOfWeek> dayOfWeek;
 
-    public Output<MaintenanceWindowDayOfWeek> getDayOfWeek() {
+    public Output<MaintenanceWindowDayOfWeek> dayOfWeek() {
         return this.dayOfWeek == null ? Codegen.empty() : this.dayOfWeek;
     }
 
@@ -38,7 +38,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     @Import(name="hourOfDay")
       private final @Nullable Output<Integer> hourOfDay;
 
-    public Output<Integer> getHourOfDay() {
+    public Output<Integer> hourOfDay() {
         return this.hourOfDay == null ? Codegen.empty() : this.hourOfDay;
     }
 

@@ -22,7 +22,7 @@ public final class InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs 
     @Import(name="onHealthCheck")
       private final @Nullable Output<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck> onHealthCheck;
 
-    public Output<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck> getOnHealthCheck() {
+    public Output<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck> onHealthCheck() {
         return this.onHealthCheck == null ? Codegen.empty() : this.onHealthCheck;
     }
 

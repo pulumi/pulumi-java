@@ -56,35 +56,35 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse {
      * Description of the StoredInfoType (max 256 characters).
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Store dictionary-based CustomInfoType.
      * 
     */
-    public GooglePrivacyDlpV2DictionaryResponse getDictionary() {
+    public GooglePrivacyDlpV2DictionaryResponse dictionary() {
         return this.dictionary;
     }
     /**
      * Display name of the StoredInfoType (max 256 characters).
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * StoredInfoType where findings are defined by a dictionary of phrases.
      * 
     */
-    public GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse getLargeCustomDictionary() {
+    public GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse largeCustomDictionary() {
         return this.largeCustomDictionary;
     }
     /**
      * Store regular expression-based StoredInfoType.
      * 
     */
-    public GooglePrivacyDlpV2RegexResponse getRegex() {
+    public GooglePrivacyDlpV2RegexResponse regex() {
         return this.regex;
     }
 

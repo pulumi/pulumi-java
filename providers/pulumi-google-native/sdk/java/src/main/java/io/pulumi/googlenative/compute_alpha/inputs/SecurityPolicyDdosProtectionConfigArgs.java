@@ -18,7 +18,7 @@ public final class SecurityPolicyDdosProtectionConfigArgs extends io.pulumi.reso
     @Import(name="ddosProtection")
       private final @Nullable Output<SecurityPolicyDdosProtectionConfigDdosProtection> ddosProtection;
 
-    public Output<SecurityPolicyDdosProtectionConfigDdosProtection> getDdosProtection() {
+    public Output<SecurityPolicyDdosProtectionConfigDdosProtection> ddosProtection() {
         return this.ddosProtection == null ? Codegen.empty() : this.ddosProtection;
     }
 

@@ -32,14 +32,14 @@ public final class BucketLoggingResponse {
      * The destination bucket where the current bucket's logs should be placed.
      * 
     */
-    public String getLogBucket() {
+    public String logBucket() {
         return this.logBucket;
     }
     /**
      * A prefix for log object names.
      * 
     */
-    public String getLogObjectPrefix() {
+    public String logObjectPrefix() {
         return this.logObjectPrefix;
     }
 

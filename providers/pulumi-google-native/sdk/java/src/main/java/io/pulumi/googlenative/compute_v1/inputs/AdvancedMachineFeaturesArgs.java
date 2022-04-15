@@ -27,7 +27,7 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
     @Import(name="enableNestedVirtualization")
       private final @Nullable Output<Boolean> enableNestedVirtualization;
 
-    public Output<Boolean> getEnableNestedVirtualization() {
+    public Output<Boolean> enableNestedVirtualization() {
         return this.enableNestedVirtualization == null ? Codegen.empty() : this.enableNestedVirtualization;
     }
 
@@ -38,7 +38,7 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
     @Import(name="enableUefiNetworking")
       private final @Nullable Output<Boolean> enableUefiNetworking;
 
-    public Output<Boolean> getEnableUefiNetworking() {
+    public Output<Boolean> enableUefiNetworking() {
         return this.enableUefiNetworking == null ? Codegen.empty() : this.enableUefiNetworking;
     }
 
@@ -49,7 +49,7 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
     @Import(name="threadsPerCore")
       private final @Nullable Output<Integer> threadsPerCore;
 
-    public Output<Integer> getThreadsPerCore() {
+    public Output<Integer> threadsPerCore() {
         return this.threadsPerCore == null ? Codegen.empty() : this.threadsPerCore;
     }
 

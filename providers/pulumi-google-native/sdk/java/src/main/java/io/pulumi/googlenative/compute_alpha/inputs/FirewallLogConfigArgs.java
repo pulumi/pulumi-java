@@ -27,7 +27,7 @@ public final class FirewallLogConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="enable")
       private final @Nullable Output<Boolean> enable;
 
-    public Output<Boolean> getEnable() {
+    public Output<Boolean> enable() {
         return this.enable == null ? Codegen.empty() : this.enable;
     }
 
@@ -38,7 +38,7 @@ public final class FirewallLogConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="metadata")
       private final @Nullable Output<FirewallLogConfigMetadata> metadata;
 
-    public Output<FirewallLogConfigMetadata> getMetadata() {
+    public Output<FirewallLogConfigMetadata> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 

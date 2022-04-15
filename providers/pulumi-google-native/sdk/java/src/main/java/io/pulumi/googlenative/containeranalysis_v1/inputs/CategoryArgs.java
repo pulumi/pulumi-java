@@ -26,7 +26,7 @@ public final class CategoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="categoryId")
       private final @Nullable Output<String> categoryId;
 
-    public Output<String> getCategoryId() {
+    public Output<String> categoryId() {
         return this.categoryId == null ? Codegen.empty() : this.categoryId;
     }
 
@@ -37,7 +37,7 @@ public final class CategoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

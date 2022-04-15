@@ -29,7 +29,7 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
     @Import(name="additionalLicenses", required=true)
       private final List<String> additionalLicenses;
 
-    public List<String> getAdditionalLicenses() {
+    public List<String> additionalLicenses() {
         return this.additionalLicenses;
     }
 
@@ -40,7 +40,7 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
     @Import(name="appliedLicense", required=true)
       private final AppliedLicenseResponse appliedLicense;
 
-    public AppliedLicenseResponse getAppliedLicense() {
+    public AppliedLicenseResponse appliedLicense() {
         return this.appliedLicense;
     }
 
@@ -51,7 +51,7 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
     @Import(name="bootOption", required=true)
       private final String bootOption;
 
-    public String getBootOption() {
+    public String bootOption() {
         return this.bootOption;
     }
 
@@ -62,7 +62,7 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
     @Import(name="computeScheduling", required=true)
       private final ComputeSchedulingResponse computeScheduling;
 
-    public ComputeSchedulingResponse getComputeScheduling() {
+    public ComputeSchedulingResponse computeScheduling() {
         return this.computeScheduling;
     }
 
@@ -73,7 +73,7 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
     @Import(name="diskType", required=true)
       private final String diskType;
 
-    public String getDiskType() {
+    public String diskType() {
         return this.diskType;
     }
 
@@ -84,7 +84,7 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
 
@@ -95,7 +95,7 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
     @Import(name="licenseType", required=true)
       private final String licenseType;
 
-    public String getLicenseType() {
+    public String licenseType() {
         return this.licenseType;
     }
 
@@ -106,7 +106,7 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
     @Import(name="machineType", required=true)
       private final String machineType;
 
-    public String getMachineType() {
+    public String machineType() {
         return this.machineType;
     }
 
@@ -117,7 +117,7 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
     @Import(name="machineTypeSeries", required=true)
       private final String machineTypeSeries;
 
-    public String getMachineTypeSeries() {
+    public String machineTypeSeries() {
         return this.machineTypeSeries;
     }
 
@@ -128,7 +128,7 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
     @Import(name="metadata", required=true)
       private final Map<String,String> metadata;
 
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata;
     }
 
@@ -139,7 +139,7 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
     @Import(name="networkInterfaces", required=true)
       private final List<NetworkInterfaceResponse> networkInterfaces;
 
-    public List<NetworkInterfaceResponse> getNetworkInterfaces() {
+    public List<NetworkInterfaceResponse> networkInterfaces() {
         return this.networkInterfaces;
     }
 
@@ -150,7 +150,7 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
     @Import(name="networkTags", required=true)
       private final List<String> networkTags;
 
-    public List<String> getNetworkTags() {
+    public List<String> networkTags() {
         return this.networkTags;
     }
 
@@ -161,7 +161,7 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
     @Import(name="secureBoot", required=true)
       private final Boolean secureBoot;
 
-    public Boolean getSecureBoot() {
+    public Boolean secureBoot() {
         return this.secureBoot;
     }
 
@@ -172,7 +172,7 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
     @Import(name="serviceAccount", required=true)
       private final String serviceAccount;
 
-    public String getServiceAccount() {
+    public String serviceAccount() {
         return this.serviceAccount;
     }
 
@@ -183,7 +183,7 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
     @Import(name="targetProject", required=true)
       private final String targetProject;
 
-    public String getTargetProject() {
+    public String targetProject() {
         return this.targetProject;
     }
 
@@ -194,7 +194,7 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
     @Import(name="vmName", required=true)
       private final String vmName;
 
-    public String getVmName() {
+    public String vmName() {
         return this.vmName;
     }
 
@@ -205,7 +205,7 @@ public final class ComputeEngineTargetDefaultsResponse extends io.pulumi.resourc
     @Import(name="zone", required=true)
       private final String zone;
 
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

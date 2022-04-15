@@ -24,7 +24,7 @@ public final class AuthenticatorGroupsConfigResponse extends io.pulumi.resources
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
@@ -35,7 +35,7 @@ public final class AuthenticatorGroupsConfigResponse extends io.pulumi.resources
     @Import(name="securityGroup", required=true)
       private final String securityGroup;
 
-    public String getSecurityGroup() {
+    public String securityGroup() {
         return this.securityGroup;
     }
 

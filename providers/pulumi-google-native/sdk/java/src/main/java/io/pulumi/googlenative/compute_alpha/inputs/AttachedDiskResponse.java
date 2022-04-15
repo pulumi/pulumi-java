@@ -30,7 +30,7 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="autoDelete", required=true)
       private final Boolean autoDelete;
 
-    public Boolean getAutoDelete() {
+    public Boolean autoDelete() {
         return this.autoDelete;
     }
 
@@ -41,7 +41,7 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="boot", required=true)
       private final Boolean boot;
 
-    public Boolean getBoot() {
+    public Boolean boot() {
         return this.boot;
     }
 
@@ -52,7 +52,7 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="deviceName", required=true)
       private final String deviceName;
 
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
 
@@ -63,7 +63,7 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="diskEncryptionKey", required=true)
       private final CustomerEncryptionKeyResponse diskEncryptionKey;
 
-    public CustomerEncryptionKeyResponse getDiskEncryptionKey() {
+    public CustomerEncryptionKeyResponse diskEncryptionKey() {
         return this.diskEncryptionKey;
     }
 
@@ -74,7 +74,7 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="diskSizeGb", required=true)
       private final String diskSizeGb;
 
-    public String getDiskSizeGb() {
+    public String diskSizeGb() {
         return this.diskSizeGb;
     }
 
@@ -85,7 +85,7 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="forceAttach", required=true)
       private final Boolean forceAttach;
 
-    public Boolean getForceAttach() {
+    public Boolean forceAttach() {
         return this.forceAttach;
     }
 
@@ -96,7 +96,7 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="guestOsFeatures", required=true)
       private final List<GuestOsFeatureResponse> guestOsFeatures;
 
-    public List<GuestOsFeatureResponse> getGuestOsFeatures() {
+    public List<GuestOsFeatureResponse> guestOsFeatures() {
         return this.guestOsFeatures;
     }
 
@@ -107,7 +107,7 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="index", required=true)
       private final Integer index;
 
-    public Integer getIndex() {
+    public Integer index() {
         return this.index;
     }
 
@@ -118,7 +118,7 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="initializeParams", required=true)
       private final AttachedDiskInitializeParamsResponse initializeParams;
 
-    public AttachedDiskInitializeParamsResponse getInitializeParams() {
+    public AttachedDiskInitializeParamsResponse initializeParams() {
         return this.initializeParams;
     }
 
@@ -129,7 +129,7 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="interface", required=true)
       private final String interface_;
 
-    public String getInterface_() {
+    public String interface_() {
         return this.interface_;
     }
 
@@ -140,7 +140,7 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -151,7 +151,7 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="licenses", required=true)
       private final List<String> licenses;
 
-    public List<String> getLicenses() {
+    public List<String> licenses() {
         return this.licenses;
     }
 
@@ -162,7 +162,7 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="locked", required=true)
       private final Boolean locked;
 
-    public Boolean getLocked() {
+    public Boolean locked() {
         return this.locked;
     }
 
@@ -173,7 +173,7 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="mode", required=true)
       private final String mode;
 
-    public String getMode() {
+    public String mode() {
         return this.mode;
     }
 
@@ -184,7 +184,7 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="savedState", required=true)
       private final String savedState;
 
-    public String getSavedState() {
+    public String savedState() {
         return this.savedState;
     }
 
@@ -195,7 +195,7 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="shieldedInstanceInitialState", required=true)
       private final InitialStateConfigResponse shieldedInstanceInitialState;
 
-    public InitialStateConfigResponse getShieldedInstanceInitialState() {
+    public InitialStateConfigResponse shieldedInstanceInitialState() {
         return this.shieldedInstanceInitialState;
     }
 
@@ -206,7 +206,7 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="source", required=true)
       private final String source;
 
-    public String getSource() {
+    public String source() {
         return this.source;
     }
 
@@ -217,7 +217,7 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -228,7 +228,7 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="userLicenses", required=true)
       private final List<String> userLicenses;
 
-    public List<String> getUserLicenses() {
+    public List<String> userLicenses() {
         return this.userLicenses;
     }
 

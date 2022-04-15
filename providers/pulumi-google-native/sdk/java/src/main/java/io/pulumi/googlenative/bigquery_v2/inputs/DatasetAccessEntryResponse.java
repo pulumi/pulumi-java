@@ -21,14 +21,14 @@ public final class DatasetAccessEntryResponse extends io.pulumi.resources.Invoke
     @Import(name="dataset", required=true)
       private final DatasetReferenceResponse dataset;
 
-    public DatasetReferenceResponse getDataset() {
+    public DatasetReferenceResponse dataset() {
         return this.dataset;
     }
 
     @Import(name="targetTypes", required=true)
       private final List<String> targetTypes;
 
-    public List<String> getTargetTypes() {
+    public List<String> targetTypes() {
         return this.targetTypes;
     }
 

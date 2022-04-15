@@ -31,7 +31,7 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
     @Import(name="amount")
       private final @Nullable Output<MoneyArgs> amount;
 
-    public Output<MoneyArgs> getAmount() {
+    public Output<MoneyArgs> amount() {
         return this.amount == null ? Codegen.empty() : this.amount;
     }
 
@@ -42,7 +42,7 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -53,7 +53,7 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
     @Import(name="expectedUnitsPerYear")
       private final @Nullable Output<Double> expectedUnitsPerYear;
 
-    public Output<Double> getExpectedUnitsPerYear() {
+    public Output<Double> expectedUnitsPerYear() {
         return this.expectedUnitsPerYear == null ? Codegen.empty() : this.expectedUnitsPerYear;
     }
 
@@ -64,7 +64,7 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
     @Import(name="range")
       private final @Nullable Output<CompensationRangeArgs> range;
 
-    public Output<CompensationRangeArgs> getRange() {
+    public Output<CompensationRangeArgs> range() {
         return this.range == null ? Codegen.empty() : this.range;
     }
 
@@ -75,7 +75,7 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
     @Import(name="type")
       private final @Nullable Output<CompensationEntryType> type;
 
-    public Output<CompensationEntryType> getType() {
+    public Output<CompensationEntryType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -86,7 +86,7 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
     @Import(name="unit")
       private final @Nullable Output<CompensationEntryUnit> unit;
 
-    public Output<CompensationEntryUnit> getUnit() {
+    public Output<CompensationEntryUnit> unit() {
         return this.unit == null ? Codegen.empty() : this.unit;
     }
 

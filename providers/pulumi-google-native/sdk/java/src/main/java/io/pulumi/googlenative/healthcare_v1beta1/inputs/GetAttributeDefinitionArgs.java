@@ -17,35 +17,35 @@ public final class GetAttributeDefinitionArgs extends io.pulumi.resources.Invoke
     @Import(name="attributeDefinitionId", required=true)
       private final String attributeDefinitionId;
 
-    public String getAttributeDefinitionId() {
+    public String attributeDefinitionId() {
         return this.attributeDefinitionId;
     }
 
     @Import(name="consentStoreId", required=true)
       private final String consentStoreId;
 
-    public String getConsentStoreId() {
+    public String consentStoreId() {
         return this.consentStoreId;
     }
 
     @Import(name="datasetId", required=true)
       private final String datasetId;
 
-    public String getDatasetId() {
+    public String datasetId() {
         return this.datasetId;
     }
 
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

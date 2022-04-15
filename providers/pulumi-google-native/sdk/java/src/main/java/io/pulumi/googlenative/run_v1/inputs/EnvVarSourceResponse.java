@@ -24,7 +24,7 @@ public final class EnvVarSourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="configMapKeyRef", required=true)
       private final ConfigMapKeySelectorResponse configMapKeyRef;
 
-    public ConfigMapKeySelectorResponse getConfigMapKeyRef() {
+    public ConfigMapKeySelectorResponse configMapKeyRef() {
         return this.configMapKeyRef;
     }
 
@@ -35,7 +35,7 @@ public final class EnvVarSourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="secretKeyRef", required=true)
       private final SecretKeySelectorResponse secretKeyRef;
 
-    public SecretKeySelectorResponse getSecretKeyRef() {
+    public SecretKeySelectorResponse secretKeyRef() {
         return this.secretKeyRef;
     }
 

@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2LoggingConfigResponse extends io.pulum
     @Import(name="enableStackdriverLogging", required=true)
       private final Boolean enableStackdriverLogging;
 
-    public Boolean getEnableStackdriverLogging() {
+    public Boolean enableStackdriverLogging() {
         return this.enableStackdriverLogging;
     }
 

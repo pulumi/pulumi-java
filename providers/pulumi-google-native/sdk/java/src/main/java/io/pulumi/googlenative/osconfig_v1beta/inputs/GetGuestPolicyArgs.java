@@ -17,14 +17,14 @@ public final class GetGuestPolicyArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="guestPolicyId", required=true)
       private final String guestPolicyId;
 
-    public String getGuestPolicyId() {
+    public String guestPolicyId() {
         return this.guestPolicyId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

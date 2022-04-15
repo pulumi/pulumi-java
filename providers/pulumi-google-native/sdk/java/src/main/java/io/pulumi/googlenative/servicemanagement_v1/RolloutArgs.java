@@ -25,7 +25,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -36,7 +36,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deleteServiceStrategy")
       private final @Nullable Output<DeleteServiceStrategyArgs> deleteServiceStrategy;
 
-    public Output<DeleteServiceStrategyArgs> getDeleteServiceStrategy() {
+    public Output<DeleteServiceStrategyArgs> deleteServiceStrategy() {
         return this.deleteServiceStrategy == null ? Codegen.empty() : this.deleteServiceStrategy;
     }
 
@@ -47,7 +47,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rolloutId")
       private final @Nullable Output<String> rolloutId;
 
-    public Output<String> getRolloutId() {
+    public Output<String> rolloutId() {
         return this.rolloutId == null ? Codegen.empty() : this.rolloutId;
     }
 
@@ -58,7 +58,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -69,7 +69,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<RolloutStatus> status;
 
-    public Output<RolloutStatus> getStatus() {
+    public Output<RolloutStatus> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -80,7 +80,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="trafficPercentStrategy")
       private final @Nullable Output<TrafficPercentStrategyArgs> trafficPercentStrategy;
 
-    public Output<TrafficPercentStrategyArgs> getTrafficPercentStrategy() {
+    public Output<TrafficPercentStrategyArgs> trafficPercentStrategy() {
         return this.trafficPercentStrategy == null ? Codegen.empty() : this.trafficPercentStrategy;
     }
 

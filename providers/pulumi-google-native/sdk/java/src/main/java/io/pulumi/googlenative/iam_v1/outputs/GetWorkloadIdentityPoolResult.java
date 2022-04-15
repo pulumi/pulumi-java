@@ -54,35 +54,35 @@ public final class GetWorkloadIdentityPoolResult {
      * A description of the pool. Cannot exceed 256 characters.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use existing tokens to access resources. If the pool is re-enabled, existing tokens grant access again.
      * 
     */
-    public Boolean getDisabled() {
+    public Boolean disabled() {
         return this.disabled;
     }
     /**
      * A display name for the pool. Cannot exceed 32 characters.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * The resource name of the pool.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The state of the pool.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

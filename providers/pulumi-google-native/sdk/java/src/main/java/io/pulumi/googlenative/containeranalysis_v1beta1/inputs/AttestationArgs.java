@@ -23,7 +23,7 @@ public final class AttestationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="genericSignedAttestation")
       private final @Nullable Output<GenericSignedAttestationArgs> genericSignedAttestation;
 
-    public Output<GenericSignedAttestationArgs> getGenericSignedAttestation() {
+    public Output<GenericSignedAttestationArgs> genericSignedAttestation() {
         return this.genericSignedAttestation == null ? Codegen.empty() : this.genericSignedAttestation;
     }
 
@@ -34,7 +34,7 @@ public final class AttestationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pgpSignedAttestation")
       private final @Nullable Output<PgpSignedAttestationArgs> pgpSignedAttestation;
 
-    public Output<PgpSignedAttestationArgs> getPgpSignedAttestation() {
+    public Output<PgpSignedAttestationArgs> pgpSignedAttestation() {
         return this.pgpSignedAttestation == null ? Codegen.empty() : this.pgpSignedAttestation;
     }
 

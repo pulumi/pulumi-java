@@ -26,7 +26,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
     @Import(name="containerSpecGcsPath", required=true)
       private final String containerSpecGcsPath;
 
-    public String getContainerSpecGcsPath() {
+    public String containerSpecGcsPath() {
         return this.containerSpecGcsPath;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
     @Import(name="environment", required=true)
       private final GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse environment;
 
-    public GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse getEnvironment() {
+    public GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse environment() {
         return this.environment;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
     @Import(name="jobName", required=true)
       private final String jobName;
 
-    public String getJobName() {
+    public String jobName() {
         return this.jobName;
     }
 
@@ -59,7 +59,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
     @Import(name="launchOptions", required=true)
       private final Map<String,String> launchOptions;
 
-    public Map<String,String> getLaunchOptions() {
+    public Map<String,String> launchOptions() {
         return this.launchOptions;
     }
 
@@ -70,7 +70,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
     @Import(name="parameters", required=true)
       private final Map<String,String> parameters;
 
-    public Map<String,String> getParameters() {
+    public Map<String,String> parameters() {
         return this.parameters;
     }
 
@@ -81,7 +81,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
     @Import(name="transformNameMappings", required=true)
       private final Map<String,String> transformNameMappings;
 
-    public Map<String,String> getTransformNameMappings() {
+    public Map<String,String> transformNameMappings() {
         return this.transformNameMappings;
     }
 
@@ -92,7 +92,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
     @Import(name="update", required=true)
       private final Boolean update;
 
-    public Boolean getUpdate() {
+    public Boolean update() {
         return this.update;
     }
 

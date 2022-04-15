@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2CryptoHashConfigArgs extends io.pulumi.reso
     @Import(name="cryptoKey")
       private final @Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey;
 
-    public Output<GooglePrivacyDlpV2CryptoKeyArgs> getCryptoKey() {
+    public Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey() {
         return this.cryptoKey == null ? Codegen.empty() : this.cryptoKey;
     }
 

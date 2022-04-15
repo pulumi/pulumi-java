@@ -84,63 +84,63 @@ public final class GetKeyResult {
      * List of API products for which the credential can be used. **Note**: Do not specify the list of API products when creating a consumer key and secret for a developer app. Instead, use the UpdateDeveloperAppKey API to make the association after the consumer key and secret are created.
      * 
     */
-    public List<Object> getApiProducts() {
+    public List<Object> apiProducts() {
         return this.apiProducts;
     }
     /**
      * List of attributes associated with the credential.
      * 
     */
-    public List<GoogleCloudApigeeV1AttributeResponse> getAttributes() {
+    public List<GoogleCloudApigeeV1AttributeResponse> attributes() {
         return this.attributes;
     }
     /**
      * Consumer key.
      * 
     */
-    public String getConsumerKey() {
+    public String consumerKey() {
         return this.consumerKey;
     }
     /**
      * Secret key.
      * 
     */
-    public String getConsumerSecret() {
+    public String consumerSecret() {
         return this.consumerSecret;
     }
     /**
      * Time the developer app expires in milliseconds since epoch.
      * 
     */
-    public String getExpiresAt() {
+    public String expiresAt() {
         return this.expiresAt;
     }
     /**
      * Input only. Expiration time, in seconds, for the consumer key. If not set or left to the default value of `-1`, the API key never expires. The expiration time can't be updated after it is set.
      * 
     */
-    public String getExpiresInSeconds() {
+    public String expiresInSeconds() {
         return this.expiresInSeconds;
     }
     /**
      * Time the developer app was created in milliseconds since epoch.
      * 
     */
-    public String getIssuedAt() {
+    public String issuedAt() {
         return this.issuedAt;
     }
     /**
      * Scopes to apply to the app. The specified scope names must already be defined for the API product that you associate with the app.
      * 
     */
-    public List<String> getScopes() {
+    public List<String> scopes() {
         return this.scopes;
     }
     /**
      * Status of the credential. Valid values include `approved` or `revoked`.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

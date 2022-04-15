@@ -63,42 +63,42 @@ public final class DocumentationResponse {
      * The URL to the root of documentation.
      * 
     */
-    public String getDocumentationRootUrl() {
+    public String documentationRootUrl() {
         return this.documentationRootUrl;
     }
     /**
      * Declares a single overview page. For example: documentation: summary: ... overview: (== include overview.md ==) This is a shortcut for the following declaration (using pages style): documentation: summary: ... pages: - name: Overview content: (== include overview.md ==) Note: you cannot specify both `overview` field and `pages` field.
      * 
     */
-    public String getOverview() {
+    public String overview() {
         return this.overview;
     }
     /**
      * The top level pages for the documentation set.
      * 
     */
-    public List<PageResponse> getPages() {
+    public List<PageResponse> pages() {
         return this.pages;
     }
     /**
      * A list of documentation rules that apply to individual API elements. **NOTE:** All service configuration rules follow "last one wins" order.
      * 
     */
-    public List<DocumentationRuleResponse> getRules() {
+    public List<DocumentationRuleResponse> rules() {
         return this.rules;
     }
     /**
      * Specifies the service root url if the default one (the service name from the yaml file) is not suitable. This can be seen in any fully specified service urls as well as sections that show a base that other urls are relative to.
      * 
     */
-    public String getServiceRootUrl() {
+    public String serviceRootUrl() {
         return this.serviceRootUrl;
     }
     /**
      * A short description of what the service does. The summary must be plain text. It becomes the overview of the service displayed in Google Cloud Console. NOTE: This field is equivalent to the standard field `description`.
      * 
     */
-    public String getSummary() {
+    public String summary() {
         return this.summary;
     }
 

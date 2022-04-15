@@ -29,7 +29,7 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends io.pulumi.resour
     @Import(name="batchSize")
       private final @Nullable Output<String> batchSize;
 
-    public Output<String> getBatchSize() {
+    public Output<String> batchSize() {
         return this.batchSize == null ? Codegen.empty() : this.batchSize;
     }
 
@@ -40,7 +40,7 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends io.pulumi.resour
     @Import(name="dataFormat", required=true)
       private final Output<GoogleCloudMlV1__PredictionInputDataFormat> dataFormat;
 
-    public Output<GoogleCloudMlV1__PredictionInputDataFormat> getDataFormat() {
+    public Output<GoogleCloudMlV1__PredictionInputDataFormat> dataFormat() {
         return this.dataFormat;
     }
 
@@ -51,7 +51,7 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends io.pulumi.resour
     @Import(name="inputPaths", required=true)
       private final Output<List<String>> inputPaths;
 
-    public Output<List<String>> getInputPaths() {
+    public Output<List<String>> inputPaths() {
         return this.inputPaths;
     }
 
@@ -62,7 +62,7 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends io.pulumi.resour
     @Import(name="maxWorkerCount")
       private final @Nullable Output<String> maxWorkerCount;
 
-    public Output<String> getMaxWorkerCount() {
+    public Output<String> maxWorkerCount() {
         return this.maxWorkerCount == null ? Codegen.empty() : this.maxWorkerCount;
     }
 
@@ -73,7 +73,7 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends io.pulumi.resour
     @Import(name="modelName")
       private final @Nullable Output<String> modelName;
 
-    public Output<String> getModelName() {
+    public Output<String> modelName() {
         return this.modelName == null ? Codegen.empty() : this.modelName;
     }
 
@@ -84,7 +84,7 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends io.pulumi.resour
     @Import(name="outputDataFormat")
       private final @Nullable Output<GoogleCloudMlV1__PredictionInputOutputDataFormat> outputDataFormat;
 
-    public Output<GoogleCloudMlV1__PredictionInputOutputDataFormat> getOutputDataFormat() {
+    public Output<GoogleCloudMlV1__PredictionInputOutputDataFormat> outputDataFormat() {
         return this.outputDataFormat == null ? Codegen.empty() : this.outputDataFormat;
     }
 
@@ -95,7 +95,7 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends io.pulumi.resour
     @Import(name="outputPath", required=true)
       private final Output<String> outputPath;
 
-    public Output<String> getOutputPath() {
+    public Output<String> outputPath() {
         return this.outputPath;
     }
 
@@ -106,7 +106,7 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends io.pulumi.resour
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
@@ -117,7 +117,7 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends io.pulumi.resour
     @Import(name="runtimeVersion")
       private final @Nullable Output<String> runtimeVersion;
 
-    public Output<String> getRuntimeVersion() {
+    public Output<String> runtimeVersion() {
         return this.runtimeVersion == null ? Codegen.empty() : this.runtimeVersion;
     }
 
@@ -128,7 +128,7 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends io.pulumi.resour
     @Import(name="signatureName")
       private final @Nullable Output<String> signatureName;
 
-    public Output<String> getSignatureName() {
+    public Output<String> signatureName() {
         return this.signatureName == null ? Codegen.empty() : this.signatureName;
     }
 
@@ -139,7 +139,7 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends io.pulumi.resour
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri == null ? Codegen.empty() : this.uri;
     }
 
@@ -150,7 +150,7 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends io.pulumi.resour
     @Import(name="versionName")
       private final @Nullable Output<String> versionName;
 
-    public Output<String> getVersionName() {
+    public Output<String> versionName() {
         return this.versionName == null ? Codegen.empty() : this.versionName;
     }
 

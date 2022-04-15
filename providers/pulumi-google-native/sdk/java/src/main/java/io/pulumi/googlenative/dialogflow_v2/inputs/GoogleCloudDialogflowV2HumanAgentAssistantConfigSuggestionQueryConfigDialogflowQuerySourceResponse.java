@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
     @Import(name="agent", required=true)
       private final String agent;
 
-    public String getAgent() {
+    public String agent() {
         return this.agent;
     }
 

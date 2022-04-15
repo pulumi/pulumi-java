@@ -27,7 +27,7 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="acceleratorCount")
       private final @Nullable Output<Integer> acceleratorCount;
 
-    public Output<Integer> getAcceleratorCount() {
+    public Output<Integer> acceleratorCount() {
         return this.acceleratorCount == null ? Codegen.empty() : this.acceleratorCount;
     }
 
@@ -38,7 +38,7 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="acceleratorTypeUri")
       private final @Nullable Output<String> acceleratorTypeUri;
 
-    public Output<String> getAcceleratorTypeUri() {
+    public Output<String> acceleratorTypeUri() {
         return this.acceleratorTypeUri == null ? Codegen.empty() : this.acceleratorTypeUri;
     }
 

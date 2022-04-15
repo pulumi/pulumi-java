@@ -23,7 +23,7 @@ public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse exte
     @Import(name="bigqueryConnectionSpec", required=true)
       private final GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse bigqueryConnectionSpec;
 
-    public GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse getBigqueryConnectionSpec() {
+    public GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse bigqueryConnectionSpec() {
         return this.bigqueryConnectionSpec;
     }
 

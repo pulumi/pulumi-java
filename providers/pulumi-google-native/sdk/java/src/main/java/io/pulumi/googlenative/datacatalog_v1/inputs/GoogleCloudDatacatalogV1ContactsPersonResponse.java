@@ -23,7 +23,7 @@ public final class GoogleCloudDatacatalogV1ContactsPersonResponse extends io.pul
     @Import(name="designation", required=true)
       private final String designation;
 
-    public String getDesignation() {
+    public String designation() {
         return this.designation;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudDatacatalogV1ContactsPersonResponse extends io.pul
     @Import(name="email", required=true)
       private final String email;
 
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
 

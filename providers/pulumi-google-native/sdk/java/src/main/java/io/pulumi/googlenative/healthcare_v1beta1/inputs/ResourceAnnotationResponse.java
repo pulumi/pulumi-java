@@ -23,7 +23,7 @@ public final class ResourceAnnotationResponse extends io.pulumi.resources.Invoke
     @Import(name="label", required=true)
       private final String label;
 
-    public String getLabel() {
+    public String label() {
         return this.label;
     }
 

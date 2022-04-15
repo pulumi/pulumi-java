@@ -30,7 +30,7 @@ public class GameServerDeployment extends io.pulumi.resources.CustomResource {
      * @return The creation time.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -44,7 +44,7 @@ public class GameServerDeployment extends io.pulumi.resources.CustomResource {
      * @return Human readable description of the game server delpoyment.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -58,7 +58,7 @@ public class GameServerDeployment extends io.pulumi.resources.CustomResource {
      * @return ETag of the resource.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -72,7 +72,7 @@ public class GameServerDeployment extends io.pulumi.resources.CustomResource {
      * @return The labels associated with this game server deployment. Each label is a key-value pair.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -86,7 +86,7 @@ public class GameServerDeployment extends io.pulumi.resources.CustomResource {
      * @return The resource name of the game server deployment, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +100,7 @@ public class GameServerDeployment extends io.pulumi.resources.CustomResource {
      * @return The last-modified time.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

@@ -31,7 +31,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * @return Long form description of the use case for this AppProfile.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -45,7 +45,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * @return Strongly validated etag for optimistic concurrency control. Preserve the value returned from `GetAppProfile` when calling `UpdateAppProfile` to fail the request if there has been a modification in the mean time. The `update_mask` of the request need not include `etag` for this protection to apply. See [Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag) and [RFC 7232](https://tools.ietf.org/html/rfc7232#section-2.3) for more details.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -59,7 +59,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * @return Use a multi-cluster routing policy.
      * 
      */
-    public Output<MultiClusterRoutingUseAnyResponse> getMultiClusterRoutingUseAny() {
+    public Output<MultiClusterRoutingUseAnyResponse> multiClusterRoutingUseAny() {
         return this.multiClusterRoutingUseAny;
     }
     /**
@@ -73,7 +73,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * @return The unique name of the app profile. Values are of the form `projects/{project}/instances/{instance}/appProfiles/_a-zA-Z0-9*`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +87,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * @return Use a single-cluster routing policy.
      * 
      */
-    public Output<SingleClusterRoutingResponse> getSingleClusterRouting() {
+    public Output<SingleClusterRoutingResponse> singleClusterRouting() {
         return this.singleClusterRouting;
     }
 

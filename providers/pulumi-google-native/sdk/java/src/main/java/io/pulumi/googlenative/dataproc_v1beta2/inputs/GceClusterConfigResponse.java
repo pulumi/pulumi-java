@@ -29,7 +29,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
     @Import(name="internalIpOnly", required=true)
       private final Boolean internalIpOnly;
 
-    public Boolean getInternalIpOnly() {
+    public Boolean internalIpOnly() {
         return this.internalIpOnly;
     }
 
@@ -40,7 +40,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
     @Import(name="metadata", required=true)
       private final Map<String,String> metadata;
 
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata;
     }
 
@@ -51,7 +51,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
     @Import(name="networkUri", required=true)
       private final String networkUri;
 
-    public String getNetworkUri() {
+    public String networkUri() {
         return this.networkUri;
     }
 
@@ -62,7 +62,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
     @Import(name="nodeGroupAffinity", required=true)
       private final NodeGroupAffinityResponse nodeGroupAffinity;
 
-    public NodeGroupAffinityResponse getNodeGroupAffinity() {
+    public NodeGroupAffinityResponse nodeGroupAffinity() {
         return this.nodeGroupAffinity;
     }
 
@@ -73,7 +73,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
     @Import(name="privateIpv6GoogleAccess", required=true)
       private final String privateIpv6GoogleAccess;
 
-    public String getPrivateIpv6GoogleAccess() {
+    public String privateIpv6GoogleAccess() {
         return this.privateIpv6GoogleAccess;
     }
 
@@ -84,7 +84,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
     @Import(name="reservationAffinity", required=true)
       private final ReservationAffinityResponse reservationAffinity;
 
-    public ReservationAffinityResponse getReservationAffinity() {
+    public ReservationAffinityResponse reservationAffinity() {
         return this.reservationAffinity;
     }
 
@@ -95,7 +95,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
     @Import(name="serviceAccount", required=true)
       private final String serviceAccount;
 
-    public String getServiceAccount() {
+    public String serviceAccount() {
         return this.serviceAccount;
     }
 
@@ -106,7 +106,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
     @Import(name="serviceAccountScopes", required=true)
       private final List<String> serviceAccountScopes;
 
-    public List<String> getServiceAccountScopes() {
+    public List<String> serviceAccountScopes() {
         return this.serviceAccountScopes;
     }
 
@@ -117,7 +117,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
     @Import(name="shieldedInstanceConfig", required=true)
       private final ShieldedInstanceConfigResponse shieldedInstanceConfig;
 
-    public ShieldedInstanceConfigResponse getShieldedInstanceConfig() {
+    public ShieldedInstanceConfigResponse shieldedInstanceConfig() {
         return this.shieldedInstanceConfig;
     }
 
@@ -128,7 +128,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
     @Import(name="subnetworkUri", required=true)
       private final String subnetworkUri;
 
-    public String getSubnetworkUri() {
+    public String subnetworkUri() {
         return this.subnetworkUri;
     }
 
@@ -139,7 +139,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
     @Import(name="tags", required=true)
       private final List<String> tags;
 
-    public List<String> getTags() {
+    public List<String> tags() {
         return this.tags;
     }
 
@@ -150,7 +150,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
     @Import(name="zoneUri", required=true)
       private final String zoneUri;
 
-    public String getZoneUri() {
+    public String zoneUri() {
         return this.zoneUri;
     }
 

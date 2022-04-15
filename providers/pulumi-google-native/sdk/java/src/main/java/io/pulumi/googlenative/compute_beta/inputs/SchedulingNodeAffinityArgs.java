@@ -28,7 +28,7 @@ public final class SchedulingNodeAffinityArgs extends io.pulumi.resources.Resour
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
@@ -39,7 +39,7 @@ public final class SchedulingNodeAffinityArgs extends io.pulumi.resources.Resour
     @Import(name="operator")
       private final @Nullable Output<SchedulingNodeAffinityOperator> operator;
 
-    public Output<SchedulingNodeAffinityOperator> getOperator() {
+    public Output<SchedulingNodeAffinityOperator> operator() {
         return this.operator == null ? Codegen.empty() : this.operator;
     }
 
@@ -50,7 +50,7 @@ public final class SchedulingNodeAffinityArgs extends io.pulumi.resources.Resour
     @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values == null ? Codegen.empty() : this.values;
     }
 

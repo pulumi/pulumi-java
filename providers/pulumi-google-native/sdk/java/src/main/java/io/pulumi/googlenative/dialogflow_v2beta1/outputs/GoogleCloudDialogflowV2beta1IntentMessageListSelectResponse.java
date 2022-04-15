@@ -41,21 +41,21 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse {
      * List items.
      * 
     */
-    public List<GoogleCloudDialogflowV2beta1IntentMessageListSelectItemResponse> getItems() {
+    public List<GoogleCloudDialogflowV2beta1IntentMessageListSelectItemResponse> items() {
         return this.items;
     }
     /**
      * Optional. Subtitle of the list.
      * 
     */
-    public String getSubtitle() {
+    public String subtitle() {
         return this.subtitle;
     }
     /**
      * Optional. The overall title of the list.
      * 
     */
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

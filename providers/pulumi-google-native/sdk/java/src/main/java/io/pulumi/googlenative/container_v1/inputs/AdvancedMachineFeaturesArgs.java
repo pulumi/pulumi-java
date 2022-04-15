@@ -26,7 +26,7 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
     @Import(name="threadsPerCore")
       private final @Nullable Output<String> threadsPerCore;
 
-    public Output<String> getThreadsPerCore() {
+    public Output<String> threadsPerCore() {
         return this.threadsPerCore == null ? Codegen.empty() : this.threadsPerCore;
     }
 

@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse exten
     @Import(name="deltaPresenceEstimationHistogram", required=true)
       private final List<GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse> deltaPresenceEstimationHistogram;
 
-    public List<GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse> getDeltaPresenceEstimationHistogram() {
+    public List<GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse> deltaPresenceEstimationHistogram() {
         return this.deltaPresenceEstimationHistogram;
     }
 

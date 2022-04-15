@@ -20,7 +20,7 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
 
@@ -31,7 +31,7 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alternateEmail")
       private final @Nullable Output<String> alternateEmail;
 
-    public Output<String> getAlternateEmail() {
+    public Output<String> alternateEmail() {
         return this.alternateEmail == null ? Codegen.empty() : this.alternateEmail;
     }
 
@@ -42,14 +42,14 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="channelPartnerId")
       private final @Nullable Output<String> channelPartnerId;
 
-    public Output<String> getChannelPartnerId() {
+    public Output<String> channelPartnerId() {
         return this.channelPartnerId == null ? Codegen.empty() : this.channelPartnerId;
     }
 
     @Import(name="channelPartnerLinkId", required=true)
       private final Output<String> channelPartnerLinkId;
 
-    public Output<String> getChannelPartnerLinkId() {
+    public Output<String> channelPartnerLinkId() {
         return this.channelPartnerLinkId;
     }
 
@@ -60,7 +60,7 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domain", required=true)
       private final Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain;
     }
 
@@ -71,7 +71,7 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
-    public Output<String> getLanguageCode() {
+    public Output<String> languageCode() {
         return this.languageCode == null ? Codegen.empty() : this.languageCode;
     }
 
@@ -82,7 +82,7 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="orgDisplayName", required=true)
       private final Output<String> orgDisplayName;
 
-    public Output<String> getOrgDisplayName() {
+    public Output<String> orgDisplayName() {
         return this.orgDisplayName;
     }
 
@@ -93,7 +93,7 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="orgPostalAddress", required=true)
       private final Output<GoogleTypePostalAddressArgs> orgPostalAddress;
 
-    public Output<GoogleTypePostalAddressArgs> getOrgPostalAddress() {
+    public Output<GoogleTypePostalAddressArgs> orgPostalAddress() {
         return this.orgPostalAddress;
     }
 
@@ -104,7 +104,7 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="primaryContactInfo")
       private final @Nullable Output<GoogleCloudChannelV1ContactInfoArgs> primaryContactInfo;
 
-    public Output<GoogleCloudChannelV1ContactInfoArgs> getPrimaryContactInfo() {
+    public Output<GoogleCloudChannelV1ContactInfoArgs> primaryContactInfo() {
         return this.primaryContactInfo == null ? Codegen.empty() : this.primaryContactInfo;
     }
 

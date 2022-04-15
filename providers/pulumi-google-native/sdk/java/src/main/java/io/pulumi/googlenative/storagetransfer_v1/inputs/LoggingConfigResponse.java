@@ -25,7 +25,7 @@ public final class LoggingConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="enableOnpremGcsTransferLogs", required=true)
       private final Boolean enableOnpremGcsTransferLogs;
 
-    public Boolean getEnableOnpremGcsTransferLogs() {
+    public Boolean enableOnpremGcsTransferLogs() {
         return this.enableOnpremGcsTransferLogs;
     }
 
@@ -36,7 +36,7 @@ public final class LoggingConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="logActionStates", required=true)
       private final List<String> logActionStates;
 
-    public List<String> getLogActionStates() {
+    public List<String> logActionStates() {
         return this.logActionStates;
     }
 
@@ -47,7 +47,7 @@ public final class LoggingConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="logActions", required=true)
       private final List<String> logActions;
 
-    public List<String> getLogActions() {
+    public List<String> logActions() {
         return this.logActions;
     }
 

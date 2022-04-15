@@ -27,7 +27,7 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -38,7 +38,7 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="gcpZone")
       private final @Nullable Output<String> gcpZone;
 
-    public Output<String> getGcpZone() {
+    public Output<String> gcpZone() {
         return this.gcpZone == null ? Codegen.empty() : this.gcpZone;
     }
 
@@ -49,7 +49,7 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -60,7 +60,7 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
@@ -71,7 +71,7 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="peerProjectId")
       private final @Nullable Output<String> peerProjectId;
 
-    public Output<String> getPeerProjectId() {
+    public Output<String> peerProjectId() {
         return this.peerProjectId == null ? Codegen.empty() : this.peerProjectId;
     }
 
@@ -82,7 +82,7 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="state")
       private final @Nullable Output<InternalCheckerState> state;
 
-    public Output<InternalCheckerState> getState() {
+    public Output<InternalCheckerState> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

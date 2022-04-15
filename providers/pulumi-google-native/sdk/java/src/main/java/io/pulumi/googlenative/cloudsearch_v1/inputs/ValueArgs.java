@@ -25,42 +25,42 @@ public final class ValueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="booleanValue")
       private final @Nullable Output<Boolean> booleanValue;
 
-    public Output<Boolean> getBooleanValue() {
+    public Output<Boolean> booleanValue() {
         return this.booleanValue == null ? Codegen.empty() : this.booleanValue;
     }
 
     @Import(name="dateValue")
       private final @Nullable Output<DateArgs> dateValue;
 
-    public Output<DateArgs> getDateValue() {
+    public Output<DateArgs> dateValue() {
         return this.dateValue == null ? Codegen.empty() : this.dateValue;
     }
 
     @Import(name="doubleValue")
       private final @Nullable Output<Double> doubleValue;
 
-    public Output<Double> getDoubleValue() {
+    public Output<Double> doubleValue() {
         return this.doubleValue == null ? Codegen.empty() : this.doubleValue;
     }
 
     @Import(name="integerValue")
       private final @Nullable Output<String> integerValue;
 
-    public Output<String> getIntegerValue() {
+    public Output<String> integerValue() {
         return this.integerValue == null ? Codegen.empty() : this.integerValue;
     }
 
     @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;
 
-    public Output<String> getStringValue() {
+    public Output<String> stringValue() {
         return this.stringValue == null ? Codegen.empty() : this.stringValue;
     }
 
     @Import(name="timestampValue")
       private final @Nullable Output<String> timestampValue;
 
-    public Output<String> getTimestampValue() {
+    public Output<String> timestampValue() {
         return this.timestampValue == null ? Codegen.empty() : this.timestampValue;
     }
 

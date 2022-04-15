@@ -27,7 +27,7 @@ public final class MonitoringComponentConfigArgs extends io.pulumi.resources.Res
     @Import(name="enableComponents")
       private final @Nullable Output<List<MonitoringComponentConfigEnableComponentsItem>> enableComponents;
 
-    public Output<List<MonitoringComponentConfigEnableComponentsItem>> getEnableComponents() {
+    public Output<List<MonitoringComponentConfigEnableComponentsItem>> enableComponents() {
         return this.enableComponents == null ? Codegen.empty() : this.enableComponents;
     }
 

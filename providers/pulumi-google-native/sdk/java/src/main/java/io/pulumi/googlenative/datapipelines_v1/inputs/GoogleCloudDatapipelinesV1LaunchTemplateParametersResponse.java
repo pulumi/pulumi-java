@@ -26,7 +26,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
     @Import(name="environment", required=true)
       private final GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse environment;
 
-    public GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse getEnvironment() {
+    public GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse environment() {
         return this.environment;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
     @Import(name="jobName", required=true)
       private final String jobName;
 
-    public String getJobName() {
+    public String jobName() {
         return this.jobName;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
     @Import(name="parameters", required=true)
       private final Map<String,String> parameters;
 
-    public Map<String,String> getParameters() {
+    public Map<String,String> parameters() {
         return this.parameters;
     }
 
@@ -59,7 +59,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
     @Import(name="transformNameMapping", required=true)
       private final Map<String,String> transformNameMapping;
 
-    public Map<String,String> getTransformNameMapping() {
+    public Map<String,String> transformNameMapping() {
         return this.transformNameMapping;
     }
 
@@ -70,7 +70,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
     @Import(name="update", required=true)
       private final Boolean update;
 
-    public Boolean getUpdate() {
+    public Boolean update() {
         return this.update;
     }
 

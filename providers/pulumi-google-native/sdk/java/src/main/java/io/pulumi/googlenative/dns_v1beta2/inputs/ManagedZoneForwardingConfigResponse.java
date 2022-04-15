@@ -17,7 +17,7 @@ public final class ManagedZoneForwardingConfigResponse extends io.pulumi.resourc
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -28,7 +28,7 @@ public final class ManagedZoneForwardingConfigResponse extends io.pulumi.resourc
     @Import(name="targetNameServers", required=true)
       private final List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers;
 
-    public List<ManagedZoneForwardingConfigNameServerTargetResponse> getTargetNameServers() {
+    public List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers() {
         return this.targetNameServers;
     }
 

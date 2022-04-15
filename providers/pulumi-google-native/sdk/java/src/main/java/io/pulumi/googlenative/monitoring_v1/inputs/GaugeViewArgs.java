@@ -26,7 +26,7 @@ public final class GaugeViewArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lowerBound")
       private final @Nullable Output<Double> lowerBound;
 
-    public Output<Double> getLowerBound() {
+    public Output<Double> lowerBound() {
         return this.lowerBound == null ? Codegen.empty() : this.lowerBound;
     }
 
@@ -37,7 +37,7 @@ public final class GaugeViewArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="upperBound")
       private final @Nullable Output<Double> upperBound;
 
-    public Output<Double> getUpperBound() {
+    public Output<Double> upperBound() {
         return this.upperBound == null ? Codegen.empty() : this.upperBound;
     }
 

@@ -29,7 +29,7 @@ public class Provider extends io.pulumi.resources.ProviderResource {
      * @return The default project to manage resources in. If another project is specified on a resource, it will take precedence.
      * 
      */
-    public Output</* @Nullable */ String> getProject() {
+    public Output</* @Nullable */ String> project() {
         return this.project;
     }
     /**
@@ -43,7 +43,7 @@ public class Provider extends io.pulumi.resources.ProviderResource {
      * @return The default region to manage resources in. If another region is specified on a regional resource, it will take precedence.
      * 
      */
-    public Output</* @Nullable */ String> getRegion() {
+    public Output</* @Nullable */ String> region() {
         return this.region;
     }
     /**
@@ -57,7 +57,7 @@ public class Provider extends io.pulumi.resources.ProviderResource {
      * @return The default zone to manage resources in. Generally, this zone should be within the default region you specified. If another zone is specified on a zonal resource, it will take precedence.
      * 
      */
-    public Output</* @Nullable */ String> getZone() {
+    public Output</* @Nullable */ String> zone() {
         return this.zone;
     }
 

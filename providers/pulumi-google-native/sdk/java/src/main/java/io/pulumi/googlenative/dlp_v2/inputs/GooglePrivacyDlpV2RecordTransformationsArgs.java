@@ -28,7 +28,7 @@ public final class GooglePrivacyDlpV2RecordTransformationsArgs extends io.pulumi
     @Import(name="fieldTransformations")
       private final @Nullable Output<List<GooglePrivacyDlpV2FieldTransformationArgs>> fieldTransformations;
 
-    public Output<List<GooglePrivacyDlpV2FieldTransformationArgs>> getFieldTransformations() {
+    public Output<List<GooglePrivacyDlpV2FieldTransformationArgs>> fieldTransformations() {
         return this.fieldTransformations == null ? Codegen.empty() : this.fieldTransformations;
     }
 
@@ -39,7 +39,7 @@ public final class GooglePrivacyDlpV2RecordTransformationsArgs extends io.pulumi
     @Import(name="recordSuppressions")
       private final @Nullable Output<List<GooglePrivacyDlpV2RecordSuppressionArgs>> recordSuppressions;
 
-    public Output<List<GooglePrivacyDlpV2RecordSuppressionArgs>> getRecordSuppressions() {
+    public Output<List<GooglePrivacyDlpV2RecordSuppressionArgs>> recordSuppressions() {
         return this.recordSuppressions == null ? Codegen.empty() : this.recordSuppressions;
     }
 

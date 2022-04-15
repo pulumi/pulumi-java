@@ -25,7 +25,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
     @Import(name="annotatedDatasetDescription", required=true)
       private final String annotatedDatasetDescription;
 
-    public String getAnnotatedDatasetDescription() {
+    public String annotatedDatasetDescription() {
         return this.annotatedDatasetDescription;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
     @Import(name="annotatedDatasetDisplayName", required=true)
       private final String annotatedDatasetDisplayName;
 
-    public String getAnnotatedDatasetDisplayName() {
+    public String annotatedDatasetDisplayName() {
         return this.annotatedDatasetDisplayName;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
     @Import(name="contributorEmails", required=true)
       private final List<String> contributorEmails;
 
-    public List<String> getContributorEmails() {
+    public List<String> contributorEmails() {
         return this.contributorEmails;
     }
 
@@ -58,7 +58,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
     @Import(name="instruction", required=true)
       private final String instruction;
 
-    public String getInstruction() {
+    public String instruction() {
         return this.instruction;
     }
 
@@ -69,7 +69,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
     @Import(name="labelGroup", required=true)
       private final String labelGroup;
 
-    public String getLabelGroup() {
+    public String labelGroup() {
         return this.labelGroup;
     }
 
@@ -80,7 +80,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
     @Import(name="languageCode", required=true)
       private final String languageCode;
 
-    public String getLanguageCode() {
+    public String languageCode() {
         return this.languageCode;
     }
 
@@ -91,7 +91,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
     @Import(name="questionDuration", required=true)
       private final String questionDuration;
 
-    public String getQuestionDuration() {
+    public String questionDuration() {
         return this.questionDuration;
     }
 
@@ -102,7 +102,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
     @Import(name="replicaCount", required=true)
       private final Integer replicaCount;
 
-    public Integer getReplicaCount() {
+    public Integer replicaCount() {
         return this.replicaCount;
     }
 
@@ -113,7 +113,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
     @Import(name="userEmailAddress", required=true)
       private final String userEmailAddress;
 
-    public String getUserEmailAddress() {
+    public String userEmailAddress() {
         return this.userEmailAddress;
     }
 

@@ -29,7 +29,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
     @Import(name="dial")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs> dial;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs> getDial() {
+    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs> dial() {
         return this.dial == null ? Codegen.empty() : this.dial;
     }
 
@@ -40,7 +40,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
     @Import(name="openUrl")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriArgs> openUrl;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriArgs> getOpenUrl() {
+    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriArgs> openUrl() {
         return this.openUrl == null ? Codegen.empty() : this.openUrl;
     }
 
@@ -51,7 +51,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
     @Import(name="postbackData")
       private final @Nullable Output<String> postbackData;
 
-    public Output<String> getPostbackData() {
+    public Output<String> postbackData() {
         return this.postbackData == null ? Codegen.empty() : this.postbackData;
     }
 
@@ -62,7 +62,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
     @Import(name="shareLocation")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationArgs> shareLocation;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationArgs> getShareLocation() {
+    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationArgs> shareLocation() {
         return this.shareLocation == null ? Codegen.empty() : this.shareLocation;
     }
 
@@ -73,7 +73,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
     @Import(name="text")
       private final @Nullable Output<String> text;
 
-    public Output<String> getText() {
+    public Output<String> text() {
         return this.text == null ? Codegen.empty() : this.text;
     }
 

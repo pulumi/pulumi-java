@@ -25,7 +25,7 @@ public final class GoogleCloudRunOpV2ResourceRequirementsResponse extends io.pul
     @Import(name="cpuIdle", required=true)
       private final Boolean cpuIdle;
 
-    public Boolean getCpuIdle() {
+    public Boolean cpuIdle() {
         return this.cpuIdle;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudRunOpV2ResourceRequirementsResponse extends io.pul
     @Import(name="limits", required=true)
       private final Map<String,String> limits;
 
-    public Map<String,String> getLimits() {
+    public Map<String,String> limits() {
         return this.limits;
     }
 

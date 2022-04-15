@@ -64,42 +64,42 @@ public final class SparkSqlJobResponse {
      * Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
      * 
     */
-    public List<String> getJarFileUris() {
+    public List<String> jarFileUris() {
         return this.jarFileUris;
     }
     /**
      * Optional. The runtime log config for job execution.
      * 
     */
-    public LoggingConfigResponse getLoggingConfig() {
+    public LoggingConfigResponse loggingConfig() {
         return this.loggingConfig;
     }
     /**
      * Optional. A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
      * 
     */
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties;
     }
     /**
      * The HCFS URI of the script that contains SQL queries.
      * 
     */
-    public String getQueryFileUri() {
+    public String queryFileUri() {
         return this.queryFileUri;
     }
     /**
      * A list of queries.
      * 
     */
-    public QueryListResponse getQueryList() {
+    public QueryListResponse queryList() {
         return this.queryList;
     }
     /**
      * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).
      * 
     */
-    public Map<String,String> getScriptVariables() {
+    public Map<String,String> scriptVariables() {
         return this.scriptVariables;
     }
 

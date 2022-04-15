@@ -28,7 +28,7 @@ public final class OsConstraintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minimumVersion")
       private final @Nullable Output<String> minimumVersion;
 
-    public Output<String> getMinimumVersion() {
+    public Output<String> minimumVersion() {
         return this.minimumVersion == null ? Codegen.empty() : this.minimumVersion;
     }
 
@@ -39,7 +39,7 @@ public final class OsConstraintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="osType", required=true)
       private final Output<OsConstraintOsType> osType;
 
-    public Output<OsConstraintOsType> getOsType() {
+    public Output<OsConstraintOsType> osType() {
         return this.osType;
     }
 
@@ -50,7 +50,7 @@ public final class OsConstraintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requireVerifiedChromeOs")
       private final @Nullable Output<Boolean> requireVerifiedChromeOs;
 
-    public Output<Boolean> getRequireVerifiedChromeOs() {
+    public Output<Boolean> requireVerifiedChromeOs() {
         return this.requireVerifiedChromeOs == null ? Codegen.empty() : this.requireVerifiedChromeOs;
     }
 

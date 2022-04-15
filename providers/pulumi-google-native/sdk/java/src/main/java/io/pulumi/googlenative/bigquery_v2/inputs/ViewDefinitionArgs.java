@@ -25,7 +25,7 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="query")
       private final @Nullable Output<String> query;
 
-    public Output<String> getQuery() {
+    public Output<String> query() {
         return this.query == null ? Codegen.empty() : this.query;
     }
 
@@ -36,7 +36,7 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="useExplicitColumnNames")
       private final @Nullable Output<Boolean> useExplicitColumnNames;
 
-    public Output<Boolean> getUseExplicitColumnNames() {
+    public Output<Boolean> useExplicitColumnNames() {
         return this.useExplicitColumnNames == null ? Codegen.empty() : this.useExplicitColumnNames;
     }
 
@@ -47,7 +47,7 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="useLegacySql")
       private final @Nullable Output<Boolean> useLegacySql;
 
-    public Output<Boolean> getUseLegacySql() {
+    public Output<Boolean> useLegacySql() {
         return this.useLegacySql == null ? Codegen.empty() : this.useLegacySql;
     }
 
@@ -58,7 +58,7 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userDefinedFunctionResources")
       private final @Nullable Output<List<UserDefinedFunctionResourceArgs>> userDefinedFunctionResources;
 
-    public Output<List<UserDefinedFunctionResourceArgs>> getUserDefinedFunctionResources() {
+    public Output<List<UserDefinedFunctionResourceArgs>> userDefinedFunctionResources() {
         return this.userDefinedFunctionResources == null ? Codegen.empty() : this.userDefinedFunctionResources;
     }
 

@@ -23,7 +23,7 @@ public final class BuildArtifactResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="image", required=true)
       private final String image;
 
-    public String getImage() {
+    public String image() {
         return this.image;
     }
 
@@ -34,7 +34,7 @@ public final class BuildArtifactResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="tag", required=true)
       private final String tag;
 
-    public String getTag() {
+    public String tag() {
         return this.tag;
     }
 

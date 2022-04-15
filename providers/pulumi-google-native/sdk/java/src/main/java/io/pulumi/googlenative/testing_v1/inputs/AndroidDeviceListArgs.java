@@ -26,7 +26,7 @@ public final class AndroidDeviceListArgs extends io.pulumi.resources.ResourceArg
     @Import(name="androidDevices", required=true)
       private final Output<List<AndroidDeviceArgs>> androidDevices;
 
-    public Output<List<AndroidDeviceArgs>> getAndroidDevices() {
+    public Output<List<AndroidDeviceArgs>> androidDevices() {
         return this.androidDevices;
     }
 

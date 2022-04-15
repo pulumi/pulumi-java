@@ -24,7 +24,7 @@ public final class SoftwareRecipeStepCopyFileResponse extends io.pulumi.resource
     @Import(name="artifactId", required=true)
       private final String artifactId;
 
-    public String getArtifactId() {
+    public String artifactId() {
         return this.artifactId;
     }
 
@@ -35,7 +35,7 @@ public final class SoftwareRecipeStepCopyFileResponse extends io.pulumi.resource
     @Import(name="destination", required=true)
       private final String destination;
 
-    public String getDestination() {
+    public String destination() {
         return this.destination;
     }
 
@@ -46,7 +46,7 @@ public final class SoftwareRecipeStepCopyFileResponse extends io.pulumi.resource
     @Import(name="overwrite", required=true)
       private final Boolean overwrite;
 
-    public Boolean getOverwrite() {
+    public Boolean overwrite() {
         return this.overwrite;
     }
 
@@ -57,7 +57,7 @@ public final class SoftwareRecipeStepCopyFileResponse extends io.pulumi.resource
     @Import(name="permissions", required=true)
       private final String permissions;
 
-    public String getPermissions() {
+    public String permissions() {
         return this.permissions;
     }
 

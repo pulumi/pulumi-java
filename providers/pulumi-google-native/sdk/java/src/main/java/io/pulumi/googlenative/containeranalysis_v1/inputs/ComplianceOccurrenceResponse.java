@@ -21,14 +21,14 @@ public final class ComplianceOccurrenceResponse extends io.pulumi.resources.Invo
     @Import(name="nonComplianceReason", required=true)
       private final String nonComplianceReason;
 
-    public String getNonComplianceReason() {
+    public String nonComplianceReason() {
         return this.nonComplianceReason;
     }
 
     @Import(name="nonCompliantFiles", required=true)
       private final List<NonCompliantFileResponse> nonCompliantFiles;
 
-    public List<NonCompliantFileResponse> getNonCompliantFiles() {
+    public List<NonCompliantFileResponse> nonCompliantFiles() {
         return this.nonCompliantFiles;
     }
 

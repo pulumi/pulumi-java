@@ -42,21 +42,21 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigResponse {
      * Actions to execute at the completion of the job. Are executed in the order provided.
      * 
     */
-    public List<GooglePrivacyDlpV2ActionResponse> getActions() {
+    public List<GooglePrivacyDlpV2ActionResponse> actions() {
         return this.actions;
     }
     /**
      * Privacy metric to compute.
      * 
     */
-    public GooglePrivacyDlpV2PrivacyMetricResponse getPrivacyMetric() {
+    public GooglePrivacyDlpV2PrivacyMetricResponse privacyMetric() {
         return this.privacyMetric;
     }
     /**
      * Input dataset to compute metrics over.
      * 
     */
-    public GooglePrivacyDlpV2BigQueryTableResponse getSourceTable() {
+    public GooglePrivacyDlpV2BigQueryTableResponse sourceTable() {
         return this.sourceTable;
     }
 

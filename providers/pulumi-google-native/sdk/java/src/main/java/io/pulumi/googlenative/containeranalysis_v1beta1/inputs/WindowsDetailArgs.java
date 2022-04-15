@@ -24,7 +24,7 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cpeUri", required=true)
       private final Output<String> cpeUri;
 
-    public Output<String> getCpeUri() {
+    public Output<String> cpeUri() {
         return this.cpeUri;
     }
 
@@ -35,7 +35,7 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,7 +46,7 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fixingKbs", required=true)
       private final Output<List<KnowledgeBaseArgs>> fixingKbs;
 
-    public Output<List<KnowledgeBaseArgs>> getFixingKbs() {
+    public Output<List<KnowledgeBaseArgs>> fixingKbs() {
         return this.fixingKbs;
     }
 
@@ -57,7 +57,7 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

@@ -27,7 +27,7 @@ public final class RoboDirectiveArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="actionType", required=true)
       private final Output<RoboDirectiveActionType> actionType;
 
-    public Output<RoboDirectiveActionType> getActionType() {
+    public Output<RoboDirectiveActionType> actionType() {
         return this.actionType;
     }
 
@@ -38,7 +38,7 @@ public final class RoboDirectiveArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputText")
       private final @Nullable Output<String> inputText;
 
-    public Output<String> getInputText() {
+    public Output<String> inputText() {
         return this.inputText == null ? Codegen.empty() : this.inputText;
     }
 
@@ -49,7 +49,7 @@ public final class RoboDirectiveArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 

@@ -23,7 +23,7 @@ public final class EcKeyTypeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="signatureAlgorithm", required=true)
       private final String signatureAlgorithm;
 
-    public String getSignatureAlgorithm() {
+    public String signatureAlgorithm() {
         return this.signatureAlgorithm;
     }
 

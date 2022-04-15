@@ -29,7 +29,7 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
     @Import(name="complexity")
       private final @Nullable Output<PasswordValidationPolicyComplexity> complexity;
 
-    public Output<PasswordValidationPolicyComplexity> getComplexity() {
+    public Output<PasswordValidationPolicyComplexity> complexity() {
         return this.complexity == null ? Codegen.empty() : this.complexity;
     }
 
@@ -40,7 +40,7 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
     @Import(name="disallowUsernameSubstring")
       private final @Nullable Output<Boolean> disallowUsernameSubstring;
 
-    public Output<Boolean> getDisallowUsernameSubstring() {
+    public Output<Boolean> disallowUsernameSubstring() {
         return this.disallowUsernameSubstring == null ? Codegen.empty() : this.disallowUsernameSubstring;
     }
 
@@ -51,7 +51,7 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
     @Import(name="minLength")
       private final @Nullable Output<Integer> minLength;
 
-    public Output<Integer> getMinLength() {
+    public Output<Integer> minLength() {
         return this.minLength == null ? Codegen.empty() : this.minLength;
     }
 
@@ -62,7 +62,7 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
     @Import(name="passwordChangeInterval")
       private final @Nullable Output<String> passwordChangeInterval;
 
-    public Output<String> getPasswordChangeInterval() {
+    public Output<String> passwordChangeInterval() {
         return this.passwordChangeInterval == null ? Codegen.empty() : this.passwordChangeInterval;
     }
 
@@ -73,7 +73,7 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
     @Import(name="reuseInterval")
       private final @Nullable Output<Integer> reuseInterval;
 
-    public Output<Integer> getReuseInterval() {
+    public Output<Integer> reuseInterval() {
         return this.reuseInterval == null ? Codegen.empty() : this.reuseInterval;
     }
 

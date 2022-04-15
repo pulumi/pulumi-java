@@ -24,7 +24,7 @@ public final class ReusableConfigWrapperResponse extends io.pulumi.resources.Inv
     @Import(name="reusableConfig", required=true)
       private final String reusableConfig;
 
-    public String getReusableConfig() {
+    public String reusableConfig() {
         return this.reusableConfig;
     }
 
@@ -35,7 +35,7 @@ public final class ReusableConfigWrapperResponse extends io.pulumi.resources.Inv
     @Import(name="reusableConfigValues", required=true)
       private final ReusableConfigValuesResponse reusableConfigValues;
 
-    public ReusableConfigValuesResponse getReusableConfigValues() {
+    public ReusableConfigValuesResponse reusableConfigValues() {
         return this.reusableConfigValues;
     }
 

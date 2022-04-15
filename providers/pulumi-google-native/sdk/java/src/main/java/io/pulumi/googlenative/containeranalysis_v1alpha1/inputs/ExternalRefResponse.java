@@ -23,7 +23,7 @@ public final class ExternalRefResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="category", required=true)
       private final String category;
 
-    public String getCategory() {
+    public String category() {
         return this.category;
     }
 
@@ -34,7 +34,7 @@ public final class ExternalRefResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="comment", required=true)
       private final String comment;
 
-    public String getComment() {
+    public String comment() {
         return this.comment;
     }
 
@@ -45,7 +45,7 @@ public final class ExternalRefResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="locator", required=true)
       private final String locator;
 
-    public String getLocator() {
+    public String locator() {
         return this.locator;
     }
 
@@ -56,7 +56,7 @@ public final class ExternalRefResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

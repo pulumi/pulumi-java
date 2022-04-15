@@ -23,7 +23,7 @@ public final class PrivateConnectivityResponse extends io.pulumi.resources.Invok
     @Import(name="privateConnection", required=true)
       private final String privateConnection;
 
-    public String getPrivateConnection() {
+    public String privateConnection() {
         return this.privateConnection;
     }
 

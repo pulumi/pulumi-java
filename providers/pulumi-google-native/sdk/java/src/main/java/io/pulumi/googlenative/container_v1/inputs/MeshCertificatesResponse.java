@@ -23,7 +23,7 @@ public final class MeshCertificatesResponse extends io.pulumi.resources.InvokeAr
     @Import(name="enableCertificates", required=true)
       private final Boolean enableCertificates;
 
-    public Boolean getEnableCertificates() {
+    public Boolean enableCertificates() {
         return this.enableCertificates;
     }
 

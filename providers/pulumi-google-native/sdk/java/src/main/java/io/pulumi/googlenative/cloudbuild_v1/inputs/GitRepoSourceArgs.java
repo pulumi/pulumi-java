@@ -27,7 +27,7 @@ public final class GitRepoSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ref")
       private final @Nullable Output<String> ref;
 
-    public Output<String> getRef() {
+    public Output<String> ref() {
         return this.ref == null ? Codegen.empty() : this.ref;
     }
 
@@ -38,7 +38,7 @@ public final class GitRepoSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="repoType")
       private final @Nullable Output<GitRepoSourceRepoType> repoType;
 
-    public Output<GitRepoSourceRepoType> getRepoType() {
+    public Output<GitRepoSourceRepoType> repoType() {
         return this.repoType == null ? Codegen.empty() : this.repoType;
     }
 
@@ -49,7 +49,7 @@ public final class GitRepoSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri == null ? Codegen.empty() : this.uri;
     }
 

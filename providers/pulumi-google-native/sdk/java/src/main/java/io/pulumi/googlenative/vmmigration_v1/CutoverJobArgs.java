@@ -18,42 +18,42 @@ public final class CutoverJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cutoverJobId", required=true)
       private final Output<String> cutoverJobId;
 
-    public Output<String> getCutoverJobId() {
+    public Output<String> cutoverJobId() {
         return this.cutoverJobId;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="migratingVmId", required=true)
       private final Output<String> migratingVmId;
 
-    public Output<String> getMigratingVmId() {
+    public Output<String> migratingVmId() {
         return this.migratingVmId;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     @Import(name="sourceId", required=true)
       private final Output<String> sourceId;
 
-    public Output<String> getSourceId() {
+    public Output<String> sourceId() {
         return this.sourceId;
     }
 

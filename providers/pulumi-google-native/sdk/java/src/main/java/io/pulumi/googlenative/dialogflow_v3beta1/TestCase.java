@@ -35,7 +35,7 @@ public class TestCase extends io.pulumi.resources.CustomResource {
      * @return When the test was created.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -49,7 +49,7 @@ public class TestCase extends io.pulumi.resources.CustomResource {
      * @return The human-readable name of the test case, unique within the agent. Limit of 200 characters.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -63,7 +63,7 @@ public class TestCase extends io.pulumi.resources.CustomResource {
      * @return The latest test result.
      * 
      */
-    public Output<GoogleCloudDialogflowCxV3beta1TestCaseResultResponse> getLastTestResult() {
+    public Output<GoogleCloudDialogflowCxV3beta1TestCaseResultResponse> lastTestResult() {
         return this.lastTestResult;
     }
     /**
@@ -77,7 +77,7 @@ public class TestCase extends io.pulumi.resources.CustomResource {
      * @return The unique identifier of the test case. TestCases.CreateTestCase will populate the name automatically. Otherwise use format: `projects//locations//agents/ /testCases/`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -91,7 +91,7 @@ public class TestCase extends io.pulumi.resources.CustomResource {
      * @return Additional freeform notes about the test case. Limit of 400 characters.
      * 
      */
-    public Output<String> getNotes() {
+    public Output<String> notes() {
         return this.notes;
     }
     /**
@@ -105,7 +105,7 @@ public class TestCase extends io.pulumi.resources.CustomResource {
      * @return Tags are short descriptions that users may apply to test cases for organizational and filtering purposes. Each tag should start with "#" and has a limit of 30 characters.
      * 
      */
-    public Output<List<String>> getTags() {
+    public Output<List<String>> tags() {
         return this.tags;
     }
     /**
@@ -119,7 +119,7 @@ public class TestCase extends io.pulumi.resources.CustomResource {
      * @return The conversation turns uttered when the test case was created, in chronological order. These include the canonical set of agent utterances that should occur when the agent is working properly.
      * 
      */
-    public Output<List<GoogleCloudDialogflowCxV3beta1ConversationTurnResponse>> getTestCaseConversationTurns() {
+    public Output<List<GoogleCloudDialogflowCxV3beta1ConversationTurnResponse>> testCaseConversationTurns() {
         return this.testCaseConversationTurns;
     }
     /**
@@ -133,7 +133,7 @@ public class TestCase extends io.pulumi.resources.CustomResource {
      * @return Config for the test case.
      * 
      */
-    public Output<GoogleCloudDialogflowCxV3beta1TestConfigResponse> getTestConfig() {
+    public Output<GoogleCloudDialogflowCxV3beta1TestConfigResponse> testConfig() {
         return this.testConfig;
     }
 

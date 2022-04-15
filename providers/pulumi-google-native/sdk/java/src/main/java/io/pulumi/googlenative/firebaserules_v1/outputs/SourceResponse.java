@@ -25,7 +25,7 @@ public final class SourceResponse {
      * `File` set constituting the `Source` bundle.
      * 
     */
-    public List<FileResponse> getFiles() {
+    public List<FileResponse> files() {
         return this.files;
     }
 

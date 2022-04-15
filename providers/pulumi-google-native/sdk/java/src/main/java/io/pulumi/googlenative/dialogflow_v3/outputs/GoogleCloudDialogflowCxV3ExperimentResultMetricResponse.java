@@ -55,35 +55,35 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse {
      * The probability that the treatment is better than all other treatments in the experiment
      * 
     */
-    public GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse getConfidenceInterval() {
+    public GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse confidenceInterval() {
         return this.confidenceInterval;
     }
     /**
      * Count value of a metric.
      * 
     */
-    public Double getCount() {
+    public Double count() {
         return this.count;
     }
     /**
      * Count-based metric type. Only one of type or count_type is specified in each Metric.
      * 
     */
-    public String getCountType() {
+    public String countType() {
         return this.countType;
     }
     /**
      * Ratio value of a metric.
      * 
     */
-    public Double getRatio() {
+    public Double ratio() {
         return this.ratio;
     }
     /**
      * Ratio-based metric type. Only one of type or count_type is specified in each Metric.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -31,7 +31,7 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enumvalue")
       private final @Nullable Output<List<EnumValueArgs>> enumvalue;
 
-    public Output<List<EnumValueArgs>> getEnumvalue() {
+    public Output<List<EnumValueArgs>> enumvalue() {
         return this.enumvalue == null ? Codegen.empty() : this.enumvalue;
     }
 
@@ -42,7 +42,7 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -53,7 +53,7 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="options")
       private final @Nullable Output<List<OptionArgs>> options;
 
-    public Output<List<OptionArgs>> getOptions() {
+    public Output<List<OptionArgs>> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 
@@ -64,7 +64,7 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceContext")
       private final @Nullable Output<SourceContextArgs> sourceContext;
 
-    public Output<SourceContextArgs> getSourceContext() {
+    public Output<SourceContextArgs> sourceContext() {
         return this.sourceContext == null ? Codegen.empty() : this.sourceContext;
     }
 
@@ -75,7 +75,7 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="syntax")
       private final @Nullable Output<EnumSyntax> syntax;
 
-    public Output<EnumSyntax> getSyntax() {
+    public Output<EnumSyntax> syntax() {
         return this.syntax == null ? Codegen.empty() : this.syntax;
     }
 

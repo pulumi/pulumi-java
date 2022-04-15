@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2DocumentReloadStatusResponse extends i
     @Import(name="status", required=true)
       private final GoogleRpcStatusResponse status;
 
-    public GoogleRpcStatusResponse getStatus() {
+    public GoogleRpcStatusResponse status() {
         return this.status;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2DocumentReloadStatusResponse extends i
     @Import(name="time", required=true)
       private final String time;
 
-    public String getTime() {
+    public String time() {
         return this.time;
     }
 

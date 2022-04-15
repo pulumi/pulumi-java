@@ -23,7 +23,7 @@ public final class MaintenanceExclusionOptionsResponse extends io.pulumi.resourc
     @Import(name="scope", required=true)
       private final String scope;
 
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
 

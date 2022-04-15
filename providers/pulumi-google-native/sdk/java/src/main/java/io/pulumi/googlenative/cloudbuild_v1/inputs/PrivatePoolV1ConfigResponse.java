@@ -24,7 +24,7 @@ public final class PrivatePoolV1ConfigResponse extends io.pulumi.resources.Invok
     @Import(name="networkConfig", required=true)
       private final NetworkConfigResponse networkConfig;
 
-    public NetworkConfigResponse getNetworkConfig() {
+    public NetworkConfigResponse networkConfig() {
         return this.networkConfig;
     }
 
@@ -35,7 +35,7 @@ public final class PrivatePoolV1ConfigResponse extends io.pulumi.resources.Invok
     @Import(name="workerConfig", required=true)
       private final WorkerConfigResponse workerConfig;
 
-    public WorkerConfigResponse getWorkerConfig() {
+    public WorkerConfigResponse workerConfig() {
         return this.workerConfig;
     }
 

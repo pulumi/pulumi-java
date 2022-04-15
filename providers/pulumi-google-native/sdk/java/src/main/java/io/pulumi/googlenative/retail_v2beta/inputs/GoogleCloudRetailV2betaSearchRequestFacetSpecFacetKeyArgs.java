@@ -28,7 +28,7 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs ext
     @Import(name="contains")
       private final @Nullable Output<List<String>> contains;
 
-    public Output<List<String>> getContains() {
+    public Output<List<String>> contains() {
         return this.contains == null ? Codegen.empty() : this.contains;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs ext
     @Import(name="intervals")
       private final @Nullable Output<List<GoogleCloudRetailV2betaIntervalArgs>> intervals;
 
-    public Output<List<GoogleCloudRetailV2betaIntervalArgs>> getIntervals() {
+    public Output<List<GoogleCloudRetailV2betaIntervalArgs>> intervals() {
         return this.intervals == null ? Codegen.empty() : this.intervals;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs ext
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -61,7 +61,7 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs ext
     @Import(name="orderBy")
       private final @Nullable Output<String> orderBy;
 
-    public Output<String> getOrderBy() {
+    public Output<String> orderBy() {
         return this.orderBy == null ? Codegen.empty() : this.orderBy;
     }
 
@@ -72,7 +72,7 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs ext
     @Import(name="prefixes")
       private final @Nullable Output<List<String>> prefixes;
 
-    public Output<List<String>> getPrefixes() {
+    public Output<List<String>> prefixes() {
         return this.prefixes == null ? Codegen.empty() : this.prefixes;
     }
 
@@ -83,7 +83,7 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs ext
     @Import(name="query")
       private final @Nullable Output<String> query;
 
-    public Output<String> getQuery() {
+    public Output<String> query() {
         return this.query == null ? Codegen.empty() : this.query;
     }
 
@@ -94,7 +94,7 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs ext
     @Import(name="restrictedValues")
       private final @Nullable Output<List<String>> restrictedValues;
 
-    public Output<List<String>> getRestrictedValues() {
+    public Output<List<String>> restrictedValues() {
         return this.restrictedValues == null ? Codegen.empty() : this.restrictedValues;
     }
 

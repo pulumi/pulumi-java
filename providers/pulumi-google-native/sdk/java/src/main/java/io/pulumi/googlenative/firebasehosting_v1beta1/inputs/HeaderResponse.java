@@ -24,7 +24,7 @@ public final class HeaderResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="glob", required=true)
       private final String glob;
 
-    public String getGlob() {
+    public String glob() {
         return this.glob;
     }
 
@@ -35,7 +35,7 @@ public final class HeaderResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="headers", required=true)
       private final Map<String,String> headers;
 
-    public Map<String,String> getHeaders() {
+    public Map<String,String> headers() {
         return this.headers;
     }
 
@@ -46,7 +46,7 @@ public final class HeaderResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="regex", required=true)
       private final String regex;
 
-    public String getRegex() {
+    public String regex() {
         return this.regex;
     }
 

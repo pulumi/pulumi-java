@@ -39,7 +39,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="abort", required=true)
       private final AbortInfoResponse abort;
 
-    public AbortInfoResponse getAbort() {
+    public AbortInfoResponse abort() {
         return this.abort;
     }
 
@@ -50,7 +50,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="causesDrop", required=true)
       private final Boolean causesDrop;
 
-    public Boolean getCausesDrop() {
+    public Boolean causesDrop() {
         return this.causesDrop;
     }
 
@@ -61,7 +61,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="cloudSqlInstance", required=true)
       private final CloudSQLInstanceInfoResponse cloudSqlInstance;
 
-    public CloudSQLInstanceInfoResponse getCloudSqlInstance() {
+    public CloudSQLInstanceInfoResponse cloudSqlInstance() {
         return this.cloudSqlInstance;
     }
 
@@ -72,7 +72,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="deliver", required=true)
       private final DeliverInfoResponse deliver;
 
-    public DeliverInfoResponse getDeliver() {
+    public DeliverInfoResponse deliver() {
         return this.deliver;
     }
 
@@ -83,7 +83,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -94,7 +94,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="drop", required=true)
       private final DropInfoResponse drop;
 
-    public DropInfoResponse getDrop() {
+    public DropInfoResponse drop() {
         return this.drop;
     }
 
@@ -105,7 +105,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="endpoint", required=true)
       private final EndpointInfoResponse endpoint;
 
-    public EndpointInfoResponse getEndpoint() {
+    public EndpointInfoResponse endpoint() {
         return this.endpoint;
     }
 
@@ -116,7 +116,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="firewall", required=true)
       private final FirewallInfoResponse firewall;
 
-    public FirewallInfoResponse getFirewall() {
+    public FirewallInfoResponse firewall() {
         return this.firewall;
     }
 
@@ -127,7 +127,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="forward", required=true)
       private final ForwardInfoResponse forward;
 
-    public ForwardInfoResponse getForward() {
+    public ForwardInfoResponse forward() {
         return this.forward;
     }
 
@@ -138,7 +138,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="forwardingRule", required=true)
       private final ForwardingRuleInfoResponse forwardingRule;
 
-    public ForwardingRuleInfoResponse getForwardingRule() {
+    public ForwardingRuleInfoResponse forwardingRule() {
         return this.forwardingRule;
     }
 
@@ -149,7 +149,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="gkeMaster", required=true)
       private final GKEMasterInfoResponse gkeMaster;
 
-    public GKEMasterInfoResponse getGkeMaster() {
+    public GKEMasterInfoResponse gkeMaster() {
         return this.gkeMaster;
     }
 
@@ -160,7 +160,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="instance", required=true)
       private final InstanceInfoResponse instance;
 
-    public InstanceInfoResponse getInstance() {
+    public InstanceInfoResponse instance() {
         return this.instance;
     }
 
@@ -171,7 +171,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="loadBalancer", required=true)
       private final LoadBalancerInfoResponse loadBalancer;
 
-    public LoadBalancerInfoResponse getLoadBalancer() {
+    public LoadBalancerInfoResponse loadBalancer() {
         return this.loadBalancer;
     }
 
@@ -182,7 +182,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="network", required=true)
       private final NetworkInfoResponse network;
 
-    public NetworkInfoResponse getNetwork() {
+    public NetworkInfoResponse network() {
         return this.network;
     }
 
@@ -193,7 +193,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="project", required=true)
       private final String project;
 
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 
@@ -204,7 +204,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="route", required=true)
       private final RouteInfoResponse route;
 
-    public RouteInfoResponse getRoute() {
+    public RouteInfoResponse route() {
         return this.route;
     }
 
@@ -215,7 +215,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 
@@ -226,7 +226,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="vpnGateway", required=true)
       private final VpnGatewayInfoResponse vpnGateway;
 
-    public VpnGatewayInfoResponse getVpnGateway() {
+    public VpnGatewayInfoResponse vpnGateway() {
         return this.vpnGateway;
     }
 
@@ -237,7 +237,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="vpnTunnel", required=true)
       private final VpnTunnelInfoResponse vpnTunnel;
 
-    public VpnTunnelInfoResponse getVpnTunnel() {
+    public VpnTunnelInfoResponse vpnTunnel() {
         return this.vpnTunnel;
     }
 

@@ -34,7 +34,7 @@ public final class GoogleCloudRetailV2betaRuleArgs extends io.pulumi.resources.R
     @Import(name="boostAction")
       private final @Nullable Output<GoogleCloudRetailV2betaRuleBoostActionArgs> boostAction;
 
-    public Output<GoogleCloudRetailV2betaRuleBoostActionArgs> getBoostAction() {
+    public Output<GoogleCloudRetailV2betaRuleBoostActionArgs> boostAction() {
         return this.boostAction == null ? Codegen.empty() : this.boostAction;
     }
 
@@ -45,7 +45,7 @@ public final class GoogleCloudRetailV2betaRuleArgs extends io.pulumi.resources.R
     @Import(name="condition", required=true)
       private final Output<GoogleCloudRetailV2betaConditionArgs> condition;
 
-    public Output<GoogleCloudRetailV2betaConditionArgs> getCondition() {
+    public Output<GoogleCloudRetailV2betaConditionArgs> condition() {
         return this.condition;
     }
 
@@ -56,7 +56,7 @@ public final class GoogleCloudRetailV2betaRuleArgs extends io.pulumi.resources.R
     @Import(name="doNotAssociateAction")
       private final @Nullable Output<GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs> doNotAssociateAction;
 
-    public Output<GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs> getDoNotAssociateAction() {
+    public Output<GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs> doNotAssociateAction() {
         return this.doNotAssociateAction == null ? Codegen.empty() : this.doNotAssociateAction;
     }
 
@@ -67,7 +67,7 @@ public final class GoogleCloudRetailV2betaRuleArgs extends io.pulumi.resources.R
     @Import(name="filterAction")
       private final @Nullable Output<GoogleCloudRetailV2betaRuleFilterActionArgs> filterAction;
 
-    public Output<GoogleCloudRetailV2betaRuleFilterActionArgs> getFilterAction() {
+    public Output<GoogleCloudRetailV2betaRuleFilterActionArgs> filterAction() {
         return this.filterAction == null ? Codegen.empty() : this.filterAction;
     }
 
@@ -78,7 +78,7 @@ public final class GoogleCloudRetailV2betaRuleArgs extends io.pulumi.resources.R
     @Import(name="ignoreAction")
       private final @Nullable Output<GoogleCloudRetailV2betaRuleIgnoreActionArgs> ignoreAction;
 
-    public Output<GoogleCloudRetailV2betaRuleIgnoreActionArgs> getIgnoreAction() {
+    public Output<GoogleCloudRetailV2betaRuleIgnoreActionArgs> ignoreAction() {
         return this.ignoreAction == null ? Codegen.empty() : this.ignoreAction;
     }
 
@@ -89,7 +89,7 @@ public final class GoogleCloudRetailV2betaRuleArgs extends io.pulumi.resources.R
     @Import(name="onewaySynonymsAction")
       private final @Nullable Output<GoogleCloudRetailV2betaRuleOnewaySynonymsActionArgs> onewaySynonymsAction;
 
-    public Output<GoogleCloudRetailV2betaRuleOnewaySynonymsActionArgs> getOnewaySynonymsAction() {
+    public Output<GoogleCloudRetailV2betaRuleOnewaySynonymsActionArgs> onewaySynonymsAction() {
         return this.onewaySynonymsAction == null ? Codegen.empty() : this.onewaySynonymsAction;
     }
 
@@ -100,7 +100,7 @@ public final class GoogleCloudRetailV2betaRuleArgs extends io.pulumi.resources.R
     @Import(name="redirectAction")
       private final @Nullable Output<GoogleCloudRetailV2betaRuleRedirectActionArgs> redirectAction;
 
-    public Output<GoogleCloudRetailV2betaRuleRedirectActionArgs> getRedirectAction() {
+    public Output<GoogleCloudRetailV2betaRuleRedirectActionArgs> redirectAction() {
         return this.redirectAction == null ? Codegen.empty() : this.redirectAction;
     }
 
@@ -111,7 +111,7 @@ public final class GoogleCloudRetailV2betaRuleArgs extends io.pulumi.resources.R
     @Import(name="replacementAction")
       private final @Nullable Output<GoogleCloudRetailV2betaRuleReplacementActionArgs> replacementAction;
 
-    public Output<GoogleCloudRetailV2betaRuleReplacementActionArgs> getReplacementAction() {
+    public Output<GoogleCloudRetailV2betaRuleReplacementActionArgs> replacementAction() {
         return this.replacementAction == null ? Codegen.empty() : this.replacementAction;
     }
 
@@ -122,7 +122,7 @@ public final class GoogleCloudRetailV2betaRuleArgs extends io.pulumi.resources.R
     @Import(name="twowaySynonymsAction")
       private final @Nullable Output<GoogleCloudRetailV2betaRuleTwowaySynonymsActionArgs> twowaySynonymsAction;
 
-    public Output<GoogleCloudRetailV2betaRuleTwowaySynonymsActionArgs> getTwowaySynonymsAction() {
+    public Output<GoogleCloudRetailV2betaRuleTwowaySynonymsActionArgs> twowaySynonymsAction() {
         return this.twowaySynonymsAction == null ? Codegen.empty() : this.twowaySynonymsAction;
     }
 

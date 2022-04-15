@@ -20,7 +20,7 @@ public final class SecurityPolicyRuleMatcherConfigResponse extends io.pulumi.res
     @Import(name="srcIpRanges", required=true)
       private final List<String> srcIpRanges;
 
-    public List<String> getSrcIpRanges() {
+    public List<String> srcIpRanges() {
         return this.srcIpRanges;
     }
 

@@ -24,7 +24,7 @@ public class ResourceRecordSet extends io.pulumi.resources.CustomResource {
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -38,7 +38,7 @@ public class ResourceRecordSet extends io.pulumi.resources.CustomResource {
      * @return For example, www.example.com.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -52,7 +52,7 @@ public class ResourceRecordSet extends io.pulumi.resources.CustomResource {
      * @return Configures dynamic query responses based on geo location of querying user or a weighted round robin based routing policy. A ResourceRecordSet should only have either rrdata (static) or routing_policy (dynamic). An error is returned otherwise.
      * 
      */
-    public Output<RRSetRoutingPolicyResponse> getRoutingPolicy() {
+    public Output<RRSetRoutingPolicyResponse> routingPolicy() {
         return this.routingPolicy;
     }
     /**
@@ -66,7 +66,7 @@ public class ResourceRecordSet extends io.pulumi.resources.CustomResource {
      * @return As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1) -- see examples.
      * 
      */
-    public Output<List<String>> getRrdatas() {
+    public Output<List<String>> rrdatas() {
         return this.rrdatas;
     }
     /**
@@ -80,7 +80,7 @@ public class ResourceRecordSet extends io.pulumi.resources.CustomResource {
      * @return As defined in RFC 4034 (section 3.2).
      * 
      */
-    public Output<List<String>> getSignatureRrdatas() {
+    public Output<List<String>> signatureRrdatas() {
         return this.signatureRrdatas;
     }
     /**
@@ -94,7 +94,7 @@ public class ResourceRecordSet extends io.pulumi.resources.CustomResource {
      * @return Number of seconds that this ResourceRecordSet can be cached by resolvers.
      * 
      */
-    public Output<Integer> getTtl() {
+    public Output<Integer> ttl() {
         return this.ttl;
     }
     /**
@@ -108,7 +108,7 @@ public class ResourceRecordSet extends io.pulumi.resources.CustomResource {
      * @return The identifier of a supported record type. See the list of Supported DNS record types.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

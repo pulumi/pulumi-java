@@ -26,7 +26,7 @@ public final class GoogleCloudDatacatalogV1SystemTimestampsArgs extends io.pulum
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudDatacatalogV1SystemTimestampsArgs extends io.pulum
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 

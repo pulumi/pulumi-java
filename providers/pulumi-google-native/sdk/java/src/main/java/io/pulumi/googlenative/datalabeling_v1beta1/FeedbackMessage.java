@@ -31,7 +31,7 @@ public class FeedbackMessage extends io.pulumi.resources.CustomResource {
      * @return String content of the feedback. Maximum of 10000 characters.
      * 
      */
-    public Output<String> getBody() {
+    public Output<String> body() {
         return this.body;
     }
     /**
@@ -45,7 +45,7 @@ public class FeedbackMessage extends io.pulumi.resources.CustomResource {
      * @return Create time.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -59,7 +59,7 @@ public class FeedbackMessage extends io.pulumi.resources.CustomResource {
      * @return The image storing this feedback if the feedback is an image representing operator's comments.
      * 
      */
-    public Output<String> getImage() {
+    public Output<String> image() {
         return this.image;
     }
     /**
@@ -73,19 +73,19 @@ public class FeedbackMessage extends io.pulumi.resources.CustomResource {
      * @return Name of the feedback message in a feedback thread. Format: 'project/{project_id}/datasets/{dataset_id}/annotatedDatasets/{annotated_dataset_id}/feedbackThreads/{feedback_thread_id}/feedbackMessage/{feedback_message_id}'
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="operatorFeedbackMetadata", type=GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse.class, parameters={})
     private Output<GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse> operatorFeedbackMetadata;
 
-    public Output<GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse> getOperatorFeedbackMetadata() {
+    public Output<GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse> operatorFeedbackMetadata() {
         return this.operatorFeedbackMetadata;
     }
     @Export(name="requesterFeedbackMetadata", type=GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataResponse.class, parameters={})
     private Output<GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataResponse> requesterFeedbackMetadata;
 
-    public Output<GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataResponse> getRequesterFeedbackMetadata() {
+    public Output<GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataResponse> requesterFeedbackMetadata() {
         return this.requesterFeedbackMetadata;
     }
 

@@ -23,7 +23,7 @@ public final class KubernetesClusterStateResponse extends io.pulumi.resources.In
     @Import(name="agonesVersionInstalled", required=true)
       private final String agonesVersionInstalled;
 
-    public String getAgonesVersionInstalled() {
+    public String agonesVersionInstalled() {
         return this.agonesVersionInstalled;
     }
 
@@ -34,7 +34,7 @@ public final class KubernetesClusterStateResponse extends io.pulumi.resources.In
     @Import(name="agonesVersionTargeted", required=true)
       private final String agonesVersionTargeted;
 
-    public String getAgonesVersionTargeted() {
+    public String agonesVersionTargeted() {
         return this.agonesVersionTargeted;
     }
 
@@ -45,7 +45,7 @@ public final class KubernetesClusterStateResponse extends io.pulumi.resources.In
     @Import(name="installationState", required=true)
       private final String installationState;
 
-    public String getInstallationState() {
+    public String installationState() {
         return this.installationState;
     }
 
@@ -56,7 +56,7 @@ public final class KubernetesClusterStateResponse extends io.pulumi.resources.In
     @Import(name="kubernetesVersionInstalled", required=true)
       private final String kubernetesVersionInstalled;
 
-    public String getKubernetesVersionInstalled() {
+    public String kubernetesVersionInstalled() {
         return this.kubernetesVersionInstalled;
     }
 
@@ -67,7 +67,7 @@ public final class KubernetesClusterStateResponse extends io.pulumi.resources.In
     @Import(name="provider", required=true)
       private final String provider;
 
-    public String getProvider() {
+    public String provider() {
         return this.provider;
     }
 
@@ -78,7 +78,7 @@ public final class KubernetesClusterStateResponse extends io.pulumi.resources.In
     @Import(name="versionInstalledErrorMessage", required=true)
       private final String versionInstalledErrorMessage;
 
-    public String getVersionInstalledErrorMessage() {
+    public String versionInstalledErrorMessage() {
         return this.versionInstalledErrorMessage;
     }
 

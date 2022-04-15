@@ -60,42 +60,42 @@ public final class X509CertificateDetailsResponse {
      * The time the certificate becomes invalid.
      * 
     */
-    public String getExpiryTime() {
+    public String expiryTime() {
         return this.expiryTime;
     }
     /**
      * The entity that signed the certificate.
      * 
     */
-    public String getIssuer() {
+    public String issuer() {
         return this.issuer;
     }
     /**
      * The type of public key in the certificate.
      * 
     */
-    public String getPublicKeyType() {
+    public String publicKeyType() {
         return this.publicKeyType;
     }
     /**
      * The algorithm used to sign the certificate.
      * 
     */
-    public String getSignatureAlgorithm() {
+    public String signatureAlgorithm() {
         return this.signatureAlgorithm;
     }
     /**
      * The time the certificate becomes valid.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
     /**
      * The entity the certificate and public key belong to.
      * 
     */
-    public String getSubject() {
+    public String subject() {
         return this.subject;
     }
 

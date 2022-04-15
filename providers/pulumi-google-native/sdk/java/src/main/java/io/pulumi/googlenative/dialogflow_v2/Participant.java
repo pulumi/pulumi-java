@@ -32,7 +32,7 @@ public class Participant extends io.pulumi.resources.CustomResource {
      * @return Optional. Key-value filters on the metadata of documents returned by article suggestion. If specified, article suggestion only returns suggested documents that match all filters in their Document.metadata. Multiple values for a metadata key should be concatenated by comma. For example, filters to match all documents that have 'US' or 'CA' in their market metadata values and 'agent' in their user metadata values will be ```documents_metadata_filters { key: "market" value: "US,CA" } documents_metadata_filters { key: "user" value: "agent" }```
      * 
      */
-    public Output<Map<String,String>> getDocumentsMetadataFilters() {
+    public Output<Map<String,String>> documentsMetadataFilters() {
         return this.documentsMetadataFilters;
     }
     /**
@@ -46,7 +46,7 @@ public class Participant extends io.pulumi.resources.CustomResource {
      * @return Optional. The unique identifier of this participant. Format: `projects//locations//conversations//participants/`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -60,7 +60,7 @@ public class Participant extends io.pulumi.resources.CustomResource {
      * @return Immutable. The role this participant plays in the conversation. This field must be set during participant creation and is then immutable.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
     /**
@@ -74,7 +74,7 @@ public class Participant extends io.pulumi.resources.CustomResource {
      * @return Optional. Label applied to streams representing this participant in SIPREC XML metadata and SDP. This is used to assign transcriptions from that media stream to this participant. This field can be updated.
      * 
      */
-    public Output<String> getSipRecordingMediaLabel() {
+    public Output<String> sipRecordingMediaLabel() {
         return this.sipRecordingMediaLabel;
     }
 

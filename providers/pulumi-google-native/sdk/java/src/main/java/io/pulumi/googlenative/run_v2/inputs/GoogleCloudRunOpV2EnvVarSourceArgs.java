@@ -26,7 +26,7 @@ public final class GoogleCloudRunOpV2EnvVarSourceArgs extends io.pulumi.resource
     @Import(name="secretKeyRef")
       private final @Nullable Output<GoogleCloudRunOpV2SecretKeySelectorArgs> secretKeyRef;
 
-    public Output<GoogleCloudRunOpV2SecretKeySelectorArgs> getSecretKeyRef() {
+    public Output<GoogleCloudRunOpV2SecretKeySelectorArgs> secretKeyRef() {
         return this.secretKeyRef == null ? Codegen.empty() : this.secretKeyRef;
     }
 

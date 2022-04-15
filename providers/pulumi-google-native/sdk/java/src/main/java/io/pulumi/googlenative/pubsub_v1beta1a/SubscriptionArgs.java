@@ -24,7 +24,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ackDeadlineSeconds")
       private final @Nullable Output<Integer> ackDeadlineSeconds;
 
-    public Output<Integer> getAckDeadlineSeconds() {
+    public Output<Integer> ackDeadlineSeconds() {
         return this.ackDeadlineSeconds == null ? Codegen.empty() : this.ackDeadlineSeconds;
     }
 
@@ -35,7 +35,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -46,7 +46,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pushConfig")
       private final @Nullable Output<PushConfigArgs> pushConfig;
 
-    public Output<PushConfigArgs> getPushConfig() {
+    public Output<PushConfigArgs> pushConfig() {
         return this.pushConfig == null ? Codegen.empty() : this.pushConfig;
     }
 
@@ -57,7 +57,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="topic")
       private final @Nullable Output<String> topic;
 
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic == null ? Codegen.empty() : this.topic;
     }
 

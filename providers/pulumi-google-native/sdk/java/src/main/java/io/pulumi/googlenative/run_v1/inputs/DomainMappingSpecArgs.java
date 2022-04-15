@@ -28,7 +28,7 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
     @Import(name="certificateMode")
       private final @Nullable Output<DomainMappingSpecCertificateMode> certificateMode;
 
-    public Output<DomainMappingSpecCertificateMode> getCertificateMode() {
+    public Output<DomainMappingSpecCertificateMode> certificateMode() {
         return this.certificateMode == null ? Codegen.empty() : this.certificateMode;
     }
 
@@ -39,7 +39,7 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
     @Import(name="forceOverride")
       private final @Nullable Output<Boolean> forceOverride;
 
-    public Output<Boolean> getForceOverride() {
+    public Output<Boolean> forceOverride() {
         return this.forceOverride == null ? Codegen.empty() : this.forceOverride;
     }
 
@@ -50,7 +50,7 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
     @Import(name="routeName")
       private final @Nullable Output<String> routeName;
 
-    public Output<String> getRouteName() {
+    public Output<String> routeName() {
         return this.routeName == null ? Codegen.empty() : this.routeName;
     }
 

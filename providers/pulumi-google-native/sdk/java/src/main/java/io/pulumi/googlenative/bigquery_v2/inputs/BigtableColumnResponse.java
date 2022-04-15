@@ -20,7 +20,7 @@ public final class BigtableColumnResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="encoding", required=true)
       private final String encoding;
 
-    public String getEncoding() {
+    public String encoding() {
         return this.encoding;
     }
 
@@ -31,7 +31,7 @@ public final class BigtableColumnResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="fieldName", required=true)
       private final String fieldName;
 
-    public String getFieldName() {
+    public String fieldName() {
         return this.fieldName;
     }
 
@@ -42,7 +42,7 @@ public final class BigtableColumnResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="onlyReadLatest", required=true)
       private final Boolean onlyReadLatest;
 
-    public Boolean getOnlyReadLatest() {
+    public Boolean onlyReadLatest() {
         return this.onlyReadLatest;
     }
 
@@ -53,14 +53,14 @@ public final class BigtableColumnResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="qualifierEncoded", required=true)
       private final String qualifierEncoded;
 
-    public String getQualifierEncoded() {
+    public String qualifierEncoded() {
         return this.qualifierEncoded;
     }
 
     @Import(name="qualifierString", required=true)
       private final String qualifierString;
 
-    public String getQualifierString() {
+    public String qualifierString() {
         return this.qualifierString;
     }
 
@@ -71,7 +71,7 @@ public final class BigtableColumnResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

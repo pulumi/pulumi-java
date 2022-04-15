@@ -23,7 +23,7 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encoding")
       private final @Nullable Output<String> encoding;
 
-    public Output<String> getEncoding() {
+    public Output<String> encoding() {
         return this.encoding == null ? Codegen.empty() : this.encoding;
     }
 
@@ -34,7 +34,7 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fieldName")
       private final @Nullable Output<String> fieldName;
 
-    public Output<String> getFieldName() {
+    public Output<String> fieldName() {
         return this.fieldName == null ? Codegen.empty() : this.fieldName;
     }
 
@@ -45,7 +45,7 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="onlyReadLatest")
       private final @Nullable Output<Boolean> onlyReadLatest;
 
-    public Output<Boolean> getOnlyReadLatest() {
+    public Output<Boolean> onlyReadLatest() {
         return this.onlyReadLatest == null ? Codegen.empty() : this.onlyReadLatest;
     }
 
@@ -56,14 +56,14 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="qualifierEncoded")
       private final @Nullable Output<String> qualifierEncoded;
 
-    public Output<String> getQualifierEncoded() {
+    public Output<String> qualifierEncoded() {
         return this.qualifierEncoded == null ? Codegen.empty() : this.qualifierEncoded;
     }
 
     @Import(name="qualifierString")
       private final @Nullable Output<String> qualifierString;
 
-    public Output<String> getQualifierString() {
+    public Output<String> qualifierString() {
         return this.qualifierString == null ? Codegen.empty() : this.qualifierString;
     }
 
@@ -74,7 +74,7 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

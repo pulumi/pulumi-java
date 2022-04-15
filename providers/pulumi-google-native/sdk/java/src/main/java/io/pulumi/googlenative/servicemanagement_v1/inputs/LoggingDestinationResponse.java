@@ -24,7 +24,7 @@ public final class LoggingDestinationResponse extends io.pulumi.resources.Invoke
     @Import(name="logs", required=true)
       private final List<String> logs;
 
-    public List<String> getLogs() {
+    public List<String> logs() {
         return this.logs;
     }
 
@@ -35,7 +35,7 @@ public final class LoggingDestinationResponse extends io.pulumi.resources.Invoke
     @Import(name="monitoredResource", required=true)
       private final String monitoredResource;
 
-    public String getMonitoredResource() {
+    public String monitoredResource() {
         return this.monitoredResource;
     }
 

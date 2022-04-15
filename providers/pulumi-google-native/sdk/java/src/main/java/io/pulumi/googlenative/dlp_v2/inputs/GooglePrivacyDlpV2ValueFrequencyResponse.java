@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2ValueFrequencyResponse extends io.pulumi.re
     @Import(name="count", required=true)
       private final String count;
 
-    public String getCount() {
+    public String count() {
         return this.count;
     }
 
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2ValueFrequencyResponse extends io.pulumi.re
     @Import(name="value", required=true)
       private final GooglePrivacyDlpV2ValueResponse value;
 
-    public GooglePrivacyDlpV2ValueResponse getValue() {
+    public GooglePrivacyDlpV2ValueResponse value() {
         return this.value;
     }
 

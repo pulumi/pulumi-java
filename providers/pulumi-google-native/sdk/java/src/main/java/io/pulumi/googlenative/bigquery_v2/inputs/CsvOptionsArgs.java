@@ -23,7 +23,7 @@ public final class CsvOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowJaggedRows")
       private final @Nullable Output<Boolean> allowJaggedRows;
 
-    public Output<Boolean> getAllowJaggedRows() {
+    public Output<Boolean> allowJaggedRows() {
         return this.allowJaggedRows == null ? Codegen.empty() : this.allowJaggedRows;
     }
 
@@ -34,7 +34,7 @@ public final class CsvOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowQuotedNewlines")
       private final @Nullable Output<Boolean> allowQuotedNewlines;
 
-    public Output<Boolean> getAllowQuotedNewlines() {
+    public Output<Boolean> allowQuotedNewlines() {
         return this.allowQuotedNewlines == null ? Codegen.empty() : this.allowQuotedNewlines;
     }
 
@@ -45,7 +45,7 @@ public final class CsvOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encoding")
       private final @Nullable Output<String> encoding;
 
-    public Output<String> getEncoding() {
+    public Output<String> encoding() {
         return this.encoding == null ? Codegen.empty() : this.encoding;
     }
 
@@ -56,7 +56,7 @@ public final class CsvOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fieldDelimiter")
       private final @Nullable Output<String> fieldDelimiter;
 
-    public Output<String> getFieldDelimiter() {
+    public Output<String> fieldDelimiter() {
         return this.fieldDelimiter == null ? Codegen.empty() : this.fieldDelimiter;
     }
 
@@ -67,7 +67,7 @@ public final class CsvOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nullMarker")
       private final @Nullable Output<String> nullMarker;
 
-    public Output<String> getNullMarker() {
+    public Output<String> nullMarker() {
         return this.nullMarker == null ? Codegen.empty() : this.nullMarker;
     }
 
@@ -78,7 +78,7 @@ public final class CsvOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="quote")
       private final @Nullable Output<String> quote;
 
-    public Output<String> getQuote() {
+    public Output<String> quote() {
         return this.quote == null ? Codegen.empty() : this.quote;
     }
 
@@ -89,7 +89,7 @@ public final class CsvOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="skipLeadingRows")
       private final @Nullable Output<String> skipLeadingRows;
 
-    public Output<String> getSkipLeadingRows() {
+    public Output<String> skipLeadingRows() {
         return this.skipLeadingRows == null ? Codegen.empty() : this.skipLeadingRows;
     }
 

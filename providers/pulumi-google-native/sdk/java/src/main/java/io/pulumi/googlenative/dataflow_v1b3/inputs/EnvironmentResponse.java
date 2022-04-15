@@ -27,7 +27,7 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="clusterManagerApiService", required=true)
       private final String clusterManagerApiService;
 
-    public String getClusterManagerApiService() {
+    public String clusterManagerApiService() {
         return this.clusterManagerApiService;
     }
 
@@ -38,7 +38,7 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="dataset", required=true)
       private final String dataset;
 
-    public String getDataset() {
+    public String dataset() {
         return this.dataset;
     }
 
@@ -49,7 +49,7 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="debugOptions", required=true)
       private final DebugOptionsResponse debugOptions;
 
-    public DebugOptionsResponse getDebugOptions() {
+    public DebugOptionsResponse debugOptions() {
         return this.debugOptions;
     }
 
@@ -60,7 +60,7 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="experiments", required=true)
       private final List<String> experiments;
 
-    public List<String> getExperiments() {
+    public List<String> experiments() {
         return this.experiments;
     }
 
@@ -71,7 +71,7 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="flexResourceSchedulingGoal", required=true)
       private final String flexResourceSchedulingGoal;
 
-    public String getFlexResourceSchedulingGoal() {
+    public String flexResourceSchedulingGoal() {
         return this.flexResourceSchedulingGoal;
     }
 
@@ -82,7 +82,7 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="internalExperiments", required=true)
       private final Map<String,String> internalExperiments;
 
-    public Map<String,String> getInternalExperiments() {
+    public Map<String,String> internalExperiments() {
         return this.internalExperiments;
     }
 
@@ -93,7 +93,7 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sdkPipelineOptions", required=true)
       private final Map<String,String> sdkPipelineOptions;
 
-    public Map<String,String> getSdkPipelineOptions() {
+    public Map<String,String> sdkPipelineOptions() {
         return this.sdkPipelineOptions;
     }
 
@@ -104,7 +104,7 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="serviceAccountEmail", required=true)
       private final String serviceAccountEmail;
 
-    public String getServiceAccountEmail() {
+    public String serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
 
@@ -115,7 +115,7 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="serviceKmsKeyName", required=true)
       private final String serviceKmsKeyName;
 
-    public String getServiceKmsKeyName() {
+    public String serviceKmsKeyName() {
         return this.serviceKmsKeyName;
     }
 
@@ -126,7 +126,7 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="serviceOptions", required=true)
       private final List<String> serviceOptions;
 
-    public List<String> getServiceOptions() {
+    public List<String> serviceOptions() {
         return this.serviceOptions;
     }
 
@@ -137,7 +137,7 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="shuffleMode", required=true)
       private final String shuffleMode;
 
-    public String getShuffleMode() {
+    public String shuffleMode() {
         return this.shuffleMode;
     }
 
@@ -148,7 +148,7 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tempStoragePrefix", required=true)
       private final String tempStoragePrefix;
 
-    public String getTempStoragePrefix() {
+    public String tempStoragePrefix() {
         return this.tempStoragePrefix;
     }
 
@@ -159,7 +159,7 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="userAgent", required=true)
       private final Map<String,String> userAgent;
 
-    public Map<String,String> getUserAgent() {
+    public Map<String,String> userAgent() {
         return this.userAgent;
     }
 
@@ -170,7 +170,7 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="version", required=true)
       private final Map<String,String> version;
 
-    public Map<String,String> getVersion() {
+    public Map<String,String> version() {
         return this.version;
     }
 
@@ -181,7 +181,7 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="workerPools", required=true)
       private final List<WorkerPoolResponse> workerPools;
 
-    public List<WorkerPoolResponse> getWorkerPools() {
+    public List<WorkerPoolResponse> workerPools() {
         return this.workerPools;
     }
 
@@ -192,7 +192,7 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="workerRegion", required=true)
       private final String workerRegion;
 
-    public String getWorkerRegion() {
+    public String workerRegion() {
         return this.workerRegion;
     }
 
@@ -203,7 +203,7 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="workerZone", required=true)
       private final String workerZone;
 
-    public String getWorkerZone() {
+    public String workerZone() {
         return this.workerZone;
     }
 

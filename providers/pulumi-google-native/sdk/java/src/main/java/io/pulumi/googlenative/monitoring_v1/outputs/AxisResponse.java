@@ -32,14 +32,14 @@ public final class AxisResponse {
      * The label of the axis.
      * 
     */
-    public String getLabel() {
+    public String label() {
         return this.label;
     }
     /**
      * The axis scale. By default, a linear scale is used.
      * 
     */
-    public String getScale() {
+    public String scale() {
         return this.scale;
     }
 

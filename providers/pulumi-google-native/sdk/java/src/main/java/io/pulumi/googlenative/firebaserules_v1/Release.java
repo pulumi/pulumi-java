@@ -29,7 +29,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Time the release was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -43,7 +43,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Format: `projects/{project_id}/releases/{release_id}`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +57,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist the `Release` to be created.
      * 
      */
-    public Output<String> getRulesetName() {
+    public Output<String> rulesetName() {
         return this.rulesetName;
     }
     /**
@@ -71,7 +71,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @return Time the release was updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

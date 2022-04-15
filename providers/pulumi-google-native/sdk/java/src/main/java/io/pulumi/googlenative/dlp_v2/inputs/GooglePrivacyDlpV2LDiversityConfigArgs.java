@@ -27,7 +27,7 @@ public final class GooglePrivacyDlpV2LDiversityConfigArgs extends io.pulumi.reso
     @Import(name="quasiIds")
       private final @Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds;
 
-    public Output<List<GooglePrivacyDlpV2FieldIdArgs>> getQuasiIds() {
+    public Output<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds() {
         return this.quasiIds == null ? Codegen.empty() : this.quasiIds;
     }
 
@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2LDiversityConfigArgs extends io.pulumi.reso
     @Import(name="sensitiveAttribute")
       private final @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> sensitiveAttribute;
 
-    public Output<GooglePrivacyDlpV2FieldIdArgs> getSensitiveAttribute() {
+    public Output<GooglePrivacyDlpV2FieldIdArgs> sensitiveAttribute() {
         return this.sensitiveAttribute == null ? Codegen.empty() : this.sensitiveAttribute;
     }
 

@@ -25,7 +25,7 @@ public final class IngressToResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="operations", required=true)
       private final List<ApiOperationResponse> operations;
 
-    public List<ApiOperationResponse> getOperations() {
+    public List<ApiOperationResponse> operations() {
         return this.operations;
     }
 
@@ -36,7 +36,7 @@ public final class IngressToResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="resources", required=true)
       private final List<String> resources;
 
-    public List<String> getResources() {
+    public List<String> resources() {
         return this.resources;
     }
 

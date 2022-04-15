@@ -105,84 +105,84 @@ public final class GetCustomerResult {
      * Secondary contact email. You need to provide an alternate email to create different domains if a primary contact email already exists. Users will receive a notification with credentials when you create an admin.google.com account. Secondary emails are also recovery email addresses. Alternate emails are optional when you create Team customers.
      * 
     */
-    public String getAlternateEmail() {
+    public String alternateEmail() {
         return this.alternateEmail;
     }
     /**
      * Cloud Identity ID of the customer's channel partner. Populated only if a channel partner exists for this customer.
      * 
     */
-    public String getChannelPartnerId() {
+    public String channelPartnerId() {
         return this.channelPartnerId;
     }
     /**
      * The customer's Cloud Identity ID if the customer has a Cloud Identity resource.
      * 
     */
-    public String getCloudIdentityId() {
+    public String cloudIdentityId() {
         return this.cloudIdentityId;
     }
     /**
      * Cloud Identity information for the customer. Populated only if a Cloud Identity account exists for this customer.
      * 
     */
-    public GoogleCloudChannelV1CloudIdentityInfoResponse getCloudIdentityInfo() {
+    public GoogleCloudChannelV1CloudIdentityInfoResponse cloudIdentityInfo() {
         return this.cloudIdentityInfo;
     }
     /**
      * Time when the customer was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The customer's primary domain. Must match the primary contact email's domain.
      * 
     */
-    public String getDomain() {
+    public String domain() {
         return this.domain;
     }
     /**
      * Optional. The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
      * 
     */
-    public String getLanguageCode() {
+    public String languageCode() {
         return this.languageCode;
     }
     /**
      * Resource name of the customer. Format: accounts/{account_id}/customers/{customer_id}
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Name of the organization that the customer entity represents.
      * 
     */
-    public String getOrgDisplayName() {
+    public String orgDisplayName() {
         return this.orgDisplayName;
     }
     /**
      * The organization address for the customer. To enforce US laws and embargoes, we require a region and zip code. You must provide valid addresses for every customer. To set the customer's language, use the Customer-level language code.
      * 
     */
-    public GoogleTypePostalAddressResponse getOrgPostalAddress() {
+    public GoogleTypePostalAddressResponse orgPostalAddress() {
         return this.orgPostalAddress;
     }
     /**
      * Primary contact info.
      * 
     */
-    public GoogleCloudChannelV1ContactInfoResponse getPrimaryContactInfo() {
+    public GoogleCloudChannelV1ContactInfoResponse primaryContactInfo() {
         return this.primaryContactInfo;
     }
     /**
      * Time when the customer was updated.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

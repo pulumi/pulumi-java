@@ -26,7 +26,7 @@ public final class NodePoolDefaultsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="nodeConfigDefaults")
       private final @Nullable Output<NodeConfigDefaultsArgs> nodeConfigDefaults;
 
-    public Output<NodeConfigDefaultsArgs> getNodeConfigDefaults() {
+    public Output<NodeConfigDefaultsArgs> nodeConfigDefaults() {
         return this.nodeConfigDefaults == null ? Codegen.empty() : this.nodeConfigDefaults;
     }
 

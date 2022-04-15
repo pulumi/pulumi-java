@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2TriggerResponse extends io.pulumi.resources
     @Import(name="manual", required=true)
       private final GooglePrivacyDlpV2ManualResponse manual;
 
-    public GooglePrivacyDlpV2ManualResponse getManual() {
+    public GooglePrivacyDlpV2ManualResponse manual() {
         return this.manual;
     }
 
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2TriggerResponse extends io.pulumi.resources
     @Import(name="schedule", required=true)
       private final GooglePrivacyDlpV2ScheduleResponse schedule;
 
-    public GooglePrivacyDlpV2ScheduleResponse getSchedule() {
+    public GooglePrivacyDlpV2ScheduleResponse schedule() {
         return this.schedule;
     }
 

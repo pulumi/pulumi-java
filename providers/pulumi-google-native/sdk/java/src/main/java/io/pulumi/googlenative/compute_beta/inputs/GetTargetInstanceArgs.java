@@ -17,21 +17,21 @@ public final class GetTargetInstanceArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="targetInstance", required=true)
       private final String targetInstance;
 
-    public String getTargetInstance() {
+    public String targetInstance() {
         return this.targetInstance;
     }
 
     @Import(name="zone", required=true)
       private final String zone;
 
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

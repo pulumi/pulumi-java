@@ -27,7 +27,7 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends io.p
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -38,7 +38,7 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends io.p
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -49,7 +49,7 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends io.p
     @Import(name="ttl")
       private final @Nullable Output<DurationArgs> ttl;
 
-    public Output<DurationArgs> getTtl() {
+    public Output<DurationArgs> ttl() {
         return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 

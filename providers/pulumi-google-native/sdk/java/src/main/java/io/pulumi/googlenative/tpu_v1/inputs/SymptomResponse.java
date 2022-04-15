@@ -23,7 +23,7 @@ public final class SymptomResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="createTime", required=true)
       private final String createTime;
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
 
@@ -34,7 +34,7 @@ public final class SymptomResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="details", required=true)
       private final String details;
 
-    public String getDetails() {
+    public String details() {
         return this.details;
     }
 
@@ -45,7 +45,7 @@ public final class SymptomResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="symptomType", required=true)
       private final String symptomType;
 
-    public String getSymptomType() {
+    public String symptomType() {
         return this.symptomType;
     }
 
@@ -56,7 +56,7 @@ public final class SymptomResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="workerId", required=true)
       private final String workerId;
 
-    public String getWorkerId() {
+    public String workerId() {
         return this.workerId;
     }
 

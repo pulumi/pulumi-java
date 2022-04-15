@@ -25,7 +25,7 @@ public final class V1IamPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bindings")
       private final @Nullable Output<List<BindingArgs>> bindings;
 
-    public Output<List<BindingArgs>> getBindings() {
+    public Output<List<BindingArgs>> bindings() {
         return this.bindings == null ? Codegen.empty() : this.bindings;
     }
 
@@ -36,14 +36,14 @@ public final class V1IamPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="v1Id", required=true)
       private final Output<String> v1Id;
 
-    public Output<String> getV1Id() {
+    public Output<String> v1Id() {
         return this.v1Id;
     }
 
@@ -54,7 +54,7 @@ public final class V1IamPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<Integer> version;
 
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

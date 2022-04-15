@@ -15,21 +15,21 @@ public final class GetCanaryEvaluationArgs extends io.pulumi.resources.InvokeArg
     @Import(name="canaryevaluationId", required=true)
       private final String canaryevaluationId;
 
-    public String getCanaryevaluationId() {
+    public String canaryevaluationId() {
         return this.canaryevaluationId;
     }
 
     @Import(name="instanceId", required=true)
       private final String instanceId;
 
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
 
     @Import(name="organizationId", required=true)
       private final String organizationId;
 
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 

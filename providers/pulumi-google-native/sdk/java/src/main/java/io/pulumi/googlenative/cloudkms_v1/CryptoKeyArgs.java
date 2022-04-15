@@ -26,14 +26,14 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cryptoKeyBackend")
       private final @Nullable Output<String> cryptoKeyBackend;
 
-    public Output<String> getCryptoKeyBackend() {
+    public Output<String> cryptoKeyBackend() {
         return this.cryptoKeyBackend == null ? Codegen.empty() : this.cryptoKeyBackend;
     }
 
     @Import(name="cryptoKeyId", required=true)
       private final Output<String> cryptoKeyId;
 
-    public Output<String> getCryptoKeyId() {
+    public Output<String> cryptoKeyId() {
         return this.cryptoKeyId;
     }
 
@@ -44,7 +44,7 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destroyScheduledDuration")
       private final @Nullable Output<String> destroyScheduledDuration;
 
-    public Output<String> getDestroyScheduledDuration() {
+    public Output<String> destroyScheduledDuration() {
         return this.destroyScheduledDuration == null ? Codegen.empty() : this.destroyScheduledDuration;
     }
 
@@ -55,14 +55,14 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="importOnly")
       private final @Nullable Output<Boolean> importOnly;
 
-    public Output<Boolean> getImportOnly() {
+    public Output<Boolean> importOnly() {
         return this.importOnly == null ? Codegen.empty() : this.importOnly;
     }
 
     @Import(name="keyRingId", required=true)
       private final Output<String> keyRingId;
 
-    public Output<String> getKeyRingId() {
+    public Output<String> keyRingId() {
         return this.keyRingId;
     }
 
@@ -73,14 +73,14 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -91,14 +91,14 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nextRotationTime")
       private final @Nullable Output<String> nextRotationTime;
 
-    public Output<String> getNextRotationTime() {
+    public Output<String> nextRotationTime() {
         return this.nextRotationTime == null ? Codegen.empty() : this.nextRotationTime;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -109,7 +109,7 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="purpose")
       private final @Nullable Output<CryptoKeyPurpose> purpose;
 
-    public Output<CryptoKeyPurpose> getPurpose() {
+    public Output<CryptoKeyPurpose> purpose() {
         return this.purpose == null ? Codegen.empty() : this.purpose;
     }
 
@@ -120,14 +120,14 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rotationPeriod")
       private final @Nullable Output<String> rotationPeriod;
 
-    public Output<String> getRotationPeriod() {
+    public Output<String> rotationPeriod() {
         return this.rotationPeriod == null ? Codegen.empty() : this.rotationPeriod;
     }
 
     @Import(name="skipInitialVersionCreation")
       private final @Nullable Output<String> skipInitialVersionCreation;
 
-    public Output<String> getSkipInitialVersionCreation() {
+    public Output<String> skipInitialVersionCreation() {
         return this.skipInitialVersionCreation == null ? Codegen.empty() : this.skipInitialVersionCreation;
     }
 
@@ -138,7 +138,7 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="versionTemplate")
       private final @Nullable Output<CryptoKeyVersionTemplateArgs> versionTemplate;
 
-    public Output<CryptoKeyVersionTemplateArgs> getVersionTemplate() {
+    public Output<CryptoKeyVersionTemplateArgs> versionTemplate() {
         return this.versionTemplate == null ? Codegen.empty() : this.versionTemplate;
     }
 

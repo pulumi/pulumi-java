@@ -23,7 +23,7 @@ public final class WarningResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="priority", required=true)
       private final String priority;
 
-    public String getPriority() {
+    public String priority() {
         return this.priority;
     }
 
@@ -34,7 +34,7 @@ public final class WarningResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="text", required=true)
       private final String text;
 
-    public String getText() {
+    public String text() {
         return this.text;
     }
 

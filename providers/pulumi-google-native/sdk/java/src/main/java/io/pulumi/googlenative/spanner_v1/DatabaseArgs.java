@@ -25,7 +25,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createStatement", required=true)
       private final Output<String> createStatement;
 
-    public Output<String> getCreateStatement() {
+    public Output<String> createStatement() {
         return this.createStatement;
     }
 
@@ -36,7 +36,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseDialect")
       private final @Nullable Output<DatabaseDatabaseDialect> databaseDialect;
 
-    public Output<DatabaseDatabaseDialect> getDatabaseDialect() {
+    public Output<DatabaseDatabaseDialect> databaseDialect() {
         return this.databaseDialect == null ? Codegen.empty() : this.databaseDialect;
     }
 
@@ -47,7 +47,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptionConfig")
       private final @Nullable Output<EncryptionConfigArgs> encryptionConfig;
 
-    public Output<EncryptionConfigArgs> getEncryptionConfig() {
+    public Output<EncryptionConfigArgs> encryptionConfig() {
         return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
     }
 
@@ -58,21 +58,21 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="extraStatements")
       private final @Nullable Output<List<String>> extraStatements;
 
-    public Output<List<String>> getExtraStatements() {
+    public Output<List<String>> extraStatements() {
         return this.extraStatements == null ? Codegen.empty() : this.extraStatements;
     }
 
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

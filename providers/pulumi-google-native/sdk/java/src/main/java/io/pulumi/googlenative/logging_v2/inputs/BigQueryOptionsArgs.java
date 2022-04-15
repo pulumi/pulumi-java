@@ -26,7 +26,7 @@ public final class BigQueryOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="usePartitionedTables")
       private final @Nullable Output<Boolean> usePartitionedTables;
 
-    public Output<Boolean> getUsePartitionedTables() {
+    public Output<Boolean> usePartitionedTables() {
         return this.usePartitionedTables == null ? Codegen.empty() : this.usePartitionedTables;
     }
 

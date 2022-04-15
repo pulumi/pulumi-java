@@ -19,7 +19,7 @@ public final class SubsettingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="policy", required=true)
       private final String policy;
 
-    public String getPolicy() {
+    public String policy() {
         return this.policy;
     }
 

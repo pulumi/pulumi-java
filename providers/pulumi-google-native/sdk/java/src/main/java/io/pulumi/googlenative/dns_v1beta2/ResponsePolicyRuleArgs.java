@@ -24,14 +24,14 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="behavior")
       private final @Nullable Output<ResponsePolicyRuleBehavior> behavior;
 
-    public Output<ResponsePolicyRuleBehavior> getBehavior() {
+    public Output<ResponsePolicyRuleBehavior> behavior() {
         return this.behavior == null ? Codegen.empty() : this.behavior;
     }
 
     @Import(name="clientOperationId")
       private final @Nullable Output<String> clientOperationId;
 
-    public Output<String> getClientOperationId() {
+    public Output<String> clientOperationId() {
         return this.clientOperationId == null ? Codegen.empty() : this.clientOperationId;
     }
 
@@ -42,14 +42,14 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
 
-    public Output<String> getDnsName() {
+    public Output<String> dnsName() {
         return this.dnsName == null ? Codegen.empty() : this.dnsName;
     }
 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -60,21 +60,21 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="localData")
       private final @Nullable Output<ResponsePolicyRuleLocalDataArgs> localData;
 
-    public Output<ResponsePolicyRuleLocalDataArgs> getLocalData() {
+    public Output<ResponsePolicyRuleLocalDataArgs> localData() {
         return this.localData == null ? Codegen.empty() : this.localData;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="responsePolicy", required=true)
       private final Output<String> responsePolicy;
 
-    public Output<String> getResponsePolicy() {
+    public Output<String> responsePolicy() {
         return this.responsePolicy;
     }
 
@@ -85,7 +85,7 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
-    public Output<String> getRuleName() {
+    public Output<String> ruleName() {
         return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 

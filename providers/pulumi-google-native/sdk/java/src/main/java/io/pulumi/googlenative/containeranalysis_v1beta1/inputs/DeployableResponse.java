@@ -24,7 +24,7 @@ public final class DeployableResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceUri", required=true)
       private final List<String> resourceUri;
 
-    public List<String> getResourceUri() {
+    public List<String> resourceUri() {
         return this.resourceUri;
     }
 

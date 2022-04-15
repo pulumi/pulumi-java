@@ -32,14 +32,14 @@ public final class NormalizedVertexResponse {
      * X coordinate.
      * 
     */
-    public Double getX() {
+    public Double x() {
         return this.x;
     }
     /**
      * Y coordinate.
      * 
     */
-    public Double getY() {
+    public Double y() {
         return this.y;
     }
 

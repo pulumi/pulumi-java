@@ -25,7 +25,7 @@ public final class OSPolicyResourceGroupResponse extends io.pulumi.resources.Inv
     @Import(name="inventoryFilters", required=true)
       private final List<OSPolicyInventoryFilterResponse> inventoryFilters;
 
-    public List<OSPolicyInventoryFilterResponse> getInventoryFilters() {
+    public List<OSPolicyInventoryFilterResponse> inventoryFilters() {
         return this.inventoryFilters;
     }
 
@@ -36,7 +36,7 @@ public final class OSPolicyResourceGroupResponse extends io.pulumi.resources.Inv
     @Import(name="resources", required=true)
       private final List<OSPolicyResourceResponse> resources;
 
-    public List<OSPolicyResourceResponse> getResources() {
+    public List<OSPolicyResourceResponse> resources() {
         return this.resources;
     }
 

@@ -29,7 +29,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecArgs extends io.pulumi.resour
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -40,7 +40,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecArgs extends io.pulumi.resour
     @Import(name="inheritFromParent")
       private final @Nullable Output<Boolean> inheritFromParent;
 
-    public Output<Boolean> getInheritFromParent() {
+    public Output<Boolean> inheritFromParent() {
         return this.inheritFromParent == null ? Codegen.empty() : this.inheritFromParent;
     }
 
@@ -51,7 +51,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecArgs extends io.pulumi.resour
     @Import(name="reset")
       private final @Nullable Output<Boolean> reset;
 
-    public Output<Boolean> getReset() {
+    public Output<Boolean> reset() {
         return this.reset == null ? Codegen.empty() : this.reset;
     }
 
@@ -62,7 +62,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecArgs extends io.pulumi.resour
     @Import(name="rules")
       private final @Nullable Output<List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs>> rules;
 
-    public Output<List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs>> getRules() {
+    public Output<List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 

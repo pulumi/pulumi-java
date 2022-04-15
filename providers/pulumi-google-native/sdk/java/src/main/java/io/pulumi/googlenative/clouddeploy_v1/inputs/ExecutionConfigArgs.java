@@ -30,7 +30,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="artifactStorage")
       private final @Nullable Output<String> artifactStorage;
 
-    public Output<String> getArtifactStorage() {
+    public Output<String> artifactStorage() {
         return this.artifactStorage == null ? Codegen.empty() : this.artifactStorage;
     }
 
@@ -41,7 +41,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="defaultPool")
       private final @Nullable Output<DefaultPoolArgs> defaultPool;
 
-    public Output<DefaultPoolArgs> getDefaultPool() {
+    public Output<DefaultPoolArgs> defaultPool() {
         return this.defaultPool == null ? Codegen.empty() : this.defaultPool;
     }
 
@@ -52,7 +52,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="privatePool")
       private final @Nullable Output<PrivatePoolArgs> privatePool;
 
-    public Output<PrivatePoolArgs> getPrivatePool() {
+    public Output<PrivatePoolArgs> privatePool() {
         return this.privatePool == null ? Codegen.empty() : this.privatePool;
     }
 
@@ -63,7 +63,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
@@ -74,7 +74,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="usages", required=true)
       private final Output<List<ExecutionConfigUsagesItem>> usages;
 
-    public Output<List<ExecutionConfigUsagesItem>> getUsages() {
+    public Output<List<ExecutionConfigUsagesItem>> usages() {
         return this.usages;
     }
 
@@ -85,7 +85,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="workerPool")
       private final @Nullable Output<String> workerPool;
 
-    public Output<String> getWorkerPool() {
+    public Output<String> workerPool() {
         return this.workerPool == null ? Codegen.empty() : this.workerPool;
     }
 

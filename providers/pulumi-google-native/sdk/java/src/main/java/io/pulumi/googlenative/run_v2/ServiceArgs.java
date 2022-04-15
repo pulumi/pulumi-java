@@ -29,7 +29,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> getAnnotations() {
+    public Output<Map<String,String>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -40,7 +40,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="binaryAuthorization")
       private final @Nullable Output<GoogleCloudRunOpV2BinaryAuthorizationArgs> binaryAuthorization;
 
-    public Output<GoogleCloudRunOpV2BinaryAuthorizationArgs> getBinaryAuthorization() {
+    public Output<GoogleCloudRunOpV2BinaryAuthorizationArgs> binaryAuthorization() {
         return this.binaryAuthorization == null ? Codegen.empty() : this.binaryAuthorization;
     }
 
@@ -51,7 +51,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="client")
       private final @Nullable Output<String> client;
 
-    public Output<String> getClient() {
+    public Output<String> client() {
         return this.client == null ? Codegen.empty() : this.client;
     }
 
@@ -62,7 +62,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientVersion")
       private final @Nullable Output<String> clientVersion;
 
-    public Output<String> getClientVersion() {
+    public Output<String> clientVersion() {
         return this.clientVersion == null ? Codegen.empty() : this.clientVersion;
     }
 
@@ -73,7 +73,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -84,7 +84,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ingress")
       private final @Nullable Output<ServiceIngress> ingress;
 
-    public Output<ServiceIngress> getIngress() {
+    public Output<ServiceIngress> ingress() {
         return this.ingress == null ? Codegen.empty() : this.ingress;
     }
 
@@ -95,7 +95,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -106,14 +106,14 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="launchStage")
       private final @Nullable Output<ServiceLaunchStage> launchStage;
 
-    public Output<ServiceLaunchStage> getLaunchStage() {
+    public Output<ServiceLaunchStage> launchStage() {
         return this.launchStage == null ? Codegen.empty() : this.launchStage;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -124,21 +124,21 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="serviceId", required=true)
       private final Output<String> serviceId;
 
-    public Output<String> getServiceId() {
+    public Output<String> serviceId() {
         return this.serviceId;
     }
 
@@ -149,7 +149,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="template", required=true)
       private final Output<GoogleCloudRunOpV2RevisionTemplateArgs> template;
 
-    public Output<GoogleCloudRunOpV2RevisionTemplateArgs> getTemplate() {
+    public Output<GoogleCloudRunOpV2RevisionTemplateArgs> template() {
         return this.template;
     }
 
@@ -160,14 +160,14 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="traffic")
       private final @Nullable Output<List<GoogleCloudRunOpV2TrafficTargetArgs>> traffic;
 
-    public Output<List<GoogleCloudRunOpV2TrafficTargetArgs>> getTraffic() {
+    public Output<List<GoogleCloudRunOpV2TrafficTargetArgs>> traffic() {
         return this.traffic == null ? Codegen.empty() : this.traffic;
     }
 
     @Import(name="validateOnly")
       private final @Nullable Output<String> validateOnly;
 
-    public Output<String> getValidateOnly() {
+    public Output<String> validateOnly() {
         return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
     }
 

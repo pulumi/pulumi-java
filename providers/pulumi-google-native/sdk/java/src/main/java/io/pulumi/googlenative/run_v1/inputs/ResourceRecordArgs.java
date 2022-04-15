@@ -27,7 +27,7 @@ public final class ResourceRecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -38,7 +38,7 @@ public final class ResourceRecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rrdata")
       private final @Nullable Output<String> rrdata;
 
-    public Output<String> getRrdata() {
+    public Output<String> rrdata() {
         return this.rrdata == null ? Codegen.empty() : this.rrdata;
     }
 
@@ -49,7 +49,7 @@ public final class ResourceRecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<ResourceRecordType> type;
 
-    public Output<ResourceRecordType> getType() {
+    public Output<ResourceRecordType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

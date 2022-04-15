@@ -28,7 +28,7 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configurationName")
       private final @Nullable Output<String> configurationName;
 
-    public Output<String> getConfigurationName() {
+    public Output<String> configurationName() {
         return this.configurationName == null ? Codegen.empty() : this.configurationName;
     }
 
@@ -39,7 +39,7 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="latestRevision")
       private final @Nullable Output<Boolean> latestRevision;
 
-    public Output<Boolean> getLatestRevision() {
+    public Output<Boolean> latestRevision() {
         return this.latestRevision == null ? Codegen.empty() : this.latestRevision;
     }
 
@@ -50,7 +50,7 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="percent")
       private final @Nullable Output<Integer> percent;
 
-    public Output<Integer> getPercent() {
+    public Output<Integer> percent() {
         return this.percent == null ? Codegen.empty() : this.percent;
     }
 
@@ -61,7 +61,7 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="revisionName")
       private final @Nullable Output<String> revisionName;
 
-    public Output<String> getRevisionName() {
+    public Output<String> revisionName() {
         return this.revisionName == null ? Codegen.empty() : this.revisionName;
     }
 
@@ -72,7 +72,7 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tag")
       private final @Nullable Output<String> tag;
 
-    public Output<String> getTag() {
+    public Output<String> tag() {
         return this.tag == null ? Codegen.empty() : this.tag;
     }
 

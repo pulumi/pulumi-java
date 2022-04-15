@@ -24,7 +24,7 @@ public final class GoogleCloudApigeeV1ConnectorsPlatformConfigResponse extends i
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudApigeeV1ConnectorsPlatformConfigResponse extends i
     @Import(name="expiresAt", required=true)
       private final String expiresAt;
 
-    public String getExpiresAt() {
+    public String expiresAt() {
         return this.expiresAt;
     }
 

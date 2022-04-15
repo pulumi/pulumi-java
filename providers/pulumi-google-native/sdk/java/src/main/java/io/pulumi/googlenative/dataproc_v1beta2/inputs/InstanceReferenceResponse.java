@@ -23,7 +23,7 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
     @Import(name="instanceId", required=true)
       private final String instanceId;
 
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
 
@@ -34,7 +34,7 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
     @Import(name="instanceName", required=true)
       private final String instanceName;
 
-    public String getInstanceName() {
+    public String instanceName() {
         return this.instanceName;
     }
 
@@ -45,7 +45,7 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
     @Import(name="publicKey", required=true)
       private final String publicKey;
 
-    public String getPublicKey() {
+    public String publicKey() {
         return this.publicKey;
     }
 

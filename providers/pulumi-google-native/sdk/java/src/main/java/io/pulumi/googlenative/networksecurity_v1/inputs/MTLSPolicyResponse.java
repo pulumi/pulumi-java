@@ -24,7 +24,7 @@ public final class MTLSPolicyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="clientValidationCa", required=true)
       private final List<ValidationCAResponse> clientValidationCa;
 
-    public List<ValidationCAResponse> getClientValidationCa() {
+    public List<ValidationCAResponse> clientValidationCa() {
         return this.clientValidationCa;
     }
 

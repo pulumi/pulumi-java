@@ -33,14 +33,14 @@ public final class BasicScalingResponse {
      * Duration of time after the last request that an instance must wait before the instance is shut down.
      * 
     */
-    public String getIdleTimeout() {
+    public String idleTimeout() {
         return this.idleTimeout;
     }
     /**
      * Maximum number of instances to create for this version.
      * 
     */
-    public Integer getMaxInstances() {
+    public Integer maxInstances() {
         return this.maxInstances;
     }
 

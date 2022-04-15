@@ -29,7 +29,7 @@ public class EnvgroupAttachment extends io.pulumi.resources.CustomResource {
      * @return The time at which the environment group attachment was created as milliseconds since epoch.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -43,7 +43,7 @@ public class EnvgroupAttachment extends io.pulumi.resources.CustomResource {
      * @return ID of the attached environment.
      * 
      */
-    public Output<String> getEnvironment() {
+    public Output<String> environment() {
         return this.environment;
     }
     /**
@@ -57,7 +57,7 @@ public class EnvgroupAttachment extends io.pulumi.resources.CustomResource {
      * @return ID of the environment group attachment.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

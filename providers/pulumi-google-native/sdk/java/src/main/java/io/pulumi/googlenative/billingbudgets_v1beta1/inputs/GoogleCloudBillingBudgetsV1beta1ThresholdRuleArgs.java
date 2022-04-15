@@ -27,7 +27,7 @@ public final class GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs extends io.
     @Import(name="spendBasis")
       private final @Nullable Output<GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasis> spendBasis;
 
-    public Output<GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasis> getSpendBasis() {
+    public Output<GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasis> spendBasis() {
         return this.spendBasis == null ? Codegen.empty() : this.spendBasis;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs extends io.
     @Import(name="thresholdPercent", required=true)
       private final Output<Double> thresholdPercent;
 
-    public Output<Double> getThresholdPercent() {
+    public Output<Double> thresholdPercent() {
         return this.thresholdPercent;
     }
 

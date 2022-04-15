@@ -25,7 +25,7 @@ public final class AndroidDeviceListResponse {
      * A list of Android devices.
      * 
     */
-    public List<AndroidDeviceResponse> getAndroidDevices() {
+    public List<AndroidDeviceResponse> androidDevices() {
         return this.androidDevices;
     }
 

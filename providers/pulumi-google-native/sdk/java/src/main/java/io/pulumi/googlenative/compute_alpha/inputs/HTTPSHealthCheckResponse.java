@@ -20,7 +20,7 @@ public final class HTTPSHealthCheckResponse extends io.pulumi.resources.InvokeAr
     @Import(name="host", required=true)
       private final String host;
 
-    public String getHost() {
+    public String host() {
         return this.host;
     }
 
@@ -31,7 +31,7 @@ public final class HTTPSHealthCheckResponse extends io.pulumi.resources.InvokeAr
     @Import(name="port", required=true)
       private final Integer port;
 
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 
@@ -42,7 +42,7 @@ public final class HTTPSHealthCheckResponse extends io.pulumi.resources.InvokeAr
     @Import(name="portName", required=true)
       private final String portName;
 
-    public String getPortName() {
+    public String portName() {
         return this.portName;
     }
 
@@ -53,7 +53,7 @@ public final class HTTPSHealthCheckResponse extends io.pulumi.resources.InvokeAr
     @Import(name="portSpecification", required=true)
       private final String portSpecification;
 
-    public String getPortSpecification() {
+    public String portSpecification() {
         return this.portSpecification;
     }
 
@@ -64,7 +64,7 @@ public final class HTTPSHealthCheckResponse extends io.pulumi.resources.InvokeAr
     @Import(name="proxyHeader", required=true)
       private final String proxyHeader;
 
-    public String getProxyHeader() {
+    public String proxyHeader() {
         return this.proxyHeader;
     }
 
@@ -75,7 +75,7 @@ public final class HTTPSHealthCheckResponse extends io.pulumi.resources.InvokeAr
     @Import(name="requestPath", required=true)
       private final String requestPath;
 
-    public String getRequestPath() {
+    public String requestPath() {
         return this.requestPath;
     }
 
@@ -86,7 +86,7 @@ public final class HTTPSHealthCheckResponse extends io.pulumi.resources.InvokeAr
     @Import(name="response", required=true)
       private final String response;
 
-    public String getResponse() {
+    public String response() {
         return this.response;
     }
 
@@ -97,7 +97,7 @@ public final class HTTPSHealthCheckResponse extends io.pulumi.resources.InvokeAr
     @Import(name="weightReportMode", required=true)
       private final String weightReportMode;
 
-    public String getWeightReportMode() {
+    public String weightReportMode() {
         return this.weightReportMode;
     }
 

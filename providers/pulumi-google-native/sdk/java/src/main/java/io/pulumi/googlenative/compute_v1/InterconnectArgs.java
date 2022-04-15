@@ -26,7 +26,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="adminEnabled")
       private final @Nullable Output<Boolean> adminEnabled;
 
-    public Output<Boolean> getAdminEnabled() {
+    public Output<Boolean> adminEnabled() {
         return this.adminEnabled == null ? Codegen.empty() : this.adminEnabled;
     }
 
@@ -37,7 +37,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customerName")
       private final @Nullable Output<String> customerName;
 
-    public Output<String> getCustomerName() {
+    public Output<String> customerName() {
         return this.customerName == null ? Codegen.empty() : this.customerName;
     }
 
@@ -48,7 +48,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -59,7 +59,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="interconnectType")
       private final @Nullable Output<InterconnectInterconnectType> interconnectType;
 
-    public Output<InterconnectInterconnectType> getInterconnectType() {
+    public Output<InterconnectInterconnectType> interconnectType() {
         return this.interconnectType == null ? Codegen.empty() : this.interconnectType;
     }
 
@@ -70,7 +70,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="linkType")
       private final @Nullable Output<InterconnectLinkType> linkType;
 
-    public Output<InterconnectLinkType> getLinkType() {
+    public Output<InterconnectLinkType> linkType() {
         return this.linkType == null ? Codegen.empty() : this.linkType;
     }
 
@@ -81,7 +81,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -92,7 +92,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -103,21 +103,21 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nocContactEmail")
       private final @Nullable Output<String> nocContactEmail;
 
-    public Output<String> getNocContactEmail() {
+    public Output<String> nocContactEmail() {
         return this.nocContactEmail == null ? Codegen.empty() : this.nocContactEmail;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -128,7 +128,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requestedLinkCount")
       private final @Nullable Output<Integer> requestedLinkCount;
 
-    public Output<Integer> getRequestedLinkCount() {
+    public Output<Integer> requestedLinkCount() {
         return this.requestedLinkCount == null ? Codegen.empty() : this.requestedLinkCount;
     }
 

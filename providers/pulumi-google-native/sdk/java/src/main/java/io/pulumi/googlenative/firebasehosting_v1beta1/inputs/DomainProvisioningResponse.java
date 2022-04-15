@@ -26,7 +26,7 @@ public final class DomainProvisioningResponse extends io.pulumi.resources.Invoke
     @Import(name="certChallengeDiscoveredTxt", required=true)
       private final List<String> certChallengeDiscoveredTxt;
 
-    public List<String> getCertChallengeDiscoveredTxt() {
+    public List<String> certChallengeDiscoveredTxt() {
         return this.certChallengeDiscoveredTxt;
     }
 
@@ -37,7 +37,7 @@ public final class DomainProvisioningResponse extends io.pulumi.resources.Invoke
     @Import(name="certChallengeDns", required=true)
       private final CertDnsChallengeResponse certChallengeDns;
 
-    public CertDnsChallengeResponse getCertChallengeDns() {
+    public CertDnsChallengeResponse certChallengeDns() {
         return this.certChallengeDns;
     }
 
@@ -48,7 +48,7 @@ public final class DomainProvisioningResponse extends io.pulumi.resources.Invoke
     @Import(name="certChallengeHttp", required=true)
       private final CertHttpChallengeResponse certChallengeHttp;
 
-    public CertHttpChallengeResponse getCertChallengeHttp() {
+    public CertHttpChallengeResponse certChallengeHttp() {
         return this.certChallengeHttp;
     }
 
@@ -59,7 +59,7 @@ public final class DomainProvisioningResponse extends io.pulumi.resources.Invoke
     @Import(name="certStatus", required=true)
       private final String certStatus;
 
-    public String getCertStatus() {
+    public String certStatus() {
         return this.certStatus;
     }
 
@@ -70,7 +70,7 @@ public final class DomainProvisioningResponse extends io.pulumi.resources.Invoke
     @Import(name="discoveredIps", required=true)
       private final List<String> discoveredIps;
 
-    public List<String> getDiscoveredIps() {
+    public List<String> discoveredIps() {
         return this.discoveredIps;
     }
 
@@ -81,7 +81,7 @@ public final class DomainProvisioningResponse extends io.pulumi.resources.Invoke
     @Import(name="dnsFetchTime", required=true)
       private final String dnsFetchTime;
 
-    public String getDnsFetchTime() {
+    public String dnsFetchTime() {
         return this.dnsFetchTime;
     }
 
@@ -92,7 +92,7 @@ public final class DomainProvisioningResponse extends io.pulumi.resources.Invoke
     @Import(name="dnsStatus", required=true)
       private final String dnsStatus;
 
-    public String getDnsStatus() {
+    public String dnsStatus() {
         return this.dnsStatus;
     }
 
@@ -103,7 +103,7 @@ public final class DomainProvisioningResponse extends io.pulumi.resources.Invoke
     @Import(name="expectedIps", required=true)
       private final List<String> expectedIps;
 
-    public List<String> getExpectedIps() {
+    public List<String> expectedIps() {
         return this.expectedIps;
     }
 

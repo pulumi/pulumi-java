@@ -29,7 +29,7 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
     @Import(name="boolValue")
       private final @Nullable Output<Boolean> boolValue;
 
-    public Output<Boolean> getBoolValue() {
+    public Output<Boolean> boolValue() {
         return this.boolValue == null ? Codegen.empty() : this.boolValue;
     }
 
@@ -40,7 +40,7 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
     @Import(name="doubleValue")
       private final @Nullable Output<Double> doubleValue;
 
-    public Output<Double> getDoubleValue() {
+    public Output<Double> doubleValue() {
         return this.doubleValue == null ? Codegen.empty() : this.doubleValue;
     }
 
@@ -51,7 +51,7 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
     @Import(name="int64Value")
       private final @Nullable Output<String> int64Value;
 
-    public Output<String> getInt64Value() {
+    public Output<String> int64Value() {
         return this.int64Value == null ? Codegen.empty() : this.int64Value;
     }
 
@@ -62,7 +62,7 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
     @Import(name="protoValue")
       private final @Nullable Output<Map<String,String>> protoValue;
 
-    public Output<Map<String,String>> getProtoValue() {
+    public Output<Map<String,String>> protoValue() {
         return this.protoValue == null ? Codegen.empty() : this.protoValue;
     }
 
@@ -73,7 +73,7 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
     @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;
 
-    public Output<String> getStringValue() {
+    public Output<String> stringValue() {
         return this.stringValue == null ? Codegen.empty() : this.stringValue;
     }
 

@@ -26,7 +26,7 @@ public final class OutputConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destination")
       private final @Nullable Output<String> destination;
 
-    public Output<String> getDestination() {
+    public Output<String> destination() {
         return this.destination == null ? Codegen.empty() : this.destination;
     }
 

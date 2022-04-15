@@ -32,14 +32,14 @@ public final class DatastoreIODetailsResponse {
      * Namespace used in the connection.
      * 
     */
-    public String getNamespace() {
+    public String namespace() {
         return this.namespace;
     }
     /**
      * ProjectId accessed in the connection.
      * 
     */
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 

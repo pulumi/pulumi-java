@@ -15,14 +15,14 @@ public final class GetServicePerimeterArgs extends io.pulumi.resources.InvokeArg
     @Import(name="accessPolicyId", required=true)
       private final String accessPolicyId;
 
-    public String getAccessPolicyId() {
+    public String accessPolicyId() {
         return this.accessPolicyId;
     }
 
     @Import(name="servicePerimeterId", required=true)
       private final String servicePerimeterId;
 
-    public String getServicePerimeterId() {
+    public String servicePerimeterId() {
         return this.servicePerimeterId;
     }
 

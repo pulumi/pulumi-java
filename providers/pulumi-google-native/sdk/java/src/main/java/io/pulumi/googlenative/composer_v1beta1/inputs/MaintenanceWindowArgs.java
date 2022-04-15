@@ -25,7 +25,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     @Import(name="endTime", required=true)
       private final Output<String> endTime;
 
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime;
     }
 
@@ -36,7 +36,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     @Import(name="recurrence", required=true)
       private final Output<String> recurrence;
 
-    public Output<String> getRecurrence() {
+    public Output<String> recurrence() {
         return this.recurrence;
     }
 
@@ -47,7 +47,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     @Import(name="startTime", required=true)
       private final Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
 

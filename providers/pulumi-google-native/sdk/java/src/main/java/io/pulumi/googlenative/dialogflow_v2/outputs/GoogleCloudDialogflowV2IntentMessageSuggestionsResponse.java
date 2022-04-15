@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionsResponse {
      * The list of suggested replies.
      * 
     */
-    public List<GoogleCloudDialogflowV2IntentMessageSuggestionResponse> getSuggestions() {
+    public List<GoogleCloudDialogflowV2IntentMessageSuggestionResponse> suggestions() {
         return this.suggestions;
     }
 

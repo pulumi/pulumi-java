@@ -40,21 +40,21 @@ public final class GSuitePrincipalResponse {
      * This principal represents all users of the G Suite domain of the customer.
      * 
     */
-    public Boolean getGsuiteDomain() {
+    public Boolean gsuiteDomain() {
         return this.gsuiteDomain;
     }
     /**
      * This principal references a G Suite group account
      * 
     */
-    public String getGsuiteGroupEmail() {
+    public String gsuiteGroupEmail() {
         return this.gsuiteGroupEmail;
     }
     /**
      * This principal references a G Suite user account
      * 
     */
-    public String getGsuiteUserEmail() {
+    public String gsuiteUserEmail() {
         return this.gsuiteUserEmail;
     }
 

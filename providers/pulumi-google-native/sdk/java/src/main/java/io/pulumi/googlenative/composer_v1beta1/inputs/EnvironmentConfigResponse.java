@@ -34,7 +34,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="airflowUri", required=true)
       private final String airflowUri;
 
-    public String getAirflowUri() {
+    public String airflowUri() {
         return this.airflowUri;
     }
 
@@ -45,7 +45,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="dagGcsPrefix", required=true)
       private final String dagGcsPrefix;
 
-    public String getDagGcsPrefix() {
+    public String dagGcsPrefix() {
         return this.dagGcsPrefix;
     }
 
@@ -56,7 +56,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="databaseConfig", required=true)
       private final DatabaseConfigResponse databaseConfig;
 
-    public DatabaseConfigResponse getDatabaseConfig() {
+    public DatabaseConfigResponse databaseConfig() {
         return this.databaseConfig;
     }
 
@@ -67,7 +67,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="encryptionConfig", required=true)
       private final EncryptionConfigResponse encryptionConfig;
 
-    public EncryptionConfigResponse getEncryptionConfig() {
+    public EncryptionConfigResponse encryptionConfig() {
         return this.encryptionConfig;
     }
 
@@ -78,7 +78,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="environmentSize", required=true)
       private final String environmentSize;
 
-    public String getEnvironmentSize() {
+    public String environmentSize() {
         return this.environmentSize;
     }
 
@@ -89,7 +89,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="gkeCluster", required=true)
       private final String gkeCluster;
 
-    public String getGkeCluster() {
+    public String gkeCluster() {
         return this.gkeCluster;
     }
 
@@ -100,7 +100,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="maintenanceWindow", required=true)
       private final MaintenanceWindowResponse maintenanceWindow;
 
-    public MaintenanceWindowResponse getMaintenanceWindow() {
+    public MaintenanceWindowResponse maintenanceWindow() {
         return this.maintenanceWindow;
     }
 
@@ -111,7 +111,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="masterAuthorizedNetworksConfig", required=true)
       private final MasterAuthorizedNetworksConfigResponse masterAuthorizedNetworksConfig;
 
-    public MasterAuthorizedNetworksConfigResponse getMasterAuthorizedNetworksConfig() {
+    public MasterAuthorizedNetworksConfigResponse masterAuthorizedNetworksConfig() {
         return this.masterAuthorizedNetworksConfig;
     }
 
@@ -122,7 +122,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="nodeConfig", required=true)
       private final NodeConfigResponse nodeConfig;
 
-    public NodeConfigResponse getNodeConfig() {
+    public NodeConfigResponse nodeConfig() {
         return this.nodeConfig;
     }
 
@@ -133,7 +133,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="nodeCount", required=true)
       private final Integer nodeCount;
 
-    public Integer getNodeCount() {
+    public Integer nodeCount() {
         return this.nodeCount;
     }
 
@@ -144,7 +144,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="privateEnvironmentConfig", required=true)
       private final PrivateEnvironmentConfigResponse privateEnvironmentConfig;
 
-    public PrivateEnvironmentConfigResponse getPrivateEnvironmentConfig() {
+    public PrivateEnvironmentConfigResponse privateEnvironmentConfig() {
         return this.privateEnvironmentConfig;
     }
 
@@ -155,7 +155,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="softwareConfig", required=true)
       private final SoftwareConfigResponse softwareConfig;
 
-    public SoftwareConfigResponse getSoftwareConfig() {
+    public SoftwareConfigResponse softwareConfig() {
         return this.softwareConfig;
     }
 
@@ -166,7 +166,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="webServerConfig", required=true)
       private final WebServerConfigResponse webServerConfig;
 
-    public WebServerConfigResponse getWebServerConfig() {
+    public WebServerConfigResponse webServerConfig() {
         return this.webServerConfig;
     }
 
@@ -177,7 +177,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="webServerNetworkAccessControl", required=true)
       private final WebServerNetworkAccessControlResponse webServerNetworkAccessControl;
 
-    public WebServerNetworkAccessControlResponse getWebServerNetworkAccessControl() {
+    public WebServerNetworkAccessControlResponse webServerNetworkAccessControl() {
         return this.webServerNetworkAccessControl;
     }
 
@@ -188,7 +188,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="workloadsConfig", required=true)
       private final WorkloadsConfigResponse workloadsConfig;
 
-    public WorkloadsConfigResponse getWorkloadsConfig() {
+    public WorkloadsConfigResponse workloadsConfig() {
         return this.workloadsConfig;
     }
 

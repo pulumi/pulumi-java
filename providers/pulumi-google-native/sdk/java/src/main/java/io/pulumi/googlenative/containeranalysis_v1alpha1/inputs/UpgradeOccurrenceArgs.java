@@ -28,7 +28,7 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="distribution")
       private final @Nullable Output<UpgradeDistributionArgs> distribution;
 
-    public Output<UpgradeDistributionArgs> getDistribution() {
+    public Output<UpgradeDistributionArgs> distribution() {
         return this.distribution == null ? Codegen.empty() : this.distribution;
     }
 
@@ -39,7 +39,7 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="package")
       private final @Nullable Output<String> package_;
 
-    public Output<String> getPackage_() {
+    public Output<String> package_() {
         return this.package_ == null ? Codegen.empty() : this.package_;
     }
 
@@ -50,7 +50,7 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="parsedVersion")
       private final @Nullable Output<VersionArgs> parsedVersion;
 
-    public Output<VersionArgs> getParsedVersion() {
+    public Output<VersionArgs> parsedVersion() {
         return this.parsedVersion == null ? Codegen.empty() : this.parsedVersion;
     }
 

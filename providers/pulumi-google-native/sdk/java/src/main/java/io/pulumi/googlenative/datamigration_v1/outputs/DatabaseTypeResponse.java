@@ -32,14 +32,14 @@ public final class DatabaseTypeResponse {
      * The database engine.
      * 
     */
-    public String getEngine() {
+    public String engine() {
         return this.engine;
     }
     /**
      * The database provider.
      * 
     */
-    public String getProvider() {
+    public String provider() {
         return this.provider;
     }
 

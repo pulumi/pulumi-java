@@ -86,63 +86,63 @@ public final class GetTriggerResult {
      * The creation time.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Destination specifies where the events should be sent to.
      * 
     */
-    public DestinationResponse getDestination() {
+    public DestinationResponse destination() {
         return this.destination;
     }
     /**
      * This checksum is computed by the server based on the value of other fields, and may be sent only on create requests to ensure the client has an up-to-date value before proceeding.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Optional. User labels attached to the triggers that can be used to group resources.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * null The criteria by which events are filtered. Only events that match with this criteria will be sent to the destination.
      * 
     */
-    public List<MatchingCriteriaResponse> getMatchingCriteria() {
+    public List<MatchingCriteriaResponse> matchingCriteria() {
         return this.matchingCriteria;
     }
     /**
      * The resource name of the trigger. Must be unique within the location on the project and must in `projects/{project}/locations/{location}/triggers/{trigger}` format.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Optional. The IAM service account email associated with the trigger. The service account represents the identity of the trigger. The principal who calls this API must have `iam.serviceAccounts.actAs` permission in the service account. See https://cloud.google.com/iam/docs/understanding-service-accounts?hl=en#sa_common for more information. For Cloud Run destinations, this service account is used to generate identity tokens when invoking the service. See https://cloud.google.com/run/docs/triggering/pubsub-push#create-service-account for information on how to invoke authenticated Cloud Run services. In order to create Audit Log triggers, the service account should also have 'eventarc.events.receiveAuditLogV1Written' permission.
      * 
     */
-    public String getServiceAccount() {
+    public String serviceAccount() {
         return this.serviceAccount;
     }
     /**
      * In order to deliver messages, Eventarc may use other GCP products as transport intermediary. This field contains a reference to that transport intermediary. This information can be used for debugging purposes.
      * 
     */
-    public TransportResponse getTransport() {
+    public TransportResponse transport() {
         return this.transport;
     }
     /**
      * The last-modified time.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

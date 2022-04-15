@@ -24,7 +24,7 @@ public final class OsConstraintResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="minimumVersion", required=true)
       private final String minimumVersion;
 
-    public String getMinimumVersion() {
+    public String minimumVersion() {
         return this.minimumVersion;
     }
 
@@ -35,7 +35,7 @@ public final class OsConstraintResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="osType", required=true)
       private final String osType;
 
-    public String getOsType() {
+    public String osType() {
         return this.osType;
     }
 
@@ -46,7 +46,7 @@ public final class OsConstraintResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="requireVerifiedChromeOs", required=true)
       private final Boolean requireVerifiedChromeOs;
 
-    public Boolean getRequireVerifiedChromeOs() {
+    public Boolean requireVerifiedChromeOs() {
         return this.requireVerifiedChromeOs;
     }
 

@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartArgs ex
     @Import(name="parameterId")
       private final @Nullable Output<String> parameterId;
 
-    public Output<String> getParameterId() {
+    public Output<String> parameterId() {
         return this.parameterId == null ? Codegen.empty() : this.parameterId;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartArgs ex
     @Import(name="text", required=true)
       private final Output<String> text;
 
-    public Output<String> getText() {
+    public Output<String> text() {
         return this.text;
     }
 

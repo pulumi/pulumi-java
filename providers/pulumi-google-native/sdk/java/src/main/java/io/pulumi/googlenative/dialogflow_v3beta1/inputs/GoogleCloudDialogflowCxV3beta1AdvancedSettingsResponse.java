@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse extend
     @Import(name="loggingSettings", required=true)
       private final GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse loggingSettings;
 
-    public GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse getLoggingSettings() {
+    public GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse loggingSettings() {
         return this.loggingSettings;
     }
 

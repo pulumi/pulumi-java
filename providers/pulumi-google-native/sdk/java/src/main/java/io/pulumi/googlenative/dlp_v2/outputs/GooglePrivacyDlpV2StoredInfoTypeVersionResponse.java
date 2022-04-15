@@ -57,35 +57,35 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse {
      * StoredInfoType configuration.
      * 
     */
-    public GooglePrivacyDlpV2StoredInfoTypeConfigResponse getConfig() {
+    public GooglePrivacyDlpV2StoredInfoTypeConfigResponse config() {
         return this.config;
     }
     /**
      * Create timestamp of the version. Read-only, determined by the system when the version is created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Errors that occurred when creating this storedInfoType version, or anomalies detected in the storedInfoType data that render it unusable. Only the five most recent errors will be displayed, with the most recent error appearing first. For example, some of the data for stored custom dictionaries is put in the user's Google Cloud Storage bucket, and if this data is modified or deleted by the user or another system, the dictionary becomes invalid. If any errors occur, fix the problem indicated by the error message and use the UpdateStoredInfoType API method to create another version of the storedInfoType to continue using it, reusing the same `config` if it was not the source of the error.
      * 
     */
-    public List<GooglePrivacyDlpV2ErrorResponse> getErrors() {
+    public List<GooglePrivacyDlpV2ErrorResponse> errors() {
         return this.errors;
     }
     /**
      * Stored info type version state. Read-only, updated by the system during dictionary creation.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Statistics about this storedInfoType version.
      * 
     */
-    public GooglePrivacyDlpV2StoredInfoTypeStatsResponse getStats() {
+    public GooglePrivacyDlpV2StoredInfoTypeStatsResponse stats() {
         return this.stats;
     }
 

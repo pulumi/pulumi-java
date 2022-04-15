@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse extends io.pulu
     @Import(name="cryptoKeyName", required=true)
       private final String cryptoKeyName;
 
-    public String getCryptoKeyName() {
+    public String cryptoKeyName() {
         return this.cryptoKeyName;
     }
 
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse extends io.pulu
     @Import(name="wrappedKey", required=true)
       private final String wrappedKey;
 
-    public String getWrappedKey() {
+    public String wrappedKey() {
         return this.wrappedKey;
     }
 

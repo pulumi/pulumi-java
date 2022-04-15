@@ -24,7 +24,7 @@ public final class PageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="content", required=true)
       private final String content;
 
-    public String getContent() {
+    public String content() {
         return this.content;
     }
 
@@ -35,7 +35,7 @@ public final class PageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -46,7 +46,7 @@ public final class PageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="subpages", required=true)
       private final List<PageResponse> subpages;
 
-    public List<PageResponse> getSubpages() {
+    public List<PageResponse> subpages() {
         return this.subpages;
     }
 

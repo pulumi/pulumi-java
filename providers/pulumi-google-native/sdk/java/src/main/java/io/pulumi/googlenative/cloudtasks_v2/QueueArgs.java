@@ -26,14 +26,14 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appEngineRoutingOverride")
       private final @Nullable Output<AppEngineRoutingArgs> appEngineRoutingOverride;
 
-    public Output<AppEngineRoutingArgs> getAppEngineRoutingOverride() {
+    public Output<AppEngineRoutingArgs> appEngineRoutingOverride() {
         return this.appEngineRoutingOverride == null ? Codegen.empty() : this.appEngineRoutingOverride;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -44,14 +44,14 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -62,7 +62,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rateLimits")
       private final @Nullable Output<RateLimitsArgs> rateLimits;
 
-    public Output<RateLimitsArgs> getRateLimits() {
+    public Output<RateLimitsArgs> rateLimits() {
         return this.rateLimits == null ? Codegen.empty() : this.rateLimits;
     }
 
@@ -73,7 +73,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retryConfig")
       private final @Nullable Output<RetryConfigArgs> retryConfig;
 
-    public Output<RetryConfigArgs> getRetryConfig() {
+    public Output<RetryConfigArgs> retryConfig() {
         return this.retryConfig == null ? Codegen.empty() : this.retryConfig;
     }
 
@@ -84,7 +84,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stackdriverLoggingConfig")
       private final @Nullable Output<StackdriverLoggingConfigArgs> stackdriverLoggingConfig;
 
-    public Output<StackdriverLoggingConfigArgs> getStackdriverLoggingConfig() {
+    public Output<StackdriverLoggingConfigArgs> stackdriverLoggingConfig() {
         return this.stackdriverLoggingConfig == null ? Codegen.empty() : this.stackdriverLoggingConfig;
     }
 

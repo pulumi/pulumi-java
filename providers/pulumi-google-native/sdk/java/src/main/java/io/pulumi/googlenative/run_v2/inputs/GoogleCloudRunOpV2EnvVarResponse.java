@@ -24,7 +24,7 @@ public final class GoogleCloudRunOpV2EnvVarResponse extends io.pulumi.resources.
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudRunOpV2EnvVarResponse extends io.pulumi.resources.
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudRunOpV2EnvVarResponse extends io.pulumi.resources.
     @Import(name="valueSource", required=true)
       private final GoogleCloudRunOpV2EnvVarSourceResponse valueSource;
 
-    public GoogleCloudRunOpV2EnvVarSourceResponse getValueSource() {
+    public GoogleCloudRunOpV2EnvVarSourceResponse valueSource() {
         return this.valueSource;
     }
 

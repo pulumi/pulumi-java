@@ -23,7 +23,7 @@ public final class SchemaConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="recursiveStructureDepth", required=true)
       private final String recursiveStructureDepth;
 
-    public String getRecursiveStructureDepth() {
+    public String recursiveStructureDepth() {
         return this.recursiveStructureDepth;
     }
 
@@ -34,7 +34,7 @@ public final class SchemaConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="schemaType", required=true)
       private final String schemaType;
 
-    public String getSchemaType() {
+    public String schemaType() {
         return this.schemaType;
     }
 

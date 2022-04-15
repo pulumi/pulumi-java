@@ -23,7 +23,7 @@ public final class ApiConfigHandlerResponse extends io.pulumi.resources.InvokeAr
     @Import(name="authFailAction", required=true)
       private final String authFailAction;
 
-    public String getAuthFailAction() {
+    public String authFailAction() {
         return this.authFailAction;
     }
 
@@ -34,7 +34,7 @@ public final class ApiConfigHandlerResponse extends io.pulumi.resources.InvokeAr
     @Import(name="login", required=true)
       private final String login;
 
-    public String getLogin() {
+    public String login() {
         return this.login;
     }
 
@@ -45,7 +45,7 @@ public final class ApiConfigHandlerResponse extends io.pulumi.resources.InvokeAr
     @Import(name="script", required=true)
       private final String script;
 
-    public String getScript() {
+    public String script() {
         return this.script;
     }
 
@@ -56,7 +56,7 @@ public final class ApiConfigHandlerResponse extends io.pulumi.resources.InvokeAr
     @Import(name="securityLevel", required=true)
       private final String securityLevel;
 
-    public String getSecurityLevel() {
+    public String securityLevel() {
         return this.securityLevel;
     }
 
@@ -67,7 +67,7 @@ public final class ApiConfigHandlerResponse extends io.pulumi.resources.InvokeAr
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

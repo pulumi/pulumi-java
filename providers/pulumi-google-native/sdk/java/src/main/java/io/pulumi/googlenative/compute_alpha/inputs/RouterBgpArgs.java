@@ -26,7 +26,7 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="advertiseMode")
       private final @Nullable Output<RouterBgpAdvertiseMode> advertiseMode;
 
-    public Output<RouterBgpAdvertiseMode> getAdvertiseMode() {
+    public Output<RouterBgpAdvertiseMode> advertiseMode() {
         return this.advertiseMode == null ? Codegen.empty() : this.advertiseMode;
     }
 
@@ -37,7 +37,7 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="advertisedGroups")
       private final @Nullable Output<List<RouterBgpAdvertisedGroupsItem>> advertisedGroups;
 
-    public Output<List<RouterBgpAdvertisedGroupsItem>> getAdvertisedGroups() {
+    public Output<List<RouterBgpAdvertisedGroupsItem>> advertisedGroups() {
         return this.advertisedGroups == null ? Codegen.empty() : this.advertisedGroups;
     }
 
@@ -48,7 +48,7 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="advertisedIpRanges")
       private final @Nullable Output<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges;
 
-    public Output<List<RouterAdvertisedIpRangeArgs>> getAdvertisedIpRanges() {
+    public Output<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges() {
         return this.advertisedIpRanges == null ? Codegen.empty() : this.advertisedIpRanges;
     }
 
@@ -59,7 +59,7 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="asn")
       private final @Nullable Output<Integer> asn;
 
-    public Output<Integer> getAsn() {
+    public Output<Integer> asn() {
         return this.asn == null ? Codegen.empty() : this.asn;
     }
 
@@ -70,7 +70,7 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keepaliveInterval")
       private final @Nullable Output<Integer> keepaliveInterval;
 
-    public Output<Integer> getKeepaliveInterval() {
+    public Output<Integer> keepaliveInterval() {
         return this.keepaliveInterval == null ? Codegen.empty() : this.keepaliveInterval;
     }
 

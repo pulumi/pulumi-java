@@ -26,7 +26,7 @@ public final class RequestUtilizationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="targetConcurrentRequests")
       private final @Nullable Output<Integer> targetConcurrentRequests;
 
-    public Output<Integer> getTargetConcurrentRequests() {
+    public Output<Integer> targetConcurrentRequests() {
         return this.targetConcurrentRequests == null ? Codegen.empty() : this.targetConcurrentRequests;
     }
 
@@ -37,7 +37,7 @@ public final class RequestUtilizationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="targetRequestCountPerSecond")
       private final @Nullable Output<Integer> targetRequestCountPerSecond;
 
-    public Output<Integer> getTargetRequestCountPerSecond() {
+    public Output<Integer> targetRequestCountPerSecond() {
         return this.targetRequestCountPerSecond == null ? Codegen.empty() : this.targetRequestCountPerSecond;
     }
 

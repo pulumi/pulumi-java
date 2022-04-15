@@ -23,7 +23,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="csvDelimiter")
       private final @Nullable Output<String> csvDelimiter;
 
-    public Output<String> getCsvDelimiter() {
+    public Output<String> csvDelimiter() {
         return this.csvDelimiter == null ? Codegen.empty() : this.csvDelimiter;
     }
 
@@ -34,7 +34,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datastoreName", required=true)
       private final Output<String> datastoreName;
 
-    public Output<String> getDatastoreName() {
+    public Output<String> datastoreName() {
         return this.datastoreName;
     }
 
@@ -45,7 +45,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dateRange", required=true)
       private final Output<GoogleCloudApigeeV1DateRangeArgs> dateRange;
 
-    public Output<GoogleCloudApigeeV1DateRangeArgs> getDateRange() {
+    public Output<GoogleCloudApigeeV1DateRangeArgs> dateRange() {
         return this.dateRange;
     }
 
@@ -56,14 +56,14 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
@@ -74,14 +74,14 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -92,7 +92,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputFormat")
       private final @Nullable Output<String> outputFormat;
 
-    public Output<String> getOutputFormat() {
+    public Output<String> outputFormat() {
         return this.outputFormat == null ? Codegen.empty() : this.outputFormat;
     }
 

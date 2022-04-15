@@ -32,14 +32,14 @@ public final class GcsProfileResponse {
      * The Cloud Storage bucket name.
      * 
     */
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
     /**
      * The root path inside the Cloud Storage bucket.
      * 
     */
-    public String getRootPath() {
+    public String rootPath() {
         return this.rootPath;
     }
 

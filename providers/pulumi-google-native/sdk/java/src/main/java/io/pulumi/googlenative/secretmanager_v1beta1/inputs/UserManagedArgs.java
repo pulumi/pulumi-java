@@ -26,7 +26,7 @@ public final class UserManagedArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="replicas", required=true)
       private final Output<List<ReplicaArgs>> replicas;
 
-    public Output<List<ReplicaArgs>> getReplicas() {
+    public Output<List<ReplicaArgs>> replicas() {
         return this.replicas;
     }
 

@@ -29,7 +29,7 @@ public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expectedCommand")
       private final @Nullable Output<List<String>> expectedCommand;
 
-    public Output<List<String>> getExpectedCommand() {
+    public Output<List<String>> expectedCommand() {
         return this.expectedCommand == null ? Codegen.empty() : this.expectedCommand;
     }
 
@@ -40,14 +40,14 @@ public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expectedMaterials")
       private final @Nullable Output<List<ArtifactRuleArgs>> expectedMaterials;
 
-    public Output<List<ArtifactRuleArgs>> getExpectedMaterials() {
+    public Output<List<ArtifactRuleArgs>> expectedMaterials() {
         return this.expectedMaterials == null ? Codegen.empty() : this.expectedMaterials;
     }
 
     @Import(name="expectedProducts")
       private final @Nullable Output<List<ArtifactRuleArgs>> expectedProducts;
 
-    public Output<List<ArtifactRuleArgs>> getExpectedProducts() {
+    public Output<List<ArtifactRuleArgs>> expectedProducts() {
         return this.expectedProducts == null ? Codegen.empty() : this.expectedProducts;
     }
 
@@ -58,7 +58,7 @@ public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="signingKeys")
       private final @Nullable Output<List<SigningKeyArgs>> signingKeys;
 
-    public Output<List<SigningKeyArgs>> getSigningKeys() {
+    public Output<List<SigningKeyArgs>> signingKeys() {
         return this.signingKeys == null ? Codegen.empty() : this.signingKeys;
     }
 
@@ -69,7 +69,7 @@ public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stepName")
       private final @Nullable Output<String> stepName;
 
-    public Output<String> getStepName() {
+    public Output<String> stepName() {
         return this.stepName == null ? Codegen.empty() : this.stepName;
     }
 
@@ -80,7 +80,7 @@ public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="threshold")
       private final @Nullable Output<String> threshold;
 
-    public Output<String> getThreshold() {
+    public Output<String> threshold() {
         return this.threshold == null ? Codegen.empty() : this.threshold;
     }
 

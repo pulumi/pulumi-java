@@ -22,7 +22,7 @@ public final class SubsettingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policy")
       private final @Nullable Output<SubsettingPolicy> policy;
 
-    public Output<SubsettingPolicy> getPolicy() {
+    public Output<SubsettingPolicy> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 

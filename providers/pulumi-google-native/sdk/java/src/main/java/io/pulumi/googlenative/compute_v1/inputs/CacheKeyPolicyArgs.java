@@ -28,7 +28,7 @@ public final class CacheKeyPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="includeHost")
       private final @Nullable Output<Boolean> includeHost;
 
-    public Output<Boolean> getIncludeHost() {
+    public Output<Boolean> includeHost() {
         return this.includeHost == null ? Codegen.empty() : this.includeHost;
     }
 
@@ -39,7 +39,7 @@ public final class CacheKeyPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="includeHttpHeaders")
       private final @Nullable Output<List<String>> includeHttpHeaders;
 
-    public Output<List<String>> getIncludeHttpHeaders() {
+    public Output<List<String>> includeHttpHeaders() {
         return this.includeHttpHeaders == null ? Codegen.empty() : this.includeHttpHeaders;
     }
 
@@ -50,7 +50,7 @@ public final class CacheKeyPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="includeNamedCookies")
       private final @Nullable Output<List<String>> includeNamedCookies;
 
-    public Output<List<String>> getIncludeNamedCookies() {
+    public Output<List<String>> includeNamedCookies() {
         return this.includeNamedCookies == null ? Codegen.empty() : this.includeNamedCookies;
     }
 
@@ -61,7 +61,7 @@ public final class CacheKeyPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="includeProtocol")
       private final @Nullable Output<Boolean> includeProtocol;
 
-    public Output<Boolean> getIncludeProtocol() {
+    public Output<Boolean> includeProtocol() {
         return this.includeProtocol == null ? Codegen.empty() : this.includeProtocol;
     }
 
@@ -72,7 +72,7 @@ public final class CacheKeyPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="includeQueryString")
       private final @Nullable Output<Boolean> includeQueryString;
 
-    public Output<Boolean> getIncludeQueryString() {
+    public Output<Boolean> includeQueryString() {
         return this.includeQueryString == null ? Codegen.empty() : this.includeQueryString;
     }
 
@@ -83,7 +83,7 @@ public final class CacheKeyPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="queryStringBlacklist")
       private final @Nullable Output<List<String>> queryStringBlacklist;
 
-    public Output<List<String>> getQueryStringBlacklist() {
+    public Output<List<String>> queryStringBlacklist() {
         return this.queryStringBlacklist == null ? Codegen.empty() : this.queryStringBlacklist;
     }
 
@@ -94,7 +94,7 @@ public final class CacheKeyPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="queryStringWhitelist")
       private final @Nullable Output<List<String>> queryStringWhitelist;
 
-    public Output<List<String>> getQueryStringWhitelist() {
+    public Output<List<String>> queryStringWhitelist() {
         return this.queryStringWhitelist == null ? Codegen.empty() : this.queryStringWhitelist;
     }
 

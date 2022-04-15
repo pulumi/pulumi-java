@@ -24,7 +24,7 @@ public final class AudioResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="highBoost", required=true)
       private final Boolean highBoost;
 
-    public Boolean getHighBoost() {
+    public Boolean highBoost() {
         return this.highBoost;
     }
 
@@ -35,7 +35,7 @@ public final class AudioResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="lowBoost", required=true)
       private final Boolean lowBoost;
 
-    public Boolean getLowBoost() {
+    public Boolean lowBoost() {
         return this.lowBoost;
     }
 
@@ -46,7 +46,7 @@ public final class AudioResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="lufs", required=true)
       private final Double lufs;
 
-    public Double getLufs() {
+    public Double lufs() {
         return this.lufs;
     }
 

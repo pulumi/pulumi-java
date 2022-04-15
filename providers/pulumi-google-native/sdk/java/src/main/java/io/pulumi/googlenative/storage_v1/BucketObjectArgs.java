@@ -30,7 +30,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="acl")
       private final @Nullable Output<List<ObjectAccessControlArgs>> acl;
 
-    public Output<List<ObjectAccessControlArgs>> getAcl() {
+    public Output<List<ObjectAccessControlArgs>> acl() {
         return this.acl == null ? Codegen.empty() : this.acl;
     }
 
@@ -41,7 +41,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -52,7 +52,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cacheControl")
       private final @Nullable Output<String> cacheControl;
 
-    public Output<String> getCacheControl() {
+    public Output<String> cacheControl() {
         return this.cacheControl == null ? Codegen.empty() : this.cacheControl;
     }
 
@@ -63,7 +63,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="componentCount")
       private final @Nullable Output<Integer> componentCount;
 
-    public Output<Integer> getComponentCount() {
+    public Output<Integer> componentCount() {
         return this.componentCount == null ? Codegen.empty() : this.componentCount;
     }
 
@@ -74,7 +74,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentDisposition")
       private final @Nullable Output<String> contentDisposition;
 
-    public Output<String> getContentDisposition() {
+    public Output<String> contentDisposition() {
         return this.contentDisposition == null ? Codegen.empty() : this.contentDisposition;
     }
 
@@ -85,7 +85,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentEncoding")
       private final @Nullable Output<String> contentEncoding;
 
-    public Output<String> getContentEncoding() {
+    public Output<String> contentEncoding() {
         return this.contentEncoding == null ? Codegen.empty() : this.contentEncoding;
     }
 
@@ -96,7 +96,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentLanguage")
       private final @Nullable Output<String> contentLanguage;
 
-    public Output<String> getContentLanguage() {
+    public Output<String> contentLanguage() {
         return this.contentLanguage == null ? Codegen.empty() : this.contentLanguage;
     }
 
@@ -107,7 +107,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
@@ -118,7 +118,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="crc32c")
       private final @Nullable Output<String> crc32c;
 
-    public Output<String> getCrc32c() {
+    public Output<String> crc32c() {
         return this.crc32c == null ? Codegen.empty() : this.crc32c;
     }
 
@@ -129,7 +129,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customTime")
       private final @Nullable Output<String> customTime;
 
-    public Output<String> getCustomTime() {
+    public Output<String> customTime() {
         return this.customTime == null ? Codegen.empty() : this.customTime;
     }
 
@@ -140,7 +140,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customerEncryption")
       private final @Nullable Output<BucketObjectCustomerEncryptionArgs> customerEncryption;
 
-    public Output<BucketObjectCustomerEncryptionArgs> getCustomerEncryption() {
+    public Output<BucketObjectCustomerEncryptionArgs> customerEncryption() {
         return this.customerEncryption == null ? Codegen.empty() : this.customerEncryption;
     }
 
@@ -151,7 +151,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -162,7 +162,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventBasedHold")
       private final @Nullable Output<Boolean> eventBasedHold;
 
-    public Output<Boolean> getEventBasedHold() {
+    public Output<Boolean> eventBasedHold() {
         return this.eventBasedHold == null ? Codegen.empty() : this.eventBasedHold;
     }
 
@@ -173,7 +173,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="generation")
       private final @Nullable Output<String> generation;
 
-    public Output<String> getGeneration() {
+    public Output<String> generation() {
         return this.generation == null ? Codegen.empty() : this.generation;
     }
 
@@ -184,35 +184,35 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
     @Import(name="ifGenerationMatch")
       private final @Nullable Output<String> ifGenerationMatch;
 
-    public Output<String> getIfGenerationMatch() {
+    public Output<String> ifGenerationMatch() {
         return this.ifGenerationMatch == null ? Codegen.empty() : this.ifGenerationMatch;
     }
 
     @Import(name="ifGenerationNotMatch")
       private final @Nullable Output<String> ifGenerationNotMatch;
 
-    public Output<String> getIfGenerationNotMatch() {
+    public Output<String> ifGenerationNotMatch() {
         return this.ifGenerationNotMatch == null ? Codegen.empty() : this.ifGenerationNotMatch;
     }
 
     @Import(name="ifMetagenerationMatch")
       private final @Nullable Output<String> ifMetagenerationMatch;
 
-    public Output<String> getIfMetagenerationMatch() {
+    public Output<String> ifMetagenerationMatch() {
         return this.ifMetagenerationMatch == null ? Codegen.empty() : this.ifMetagenerationMatch;
     }
 
     @Import(name="ifMetagenerationNotMatch")
       private final @Nullable Output<String> ifMetagenerationNotMatch;
 
-    public Output<String> getIfMetagenerationNotMatch() {
+    public Output<String> ifMetagenerationNotMatch() {
         return this.ifMetagenerationNotMatch == null ? Codegen.empty() : this.ifMetagenerationNotMatch;
     }
 
@@ -223,7 +223,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -234,7 +234,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
-    public Output<String> getKmsKeyName() {
+    public Output<String> kmsKeyName() {
         return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
     }
 
@@ -245,7 +245,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="md5Hash")
       private final @Nullable Output<String> md5Hash;
 
-    public Output<String> getMd5Hash() {
+    public Output<String> md5Hash() {
         return this.md5Hash == null ? Codegen.empty() : this.md5Hash;
     }
 
@@ -256,7 +256,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mediaLink")
       private final @Nullable Output<String> mediaLink;
 
-    public Output<String> getMediaLink() {
+    public Output<String> mediaLink() {
         return this.mediaLink == null ? Codegen.empty() : this.mediaLink;
     }
 
@@ -267,7 +267,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -278,7 +278,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metageneration")
       private final @Nullable Output<String> metageneration;
 
-    public Output<String> getMetageneration() {
+    public Output<String> metageneration() {
         return this.metageneration == null ? Codegen.empty() : this.metageneration;
     }
 
@@ -289,7 +289,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -300,28 +300,28 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="owner")
       private final @Nullable Output<BucketObjectOwnerArgs> owner;
 
-    public Output<BucketObjectOwnerArgs> getOwner() {
+    public Output<BucketObjectOwnerArgs> owner() {
         return this.owner == null ? Codegen.empty() : this.owner;
     }
 
     @Import(name="predefinedAcl")
       private final @Nullable Output<String> predefinedAcl;
 
-    public Output<String> getPredefinedAcl() {
+    public Output<String> predefinedAcl() {
         return this.predefinedAcl == null ? Codegen.empty() : this.predefinedAcl;
     }
 
     @Import(name="projection")
       private final @Nullable Output<String> projection;
 
-    public Output<String> getProjection() {
+    public Output<String> projection() {
         return this.projection == null ? Codegen.empty() : this.projection;
     }
 
     @Import(name="provisionalUserProject")
       private final @Nullable Output<String> provisionalUserProject;
 
-    public Output<String> getProvisionalUserProject() {
+    public Output<String> provisionalUserProject() {
         return this.provisionalUserProject == null ? Codegen.empty() : this.provisionalUserProject;
     }
 
@@ -332,7 +332,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retentionExpirationTime")
       private final @Nullable Output<String> retentionExpirationTime;
 
-    public Output<String> getRetentionExpirationTime() {
+    public Output<String> retentionExpirationTime() {
         return this.retentionExpirationTime == null ? Codegen.empty() : this.retentionExpirationTime;
     }
 
@@ -343,7 +343,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
@@ -354,14 +354,14 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="size")
       private final @Nullable Output<String> size;
 
-    public Output<String> getSize() {
+    public Output<String> size() {
         return this.size == null ? Codegen.empty() : this.size;
     }
 
     @Import(name="source")
       private final @Nullable Output<AssetOrArchive> source;
 
-    public Output<AssetOrArchive> getSource() {
+    public Output<AssetOrArchive> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 
@@ -372,7 +372,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageClass")
       private final @Nullable Output<String> storageClass;
 
-    public Output<String> getStorageClass() {
+    public Output<String> storageClass() {
         return this.storageClass == null ? Codegen.empty() : this.storageClass;
     }
 
@@ -383,7 +383,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="temporaryHold")
       private final @Nullable Output<Boolean> temporaryHold;
 
-    public Output<Boolean> getTemporaryHold() {
+    public Output<Boolean> temporaryHold() {
         return this.temporaryHold == null ? Codegen.empty() : this.temporaryHold;
     }
 
@@ -394,7 +394,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeCreated")
       private final @Nullable Output<String> timeCreated;
 
-    public Output<String> getTimeCreated() {
+    public Output<String> timeCreated() {
         return this.timeCreated == null ? Codegen.empty() : this.timeCreated;
     }
 
@@ -405,7 +405,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeDeleted")
       private final @Nullable Output<String> timeDeleted;
 
-    public Output<String> getTimeDeleted() {
+    public Output<String> timeDeleted() {
         return this.timeDeleted == null ? Codegen.empty() : this.timeDeleted;
     }
 
@@ -416,7 +416,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeStorageClassUpdated")
       private final @Nullable Output<String> timeStorageClassUpdated;
 
-    public Output<String> getTimeStorageClassUpdated() {
+    public Output<String> timeStorageClassUpdated() {
         return this.timeStorageClassUpdated == null ? Codegen.empty() : this.timeStorageClassUpdated;
     }
 
@@ -427,14 +427,14 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="updated")
       private final @Nullable Output<String> updated;
 
-    public Output<String> getUpdated() {
+    public Output<String> updated() {
         return this.updated == null ? Codegen.empty() : this.updated;
     }
 
     @Import(name="userProject")
       private final @Nullable Output<String> userProject;
 
-    public Output<String> getUserProject() {
+    public Output<String> userProject() {
         return this.userProject == null ? Codegen.empty() : this.userProject;
     }
 

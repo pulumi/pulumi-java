@@ -23,7 +23,7 @@ public final class PushConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="pushEndpoint", required=true)
       private final String pushEndpoint;
 
-    public String getPushEndpoint() {
+    public String pushEndpoint() {
         return this.pushEndpoint;
     }
 

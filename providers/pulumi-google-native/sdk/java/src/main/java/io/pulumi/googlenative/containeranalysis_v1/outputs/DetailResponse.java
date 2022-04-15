@@ -118,98 +118,98 @@ public final class DetailResponse {
      * The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability affects.
      * 
     */
-    public String getAffectedCpeUri() {
+    public String affectedCpeUri() {
         return this.affectedCpeUri;
     }
     /**
      * The package this vulnerability affects.
      * 
     */
-    public String getAffectedPackage() {
+    public String affectedPackage() {
         return this.affectedPackage;
     }
     /**
      * The version number at the end of an interval in which this vulnerability exists. A vulnerability can affect a package between version numbers that are disjoint sets of intervals (example: [1.0.0-1.1.0], [2.4.6-2.4.8] and [4.5.6-4.6.8]) each of which will be represented in its own Detail. If a specific affected version is provided by a vulnerability database, affected_version_start and affected_version_end will be the same in that Detail.
      * 
     */
-    public VersionResponse getAffectedVersionEnd() {
+    public VersionResponse affectedVersionEnd() {
         return this.affectedVersionEnd;
     }
     /**
      * The version number at the start of an interval in which this vulnerability exists. A vulnerability can affect a package between version numbers that are disjoint sets of intervals (example: [1.0.0-1.1.0], [2.4.6-2.4.8] and [4.5.6-4.6.8]) each of which will be represented in its own Detail. If a specific affected version is provided by a vulnerability database, affected_version_start and affected_version_end will be the same in that Detail.
      * 
     */
-    public VersionResponse getAffectedVersionStart() {
+    public VersionResponse affectedVersionStart() {
         return this.affectedVersionStart;
     }
     /**
      * A vendor-specific description of this vulnerability.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The distro recommended [CPE URI](https://cpe.mitre.org/specification/) to update to that contains a fix for this vulnerability. It is possible for this to be different from the affected_cpe_uri.
      * 
     */
-    public String getFixedCpeUri() {
+    public String fixedCpeUri() {
         return this.fixedCpeUri;
     }
     /**
      * The distro recommended package to update to that contains a fix for this vulnerability. It is possible for this to be different from the affected_package.
      * 
     */
-    public String getFixedPackage() {
+    public String fixedPackage() {
         return this.fixedPackage;
     }
     /**
      * The distro recommended version to update to that contains a fix for this vulnerability. Setting this to VersionKind.MAXIMUM means no such version is yet available.
      * 
     */
-    public VersionResponse getFixedVersion() {
+    public VersionResponse fixedVersion() {
         return this.fixedVersion;
     }
     /**
      * Whether this detail is obsolete. Occurrences are expected not to point to obsolete details.
      * 
     */
-    public Boolean getIsObsolete() {
+    public Boolean isObsolete() {
         return this.isObsolete;
     }
     /**
      * The type of package; whether native or non native (e.g., ruby gems, node.js packages, etc.).
      * 
     */
-    public String getPackageType() {
+    public String packageType() {
         return this.packageType;
     }
     /**
      * The distro assigned severity of this vulnerability.
      * 
     */
-    public String getSeverityName() {
+    public String severityName() {
         return this.severityName;
     }
     /**
      * The source from which the information in this Detail was obtained.
      * 
     */
-    public String getSource() {
+    public String source() {
         return this.source;
     }
     /**
      * The time this information was last changed at the source. This is an upstream timestamp from the underlying information source - e.g. Ubuntu security tracker.
      * 
     */
-    public String getSourceUpdateTime() {
+    public String sourceUpdateTime() {
         return this.sourceUpdateTime;
     }
     /**
      * The name of the vendor of the product.
      * 
     */
-    public String getVendor() {
+    public String vendor() {
         return this.vendor;
     }
 

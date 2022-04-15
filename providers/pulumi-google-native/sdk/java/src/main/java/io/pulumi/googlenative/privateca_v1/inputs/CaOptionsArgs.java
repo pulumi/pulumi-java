@@ -27,7 +27,7 @@ public final class CaOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isCa")
       private final @Nullable Output<Boolean> isCa;
 
-    public Output<Boolean> getIsCa() {
+    public Output<Boolean> isCa() {
         return this.isCa == null ? Codegen.empty() : this.isCa;
     }
 
@@ -38,7 +38,7 @@ public final class CaOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxIssuerPathLength")
       private final @Nullable Output<Integer> maxIssuerPathLength;
 
-    public Output<Integer> getMaxIssuerPathLength() {
+    public Output<Integer> maxIssuerPathLength() {
         return this.maxIssuerPathLength == null ? Codegen.empty() : this.maxIssuerPathLength;
     }
 

@@ -29,7 +29,7 @@ public class KnowledgeBase extends io.pulumi.resources.CustomResource {
      * @return The display name of the knowledge base. The name must be 1024 bytes or less; otherwise, the creation request fails.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -43,7 +43,7 @@ public class KnowledgeBase extends io.pulumi.resources.CustomResource {
      * @return Language which represents the KnowledgeBase. When the KnowledgeBase is created/updated, this is populated for all non en-us languages. If not populated, the default language en-us applies.
      * 
      */
-    public Output<String> getLanguageCode() {
+    public Output<String> languageCode() {
         return this.languageCode;
     }
     /**
@@ -57,7 +57,7 @@ public class KnowledgeBase extends io.pulumi.resources.CustomResource {
      * @return The knowledge base resource name. The name must be empty when creating a knowledge base. Format: `projects//locations//knowledgeBases/`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

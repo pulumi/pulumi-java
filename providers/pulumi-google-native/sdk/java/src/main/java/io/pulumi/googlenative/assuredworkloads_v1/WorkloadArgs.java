@@ -28,7 +28,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="billingAccount")
       private final @Nullable Output<String> billingAccount;
 
-    public Output<String> getBillingAccount() {
+    public Output<String> billingAccount() {
         return this.billingAccount == null ? Codegen.empty() : this.billingAccount;
     }
 
@@ -39,7 +39,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="complianceRegime", required=true)
       private final Output<WorkloadComplianceRegime> complianceRegime;
 
-    public Output<WorkloadComplianceRegime> getComplianceRegime() {
+    public Output<WorkloadComplianceRegime> complianceRegime() {
         return this.complianceRegime;
     }
 
@@ -50,7 +50,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -61,7 +61,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableSovereignControls")
       private final @Nullable Output<Boolean> enableSovereignControls;
 
-    public Output<Boolean> getEnableSovereignControls() {
+    public Output<Boolean> enableSovereignControls() {
         return this.enableSovereignControls == null ? Codegen.empty() : this.enableSovereignControls;
     }
 
@@ -72,14 +72,14 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="externalId")
       private final @Nullable Output<String> externalId;
 
-    public Output<String> getExternalId() {
+    public Output<String> externalId() {
         return this.externalId == null ? Codegen.empty() : this.externalId;
     }
 
@@ -90,7 +90,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsSettings")
       private final @Nullable Output<GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs> kmsSettings;
 
-    public Output<GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs> getKmsSettings() {
+    public Output<GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs> kmsSettings() {
         return this.kmsSettings == null ? Codegen.empty() : this.kmsSettings;
     }
 
@@ -101,14 +101,14 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -119,14 +119,14 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -137,7 +137,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="provisionedResourcesParent")
       private final @Nullable Output<String> provisionedResourcesParent;
 
-    public Output<String> getProvisionedResourcesParent() {
+    public Output<String> provisionedResourcesParent() {
         return this.provisionedResourcesParent == null ? Codegen.empty() : this.provisionedResourcesParent;
     }
 
@@ -148,7 +148,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceSettings")
       private final @Nullable Output<List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs>> resourceSettings;
 
-    public Output<List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs>> getResourceSettings() {
+    public Output<List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs>> resourceSettings() {
         return this.resourceSettings == null ? Codegen.empty() : this.resourceSettings;
     }
 

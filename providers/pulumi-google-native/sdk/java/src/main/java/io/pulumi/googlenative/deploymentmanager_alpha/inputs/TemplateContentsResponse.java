@@ -25,7 +25,7 @@ public final class TemplateContentsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="imports", required=true)
       private final List<ImportFileResponse> imports;
 
-    public List<ImportFileResponse> getImports() {
+    public List<ImportFileResponse> imports() {
         return this.imports;
     }
 
@@ -36,7 +36,7 @@ public final class TemplateContentsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="interpreter", required=true)
       private final String interpreter;
 
-    public String getInterpreter() {
+    public String interpreter() {
         return this.interpreter;
     }
 
@@ -47,7 +47,7 @@ public final class TemplateContentsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="mainTemplate", required=true)
       private final String mainTemplate;
 
-    public String getMainTemplate() {
+    public String mainTemplate() {
         return this.mainTemplate;
     }
 
@@ -58,7 +58,7 @@ public final class TemplateContentsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="schema", required=true)
       private final String schema;
 
-    public String getSchema() {
+    public String schema() {
         return this.schema;
     }
 
@@ -69,7 +69,7 @@ public final class TemplateContentsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="template", required=true)
       private final String template;
 
-    public String getTemplate() {
+    public String template() {
         return this.template;
     }
 

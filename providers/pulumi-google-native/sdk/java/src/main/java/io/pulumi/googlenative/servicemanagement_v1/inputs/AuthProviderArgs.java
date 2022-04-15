@@ -28,7 +28,7 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="audiences")
       private final @Nullable Output<String> audiences;
 
-    public Output<String> getAudiences() {
+    public Output<String> audiences() {
         return this.audiences == null ? Codegen.empty() : this.audiences;
     }
 
@@ -39,7 +39,7 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizationUrl")
       private final @Nullable Output<String> authorizationUrl;
 
-    public Output<String> getAuthorizationUrl() {
+    public Output<String> authorizationUrl() {
         return this.authorizationUrl == null ? Codegen.empty() : this.authorizationUrl;
     }
 
@@ -50,7 +50,7 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -61,7 +61,7 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="issuer")
       private final @Nullable Output<String> issuer;
 
-    public Output<String> getIssuer() {
+    public Output<String> issuer() {
         return this.issuer == null ? Codegen.empty() : this.issuer;
     }
 
@@ -72,7 +72,7 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jwksUri")
       private final @Nullable Output<String> jwksUri;
 
-    public Output<String> getJwksUri() {
+    public Output<String> jwksUri() {
         return this.jwksUri == null ? Codegen.empty() : this.jwksUri;
     }
 
@@ -83,7 +83,7 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jwtLocations")
       private final @Nullable Output<List<JwtLocationArgs>> jwtLocations;
 
-    public Output<List<JwtLocationArgs>> getJwtLocations() {
+    public Output<List<JwtLocationArgs>> jwtLocations() {
         return this.jwtLocations == null ? Codegen.empty() : this.jwtLocations;
     }
 

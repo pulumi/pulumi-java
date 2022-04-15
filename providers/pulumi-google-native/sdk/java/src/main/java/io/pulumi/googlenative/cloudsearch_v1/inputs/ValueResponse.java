@@ -22,42 +22,42 @@ public final class ValueResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="booleanValue", required=true)
       private final Boolean booleanValue;
 
-    public Boolean getBooleanValue() {
+    public Boolean booleanValue() {
         return this.booleanValue;
     }
 
     @Import(name="dateValue", required=true)
       private final DateResponse dateValue;
 
-    public DateResponse getDateValue() {
+    public DateResponse dateValue() {
         return this.dateValue;
     }
 
     @Import(name="doubleValue", required=true)
       private final Double doubleValue;
 
-    public Double getDoubleValue() {
+    public Double doubleValue() {
         return this.doubleValue;
     }
 
     @Import(name="integerValue", required=true)
       private final String integerValue;
 
-    public String getIntegerValue() {
+    public String integerValue() {
         return this.integerValue;
     }
 
     @Import(name="stringValue", required=true)
       private final String stringValue;
 
-    public String getStringValue() {
+    public String stringValue() {
         return this.stringValue;
     }
 
     @Import(name="timestampValue", required=true)
       private final String timestampValue;
 
-    public String getTimestampValue() {
+    public String timestampValue() {
         return this.timestampValue;
     }
 

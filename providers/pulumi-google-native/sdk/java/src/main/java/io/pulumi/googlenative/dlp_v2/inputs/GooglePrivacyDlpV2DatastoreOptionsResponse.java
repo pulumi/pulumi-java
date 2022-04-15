@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2DatastoreOptionsResponse extends io.pulumi.
     @Import(name="kind", required=true)
       private final GooglePrivacyDlpV2KindExpressionResponse kind;
 
-    public GooglePrivacyDlpV2KindExpressionResponse getKind() {
+    public GooglePrivacyDlpV2KindExpressionResponse kind() {
         return this.kind;
     }
 
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2DatastoreOptionsResponse extends io.pulumi.
     @Import(name="partitionId", required=true)
       private final GooglePrivacyDlpV2PartitionIdResponse partitionId;
 
-    public GooglePrivacyDlpV2PartitionIdResponse getPartitionId() {
+    public GooglePrivacyDlpV2PartitionIdResponse partitionId() {
         return this.partitionId;
     }
 

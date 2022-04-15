@@ -22,7 +22,7 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
     @Import(name="timeoutSec")
       private final @Nullable Output<Integer> timeoutSec;
 
-    public Output<Integer> getTimeoutSec() {
+    public Output<Integer> timeoutSec() {
         return this.timeoutSec == null ? Codegen.empty() : this.timeoutSec;
     }
 

@@ -23,7 +23,7 @@ public final class SavedDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -34,7 +34,7 @@ public final class SavedDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sourceDisk", required=true)
       private final String sourceDisk;
 
-    public String getSourceDisk() {
+    public String sourceDisk() {
         return this.sourceDisk;
     }
 
@@ -45,7 +45,7 @@ public final class SavedDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="storageBytes", required=true)
       private final String storageBytes;
 
-    public String getStorageBytes() {
+    public String storageBytes() {
         return this.storageBytes;
     }
 
@@ -56,7 +56,7 @@ public final class SavedDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="storageBytesStatus", required=true)
       private final String storageBytesStatus;
 
-    public String getStorageBytesStatus() {
+    public String storageBytesStatus() {
         return this.storageBytesStatus;
     }
 

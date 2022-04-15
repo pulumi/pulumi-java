@@ -27,7 +27,7 @@ public final class GoogleCloudChannelV1ParameterArgs extends io.pulumi.resources
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudChannelV1ParameterArgs extends io.pulumi.resources
     @Import(name="value")
       private final @Nullable Output<GoogleCloudChannelV1ValueArgs> value;
 
-    public Output<GoogleCloudChannelV1ValueArgs> getValue() {
+    public Output<GoogleCloudChannelV1ValueArgs> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

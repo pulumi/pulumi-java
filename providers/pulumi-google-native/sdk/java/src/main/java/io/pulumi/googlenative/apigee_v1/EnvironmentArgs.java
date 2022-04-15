@@ -25,7 +25,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiProxyType")
       private final @Nullable Output<EnvironmentApiProxyType> apiProxyType;
 
-    public Output<EnvironmentApiProxyType> getApiProxyType() {
+    public Output<EnvironmentApiProxyType> apiProxyType() {
         return this.apiProxyType == null ? Codegen.empty() : this.apiProxyType;
     }
 
@@ -36,7 +36,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deploymentType")
       private final @Nullable Output<EnvironmentDeploymentType> deploymentType;
 
-    public Output<EnvironmentDeploymentType> getDeploymentType() {
+    public Output<EnvironmentDeploymentType> deploymentType() {
         return this.deploymentType == null ? Codegen.empty() : this.deploymentType;
     }
 
@@ -47,7 +47,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -58,7 +58,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -69,14 +69,14 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -87,7 +87,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<GoogleCloudApigeeV1PropertiesArgs> properties;
 
-    public Output<GoogleCloudApigeeV1PropertiesArgs> getProperties() {
+    public Output<GoogleCloudApigeeV1PropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 

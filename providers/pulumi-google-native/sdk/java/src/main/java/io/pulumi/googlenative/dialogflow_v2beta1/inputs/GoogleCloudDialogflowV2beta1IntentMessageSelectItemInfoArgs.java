@@ -27,7 +27,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs e
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs e
     @Import(name="synonyms")
       private final @Nullable Output<List<String>> synonyms;
 
-    public Output<List<String>> getSynonyms() {
+    public Output<List<String>> synonyms() {
         return this.synonyms == null ? Codegen.empty() : this.synonyms;
     }
 

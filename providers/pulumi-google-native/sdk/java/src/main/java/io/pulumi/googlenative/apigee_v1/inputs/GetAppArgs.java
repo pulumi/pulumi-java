@@ -17,35 +17,35 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="appId", required=true)
       private final String appId;
 
-    public String getAppId() {
+    public String appId() {
         return this.appId;
     }
 
     @Import(name="developerId", required=true)
       private final String developerId;
 
-    public String getDeveloperId() {
+    public String developerId() {
         return this.developerId;
     }
 
     @Import(name="entity")
       private final @Nullable String entity;
 
-    public Optional<String> getEntity() {
+    public Optional<String> entity() {
         return this.entity == null ? Optional.empty() : Optional.ofNullable(this.entity);
     }
 
     @Import(name="organizationId", required=true)
       private final String organizationId;
 
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 
     @Import(name="query")
       private final @Nullable String query;
 
-    public Optional<String> getQuery() {
+    public Optional<String> query() {
         return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
     }
 

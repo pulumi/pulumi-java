@@ -27,7 +27,7 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="coreCount")
       private final @Nullable Output<String> coreCount;
 
-    public Output<String> getCoreCount() {
+    public Output<String> coreCount() {
         return this.coreCount == null ? Codegen.empty() : this.coreCount;
     }
 
@@ -38,7 +38,7 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="type")
       private final @Nullable Output<AcceleratorConfigType> type;
 
-    public Output<AcceleratorConfigType> getType() {
+    public Output<AcceleratorConfigType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

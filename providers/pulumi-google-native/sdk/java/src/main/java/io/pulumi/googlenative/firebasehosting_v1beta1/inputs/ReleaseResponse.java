@@ -25,7 +25,7 @@ public final class ReleaseResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 
@@ -36,7 +36,7 @@ public final class ReleaseResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -47,7 +47,7 @@ public final class ReleaseResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="releaseTime", required=true)
       private final String releaseTime;
 
-    public String getReleaseTime() {
+    public String releaseTime() {
         return this.releaseTime;
     }
 
@@ -58,7 +58,7 @@ public final class ReleaseResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="releaseUser", required=true)
       private final ActingUserResponse releaseUser;
 
-    public ActingUserResponse getReleaseUser() {
+    public ActingUserResponse releaseUser() {
         return this.releaseUser;
     }
 
@@ -69,7 +69,7 @@ public final class ReleaseResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -80,7 +80,7 @@ public final class ReleaseResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="version", required=true)
       private final VersionResponse version;
 
-    public VersionResponse getVersion() {
+    public VersionResponse version() {
         return this.version;
     }
 

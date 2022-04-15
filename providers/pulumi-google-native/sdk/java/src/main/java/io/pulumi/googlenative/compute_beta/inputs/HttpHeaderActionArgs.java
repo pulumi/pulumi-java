@@ -28,7 +28,7 @@ public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="requestHeadersToAdd")
       private final @Nullable Output<List<HttpHeaderOptionArgs>> requestHeadersToAdd;
 
-    public Output<List<HttpHeaderOptionArgs>> getRequestHeadersToAdd() {
+    public Output<List<HttpHeaderOptionArgs>> requestHeadersToAdd() {
         return this.requestHeadersToAdd == null ? Codegen.empty() : this.requestHeadersToAdd;
     }
 
@@ -39,7 +39,7 @@ public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="requestHeadersToRemove")
       private final @Nullable Output<List<String>> requestHeadersToRemove;
 
-    public Output<List<String>> getRequestHeadersToRemove() {
+    public Output<List<String>> requestHeadersToRemove() {
         return this.requestHeadersToRemove == null ? Codegen.empty() : this.requestHeadersToRemove;
     }
 
@@ -50,7 +50,7 @@ public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="responseHeadersToAdd")
       private final @Nullable Output<List<HttpHeaderOptionArgs>> responseHeadersToAdd;
 
-    public Output<List<HttpHeaderOptionArgs>> getResponseHeadersToAdd() {
+    public Output<List<HttpHeaderOptionArgs>> responseHeadersToAdd() {
         return this.responseHeadersToAdd == null ? Codegen.empty() : this.responseHeadersToAdd;
     }
 
@@ -61,7 +61,7 @@ public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="responseHeadersToRemove")
       private final @Nullable Output<List<String>> responseHeadersToRemove;
 
-    public Output<List<String>> getResponseHeadersToRemove() {
+    public Output<List<String>> responseHeadersToRemove() {
         return this.responseHeadersToRemove == null ? Codegen.empty() : this.responseHeadersToRemove;
     }
 

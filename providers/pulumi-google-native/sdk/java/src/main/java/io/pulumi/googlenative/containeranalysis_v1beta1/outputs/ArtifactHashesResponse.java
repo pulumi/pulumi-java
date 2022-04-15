@@ -16,7 +16,7 @@ public final class ArtifactHashesResponse {
         this.sha256 = sha256;
     }
 
-    public String getSha256() {
+    public String sha256() {
         return this.sha256;
     }
 

@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalRe
     @Import(name="confidenceLevel", required=true)
       private final Double confidenceLevel;
 
-    public Double getConfidenceLevel() {
+    public Double confidenceLevel() {
         return this.confidenceLevel;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalRe
     @Import(name="lowerBound", required=true)
       private final Double lowerBound;
 
-    public Double getLowerBound() {
+    public Double lowerBound() {
         return this.lowerBound;
     }
 
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalRe
     @Import(name="ratio", required=true)
       private final Double ratio;
 
-    public Double getRatio() {
+    public Double ratio() {
         return this.ratio;
     }
 
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalRe
     @Import(name="upperBound", required=true)
       private final Double upperBound;
 
-    public Double getUpperBound() {
+    public Double upperBound() {
         return this.upperBound;
     }
 

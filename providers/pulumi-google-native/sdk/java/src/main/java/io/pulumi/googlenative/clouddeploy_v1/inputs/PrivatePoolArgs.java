@@ -26,7 +26,7 @@ public final class PrivatePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="artifactStorage")
       private final @Nullable Output<String> artifactStorage;
 
-    public Output<String> getArtifactStorage() {
+    public Output<String> artifactStorage() {
         return this.artifactStorage == null ? Codegen.empty() : this.artifactStorage;
     }
 
@@ -37,7 +37,7 @@ public final class PrivatePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
@@ -48,7 +48,7 @@ public final class PrivatePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workerPool", required=true)
       private final Output<String> workerPool;
 
-    public Output<String> getWorkerPool() {
+    public Output<String> workerPool() {
         return this.workerPool;
     }
 

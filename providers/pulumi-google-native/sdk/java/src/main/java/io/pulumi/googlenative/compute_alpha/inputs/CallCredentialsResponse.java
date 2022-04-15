@@ -24,7 +24,7 @@ public final class CallCredentialsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="callCredentialType", required=true)
       private final String callCredentialType;
 
-    public String getCallCredentialType() {
+    public String callCredentialType() {
         return this.callCredentialType;
     }
 
@@ -35,7 +35,7 @@ public final class CallCredentialsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="fromPlugin", required=true)
       private final MetadataCredentialsFromPluginResponse fromPlugin;
 
-    public MetadataCredentialsFromPluginResponse getFromPlugin() {
+    public MetadataCredentialsFromPluginResponse fromPlugin() {
         return this.fromPlugin;
     }
 

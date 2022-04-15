@@ -27,7 +27,7 @@ public final class HttpFaultDelayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fixedDelay")
       private final @Nullable Output<DurationArgs> fixedDelay;
 
-    public Output<DurationArgs> getFixedDelay() {
+    public Output<DurationArgs> fixedDelay() {
         return this.fixedDelay == null ? Codegen.empty() : this.fixedDelay;
     }
 
@@ -38,7 +38,7 @@ public final class HttpFaultDelayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="percentage")
       private final @Nullable Output<Double> percentage;
 
-    public Output<Double> getPercentage() {
+    public Output<Double> percentage() {
         return this.percentage == null ? Codegen.empty() : this.percentage;
     }
 

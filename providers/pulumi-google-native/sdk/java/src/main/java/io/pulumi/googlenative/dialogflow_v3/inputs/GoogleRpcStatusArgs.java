@@ -29,7 +29,7 @@ public final class GoogleRpcStatusArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="code")
       private final @Nullable Output<Integer> code;
 
-    public Output<Integer> getCode() {
+    public Output<Integer> code() {
         return this.code == null ? Codegen.empty() : this.code;
     }
 
@@ -40,7 +40,7 @@ public final class GoogleRpcStatusArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="details")
       private final @Nullable Output<List<Map<String,String>>> details;
 
-    public Output<List<Map<String,String>>> getDetails() {
+    public Output<List<Map<String,String>>> details() {
         return this.details == null ? Codegen.empty() : this.details;
     }
 
@@ -51,7 +51,7 @@ public final class GoogleRpcStatusArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message == null ? Codegen.empty() : this.message;
     }
 

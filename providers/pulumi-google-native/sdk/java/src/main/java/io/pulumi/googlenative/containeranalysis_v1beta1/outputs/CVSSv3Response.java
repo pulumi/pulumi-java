@@ -56,45 +56,45 @@ public final class CVSSv3Response {
         this.userInteraction = userInteraction;
     }
 
-    public String getAttackComplexity() {
+    public String attackComplexity() {
         return this.attackComplexity;
     }
     /**
      * Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over time and across user environments.
      * 
     */
-    public String getAttackVector() {
+    public String attackVector() {
         return this.attackVector;
     }
-    public String getAvailabilityImpact() {
+    public String availabilityImpact() {
         return this.availabilityImpact;
     }
     /**
      * The base score is a function of the base metric scores.
      * 
     */
-    public Double getBaseScore() {
+    public Double baseScore() {
         return this.baseScore;
     }
-    public String getConfidentialityImpact() {
+    public String confidentialityImpact() {
         return this.confidentialityImpact;
     }
-    public Double getExploitabilityScore() {
+    public Double exploitabilityScore() {
         return this.exploitabilityScore;
     }
-    public Double getImpactScore() {
+    public Double impactScore() {
         return this.impactScore;
     }
-    public String getIntegrityImpact() {
+    public String integrityImpact() {
         return this.integrityImpact;
     }
-    public String getPrivilegesRequired() {
+    public String privilegesRequired() {
         return this.privilegesRequired;
     }
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
-    public String getUserInteraction() {
+    public String userInteraction() {
         return this.userInteraction;
     }
 

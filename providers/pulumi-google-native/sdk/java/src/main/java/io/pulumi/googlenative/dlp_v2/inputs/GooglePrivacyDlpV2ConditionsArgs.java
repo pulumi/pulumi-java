@@ -27,7 +27,7 @@ public final class GooglePrivacyDlpV2ConditionsArgs extends io.pulumi.resources.
     @Import(name="conditions")
       private final @Nullable Output<List<GooglePrivacyDlpV2ConditionArgs>> conditions;
 
-    public Output<List<GooglePrivacyDlpV2ConditionArgs>> getConditions() {
+    public Output<List<GooglePrivacyDlpV2ConditionArgs>> conditions() {
         return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 

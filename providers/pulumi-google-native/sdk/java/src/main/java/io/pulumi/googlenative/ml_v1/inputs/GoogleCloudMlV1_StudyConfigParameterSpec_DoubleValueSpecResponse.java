@@ -19,7 +19,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecRespo
     @Import(name="maxValue", required=true)
       private final Double maxValue;
 
-    public Double getMaxValue() {
+    public Double maxValue() {
         return this.maxValue;
     }
 
@@ -30,7 +30,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecRespo
     @Import(name="minValue", required=true)
       private final Double minValue;
 
-    public Double getMinValue() {
+    public Double minValue() {
         return this.minValue;
     }
 

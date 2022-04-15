@@ -22,7 +22,7 @@ public final class DatasetTagsItemArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tagKey")
       private final @Nullable Output<String> tagKey;
 
-    public Output<String> getTagKey() {
+    public Output<String> tagKey() {
         return this.tagKey == null ? Codegen.empty() : this.tagKey;
     }
 
@@ -33,7 +33,7 @@ public final class DatasetTagsItemArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tagValue")
       private final @Nullable Output<String> tagValue;
 
-    public Output<String> getTagValue() {
+    public Output<String> tagValue() {
         return this.tagValue == null ? Codegen.empty() : this.tagValue;
     }
 

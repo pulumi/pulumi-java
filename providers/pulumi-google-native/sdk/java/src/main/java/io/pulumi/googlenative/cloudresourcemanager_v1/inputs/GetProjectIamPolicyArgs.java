@@ -15,7 +15,7 @@ public final class GetProjectIamPolicyArgs extends io.pulumi.resources.InvokeArg
     @Import(name="resource", required=true)
       private final String resource;
 
-    public String getResource() {
+    public String resource() {
         return this.resource;
     }
 

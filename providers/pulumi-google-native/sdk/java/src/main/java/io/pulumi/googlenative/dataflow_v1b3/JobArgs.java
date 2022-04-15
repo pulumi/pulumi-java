@@ -33,7 +33,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientRequestId")
       private final @Nullable Output<String> clientRequestId;
 
-    public Output<String> getClientRequestId() {
+    public Output<String> clientRequestId() {
         return this.clientRequestId == null ? Codegen.empty() : this.clientRequestId;
     }
 
@@ -44,7 +44,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -55,7 +55,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdFromSnapshotId")
       private final @Nullable Output<String> createdFromSnapshotId;
 
-    public Output<String> getCreatedFromSnapshotId() {
+    public Output<String> createdFromSnapshotId() {
         return this.createdFromSnapshotId == null ? Codegen.empty() : this.createdFromSnapshotId;
     }
 
@@ -66,7 +66,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="currentState")
       private final @Nullable Output<JobCurrentState> currentState;
 
-    public Output<JobCurrentState> getCurrentState() {
+    public Output<JobCurrentState> currentState() {
         return this.currentState == null ? Codegen.empty() : this.currentState;
     }
 
@@ -77,7 +77,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="currentStateTime")
       private final @Nullable Output<String> currentStateTime;
 
-    public Output<String> getCurrentStateTime() {
+    public Output<String> currentStateTime() {
         return this.currentStateTime == null ? Codegen.empty() : this.currentStateTime;
     }
 
@@ -88,7 +88,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="environment")
       private final @Nullable Output<EnvironmentArgs> environment;
 
-    public Output<EnvironmentArgs> getEnvironment() {
+    public Output<EnvironmentArgs> environment() {
         return this.environment == null ? Codegen.empty() : this.environment;
     }
 
@@ -99,7 +99,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -110,7 +110,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobMetadata")
       private final @Nullable Output<JobMetadataArgs> jobMetadata;
 
-    public Output<JobMetadataArgs> getJobMetadata() {
+    public Output<JobMetadataArgs> jobMetadata() {
         return this.jobMetadata == null ? Codegen.empty() : this.jobMetadata;
     }
 
@@ -121,7 +121,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -132,7 +132,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -143,7 +143,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -154,7 +154,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pipelineDescription")
       private final @Nullable Output<PipelineDescriptionArgs> pipelineDescription;
 
-    public Output<PipelineDescriptionArgs> getPipelineDescription() {
+    public Output<PipelineDescriptionArgs> pipelineDescription() {
         return this.pipelineDescription == null ? Codegen.empty() : this.pipelineDescription;
     }
 
@@ -165,7 +165,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -176,7 +176,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="replaceJobId")
       private final @Nullable Output<String> replaceJobId;
 
-    public Output<String> getReplaceJobId() {
+    public Output<String> replaceJobId() {
         return this.replaceJobId == null ? Codegen.empty() : this.replaceJobId;
     }
 
@@ -187,7 +187,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="replacedByJobId")
       private final @Nullable Output<String> replacedByJobId;
 
-    public Output<String> getReplacedByJobId() {
+    public Output<String> replacedByJobId() {
         return this.replacedByJobId == null ? Codegen.empty() : this.replacedByJobId;
     }
 
@@ -198,7 +198,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requestedState")
       private final @Nullable Output<JobRequestedState> requestedState;
 
-    public Output<JobRequestedState> getRequestedState() {
+    public Output<JobRequestedState> requestedState() {
         return this.requestedState == null ? Codegen.empty() : this.requestedState;
     }
 
@@ -209,7 +209,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="satisfiesPzs")
       private final @Nullable Output<Boolean> satisfiesPzs;
 
-    public Output<Boolean> getSatisfiesPzs() {
+    public Output<Boolean> satisfiesPzs() {
         return this.satisfiesPzs == null ? Codegen.empty() : this.satisfiesPzs;
     }
 
@@ -220,7 +220,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stageStates")
       private final @Nullable Output<List<ExecutionStageStateArgs>> stageStates;
 
-    public Output<List<ExecutionStageStateArgs>> getStageStates() {
+    public Output<List<ExecutionStageStateArgs>> stageStates() {
         return this.stageStates == null ? Codegen.empty() : this.stageStates;
     }
 
@@ -231,7 +231,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
@@ -242,7 +242,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="steps")
       private final @Nullable Output<List<StepArgs>> steps;
 
-    public Output<List<StepArgs>> getSteps() {
+    public Output<List<StepArgs>> steps() {
         return this.steps == null ? Codegen.empty() : this.steps;
     }
 
@@ -253,7 +253,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stepsLocation")
       private final @Nullable Output<String> stepsLocation;
 
-    public Output<String> getStepsLocation() {
+    public Output<String> stepsLocation() {
         return this.stepsLocation == null ? Codegen.empty() : this.stepsLocation;
     }
 
@@ -264,7 +264,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tempFiles")
       private final @Nullable Output<List<String>> tempFiles;
 
-    public Output<List<String>> getTempFiles() {
+    public Output<List<String>> tempFiles() {
         return this.tempFiles == null ? Codegen.empty() : this.tempFiles;
     }
 
@@ -275,7 +275,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="transformNameMapping")
       private final @Nullable Output<Map<String,String>> transformNameMapping;
 
-    public Output<Map<String,String>> getTransformNameMapping() {
+    public Output<Map<String,String>> transformNameMapping() {
         return this.transformNameMapping == null ? Codegen.empty() : this.transformNameMapping;
     }
 
@@ -286,14 +286,14 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<JobType> type;
 
-    public Output<JobType> getType() {
+    public Output<JobType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
     @Import(name="view")
       private final @Nullable Output<String> view;
 
-    public Output<String> getView() {
+    public Output<String> view() {
         return this.view == null ? Codegen.empty() : this.view;
     }
 

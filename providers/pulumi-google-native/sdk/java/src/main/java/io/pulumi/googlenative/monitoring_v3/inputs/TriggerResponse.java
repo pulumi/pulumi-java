@@ -24,7 +24,7 @@ public final class TriggerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="count", required=true)
       private final Integer count;
 
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
 
@@ -35,7 +35,7 @@ public final class TriggerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="percent", required=true)
       private final Double percent;
 
-    public Double getPercent() {
+    public Double percent() {
         return this.percent;
     }
 

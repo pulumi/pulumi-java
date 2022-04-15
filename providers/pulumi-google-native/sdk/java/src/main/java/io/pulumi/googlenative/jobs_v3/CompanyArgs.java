@@ -25,7 +25,7 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="careerSiteUri")
       private final @Nullable Output<String> careerSiteUri;
 
-    public Output<String> getCareerSiteUri() {
+    public Output<String> careerSiteUri() {
         return this.careerSiteUri == null ? Codegen.empty() : this.careerSiteUri;
     }
 
@@ -36,7 +36,7 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -47,7 +47,7 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eeoText")
       private final @Nullable Output<String> eeoText;
 
-    public Output<String> getEeoText() {
+    public Output<String> eeoText() {
         return this.eeoText == null ? Codegen.empty() : this.eeoText;
     }
 
@@ -58,7 +58,7 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="externalId", required=true)
       private final Output<String> externalId;
 
-    public Output<String> getExternalId() {
+    public Output<String> externalId() {
         return this.externalId;
     }
 
@@ -69,7 +69,7 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="headquartersAddress")
       private final @Nullable Output<String> headquartersAddress;
 
-    public Output<String> getHeadquartersAddress() {
+    public Output<String> headquartersAddress() {
         return this.headquartersAddress == null ? Codegen.empty() : this.headquartersAddress;
     }
 
@@ -80,7 +80,7 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hiringAgency")
       private final @Nullable Output<Boolean> hiringAgency;
 
-    public Output<Boolean> getHiringAgency() {
+    public Output<Boolean> hiringAgency() {
         return this.hiringAgency == null ? Codegen.empty() : this.hiringAgency;
     }
 
@@ -91,7 +91,7 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="imageUri")
       private final @Nullable Output<String> imageUri;
 
-    public Output<String> getImageUri() {
+    public Output<String> imageUri() {
         return this.imageUri == null ? Codegen.empty() : this.imageUri;
     }
 
@@ -102,7 +102,7 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keywordSearchableJobCustomAttributes")
       private final @Nullable Output<List<String>> keywordSearchableJobCustomAttributes;
 
-    public Output<List<String>> getKeywordSearchableJobCustomAttributes() {
+    public Output<List<String>> keywordSearchableJobCustomAttributes() {
         return this.keywordSearchableJobCustomAttributes == null ? Codegen.empty() : this.keywordSearchableJobCustomAttributes;
     }
 
@@ -113,14 +113,14 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -131,7 +131,7 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="size")
       private final @Nullable Output<CompanySize> size;
 
-    public Output<CompanySize> getSize() {
+    public Output<CompanySize> size() {
         return this.size == null ? Codegen.empty() : this.size;
     }
 
@@ -142,7 +142,7 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="websiteUri")
       private final @Nullable Output<String> websiteUri;
 
-    public Output<String> getWebsiteUri() {
+    public Output<String> websiteUri() {
         return this.websiteUri == null ? Codegen.empty() : this.websiteUri;
     }
 

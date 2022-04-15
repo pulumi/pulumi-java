@@ -25,7 +25,7 @@ public final class EnvFromSourceResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="configMapRef", required=true)
       private final ConfigMapEnvSourceResponse configMapRef;
 
-    public ConfigMapEnvSourceResponse getConfigMapRef() {
+    public ConfigMapEnvSourceResponse configMapRef() {
         return this.configMapRef;
     }
 
@@ -36,7 +36,7 @@ public final class EnvFromSourceResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="prefix", required=true)
       private final String prefix;
 
-    public String getPrefix() {
+    public String prefix() {
         return this.prefix;
     }
 
@@ -47,7 +47,7 @@ public final class EnvFromSourceResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="secretRef", required=true)
       private final SecretEnvSourceResponse secretRef;
 
-    public SecretEnvSourceResponse getSecretRef() {
+    public SecretEnvSourceResponse secretRef() {
         return this.secretRef;
     }
 

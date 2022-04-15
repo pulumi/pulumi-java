@@ -23,7 +23,7 @@ public final class ForwardingRuleServiceDirectoryRegistrationResponse extends io
     @Import(name="namespace", required=true)
       private final String namespace;
 
-    public String getNamespace() {
+    public String namespace() {
         return this.namespace;
     }
 
@@ -34,7 +34,7 @@ public final class ForwardingRuleServiceDirectoryRegistrationResponse extends io
     @Import(name="service", required=true)
       private final String service;
 
-    public String getService() {
+    public String service() {
         return this.service;
     }
 
@@ -45,7 +45,7 @@ public final class ForwardingRuleServiceDirectoryRegistrationResponse extends io
     @Import(name="serviceDirectoryRegion", required=true)
       private final String serviceDirectoryRegion;
 
-    public String getServiceDirectoryRegion() {
+    public String serviceDirectoryRegion() {
         return this.serviceDirectoryRegion;
     }
 

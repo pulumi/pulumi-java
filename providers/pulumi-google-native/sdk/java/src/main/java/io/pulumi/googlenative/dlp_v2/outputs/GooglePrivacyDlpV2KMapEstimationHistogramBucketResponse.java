@@ -55,35 +55,35 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse {
      * Number of records within these anonymity bounds.
      * 
     */
-    public String getBucketSize() {
+    public String bucketSize() {
         return this.bucketSize;
     }
     /**
      * Total number of distinct quasi-identifier tuple values in this bucket.
      * 
     */
-    public String getBucketValueCount() {
+    public String bucketValueCount() {
         return this.bucketValueCount;
     }
     /**
      * Sample of quasi-identifier tuple values in this bucket. The total number of classes returned per bucket is capped at 20.
      * 
     */
-    public List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> getBucketValues() {
+    public List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> bucketValues() {
         return this.bucketValues;
     }
     /**
      * Always greater than or equal to min_anonymity.
      * 
     */
-    public String getMaxAnonymity() {
+    public String maxAnonymity() {
         return this.maxAnonymity;
     }
     /**
      * Always positive.
      * 
     */
-    public String getMinAnonymity() {
+    public String minAnonymity() {
         return this.minAnonymity;
     }
 

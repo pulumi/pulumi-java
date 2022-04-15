@@ -24,7 +24,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="iam", required=true)
       private final String iam;
 
-    public String getIam() {
+    public String iam() {
         return this.iam;
     }
 
@@ -35,7 +35,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="op", required=true)
       private final String op;
 
-    public String getOp() {
+    public String op() {
         return this.op;
     }
 
@@ -46,7 +46,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="svc", required=true)
       private final String svc;
 
-    public String getSvc() {
+    public String svc() {
         return this.svc;
     }
 
@@ -57,7 +57,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sys", required=true)
       private final String sys;
 
-    public String getSys() {
+    public String sys() {
         return this.sys;
     }
 
@@ -68,7 +68,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="values", required=true)
       private final List<String> values;
 
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

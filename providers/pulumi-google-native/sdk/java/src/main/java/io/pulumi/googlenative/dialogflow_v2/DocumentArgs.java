@@ -26,7 +26,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentUri")
       private final @Nullable Output<String> contentUri;
 
-    public Output<String> getContentUri() {
+    public Output<String> contentUri() {
         return this.contentUri == null ? Codegen.empty() : this.contentUri;
     }
 
@@ -37,7 +37,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -48,14 +48,14 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableAutoReload")
       private final @Nullable Output<Boolean> enableAutoReload;
 
-    public Output<Boolean> getEnableAutoReload() {
+    public Output<Boolean> enableAutoReload() {
         return this.enableAutoReload == null ? Codegen.empty() : this.enableAutoReload;
     }
 
     @Import(name="knowledgeBaseId", required=true)
       private final Output<String> knowledgeBaseId;
 
-    public Output<String> getKnowledgeBaseId() {
+    public Output<String> knowledgeBaseId() {
         return this.knowledgeBaseId;
     }
 
@@ -66,14 +66,14 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="knowledgeTypes", required=true)
       private final Output<List<DocumentKnowledgeTypesItem>> knowledgeTypes;
 
-    public Output<List<DocumentKnowledgeTypesItem>> getKnowledgeTypes() {
+    public Output<List<DocumentKnowledgeTypesItem>> knowledgeTypes() {
         return this.knowledgeTypes;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -84,7 +84,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -95,7 +95,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mimeType", required=true)
       private final Output<String> mimeType;
 
-    public Output<String> getMimeType() {
+    public Output<String> mimeType() {
         return this.mimeType;
     }
 
@@ -106,14 +106,14 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -124,7 +124,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rawContent")
       private final @Nullable Output<String> rawContent;
 
-    public Output<String> getRawContent() {
+    public Output<String> rawContent() {
         return this.rawContent == null ? Codegen.empty() : this.rawContent;
     }
 

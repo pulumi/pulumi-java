@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2ReplaceDictionaryConfigResponse extends io.
     @Import(name="wordList", required=true)
       private final GooglePrivacyDlpV2WordListResponse wordList;
 
-    public GooglePrivacyDlpV2WordListResponse getWordList() {
+    public GooglePrivacyDlpV2WordListResponse wordList() {
         return this.wordList;
     }
 

@@ -24,7 +24,7 @@ public final class FutureReservationStatusResponse extends io.pulumi.resources.I
     @Import(name="autoCreatedReservations", required=true)
       private final List<String> autoCreatedReservations;
 
-    public List<String> getAutoCreatedReservations() {
+    public List<String> autoCreatedReservations() {
         return this.autoCreatedReservations;
     }
 
@@ -35,7 +35,7 @@ public final class FutureReservationStatusResponse extends io.pulumi.resources.I
     @Import(name="fulfilledCount", required=true)
       private final String fulfilledCount;
 
-    public String getFulfilledCount() {
+    public String fulfilledCount() {
         return this.fulfilledCount;
     }
 
@@ -46,7 +46,7 @@ public final class FutureReservationStatusResponse extends io.pulumi.resources.I
     @Import(name="lockTime", required=true)
       private final String lockTime;
 
-    public String getLockTime() {
+    public String lockTime() {
         return this.lockTime;
     }
 
@@ -57,7 +57,7 @@ public final class FutureReservationStatusResponse extends io.pulumi.resources.I
     @Import(name="procurementStatus", required=true)
       private final String procurementStatus;
 
-    public String getProcurementStatus() {
+    public String procurementStatus() {
         return this.procurementStatus;
     }
 

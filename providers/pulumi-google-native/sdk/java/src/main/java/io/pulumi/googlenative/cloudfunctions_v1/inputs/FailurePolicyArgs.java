@@ -26,7 +26,7 @@ public final class FailurePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retry")
       private final @Nullable Output<RetryArgs> retry;
 
-    public Output<RetryArgs> getRetry() {
+    public Output<RetryArgs> retry() {
         return this.retry == null ? Codegen.empty() : this.retry;
     }
 

@@ -29,7 +29,7 @@ public final class ServerTlsSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="proxyTlsContext")
       private final @Nullable Output<TlsContextArgs> proxyTlsContext;
 
-    public Output<TlsContextArgs> getProxyTlsContext() {
+    public Output<TlsContextArgs> proxyTlsContext() {
         return this.proxyTlsContext == null ? Codegen.empty() : this.proxyTlsContext;
     }
 
@@ -40,7 +40,7 @@ public final class ServerTlsSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="subjectAltNames")
       private final @Nullable Output<List<String>> subjectAltNames;
 
-    public Output<List<String>> getSubjectAltNames() {
+    public Output<List<String>> subjectAltNames() {
         return this.subjectAltNames == null ? Codegen.empty() : this.subjectAltNames;
     }
 
@@ -51,7 +51,7 @@ public final class ServerTlsSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tlsMode")
       private final @Nullable Output<ServerTlsSettingsTlsMode> tlsMode;
 
-    public Output<ServerTlsSettingsTlsMode> getTlsMode() {
+    public Output<ServerTlsSettingsTlsMode> tlsMode() {
         return this.tlsMode == null ? Codegen.empty() : this.tlsMode;
     }
 

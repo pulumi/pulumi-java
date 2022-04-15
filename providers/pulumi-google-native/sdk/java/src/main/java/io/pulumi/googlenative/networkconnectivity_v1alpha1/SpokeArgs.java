@@ -25,7 +25,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -36,7 +36,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -47,7 +47,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hub")
       private final @Nullable Output<String> hub;
 
-    public Output<String> getHub() {
+    public Output<String> hub() {
         return this.hub == null ? Codegen.empty() : this.hub;
     }
 
@@ -58,7 +58,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -69,7 +69,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="linkedInterconnectAttachments")
       private final @Nullable Output<List<String>> linkedInterconnectAttachments;
 
-    public Output<List<String>> getLinkedInterconnectAttachments() {
+    public Output<List<String>> linkedInterconnectAttachments() {
         return this.linkedInterconnectAttachments == null ? Codegen.empty() : this.linkedInterconnectAttachments;
     }
 
@@ -80,7 +80,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="linkedRouterApplianceInstances")
       private final @Nullable Output<List<RouterApplianceInstanceArgs>> linkedRouterApplianceInstances;
 
-    public Output<List<RouterApplianceInstanceArgs>> getLinkedRouterApplianceInstances() {
+    public Output<List<RouterApplianceInstanceArgs>> linkedRouterApplianceInstances() {
         return this.linkedRouterApplianceInstances == null ? Codegen.empty() : this.linkedRouterApplianceInstances;
     }
 
@@ -91,14 +91,14 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="linkedVpnTunnels")
       private final @Nullable Output<List<String>> linkedVpnTunnels;
 
-    public Output<List<String>> getLinkedVpnTunnels() {
+    public Output<List<String>> linkedVpnTunnels() {
         return this.linkedVpnTunnels == null ? Codegen.empty() : this.linkedVpnTunnels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -109,28 +109,28 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     @Import(name="spokeId")
       private final @Nullable Output<String> spokeId;
 
-    public Output<String> getSpokeId() {
+    public Output<String> spokeId() {
         return this.spokeId == null ? Codegen.empty() : this.spokeId;
     }
 
@@ -141,7 +141,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 

@@ -23,7 +23,7 @@ public final class GoogleTypeDateResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="day", required=true)
       private final Integer day;
 
-    public Integer getDay() {
+    public Integer day() {
         return this.day;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleTypeDateResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="month", required=true)
       private final Integer month;
 
-    public Integer getMonth() {
+    public Integer month() {
         return this.month;
     }
 
@@ -45,7 +45,7 @@ public final class GoogleTypeDateResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="year", required=true)
       private final Integer year;
 
-    public Integer getYear() {
+    public Integer year() {
         return this.year;
     }
 

@@ -21,7 +21,7 @@ public final class WindowsDetailResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="cpeUri", required=true)
       private final String cpeUri;
 
-    public String getCpeUri() {
+    public String cpeUri() {
         return this.cpeUri;
     }
 
@@ -32,7 +32,7 @@ public final class WindowsDetailResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -43,7 +43,7 @@ public final class WindowsDetailResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="fixingKbs", required=true)
       private final List<KnowledgeBaseResponse> fixingKbs;
 
-    public List<KnowledgeBaseResponse> getFixingKbs() {
+    public List<KnowledgeBaseResponse> fixingKbs() {
         return this.fixingKbs;
     }
 
@@ -54,7 +54,7 @@ public final class WindowsDetailResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

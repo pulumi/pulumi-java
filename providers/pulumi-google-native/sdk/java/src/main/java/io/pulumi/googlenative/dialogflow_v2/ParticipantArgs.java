@@ -20,7 +20,7 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conversationId", required=true)
       private final Output<String> conversationId;
 
-    public Output<String> getConversationId() {
+    public Output<String> conversationId() {
         return this.conversationId;
     }
 
@@ -31,14 +31,14 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="documentsMetadataFilters")
       private final @Nullable Output<Map<String,String>> documentsMetadataFilters;
 
-    public Output<Map<String,String>> getDocumentsMetadataFilters() {
+    public Output<Map<String,String>> documentsMetadataFilters() {
         return this.documentsMetadataFilters == null ? Codegen.empty() : this.documentsMetadataFilters;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -49,14 +49,14 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -67,7 +67,7 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="role")
       private final @Nullable Output<ParticipantRole> role;
 
-    public Output<ParticipantRole> getRole() {
+    public Output<ParticipantRole> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 
@@ -78,7 +78,7 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sipRecordingMediaLabel")
       private final @Nullable Output<String> sipRecordingMediaLabel;
 
-    public Output<String> getSipRecordingMediaLabel() {
+    public Output<String> sipRecordingMediaLabel() {
         return this.sipRecordingMediaLabel == null ? Codegen.empty() : this.sipRecordingMediaLabel;
     }
 

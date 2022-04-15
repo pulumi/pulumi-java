@@ -31,7 +31,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Configuration parameters for this environment.
      * 
      */
-    public Output<EnvironmentConfigResponse> getConfig() {
+    public Output<EnvironmentConfigResponse> config() {
         return this.config;
     }
     /**
@@ -45,7 +45,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The time at which this environment was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -59,7 +59,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Optional. User-defined labels for this environment. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: * Keys must conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to regexp: [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be <= 128 bytes in size.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -73,7 +73,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The resource name of the environment, in the form: "projects/{projectId}/locations/{locationId}/environments/{environmentId}" EnvironmentId must start with a lowercase letter followed by up to 63 lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +87,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The current state of the environment.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -101,7 +101,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The time at which this environment was last modified.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
     /**
@@ -115,7 +115,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The UUID (Universally Unique IDentifier) associated with this environment. This value is generated when the environment is created.
      * 
      */
-    public Output<String> getUuid() {
+    public Output<String> uuid() {
         return this.uuid;
     }
 

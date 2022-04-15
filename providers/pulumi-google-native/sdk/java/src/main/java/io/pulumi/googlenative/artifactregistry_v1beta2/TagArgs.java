@@ -18,7 +18,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -29,35 +29,35 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="packageId", required=true)
       private final Output<String> packageId;
 
-    public Output<String> getPackageId() {
+    public Output<String> packageId() {
         return this.packageId;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="repositoryId", required=true)
       private final Output<String> repositoryId;
 
-    public Output<String> getRepositoryId() {
+    public Output<String> repositoryId() {
         return this.repositoryId;
     }
 
     @Import(name="tagId")
       private final @Nullable Output<String> tagId;
 
-    public Output<String> getTagId() {
+    public Output<String> tagId() {
         return this.tagId == null ? Codegen.empty() : this.tagId;
     }
 
@@ -68,7 +68,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

@@ -26,7 +26,7 @@ public final class ValueValidationArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="values", required=true)
       private final Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values;
     }
 

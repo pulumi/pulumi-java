@@ -19,7 +19,7 @@ public final class InstantSnapshotResourceStatusResponse extends io.pulumi.resou
     @Import(name="storageSizeBytes", required=true)
       private final String storageSizeBytes;
 
-    public String getStorageSizeBytes() {
+    public String storageSizeBytes() {
         return this.storageSizeBytes;
     }
 

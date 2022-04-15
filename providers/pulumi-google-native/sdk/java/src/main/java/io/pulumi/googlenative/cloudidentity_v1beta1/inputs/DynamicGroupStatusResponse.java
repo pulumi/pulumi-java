@@ -23,7 +23,7 @@ public final class DynamicGroupStatusResponse extends io.pulumi.resources.Invoke
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
@@ -34,7 +34,7 @@ public final class DynamicGroupStatusResponse extends io.pulumi.resources.Invoke
     @Import(name="statusTime", required=true)
       private final String statusTime;
 
-    public String getStatusTime() {
+    public String statusTime() {
         return this.statusTime;
     }
 

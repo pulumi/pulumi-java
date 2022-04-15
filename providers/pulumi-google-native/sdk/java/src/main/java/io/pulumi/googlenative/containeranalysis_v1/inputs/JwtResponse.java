@@ -19,7 +19,7 @@ public final class JwtResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="compactJwt", required=true)
       private final String compactJwt;
 
-    public String getCompactJwt() {
+    public String compactJwt() {
         return this.compactJwt;
     }
 

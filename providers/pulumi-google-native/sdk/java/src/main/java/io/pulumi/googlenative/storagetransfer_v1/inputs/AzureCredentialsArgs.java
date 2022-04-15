@@ -25,7 +25,7 @@ public final class AzureCredentialsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="sasToken", required=true)
       private final Output<String> sasToken;
 
-    public Output<String> getSasToken() {
+    public Output<String> sasToken() {
         return this.sasToken;
     }
 

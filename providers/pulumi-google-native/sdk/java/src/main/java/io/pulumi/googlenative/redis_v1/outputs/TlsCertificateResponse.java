@@ -53,35 +53,35 @@ public final class TlsCertificateResponse {
      * PEM representation.
      * 
     */
-    public String getCert() {
+    public String cert() {
         return this.cert;
     }
     /**
      * The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2020-05-18T00:00:00.094Z`.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2020-05-18T00:00:00.094Z`.
      * 
     */
-    public String getExpireTime() {
+    public String expireTime() {
         return this.expireTime;
     }
     /**
      * Serial number, as extracted from the certificate.
      * 
     */
-    public String getSerialNumber() {
+    public String serialNumber() {
         return this.serialNumber;
     }
     /**
      * Sha1 Fingerprint of the certificate.
      * 
     */
-    public String getSha1Fingerprint() {
+    public String sha1Fingerprint() {
         return this.sha1Fingerprint;
     }
 

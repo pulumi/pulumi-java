@@ -24,21 +24,21 @@ public final class BasicPerfSampleSeriesArgs extends io.pulumi.resources.Resourc
     @Import(name="perfMetricType")
       private final @Nullable Output<BasicPerfSampleSeriesPerfMetricType> perfMetricType;
 
-    public Output<BasicPerfSampleSeriesPerfMetricType> getPerfMetricType() {
+    public Output<BasicPerfSampleSeriesPerfMetricType> perfMetricType() {
         return this.perfMetricType == null ? Codegen.empty() : this.perfMetricType;
     }
 
     @Import(name="perfUnit")
       private final @Nullable Output<BasicPerfSampleSeriesPerfUnit> perfUnit;
 
-    public Output<BasicPerfSampleSeriesPerfUnit> getPerfUnit() {
+    public Output<BasicPerfSampleSeriesPerfUnit> perfUnit() {
         return this.perfUnit == null ? Codegen.empty() : this.perfUnit;
     }
 
     @Import(name="sampleSeriesLabel")
       private final @Nullable Output<BasicPerfSampleSeriesSampleSeriesLabel> sampleSeriesLabel;
 
-    public Output<BasicPerfSampleSeriesSampleSeriesLabel> getSampleSeriesLabel() {
+    public Output<BasicPerfSampleSeriesSampleSeriesLabel> sampleSeriesLabel() {
         return this.sampleSeriesLabel == null ? Codegen.empty() : this.sampleSeriesLabel;
     }
 

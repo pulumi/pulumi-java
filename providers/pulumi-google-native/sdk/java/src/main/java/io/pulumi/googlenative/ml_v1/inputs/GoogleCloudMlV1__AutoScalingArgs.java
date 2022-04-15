@@ -28,7 +28,7 @@ public final class GoogleCloudMlV1__AutoScalingArgs extends io.pulumi.resources.
     @Import(name="maxNodes")
       private final @Nullable Output<Integer> maxNodes;
 
-    public Output<Integer> getMaxNodes() {
+    public Output<Integer> maxNodes() {
         return this.maxNodes == null ? Codegen.empty() : this.maxNodes;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudMlV1__AutoScalingArgs extends io.pulumi.resources.
     @Import(name="metrics")
       private final @Nullable Output<List<GoogleCloudMlV1__MetricSpecArgs>> metrics;
 
-    public Output<List<GoogleCloudMlV1__MetricSpecArgs>> getMetrics() {
+    public Output<List<GoogleCloudMlV1__MetricSpecArgs>> metrics() {
         return this.metrics == null ? Codegen.empty() : this.metrics;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudMlV1__AutoScalingArgs extends io.pulumi.resources.
     @Import(name="minNodes")
       private final @Nullable Output<Integer> minNodes;
 
-    public Output<Integer> getMinNodes() {
+    public Output<Integer> minNodes() {
         return this.minNodes == null ? Codegen.empty() : this.minNodes;
     }
 

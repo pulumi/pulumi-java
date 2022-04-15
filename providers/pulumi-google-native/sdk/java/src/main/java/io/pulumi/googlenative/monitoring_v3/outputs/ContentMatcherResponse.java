@@ -32,14 +32,14 @@ public final class ContentMatcherResponse {
      * String or regex content to match. Maximum 1024 bytes. An empty content string indicates no content matching is to be performed.
      * 
     */
-    public String getContent() {
+    public String content() {
         return this.content;
     }
     /**
      * The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
      * 
     */
-    public String getMatcher() {
+    public String matcher() {
         return this.matcher;
     }
 

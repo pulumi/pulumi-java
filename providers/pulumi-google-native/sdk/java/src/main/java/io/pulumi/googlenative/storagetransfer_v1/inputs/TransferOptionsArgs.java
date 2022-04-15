@@ -27,7 +27,7 @@ public final class TransferOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="deleteObjectsFromSourceAfterTransfer")
       private final @Nullable Output<Boolean> deleteObjectsFromSourceAfterTransfer;
 
-    public Output<Boolean> getDeleteObjectsFromSourceAfterTransfer() {
+    public Output<Boolean> deleteObjectsFromSourceAfterTransfer() {
         return this.deleteObjectsFromSourceAfterTransfer == null ? Codegen.empty() : this.deleteObjectsFromSourceAfterTransfer;
     }
 
@@ -38,7 +38,7 @@ public final class TransferOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="deleteObjectsUniqueInSink")
       private final @Nullable Output<Boolean> deleteObjectsUniqueInSink;
 
-    public Output<Boolean> getDeleteObjectsUniqueInSink() {
+    public Output<Boolean> deleteObjectsUniqueInSink() {
         return this.deleteObjectsUniqueInSink == null ? Codegen.empty() : this.deleteObjectsUniqueInSink;
     }
 
@@ -49,7 +49,7 @@ public final class TransferOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="metadataOptions")
       private final @Nullable Output<MetadataOptionsArgs> metadataOptions;
 
-    public Output<MetadataOptionsArgs> getMetadataOptions() {
+    public Output<MetadataOptionsArgs> metadataOptions() {
         return this.metadataOptions == null ? Codegen.empty() : this.metadataOptions;
     }
 
@@ -60,7 +60,7 @@ public final class TransferOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="overwriteObjectsAlreadyExistingInSink")
       private final @Nullable Output<Boolean> overwriteObjectsAlreadyExistingInSink;
 
-    public Output<Boolean> getOverwriteObjectsAlreadyExistingInSink() {
+    public Output<Boolean> overwriteObjectsAlreadyExistingInSink() {
         return this.overwriteObjectsAlreadyExistingInSink == null ? Codegen.empty() : this.overwriteObjectsAlreadyExistingInSink;
     }
 

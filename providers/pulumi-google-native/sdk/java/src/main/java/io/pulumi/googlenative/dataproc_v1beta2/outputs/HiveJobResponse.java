@@ -64,42 +64,42 @@ public final class HiveJobResponse {
      * Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.
      * 
     */
-    public Boolean getContinueOnFailure() {
+    public Boolean continueOnFailure() {
         return this.continueOnFailure;
     }
     /**
      * Optional. HCFS URIs of jar files to add to the CLASSPATH of the Hive server and Hadoop MapReduce (MR) tasks. Can contain Hive SerDes and UDFs.
      * 
     */
-    public List<String> getJarFileUris() {
+    public List<String> jarFileUris() {
         return this.jarFileUris;
     }
     /**
      * Optional. A mapping of property names and values, used to configure Hive. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/hive/conf/hive-site.xml, and classes in user code.
      * 
     */
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties;
     }
     /**
      * The HCFS URI of the script that contains Hive queries.
      * 
     */
-    public String getQueryFileUri() {
+    public String queryFileUri() {
         return this.queryFileUri;
     }
     /**
      * A list of queries.
      * 
     */
-    public QueryListResponse getQueryList() {
+    public QueryListResponse queryList() {
         return this.queryList;
     }
     /**
      * Optional. Mapping of query variable names to values (equivalent to the Hive command: SET name="value";).
      * 
     */
-    public Map<String,String> getScriptVariables() {
+    public Map<String,String> scriptVariables() {
         return this.scriptVariables;
     }
 

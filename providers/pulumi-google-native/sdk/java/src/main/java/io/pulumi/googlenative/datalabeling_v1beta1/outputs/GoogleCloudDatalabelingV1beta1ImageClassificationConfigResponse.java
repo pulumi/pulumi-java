@@ -40,21 +40,21 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigRespon
      * Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one image.
      * 
     */
-    public Boolean getAllowMultiLabel() {
+    public Boolean allowMultiLabel() {
         return this.allowMultiLabel;
     }
     /**
      * Annotation spec set resource name.
      * 
     */
-    public String getAnnotationSpecSet() {
+    public String annotationSpecSet() {
         return this.annotationSpecSet;
     }
     /**
      * Optional. The type of how to aggregate answers.
      * 
     */
-    public String getAnswerAggregationType() {
+    public String answerAggregationType() {
         return this.answerAggregationType;
     }
 

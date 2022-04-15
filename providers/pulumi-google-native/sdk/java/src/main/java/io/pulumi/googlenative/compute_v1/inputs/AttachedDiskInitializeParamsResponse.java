@@ -26,7 +26,7 @@ public final class AttachedDiskInitializeParamsResponse extends io.pulumi.resour
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -37,7 +37,7 @@ public final class AttachedDiskInitializeParamsResponse extends io.pulumi.resour
     @Import(name="diskName", required=true)
       private final String diskName;
 
-    public String getDiskName() {
+    public String diskName() {
         return this.diskName;
     }
 
@@ -48,7 +48,7 @@ public final class AttachedDiskInitializeParamsResponse extends io.pulumi.resour
     @Import(name="diskSizeGb", required=true)
       private final String diskSizeGb;
 
-    public String getDiskSizeGb() {
+    public String diskSizeGb() {
         return this.diskSizeGb;
     }
 
@@ -59,7 +59,7 @@ public final class AttachedDiskInitializeParamsResponse extends io.pulumi.resour
     @Import(name="diskType", required=true)
       private final String diskType;
 
-    public String getDiskType() {
+    public String diskType() {
         return this.diskType;
     }
 
@@ -70,7 +70,7 @@ public final class AttachedDiskInitializeParamsResponse extends io.pulumi.resour
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
 
@@ -81,7 +81,7 @@ public final class AttachedDiskInitializeParamsResponse extends io.pulumi.resour
     @Import(name="licenses", required=true)
       private final List<String> licenses;
 
-    public List<String> getLicenses() {
+    public List<String> licenses() {
         return this.licenses;
     }
 
@@ -92,7 +92,7 @@ public final class AttachedDiskInitializeParamsResponse extends io.pulumi.resour
     @Import(name="onUpdateAction", required=true)
       private final String onUpdateAction;
 
-    public String getOnUpdateAction() {
+    public String onUpdateAction() {
         return this.onUpdateAction;
     }
 
@@ -103,7 +103,7 @@ public final class AttachedDiskInitializeParamsResponse extends io.pulumi.resour
     @Import(name="provisionedIops", required=true)
       private final String provisionedIops;
 
-    public String getProvisionedIops() {
+    public String provisionedIops() {
         return this.provisionedIops;
     }
 
@@ -114,7 +114,7 @@ public final class AttachedDiskInitializeParamsResponse extends io.pulumi.resour
     @Import(name="resourcePolicies", required=true)
       private final List<String> resourcePolicies;
 
-    public List<String> getResourcePolicies() {
+    public List<String> resourcePolicies() {
         return this.resourcePolicies;
     }
 
@@ -125,7 +125,7 @@ public final class AttachedDiskInitializeParamsResponse extends io.pulumi.resour
     @Import(name="sourceImage", required=true)
       private final String sourceImage;
 
-    public String getSourceImage() {
+    public String sourceImage() {
         return this.sourceImage;
     }
 
@@ -136,7 +136,7 @@ public final class AttachedDiskInitializeParamsResponse extends io.pulumi.resour
     @Import(name="sourceImageEncryptionKey", required=true)
       private final CustomerEncryptionKeyResponse sourceImageEncryptionKey;
 
-    public CustomerEncryptionKeyResponse getSourceImageEncryptionKey() {
+    public CustomerEncryptionKeyResponse sourceImageEncryptionKey() {
         return this.sourceImageEncryptionKey;
     }
 
@@ -147,7 +147,7 @@ public final class AttachedDiskInitializeParamsResponse extends io.pulumi.resour
     @Import(name="sourceSnapshot", required=true)
       private final String sourceSnapshot;
 
-    public String getSourceSnapshot() {
+    public String sourceSnapshot() {
         return this.sourceSnapshot;
     }
 
@@ -158,7 +158,7 @@ public final class AttachedDiskInitializeParamsResponse extends io.pulumi.resour
     @Import(name="sourceSnapshotEncryptionKey", required=true)
       private final CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey;
 
-    public CustomerEncryptionKeyResponse getSourceSnapshotEncryptionKey() {
+    public CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey() {
         return this.sourceSnapshotEncryptionKey;
     }
 

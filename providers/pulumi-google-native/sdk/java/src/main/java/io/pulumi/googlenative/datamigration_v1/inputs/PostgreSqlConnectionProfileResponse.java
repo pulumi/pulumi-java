@@ -26,7 +26,7 @@ public final class PostgreSqlConnectionProfileResponse extends io.pulumi.resourc
     @Import(name="cloudSqlId", required=true)
       private final String cloudSqlId;
 
-    public String getCloudSqlId() {
+    public String cloudSqlId() {
         return this.cloudSqlId;
     }
 
@@ -37,7 +37,7 @@ public final class PostgreSqlConnectionProfileResponse extends io.pulumi.resourc
     @Import(name="host", required=true)
       private final String host;
 
-    public String getHost() {
+    public String host() {
         return this.host;
     }
 
@@ -48,7 +48,7 @@ public final class PostgreSqlConnectionProfileResponse extends io.pulumi.resourc
     @Import(name="password", required=true)
       private final String password;
 
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
 
@@ -59,7 +59,7 @@ public final class PostgreSqlConnectionProfileResponse extends io.pulumi.resourc
     @Import(name="passwordSet", required=true)
       private final Boolean passwordSet;
 
-    public Boolean getPasswordSet() {
+    public Boolean passwordSet() {
         return this.passwordSet;
     }
 
@@ -70,7 +70,7 @@ public final class PostgreSqlConnectionProfileResponse extends io.pulumi.resourc
     @Import(name="port", required=true)
       private final Integer port;
 
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 
@@ -81,7 +81,7 @@ public final class PostgreSqlConnectionProfileResponse extends io.pulumi.resourc
     @Import(name="ssl", required=true)
       private final SslConfigResponse ssl;
 
-    public SslConfigResponse getSsl() {
+    public SslConfigResponse ssl() {
         return this.ssl;
     }
 
@@ -92,7 +92,7 @@ public final class PostgreSqlConnectionProfileResponse extends io.pulumi.resourc
     @Import(name="username", required=true)
       private final String username;
 
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

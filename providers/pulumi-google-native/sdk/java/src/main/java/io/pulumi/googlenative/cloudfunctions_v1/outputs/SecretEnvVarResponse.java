@@ -46,28 +46,28 @@ public final class SecretEnvVarResponse {
      * Name of the environment variable.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * Project identifier (preferrably project number but can also be the project ID) of the project that contains the secret. If not set, it will be populated with the function's project assuming that the secret exists in the same project as of the function.
      * 
     */
-    public String getProject() {
+    public String project() {
         return this.project;
     }
     /**
      * Name of the secret in secret manager (not the full resource name).
      * 
     */
-    public String getSecret() {
+    public String secret() {
         return this.secret;
     }
     /**
      * Version of the secret (version number or the string 'latest'). It is recommended to use a numeric version for secret environment variables as any updates to the secret value is not reflected until new clones start.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

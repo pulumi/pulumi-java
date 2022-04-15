@@ -23,7 +23,7 @@ public final class StatusConditionResponse extends io.pulumi.resources.InvokeArg
     @Import(name="canonicalCode", required=true)
       private final String canonicalCode;
 
-    public String getCanonicalCode() {
+    public String canonicalCode() {
         return this.canonicalCode;
     }
 
@@ -34,7 +34,7 @@ public final class StatusConditionResponse extends io.pulumi.resources.InvokeArg
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 

@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2WordListResponse extends io.pulumi.resource
     @Import(name="words", required=true)
       private final List<String> words;
 
-    public List<String> getWords() {
+    public List<String> words() {
         return this.words;
     }
 

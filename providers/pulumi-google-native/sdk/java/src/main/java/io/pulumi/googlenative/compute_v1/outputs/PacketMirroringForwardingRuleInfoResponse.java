@@ -32,14 +32,14 @@ public final class PacketMirroringForwardingRuleInfoResponse {
      * Unique identifier for the forwarding rule; defined by the server.
      * 
     */
-    public String getCanonicalUrl() {
+    public String canonicalUrl() {
         return this.canonicalUrl;
     }
     /**
      * Resource URL to the forwarding rule representing the ILB configured as destination of the mirrored traffic.
      * 
     */
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

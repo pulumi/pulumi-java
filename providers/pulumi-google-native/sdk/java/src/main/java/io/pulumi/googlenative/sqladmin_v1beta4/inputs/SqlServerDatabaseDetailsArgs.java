@@ -27,7 +27,7 @@ public final class SqlServerDatabaseDetailsArgs extends io.pulumi.resources.Reso
     @Import(name="compatibilityLevel")
       private final @Nullable Output<Integer> compatibilityLevel;
 
-    public Output<Integer> getCompatibilityLevel() {
+    public Output<Integer> compatibilityLevel() {
         return this.compatibilityLevel == null ? Codegen.empty() : this.compatibilityLevel;
     }
 
@@ -38,7 +38,7 @@ public final class SqlServerDatabaseDetailsArgs extends io.pulumi.resources.Reso
     @Import(name="recoveryModel")
       private final @Nullable Output<String> recoveryModel;
 
-    public Output<String> getRecoveryModel() {
+    public Output<String> recoveryModel() {
         return this.recoveryModel == null ? Codegen.empty() : this.recoveryModel;
     }
 

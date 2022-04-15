@@ -23,7 +23,7 @@ public final class KeyIdResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="keyId", required=true)
       private final String keyId;
 
-    public String getKeyId() {
+    public String keyId() {
         return this.keyId;
     }
 

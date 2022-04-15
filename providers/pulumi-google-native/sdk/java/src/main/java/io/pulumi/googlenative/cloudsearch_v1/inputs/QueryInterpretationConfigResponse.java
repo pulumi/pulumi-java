@@ -23,7 +23,7 @@ public final class QueryInterpretationConfigResponse extends io.pulumi.resources
     @Import(name="forceDisableSupplementalResults", required=true)
       private final Boolean forceDisableSupplementalResults;
 
-    public Boolean getForceDisableSupplementalResults() {
+    public Boolean forceDisableSupplementalResults() {
         return this.forceDisableSupplementalResults;
     }
 
@@ -34,7 +34,7 @@ public final class QueryInterpretationConfigResponse extends io.pulumi.resources
     @Import(name="forceVerbatimMode", required=true)
       private final Boolean forceVerbatimMode;
 
-    public Boolean getForceVerbatimMode() {
+    public Boolean forceVerbatimMode() {
         return this.forceVerbatimMode;
     }
 

@@ -40,21 +40,21 @@ public final class ResourcePolicyHourlyCycleResponse {
      * [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.
      * 
     */
-    public String getDuration() {
+    public String duration() {
         return this.duration;
     }
     /**
      * Defines a schedule with units measured in hours. The value determines how many hours pass between the start of each cycle.
      * 
     */
-    public Integer getHoursInCycle() {
+    public Integer hoursInCycle() {
         return this.hoursInCycle;
     }
     /**
      * Time within the window to start the operations. It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

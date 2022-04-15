@@ -24,7 +24,7 @@ public final class CompositeFilterArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="logicOperator")
       private final @Nullable Output<CompositeFilterLogicOperator> logicOperator;
 
-    public Output<CompositeFilterLogicOperator> getLogicOperator() {
+    public Output<CompositeFilterLogicOperator> logicOperator() {
         return this.logicOperator == null ? Codegen.empty() : this.logicOperator;
     }
 
@@ -35,7 +35,7 @@ public final class CompositeFilterArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="subFilters")
       private final @Nullable Output<List<FilterArgs>> subFilters;
 
-    public Output<List<FilterArgs>> getSubFilters() {
+    public Output<List<FilterArgs>> subFilters() {
         return this.subFilters == null ? Codegen.empty() : this.subFilters;
     }
 

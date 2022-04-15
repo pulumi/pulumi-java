@@ -34,14 +34,14 @@ public final class MlStatisticsResponse {
      * Results for all completed iterations.
      * 
     */
-    public List<IterationResultResponse> getIterationResults() {
+    public List<IterationResultResponse> iterationResults() {
         return this.iterationResults;
     }
     /**
      * Maximum number of iterations specified as max_iterations in the 'CREATE MODEL' query. The actual number of iterations may be less than this number due to early stop.
      * 
     */
-    public String getMaxIterations() {
+    public String maxIterations() {
         return this.maxIterations;
     }
 

@@ -48,28 +48,28 @@ public final class BucketCorsItemResponse {
      * The value, in seconds, to return in the  Access-Control-Max-Age header used in preflight responses.
      * 
     */
-    public Integer getMaxAgeSeconds() {
+    public Integer maxAgeSeconds() {
         return this.maxAgeSeconds;
     }
     /**
      * The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: "*" is permitted in the list of methods, and means "any method".
      * 
     */
-    public List<String> getMethod() {
+    public List<String> method() {
         return this.method;
     }
     /**
      * The list of Origins eligible to receive CORS response headers. Note: "*" is permitted in the list of origins, and means "any Origin".
      * 
     */
-    public List<String> getOrigin() {
+    public List<String> origin() {
         return this.origin;
     }
     /**
      * The list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains.
      * 
     */
-    public List<String> getResponseHeader() {
+    public List<String> responseHeader() {
         return this.responseHeader;
     }
 

@@ -25,7 +25,7 @@ public final class HealthCheckResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="checkInterval", required=true)
       private final String checkInterval;
 
-    public String getCheckInterval() {
+    public String checkInterval() {
         return this.checkInterval;
     }
 
@@ -36,7 +36,7 @@ public final class HealthCheckResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="disableHealthCheck", required=true)
       private final Boolean disableHealthCheck;
 
-    public Boolean getDisableHealthCheck() {
+    public Boolean disableHealthCheck() {
         return this.disableHealthCheck;
     }
 
@@ -47,7 +47,7 @@ public final class HealthCheckResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="healthyThreshold", required=true)
       private final Integer healthyThreshold;
 
-    public Integer getHealthyThreshold() {
+    public Integer healthyThreshold() {
         return this.healthyThreshold;
     }
 
@@ -58,7 +58,7 @@ public final class HealthCheckResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="host", required=true)
       private final String host;
 
-    public String getHost() {
+    public String host() {
         return this.host;
     }
 
@@ -69,7 +69,7 @@ public final class HealthCheckResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="restartThreshold", required=true)
       private final Integer restartThreshold;
 
-    public Integer getRestartThreshold() {
+    public Integer restartThreshold() {
         return this.restartThreshold;
     }
 
@@ -80,7 +80,7 @@ public final class HealthCheckResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="timeout", required=true)
       private final String timeout;
 
-    public String getTimeout() {
+    public String timeout() {
         return this.timeout;
     }
 
@@ -91,7 +91,7 @@ public final class HealthCheckResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="unhealthyThreshold", required=true)
       private final Integer unhealthyThreshold;
 
-    public Integer getUnhealthyThreshold() {
+    public Integer unhealthyThreshold() {
         return this.unhealthyThreshold;
     }
 

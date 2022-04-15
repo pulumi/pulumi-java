@@ -19,7 +19,7 @@ public final class ResourcePolicyVmMaintenancePolicyArgs extends io.pulumi.resou
     @Import(name="concurrencyControlGroup")
       private final @Nullable Output<ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs> concurrencyControlGroup;
 
-    public Output<ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs> getConcurrencyControlGroup() {
+    public Output<ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs> concurrencyControlGroup() {
         return this.concurrencyControlGroup == null ? Codegen.empty() : this.concurrencyControlGroup;
     }
 
@@ -30,7 +30,7 @@ public final class ResourcePolicyVmMaintenancePolicyArgs extends io.pulumi.resou
     @Import(name="maintenanceWindow")
       private final @Nullable Output<ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs> maintenanceWindow;
 
-    public Output<ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs> getMaintenanceWindow() {
+    public Output<ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs> maintenanceWindow() {
         return this.maintenanceWindow == null ? Codegen.empty() : this.maintenanceWindow;
     }
 

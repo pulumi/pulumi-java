@@ -25,7 +25,7 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="issuer", required=true)
       private final String issuer;
 
-    public String getIssuer() {
+    public String issuer() {
         return this.issuer;
     }
 
@@ -36,7 +36,7 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="notAfterTime", required=true)
       private final String notAfterTime;
 
-    public String getNotAfterTime() {
+    public String notAfterTime() {
         return this.notAfterTime;
     }
 
@@ -47,7 +47,7 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="notBeforeTime", required=true)
       private final String notBeforeTime;
 
-    public String getNotBeforeTime() {
+    public String notBeforeTime() {
         return this.notBeforeTime;
     }
 
@@ -58,7 +58,7 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="parsed", required=true)
       private final Boolean parsed;
 
-    public Boolean getParsed() {
+    public Boolean parsed() {
         return this.parsed;
     }
 
@@ -69,7 +69,7 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="rawDer", required=true)
       private final String rawDer;
 
-    public String getRawDer() {
+    public String rawDer() {
         return this.rawDer;
     }
 
@@ -80,7 +80,7 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="serialNumber", required=true)
       private final String serialNumber;
 
-    public String getSerialNumber() {
+    public String serialNumber() {
         return this.serialNumber;
     }
 
@@ -91,7 +91,7 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sha256Fingerprint", required=true)
       private final String sha256Fingerprint;
 
-    public String getSha256Fingerprint() {
+    public String sha256Fingerprint() {
         return this.sha256Fingerprint;
     }
 
@@ -102,7 +102,7 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="subject", required=true)
       private final String subject;
 
-    public String getSubject() {
+    public String subject() {
         return this.subject;
     }
 
@@ -113,7 +113,7 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="subjectAlternativeDnsNames", required=true)
       private final List<String> subjectAlternativeDnsNames;
 
-    public List<String> getSubjectAlternativeDnsNames() {
+    public List<String> subjectAlternativeDnsNames() {
         return this.subjectAlternativeDnsNames;
     }
 

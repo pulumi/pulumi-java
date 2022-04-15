@@ -23,7 +23,7 @@ public final class SkippedDetailResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="incompatibleAppVersion", required=true)
       private final Boolean incompatibleAppVersion;
 
-    public Boolean getIncompatibleAppVersion() {
+    public Boolean incompatibleAppVersion() {
         return this.incompatibleAppVersion;
     }
 
@@ -34,7 +34,7 @@ public final class SkippedDetailResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="incompatibleArchitecture", required=true)
       private final Boolean incompatibleArchitecture;
 
-    public Boolean getIncompatibleArchitecture() {
+    public Boolean incompatibleArchitecture() {
         return this.incompatibleArchitecture;
     }
 
@@ -45,7 +45,7 @@ public final class SkippedDetailResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="incompatibleDevice", required=true)
       private final Boolean incompatibleDevice;
 
-    public Boolean getIncompatibleDevice() {
+    public Boolean incompatibleDevice() {
         return this.incompatibleDevice;
     }
 

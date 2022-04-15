@@ -32,7 +32,7 @@ public class PhraseMatcher extends io.pulumi.resources.CustomResource {
      * @return The most recent time at which the activation status was updated.
      * 
      */
-    public Output<String> getActivationUpdateTime() {
+    public Output<String> activationUpdateTime() {
         return this.activationUpdateTime;
     }
     /**
@@ -46,7 +46,7 @@ public class PhraseMatcher extends io.pulumi.resources.CustomResource {
      * @return Applies the phrase matcher only when it is active.
      * 
      */
-    public Output<Boolean> getActive() {
+    public Output<Boolean> active() {
         return this.active;
     }
     /**
@@ -60,7 +60,7 @@ public class PhraseMatcher extends io.pulumi.resources.CustomResource {
      * @return The human-readable name of the phrase matcher.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -74,7 +74,7 @@ public class PhraseMatcher extends io.pulumi.resources.CustomResource {
      * @return The resource name of the phrase matcher. Format: projects/{project}/locations/{location}/phraseMatchers/{phrase_matcher}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -88,7 +88,7 @@ public class PhraseMatcher extends io.pulumi.resources.CustomResource {
      * @return A list of phase match rule groups that are included in this matcher.
      * 
      */
-    public Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse>> getPhraseMatchRuleGroups() {
+    public Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse>> phraseMatchRuleGroups() {
         return this.phraseMatchRuleGroups;
     }
     /**
@@ -102,7 +102,7 @@ public class PhraseMatcher extends io.pulumi.resources.CustomResource {
      * @return The timestamp of when the revision was created. It is also the create time when a new matcher is added.
      * 
      */
-    public Output<String> getRevisionCreateTime() {
+    public Output<String> revisionCreateTime() {
         return this.revisionCreateTime;
     }
     /**
@@ -116,7 +116,7 @@ public class PhraseMatcher extends io.pulumi.resources.CustomResource {
      * @return Immutable. The revision ID of the phrase matcher. A new revision is committed whenever the matcher is changed, except when it is activated or deactivated. A server generated random ID will be used. Example: locations/global/phraseMatchers/my-first-matcher@1234567
      * 
      */
-    public Output<String> getRevisionId() {
+    public Output<String> revisionId() {
         return this.revisionId;
     }
     /**
@@ -130,7 +130,7 @@ public class PhraseMatcher extends io.pulumi.resources.CustomResource {
      * @return The role whose utterances the phrase matcher should be matched against. If the role is ROLE_UNSPECIFIED it will be matched against any utterances in the transcript.
      * 
      */
-    public Output<String> getRoleMatch() {
+    public Output<String> roleMatch() {
         return this.roleMatch;
     }
     /**
@@ -144,7 +144,7 @@ public class PhraseMatcher extends io.pulumi.resources.CustomResource {
      * @return The type of this phrase matcher.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -158,7 +158,7 @@ public class PhraseMatcher extends io.pulumi.resources.CustomResource {
      * @return The most recent time at which the phrase matcher was updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
     /**
@@ -172,7 +172,7 @@ public class PhraseMatcher extends io.pulumi.resources.CustomResource {
      * @return The customized version tag to use for the phrase matcher. If not specified, it will default to `revision_id`.
      * 
      */
-    public Output<String> getVersionTag() {
+    public Output<String> versionTag() {
         return this.versionTag;
     }
 

@@ -19,7 +19,7 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyResponse extends i
     @Import(name="metadataBasedReadinessSignal", required=true)
       private final InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse metadataBasedReadinessSignal;
 
-    public InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse getMetadataBasedReadinessSignal() {
+    public InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse metadataBasedReadinessSignal() {
         return this.metadataBasedReadinessSignal;
     }
 

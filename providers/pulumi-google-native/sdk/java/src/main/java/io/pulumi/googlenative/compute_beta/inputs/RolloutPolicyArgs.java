@@ -27,7 +27,7 @@ public final class RolloutPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultRolloutTime")
       private final @Nullable Output<String> defaultRolloutTime;
 
-    public Output<String> getDefaultRolloutTime() {
+    public Output<String> defaultRolloutTime() {
         return this.defaultRolloutTime == null ? Codegen.empty() : this.defaultRolloutTime;
     }
 
@@ -38,7 +38,7 @@ public final class RolloutPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locationRolloutPolicies")
       private final @Nullable Output<Map<String,String>> locationRolloutPolicies;
 
-    public Output<Map<String,String>> getLocationRolloutPolicies() {
+    public Output<Map<String,String>> locationRolloutPolicies() {
         return this.locationRolloutPolicies == null ? Codegen.empty() : this.locationRolloutPolicies;
     }
 

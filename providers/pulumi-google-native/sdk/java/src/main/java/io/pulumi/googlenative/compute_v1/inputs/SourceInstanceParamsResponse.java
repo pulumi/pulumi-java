@@ -24,7 +24,7 @@ public final class SourceInstanceParamsResponse extends io.pulumi.resources.Invo
     @Import(name="diskConfigs", required=true)
       private final List<DiskInstantiationConfigResponse> diskConfigs;
 
-    public List<DiskInstantiationConfigResponse> getDiskConfigs() {
+    public List<DiskInstantiationConfigResponse> diskConfigs() {
         return this.diskConfigs;
     }
 

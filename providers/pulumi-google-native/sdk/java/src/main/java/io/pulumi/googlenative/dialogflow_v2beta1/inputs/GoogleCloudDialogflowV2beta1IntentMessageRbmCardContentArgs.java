@@ -29,7 +29,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs e
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -40,7 +40,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs e
     @Import(name="media")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs> media;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs> getMedia() {
+    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs> media() {
         return this.media == null ? Codegen.empty() : this.media;
     }
 
@@ -51,7 +51,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs e
     @Import(name="suggestions")
       private final @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> suggestions;
 
-    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> getSuggestions() {
+    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> suggestions() {
         return this.suggestions == null ? Codegen.empty() : this.suggestions;
     }
 
@@ -62,7 +62,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs e
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 

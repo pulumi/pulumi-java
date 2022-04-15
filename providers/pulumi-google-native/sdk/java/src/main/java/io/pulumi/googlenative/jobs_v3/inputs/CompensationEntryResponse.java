@@ -26,7 +26,7 @@ public final class CompensationEntryResponse extends io.pulumi.resources.InvokeA
     @Import(name="amount", required=true)
       private final MoneyResponse amount;
 
-    public MoneyResponse getAmount() {
+    public MoneyResponse amount() {
         return this.amount;
     }
 
@@ -37,7 +37,7 @@ public final class CompensationEntryResponse extends io.pulumi.resources.InvokeA
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -48,7 +48,7 @@ public final class CompensationEntryResponse extends io.pulumi.resources.InvokeA
     @Import(name="expectedUnitsPerYear", required=true)
       private final Double expectedUnitsPerYear;
 
-    public Double getExpectedUnitsPerYear() {
+    public Double expectedUnitsPerYear() {
         return this.expectedUnitsPerYear;
     }
 
@@ -59,7 +59,7 @@ public final class CompensationEntryResponse extends io.pulumi.resources.InvokeA
     @Import(name="range", required=true)
       private final CompensationRangeResponse range;
 
-    public CompensationRangeResponse getRange() {
+    public CompensationRangeResponse range() {
         return this.range;
     }
 
@@ -70,7 +70,7 @@ public final class CompensationEntryResponse extends io.pulumi.resources.InvokeA
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -81,7 +81,7 @@ public final class CompensationEntryResponse extends io.pulumi.resources.InvokeA
     @Import(name="unit", required=true)
       private final String unit;
 
-    public String getUnit() {
+    public String unit() {
         return this.unit;
     }
 

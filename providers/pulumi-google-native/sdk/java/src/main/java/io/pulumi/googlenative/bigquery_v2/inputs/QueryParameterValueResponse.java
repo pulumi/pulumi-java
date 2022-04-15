@@ -21,7 +21,7 @@ public final class QueryParameterValueResponse extends io.pulumi.resources.Invok
     @Import(name="arrayValues", required=true)
       private final List<QueryParameterValueResponse> arrayValues;
 
-    public List<QueryParameterValueResponse> getArrayValues() {
+    public List<QueryParameterValueResponse> arrayValues() {
         return this.arrayValues;
     }
 
@@ -32,7 +32,7 @@ public final class QueryParameterValueResponse extends io.pulumi.resources.Invok
     @Import(name="structValues", required=true)
       private final Map<String,String> structValues;
 
-    public Map<String,String> getStructValues() {
+    public Map<String,String> structValues() {
         return this.structValues;
     }
 
@@ -43,7 +43,7 @@ public final class QueryParameterValueResponse extends io.pulumi.resources.Invok
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

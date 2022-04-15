@@ -27,7 +27,7 @@ public final class SingleClusterRoutingArgs extends io.pulumi.resources.Resource
     @Import(name="allowTransactionalWrites")
       private final @Nullable Output<Boolean> allowTransactionalWrites;
 
-    public Output<Boolean> getAllowTransactionalWrites() {
+    public Output<Boolean> allowTransactionalWrites() {
         return this.allowTransactionalWrites == null ? Codegen.empty() : this.allowTransactionalWrites;
     }
 
@@ -38,7 +38,7 @@ public final class SingleClusterRoutingArgs extends io.pulumi.resources.Resource
     @Import(name="clusterId")
       private final @Nullable Output<String> clusterId;
 
-    public Output<String> getClusterId() {
+    public Output<String> clusterId() {
         return this.clusterId == null ? Codegen.empty() : this.clusterId;
     }
 

@@ -33,7 +33,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="completionTime")
       private final @Nullable Output<TimestampArgs> completionTime;
 
-    public Output<TimestampArgs> getCompletionTime() {
+    public Output<TimestampArgs> completionTime() {
         return this.completionTime == null ? Codegen.empty() : this.completionTime;
     }
 
@@ -44,7 +44,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="creationTime")
       private final @Nullable Output<TimestampArgs> creationTime;
 
-    public Output<TimestampArgs> getCreationTime() {
+    public Output<TimestampArgs> creationTime() {
         return this.creationTime == null ? Codegen.empty() : this.creationTime;
     }
 
@@ -55,7 +55,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -66,7 +66,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deviceUsageDuration")
       private final @Nullable Output<DurationArgs> deviceUsageDuration;
 
-    public Output<DurationArgs> getDeviceUsageDuration() {
+    public Output<DurationArgs> deviceUsageDuration() {
         return this.deviceUsageDuration == null ? Codegen.empty() : this.deviceUsageDuration;
     }
 
@@ -77,14 +77,14 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dimensionValue")
       private final @Nullable Output<List<StepDimensionValueEntryArgs>> dimensionValue;
 
-    public Output<List<StepDimensionValueEntryArgs>> getDimensionValue() {
+    public Output<List<StepDimensionValueEntryArgs>> dimensionValue() {
         return this.dimensionValue == null ? Codegen.empty() : this.dimensionValue;
     }
 
     @Import(name="executionId", required=true)
       private final Output<String> executionId;
 
-    public Output<String> getExecutionId() {
+    public Output<String> executionId() {
         return this.executionId;
     }
 
@@ -95,14 +95,14 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hasImages")
       private final @Nullable Output<Boolean> hasImages;
 
-    public Output<Boolean> getHasImages() {
+    public Output<Boolean> hasImages() {
         return this.hasImages == null ? Codegen.empty() : this.hasImages;
     }
 
     @Import(name="historyId", required=true)
       private final Output<String> historyId;
 
-    public Output<String> getHistoryId() {
+    public Output<String> historyId() {
         return this.historyId;
     }
 
@@ -113,7 +113,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<List<StepLabelsEntryArgs>> labels;
 
-    public Output<List<StepLabelsEntryArgs>> getLabels() {
+    public Output<List<StepLabelsEntryArgs>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -124,7 +124,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="multiStep")
       private final @Nullable Output<MultiStepArgs> multiStep;
 
-    public Output<MultiStepArgs> getMultiStep() {
+    public Output<MultiStepArgs> multiStep() {
         return this.multiStep == null ? Codegen.empty() : this.multiStep;
     }
 
@@ -135,7 +135,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -146,21 +146,21 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outcome")
       private final @Nullable Output<OutcomeArgs> outcome;
 
-    public Output<OutcomeArgs> getOutcome() {
+    public Output<OutcomeArgs> outcome() {
         return this.outcome == null ? Codegen.empty() : this.outcome;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -171,7 +171,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="runDuration")
       private final @Nullable Output<DurationArgs> runDuration;
 
-    public Output<DurationArgs> getRunDuration() {
+    public Output<DurationArgs> runDuration() {
         return this.runDuration == null ? Codegen.empty() : this.runDuration;
     }
 
@@ -182,7 +182,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<StepState> state;
 
-    public Output<StepState> getState() {
+    public Output<StepState> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -193,7 +193,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stepId")
       private final @Nullable Output<String> stepId;
 
-    public Output<String> getStepId() {
+    public Output<String> stepId() {
         return this.stepId == null ? Codegen.empty() : this.stepId;
     }
 
@@ -204,7 +204,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="testExecutionStep")
       private final @Nullable Output<TestExecutionStepArgs> testExecutionStep;
 
-    public Output<TestExecutionStepArgs> getTestExecutionStep() {
+    public Output<TestExecutionStepArgs> testExecutionStep() {
         return this.testExecutionStep == null ? Codegen.empty() : this.testExecutionStep;
     }
 
@@ -215,7 +215,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="toolExecutionStep")
       private final @Nullable Output<ToolExecutionStepArgs> toolExecutionStep;
 
-    public Output<ToolExecutionStepArgs> getToolExecutionStep() {
+    public Output<ToolExecutionStepArgs> toolExecutionStep() {
         return this.toolExecutionStep == null ? Codegen.empty() : this.toolExecutionStep;
     }
 

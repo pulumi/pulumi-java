@@ -24,7 +24,7 @@ public final class MonthlyScheduleResponse extends io.pulumi.resources.InvokeArg
     @Import(name="monthDay", required=true)
       private final Integer monthDay;
 
-    public Integer getMonthDay() {
+    public Integer monthDay() {
         return this.monthDay;
     }
 
@@ -35,7 +35,7 @@ public final class MonthlyScheduleResponse extends io.pulumi.resources.InvokeArg
     @Import(name="weekDayOfMonth", required=true)
       private final WeekDayOfMonthResponse weekDayOfMonth;
 
-    public WeekDayOfMonthResponse getWeekDayOfMonth() {
+    public WeekDayOfMonthResponse weekDayOfMonth() {
         return this.weekDayOfMonth;
     }
 

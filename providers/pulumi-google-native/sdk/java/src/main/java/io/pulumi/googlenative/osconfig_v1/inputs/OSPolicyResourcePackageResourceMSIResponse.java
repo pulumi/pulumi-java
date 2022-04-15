@@ -25,7 +25,7 @@ public final class OSPolicyResourcePackageResourceMSIResponse extends io.pulumi.
     @Import(name="properties", required=true)
       private final List<String> properties;
 
-    public List<String> getProperties() {
+    public List<String> properties() {
         return this.properties;
     }
 
@@ -36,7 +36,7 @@ public final class OSPolicyResourcePackageResourceMSIResponse extends io.pulumi.
     @Import(name="source", required=true)
       private final OSPolicyResourceFileResponse source;
 
-    public OSPolicyResourceFileResponse getSource() {
+    public OSPolicyResourceFileResponse source() {
         return this.source;
     }
 

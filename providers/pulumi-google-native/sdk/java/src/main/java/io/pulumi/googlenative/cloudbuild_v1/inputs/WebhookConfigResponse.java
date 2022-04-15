@@ -23,7 +23,7 @@ public final class WebhookConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="secret", required=true)
       private final String secret;
 
-    public String getSecret() {
+    public String secret() {
         return this.secret;
     }
 
@@ -34,7 +34,7 @@ public final class WebhookConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

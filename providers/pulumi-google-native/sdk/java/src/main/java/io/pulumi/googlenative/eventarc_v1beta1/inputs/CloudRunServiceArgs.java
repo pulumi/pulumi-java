@@ -26,7 +26,7 @@ public final class CloudRunServiceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -37,7 +37,7 @@ public final class CloudRunServiceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
@@ -48,7 +48,7 @@ public final class CloudRunServiceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="service", required=true)
       private final Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 

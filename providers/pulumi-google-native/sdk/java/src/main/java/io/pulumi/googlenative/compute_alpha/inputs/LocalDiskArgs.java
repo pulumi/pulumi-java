@@ -23,7 +23,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskCount")
       private final @Nullable Output<Integer> diskCount;
 
-    public Output<Integer> getDiskCount() {
+    public Output<Integer> diskCount() {
         return this.diskCount == null ? Codegen.empty() : this.diskCount;
     }
 
@@ -34,7 +34,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGb")
       private final @Nullable Output<Integer> diskSizeGb;
 
-    public Output<Integer> getDiskSizeGb() {
+    public Output<Integer> diskSizeGb() {
         return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
     }
 
@@ -45,7 +45,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskType")
       private final @Nullable Output<String> diskType;
 
-    public Output<String> getDiskType() {
+    public Output<String> diskType() {
         return this.diskType == null ? Codegen.empty() : this.diskType;
     }
 

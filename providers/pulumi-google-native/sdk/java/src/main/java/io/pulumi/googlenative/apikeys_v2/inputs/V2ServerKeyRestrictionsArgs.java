@@ -27,7 +27,7 @@ public final class V2ServerKeyRestrictionsArgs extends io.pulumi.resources.Resou
     @Import(name="allowedIps")
       private final @Nullable Output<List<String>> allowedIps;
 
-    public Output<List<String>> getAllowedIps() {
+    public Output<List<String>> allowedIps() {
         return this.allowedIps == null ? Codegen.empty() : this.allowedIps;
     }
 

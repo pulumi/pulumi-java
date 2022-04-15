@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
     @Import(name="conversationModelConfig", required=true)
       private final GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigResponse conversationModelConfig;
 
-    public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigResponse getConversationModelConfig() {
+    public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigResponse conversationModelConfig() {
         return this.conversationModelConfig;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
     @Import(name="conversationProcessConfig", required=true)
       private final GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigResponse conversationProcessConfig;
 
-    public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigResponse getConversationProcessConfig() {
+    public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigResponse conversationProcessConfig() {
         return this.conversationProcessConfig;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
     @Import(name="enableEventBasedSuggestion", required=true)
       private final Boolean enableEventBasedSuggestion;
 
-    public Boolean getEnableEventBasedSuggestion() {
+    public Boolean enableEventBasedSuggestion() {
         return this.enableEventBasedSuggestion;
     }
 
@@ -61,7 +61,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
     @Import(name="queryConfig", required=true)
       private final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigResponse queryConfig;
 
-    public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigResponse getQueryConfig() {
+    public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigResponse queryConfig() {
         return this.queryConfig;
     }
 
@@ -72,7 +72,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
     @Import(name="suggestionFeature", required=true)
       private final GoogleCloudDialogflowV2SuggestionFeatureResponse suggestionFeature;
 
-    public GoogleCloudDialogflowV2SuggestionFeatureResponse getSuggestionFeature() {
+    public GoogleCloudDialogflowV2SuggestionFeatureResponse suggestionFeature() {
         return this.suggestionFeature;
     }
 
@@ -83,7 +83,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
     @Import(name="suggestionTriggerSettings", required=true)
       private final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse suggestionTriggerSettings;
 
-    public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse getSuggestionTriggerSettings() {
+    public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse suggestionTriggerSettings() {
         return this.suggestionTriggerSettings;
     }
 

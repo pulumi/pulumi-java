@@ -32,14 +32,14 @@ public final class GoogleCloudRunOpV2RevisionScalingResponse {
      * Maximum number of serving instances that this resource should have.
      * 
     */
-    public Integer getMaxInstanceCount() {
+    public Integer maxInstanceCount() {
         return this.maxInstanceCount;
     }
     /**
      * Minimum number of serving instances that this resource should have.
      * 
     */
-    public Integer getMinInstanceCount() {
+    public Integer minInstanceCount() {
         return this.minInstanceCount;
     }
 

@@ -23,7 +23,7 @@ public final class VersionSourceResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="mshField", required=true)
       private final String mshField;
 
-    public String getMshField() {
+    public String mshField() {
         return this.mshField;
     }
 
@@ -34,7 +34,7 @@ public final class VersionSourceResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

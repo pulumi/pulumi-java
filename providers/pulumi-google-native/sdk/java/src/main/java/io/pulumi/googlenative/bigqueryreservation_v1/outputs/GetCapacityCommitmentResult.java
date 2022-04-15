@@ -75,56 +75,56 @@ public final class GetCapacityCommitmentResult {
      * The end of the current commitment period. It is applicable only for ACTIVE capacity commitments.
      * 
     */
-    public String getCommitmentEndTime() {
+    public String commitmentEndTime() {
         return this.commitmentEndTime;
     }
     /**
      * The start of the current commitment period. It is applicable only for ACTIVE capacity commitments.
      * 
     */
-    public String getCommitmentStartTime() {
+    public String commitmentStartTime() {
         return this.commitmentStartTime;
     }
     /**
      * For FAILED commitment plan, provides the reason of failure.
      * 
     */
-    public StatusResponse getFailureStatus() {
+    public StatusResponse failureStatus() {
         return this.failureStatus;
     }
     /**
      * The resource name of the capacity commitment, e.g., `projects/myproject/locations/US/capacityCommitments/123`
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Capacity commitment commitment plan.
      * 
     */
-    public String getPlan() {
+    public String plan() {
         return this.plan;
     }
     /**
      * The plan this capacity commitment is converted to after commitment_end_time passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable for ANNUAL and TRIAL commitments.
      * 
     */
-    public String getRenewalPlan() {
+    public String renewalPlan() {
         return this.renewalPlan;
     }
     /**
      * Number of slots in this commitment.
      * 
     */
-    public String getSlotCount() {
+    public String slotCount() {
         return this.slotCount;
     }
     /**
      * State of the commitment.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

@@ -25,7 +25,7 @@ public final class TextStreamResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="codec", required=true)
       private final String codec;
 
-    public String getCodec() {
+    public String codec() {
         return this.codec;
     }
 
@@ -36,7 +36,7 @@ public final class TextStreamResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="mapping", required=true)
       private final List<TextMappingResponse> mapping;
 
-    public List<TextMappingResponse> getMapping() {
+    public List<TextMappingResponse> mapping() {
         return this.mapping;
     }
 

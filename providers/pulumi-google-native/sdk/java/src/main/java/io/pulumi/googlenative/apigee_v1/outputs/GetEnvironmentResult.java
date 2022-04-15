@@ -82,63 +82,63 @@ public final class GetEnvironmentResult {
      * Optional. API Proxy type supported by the environment. The type can be set when creating the Environment and cannot be changed.
      * 
     */
-    public String getApiProxyType() {
+    public String apiProxyType() {
         return this.apiProxyType;
     }
     /**
      * Creation time of this environment as milliseconds since epoch.
      * 
     */
-    public String getCreatedAt() {
+    public String createdAt() {
         return this.createdAt;
     }
     /**
      * Optional. Deployment type supported by the environment. The deployment type can be set when creating the environment and cannot be changed. When you enable archive deployment, you will be **prevented from performing** a [subset of actions](/apigee/docs/api-platform/local-development/overview#prevented-actions) within the environment, including: * Managing the deployment of API proxy or shared flow revisions * Creating, updating, or deleting resource files * Creating, updating, or deleting target servers
      * 
     */
-    public String getDeploymentType() {
+    public String deploymentType() {
         return this.deploymentType;
     }
     /**
      * Optional. Description of the environment.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Optional. Display name for this environment.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Last modification time of this environment as milliseconds since epoch.
      * 
     */
-    public String getLastModifiedAt() {
+    public String lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
      * Name of the environment. Values must match the regular expression `^[.\\p{Alnum}-_]{1,255}$`
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Optional. Key-value pairs that may be used for customizing the environment.
      * 
     */
-    public GoogleCloudApigeeV1PropertiesResponse getProperties() {
+    public GoogleCloudApigeeV1PropertiesResponse properties() {
         return this.properties;
     }
     /**
      * State of the environment. Values other than ACTIVE means the resource is not ready to use.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

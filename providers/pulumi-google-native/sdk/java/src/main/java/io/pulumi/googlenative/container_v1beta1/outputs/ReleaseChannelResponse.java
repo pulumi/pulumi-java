@@ -24,7 +24,7 @@ public final class ReleaseChannelResponse {
      * channel specifies which release channel the cluster is subscribed to.
      * 
     */
-    public String getChannel() {
+    public String channel() {
         return this.channel;
     }
 

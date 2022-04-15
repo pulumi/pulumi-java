@@ -24,7 +24,7 @@ public final class SecuritySettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="clientTlsPolicy", required=true)
       private final String clientTlsPolicy;
 
-    public String getClientTlsPolicy() {
+    public String clientTlsPolicy() {
         return this.clientTlsPolicy;
     }
 
@@ -35,7 +35,7 @@ public final class SecuritySettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="subjectAltNames", required=true)
       private final List<String> subjectAltNames;
 
-    public List<String> getSubjectAltNames() {
+    public List<String> subjectAltNames() {
         return this.subjectAltNames;
     }
 

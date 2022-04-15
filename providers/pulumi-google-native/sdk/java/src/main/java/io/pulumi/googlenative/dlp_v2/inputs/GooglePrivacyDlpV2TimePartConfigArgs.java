@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2TimePartConfigArgs extends io.pulumi.resour
     @Import(name="partToExtract")
       private final @Nullable Output<GooglePrivacyDlpV2TimePartConfigPartToExtract> partToExtract;
 
-    public Output<GooglePrivacyDlpV2TimePartConfigPartToExtract> getPartToExtract() {
+    public Output<GooglePrivacyDlpV2TimePartConfigPartToExtract> partToExtract() {
         return this.partToExtract == null ? Codegen.empty() : this.partToExtract;
     }
 

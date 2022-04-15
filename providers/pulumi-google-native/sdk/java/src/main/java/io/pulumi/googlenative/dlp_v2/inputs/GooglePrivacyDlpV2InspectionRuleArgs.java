@@ -27,7 +27,7 @@ public final class GooglePrivacyDlpV2InspectionRuleArgs extends io.pulumi.resour
     @Import(name="exclusionRule")
       private final @Nullable Output<GooglePrivacyDlpV2ExclusionRuleArgs> exclusionRule;
 
-    public Output<GooglePrivacyDlpV2ExclusionRuleArgs> getExclusionRule() {
+    public Output<GooglePrivacyDlpV2ExclusionRuleArgs> exclusionRule() {
         return this.exclusionRule == null ? Codegen.empty() : this.exclusionRule;
     }
 
@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2InspectionRuleArgs extends io.pulumi.resour
     @Import(name="hotwordRule")
       private final @Nullable Output<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule;
 
-    public Output<GooglePrivacyDlpV2HotwordRuleArgs> getHotwordRule() {
+    public Output<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule() {
         return this.hotwordRule == null ? Codegen.empty() : this.hotwordRule;
     }
 

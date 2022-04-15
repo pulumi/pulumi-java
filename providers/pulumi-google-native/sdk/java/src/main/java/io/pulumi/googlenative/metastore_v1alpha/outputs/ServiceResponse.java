@@ -166,140 +166,140 @@ public final class ServiceResponse {
      * A Cloud Storage URI (starting with gs://) that specifies where artifacts related to the metastore service are stored.
      * 
     */
-    public String getArtifactGcsUri() {
+    public String artifactGcsUri() {
         return this.artifactGcsUri;
     }
     /**
      * The time when the metastore service was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Immutable. The database type that the Metastore service stores its data.
      * 
     */
-    public String getDatabaseType() {
+    public String databaseType() {
         return this.databaseType;
     }
     /**
      * Immutable. Information used to configure the Dataproc Metastore service to encrypt customer data at rest. Cannot be updated.
      * 
     */
-    public EncryptionConfigResponse getEncryptionConfig() {
+    public EncryptionConfigResponse encryptionConfig() {
         return this.encryptionConfig;
     }
     /**
      * The URI of the endpoint used to access the metastore service.
      * 
     */
-    public String getEndpointUri() {
+    public String endpointUri() {
         return this.endpointUri;
     }
     /**
      * Configuration information specific to running Hive metastore software as the metastore service.
      * 
     */
-    public HiveMetastoreConfigResponse getHiveMetastoreConfig() {
+    public HiveMetastoreConfigResponse hiveMetastoreConfig() {
         return this.hiveMetastoreConfig;
     }
     /**
      * User-defined labels for the metastore service.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * The one hour maintenance window of the metastore service. This specifies when the service can be restarted for maintenance purposes in UTC time. Maintenance window is not needed for services with the SPANNER database type.
      * 
     */
-    public MaintenanceWindowResponse getMaintenanceWindow() {
+    public MaintenanceWindowResponse maintenanceWindow() {
         return this.maintenanceWindow;
     }
     /**
      * The setting that defines how metastore metadata should be integrated with external services and systems.
      * 
     */
-    public MetadataIntegrationResponse getMetadataIntegration() {
+    public MetadataIntegrationResponse metadataIntegration() {
         return this.metadataIntegration;
     }
     /**
      * The metadata management activities of the metastore service.
      * 
     */
-    public MetadataManagementActivityResponse getMetadataManagementActivity() {
+    public MetadataManagementActivityResponse metadataManagementActivity() {
         return this.metadataManagementActivity;
     }
     /**
      * Immutable. The relative resource name of the metastore service, of the form:projects/{project_number}/locations/{location_id}/services/{service_id}.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Immutable. The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:projects/{project_number}/global/networks/{network_id}.
      * 
     */
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
     /**
      * Immutable. The configuration specifying the network settings for the Dataproc Metastore service.
      * 
     */
-    public NetworkConfigResponse getNetworkConfig() {
+    public NetworkConfigResponse networkConfig() {
         return this.networkConfig;
     }
     /**
      * The TCP port at which the metastore service is reached. Default: 9083.
      * 
     */
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
     /**
      * Immutable. The release channel of the service. If unspecified, defaults to STABLE.
      * 
     */
-    public String getReleaseChannel() {
+    public String releaseChannel() {
         return this.releaseChannel;
     }
     /**
      * The current state of the metastore service.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Additional information about the current state of the metastore service, if available.
      * 
     */
-    public String getStateMessage() {
+    public String stateMessage() {
         return this.stateMessage;
     }
     /**
      * The tier of the service.
      * 
     */
-    public String getTier() {
+    public String tier() {
         return this.tier;
     }
     /**
      * The globally unique resource identifier of the metastore service.
      * 
     */
-    public String getUid() {
+    public String uid() {
         return this.uid;
     }
     /**
      * The time when the metastore service was last updated.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

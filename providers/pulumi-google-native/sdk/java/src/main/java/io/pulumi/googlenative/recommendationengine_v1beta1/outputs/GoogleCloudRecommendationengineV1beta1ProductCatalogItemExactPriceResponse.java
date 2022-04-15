@@ -32,14 +32,14 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
      * Optional. Display price of the product.
      * 
     */
-    public Double getDisplayPrice() {
+    public Double displayPrice() {
         return this.displayPrice;
     }
     /**
      * Optional. Price of the product without any discount. If zero, by default set to be the 'displayPrice'.
      * 
     */
-    public Double getOriginalPrice() {
+    public Double originalPrice() {
         return this.originalPrice;
     }
 

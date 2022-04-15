@@ -28,7 +28,7 @@ public final class WindowsUpdateSettingsArgs extends io.pulumi.resources.Resourc
     @Import(name="classifications")
       private final @Nullable Output<List<WindowsUpdateSettingsClassificationsItem>> classifications;
 
-    public Output<List<WindowsUpdateSettingsClassificationsItem>> getClassifications() {
+    public Output<List<WindowsUpdateSettingsClassificationsItem>> classifications() {
         return this.classifications == null ? Codegen.empty() : this.classifications;
     }
 
@@ -39,7 +39,7 @@ public final class WindowsUpdateSettingsArgs extends io.pulumi.resources.Resourc
     @Import(name="excludes")
       private final @Nullable Output<List<String>> excludes;
 
-    public Output<List<String>> getExcludes() {
+    public Output<List<String>> excludes() {
         return this.excludes == null ? Codegen.empty() : this.excludes;
     }
 
@@ -50,7 +50,7 @@ public final class WindowsUpdateSettingsArgs extends io.pulumi.resources.Resourc
     @Import(name="exclusivePatches")
       private final @Nullable Output<List<String>> exclusivePatches;
 
-    public Output<List<String>> getExclusivePatches() {
+    public Output<List<String>> exclusivePatches() {
         return this.exclusivePatches == null ? Codegen.empty() : this.exclusivePatches;
     }
 

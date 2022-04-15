@@ -27,7 +27,7 @@ public final class GooglePrivacyDlpV2InfoTypeLimitArgs extends io.pulumi.resourc
     @Import(name="infoType")
       private final @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> infoType;
 
-    public Output<GooglePrivacyDlpV2InfoTypeArgs> getInfoType() {
+    public Output<GooglePrivacyDlpV2InfoTypeArgs> infoType() {
         return this.infoType == null ? Codegen.empty() : this.infoType;
     }
 
@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2InfoTypeLimitArgs extends io.pulumi.resourc
     @Import(name="maxFindings")
       private final @Nullable Output<Integer> maxFindings;
 
-    public Output<Integer> getMaxFindings() {
+    public Output<Integer> maxFindings() {
         return this.maxFindings == null ? Codegen.empty() : this.maxFindings;
     }
 

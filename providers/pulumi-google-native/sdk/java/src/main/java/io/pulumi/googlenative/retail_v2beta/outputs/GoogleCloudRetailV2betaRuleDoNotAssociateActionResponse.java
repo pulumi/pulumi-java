@@ -40,21 +40,21 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse {
      * Cannot contain duplicates or the query term. Can specify up to 100 terms.
      * 
     */
-    public List<String> getDoNotAssociateTerms() {
+    public List<String> doNotAssociateTerms() {
         return this.doNotAssociateTerms;
     }
     /**
      * Terms from the search query. Will not consider do_not_associate_terms for search if in search query. Can specify up to 100 terms.
      * 
     */
-    public List<String> getQueryTerms() {
+    public List<String> queryTerms() {
         return this.queryTerms;
     }
     /**
      * Will be [deprecated = true] post migration;
      * 
     */
-    public List<String> getTerms() {
+    public List<String> terms() {
         return this.terms;
     }
 

@@ -24,7 +24,7 @@ public final class CertificateIdentityConstraintsResponse extends io.pulumi.reso
     @Import(name="allowSubjectAltNamesPassthrough", required=true)
       private final Boolean allowSubjectAltNamesPassthrough;
 
-    public Boolean getAllowSubjectAltNamesPassthrough() {
+    public Boolean allowSubjectAltNamesPassthrough() {
         return this.allowSubjectAltNamesPassthrough;
     }
 
@@ -35,7 +35,7 @@ public final class CertificateIdentityConstraintsResponse extends io.pulumi.reso
     @Import(name="allowSubjectPassthrough", required=true)
       private final Boolean allowSubjectPassthrough;
 
-    public Boolean getAllowSubjectPassthrough() {
+    public Boolean allowSubjectPassthrough() {
         return this.allowSubjectPassthrough;
     }
 
@@ -46,7 +46,7 @@ public final class CertificateIdentityConstraintsResponse extends io.pulumi.reso
     @Import(name="celExpression", required=true)
       private final ExprResponse celExpression;
 
-    public ExprResponse getCelExpression() {
+    public ExprResponse celExpression() {
         return this.celExpression;
     }
 

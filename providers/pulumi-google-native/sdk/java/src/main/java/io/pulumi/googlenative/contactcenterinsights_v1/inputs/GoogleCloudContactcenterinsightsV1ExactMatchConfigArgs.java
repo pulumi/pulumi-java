@@ -26,7 +26,7 @@ public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs extend
     @Import(name="caseSensitive")
       private final @Nullable Output<Boolean> caseSensitive;
 
-    public Output<Boolean> getCaseSensitive() {
+    public Output<Boolean> caseSensitive() {
         return this.caseSensitive == null ? Codegen.empty() : this.caseSensitive;
     }
 

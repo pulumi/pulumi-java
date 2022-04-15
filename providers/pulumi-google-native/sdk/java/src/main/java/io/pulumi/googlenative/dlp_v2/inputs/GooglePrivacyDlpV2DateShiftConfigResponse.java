@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2DateShiftConfigResponse extends io.pulumi.r
     @Import(name="context", required=true)
       private final GooglePrivacyDlpV2FieldIdResponse context;
 
-    public GooglePrivacyDlpV2FieldIdResponse getContext() {
+    public GooglePrivacyDlpV2FieldIdResponse context() {
         return this.context;
     }
 
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2DateShiftConfigResponse extends io.pulumi.r
     @Import(name="cryptoKey", required=true)
       private final GooglePrivacyDlpV2CryptoKeyResponse cryptoKey;
 
-    public GooglePrivacyDlpV2CryptoKeyResponse getCryptoKey() {
+    public GooglePrivacyDlpV2CryptoKeyResponse cryptoKey() {
         return this.cryptoKey;
     }
 
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2DateShiftConfigResponse extends io.pulumi.r
     @Import(name="lowerBoundDays", required=true)
       private final Integer lowerBoundDays;
 
-    public Integer getLowerBoundDays() {
+    public Integer lowerBoundDays() {
         return this.lowerBoundDays;
     }
 
@@ -58,7 +58,7 @@ public final class GooglePrivacyDlpV2DateShiftConfigResponse extends io.pulumi.r
     @Import(name="upperBoundDays", required=true)
       private final Integer upperBoundDays;
 
-    public Integer getUpperBoundDays() {
+    public Integer upperBoundDays() {
         return this.upperBoundDays;
     }
 

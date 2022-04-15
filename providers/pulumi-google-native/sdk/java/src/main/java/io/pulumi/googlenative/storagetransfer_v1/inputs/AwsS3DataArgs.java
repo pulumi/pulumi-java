@@ -27,7 +27,7 @@ public final class AwsS3DataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="awsAccessKey")
       private final @Nullable Output<AwsAccessKeyArgs> awsAccessKey;
 
-    public Output<AwsAccessKeyArgs> getAwsAccessKey() {
+    public Output<AwsAccessKeyArgs> awsAccessKey() {
         return this.awsAccessKey == null ? Codegen.empty() : this.awsAccessKey;
     }
 
@@ -38,7 +38,7 @@ public final class AwsS3DataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
@@ -49,7 +49,7 @@ public final class AwsS3DataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -60,7 +60,7 @@ public final class AwsS3DataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 

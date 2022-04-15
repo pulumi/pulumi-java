@@ -33,14 +33,14 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse {
      * Maximum age of the snapshot that is allowed to be kept.
      * 
     */
-    public Integer getMaxRetentionDays() {
+    public Integer maxRetentionDays() {
         return this.maxRetentionDays;
     }
     /**
      * Specifies the behavior to apply to scheduled snapshots when the source disk is deleted.
      * 
     */
-    public String getOnSourceDiskDelete() {
+    public String onSourceDiskDelete() {
         return this.onSourceDiskDelete;
     }
 

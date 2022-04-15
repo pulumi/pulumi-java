@@ -23,7 +23,7 @@ public final class NetworkEndpointGroupCloudRunResponse extends io.pulumi.resour
     @Import(name="service", required=true)
       private final String service;
 
-    public String getService() {
+    public String service() {
         return this.service;
     }
 
@@ -34,7 +34,7 @@ public final class NetworkEndpointGroupCloudRunResponse extends io.pulumi.resour
     @Import(name="tag", required=true)
       private final String tag;
 
-    public String getTag() {
+    public String tag() {
         return this.tag;
     }
 
@@ -45,7 +45,7 @@ public final class NetworkEndpointGroupCloudRunResponse extends io.pulumi.resour
     @Import(name="urlMask", required=true)
       private final String urlMask;
 
-    public String getUrlMask() {
+    public String urlMask() {
         return this.urlMask;
     }
 

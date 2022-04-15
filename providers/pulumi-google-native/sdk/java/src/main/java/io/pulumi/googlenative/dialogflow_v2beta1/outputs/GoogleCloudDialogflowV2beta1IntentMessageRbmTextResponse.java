@@ -34,14 +34,14 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse {
      * Optional. One or more suggestions to show to the user.
      * 
     */
-    public List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> getRbmSuggestion() {
+    public List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> rbmSuggestion() {
         return this.rbmSuggestion;
     }
     /**
      * Text sent and displayed to the user.
      * 
     */
-    public String getText() {
+    public String text() {
         return this.text;
     }
 

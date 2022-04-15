@@ -19,7 +19,7 @@ public final class UpgradeSettingsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="maxSurge", required=true)
       private final Integer maxSurge;
 
-    public Integer getMaxSurge() {
+    public Integer maxSurge() {
         return this.maxSurge;
     }
 
@@ -30,7 +30,7 @@ public final class UpgradeSettingsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="maxUnavailable", required=true)
       private final Integer maxUnavailable;
 
-    public Integer getMaxUnavailable() {
+    public Integer maxUnavailable() {
         return this.maxUnavailable;
     }
 

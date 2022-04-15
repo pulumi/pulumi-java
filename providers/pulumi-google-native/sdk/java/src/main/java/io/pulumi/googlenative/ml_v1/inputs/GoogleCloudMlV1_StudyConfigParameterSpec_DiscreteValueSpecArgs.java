@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecArg
     @Import(name="values")
       private final @Nullable Output<List<Double>> values;
 
-    public Output<List<Double>> getValues() {
+    public Output<List<Double>> values() {
         return this.values == null ? Codegen.empty() : this.values;
     }
 

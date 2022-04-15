@@ -24,7 +24,7 @@ public final class SessionInfoResponse {
      * // [Preview] Id of the session.
      * 
     */
-    public String getSessionId() {
+    public String sessionId() {
         return this.sessionId;
     }
 

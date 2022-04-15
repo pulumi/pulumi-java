@@ -22,7 +22,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -33,21 +33,21 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -58,7 +58,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sizeBytes")
       private final @Nullable Output<String> sizeBytes;
 
-    public Output<String> getSizeBytes() {
+    public Output<String> sizeBytes() {
         return this.sizeBytes == null ? Codegen.empty() : this.sizeBytes;
     }
 
@@ -69,14 +69,14 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageVolume")
       private final @Nullable Output<String> storageVolume;
 
-    public Output<String> getStorageVolume() {
+    public Output<String> storageVolume() {
         return this.storageVolume == null ? Codegen.empty() : this.storageVolume;
     }
 
     @Import(name="volumeId", required=true)
       private final Output<String> volumeId;
 
-    public Output<String> getVolumeId() {
+    public Output<String> volumeId() {
         return this.volumeId;
     }
 

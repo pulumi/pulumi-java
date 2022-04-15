@@ -29,7 +29,7 @@ public final class HiveMetastoreConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="auxiliaryVersions")
       private final @Nullable Output<Map<String,String>> auxiliaryVersions;
 
-    public Output<Map<String,String>> getAuxiliaryVersions() {
+    public Output<Map<String,String>> auxiliaryVersions() {
         return this.auxiliaryVersions == null ? Codegen.empty() : this.auxiliaryVersions;
     }
 
@@ -40,7 +40,7 @@ public final class HiveMetastoreConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="configOverrides")
       private final @Nullable Output<Map<String,String>> configOverrides;
 
-    public Output<Map<String,String>> getConfigOverrides() {
+    public Output<Map<String,String>> configOverrides() {
         return this.configOverrides == null ? Codegen.empty() : this.configOverrides;
     }
 
@@ -51,7 +51,7 @@ public final class HiveMetastoreConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="endpointProtocol")
       private final @Nullable Output<HiveMetastoreConfigEndpointProtocol> endpointProtocol;
 
-    public Output<HiveMetastoreConfigEndpointProtocol> getEndpointProtocol() {
+    public Output<HiveMetastoreConfigEndpointProtocol> endpointProtocol() {
         return this.endpointProtocol == null ? Codegen.empty() : this.endpointProtocol;
     }
 
@@ -62,7 +62,7 @@ public final class HiveMetastoreConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="kerberosConfig")
       private final @Nullable Output<KerberosConfigArgs> kerberosConfig;
 
-    public Output<KerberosConfigArgs> getKerberosConfig() {
+    public Output<KerberosConfigArgs> kerberosConfig() {
         return this.kerberosConfig == null ? Codegen.empty() : this.kerberosConfig;
     }
 
@@ -73,7 +73,7 @@ public final class HiveMetastoreConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

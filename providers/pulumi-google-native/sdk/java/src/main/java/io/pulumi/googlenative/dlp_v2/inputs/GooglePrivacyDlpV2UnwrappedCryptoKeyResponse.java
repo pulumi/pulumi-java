@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2UnwrappedCryptoKeyResponse extends io.pulum
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 

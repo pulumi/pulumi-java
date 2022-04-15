@@ -26,7 +26,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hint")
       private final @Nullable Output<HintArgs> hint;
 
-    public Output<HintArgs> getHint() {
+    public Output<HintArgs> hint() {
         return this.hint == null ? Codegen.empty() : this.hint;
     }
 

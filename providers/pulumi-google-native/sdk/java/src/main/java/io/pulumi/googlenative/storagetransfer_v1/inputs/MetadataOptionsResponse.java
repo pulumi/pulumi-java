@@ -23,7 +23,7 @@ public final class MetadataOptionsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="acl", required=true)
       private final String acl;
 
-    public String getAcl() {
+    public String acl() {
         return this.acl;
     }
 
@@ -34,7 +34,7 @@ public final class MetadataOptionsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="gid", required=true)
       private final String gid;
 
-    public String getGid() {
+    public String gid() {
         return this.gid;
     }
 
@@ -45,7 +45,7 @@ public final class MetadataOptionsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="kmsKey", required=true)
       private final String kmsKey;
 
-    public String getKmsKey() {
+    public String kmsKey() {
         return this.kmsKey;
     }
 
@@ -56,7 +56,7 @@ public final class MetadataOptionsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="mode", required=true)
       private final String mode;
 
-    public String getMode() {
+    public String mode() {
         return this.mode;
     }
 
@@ -67,7 +67,7 @@ public final class MetadataOptionsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="storageClass", required=true)
       private final String storageClass;
 
-    public String getStorageClass() {
+    public String storageClass() {
         return this.storageClass;
     }
 
@@ -78,7 +78,7 @@ public final class MetadataOptionsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="symlink", required=true)
       private final String symlink;
 
-    public String getSymlink() {
+    public String symlink() {
         return this.symlink;
     }
 
@@ -89,7 +89,7 @@ public final class MetadataOptionsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="temporaryHold", required=true)
       private final String temporaryHold;
 
-    public String getTemporaryHold() {
+    public String temporaryHold() {
         return this.temporaryHold;
     }
 
@@ -100,7 +100,7 @@ public final class MetadataOptionsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="uid", required=true)
       private final String uid;
 
-    public String getUid() {
+    public String uid() {
         return this.uid;
     }
 

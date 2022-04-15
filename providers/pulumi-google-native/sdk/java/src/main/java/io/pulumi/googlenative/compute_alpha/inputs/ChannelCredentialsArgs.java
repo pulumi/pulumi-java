@@ -27,7 +27,7 @@ public final class ChannelCredentialsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="certificates")
       private final @Nullable Output<TlsCertificatePathsArgs> certificates;
 
-    public Output<TlsCertificatePathsArgs> getCertificates() {
+    public Output<TlsCertificatePathsArgs> certificates() {
         return this.certificates == null ? Codegen.empty() : this.certificates;
     }
 
@@ -38,7 +38,7 @@ public final class ChannelCredentialsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="channelCredentialType")
       private final @Nullable Output<ChannelCredentialsChannelCredentialType> channelCredentialType;
 
-    public Output<ChannelCredentialsChannelCredentialType> getChannelCredentialType() {
+    public Output<ChannelCredentialsChannelCredentialType> channelCredentialType() {
         return this.channelCredentialType == null ? Codegen.empty() : this.channelCredentialType;
     }
 

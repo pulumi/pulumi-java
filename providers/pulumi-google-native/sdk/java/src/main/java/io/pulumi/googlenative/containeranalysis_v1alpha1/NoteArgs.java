@@ -38,7 +38,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attestationAuthority")
       private final @Nullable Output<AttestationAuthorityArgs> attestationAuthority;
 
-    public Output<AttestationAuthorityArgs> getAttestationAuthority() {
+    public Output<AttestationAuthorityArgs> attestationAuthority() {
         return this.attestationAuthority == null ? Codegen.empty() : this.attestationAuthority;
     }
 
@@ -49,7 +49,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="baseImage")
       private final @Nullable Output<BasisArgs> baseImage;
 
-    public Output<BasisArgs> getBaseImage() {
+    public Output<BasisArgs> baseImage() {
         return this.baseImage == null ? Codegen.empty() : this.baseImage;
     }
 
@@ -60,7 +60,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="buildType")
       private final @Nullable Output<BuildTypeArgs> buildType;
 
-    public Output<BuildTypeArgs> getBuildType() {
+    public Output<BuildTypeArgs> buildType() {
         return this.buildType == null ? Codegen.empty() : this.buildType;
     }
 
@@ -71,7 +71,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="compliance")
       private final @Nullable Output<ComplianceNoteArgs> compliance;
 
-    public Output<ComplianceNoteArgs> getCompliance() {
+    public Output<ComplianceNoteArgs> compliance() {
         return this.compliance == null ? Codegen.empty() : this.compliance;
     }
 
@@ -82,7 +82,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deployable")
       private final @Nullable Output<DeployableArgs> deployable;
 
-    public Output<DeployableArgs> getDeployable() {
+    public Output<DeployableArgs> deployable() {
         return this.deployable == null ? Codegen.empty() : this.deployable;
     }
 
@@ -93,7 +93,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="discovery")
       private final @Nullable Output<DiscoveryArgs> discovery;
 
-    public Output<DiscoveryArgs> getDiscovery() {
+    public Output<DiscoveryArgs> discovery() {
         return this.discovery == null ? Codegen.empty() : this.discovery;
     }
 
@@ -104,7 +104,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dsseAttestation")
       private final @Nullable Output<DSSEAttestationNoteArgs> dsseAttestation;
 
-    public Output<DSSEAttestationNoteArgs> getDsseAttestation() {
+    public Output<DSSEAttestationNoteArgs> dsseAttestation() {
         return this.dsseAttestation == null ? Codegen.empty() : this.dsseAttestation;
     }
 
@@ -115,7 +115,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expirationTime")
       private final @Nullable Output<String> expirationTime;
 
-    public Output<String> getExpirationTime() {
+    public Output<String> expirationTime() {
         return this.expirationTime == null ? Codegen.empty() : this.expirationTime;
     }
 
@@ -126,7 +126,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="longDescription")
       private final @Nullable Output<String> longDescription;
 
-    public Output<String> getLongDescription() {
+    public Output<String> longDescription() {
         return this.longDescription == null ? Codegen.empty() : this.longDescription;
     }
 
@@ -137,14 +137,14 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="noteId")
       private final @Nullable Output<String> noteId;
 
-    public Output<String> getNoteId() {
+    public Output<String> noteId() {
         return this.noteId == null ? Codegen.empty() : this.noteId;
     }
 
@@ -155,14 +155,14 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="package")
       private final @Nullable Output<PackageArgs> package_;
 
-    public Output<PackageArgs> getPackage_() {
+    public Output<PackageArgs> package_() {
         return this.package_ == null ? Codegen.empty() : this.package_;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -173,7 +173,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="relatedUrl")
       private final @Nullable Output<List<RelatedUrlArgs>> relatedUrl;
 
-    public Output<List<RelatedUrlArgs>> getRelatedUrl() {
+    public Output<List<RelatedUrlArgs>> relatedUrl() {
         return this.relatedUrl == null ? Codegen.empty() : this.relatedUrl;
     }
 
@@ -184,7 +184,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sbom")
       private final @Nullable Output<DocumentNoteArgs> sbom;
 
-    public Output<DocumentNoteArgs> getSbom() {
+    public Output<DocumentNoteArgs> sbom() {
         return this.sbom == null ? Codegen.empty() : this.sbom;
     }
 
@@ -195,7 +195,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shortDescription")
       private final @Nullable Output<String> shortDescription;
 
-    public Output<String> getShortDescription() {
+    public Output<String> shortDescription() {
         return this.shortDescription == null ? Codegen.empty() : this.shortDescription;
     }
 
@@ -206,7 +206,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="spdxFile")
       private final @Nullable Output<FileNoteArgs> spdxFile;
 
-    public Output<FileNoteArgs> getSpdxFile() {
+    public Output<FileNoteArgs> spdxFile() {
         return this.spdxFile == null ? Codegen.empty() : this.spdxFile;
     }
 
@@ -217,7 +217,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="spdxPackage")
       private final @Nullable Output<PackageInfoNoteArgs> spdxPackage;
 
-    public Output<PackageInfoNoteArgs> getSpdxPackage() {
+    public Output<PackageInfoNoteArgs> spdxPackage() {
         return this.spdxPackage == null ? Codegen.empty() : this.spdxPackage;
     }
 
@@ -228,7 +228,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="spdxRelationship")
       private final @Nullable Output<RelationshipNoteArgs> spdxRelationship;
 
-    public Output<RelationshipNoteArgs> getSpdxRelationship() {
+    public Output<RelationshipNoteArgs> spdxRelationship() {
         return this.spdxRelationship == null ? Codegen.empty() : this.spdxRelationship;
     }
 
@@ -239,7 +239,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="upgrade")
       private final @Nullable Output<UpgradeNoteArgs> upgrade;
 
-    public Output<UpgradeNoteArgs> getUpgrade() {
+    public Output<UpgradeNoteArgs> upgrade() {
         return this.upgrade == null ? Codegen.empty() : this.upgrade;
     }
 
@@ -250,7 +250,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vulnerabilityType")
       private final @Nullable Output<VulnerabilityTypeArgs> vulnerabilityType;
 
-    public Output<VulnerabilityTypeArgs> getVulnerabilityType() {
+    public Output<VulnerabilityTypeArgs> vulnerabilityType() {
         return this.vulnerabilityType == null ? Codegen.empty() : this.vulnerabilityType;
     }
 

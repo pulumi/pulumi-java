@@ -28,7 +28,7 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="collation")
       private final @Nullable Output<String> collation;
 
-    public Output<String> getCollation() {
+    public Output<String> collation() {
         return this.collation == null ? Codegen.empty() : this.collation;
     }
 
@@ -39,7 +39,7 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="columnName")
       private final @Nullable Output<String> columnName;
 
-    public Output<String> getColumnName() {
+    public Output<String> columnName() {
         return this.columnName == null ? Codegen.empty() : this.columnName;
     }
 
@@ -50,7 +50,7 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataType")
       private final @Nullable Output<String> dataType;
 
-    public Output<String> getDataType() {
+    public Output<String> dataType() {
         return this.dataType == null ? Codegen.empty() : this.dataType;
     }
 
@@ -61,7 +61,7 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="length")
       private final @Nullable Output<Integer> length;
 
-    public Output<Integer> getLength() {
+    public Output<Integer> length() {
         return this.length == null ? Codegen.empty() : this.length;
     }
 
@@ -72,7 +72,7 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nullable")
       private final @Nullable Output<Boolean> nullable;
 
-    public Output<Boolean> getNullable() {
+    public Output<Boolean> nullable() {
         return this.nullable == null ? Codegen.empty() : this.nullable;
     }
 
@@ -83,7 +83,7 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ordinalPosition")
       private final @Nullable Output<Integer> ordinalPosition;
 
-    public Output<Integer> getOrdinalPosition() {
+    public Output<Integer> ordinalPosition() {
         return this.ordinalPosition == null ? Codegen.empty() : this.ordinalPosition;
     }
 
@@ -94,7 +94,7 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="primaryKey")
       private final @Nullable Output<Boolean> primaryKey;
 
-    public Output<Boolean> getPrimaryKey() {
+    public Output<Boolean> primaryKey() {
         return this.primaryKey == null ? Codegen.empty() : this.primaryKey;
     }
 

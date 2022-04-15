@@ -21,7 +21,7 @@ public final class InstanceGroupManagerUpdatePolicyResponse extends io.pulumi.re
     @Import(name="instanceRedistributionType", required=true)
       private final String instanceRedistributionType;
 
-    public String getInstanceRedistributionType() {
+    public String instanceRedistributionType() {
         return this.instanceRedistributionType;
     }
 
@@ -32,7 +32,7 @@ public final class InstanceGroupManagerUpdatePolicyResponse extends io.pulumi.re
     @Import(name="maxSurge", required=true)
       private final FixedOrPercentResponse maxSurge;
 
-    public FixedOrPercentResponse getMaxSurge() {
+    public FixedOrPercentResponse maxSurge() {
         return this.maxSurge;
     }
 
@@ -43,7 +43,7 @@ public final class InstanceGroupManagerUpdatePolicyResponse extends io.pulumi.re
     @Import(name="maxUnavailable", required=true)
       private final FixedOrPercentResponse maxUnavailable;
 
-    public FixedOrPercentResponse getMaxUnavailable() {
+    public FixedOrPercentResponse maxUnavailable() {
         return this.maxUnavailable;
     }
 
@@ -54,7 +54,7 @@ public final class InstanceGroupManagerUpdatePolicyResponse extends io.pulumi.re
     @Import(name="minReadySec", required=true)
       private final Integer minReadySec;
 
-    public Integer getMinReadySec() {
+    public Integer minReadySec() {
         return this.minReadySec;
     }
 
@@ -65,7 +65,7 @@ public final class InstanceGroupManagerUpdatePolicyResponse extends io.pulumi.re
     @Import(name="minimalAction", required=true)
       private final String minimalAction;
 
-    public String getMinimalAction() {
+    public String minimalAction() {
         return this.minimalAction;
     }
 
@@ -76,7 +76,7 @@ public final class InstanceGroupManagerUpdatePolicyResponse extends io.pulumi.re
     @Import(name="mostDisruptiveAllowedAction", required=true)
       private final String mostDisruptiveAllowedAction;
 
-    public String getMostDisruptiveAllowedAction() {
+    public String mostDisruptiveAllowedAction() {
         return this.mostDisruptiveAllowedAction;
     }
 
@@ -87,7 +87,7 @@ public final class InstanceGroupManagerUpdatePolicyResponse extends io.pulumi.re
     @Import(name="replacementMethod", required=true)
       private final String replacementMethod;
 
-    public String getReplacementMethod() {
+    public String replacementMethod() {
         return this.replacementMethod;
     }
 
@@ -98,7 +98,7 @@ public final class InstanceGroupManagerUpdatePolicyResponse extends io.pulumi.re
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

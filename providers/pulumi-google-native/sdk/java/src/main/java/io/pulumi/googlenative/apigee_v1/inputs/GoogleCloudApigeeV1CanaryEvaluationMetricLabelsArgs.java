@@ -26,7 +26,7 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs extends i
     @Import(name="env")
       private final @Nullable Output<String> env;
 
-    public Output<String> getEnv() {
+    public Output<String> env() {
         return this.env == null ? Codegen.empty() : this.env;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs extends i
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs extends i
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 

@@ -26,7 +26,7 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="dataset")
       private final @Nullable Output<String> dataset;
 
-    public Output<String> getDataset() {
+    public Output<String> dataset() {
         return this.dataset == null ? Codegen.empty() : this.dataset;
     }
 
@@ -37,7 +37,7 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -48,7 +48,7 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="query")
       private final @Nullable Output<String> query;
 
-    public Output<String> getQuery() {
+    public Output<String> query() {
         return this.query == null ? Codegen.empty() : this.query;
     }
 
@@ -59,7 +59,7 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="table")
       private final @Nullable Output<String> table;
 
-    public Output<String> getTable() {
+    public Output<String> table() {
         return this.table == null ? Codegen.empty() : this.table;
     }
 

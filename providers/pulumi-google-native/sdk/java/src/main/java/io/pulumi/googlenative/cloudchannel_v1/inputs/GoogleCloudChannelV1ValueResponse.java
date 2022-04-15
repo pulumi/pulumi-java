@@ -26,7 +26,7 @@ public final class GoogleCloudChannelV1ValueResponse extends io.pulumi.resources
     @Import(name="boolValue", required=true)
       private final Boolean boolValue;
 
-    public Boolean getBoolValue() {
+    public Boolean boolValue() {
         return this.boolValue;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudChannelV1ValueResponse extends io.pulumi.resources
     @Import(name="doubleValue", required=true)
       private final Double doubleValue;
 
-    public Double getDoubleValue() {
+    public Double doubleValue() {
         return this.doubleValue;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudChannelV1ValueResponse extends io.pulumi.resources
     @Import(name="int64Value", required=true)
       private final String int64Value;
 
-    public String getInt64Value() {
+    public String int64Value() {
         return this.int64Value;
     }
 
@@ -59,7 +59,7 @@ public final class GoogleCloudChannelV1ValueResponse extends io.pulumi.resources
     @Import(name="protoValue", required=true)
       private final Map<String,String> protoValue;
 
-    public Map<String,String> getProtoValue() {
+    public Map<String,String> protoValue() {
         return this.protoValue;
     }
 
@@ -70,7 +70,7 @@ public final class GoogleCloudChannelV1ValueResponse extends io.pulumi.resources
     @Import(name="stringValue", required=true)
       private final String stringValue;
 
-    public String getStringValue() {
+    public String stringValue() {
         return this.stringValue;
     }
 

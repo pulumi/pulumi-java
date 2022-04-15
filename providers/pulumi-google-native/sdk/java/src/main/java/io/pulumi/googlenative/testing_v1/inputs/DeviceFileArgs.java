@@ -27,7 +27,7 @@ public final class DeviceFileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="obbFile")
       private final @Nullable Output<ObbFileArgs> obbFile;
 
-    public Output<ObbFileArgs> getObbFile() {
+    public Output<ObbFileArgs> obbFile() {
         return this.obbFile == null ? Codegen.empty() : this.obbFile;
     }
 
@@ -38,7 +38,7 @@ public final class DeviceFileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="regularFile")
       private final @Nullable Output<RegularFileArgs> regularFile;
 
-    public Output<RegularFileArgs> getRegularFile() {
+    public Output<RegularFileArgs> regularFile() {
         return this.regularFile == null ? Codegen.empty() : this.regularFile;
     }
 

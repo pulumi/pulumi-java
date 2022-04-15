@@ -29,7 +29,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs ext
     @Import(name="containerSpecGcsPath")
       private final @Nullable Output<String> containerSpecGcsPath;
 
-    public Output<String> getContainerSpecGcsPath() {
+    public Output<String> containerSpecGcsPath() {
         return this.containerSpecGcsPath == null ? Codegen.empty() : this.containerSpecGcsPath;
     }
 
@@ -40,7 +40,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs ext
     @Import(name="environment")
       private final @Nullable Output<GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs> environment;
 
-    public Output<GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs> getEnvironment() {
+    public Output<GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs> environment() {
         return this.environment == null ? Codegen.empty() : this.environment;
     }
 
@@ -51,7 +51,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs ext
     @Import(name="jobName", required=true)
       private final Output<String> jobName;
 
-    public Output<String> getJobName() {
+    public Output<String> jobName() {
         return this.jobName;
     }
 
@@ -62,7 +62,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs ext
     @Import(name="launchOptions")
       private final @Nullable Output<Map<String,String>> launchOptions;
 
-    public Output<Map<String,String>> getLaunchOptions() {
+    public Output<Map<String,String>> launchOptions() {
         return this.launchOptions == null ? Codegen.empty() : this.launchOptions;
     }
 
@@ -73,7 +73,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs ext
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
+    public Output<Map<String,String>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -84,7 +84,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs ext
     @Import(name="transformNameMappings")
       private final @Nullable Output<Map<String,String>> transformNameMappings;
 
-    public Output<Map<String,String>> getTransformNameMappings() {
+    public Output<Map<String,String>> transformNameMappings() {
         return this.transformNameMappings == null ? Codegen.empty() : this.transformNameMappings;
     }
 
@@ -95,7 +95,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs ext
     @Import(name="update")
       private final @Nullable Output<Boolean> update;
 
-    public Output<Boolean> getUpdate() {
+    public Output<Boolean> update() {
         return this.update == null ? Codegen.empty() : this.update;
     }
 

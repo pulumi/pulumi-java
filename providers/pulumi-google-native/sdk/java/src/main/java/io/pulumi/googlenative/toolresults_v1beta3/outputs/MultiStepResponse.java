@@ -41,21 +41,21 @@ public final class MultiStepResponse {
      * Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.
      * 
     */
-    public Integer getMultistepNumber() {
+    public Integer multistepNumber() {
         return this.multistepNumber;
     }
     /**
      * Present if it is a primary (original) step.
      * 
     */
-    public PrimaryStepResponse getPrimaryStep() {
+    public PrimaryStepResponse primaryStep() {
         return this.primaryStep;
     }
     /**
      * Step Id of the primary (original) step, which might be this step.
      * 
     */
-    public String getPrimaryStepId() {
+    public String primaryStepId() {
         return this.primaryStepId;
     }
 

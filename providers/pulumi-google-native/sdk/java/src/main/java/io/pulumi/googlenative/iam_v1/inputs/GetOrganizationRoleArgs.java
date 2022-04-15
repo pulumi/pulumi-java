@@ -15,14 +15,14 @@ public final class GetOrganizationRoleArgs extends io.pulumi.resources.InvokeArg
     @Import(name="organizationId", required=true)
       private final String organizationId;
 
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 
     @Import(name="roleId", required=true)
       private final String roleId;
 
-    public String getRoleId() {
+    public String roleId() {
         return this.roleId;
     }
 

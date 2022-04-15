@@ -31,7 +31,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentArgs extends io.pulumi.re
     @Import(name="conditionalCases")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs>> conditionalCases;
 
-    public Output<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs>> getConditionalCases() {
+    public Output<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs>> conditionalCases() {
         return this.conditionalCases == null ? Codegen.empty() : this.conditionalCases;
     }
 
@@ -42,7 +42,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentArgs extends io.pulumi.re
     @Import(name="messages")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3ResponseMessageArgs>> messages;
 
-    public Output<List<GoogleCloudDialogflowCxV3ResponseMessageArgs>> getMessages() {
+    public Output<List<GoogleCloudDialogflowCxV3ResponseMessageArgs>> messages() {
         return this.messages == null ? Codegen.empty() : this.messages;
     }
 
@@ -53,7 +53,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentArgs extends io.pulumi.re
     @Import(name="returnPartialResponses")
       private final @Nullable Output<Boolean> returnPartialResponses;
 
-    public Output<Boolean> getReturnPartialResponses() {
+    public Output<Boolean> returnPartialResponses() {
         return this.returnPartialResponses == null ? Codegen.empty() : this.returnPartialResponses;
     }
 
@@ -64,7 +64,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentArgs extends io.pulumi.re
     @Import(name="setParameterActions")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3FulfillmentSetParameterActionArgs>> setParameterActions;
 
-    public Output<List<GoogleCloudDialogflowCxV3FulfillmentSetParameterActionArgs>> getSetParameterActions() {
+    public Output<List<GoogleCloudDialogflowCxV3FulfillmentSetParameterActionArgs>> setParameterActions() {
         return this.setParameterActions == null ? Codegen.empty() : this.setParameterActions;
     }
 
@@ -75,7 +75,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentArgs extends io.pulumi.re
     @Import(name="tag")
       private final @Nullable Output<String> tag;
 
-    public Output<String> getTag() {
+    public Output<String> tag() {
         return this.tag == null ? Codegen.empty() : this.tag;
     }
 
@@ -86,7 +86,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentArgs extends io.pulumi.re
     @Import(name="webhook")
       private final @Nullable Output<String> webhook;
 
-    public Output<String> getWebhook() {
+    public Output<String> webhook() {
         return this.webhook == null ? Codegen.empty() : this.webhook;
     }
 

@@ -47,28 +47,28 @@ public final class DsRecordResponse {
      * The algorithm used to generate the referenced DNSKEY.
      * 
     */
-    public String getAlgorithm() {
+    public String algorithm() {
         return this.algorithm;
     }
     /**
      * The digest generated from the referenced DNSKEY.
      * 
     */
-    public String getDigest() {
+    public String digest() {
         return this.digest;
     }
     /**
      * The hash function used to generate the digest of the referenced DNSKEY.
      * 
     */
-    public String getDigestType() {
+    public String digestType() {
         return this.digestType;
     }
     /**
      * The key tag of the record. Must be set in range 0 -- 65535.
      * 
     */
-    public Integer getKeyTag() {
+    public Integer keyTag() {
         return this.keyTag;
     }
 

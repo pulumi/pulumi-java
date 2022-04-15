@@ -29,7 +29,7 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
     @Import(name="archiveExtraction", required=true)
       private final SoftwareRecipeStepExtractArchiveResponse archiveExtraction;
 
-    public SoftwareRecipeStepExtractArchiveResponse getArchiveExtraction() {
+    public SoftwareRecipeStepExtractArchiveResponse archiveExtraction() {
         return this.archiveExtraction;
     }
 
@@ -40,7 +40,7 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
     @Import(name="dpkgInstallation", required=true)
       private final SoftwareRecipeStepInstallDpkgResponse dpkgInstallation;
 
-    public SoftwareRecipeStepInstallDpkgResponse getDpkgInstallation() {
+    public SoftwareRecipeStepInstallDpkgResponse dpkgInstallation() {
         return this.dpkgInstallation;
     }
 
@@ -51,7 +51,7 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
     @Import(name="fileCopy", required=true)
       private final SoftwareRecipeStepCopyFileResponse fileCopy;
 
-    public SoftwareRecipeStepCopyFileResponse getFileCopy() {
+    public SoftwareRecipeStepCopyFileResponse fileCopy() {
         return this.fileCopy;
     }
 
@@ -62,7 +62,7 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
     @Import(name="fileExec", required=true)
       private final SoftwareRecipeStepExecFileResponse fileExec;
 
-    public SoftwareRecipeStepExecFileResponse getFileExec() {
+    public SoftwareRecipeStepExecFileResponse fileExec() {
         return this.fileExec;
     }
 
@@ -73,7 +73,7 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
     @Import(name="msiInstallation", required=true)
       private final SoftwareRecipeStepInstallMsiResponse msiInstallation;
 
-    public SoftwareRecipeStepInstallMsiResponse getMsiInstallation() {
+    public SoftwareRecipeStepInstallMsiResponse msiInstallation() {
         return this.msiInstallation;
     }
 
@@ -84,7 +84,7 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
     @Import(name="rpmInstallation", required=true)
       private final SoftwareRecipeStepInstallRpmResponse rpmInstallation;
 
-    public SoftwareRecipeStepInstallRpmResponse getRpmInstallation() {
+    public SoftwareRecipeStepInstallRpmResponse rpmInstallation() {
         return this.rpmInstallation;
     }
 
@@ -95,7 +95,7 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
     @Import(name="scriptRun", required=true)
       private final SoftwareRecipeStepRunScriptResponse scriptRun;
 
-    public SoftwareRecipeStepRunScriptResponse getScriptRun() {
+    public SoftwareRecipeStepRunScriptResponse scriptRun() {
         return this.scriptRun;
     }
 

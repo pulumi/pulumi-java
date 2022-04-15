@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2KAnonymityConfigResponse extends io.pulumi.
     @Import(name="entityId", required=true)
       private final GooglePrivacyDlpV2EntityIdResponse entityId;
 
-    public GooglePrivacyDlpV2EntityIdResponse getEntityId() {
+    public GooglePrivacyDlpV2EntityIdResponse entityId() {
         return this.entityId;
     }
 
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2KAnonymityConfigResponse extends io.pulumi.
     @Import(name="quasiIds", required=true)
       private final List<GooglePrivacyDlpV2FieldIdResponse> quasiIds;
 
-    public List<GooglePrivacyDlpV2FieldIdResponse> getQuasiIds() {
+    public List<GooglePrivacyDlpV2FieldIdResponse> quasiIds() {
         return this.quasiIds;
     }
 

@@ -21,7 +21,7 @@ public final class AutoscalingPolicyIamPolicyArgs extends io.pulumi.resources.Re
     @Import(name="autoscalingPolicyId", required=true)
       private final Output<String> autoscalingPolicyId;
 
-    public Output<String> getAutoscalingPolicyId() {
+    public Output<String> autoscalingPolicyId() {
         return this.autoscalingPolicyId;
     }
 
@@ -32,7 +32,7 @@ public final class AutoscalingPolicyIamPolicyArgs extends io.pulumi.resources.Re
     @Import(name="bindings")
       private final @Nullable Output<List<BindingArgs>> bindings;
 
-    public Output<List<BindingArgs>> getBindings() {
+    public Output<List<BindingArgs>> bindings() {
         return this.bindings == null ? Codegen.empty() : this.bindings;
     }
 
@@ -43,21 +43,21 @@ public final class AutoscalingPolicyIamPolicyArgs extends io.pulumi.resources.Re
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -68,7 +68,7 @@ public final class AutoscalingPolicyIamPolicyArgs extends io.pulumi.resources.Re
     @Import(name="version")
       private final @Nullable Output<Integer> version;
 
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

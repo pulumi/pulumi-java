@@ -25,7 +25,7 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="categories")
       private final @Nullable Output<TableFieldSchemaCategoriesArgs> categories;
 
-    public Output<TableFieldSchemaCategoriesArgs> getCategories() {
+    public Output<TableFieldSchemaCategoriesArgs> categories() {
         return this.categories == null ? Codegen.empty() : this.categories;
     }
 
@@ -36,7 +36,7 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="collationSpec")
       private final @Nullable Output<String> collationSpec;
 
-    public Output<String> getCollationSpec() {
+    public Output<String> collationSpec() {
         return this.collationSpec == null ? Codegen.empty() : this.collationSpec;
     }
 
@@ -47,7 +47,7 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -58,7 +58,7 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="fields")
       private final @Nullable Output<List<TableFieldSchemaArgs>> fields;
 
-    public Output<List<TableFieldSchemaArgs>> getFields() {
+    public Output<List<TableFieldSchemaArgs>> fields() {
         return this.fields == null ? Codegen.empty() : this.fields;
     }
 
@@ -69,7 +69,7 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="maxLength")
       private final @Nullable Output<String> maxLength;
 
-    public Output<String> getMaxLength() {
+    public Output<String> maxLength() {
         return this.maxLength == null ? Codegen.empty() : this.maxLength;
     }
 
@@ -80,7 +80,7 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="mode")
       private final @Nullable Output<String> mode;
 
-    public Output<String> getMode() {
+    public Output<String> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -91,14 +91,14 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="policyTags")
       private final @Nullable Output<TableFieldSchemaPolicyTagsArgs> policyTags;
 
-    public Output<TableFieldSchemaPolicyTagsArgs> getPolicyTags() {
+    public Output<TableFieldSchemaPolicyTagsArgs> policyTags() {
         return this.policyTags == null ? Codegen.empty() : this.policyTags;
     }
 
@@ -109,7 +109,7 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="precision")
       private final @Nullable Output<String> precision;
 
-    public Output<String> getPrecision() {
+    public Output<String> precision() {
         return this.precision == null ? Codegen.empty() : this.precision;
     }
 
@@ -120,7 +120,7 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="scale")
       private final @Nullable Output<String> scale;
 
-    public Output<String> getScale() {
+    public Output<String> scale() {
         return this.scale == null ? Codegen.empty() : this.scale;
     }
 
@@ -131,7 +131,7 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

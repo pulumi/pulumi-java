@@ -23,7 +23,7 @@ public final class GcsDataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="bucketName", required=true)
       private final String bucketName;
 
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
 
@@ -34,7 +34,7 @@ public final class GcsDataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 

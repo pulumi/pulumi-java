@@ -31,7 +31,7 @@ public final class GoogleCloudBillingBudgetsV1beta1FilterArgs extends io.pulumi.
     @Import(name="calendarPeriod")
       private final @Nullable Output<GoogleCloudBillingBudgetsV1beta1FilterCalendarPeriod> calendarPeriod;
 
-    public Output<GoogleCloudBillingBudgetsV1beta1FilterCalendarPeriod> getCalendarPeriod() {
+    public Output<GoogleCloudBillingBudgetsV1beta1FilterCalendarPeriod> calendarPeriod() {
         return this.calendarPeriod == null ? Codegen.empty() : this.calendarPeriod;
     }
 
@@ -42,7 +42,7 @@ public final class GoogleCloudBillingBudgetsV1beta1FilterArgs extends io.pulumi.
     @Import(name="creditTypes")
       private final @Nullable Output<List<String>> creditTypes;
 
-    public Output<List<String>> getCreditTypes() {
+    public Output<List<String>> creditTypes() {
         return this.creditTypes == null ? Codegen.empty() : this.creditTypes;
     }
 
@@ -53,7 +53,7 @@ public final class GoogleCloudBillingBudgetsV1beta1FilterArgs extends io.pulumi.
     @Import(name="creditTypesTreatment")
       private final @Nullable Output<GoogleCloudBillingBudgetsV1beta1FilterCreditTypesTreatment> creditTypesTreatment;
 
-    public Output<GoogleCloudBillingBudgetsV1beta1FilterCreditTypesTreatment> getCreditTypesTreatment() {
+    public Output<GoogleCloudBillingBudgetsV1beta1FilterCreditTypesTreatment> creditTypesTreatment() {
         return this.creditTypesTreatment == null ? Codegen.empty() : this.creditTypesTreatment;
     }
 
@@ -64,7 +64,7 @@ public final class GoogleCloudBillingBudgetsV1beta1FilterArgs extends io.pulumi.
     @Import(name="customPeriod")
       private final @Nullable Output<GoogleCloudBillingBudgetsV1beta1CustomPeriodArgs> customPeriod;
 
-    public Output<GoogleCloudBillingBudgetsV1beta1CustomPeriodArgs> getCustomPeriod() {
+    public Output<GoogleCloudBillingBudgetsV1beta1CustomPeriodArgs> customPeriod() {
         return this.customPeriod == null ? Codegen.empty() : this.customPeriod;
     }
 
@@ -75,7 +75,7 @@ public final class GoogleCloudBillingBudgetsV1beta1FilterArgs extends io.pulumi.
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -86,7 +86,7 @@ public final class GoogleCloudBillingBudgetsV1beta1FilterArgs extends io.pulumi.
     @Import(name="projects")
       private final @Nullable Output<List<String>> projects;
 
-    public Output<List<String>> getProjects() {
+    public Output<List<String>> projects() {
         return this.projects == null ? Codegen.empty() : this.projects;
     }
 
@@ -97,7 +97,7 @@ public final class GoogleCloudBillingBudgetsV1beta1FilterArgs extends io.pulumi.
     @Import(name="services")
       private final @Nullable Output<List<String>> services;
 
-    public Output<List<String>> getServices() {
+    public Output<List<String>> services() {
         return this.services == null ? Codegen.empty() : this.services;
     }
 
@@ -108,7 +108,7 @@ public final class GoogleCloudBillingBudgetsV1beta1FilterArgs extends io.pulumi.
     @Import(name="subaccounts")
       private final @Nullable Output<List<String>> subaccounts;
 
-    public Output<List<String>> getSubaccounts() {
+    public Output<List<String>> subaccounts() {
         return this.subaccounts == null ? Codegen.empty() : this.subaccounts;
     }
 

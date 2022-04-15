@@ -26,7 +26,7 @@ public final class HttpsTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="securityLevel")
       private final @Nullable Output<HttpsTriggerSecurityLevel> securityLevel;
 
-    public Output<HttpsTriggerSecurityLevel> getSecurityLevel() {
+    public Output<HttpsTriggerSecurityLevel> securityLevel() {
         return this.securityLevel == null ? Codegen.empty() : this.securityLevel;
     }
 

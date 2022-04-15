@@ -37,7 +37,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * @return Automatically backfill objects included in the stream source configuration. Specific objects can be excluded.
      * 
      */
-    public Output<BackfillAllStrategyResponse> getBackfillAll() {
+    public Output<BackfillAllStrategyResponse> backfillAll() {
         return this.backfillAll;
     }
     /**
@@ -51,7 +51,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * @return Do not automatically backfill any objects.
      * 
      */
-    public Output<BackfillNoneStrategyResponse> getBackfillNone() {
+    public Output<BackfillNoneStrategyResponse> backfillNone() {
         return this.backfillNone;
     }
     /**
@@ -65,7 +65,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * @return The creation time of the stream.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -79,7 +79,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * @return Immutable. A reference to a KMS encryption key. If provided, it will be used to encrypt the data. If left blank, data will be encrypted using an internal Stream-specific encryption key provisioned through KMS.
      * 
      */
-    public Output<String> getCustomerManagedEncryptionKey() {
+    public Output<String> customerManagedEncryptionKey() {
         return this.customerManagedEncryptionKey;
     }
     /**
@@ -93,7 +93,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * @return Destination connection profile configuration.
      * 
      */
-    public Output<DestinationConfigResponse> getDestinationConfig() {
+    public Output<DestinationConfigResponse> destinationConfig() {
         return this.destinationConfig;
     }
     /**
@@ -107,7 +107,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * @return Display name.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -121,7 +121,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * @return Errors on the Stream.
      * 
      */
-    public Output<List<ErrorResponse>> getErrors() {
+    public Output<List<ErrorResponse>> errors() {
         return this.errors;
     }
     /**
@@ -135,7 +135,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * @return Labels.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -149,7 +149,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * @return The stream's name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -163,7 +163,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * @return Source connection profile configuration.
      * 
      */
-    public Output<SourceConfigResponse> getSourceConfig() {
+    public Output<SourceConfigResponse> sourceConfig() {
         return this.sourceConfig;
     }
     /**
@@ -177,7 +177,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * @return The state of the stream.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -191,7 +191,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * @return The last update time of the stream.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

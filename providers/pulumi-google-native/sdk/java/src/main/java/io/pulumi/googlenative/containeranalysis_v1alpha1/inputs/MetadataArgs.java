@@ -28,7 +28,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="buildFinishedOn")
       private final @Nullable Output<String> buildFinishedOn;
 
-    public Output<String> getBuildFinishedOn() {
+    public Output<String> buildFinishedOn() {
         return this.buildFinishedOn == null ? Codegen.empty() : this.buildFinishedOn;
     }
 
@@ -39,7 +39,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="buildInvocationId")
       private final @Nullable Output<String> buildInvocationId;
 
-    public Output<String> getBuildInvocationId() {
+    public Output<String> buildInvocationId() {
         return this.buildInvocationId == null ? Codegen.empty() : this.buildInvocationId;
     }
 
@@ -50,7 +50,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="buildStartedOn")
       private final @Nullable Output<String> buildStartedOn;
 
-    public Output<String> getBuildStartedOn() {
+    public Output<String> buildStartedOn() {
         return this.buildStartedOn == null ? Codegen.empty() : this.buildStartedOn;
     }
 
@@ -61,7 +61,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="completeness")
       private final @Nullable Output<CompletenessArgs> completeness;
 
-    public Output<CompletenessArgs> getCompleteness() {
+    public Output<CompletenessArgs> completeness() {
         return this.completeness == null ? Codegen.empty() : this.completeness;
     }
 
@@ -72,7 +72,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reproducible")
       private final @Nullable Output<Boolean> reproducible;
 
-    public Output<Boolean> getReproducible() {
+    public Output<Boolean> reproducible() {
         return this.reproducible == null ? Codegen.empty() : this.reproducible;
     }
 

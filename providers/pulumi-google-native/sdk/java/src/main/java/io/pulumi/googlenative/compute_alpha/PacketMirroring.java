@@ -34,7 +34,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * @return The Forwarding Rule resource of type loadBalancingScheme=INTERNAL that will be used as collector for mirrored traffic. The specified forwarding rule must have isMirroringCollector set to true.
      * 
      */
-    public Output<PacketMirroringForwardingRuleInfoResponse> getCollectorIlb() {
+    public Output<PacketMirroringForwardingRuleInfoResponse> collectorIlb() {
         return this.collectorIlb;
     }
     /**
@@ -48,7 +48,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -62,7 +62,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -76,7 +76,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * @return Indicates whether or not this packet mirroring takes effect. If set to FALSE, this packet mirroring policy will not be enforced on the network. The default is TRUE.
      * 
      */
-    public Output<String> getEnable() {
+    public Output<String> enable() {
         return this.enable;
     }
     /**
@@ -90,7 +90,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * @return Filter for mirrored traffic. If unspecified, all traffic is mirrored.
      * 
      */
-    public Output<PacketMirroringFilterResponse> getFilter() {
+    public Output<PacketMirroringFilterResponse> filter() {
         return this.filter;
     }
     /**
@@ -104,7 +104,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * @return Type of the resource. Always compute#packetMirroring for packet mirrorings.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -118,7 +118,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * @return PacketMirroring mirroredResourceInfos. MirroredResourceInfo specifies a set of mirrored VM instances, subnetworks and/or tags for which traffic from/to all VM instances will be mirrored.
      * 
      */
-    public Output<PacketMirroringMirroredResourceInfoResponse> getMirroredResources() {
+    public Output<PacketMirroringMirroredResourceInfoResponse> mirroredResources() {
         return this.mirroredResources;
     }
     /**
@@ -132,7 +132,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * @return Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -146,7 +146,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * @return Specifies the mirrored VPC network. Only packets in this network will be mirrored. All mirrored VMs should have a NIC in the given network. All mirrored subnetworks should belong to the given network.
      * 
      */
-    public Output<PacketMirroringNetworkInfoResponse> getNetwork() {
+    public Output<PacketMirroringNetworkInfoResponse> network() {
         return this.network;
     }
     /**
@@ -160,7 +160,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * @return The priority of applying this configuration. Priority is used to break ties in cases where there is more than one matching rule. In the case of two rules that apply for a given Instance, the one with the lowest-numbered priority value wins. Default value is 1000. Valid range is 0 through 65535.
      * 
      */
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
     /**
@@ -174,7 +174,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * @return URI of the region where the packetMirroring resides.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -188,7 +188,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * @return Server-defined URL for the resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -202,7 +202,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * @return Server-defined URL for this resource with the resource id.
      * 
      */
-    public Output<String> getSelfLinkWithId() {
+    public Output<String> selfLinkWithId() {
         return this.selfLinkWithId;
     }
 

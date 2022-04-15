@@ -25,7 +25,7 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="headerName", required=true)
       private final Output<String> headerName;
 
-    public Output<String> getHeaderName() {
+    public Output<String> headerName() {
         return this.headerName;
     }
 
@@ -36,7 +36,7 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="regexMatch", required=true)
       private final Output<String> regexMatch;
 
-    public Output<String> getRegexMatch() {
+    public Output<String> regexMatch() {
         return this.regexMatch;
     }
 

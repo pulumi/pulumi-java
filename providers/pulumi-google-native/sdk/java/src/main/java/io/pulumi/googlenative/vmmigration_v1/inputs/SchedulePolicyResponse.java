@@ -24,7 +24,7 @@ public final class SchedulePolicyResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="idleDuration", required=true)
       private final String idleDuration;
 
-    public String getIdleDuration() {
+    public String idleDuration() {
         return this.idleDuration;
     }
 
@@ -35,7 +35,7 @@ public final class SchedulePolicyResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="skipOsAdaptation", required=true)
       private final Boolean skipOsAdaptation;
 
-    public Boolean getSkipOsAdaptation() {
+    public Boolean skipOsAdaptation() {
         return this.skipOsAdaptation;
     }
 

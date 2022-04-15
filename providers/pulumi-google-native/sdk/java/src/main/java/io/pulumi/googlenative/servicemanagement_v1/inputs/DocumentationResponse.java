@@ -26,7 +26,7 @@ public final class DocumentationResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="documentationRootUrl", required=true)
       private final String documentationRootUrl;
 
-    public String getDocumentationRootUrl() {
+    public String documentationRootUrl() {
         return this.documentationRootUrl;
     }
 
@@ -37,7 +37,7 @@ public final class DocumentationResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="overview", required=true)
       private final String overview;
 
-    public String getOverview() {
+    public String overview() {
         return this.overview;
     }
 
@@ -48,7 +48,7 @@ public final class DocumentationResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="pages", required=true)
       private final List<PageResponse> pages;
 
-    public List<PageResponse> getPages() {
+    public List<PageResponse> pages() {
         return this.pages;
     }
 
@@ -59,7 +59,7 @@ public final class DocumentationResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="rules", required=true)
       private final List<DocumentationRuleResponse> rules;
 
-    public List<DocumentationRuleResponse> getRules() {
+    public List<DocumentationRuleResponse> rules() {
         return this.rules;
     }
 
@@ -70,7 +70,7 @@ public final class DocumentationResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="serviceRootUrl", required=true)
       private final String serviceRootUrl;
 
-    public String getServiceRootUrl() {
+    public String serviceRootUrl() {
         return this.serviceRootUrl;
     }
 
@@ -81,7 +81,7 @@ public final class DocumentationResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="summary", required=true)
       private final String summary;
 
-    public String getSummary() {
+    public String summary() {
         return this.summary;
     }
 

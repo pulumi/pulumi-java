@@ -26,7 +26,7 @@ public final class H265CodecSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="allowOpenGop", required=true)
       private final Boolean allowOpenGop;
 
-    public Boolean getAllowOpenGop() {
+    public Boolean allowOpenGop() {
         return this.allowOpenGop;
     }
 
@@ -37,7 +37,7 @@ public final class H265CodecSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="aqStrength", required=true)
       private final Double aqStrength;
 
-    public Double getAqStrength() {
+    public Double aqStrength() {
         return this.aqStrength;
     }
 
@@ -48,7 +48,7 @@ public final class H265CodecSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="bFrameCount", required=true)
       private final Integer bFrameCount;
 
-    public Integer getBFrameCount() {
+    public Integer bFrameCount() {
         return this.bFrameCount;
     }
 
@@ -59,7 +59,7 @@ public final class H265CodecSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="bPyramid", required=true)
       private final Boolean bPyramid;
 
-    public Boolean getBPyramid() {
+    public Boolean bPyramid() {
         return this.bPyramid;
     }
 
@@ -70,7 +70,7 @@ public final class H265CodecSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="bitrateBps", required=true)
       private final Integer bitrateBps;
 
-    public Integer getBitrateBps() {
+    public Integer bitrateBps() {
         return this.bitrateBps;
     }
 
@@ -81,7 +81,7 @@ public final class H265CodecSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="crfLevel", required=true)
       private final Integer crfLevel;
 
-    public Integer getCrfLevel() {
+    public Integer crfLevel() {
         return this.crfLevel;
     }
 
@@ -92,7 +92,7 @@ public final class H265CodecSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="enableTwoPass", required=true)
       private final Boolean enableTwoPass;
 
-    public Boolean getEnableTwoPass() {
+    public Boolean enableTwoPass() {
         return this.enableTwoPass;
     }
 
@@ -103,7 +103,7 @@ public final class H265CodecSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="frameRate", required=true)
       private final Double frameRate;
 
-    public Double getFrameRate() {
+    public Double frameRate() {
         return this.frameRate;
     }
 
@@ -114,7 +114,7 @@ public final class H265CodecSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="gopDuration", required=true)
       private final String gopDuration;
 
-    public String getGopDuration() {
+    public String gopDuration() {
         return this.gopDuration;
     }
 
@@ -125,7 +125,7 @@ public final class H265CodecSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="gopFrameCount", required=true)
       private final Integer gopFrameCount;
 
-    public Integer getGopFrameCount() {
+    public Integer gopFrameCount() {
         return this.gopFrameCount;
     }
 
@@ -136,7 +136,7 @@ public final class H265CodecSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="heightPixels", required=true)
       private final Integer heightPixels;
 
-    public Integer getHeightPixels() {
+    public Integer heightPixels() {
         return this.heightPixels;
     }
 
@@ -147,7 +147,7 @@ public final class H265CodecSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="pixelFormat", required=true)
       private final String pixelFormat;
 
-    public String getPixelFormat() {
+    public String pixelFormat() {
         return this.pixelFormat;
     }
 
@@ -158,7 +158,7 @@ public final class H265CodecSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="preset", required=true)
       private final String preset;
 
-    public String getPreset() {
+    public String preset() {
         return this.preset;
     }
 
@@ -169,7 +169,7 @@ public final class H265CodecSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="profile", required=true)
       private final String profile;
 
-    public String getProfile() {
+    public String profile() {
         return this.profile;
     }
 
@@ -180,7 +180,7 @@ public final class H265CodecSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="rateControlMode", required=true)
       private final String rateControlMode;
 
-    public String getRateControlMode() {
+    public String rateControlMode() {
         return this.rateControlMode;
     }
 
@@ -191,7 +191,7 @@ public final class H265CodecSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="tune", required=true)
       private final String tune;
 
-    public String getTune() {
+    public String tune() {
         return this.tune;
     }
 
@@ -202,7 +202,7 @@ public final class H265CodecSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="vbvFullnessBits", required=true)
       private final Integer vbvFullnessBits;
 
-    public Integer getVbvFullnessBits() {
+    public Integer vbvFullnessBits() {
         return this.vbvFullnessBits;
     }
 
@@ -213,7 +213,7 @@ public final class H265CodecSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="vbvSizeBits", required=true)
       private final Integer vbvSizeBits;
 
-    public Integer getVbvSizeBits() {
+    public Integer vbvSizeBits() {
         return this.vbvSizeBits;
     }
 
@@ -224,7 +224,7 @@ public final class H265CodecSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="widthPixels", required=true)
       private final Integer widthPixels;
 
-    public Integer getWidthPixels() {
+    public Integer widthPixels() {
         return this.widthPixels;
     }
 

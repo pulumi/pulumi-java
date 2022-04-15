@@ -128,102 +128,102 @@ public final class GetRegionHealthCheckResult {
      * How often (in seconds) to send a health check. The default value is 5 seconds.
      * 
     */
-    public Integer getCheckIntervalSec() {
+    public Integer checkIntervalSec() {
         return this.checkIntervalSec;
     }
     /**
      * Creation timestamp in 3339 text format.
      * 
     */
-    public String getCreationTimestamp() {
+    public String creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
      * An optional description of this resource. Provide this property when you create the resource.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
-    public GRPCHealthCheckResponse getGrpcHealthCheck() {
+    public GRPCHealthCheckResponse grpcHealthCheck() {
         return this.grpcHealthCheck;
     }
     /**
      * A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
      * 
     */
-    public Integer getHealthyThreshold() {
+    public Integer healthyThreshold() {
         return this.healthyThreshold;
     }
-    public HTTP2HealthCheckResponse getHttp2HealthCheck() {
+    public HTTP2HealthCheckResponse http2HealthCheck() {
         return this.http2HealthCheck;
     }
-    public HTTPHealthCheckResponse getHttpHealthCheck() {
+    public HTTPHealthCheckResponse httpHealthCheck() {
         return this.httpHealthCheck;
     }
-    public HTTPSHealthCheckResponse getHttpsHealthCheck() {
+    public HTTPSHealthCheckResponse httpsHealthCheck() {
         return this.httpsHealthCheck;
     }
     /**
      * Type of the resource.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Configure logging on this health check.
      * 
     */
-    public HealthCheckLogConfigResponse getLogConfig() {
+    public HealthCheckLogConfigResponse logConfig() {
         return this.logConfig;
     }
     /**
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. For example, a name that is 1-63 characters long, matches the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`, and otherwise complies with RFC1035. This regular expression describes a name where the first character is a lowercase letter, and all following characters are a dash, lowercase letter, or digit, except the last character, which isn't a dash.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Region where the health check resides. Not applicable to global health checks.
      * 
     */
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
     /**
      * Server-defined URL for the resource.
      * 
     */
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
-    public SSLHealthCheckResponse getSslHealthCheck() {
+    public SSLHealthCheckResponse sslHealthCheck() {
         return this.sslHealthCheck;
     }
-    public TCPHealthCheckResponse getTcpHealthCheck() {
+    public TCPHealthCheckResponse tcpHealthCheck() {
         return this.tcpHealthCheck;
     }
     /**
      * How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to have greater value than checkIntervalSec.
      * 
     */
-    public Integer getTimeoutSec() {
+    public Integer timeoutSec() {
         return this.timeoutSec;
     }
     /**
      * Specifies the type of the healthCheck, either TCP, SSL, HTTP, HTTPS or HTTP2. Exactly one of the protocol-specific health check field must be specified, which must match type field.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
      * 
     */
-    public Integer getUnhealthyThreshold() {
+    public Integer unhealthyThreshold() {
         return this.unhealthyThreshold;
     }
 

@@ -29,7 +29,7 @@ public final class KeyUsageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="baseKeyUsage")
       private final @Nullable Output<KeyUsageOptionsArgs> baseKeyUsage;
 
-    public Output<KeyUsageOptionsArgs> getBaseKeyUsage() {
+    public Output<KeyUsageOptionsArgs> baseKeyUsage() {
         return this.baseKeyUsage == null ? Codegen.empty() : this.baseKeyUsage;
     }
 
@@ -40,7 +40,7 @@ public final class KeyUsageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="extendedKeyUsage")
       private final @Nullable Output<ExtendedKeyUsageOptionsArgs> extendedKeyUsage;
 
-    public Output<ExtendedKeyUsageOptionsArgs> getExtendedKeyUsage() {
+    public Output<ExtendedKeyUsageOptionsArgs> extendedKeyUsage() {
         return this.extendedKeyUsage == null ? Codegen.empty() : this.extendedKeyUsage;
     }
 
@@ -51,7 +51,7 @@ public final class KeyUsageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="unknownExtendedKeyUsages")
       private final @Nullable Output<List<ObjectIdArgs>> unknownExtendedKeyUsages;
 
-    public Output<List<ObjectIdArgs>> getUnknownExtendedKeyUsages() {
+    public Output<List<ObjectIdArgs>> unknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages == null ? Codegen.empty() : this.unknownExtendedKeyUsages;
     }
 

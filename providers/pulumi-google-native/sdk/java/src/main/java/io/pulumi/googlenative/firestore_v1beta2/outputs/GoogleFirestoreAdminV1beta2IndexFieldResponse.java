@@ -39,21 +39,21 @@ public final class GoogleFirestoreAdminV1beta2IndexFieldResponse {
      * Indicates that this field supports operations on `array_value`s.
      * 
     */
-    public String getArrayConfig() {
+    public String arrayConfig() {
         return this.arrayConfig;
     }
     /**
      * Can be __name__. For single field indexes, this must match the name of the field or may be omitted.
      * 
     */
-    public String getFieldPath() {
+    public String fieldPath() {
         return this.fieldPath;
     }
     /**
      * Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.
      * 
     */
-    public String getOrder() {
+    public String order() {
         return this.order;
     }
 

@@ -25,7 +25,7 @@ public final class PackageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="distribution", required=true)
       private final List<DistributionResponse> distribution;
 
-    public List<DistributionResponse> getDistribution() {
+    public List<DistributionResponse> distribution() {
         return this.distribution;
     }
 
@@ -36,7 +36,7 @@ public final class PackageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

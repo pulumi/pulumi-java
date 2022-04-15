@@ -27,7 +27,7 @@ public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs extends 
     @Import(name="quickReplies")
       private final @Nullable Output<List<String>> quickReplies;
 
-    public Output<List<String>> getQuickReplies() {
+    public Output<List<String>> quickReplies() {
         return this.quickReplies == null ? Codegen.empty() : this.quickReplies;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs extends 
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 

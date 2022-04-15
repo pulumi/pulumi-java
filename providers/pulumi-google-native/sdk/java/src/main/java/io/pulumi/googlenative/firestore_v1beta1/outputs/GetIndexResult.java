@@ -48,28 +48,28 @@ public final class GetIndexResult {
      * The collection ID to which this index applies. Required.
      * 
     */
-    public String getCollectionId() {
+    public String collectionId() {
         return this.collectionId;
     }
     /**
      * The fields to index.
      * 
     */
-    public List<GoogleFirestoreAdminV1beta1IndexFieldResponse> getFields() {
+    public List<GoogleFirestoreAdminV1beta1IndexFieldResponse> fields() {
         return this.fields;
     }
     /**
      * The resource name of the index. Output only.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The state of the index. Output only.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

@@ -25,7 +25,7 @@ public final class ArtifactsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="images", required=true)
       private final List<String> images;
 
-    public List<String> getImages() {
+    public List<String> images() {
         return this.images;
     }
 
@@ -36,7 +36,7 @@ public final class ArtifactsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="objects", required=true)
       private final ArtifactObjectsResponse objects;
 
-    public ArtifactObjectsResponse getObjects() {
+    public ArtifactObjectsResponse objects() {
         return this.objects;
     }
 

@@ -33,7 +33,7 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="acl")
       private final @Nullable Output<MetadataOptionsAcl> acl;
 
-    public Output<MetadataOptionsAcl> getAcl() {
+    public Output<MetadataOptionsAcl> acl() {
         return this.acl == null ? Codegen.empty() : this.acl;
     }
 
@@ -44,7 +44,7 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="gid")
       private final @Nullable Output<MetadataOptionsGid> gid;
 
-    public Output<MetadataOptionsGid> getGid() {
+    public Output<MetadataOptionsGid> gid() {
         return this.gid == null ? Codegen.empty() : this.gid;
     }
 
@@ -55,7 +55,7 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="kmsKey")
       private final @Nullable Output<MetadataOptionsKmsKey> kmsKey;
 
-    public Output<MetadataOptionsKmsKey> getKmsKey() {
+    public Output<MetadataOptionsKmsKey> kmsKey() {
         return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
     }
 
@@ -66,7 +66,7 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="mode")
       private final @Nullable Output<MetadataOptionsMode> mode;
 
-    public Output<MetadataOptionsMode> getMode() {
+    public Output<MetadataOptionsMode> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -77,7 +77,7 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="storageClass")
       private final @Nullable Output<MetadataOptionsStorageClass> storageClass;
 
-    public Output<MetadataOptionsStorageClass> getStorageClass() {
+    public Output<MetadataOptionsStorageClass> storageClass() {
         return this.storageClass == null ? Codegen.empty() : this.storageClass;
     }
 
@@ -88,7 +88,7 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="symlink")
       private final @Nullable Output<MetadataOptionsSymlink> symlink;
 
-    public Output<MetadataOptionsSymlink> getSymlink() {
+    public Output<MetadataOptionsSymlink> symlink() {
         return this.symlink == null ? Codegen.empty() : this.symlink;
     }
 
@@ -99,7 +99,7 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="temporaryHold")
       private final @Nullable Output<MetadataOptionsTemporaryHold> temporaryHold;
 
-    public Output<MetadataOptionsTemporaryHold> getTemporaryHold() {
+    public Output<MetadataOptionsTemporaryHold> temporaryHold() {
         return this.temporaryHold == null ? Codegen.empty() : this.temporaryHold;
     }
 
@@ -110,7 +110,7 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="uid")
       private final @Nullable Output<MetadataOptionsUid> uid;
 
-    public Output<MetadataOptionsUid> getUid() {
+    public Output<MetadataOptionsUid> uid() {
         return this.uid == null ? Codegen.empty() : this.uid;
     }
 

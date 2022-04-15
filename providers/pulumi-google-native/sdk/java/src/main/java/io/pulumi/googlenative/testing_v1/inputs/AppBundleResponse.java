@@ -23,7 +23,7 @@ public final class AppBundleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="bundleLocation", required=true)
       private final FileReferenceResponse bundleLocation;
 
-    public FileReferenceResponse getBundleLocation() {
+    public FileReferenceResponse bundleLocation() {
         return this.bundleLocation;
     }
 

@@ -25,7 +25,7 @@ public final class BoundingPolyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="normalizedVertices", required=true)
       private final List<NormalizedVertexResponse> normalizedVertices;
 
-    public List<NormalizedVertexResponse> getNormalizedVertices() {
+    public List<NormalizedVertexResponse> normalizedVertices() {
         return this.normalizedVertices;
     }
 
@@ -36,7 +36,7 @@ public final class BoundingPolyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="vertices", required=true)
       private final List<VertexResponse> vertices;
 
-    public List<VertexResponse> getVertices() {
+    public List<VertexResponse> vertices() {
         return this.vertices;
     }
 

@@ -28,7 +28,7 @@ public final class PipelineResourcesResponse extends io.pulumi.resources.InvokeA
     @Import(name="acceleratorCount", required=true)
       private final String acceleratorCount;
 
-    public String getAcceleratorCount() {
+    public String acceleratorCount() {
         return this.acceleratorCount;
     }
 
@@ -39,7 +39,7 @@ public final class PipelineResourcesResponse extends io.pulumi.resources.InvokeA
     @Import(name="acceleratorType", required=true)
       private final String acceleratorType;
 
-    public String getAcceleratorType() {
+    public String acceleratorType() {
         return this.acceleratorType;
     }
 
@@ -50,7 +50,7 @@ public final class PipelineResourcesResponse extends io.pulumi.resources.InvokeA
     @Import(name="bootDiskSizeGb", required=true)
       private final Integer bootDiskSizeGb;
 
-    public Integer getBootDiskSizeGb() {
+    public Integer bootDiskSizeGb() {
         return this.bootDiskSizeGb;
     }
 
@@ -61,7 +61,7 @@ public final class PipelineResourcesResponse extends io.pulumi.resources.InvokeA
     @Import(name="disks", required=true)
       private final List<DiskResponse> disks;
 
-    public List<DiskResponse> getDisks() {
+    public List<DiskResponse> disks() {
         return this.disks;
     }
 
@@ -72,7 +72,7 @@ public final class PipelineResourcesResponse extends io.pulumi.resources.InvokeA
     @Import(name="minimumCpuCores", required=true)
       private final Integer minimumCpuCores;
 
-    public Integer getMinimumCpuCores() {
+    public Integer minimumCpuCores() {
         return this.minimumCpuCores;
     }
 
@@ -83,7 +83,7 @@ public final class PipelineResourcesResponse extends io.pulumi.resources.InvokeA
     @Import(name="minimumRamGb", required=true)
       private final Double minimumRamGb;
 
-    public Double getMinimumRamGb() {
+    public Double minimumRamGb() {
         return this.minimumRamGb;
     }
 
@@ -94,7 +94,7 @@ public final class PipelineResourcesResponse extends io.pulumi.resources.InvokeA
     @Import(name="noAddress", required=true)
       private final Boolean noAddress;
 
-    public Boolean getNoAddress() {
+    public Boolean noAddress() {
         return this.noAddress;
     }
 
@@ -105,7 +105,7 @@ public final class PipelineResourcesResponse extends io.pulumi.resources.InvokeA
     @Import(name="preemptible", required=true)
       private final Boolean preemptible;
 
-    public Boolean getPreemptible() {
+    public Boolean preemptible() {
         return this.preemptible;
     }
 
@@ -116,7 +116,7 @@ public final class PipelineResourcesResponse extends io.pulumi.resources.InvokeA
     @Import(name="zones", required=true)
       private final List<String> zones;
 
-    public List<String> getZones() {
+    public List<String> zones() {
         return this.zones;
     }
 

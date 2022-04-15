@@ -28,7 +28,7 @@ public final class TableDataSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minAlignmentPeriod")
       private final @Nullable Output<String> minAlignmentPeriod;
 
-    public Output<String> getMinAlignmentPeriod() {
+    public Output<String> minAlignmentPeriod() {
         return this.minAlignmentPeriod == null ? Codegen.empty() : this.minAlignmentPeriod;
     }
 
@@ -39,7 +39,7 @@ public final class TableDataSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tableDisplayOptions")
       private final @Nullable Output<TableDisplayOptionsArgs> tableDisplayOptions;
 
-    public Output<TableDisplayOptionsArgs> getTableDisplayOptions() {
+    public Output<TableDisplayOptionsArgs> tableDisplayOptions() {
         return this.tableDisplayOptions == null ? Codegen.empty() : this.tableDisplayOptions;
     }
 
@@ -50,7 +50,7 @@ public final class TableDataSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tableTemplate")
       private final @Nullable Output<String> tableTemplate;
 
-    public Output<String> getTableTemplate() {
+    public Output<String> tableTemplate() {
         return this.tableTemplate == null ? Codegen.empty() : this.tableTemplate;
     }
 
@@ -61,7 +61,7 @@ public final class TableDataSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeSeriesQuery", required=true)
       private final Output<TimeSeriesQueryArgs> timeSeriesQuery;
 
-    public Output<TimeSeriesQueryArgs> getTimeSeriesQuery() {
+    public Output<TimeSeriesQueryArgs> timeSeriesQuery() {
         return this.timeSeriesQuery;
     }
 

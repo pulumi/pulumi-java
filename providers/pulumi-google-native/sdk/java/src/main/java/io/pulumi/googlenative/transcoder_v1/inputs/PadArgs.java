@@ -26,7 +26,7 @@ public final class PadArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bottomPixels")
       private final @Nullable Output<Integer> bottomPixels;
 
-    public Output<Integer> getBottomPixels() {
+    public Output<Integer> bottomPixels() {
         return this.bottomPixels == null ? Codegen.empty() : this.bottomPixels;
     }
 
@@ -37,7 +37,7 @@ public final class PadArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="leftPixels")
       private final @Nullable Output<Integer> leftPixels;
 
-    public Output<Integer> getLeftPixels() {
+    public Output<Integer> leftPixels() {
         return this.leftPixels == null ? Codegen.empty() : this.leftPixels;
     }
 
@@ -48,7 +48,7 @@ public final class PadArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rightPixels")
       private final @Nullable Output<Integer> rightPixels;
 
-    public Output<Integer> getRightPixels() {
+    public Output<Integer> rightPixels() {
         return this.rightPixels == null ? Codegen.empty() : this.rightPixels;
     }
 
@@ -59,7 +59,7 @@ public final class PadArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="topPixels")
       private final @Nullable Output<Integer> topPixels;
 
-    public Output<Integer> getTopPixels() {
+    public Output<Integer> topPixels() {
         return this.topPixels == null ? Codegen.empty() : this.topPixels;
     }
 

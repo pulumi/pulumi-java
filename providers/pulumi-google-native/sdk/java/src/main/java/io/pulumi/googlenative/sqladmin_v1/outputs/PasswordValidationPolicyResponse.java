@@ -55,35 +55,35 @@ public final class PasswordValidationPolicyResponse {
      * The complexity of the password.
      * 
     */
-    public String getComplexity() {
+    public String complexity() {
         return this.complexity;
     }
     /**
      * Disallow username as a part of the password.
      * 
     */
-    public Boolean getDisallowUsernameSubstring() {
+    public Boolean disallowUsernameSubstring() {
         return this.disallowUsernameSubstring;
     }
     /**
      * Minimum number of characters allowed.
      * 
     */
-    public Integer getMinLength() {
+    public Integer minLength() {
         return this.minLength;
     }
     /**
      * Minimum interval after which the password can be changed. This flag is only supported for PostgresSQL.
      * 
     */
-    public String getPasswordChangeInterval() {
+    public String passwordChangeInterval() {
         return this.passwordChangeInterval;
     }
     /**
      * Number of previous passwords that cannot be reused.
      * 
     */
-    public Integer getReuseInterval() {
+    public Integer reuseInterval() {
         return this.reuseInterval;
     }
 

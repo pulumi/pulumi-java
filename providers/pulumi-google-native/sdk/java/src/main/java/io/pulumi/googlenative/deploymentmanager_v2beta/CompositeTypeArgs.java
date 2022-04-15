@@ -26,14 +26,14 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -44,7 +44,7 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<List<CompositeTypeLabelEntryArgs>> labels;
 
-    public Output<List<CompositeTypeLabelEntryArgs>> getLabels() {
+    public Output<List<CompositeTypeLabelEntryArgs>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -55,21 +55,21 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="status")
       private final @Nullable Output<CompositeTypeStatus> status;
 
-    public Output<CompositeTypeStatus> getStatus() {
+    public Output<CompositeTypeStatus> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -80,7 +80,7 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="templateContents")
       private final @Nullable Output<TemplateContentsArgs> templateContents;
 
-    public Output<TemplateContentsArgs> getTemplateContents() {
+    public Output<TemplateContentsArgs> templateContents() {
         return this.templateContents == null ? Codegen.empty() : this.templateContents;
     }
 

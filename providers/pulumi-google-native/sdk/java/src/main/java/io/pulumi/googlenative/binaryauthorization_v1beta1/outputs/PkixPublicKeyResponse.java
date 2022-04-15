@@ -32,14 +32,14 @@ public final class PkixPublicKeyResponse {
      * A PEM-encoded public key, as described in https://tools.ietf.org/html/rfc7468#section-13
      * 
     */
-    public String getPublicKeyPem() {
+    public String publicKeyPem() {
         return this.publicKeyPem;
     }
     /**
      * The signature algorithm used to verify a message against a signature using this key. These signature algorithm must match the structure and any object identifiers encoded in `public_key_pem` (i.e. this algorithm must match that of the public key).
      * 
     */
-    public String getSignatureAlgorithm() {
+    public String signatureAlgorithm() {
         return this.signatureAlgorithm;
     }
 

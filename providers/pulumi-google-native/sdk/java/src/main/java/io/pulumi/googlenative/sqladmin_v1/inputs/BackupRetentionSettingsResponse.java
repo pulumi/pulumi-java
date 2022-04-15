@@ -24,7 +24,7 @@ public final class BackupRetentionSettingsResponse extends io.pulumi.resources.I
     @Import(name="retainedBackups", required=true)
       private final Integer retainedBackups;
 
-    public Integer getRetainedBackups() {
+    public Integer retainedBackups() {
         return this.retainedBackups;
     }
 
@@ -35,7 +35,7 @@ public final class BackupRetentionSettingsResponse extends io.pulumi.resources.I
     @Import(name="retentionUnit", required=true)
       private final String retentionUnit;
 
-    public String getRetentionUnit() {
+    public String retentionUnit() {
         return this.retentionUnit;
     }
 

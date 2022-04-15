@@ -23,7 +23,7 @@ public final class JobConfigurationExtractResponse extends io.pulumi.resources.I
     @Import(name="compression", required=true)
       private final String compression;
 
-    public String getCompression() {
+    public String compression() {
         return this.compression;
     }
 
@@ -34,7 +34,7 @@ public final class JobConfigurationExtractResponse extends io.pulumi.resources.I
     @Import(name="destinationFormat", required=true)
       private final String destinationFormat;
 
-    public String getDestinationFormat() {
+    public String destinationFormat() {
         return this.destinationFormat;
     }
 
@@ -45,7 +45,7 @@ public final class JobConfigurationExtractResponse extends io.pulumi.resources.I
     @Import(name="destinationUri", required=true)
       private final String destinationUri;
 
-    public String getDestinationUri() {
+    public String destinationUri() {
         return this.destinationUri;
     }
 
@@ -56,7 +56,7 @@ public final class JobConfigurationExtractResponse extends io.pulumi.resources.I
     @Import(name="destinationUris", required=true)
       private final List<String> destinationUris;
 
-    public List<String> getDestinationUris() {
+    public List<String> destinationUris() {
         return this.destinationUris;
     }
 
@@ -67,7 +67,7 @@ public final class JobConfigurationExtractResponse extends io.pulumi.resources.I
     @Import(name="fieldDelimiter", required=true)
       private final String fieldDelimiter;
 
-    public String getFieldDelimiter() {
+    public String fieldDelimiter() {
         return this.fieldDelimiter;
     }
 
@@ -78,7 +78,7 @@ public final class JobConfigurationExtractResponse extends io.pulumi.resources.I
     @Import(name="printHeader", required=true)
       private final Boolean printHeader;
 
-    public Boolean getPrintHeader() {
+    public Boolean printHeader() {
         return this.printHeader;
     }
 
@@ -89,7 +89,7 @@ public final class JobConfigurationExtractResponse extends io.pulumi.resources.I
     @Import(name="sourceModel", required=true)
       private final ModelReferenceResponse sourceModel;
 
-    public ModelReferenceResponse getSourceModel() {
+    public ModelReferenceResponse sourceModel() {
         return this.sourceModel;
     }
 
@@ -100,7 +100,7 @@ public final class JobConfigurationExtractResponse extends io.pulumi.resources.I
     @Import(name="sourceTable", required=true)
       private final TableReferenceResponse sourceTable;
 
-    public TableReferenceResponse getSourceTable() {
+    public TableReferenceResponse sourceTable() {
         return this.sourceTable;
     }
 
@@ -111,7 +111,7 @@ public final class JobConfigurationExtractResponse extends io.pulumi.resources.I
     @Import(name="useAvroLogicalTypes", required=true)
       private final Boolean useAvroLogicalTypes;
 
-    public Boolean getUseAvroLogicalTypes() {
+    public Boolean useAvroLogicalTypes() {
         return this.useAvroLogicalTypes;
     }
 

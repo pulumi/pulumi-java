@@ -17,7 +17,7 @@ public final class ParsedDataResponse {
         this.segments = segments;
     }
 
-    public List<SegmentResponse> getSegments() {
+    public List<SegmentResponse> segments() {
         return this.segments;
     }
 

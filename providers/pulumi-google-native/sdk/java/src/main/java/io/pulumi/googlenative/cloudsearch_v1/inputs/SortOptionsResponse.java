@@ -19,7 +19,7 @@ public final class SortOptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="operatorName", required=true)
       private final String operatorName;
 
-    public String getOperatorName() {
+    public String operatorName() {
         return this.operatorName;
     }
 
@@ -30,7 +30,7 @@ public final class SortOptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sortOrder", required=true)
       private final String sortOrder;
 
-    public String getSortOrder() {
+    public String sortOrder() {
         return this.sortOrder;
     }
 

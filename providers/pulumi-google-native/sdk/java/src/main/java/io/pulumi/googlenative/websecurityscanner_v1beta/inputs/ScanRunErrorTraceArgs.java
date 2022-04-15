@@ -28,7 +28,7 @@ public final class ScanRunErrorTraceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="code")
       private final @Nullable Output<ScanRunErrorTraceCode> code;
 
-    public Output<ScanRunErrorTraceCode> getCode() {
+    public Output<ScanRunErrorTraceCode> code() {
         return this.code == null ? Codegen.empty() : this.code;
     }
 
@@ -39,7 +39,7 @@ public final class ScanRunErrorTraceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="mostCommonHttpErrorCode")
       private final @Nullable Output<Integer> mostCommonHttpErrorCode;
 
-    public Output<Integer> getMostCommonHttpErrorCode() {
+    public Output<Integer> mostCommonHttpErrorCode() {
         return this.mostCommonHttpErrorCode == null ? Codegen.empty() : this.mostCommonHttpErrorCode;
     }
 
@@ -50,7 +50,7 @@ public final class ScanRunErrorTraceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="scanConfigError")
       private final @Nullable Output<ScanConfigErrorArgs> scanConfigError;
 
-    public Output<ScanConfigErrorArgs> getScanConfigError() {
+    public Output<ScanConfigErrorArgs> scanConfigError() {
         return this.scanConfigError == null ? Codegen.empty() : this.scanConfigError;
     }
 

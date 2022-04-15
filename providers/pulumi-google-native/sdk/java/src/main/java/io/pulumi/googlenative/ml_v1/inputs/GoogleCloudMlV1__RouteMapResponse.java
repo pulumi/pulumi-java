@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1__RouteMapResponse extends io.pulumi.resources
     @Import(name="health", required=true)
       private final String health;
 
-    public String getHealth() {
+    public String health() {
         return this.health;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudMlV1__RouteMapResponse extends io.pulumi.resources
     @Import(name="predict", required=true)
       private final String predict;
 
-    public String getPredict() {
+    public String predict() {
         return this.predict;
     }
 

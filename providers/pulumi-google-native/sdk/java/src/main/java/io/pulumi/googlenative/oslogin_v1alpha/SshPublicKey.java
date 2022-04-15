@@ -30,7 +30,7 @@ public class SshPublicKey extends io.pulumi.resources.CustomResource {
      * @return An expiration time in microseconds since epoch.
      * 
      */
-    public Output<String> getExpirationTimeUsec() {
+    public Output<String> expirationTimeUsec() {
         return this.expirationTimeUsec;
     }
     /**
@@ -44,7 +44,7 @@ public class SshPublicKey extends io.pulumi.resources.CustomResource {
      * @return The SHA-256 fingerprint of the SSH public key.
      * 
      */
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint;
     }
     /**
@@ -58,7 +58,7 @@ public class SshPublicKey extends io.pulumi.resources.CustomResource {
      * @return Public key text in SSH format, defined by RFC4253 section 6.6.
      * 
      */
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
     /**
@@ -72,7 +72,7 @@ public class SshPublicKey extends io.pulumi.resources.CustomResource {
      * @return The canonical resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

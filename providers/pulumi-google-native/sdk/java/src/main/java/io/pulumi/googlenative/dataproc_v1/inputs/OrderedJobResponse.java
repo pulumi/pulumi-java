@@ -34,7 +34,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="hadoopJob", required=true)
       private final HadoopJobResponse hadoopJob;
 
-    public HadoopJobResponse getHadoopJob() {
+    public HadoopJobResponse hadoopJob() {
         return this.hadoopJob;
     }
 
@@ -45,7 +45,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="hiveJob", required=true)
       private final HiveJobResponse hiveJob;
 
-    public HiveJobResponse getHiveJob() {
+    public HiveJobResponse hiveJob() {
         return this.hiveJob;
     }
 
@@ -56,7 +56,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
 
@@ -67,7 +67,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="pigJob", required=true)
       private final PigJobResponse pigJob;
 
-    public PigJobResponse getPigJob() {
+    public PigJobResponse pigJob() {
         return this.pigJob;
     }
 
@@ -78,7 +78,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="prerequisiteStepIds", required=true)
       private final List<String> prerequisiteStepIds;
 
-    public List<String> getPrerequisiteStepIds() {
+    public List<String> prerequisiteStepIds() {
         return this.prerequisiteStepIds;
     }
 
@@ -89,7 +89,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="prestoJob", required=true)
       private final PrestoJobResponse prestoJob;
 
-    public PrestoJobResponse getPrestoJob() {
+    public PrestoJobResponse prestoJob() {
         return this.prestoJob;
     }
 
@@ -100,7 +100,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="pysparkJob", required=true)
       private final PySparkJobResponse pysparkJob;
 
-    public PySparkJobResponse getPysparkJob() {
+    public PySparkJobResponse pysparkJob() {
         return this.pysparkJob;
     }
 
@@ -111,7 +111,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="scheduling", required=true)
       private final JobSchedulingResponse scheduling;
 
-    public JobSchedulingResponse getScheduling() {
+    public JobSchedulingResponse scheduling() {
         return this.scheduling;
     }
 
@@ -122,7 +122,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sparkJob", required=true)
       private final SparkJobResponse sparkJob;
 
-    public SparkJobResponse getSparkJob() {
+    public SparkJobResponse sparkJob() {
         return this.sparkJob;
     }
 
@@ -133,7 +133,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sparkRJob", required=true)
       private final SparkRJobResponse sparkRJob;
 
-    public SparkRJobResponse getSparkRJob() {
+    public SparkRJobResponse sparkRJob() {
         return this.sparkRJob;
     }
 
@@ -144,7 +144,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sparkSqlJob", required=true)
       private final SparkSqlJobResponse sparkSqlJob;
 
-    public SparkSqlJobResponse getSparkSqlJob() {
+    public SparkSqlJobResponse sparkSqlJob() {
         return this.sparkSqlJob;
     }
 
@@ -155,7 +155,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="stepId", required=true)
       private final String stepId;
 
-    public String getStepId() {
+    public String stepId() {
         return this.stepId;
     }
 

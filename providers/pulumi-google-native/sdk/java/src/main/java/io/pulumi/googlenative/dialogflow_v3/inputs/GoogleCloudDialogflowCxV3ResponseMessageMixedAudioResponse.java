@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioResponse ex
     @Import(name="segments", required=true)
       private final List<GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResponse> segments;
 
-    public List<GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResponse> getSegments() {
+    public List<GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResponse> segments() {
         return this.segments;
     }
 

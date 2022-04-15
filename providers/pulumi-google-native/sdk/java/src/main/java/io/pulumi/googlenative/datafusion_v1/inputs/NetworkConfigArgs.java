@@ -26,7 +26,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipAllocation")
       private final @Nullable Output<String> ipAllocation;
 
-    public Output<String> getIpAllocation() {
+    public Output<String> ipAllocation() {
         return this.ipAllocation == null ? Codegen.empty() : this.ipAllocation;
     }
 
@@ -37,7 +37,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 

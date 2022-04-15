@@ -26,7 +26,7 @@ public final class GkeClusterConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="namespacedGkeDeploymentTarget")
       private final @Nullable Output<NamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget;
 
-    public Output<NamespacedGkeDeploymentTargetArgs> getNamespacedGkeDeploymentTarget() {
+    public Output<NamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget() {
         return this.namespacedGkeDeploymentTarget == null ? Codegen.empty() : this.namespacedGkeDeploymentTarget;
     }
 

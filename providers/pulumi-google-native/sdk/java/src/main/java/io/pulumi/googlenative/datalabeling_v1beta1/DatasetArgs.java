@@ -22,7 +22,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -33,7 +33,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -44,14 +44,14 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastMigrateTime")
       private final @Nullable Output<String> lastMigrateTime;
 
-    public Output<String> getLastMigrateTime() {
+    public Output<String> lastMigrateTime() {
         return this.lastMigrateTime == null ? Codegen.empty() : this.lastMigrateTime;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

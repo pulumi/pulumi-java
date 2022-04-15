@@ -24,7 +24,7 @@ public final class NodeManagementResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="autoRepair", required=true)
       private final Boolean autoRepair;
 
-    public Boolean getAutoRepair() {
+    public Boolean autoRepair() {
         return this.autoRepair;
     }
 
@@ -35,7 +35,7 @@ public final class NodeManagementResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="autoUpgrade", required=true)
       private final Boolean autoUpgrade;
 
-    public Boolean getAutoUpgrade() {
+    public Boolean autoUpgrade() {
         return this.autoUpgrade;
     }
 
@@ -46,7 +46,7 @@ public final class NodeManagementResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="upgradeOptions", required=true)
       private final AutoUpgradeOptionsResponse upgradeOptions;
 
-    public AutoUpgradeOptionsResponse getUpgradeOptions() {
+    public AutoUpgradeOptionsResponse upgradeOptions() {
         return this.upgradeOptions;
     }
 

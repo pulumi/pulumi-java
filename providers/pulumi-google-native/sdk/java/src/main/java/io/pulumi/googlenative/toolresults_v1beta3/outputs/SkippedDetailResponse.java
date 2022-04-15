@@ -39,21 +39,21 @@ public final class SkippedDetailResponse {
      * If the App doesn't support the specific API level.
      * 
     */
-    public Boolean getIncompatibleAppVersion() {
+    public Boolean incompatibleAppVersion() {
         return this.incompatibleAppVersion;
     }
     /**
      * If the App doesn't run on the specific architecture, for example, x86.
      * 
     */
-    public Boolean getIncompatibleArchitecture() {
+    public Boolean incompatibleArchitecture() {
         return this.incompatibleArchitecture;
     }
     /**
      * If the requested OS version doesn't run on the specific device model.
      * 
     */
-    public Boolean getIncompatibleDevice() {
+    public Boolean incompatibleDevice() {
         return this.incompatibleDevice;
     }
 

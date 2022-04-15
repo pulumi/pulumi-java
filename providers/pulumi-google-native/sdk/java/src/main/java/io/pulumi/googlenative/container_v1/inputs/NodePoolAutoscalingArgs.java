@@ -27,7 +27,7 @@ public final class NodePoolAutoscalingArgs extends io.pulumi.resources.ResourceA
     @Import(name="autoprovisioned")
       private final @Nullable Output<Boolean> autoprovisioned;
 
-    public Output<Boolean> getAutoprovisioned() {
+    public Output<Boolean> autoprovisioned() {
         return this.autoprovisioned == null ? Codegen.empty() : this.autoprovisioned;
     }
 
@@ -38,7 +38,7 @@ public final class NodePoolAutoscalingArgs extends io.pulumi.resources.ResourceA
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -49,7 +49,7 @@ public final class NodePoolAutoscalingArgs extends io.pulumi.resources.ResourceA
     @Import(name="maxNodeCount")
       private final @Nullable Output<Integer> maxNodeCount;
 
-    public Output<Integer> getMaxNodeCount() {
+    public Output<Integer> maxNodeCount() {
         return this.maxNodeCount == null ? Codegen.empty() : this.maxNodeCount;
     }
 
@@ -60,7 +60,7 @@ public final class NodePoolAutoscalingArgs extends io.pulumi.resources.ResourceA
     @Import(name="minNodeCount")
       private final @Nullable Output<Integer> minNodeCount;
 
-    public Output<Integer> getMinNodeCount() {
+    public Output<Integer> minNodeCount() {
         return this.minNodeCount == null ? Codegen.empty() : this.minNodeCount;
     }
 

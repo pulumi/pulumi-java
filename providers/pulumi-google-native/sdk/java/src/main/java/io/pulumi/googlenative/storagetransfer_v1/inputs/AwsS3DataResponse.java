@@ -24,7 +24,7 @@ public final class AwsS3DataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="awsAccessKey", required=true)
       private final AwsAccessKeyResponse awsAccessKey;
 
-    public AwsAccessKeyResponse getAwsAccessKey() {
+    public AwsAccessKeyResponse awsAccessKey() {
         return this.awsAccessKey;
     }
 
@@ -35,7 +35,7 @@ public final class AwsS3DataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="bucketName", required=true)
       private final String bucketName;
 
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
 
@@ -46,7 +46,7 @@ public final class AwsS3DataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 
@@ -57,7 +57,7 @@ public final class AwsS3DataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="roleArn", required=true)
       private final String roleArn;
 
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 

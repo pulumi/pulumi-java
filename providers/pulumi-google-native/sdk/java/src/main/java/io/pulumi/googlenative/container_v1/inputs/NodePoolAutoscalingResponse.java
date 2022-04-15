@@ -24,7 +24,7 @@ public final class NodePoolAutoscalingResponse extends io.pulumi.resources.Invok
     @Import(name="autoprovisioned", required=true)
       private final Boolean autoprovisioned;
 
-    public Boolean getAutoprovisioned() {
+    public Boolean autoprovisioned() {
         return this.autoprovisioned;
     }
 
@@ -35,7 +35,7 @@ public final class NodePoolAutoscalingResponse extends io.pulumi.resources.Invok
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
@@ -46,7 +46,7 @@ public final class NodePoolAutoscalingResponse extends io.pulumi.resources.Invok
     @Import(name="maxNodeCount", required=true)
       private final Integer maxNodeCount;
 
-    public Integer getMaxNodeCount() {
+    public Integer maxNodeCount() {
         return this.maxNodeCount;
     }
 
@@ -57,7 +57,7 @@ public final class NodePoolAutoscalingResponse extends io.pulumi.resources.Invok
     @Import(name="minNodeCount", required=true)
       private final Integer minNodeCount;
 
-    public Integer getMinNodeCount() {
+    public Integer minNodeCount() {
         return this.minNodeCount;
     }
 

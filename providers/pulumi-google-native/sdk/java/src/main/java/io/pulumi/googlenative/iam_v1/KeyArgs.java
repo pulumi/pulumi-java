@@ -24,7 +24,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyAlgorithm")
       private final @Nullable Output<KeyKeyAlgorithm> keyAlgorithm;
 
-    public Output<KeyKeyAlgorithm> getKeyAlgorithm() {
+    public Output<KeyKeyAlgorithm> keyAlgorithm() {
         return this.keyAlgorithm == null ? Codegen.empty() : this.keyAlgorithm;
     }
 
@@ -35,21 +35,21 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="privateKeyType")
       private final @Nullable Output<KeyPrivateKeyType> privateKeyType;
 
-    public Output<KeyPrivateKeyType> getPrivateKeyType() {
+    public Output<KeyPrivateKeyType> privateKeyType() {
         return this.privateKeyType == null ? Codegen.empty() : this.privateKeyType;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="serviceAccountId", required=true)
       private final Output<String> serviceAccountId;
 
-    public Output<String> getServiceAccountId() {
+    public Output<String> serviceAccountId() {
         return this.serviceAccountId;
     }
 

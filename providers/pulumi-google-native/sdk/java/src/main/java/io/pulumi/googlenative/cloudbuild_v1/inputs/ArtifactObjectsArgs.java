@@ -27,7 +27,7 @@ public final class ArtifactObjectsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -38,7 +38,7 @@ public final class ArtifactObjectsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="paths")
       private final @Nullable Output<List<String>> paths;
 
-    public Output<List<String>> getPaths() {
+    public Output<List<String>> paths() {
         return this.paths == null ? Codegen.empty() : this.paths;
     }
 

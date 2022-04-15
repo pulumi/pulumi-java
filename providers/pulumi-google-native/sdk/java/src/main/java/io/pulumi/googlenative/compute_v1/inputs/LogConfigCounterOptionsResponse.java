@@ -25,7 +25,7 @@ public final class LogConfigCounterOptionsResponse extends io.pulumi.resources.I
     @Import(name="customFields", required=true)
       private final List<LogConfigCounterOptionsCustomFieldResponse> customFields;
 
-    public List<LogConfigCounterOptionsCustomFieldResponse> getCustomFields() {
+    public List<LogConfigCounterOptionsCustomFieldResponse> customFields() {
         return this.customFields;
     }
 
@@ -36,7 +36,7 @@ public final class LogConfigCounterOptionsResponse extends io.pulumi.resources.I
     @Import(name="field", required=true)
       private final String field;
 
-    public String getField() {
+    public String field() {
         return this.field;
     }
 
@@ -47,7 +47,7 @@ public final class LogConfigCounterOptionsResponse extends io.pulumi.resources.I
     @Import(name="metric", required=true)
       private final String metric;
 
-    public String getMetric() {
+    public String metric() {
         return this.metric;
     }
 

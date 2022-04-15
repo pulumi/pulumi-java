@@ -33,14 +33,14 @@ public final class GoogleCloudDatacatalogV1UsageSignalResponse {
      * The end timestamp of the duration of usage statistics.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
     /**
      * Usage statistics over each of the predefined time ranges. Supported time ranges are `{"24H", "7D", "30D"}`.
      * 
     */
-    public Map<String,String> getUsageWithinTimeRange() {
+    public Map<String,String> usageWithinTimeRange() {
         return this.usageWithinTimeRange;
     }
 

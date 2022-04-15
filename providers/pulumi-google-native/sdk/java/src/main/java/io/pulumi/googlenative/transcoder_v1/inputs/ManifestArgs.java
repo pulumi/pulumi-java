@@ -28,7 +28,7 @@ public final class ManifestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileName")
       private final @Nullable Output<String> fileName;
 
-    public Output<String> getFileName() {
+    public Output<String> fileName() {
         return this.fileName == null ? Codegen.empty() : this.fileName;
     }
 
@@ -39,7 +39,7 @@ public final class ManifestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="muxStreams", required=true)
       private final Output<List<String>> muxStreams;
 
-    public Output<List<String>> getMuxStreams() {
+    public Output<List<String>> muxStreams() {
         return this.muxStreams;
     }
 
@@ -50,7 +50,7 @@ public final class ManifestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<ManifestType> type;
 
-    public Output<ManifestType> getType() {
+    public Output<ManifestType> type() {
         return this.type;
     }
 

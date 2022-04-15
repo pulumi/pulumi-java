@@ -34,7 +34,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * @return The time the report was created (this refers to the time of the request, not the time the report creation completed).
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -48,7 +48,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * @return The report display name, as assigned by the user.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -62,7 +62,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * @return Provides details on the state of the report in case of an error.
      * 
      */
-    public Output<StatusResponse> getError() {
+    public Output<StatusResponse> error() {
         return this.error;
     }
     /**
@@ -76,7 +76,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * @return The point in time when the time frame ends. Notice that the time frame is counted backwards. For instance if the "frame_end_time" value is 2021/01/20 and the time frame is WEEK then the report covers the week between 2021/01/20 and 2021/01/14.
      * 
      */
-    public Output<String> getFrameEndTime() {
+    public Output<String> frameEndTime() {
         return this.frameEndTime;
     }
     /**
@@ -90,7 +90,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * @return The report unique name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -104,7 +104,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * @return Current state of the report.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -118,7 +118,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * @return The time the state was last set.
      * 
      */
-    public Output<String> getStateTime() {
+    public Output<String> stateTime() {
         return this.stateTime;
     }
     /**
@@ -132,7 +132,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * @return Time frame of the report.
      * 
      */
-    public Output<String> getTimeFrame() {
+    public Output<String> timeFrame() {
         return this.timeFrame;
     }
     /**
@@ -146,7 +146,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * @return Total number of VMs included in the report.
      * 
      */
-    public Output<Integer> getVmCount() {
+    public Output<Integer> vmCount() {
         return this.vmCount;
     }
     /**
@@ -160,7 +160,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * @return List of utilization information per VM. When sent as part of the request, the "vm_id" field is used in order to specify which VMs to include in the report. In that case all other fields are ignored.
      * 
      */
-    public Output<List<VmUtilizationInfoResponse>> getVms() {
+    public Output<List<VmUtilizationInfoResponse>> vms() {
         return this.vms;
     }
 

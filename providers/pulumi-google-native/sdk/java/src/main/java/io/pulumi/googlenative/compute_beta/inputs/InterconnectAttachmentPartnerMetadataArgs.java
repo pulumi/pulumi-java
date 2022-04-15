@@ -26,7 +26,7 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends io.pulumi.r
     @Import(name="interconnectName")
       private final @Nullable Output<String> interconnectName;
 
-    public Output<String> getInterconnectName() {
+    public Output<String> interconnectName() {
         return this.interconnectName == null ? Codegen.empty() : this.interconnectName;
     }
 
@@ -37,7 +37,7 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends io.pulumi.r
     @Import(name="partnerName")
       private final @Nullable Output<String> partnerName;
 
-    public Output<String> getPartnerName() {
+    public Output<String> partnerName() {
         return this.partnerName == null ? Codegen.empty() : this.partnerName;
     }
 
@@ -48,7 +48,7 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends io.pulumi.r
     @Import(name="portalUrl")
       private final @Nullable Output<String> portalUrl;
 
-    public Output<String> getPortalUrl() {
+    public Output<String> portalUrl() {
         return this.portalUrl == null ? Codegen.empty() : this.portalUrl;
     }
 

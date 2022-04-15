@@ -32,14 +32,14 @@ public final class GoogleCloudApigeeV1CustomReportMetricResponse {
      * aggregate function
      * 
     */
-    public String getFunction() {
+    public String function() {
         return this.function;
     }
     /**
      * name of the metric
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

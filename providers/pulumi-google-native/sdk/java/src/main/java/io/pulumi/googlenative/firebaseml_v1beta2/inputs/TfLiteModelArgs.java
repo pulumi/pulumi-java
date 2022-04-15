@@ -26,7 +26,7 @@ public final class TfLiteModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="automlModel")
       private final @Nullable Output<String> automlModel;
 
-    public Output<String> getAutomlModel() {
+    public Output<String> automlModel() {
         return this.automlModel == null ? Codegen.empty() : this.automlModel;
     }
 
@@ -37,7 +37,7 @@ public final class TfLiteModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gcsTfliteUri")
       private final @Nullable Output<String> gcsTfliteUri;
 
-    public Output<String> getGcsTfliteUri() {
+    public Output<String> gcsTfliteUri() {
         return this.gcsTfliteUri == null ? Codegen.empty() : this.gcsTfliteUri;
     }
 

@@ -23,7 +23,7 @@ public final class TfLiteModelResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="automlModel", required=true)
       private final String automlModel;
 
-    public String getAutomlModel() {
+    public String automlModel() {
         return this.automlModel;
     }
 
@@ -34,7 +34,7 @@ public final class TfLiteModelResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="gcsTfliteUri", required=true)
       private final String gcsTfliteUri;
 
-    public String getGcsTfliteUri() {
+    public String gcsTfliteUri() {
         return this.gcsTfliteUri;
     }
 
@@ -45,7 +45,7 @@ public final class TfLiteModelResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sizeBytes", required=true)
       private final String sizeBytes;
 
-    public String getSizeBytes() {
+    public String sizeBytes() {
         return this.sizeBytes;
     }
 

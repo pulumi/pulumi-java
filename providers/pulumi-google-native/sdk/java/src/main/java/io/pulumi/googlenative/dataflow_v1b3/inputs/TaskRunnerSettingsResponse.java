@@ -26,7 +26,7 @@ public final class TaskRunnerSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="alsologtostderr", required=true)
       private final Boolean alsologtostderr;
 
-    public Boolean getAlsologtostderr() {
+    public Boolean alsologtostderr() {
         return this.alsologtostderr;
     }
 
@@ -37,7 +37,7 @@ public final class TaskRunnerSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="baseTaskDir", required=true)
       private final String baseTaskDir;
 
-    public String getBaseTaskDir() {
+    public String baseTaskDir() {
         return this.baseTaskDir;
     }
 
@@ -48,7 +48,7 @@ public final class TaskRunnerSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="baseUrl", required=true)
       private final String baseUrl;
 
-    public String getBaseUrl() {
+    public String baseUrl() {
         return this.baseUrl;
     }
 
@@ -59,7 +59,7 @@ public final class TaskRunnerSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="commandlinesFileName", required=true)
       private final String commandlinesFileName;
 
-    public String getCommandlinesFileName() {
+    public String commandlinesFileName() {
         return this.commandlinesFileName;
     }
 
@@ -70,7 +70,7 @@ public final class TaskRunnerSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="continueOnException", required=true)
       private final Boolean continueOnException;
 
-    public Boolean getContinueOnException() {
+    public Boolean continueOnException() {
         return this.continueOnException;
     }
 
@@ -81,7 +81,7 @@ public final class TaskRunnerSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="dataflowApiVersion", required=true)
       private final String dataflowApiVersion;
 
-    public String getDataflowApiVersion() {
+    public String dataflowApiVersion() {
         return this.dataflowApiVersion;
     }
 
@@ -92,7 +92,7 @@ public final class TaskRunnerSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="harnessCommand", required=true)
       private final String harnessCommand;
 
-    public String getHarnessCommand() {
+    public String harnessCommand() {
         return this.harnessCommand;
     }
 
@@ -103,7 +103,7 @@ public final class TaskRunnerSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="languageHint", required=true)
       private final String languageHint;
 
-    public String getLanguageHint() {
+    public String languageHint() {
         return this.languageHint;
     }
 
@@ -114,7 +114,7 @@ public final class TaskRunnerSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="logDir", required=true)
       private final String logDir;
 
-    public String getLogDir() {
+    public String logDir() {
         return this.logDir;
     }
 
@@ -125,7 +125,7 @@ public final class TaskRunnerSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="logToSerialconsole", required=true)
       private final Boolean logToSerialconsole;
 
-    public Boolean getLogToSerialconsole() {
+    public Boolean logToSerialconsole() {
         return this.logToSerialconsole;
     }
 
@@ -136,7 +136,7 @@ public final class TaskRunnerSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="logUploadLocation", required=true)
       private final String logUploadLocation;
 
-    public String getLogUploadLocation() {
+    public String logUploadLocation() {
         return this.logUploadLocation;
     }
 
@@ -147,7 +147,7 @@ public final class TaskRunnerSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="oauthScopes", required=true)
       private final List<String> oauthScopes;
 
-    public List<String> getOauthScopes() {
+    public List<String> oauthScopes() {
         return this.oauthScopes;
     }
 
@@ -158,7 +158,7 @@ public final class TaskRunnerSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="parallelWorkerSettings", required=true)
       private final WorkerSettingsResponse parallelWorkerSettings;
 
-    public WorkerSettingsResponse getParallelWorkerSettings() {
+    public WorkerSettingsResponse parallelWorkerSettings() {
         return this.parallelWorkerSettings;
     }
 
@@ -169,7 +169,7 @@ public final class TaskRunnerSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="streamingWorkerMainClass", required=true)
       private final String streamingWorkerMainClass;
 
-    public String getStreamingWorkerMainClass() {
+    public String streamingWorkerMainClass() {
         return this.streamingWorkerMainClass;
     }
 
@@ -180,7 +180,7 @@ public final class TaskRunnerSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="taskGroup", required=true)
       private final String taskGroup;
 
-    public String getTaskGroup() {
+    public String taskGroup() {
         return this.taskGroup;
     }
 
@@ -191,7 +191,7 @@ public final class TaskRunnerSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="taskUser", required=true)
       private final String taskUser;
 
-    public String getTaskUser() {
+    public String taskUser() {
         return this.taskUser;
     }
 
@@ -202,7 +202,7 @@ public final class TaskRunnerSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="tempStoragePrefix", required=true)
       private final String tempStoragePrefix;
 
-    public String getTempStoragePrefix() {
+    public String tempStoragePrefix() {
         return this.tempStoragePrefix;
     }
 
@@ -213,7 +213,7 @@ public final class TaskRunnerSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="vmId", required=true)
       private final String vmId;
 
-    public String getVmId() {
+    public String vmId() {
         return this.vmId;
     }
 
@@ -224,7 +224,7 @@ public final class TaskRunnerSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="workflowFileName", required=true)
       private final String workflowFileName;
 
-    public String getWorkflowFileName() {
+    public String workflowFileName() {
         return this.workflowFileName;
     }
 

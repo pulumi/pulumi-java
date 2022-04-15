@@ -23,7 +23,7 @@ public final class InputMappingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="fieldName", required=true)
       private final String fieldName;
 
-    public String getFieldName() {
+    public String fieldName() {
         return this.fieldName;
     }
 
@@ -34,7 +34,7 @@ public final class InputMappingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
@@ -45,7 +45,7 @@ public final class InputMappingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="methodMatch", required=true)
       private final String methodMatch;
 
-    public String getMethodMatch() {
+    public String methodMatch() {
         return this.methodMatch;
     }
 
@@ -56,7 +56,7 @@ public final class InputMappingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

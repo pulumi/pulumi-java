@@ -24,7 +24,7 @@ public final class MonitoringDestinationResponse extends io.pulumi.resources.Inv
     @Import(name="metrics", required=true)
       private final List<String> metrics;
 
-    public List<String> getMetrics() {
+    public List<String> metrics() {
         return this.metrics;
     }
 
@@ -35,7 +35,7 @@ public final class MonitoringDestinationResponse extends io.pulumi.resources.Inv
     @Import(name="monitoredResource", required=true)
       private final String monitoredResource;
 
-    public String getMonitoredResource() {
+    public String monitoredResource() {
         return this.monitoredResource;
     }
 

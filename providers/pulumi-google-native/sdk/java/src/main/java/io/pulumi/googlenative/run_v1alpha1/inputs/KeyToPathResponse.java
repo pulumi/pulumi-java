@@ -24,7 +24,7 @@ public final class KeyToPathResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 
@@ -35,7 +35,7 @@ public final class KeyToPathResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="mode", required=true)
       private final Integer mode;
 
-    public Integer getMode() {
+    public Integer mode() {
         return this.mode;
     }
 
@@ -46,7 +46,7 @@ public final class KeyToPathResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 

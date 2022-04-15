@@ -27,7 +27,7 @@ public final class JsonFileFormatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="compression")
       private final @Nullable Output<JsonFileFormatCompression> compression;
 
-    public Output<JsonFileFormatCompression> getCompression() {
+    public Output<JsonFileFormatCompression> compression() {
         return this.compression == null ? Codegen.empty() : this.compression;
     }
 
@@ -38,7 +38,7 @@ public final class JsonFileFormatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schemaFileFormat")
       private final @Nullable Output<JsonFileFormatSchemaFileFormat> schemaFileFormat;
 
-    public Output<JsonFileFormatSchemaFileFormat> getSchemaFileFormat() {
+    public Output<JsonFileFormatSchemaFileFormat> schemaFileFormat() {
         return this.schemaFileFormat == null ? Codegen.empty() : this.schemaFileFormat;
     }
 

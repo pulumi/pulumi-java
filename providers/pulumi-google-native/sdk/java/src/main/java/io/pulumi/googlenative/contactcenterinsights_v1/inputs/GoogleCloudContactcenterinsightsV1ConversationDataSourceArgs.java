@@ -27,7 +27,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs 
     @Import(name="dialogflowSource")
       private final @Nullable Output<GoogleCloudContactcenterinsightsV1DialogflowSourceArgs> dialogflowSource;
 
-    public Output<GoogleCloudContactcenterinsightsV1DialogflowSourceArgs> getDialogflowSource() {
+    public Output<GoogleCloudContactcenterinsightsV1DialogflowSourceArgs> dialogflowSource() {
         return this.dialogflowSource == null ? Codegen.empty() : this.dialogflowSource;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs 
     @Import(name="gcsSource")
       private final @Nullable Output<GoogleCloudContactcenterinsightsV1GcsSourceArgs> gcsSource;
 
-    public Output<GoogleCloudContactcenterinsightsV1GcsSourceArgs> getGcsSource() {
+    public Output<GoogleCloudContactcenterinsightsV1GcsSourceArgs> gcsSource() {
         return this.gcsSource == null ? Codegen.empty() : this.gcsSource;
     }
 

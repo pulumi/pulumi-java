@@ -27,7 +27,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="active", required=true)
       private final Integer active;
 
-    public Integer getActive() {
+    public Integer active() {
         return this.active;
     }
 
@@ -38,7 +38,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="completionTime", required=true)
       private final String completionTime;
 
-    public String getCompletionTime() {
+    public String completionTime() {
         return this.completionTime;
     }
 
@@ -49,7 +49,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="conditions", required=true)
       private final List<JobConditionResponse> conditions;
 
-    public List<JobConditionResponse> getConditions() {
+    public List<JobConditionResponse> conditions() {
         return this.conditions;
     }
 
@@ -60,7 +60,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="failed", required=true)
       private final Integer failed;
 
-    public Integer getFailed() {
+    public Integer failed() {
         return this.failed;
     }
 
@@ -71,7 +71,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="imageDigest", required=true)
       private final String imageDigest;
 
-    public String getImageDigest() {
+    public String imageDigest() {
         return this.imageDigest;
     }
 
@@ -82,7 +82,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="instances", required=true)
       private final List<InstanceStatusResponse> instances;
 
-    public List<InstanceStatusResponse> getInstances() {
+    public List<InstanceStatusResponse> instances() {
         return this.instances;
     }
 
@@ -93,7 +93,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="observedGeneration", required=true)
       private final Integer observedGeneration;
 
-    public Integer getObservedGeneration() {
+    public Integer observedGeneration() {
         return this.observedGeneration;
     }
 
@@ -104,7 +104,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
@@ -115,7 +115,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="succeeded", required=true)
       private final Integer succeeded;
 
-    public Integer getSucceeded() {
+    public Integer succeeded() {
         return this.succeeded;
     }
 

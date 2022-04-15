@@ -27,7 +27,7 @@ public final class GoogleCloudMlV1__SchedulingArgs extends io.pulumi.resources.R
     @Import(name="maxRunningTime")
       private final @Nullable Output<String> maxRunningTime;
 
-    public Output<String> getMaxRunningTime() {
+    public Output<String> maxRunningTime() {
         return this.maxRunningTime == null ? Codegen.empty() : this.maxRunningTime;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudMlV1__SchedulingArgs extends io.pulumi.resources.R
     @Import(name="maxWaitTime")
       private final @Nullable Output<String> maxWaitTime;
 
-    public Output<String> getMaxWaitTime() {
+    public Output<String> maxWaitTime() {
         return this.maxWaitTime == null ? Codegen.empty() : this.maxWaitTime;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudMlV1__SchedulingArgs extends io.pulumi.resources.R
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 

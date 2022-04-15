@@ -17,21 +17,21 @@ public final class GetSnapshotSchedulePolicyArgs extends io.pulumi.resources.Inv
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="snapshotSchedulePolicyId", required=true)
       private final String snapshotSchedulePolicyId;
 
-    public String getSnapshotSchedulePolicyId() {
+    public String snapshotSchedulePolicyId() {
         return this.snapshotSchedulePolicyId;
     }
 

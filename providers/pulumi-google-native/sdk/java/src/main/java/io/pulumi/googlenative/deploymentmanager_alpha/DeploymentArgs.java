@@ -22,7 +22,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createPolicy")
       private final @Nullable Output<String> createPolicy;
 
-    public Output<String> getCreatePolicy() {
+    public Output<String> createPolicy() {
         return this.createPolicy == null ? Codegen.empty() : this.createPolicy;
     }
 
@@ -33,7 +33,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="credential")
       private final @Nullable Output<CredentialArgs> credential;
 
-    public Output<CredentialArgs> getCredential() {
+    public Output<CredentialArgs> credential() {
         return this.credential == null ? Codegen.empty() : this.credential;
     }
 
@@ -44,14 +44,14 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -62,7 +62,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<List<DeploymentLabelEntryArgs>> labels;
 
-    public Output<List<DeploymentLabelEntryArgs>> getLabels() {
+    public Output<List<DeploymentLabelEntryArgs>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -73,21 +73,21 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="preview")
       private final @Nullable Output<String> preview;
 
-    public Output<String> getPreview() {
+    public Output<String> preview() {
         return this.preview == null ? Codegen.empty() : this.preview;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -98,7 +98,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="target")
       private final @Nullable Output<TargetConfigurationArgs> target;
 
-    public Output<TargetConfigurationArgs> getTarget() {
+    public Output<TargetConfigurationArgs> target() {
         return this.target == null ? Codegen.empty() : this.target;
     }
 

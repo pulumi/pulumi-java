@@ -27,7 +27,7 @@ public final class NetworkPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -38,7 +38,7 @@ public final class NetworkPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="provider")
       private final @Nullable Output<NetworkPolicyProvider> provider;
 
-    public Output<NetworkPolicyProvider> getProvider() {
+    public Output<NetworkPolicyProvider> provider() {
         return this.provider == null ? Codegen.empty() : this.provider;
     }
 

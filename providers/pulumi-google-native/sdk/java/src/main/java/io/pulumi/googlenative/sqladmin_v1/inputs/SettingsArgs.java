@@ -43,7 +43,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="activationPolicy")
       private final @Nullable Output<SettingsActivationPolicy> activationPolicy;
 
-    public Output<SettingsActivationPolicy> getActivationPolicy() {
+    public Output<SettingsActivationPolicy> activationPolicy() {
         return this.activationPolicy == null ? Codegen.empty() : this.activationPolicy;
     }
 
@@ -54,7 +54,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="activeDirectoryConfig")
       private final @Nullable Output<SqlActiveDirectoryConfigArgs> activeDirectoryConfig;
 
-    public Output<SqlActiveDirectoryConfigArgs> getActiveDirectoryConfig() {
+    public Output<SqlActiveDirectoryConfigArgs> activeDirectoryConfig() {
         return this.activeDirectoryConfig == null ? Codegen.empty() : this.activeDirectoryConfig;
     }
 
@@ -65,7 +65,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="availabilityType")
       private final @Nullable Output<SettingsAvailabilityType> availabilityType;
 
-    public Output<SettingsAvailabilityType> getAvailabilityType() {
+    public Output<SettingsAvailabilityType> availabilityType() {
         return this.availabilityType == null ? Codegen.empty() : this.availabilityType;
     }
 
@@ -76,7 +76,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backupConfiguration")
       private final @Nullable Output<BackupConfigurationArgs> backupConfiguration;
 
-    public Output<BackupConfigurationArgs> getBackupConfiguration() {
+    public Output<BackupConfigurationArgs> backupConfiguration() {
         return this.backupConfiguration == null ? Codegen.empty() : this.backupConfiguration;
     }
 
@@ -87,7 +87,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="collation")
       private final @Nullable Output<String> collation;
 
-    public Output<String> getCollation() {
+    public Output<String> collation() {
         return this.collation == null ? Codegen.empty() : this.collation;
     }
 
@@ -98,7 +98,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="crashSafeReplicationEnabled")
       private final @Nullable Output<Boolean> crashSafeReplicationEnabled;
 
-    public Output<Boolean> getCrashSafeReplicationEnabled() {
+    public Output<Boolean> crashSafeReplicationEnabled() {
         return this.crashSafeReplicationEnabled == null ? Codegen.empty() : this.crashSafeReplicationEnabled;
     }
 
@@ -109,7 +109,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataDiskSizeGb")
       private final @Nullable Output<String> dataDiskSizeGb;
 
-    public Output<String> getDataDiskSizeGb() {
+    public Output<String> dataDiskSizeGb() {
         return this.dataDiskSizeGb == null ? Codegen.empty() : this.dataDiskSizeGb;
     }
 
@@ -120,7 +120,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataDiskType")
       private final @Nullable Output<SettingsDataDiskType> dataDiskType;
 
-    public Output<SettingsDataDiskType> getDataDiskType() {
+    public Output<SettingsDataDiskType> dataDiskType() {
         return this.dataDiskType == null ? Codegen.empty() : this.dataDiskType;
     }
 
@@ -131,7 +131,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseFlags")
       private final @Nullable Output<List<DatabaseFlagsArgs>> databaseFlags;
 
-    public Output<List<DatabaseFlagsArgs>> getDatabaseFlags() {
+    public Output<List<DatabaseFlagsArgs>> databaseFlags() {
         return this.databaseFlags == null ? Codegen.empty() : this.databaseFlags;
     }
 
@@ -142,7 +142,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseReplicationEnabled")
       private final @Nullable Output<Boolean> databaseReplicationEnabled;
 
-    public Output<Boolean> getDatabaseReplicationEnabled() {
+    public Output<Boolean> databaseReplicationEnabled() {
         return this.databaseReplicationEnabled == null ? Codegen.empty() : this.databaseReplicationEnabled;
     }
 
@@ -153,7 +153,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="denyMaintenancePeriods")
       private final @Nullable Output<List<DenyMaintenancePeriodArgs>> denyMaintenancePeriods;
 
-    public Output<List<DenyMaintenancePeriodArgs>> getDenyMaintenancePeriods() {
+    public Output<List<DenyMaintenancePeriodArgs>> denyMaintenancePeriods() {
         return this.denyMaintenancePeriods == null ? Codegen.empty() : this.denyMaintenancePeriods;
     }
 
@@ -164,7 +164,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="insightsConfig")
       private final @Nullable Output<InsightsConfigArgs> insightsConfig;
 
-    public Output<InsightsConfigArgs> getInsightsConfig() {
+    public Output<InsightsConfigArgs> insightsConfig() {
         return this.insightsConfig == null ? Codegen.empty() : this.insightsConfig;
     }
 
@@ -175,7 +175,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipConfiguration")
       private final @Nullable Output<IpConfigurationArgs> ipConfiguration;
 
-    public Output<IpConfigurationArgs> getIpConfiguration() {
+    public Output<IpConfigurationArgs> ipConfiguration() {
         return this.ipConfiguration == null ? Codegen.empty() : this.ipConfiguration;
     }
 
@@ -186,7 +186,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -197,7 +197,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locationPreference")
       private final @Nullable Output<LocationPreferenceArgs> locationPreference;
 
-    public Output<LocationPreferenceArgs> getLocationPreference() {
+    public Output<LocationPreferenceArgs> locationPreference() {
         return this.locationPreference == null ? Codegen.empty() : this.locationPreference;
     }
 
@@ -208,7 +208,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maintenanceWindow")
       private final @Nullable Output<MaintenanceWindowArgs> maintenanceWindow;
 
-    public Output<MaintenanceWindowArgs> getMaintenanceWindow() {
+    public Output<MaintenanceWindowArgs> maintenanceWindow() {
         return this.maintenanceWindow == null ? Codegen.empty() : this.maintenanceWindow;
     }
 
@@ -219,7 +219,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="passwordValidationPolicy")
       private final @Nullable Output<PasswordValidationPolicyArgs> passwordValidationPolicy;
 
-    public Output<PasswordValidationPolicyArgs> getPasswordValidationPolicy() {
+    public Output<PasswordValidationPolicyArgs> passwordValidationPolicy() {
         return this.passwordValidationPolicy == null ? Codegen.empty() : this.passwordValidationPolicy;
     }
 
@@ -230,7 +230,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pricingPlan")
       private final @Nullable Output<SettingsPricingPlan> pricingPlan;
 
-    public Output<SettingsPricingPlan> getPricingPlan() {
+    public Output<SettingsPricingPlan> pricingPlan() {
         return this.pricingPlan == null ? Codegen.empty() : this.pricingPlan;
     }
 
@@ -241,7 +241,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="settingsVersion")
       private final @Nullable Output<String> settingsVersion;
 
-    public Output<String> getSettingsVersion() {
+    public Output<String> settingsVersion() {
         return this.settingsVersion == null ? Codegen.empty() : this.settingsVersion;
     }
 
@@ -252,7 +252,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sqlServerAuditConfig")
       private final @Nullable Output<SqlServerAuditConfigArgs> sqlServerAuditConfig;
 
-    public Output<SqlServerAuditConfigArgs> getSqlServerAuditConfig() {
+    public Output<SqlServerAuditConfigArgs> sqlServerAuditConfig() {
         return this.sqlServerAuditConfig == null ? Codegen.empty() : this.sqlServerAuditConfig;
     }
 
@@ -263,7 +263,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageAutoResize")
       private final @Nullable Output<Boolean> storageAutoResize;
 
-    public Output<Boolean> getStorageAutoResize() {
+    public Output<Boolean> storageAutoResize() {
         return this.storageAutoResize == null ? Codegen.empty() : this.storageAutoResize;
     }
 
@@ -274,7 +274,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageAutoResizeLimit")
       private final @Nullable Output<String> storageAutoResizeLimit;
 
-    public Output<String> getStorageAutoResizeLimit() {
+    public Output<String> storageAutoResizeLimit() {
         return this.storageAutoResizeLimit == null ? Codegen.empty() : this.storageAutoResizeLimit;
     }
 
@@ -285,7 +285,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tier")
       private final @Nullable Output<String> tier;
 
-    public Output<String> getTier() {
+    public Output<String> tier() {
         return this.tier == null ? Codegen.empty() : this.tier;
     }
 
@@ -296,7 +296,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userLabels")
       private final @Nullable Output<Map<String,String>> userLabels;
 
-    public Output<Map<String,String>> getUserLabels() {
+    public Output<Map<String,String>> userLabels() {
         return this.userLabels == null ? Codegen.empty() : this.userLabels;
     }
 

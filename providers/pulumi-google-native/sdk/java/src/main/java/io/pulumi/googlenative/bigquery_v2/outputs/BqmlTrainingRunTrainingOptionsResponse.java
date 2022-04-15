@@ -43,31 +43,31 @@ public final class BqmlTrainingRunTrainingOptionsResponse {
         this.warmStart = warmStart;
     }
 
-    public Boolean getEarlyStop() {
+    public Boolean earlyStop() {
         return this.earlyStop;
     }
-    public Double getL1Reg() {
+    public Double l1Reg() {
         return this.l1Reg;
     }
-    public Double getL2Reg() {
+    public Double l2Reg() {
         return this.l2Reg;
     }
-    public Double getLearnRate() {
+    public Double learnRate() {
         return this.learnRate;
     }
-    public String getLearnRateStrategy() {
+    public String learnRateStrategy() {
         return this.learnRateStrategy;
     }
-    public Double getLineSearchInitLearnRate() {
+    public Double lineSearchInitLearnRate() {
         return this.lineSearchInitLearnRate;
     }
-    public String getMaxIteration() {
+    public String maxIteration() {
         return this.maxIteration;
     }
-    public Double getMinRelProgress() {
+    public Double minRelProgress() {
         return this.minRelProgress;
     }
-    public Boolean getWarmStart() {
+    public Boolean warmStart() {
         return this.warmStart;
     }
 

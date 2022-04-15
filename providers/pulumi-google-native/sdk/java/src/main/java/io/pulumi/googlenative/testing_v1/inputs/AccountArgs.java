@@ -26,7 +26,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="googleAuto")
       private final @Nullable Output<GoogleAutoArgs> googleAuto;
 
-    public Output<GoogleAutoArgs> getGoogleAuto() {
+    public Output<GoogleAutoArgs> googleAuto() {
         return this.googleAuto == null ? Codegen.empty() : this.googleAuto;
     }
 

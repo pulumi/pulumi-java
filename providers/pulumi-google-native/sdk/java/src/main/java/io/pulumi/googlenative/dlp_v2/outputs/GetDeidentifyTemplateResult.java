@@ -61,42 +61,42 @@ public final class GetDeidentifyTemplateResult {
      * The creation timestamp of an inspectTemplate.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The core content of the template.
      * 
     */
-    public GooglePrivacyDlpV2DeidentifyConfigResponse getDeidentifyConfig() {
+    public GooglePrivacyDlpV2DeidentifyConfigResponse deidentifyConfig() {
         return this.deidentifyConfig;
     }
     /**
      * Short description (max 256 chars).
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Display name (max 256 chars).
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * The template name. The template will have one of the following formats: `projects/PROJECT_ID/deidentifyTemplates/TEMPLATE_ID` OR `organizations/ORGANIZATION_ID/deidentifyTemplates/TEMPLATE_ID`
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The last update timestamp of an inspectTemplate.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

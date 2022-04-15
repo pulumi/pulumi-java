@@ -68,49 +68,49 @@ public final class DeploymentResponse {
      * Address of the runtime element hosting this deployment.
      * 
     */
-    public String getAddress() {
+    public String address() {
         return this.address;
     }
     /**
      * Configuration used to create this deployment.
      * 
     */
-    public String getConfig() {
+    public String config() {
         return this.config;
     }
     /**
      * Beginning of the lifetime of this deployment.
      * 
     */
-    public String getDeployTime() {
+    public String deployTime() {
         return this.deployTime;
     }
     /**
      * Platform hosting this deployment.
      * 
     */
-    public String getPlatform() {
+    public String platform() {
         return this.platform;
     }
     /**
      * Resource URI for the artifact being deployed taken from the deployable field with the same name.
      * 
     */
-    public List<String> getResourceUri() {
+    public List<String> resourceUri() {
         return this.resourceUri;
     }
     /**
      * End of the lifetime of this deployment.
      * 
     */
-    public String getUndeployTime() {
+    public String undeployTime() {
         return this.undeployTime;
     }
     /**
      * Identity of the user that triggered this deployment.
      * 
     */
-    public String getUserEmail() {
+    public String userEmail() {
         return this.userEmail;
     }
 

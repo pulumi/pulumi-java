@@ -15,21 +15,21 @@ public final class GetQueryArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="environmentId", required=true)
       private final String environmentId;
 
-    public String getEnvironmentId() {
+    public String environmentId() {
         return this.environmentId;
     }
 
     @Import(name="organizationId", required=true)
       private final String organizationId;
 
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 
     @Import(name="queryId", required=true)
       private final String queryId;
 
-    public String getQueryId() {
+    public String queryId() {
         return this.queryId;
     }
 

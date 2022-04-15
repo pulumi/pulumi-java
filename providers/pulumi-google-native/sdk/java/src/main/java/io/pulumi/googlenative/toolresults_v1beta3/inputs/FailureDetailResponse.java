@@ -23,7 +23,7 @@ public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="crashed", required=true)
       private final Boolean crashed;
 
-    public Boolean getCrashed() {
+    public Boolean crashed() {
         return this.crashed;
     }
 
@@ -34,7 +34,7 @@ public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="deviceOutOfMemory", required=true)
       private final Boolean deviceOutOfMemory;
 
-    public Boolean getDeviceOutOfMemory() {
+    public Boolean deviceOutOfMemory() {
         return this.deviceOutOfMemory;
     }
 
@@ -45,7 +45,7 @@ public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="failedRoboscript", required=true)
       private final Boolean failedRoboscript;
 
-    public Boolean getFailedRoboscript() {
+    public Boolean failedRoboscript() {
         return this.failedRoboscript;
     }
 
@@ -56,7 +56,7 @@ public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="notInstalled", required=true)
       private final Boolean notInstalled;
 
-    public Boolean getNotInstalled() {
+    public Boolean notInstalled() {
         return this.notInstalled;
     }
 
@@ -67,7 +67,7 @@ public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="otherNativeCrash", required=true)
       private final Boolean otherNativeCrash;
 
-    public Boolean getOtherNativeCrash() {
+    public Boolean otherNativeCrash() {
         return this.otherNativeCrash;
     }
 
@@ -78,7 +78,7 @@ public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="timedOut", required=true)
       private final Boolean timedOut;
 
-    public Boolean getTimedOut() {
+    public Boolean timedOut() {
         return this.timedOut;
     }
 
@@ -89,7 +89,7 @@ public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="unableToCrawl", required=true)
       private final Boolean unableToCrawl;
 
-    public Boolean getUnableToCrawl() {
+    public Boolean unableToCrawl() {
         return this.unableToCrawl;
     }
 

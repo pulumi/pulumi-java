@@ -25,14 +25,14 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
+    public Output<String> apiVersion() {
         return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
     @Import(name="dryRun")
       private final @Nullable Output<String> dryRun;
 
-    public Output<String> getDryRun() {
+    public Output<String> dryRun() {
         return this.dryRun == null ? Codegen.empty() : this.dryRun;
     }
 
@@ -43,14 +43,14 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -61,14 +61,14 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> getMetadata() {
+    public Output<ObjectMetaArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -79,7 +79,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="spec")
       private final @Nullable Output<DomainMappingSpecArgs> spec;
 
-    public Output<DomainMappingSpecArgs> getSpec() {
+    public Output<DomainMappingSpecArgs> spec() {
         return this.spec == null ? Codegen.empty() : this.spec;
     }
 
@@ -90,7 +90,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<DomainMappingStatusArgs> status;
 
-    public Output<DomainMappingStatusArgs> getStatus() {
+    public Output<DomainMappingStatusArgs> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

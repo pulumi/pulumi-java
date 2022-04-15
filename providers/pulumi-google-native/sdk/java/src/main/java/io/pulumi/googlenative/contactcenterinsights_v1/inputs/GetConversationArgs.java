@@ -17,28 +17,28 @@ public final class GetConversationArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="conversationId", required=true)
       private final String conversationId;
 
-    public String getConversationId() {
+    public String conversationId() {
         return this.conversationId;
     }
 
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="view")
       private final @Nullable String view;
 
-    public Optional<String> getView() {
+    public Optional<String> view() {
         return this.view == null ? Optional.empty() : Optional.ofNullable(this.view);
     }
 

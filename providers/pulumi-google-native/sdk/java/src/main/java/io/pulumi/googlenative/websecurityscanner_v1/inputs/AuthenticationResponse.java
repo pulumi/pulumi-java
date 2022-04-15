@@ -25,7 +25,7 @@ public final class AuthenticationResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="customAccount", required=true)
       private final CustomAccountResponse customAccount;
 
-    public CustomAccountResponse getCustomAccount() {
+    public CustomAccountResponse customAccount() {
         return this.customAccount;
     }
 
@@ -36,7 +36,7 @@ public final class AuthenticationResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="googleAccount", required=true)
       private final GoogleAccountResponse googleAccount;
 
-    public GoogleAccountResponse getGoogleAccount() {
+    public GoogleAccountResponse googleAccount() {
         return this.googleAccount;
     }
 
@@ -47,7 +47,7 @@ public final class AuthenticationResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="iapCredential", required=true)
       private final IapCredentialResponse iapCredential;
 
-    public IapCredentialResponse getIapCredential() {
+    public IapCredentialResponse iapCredential() {
         return this.iapCredential;
     }
 

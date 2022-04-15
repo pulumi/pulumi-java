@@ -23,7 +23,7 @@ public final class TransferManifestResponse extends io.pulumi.resources.InvokeAr
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 

@@ -24,14 +24,14 @@ public final class RRSetRoutingPolicyWrrPolicyArgs extends io.pulumi.resources.R
     @Import(name="items")
       private final @Nullable Output<List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs>> items;
 
-    public Output<List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs>> getItems() {
+    public Output<List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs>> items() {
         return this.items == null ? Codegen.empty() : this.items;
     }
 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 

@@ -27,7 +27,7 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="cloudBuildOptions", required=true)
       private final CloudBuildOptionsResponse cloudBuildOptions;
 
-    public CloudBuildOptionsResponse getCloudBuildOptions() {
+    public CloudBuildOptionsResponse cloudBuildOptions() {
         return this.cloudBuildOptions;
     }
 
@@ -38,7 +38,7 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="container", required=true)
       private final ContainerInfoResponse container;
 
-    public ContainerInfoResponse getContainer() {
+    public ContainerInfoResponse container() {
         return this.container;
     }
 
@@ -49,7 +49,7 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="files", required=true)
       private final Map<String,String> files;
 
-    public Map<String,String> getFiles() {
+    public Map<String,String> files() {
         return this.files;
     }
 
@@ -60,7 +60,7 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="zip", required=true)
       private final ZipInfoResponse zip;
 
-    public ZipInfoResponse getZip() {
+    public ZipInfoResponse zip() {
         return this.zip;
     }
 

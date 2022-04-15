@@ -24,7 +24,7 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="activatedPolicyTypes")
       private final @Nullable Output<List<TaxonomyActivatedPolicyTypesItem>> activatedPolicyTypes;
 
-    public Output<List<TaxonomyActivatedPolicyTypesItem>> getActivatedPolicyTypes() {
+    public Output<List<TaxonomyActivatedPolicyTypesItem>> activatedPolicyTypes() {
         return this.activatedPolicyTypes == null ? Codegen.empty() : this.activatedPolicyTypes;
     }
 
@@ -35,7 +35,7 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,21 +46,21 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

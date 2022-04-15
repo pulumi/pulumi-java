@@ -23,7 +23,7 @@ public final class SparkHistoryServerConfigResponse extends io.pulumi.resources.
     @Import(name="dataprocCluster", required=true)
       private final String dataprocCluster;
 
-    public String getDataprocCluster() {
+    public String dataprocCluster() {
         return this.dataprocCluster;
     }
 

@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse
     @Import(name="cells", required=true)
       private final List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse> cells;
 
-    public List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse> getCells() {
+    public List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse> cells() {
         return this.cells;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse
     @Import(name="dividerAfter", required=true)
       private final Boolean dividerAfter;
 
-    public Boolean getDividerAfter() {
+    public Boolean dividerAfter() {
         return this.dividerAfter;
     }
 

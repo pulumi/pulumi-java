@@ -26,7 +26,7 @@ public final class PullMessageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="payload")
       private final @Nullable Output<String> payload;
 
-    public Output<String> getPayload() {
+    public Output<String> payload() {
         return this.payload == null ? Codegen.empty() : this.payload;
     }
 
@@ -37,7 +37,7 @@ public final class PullMessageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tag")
       private final @Nullable Output<String> tag;
 
-    public Output<String> getTag() {
+    public Output<String> tag() {
         return this.tag == null ? Codegen.empty() : this.tag;
     }
 

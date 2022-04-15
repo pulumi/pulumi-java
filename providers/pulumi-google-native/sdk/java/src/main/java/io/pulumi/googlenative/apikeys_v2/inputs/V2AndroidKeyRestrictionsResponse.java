@@ -24,7 +24,7 @@ public final class V2AndroidKeyRestrictionsResponse extends io.pulumi.resources.
     @Import(name="allowedApplications", required=true)
       private final List<V2AndroidApplicationResponse> allowedApplications;
 
-    public List<V2AndroidApplicationResponse> getAllowedApplications() {
+    public List<V2AndroidApplicationResponse> allowedApplications() {
         return this.allowedApplications;
     }
 

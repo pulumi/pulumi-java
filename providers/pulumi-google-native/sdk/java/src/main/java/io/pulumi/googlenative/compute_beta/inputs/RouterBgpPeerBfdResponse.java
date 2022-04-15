@@ -20,7 +20,7 @@ public final class RouterBgpPeerBfdResponse extends io.pulumi.resources.InvokeAr
     @Import(name="minReceiveInterval", required=true)
       private final Integer minReceiveInterval;
 
-    public Integer getMinReceiveInterval() {
+    public Integer minReceiveInterval() {
         return this.minReceiveInterval;
     }
 
@@ -31,7 +31,7 @@ public final class RouterBgpPeerBfdResponse extends io.pulumi.resources.InvokeAr
     @Import(name="minTransmitInterval", required=true)
       private final Integer minTransmitInterval;
 
-    public Integer getMinTransmitInterval() {
+    public Integer minTransmitInterval() {
         return this.minTransmitInterval;
     }
 
@@ -42,7 +42,7 @@ public final class RouterBgpPeerBfdResponse extends io.pulumi.resources.InvokeAr
     @Import(name="multiplier", required=true)
       private final Integer multiplier;
 
-    public Integer getMultiplier() {
+    public Integer multiplier() {
         return this.multiplier;
     }
 
@@ -53,7 +53,7 @@ public final class RouterBgpPeerBfdResponse extends io.pulumi.resources.InvokeAr
     @Import(name="sessionInitializationMode", required=true)
       private final String sessionInitializationMode;
 
-    public String getSessionInitializationMode() {
+    public String sessionInitializationMode() {
         return this.sessionInitializationMode;
     }
 

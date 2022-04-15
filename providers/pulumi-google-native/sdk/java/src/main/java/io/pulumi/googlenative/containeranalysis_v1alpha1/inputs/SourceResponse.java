@@ -28,7 +28,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="additionalContexts", required=true)
       private final List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse> additionalContexts;
 
-    public List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse> getAdditionalContexts() {
+    public List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse> additionalContexts() {
         return this.additionalContexts;
     }
 
@@ -39,7 +39,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="artifactStorageSource", required=true)
       private final StorageSourceResponse artifactStorageSource;
 
-    public StorageSourceResponse getArtifactStorageSource() {
+    public StorageSourceResponse artifactStorageSource() {
         return this.artifactStorageSource;
     }
 
@@ -50,7 +50,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="context", required=true)
       private final GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse context;
 
-    public GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse getContext() {
+    public GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse context() {
         return this.context;
     }
 
@@ -61,7 +61,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="fileHashes", required=true)
       private final Map<String,String> fileHashes;
 
-    public Map<String,String> getFileHashes() {
+    public Map<String,String> fileHashes() {
         return this.fileHashes;
     }
 
@@ -72,7 +72,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="repoSource", required=true)
       private final RepoSourceResponse repoSource;
 
-    public RepoSourceResponse getRepoSource() {
+    public RepoSourceResponse repoSource() {
         return this.repoSource;
     }
 
@@ -83,7 +83,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="storageSource", required=true)
       private final StorageSourceResponse storageSource;
 
-    public StorageSourceResponse getStorageSource() {
+    public StorageSourceResponse storageSource() {
         return this.storageSource;
     }
 

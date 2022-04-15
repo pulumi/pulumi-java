@@ -24,14 +24,14 @@ public final class ComplianceOccurrenceArgs extends io.pulumi.resources.Resource
     @Import(name="nonComplianceReason")
       private final @Nullable Output<String> nonComplianceReason;
 
-    public Output<String> getNonComplianceReason() {
+    public Output<String> nonComplianceReason() {
         return this.nonComplianceReason == null ? Codegen.empty() : this.nonComplianceReason;
     }
 
     @Import(name="nonCompliantFiles")
       private final @Nullable Output<List<NonCompliantFileArgs>> nonCompliantFiles;
 
-    public Output<List<NonCompliantFileArgs>> getNonCompliantFiles() {
+    public Output<List<NonCompliantFileArgs>> nonCompliantFiles() {
         return this.nonCompliantFiles == null ? Codegen.empty() : this.nonCompliantFiles;
     }
 

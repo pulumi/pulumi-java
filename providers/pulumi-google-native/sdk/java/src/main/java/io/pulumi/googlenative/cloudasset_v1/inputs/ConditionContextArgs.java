@@ -26,7 +26,7 @@ public final class ConditionContextArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="accessTime")
       private final @Nullable Output<String> accessTime;
 
-    public Output<String> getAccessTime() {
+    public Output<String> accessTime() {
         return this.accessTime == null ? Codegen.empty() : this.accessTime;
     }
 

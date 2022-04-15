@@ -25,7 +25,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="createTime", required=true)
       private final String createTime;
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
 
@@ -36,7 +36,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="lastTrustHeartbeatTime", required=true)
       private final String lastTrustHeartbeatTime;
 
-    public String getLastTrustHeartbeatTime() {
+    public String lastTrustHeartbeatTime() {
         return this.lastTrustHeartbeatTime;
     }
 
@@ -47,7 +47,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="selectiveAuthentication", required=true)
       private final Boolean selectiveAuthentication;
 
-    public Boolean getSelectiveAuthentication() {
+    public Boolean selectiveAuthentication() {
         return this.selectiveAuthentication;
     }
 
@@ -58,7 +58,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 
@@ -69,7 +69,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="stateDescription", required=true)
       private final String stateDescription;
 
-    public String getStateDescription() {
+    public String stateDescription() {
         return this.stateDescription;
     }
 
@@ -80,7 +80,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="targetDnsIpAddresses", required=true)
       private final List<String> targetDnsIpAddresses;
 
-    public List<String> getTargetDnsIpAddresses() {
+    public List<String> targetDnsIpAddresses() {
         return this.targetDnsIpAddresses;
     }
 
@@ -91,7 +91,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="targetDomainName", required=true)
       private final String targetDomainName;
 
-    public String getTargetDomainName() {
+    public String targetDomainName() {
         return this.targetDomainName;
     }
 
@@ -102,7 +102,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="trustDirection", required=true)
       private final String trustDirection;
 
-    public String getTrustDirection() {
+    public String trustDirection() {
         return this.trustDirection;
     }
 
@@ -113,7 +113,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="trustHandshakeSecret", required=true)
       private final String trustHandshakeSecret;
 
-    public String getTrustHandshakeSecret() {
+    public String trustHandshakeSecret() {
         return this.trustHandshakeSecret;
     }
 
@@ -124,7 +124,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="trustType", required=true)
       private final String trustType;
 
-    public String getTrustType() {
+    public String trustType() {
         return this.trustType;
     }
 
@@ -135,7 +135,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="updateTime", required=true)
       private final String updateTime;
 
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

@@ -53,35 +53,35 @@ public final class GetInstanceResult {
      * Immutable. The globally unique hostname of the database.
      * 
     */
-    public String getDatabaseUrl() {
+    public String databaseUrl() {
         return this.databaseUrl;
     }
     /**
      * The fully qualified resource name of the database instance, in the form: `projects/{project-number}/locations/{location-id}/instances/{database-id}`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The resource name of the project this instance belongs to. For example: `projects/{project-number}`.
      * 
     */
-    public String getProject() {
+    public String project() {
         return this.project;
     }
     /**
      * The database's lifecycle state. Read-only.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The database instance type. On creation only USER_DATABASE is allowed, which is also the default when omitted.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

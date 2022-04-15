@@ -27,7 +27,7 @@ public final class SystemParametersArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="rules")
       private final @Nullable Output<List<SystemParameterRuleArgs>> rules;
 
-    public Output<List<SystemParameterRuleArgs>> getRules() {
+    public Output<List<SystemParameterRuleArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 

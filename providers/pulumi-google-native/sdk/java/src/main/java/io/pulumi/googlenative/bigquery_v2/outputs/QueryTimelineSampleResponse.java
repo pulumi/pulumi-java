@@ -53,35 +53,35 @@ public final class QueryTimelineSampleResponse {
      * Total number of units currently being processed by workers. This does not correspond directly to slot usage. This is the largest value observed since the last sample.
      * 
     */
-    public String getActiveUnits() {
+    public String activeUnits() {
         return this.activeUnits;
     }
     /**
      * Total parallel units of work completed by this query.
      * 
     */
-    public String getCompletedUnits() {
+    public String completedUnits() {
         return this.completedUnits;
     }
     /**
      * Milliseconds elapsed since the start of query execution.
      * 
     */
-    public String getElapsedMs() {
+    public String elapsedMs() {
         return this.elapsedMs;
     }
     /**
      * Total parallel units of work remaining for the active stages.
      * 
     */
-    public String getPendingUnits() {
+    public String pendingUnits() {
         return this.pendingUnits;
     }
     /**
      * Cumulative slot-ms consumed by the query.
      * 
     */
-    public String getTotalSlotMs() {
+    public String totalSlotMs() {
         return this.totalSlotMs;
     }
 

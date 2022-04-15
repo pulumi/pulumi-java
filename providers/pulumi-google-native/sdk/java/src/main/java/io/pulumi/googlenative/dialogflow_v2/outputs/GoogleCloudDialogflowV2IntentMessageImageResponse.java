@@ -32,14 +32,14 @@ public final class GoogleCloudDialogflowV2IntentMessageImageResponse {
      * Optional. A text description of the image to be used for accessibility, e.g., screen readers.
      * 
     */
-    public String getAccessibilityText() {
+    public String accessibilityText() {
         return this.accessibilityText;
     }
     /**
      * Optional. The public URI to an image file.
      * 
     */
-    public String getImageUri() {
+    public String imageUri() {
         return this.imageUri;
     }
 

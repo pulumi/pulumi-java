@@ -24,7 +24,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cronSchedule")
       private final @Nullable Output<String> cronSchedule;
 
-    public Output<String> getCronSchedule() {
+    public Output<String> cronSchedule() {
         return this.cronSchedule == null ? Codegen.empty() : this.cronSchedule;
     }
 
@@ -35,7 +35,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,35 +46,35 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="executionTemplate")
       private final @Nullable Output<ExecutionTemplateArgs> executionTemplate;
 
-    public Output<ExecutionTemplateArgs> getExecutionTemplate() {
+    public Output<ExecutionTemplateArgs> executionTemplate() {
         return this.executionTemplate == null ? Codegen.empty() : this.executionTemplate;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="scheduleId", required=true)
       private final Output<String> scheduleId;
 
-    public Output<String> getScheduleId() {
+    public Output<String> scheduleId() {
         return this.scheduleId;
     }
 
     @Import(name="state")
       private final @Nullable Output<ScheduleState> state;
 
-    public Output<ScheduleState> getState() {
+    public Output<ScheduleState> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -85,7 +85,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 

@@ -29,7 +29,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cpeUri")
       private final @Nullable Output<String> cpeUri;
 
-    public Output<String> getCpeUri() {
+    public Output<String> cpeUri() {
         return this.cpeUri == null ? Codegen.empty() : this.cpeUri;
     }
 
@@ -40,7 +40,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -51,7 +51,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fixedLocation")
       private final @Nullable Output<VulnerabilityLocationArgs> fixedLocation;
 
-    public Output<VulnerabilityLocationArgs> getFixedLocation() {
+    public Output<VulnerabilityLocationArgs> fixedLocation() {
         return this.fixedLocation == null ? Codegen.empty() : this.fixedLocation;
     }
 
@@ -62,7 +62,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isObsolete")
       private final @Nullable Output<Boolean> isObsolete;
 
-    public Output<Boolean> getIsObsolete() {
+    public Output<Boolean> isObsolete() {
         return this.isObsolete == null ? Codegen.empty() : this.isObsolete;
     }
 
@@ -73,7 +73,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxAffectedVersion")
       private final @Nullable Output<VersionArgs> maxAffectedVersion;
 
-    public Output<VersionArgs> getMaxAffectedVersion() {
+    public Output<VersionArgs> maxAffectedVersion() {
         return this.maxAffectedVersion == null ? Codegen.empty() : this.maxAffectedVersion;
     }
 
@@ -84,7 +84,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minAffectedVersion")
       private final @Nullable Output<VersionArgs> minAffectedVersion;
 
-    public Output<VersionArgs> getMinAffectedVersion() {
+    public Output<VersionArgs> minAffectedVersion() {
         return this.minAffectedVersion == null ? Codegen.empty() : this.minAffectedVersion;
     }
 
@@ -95,7 +95,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="package")
       private final @Nullable Output<String> package_;
 
-    public Output<String> getPackage_() {
+    public Output<String> package_() {
         return this.package_ == null ? Codegen.empty() : this.package_;
     }
 
@@ -106,7 +106,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="packageType")
       private final @Nullable Output<String> packageType;
 
-    public Output<String> getPackageType() {
+    public Output<String> packageType() {
         return this.packageType == null ? Codegen.empty() : this.packageType;
     }
 
@@ -117,7 +117,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="severityName")
       private final @Nullable Output<String> severityName;
 
-    public Output<String> getSeverityName() {
+    public Output<String> severityName() {
         return this.severityName == null ? Codegen.empty() : this.severityName;
     }
 
@@ -128,7 +128,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="source")
       private final @Nullable Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 
@@ -139,7 +139,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vendor")
       private final @Nullable Output<String> vendor;
 
-    public Output<String> getVendor() {
+    public Output<String> vendor() {
         return this.vendor == null ? Codegen.empty() : this.vendor;
     }
 

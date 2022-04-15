@@ -33,7 +33,7 @@ public class Glossary extends io.pulumi.resources.CustomResource {
      * @return When the glossary creation was finished.
      * 
      */
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime;
     }
     /**
@@ -47,7 +47,7 @@ public class Glossary extends io.pulumi.resources.CustomResource {
      * @return The number of entries defined in the glossary.
      * 
      */
-    public Output<Integer> getEntryCount() {
+    public Output<Integer> entryCount() {
         return this.entryCount;
     }
     /**
@@ -61,7 +61,7 @@ public class Glossary extends io.pulumi.resources.CustomResource {
      * @return Provides examples to build the glossary from. Total glossary must not exceed 10M Unicode codepoints.
      * 
      */
-    public Output<GlossaryInputConfigResponse> getInputConfig() {
+    public Output<GlossaryInputConfigResponse> inputConfig() {
         return this.inputConfig;
     }
     /**
@@ -75,7 +75,7 @@ public class Glossary extends io.pulumi.resources.CustomResource {
      * @return Used with equivalent term set glossaries.
      * 
      */
-    public Output<LanguageCodesSetResponse> getLanguageCodesSet() {
+    public Output<LanguageCodesSetResponse> languageCodesSet() {
         return this.languageCodesSet;
     }
     /**
@@ -89,7 +89,7 @@ public class Glossary extends io.pulumi.resources.CustomResource {
      * @return Used with unidirectional glossaries.
      * 
      */
-    public Output<LanguageCodePairResponse> getLanguagePair() {
+    public Output<LanguageCodePairResponse> languagePair() {
         return this.languagePair;
     }
     /**
@@ -103,7 +103,7 @@ public class Glossary extends io.pulumi.resources.CustomResource {
      * @return The resource name of the glossary. Glossary names have the form `projects/{project-number-or-id}/locations/{location-id}/glossaries/{glossary-id}`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -117,7 +117,7 @@ public class Glossary extends io.pulumi.resources.CustomResource {
      * @return When CreateGlossary was called.
      * 
      */
-    public Output<String> getSubmitTime() {
+    public Output<String> submitTime() {
         return this.submitTime;
     }
 

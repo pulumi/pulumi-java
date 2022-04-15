@@ -41,21 +41,21 @@ public final class NetworkEndpointResponse {
      * The access config for the TPU worker.
      * 
     */
-    public AccessConfigResponse getAccessConfig() {
+    public AccessConfigResponse accessConfig() {
         return this.accessConfig;
     }
     /**
      * The internal IP address of this network endpoint.
      * 
     */
-    public String getIpAddress() {
+    public String ipAddress() {
         return this.ipAddress;
     }
     /**
      * The port of this network endpoint.
      * 
     */
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 

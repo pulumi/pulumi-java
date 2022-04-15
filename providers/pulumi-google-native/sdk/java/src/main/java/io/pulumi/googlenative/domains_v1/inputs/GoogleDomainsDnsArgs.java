@@ -25,7 +25,7 @@ public final class GoogleDomainsDnsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="dsState", required=true)
       private final Output<GoogleDomainsDnsDsState> dsState;
 
-    public Output<GoogleDomainsDnsDsState> getDsState() {
+    public Output<GoogleDomainsDnsDsState> dsState() {
         return this.dsState;
     }
 

@@ -26,7 +26,7 @@ public final class GcsProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
@@ -37,7 +37,7 @@ public final class GcsProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rootPath")
       private final @Nullable Output<String> rootPath;
 
-    public Output<String> getRootPath() {
+    public Output<String> rootPath() {
         return this.rootPath == null ? Codegen.empty() : this.rootPath;
     }
 

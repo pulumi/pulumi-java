@@ -31,7 +31,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="acceleratorCount")
       private final @Nullable Output<String> acceleratorCount;
 
-    public Output<String> getAcceleratorCount() {
+    public Output<String> acceleratorCount() {
         return this.acceleratorCount == null ? Codegen.empty() : this.acceleratorCount;
     }
 
@@ -42,7 +42,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="acceleratorType")
       private final @Nullable Output<String> acceleratorType;
 
-    public Output<String> getAcceleratorType() {
+    public Output<String> acceleratorType() {
         return this.acceleratorType == null ? Codegen.empty() : this.acceleratorType;
     }
 
@@ -53,7 +53,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="bootDiskSizeGb")
       private final @Nullable Output<Integer> bootDiskSizeGb;
 
-    public Output<Integer> getBootDiskSizeGb() {
+    public Output<Integer> bootDiskSizeGb() {
         return this.bootDiskSizeGb == null ? Codegen.empty() : this.bootDiskSizeGb;
     }
 
@@ -64,7 +64,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="disks")
       private final @Nullable Output<List<DiskArgs>> disks;
 
-    public Output<List<DiskArgs>> getDisks() {
+    public Output<List<DiskArgs>> disks() {
         return this.disks == null ? Codegen.empty() : this.disks;
     }
 
@@ -75,7 +75,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="minimumCpuCores")
       private final @Nullable Output<Integer> minimumCpuCores;
 
-    public Output<Integer> getMinimumCpuCores() {
+    public Output<Integer> minimumCpuCores() {
         return this.minimumCpuCores == null ? Codegen.empty() : this.minimumCpuCores;
     }
 
@@ -86,7 +86,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="minimumRamGb")
       private final @Nullable Output<Double> minimumRamGb;
 
-    public Output<Double> getMinimumRamGb() {
+    public Output<Double> minimumRamGb() {
         return this.minimumRamGb == null ? Codegen.empty() : this.minimumRamGb;
     }
 
@@ -97,7 +97,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="noAddress")
       private final @Nullable Output<Boolean> noAddress;
 
-    public Output<Boolean> getNoAddress() {
+    public Output<Boolean> noAddress() {
         return this.noAddress == null ? Codegen.empty() : this.noAddress;
     }
 
@@ -108,7 +108,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="preemptible")
       private final @Nullable Output<Boolean> preemptible;
 
-    public Output<Boolean> getPreemptible() {
+    public Output<Boolean> preemptible() {
         return this.preemptible == null ? Codegen.empty() : this.preemptible;
     }
 
@@ -119,7 +119,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> getZones() {
+    public Output<List<String>> zones() {
         return this.zones == null ? Codegen.empty() : this.zones;
     }
 

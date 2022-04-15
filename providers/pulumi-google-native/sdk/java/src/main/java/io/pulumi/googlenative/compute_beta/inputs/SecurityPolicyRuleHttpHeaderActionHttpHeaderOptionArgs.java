@@ -22,7 +22,7 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs extend
     @Import(name="headerName")
       private final @Nullable Output<String> headerName;
 
-    public Output<String> getHeaderName() {
+    public Output<String> headerName() {
         return this.headerName == null ? Codegen.empty() : this.headerName;
     }
 
@@ -33,7 +33,7 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs extend
     @Import(name="headerValue")
       private final @Nullable Output<String> headerValue;
 
-    public Output<String> getHeaderValue() {
+    public Output<String> headerValue() {
         return this.headerValue == null ? Codegen.empty() : this.headerValue;
     }
 

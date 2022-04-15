@@ -33,14 +33,14 @@ public final class EnvVarSourceResponse {
      * (Optional) Not supported by Cloud Run Selects a key of a ConfigMap.
      * 
     */
-    public ConfigMapKeySelectorResponse getConfigMapKeyRef() {
+    public ConfigMapKeySelectorResponse configMapKeyRef() {
         return this.configMapKeyRef;
     }
     /**
      * (Optional) Selects a key (version) of a secret in Secret Manager.
      * 
     */
-    public SecretKeySelectorResponse getSecretKeyRef() {
+    public SecretKeySelectorResponse secretKeyRef() {
         return this.secretKeyRef;
     }
 

@@ -23,7 +23,7 @@ public final class NotificationConfigResponse extends io.pulumi.resources.Invoke
     @Import(name="pubsubTopic", required=true)
       private final String pubsubTopic;
 
-    public String getPubsubTopic() {
+    public String pubsubTopic() {
         return this.pubsubTopic;
     }
 

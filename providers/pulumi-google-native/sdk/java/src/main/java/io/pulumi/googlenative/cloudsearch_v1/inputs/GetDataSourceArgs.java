@@ -17,14 +17,14 @@ public final class GetDataSourceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="datasourceId", required=true)
       private final String datasourceId;
 
-    public String getDatasourceId() {
+    public String datasourceId() {
         return this.datasourceId;
     }
 
     @Import(name="debugOptionsEnableDebugging")
       private final @Nullable String debugOptionsEnableDebugging;
 
-    public Optional<String> getDebugOptionsEnableDebugging() {
+    public Optional<String> debugOptionsEnableDebugging() {
         return this.debugOptionsEnableDebugging == null ? Optional.empty() : Optional.ofNullable(this.debugOptionsEnableDebugging);
     }
 

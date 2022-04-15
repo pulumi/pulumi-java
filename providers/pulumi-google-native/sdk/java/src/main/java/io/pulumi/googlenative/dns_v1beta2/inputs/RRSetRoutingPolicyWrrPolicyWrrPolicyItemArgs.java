@@ -24,14 +24,14 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs extends io.pulum
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     @Import(name="rrdatas")
       private final @Nullable Output<List<String>> rrdatas;
 
-    public Output<List<String>> getRrdatas() {
+    public Output<List<String>> rrdatas() {
         return this.rrdatas == null ? Codegen.empty() : this.rrdatas;
     }
 
@@ -42,7 +42,7 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs extends io.pulum
     @Import(name="signatureRrdatas")
       private final @Nullable Output<List<String>> signatureRrdatas;
 
-    public Output<List<String>> getSignatureRrdatas() {
+    public Output<List<String>> signatureRrdatas() {
         return this.signatureRrdatas == null ? Codegen.empty() : this.signatureRrdatas;
     }
 
@@ -53,7 +53,7 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs extends io.pulum
     @Import(name="weight")
       private final @Nullable Output<Double> weight;
 
-    public Output<Double> getWeight() {
+    public Output<Double> weight() {
         return this.weight == null ? Codegen.empty() : this.weight;
     }
 

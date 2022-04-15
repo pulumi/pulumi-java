@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2RecordConditionArgs extends io.pulumi.resou
     @Import(name="expressions")
       private final @Nullable Output<GooglePrivacyDlpV2ExpressionsArgs> expressions;
 
-    public Output<GooglePrivacyDlpV2ExpressionsArgs> getExpressions() {
+    public Output<GooglePrivacyDlpV2ExpressionsArgs> expressions() {
         return this.expressions == null ? Codegen.empty() : this.expressions;
     }
 

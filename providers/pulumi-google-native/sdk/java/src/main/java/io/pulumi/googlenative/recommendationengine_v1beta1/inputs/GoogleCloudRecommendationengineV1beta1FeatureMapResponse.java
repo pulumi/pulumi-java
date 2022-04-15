@@ -24,7 +24,7 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapResponse exte
     @Import(name="categoricalFeatures", required=true)
       private final Map<String,String> categoricalFeatures;
 
-    public Map<String,String> getCategoricalFeatures() {
+    public Map<String,String> categoricalFeatures() {
         return this.categoricalFeatures;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapResponse exte
     @Import(name="numericalFeatures", required=true)
       private final Map<String,String> numericalFeatures;
 
-    public Map<String,String> getNumericalFeatures() {
+    public Map<String,String> numericalFeatures() {
         return this.numericalFeatures;
     }
 

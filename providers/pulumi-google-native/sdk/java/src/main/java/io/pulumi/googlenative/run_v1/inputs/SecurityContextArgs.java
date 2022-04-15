@@ -26,7 +26,7 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="runAsUser")
       private final @Nullable Output<Integer> runAsUser;
 
-    public Output<Integer> getRunAsUser() {
+    public Output<Integer> runAsUser() {
         return this.runAsUser == null ? Codegen.empty() : this.runAsUser;
     }
 

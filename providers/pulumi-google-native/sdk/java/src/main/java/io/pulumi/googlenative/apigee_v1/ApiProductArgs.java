@@ -22,7 +22,7 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiResources")
       private final @Nullable Output<List<String>> apiResources;
 
-    public Output<List<String>> getApiResources() {
+    public Output<List<String>> apiResources() {
         return this.apiResources == null ? Codegen.empty() : this.apiResources;
     }
 
@@ -33,7 +33,7 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="approvalType")
       private final @Nullable Output<String> approvalType;
 
-    public Output<String> getApprovalType() {
+    public Output<String> approvalType() {
         return this.approvalType == null ? Codegen.empty() : this.approvalType;
     }
 
@@ -44,7 +44,7 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attributes")
       private final @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
 
-    public Output<List<GoogleCloudApigeeV1AttributeArgs>> getAttributes() {
+    public Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes() {
         return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
@@ -55,7 +55,7 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt == null ? Codegen.empty() : this.createdAt;
     }
 
@@ -66,7 +66,7 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -77,7 +77,7 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -88,7 +88,7 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="environments")
       private final @Nullable Output<List<String>> environments;
 
-    public Output<List<String>> getEnvironments() {
+    public Output<List<String>> environments() {
         return this.environments == null ? Codegen.empty() : this.environments;
     }
 
@@ -99,7 +99,7 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="graphqlOperationGroup")
       private final @Nullable Output<GoogleCloudApigeeV1GraphQLOperationGroupArgs> graphqlOperationGroup;
 
-    public Output<GoogleCloudApigeeV1GraphQLOperationGroupArgs> getGraphqlOperationGroup() {
+    public Output<GoogleCloudApigeeV1GraphQLOperationGroupArgs> graphqlOperationGroup() {
         return this.graphqlOperationGroup == null ? Codegen.empty() : this.graphqlOperationGroup;
     }
 
@@ -110,7 +110,7 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedAt")
       private final @Nullable Output<String> lastModifiedAt;
 
-    public Output<String> getLastModifiedAt() {
+    public Output<String> lastModifiedAt() {
         return this.lastModifiedAt == null ? Codegen.empty() : this.lastModifiedAt;
     }
 
@@ -121,7 +121,7 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -132,14 +132,14 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operationGroup")
       private final @Nullable Output<GoogleCloudApigeeV1OperationGroupArgs> operationGroup;
 
-    public Output<GoogleCloudApigeeV1OperationGroupArgs> getOperationGroup() {
+    public Output<GoogleCloudApigeeV1OperationGroupArgs> operationGroup() {
         return this.operationGroup == null ? Codegen.empty() : this.operationGroup;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -150,7 +150,7 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="proxies")
       private final @Nullable Output<List<String>> proxies;
 
-    public Output<List<String>> getProxies() {
+    public Output<List<String>> proxies() {
         return this.proxies == null ? Codegen.empty() : this.proxies;
     }
 
@@ -161,7 +161,7 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="quota")
       private final @Nullable Output<String> quota;
 
-    public Output<String> getQuota() {
+    public Output<String> quota() {
         return this.quota == null ? Codegen.empty() : this.quota;
     }
 
@@ -172,7 +172,7 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="quotaInterval")
       private final @Nullable Output<String> quotaInterval;
 
-    public Output<String> getQuotaInterval() {
+    public Output<String> quotaInterval() {
         return this.quotaInterval == null ? Codegen.empty() : this.quotaInterval;
     }
 
@@ -183,7 +183,7 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="quotaTimeUnit")
       private final @Nullable Output<String> quotaTimeUnit;
 
-    public Output<String> getQuotaTimeUnit() {
+    public Output<String> quotaTimeUnit() {
         return this.quotaTimeUnit == null ? Codegen.empty() : this.quotaTimeUnit;
     }
 
@@ -194,7 +194,7 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scopes")
       private final @Nullable Output<List<String>> scopes;
 
-    public Output<List<String>> getScopes() {
+    public Output<List<String>> scopes() {
         return this.scopes == null ? Codegen.empty() : this.scopes;
     }
 

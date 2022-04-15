@@ -27,7 +27,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keytab")
       private final @Nullable Output<SecretArgs> keytab;
 
-    public Output<SecretArgs> getKeytab() {
+    public Output<SecretArgs> keytab() {
         return this.keytab == null ? Codegen.empty() : this.keytab;
     }
 
@@ -38,7 +38,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="krb5ConfigGcsUri")
       private final @Nullable Output<String> krb5ConfigGcsUri;
 
-    public Output<String> getKrb5ConfigGcsUri() {
+    public Output<String> krb5ConfigGcsUri() {
         return this.krb5ConfigGcsUri == null ? Codegen.empty() : this.krb5ConfigGcsUri;
     }
 
@@ -49,7 +49,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="principal")
       private final @Nullable Output<String> principal;
 
-    public Output<String> getPrincipal() {
+    public Output<String> principal() {
         return this.principal == null ? Codegen.empty() : this.principal;
     }
 

@@ -29,7 +29,7 @@ public final class IngressFromArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identities")
       private final @Nullable Output<List<String>> identities;
 
-    public Output<List<String>> getIdentities() {
+    public Output<List<String>> identities() {
         return this.identities == null ? Codegen.empty() : this.identities;
     }
 
@@ -40,7 +40,7 @@ public final class IngressFromArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identityType")
       private final @Nullable Output<IngressFromIdentityType> identityType;
 
-    public Output<IngressFromIdentityType> getIdentityType() {
+    public Output<IngressFromIdentityType> identityType() {
         return this.identityType == null ? Codegen.empty() : this.identityType;
     }
 
@@ -51,7 +51,7 @@ public final class IngressFromArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sources")
       private final @Nullable Output<List<IngressSourceArgs>> sources;
 
-    public Output<List<IngressSourceArgs>> getSources() {
+    public Output<List<IngressSourceArgs>> sources() {
         return this.sources == null ? Codegen.empty() : this.sources;
     }
 

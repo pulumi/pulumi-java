@@ -24,7 +24,7 @@ public final class CloudRunConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="disabled", required=true)
       private final Boolean disabled;
 
-    public Boolean getDisabled() {
+    public Boolean disabled() {
         return this.disabled;
     }
 
@@ -35,7 +35,7 @@ public final class CloudRunConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="loadBalancerType", required=true)
       private final String loadBalancerType;
 
-    public String getLoadBalancerType() {
+    public String loadBalancerType() {
         return this.loadBalancerType;
     }
 

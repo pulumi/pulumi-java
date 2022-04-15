@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs ext
     @Import(name="cells")
       private final @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs>> cells;
 
-    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs>> getCells() {
+    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs>> cells() {
         return this.cells == null ? Codegen.empty() : this.cells;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs ext
     @Import(name="dividerAfter")
       private final @Nullable Output<Boolean> dividerAfter;
 
-    public Output<Boolean> getDividerAfter() {
+    public Output<Boolean> dividerAfter() {
         return this.dividerAfter == null ? Codegen.empty() : this.dividerAfter;
     }
 

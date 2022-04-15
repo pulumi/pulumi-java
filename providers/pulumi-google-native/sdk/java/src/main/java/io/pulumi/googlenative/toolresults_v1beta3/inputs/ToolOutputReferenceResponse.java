@@ -25,7 +25,7 @@ public final class ToolOutputReferenceResponse extends io.pulumi.resources.Invok
     @Import(name="creationTime", required=true)
       private final TimestampResponse creationTime;
 
-    public TimestampResponse getCreationTime() {
+    public TimestampResponse creationTime() {
         return this.creationTime;
     }
 
@@ -36,7 +36,7 @@ public final class ToolOutputReferenceResponse extends io.pulumi.resources.Invok
     @Import(name="output", required=true)
       private final FileReferenceResponse output;
 
-    public FileReferenceResponse getOutput() {
+    public FileReferenceResponse output() {
         return this.output;
     }
 
@@ -47,7 +47,7 @@ public final class ToolOutputReferenceResponse extends io.pulumi.resources.Invok
     @Import(name="testCase", required=true)
       private final TestCaseReferenceResponse testCase;
 
-    public TestCaseReferenceResponse getTestCase() {
+    public TestCaseReferenceResponse testCase() {
         return this.testCase;
     }
 

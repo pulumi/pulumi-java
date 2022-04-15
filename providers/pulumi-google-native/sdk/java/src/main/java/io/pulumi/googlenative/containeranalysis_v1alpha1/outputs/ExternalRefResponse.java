@@ -46,28 +46,28 @@ public final class ExternalRefResponse {
      * An External Reference allows a Package to reference an external source of additional information, metadata, enumerations, asset identifiers, or downloadable content believed to be relevant to the Package
      * 
     */
-    public String getCategory() {
+    public String category() {
         return this.category;
     }
     /**
      * Human-readable information about the purpose and target of the reference
      * 
     */
-    public String getComment() {
+    public String comment() {
         return this.comment;
     }
     /**
      * The unique string with no spaces necessary to access the package-specific information, metadata, or content within the target location
      * 
     */
-    public String getLocator() {
+    public String locator() {
         return this.locator;
     }
     /**
      * Type of category (e.g. 'npm' for the PACKAGE_MANAGER category)
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

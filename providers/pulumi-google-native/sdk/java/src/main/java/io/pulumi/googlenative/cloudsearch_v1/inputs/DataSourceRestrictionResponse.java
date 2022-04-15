@@ -25,7 +25,7 @@ public final class DataSourceRestrictionResponse extends io.pulumi.resources.Inv
     @Import(name="filterOptions", required=true)
       private final List<FilterOptionsResponse> filterOptions;
 
-    public List<FilterOptionsResponse> getFilterOptions() {
+    public List<FilterOptionsResponse> filterOptions() {
         return this.filterOptions;
     }
 
@@ -36,7 +36,7 @@ public final class DataSourceRestrictionResponse extends io.pulumi.resources.Inv
     @Import(name="source", required=true)
       private final SourceResponse source;
 
-    public SourceResponse getSource() {
+    public SourceResponse source() {
         return this.source;
     }
 

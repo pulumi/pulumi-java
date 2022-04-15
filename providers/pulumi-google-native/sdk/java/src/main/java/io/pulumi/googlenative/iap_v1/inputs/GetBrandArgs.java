@@ -17,14 +17,14 @@ public final class GetBrandArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="brandId", required=true)
       private final String brandId;
 
-    public String getBrandId() {
+    public String brandId() {
         return this.brandId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

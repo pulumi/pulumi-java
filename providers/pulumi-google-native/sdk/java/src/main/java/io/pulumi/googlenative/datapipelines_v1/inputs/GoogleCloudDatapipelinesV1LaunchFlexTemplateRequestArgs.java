@@ -28,7 +28,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
     @Import(name="launchParameter", required=true)
       private final Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs> launchParameter;
 
-    public Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs> getLaunchParameter() {
+    public Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs> launchParameter() {
         return this.launchParameter;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
     @Import(name="project", required=true)
       private final Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
@@ -61,7 +61,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
     @Import(name="validateOnly")
       private final @Nullable Output<Boolean> validateOnly;
 
-    public Output<Boolean> getValidateOnly() {
+    public Output<Boolean> validateOnly() {
         return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
     }
 

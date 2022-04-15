@@ -21,7 +21,7 @@ public final class SslPolicyWarningsItemResponse extends io.pulumi.resources.Inv
     @Import(name="code", required=true)
       private final String code;
 
-    public String getCode() {
+    public String code() {
         return this.code;
     }
 
@@ -32,7 +32,7 @@ public final class SslPolicyWarningsItemResponse extends io.pulumi.resources.Inv
     @Import(name="data", required=true)
       private final List<SslPolicyWarningsItemDataItemResponse> data;
 
-    public List<SslPolicyWarningsItemDataItemResponse> getData() {
+    public List<SslPolicyWarningsItemDataItemResponse> data() {
         return this.data;
     }
 
@@ -43,7 +43,7 @@ public final class SslPolicyWarningsItemResponse extends io.pulumi.resources.Inv
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 

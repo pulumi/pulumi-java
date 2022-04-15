@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2BigQueryTableResponse extends io.pulumi.res
     @Import(name="datasetId", required=true)
       private final String datasetId;
 
-    public String getDatasetId() {
+    public String datasetId() {
         return this.datasetId;
     }
 
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2BigQueryTableResponse extends io.pulumi.res
     @Import(name="project", required=true)
       private final String project;
 
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2BigQueryTableResponse extends io.pulumi.res
     @Import(name="tableId", required=true)
       private final String tableId;
 
-    public String getTableId() {
+    public String tableId() {
         return this.tableId;
     }
 

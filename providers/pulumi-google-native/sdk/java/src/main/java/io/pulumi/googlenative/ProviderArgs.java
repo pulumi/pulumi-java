@@ -24,7 +24,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appendUserAgent")
       private final @Nullable Output<String> appendUserAgent;
 
-    public Output<String> getAppendUserAgent() {
+    public Output<String> appendUserAgent() {
         return this.appendUserAgent == null ? Codegen.empty() : this.appendUserAgent;
     }
 
@@ -35,7 +35,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disablePartnerName", json=true)
       private final @Nullable Output<Boolean> disablePartnerName;
 
-    public Output<Boolean> getDisablePartnerName() {
+    public Output<Boolean> disablePartnerName() {
         return this.disablePartnerName == null ? Codegen.empty() : this.disablePartnerName;
     }
 
@@ -46,7 +46,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="partnerName")
       private final @Nullable Output<String> partnerName;
 
-    public Output<String> getPartnerName() {
+    public Output<String> partnerName() {
         return this.partnerName == null ? Codegen.empty() : this.partnerName;
     }
 
@@ -57,7 +57,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -68,7 +68,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -79,7 +79,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

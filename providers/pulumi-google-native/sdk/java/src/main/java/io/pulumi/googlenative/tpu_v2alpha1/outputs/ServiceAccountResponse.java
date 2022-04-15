@@ -33,14 +33,14 @@ public final class ServiceAccountResponse {
      * Email address of the service account. If empty, default Compute service account will be used.
      * 
     */
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
     /**
      * The list of scopes to be made available for this service account. If empty, access to all Cloud APIs will be allowed.
      * 
     */
-    public List<String> getScope() {
+    public List<String> scope() {
         return this.scope;
     }
 

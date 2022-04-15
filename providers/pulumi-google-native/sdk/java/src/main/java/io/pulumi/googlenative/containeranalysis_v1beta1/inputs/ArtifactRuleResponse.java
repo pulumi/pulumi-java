@@ -20,7 +20,7 @@ public final class ArtifactRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="artifactRule", required=true)
       private final List<String> artifactRule;
 
-    public List<String> getArtifactRule() {
+    public List<String> artifactRule() {
         return this.artifactRule;
     }
 

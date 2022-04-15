@@ -25,7 +25,7 @@ public final class TableFieldSchemaPolicyTagsResponse {
      * A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.
      * 
     */
-    public List<String> getNames() {
+    public List<String> names() {
         return this.names;
     }
 

@@ -30,7 +30,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action")
       private final @Nullable Output<RuleAction> action;
 
-    public Output<RuleAction> getAction() {
+    public Output<RuleAction> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -41,7 +41,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conditions")
       private final @Nullable Output<List<ConditionArgs>> conditions;
 
-    public Output<List<ConditionArgs>> getConditions() {
+    public Output<List<ConditionArgs>> conditions() {
         return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
@@ -52,7 +52,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -63,7 +63,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="in")
       private final @Nullable Output<List<String>> in;
 
-    public Output<List<String>> getIn() {
+    public Output<List<String>> in() {
         return this.in == null ? Codegen.empty() : this.in;
     }
 
@@ -74,7 +74,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logConfig")
       private final @Nullable Output<List<LogConfigArgs>> logConfig;
 
-    public Output<List<LogConfigArgs>> getLogConfig() {
+    public Output<List<LogConfigArgs>> logConfig() {
         return this.logConfig == null ? Codegen.empty() : this.logConfig;
     }
 
@@ -85,7 +85,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notIn")
       private final @Nullable Output<List<String>> notIn;
 
-    public Output<List<String>> getNotIn() {
+    public Output<List<String>> notIn() {
         return this.notIn == null ? Codegen.empty() : this.notIn;
     }
 
@@ -96,7 +96,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="permissions")
       private final @Nullable Output<List<String>> permissions;
 
-    public Output<List<String>> getPermissions() {
+    public Output<List<String>> permissions() {
         return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 

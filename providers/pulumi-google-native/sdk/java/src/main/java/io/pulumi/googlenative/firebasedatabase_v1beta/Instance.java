@@ -29,7 +29,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Immutable. The globally unique hostname of the database.
      * 
      */
-    public Output<String> getDatabaseUrl() {
+    public Output<String> databaseUrl() {
         return this.databaseUrl;
     }
     /**
@@ -43,7 +43,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The fully qualified resource name of the database instance, in the form: `projects/{project-number}/locations/{location-id}/instances/{database-id}`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +57,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The resource name of the project this instance belongs to. For example: `projects/{project-number}`.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -71,7 +71,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The database's lifecycle state. Read-only.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -85,7 +85,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The database instance type. On creation only USER_DATABASE is allowed, which is also the default when omitted.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

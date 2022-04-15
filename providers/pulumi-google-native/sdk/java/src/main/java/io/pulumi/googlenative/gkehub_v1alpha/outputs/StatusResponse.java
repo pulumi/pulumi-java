@@ -32,14 +32,14 @@ public final class StatusResponse {
      * Code specifies AppDevExperienceFeature's subcomponent ready state.
      * 
     */
-    public String getCode() {
+    public String code() {
         return this.code;
     }
     /**
      * Description is populated if Code is Failed, explaining why it has failed.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 

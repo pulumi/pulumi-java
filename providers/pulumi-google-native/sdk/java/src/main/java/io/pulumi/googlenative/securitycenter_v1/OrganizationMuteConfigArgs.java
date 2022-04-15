@@ -22,7 +22,7 @@ public final class OrganizationMuteConfigArgs extends io.pulumi.resources.Resour
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -33,7 +33,7 @@ public final class OrganizationMuteConfigArgs extends io.pulumi.resources.Resour
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -44,14 +44,14 @@ public final class OrganizationMuteConfigArgs extends io.pulumi.resources.Resour
     @Import(name="filter", required=true)
       private final Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter;
     }
 
     @Import(name="muteConfigId", required=true)
       private final Output<String> muteConfigId;
 
-    public Output<String> getMuteConfigId() {
+    public Output<String> muteConfigId() {
         return this.muteConfigId;
     }
 
@@ -62,14 +62,14 @@ public final class OrganizationMuteConfigArgs extends io.pulumi.resources.Resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 

@@ -23,14 +23,14 @@ public final class GoogleCloudMlV1__AutomatedStoppingConfigArgs extends io.pulum
     @Import(name="decayCurveStoppingConfig")
       private final @Nullable Output<GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigArgs> decayCurveStoppingConfig;
 
-    public Output<GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigArgs> getDecayCurveStoppingConfig() {
+    public Output<GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigArgs> decayCurveStoppingConfig() {
         return this.decayCurveStoppingConfig == null ? Codegen.empty() : this.decayCurveStoppingConfig;
     }
 
     @Import(name="medianAutomatedStoppingConfig")
       private final @Nullable Output<GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs> medianAutomatedStoppingConfig;
 
-    public Output<GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs> getMedianAutomatedStoppingConfig() {
+    public Output<GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs> medianAutomatedStoppingConfig() {
         return this.medianAutomatedStoppingConfig == null ? Codegen.empty() : this.medianAutomatedStoppingConfig;
     }
 

@@ -32,14 +32,14 @@ public final class AwsAccessKeyResponse {
      * AWS access key ID.
      * 
     */
-    public String getAccessKeyId() {
+    public String accessKeyId() {
         return this.accessKeyId;
     }
     /**
      * AWS secret access key. This field is not returned in RPC responses.
      * 
     */
-    public String getSecretAccessKey() {
+    public String secretAccessKey() {
         return this.secretAccessKey;
     }
 

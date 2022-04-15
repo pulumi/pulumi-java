@@ -27,7 +27,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs extends io.
     @Import(name="projectRepoId")
       private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs> projectRepoId;
 
-    public Output<GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs> getProjectRepoId() {
+    public Output<GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs> projectRepoId() {
         return this.projectRepoId == null ? Codegen.empty() : this.projectRepoId;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs extends io.
     @Import(name="uid")
       private final @Nullable Output<String> uid;
 
-    public Output<String> getUid() {
+    public Output<String> uid() {
         return this.uid == null ? Codegen.empty() : this.uid;
     }
 

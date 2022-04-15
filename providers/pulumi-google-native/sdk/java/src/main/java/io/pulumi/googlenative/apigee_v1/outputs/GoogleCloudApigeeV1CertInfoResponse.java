@@ -97,77 +97,77 @@ public final class GoogleCloudApigeeV1CertInfoResponse {
      * X.509 basic constraints extension.
      * 
     */
-    public String getBasicConstraints() {
+    public String basicConstraints() {
         return this.basicConstraints;
     }
     /**
      * X.509 `notAfter` validity period in milliseconds since epoch.
      * 
     */
-    public String getExpiryDate() {
+    public String expiryDate() {
         return this.expiryDate;
     }
     /**
      * Flag that specifies whether the certificate is valid. Flag is set to `Yes` if the certificate is valid, `No` if expired, or `Not yet` if not yet valid.
      * 
     */
-    public String getIsValid() {
+    public String isValid() {
         return this.isValid;
     }
     /**
      * X.509 issuer.
      * 
     */
-    public String getIssuer() {
+    public String issuer() {
         return this.issuer;
     }
     /**
      * Public key component of the X.509 subject public key info.
      * 
     */
-    public String getPublicKey() {
+    public String publicKey() {
         return this.publicKey;
     }
     /**
      * X.509 serial number.
      * 
     */
-    public String getSerialNumber() {
+    public String serialNumber() {
         return this.serialNumber;
     }
     /**
      * X.509 signatureAlgorithm.
      * 
     */
-    public String getSigAlgName() {
+    public String sigAlgName() {
         return this.sigAlgName;
     }
     /**
      * X.509 subject.
      * 
     */
-    public String getSubject() {
+    public String subject() {
         return this.subject;
     }
     /**
      * X.509 subject alternative names (SANs) extension.
      * 
     */
-    public List<String> getSubjectAlternativeNames() {
+    public List<String> subjectAlternativeNames() {
         return this.subjectAlternativeNames;
     }
     /**
      * X.509 `notBefore` validity period in milliseconds since epoch.
      * 
     */
-    public String getValidFrom() {
+    public String validFrom() {
         return this.validFrom;
     }
     /**
      * X.509 version.
      * 
     */
-    public Integer getVersion() {
+    public Integer version() {
         return this.version;
     }
 

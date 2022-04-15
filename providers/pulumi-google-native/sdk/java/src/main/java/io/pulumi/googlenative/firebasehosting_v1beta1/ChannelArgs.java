@@ -20,7 +20,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="channelId", required=true)
       private final Output<String> channelId;
 
-    public Output<String> getChannelId() {
+    public Output<String> channelId() {
         return this.channelId;
     }
 
@@ -31,7 +31,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expireTime")
       private final @Nullable Output<String> expireTime;
 
-    public Output<String> getExpireTime() {
+    public Output<String> expireTime() {
         return this.expireTime == null ? Codegen.empty() : this.expireTime;
     }
 
@@ -42,7 +42,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -53,14 +53,14 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -71,14 +71,14 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retainedReleaseCount")
       private final @Nullable Output<Integer> retainedReleaseCount;
 
-    public Output<Integer> getRetainedReleaseCount() {
+    public Output<Integer> retainedReleaseCount() {
         return this.retainedReleaseCount == null ? Codegen.empty() : this.retainedReleaseCount;
     }
 
     @Import(name="siteId", required=true)
       private final Output<String> siteId;
 
-    public Output<String> getSiteId() {
+    public Output<String> siteId() {
         return this.siteId;
     }
 
@@ -89,7 +89,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ttl")
       private final @Nullable Output<String> ttl;
 
-    public Output<String> getTtl() {
+    public Output<String> ttl() {
         return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 

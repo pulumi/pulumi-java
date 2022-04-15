@@ -27,7 +27,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -38,7 +38,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sizeGb")
       private final @Nullable Output<Double> sizeGb;
 
-    public Output<Double> getSizeGb() {
+    public Output<Double> sizeGb() {
         return this.sizeGb == null ? Codegen.empty() : this.sizeGb;
     }
 
@@ -49,7 +49,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;
 
-    public Output<String> getVolumeType() {
+    public Output<String> volumeType() {
         return this.volumeType == null ? Codegen.empty() : this.volumeType;
     }
 

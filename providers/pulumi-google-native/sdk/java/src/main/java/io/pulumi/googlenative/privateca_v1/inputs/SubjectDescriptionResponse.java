@@ -25,7 +25,7 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
     @Import(name="hexSerialNumber", required=true)
       private final String hexSerialNumber;
 
-    public String getHexSerialNumber() {
+    public String hexSerialNumber() {
         return this.hexSerialNumber;
     }
 
@@ -36,7 +36,7 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
     @Import(name="lifetime", required=true)
       private final String lifetime;
 
-    public String getLifetime() {
+    public String lifetime() {
         return this.lifetime;
     }
 
@@ -47,7 +47,7 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
     @Import(name="notAfterTime", required=true)
       private final String notAfterTime;
 
-    public String getNotAfterTime() {
+    public String notAfterTime() {
         return this.notAfterTime;
     }
 
@@ -58,7 +58,7 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
     @Import(name="notBeforeTime", required=true)
       private final String notBeforeTime;
 
-    public String getNotBeforeTime() {
+    public String notBeforeTime() {
         return this.notBeforeTime;
     }
 
@@ -69,7 +69,7 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
     @Import(name="subject", required=true)
       private final SubjectResponse subject;
 
-    public SubjectResponse getSubject() {
+    public SubjectResponse subject() {
         return this.subject;
     }
 
@@ -80,7 +80,7 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
     @Import(name="subjectAltName", required=true)
       private final SubjectAltNamesResponse subjectAltName;
 
-    public SubjectAltNamesResponse getSubjectAltName() {
+    public SubjectAltNamesResponse subjectAltName() {
         return this.subjectAltName;
     }
 

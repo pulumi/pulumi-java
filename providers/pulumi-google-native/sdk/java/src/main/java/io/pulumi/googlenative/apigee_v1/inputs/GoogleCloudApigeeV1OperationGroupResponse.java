@@ -25,7 +25,7 @@ public final class GoogleCloudApigeeV1OperationGroupResponse extends io.pulumi.r
     @Import(name="operationConfigType", required=true)
       private final String operationConfigType;
 
-    public String getOperationConfigType() {
+    public String operationConfigType() {
         return this.operationConfigType;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudApigeeV1OperationGroupResponse extends io.pulumi.r
     @Import(name="operationConfigs", required=true)
       private final List<GoogleCloudApigeeV1OperationConfigResponse> operationConfigs;
 
-    public List<GoogleCloudApigeeV1OperationConfigResponse> getOperationConfigs() {
+    public List<GoogleCloudApigeeV1OperationConfigResponse> operationConfigs() {
         return this.operationConfigs;
     }
 

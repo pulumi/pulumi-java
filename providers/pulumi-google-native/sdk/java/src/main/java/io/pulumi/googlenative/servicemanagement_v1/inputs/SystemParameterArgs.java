@@ -26,7 +26,7 @@ public final class SystemParameterArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="httpHeader")
       private final @Nullable Output<String> httpHeader;
 
-    public Output<String> getHttpHeader() {
+    public Output<String> httpHeader() {
         return this.httpHeader == null ? Codegen.empty() : this.httpHeader;
     }
 
@@ -37,7 +37,7 @@ public final class SystemParameterArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -48,7 +48,7 @@ public final class SystemParameterArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="urlQueryParameter")
       private final @Nullable Output<String> urlQueryParameter;
 
-    public Output<String> getUrlQueryParameter() {
+    public Output<String> urlQueryParameter() {
         return this.urlQueryParameter == null ? Codegen.empty() : this.urlQueryParameter;
     }
 

@@ -25,7 +25,7 @@ public final class StaticFilesHandlerResponse extends io.pulumi.resources.Invoke
     @Import(name="applicationReadable", required=true)
       private final Boolean applicationReadable;
 
-    public Boolean getApplicationReadable() {
+    public Boolean applicationReadable() {
         return this.applicationReadable;
     }
 
@@ -36,7 +36,7 @@ public final class StaticFilesHandlerResponse extends io.pulumi.resources.Invoke
     @Import(name="expiration", required=true)
       private final String expiration;
 
-    public String getExpiration() {
+    public String expiration() {
         return this.expiration;
     }
 
@@ -47,7 +47,7 @@ public final class StaticFilesHandlerResponse extends io.pulumi.resources.Invoke
     @Import(name="httpHeaders", required=true)
       private final Map<String,String> httpHeaders;
 
-    public Map<String,String> getHttpHeaders() {
+    public Map<String,String> httpHeaders() {
         return this.httpHeaders;
     }
 
@@ -58,7 +58,7 @@ public final class StaticFilesHandlerResponse extends io.pulumi.resources.Invoke
     @Import(name="mimeType", required=true)
       private final String mimeType;
 
-    public String getMimeType() {
+    public String mimeType() {
         return this.mimeType;
     }
 
@@ -69,7 +69,7 @@ public final class StaticFilesHandlerResponse extends io.pulumi.resources.Invoke
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 
@@ -80,7 +80,7 @@ public final class StaticFilesHandlerResponse extends io.pulumi.resources.Invoke
     @Import(name="requireMatchingFile", required=true)
       private final Boolean requireMatchingFile;
 
-    public Boolean getRequireMatchingFile() {
+    public Boolean requireMatchingFile() {
         return this.requireMatchingFile;
     }
 
@@ -91,7 +91,7 @@ public final class StaticFilesHandlerResponse extends io.pulumi.resources.Invoke
     @Import(name="uploadPathRegex", required=true)
       private final String uploadPathRegex;
 
-    public String getUploadPathRegex() {
+    public String uploadPathRegex() {
         return this.uploadPathRegex;
     }
 

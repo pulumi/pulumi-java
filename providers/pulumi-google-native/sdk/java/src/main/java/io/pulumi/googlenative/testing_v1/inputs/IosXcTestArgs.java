@@ -28,7 +28,7 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="testSpecialEntitlements")
       private final @Nullable Output<Boolean> testSpecialEntitlements;
 
-    public Output<Boolean> getTestSpecialEntitlements() {
+    public Output<Boolean> testSpecialEntitlements() {
         return this.testSpecialEntitlements == null ? Codegen.empty() : this.testSpecialEntitlements;
     }
 
@@ -39,7 +39,7 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="testsZip", required=true)
       private final Output<FileReferenceArgs> testsZip;
 
-    public Output<FileReferenceArgs> getTestsZip() {
+    public Output<FileReferenceArgs> testsZip() {
         return this.testsZip;
     }
 
@@ -50,7 +50,7 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="xcodeVersion")
       private final @Nullable Output<String> xcodeVersion;
 
-    public Output<String> getXcodeVersion() {
+    public Output<String> xcodeVersion() {
         return this.xcodeVersion == null ? Codegen.empty() : this.xcodeVersion;
     }
 
@@ -61,7 +61,7 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="xctestrun")
       private final @Nullable Output<FileReferenceArgs> xctestrun;
 
-    public Output<FileReferenceArgs> getXctestrun() {
+    public Output<FileReferenceArgs> xctestrun() {
         return this.xctestrun == null ? Codegen.empty() : this.xctestrun;
     }
 

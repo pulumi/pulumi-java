@@ -25,7 +25,7 @@ public final class MetadataLabelMatcherResponse extends io.pulumi.resources.Invo
     @Import(name="metadataLabelMatchCriteria", required=true)
       private final String metadataLabelMatchCriteria;
 
-    public String getMetadataLabelMatchCriteria() {
+    public String metadataLabelMatchCriteria() {
         return this.metadataLabelMatchCriteria;
     }
 
@@ -36,7 +36,7 @@ public final class MetadataLabelMatcherResponse extends io.pulumi.resources.Invo
     @Import(name="metadataLabels", required=true)
       private final List<MetadataLabelsResponse> metadataLabels;
 
-    public List<MetadataLabelsResponse> getMetadataLabels() {
+    public List<MetadataLabelsResponse> metadataLabels() {
         return this.metadataLabels;
     }
 

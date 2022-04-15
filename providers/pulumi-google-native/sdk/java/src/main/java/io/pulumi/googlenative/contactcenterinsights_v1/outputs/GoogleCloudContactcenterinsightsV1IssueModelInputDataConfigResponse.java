@@ -39,21 +39,21 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigRe
      * A filter to reduce the conversations used for training the model to a specific subset.
      * 
     */
-    public String getFilter() {
+    public String filter() {
         return this.filter;
     }
     /**
      * Medium of conversations used in training data. This field is being deprecated. To specify the medium to be used in training a new issue model, set the `medium` field on `filter`.
      * 
     */
-    public String getMedium() {
+    public String medium() {
         return this.medium;
     }
     /**
      * Number of conversations used in training. Output only.
      * 
     */
-    public String getTrainingConversationsCount() {
+    public String trainingConversationsCount() {
         return this.trainingConversationsCount;
     }
 

@@ -25,7 +25,7 @@ public final class IssuingOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="includeCaCertUrl", required=true)
       private final Output<Boolean> includeCaCertUrl;
 
-    public Output<Boolean> getIncludeCaCertUrl() {
+    public Output<Boolean> includeCaCertUrl() {
         return this.includeCaCertUrl;
     }
 
@@ -36,7 +36,7 @@ public final class IssuingOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="includeCrlAccessUrl", required=true)
       private final Output<Boolean> includeCrlAccessUrl;
 
-    public Output<Boolean> getIncludeCrlAccessUrl() {
+    public Output<Boolean> includeCrlAccessUrl() {
         return this.includeCrlAccessUrl;
     }
 

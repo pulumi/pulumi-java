@@ -49,28 +49,28 @@ public final class GetTemplateResult {
      * The template metadata describing the template name, available parameters, etc.
      * 
     */
-    public TemplateMetadataResponse getMetadata() {
+    public TemplateMetadataResponse metadata() {
         return this.metadata;
     }
     /**
      * Describes the runtime metadata with SDKInfo and available parameters.
      * 
     */
-    public RuntimeMetadataResponse getRuntimeMetadata() {
+    public RuntimeMetadataResponse runtimeMetadata() {
         return this.runtimeMetadata;
     }
     /**
      * The status of the get template request. Any problems with the request will be indicated in the error_details.
      * 
     */
-    public StatusResponse getStatus() {
+    public StatusResponse status() {
         return this.status;
     }
     /**
      * Template Type.
      * 
     */
-    public String getTemplateType() {
+    public String templateType() {
         return this.templateType;
     }
 

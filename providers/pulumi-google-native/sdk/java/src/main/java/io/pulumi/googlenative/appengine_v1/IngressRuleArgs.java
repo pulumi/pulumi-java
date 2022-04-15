@@ -24,14 +24,14 @@ public final class IngressRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action")
       private final @Nullable Output<IngressRuleAction> action;
 
-    public Output<IngressRuleAction> getAction() {
+    public Output<IngressRuleAction> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
     @Import(name="appId", required=true)
       private final Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
 
@@ -42,7 +42,7 @@ public final class IngressRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -53,7 +53,7 @@ public final class IngressRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -64,7 +64,7 @@ public final class IngressRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceRange")
       private final @Nullable Output<String> sourceRange;
 
-    public Output<String> getSourceRange() {
+    public Output<String> sourceRange() {
         return this.sourceRange == null ? Codegen.empty() : this.sourceRange;
     }
 

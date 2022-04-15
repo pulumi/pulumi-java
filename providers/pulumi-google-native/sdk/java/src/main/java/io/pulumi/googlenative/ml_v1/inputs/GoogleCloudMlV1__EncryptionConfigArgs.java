@@ -26,7 +26,7 @@ public final class GoogleCloudMlV1__EncryptionConfigArgs extends io.pulumi.resou
     @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
-    public Output<String> getKmsKeyName() {
+    public Output<String> kmsKeyName() {
         return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
     }
 

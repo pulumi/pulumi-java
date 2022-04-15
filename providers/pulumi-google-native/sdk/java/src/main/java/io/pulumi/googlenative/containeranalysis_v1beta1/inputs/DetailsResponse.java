@@ -23,7 +23,7 @@ public final class DetailsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="attestation", required=true)
       private final AttestationResponse attestation;
 
-    public AttestationResponse getAttestation() {
+    public AttestationResponse attestation() {
         return this.attestation;
     }
 

@@ -24,7 +24,7 @@ public final class OidcResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="allowedAudiences", required=true)
       private final List<String> allowedAudiences;
 
-    public List<String> getAllowedAudiences() {
+    public List<String> allowedAudiences() {
         return this.allowedAudiences;
     }
 
@@ -35,7 +35,7 @@ public final class OidcResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="issuerUri", required=true)
       private final String issuerUri;
 
-    public String getIssuerUri() {
+    public String issuerUri() {
         return this.issuerUri;
     }
 

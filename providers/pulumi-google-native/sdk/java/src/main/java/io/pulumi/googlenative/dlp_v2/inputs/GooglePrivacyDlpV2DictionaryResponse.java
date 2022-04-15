@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2DictionaryResponse extends io.pulumi.resour
     @Import(name="cloudStoragePath", required=true)
       private final GooglePrivacyDlpV2CloudStoragePathResponse cloudStoragePath;
 
-    public GooglePrivacyDlpV2CloudStoragePathResponse getCloudStoragePath() {
+    public GooglePrivacyDlpV2CloudStoragePathResponse cloudStoragePath() {
         return this.cloudStoragePath;
     }
 
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2DictionaryResponse extends io.pulumi.resour
     @Import(name="wordList", required=true)
       private final GooglePrivacyDlpV2WordListResponse wordList;
 
-    public GooglePrivacyDlpV2WordListResponse getWordList() {
+    public GooglePrivacyDlpV2WordListResponse wordList() {
         return this.wordList;
     }
 

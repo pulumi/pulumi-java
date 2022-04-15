@@ -23,7 +23,7 @@ public final class SuccessDetailResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="otherNativeCrash", required=true)
       private final Boolean otherNativeCrash;
 
-    public Boolean getOtherNativeCrash() {
+    public Boolean otherNativeCrash() {
         return this.otherNativeCrash;
     }
 

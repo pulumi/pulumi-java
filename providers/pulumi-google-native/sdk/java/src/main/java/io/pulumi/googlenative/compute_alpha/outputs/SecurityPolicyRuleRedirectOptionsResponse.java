@@ -32,14 +32,14 @@ public final class SecurityPolicyRuleRedirectOptionsResponse {
      * Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.
      * 
     */
-    public String getTarget() {
+    public String target() {
         return this.target;
     }
     /**
      * Type of the redirect action.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

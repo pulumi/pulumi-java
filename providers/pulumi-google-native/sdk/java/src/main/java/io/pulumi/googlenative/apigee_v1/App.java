@@ -32,7 +32,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return List of API products associated with the developer app.
      * 
      */
-    public Output<List<String>> getApiProducts() {
+    public Output<List<String>> apiProducts() {
         return this.apiProducts;
     }
     /**
@@ -46,7 +46,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return Developer app family.
      * 
      */
-    public Output<String> getAppFamily() {
+    public Output<String> appFamily() {
         return this.appFamily;
     }
     /**
@@ -60,7 +60,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return ID of the developer app.
      * 
      */
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
     /**
@@ -74,7 +74,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return List of attributes for the developer app.
      * 
      */
-    public Output<List<GoogleCloudApigeeV1AttributeResponse>> getAttributes() {
+    public Output<List<GoogleCloudApigeeV1AttributeResponse>> attributes() {
         return this.attributes;
     }
     /**
@@ -88,7 +88,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return Callback URL used by OAuth 2.0 authorization servers to communicate authorization codes back to developer apps.
      * 
      */
-    public Output<String> getCallbackUrl() {
+    public Output<String> callbackUrl() {
         return this.callbackUrl;
     }
     /**
@@ -102,7 +102,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return Time the developer app was created in milliseconds since epoch.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -116,7 +116,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return Set of credentials for the developer app consisting of the consumer key/secret pairs associated with the API products.
      * 
      */
-    public Output<List<GoogleCloudApigeeV1CredentialResponse>> getCredentials() {
+    public Output<List<GoogleCloudApigeeV1CredentialResponse>> credentials() {
         return this.credentials;
     }
     /**
@@ -130,7 +130,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return ID of the developer.
      * 
      */
-    public Output<String> getDeveloperId() {
+    public Output<String> developerId() {
         return this.developerId;
     }
     /**
@@ -144,7 +144,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return Expiration time, in milliseconds, for the consumer key that is generated for the developer app. If not set or left to the default value of `-1`, the API key never expires. The expiration time can't be updated after it is set.
      * 
      */
-    public Output<String> getKeyExpiresIn() {
+    public Output<String> keyExpiresIn() {
         return this.keyExpiresIn;
     }
     /**
@@ -158,7 +158,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return Time the developer app was modified in milliseconds since epoch.
      * 
      */
-    public Output<String> getLastModifiedAt() {
+    public Output<String> lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
@@ -172,7 +172,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return Name of the developer app.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -186,7 +186,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return Scopes to apply to the developer app. The specified scopes must already exist for the API product that you associate with the developer app.
      * 
      */
-    public Output<List<String>> getScopes() {
+    public Output<List<String>> scopes() {
         return this.scopes;
     }
     /**
@@ -200,7 +200,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * @return Status of the credential. Valid values include `approved` or `revoked`.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 

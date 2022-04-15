@@ -32,14 +32,14 @@ public final class GoogleCloudDatacatalogV1ContactsPersonResponse {
      * Designation of the person, for example, Data Steward.
      * 
     */
-    public String getDesignation() {
+    public String designation() {
         return this.designation;
     }
     /**
      * Email of the person in the format of `john.doe@xyz`, ``, or `John Doe`.
      * 
     */
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
 

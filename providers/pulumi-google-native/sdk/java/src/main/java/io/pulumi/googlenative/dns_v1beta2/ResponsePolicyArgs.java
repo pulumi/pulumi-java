@@ -21,7 +21,7 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientOperationId")
       private final @Nullable Output<String> clientOperationId;
 
-    public Output<String> getClientOperationId() {
+    public Output<String> clientOperationId() {
         return this.clientOperationId == null ? Codegen.empty() : this.clientOperationId;
     }
 
@@ -32,7 +32,7 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -43,7 +43,7 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gkeClusters")
       private final @Nullable Output<List<ResponsePolicyGKEClusterArgs>> gkeClusters;
 
-    public Output<List<ResponsePolicyGKEClusterArgs>> getGkeClusters() {
+    public Output<List<ResponsePolicyGKEClusterArgs>> gkeClusters() {
         return this.gkeClusters == null ? Codegen.empty() : this.gkeClusters;
     }
 
@@ -54,14 +54,14 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -72,14 +72,14 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networks")
       private final @Nullable Output<List<ResponsePolicyNetworkArgs>> networks;
 
-    public Output<List<ResponsePolicyNetworkArgs>> getNetworks() {
+    public Output<List<ResponsePolicyNetworkArgs>> networks() {
         return this.networks == null ? Codegen.empty() : this.networks;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -90,7 +90,7 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="responsePolicyName")
       private final @Nullable Output<String> responsePolicyName;
 
-    public Output<String> getResponsePolicyName() {
+    public Output<String> responsePolicyName() {
         return this.responsePolicyName == null ? Codegen.empty() : this.responsePolicyName;
     }
 

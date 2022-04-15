@@ -27,7 +27,7 @@ public final class IpMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
@@ -38,7 +38,7 @@ public final class IpMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeToRetire")
       private final @Nullable Output<String> timeToRetire;
 
-    public Output<String> getTimeToRetire() {
+    public Output<String> timeToRetire() {
         return this.timeToRetire == null ? Codegen.empty() : this.timeToRetire;
     }
 
@@ -49,7 +49,7 @@ public final class IpMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<IpMappingType> type;
 
-    public Output<IpMappingType> getType() {
+    public Output<IpMappingType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

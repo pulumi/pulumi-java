@@ -24,7 +24,7 @@ public final class SegmentSettingsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="individualSegments", required=true)
       private final Boolean individualSegments;
 
-    public Boolean getIndividualSegments() {
+    public Boolean individualSegments() {
         return this.individualSegments;
     }
 
@@ -35,7 +35,7 @@ public final class SegmentSettingsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="segmentDuration", required=true)
       private final String segmentDuration;
 
-    public String getSegmentDuration() {
+    public String segmentDuration() {
         return this.segmentDuration;
     }
 

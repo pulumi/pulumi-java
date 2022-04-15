@@ -34,7 +34,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="action")
       private final @Nullable Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -45,7 +45,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -56,7 +56,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="direction")
       private final @Nullable Output<SecurityPolicyRuleDirection> direction;
 
-    public Output<SecurityPolicyRuleDirection> getDirection() {
+    public Output<SecurityPolicyRuleDirection> direction() {
         return this.direction == null ? Codegen.empty() : this.direction;
     }
 
@@ -67,7 +67,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="enableLogging")
       private final @Nullable Output<Boolean> enableLogging;
 
-    public Output<Boolean> getEnableLogging() {
+    public Output<Boolean> enableLogging() {
         return this.enableLogging == null ? Codegen.empty() : this.enableLogging;
     }
 
@@ -78,7 +78,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="headerAction")
       private final @Nullable Output<SecurityPolicyRuleHttpHeaderActionArgs> headerAction;
 
-    public Output<SecurityPolicyRuleHttpHeaderActionArgs> getHeaderAction() {
+    public Output<SecurityPolicyRuleHttpHeaderActionArgs> headerAction() {
         return this.headerAction == null ? Codegen.empty() : this.headerAction;
     }
 
@@ -89,7 +89,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="match")
       private final @Nullable Output<SecurityPolicyRuleMatcherArgs> match;
 
-    public Output<SecurityPolicyRuleMatcherArgs> getMatch() {
+    public Output<SecurityPolicyRuleMatcherArgs> match() {
         return this.match == null ? Codegen.empty() : this.match;
     }
 
@@ -100,7 +100,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="preview")
       private final @Nullable Output<Boolean> preview;
 
-    public Output<Boolean> getPreview() {
+    public Output<Boolean> preview() {
         return this.preview == null ? Codegen.empty() : this.preview;
     }
 
@@ -111,7 +111,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -122,7 +122,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="rateLimitOptions")
       private final @Nullable Output<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions;
 
-    public Output<SecurityPolicyRuleRateLimitOptionsArgs> getRateLimitOptions() {
+    public Output<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions() {
         return this.rateLimitOptions == null ? Codegen.empty() : this.rateLimitOptions;
     }
 
@@ -133,7 +133,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="redirectOptions")
       private final @Nullable Output<SecurityPolicyRuleRedirectOptionsArgs> redirectOptions;
 
-    public Output<SecurityPolicyRuleRedirectOptionsArgs> getRedirectOptions() {
+    public Output<SecurityPolicyRuleRedirectOptionsArgs> redirectOptions() {
         return this.redirectOptions == null ? Codegen.empty() : this.redirectOptions;
     }
 
@@ -144,7 +144,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="redirectTarget")
       private final @Nullable Output<String> redirectTarget;
 
-    public Output<String> getRedirectTarget() {
+    public Output<String> redirectTarget() {
         return this.redirectTarget == null ? Codegen.empty() : this.redirectTarget;
     }
 
@@ -155,7 +155,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="ruleNumber")
       private final @Nullable Output<String> ruleNumber;
 
-    public Output<String> getRuleNumber() {
+    public Output<String> ruleNumber() {
         return this.ruleNumber == null ? Codegen.empty() : this.ruleNumber;
     }
 
@@ -166,7 +166,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="targetResources")
       private final @Nullable Output<List<String>> targetResources;
 
-    public Output<List<String>> getTargetResources() {
+    public Output<List<String>> targetResources() {
         return this.targetResources == null ? Codegen.empty() : this.targetResources;
     }
 
@@ -177,7 +177,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="targetServiceAccounts")
       private final @Nullable Output<List<String>> targetServiceAccounts;
 
-    public Output<List<String>> getTargetServiceAccounts() {
+    public Output<List<String>> targetServiceAccounts() {
         return this.targetServiceAccounts == null ? Codegen.empty() : this.targetServiceAccounts;
     }
 

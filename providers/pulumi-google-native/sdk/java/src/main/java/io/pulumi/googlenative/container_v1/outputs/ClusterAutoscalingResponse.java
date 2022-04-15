@@ -57,35 +57,35 @@ public final class ClusterAutoscalingResponse {
      * The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes can be created by NAP.
      * 
     */
-    public List<String> getAutoprovisioningLocations() {
+    public List<String> autoprovisioningLocations() {
         return this.autoprovisioningLocations;
     }
     /**
      * AutoprovisioningNodePoolDefaults contains defaults for a node pool created by NAP.
      * 
     */
-    public AutoprovisioningNodePoolDefaultsResponse getAutoprovisioningNodePoolDefaults() {
+    public AutoprovisioningNodePoolDefaultsResponse autoprovisioningNodePoolDefaults() {
         return this.autoprovisioningNodePoolDefaults;
     }
     /**
      * Defines autoscaling behaviour.
      * 
     */
-    public String getAutoscalingProfile() {
+    public String autoscalingProfile() {
         return this.autoscalingProfile;
     }
     /**
      * Enables automatic node pool creation and deletion.
      * 
     */
-    public Boolean getEnableNodeAutoprovisioning() {
+    public Boolean enableNodeAutoprovisioning() {
         return this.enableNodeAutoprovisioning;
     }
     /**
      * Contains global constraints regarding minimum and maximum amount of resources in the cluster.
      * 
     */
-    public List<ResourceLimitResponse> getResourceLimits() {
+    public List<ResourceLimitResponse> resourceLimits() {
         return this.resourceLimits;
     }
 

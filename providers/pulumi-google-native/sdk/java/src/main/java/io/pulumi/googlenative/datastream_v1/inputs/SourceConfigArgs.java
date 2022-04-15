@@ -28,7 +28,7 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mysqlSourceConfig")
       private final @Nullable Output<MysqlSourceConfigArgs> mysqlSourceConfig;
 
-    public Output<MysqlSourceConfigArgs> getMysqlSourceConfig() {
+    public Output<MysqlSourceConfigArgs> mysqlSourceConfig() {
         return this.mysqlSourceConfig == null ? Codegen.empty() : this.mysqlSourceConfig;
     }
 
@@ -39,7 +39,7 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="oracleSourceConfig")
       private final @Nullable Output<OracleSourceConfigArgs> oracleSourceConfig;
 
-    public Output<OracleSourceConfigArgs> getOracleSourceConfig() {
+    public Output<OracleSourceConfigArgs> oracleSourceConfig() {
         return this.oracleSourceConfig == null ? Codegen.empty() : this.oracleSourceConfig;
     }
 
@@ -50,7 +50,7 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceConnectionProfile", required=true)
       private final Output<String> sourceConnectionProfile;
 
-    public Output<String> getSourceConnectionProfile() {
+    public Output<String> sourceConnectionProfile() {
         return this.sourceConnectionProfile;
     }
 

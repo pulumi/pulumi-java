@@ -20,7 +20,7 @@ public final class InstanceGroupManagerVersionResponse extends io.pulumi.resourc
     @Import(name="instanceTemplate", required=true)
       private final String instanceTemplate;
 
-    public String getInstanceTemplate() {
+    public String instanceTemplate() {
         return this.instanceTemplate;
     }
 
@@ -31,7 +31,7 @@ public final class InstanceGroupManagerVersionResponse extends io.pulumi.resourc
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -42,7 +42,7 @@ public final class InstanceGroupManagerVersionResponse extends io.pulumi.resourc
     @Import(name="targetSize", required=true)
       private final FixedOrPercentResponse targetSize;
 
-    public FixedOrPercentResponse getTargetSize() {
+    public FixedOrPercentResponse targetSize() {
         return this.targetSize;
     }
 

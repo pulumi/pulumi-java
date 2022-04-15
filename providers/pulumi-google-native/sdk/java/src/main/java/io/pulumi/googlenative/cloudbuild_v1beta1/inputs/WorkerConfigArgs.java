@@ -27,7 +27,7 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGb")
       private final @Nullable Output<String> diskSizeGb;
 
-    public Output<String> getDiskSizeGb() {
+    public Output<String> diskSizeGb() {
         return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
     }
 
@@ -38,7 +38,7 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
-    public Output<String> getMachineType() {
+    public Output<String> machineType() {
         return this.machineType == null ? Codegen.empty() : this.machineType;
     }
 
@@ -49,7 +49,7 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="noExternalIp")
       private final @Nullable Output<Boolean> noExternalIp;
 
-    public Output<Boolean> getNoExternalIp() {
+    public Output<Boolean> noExternalIp() {
         return this.noExternalIp == null ? Codegen.empty() : this.noExternalIp;
     }
 

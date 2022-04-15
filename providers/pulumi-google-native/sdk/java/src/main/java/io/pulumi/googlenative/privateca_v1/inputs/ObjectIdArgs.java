@@ -26,7 +26,7 @@ public final class ObjectIdArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="objectIdPath", required=true)
       private final Output<List<Integer>> objectIdPath;
 
-    public Output<List<Integer>> getObjectIdPath() {
+    public Output<List<Integer>> objectIdPath() {
         return this.objectIdPath;
     }
 

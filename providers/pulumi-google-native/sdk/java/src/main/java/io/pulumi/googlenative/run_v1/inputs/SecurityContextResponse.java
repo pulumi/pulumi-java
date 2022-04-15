@@ -23,7 +23,7 @@ public final class SecurityContextResponse extends io.pulumi.resources.InvokeArg
     @Import(name="runAsUser", required=true)
       private final Integer runAsUser;
 
-    public Integer getRunAsUser() {
+    public Integer runAsUser() {
         return this.runAsUser;
     }
 

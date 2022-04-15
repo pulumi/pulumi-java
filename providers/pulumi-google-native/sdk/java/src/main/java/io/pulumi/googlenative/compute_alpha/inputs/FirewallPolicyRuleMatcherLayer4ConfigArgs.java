@@ -23,7 +23,7 @@ public final class FirewallPolicyRuleMatcherLayer4ConfigArgs extends io.pulumi.r
     @Import(name="ipProtocol")
       private final @Nullable Output<String> ipProtocol;
 
-    public Output<String> getIpProtocol() {
+    public Output<String> ipProtocol() {
         return this.ipProtocol == null ? Codegen.empty() : this.ipProtocol;
     }
 
@@ -34,7 +34,7 @@ public final class FirewallPolicyRuleMatcherLayer4ConfigArgs extends io.pulumi.r
     @Import(name="ports")
       private final @Nullable Output<List<String>> ports;
 
-    public Output<List<String>> getPorts() {
+    public Output<List<String>> ports() {
         return this.ports == null ? Codegen.empty() : this.ports;
     }
 

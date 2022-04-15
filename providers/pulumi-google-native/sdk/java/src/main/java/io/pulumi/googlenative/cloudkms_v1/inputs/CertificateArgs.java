@@ -25,7 +25,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rawDer", required=true)
       private final Output<String> rawDer;
 
-    public Output<String> getRawDer() {
+    public Output<String> rawDer() {
         return this.rawDer;
     }
 

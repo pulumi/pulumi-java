@@ -24,7 +24,7 @@ public final class GoogleCloudChannelV1TrialSettingsResponse extends io.pulumi.r
     @Import(name="endTime", required=true)
       private final String endTime;
 
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudChannelV1TrialSettingsResponse extends io.pulumi.r
     @Import(name="trial", required=true)
       private final Boolean trial;
 
-    public Boolean getTrial() {
+    public Boolean trial() {
         return this.trial;
     }
 

@@ -26,7 +26,7 @@ public final class ServiceMeshAnalysisMessageResponse extends io.pulumi.resource
     @Import(name="args", required=true)
       private final Map<String,String> args;
 
-    public Map<String,String> getArgs() {
+    public Map<String,String> args() {
         return this.args;
     }
 
@@ -37,7 +37,7 @@ public final class ServiceMeshAnalysisMessageResponse extends io.pulumi.resource
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -48,7 +48,7 @@ public final class ServiceMeshAnalysisMessageResponse extends io.pulumi.resource
     @Import(name="messageBase", required=true)
       private final ServiceMeshAnalysisMessageBaseResponse messageBase;
 
-    public ServiceMeshAnalysisMessageBaseResponse getMessageBase() {
+    public ServiceMeshAnalysisMessageBaseResponse messageBase() {
         return this.messageBase;
     }
 
@@ -59,7 +59,7 @@ public final class ServiceMeshAnalysisMessageResponse extends io.pulumi.resource
     @Import(name="resourcePaths", required=true)
       private final List<String> resourcePaths;
 
-    public List<String> getResourcePaths() {
+    public List<String> resourcePaths() {
         return this.resourcePaths;
     }
 

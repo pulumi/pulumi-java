@@ -28,7 +28,7 @@ public final class GooglePrivacyDlpV2RegexArgs extends io.pulumi.resources.Resou
     @Import(name="groupIndexes")
       private final @Nullable Output<List<Integer>> groupIndexes;
 
-    public Output<List<Integer>> getGroupIndexes() {
+    public Output<List<Integer>> groupIndexes() {
         return this.groupIndexes == null ? Codegen.empty() : this.groupIndexes;
     }
 
@@ -39,7 +39,7 @@ public final class GooglePrivacyDlpV2RegexArgs extends io.pulumi.resources.Resou
     @Import(name="pattern")
       private final @Nullable Output<String> pattern;
 
-    public Output<String> getPattern() {
+    public Output<String> pattern() {
         return this.pattern == null ? Codegen.empty() : this.pattern;
     }
 

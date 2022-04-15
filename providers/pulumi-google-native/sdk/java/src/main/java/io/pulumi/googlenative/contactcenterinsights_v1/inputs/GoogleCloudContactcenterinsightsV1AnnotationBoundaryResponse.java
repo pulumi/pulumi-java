@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse 
     @Import(name="transcriptIndex", required=true)
       private final Integer transcriptIndex;
 
-    public Integer getTranscriptIndex() {
+    public Integer transcriptIndex() {
         return this.transcriptIndex;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse 
     @Import(name="wordIndex", required=true)
       private final Integer wordIndex;
 
-    public Integer getWordIndex() {
+    public Integer wordIndex() {
         return this.wordIndex;
     }
 

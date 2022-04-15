@@ -21,63 +21,63 @@ public final class BqmlTrainingRunTrainingOptionsResponse extends io.pulumi.reso
     @Import(name="earlyStop", required=true)
       private final Boolean earlyStop;
 
-    public Boolean getEarlyStop() {
+    public Boolean earlyStop() {
         return this.earlyStop;
     }
 
     @Import(name="l1Reg", required=true)
       private final Double l1Reg;
 
-    public Double getL1Reg() {
+    public Double l1Reg() {
         return this.l1Reg;
     }
 
     @Import(name="l2Reg", required=true)
       private final Double l2Reg;
 
-    public Double getL2Reg() {
+    public Double l2Reg() {
         return this.l2Reg;
     }
 
     @Import(name="learnRate", required=true)
       private final Double learnRate;
 
-    public Double getLearnRate() {
+    public Double learnRate() {
         return this.learnRate;
     }
 
     @Import(name="learnRateStrategy", required=true)
       private final String learnRateStrategy;
 
-    public String getLearnRateStrategy() {
+    public String learnRateStrategy() {
         return this.learnRateStrategy;
     }
 
     @Import(name="lineSearchInitLearnRate", required=true)
       private final Double lineSearchInitLearnRate;
 
-    public Double getLineSearchInitLearnRate() {
+    public Double lineSearchInitLearnRate() {
         return this.lineSearchInitLearnRate;
     }
 
     @Import(name="maxIteration", required=true)
       private final String maxIteration;
 
-    public String getMaxIteration() {
+    public String maxIteration() {
         return this.maxIteration;
     }
 
     @Import(name="minRelProgress", required=true)
       private final Double minRelProgress;
 
-    public Double getMinRelProgress() {
+    public Double minRelProgress() {
         return this.minRelProgress;
     }
 
     @Import(name="warmStart", required=true)
       private final Boolean warmStart;
 
-    public Boolean getWarmStart() {
+    public Boolean warmStart() {
         return this.warmStart;
     }
 

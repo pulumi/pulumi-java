@@ -26,7 +26,7 @@ public final class InstallationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
       private final Output<List<LocationArgs>> location;
 
-    public Output<List<LocationArgs>> getLocation() {
+    public Output<List<LocationArgs>> location() {
         return this.location;
     }
 

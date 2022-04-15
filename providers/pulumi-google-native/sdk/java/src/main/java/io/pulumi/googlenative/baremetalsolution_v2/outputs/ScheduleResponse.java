@@ -40,21 +40,21 @@ public final class ScheduleResponse {
      * A crontab-like specification that the schedule uses to take snapshots.
      * 
     */
-    public String getCrontabSpec() {
+    public String crontabSpec() {
         return this.crontabSpec;
     }
     /**
      * A list of snapshot names created in this schedule.
      * 
     */
-    public String getPrefix() {
+    public String prefix() {
         return this.prefix;
     }
     /**
      * The maximum number of snapshots to retain in this schedule.
      * 
     */
-    public Integer getRetentionCount() {
+    public Integer retentionCount() {
         return this.retentionCount;
     }
 

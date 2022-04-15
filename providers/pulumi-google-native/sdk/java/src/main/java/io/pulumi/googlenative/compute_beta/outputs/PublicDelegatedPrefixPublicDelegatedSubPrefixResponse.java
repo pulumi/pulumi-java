@@ -68,49 +68,49 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse {
      * Name of the project scoping this PublicDelegatedSubPrefix.
      * 
     */
-    public String getDelegateeProject() {
+    public String delegateeProject() {
         return this.delegateeProject;
     }
     /**
      * An optional description of this resource. Provide this property when you create the resource.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The IPv4 address range, in CIDR format, represented by this sub public delegated prefix.
      * 
     */
-    public String getIpCidrRange() {
+    public String ipCidrRange() {
         return this.ipCidrRange;
     }
     /**
      * Whether the sub prefix is delegated to create Address resources in the delegatee project.
      * 
     */
-    public Boolean getIsAddress() {
+    public Boolean isAddress() {
         return this.isAddress;
     }
     /**
      * The name of the sub public delegated prefix.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The region of the sub public delegated prefix if it is regional. If absent, the sub prefix is global.
      * 
     */
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
     /**
      * The status of the sub public delegated prefix.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

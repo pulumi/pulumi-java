@@ -24,7 +24,7 @@ public final class AttestationAuthorityHintResponse {
      * The human readable name of this Attestation Authority, for example "qa".
      * 
     */
-    public String getHumanReadableName() {
+    public String humanReadableName() {
         return this.humanReadableName;
     }
 

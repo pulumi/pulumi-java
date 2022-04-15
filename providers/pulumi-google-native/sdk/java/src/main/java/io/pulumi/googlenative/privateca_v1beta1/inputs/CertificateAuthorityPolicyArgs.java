@@ -32,7 +32,7 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
     @Import(name="allowedCommonNames")
       private final @Nullable Output<List<String>> allowedCommonNames;
 
-    public Output<List<String>> getAllowedCommonNames() {
+    public Output<List<String>> allowedCommonNames() {
         return this.allowedCommonNames == null ? Codegen.empty() : this.allowedCommonNames;
     }
 
@@ -43,7 +43,7 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
     @Import(name="allowedConfigList")
       private final @Nullable Output<AllowedConfigListArgs> allowedConfigList;
 
-    public Output<AllowedConfigListArgs> getAllowedConfigList() {
+    public Output<AllowedConfigListArgs> allowedConfigList() {
         return this.allowedConfigList == null ? Codegen.empty() : this.allowedConfigList;
     }
 
@@ -54,7 +54,7 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
     @Import(name="allowedIssuanceModes")
       private final @Nullable Output<IssuanceModesArgs> allowedIssuanceModes;
 
-    public Output<IssuanceModesArgs> getAllowedIssuanceModes() {
+    public Output<IssuanceModesArgs> allowedIssuanceModes() {
         return this.allowedIssuanceModes == null ? Codegen.empty() : this.allowedIssuanceModes;
     }
 
@@ -65,7 +65,7 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
     @Import(name="allowedLocationsAndOrganizations")
       private final @Nullable Output<List<SubjectArgs>> allowedLocationsAndOrganizations;
 
-    public Output<List<SubjectArgs>> getAllowedLocationsAndOrganizations() {
+    public Output<List<SubjectArgs>> allowedLocationsAndOrganizations() {
         return this.allowedLocationsAndOrganizations == null ? Codegen.empty() : this.allowedLocationsAndOrganizations;
     }
 
@@ -76,7 +76,7 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
     @Import(name="allowedSans")
       private final @Nullable Output<AllowedSubjectAltNamesArgs> allowedSans;
 
-    public Output<AllowedSubjectAltNamesArgs> getAllowedSans() {
+    public Output<AllowedSubjectAltNamesArgs> allowedSans() {
         return this.allowedSans == null ? Codegen.empty() : this.allowedSans;
     }
 
@@ -87,7 +87,7 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
     @Import(name="maximumLifetime")
       private final @Nullable Output<String> maximumLifetime;
 
-    public Output<String> getMaximumLifetime() {
+    public Output<String> maximumLifetime() {
         return this.maximumLifetime == null ? Codegen.empty() : this.maximumLifetime;
     }
 
@@ -98,7 +98,7 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
     @Import(name="overwriteConfigValues")
       private final @Nullable Output<ReusableConfigWrapperArgs> overwriteConfigValues;
 
-    public Output<ReusableConfigWrapperArgs> getOverwriteConfigValues() {
+    public Output<ReusableConfigWrapperArgs> overwriteConfigValues() {
         return this.overwriteConfigValues == null ? Codegen.empty() : this.overwriteConfigValues;
     }
 

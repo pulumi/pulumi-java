@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetResponse extends io
     @Import(name="bucketName", required=true)
       private final String bucketName;
 
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
 
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetResponse extends io
     @Import(name="excludeRegex", required=true)
       private final List<String> excludeRegex;
 
-    public List<String> getExcludeRegex() {
+    public List<String> excludeRegex() {
         return this.excludeRegex;
     }
 
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetResponse extends io
     @Import(name="includeRegex", required=true)
       private final List<String> includeRegex;
 
-    public List<String> getIncludeRegex() {
+    public List<String> includeRegex() {
         return this.includeRegex;
     }
 

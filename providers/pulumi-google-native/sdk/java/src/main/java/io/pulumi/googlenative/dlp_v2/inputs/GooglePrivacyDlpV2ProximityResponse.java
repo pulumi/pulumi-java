@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2ProximityResponse extends io.pulumi.resourc
     @Import(name="windowAfter", required=true)
       private final Integer windowAfter;
 
-    public Integer getWindowAfter() {
+    public Integer windowAfter() {
         return this.windowAfter;
     }
 
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2ProximityResponse extends io.pulumi.resourc
     @Import(name="windowBefore", required=true)
       private final Integer windowBefore;
 
-    public Integer getWindowBefore() {
+    public Integer windowBefore() {
         return this.windowBefore;
     }
 

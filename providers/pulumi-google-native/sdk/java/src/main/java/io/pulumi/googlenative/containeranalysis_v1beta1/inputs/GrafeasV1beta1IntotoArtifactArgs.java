@@ -19,14 +19,14 @@ public final class GrafeasV1beta1IntotoArtifactArgs extends io.pulumi.resources.
     @Import(name="hashes")
       private final @Nullable Output<ArtifactHashesArgs> hashes;
 
-    public Output<ArtifactHashesArgs> getHashes() {
+    public Output<ArtifactHashesArgs> hashes() {
         return this.hashes == null ? Codegen.empty() : this.hashes;
     }
 
     @Import(name="resourceUri")
       private final @Nullable Output<String> resourceUri;
 
-    public Output<String> getResourceUri() {
+    public Output<String> resourceUri() {
         return this.resourceUri == null ? Codegen.empty() : this.resourceUri;
     }
 

@@ -28,7 +28,7 @@ public final class MultiStepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="multistepNumber")
       private final @Nullable Output<Integer> multistepNumber;
 
-    public Output<Integer> getMultistepNumber() {
+    public Output<Integer> multistepNumber() {
         return this.multistepNumber == null ? Codegen.empty() : this.multistepNumber;
     }
 
@@ -39,7 +39,7 @@ public final class MultiStepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="primaryStep")
       private final @Nullable Output<PrimaryStepArgs> primaryStep;
 
-    public Output<PrimaryStepArgs> getPrimaryStep() {
+    public Output<PrimaryStepArgs> primaryStep() {
         return this.primaryStep == null ? Codegen.empty() : this.primaryStep;
     }
 
@@ -50,7 +50,7 @@ public final class MultiStepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="primaryStepId")
       private final @Nullable Output<String> primaryStepId;
 
-    public Output<String> getPrimaryStepId() {
+    public Output<String> primaryStepId() {
         return this.primaryStepId == null ? Codegen.empty() : this.primaryStepId;
     }
 

@@ -23,7 +23,7 @@ public final class CloudBuildOptionsResponse extends io.pulumi.resources.InvokeA
     @Import(name="appYamlPath", required=true)
       private final String appYamlPath;
 
-    public String getAppYamlPath() {
+    public String appYamlPath() {
         return this.appYamlPath;
     }
 
@@ -34,7 +34,7 @@ public final class CloudBuildOptionsResponse extends io.pulumi.resources.InvokeA
     @Import(name="cloudBuildTimeout", required=true)
       private final String cloudBuildTimeout;
 
-    public String getCloudBuildTimeout() {
+    public String cloudBuildTimeout() {
         return this.cloudBuildTimeout;
     }
 

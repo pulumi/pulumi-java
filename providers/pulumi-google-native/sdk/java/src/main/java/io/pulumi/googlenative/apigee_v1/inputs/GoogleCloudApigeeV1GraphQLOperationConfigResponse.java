@@ -27,7 +27,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigResponse extends io.
     @Import(name="apiSource", required=true)
       private final String apiSource;
 
-    public String getApiSource() {
+    public String apiSource() {
         return this.apiSource;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigResponse extends io.
     @Import(name="attributes", required=true)
       private final List<GoogleCloudApigeeV1AttributeResponse> attributes;
 
-    public List<GoogleCloudApigeeV1AttributeResponse> getAttributes() {
+    public List<GoogleCloudApigeeV1AttributeResponse> attributes() {
         return this.attributes;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigResponse extends io.
     @Import(name="operations", required=true)
       private final List<GoogleCloudApigeeV1GraphQLOperationResponse> operations;
 
-    public List<GoogleCloudApigeeV1GraphQLOperationResponse> getOperations() {
+    public List<GoogleCloudApigeeV1GraphQLOperationResponse> operations() {
         return this.operations;
     }
 
@@ -60,7 +60,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigResponse extends io.
     @Import(name="quota", required=true)
       private final GoogleCloudApigeeV1QuotaResponse quota;
 
-    public GoogleCloudApigeeV1QuotaResponse getQuota() {
+    public GoogleCloudApigeeV1QuotaResponse quota() {
         return this.quota;
     }
 

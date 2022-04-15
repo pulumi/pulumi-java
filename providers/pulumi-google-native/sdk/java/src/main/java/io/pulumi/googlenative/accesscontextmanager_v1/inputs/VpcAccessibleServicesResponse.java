@@ -25,7 +25,7 @@ public final class VpcAccessibleServicesResponse extends io.pulumi.resources.Inv
     @Import(name="allowedServices", required=true)
       private final List<String> allowedServices;
 
-    public List<String> getAllowedServices() {
+    public List<String> allowedServices() {
         return this.allowedServices;
     }
 
@@ -36,7 +36,7 @@ public final class VpcAccessibleServicesResponse extends io.pulumi.resources.Inv
     @Import(name="enableRestriction", required=true)
       private final Boolean enableRestriction;
 
-    public Boolean getEnableRestriction() {
+    public Boolean enableRestriction() {
         return this.enableRestriction;
     }
 

@@ -31,7 +31,7 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attackComplexity")
       private final @Nullable Output<CVSSAttackComplexity> attackComplexity;
 
-    public Output<CVSSAttackComplexity> getAttackComplexity() {
+    public Output<CVSSAttackComplexity> attackComplexity() {
         return this.attackComplexity == null ? Codegen.empty() : this.attackComplexity;
     }
 
@@ -42,21 +42,21 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attackVector")
       private final @Nullable Output<CVSSAttackVector> attackVector;
 
-    public Output<CVSSAttackVector> getAttackVector() {
+    public Output<CVSSAttackVector> attackVector() {
         return this.attackVector == null ? Codegen.empty() : this.attackVector;
     }
 
     @Import(name="authentication")
       private final @Nullable Output<CVSSAuthentication> authentication;
 
-    public Output<CVSSAuthentication> getAuthentication() {
+    public Output<CVSSAuthentication> authentication() {
         return this.authentication == null ? Codegen.empty() : this.authentication;
     }
 
     @Import(name="availabilityImpact")
       private final @Nullable Output<CVSSAvailabilityImpact> availabilityImpact;
 
-    public Output<CVSSAvailabilityImpact> getAvailabilityImpact() {
+    public Output<CVSSAvailabilityImpact> availabilityImpact() {
         return this.availabilityImpact == null ? Codegen.empty() : this.availabilityImpact;
     }
 
@@ -67,56 +67,56 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="baseScore")
       private final @Nullable Output<Double> baseScore;
 
-    public Output<Double> getBaseScore() {
+    public Output<Double> baseScore() {
         return this.baseScore == null ? Codegen.empty() : this.baseScore;
     }
 
     @Import(name="confidentialityImpact")
       private final @Nullable Output<CVSSConfidentialityImpact> confidentialityImpact;
 
-    public Output<CVSSConfidentialityImpact> getConfidentialityImpact() {
+    public Output<CVSSConfidentialityImpact> confidentialityImpact() {
         return this.confidentialityImpact == null ? Codegen.empty() : this.confidentialityImpact;
     }
 
     @Import(name="exploitabilityScore")
       private final @Nullable Output<Double> exploitabilityScore;
 
-    public Output<Double> getExploitabilityScore() {
+    public Output<Double> exploitabilityScore() {
         return this.exploitabilityScore == null ? Codegen.empty() : this.exploitabilityScore;
     }
 
     @Import(name="impactScore")
       private final @Nullable Output<Double> impactScore;
 
-    public Output<Double> getImpactScore() {
+    public Output<Double> impactScore() {
         return this.impactScore == null ? Codegen.empty() : this.impactScore;
     }
 
     @Import(name="integrityImpact")
       private final @Nullable Output<CVSSIntegrityImpact> integrityImpact;
 
-    public Output<CVSSIntegrityImpact> getIntegrityImpact() {
+    public Output<CVSSIntegrityImpact> integrityImpact() {
         return this.integrityImpact == null ? Codegen.empty() : this.integrityImpact;
     }
 
     @Import(name="privilegesRequired")
       private final @Nullable Output<CVSSPrivilegesRequired> privilegesRequired;
 
-    public Output<CVSSPrivilegesRequired> getPrivilegesRequired() {
+    public Output<CVSSPrivilegesRequired> privilegesRequired() {
         return this.privilegesRequired == null ? Codegen.empty() : this.privilegesRequired;
     }
 
     @Import(name="scope")
       private final @Nullable Output<CVSSScope> scope;
 
-    public Output<CVSSScope> getScope() {
+    public Output<CVSSScope> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     @Import(name="userInteraction")
       private final @Nullable Output<CVSSUserInteraction> userInteraction;
 
-    public Output<CVSSUserInteraction> getUserInteraction() {
+    public Output<CVSSUserInteraction> userInteraction() {
         return this.userInteraction == null ? Codegen.empty() : this.userInteraction;
     }
 

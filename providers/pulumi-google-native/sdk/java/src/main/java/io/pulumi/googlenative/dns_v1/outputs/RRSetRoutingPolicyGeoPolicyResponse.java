@@ -30,10 +30,10 @@ public final class RRSetRoutingPolicyGeoPolicyResponse {
      * The primary geo routing configuration. If there are multiple items with the same location, an error is returned instead.
      * 
     */
-    public List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> getItems() {
+    public List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> items() {
         return this.items;
     }
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 

@@ -19,14 +19,14 @@ public final class ManagedZonePeeringConfigTargetNetworkResponse extends io.pulu
     @Import(name="deactivateTime", required=true)
       private final String deactivateTime;
 
-    public String getDeactivateTime() {
+    public String deactivateTime() {
         return this.deactivateTime;
     }
 
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -37,7 +37,7 @@ public final class ManagedZonePeeringConfigTargetNetworkResponse extends io.pulu
     @Import(name="networkUrl", required=true)
       private final String networkUrl;
 
-    public String getNetworkUrl() {
+    public String networkUrl() {
         return this.networkUrl;
     }
 

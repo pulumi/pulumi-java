@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse extends i
     @Import(name="bucketSize", required=true)
       private final String bucketSize;
 
-    public String getBucketSize() {
+    public String bucketSize() {
         return this.bucketSize;
     }
 
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse extends i
     @Import(name="bucketValueCount", required=true)
       private final String bucketValueCount;
 
-    public String getBucketValueCount() {
+    public String bucketValueCount() {
         return this.bucketValueCount;
     }
 
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse extends i
     @Import(name="bucketValues", required=true)
       private final List<GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse> bucketValues;
 
-    public List<GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse> getBucketValues() {
+    public List<GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse> bucketValues() {
         return this.bucketValues;
     }
 
@@ -58,7 +58,7 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse extends i
     @Import(name="equivalenceClassSizeLowerBound", required=true)
       private final String equivalenceClassSizeLowerBound;
 
-    public String getEquivalenceClassSizeLowerBound() {
+    public String equivalenceClassSizeLowerBound() {
         return this.equivalenceClassSizeLowerBound;
     }
 
@@ -69,7 +69,7 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse extends i
     @Import(name="equivalenceClassSizeUpperBound", required=true)
       private final String equivalenceClassSizeUpperBound;
 
-    public String getEquivalenceClassSizeUpperBound() {
+    public String equivalenceClassSizeUpperBound() {
         return this.equivalenceClassSizeUpperBound;
     }
 

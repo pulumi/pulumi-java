@@ -49,28 +49,28 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsResponse {
      * Optional. Indicates whether text to speech is enabled. Even when this field is false, other settings in this proto are still retained.
      * 
     */
-    public Boolean getEnableTextToSpeech() {
+    public Boolean enableTextToSpeech() {
         return this.enableTextToSpeech;
     }
     /**
      * Audio encoding of the synthesized audio content.
      * 
     */
-    public String getOutputAudioEncoding() {
+    public String outputAudioEncoding() {
         return this.outputAudioEncoding;
     }
     /**
      * Optional. The synthesis sample rate (in hertz) for this audio. If not provided, then the synthesizer will use the default sample rate based on the audio encoding. If this is different from the voice's natural sample rate, then the synthesizer will honor this request by converting to the desired sample rate (which might result in worse audio quality).
      * 
     */
-    public Integer getSampleRateHertz() {
+    public Integer sampleRateHertz() {
         return this.sampleRateHertz;
     }
     /**
      * Optional. Configuration of how speech should be synthesized, mapping from language (https://cloud.google.com/dialogflow/docs/reference/language) to SynthesizeSpeechConfig.
      * 
     */
-    public Map<String,String> getSynthesizeSpeechConfigs() {
+    public Map<String,String> synthesizeSpeechConfigs() {
         return this.synthesizeSpeechConfigs;
     }
 

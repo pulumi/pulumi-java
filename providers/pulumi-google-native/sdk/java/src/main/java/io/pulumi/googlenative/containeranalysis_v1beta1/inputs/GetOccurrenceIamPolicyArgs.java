@@ -17,14 +17,14 @@ public final class GetOccurrenceIamPolicyArgs extends io.pulumi.resources.Invoke
     @Import(name="occurrenceId", required=true)
       private final String occurrenceId;
 
-    public String getOccurrenceId() {
+    public String occurrenceId() {
         return this.occurrenceId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

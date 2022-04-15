@@ -23,7 +23,7 @@ public final class V2AndroidApplicationResponse extends io.pulumi.resources.Invo
     @Import(name="packageName", required=true)
       private final String packageName;
 
-    public String getPackageName() {
+    public String packageName() {
         return this.packageName;
     }
 
@@ -34,7 +34,7 @@ public final class V2AndroidApplicationResponse extends io.pulumi.resources.Invo
     @Import(name="sha1Fingerprint", required=true)
       private final String sha1Fingerprint;
 
-    public String getSha1Fingerprint() {
+    public String sha1Fingerprint() {
         return this.sha1Fingerprint;
     }
 
