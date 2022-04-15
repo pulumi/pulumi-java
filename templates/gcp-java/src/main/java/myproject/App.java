@@ -12,7 +12,7 @@ public class App {
                                     BucketArgs.builder()
                                     .location("US")
                                     .build());
-            ctx.export("bucketName", bucket.getUrl());
+            ctx.export("bucketName", bucket.url());
             return ctx.exports();
         });
         System.exit(exitCode);
