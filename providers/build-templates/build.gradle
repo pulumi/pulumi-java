@@ -69,7 +69,7 @@ publishing {
         //
         // https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry
         gpr(MavenPublication) {
-            groupId = "io.pulumi"
+            groupId = "com.pulumi"
             artifactId = "{{ .ArtifactID }}"
             version = project.findProperty("version") + (project.findProperty("snapshot") ? "-SNAPSHOT": "");
             from components.java
