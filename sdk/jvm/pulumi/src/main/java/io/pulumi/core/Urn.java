@@ -1,8 +1,8 @@
-package io.pulumi.core;
+package com.pulumi.core;
 
 import com.google.common.base.Strings;
-import io.pulumi.deployment.Deployment;
-import io.pulumi.resources.Resource;
+import com.pulumi.deployment.Deployment;
+import com.pulumi.resources.Resource;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;

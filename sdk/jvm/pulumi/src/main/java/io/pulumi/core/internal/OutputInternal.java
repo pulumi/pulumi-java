@@ -1,11 +1,11 @@
-package io.pulumi.core.internal;
+package com.pulumi.core.internal;
 
 import com.google.common.collect.ImmutableSet;
-import io.pulumi.core.Output;
-import io.pulumi.core.Tuples;
-import io.pulumi.core.internal.annotations.InternalUse;
-import io.pulumi.deployment.internal.DeploymentInternal;
-import io.pulumi.resources.Resource;
+import com.pulumi.core.Output;
+import com.pulumi.core.Tuples;
+import com.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.deployment.internal.DeploymentInternal;
+import com.pulumi.resources.Resource;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;

@@ -1,12 +1,12 @@
-package io.pulumi;
+package com.pulumi;
 
-import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.InternalUse;
-import io.pulumi.deployment.Deployment;
-import io.pulumi.deployment.internal.DeploymentInternal;
-import io.pulumi.resources.ComponentResource;
-import io.pulumi.resources.ComponentResourceOptions;
-import io.pulumi.resources.StackOptions;
+import com.pulumi.core.Output;
+import com.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.deployment.Deployment;
+import com.pulumi.deployment.internal.DeploymentInternal;
+import com.pulumi.resources.ComponentResource;
+import com.pulumi.resources.ComponentResourceOptions;
+import com.pulumi.resources.StackOptions;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;

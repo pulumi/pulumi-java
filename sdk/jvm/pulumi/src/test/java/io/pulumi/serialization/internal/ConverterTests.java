@@ -1,4 +1,4 @@
-package io.pulumi.serialization.internal;
+package com.pulumi.serialization.internal;
 
 import com.google.common.base.MoreObjects;
 import com.google.common.collect.ImmutableList;
@@ -9,21 +9,21 @@ import com.google.protobuf.ListValue;
 import com.google.protobuf.NullValue;
 import com.google.protobuf.Struct;
 import com.google.protobuf.Value;
-import io.pulumi.Log;
-import io.pulumi.core.Output;
-import io.pulumi.core.OutputTests;
-import io.pulumi.core.TypeShape;
-import io.pulumi.core.annotations.CustomType;
-import io.pulumi.core.annotations.CustomType.Constructor;
-import io.pulumi.core.annotations.CustomType.Parameter;
-import io.pulumi.core.annotations.EnumType;
-import io.pulumi.core.annotations.Import;
-import io.pulumi.core.internal.Constants;
-import io.pulumi.deployment.MocksTest;
-import io.pulumi.deployment.internal.DeploymentTests;
-import io.pulumi.deployment.internal.TestOptions;
-import io.pulumi.resources.InvokeArgs;
-import io.pulumi.resources.ResourceArgs;
+import com.pulumi.Log;
+import com.pulumi.core.Output;
+import com.pulumi.core.OutputTests;
+import com.pulumi.core.TypeShape;
+import com.pulumi.core.annotations.CustomType;
+import com.pulumi.core.annotations.CustomType.Constructor;
+import com.pulumi.core.annotations.CustomType.Parameter;
+import com.pulumi.core.annotations.EnumType;
+import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Constants;
+import com.pulumi.deployment.MocksTest;
+import com.pulumi.deployment.internal.DeploymentTests;
+import com.pulumi.deployment.internal.TestOptions;
+import com.pulumi.resources.InvokeArgs;
+import com.pulumi.resources.ResourceArgs;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -39,7 +39,7 @@ import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Stream;
 
-import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
+import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
@@ -413,7 +413,7 @@ class ConverterTests {
 
 
         @ParameterizedTest
-        @MethodSource("io.pulumi.serialization.internal.ConverterTests#testSerializingUnserializableEnumsThrows")
+        @MethodSource("com.pulumi.serialization.internal.ConverterTests#testSerializingUnserializableEnumsThrows")
         void testSerializingUnserializableEnumsThrows(Enum<?> input) {
             //noinspection ResultOfMethodCallIgnored
             assertThatThrownBy(() -> serializeToValueAsync(input))
@@ -422,7 +422,7 @@ class ConverterTests {
         }
 
         @ParameterizedTest
-        @MethodSource("io.pulumi.serialization.internal.ConverterTests#testConvertingNonconvertibleValuesThrows")
+        @MethodSource("com.pulumi.serialization.internal.ConverterTests#testConvertingNonconvertibleValuesThrows")
         void testConvertingNonconvertibleValuesThrows(Class<?> targetType, Value value) {
             var deserializer = new Deserializer();
             var converter = new Converter(log, deserializer);
@@ -496,7 +496,7 @@ class ConverterTests {
         private final Gson gson = new Gson();
 
         @ParameterizedTest
-        @MethodSource("io.pulumi.serialization.internal.ConverterTests#testJsons")
+        @MethodSource("com.pulumi.serialization.internal.ConverterTests#testJsons")
         void testJsons(String json, String expected) {
             var deserializer = new Deserializer();
             var converter = new Converter(log, deserializer);

@@ -1,7 +1,7 @@
-package io.pulumi.context;
+package com.pulumi.context;
 
-import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.core.Output;
+import com.pulumi.core.internal.annotations.InternalUse;
 
 import java.util.Map;
 

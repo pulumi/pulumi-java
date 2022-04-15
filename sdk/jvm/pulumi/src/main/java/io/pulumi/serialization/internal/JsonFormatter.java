@@ -1,9 +1,9 @@
-package io.pulumi.serialization.internal;
+package com.pulumi.serialization.internal;
 
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.MessageOrBuilder;
 import com.google.protobuf.util.JsonFormat;
-import io.pulumi.core.Either;
+import com.pulumi.core.Either;
 
 public class JsonFormatter {
 

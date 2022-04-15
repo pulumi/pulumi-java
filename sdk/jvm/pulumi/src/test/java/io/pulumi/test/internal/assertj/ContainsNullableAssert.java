@@ -1,10 +1,10 @@
-package io.pulumi.test.internal.assertj;
+package com.pulumi.test.internal.assertj;
 
 import org.assertj.core.api.AbstractAssert;
 
 import javax.annotation.Nullable;
 
-import static io.pulumi.test.internal.assertj.ContainsNullableCondition.containsNullable;
+import static com.pulumi.test.internal.assertj.ContainsNullableCondition.containsNullable;
 
 public class ContainsNullableAssert<ELEMENT> extends AbstractAssert<ContainsNullableAssert<ELEMENT>, Iterable<? extends ELEMENT>> {
     protected ContainsNullableAssert(@Nullable Iterable<? extends ELEMENT> elements) {

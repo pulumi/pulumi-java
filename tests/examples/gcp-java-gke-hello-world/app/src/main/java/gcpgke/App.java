@@ -1,38 +1,38 @@
 package gcpgke;
 
-import io.pulumi.Pulumi;
-import io.pulumi.context.ExportContext;
-import io.pulumi.context.StackContext;
-import io.pulumi.core.Output;
-import io.pulumi.deployment.InvokeOptions;
-import io.pulumi.gcp.container.Cluster;
-import io.pulumi.gcp.container.ClusterArgs;
-import io.pulumi.gcp.container.ContainerFunctions;
-import io.pulumi.gcp.container.NodePool;
-import io.pulumi.gcp.container.NodePoolArgs;
-import io.pulumi.gcp.container.inputs.GetEngineVersionsArgs;
-import io.pulumi.gcp.container.inputs.NodePoolManagementArgs;
-import io.pulumi.gcp.container.inputs.NodePoolNodeConfigArgs;
-import io.pulumi.gcp.container.outputs.GetEngineVersionsResult;
-import io.pulumi.kubernetes.Provider;
-import io.pulumi.kubernetes.ProviderArgs;
-import io.pulumi.kubernetes.apps_v1.Deployment;
-import io.pulumi.kubernetes.apps_v1.DeploymentArgs;
-import io.pulumi.kubernetes.apps_v1.inputs.DeploymentSpecArgs;
-import io.pulumi.kubernetes.core_v1.Namespace;
-import io.pulumi.kubernetes.core_v1.NamespaceArgs;
-import io.pulumi.kubernetes.core_v1.Service;
-import io.pulumi.kubernetes.core_v1.ServiceArgs;
-import io.pulumi.kubernetes.core_v1.enums.ServiceSpecType;
-import io.pulumi.kubernetes.core_v1.inputs.ContainerArgs;
-import io.pulumi.kubernetes.core_v1.inputs.ContainerPortArgs;
-import io.pulumi.kubernetes.core_v1.inputs.PodSpecArgs;
-import io.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
-import io.pulumi.kubernetes.core_v1.inputs.ServicePortArgs;
-import io.pulumi.kubernetes.core_v1.inputs.ServiceSpecArgs;
-import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
-import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
-import io.pulumi.resources.CustomResourceOptions;
+import com.pulumi.Pulumi;
+import com.pulumi.context.ExportContext;
+import com.pulumi.context.StackContext;
+import com.pulumi.core.Output;
+import com.pulumi.deployment.InvokeOptions;
+import com.pulumi.gcp.container.Cluster;
+import com.pulumi.gcp.container.ClusterArgs;
+import com.pulumi.gcp.container.ContainerFunctions;
+import com.pulumi.gcp.container.NodePool;
+import com.pulumi.gcp.container.NodePoolArgs;
+import com.pulumi.gcp.container.inputs.GetEngineVersionsArgs;
+import com.pulumi.gcp.container.inputs.NodePoolManagementArgs;
+import com.pulumi.gcp.container.inputs.NodePoolNodeConfigArgs;
+import com.pulumi.gcp.container.outputs.GetEngineVersionsResult;
+import com.pulumi.kubernetes.Provider;
+import com.pulumi.kubernetes.ProviderArgs;
+import com.pulumi.kubernetes.apps_v1.Deployment;
+import com.pulumi.kubernetes.apps_v1.DeploymentArgs;
+import com.pulumi.kubernetes.apps_v1.inputs.DeploymentSpecArgs;
+import com.pulumi.kubernetes.core_v1.Namespace;
+import com.pulumi.kubernetes.core_v1.NamespaceArgs;
+import com.pulumi.kubernetes.core_v1.Service;
+import com.pulumi.kubernetes.core_v1.ServiceArgs;
+import com.pulumi.kubernetes.core_v1.enums.ServiceSpecType;
+import com.pulumi.kubernetes.core_v1.inputs.ContainerArgs;
+import com.pulumi.kubernetes.core_v1.inputs.ContainerPortArgs;
+import com.pulumi.kubernetes.core_v1.inputs.PodSpecArgs;
+import com.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
+import com.pulumi.kubernetes.core_v1.inputs.ServicePortArgs;
+import com.pulumi.kubernetes.core_v1.inputs.ServiceSpecArgs;
+import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
+import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.CustomResourceOptions;
 
 import java.text.MessageFormat;
 import java.util.Map;
@@ -46,7 +46,7 @@ public class App {
     private static ExportContext stack(StackContext ctx) {
         final String name = "helloworld";
 
-        final var config = io.pulumi.Config.of();
+        final var config = com.pulumi.Config.of();
         final var masterVersion = config.get("masterVersion").orElse(
                 ContainerFunctions.getEngineVersions()
                 .thenApply(GetEngineVersionsResult::getLatestMasterVersion).join()
@@ -95,7 +95,7 @@ public class App {
         // Manufacture a GKE-style kubeconfig. Note that this is slightly "different"
         // because of the way GKE requires gcloud to be in the picture for cluster
         // authentication (rather than using the client cert/key directly).
-        final var gcpConfig = new io.pulumi.gcp.Config();
+        final var gcpConfig = new com.pulumi.gcp.Config();
         var clusterName = String.format("%s_%s_%s",
                 gcpConfig.project().orElseThrow(),
                 gcpConfig.zone().orElseThrow(),

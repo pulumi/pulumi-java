@@ -1,6 +1,6 @@
-package io.pulumi.deployment;
+package com.pulumi.deployment;
 
-import io.pulumi.core.Tuples;
+import com.pulumi.core.Tuples;
 
 import java.util.Map;
 import java.util.Optional;

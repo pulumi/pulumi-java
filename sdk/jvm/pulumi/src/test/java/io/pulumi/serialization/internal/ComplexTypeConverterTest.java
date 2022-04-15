@@ -1,14 +1,14 @@
-package io.pulumi.serialization.internal;
+package com.pulumi.serialization.internal;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
-import io.pulumi.Log;
-import io.pulumi.core.annotations.CustomType;
-import io.pulumi.core.annotations.CustomType.Constructor;
-import io.pulumi.core.annotations.CustomType.Parameter;
-import io.pulumi.deployment.internal.DeploymentTests;
-import io.pulumi.deployment.internal.InMemoryLogger;
-import io.pulumi.serialization.internal.ConverterTests.ContainerSize;
+import com.pulumi.Log;
+import com.pulumi.core.annotations.CustomType;
+import com.pulumi.core.annotations.CustomType.Constructor;
+import com.pulumi.core.annotations.CustomType.Parameter;
+import com.pulumi.deployment.internal.DeploymentTests;
+import com.pulumi.deployment.internal.InMemoryLogger;
+import com.pulumi.serialization.internal.ConverterTests.ContainerSize;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
@@ -17,10 +17,10 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.logging.Level;
 
-import static io.pulumi.serialization.internal.ConverterTests.ContainerColor;
-import static io.pulumi.serialization.internal.ConverterTests.ContainerColor.Blue;
-import static io.pulumi.serialization.internal.ConverterTests.serializeToValueAsync;
-import static io.pulumi.test.internal.assertj.PulumiConditions.containsString;
+import static com.pulumi.serialization.internal.ConverterTests.ContainerColor;
+import static com.pulumi.serialization.internal.ConverterTests.ContainerColor.Blue;
+import static com.pulumi.serialization.internal.ConverterTests.serializeToValueAsync;
+import static com.pulumi.test.internal.assertj.PulumiConditions.containsString;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 

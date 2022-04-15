@@ -1,16 +1,16 @@
-package io.pulumi.serialization.internal;
+package com.pulumi.serialization.internal;
 
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.Struct;
 import com.google.protobuf.util.JsonFormat;
-import io.pulumi.Log;
-import io.pulumi.core.Output;
-import io.pulumi.core.annotations.CustomType.Constructor;
-import io.pulumi.core.annotations.CustomType.Parameter;
-import io.pulumi.core.annotations.Import;
-import io.pulumi.core.internal.Internal;
-import io.pulumi.deployment.internal.EngineLogger;
-import io.pulumi.resources.ResourceArgs;
+import com.pulumi.Log;
+import com.pulumi.core.Output;
+import com.pulumi.core.annotations.CustomType.Constructor;
+import com.pulumi.core.annotations.CustomType.Parameter;
+import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Internal;
+import com.pulumi.deployment.internal.EngineLogger;
+import com.pulumi.resources.ResourceArgs;
 import org.junit.jupiter.api.Test;
 
 import javax.annotation.Nullable;

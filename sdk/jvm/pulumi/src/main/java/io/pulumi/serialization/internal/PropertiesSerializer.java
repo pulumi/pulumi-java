@@ -1,13 +1,13 @@
-package io.pulumi.serialization.internal;
+package com.pulumi.serialization.internal;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.protobuf.Struct;
-import io.pulumi.Log;
-import io.pulumi.core.Output;
-import io.pulumi.core.internal.CompletableFutures;
-import io.pulumi.core.internal.Constants;
-import io.pulumi.resources.CustomResource;
-import io.pulumi.resources.Resource;
+import com.pulumi.Log;
+import com.pulumi.core.Output;
+import com.pulumi.core.internal.CompletableFutures;
+import com.pulumi.core.internal.Constants;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.Resource;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.HashMap;
@@ -17,8 +17,8 @@ import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Predicate;
 
-import static io.pulumi.core.internal.CompletableFutures.ignoreNullMapValues;
-import static io.pulumi.core.internal.PulumiCollectors.toTupleOfMaps2;
+import static com.pulumi.core.internal.CompletableFutures.ignoreNullMapValues;
+import static com.pulumi.core.internal.PulumiCollectors.toTupleOfMaps2;
 
 public final class PropertiesSerializer {
 

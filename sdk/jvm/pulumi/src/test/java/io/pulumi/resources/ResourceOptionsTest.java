@@ -1,8 +1,8 @@
-package io.pulumi.resources;
+package com.pulumi.resources;
 
-import io.pulumi.core.Alias;
-import io.pulumi.core.Output;
-import io.pulumi.core.OutputTests;
+import com.pulumi.core.Alias;
+import com.pulumi.core.Output;
+import com.pulumi.core.OutputTests;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -11,7 +11,7 @@ import javax.annotation.Nullable;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static io.pulumi.test.internal.assertj.PulumiAssertions.assertThatNullable;
+import static com.pulumi.test.internal.assertj.PulumiAssertions.assertThatNullable;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 

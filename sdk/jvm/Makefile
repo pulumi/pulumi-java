@@ -20,7 +20,7 @@ ensure::
 # }
 #
 # dependencies {
-#    implementation 'io.pulumi:pulumi:1.0.0'
+#    implementation 'com.pulumi:pulumi:1.0.0'
 # }
 #
 # Adjust 1.0.0 to the right version above.

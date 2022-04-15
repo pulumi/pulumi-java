@@ -1,4 +1,4 @@
-package io.pulumi.test.internal.assertj;
+package com.pulumi.test.internal.assertj;
 
 import org.assertj.core.api.HamcrestCondition;
 import org.hamcrest.CoreMatchers;

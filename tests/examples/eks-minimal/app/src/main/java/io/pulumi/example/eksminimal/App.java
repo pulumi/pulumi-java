@@ -1,15 +1,15 @@
-package io.pulumi.example.eksminimal;
+package com.pulumi.example.eksminimal;
 
-import io.pulumi.Pulumi;
-import io.pulumi.aws.ec2.Ec2Functions;
-import io.pulumi.aws.ec2.inputs.GetSubnetIdsArgs;
-import io.pulumi.aws.ec2.inputs.GetVpcArgs;
-import io.pulumi.aws.ec2.outputs.GetVpcResult;
-import io.pulumi.context.ExportContext;
-import io.pulumi.context.StackContext;
-import io.pulumi.core.Output;
-import io.pulumi.eks.Cluster;
-import io.pulumi.eks.ClusterArgs;
+import com.pulumi.Pulumi;
+import com.pulumi.aws.ec2.Ec2Functions;
+import com.pulumi.aws.ec2.inputs.GetSubnetIdsArgs;
+import com.pulumi.aws.ec2.inputs.GetVpcArgs;
+import com.pulumi.aws.ec2.outputs.GetVpcResult;
+import com.pulumi.context.ExportContext;
+import com.pulumi.context.StackContext;
+import com.pulumi.core.Output;
+import com.pulumi.eks.Cluster;
+import com.pulumi.eks.ClusterArgs;
 
 import java.util.stream.Collectors;
 

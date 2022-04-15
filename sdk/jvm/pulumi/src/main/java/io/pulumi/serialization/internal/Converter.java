@@ -1,4 +1,4 @@
-package io.pulumi.serialization.internal;
+package com.pulumi.serialization.internal;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
@@ -8,18 +8,18 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonNull;
 import com.google.gson.stream.JsonWriter;
 import com.google.protobuf.Value;
-import io.pulumi.Log;
-import io.pulumi.asset.Archive;
-import io.pulumi.asset.Archive.InvalidArchive;
-import io.pulumi.asset.Asset.InvalidAsset;
-import io.pulumi.asset.AssetOrArchive;
-import io.pulumi.core.Either;
-import io.pulumi.core.TypeShape;
-import io.pulumi.core.annotations.CustomType;
-import io.pulumi.core.annotations.EnumType;
-import io.pulumi.core.internal.Maps;
-import io.pulumi.core.internal.OutputData;
-import io.pulumi.resources.Resource;
+import com.pulumi.Log;
+import com.pulumi.asset.Archive;
+import com.pulumi.asset.Archive.InvalidArchive;
+import com.pulumi.asset.Asset.InvalidAsset;
+import com.pulumi.asset.AssetOrArchive;
+import com.pulumi.core.Either;
+import com.pulumi.core.TypeShape;
+import com.pulumi.core.annotations.CustomType;
+import com.pulumi.core.annotations.EnumType;
+import com.pulumi.core.internal.Maps;
+import com.pulumi.core.internal.OutputData;
+import com.pulumi.resources.Resource;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;

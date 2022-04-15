@@ -7,14 +7,14 @@ var root = System.getenv("PULUMI_REPO_ROOT") ?: "../../..";
 
 includeBuild(root + '/sdk/jvm') {
   dependencySubstitution {
-    substitute module('io.pulumi:pulumi') using project(':pulumi')
+    substitute module('com.pulumi:pulumi') using project(':pulumi')
   }
 }
 
 includeBuild(root + '/providers/pulumi-azure-native/sdk/java') {
   name = ':azure-native'
   dependencySubstitution {
-    substitute module('io.pulumi:azure-native') using project(':')
+    substitute module('com.pulumi:azure-native') using project(':')
   }
 }
 

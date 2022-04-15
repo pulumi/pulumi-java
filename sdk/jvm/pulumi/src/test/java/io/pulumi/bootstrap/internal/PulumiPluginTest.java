@@ -1,8 +1,8 @@
-package io.pulumi.bootstrap.internal;
+package com.pulumi.bootstrap.internal;
 
 import com.google.gson.Gson;
-import io.pulumi.bootstrap.internal.PulumiPlugins.RawResource;
-import io.pulumi.core.internal.Optionals;
+import com.pulumi.bootstrap.internal.PulumiPlugins.RawResource;
+import com.pulumi.core.internal.Optionals;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;

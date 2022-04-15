@@ -117,7 +117,7 @@ publishing {
         //
         // https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry
         gpr(MavenPublication) {
-            groupId = "io.pulumi"
+            groupId = "com.pulumi"
             artifactId = "pulumi"
             version = (
               project.findProperty("version") == "unspecified"

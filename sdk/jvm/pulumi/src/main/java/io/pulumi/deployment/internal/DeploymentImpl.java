@@ -1,4 +1,4 @@
-package io.pulumi.deployment.internal;
+package com.pulumi.deployment.internal;
 
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.collect.ImmutableList;
@@ -10,49 +10,49 @@ import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.protobuf.Struct;
 import com.google.protobuf.Value;
-import io.pulumi.Log;
-import io.pulumi.Stack;
-import io.pulumi.Stack.StackInternal;
-import io.pulumi.core.Output;
-import io.pulumi.core.TypeShape;
-import io.pulumi.core.annotations.Import;
-import io.pulumi.core.internal.CompletableFutures;
-import io.pulumi.core.internal.Constants;
-import io.pulumi.core.internal.Environment;
-import io.pulumi.core.internal.Exceptions;
-import io.pulumi.core.internal.GlobalLogging;
-import io.pulumi.core.internal.Internal;
-import io.pulumi.core.internal.Maps;
-import io.pulumi.core.internal.OutputCompletionSource;
-import io.pulumi.core.internal.OutputData;
-import io.pulumi.core.internal.OutputInternal;
-import io.pulumi.core.internal.Strings;
-import io.pulumi.core.internal.annotations.InternalUse;
-import io.pulumi.deployment.CallOptions;
-import io.pulumi.deployment.Deployment;
-import io.pulumi.deployment.InvokeOptions;
-import io.pulumi.exceptions.LogException;
-import io.pulumi.exceptions.ResourceException;
-import io.pulumi.exceptions.RunException;
-import io.pulumi.resources.CallArgs;
-import io.pulumi.resources.ComponentResource;
-import io.pulumi.resources.ComponentResourceOptions;
-import io.pulumi.resources.CustomResource;
-import io.pulumi.resources.CustomResourceOptions;
-import io.pulumi.resources.CustomTimeouts;
-import io.pulumi.resources.DependencyResource;
-import io.pulumi.resources.InvokeArgs;
-import io.pulumi.resources.ProviderResource;
-import io.pulumi.resources.Resource;
-import io.pulumi.resources.ResourceArgs;
-import io.pulumi.resources.ResourceOptions;
-import io.pulumi.resources.StackOptions;
-import io.pulumi.serialization.internal.Converter;
-import io.pulumi.serialization.internal.Deserializer;
-import io.pulumi.serialization.internal.JsonFormatter;
-import io.pulumi.serialization.internal.PropertiesSerializer;
-import io.pulumi.serialization.internal.PropertiesSerializer.SerializationResult;
-import io.pulumi.serialization.internal.Structs;
+import com.pulumi.Log;
+import com.pulumi.Stack;
+import com.pulumi.Stack.StackInternal;
+import com.pulumi.core.Output;
+import com.pulumi.core.TypeShape;
+import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.CompletableFutures;
+import com.pulumi.core.internal.Constants;
+import com.pulumi.core.internal.Environment;
+import com.pulumi.core.internal.Exceptions;
+import com.pulumi.core.internal.GlobalLogging;
+import com.pulumi.core.internal.Internal;
+import com.pulumi.core.internal.Maps;
+import com.pulumi.core.internal.OutputCompletionSource;
+import com.pulumi.core.internal.OutputData;
+import com.pulumi.core.internal.OutputInternal;
+import com.pulumi.core.internal.Strings;
+import com.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.deployment.CallOptions;
+import com.pulumi.deployment.Deployment;
+import com.pulumi.deployment.InvokeOptions;
+import com.pulumi.exceptions.LogException;
+import com.pulumi.exceptions.ResourceException;
+import com.pulumi.exceptions.RunException;
+import com.pulumi.resources.CallArgs;
+import com.pulumi.resources.ComponentResource;
+import com.pulumi.resources.ComponentResourceOptions;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
+import com.pulumi.resources.CustomTimeouts;
+import com.pulumi.resources.DependencyResource;
+import com.pulumi.resources.InvokeArgs;
+import com.pulumi.resources.ProviderResource;
+import com.pulumi.resources.Resource;
+import com.pulumi.resources.ResourceArgs;
+import com.pulumi.resources.ResourceOptions;
+import com.pulumi.resources.StackOptions;
+import com.pulumi.serialization.internal.Converter;
+import com.pulumi.serialization.internal.Deserializer;
+import com.pulumi.serialization.internal.JsonFormatter;
+import com.pulumi.serialization.internal.PropertiesSerializer;
+import com.pulumi.serialization.internal.PropertiesSerializer.SerializationResult;
+import com.pulumi.serialization.internal.Structs;
 import pulumirpc.EngineOuterClass;
 import pulumirpc.EngineOuterClass.LogRequest;
 import pulumirpc.EngineOuterClass.LogSeverity;
@@ -93,11 +93,11 @@ import java.util.stream.Collectors;
 
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static com.google.common.collect.ImmutableSet.toImmutableSet;
-import static io.pulumi.core.internal.Environment.getBooleanEnvironmentVariable;
-import static io.pulumi.core.internal.Environment.getEnvironmentVariable;
-import static io.pulumi.core.internal.Environment.getIntegerEnvironmentVariable;
-import static io.pulumi.core.internal.Exceptions.getStackTrace;
-import static io.pulumi.core.internal.Strings.isNonEmptyOrNull;
+import static com.pulumi.core.internal.Environment.getBooleanEnvironmentVariable;
+import static com.pulumi.core.internal.Environment.getEnvironmentVariable;
+import static com.pulumi.core.internal.Environment.getIntegerEnvironmentVariable;
+import static com.pulumi.core.internal.Exceptions.getStackTrace;
+import static com.pulumi.core.internal.Strings.isNonEmptyOrNull;
 import static java.util.stream.Collectors.toMap;
 import static java.util.stream.Collectors.toSet;
 
@@ -1660,7 +1660,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
         /**
          * The set of tasks (futures) that we have fired off. We issue futures in a Fire-and-Forget manner
-         * to be able to expose a Synchronous @see {@link io.pulumi.resources.Resource} model for users.
+         * to be able to expose a Synchronous @see {@link com.pulumi.resources.Resource} model for users.
          * i.e. a user just synchronously creates a resource, and we asynchronously kick off the work
          * to populate it.
          * This works well, however we have to make sure the console app

@@ -1,4 +1,4 @@
-package io.pulumi.core.internal;
+package com.pulumi.core.internal;
 
 import javax.annotation.Nullable;
 import java.lang.reflect.Array;

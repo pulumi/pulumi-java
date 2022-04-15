@@ -1,8 +1,8 @@
-package io.pulumi;
+package com.pulumi;
 
-import io.pulumi.deployment.internal.CountingLogger;
-import io.pulumi.deployment.internal.EngineLogger;
-import io.pulumi.resources.Resource;
+import com.pulumi.deployment.internal.CountingLogger;
+import com.pulumi.deployment.internal.EngineLogger;
+import com.pulumi.resources.Resource;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;

@@ -1,7 +1,7 @@
-package io.pulumi.resources;
+package com.pulumi.resources;
 
-import io.pulumi.core.internal.Internal;
-import io.pulumi.resources.internal.DependencyProviderResource;
+import com.pulumi.core.internal.Internal;
+import com.pulumi.resources.internal.DependencyProviderResource;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

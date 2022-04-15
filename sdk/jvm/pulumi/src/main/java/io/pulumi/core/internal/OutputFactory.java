@@ -1,8 +1,8 @@
-package io.pulumi.core.internal;
+package com.pulumi.core.internal;
 
-import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.InternalUse;
-import io.pulumi.deployment.internal.Runner;
+import com.pulumi.core.Output;
+import com.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.deployment.internal.Runner;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.concurrent.CompletableFuture;

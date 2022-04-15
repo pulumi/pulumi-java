@@ -1,4 +1,4 @@
-package io.pulumi.deployment.internal;
+package com.pulumi.deployment.internal;
 
 import javax.annotation.Nullable;
 import java.util.Collection;

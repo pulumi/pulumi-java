@@ -1,4 +1,4 @@
-package io.pulumi.resources;
+package com.pulumi.resources;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -8,8 +8,8 @@ import javax.annotation.Nullable;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static io.pulumi.resources.Resources.copyNullableList;
-import static io.pulumi.resources.Resources.mergeNullableList;
+import static com.pulumi.resources.Resources.copyNullableList;
+import static com.pulumi.resources.Resources.mergeNullableList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 

@@ -1,16 +1,16 @@
-package io.pulumi.deployment;
+package com.pulumi.deployment;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.protobuf.Struct;
-import io.pulumi.Log;
-import io.pulumi.Stack.StackInternal;
-import io.pulumi.core.Urn;
-import io.pulumi.core.internal.Maps;
-import io.pulumi.deployment.internal.Monitor;
-import io.pulumi.resources.Resource;
-import io.pulumi.serialization.internal.Deserializer;
-import io.pulumi.serialization.internal.Serializer;
+import com.pulumi.Log;
+import com.pulumi.Stack.StackInternal;
+import com.pulumi.core.Urn;
+import com.pulumi.core.internal.Maps;
+import com.pulumi.deployment.internal.Monitor;
+import com.pulumi.resources.Resource;
+import com.pulumi.serialization.internal.Deserializer;
+import com.pulumi.serialization.internal.Serializer;
 import pulumirpc.Provider.CallRequest;
 import pulumirpc.Provider.CallResponse;
 import pulumirpc.Provider.InvokeRequest;

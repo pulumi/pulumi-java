@@ -1,15 +1,15 @@
-package io.pulumi;
+package com.pulumi;
 
-import io.pulumi.core.Output;
-import io.pulumi.core.OutputTests;
-import io.pulumi.core.Tuples;
-import io.pulumi.core.Tuples.Tuple2;
-import io.pulumi.core.annotations.Export;
-import io.pulumi.core.internal.Internal;
-import io.pulumi.deployment.MocksTest;
-import io.pulumi.deployment.internal.TestOptions;
-import io.pulumi.exceptions.RunException;
-import io.pulumi.resources.Resource;
+import com.pulumi.core.Output;
+import com.pulumi.core.OutputTests;
+import com.pulumi.core.Tuples;
+import com.pulumi.core.Tuples.Tuple2;
+import com.pulumi.core.annotations.Export;
+import com.pulumi.core.internal.Internal;
+import com.pulumi.deployment.MocksTest;
+import com.pulumi.deployment.internal.TestOptions;
+import com.pulumi.exceptions.RunException;
+import com.pulumi.resources.Resource;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
@@ -17,8 +17,8 @@ import org.mockito.ArgumentCaptor;
 import java.util.Map;
 import java.util.function.Supplier;
 
-import static io.pulumi.deployment.internal.DeploymentTests.DeploymentMockBuilder;
-import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
+import static com.pulumi.deployment.internal.DeploymentTests.DeploymentMockBuilder;
+import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.ArgumentMatchers.any;

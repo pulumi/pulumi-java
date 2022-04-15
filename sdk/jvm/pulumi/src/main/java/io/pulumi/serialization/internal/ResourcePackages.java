@@ -1,17 +1,17 @@
-package io.pulumi.serialization.internal;
+package com.pulumi.serialization.internal;
 
 import com.google.common.base.Strings;
 import com.google.common.base.Suppliers;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.reflect.ClassPath;
-import io.pulumi.core.Output;
-import io.pulumi.core.Tuples;
-import io.pulumi.core.Tuples.Tuple2;
-import io.pulumi.core.annotations.ResourceType;
-import io.pulumi.core.internal.*;
-import io.pulumi.core.internal.annotations.InternalUse;
-import io.pulumi.resources.*;
+import com.pulumi.core.Output;
+import com.pulumi.core.Tuples;
+import com.pulumi.core.Tuples.Tuple2;
+import com.pulumi.core.annotations.ResourceType;
+import com.pulumi.core.internal.*;
+import com.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.resources.*;
 import pulumirpc.EngineGrpc;
 
 import javax.annotation.Nullable;

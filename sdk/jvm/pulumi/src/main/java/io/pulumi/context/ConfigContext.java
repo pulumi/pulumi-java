@@ -1,6 +1,6 @@
-package io.pulumi.context;
+package com.pulumi.context;
 
-import io.pulumi.Config;
+import com.pulumi.Config;
 
 /**
  * Provides {@link Config} in current context.

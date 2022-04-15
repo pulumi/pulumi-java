@@ -1,6 +1,6 @@
-package io.pulumi.context;
+package com.pulumi.context;
 
-import io.pulumi.core.Output;
+import com.pulumi.core.Output;
 
 /**
  * Provides the current context to the stack callback.

@@ -1,29 +1,29 @@
-package io.pulumi.serialization.internal;
+package com.pulumi.serialization.internal;
 
 import com.google.gson.JsonElement;
 import com.google.protobuf.ListValue;
 import com.google.protobuf.NullValue;
 import com.google.protobuf.Struct;
 import com.google.protobuf.Value;
-import io.pulumi.Log;
-import io.pulumi.asset.Archive;
-import io.pulumi.asset.Archive.InvalidArchive;
-import io.pulumi.asset.Asset;
-import io.pulumi.asset.Asset.InvalidAsset;
-import io.pulumi.asset.AssetOrArchive;
-import io.pulumi.core.Either;
-import io.pulumi.core.Output;
-import io.pulumi.core.TypeShape;
-import io.pulumi.core.annotations.EnumType;
-import io.pulumi.core.internal.CompletableFutures;
-import io.pulumi.core.internal.Constants;
-import io.pulumi.core.internal.Internal;
-import io.pulumi.core.internal.OutputData;
-import io.pulumi.core.internal.annotations.InternalUse;
-import io.pulumi.resources.ComponentResource;
-import io.pulumi.resources.CustomResource;
-import io.pulumi.resources.InputArgs;
-import io.pulumi.resources.Resource;
+import com.pulumi.Log;
+import com.pulumi.asset.Archive;
+import com.pulumi.asset.Archive.InvalidArchive;
+import com.pulumi.asset.Asset;
+import com.pulumi.asset.Asset.InvalidAsset;
+import com.pulumi.asset.AssetOrArchive;
+import com.pulumi.core.Either;
+import com.pulumi.core.Output;
+import com.pulumi.core.TypeShape;
+import com.pulumi.core.annotations.EnumType;
+import com.pulumi.core.internal.CompletableFutures;
+import com.pulumi.core.internal.Constants;
+import com.pulumi.core.internal.Internal;
+import com.pulumi.core.internal.OutputData;
+import com.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.resources.ComponentResource;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.InputArgs;
+import com.pulumi.resources.Resource;
 
 import javax.annotation.Nullable;
 import java.lang.reflect.InvocationTargetException;
@@ -64,7 +64,7 @@ public class Serializer {
      * <li>@see {@link Asset}</li>
      * <li>@see {@link Archive}</li>
      * <li>@see {@link Resource}</li>
-     * <li>@see {@link io.pulumi.resources.ResourceArgs}</li>
+     * <li>@see {@link com.pulumi.resources.ResourceArgs}</li>
      * <li>@see {@link com.google.gson.JsonElement}</li>
      * </ul>
      * <p/>
@@ -72,10 +72,10 @@ public class Serializer {
      * <br/>
      * These complex objects include:
      * <ul>
-     * <li>@see {@link io.pulumi.core.Output}. As long as they are an Output of a serializable type.</li>
+     * <li>@see {@link com.pulumi.core.Output}. As long as they are an Output of a serializable type.</li>
      * <li>@see {@link java.util.List}. As long as all elements in the list are serializable.</li>
      * <li>@see {@link java.util.Map}. As long as the key of the dictionary are {@code String} and as long as the value are all serializable.</li>
-     * <li>@see {@link io.pulumi.core.Either}. As long as both left and right are serializable.</li>
+     * <li>@see {@link com.pulumi.core.Either}. As long as both left and right are serializable.</li>
      * </ul>
      * <p/>
      * As the final complex type, an {@link Enum} is allowed, but there are special requirements as follows.<br/>

@@ -1,18 +1,18 @@
-package io.pulumi.deployment;
+package com.pulumi.deployment;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
-import io.pulumi.core.Output;
-import io.pulumi.core.Tuples;
-import io.pulumi.core.TypeShape;
-import io.pulumi.core.annotations.CustomType;
-import io.pulumi.core.annotations.CustomType.Constructor;
-import io.pulumi.core.annotations.CustomType.Parameter;
-import io.pulumi.core.annotations.Import;
-import io.pulumi.core.internal.Internal;
-import io.pulumi.deployment.internal.DeploymentTests;
-import io.pulumi.deployment.internal.TestOptions;
-import io.pulumi.resources.InvokeArgs;
+import com.pulumi.core.Output;
+import com.pulumi.core.Tuples;
+import com.pulumi.core.TypeShape;
+import com.pulumi.core.annotations.CustomType;
+import com.pulumi.core.annotations.CustomType.Constructor;
+import com.pulumi.core.annotations.CustomType.Parameter;
+import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Internal;
+import com.pulumi.deployment.internal.DeploymentTests;
+import com.pulumi.deployment.internal.TestOptions;
+import com.pulumi.resources.InvokeArgs;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
@@ -21,7 +21,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
-import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
+import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class DeploymentInvokeTest {

@@ -1,14 +1,14 @@
-package io.pulumi.resources;
+package com.pulumi.resources;
 
-import io.pulumi.core.Alias;
-import io.pulumi.core.Output;
-import io.pulumi.core.internal.Copyable;
-import io.pulumi.core.internal.Objects;
+import com.pulumi.core.Alias;
+import com.pulumi.core.Output;
+import com.pulumi.core.internal.Copyable;
+import com.pulumi.core.internal.Objects;
 
 import javax.annotation.Nullable;
 import java.util.List;
 
-import static io.pulumi.resources.Resources.*;
+import static com.pulumi.resources.Resources.*;
 
 /**
  * A bag of optional settings that control a @see {@link ComponentResource} behavior.

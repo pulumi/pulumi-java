@@ -1,9 +1,9 @@
-package io.pulumi.deployment.internal;
+package com.pulumi.deployment.internal;
 
-import io.pulumi.deployment.internal.DeploymentImpl.DefaultEngineLogger;
+import com.pulumi.deployment.internal.DeploymentImpl.DefaultEngineLogger;
 import org.junit.jupiter.api.Test;
 
-import static io.pulumi.test.internal.assertj.PulumiConditions.containsString;
+import static com.pulumi.test.internal.assertj.PulumiConditions.containsString;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
 

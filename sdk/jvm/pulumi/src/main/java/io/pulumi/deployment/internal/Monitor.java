@@ -1,6 +1,6 @@
-package io.pulumi.deployment.internal;
+package com.pulumi.deployment.internal;
 
-import io.pulumi.resources.Resource;
+import com.pulumi.resources.Resource;
 import pulumirpc.Provider.CallRequest;
 import pulumirpc.Provider.CallResponse;
 import pulumirpc.Provider.InvokeRequest;

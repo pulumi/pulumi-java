@@ -1,4 +1,4 @@
-package io.pulumi.core;
+package com.pulumi.core;
 
 import nl.jqno.equalsverifier.EqualsVerifier;
 import nl.jqno.equalsverifier.Warning;

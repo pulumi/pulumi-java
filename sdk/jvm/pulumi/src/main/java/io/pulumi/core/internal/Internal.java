@@ -1,26 +1,26 @@
-package io.pulumi.core.internal;
+package com.pulumi.core.internal;
 
-import io.pulumi.Stack;
-import io.pulumi.Stack.StackInternal;
-import io.pulumi.asset.AssetOrArchive;
-import io.pulumi.asset.AssetOrArchive.AssetOrArchiveInternal;
-import io.pulumi.core.Output;
-import io.pulumi.deployment.CallOptions;
-import io.pulumi.deployment.CallOptions.CallOptionsInternal;
-import io.pulumi.deployment.DeploymentInstance;
-import io.pulumi.deployment.InvokeOptions;
-import io.pulumi.deployment.InvokeOptions.InvokeOptionsInternal;
-import io.pulumi.deployment.internal.DeploymentInstanceInternal;
-import io.pulumi.resources.ComponentResource;
-import io.pulumi.resources.ComponentResource.ComponentResourceInternal;
-import io.pulumi.resources.CustomResource;
-import io.pulumi.resources.CustomResource.CustomResourceInternal;
-import io.pulumi.resources.InputArgs;
-import io.pulumi.resources.InputArgs.InputArgsInternal;
-import io.pulumi.resources.ProviderResource;
-import io.pulumi.resources.ProviderResource.ProviderResourceInternal;
-import io.pulumi.resources.Resource;
-import io.pulumi.resources.Resource.ResourceInternal;
+import com.pulumi.Stack;
+import com.pulumi.Stack.StackInternal;
+import com.pulumi.asset.AssetOrArchive;
+import com.pulumi.asset.AssetOrArchive.AssetOrArchiveInternal;
+import com.pulumi.core.Output;
+import com.pulumi.deployment.CallOptions;
+import com.pulumi.deployment.CallOptions.CallOptionsInternal;
+import com.pulumi.deployment.DeploymentInstance;
+import com.pulumi.deployment.InvokeOptions;
+import com.pulumi.deployment.InvokeOptions.InvokeOptionsInternal;
+import com.pulumi.deployment.internal.DeploymentInstanceInternal;
+import com.pulumi.resources.ComponentResource;
+import com.pulumi.resources.ComponentResource.ComponentResourceInternal;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResource.CustomResourceInternal;
+import com.pulumi.resources.InputArgs;
+import com.pulumi.resources.InputArgs.InputArgsInternal;
+import com.pulumi.resources.ProviderResource;
+import com.pulumi.resources.ProviderResource.ProviderResourceInternal;
+import com.pulumi.resources.Resource;
+import com.pulumi.resources.Resource.ResourceInternal;
 
 public class Internal {
 

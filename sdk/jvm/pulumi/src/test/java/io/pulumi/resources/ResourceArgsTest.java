@@ -1,17 +1,17 @@
-package io.pulumi.resources;
+package com.pulumi.resources;
 
-import io.pulumi.Log;
-import io.pulumi.core.Output;
-import io.pulumi.core.annotations.Import;
-import io.pulumi.core.internal.Internal;
-import io.pulumi.deployment.internal.DeploymentTests;
+import com.pulumi.Log;
+import com.pulumi.core.Output;
+import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Internal;
+import com.pulumi.deployment.internal.DeploymentTests;
 import org.junit.jupiter.api.Test;
 
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
 
-import static io.pulumi.core.OutputTests.waitFor;
+import static com.pulumi.core.OutputTests.waitFor;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class ResourceArgsTest {

@@ -10,13 +10,13 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.pulumi:pulumi:1.0.0'
-    implementation 'io.pulumi:aws:4.37.3'
-    implementation 'io.pulumi:eks:0.37.1'
+    implementation 'com.pulumi:pulumi:1.0.0'
+    implementation 'com.pulumi:aws:4.37.3'
+    implementation 'com.pulumi:eks:0.37.1'
 }
 
 application {
     mainClass = project.hasProperty("mainClass")
             ? project.getProperty("mainClass")
-            : 'io.pulumi.example.eksminimal.App'
+            : 'com.pulumi.example.eksminimal.App'
 }

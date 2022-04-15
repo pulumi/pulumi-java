@@ -1,6 +1,6 @@
-package io.pulumi.core.internal.annotations;
+package com.pulumi.core.internal.annotations;
 
-import io.pulumi.core.internal.Optionals;
+import com.pulumi.core.internal.Optionals;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;

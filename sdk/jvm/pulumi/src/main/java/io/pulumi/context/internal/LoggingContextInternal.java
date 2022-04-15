@@ -1,8 +1,8 @@
-package io.pulumi.context.internal;
+package com.pulumi.context.internal;
 
-import io.pulumi.Log;
-import io.pulumi.context.LoggingContext;
-import io.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.Log;
+import com.pulumi.context.LoggingContext;
+import com.pulumi.core.internal.annotations.InternalUse;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 

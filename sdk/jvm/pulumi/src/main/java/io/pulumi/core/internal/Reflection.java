@@ -1,7 +1,7 @@
-package io.pulumi.core.internal;
+package com.pulumi.core.internal;
 
 import com.google.common.collect.ImmutableList;
-import io.pulumi.core.Either;
+import com.pulumi.core.Either;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;

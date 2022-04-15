@@ -1,8 +1,8 @@
 package myproject;
 
-import io.pulumi.Pulumi;
-import io.pulumi.core.Output;
-import io.pulumi.aws.s3.Bucket;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.aws.s3.Bucket;
 
 public class App {
     public static void main(String[] args) {

@@ -1,14 +1,14 @@
-package io.pulumi.deployment.internal;
+package com.pulumi.deployment.internal;
 
-import io.pulumi.core.Output;
-import io.pulumi.core.TypeShape;
-import io.pulumi.core.internal.annotations.InternalUse;
-import io.pulumi.deployment.CallOptions;
-import io.pulumi.deployment.DeploymentInstance;
-import io.pulumi.deployment.InvokeOptions;
-import io.pulumi.resources.CallArgs;
-import io.pulumi.resources.InvokeArgs;
-import io.pulumi.resources.Resource;
+import com.pulumi.core.Output;
+import com.pulumi.core.TypeShape;
+import com.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.deployment.CallOptions;
+import com.pulumi.deployment.DeploymentInstance;
+import com.pulumi.deployment.InvokeOptions;
+import com.pulumi.resources.CallArgs;
+import com.pulumi.resources.InvokeArgs;
+import com.pulumi.resources.Resource;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 
 /**
- * Metadata of the deployment that is currently running. Accessible via @see {@link io.pulumi.deployment.Deployment#getInstance()}.
+ * Metadata of the deployment that is currently running. Accessible via @see {@link com.pulumi.deployment.Deployment#getInstance()}.
  */
 @InternalUse
 public final class DeploymentInstanceInternal implements DeploymentInstance {

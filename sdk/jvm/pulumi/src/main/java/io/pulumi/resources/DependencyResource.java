@@ -1,12 +1,12 @@
-package io.pulumi.resources;
+package com.pulumi.resources;
 
 import com.google.common.collect.ImmutableSet;
-import io.pulumi.core.Output;
-import io.pulumi.core.internal.Internal;
-import io.pulumi.core.internal.OutputInternal;
+import com.pulumi.core.Output;
+import com.pulumi.core.internal.Internal;
+import com.pulumi.core.internal.OutputInternal;
 
 /**
- * A @see {@link Resource} that is used to indicate that an @see {@link io.pulumi.core.Output}
+ * A @see {@link Resource} that is used to indicate that an @see {@link com.pulumi.core.Output}
  * has a dependency on a particular resource. These resources are only created when dealing
  * with remote component resources.
  */

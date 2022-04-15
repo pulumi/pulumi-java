@@ -1,11 +1,11 @@
-package io.pulumi.core.internal;
+package com.pulumi.core.internal;
 
 import java.util.logging.Handler;
 import java.util.logging.Level;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
-import static io.pulumi.core.internal.Environment.getBooleanEnvironmentVariable;
+import static com.pulumi.core.internal.Environment.getBooleanEnvironmentVariable;
 
 public final class GlobalLogging {
     public static final Level GlobalLevel = getBooleanEnvironmentVariable("PULUMI_JVM_LOG_VERBOSE").or(false)

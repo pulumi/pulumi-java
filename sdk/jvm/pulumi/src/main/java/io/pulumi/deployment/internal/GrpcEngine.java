@@ -1,4 +1,4 @@
-package io.pulumi.deployment.internal;
+package com.pulumi.deployment.internal;
 
 import io.grpc.ManagedChannelBuilder;
 import pulumirpc.EngineGrpc;

@@ -1,12 +1,12 @@
-package io.pulumi.core;
+package com.pulumi.core;
 
 import com.google.common.collect.ImmutableSet;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
-import io.pulumi.core.Tuples.Tuple2;
-import io.pulumi.core.Tuples.Tuple3;
-import io.pulumi.core.internal.Internal;
-import io.pulumi.core.internal.OutputData;
-import io.pulumi.core.internal.OutputInternal;
+import com.pulumi.core.Tuples.Tuple2;
+import com.pulumi.core.Tuples.Tuple3;
+import com.pulumi.core.internal.Internal;
+import com.pulumi.core.internal.OutputData;
+import com.pulumi.core.internal.OutputInternal;
 
 public class OutputTests {
 

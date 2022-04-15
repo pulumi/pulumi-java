@@ -1,17 +1,17 @@
 // from https://github.com/pulumi/examples/blob/8cc8b1a4384c8b33f70ba65c701e19daecfa6399/aws-ts-s3-folder/index.ts
 package s3site;
 
-import io.pulumi.Pulumi;
-import io.pulumi.asset.FileAsset;
-import io.pulumi.aws.s3.BucketObject;
-import io.pulumi.aws.s3.BucketObjectArgs;
-import io.pulumi.aws.s3.BucketPolicy;
-import io.pulumi.aws.s3.BucketPolicyArgs;
-import io.pulumi.awsnative.s3.Bucket;
-import io.pulumi.awsnative.s3.BucketArgs;
-import io.pulumi.awsnative.s3.inputs.BucketWebsiteConfigurationArgs;
-import io.pulumi.context.ExportContext;
-import io.pulumi.context.StackContext;
+import com.pulumi.Pulumi;
+import com.pulumi.asset.FileAsset;
+import com.pulumi.aws.s3.BucketObject;
+import com.pulumi.aws.s3.BucketObjectArgs;
+import com.pulumi.aws.s3.BucketPolicy;
+import com.pulumi.aws.s3.BucketPolicyArgs;
+import com.pulumi.awsnative.s3.Bucket;
+import com.pulumi.awsnative.s3.BucketArgs;
+import com.pulumi.awsnative.s3.inputs.BucketWebsiteConfigurationArgs;
+import com.pulumi.context.ExportContext;
+import com.pulumi.context.StackContext;
 
 import java.io.IOException;
 import java.nio.file.Files;

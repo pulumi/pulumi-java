@@ -1,26 +1,26 @@
-package io.pulumi.serialization.internal;
+package com.pulumi.serialization.internal;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.protobuf.Struct;
 import com.google.protobuf.Value;
-import io.pulumi.Stack;
-import io.pulumi.core.Output;
-import io.pulumi.core.OutputTests;
-import io.pulumi.core.Tuples;
-import io.pulumi.core.annotations.Export;
-import io.pulumi.core.annotations.ResourceType;
-import io.pulumi.core.internal.Constants;
-import io.pulumi.deployment.MockCallArgs;
-import io.pulumi.deployment.MockResourceArgs;
-import io.pulumi.deployment.Mocks;
-import io.pulumi.deployment.internal.DeploymentTests;
-import io.pulumi.deployment.internal.TestOptions;
-import io.pulumi.resources.ComponentResource;
-import io.pulumi.resources.ComponentResourceOptions;
-import io.pulumi.resources.CustomResource;
-import io.pulumi.resources.CustomResourceOptions;
-import io.pulumi.resources.Resource;
-import io.pulumi.resources.ResourceArgs;
+import com.pulumi.Stack;
+import com.pulumi.core.Output;
+import com.pulumi.core.OutputTests;
+import com.pulumi.core.Tuples;
+import com.pulumi.core.annotations.Export;
+import com.pulumi.core.annotations.ResourceType;
+import com.pulumi.core.internal.Constants;
+import com.pulumi.deployment.MockCallArgs;
+import com.pulumi.deployment.MockResourceArgs;
+import com.pulumi.deployment.Mocks;
+import com.pulumi.deployment.internal.DeploymentTests;
+import com.pulumi.deployment.internal.TestOptions;
+import com.pulumi.resources.ComponentResource;
+import com.pulumi.resources.ComponentResourceOptions;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
+import com.pulumi.resources.Resource;
+import com.pulumi.resources.ResourceArgs;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -31,9 +31,9 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
-import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
-import static io.pulumi.serialization.internal.ConverterTests.deserializeFromValue;
-import static io.pulumi.serialization.internal.ConverterTests.serializeToValueAsync;
+import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
+import static com.pulumi.serialization.internal.ConverterTests.deserializeFromValue;
+import static com.pulumi.serialization.internal.ConverterTests.serializeToValueAsync;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class ResourceRefPropertyTest {

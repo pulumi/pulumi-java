@@ -1,4 +1,4 @@
-package io.pulumi.core;
+package com.pulumi.core;
 
 import com.google.common.base.MoreObjects;
 

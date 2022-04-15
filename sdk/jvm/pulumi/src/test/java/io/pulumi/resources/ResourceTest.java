@@ -1,15 +1,15 @@
-package io.pulumi.resources;
+package com.pulumi.resources;
 
 import com.google.common.collect.ImmutableMap;
-import io.pulumi.Stack;
-import io.pulumi.core.OutputTests;
-import io.pulumi.core.Tuples;
-import io.pulumi.core.internal.Internal;
-import io.pulumi.deployment.MockCallArgs;
-import io.pulumi.deployment.MockResourceArgs;
-import io.pulumi.deployment.Mocks;
-import io.pulumi.deployment.internal.DeploymentTests;
-import io.pulumi.deployment.internal.TestOptions;
+import com.pulumi.Stack;
+import com.pulumi.core.OutputTests;
+import com.pulumi.core.Tuples;
+import com.pulumi.core.internal.Internal;
+import com.pulumi.deployment.MockCallArgs;
+import com.pulumi.deployment.MockResourceArgs;
+import com.pulumi.deployment.Mocks;
+import com.pulumi.deployment.internal.DeploymentTests;
+import com.pulumi.deployment.internal.TestOptions;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -19,7 +19,7 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
-import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
+import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ResourceTest {

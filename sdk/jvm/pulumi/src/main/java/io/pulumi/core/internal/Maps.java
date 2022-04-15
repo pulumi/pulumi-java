@@ -1,7 +1,7 @@
-package io.pulumi.core.internal;
+package com.pulumi.core.internal;
 
 import com.google.common.collect.ImmutableMap;
-import io.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.core.internal.annotations.InternalUse;
 
 import java.util.Map;
 import java.util.Objects;

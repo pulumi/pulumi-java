@@ -1,14 +1,14 @@
-package io.pulumi.resources;
+package com.pulumi.resources;
 
-import io.pulumi.core.Alias;
-import io.pulumi.core.Output;
+import com.pulumi.core.Alias;
+import com.pulumi.core.Output;
 
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
-import static io.pulumi.resources.Resources.mergeNullableList;
+import static com.pulumi.resources.Resources.mergeNullableList;
 
 /**
  * ResourceOptions is a bag of optional settings that control a resource's behavior.

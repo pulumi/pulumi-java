@@ -1,9 +1,9 @@
-package io.pulumi.deployment;
+package com.pulumi.deployment;
 
 import org.junit.jupiter.api.Test;
 
-import static io.pulumi.deployment.internal.DeploymentTests.parseConfig;
-import static io.pulumi.deployment.internal.DeploymentTests.parseConfigSecretKeys;
+import static com.pulumi.deployment.internal.DeploymentTests.parseConfig;
+import static com.pulumi.deployment.internal.DeploymentTests.parseConfigSecretKeys;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class DeploymentConfigTest {

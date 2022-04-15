@@ -1,8 +1,8 @@
-package io.pulumi.core.internal;
+package com.pulumi.core.internal;
 
 import com.google.common.collect.ImmutableMap;
-import io.pulumi.core.Tuples;
-import io.pulumi.core.Tuples.Tuple2;
+import com.pulumi.core.Tuples;
+import com.pulumi.core.Tuples.Tuple2;
 import org.assertj.core.util.Lists;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -12,8 +12,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static io.pulumi.core.internal.PulumiCollectors.toSingleton;
-import static io.pulumi.core.internal.PulumiCollectors.toTupleOfMaps2;
+import static com.pulumi.core.internal.PulumiCollectors.toSingleton;
+import static com.pulumi.core.internal.PulumiCollectors.toTupleOfMaps2;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.params.provider.Arguments.arguments;

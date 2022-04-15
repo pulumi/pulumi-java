@@ -1,4 +1,4 @@
-package io.pulumi.exceptions;
+package com.pulumi.exceptions;
 
 /**
  * Special exception we throw if we had a problem actually logging a message to the engine

@@ -1,7 +1,7 @@
-package io.pulumi.resources;
+package com.pulumi.resources;
 
-import io.pulumi.core.Output;
-import io.pulumi.core.annotations.Import;
+import com.pulumi.core.Output;
+import com.pulumi.core.annotations.Import;
 
 import javax.annotation.Nullable;
 import java.util.Optional;

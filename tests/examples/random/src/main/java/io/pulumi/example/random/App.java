@@ -1,21 +1,21 @@
-package io.pulumi.example.random;
+package com.pulumi.example.random;
 
-import io.pulumi.Pulumi;
-import io.pulumi.context.ExportContext;
-import io.pulumi.context.StackContext;
-import io.pulumi.core.Output;
-import io.pulumi.random.RandomId;
-import io.pulumi.random.RandomIdArgs;
-import io.pulumi.random.RandomInteger;
-import io.pulumi.random.RandomIntegerArgs;
-import io.pulumi.random.RandomPassword;
-import io.pulumi.random.RandomPasswordArgs;
-import io.pulumi.random.RandomPet;
-import io.pulumi.random.RandomShuffle;
-import io.pulumi.random.RandomShuffleArgs;
-import io.pulumi.random.RandomString;
-import io.pulumi.random.RandomStringArgs;
-import io.pulumi.random.RandomUuid;
+import com.pulumi.Pulumi;
+import com.pulumi.context.ExportContext;
+import com.pulumi.context.StackContext;
+import com.pulumi.core.Output;
+import com.pulumi.random.RandomId;
+import com.pulumi.random.RandomIdArgs;
+import com.pulumi.random.RandomInteger;
+import com.pulumi.random.RandomIntegerArgs;
+import com.pulumi.random.RandomPassword;
+import com.pulumi.random.RandomPasswordArgs;
+import com.pulumi.random.RandomPet;
+import com.pulumi.random.RandomShuffle;
+import com.pulumi.random.RandomShuffleArgs;
+import com.pulumi.random.RandomString;
+import com.pulumi.random.RandomStringArgs;
+import com.pulumi.random.RandomUuid;
 
 import java.util.List;
 

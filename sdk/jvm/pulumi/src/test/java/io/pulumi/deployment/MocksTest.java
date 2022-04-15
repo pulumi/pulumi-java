@@ -1,25 +1,25 @@
-package io.pulumi.deployment;
+package com.pulumi.deployment;
 
 import com.google.common.collect.ImmutableMap;
 import io.grpc.Status;
-import io.pulumi.Stack;
-import io.pulumi.core.Output;
-import io.pulumi.core.OutputTests;
-import io.pulumi.core.Tuples;
-import io.pulumi.core.annotations.CustomType;
-import io.pulumi.core.annotations.CustomType.Constructor;
-import io.pulumi.core.annotations.CustomType.Parameter;
-import io.pulumi.core.annotations.Export;
-import io.pulumi.core.annotations.Import;
-import io.pulumi.core.annotations.ResourceType;
-import io.pulumi.core.internal.Internal;
-import io.pulumi.deployment.internal.DeploymentTests;
-import io.pulumi.deployment.internal.InMemoryLogger;
-import io.pulumi.deployment.internal.TestOptions;
-import io.pulumi.resources.CustomResource;
-import io.pulumi.resources.CustomResourceOptions;
-import io.pulumi.resources.InvokeArgs;
-import io.pulumi.resources.ResourceArgs;
+import com.pulumi.Stack;
+import com.pulumi.core.Output;
+import com.pulumi.core.OutputTests;
+import com.pulumi.core.Tuples;
+import com.pulumi.core.annotations.CustomType;
+import com.pulumi.core.annotations.CustomType.Constructor;
+import com.pulumi.core.annotations.CustomType.Parameter;
+import com.pulumi.core.annotations.Export;
+import com.pulumi.core.annotations.Import;
+import com.pulumi.core.annotations.ResourceType;
+import com.pulumi.core.internal.Internal;
+import com.pulumi.deployment.internal.DeploymentTests;
+import com.pulumi.deployment.internal.InMemoryLogger;
+import com.pulumi.deployment.internal.TestOptions;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
+import com.pulumi.resources.InvokeArgs;
+import com.pulumi.resources.ResourceArgs;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
@@ -31,9 +31,9 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.stream.Collectors;
 
-import static io.pulumi.core.TypeShape.of;
-import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
-import static io.pulumi.test.internal.assertj.PulumiConditions.containsString;
+import static com.pulumi.core.TypeShape.of;
+import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
+import static com.pulumi.test.internal.assertj.PulumiConditions.containsString;
 import static java.util.Objects.requireNonNull;
 import static org.assertj.core.api.Assertions.assertThat;
 

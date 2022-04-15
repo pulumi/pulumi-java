@@ -1,8 +1,8 @@
-package io.pulumi;
+package com.pulumi;
 
-import io.pulumi.context.ExportContext;
-import io.pulumi.context.StackContext;
-import io.pulumi.internal.PulumiInternal;
+import com.pulumi.context.ExportContext;
+import com.pulumi.context.StackContext;
+import com.pulumi.internal.PulumiInternal;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;

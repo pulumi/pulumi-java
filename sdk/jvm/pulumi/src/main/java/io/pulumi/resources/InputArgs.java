@@ -1,15 +1,15 @@
-package io.pulumi.resources;
+package com.pulumi.resources;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
-import io.pulumi.Log;
-import io.pulumi.core.Output;
-import io.pulumi.core.annotations.Import;
-import io.pulumi.core.internal.CompletableFutures;
-import io.pulumi.core.internal.annotations.ImportMetadata;
-import io.pulumi.core.internal.annotations.InternalUse;
-import io.pulumi.serialization.internal.JsonFormatter;
-import io.pulumi.serialization.internal.Serializer;
+import com.pulumi.Log;
+import com.pulumi.core.Output;
+import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.CompletableFutures;
+import com.pulumi.core.internal.annotations.ImportMetadata;
+import com.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.serialization.internal.JsonFormatter;
+import com.pulumi.serialization.internal.Serializer;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Map;

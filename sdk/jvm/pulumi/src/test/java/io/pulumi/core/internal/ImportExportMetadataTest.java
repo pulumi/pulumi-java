@@ -1,12 +1,12 @@
-package io.pulumi.core.internal;
+package com.pulumi.core.internal;
 
-import io.pulumi.core.Either;
-import io.pulumi.core.Output;
-import io.pulumi.core.TypeShape;
-import io.pulumi.core.annotations.Export;
-import io.pulumi.core.annotations.Import;
-import io.pulumi.core.internal.annotations.ExportMetadata;
-import io.pulumi.core.internal.annotations.ImportMetadata;
+import com.pulumi.core.Either;
+import com.pulumi.core.Output;
+import com.pulumi.core.TypeShape;
+import com.pulumi.core.annotations.Export;
+import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.annotations.ExportMetadata;
+import com.pulumi.core.internal.annotations.ImportMetadata;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;

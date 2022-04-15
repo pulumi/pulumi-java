@@ -1,4 +1,4 @@
-package io.pulumi.core;
+package com.pulumi.core;
 
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import org.junit.jupiter.api.Test;

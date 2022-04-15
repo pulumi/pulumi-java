@@ -1,9 +1,9 @@
-package io.pulumi.serialization.internal;
+package com.pulumi.serialization.internal;
 
-import io.pulumi.core.annotations.ResourceType;
-import io.pulumi.resources.CustomResource;
-import io.pulumi.resources.CustomResourceOptions;
-import io.pulumi.resources.ResourceArgs;
+import com.pulumi.core.annotations.ResourceType;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
+import com.pulumi.resources.ResourceArgs;
 import org.junit.jupiter.api.Test;
 
 import javax.annotation.Nullable;

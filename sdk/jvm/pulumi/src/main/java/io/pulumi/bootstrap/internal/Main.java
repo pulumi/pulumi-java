@@ -1,8 +1,8 @@
-package io.pulumi.bootstrap.internal;
+package com.pulumi.bootstrap.internal;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.gson.Gson;
-import io.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.core.internal.annotations.InternalUse;
 
 import java.util.Arrays;
 

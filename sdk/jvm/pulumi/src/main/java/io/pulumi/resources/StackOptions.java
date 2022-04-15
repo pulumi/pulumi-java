@@ -1,4 +1,4 @@
-package io.pulumi.resources;
+package com.pulumi.resources;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;

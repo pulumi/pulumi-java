@@ -1,21 +1,21 @@
-package io.pulumi.resources;
+package com.pulumi.resources;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
-import io.pulumi.Stack.StackInternal;
-import io.pulumi.core.Alias;
-import io.pulumi.core.Output;
-import io.pulumi.core.Urn;
-import io.pulumi.core.annotations.Export;
-import io.pulumi.core.internal.Constants;
-import io.pulumi.core.internal.Internal;
-import io.pulumi.core.internal.Strings;
-import io.pulumi.core.internal.annotations.ExportMetadata;
-import io.pulumi.core.internal.annotations.InternalUse;
-import io.pulumi.deployment.Deployment;
-import io.pulumi.deployment.internal.DeploymentInternal;
-import io.pulumi.exceptions.ResourceException;
-import io.pulumi.exceptions.RunException;
+import com.pulumi.Stack.StackInternal;
+import com.pulumi.core.Alias;
+import com.pulumi.core.Output;
+import com.pulumi.core.Urn;
+import com.pulumi.core.annotations.Export;
+import com.pulumi.core.internal.Constants;
+import com.pulumi.core.internal.Internal;
+import com.pulumi.core.internal.Strings;
+import com.pulumi.core.internal.annotations.ExportMetadata;
+import com.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.deployment.Deployment;
+import com.pulumi.deployment.internal.DeploymentInternal;
+import com.pulumi.exceptions.ResourceException;
+import com.pulumi.exceptions.RunException;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -33,9 +33,9 @@ import java.util.stream.Collectors;
 
 import static com.google.common.collect.ImmutableList.toImmutableList;
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
-import static io.pulumi.core.internal.Objects.exceptionSupplier;
-import static io.pulumi.core.internal.Objects.require;
-import static io.pulumi.resources.Resources.copyNullableList;
+import static com.pulumi.core.internal.Objects.exceptionSupplier;
+import static com.pulumi.core.internal.Objects.require;
+import static com.pulumi.resources.Resources.copyNullableList;
 import static java.util.Objects.requireNonNull;
 
 /**
@@ -505,7 +505,7 @@ public abstract class Resource {
          * ensures the field type is {@link Output}
          * and uses reflection to get the references to them.
          * Returns a map of export names and output references.
-         * Not to be confused with {@link io.pulumi.core.internal.OutputCompletionSource#from(io.pulumi.resources.Resource)}
+         * Not to be confused with {@link com.pulumi.core.internal.OutputCompletionSource#from(com.pulumi.resources.Resource)}
          */
         @InternalUse
         public static Map<String, Output<?>> findOutputs(Object object) {

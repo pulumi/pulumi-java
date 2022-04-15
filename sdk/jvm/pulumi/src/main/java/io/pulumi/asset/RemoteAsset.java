@@ -1,6 +1,6 @@
-package io.pulumi.asset;
+package com.pulumi.asset;
 
-import io.pulumi.core.internal.Constants;
+import com.pulumi.core.internal.Constants;
 
 /**
  * RemoteAsset is a kind of asset produced from a given URI string.  The URI's scheme dictates

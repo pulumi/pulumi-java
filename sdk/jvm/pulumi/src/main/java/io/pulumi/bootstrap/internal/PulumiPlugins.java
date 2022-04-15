@@ -1,4 +1,4 @@
-package io.pulumi.bootstrap.internal;
+package com.pulumi.bootstrap.internal;
 
 import com.google.common.base.MoreObjects;
 import com.google.common.collect.ImmutableMap;
@@ -7,8 +7,8 @@ import com.google.common.io.Resources;
 import com.google.common.reflect.ClassPath;
 import com.google.common.reflect.ClassPath.ResourceInfo;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
-import io.pulumi.core.internal.RegexPattern;
-import io.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.core.internal.RegexPattern;
+import com.pulumi.core.internal.annotations.InternalUse;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;

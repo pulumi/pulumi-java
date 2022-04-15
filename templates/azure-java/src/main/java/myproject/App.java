@@ -1,17 +1,17 @@
 package myproject;
 
-import io.pulumi.Pulumi;
-import io.pulumi.azurenative.resources.ResourceGroup;
-import io.pulumi.azurenative.storage.StorageAccount;
-import io.pulumi.azurenative.storage.StorageAccountArgs;
-import io.pulumi.azurenative.storage.StorageFunctions;
-import io.pulumi.azurenative.storage.enums.Kind;
-import io.pulumi.azurenative.storage.enums.SkuName;
-import io.pulumi.azurenative.storage.inputs.ListStorageAccountKeysArgs;
-import io.pulumi.azurenative.storage.inputs.SkuArgs;
-import io.pulumi.core.Either;
-import io.pulumi.core.Output;
-import io.pulumi.deployment.InvokeOptions;
+import com.pulumi.Pulumi;
+import com.pulumi.azurenative.resources.ResourceGroup;
+import com.pulumi.azurenative.storage.StorageAccount;
+import com.pulumi.azurenative.storage.StorageAccountArgs;
+import com.pulumi.azurenative.storage.StorageFunctions;
+import com.pulumi.azurenative.storage.enums.Kind;
+import com.pulumi.azurenative.storage.enums.SkuName;
+import com.pulumi.azurenative.storage.inputs.ListStorageAccountKeysArgs;
+import com.pulumi.azurenative.storage.inputs.SkuArgs;
+import com.pulumi.core.Either;
+import com.pulumi.core.Output;
+import com.pulumi.deployment.InvokeOptions;
 
 public class App {
     public static void main(String[] args) {

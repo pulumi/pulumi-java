@@ -1,16 +1,16 @@
-package io.pulumi.resources.internal;
+package com.pulumi.resources.internal;
 
 import com.google.common.collect.ImmutableSet;
-import io.pulumi.core.Tuples;
-import io.pulumi.core.Tuples.Tuple2;
-import io.pulumi.core.internal.Internal;
-import io.pulumi.core.internal.OutputInternal;
-import io.pulumi.resources.ProviderResource;
-import io.pulumi.resources.Resource;
-import io.pulumi.resources.ResourceArgs;
+import com.pulumi.core.Tuples;
+import com.pulumi.core.Tuples.Tuple2;
+import com.pulumi.core.internal.Internal;
+import com.pulumi.core.internal.OutputInternal;
+import com.pulumi.resources.ProviderResource;
+import com.pulumi.resources.Resource;
+import com.pulumi.resources.ResourceArgs;
 
 /**
- * A @see {@link io.pulumi.resources.Resource} that is used by the provider SDK
+ * A @see {@link com.pulumi.resources.Resource} that is used by the provider SDK
  * as a stand-in for a provider that is only used for its reference.
  * Its only valid properties are its URN and ID.
  */

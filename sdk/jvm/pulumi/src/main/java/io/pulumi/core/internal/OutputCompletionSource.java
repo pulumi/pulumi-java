@@ -1,16 +1,16 @@
-package io.pulumi.core.internal;
+package com.pulumi.core.internal;
 
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
 import com.google.protobuf.Value;
-import io.pulumi.core.Output;
-import io.pulumi.core.TypeShape;
-import io.pulumi.core.annotations.Export;
-import io.pulumi.core.internal.annotations.ExportMetadata;
-import io.pulumi.resources.Resource;
-import io.pulumi.serialization.internal.Converter;
+import com.pulumi.core.Output;
+import com.pulumi.core.TypeShape;
+import com.pulumi.core.annotations.Export;
+import com.pulumi.core.internal.annotations.ExportMetadata;
+import com.pulumi.resources.Resource;
+import com.pulumi.serialization.internal.Converter;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Map;
@@ -23,7 +23,7 @@ import static com.google.common.collect.ImmutableMap.toImmutableMap;
  * Lazy initialization object used to set {@link Output}
  * field values with data that will come from Pulumi engine.
  * The lazy initialization is done with reflection during the resource registration in:
- * {@link io.pulumi.deployment.internal.DeploymentImpl.ReadOrRegisterResource#readOrRegisterResource(io.pulumi.resources.Resource, boolean, java.util.function.Function, io.pulumi.resources.ResourceArgs, io.pulumi.resources.ResourceOptions)}.
+ * {@link com.pulumi.deployment.internal.DeploymentImpl.ReadOrRegisterResource#readOrRegisterResource(com.pulumi.resources.Resource, boolean, java.util.function.Function, com.pulumi.resources.ResourceArgs, com.pulumi.resources.ResourceOptions)}.
  * @param <T> type of the field value
  */
 @SuppressWarnings("JavadocReference") // ReadOrRegisterResource is private but this is an internal class

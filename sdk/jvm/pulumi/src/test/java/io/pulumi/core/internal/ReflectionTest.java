@@ -1,7 +1,7 @@
-package io.pulumi.core.internal;
+package com.pulumi.core.internal;
 
 import com.google.gson.Gson;
-import io.pulumi.core.TypeShape;
+import com.pulumi.core.TypeShape;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

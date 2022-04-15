@@ -1,11 +1,11 @@
-package io.pulumi.core.internal;
+package com.pulumi.core.internal;
 
 import com.google.common.collect.ImmutableSet;
-import io.pulumi.core.Either;
-import io.pulumi.core.Output;
-import io.pulumi.core.TypeShape;
-import io.pulumi.core.annotations.Export;
-import io.pulumi.core.internal.annotations.ExportMetadata;
+import com.pulumi.core.Either;
+import com.pulumi.core.Output;
+import com.pulumi.core.TypeShape;
+import com.pulumi.core.annotations.Export;
+import com.pulumi.core.internal.annotations.ExportMetadata;
 import org.junit.jupiter.api.Test;
 
 import java.util.Map;

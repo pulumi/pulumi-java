@@ -1,13 +1,13 @@
-package io.pulumi.deployment.internal;
+package com.pulumi.deployment.internal;
 
 import com.google.common.annotations.VisibleForTesting;
-import io.pulumi.Stack;
-import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.InternalUse;
-import io.pulumi.deployment.Deployment;
-import io.pulumi.resources.Resource;
-import io.pulumi.resources.ResourceArgs;
-import io.pulumi.resources.ResourceOptions;
+import com.pulumi.Stack;
+import com.pulumi.core.Output;
+import com.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.deployment.Deployment;
+import com.pulumi.resources.Resource;
+import com.pulumi.resources.ResourceArgs;
+import com.pulumi.resources.ResourceOptions;
 
 import java.util.Map;
 import java.util.Optional;

@@ -1,8 +1,8 @@
-package io.pulumi.core.internal;
+package com.pulumi.core.internal;
 
 import com.google.common.collect.ComparisonChain;
-import io.pulumi.core.Tuples;
-import io.pulumi.core.Tuples.Tuple5;
+import com.pulumi.core.Tuples;
+import com.pulumi.core.Tuples.Tuple5;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -11,7 +11,7 @@ import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static io.pulumi.core.internal.Strings.isNonEmptyOrNull;
+import static com.pulumi.core.internal.Strings.isNonEmptyOrNull;
 
 /**
  * A semantic version implementation.

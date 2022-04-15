@@ -1,10 +1,10 @@
-package io.pulumi.core;
+package com.pulumi.core;
 
 import com.google.common.base.MoreObjects;
 import com.google.common.collect.ImmutableList;
 import com.google.common.reflect.TypeToken;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
-import io.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.core.internal.annotations.InternalUse;
 
 import javax.annotation.CheckReturnValue;
 import java.lang.annotation.Annotation;
@@ -14,7 +14,7 @@ import java.lang.reflect.Parameter;
 import java.lang.reflect.Type;
 import java.util.*;
 
-import static io.pulumi.core.internal.PulumiCollectors.toSingleton;
+import static com.pulumi.core.internal.PulumiCollectors.toSingleton;
 import static java.util.stream.Collectors.joining;
 
 public final class TypeShape<T> {

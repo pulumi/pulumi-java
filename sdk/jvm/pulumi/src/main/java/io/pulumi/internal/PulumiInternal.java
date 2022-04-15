@@ -1,19 +1,19 @@
-package io.pulumi.internal;
+package com.pulumi.internal;
 
-import io.pulumi.Config;
-import io.pulumi.Pulumi;
-import io.pulumi.context.ExportContext;
-import io.pulumi.context.StackContext;
-import io.pulumi.context.internal.ConfigContextInternal;
-import io.pulumi.context.internal.ExportContextInternal;
-import io.pulumi.context.internal.LoggingContextInternal;
-import io.pulumi.context.internal.OutputContextInternal;
-import io.pulumi.context.internal.StackContextInternal;
-import io.pulumi.core.internal.OutputFactory;
-import io.pulumi.core.internal.annotations.InternalUse;
-import io.pulumi.deployment.Deployment;
-import io.pulumi.deployment.internal.DeploymentImpl;
-import io.pulumi.deployment.internal.Runner;
+import com.pulumi.Config;
+import com.pulumi.Pulumi;
+import com.pulumi.context.ExportContext;
+import com.pulumi.context.StackContext;
+import com.pulumi.context.internal.ConfigContextInternal;
+import com.pulumi.context.internal.ExportContextInternal;
+import com.pulumi.context.internal.LoggingContextInternal;
+import com.pulumi.context.internal.OutputContextInternal;
+import com.pulumi.context.internal.StackContextInternal;
+import com.pulumi.core.internal.OutputFactory;
+import com.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.deployment.Deployment;
+import com.pulumi.deployment.internal.DeploymentImpl;
+import com.pulumi.deployment.internal.Runner;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.concurrent.CompletableFuture;

@@ -1,9 +1,9 @@
-package io.pulumi.serialization.internal;
+package com.pulumi.serialization.internal;
 
 import com.google.protobuf.Struct;
 import com.google.protobuf.Value;
-import io.pulumi.core.internal.Maps;
-import io.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.core.internal.Maps;
+import com.pulumi.core.internal.annotations.InternalUse;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Map;

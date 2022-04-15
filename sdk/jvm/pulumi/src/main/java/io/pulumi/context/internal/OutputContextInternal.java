@@ -1,9 +1,9 @@
-package io.pulumi.context.internal;
+package com.pulumi.context.internal;
 
-import io.pulumi.context.OutputContext;
-import io.pulumi.core.Output;
-import io.pulumi.core.internal.OutputFactory;
-import io.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.context.OutputContext;
+import com.pulumi.core.Output;
+import com.pulumi.core.internal.OutputFactory;
+import com.pulumi.core.internal.annotations.InternalUse;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 

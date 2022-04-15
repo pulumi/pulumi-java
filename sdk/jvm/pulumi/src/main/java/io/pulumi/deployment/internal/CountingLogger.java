@@ -1,6 +1,6 @@
-package io.pulumi.deployment.internal;
+package com.pulumi.deployment.internal;
 
-import io.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.core.internal.annotations.InternalUse;
 
 /**
  * A logger that counts the errors

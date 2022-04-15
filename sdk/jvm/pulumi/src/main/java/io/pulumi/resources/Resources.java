@@ -1,6 +1,6 @@
-package io.pulumi.resources;
+package com.pulumi.resources;
 
-import io.pulumi.core.internal.Copyable;
+import com.pulumi.core.internal.Copyable;
 
 import javax.annotation.Nullable;
 import java.util.ArrayList;

@@ -1,11 +1,11 @@
-package io.pulumi.deployment;
+package com.pulumi.deployment;
 
-import io.pulumi.core.TypeShape;
-import io.pulumi.core.internal.Internal;
-import io.pulumi.core.internal.annotations.InternalUse;
-import io.pulumi.resources.CallArgs;
-import io.pulumi.resources.ProviderResource;
-import io.pulumi.resources.Resource;
+import com.pulumi.core.TypeShape;
+import com.pulumi.core.internal.Internal;
+import com.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.resources.CallArgs;
+import com.pulumi.resources.ProviderResource;
+import com.pulumi.resources.Resource;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;

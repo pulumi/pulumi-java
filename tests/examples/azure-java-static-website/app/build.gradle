@@ -10,8 +10,8 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.pulumi:pulumi:1.0.0'
-    implementation 'io.pulumi:azure-native:1.56.0'
+    implementation 'com.pulumi:pulumi:1.0.0'
+    implementation 'com.pulumi:azure-native:1.56.0'
 }
 
 application {

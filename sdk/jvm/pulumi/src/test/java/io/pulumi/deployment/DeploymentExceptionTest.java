@@ -1,10 +1,10 @@
-package io.pulumi.deployment;
+package com.pulumi.deployment;
 
-import io.pulumi.Stack;
-import io.pulumi.core.Tuples;
-import io.pulumi.core.internal.Internal;
-import io.pulumi.deployment.internal.DeploymentTests;
-import io.pulumi.exceptions.RunException;
+import com.pulumi.Stack;
+import com.pulumi.core.Tuples;
+import com.pulumi.core.internal.Internal;
+import com.pulumi.deployment.internal.DeploymentTests;
+import com.pulumi.exceptions.RunException;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -15,7 +15,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
-import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
+import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static java.util.Objects.requireNonNull;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 

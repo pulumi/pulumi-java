@@ -1,6 +1,6 @@
-package io.pulumi.example.minimal;
+package com.pulumi.example.minimal;
 
-import io.pulumi.Pulumi;
+import com.pulumi.Pulumi;
 
 public class App {
     public static void main(String[] args) {

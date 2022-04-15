@@ -1,24 +1,24 @@
-package io.pulumi.serialization.internal;
+package com.pulumi.serialization.internal;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.google.protobuf.Value;
-import io.pulumi.asset.Archive;
-import io.pulumi.asset.Asset;
-import io.pulumi.asset.AssetArchive;
-import io.pulumi.asset.AssetOrArchive;
-import io.pulumi.asset.FileArchive;
-import io.pulumi.asset.FileAsset;
-import io.pulumi.asset.RemoteArchive;
-import io.pulumi.asset.RemoteAsset;
-import io.pulumi.asset.StringAsset;
-import io.pulumi.core.Tuples;
-import io.pulumi.core.Tuples.Tuple2;
-import io.pulumi.core.internal.Constants;
-import io.pulumi.core.internal.OutputData;
-import io.pulumi.resources.DependencyResource;
-import io.pulumi.resources.Resource;
+import com.pulumi.asset.Archive;
+import com.pulumi.asset.Asset;
+import com.pulumi.asset.AssetArchive;
+import com.pulumi.asset.AssetOrArchive;
+import com.pulumi.asset.FileArchive;
+import com.pulumi.asset.FileAsset;
+import com.pulumi.asset.RemoteArchive;
+import com.pulumi.asset.RemoteAsset;
+import com.pulumi.asset.StringAsset;
+import com.pulumi.core.Tuples;
+import com.pulumi.core.Tuples.Tuple2;
+import com.pulumi.core.internal.Constants;
+import com.pulumi.core.internal.OutputData;
+import com.pulumi.resources.DependencyResource;
+import com.pulumi.resources.Resource;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -36,9 +36,9 @@ import static com.google.protobuf.Value.KindCase.LIST_VALUE;
 import static com.google.protobuf.Value.KindCase.NUMBER_VALUE;
 import static com.google.protobuf.Value.KindCase.STRING_VALUE;
 import static com.google.protobuf.Value.KindCase.STRUCT_VALUE;
-import static io.pulumi.serialization.internal.Structs.tryGetStringValue;
-import static io.pulumi.serialization.internal.Structs.tryGetStructValue;
-import static io.pulumi.serialization.internal.Structs.tryGetValue;
+import static com.pulumi.serialization.internal.Structs.tryGetStringValue;
+import static com.pulumi.serialization.internal.Structs.tryGetStructValue;
+import static com.pulumi.serialization.internal.Structs.tryGetValue;
 
 /**
  * Also @see {@link Serializer}

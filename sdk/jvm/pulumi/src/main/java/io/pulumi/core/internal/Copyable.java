@@ -1,4 +1,4 @@
-package io.pulumi.core.internal;
+package com.pulumi.core.internal;
 
 public interface Copyable<C extends Copyable<C>> {
     /**

@@ -1,8 +1,8 @@
-package io.pulumi.bootstrap.internal;
+package com.pulumi.bootstrap.internal;
 
 import com.google.common.annotations.VisibleForTesting;
 import com.google.gson.Gson;
-import io.pulumi.core.internal.Optionals;
+import com.pulumi.core.internal.Optionals;
 
 import javax.annotation.Nullable;
 import java.util.Map;

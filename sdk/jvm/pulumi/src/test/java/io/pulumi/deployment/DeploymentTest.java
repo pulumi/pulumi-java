@@ -1,8 +1,8 @@
-package io.pulumi.deployment;
+package com.pulumi.deployment;
 
-import io.pulumi.Config;
-import io.pulumi.core.Output;
-import io.pulumi.deployment.internal.DeploymentInternal;
+import com.pulumi.Config;
+import com.pulumi.core.Output;
+import com.pulumi.deployment.internal.DeploymentInternal;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Disabled;
@@ -16,7 +16,7 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.Supplier;
 import java.util.logging.Level;
 
-import static io.pulumi.deployment.internal.DeploymentTests.*;
+import static com.pulumi.deployment.internal.DeploymentTests.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class DeploymentTest {

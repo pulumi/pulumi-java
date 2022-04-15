@@ -1,4 +1,4 @@
-package io.pulumi.resources;
+package com.pulumi.resources;
 
 import nl.jqno.equalsverifier.EqualsVerifier;
 import org.junit.jupiter.api.DynamicNode;

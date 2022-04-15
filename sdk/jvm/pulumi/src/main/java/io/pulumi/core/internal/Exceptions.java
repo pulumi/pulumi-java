@@ -1,6 +1,6 @@
-package io.pulumi.core.internal;
+package com.pulumi.core.internal;
 
-import io.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.core.internal.annotations.InternalUse;
 
 import javax.annotation.Nullable;
 import java.io.PrintWriter;

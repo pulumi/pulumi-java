@@ -1,19 +1,19 @@
-package io.pulumi.serialization.internal;
+package com.pulumi.serialization.internal;
 
 import com.google.common.collect.ImmutableMap;
-import io.pulumi.Stack;
-import io.pulumi.core.Output;
-import io.pulumi.core.Tuples;
-import io.pulumi.core.Tuples.Tuple2;
-import io.pulumi.core.annotations.ResourceType;
-import io.pulumi.deployment.MockCallArgs;
-import io.pulumi.deployment.MockResourceArgs;
-import io.pulumi.deployment.Mocks;
-import io.pulumi.deployment.internal.DeploymentTests;
-import io.pulumi.deployment.internal.TestOptions;
-import io.pulumi.resources.CustomResource;
-import io.pulumi.resources.CustomResourceOptions;
-import io.pulumi.resources.ResourceArgs;
+import com.pulumi.Stack;
+import com.pulumi.core.Output;
+import com.pulumi.core.Tuples;
+import com.pulumi.core.Tuples.Tuple2;
+import com.pulumi.core.annotations.ResourceType;
+import com.pulumi.deployment.MockCallArgs;
+import com.pulumi.deployment.MockResourceArgs;
+import com.pulumi.deployment.Mocks;
+import com.pulumi.deployment.internal.DeploymentTests;
+import com.pulumi.deployment.internal.TestOptions;
+import com.pulumi.resources.CustomResource;
+import com.pulumi.resources.CustomResourceOptions;
+import com.pulumi.resources.ResourceArgs;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 

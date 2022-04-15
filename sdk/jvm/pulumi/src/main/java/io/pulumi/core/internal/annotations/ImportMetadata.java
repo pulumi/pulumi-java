@@ -1,11 +1,11 @@
-package io.pulumi.core.internal.annotations;
+package com.pulumi.core.internal.annotations;
 
 import com.google.common.base.MoreObjects;
 import com.google.common.collect.ImmutableMap;
-import io.pulumi.core.Output;
-import io.pulumi.core.TypeShape;
-import io.pulumi.core.annotations.Import;
-import io.pulumi.core.internal.Reflection;
+import com.pulumi.core.Output;
+import com.pulumi.core.TypeShape;
+import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Reflection;
 
 import java.lang.reflect.Field;
 import java.util.Optional;

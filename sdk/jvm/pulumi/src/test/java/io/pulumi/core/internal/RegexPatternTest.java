@@ -1,4 +1,4 @@
-package io.pulumi.core.internal;
+package com.pulumi.core.internal;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;

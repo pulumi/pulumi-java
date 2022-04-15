@@ -1,7 +1,7 @@
-package io.pulumi.deployment;
+package com.pulumi.deployment;
 
-import io.pulumi.deployment.internal.CountingLogger;
-import io.pulumi.deployment.internal.Engine;
+import com.pulumi.deployment.internal.CountingLogger;
+import com.pulumi.deployment.internal.Engine;
 import pulumirpc.EngineOuterClass;
 
 import java.util.Collection;

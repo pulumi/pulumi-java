@@ -1,6 +1,6 @@
-package io.pulumi.asset;
+package com.pulumi.asset;
 
-import io.pulumi.core.internal.Constants;
+import com.pulumi.core.internal.Constants;
 
 /**
  * FileAsset is a kind of asset produced from a given path to a file on the local filesystem.

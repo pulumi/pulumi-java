@@ -1,6 +1,6 @@
-package io.pulumi.asset;
+package com.pulumi.asset;
 
-import io.pulumi.core.internal.Constants;
+import com.pulumi.core.internal.Constants;
 
 /**
  * A RemoteArchive is a file-based archive fetched from a remote location.  The URI's scheme

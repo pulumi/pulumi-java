@@ -1,4 +1,4 @@
-package io.pulumi.core.internal;
+package com.pulumi.core.internal;
 
 import java.util.Optional;
 import java.util.regex.Matcher;

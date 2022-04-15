@@ -1,8 +1,8 @@
-package io.pulumi.deployment.internal;
+package com.pulumi.deployment.internal;
 
-import io.pulumi.Stack;
-import io.pulumi.core.Output;
-import io.pulumi.resources.StackOptions;
+import com.pulumi.Stack;
+import com.pulumi.core.Output;
+import com.pulumi.resources.StackOptions;
 
 import java.util.List;
 import java.util.Map;

@@ -1,14 +1,14 @@
-package io.pulumi.core;
+package com.pulumi.core;
 
-import io.pulumi.core.internal.Internal;
-import io.pulumi.deployment.MocksTest;
-import io.pulumi.deployment.internal.DeploymentTests;
-import io.pulumi.deployment.internal.TestOptions;
+import com.pulumi.core.internal.Internal;
+import com.pulumi.deployment.MocksTest;
+import com.pulumi.deployment.internal.DeploymentTests;
+import com.pulumi.deployment.internal.TestOptions;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
+import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class UrnTest {

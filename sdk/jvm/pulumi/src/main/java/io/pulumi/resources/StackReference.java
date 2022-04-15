@@ -1,15 +1,15 @@
-package io.pulumi.resources;
+package com.pulumi.resources;
 
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
-import io.pulumi.core.Output;
-import io.pulumi.core.annotations.Export;
-import io.pulumi.core.internal.Internal;
-import io.pulumi.core.internal.Maps;
-import io.pulumi.core.internal.OutputData;
-import io.pulumi.core.internal.annotations.InternalUse;
-import io.pulumi.exceptions.RunException;
+import com.pulumi.core.Output;
+import com.pulumi.core.annotations.Export;
+import com.pulumi.core.internal.Internal;
+import com.pulumi.core.internal.Maps;
+import com.pulumi.core.internal.OutputData;
+import com.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.exceptions.RunException;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;

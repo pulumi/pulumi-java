@@ -1,4 +1,4 @@
-package io.pulumi.core.internal.annotations;
+package com.pulumi.core.internal.annotations;
 
 import java.lang.annotation.*;
 

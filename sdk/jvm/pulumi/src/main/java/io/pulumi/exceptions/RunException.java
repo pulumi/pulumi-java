@@ -1,4 +1,4 @@
-package io.pulumi.exceptions;
+package com.pulumi.exceptions;
 
 import javax.annotation.Nullable;
 
@@ -9,7 +9,7 @@ import javax.annotation.Nullable;
  * <br/><b>This type should be rarely used.</b>
  * <p/>
  * Ideally @see {@link ResourceException} should always be used so that
- * as many errors as possible can be associated with a @see {@link io.pulumi.resources.Resource}.
+ * as many errors as possible can be associated with a @see {@link com.pulumi.resources.Resource}.
  */
 public class RunException extends RuntimeException {
     public RunException(String message) {

@@ -1,6 +1,6 @@
-package io.pulumi.core;
+package com.pulumi.core;
 
-import io.pulumi.resources.Resource;
+import com.pulumi.resources.Resource;
 
 import javax.annotation.Nullable;
 import java.util.Objects;
@@ -8,8 +8,8 @@ import java.util.Optional;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-import static io.pulumi.core.internal.Objects.requireFalseState;
-import static io.pulumi.core.internal.Objects.requireNullState;
+import static com.pulumi.core.internal.Objects.requireFalseState;
+import static com.pulumi.core.internal.Objects.requireNullState;
 
 /**
  * Alias is a description of prior named used for a resource. It can be processed in the
@@ -17,13 +17,13 @@ import static io.pulumi.core.internal.Objects.requireNullState;
  * <p>
  * Use @see {@link Urn} in the case where a prior URN is known and can just be specified in
  * full. Otherwise, provide some subset of the other properties in this type to generate an
- * appropriate {@code urn} from the pre-existing values of the @see {@link io.pulumi.resources.Resource}
+ * appropriate {@code urn} from the pre-existing values of the @see {@link com.pulumi.resources.Resource}
  * with certain parts overridden.
  * <p>
  * The presence of a property indicates if its value should be used. If absent (i.e. "null"), then the value is not used.
  * <p>
  * Note: because of the above, there needs to be special handling to indicate that the previous
- * "parent" of a @see {@link io.pulumi.resources.Resource} was "null".
+ * "parent" of a @see {@link com.pulumi.resources.Resource} was "null".
  * Specifically, pass in: Alias.noParent()
  */
 public class Alias {
@@ -209,7 +209,7 @@ public class Alias {
 
     /**
      * The previous stack of the resource.
-     * If empty, defaults to the value of @see {@link io.pulumi.deployment.Deployment#getStackName()}
+     * If empty, defaults to the value of @see {@link com.pulumi.deployment.Deployment#getStackName()}
      */
     public Optional<Output<String>> getStack() {
         return Optional.ofNullable(stack);
@@ -217,7 +217,7 @@ public class Alias {
 
     /**
      * The previous project of the resource.
-     * If empty, defaults to the value of @see {@link io.pulumi.deployment.Deployment#getProjectName()}
+     * If empty, defaults to the value of @see {@link com.pulumi.deployment.Deployment#getProjectName()}
      */
     public Optional<Output<String>> getProject() {
         return Optional.ofNullable(project);

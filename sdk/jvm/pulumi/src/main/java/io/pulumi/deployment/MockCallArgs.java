@@ -1,4 +1,4 @@
-package io.pulumi.deployment;
+package com.pulumi.deployment;
 
 import com.google.common.collect.ImmutableMap;
 

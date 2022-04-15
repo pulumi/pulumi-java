@@ -1,9 +1,9 @@
-package io.pulumi.context.internal;
+package com.pulumi.context.internal;
 
 import com.google.common.collect.ImmutableMap;
-import io.pulumi.context.ExportContext;
-import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.context.ExportContext;
+import com.pulumi.core.Output;
+import com.pulumi.core.internal.annotations.InternalUse;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Map;

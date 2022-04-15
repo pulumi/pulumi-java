@@ -1,16 +1,16 @@
-package io.pulumi.context.internal;
+package com.pulumi.context.internal;
 
-import io.pulumi.Config;
-import io.pulumi.context.ExportContext;
-import io.pulumi.context.LoggingContext;
-import io.pulumi.context.StackContext;
-import io.pulumi.core.Output;
-import io.pulumi.core.internal.Strings;
-import io.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.Config;
+import com.pulumi.context.ExportContext;
+import com.pulumi.context.LoggingContext;
+import com.pulumi.context.StackContext;
+import com.pulumi.core.Output;
+import com.pulumi.core.internal.Strings;
+import com.pulumi.core.internal.annotations.InternalUse;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import static io.pulumi.core.internal.Objects.require;
+import static com.pulumi.core.internal.Objects.require;
 import static java.util.Objects.requireNonNull;
 
 @InternalUse

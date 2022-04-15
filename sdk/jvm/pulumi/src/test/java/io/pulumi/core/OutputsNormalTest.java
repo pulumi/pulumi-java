@@ -1,4 +1,4 @@
-package io.pulumi.core;
+package com.pulumi.core;
 
 public class OutputsNormalTest extends OutputTestBase {
     @Override

@@ -1,7 +1,7 @@
-package io.pulumi.core.internal;
+package com.pulumi.core.internal;
 
-import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.core.Either;
+import com.pulumi.core.internal.annotations.InternalUse;
 
 import java.util.Arrays;
 import java.util.Objects;
@@ -9,8 +9,8 @@ import java.util.Optional;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import static io.pulumi.core.internal.Arrays.concat;
-import static io.pulumi.core.internal.Arrays.contains;
+import static com.pulumi.core.internal.Arrays.concat;
+import static com.pulumi.core.internal.Arrays.contains;
 
 @InternalUse
 public class Environment {

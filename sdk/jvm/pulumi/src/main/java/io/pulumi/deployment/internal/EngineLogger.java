@@ -1,8 +1,8 @@
-package io.pulumi.deployment.internal;
+package com.pulumi.deployment.internal;
 
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
-import io.pulumi.core.internal.annotations.InternalUse;
-import io.pulumi.resources.Resource;
+import com.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.resources.Resource;
 
 import javax.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;

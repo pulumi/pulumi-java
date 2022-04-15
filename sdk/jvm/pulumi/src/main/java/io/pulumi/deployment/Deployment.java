@@ -1,15 +1,15 @@
-package io.pulumi.deployment;
+package com.pulumi.deployment;
 
 import com.google.common.collect.ImmutableMap;
-import io.pulumi.Stack;
-import io.pulumi.core.Output;
-import io.pulumi.core.TypeShape;
-import io.pulumi.deployment.internal.DeploymentInstanceHolder;
-import io.pulumi.deployment.internal.DeploymentInternal;
-import io.pulumi.resources.CallArgs;
-import io.pulumi.resources.InvokeArgs;
-import io.pulumi.resources.Resource;
-import io.pulumi.resources.StackOptions;
+import com.pulumi.Stack;
+import com.pulumi.core.Output;
+import com.pulumi.core.TypeShape;
+import com.pulumi.deployment.internal.DeploymentInstanceHolder;
+import com.pulumi.deployment.internal.DeploymentInternal;
+import com.pulumi.resources.CallArgs;
+import com.pulumi.resources.InvokeArgs;
+import com.pulumi.resources.Resource;
+import com.pulumi.resources.StackOptions;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -55,7 +55,7 @@ public interface Deployment {
      * result value of the provider plugin.
      * <p>
      * The {@code args} inputs can be a bag of computed values
-     * (including, {@code T}s, @see {@link CompletableFuture}s, @see {@link io.pulumi.core.Output}s, etc.)
+     * (including, {@code T}s, @see {@link CompletableFuture}s, @see {@link com.pulumi.core.Output}s, etc.)
      */
     <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, @Nullable InvokeOptions options);
 
@@ -71,7 +71,7 @@ public interface Deployment {
      * result value of the provider plugin.
      * <p>
      * The {@code args} inputs can be a bag of computed values
-     * (including, {@code T}s, @see {@link CompletableFuture}s, @see {@link io.pulumi.core.Output}s, etc.).
+     * (including, {@code T}s, @see {@link CompletableFuture}s, @see {@link com.pulumi.core.Output}s, etc.).
      */
     <T> CompletableFuture<T> invokeAsync(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options);
 
@@ -97,7 +97,7 @@ public interface Deployment {
      * result value of the provider plugin.
      * <p>
      * The {@code args} inputs can be a bag of computed values
-     * (including, {@code T}s, @see {@link CompletableFuture}s, @see {@link io.pulumi.core.Output}s, etc.).
+     * (including, {@code T}s, @see {@link CompletableFuture}s, @see {@link com.pulumi.core.Output}s, etc.).
      */
     <T> Output<T> call(String token, TypeShape<T> targetType, CallArgs args, @Nullable Resource self, @Nullable CallOptions options);
 

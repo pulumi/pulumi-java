@@ -1,8 +1,8 @@
-package io.pulumi.resources;
+package com.pulumi.resources;
 
-import io.pulumi.core.internal.Constants;
-import io.pulumi.core.internal.Internal;
-import io.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.core.internal.Constants;
+import com.pulumi.core.internal.Internal;
+import com.pulumi.core.internal.annotations.InternalUse;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;

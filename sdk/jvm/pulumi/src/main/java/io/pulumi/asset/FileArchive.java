@@ -1,6 +1,6 @@
-package io.pulumi.asset;
+package com.pulumi.asset;
 
-import io.pulumi.core.internal.Constants;
+import com.pulumi.core.internal.Constants;
 
 /**
  * A FileArchive is a file-based archive, or a collection of file-based assets.  This can be a

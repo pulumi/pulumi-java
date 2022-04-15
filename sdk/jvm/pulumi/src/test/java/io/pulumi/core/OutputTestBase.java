@@ -1,8 +1,8 @@
-package io.pulumi.core;
+package com.pulumi.core;
 
-import io.pulumi.core.internal.Internal;
-import io.pulumi.deployment.MocksTest;
-import io.pulumi.deployment.internal.TestOptions;
+import com.pulumi.core.internal.Internal;
+import com.pulumi.deployment.MocksTest;
+import com.pulumi.deployment.internal.TestOptions;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -11,8 +11,8 @@ import org.junit.jupiter.api.TestInstance;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static io.pulumi.deployment.internal.DeploymentTests.DeploymentMockBuilder;
-import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
+import static com.pulumi.deployment.internal.DeploymentTests.DeploymentMockBuilder;
+import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)

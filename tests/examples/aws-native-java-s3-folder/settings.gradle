@@ -7,21 +7,21 @@ var root = System.getenv("PULUMI_REPO_ROOT") ?: "../../..";
 
 includeBuild(root + '/sdk/jvm') {
   dependencySubstitution {
-    substitute module('io.pulumi:pulumi') using project(':pulumi')
+    substitute module('com.pulumi:pulumi') using project(':pulumi')
   }
 }
 
 includeBuild(root + '/providers/pulumi-aws/sdk/java') {
   name = ':aws'
   dependencySubstitution {
-    substitute module('io.pulumi:aws') using project(':')
+    substitute module('com.pulumi:aws') using project(':')
   }
 }
 
 includeBuild(root + '/providers/pulumi-aws-native/sdk/java') {
   name = ':aws-native'
   dependencySubstitution {
-    substitute module('io.pulumi:aws-native') using project(':')
+    substitute module('com.pulumi:aws-native') using project(':')
   }
 }
 

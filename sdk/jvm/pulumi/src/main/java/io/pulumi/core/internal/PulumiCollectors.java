@@ -1,8 +1,8 @@
-package io.pulumi.core.internal;
+package com.pulumi.core.internal;
 
 import com.google.common.collect.ImmutableMap;
-import io.pulumi.core.Tuples;
-import io.pulumi.core.Tuples.Tuple2;
+import com.pulumi.core.Tuples;
+import com.pulumi.core.Tuples.Tuple2;
 
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.Function;

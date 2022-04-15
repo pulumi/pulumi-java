@@ -1,15 +1,15 @@
-package io.pulumi;
+package com.pulumi;
 
 import com.google.common.annotations.VisibleForTesting;
 import com.google.gson.Gson;
 import com.google.gson.JsonParseException;
-import io.pulumi.core.Output;
-import io.pulumi.core.TypeShape;
-import io.pulumi.core.internal.Internal;
-import io.pulumi.core.internal.annotations.InternalUse;
-import io.pulumi.deployment.Deployment;
-import io.pulumi.deployment.DeploymentInstance;
-import io.pulumi.exceptions.RunException;
+import com.pulumi.core.Output;
+import com.pulumi.core.TypeShape;
+import com.pulumi.core.internal.Internal;
+import com.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.deployment.Deployment;
+import com.pulumi.deployment.DeploymentInstance;
+import com.pulumi.exceptions.RunException;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

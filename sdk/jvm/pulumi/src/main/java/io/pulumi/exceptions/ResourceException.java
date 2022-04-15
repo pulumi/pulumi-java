@@ -1,6 +1,6 @@
-package io.pulumi.exceptions;
+package com.pulumi.exceptions;
 
-import io.pulumi.resources.Resource;
+import com.pulumi.resources.Resource;
 
 import javax.annotation.Nullable;
 import java.util.Optional;

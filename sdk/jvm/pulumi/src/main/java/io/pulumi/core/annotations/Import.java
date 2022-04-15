@@ -1,4 +1,4 @@
-package io.pulumi.core.annotations;
+package com.pulumi.core.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,7 +7,7 @@ import java.lang.annotation.Target;
 
 /**
  * Annotation used by a Pulumi Cloud Provider Package
- * to mark @see {@link io.pulumi.resources.Resource} input fields.
+ * to mark @see {@link com.pulumi.resources.Resource} input fields.
  * <p/>
  * Note: this should just be placed on the field itself, not a setter or getter
  */

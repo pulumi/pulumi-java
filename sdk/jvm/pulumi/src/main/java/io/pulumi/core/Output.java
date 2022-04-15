@@ -1,4 +1,4 @@
-package io.pulumi.core;
+package com.pulumi.core;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
@@ -7,11 +7,11 @@ import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonNull;
-import io.pulumi.core.internal.CompletableFutures;
-import io.pulumi.core.internal.Copyable;
-import io.pulumi.core.internal.Internal;
-import io.pulumi.core.internal.OutputData;
-import io.pulumi.core.internal.OutputInternal;
+import com.pulumi.core.internal.CompletableFutures;
+import com.pulumi.core.internal.Copyable;
+import com.pulumi.core.internal.Internal;
+import com.pulumi.core.internal.OutputData;
+import com.pulumi.core.internal.OutputInternal;
 
 import javax.annotation.Nullable;
 import java.util.Iterator;
@@ -23,13 +23,13 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
-import static io.pulumi.core.internal.OutputData.allHelperAsync;
-import static io.pulumi.core.internal.OutputInternal.TupleZeroOut;
+import static com.pulumi.core.internal.OutputData.allHelperAsync;
+import static com.pulumi.core.internal.OutputInternal.TupleZeroOut;
 import static java.util.Objects.requireNonNull;
 
 /**
  * {@code Output<T>} is a key part of how Pulumi tracks dependencies
- * between @see {@link io.pulumi.resources.Resource}s.
+ * between @see {@link com.pulumi.resources.Resource}s.
  * Because the values of outputs are not available until resources are created,
  * these are represented using the special {@code Output<T>} type,
  * which internally represents two things:

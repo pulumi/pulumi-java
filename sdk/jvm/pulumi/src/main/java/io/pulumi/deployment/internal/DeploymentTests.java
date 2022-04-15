@@ -1,17 +1,17 @@
-package io.pulumi.deployment.internal;
+package com.pulumi.deployment.internal;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
-import io.pulumi.Log;
-import io.pulumi.Stack;
-import io.pulumi.core.Output;
-import io.pulumi.deployment.MockEngine;
-import io.pulumi.deployment.MockMonitor;
-import io.pulumi.deployment.Mocks;
-import io.pulumi.deployment.internal.DeploymentImpl.DefaultEngineLogger;
-import io.pulumi.exceptions.RunException;
-import io.pulumi.resources.Resource;
+import com.pulumi.Log;
+import com.pulumi.Stack;
+import com.pulumi.core.Output;
+import com.pulumi.deployment.MockEngine;
+import com.pulumi.deployment.MockMonitor;
+import com.pulumi.deployment.Mocks;
+import com.pulumi.deployment.internal.DeploymentImpl.DefaultEngineLogger;
+import com.pulumi.exceptions.RunException;
+import com.pulumi.resources.Resource;
 import org.mockito.ArgumentMatchers;
 import org.mockito.Mockito;
 

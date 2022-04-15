@@ -1,8 +1,8 @@
-package io.pulumi.deployment.internal;
+package com.pulumi.deployment.internal;
 
 import com.google.common.annotations.VisibleForTesting;
-import io.pulumi.core.internal.annotations.InternalUse;
-import io.pulumi.deployment.DeploymentInstance;
+import com.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.deployment.DeploymentInstance;
 
 import javax.annotation.Nullable;
 import java.util.Optional;

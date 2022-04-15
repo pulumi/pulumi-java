@@ -1,6 +1,6 @@
-package io.pulumi.asset;
+package com.pulumi.asset;
 
-import io.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.core.internal.annotations.InternalUse;
 
 import static java.util.Objects.requireNonNull;
 

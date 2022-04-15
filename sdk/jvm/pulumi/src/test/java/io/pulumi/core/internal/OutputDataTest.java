@@ -1,8 +1,8 @@
-package io.pulumi.core.internal;
+package com.pulumi.core.internal;
 
-import io.pulumi.core.Output;
-import io.pulumi.core.OutputTests;
-import io.pulumi.core.Tuples;
+import com.pulumi.core.Output;
+import com.pulumi.core.OutputTests;
+import com.pulumi.core.Tuples;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
