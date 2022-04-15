@@ -4,6 +4,8 @@ plugins {
     id("com.google.protobuf") version "0.8.16"
 }
 
+version = System.getenv("PULUMI_JAVA_SDK_VERSION") ?: "0.0.1-SNAPSHOT"
+
 java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(11)
@@ -119,11 +121,7 @@ publishing {
         gpr(MavenPublication) {
             groupId = "io.pulumi"
             artifactId = "pulumi"
-            version = (
-              project.findProperty("version") == "unspecified"
-              ? "0.0.1-SNAPSHOT"
-              : (project.findProperty("version") ?: "0.0.1-SNAPSHOT")
-            )
+            version = version
             from components.java
         }
     }

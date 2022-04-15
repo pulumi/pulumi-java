@@ -5,10 +5,9 @@ import com.google.gson.Gson;
 import com.google.gson.JsonParseException;
 import io.pulumi.core.Output;
 import io.pulumi.core.TypeShape;
-import io.pulumi.core.internal.Internal;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.Deployment;
-import io.pulumi.deployment.DeploymentInstance;
+import io.pulumi.deployment.internal.DeploymentImpl;
 import io.pulumi.exceptions.RunException;
 
 import javax.annotation.Nonnull;
@@ -32,14 +31,15 @@ import static java.util.Objects.requireNonNull;
 public class Config {
 
     private final String name;
-    private final DeploymentInstance deployment;
+    private final DeploymentImpl.Config internalConfig;
 
-    public Config(DeploymentInstance deployment) {
-        this(deployment, deployment.getProjectName());
-    }
-
-    public Config(DeploymentInstance deployment, String name) {
-        this.deployment = requireNonNull(deployment);
+    /**
+     * @see io.pulumi.context.StackContext#config()
+     * @see io.pulumi.context.StackContext#config(String)
+     */
+    @InternalUse
+    public Config(DeploymentImpl.Config internalConfig, String name) {
+        this.internalConfig = requireNonNull(internalConfig);
 
         requireNonNull(name);
         if (name.endsWith(":config")) {
@@ -49,19 +49,16 @@ public class Config {
     }
 
     /**
-     * Creates a new {@link Config} instance, with default, the name of the current project.
+     * For internal use by providers.
+     * @see io.pulumi.context.StackContext#config()
+     * @see io.pulumi.context.StackContext#config(String)
+     * @deprecated will be removed in the future, use {@link io.pulumi.context.StackContext#config(String)}
      */
-    public static Config of() {
-        return new Config(Deployment.getInstance());
-    }
-
-    /**
-     * Creates a new {@link Config} instance.
-     *
-     * @param name unique logical name
-     */
+    // TODO: remove after refactoring the deployment
+    @InternalUse
+    @Deprecated
     public static Config of(String name) {
-        return new Config(Deployment.getInstance(), name);
+        return new Config(Deployment.getInstance().getConfig(), name);
     }
 
     /**
@@ -80,7 +77,9 @@ public class Config {
      */
     public Optional<String> get(String key) {
         var fullKey = fullKey(key);
-        return Internal.of(deployment).getInternal().getConfig(fullKey);
+        // FIXME: due to https://github.com/pulumi/pulumi/issues/7127
+        //        there is a check for key being a secret missing here
+        return this.internalConfig.getConfig(fullKey);
     }
 
     /**

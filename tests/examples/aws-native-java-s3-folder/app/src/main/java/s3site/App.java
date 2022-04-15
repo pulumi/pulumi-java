@@ -1,6 +1,8 @@
 // from https://github.com/pulumi/examples/blob/8cc8b1a4384c8b33f70ba65c701e19daecfa6399/aws-ts-s3-folder/index.ts
 package s3site;
 
+import io.pulumi.Context;
+import io.pulumi.Exports;
 import io.pulumi.Pulumi;
 import io.pulumi.asset.FileAsset;
 import io.pulumi.aws.s3.BucketObject;
@@ -10,8 +12,6 @@ import io.pulumi.aws.s3.BucketPolicyArgs;
 import io.pulumi.awsnative.s3.Bucket;
 import io.pulumi.awsnative.s3.BucketArgs;
 import io.pulumi.awsnative.s3.inputs.BucketWebsiteConfigurationArgs;
-import io.pulumi.context.ExportContext;
-import io.pulumi.context.StackContext;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -23,7 +23,7 @@ public class App {
         System.exit(exitCode);
     }
 
-    private static ExportContext stack(StackContext ctx) {
+    private static Exports stack(Context ctx) {
 
         final var siteBucket = new Bucket("s3-website-bucket",
                 BucketArgs.builder().websiteConfiguration(BucketWebsiteConfigurationArgs.builder()

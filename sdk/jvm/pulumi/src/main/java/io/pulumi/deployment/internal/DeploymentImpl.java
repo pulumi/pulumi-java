@@ -11,8 +11,6 @@ import com.google.gson.JsonElement;
 import com.google.protobuf.Struct;
 import com.google.protobuf.Value;
 import io.pulumi.Log;
-import io.pulumi.Stack;
-import io.pulumi.Stack.StackInternal;
 import io.pulumi.core.Output;
 import io.pulumi.core.TypeShape;
 import io.pulumi.core.annotations.Import;
@@ -46,6 +44,8 @@ import io.pulumi.resources.ProviderResource;
 import io.pulumi.resources.Resource;
 import io.pulumi.resources.ResourceArgs;
 import io.pulumi.resources.ResourceOptions;
+import io.pulumi.resources.Stack;
+import io.pulumi.resources.Stack.StackInternal;
 import io.pulumi.resources.StackOptions;
 import io.pulumi.serialization.internal.Converter;
 import io.pulumi.serialization.internal.Deserializer;
@@ -178,6 +178,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         return this.state.isDryRun;
     }
 
+    @Override
     @InternalUse
     public Runner getRunner() {
         return this.state.runner;
@@ -185,6 +186,12 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
     public Log getLog() {
         return this.log;
+    }
+
+    @Override
+    @InternalUse
+    public Config getConfig() {
+        return this.state.config;
     }
 
     public Optional<String> getConfig(String fullKey) {
@@ -244,8 +251,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
     @ParametersAreNonnullByDefault
     @InternalUse
-    @VisibleForTesting
-    static class Config {
+    public static class Config {
 
         /**
          * The environment variable key that the language plugin uses to set configuration values.

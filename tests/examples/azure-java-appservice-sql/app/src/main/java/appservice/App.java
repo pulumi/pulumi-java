@@ -1,6 +1,8 @@
 package appservice;
 
 import io.pulumi.Config;
+import io.pulumi.Context;
+import io.pulumi.Exports;
 import io.pulumi.Pulumi;
 import io.pulumi.asset.FileArchive;
 import io.pulumi.azurenative.insights.Component;
@@ -15,9 +17,9 @@ import io.pulumi.azurenative.storage.Blob;
 import io.pulumi.azurenative.storage.BlobArgs;
 import io.pulumi.azurenative.storage.BlobContainer;
 import io.pulumi.azurenative.storage.BlobContainerArgs;
-import io.pulumi.azurenative.storage.StorageFunctions;
 import io.pulumi.azurenative.storage.StorageAccount;
 import io.pulumi.azurenative.storage.StorageAccountArgs;
+import io.pulumi.azurenative.storage.StorageFunctions;
 import io.pulumi.azurenative.storage.enums.HttpProtocol;
 import io.pulumi.azurenative.storage.enums.Kind;
 import io.pulumi.azurenative.storage.enums.Permissions;
@@ -36,11 +38,8 @@ import io.pulumi.azurenative.web.inputs.ConnStringInfoArgs;
 import io.pulumi.azurenative.web.inputs.NameValuePairArgs;
 import io.pulumi.azurenative.web.inputs.SiteConfigArgs;
 import io.pulumi.azurenative.web.inputs.SkuDescriptionArgs;
-import io.pulumi.context.ExportContext;
-import io.pulumi.context.StackContext;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.deployment.InvokeOptions;
 
 public class App {
     public static void main(String[] args) {
@@ -48,7 +47,7 @@ public class App {
         System.exit(exitCode);
     }
 
-    private static ExportContext stack(StackContext ctx) {
+    private static Exports stack(Context ctx) {
         var resourceGroup = new ResourceGroup("resourceGroup");
 
         var storageAccount = new StorageAccount("sa",
@@ -81,8 +80,7 @@ public class App {
         var username = "pulumi";
 
         // Get the password to use for SQL from config.
-        var config = Config.of();
-        var pwd = config.require("sqlPassword");
+        var pwd = ctx.config().require("sqlPassword");
 
         var sqlServer = new Server("sqlserver",
                 ServerArgs.builder().resourceGroupName(resourceGroup.getName())

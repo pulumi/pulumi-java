@@ -1,7 +1,7 @@
 package io.pulumi.deployment.internal;
 
-import io.pulumi.Stack;
 import io.pulumi.core.Output;
+import io.pulumi.resources.Stack;
 import io.pulumi.resources.StackOptions;
 
 import java.util.List;

@@ -28,8 +28,6 @@ public final class InvokeOptions {
     @Nullable
     private final String version;
 
-    private final InvokeOptionsInternal internal = new InvokeOptionsInternal(this);
-
     public InvokeOptions() {
         this(null, null, null);
     }
@@ -75,7 +73,7 @@ public final class InvokeOptions {
         }
 
         public static InvokeOptionsInternal from(InvokeOptions options) {
-            return options.internal;
+            return new InvokeOptionsInternal(options);
         }
 
         public Optional<ProviderResource> getNestedProvider(String token) {

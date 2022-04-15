@@ -2,21 +2,18 @@
 
 build::	ensure build_go build_sdk
 
-ensure::	ensure_go ensure_sdk
+ensure::	ensure_sdk
 
 PKG_FILES := $(shell  find pkg -name '*.go' -type f)
 
 # Go project rooted at `pkg/` implements Pulumi JVM language plugin
 # and Java go as a Go library.
 
-build_go::	ensure_go
+build_go::
 	cd pkg && go build -v all
 
 test_go:: build_go submodule_update
 	cd pkg && go test ./...
-
-ensure_go::
-	cd pkg && go mod tidy
 
 bin/pulumi-language-jvm: ${PKG_FILES}
 	mkdir -p bin
@@ -59,10 +56,6 @@ lint_pkg:
 provider.%.install:	provider.%.build
 	cd providers/pulumi-$*/sdk/java && gradle --console=plain publishToMavenLocal
 
-# Integration tests will use PULUMI_ACCESS_TOKEN to provision tests
-# stacks in Pulumi service.
-integration_tests::	bin/pulumi-language-jvm
-
 # Run a custom integration test or example.
 # Example: make test_example.aws-java-webserver
 test_example.%:	bin/pulumi-language-jvm
@@ -90,20 +83,3 @@ borrow_schemas:: submodule_update
 # Runs `go mod tidy` on every Go project.
 tidy::
 	./scripts/tidy.sh
-
-# Rules to re-generate providers before testing each example. This
-# makes sure CI exmaple tests take into account latest codegen
-# changes. The Gradle-based providers link against in-repo Java code,
-# so we only need `generate`, not `install` target, we do not need to
-# build them into the local Maven repo.
-test_example.aws-java-webserver: provider.aws.generate
-test_example.azure-java-static-website: provider.azure-native.generate
-test_example.azure-java-appservice-sql: provider.azure-native.generate
-test_example.eks-minimal: provider.eks.generate provider.aws.generate provider.kubernetes.generate
-test_example.gcp-java-gke-hello-world: provider.gcp.generate provider.kubernetes.generate
-test_example.aws-native-java-s3-folder: provider.aws.generate provider.aws-native.generate
-
-# Maven-based examples need `install` as they reference deps from the
-# local Maven repo.
-test_example.random: install_sdk provider.random.install
-test_example.minimal: install_sdk

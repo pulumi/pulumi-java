@@ -9,34 +9,5 @@ pluginManagement {
   }
 }
 
-var root = '../../../..'
-
-includeBuild(root + '/sdk/jvm') {
-  dependencySubstitution {
-    substitute module('io.pulumi:pulumi') using project(':pulumi')
-  }
-}
-
-includeBuild(root + '/providers/pulumi-aws/sdk/java') {
-  name = ':aws'
-  dependencySubstitution {
-    substitute module('io.pulumi:aws') using project(':')
-  }
-}
-
-includeBuild(root + '/providers/pulumi-eks/sdk/java') {
-  name = ':eks'
-  dependencySubstitution {
-    substitute module('io.pulumi:eks') using project(':')
-  }
-}
-
-includeBuild(root + '/providers/pulumi-kubernetes/sdk/java') {
-  name = ':kubernetes'
-  dependencySubstitution {
-    substitute module('io.pulumi:kubernetes') using project(':')
-  }
-}
-
 rootProject.name = "io.pulumi.eks"
 include("lib")

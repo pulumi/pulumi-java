@@ -1,12 +1,9 @@
-package io.pulumi;
+package io.pulumi.resources;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.internal.DeploymentInternal;
-import io.pulumi.resources.ComponentResource;
-import io.pulumi.resources.ComponentResourceOptions;
-import io.pulumi.resources.StackOptions;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -24,8 +21,6 @@ public class Stack extends ComponentResource {
      * The outputs of this stack, if the <code>init</code> callback exited normally.
      */
     private Output<Map<String, Output<?>>> outputs = Output.of(Map.of());
-
-    private final StackInternal internal = new StackInternal(this);
 
     /**
      * Create a Stack with stack resources defined in derived class constructor.
@@ -105,7 +100,7 @@ public class Stack extends ComponentResource {
         }
 
         public static StackInternal from(Stack r) {
-            return r.internal;
+            return new StackInternal(r);
         }
 
         @InternalUse

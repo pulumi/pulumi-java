@@ -1,7 +1,6 @@
 package io.pulumi.deployment;
 
 import com.google.common.collect.ImmutableMap;
-import io.pulumi.Stack;
 import io.pulumi.core.Output;
 import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.internal.DeploymentInstanceHolder;
@@ -9,6 +8,7 @@ import io.pulumi.deployment.internal.DeploymentInternal;
 import io.pulumi.resources.CallArgs;
 import io.pulumi.resources.InvokeArgs;
 import io.pulumi.resources.Resource;
+import io.pulumi.resources.Stack;
 import io.pulumi.resources.StackOptions;
 
 import javax.annotation.Nonnull;

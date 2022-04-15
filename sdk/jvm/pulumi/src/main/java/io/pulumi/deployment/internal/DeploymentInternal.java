@@ -1,13 +1,13 @@
 package io.pulumi.deployment.internal;
 
 import com.google.common.annotations.VisibleForTesting;
-import io.pulumi.Stack;
 import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.resources.Resource;
 import io.pulumi.resources.ResourceArgs;
 import io.pulumi.resources.ResourceOptions;
+import io.pulumi.resources.Stack;
 
 import java.util.Map;
 import java.util.Optional;
@@ -17,6 +17,8 @@ import java.util.function.Supplier;
 
 @InternalUse
 public interface DeploymentInternal extends Deployment {
+
+    DeploymentImpl.Config getConfig();
 
     Optional<String> getConfig(String fullKey);
 

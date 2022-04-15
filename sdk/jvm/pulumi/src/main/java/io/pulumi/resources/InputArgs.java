@@ -29,8 +29,6 @@ public abstract class InputArgs {
 
     private final ImmutableList<ImportMetadata<?, ?, ?>> inputInfos;
 
-    private final InputArgsInternal internal = new InputArgsInternal(this);
-
     protected InputArgs() {
         this.inputInfos = extractInputInfos(this.getClass());
     }
@@ -48,7 +46,7 @@ public abstract class InputArgs {
         }
 
         public static InputArgsInternal from(InputArgs inputArgs) {
-            return inputArgs.internal;
+            return new InputArgsInternal(inputArgs);
         }
 
         // TODO: try to remove, this only casts the type

@@ -1,9 +1,9 @@
 package io.pulumi.context.internal;
 
 import io.pulumi.Config;
-import io.pulumi.context.ExportContext;
+import io.pulumi.Context;
+import io.pulumi.Exports;
 import io.pulumi.context.LoggingContext;
-import io.pulumi.context.StackContext;
 import io.pulumi.core.Output;
 import io.pulumi.core.internal.Strings;
 import io.pulumi.core.internal.annotations.InternalUse;
@@ -15,20 +15,20 @@ import static java.util.Objects.requireNonNull;
 
 @InternalUse
 @ParametersAreNonnullByDefault
-public class StackContextInternal implements StackContext {
+public class ContextInternal implements Context {
 
     private final String stackName;
     private final LoggingContextInternal logging;
     private final ConfigContextInternal config;
     private final OutputContextInternal outputs;
-    private final ExportContextInternal exports;
+    private final ExportsInternal exports;
 
-    public StackContextInternal(
+    public ContextInternal(
             String stackName,
             LoggingContextInternal logging,
             ConfigContextInternal config,
             OutputContextInternal outputs,
-            ExportContextInternal exports
+            ExportsInternal exports
     ) {
         this.stackName = require(Strings::isNonEmptyOrNull, stackName, () -> "expected a stack name, got empty string or null");
         this.logging = requireNonNull(logging);
@@ -53,13 +53,13 @@ public class StackContextInternal implements StackContext {
     }
 
     @Override
-    public ExportContext export(String name, Output<?> output) {
+    public Exports export(String name, Output<?> output) {
         this.exports.export(name, output);
         return this.exports;
     }
 
     @Override
-    public ExportContext exports() {
+    public Exports exports() {
         return this.exports;
     }
 

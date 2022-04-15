@@ -3,6 +3,7 @@
 package examples
 
 import (
+	"bytes"
 	"fmt"
 	"os/exec"
 	"path/filepath"
@@ -122,7 +123,17 @@ func TestExamples(t *testing.T) {
 				cmd := exec.Command(filepath.Join(info.Root, "mvnw"),
 					"--no-transfer-progress", "package")
 				cmd.Dir = info.Root
-				return cmd.Run()
+				var buf bytes.Buffer
+				cmd.Stdout = &buf
+				cmd.Stderr = &buf
+				err := cmd.Run()
+
+				if err != nil {
+					t.Logf("mvwn --no-transfer-progress package: %v", err)
+					t.Log(buf.String())
+				}
+
+				return err
 			},
 			Config: map[string]string{
 				"name": "Pulumi",

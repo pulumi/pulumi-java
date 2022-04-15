@@ -1,7 +1,6 @@
 package io.pulumi.resources;
 
 import com.google.common.collect.ImmutableMap;
-import io.pulumi.Stack;
 import io.pulumi.core.OutputTests;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.internal.Internal;

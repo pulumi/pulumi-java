@@ -2,7 +2,6 @@ package io.pulumi.resources;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
-import io.pulumi.Stack.StackInternal;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.Urn;
@@ -16,6 +15,7 @@ import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.internal.DeploymentInternal;
 import io.pulumi.exceptions.ResourceException;
 import io.pulumi.exceptions.RunException;
+import io.pulumi.resources.Stack.StackInternal;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -72,8 +72,6 @@ public abstract class Resource {
 
     @Nullable
     private final String version;
-
-    private final ResourceInternal internal = new ResourceInternal(this);
 
     /**
      * @see Resource#Resource(String, String, boolean, ResourceArgs, ResourceOptions, boolean, boolean)
@@ -427,7 +425,7 @@ public abstract class Resource {
         }
 
         public static ResourceInternal from(Resource r) {
-            return r.internal;
+            return new ResourceInternal(r);
         }
 
         /**
