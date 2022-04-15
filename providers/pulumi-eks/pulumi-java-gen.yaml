@@ -5,4 +5,4 @@ out: sdk/java
 versionFile: src/main/resources/com/pulumi/eks/version.txt
 pluginFile: src/main/resources/com/pulumi/eks/plugin.json
 overlays:
-  - "../build-templates"
+  - "./build-templates"
