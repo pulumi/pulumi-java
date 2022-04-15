@@ -24,7 +24,7 @@ public final class DaemonEndpoint {
      * Port number of the given endpoint.
      * 
     */
-    public Integer getPort() {
+    public Integer Port() {
         return this.Port;
     }
 
@@ -48,7 +48,7 @@ public final class DaemonEndpoint {
     	      this.Port = defaults.Port;
         }
 
-        public Builder port(Integer Port) {
+        public Builder Port(Integer Port) {
             this.Port = Objects.requireNonNull(Port);
             return this;
         }        public DaemonEndpoint build() {

@@ -26,7 +26,7 @@ public final class CustomResourceSubresourceScaleArgs extends io.pulumi.resource
     @Import(name="labelSelectorPath")
       private final @Nullable Output<String> labelSelectorPath;
 
-    public Output<String> getLabelSelectorPath() {
+    public Output<String> labelSelectorPath() {
         return this.labelSelectorPath == null ? Codegen.empty() : this.labelSelectorPath;
     }
 
@@ -37,7 +37,7 @@ public final class CustomResourceSubresourceScaleArgs extends io.pulumi.resource
     @Import(name="specReplicasPath", required=true)
       private final Output<String> specReplicasPath;
 
-    public Output<String> getSpecReplicasPath() {
+    public Output<String> specReplicasPath() {
         return this.specReplicasPath;
     }
 
@@ -48,7 +48,7 @@ public final class CustomResourceSubresourceScaleArgs extends io.pulumi.resource
     @Import(name="statusReplicasPath", required=true)
       private final Output<String> statusReplicasPath;
 
-    public Output<String> getStatusReplicasPath() {
+    public Output<String> statusReplicasPath() {
         return this.statusReplicasPath;
     }
 

@@ -27,7 +27,7 @@ public final class PriorityLevelConfigurationSpecArgs extends io.pulumi.resource
     @Import(name="limited")
       private final @Nullable Output<LimitedPriorityLevelConfigurationArgs> limited;
 
-    public Output<LimitedPriorityLevelConfigurationArgs> getLimited() {
+    public Output<LimitedPriorityLevelConfigurationArgs> limited() {
         return this.limited == null ? Codegen.empty() : this.limited;
     }
 
@@ -38,7 +38,7 @@ public final class PriorityLevelConfigurationSpecArgs extends io.pulumi.resource
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

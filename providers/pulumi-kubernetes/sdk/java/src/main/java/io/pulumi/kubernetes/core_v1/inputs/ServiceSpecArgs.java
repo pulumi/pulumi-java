@@ -34,7 +34,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allocateLoadBalancerNodePorts")
       private final @Nullable Output<Boolean> allocateLoadBalancerNodePorts;
 
-    public Output<Boolean> getAllocateLoadBalancerNodePorts() {
+    public Output<Boolean> allocateLoadBalancerNodePorts() {
         return this.allocateLoadBalancerNodePorts == null ? Codegen.empty() : this.allocateLoadBalancerNodePorts;
     }
 
@@ -45,7 +45,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterIP")
       private final @Nullable Output<String> clusterIP;
 
-    public Output<String> getClusterIP() {
+    public Output<String> clusterIP() {
         return this.clusterIP == null ? Codegen.empty() : this.clusterIP;
     }
 
@@ -58,7 +58,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterIPs")
       private final @Nullable Output<List<String>> clusterIPs;
 
-    public Output<List<String>> getClusterIPs() {
+    public Output<List<String>> clusterIPs() {
         return this.clusterIPs == null ? Codegen.empty() : this.clusterIPs;
     }
 
@@ -69,7 +69,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="externalIPs")
       private final @Nullable Output<List<String>> externalIPs;
 
-    public Output<List<String>> getExternalIPs() {
+    public Output<List<String>> externalIPs() {
         return this.externalIPs == null ? Codegen.empty() : this.externalIPs;
     }
 
@@ -80,7 +80,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="externalName")
       private final @Nullable Output<String> externalName;
 
-    public Output<String> getExternalName() {
+    public Output<String> externalName() {
         return this.externalName == null ? Codegen.empty() : this.externalName;
     }
 
@@ -95,7 +95,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="externalTrafficPolicy")
       private final @Nullable Output<String> externalTrafficPolicy;
 
-    public Output<String> getExternalTrafficPolicy() {
+    public Output<String> externalTrafficPolicy() {
         return this.externalTrafficPolicy == null ? Codegen.empty() : this.externalTrafficPolicy;
     }
 
@@ -106,7 +106,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="healthCheckNodePort")
       private final @Nullable Output<Integer> healthCheckNodePort;
 
-    public Output<Integer> getHealthCheckNodePort() {
+    public Output<Integer> healthCheckNodePort() {
         return this.healthCheckNodePort == null ? Codegen.empty() : this.healthCheckNodePort;
     }
 
@@ -117,7 +117,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="internalTrafficPolicy")
       private final @Nullable Output<String> internalTrafficPolicy;
 
-    public Output<String> getInternalTrafficPolicy() {
+    public Output<String> internalTrafficPolicy() {
         return this.internalTrafficPolicy == null ? Codegen.empty() : this.internalTrafficPolicy;
     }
 
@@ -130,7 +130,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipFamilies")
       private final @Nullable Output<List<String>> ipFamilies;
 
-    public Output<List<String>> getIpFamilies() {
+    public Output<List<String>> ipFamilies() {
         return this.ipFamilies == null ? Codegen.empty() : this.ipFamilies;
     }
 
@@ -141,7 +141,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipFamily")
       private final @Nullable Output<String> ipFamily;
 
-    public Output<String> getIpFamily() {
+    public Output<String> ipFamily() {
         return this.ipFamily == null ? Codegen.empty() : this.ipFamily;
     }
 
@@ -152,7 +152,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipFamilyPolicy")
       private final @Nullable Output<String> ipFamilyPolicy;
 
-    public Output<String> getIpFamilyPolicy() {
+    public Output<String> ipFamilyPolicy() {
         return this.ipFamilyPolicy == null ? Codegen.empty() : this.ipFamilyPolicy;
     }
 
@@ -163,7 +163,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancerClass")
       private final @Nullable Output<String> loadBalancerClass;
 
-    public Output<String> getLoadBalancerClass() {
+    public Output<String> loadBalancerClass() {
         return this.loadBalancerClass == null ? Codegen.empty() : this.loadBalancerClass;
     }
 
@@ -174,7 +174,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancerIP")
       private final @Nullable Output<String> loadBalancerIP;
 
-    public Output<String> getLoadBalancerIP() {
+    public Output<String> loadBalancerIP() {
         return this.loadBalancerIP == null ? Codegen.empty() : this.loadBalancerIP;
     }
 
@@ -185,7 +185,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancerSourceRanges")
       private final @Nullable Output<List<String>> loadBalancerSourceRanges;
 
-    public Output<List<String>> getLoadBalancerSourceRanges() {
+    public Output<List<String>> loadBalancerSourceRanges() {
         return this.loadBalancerSourceRanges == null ? Codegen.empty() : this.loadBalancerSourceRanges;
     }
 
@@ -196,7 +196,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ports")
       private final @Nullable Output<List<ServicePortArgs>> ports;
 
-    public Output<List<ServicePortArgs>> getPorts() {
+    public Output<List<ServicePortArgs>> ports() {
         return this.ports == null ? Codegen.empty() : this.ports;
     }
 
@@ -207,7 +207,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publishNotReadyAddresses")
       private final @Nullable Output<Boolean> publishNotReadyAddresses;
 
-    public Output<Boolean> getPublishNotReadyAddresses() {
+    public Output<Boolean> publishNotReadyAddresses() {
         return this.publishNotReadyAddresses == null ? Codegen.empty() : this.publishNotReadyAddresses;
     }
 
@@ -218,7 +218,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="selector")
       private final @Nullable Output<Map<String,String>> selector;
 
-    public Output<Map<String,String>> getSelector() {
+    public Output<Map<String,String>> selector() {
         return this.selector == null ? Codegen.empty() : this.selector;
     }
 
@@ -233,7 +233,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sessionAffinity")
       private final @Nullable Output<String> sessionAffinity;
 
-    public Output<String> getSessionAffinity() {
+    public Output<String> sessionAffinity() {
         return this.sessionAffinity == null ? Codegen.empty() : this.sessionAffinity;
     }
 
@@ -244,7 +244,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sessionAffinityConfig")
       private final @Nullable Output<SessionAffinityConfigArgs> sessionAffinityConfig;
 
-    public Output<SessionAffinityConfigArgs> getSessionAffinityConfig() {
+    public Output<SessionAffinityConfigArgs> sessionAffinityConfig() {
         return this.sessionAffinityConfig == null ? Codegen.empty() : this.sessionAffinityConfig;
     }
 
@@ -255,7 +255,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="topologyKeys")
       private final @Nullable Output<List<String>> topologyKeys;
 
-    public Output<List<String>> getTopologyKeys() {
+    public Output<List<String>> topologyKeys() {
         return this.topologyKeys == null ? Codegen.empty() : this.topologyKeys;
     }
 
@@ -272,7 +272,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<Either<String,ServiceSpecType>> type;
 
-    public Output<Either<String,ServiceSpecType>> getType() {
+    public Output<Either<String,ServiceSpecType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -60,31 +60,31 @@ public final class PersistentVolumeClaimCondition {
      * Last time we probed the condition.
      * 
     */
-    public Optional<String> getLastProbeTime() {
+    public Optional<String> lastProbeTime() {
         return Optional.ofNullable(this.lastProbeTime);
     }
     /**
      * Last time the condition transitioned from one status to another.
      * 
     */
-    public Optional<String> getLastTransitionTime() {
+    public Optional<String> lastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
     /**
      * Human-readable message indicating details about last transition.
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
      * Unique, this should be a short, machine understandable string that gives the reason for condition's last transition. If it reports "ResizeStarted" that means the underlying persistent volume is being resized.
      * 
     */
-    public Optional<String> getReason() {
+    public Optional<String> reason() {
         return Optional.ofNullable(this.reason);
     }
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
@@ -93,7 +93,7 @@ public final class PersistentVolumeClaimCondition {
      *  - `"Resizing"` - a user trigger resize of pvc has been started
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

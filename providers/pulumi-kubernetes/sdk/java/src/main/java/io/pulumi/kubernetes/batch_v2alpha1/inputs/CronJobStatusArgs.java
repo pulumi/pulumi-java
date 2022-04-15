@@ -28,7 +28,7 @@ public final class CronJobStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="active")
       private final @Nullable Output<List<ObjectReferenceArgs>> active;
 
-    public Output<List<ObjectReferenceArgs>> getActive() {
+    public Output<List<ObjectReferenceArgs>> active() {
         return this.active == null ? Codegen.empty() : this.active;
     }
 
@@ -39,7 +39,7 @@ public final class CronJobStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastScheduleTime")
       private final @Nullable Output<String> lastScheduleTime;
 
-    public Output<String> getLastScheduleTime() {
+    public Output<String> lastScheduleTime() {
         return this.lastScheduleTime == null ? Codegen.empty() : this.lastScheduleTime;
     }
 

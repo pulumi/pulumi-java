@@ -27,7 +27,7 @@ public final class MetricValueStatusArgs extends io.pulumi.resources.ResourceArg
     @Import(name="averageUtilization")
       private final @Nullable Output<Integer> averageUtilization;
 
-    public Output<Integer> getAverageUtilization() {
+    public Output<Integer> averageUtilization() {
         return this.averageUtilization == null ? Codegen.empty() : this.averageUtilization;
     }
 
@@ -38,7 +38,7 @@ public final class MetricValueStatusArgs extends io.pulumi.resources.ResourceArg
     @Import(name="averageValue")
       private final @Nullable Output<String> averageValue;
 
-    public Output<String> getAverageValue() {
+    public Output<String> averageValue() {
         return this.averageValue == null ? Codegen.empty() : this.averageValue;
     }
 
@@ -49,7 +49,7 @@ public final class MetricValueStatusArgs extends io.pulumi.resources.ResourceArg
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

@@ -23,7 +23,7 @@ public final class GRPCActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="port", required=true)
       private final Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
 
@@ -36,7 +36,7 @@ public final class GRPCActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service == null ? Codegen.empty() : this.service;
     }
 

@@ -95,14 +95,14 @@ public final class CSIDriverSpec {
      * attachRequired indicates this CSI volume driver requires an attach operation (because it implements the CSI ControllerPublishVolume() method), and that the Kubernetes attach detach controller should call the attach volume interface which checks the volumeattachment status and waits until the volume is attached before proceeding to mounting. The CSI external-attacher coordinates with CSI volume driver and updates the volumeattachment status when the attach operation is complete. If the CSIDriverRegistry feature gate is enabled and the value is specified to false, the attach operation will be skipped. Otherwise the attach operation will be called.
      * 
     */
-    public Optional<Boolean> getAttachRequired() {
+    public Optional<Boolean> attachRequired() {
         return Optional.ofNullable(this.attachRequired);
     }
     /**
      * Defines if the underlying volume supports changing ownership and permission of the volume before being mounted. Refer to the specific FSGroupPolicy values for additional details. This field is alpha-level, and is only honored by servers that enable the CSIVolumeFSGroupPolicy feature gate.
      * 
     */
-    public Optional<String> getFsGroupPolicy() {
+    public Optional<String> fsGroupPolicy() {
         return Optional.ofNullable(this.fsGroupPolicy);
     }
     /**
@@ -112,7 +112,7 @@ public final class CSIDriverSpec {
      * "csi.storage.k8s.io/ephemeral" is a new feature in Kubernetes 1.16. It is only required for drivers which support both the "Persistent" and "Ephemeral" VolumeLifecycleMode. Other drivers can leave pod info disabled and/or ignore this field. As Kubernetes 1.15 doesn't support this field, drivers can only support one mode when deployed on such a cluster and the deployment determines which mode that is, for example via a command line parameter of the driver.
      * 
     */
-    public Optional<Boolean> getPodInfoOnMount() {
+    public Optional<Boolean> podInfoOnMount() {
         return Optional.ofNullable(this.podInfoOnMount);
     }
     /**
@@ -123,7 +123,7 @@ public final class CSIDriverSpec {
      * This is an alpha feature and only available when the CSIServiceAccountToken feature is enabled.
      * 
     */
-    public Optional<Boolean> getRequiresRepublish() {
+    public Optional<Boolean> requiresRepublish() {
         return Optional.ofNullable(this.requiresRepublish);
     }
     /**
@@ -136,7 +136,7 @@ public final class CSIDriverSpec {
      * This is an alpha field and only available when the CSIStorageCapacity feature is enabled. The default is false.
      * 
     */
-    public Optional<Boolean> getStorageCapacity() {
+    public Optional<Boolean> storageCapacity() {
         return Optional.ofNullable(this.storageCapacity);
     }
     /**
@@ -153,14 +153,14 @@ public final class CSIDriverSpec {
      * This is an alpha feature and only available when the CSIServiceAccountToken feature is enabled.
      * 
     */
-    public List<TokenRequest> getTokenRequests() {
+    public List<TokenRequest> tokenRequests() {
         return this.tokenRequests == null ? List.of() : this.tokenRequests;
     }
     /**
      * VolumeLifecycleModes defines what kind of volumes this CSI volume driver supports. The default if the list is empty is "Persistent", which is the usage defined by the CSI specification and implemented in Kubernetes via the usual PV/PVC mechanism. The other mode is "Ephemeral". In this mode, volumes are defined inline inside the pod spec with CSIVolumeSource and their lifecycle is tied to the lifecycle of that pod. A driver has to be aware of this because it is only going to get a NodePublishVolume call for such a volume. For more information about implementing this mode, see https://kubernetes-csi.github.io/docs/ephemeral-local-volumes.html A driver can support one or more of these modes and more modes may be added in the future.
      * 
     */
-    public List<String> getVolumeLifecycleModes() {
+    public List<String> volumeLifecycleModes() {
         return this.volumeLifecycleModes == null ? List.of() : this.volumeLifecycleModes;
     }
 

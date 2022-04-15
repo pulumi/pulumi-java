@@ -26,7 +26,7 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="caFile")
       private final @Nullable Output<String> caFile;
 
-    public Output<String> getCaFile() {
+    public Output<String> caFile() {
         return this.caFile == null ? Codegen.empty() : this.caFile;
     }
 
@@ -37,7 +37,7 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="certFile")
       private final @Nullable Output<String> certFile;
 
-    public Output<String> getCertFile() {
+    public Output<String> certFile() {
         return this.certFile == null ? Codegen.empty() : this.certFile;
     }
 
@@ -48,7 +48,7 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyFile")
       private final @Nullable Output<String> keyFile;
 
-    public Output<String> getKeyFile() {
+    public Output<String> keyFile() {
         return this.keyFile == null ? Codegen.empty() : this.keyFile;
     }
 
@@ -59,7 +59,7 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -70,7 +70,7 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="repo")
       private final @Nullable Output<String> repo;
 
-    public Output<String> getRepo() {
+    public Output<String> repo() {
         return this.repo == null ? Codegen.empty() : this.repo;
     }
 
@@ -81,7 +81,7 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 

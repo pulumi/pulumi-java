@@ -34,7 +34,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
     @Import(name="additionalPrinterColumns")
       private final @Nullable Output<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns;
 
-    public Output<List<CustomResourceColumnDefinitionArgs>> getAdditionalPrinterColumns() {
+    public Output<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns() {
         return this.additionalPrinterColumns == null ? Codegen.empty() : this.additionalPrinterColumns;
     }
 
@@ -45,7 +45,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
     @Import(name="conversion")
       private final @Nullable Output<CustomResourceConversionArgs> conversion;
 
-    public Output<CustomResourceConversionArgs> getConversion() {
+    public Output<CustomResourceConversionArgs> conversion() {
         return this.conversion == null ? Codegen.empty() : this.conversion;
     }
 
@@ -56,7 +56,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
     @Import(name="group", required=true)
       private final Output<String> group;
 
-    public Output<String> getGroup() {
+    public Output<String> group() {
         return this.group;
     }
 
@@ -67,7 +67,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
     @Import(name="names", required=true)
       private final Output<CustomResourceDefinitionNamesArgs> names;
 
-    public Output<CustomResourceDefinitionNamesArgs> getNames() {
+    public Output<CustomResourceDefinitionNamesArgs> names() {
         return this.names;
     }
 
@@ -78,7 +78,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
     @Import(name="preserveUnknownFields")
       private final @Nullable Output<Boolean> preserveUnknownFields;
 
-    public Output<Boolean> getPreserveUnknownFields() {
+    public Output<Boolean> preserveUnknownFields() {
         return this.preserveUnknownFields == null ? Codegen.empty() : this.preserveUnknownFields;
     }
 
@@ -89,7 +89,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -100,7 +100,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
     @Import(name="subresources")
       private final @Nullable Output<CustomResourceSubresourcesArgs> subresources;
 
-    public Output<CustomResourceSubresourcesArgs> getSubresources() {
+    public Output<CustomResourceSubresourcesArgs> subresources() {
         return this.subresources == null ? Codegen.empty() : this.subresources;
     }
 
@@ -111,7 +111,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
     @Import(name="validation")
       private final @Nullable Output<CustomResourceValidationArgs> validation;
 
-    public Output<CustomResourceValidationArgs> getValidation() {
+    public Output<CustomResourceValidationArgs> validation() {
         return this.validation == null ? Codegen.empty() : this.validation;
     }
 
@@ -122,7 +122,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 
@@ -133,7 +133,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
     @Import(name="versions")
       private final @Nullable Output<List<CustomResourceDefinitionVersionArgs>> versions;
 
-    public Output<List<CustomResourceDefinitionVersionArgs>> getVersions() {
+    public Output<List<CustomResourceDefinitionVersionArgs>> versions() {
         return this.versions == null ? Codegen.empty() : this.versions;
     }
 

@@ -51,28 +51,28 @@ public final class Subject {
      * `group` matches based on user group name.
      * 
     */
-    public Optional<GroupSubject> getGroup() {
+    public Optional<GroupSubject> group() {
         return Optional.ofNullable(this.group);
     }
     /**
      * `kind` indicates which one of the other fields is non-empty. Required
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * `serviceAccount` matches ServiceAccounts.
      * 
     */
-    public Optional<ServiceAccountSubject> getServiceAccount() {
+    public Optional<ServiceAccountSubject> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
     /**
      * `user` matches based on username.
      * 
     */
-    public Optional<UserSubject> getUser() {
+    public Optional<UserSubject> user() {
         return Optional.ofNullable(this.user);
     }
 

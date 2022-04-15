@@ -27,7 +27,7 @@ public final class JobTemplateSpecArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> getMetadata() {
+    public Output<ObjectMetaArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -38,7 +38,7 @@ public final class JobTemplateSpecArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="spec")
       private final @Nullable Output<JobSpecArgs> spec;
 
-    public Output<JobSpecArgs> getSpec() {
+    public Output<JobSpecArgs> spec() {
         return this.spec == null ? Codegen.empty() : this.spec;
     }
 

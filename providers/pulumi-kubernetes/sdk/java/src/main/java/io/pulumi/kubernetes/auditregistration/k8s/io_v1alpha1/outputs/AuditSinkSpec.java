@@ -33,14 +33,14 @@ public final class AuditSinkSpec {
      * Policy defines the policy for selecting which events should be sent to the webhook required
      * 
     */
-    public Policy getPolicy() {
+    public Policy policy() {
         return this.policy;
     }
     /**
      * Webhook to send events required
      * 
     */
-    public Webhook getWebhook() {
+    public Webhook webhook() {
         return this.webhook;
     }
 

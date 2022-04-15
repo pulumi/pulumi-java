@@ -26,7 +26,7 @@ public final class LifecycleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="postStart")
       private final @Nullable Output<LifecycleHandlerArgs> postStart;
 
-    public Output<LifecycleHandlerArgs> getPostStart() {
+    public Output<LifecycleHandlerArgs> postStart() {
         return this.postStart == null ? Codegen.empty() : this.postStart;
     }
 
@@ -37,7 +37,7 @@ public final class LifecycleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preStop")
       private final @Nullable Output<LifecycleHandlerArgs> preStop;
 
-    public Output<LifecycleHandlerArgs> getPreStop() {
+    public Output<LifecycleHandlerArgs> preStop() {
         return this.preStop == null ? Codegen.empty() : this.preStop;
     }
 

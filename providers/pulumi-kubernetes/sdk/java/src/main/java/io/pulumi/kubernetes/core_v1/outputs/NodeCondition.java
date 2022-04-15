@@ -69,35 +69,35 @@ public final class NodeCondition {
      * Last time we got an update on a given condition.
      * 
     */
-    public Optional<String> getLastHeartbeatTime() {
+    public Optional<String> lastHeartbeatTime() {
         return Optional.ofNullable(this.lastHeartbeatTime);
     }
     /**
      * Last time the condition transit from one status to another.
      * 
     */
-    public Optional<String> getLastTransitionTime() {
+    public Optional<String> lastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
     /**
      * Human readable message indicating details about last transition.
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
      * (brief) reason for the condition's last transition.
      * 
     */
-    public Optional<String> getReason() {
+    public Optional<String> reason() {
         return Optional.ofNullable(this.reason);
     }
     /**
      * Status of the condition, one of True, False, Unknown.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
@@ -111,7 +111,7 @@ public final class NodeCondition {
      *  - `"Ready"` means kubelet is healthy and ready to accept pods.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

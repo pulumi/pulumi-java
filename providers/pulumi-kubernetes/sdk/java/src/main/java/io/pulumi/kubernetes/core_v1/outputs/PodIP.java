@@ -26,7 +26,7 @@ public final class PodIP {
      * ip is an IP address (IPv4 or IPv6) assigned to the pod
      * 
     */
-    public Optional<String> getIp() {
+    public Optional<String> ip() {
         return Optional.ofNullable(this.ip);
     }
 

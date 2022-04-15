@@ -29,7 +29,7 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="caBundle")
       private final @Nullable Output<String> caBundle;
 
-    public Output<String> getCaBundle() {
+    public Output<String> caBundle() {
         return this.caBundle == null ? Codegen.empty() : this.caBundle;
     }
 
@@ -40,7 +40,7 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="group")
       private final @Nullable Output<String> group;
 
-    public Output<String> getGroup() {
+    public Output<String> group() {
         return this.group == null ? Codegen.empty() : this.group;
     }
 
@@ -51,7 +51,7 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="groupPriorityMinimum", required=true)
       private final Output<Integer> groupPriorityMinimum;
 
-    public Output<Integer> getGroupPriorityMinimum() {
+    public Output<Integer> groupPriorityMinimum() {
         return this.groupPriorityMinimum;
     }
 
@@ -62,7 +62,7 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="insecureSkipTLSVerify")
       private final @Nullable Output<Boolean> insecureSkipTLSVerify;
 
-    public Output<Boolean> getInsecureSkipTLSVerify() {
+    public Output<Boolean> insecureSkipTLSVerify() {
         return this.insecureSkipTLSVerify == null ? Codegen.empty() : this.insecureSkipTLSVerify;
     }
 
@@ -73,7 +73,7 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="service", required=true)
       private final Output<ServiceReferenceArgs> service;
 
-    public Output<ServiceReferenceArgs> getService() {
+    public Output<ServiceReferenceArgs> service() {
         return this.service;
     }
 
@@ -84,7 +84,7 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 
@@ -95,7 +95,7 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="versionPriority", required=true)
       private final Output<Integer> versionPriority;
 
-    public Output<Integer> getVersionPriority() {
+    public Output<Integer> versionPriority() {
         return this.versionPriority;
     }
 

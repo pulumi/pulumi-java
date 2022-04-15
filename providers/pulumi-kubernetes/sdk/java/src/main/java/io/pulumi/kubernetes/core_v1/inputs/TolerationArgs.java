@@ -32,7 +32,7 @@ public final class TolerationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="effect")
       private final @Nullable Output<String> effect;
 
-    public Output<String> getEffect() {
+    public Output<String> effect() {
         return this.effect == null ? Codegen.empty() : this.effect;
     }
 
@@ -43,7 +43,7 @@ public final class TolerationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
@@ -58,7 +58,7 @@ public final class TolerationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operator")
       private final @Nullable Output<String> operator;
 
-    public Output<String> getOperator() {
+    public Output<String> operator() {
         return this.operator == null ? Codegen.empty() : this.operator;
     }
 
@@ -69,7 +69,7 @@ public final class TolerationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tolerationSeconds")
       private final @Nullable Output<Integer> tolerationSeconds;
 
-    public Output<Integer> getTolerationSeconds() {
+    public Output<Integer> tolerationSeconds() {
         return this.tolerationSeconds == null ? Codegen.empty() : this.tolerationSeconds;
     }
 
@@ -80,7 +80,7 @@ public final class TolerationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

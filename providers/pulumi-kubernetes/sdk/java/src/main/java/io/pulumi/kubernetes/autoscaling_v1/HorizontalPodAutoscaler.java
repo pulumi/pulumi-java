@@ -34,7 +34,7 @@ public class HorizontalPodAutoscaler extends io.pulumi.resources.CustomResource 
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    public Output</* @Nullable */ String> getApiVersion() {
+    public Output</* @Nullable */ String> apiVersion() {
         return this.apiVersion;
     }
     /**
@@ -48,7 +48,7 @@ public class HorizontalPodAutoscaler extends io.pulumi.resources.CustomResource 
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -62,7 +62,7 @@ public class HorizontalPodAutoscaler extends io.pulumi.resources.CustomResource 
      * @return Standard object metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
-    public Output</* @Nullable */ ObjectMeta> getMetadata() {
+    public Output</* @Nullable */ ObjectMeta> metadata() {
         return this.metadata;
     }
     /**
@@ -76,7 +76,7 @@ public class HorizontalPodAutoscaler extends io.pulumi.resources.CustomResource 
      * @return behaviour of autoscaler. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status.
      * 
      */
-    public Output</* @Nullable */ HorizontalPodAutoscalerSpec> getSpec() {
+    public Output</* @Nullable */ HorizontalPodAutoscalerSpec> spec() {
         return this.spec;
     }
     /**
@@ -90,7 +90,7 @@ public class HorizontalPodAutoscaler extends io.pulumi.resources.CustomResource 
      * @return current information about the autoscaler.
      * 
      */
-    public Output</* @Nullable */ HorizontalPodAutoscalerStatus> getStatus() {
+    public Output</* @Nullable */ HorizontalPodAutoscalerStatus> status() {
         return this.status;
     }
 

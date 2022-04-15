@@ -25,7 +25,7 @@ public final class EndpointsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
+    public Output<String> apiVersion() {
         return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
@@ -36,7 +36,7 @@ public final class EndpointsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -47,7 +47,7 @@ public final class EndpointsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> getMetadata() {
+    public Output<ObjectMetaArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -58,7 +58,7 @@ public final class EndpointsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subsets")
       private final @Nullable Output<List<EndpointSubsetArgs>> subsets;
 
-    public Output<List<EndpointSubsetArgs>> getSubsets() {
+    public Output<List<EndpointSubsetArgs>> subsets() {
         return this.subsets == null ? Codegen.empty() : this.subsets;
     }
 

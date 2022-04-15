@@ -25,7 +25,7 @@ public final class CustomResourceDefinitionListArgs extends io.pulumi.resources.
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
+    public Output<String> apiVersion() {
         return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
@@ -36,7 +36,7 @@ public final class CustomResourceDefinitionListArgs extends io.pulumi.resources.
     @Import(name="items", required=true)
       private final Output<List<CustomResourceDefinitionArgs>> items;
 
-    public Output<List<CustomResourceDefinitionArgs>> getItems() {
+    public Output<List<CustomResourceDefinitionArgs>> items() {
         return this.items;
     }
 
@@ -47,14 +47,14 @@ public final class CustomResourceDefinitionListArgs extends io.pulumi.resources.
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     @Import(name="metadata")
       private final @Nullable Output<ListMetaArgs> metadata;
 
-    public Output<ListMetaArgs> getMetadata() {
+    public Output<ListMetaArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 

@@ -27,7 +27,7 @@ public final class WindowsSecurityContextOptionsArgs extends io.pulumi.resources
     @Import(name="gmsaCredentialSpec")
       private final @Nullable Output<String> gmsaCredentialSpec;
 
-    public Output<String> getGmsaCredentialSpec() {
+    public Output<String> gmsaCredentialSpec() {
         return this.gmsaCredentialSpec == null ? Codegen.empty() : this.gmsaCredentialSpec;
     }
 
@@ -38,7 +38,7 @@ public final class WindowsSecurityContextOptionsArgs extends io.pulumi.resources
     @Import(name="gmsaCredentialSpecName")
       private final @Nullable Output<String> gmsaCredentialSpecName;
 
-    public Output<String> getGmsaCredentialSpecName() {
+    public Output<String> gmsaCredentialSpecName() {
         return this.gmsaCredentialSpecName == null ? Codegen.empty() : this.gmsaCredentialSpecName;
     }
 
@@ -49,7 +49,7 @@ public final class WindowsSecurityContextOptionsArgs extends io.pulumi.resources
     @Import(name="hostProcess")
       private final @Nullable Output<Boolean> hostProcess;
 
-    public Output<Boolean> getHostProcess() {
+    public Output<Boolean> hostProcess() {
         return this.hostProcess == null ? Codegen.empty() : this.hostProcess;
     }
 
@@ -60,7 +60,7 @@ public final class WindowsSecurityContextOptionsArgs extends io.pulumi.resources
     @Import(name="runAsUserName")
       private final @Nullable Output<String> runAsUserName;
 
-    public Output<String> getRunAsUserName() {
+    public Output<String> runAsUserName() {
         return this.runAsUserName == null ? Codegen.empty() : this.runAsUserName;
     }
 

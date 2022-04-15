@@ -36,7 +36,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return What action was taken/failed regarding to the Regarding object.
      * 
      */
-    public Output</* @Nullable */ String> getAction() {
+    public Output</* @Nullable */ String> action() {
         return this.action;
     }
     /**
@@ -50,7 +50,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    public Output</* @Nullable */ String> getApiVersion() {
+    public Output</* @Nullable */ String> apiVersion() {
         return this.apiVersion;
     }
     /**
@@ -64,7 +64,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return The number of times this event has occurred.
      * 
      */
-    public Output</* @Nullable */ Integer> getCount() {
+    public Output</* @Nullable */ Integer> count() {
         return this.count;
     }
     /**
@@ -78,7 +78,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return Time when this Event was first observed.
      * 
      */
-    public Output</* @Nullable */ String> getEventTime() {
+    public Output</* @Nullable */ String> eventTime() {
         return this.eventTime;
     }
     /**
@@ -92,7 +92,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return The time at which the event was first recorded. (Time of server receipt is in TypeMeta.)
      * 
      */
-    public Output</* @Nullable */ String> getFirstTimestamp() {
+    public Output</* @Nullable */ String> firstTimestamp() {
         return this.firstTimestamp;
     }
     /**
@@ -106,7 +106,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return The object that this event is about.
      * 
      */
-    public Output<ObjectReference> getInvolvedObject() {
+    public Output<ObjectReference> involvedObject() {
         return this.involvedObject;
     }
     /**
@@ -120,7 +120,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -134,7 +134,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return The time at which the most recent occurrence of this event was recorded.
      * 
      */
-    public Output</* @Nullable */ String> getLastTimestamp() {
+    public Output</* @Nullable */ String> lastTimestamp() {
         return this.lastTimestamp;
     }
     /**
@@ -148,7 +148,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return A human-readable description of the status of this operation.
      * 
      */
-    public Output</* @Nullable */ String> getMessage() {
+    public Output</* @Nullable */ String> message() {
         return this.message;
     }
     /**
@@ -162,7 +162,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
-    public Output<ObjectMeta> getMetadata() {
+    public Output<ObjectMeta> metadata() {
         return this.metadata;
     }
     /**
@@ -176,7 +176,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return This should be a short, machine understandable string that gives the reason for the transition into the object's current status.
      * 
      */
-    public Output</* @Nullable */ String> getReason() {
+    public Output</* @Nullable */ String> reason() {
         return this.reason;
     }
     /**
@@ -190,7 +190,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return Optional secondary object for more complex actions.
      * 
      */
-    public Output</* @Nullable */ ObjectReference> getRelated() {
+    public Output</* @Nullable */ ObjectReference> related() {
         return this.related;
     }
     /**
@@ -204,7 +204,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return Name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`.
      * 
      */
-    public Output</* @Nullable */ String> getReportingComponent() {
+    public Output</* @Nullable */ String> reportingComponent() {
         return this.reportingComponent;
     }
     /**
@@ -218,7 +218,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return ID of the controller instance, e.g. `kubelet-xyzf`.
      * 
      */
-    public Output</* @Nullable */ String> getReportingInstance() {
+    public Output</* @Nullable */ String> reportingInstance() {
         return this.reportingInstance;
     }
     /**
@@ -232,7 +232,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return Data about the Event series this event represents or nil if it's a singleton Event.
      * 
      */
-    public Output</* @Nullable */ EventSeries> getSeries() {
+    public Output</* @Nullable */ EventSeries> series() {
         return this.series;
     }
     /**
@@ -246,7 +246,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return The component reporting this event. Should be a short machine understandable string.
      * 
      */
-    public Output</* @Nullable */ EventSource> getSource() {
+    public Output</* @Nullable */ EventSource> source() {
         return this.source;
     }
     /**
@@ -260,7 +260,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return Type of this event (Normal, Warning), new types could be added in the future
      * 
      */
-    public Output</* @Nullable */ String> getType() {
+    public Output</* @Nullable */ String> type() {
         return this.type;
     }
 

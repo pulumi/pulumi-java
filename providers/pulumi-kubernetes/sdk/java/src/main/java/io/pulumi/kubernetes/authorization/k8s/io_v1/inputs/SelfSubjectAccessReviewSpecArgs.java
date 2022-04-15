@@ -27,7 +27,7 @@ public final class SelfSubjectAccessReviewSpecArgs extends io.pulumi.resources.R
     @Import(name="nonResourceAttributes")
       private final @Nullable Output<NonResourceAttributesArgs> nonResourceAttributes;
 
-    public Output<NonResourceAttributesArgs> getNonResourceAttributes() {
+    public Output<NonResourceAttributesArgs> nonResourceAttributes() {
         return this.nonResourceAttributes == null ? Codegen.empty() : this.nonResourceAttributes;
     }
 
@@ -38,7 +38,7 @@ public final class SelfSubjectAccessReviewSpecArgs extends io.pulumi.resources.R
     @Import(name="resourceAttributes")
       private final @Nullable Output<ResourceAttributesArgs> resourceAttributes;
 
-    public Output<ResourceAttributesArgs> getResourceAttributes() {
+    public Output<ResourceAttributesArgs> resourceAttributes() {
         return this.resourceAttributes == null ? Codegen.empty() : this.resourceAttributes;
     }
 

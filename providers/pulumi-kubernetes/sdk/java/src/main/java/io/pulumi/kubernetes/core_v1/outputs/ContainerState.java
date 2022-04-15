@@ -43,21 +43,21 @@ public final class ContainerState {
      * Details about a running container
      * 
     */
-    public Optional<ContainerStateRunning> getRunning() {
+    public Optional<ContainerStateRunning> running() {
         return Optional.ofNullable(this.running);
     }
     /**
      * Details about a terminated container
      * 
     */
-    public Optional<ContainerStateTerminated> getTerminated() {
+    public Optional<ContainerStateTerminated> terminated() {
         return Optional.ofNullable(this.terminated);
     }
     /**
      * Details about a waiting container
      * 
     */
-    public Optional<ContainerStateWaiting> getWaiting() {
+    public Optional<ContainerStateWaiting> waiting() {
         return Optional.ofNullable(this.waiting);
     }
 

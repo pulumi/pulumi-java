@@ -26,7 +26,7 @@ public final class NodeConfigSourceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="configMap")
       private final @Nullable Output<ConfigMapNodeConfigSourceArgs> configMap;
 
-    public Output<ConfigMapNodeConfigSourceArgs> getConfigMap() {
+    public Output<ConfigMapNodeConfigSourceArgs> configMap() {
         return this.configMap == null ? Codegen.empty() : this.configMap;
     }
 

@@ -33,7 +33,7 @@ public final class ScopedResourceSelectorRequirementArgs extends io.pulumi.resou
     @Import(name="operator", required=true)
       private final Output<String> operator;
 
-    public Output<String> getOperator() {
+    public Output<String> operator() {
         return this.operator;
     }
 
@@ -52,7 +52,7 @@ public final class ScopedResourceSelectorRequirementArgs extends io.pulumi.resou
     @Import(name="scopeName", required=true)
       private final Output<String> scopeName;
 
-    public Output<String> getScopeName() {
+    public Output<String> scopeName() {
         return this.scopeName;
     }
 
@@ -63,7 +63,7 @@ public final class ScopedResourceSelectorRequirementArgs extends io.pulumi.resou
     @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values == null ? Codegen.empty() : this.values;
     }
 

@@ -32,14 +32,14 @@ public final class TokenRequestStatus {
      * ExpirationTimestamp is the time of expiration of the returned token.
      * 
     */
-    public String getExpirationTimestamp() {
+    public String expirationTimestamp() {
         return this.expirationTimestamp;
     }
     /**
      * Token is the opaque bearer token.
      * 
     */
-    public String getToken() {
+    public String token() {
         return this.token;
     }
 

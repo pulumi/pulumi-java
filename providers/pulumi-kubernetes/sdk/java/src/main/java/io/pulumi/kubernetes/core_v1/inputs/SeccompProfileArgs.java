@@ -26,7 +26,7 @@ public final class SeccompProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="localhostProfile")
       private final @Nullable Output<String> localhostProfile;
 
-    public Output<String> getLocalhostProfile() {
+    public Output<String> localhostProfile() {
         return this.localhostProfile == null ? Codegen.empty() : this.localhostProfile;
     }
 
@@ -44,7 +44,7 @@ public final class SeccompProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

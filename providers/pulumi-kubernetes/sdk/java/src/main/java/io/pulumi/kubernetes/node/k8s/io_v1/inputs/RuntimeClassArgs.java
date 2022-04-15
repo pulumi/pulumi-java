@@ -29,7 +29,7 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
+    public Output<String> apiVersion() {
         return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
@@ -40,7 +40,7 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="handler", required=true)
       private final Output<String> handler;
 
-    public Output<String> getHandler() {
+    public Output<String> handler() {
         return this.handler;
     }
 
@@ -51,7 +51,7 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -62,7 +62,7 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> getMetadata() {
+    public Output<ObjectMetaArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -75,7 +75,7 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="overhead")
       private final @Nullable Output<OverheadArgs> overhead;
 
-    public Output<OverheadArgs> getOverhead() {
+    public Output<OverheadArgs> overhead() {
         return this.overhead == null ? Codegen.empty() : this.overhead;
     }
 
@@ -86,7 +86,7 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scheduling")
       private final @Nullable Output<SchedulingArgs> scheduling;
 
-    public Output<SchedulingArgs> getScheduling() {
+    public Output<SchedulingArgs> scheduling() {
         return this.scheduling == null ? Codegen.empty() : this.scheduling;
     }
 

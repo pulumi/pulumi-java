@@ -25,7 +25,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
+    public Output<String> apiVersion() {
         return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
@@ -36,7 +36,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="binaryData")
       private final @Nullable Output<Map<String,String>> binaryData;
 
-    public Output<Map<String,String>> getBinaryData() {
+    public Output<Map<String,String>> binaryData() {
         return this.binaryData == null ? Codegen.empty() : this.binaryData;
     }
 
@@ -47,7 +47,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="data")
       private final @Nullable Output<Map<String,String>> data;
 
-    public Output<Map<String,String>> getData() {
+    public Output<Map<String,String>> data() {
         return this.data == null ? Codegen.empty() : this.data;
     }
 
@@ -58,7 +58,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="immutable")
       private final @Nullable Output<Boolean> immutable;
 
-    public Output<Boolean> getImmutable() {
+    public Output<Boolean> immutable() {
         return this.immutable == null ? Codegen.empty() : this.immutable;
     }
 
@@ -69,7 +69,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -80,7 +80,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> getMetadata() {
+    public Output<ObjectMetaArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 

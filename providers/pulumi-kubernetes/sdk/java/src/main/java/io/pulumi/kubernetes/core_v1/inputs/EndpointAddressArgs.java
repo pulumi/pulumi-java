@@ -27,7 +27,7 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
-    public Output<String> getHostname() {
+    public Output<String> hostname() {
         return this.hostname == null ? Codegen.empty() : this.hostname;
     }
 
@@ -38,7 +38,7 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="ip", required=true)
       private final Output<String> ip;
 
-    public Output<String> getIp() {
+    public Output<String> ip() {
         return this.ip;
     }
 
@@ -49,7 +49,7 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="nodeName")
       private final @Nullable Output<String> nodeName;
 
-    public Output<String> getNodeName() {
+    public Output<String> nodeName() {
         return this.nodeName == null ? Codegen.empty() : this.nodeName;
     }
 
@@ -60,7 +60,7 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="targetRef")
       private final @Nullable Output<ObjectReferenceArgs> targetRef;
 
-    public Output<ObjectReferenceArgs> getTargetRef() {
+    public Output<ObjectReferenceArgs> targetRef() {
         return this.targetRef == null ? Codegen.empty() : this.targetRef;
     }
 

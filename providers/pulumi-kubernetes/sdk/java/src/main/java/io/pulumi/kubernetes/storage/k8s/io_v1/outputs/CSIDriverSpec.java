@@ -105,7 +105,7 @@ public final class CSIDriverSpec {
      * This field is immutable.
      * 
     */
-    public Optional<Boolean> getAttachRequired() {
+    public Optional<Boolean> attachRequired() {
         return Optional.ofNullable(this.attachRequired);
     }
     /**
@@ -116,7 +116,7 @@ public final class CSIDriverSpec {
      * Defaults to ReadWriteOnceWithFSType, which will examine each volume to determine if Kubernetes should modify ownership and permissions of the volume. With the default policy the defined fsGroup will only be applied if a fstype is defined and the volume's access mode contains ReadWriteOnce.
      * 
     */
-    public Optional<String> getFsGroupPolicy() {
+    public Optional<String> fsGroupPolicy() {
         return Optional.ofNullable(this.fsGroupPolicy);
     }
     /**
@@ -128,7 +128,7 @@ public final class CSIDriverSpec {
      * This field is immutable.
      * 
     */
-    public Optional<Boolean> getPodInfoOnMount() {
+    public Optional<Boolean> podInfoOnMount() {
         return Optional.ofNullable(this.podInfoOnMount);
     }
     /**
@@ -137,7 +137,7 @@ public final class CSIDriverSpec {
      * Note: After a successful initial NodePublishVolume call, subsequent calls to NodePublishVolume should only update the contents of the volume. New mount points will not be seen by a running container.
      * 
     */
-    public Optional<Boolean> getRequiresRepublish() {
+    public Optional<Boolean> requiresRepublish() {
         return Optional.ofNullable(this.requiresRepublish);
     }
     /**
@@ -152,7 +152,7 @@ public final class CSIDriverSpec {
      * This is a beta field and only available when the CSIStorageCapacity feature is enabled. The default is false.
      * 
     */
-    public Optional<Boolean> getStorageCapacity() {
+    public Optional<Boolean> storageCapacity() {
         return Optional.ofNullable(this.storageCapacity);
     }
     /**
@@ -167,7 +167,7 @@ public final class CSIDriverSpec {
      * Note: Audience in each TokenRequest should be different and at most one token is empty string. To receive a new token after expiry, RequiresRepublish can be used to trigger NodePublishVolume periodically.
      * 
     */
-    public List<TokenRequest> getTokenRequests() {
+    public List<TokenRequest> tokenRequests() {
         return this.tokenRequests == null ? List.of() : this.tokenRequests;
     }
     /**
@@ -176,7 +176,7 @@ public final class CSIDriverSpec {
      * This field is immutable.
      * 
     */
-    public List<String> getVolumeLifecycleModes() {
+    public List<String> volumeLifecycleModes() {
         return this.volumeLifecycleModes == null ? List.of() : this.volumeLifecycleModes;
     }
 

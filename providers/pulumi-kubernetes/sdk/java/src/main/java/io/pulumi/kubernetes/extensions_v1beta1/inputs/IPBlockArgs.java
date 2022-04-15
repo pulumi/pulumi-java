@@ -27,7 +27,7 @@ public final class IPBlockArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cidr", required=true)
       private final Output<String> cidr;
 
-    public Output<String> getCidr() {
+    public Output<String> cidr() {
         return this.cidr;
     }
 
@@ -38,7 +38,7 @@ public final class IPBlockArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="except")
       private final @Nullable Output<List<String>> except;
 
-    public Output<List<String>> getExcept() {
+    public Output<List<String>> except() {
         return this.except == null ? Codegen.empty() : this.except;
     }
 

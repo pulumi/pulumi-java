@@ -32,7 +32,7 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="podManagementPolicy")
       private final @Nullable Output<String> podManagementPolicy;
 
-    public Output<String> getPodManagementPolicy() {
+    public Output<String> podManagementPolicy() {
         return this.podManagementPolicy == null ? Codegen.empty() : this.podManagementPolicy;
     }
 
@@ -43,7 +43,7 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="replicas")
       private final @Nullable Output<Integer> replicas;
 
-    public Output<Integer> getReplicas() {
+    public Output<Integer> replicas() {
         return this.replicas == null ? Codegen.empty() : this.replicas;
     }
 
@@ -54,7 +54,7 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="revisionHistoryLimit")
       private final @Nullable Output<Integer> revisionHistoryLimit;
 
-    public Output<Integer> getRevisionHistoryLimit() {
+    public Output<Integer> revisionHistoryLimit() {
         return this.revisionHistoryLimit == null ? Codegen.empty() : this.revisionHistoryLimit;
     }
 
@@ -65,7 +65,7 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="selector", required=true)
       private final Output<LabelSelectorArgs> selector;
 
-    public Output<LabelSelectorArgs> getSelector() {
+    public Output<LabelSelectorArgs> selector() {
         return this.selector;
     }
 
@@ -76,7 +76,7 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -87,7 +87,7 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="template", required=true)
       private final Output<PodTemplateSpecArgs> template;
 
-    public Output<PodTemplateSpecArgs> getTemplate() {
+    public Output<PodTemplateSpecArgs> template() {
         return this.template;
     }
 
@@ -98,7 +98,7 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="updateStrategy")
       private final @Nullable Output<StatefulSetUpdateStrategyArgs> updateStrategy;
 
-    public Output<StatefulSetUpdateStrategyArgs> getUpdateStrategy() {
+    public Output<StatefulSetUpdateStrategyArgs> updateStrategy() {
         return this.updateStrategy == null ? Codegen.empty() : this.updateStrategy;
     }
 
@@ -109,7 +109,7 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="volumeClaimTemplates")
       private final @Nullable Output<List<PersistentVolumeClaimArgs>> volumeClaimTemplates;
 
-    public Output<List<PersistentVolumeClaimArgs>> getVolumeClaimTemplates() {
+    public Output<List<PersistentVolumeClaimArgs>> volumeClaimTemplates() {
         return this.volumeClaimTemplates == null ? Codegen.empty() : this.volumeClaimTemplates;
     }
 

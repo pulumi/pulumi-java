@@ -27,7 +27,7 @@ public final class SELinuxStrategyOptionsArgs extends io.pulumi.resources.Resour
     @Import(name="rule", required=true)
       private final Output<String> rule;
 
-    public Output<String> getRule() {
+    public Output<String> rule() {
         return this.rule;
     }
 
@@ -38,7 +38,7 @@ public final class SELinuxStrategyOptionsArgs extends io.pulumi.resources.Resour
     @Import(name="seLinuxOptions")
       private final @Nullable Output<SELinuxOptionsArgs> seLinuxOptions;
 
-    public Output<SELinuxOptionsArgs> getSeLinuxOptions() {
+    public Output<SELinuxOptionsArgs> seLinuxOptions() {
         return this.seLinuxOptions == null ? Codegen.empty() : this.seLinuxOptions;
     }
 

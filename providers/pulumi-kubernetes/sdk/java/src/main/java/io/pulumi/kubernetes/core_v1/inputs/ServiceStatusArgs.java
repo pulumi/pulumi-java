@@ -28,7 +28,7 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conditions")
       private final @Nullable Output<List<ConditionArgs>> conditions;
 
-    public Output<List<ConditionArgs>> getConditions() {
+    public Output<List<ConditionArgs>> conditions() {
         return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
@@ -39,7 +39,7 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancer")
       private final @Nullable Output<LoadBalancerStatusArgs> loadBalancer;
 
-    public Output<LoadBalancerStatusArgs> getLoadBalancer() {
+    public Output<LoadBalancerStatusArgs> loadBalancer() {
         return this.loadBalancer == null ? Codegen.empty() : this.loadBalancer;
     }
 

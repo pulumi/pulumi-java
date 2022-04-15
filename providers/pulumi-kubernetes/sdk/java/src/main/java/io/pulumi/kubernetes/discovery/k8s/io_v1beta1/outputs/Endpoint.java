@@ -81,42 +81,42 @@ public final class Endpoint {
      * addresses of this endpoint. The contents of this field are interpreted according to the corresponding EndpointSlice addressType field. Consumers must handle different types of addresses in the context of their own capabilities. This must contain at least one address but no more than 100.
      * 
     */
-    public List<String> getAddresses() {
+    public List<String> addresses() {
         return this.addresses;
     }
     /**
      * conditions contains information about the current status of the endpoint.
      * 
     */
-    public Optional<EndpointConditions> getConditions() {
+    public Optional<EndpointConditions> conditions() {
         return Optional.ofNullable(this.conditions);
     }
     /**
      * hints contains information associated with how an endpoint should be consumed.
      * 
     */
-    public Optional<EndpointHints> getHints() {
+    public Optional<EndpointHints> hints() {
         return Optional.ofNullable(this.hints);
     }
     /**
      * hostname of this endpoint. This field may be used by consumers of endpoints to distinguish endpoints from each other (e.g. in DNS names). Multiple endpoints which use the same hostname should be considered fungible (e.g. multiple A values in DNS). Must be lowercase and pass DNS Label (RFC 1123) validation.
      * 
     */
-    public Optional<String> getHostname() {
+    public Optional<String> hostname() {
         return Optional.ofNullable(this.hostname);
     }
     /**
      * nodeName represents the name of the Node hosting this endpoint. This can be used to determine endpoints local to a Node. This field can be enabled with the EndpointSliceNodeName feature gate.
      * 
     */
-    public Optional<String> getNodeName() {
+    public Optional<String> nodeName() {
         return Optional.ofNullable(this.nodeName);
     }
     /**
      * targetRef is a reference to a Kubernetes object that represents this endpoint.
      * 
     */
-    public Optional<ObjectReference> getTargetRef() {
+    public Optional<ObjectReference> targetRef() {
         return Optional.ofNullable(this.targetRef);
     }
     /**
@@ -130,7 +130,7 @@ public final class Endpoint {
      *   This field is deprecated and will be removed in future api versions.
      * 
     */
-    public Map<String,String> getTopology() {
+    public Map<String,String> topology() {
         return this.topology == null ? Map.of() : this.topology;
     }
 

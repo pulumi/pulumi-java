@@ -30,7 +30,7 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configSource")
       private final @Nullable Output<NodeConfigSourceArgs> configSource;
 
-    public Output<NodeConfigSourceArgs> getConfigSource() {
+    public Output<NodeConfigSourceArgs> configSource() {
         return this.configSource == null ? Codegen.empty() : this.configSource;
     }
 
@@ -41,7 +41,7 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="externalID")
       private final @Nullable Output<String> externalID;
 
-    public Output<String> getExternalID() {
+    public Output<String> externalID() {
         return this.externalID == null ? Codegen.empty() : this.externalID;
     }
 
@@ -52,7 +52,7 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="podCIDR")
       private final @Nullable Output<String> podCIDR;
 
-    public Output<String> getPodCIDR() {
+    public Output<String> podCIDR() {
         return this.podCIDR == null ? Codegen.empty() : this.podCIDR;
     }
 
@@ -63,7 +63,7 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="podCIDRs")
       private final @Nullable Output<List<String>> podCIDRs;
 
-    public Output<List<String>> getPodCIDRs() {
+    public Output<List<String>> podCIDRs() {
         return this.podCIDRs == null ? Codegen.empty() : this.podCIDRs;
     }
 
@@ -74,7 +74,7 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="providerID")
       private final @Nullable Output<String> providerID;
 
-    public Output<String> getProviderID() {
+    public Output<String> providerID() {
         return this.providerID == null ? Codegen.empty() : this.providerID;
     }
 
@@ -85,7 +85,7 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="taints")
       private final @Nullable Output<List<TaintArgs>> taints;
 
-    public Output<List<TaintArgs>> getTaints() {
+    public Output<List<TaintArgs>> taints() {
         return this.taints == null ? Codegen.empty() : this.taints;
     }
 
@@ -96,7 +96,7 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="unschedulable")
       private final @Nullable Output<Boolean> unschedulable;
 
-    public Output<Boolean> getUnschedulable() {
+    public Output<Boolean> unschedulable() {
         return this.unschedulable == null ? Codegen.empty() : this.unschedulable;
     }
 

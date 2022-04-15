@@ -26,7 +26,7 @@ public final class CSINodeSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="drivers", required=true)
       private final Output<List<CSINodeDriverArgs>> drivers;
 
-    public Output<List<CSINodeDriverArgs>> getDrivers() {
+    public Output<List<CSINodeDriverArgs>> drivers() {
         return this.drivers;
     }
 

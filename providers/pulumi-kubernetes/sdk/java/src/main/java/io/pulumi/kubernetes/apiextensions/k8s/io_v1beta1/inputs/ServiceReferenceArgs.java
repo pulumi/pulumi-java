@@ -27,7 +27,7 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -38,7 +38,7 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 
@@ -49,7 +49,7 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -60,7 +60,7 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 

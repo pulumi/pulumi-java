@@ -32,7 +32,7 @@ public final class NonResourcePolicyRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="nonResourceURLs", required=true)
       private final Output<List<String>> nonResourceURLs;
 
-    public Output<List<String>> getNonResourceURLs() {
+    public Output<List<String>> nonResourceURLs() {
         return this.nonResourceURLs;
     }
 
@@ -43,7 +43,7 @@ public final class NonResourcePolicyRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="verbs", required=true)
       private final Output<List<String>> verbs;
 
-    public Output<List<String>> getVerbs() {
+    public Output<List<String>> verbs() {
         return this.verbs;
     }
 

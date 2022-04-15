@@ -35,14 +35,14 @@ public final class ServiceBackendPort {
      * Name is the name of the port on the Service. This is a mutually exclusive setting with "Number".
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Number is the numerical port number (e.g. 80) on the Service. This is a mutually exclusive setting with "Name".
      * 
     */
-    public Optional<Integer> getNumber() {
+    public Optional<Integer> number() {
         return Optional.ofNullable(this.number);
     }
 

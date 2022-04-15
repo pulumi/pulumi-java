@@ -29,7 +29,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeSelector")
       private final @Nullable Output<Map<String,String>> nodeSelector;
 
-    public Output<Map<String,String>> getNodeSelector() {
+    public Output<Map<String,String>> nodeSelector() {
         return this.nodeSelector == null ? Codegen.empty() : this.nodeSelector;
     }
 
@@ -40,7 +40,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tolerations")
       private final @Nullable Output<List<TolerationArgs>> tolerations;
 
-    public Output<List<TolerationArgs>> getTolerations() {
+    public Output<List<TolerationArgs>> tolerations() {
         return this.tolerations == null ? Codegen.empty() : this.tolerations;
     }
 

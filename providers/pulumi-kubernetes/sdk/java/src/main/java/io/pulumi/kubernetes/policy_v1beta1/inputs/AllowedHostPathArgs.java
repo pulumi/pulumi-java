@@ -29,7 +29,7 @@ public final class AllowedHostPathArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="pathPrefix")
       private final @Nullable Output<String> pathPrefix;
 
-    public Output<String> getPathPrefix() {
+    public Output<String> pathPrefix() {
         return this.pathPrefix == null ? Codegen.empty() : this.pathPrefix;
     }
 
@@ -40,7 +40,7 @@ public final class AllowedHostPathArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
+    public Output<Boolean> readOnly() {
         return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 

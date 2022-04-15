@@ -29,7 +29,7 @@ public final class PolicyRulesWithSubjectsArgs extends io.pulumi.resources.Resou
     @Import(name="nonResourceRules")
       private final @Nullable Output<List<NonResourcePolicyRuleArgs>> nonResourceRules;
 
-    public Output<List<NonResourcePolicyRuleArgs>> getNonResourceRules() {
+    public Output<List<NonResourcePolicyRuleArgs>> nonResourceRules() {
         return this.nonResourceRules == null ? Codegen.empty() : this.nonResourceRules;
     }
 
@@ -40,7 +40,7 @@ public final class PolicyRulesWithSubjectsArgs extends io.pulumi.resources.Resou
     @Import(name="resourceRules")
       private final @Nullable Output<List<ResourcePolicyRuleArgs>> resourceRules;
 
-    public Output<List<ResourcePolicyRuleArgs>> getResourceRules() {
+    public Output<List<ResourcePolicyRuleArgs>> resourceRules() {
         return this.resourceRules == null ? Codegen.empty() : this.resourceRules;
     }
 
@@ -51,7 +51,7 @@ public final class PolicyRulesWithSubjectsArgs extends io.pulumi.resources.Resou
     @Import(name="subjects", required=true)
       private final Output<List<SubjectArgs>> subjects;
 
-    public Output<List<SubjectArgs>> getSubjects() {
+    public Output<List<SubjectArgs>> subjects() {
         return this.subjects;
     }
 

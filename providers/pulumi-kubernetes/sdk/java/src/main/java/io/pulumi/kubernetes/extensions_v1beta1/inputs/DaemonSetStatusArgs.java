@@ -28,7 +28,7 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="collisionCount")
       private final @Nullable Output<Integer> collisionCount;
 
-    public Output<Integer> getCollisionCount() {
+    public Output<Integer> collisionCount() {
         return this.collisionCount == null ? Codegen.empty() : this.collisionCount;
     }
 
@@ -39,7 +39,7 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="conditions")
       private final @Nullable Output<List<DaemonSetConditionArgs>> conditions;
 
-    public Output<List<DaemonSetConditionArgs>> getConditions() {
+    public Output<List<DaemonSetConditionArgs>> conditions() {
         return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
@@ -50,7 +50,7 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="currentNumberScheduled", required=true)
       private final Output<Integer> currentNumberScheduled;
 
-    public Output<Integer> getCurrentNumberScheduled() {
+    public Output<Integer> currentNumberScheduled() {
         return this.currentNumberScheduled;
     }
 
@@ -61,7 +61,7 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="desiredNumberScheduled", required=true)
       private final Output<Integer> desiredNumberScheduled;
 
-    public Output<Integer> getDesiredNumberScheduled() {
+    public Output<Integer> desiredNumberScheduled() {
         return this.desiredNumberScheduled;
     }
 
@@ -72,7 +72,7 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="numberAvailable")
       private final @Nullable Output<Integer> numberAvailable;
 
-    public Output<Integer> getNumberAvailable() {
+    public Output<Integer> numberAvailable() {
         return this.numberAvailable == null ? Codegen.empty() : this.numberAvailable;
     }
 
@@ -83,7 +83,7 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="numberMisscheduled", required=true)
       private final Output<Integer> numberMisscheduled;
 
-    public Output<Integer> getNumberMisscheduled() {
+    public Output<Integer> numberMisscheduled() {
         return this.numberMisscheduled;
     }
 
@@ -94,7 +94,7 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="numberReady", required=true)
       private final Output<Integer> numberReady;
 
-    public Output<Integer> getNumberReady() {
+    public Output<Integer> numberReady() {
         return this.numberReady;
     }
 
@@ -105,7 +105,7 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="numberUnavailable")
       private final @Nullable Output<Integer> numberUnavailable;
 
-    public Output<Integer> getNumberUnavailable() {
+    public Output<Integer> numberUnavailable() {
         return this.numberUnavailable == null ? Codegen.empty() : this.numberUnavailable;
     }
 
@@ -116,7 +116,7 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;
 
-    public Output<Integer> getObservedGeneration() {
+    public Output<Integer> observedGeneration() {
         return this.observedGeneration == null ? Codegen.empty() : this.observedGeneration;
     }
 
@@ -127,7 +127,7 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="updatedNumberScheduled")
       private final @Nullable Output<Integer> updatedNumberScheduled;
 
-    public Output<Integer> getUpdatedNumberScheduled() {
+    public Output<Integer> updatedNumberScheduled() {
         return this.updatedNumberScheduled == null ? Codegen.empty() : this.updatedNumberScheduled;
     }
 

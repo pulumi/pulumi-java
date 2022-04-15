@@ -43,14 +43,14 @@ public final class LimitedPriorityLevelConfiguration {
      * bigger numbers of ACS mean more reserved concurrent requests (at the expense of every other PL). This field has a default value of 30.
      * 
     */
-    public Optional<Integer> getAssuredConcurrencyShares() {
+    public Optional<Integer> assuredConcurrencyShares() {
         return Optional.ofNullable(this.assuredConcurrencyShares);
     }
     /**
      * `limitResponse` indicates what to do with requests that can not be executed right now
      * 
     */
-    public Optional<LimitResponse> getLimitResponse() {
+    public Optional<LimitResponse> limitResponse() {
         return Optional.ofNullable(this.limitResponse);
     }
 

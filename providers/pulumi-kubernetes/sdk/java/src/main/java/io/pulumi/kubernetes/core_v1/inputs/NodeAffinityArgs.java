@@ -28,7 +28,7 @@ public final class NodeAffinityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preferredDuringSchedulingIgnoredDuringExecution")
       private final @Nullable Output<List<PreferredSchedulingTermArgs>> preferredDuringSchedulingIgnoredDuringExecution;
 
-    public Output<List<PreferredSchedulingTermArgs>> getPreferredDuringSchedulingIgnoredDuringExecution() {
+    public Output<List<PreferredSchedulingTermArgs>> preferredDuringSchedulingIgnoredDuringExecution() {
         return this.preferredDuringSchedulingIgnoredDuringExecution == null ? Codegen.empty() : this.preferredDuringSchedulingIgnoredDuringExecution;
     }
 
@@ -39,7 +39,7 @@ public final class NodeAffinityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requiredDuringSchedulingIgnoredDuringExecution")
       private final @Nullable Output<NodeSelectorArgs> requiredDuringSchedulingIgnoredDuringExecution;
 
-    public Output<NodeSelectorArgs> getRequiredDuringSchedulingIgnoredDuringExecution() {
+    public Output<NodeSelectorArgs> requiredDuringSchedulingIgnoredDuringExecution() {
         return this.requiredDuringSchedulingIgnoredDuringExecution == null ? Codegen.empty() : this.requiredDuringSchedulingIgnoredDuringExecution;
     }
 

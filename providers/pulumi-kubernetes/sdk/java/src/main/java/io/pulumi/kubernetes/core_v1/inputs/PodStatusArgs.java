@@ -30,7 +30,7 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conditions")
       private final @Nullable Output<List<PodConditionArgs>> conditions;
 
-    public Output<List<PodConditionArgs>> getConditions() {
+    public Output<List<PodConditionArgs>> conditions() {
         return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
@@ -41,7 +41,7 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containerStatuses")
       private final @Nullable Output<List<ContainerStatusArgs>> containerStatuses;
 
-    public Output<List<ContainerStatusArgs>> getContainerStatuses() {
+    public Output<List<ContainerStatusArgs>> containerStatuses() {
         return this.containerStatuses == null ? Codegen.empty() : this.containerStatuses;
     }
 
@@ -52,7 +52,7 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ephemeralContainerStatuses")
       private final @Nullable Output<List<ContainerStatusArgs>> ephemeralContainerStatuses;
 
-    public Output<List<ContainerStatusArgs>> getEphemeralContainerStatuses() {
+    public Output<List<ContainerStatusArgs>> ephemeralContainerStatuses() {
         return this.ephemeralContainerStatuses == null ? Codegen.empty() : this.ephemeralContainerStatuses;
     }
 
@@ -63,7 +63,7 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostIP")
       private final @Nullable Output<String> hostIP;
 
-    public Output<String> getHostIP() {
+    public Output<String> hostIP() {
         return this.hostIP == null ? Codegen.empty() : this.hostIP;
     }
 
@@ -74,7 +74,7 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="initContainerStatuses")
       private final @Nullable Output<List<ContainerStatusArgs>> initContainerStatuses;
 
-    public Output<List<ContainerStatusArgs>> getInitContainerStatuses() {
+    public Output<List<ContainerStatusArgs>> initContainerStatuses() {
         return this.initContainerStatuses == null ? Codegen.empty() : this.initContainerStatuses;
     }
 
@@ -85,7 +85,7 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message == null ? Codegen.empty() : this.message;
     }
 
@@ -96,7 +96,7 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nominatedNodeName")
       private final @Nullable Output<String> nominatedNodeName;
 
-    public Output<String> getNominatedNodeName() {
+    public Output<String> nominatedNodeName() {
         return this.nominatedNodeName == null ? Codegen.empty() : this.nominatedNodeName;
     }
 
@@ -118,7 +118,7 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="phase")
       private final @Nullable Output<String> phase;
 
-    public Output<String> getPhase() {
+    public Output<String> phase() {
         return this.phase == null ? Codegen.empty() : this.phase;
     }
 
@@ -129,7 +129,7 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="podIP")
       private final @Nullable Output<String> podIP;
 
-    public Output<String> getPodIP() {
+    public Output<String> podIP() {
         return this.podIP == null ? Codegen.empty() : this.podIP;
     }
 
@@ -140,7 +140,7 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="podIPs")
       private final @Nullable Output<List<PodIPArgs>> podIPs;
 
-    public Output<List<PodIPArgs>> getPodIPs() {
+    public Output<List<PodIPArgs>> podIPs() {
         return this.podIPs == null ? Codegen.empty() : this.podIPs;
     }
 
@@ -156,7 +156,7 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="qosClass")
       private final @Nullable Output<String> qosClass;
 
-    public Output<String> getQosClass() {
+    public Output<String> qosClass() {
         return this.qosClass == null ? Codegen.empty() : this.qosClass;
     }
 
@@ -167,7 +167,7 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reason")
       private final @Nullable Output<String> reason;
 
-    public Output<String> getReason() {
+    public Output<String> reason() {
         return this.reason == null ? Codegen.empty() : this.reason;
     }
 
@@ -178,7 +178,7 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 

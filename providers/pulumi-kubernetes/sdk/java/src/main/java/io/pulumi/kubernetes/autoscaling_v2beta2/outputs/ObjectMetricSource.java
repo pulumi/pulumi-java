@@ -33,21 +33,21 @@ public final class ObjectMetricSource {
         this.target = target;
     }
 
-    public CrossVersionObjectReference getDescribedObject() {
+    public CrossVersionObjectReference describedObject() {
         return this.describedObject;
     }
     /**
      * metric identifies the target metric by name and selector
      * 
     */
-    public MetricIdentifier getMetric() {
+    public MetricIdentifier metric() {
         return this.metric;
     }
     /**
      * target specifies the target value for the given metric
      * 
     */
-    public MetricTarget getTarget() {
+    public MetricTarget target() {
         return this.target;
     }
 

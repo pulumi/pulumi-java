@@ -35,14 +35,14 @@ public final class HostAlias {
      * Hostnames for the above IP address.
      * 
     */
-    public List<String> getHostnames() {
+    public List<String> hostnames() {
         return this.hostnames == null ? List.of() : this.hostnames;
     }
     /**
      * IP address of the host file entry.
      * 
     */
-    public Optional<String> getIp() {
+    public Optional<String> ip() {
         return Optional.ofNullable(this.ip);
     }
 

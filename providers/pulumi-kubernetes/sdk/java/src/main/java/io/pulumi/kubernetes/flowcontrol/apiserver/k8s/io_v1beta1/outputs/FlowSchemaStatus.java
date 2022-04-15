@@ -26,7 +26,7 @@ public final class FlowSchemaStatus {
      * `conditions` is a list of the current states of FlowSchema.
      * 
     */
-    public List<FlowSchemaCondition> getConditions() {
+    public List<FlowSchemaCondition> conditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
 
