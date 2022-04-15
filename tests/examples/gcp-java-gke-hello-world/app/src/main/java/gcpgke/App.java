@@ -44,8 +44,7 @@ public class App {
     private static Exports stack(Context ctx) {
         final String name = "helloworld";
 
-        final var config = io.pulumi.Config.of();
-        final var masterVersion = config.get("masterVersion").orElse(
+        final var masterVersion = ctx.config().get("masterVersion").orElse(
                 ContainerFunctions.getEngineVersions()
                 .thenApply(GetEngineVersionsResult::getLatestMasterVersion).join()
         );

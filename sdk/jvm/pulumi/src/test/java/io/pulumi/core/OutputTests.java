@@ -11,6 +11,11 @@ import io.pulumi.core.internal.OutputInternal;
 public class OutputTests {
 
     @CanIgnoreReturnValue
+    public static <T> T waitForValue(Output<T> io) {
+        return waitFor(io).getValueNullable();
+    }
+
+    @CanIgnoreReturnValue
     public static <T> OutputData<T> waitFor(Output<T> io) {
         return Internal.of(io).getDataAsync().join();
     }

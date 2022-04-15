@@ -80,8 +80,7 @@ public class App {
         var username = "pulumi";
 
         // Get the password to use for SQL from config.
-        var config = Config.of();
-        var pwd = config.require("sqlPassword");
+        var pwd = ctx.config().require("sqlPassword");
 
         var sqlServer = new Server("sqlserver",
                 ServerArgs.builder().resourceGroupName(resourceGroup.getName())
