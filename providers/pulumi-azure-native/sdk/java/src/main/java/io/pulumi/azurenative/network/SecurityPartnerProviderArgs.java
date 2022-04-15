@@ -26,7 +26,7 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -37,7 +37,7 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -48,7 +48,7 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -59,7 +59,7 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
     @Import(name="securityPartnerProviderName")
       private final @Nullable Output<String> securityPartnerProviderName;
 
-    public Output<String> getSecurityPartnerProviderName() {
+    public Output<String> securityPartnerProviderName() {
         return this.securityPartnerProviderName == null ? Codegen.empty() : this.securityPartnerProviderName;
     }
 
@@ -70,7 +70,7 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
     @Import(name="securityProviderName")
       private final @Nullable Output<Either<String,SecurityProviderName>> securityProviderName;
 
-    public Output<Either<String,SecurityProviderName>> getSecurityProviderName() {
+    public Output<Either<String,SecurityProviderName>> securityProviderName() {
         return this.securityProviderName == null ? Codegen.empty() : this.securityProviderName;
     }
 
@@ -81,7 +81,7 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -92,7 +92,7 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
     @Import(name="virtualHub")
       private final @Nullable Output<SubResourceArgs> virtualHub;
 
-    public Output<SubResourceArgs> getVirtualHub() {
+    public Output<SubResourceArgs> virtualHub() {
         return this.virtualHub == null ? Codegen.empty() : this.virtualHub;
     }
 

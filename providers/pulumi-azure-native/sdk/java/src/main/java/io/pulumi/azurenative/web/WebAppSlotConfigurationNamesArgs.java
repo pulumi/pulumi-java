@@ -23,7 +23,7 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
     @Import(name="appSettingNames")
       private final @Nullable Output<List<String>> appSettingNames;
 
-    public Output<List<String>> getAppSettingNames() {
+    public Output<List<String>> appSettingNames() {
         return this.appSettingNames == null ? Codegen.empty() : this.appSettingNames;
     }
 
@@ -34,7 +34,7 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
     @Import(name="azureStorageConfigNames")
       private final @Nullable Output<List<String>> azureStorageConfigNames;
 
-    public Output<List<String>> getAzureStorageConfigNames() {
+    public Output<List<String>> azureStorageConfigNames() {
         return this.azureStorageConfigNames == null ? Codegen.empty() : this.azureStorageConfigNames;
     }
 
@@ -45,7 +45,7 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
     @Import(name="connectionStringNames")
       private final @Nullable Output<List<String>> connectionStringNames;
 
-    public Output<List<String>> getConnectionStringNames() {
+    public Output<List<String>> connectionStringNames() {
         return this.connectionStringNames == null ? Codegen.empty() : this.connectionStringNames;
     }
 
@@ -56,7 +56,7 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -67,7 +67,7 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -78,7 +78,7 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

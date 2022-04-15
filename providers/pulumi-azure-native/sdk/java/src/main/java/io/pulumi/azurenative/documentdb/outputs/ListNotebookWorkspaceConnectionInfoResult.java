@@ -32,14 +32,14 @@ public final class ListNotebookWorkspaceConnectionInfoResult {
      * Specifies auth token used for connecting to Notebook server (uses token-based auth).
      * 
     */
-    public String getAuthToken() {
+    public String authToken() {
         return this.authToken;
     }
     /**
      * Specifies the endpoint of Notebook server.
      * 
     */
-    public String getNotebookServerEndpoint() {
+    public String notebookServerEndpoint() {
         return this.notebookServerEndpoint;
     }
 

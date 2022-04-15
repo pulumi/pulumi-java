@@ -25,7 +25,7 @@ public final class TransferConfigurationResponseTransferAllDetails extends io.pu
     @Import(name="include")
       private final @Nullable TransferAllDetailsResponse include;
 
-    public Optional<TransferAllDetailsResponse> getInclude() {
+    public Optional<TransferAllDetailsResponse> include() {
         return this.include == null ? Optional.empty() : Optional.ofNullable(this.include);
     }
 

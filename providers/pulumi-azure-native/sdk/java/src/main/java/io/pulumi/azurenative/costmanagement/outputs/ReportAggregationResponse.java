@@ -32,14 +32,14 @@ public final class ReportAggregationResponse {
      * The name of the aggregation function to use.
      * 
     */
-    public String getFunction() {
+    public String function() {
         return this.function;
     }
     /**
      * The name of the column to aggregate.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

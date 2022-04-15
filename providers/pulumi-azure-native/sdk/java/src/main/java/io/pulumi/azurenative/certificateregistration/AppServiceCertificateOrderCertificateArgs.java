@@ -23,7 +23,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
     @Import(name="certificateOrderName", required=true)
       private final Output<String> certificateOrderName;
 
-    public Output<String> getCertificateOrderName() {
+    public Output<String> certificateOrderName() {
         return this.certificateOrderName;
     }
 
@@ -34,7 +34,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
     @Import(name="keyVaultId")
       private final @Nullable Output<String> keyVaultId;
 
-    public Output<String> getKeyVaultId() {
+    public Output<String> keyVaultId() {
         return this.keyVaultId == null ? Codegen.empty() : this.keyVaultId;
     }
 
@@ -45,7 +45,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
     @Import(name="keyVaultSecretName")
       private final @Nullable Output<String> keyVaultSecretName;
 
-    public Output<String> getKeyVaultSecretName() {
+    public Output<String> keyVaultSecretName() {
         return this.keyVaultSecretName == null ? Codegen.empty() : this.keyVaultSecretName;
     }
 
@@ -56,7 +56,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -67,7 +67,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -78,7 +78,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -89,7 +89,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -100,7 +100,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -27,7 +27,7 @@ public final class DiscreteActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -38,7 +38,7 @@ public final class DiscreteActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters", required=true)
       private final Output<List<KeyValuePairArgs>> parameters;
 
-    public Output<List<KeyValuePairArgs>> getParameters() {
+    public Output<List<KeyValuePairArgs>> parameters() {
         return this.parameters;
     }
 
@@ -49,7 +49,7 @@ public final class DiscreteActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="selectorId", required=true)
       private final Output<String> selectorId;
 
-    public Output<String> getSelectorId() {
+    public Output<String> selectorId() {
         return this.selectorId;
     }
 
@@ -61,7 +61,7 @@ public final class DiscreteActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

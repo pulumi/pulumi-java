@@ -30,7 +30,7 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
     @Import(name="backendAddressPool")
       private final @Nullable Output<SubResourceArgs> backendAddressPool;
 
-    public Output<SubResourceArgs> getBackendAddressPool() {
+    public Output<SubResourceArgs> backendAddressPool() {
         return this.backendAddressPool == null ? Codegen.empty() : this.backendAddressPool;
     }
 
@@ -41,7 +41,7 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
     @Import(name="backendHttpSettings")
       private final @Nullable Output<SubResourceArgs> backendHttpSettings;
 
-    public Output<SubResourceArgs> getBackendHttpSettings() {
+    public Output<SubResourceArgs> backendHttpSettings() {
         return this.backendHttpSettings == null ? Codegen.empty() : this.backendHttpSettings;
     }
 
@@ -52,7 +52,7 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
     @Import(name="httpListener")
       private final @Nullable Output<SubResourceArgs> httpListener;
 
-    public Output<SubResourceArgs> getHttpListener() {
+    public Output<SubResourceArgs> httpListener() {
         return this.httpListener == null ? Codegen.empty() : this.httpListener;
     }
 
@@ -63,7 +63,7 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -74,7 +74,7 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -85,7 +85,7 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -96,7 +96,7 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
     @Import(name="redirectConfiguration")
       private final @Nullable Output<SubResourceArgs> redirectConfiguration;
 
-    public Output<SubResourceArgs> getRedirectConfiguration() {
+    public Output<SubResourceArgs> redirectConfiguration() {
         return this.redirectConfiguration == null ? Codegen.empty() : this.redirectConfiguration;
     }
 
@@ -107,7 +107,7 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
     @Import(name="rewriteRuleSet")
       private final @Nullable Output<SubResourceArgs> rewriteRuleSet;
 
-    public Output<SubResourceArgs> getRewriteRuleSet() {
+    public Output<SubResourceArgs> rewriteRuleSet() {
         return this.rewriteRuleSet == null ? Codegen.empty() : this.rewriteRuleSet;
     }
 
@@ -118,7 +118,7 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
     @Import(name="ruleType")
       private final @Nullable Output<Either<String,ApplicationGatewayRequestRoutingRuleType>> ruleType;
 
-    public Output<Either<String,ApplicationGatewayRequestRoutingRuleType>> getRuleType() {
+    public Output<Either<String,ApplicationGatewayRequestRoutingRuleType>> ruleType() {
         return this.ruleType == null ? Codegen.empty() : this.ruleType;
     }
 
@@ -129,7 +129,7 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
     @Import(name="urlPathMap")
       private final @Nullable Output<SubResourceArgs> urlPathMap;
 
-    public Output<SubResourceArgs> getUrlPathMap() {
+    public Output<SubResourceArgs> urlPathMap() {
         return this.urlPathMap == null ? Codegen.empty() : this.urlPathMap;
     }
 

@@ -37,7 +37,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="clusterDefinition")
       private final @Nullable Output<ClusterDefinitionArgs> clusterDefinition;
 
-    public Output<ClusterDefinitionArgs> getClusterDefinition() {
+    public Output<ClusterDefinitionArgs> clusterDefinition() {
         return this.clusterDefinition == null ? Codegen.empty() : this.clusterDefinition;
     }
 
@@ -48,7 +48,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="clusterVersion")
       private final @Nullable Output<String> clusterVersion;
 
-    public Output<String> getClusterVersion() {
+    public Output<String> clusterVersion() {
         return this.clusterVersion == null ? Codegen.empty() : this.clusterVersion;
     }
 
@@ -59,7 +59,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="computeIsolationProperties")
       private final @Nullable Output<ComputeIsolationPropertiesArgs> computeIsolationProperties;
 
-    public Output<ComputeIsolationPropertiesArgs> getComputeIsolationProperties() {
+    public Output<ComputeIsolationPropertiesArgs> computeIsolationProperties() {
         return this.computeIsolationProperties == null ? Codegen.empty() : this.computeIsolationProperties;
     }
 
@@ -70,7 +70,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="computeProfile")
       private final @Nullable Output<ComputeProfileArgs> computeProfile;
 
-    public Output<ComputeProfileArgs> getComputeProfile() {
+    public Output<ComputeProfileArgs> computeProfile() {
         return this.computeProfile == null ? Codegen.empty() : this.computeProfile;
     }
 
@@ -81,7 +81,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="diskEncryptionProperties")
       private final @Nullable Output<DiskEncryptionPropertiesArgs> diskEncryptionProperties;
 
-    public Output<DiskEncryptionPropertiesArgs> getDiskEncryptionProperties() {
+    public Output<DiskEncryptionPropertiesArgs> diskEncryptionProperties() {
         return this.diskEncryptionProperties == null ? Codegen.empty() : this.diskEncryptionProperties;
     }
 
@@ -92,7 +92,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="encryptionInTransitProperties")
       private final @Nullable Output<EncryptionInTransitPropertiesArgs> encryptionInTransitProperties;
 
-    public Output<EncryptionInTransitPropertiesArgs> getEncryptionInTransitProperties() {
+    public Output<EncryptionInTransitPropertiesArgs> encryptionInTransitProperties() {
         return this.encryptionInTransitProperties == null ? Codegen.empty() : this.encryptionInTransitProperties;
     }
 
@@ -103,7 +103,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="kafkaRestProperties")
       private final @Nullable Output<KafkaRestPropertiesArgs> kafkaRestProperties;
 
-    public Output<KafkaRestPropertiesArgs> getKafkaRestProperties() {
+    public Output<KafkaRestPropertiesArgs> kafkaRestProperties() {
         return this.kafkaRestProperties == null ? Codegen.empty() : this.kafkaRestProperties;
     }
 
@@ -114,7 +114,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="minSupportedTlsVersion")
       private final @Nullable Output<String> minSupportedTlsVersion;
 
-    public Output<String> getMinSupportedTlsVersion() {
+    public Output<String> minSupportedTlsVersion() {
         return this.minSupportedTlsVersion == null ? Codegen.empty() : this.minSupportedTlsVersion;
     }
 
@@ -125,7 +125,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="networkProperties")
       private final @Nullable Output<NetworkPropertiesArgs> networkProperties;
 
-    public Output<NetworkPropertiesArgs> getNetworkProperties() {
+    public Output<NetworkPropertiesArgs> networkProperties() {
         return this.networkProperties == null ? Codegen.empty() : this.networkProperties;
     }
 
@@ -136,7 +136,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="osType")
       private final @Nullable Output<OSType> osType;
 
-    public Output<OSType> getOsType() {
+    public Output<OSType> osType() {
         return this.osType == null ? Codegen.empty() : this.osType;
     }
 
@@ -147,7 +147,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="securityProfile")
       private final @Nullable Output<SecurityProfileArgs> securityProfile;
 
-    public Output<SecurityProfileArgs> getSecurityProfile() {
+    public Output<SecurityProfileArgs> securityProfile() {
         return this.securityProfile == null ? Codegen.empty() : this.securityProfile;
     }
 
@@ -158,7 +158,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="storageProfile")
       private final @Nullable Output<StorageProfileArgs> storageProfile;
 
-    public Output<StorageProfileArgs> getStorageProfile() {
+    public Output<StorageProfileArgs> storageProfile() {
         return this.storageProfile == null ? Codegen.empty() : this.storageProfile;
     }
 
@@ -169,7 +169,7 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="tier")
       private final @Nullable Output<Tier> tier;
 
-    public Output<Tier> getTier() {
+    public Output<Tier> tier() {
         return this.tier == null ? Codegen.empty() : this.tier;
     }
 

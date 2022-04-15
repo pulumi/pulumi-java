@@ -42,21 +42,21 @@ public final class ChannelTypeDescriptionResponse {
      * Text description for the channel
      * 
     */
-    public Optional<String> getChannelDescription() {
+    public Optional<String> channelDescription() {
         return Optional.ofNullable(this.channelDescription);
     }
     /**
      * All the available functions for the channel
      * 
     */
-    public List<String> getChannelFunctions() {
+    public List<String> channelFunctions() {
         return this.channelFunctions == null ? List.of() : this.channelFunctions;
     }
     /**
      * Channel type
      * 
     */
-    public Optional<String> getChannelType() {
+    public Optional<String> channelType() {
         return Optional.ofNullable(this.channelType);
     }
 

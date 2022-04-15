@@ -32,7 +32,7 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="basicLoginInformation")
       private final @Nullable Output<BasicLoginInformationArgs> basicLoginInformation;
 
-    public Output<BasicLoginInformationArgs> getBasicLoginInformation() {
+    public Output<BasicLoginInformationArgs> basicLoginInformation() {
         return this.basicLoginInformation == null ? Codegen.empty() : this.basicLoginInformation;
     }
 
@@ -43,7 +43,7 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="k8sRaw")
       private final @Nullable Output<Object> k8sRaw;
 
-    public Output<Object> getK8sRaw() {
+    public Output<Object> k8sRaw() {
         return this.k8sRaw == null ? Codegen.empty() : this.k8sRaw;
     }
 
@@ -54,7 +54,7 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="lastUploadedDate")
       private final @Nullable Output<String> lastUploadedDate;
 
-    public Output<String> getLastUploadedDate() {
+    public Output<String> lastUploadedDate() {
         return this.lastUploadedDate == null ? Codegen.empty() : this.lastUploadedDate;
     }
 
@@ -65,7 +65,7 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="logAnalyticsWorkspaceConfig")
       private final @Nullable Output<LogAnalyticsWorkspaceConfigArgs> logAnalyticsWorkspaceConfig;
 
-    public Output<LogAnalyticsWorkspaceConfigArgs> getLogAnalyticsWorkspaceConfig() {
+    public Output<LogAnalyticsWorkspaceConfigArgs> logAnalyticsWorkspaceConfig() {
         return this.logAnalyticsWorkspaceConfig == null ? Codegen.empty() : this.logAnalyticsWorkspaceConfig;
     }
 
@@ -76,7 +76,7 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="onPremiseProperty")
       private final @Nullable Output<OnPremisePropertyArgs> onPremiseProperty;
 
-    public Output<OnPremisePropertyArgs> getOnPremiseProperty() {
+    public Output<OnPremisePropertyArgs> onPremiseProperty() {
         return this.onPremiseProperty == null ? Codegen.empty() : this.onPremiseProperty;
     }
 
@@ -87,7 +87,7 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="uploadServicePrincipal")
       private final @Nullable Output<UploadServicePrincipalArgs> uploadServicePrincipal;
 
-    public Output<UploadServicePrincipalArgs> getUploadServicePrincipal() {
+    public Output<UploadServicePrincipalArgs> uploadServicePrincipal() {
         return this.uploadServicePrincipal == null ? Codegen.empty() : this.uploadServicePrincipal;
     }
 
@@ -98,7 +98,7 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="uploadWatermark")
       private final @Nullable Output<UploadWatermarkArgs> uploadWatermark;
 
-    public Output<UploadWatermarkArgs> getUploadWatermark() {
+    public Output<UploadWatermarkArgs> uploadWatermark() {
         return this.uploadWatermark == null ? Codegen.empty() : this.uploadWatermark;
     }
 

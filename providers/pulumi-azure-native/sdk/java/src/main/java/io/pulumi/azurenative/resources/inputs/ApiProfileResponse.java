@@ -19,7 +19,7 @@ public final class ApiProfileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="apiVersion", required=true)
       private final String apiVersion;
 
-    public String getApiVersion() {
+    public String apiVersion() {
         return this.apiVersion;
     }
 
@@ -30,7 +30,7 @@ public final class ApiProfileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="profileVersion", required=true)
       private final String profileVersion;
 
-    public String getProfileVersion() {
+    public String profileVersion() {
         return this.profileVersion;
     }
 

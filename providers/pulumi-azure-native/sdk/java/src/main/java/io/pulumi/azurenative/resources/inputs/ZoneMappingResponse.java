@@ -22,14 +22,14 @@ public final class ZoneMappingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="location")
       private final @Nullable String location;
 
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
     @Import(name="zones")
       private final @Nullable List<String> zones;
 
-    public List<String> getZones() {
+    public List<String> zones() {
         return this.zones == null ? List.of() : this.zones;
     }
 

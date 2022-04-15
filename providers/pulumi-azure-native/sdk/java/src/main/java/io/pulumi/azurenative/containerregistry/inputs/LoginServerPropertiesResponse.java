@@ -24,7 +24,7 @@ public final class LoginServerPropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="host", required=true)
       private final String host;
 
-    public String getHost() {
+    public String host() {
         return this.host;
     }
 
@@ -35,7 +35,7 @@ public final class LoginServerPropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="tls", required=true)
       private final TlsPropertiesResponse tls;
 
-    public TlsPropertiesResponse getTls() {
+    public TlsPropertiesResponse tls() {
         return this.tls;
     }
 

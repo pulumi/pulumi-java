@@ -33,7 +33,7 @@ public final class SapCloudForCustomerLinkedServiceResponse extends io.pulumi.re
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -44,7 +44,7 @@ public final class SapCloudForCustomerLinkedServiceResponse extends io.pulumi.re
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
@@ -55,7 +55,7 @@ public final class SapCloudForCustomerLinkedServiceResponse extends io.pulumi.re
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -66,7 +66,7 @@ public final class SapCloudForCustomerLinkedServiceResponse extends io.pulumi.re
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
@@ -77,7 +77,7 @@ public final class SapCloudForCustomerLinkedServiceResponse extends io.pulumi.re
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -88,7 +88,7 @@ public final class SapCloudForCustomerLinkedServiceResponse extends io.pulumi.re
     @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
         return this.password == null ? null : this.password;
     }
 
@@ -100,7 +100,7 @@ public final class SapCloudForCustomerLinkedServiceResponse extends io.pulumi.re
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -111,7 +111,7 @@ public final class SapCloudForCustomerLinkedServiceResponse extends io.pulumi.re
     @Import(name="url", required=true)
       private final Object url;
 
-    public Object getUrl() {
+    public Object url() {
         return this.url;
     }
 
@@ -122,7 +122,7 @@ public final class SapCloudForCustomerLinkedServiceResponse extends io.pulumi.re
     @Import(name="username")
       private final @Nullable Object username;
 
-    public Optional<Object> getUsername() {
+    public Optional<Object> username() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
     }
 

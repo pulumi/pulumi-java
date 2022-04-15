@@ -23,7 +23,7 @@ public final class FlavorDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="data")
       private final @Nullable Output<Map<String,String>> data;
 
-    public Output<Map<String,String>> getData() {
+    public Output<Map<String,String>> data() {
         return this.data == null ? Codegen.empty() : this.data;
     }
 

@@ -22,7 +22,7 @@ public final class ManagementGroupSubscriptionArgs extends io.pulumi.resources.R
     @Import(name="groupId", required=true)
       private final Output<String> groupId;
 
-    public Output<String> getGroupId() {
+    public Output<String> groupId() {
         return this.groupId;
     }
 
@@ -33,7 +33,7 @@ public final class ManagementGroupSubscriptionArgs extends io.pulumi.resources.R
     @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
 
-    public Output<String> getSubscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
     }
 

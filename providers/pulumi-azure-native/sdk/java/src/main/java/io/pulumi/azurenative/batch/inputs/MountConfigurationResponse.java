@@ -24,7 +24,7 @@ public final class MountConfigurationResponse extends io.pulumi.resources.Invoke
     @Import(name="azureBlobFileSystemConfiguration")
       private final @Nullable AzureBlobFileSystemConfigurationResponse azureBlobFileSystemConfiguration;
 
-    public Optional<AzureBlobFileSystemConfigurationResponse> getAzureBlobFileSystemConfiguration() {
+    public Optional<AzureBlobFileSystemConfigurationResponse> azureBlobFileSystemConfiguration() {
         return this.azureBlobFileSystemConfiguration == null ? Optional.empty() : Optional.ofNullable(this.azureBlobFileSystemConfiguration);
     }
 
@@ -35,7 +35,7 @@ public final class MountConfigurationResponse extends io.pulumi.resources.Invoke
     @Import(name="azureFileShareConfiguration")
       private final @Nullable AzureFileShareConfigurationResponse azureFileShareConfiguration;
 
-    public Optional<AzureFileShareConfigurationResponse> getAzureFileShareConfiguration() {
+    public Optional<AzureFileShareConfigurationResponse> azureFileShareConfiguration() {
         return this.azureFileShareConfiguration == null ? Optional.empty() : Optional.ofNullable(this.azureFileShareConfiguration);
     }
 
@@ -46,7 +46,7 @@ public final class MountConfigurationResponse extends io.pulumi.resources.Invoke
     @Import(name="cifsMountConfiguration")
       private final @Nullable CIFSMountConfigurationResponse cifsMountConfiguration;
 
-    public Optional<CIFSMountConfigurationResponse> getCifsMountConfiguration() {
+    public Optional<CIFSMountConfigurationResponse> cifsMountConfiguration() {
         return this.cifsMountConfiguration == null ? Optional.empty() : Optional.ofNullable(this.cifsMountConfiguration);
     }
 
@@ -57,7 +57,7 @@ public final class MountConfigurationResponse extends io.pulumi.resources.Invoke
     @Import(name="nfsMountConfiguration")
       private final @Nullable NFSMountConfigurationResponse nfsMountConfiguration;
 
-    public Optional<NFSMountConfigurationResponse> getNfsMountConfiguration() {
+    public Optional<NFSMountConfigurationResponse> nfsMountConfiguration() {
         return this.nfsMountConfiguration == null ? Optional.empty() : Optional.ofNullable(this.nfsMountConfiguration);
     }
 

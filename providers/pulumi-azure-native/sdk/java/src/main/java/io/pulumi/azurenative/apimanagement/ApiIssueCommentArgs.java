@@ -22,7 +22,7 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -33,7 +33,7 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="commentId")
       private final @Nullable Output<String> commentId;
 
-    public Output<String> getCommentId() {
+    public Output<String> commentId() {
         return this.commentId == null ? Codegen.empty() : this.commentId;
     }
 
@@ -44,7 +44,7 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
 
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate == null ? Codegen.empty() : this.createdDate;
     }
 
@@ -55,7 +55,7 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="issueId", required=true)
       private final Output<String> issueId;
 
-    public Output<String> getIssueId() {
+    public Output<String> issueId() {
         return this.issueId;
     }
 
@@ -66,7 +66,7 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,7 +77,7 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -88,7 +88,7 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="text", required=true)
       private final Output<String> text;
 
-    public Output<String> getText() {
+    public Output<String> text() {
         return this.text;
     }
 
@@ -99,7 +99,7 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="userId", required=true)
       private final Output<String> userId;
 
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId;
     }
 

@@ -34,7 +34,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
     @Import(name="computeName")
       private final @Nullable Output<String> computeName;
 
-    public Output<String> getComputeName() {
+    public Output<String> computeName() {
         return this.computeName == null ? Codegen.empty() : this.computeName;
     }
 
@@ -45,7 +45,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
     @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
 
-    public Output<IdentityArgs> getIdentity() {
+    public Output<IdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -56,7 +56,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -67,7 +67,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
     @Import(name="properties")
       private final @Nullable Output<Object> properties;
 
-    public Output<Object> getProperties() {
+    public Output<Object> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -78,7 +78,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,7 +89,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -100,7 +100,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -111,7 +111,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

@@ -34,14 +34,14 @@ public final class B2CTenantResourcePropertiesResponseBillingConfig {
      * The type of billing. Will be MAU for all new customers. If 'Auths', it can be updated to 'MAU'. Cannot be changed if value is 'MAU'. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cbilling).
      * 
     */
-    public Optional<String> getBillingType() {
+    public Optional<String> billingType() {
         return Optional.ofNullable(this.billingType);
     }
     /**
      * The data from which the billing type took effect
      * 
     */
-    public String getEffectiveStartDateUtc() {
+    public String effectiveStartDateUtc() {
         return this.effectiveStartDateUtc;
     }
 

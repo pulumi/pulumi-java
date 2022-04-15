@@ -25,7 +25,7 @@ public final class HourDetailsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="minute")
       private final @Nullable Integer minute;
 
-    public Optional<Integer> getMinute() {
+    public Optional<Integer> minute() {
         return this.minute == null ? Optional.empty() : Optional.ofNullable(this.minute);
     }
 

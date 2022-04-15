@@ -26,7 +26,7 @@ public final class DiagnosticsProfileArgs extends io.pulumi.resources.ResourceAr
     @Import(name="bootDiagnostics")
       private final @Nullable Output<BootDiagnosticsArgs> bootDiagnostics;
 
-    public Output<BootDiagnosticsArgs> getBootDiagnostics() {
+    public Output<BootDiagnosticsArgs> bootDiagnostics() {
         return this.bootDiagnostics == null ? Codegen.empty() : this.bootDiagnostics;
     }
 

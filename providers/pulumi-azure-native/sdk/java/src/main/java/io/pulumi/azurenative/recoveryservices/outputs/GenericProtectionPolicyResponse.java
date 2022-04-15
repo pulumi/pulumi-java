@@ -60,35 +60,35 @@ public final class GenericProtectionPolicyResponse {
      * Expected value is 'GenericProtectionPolicy'.
      * 
     */
-    public String getBackupManagementType() {
+    public String backupManagementType() {
         return this.backupManagementType;
     }
     /**
      * Name of this policy's fabric.
      * 
     */
-    public Optional<String> getFabricName() {
+    public Optional<String> fabricName() {
         return Optional.ofNullable(this.fabricName);
     }
     /**
      * Number of items associated with this policy.
      * 
     */
-    public Optional<Integer> getProtectedItemsCount() {
+    public Optional<Integer> protectedItemsCount() {
         return Optional.ofNullable(this.protectedItemsCount);
     }
     /**
      * List of sub-protection policies which includes schedule and retention
      * 
     */
-    public List<SubProtectionPolicyResponse> getSubProtectionPolicy() {
+    public List<SubProtectionPolicyResponse> subProtectionPolicy() {
         return this.subProtectionPolicy == null ? List.of() : this.subProtectionPolicy;
     }
     /**
      * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
      * 
     */
-    public Optional<String> getTimeZone() {
+    public Optional<String> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }
 

@@ -26,7 +26,7 @@ public final class AccessReviewInstanceArgs extends io.pulumi.resources.Resource
     @Import(name="endDateTime")
       private final @Nullable Output<String> endDateTime;
 
-    public Output<String> getEndDateTime() {
+    public Output<String> endDateTime() {
         return this.endDateTime == null ? Codegen.empty() : this.endDateTime;
     }
 
@@ -37,7 +37,7 @@ public final class AccessReviewInstanceArgs extends io.pulumi.resources.Resource
     @Import(name="startDateTime")
       private final @Nullable Output<String> startDateTime;
 
-    public Output<String> getStartDateTime() {
+    public Output<String> startDateTime() {
         return this.startDateTime == null ? Codegen.empty() : this.startDateTime;
     }
 

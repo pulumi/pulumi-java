@@ -153,126 +153,126 @@ public final class GetScheduledQueryRuleResult {
      * Action needs to be taken on rule execution.
      * 
     */
-    public Either<AlertingActionResponse,LogToMetricActionResponse> getAction() {
+    public Either<AlertingActionResponse,LogToMetricActionResponse> action() {
         return this.action;
     }
     /**
      * The flag that indicates whether the alert should be automatically resolved or not. The default is false.
      * 
     */
-    public Optional<Boolean> getAutoMitigate() {
+    public Optional<Boolean> autoMitigate() {
         return Optional.ofNullable(this.autoMitigate);
     }
     /**
      * The api-version used when creating this alert rule
      * 
     */
-    public String getCreatedWithApiVersion() {
+    public String createdWithApiVersion() {
         return this.createdWithApiVersion;
     }
     /**
      * The description of the Log Search rule.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The display name of the alert rule
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The flag which indicates whether the Log Search rule is enabled. Value should be true or false
      * 
     */
-    public Optional<String> getEnabled() {
+    public Optional<String> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Azure resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * True if alert rule is legacy Log Analytic rule
      * 
     */
-    public Boolean getIsLegacyLogAnalyticsRule() {
+    public Boolean isLegacyLogAnalyticsRule() {
         return this.isLegacyLogAnalyticsRule;
     }
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Last time the rule was updated in IS08601 format.
      * 
     */
-    public String getLastUpdatedTime() {
+    public String lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Azure resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Provisioning state of the scheduled query rule
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction
      * 
     */
-    public Optional<ScheduleResponse> getSchedule() {
+    public Optional<ScheduleResponse> schedule() {
         return Optional.ofNullable(this.schedule);
     }
     /**
      * Data Source against which rule will Query Data
      * 
     */
-    public SourceResponse getSource() {
+    public SourceResponse source() {
         return this.source;
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Azure resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

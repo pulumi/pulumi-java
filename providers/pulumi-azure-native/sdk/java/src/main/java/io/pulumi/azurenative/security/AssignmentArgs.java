@@ -27,7 +27,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="additionalData")
       private final @Nullable Output<AssignmentPropertiesAdditionalDataArgs> additionalData;
 
-    public Output<AssignmentPropertiesAdditionalDataArgs> getAdditionalData() {
+    public Output<AssignmentPropertiesAdditionalDataArgs> additionalData() {
         return this.additionalData == null ? Codegen.empty() : this.additionalData;
     }
 
@@ -38,7 +38,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="assignedComponent")
       private final @Nullable Output<AssignedComponentItemArgs> assignedComponent;
 
-    public Output<AssignedComponentItemArgs> getAssignedComponent() {
+    public Output<AssignedComponentItemArgs> assignedComponent() {
         return this.assignedComponent == null ? Codegen.empty() : this.assignedComponent;
     }
 
@@ -49,7 +49,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="assignedStandard")
       private final @Nullable Output<AssignedStandardItemArgs> assignedStandard;
 
-    public Output<AssignedStandardItemArgs> getAssignedStandard() {
+    public Output<AssignedStandardItemArgs> assignedStandard() {
         return this.assignedStandard == null ? Codegen.empty() : this.assignedStandard;
     }
 
@@ -60,7 +60,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="assignmentId")
       private final @Nullable Output<String> assignmentId;
 
-    public Output<String> getAssignmentId() {
+    public Output<String> assignmentId() {
         return this.assignmentId == null ? Codegen.empty() : this.assignmentId;
     }
 
@@ -71,7 +71,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -82,7 +82,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -93,7 +93,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="effect")
       private final @Nullable Output<String> effect;
 
-    public Output<String> getEffect() {
+    public Output<String> effect() {
         return this.effect == null ? Codegen.empty() : this.effect;
     }
 
@@ -104,7 +104,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expiresOn")
       private final @Nullable Output<String> expiresOn;
 
-    public Output<String> getExpiresOn() {
+    public Output<String> expiresOn() {
         return this.expiresOn == null ? Codegen.empty() : this.expiresOn;
     }
 
@@ -115,7 +115,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -126,7 +126,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -137,7 +137,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
-    public Output<Object> getMetadata() {
+    public Output<Object> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -148,7 +148,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -159,7 +159,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scope")
       private final @Nullable Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 
@@ -170,7 +170,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

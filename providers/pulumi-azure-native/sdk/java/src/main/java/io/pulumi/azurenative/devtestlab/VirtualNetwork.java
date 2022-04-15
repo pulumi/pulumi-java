@@ -46,7 +46,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @return The allowed subnets of the virtual network.
      * 
      */
-    public Output</* @Nullable */ List<SubnetResponse>> getAllowedSubnets() {
+    public Output</* @Nullable */ List<SubnetResponse>> allowedSubnets() {
         return this.allowedSubnets;
     }
     /**
@@ -60,7 +60,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @return The creation date of the virtual network.
      * 
      */
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate;
     }
     /**
@@ -74,7 +74,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @return The description of the virtual network.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -88,7 +88,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @return The Microsoft.Network resource identifier of the virtual network.
      * 
      */
-    public Output</* @Nullable */ String> getExternalProviderResourceId() {
+    public Output</* @Nullable */ String> externalProviderResourceId() {
         return this.externalProviderResourceId;
     }
     /**
@@ -102,7 +102,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @return The external subnet properties.
      * 
      */
-    public Output<List<ExternalSubnetResponse>> getExternalSubnets() {
+    public Output<List<ExternalSubnetResponse>> externalSubnets() {
         return this.externalSubnets;
     }
     /**
@@ -116,7 +116,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -130,7 +130,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -144,7 +144,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @return The provisioning status of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -158,7 +158,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @return The subnet overrides of the virtual network.
      * 
      */
-    public Output</* @Nullable */ List<SubnetOverrideResponse>> getSubnetOverrides() {
+    public Output</* @Nullable */ List<SubnetOverrideResponse>> subnetOverrides() {
         return this.subnetOverrides;
     }
     /**
@@ -172,7 +172,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -186,7 +186,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -200,7 +200,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @return The unique immutable identifier of a resource (Guid).
      * 
      */
-    public Output<String> getUniqueIdentifier() {
+    public Output<String> uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
 

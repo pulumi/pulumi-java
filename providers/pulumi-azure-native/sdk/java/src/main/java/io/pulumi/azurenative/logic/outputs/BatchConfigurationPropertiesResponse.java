@@ -53,31 +53,31 @@ public final class BatchConfigurationPropertiesResponse {
      * The name of the batch group.
      * 
     */
-    public String getBatchGroupName() {
+    public String batchGroupName() {
         return this.batchGroupName;
     }
     /**
      * The artifact changed time.
      * 
     */
-    public Optional<String> getChangedTime() {
+    public Optional<String> changedTime() {
         return Optional.ofNullable(this.changedTime);
     }
     /**
      * The artifact creation time.
      * 
     */
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
-    public Optional<Object> getMetadata() {
+    public Optional<Object> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * The batch release criteria.
      * 
     */
-    public BatchReleaseCriteriaResponse getReleaseCriteria() {
+    public BatchReleaseCriteriaResponse releaseCriteria() {
         return this.releaseCriteria;
     }
 

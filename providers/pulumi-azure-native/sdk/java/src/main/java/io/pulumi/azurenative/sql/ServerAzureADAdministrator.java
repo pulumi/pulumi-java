@@ -43,7 +43,7 @@ public class ServerAzureADAdministrator extends io.pulumi.resources.CustomResour
      * @return Type of the sever administrator.
      * 
      */
-    public Output<String> getAdministratorType() {
+    public Output<String> administratorType() {
         return this.administratorType;
     }
     /**
@@ -57,7 +57,7 @@ public class ServerAzureADAdministrator extends io.pulumi.resources.CustomResour
      * @return Azure Active Directory only Authentication enabled.
      * 
      */
-    public Output<Boolean> getAzureADOnlyAuthentication() {
+    public Output<Boolean> azureADOnlyAuthentication() {
         return this.azureADOnlyAuthentication;
     }
     /**
@@ -71,7 +71,7 @@ public class ServerAzureADAdministrator extends io.pulumi.resources.CustomResour
      * @return Login name of the server administrator.
      * 
      */
-    public Output<String> getLogin() {
+    public Output<String> login() {
         return this.login;
     }
     /**
@@ -85,7 +85,7 @@ public class ServerAzureADAdministrator extends io.pulumi.resources.CustomResour
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +99,7 @@ public class ServerAzureADAdministrator extends io.pulumi.resources.CustomResour
      * @return SID (object ID) of the server administrator.
      * 
      */
-    public Output<String> getSid() {
+    public Output<String> sid() {
         return this.sid;
     }
     /**
@@ -113,7 +113,7 @@ public class ServerAzureADAdministrator extends io.pulumi.resources.CustomResour
      * @return Tenant ID of the administrator.
      * 
      */
-    public Output</* @Nullable */ String> getTenantId() {
+    public Output</* @Nullable */ String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -127,7 +127,7 @@ public class ServerAzureADAdministrator extends io.pulumi.resources.CustomResour
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -34,14 +34,14 @@ public final class TerminalSettingsResponse {
      * Size of terminal font.
      * 
     */
-    public Optional<String> getFontSize() {
+    public Optional<String> fontSize() {
         return Optional.ofNullable(this.fontSize);
     }
     /**
      * Style of terminal font.
      * 
     */
-    public Optional<String> getFontStyle() {
+    public Optional<String> fontStyle() {
         return Optional.ofNullable(this.fontStyle);
     }
 

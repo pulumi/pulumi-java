@@ -25,7 +25,7 @@ public final class NsgReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceArmResourceId", required=true)
       private final Output<String> sourceArmResourceId;
 
-    public Output<String> getSourceArmResourceId() {
+    public Output<String> sourceArmResourceId() {
         return this.sourceArmResourceId;
     }
 

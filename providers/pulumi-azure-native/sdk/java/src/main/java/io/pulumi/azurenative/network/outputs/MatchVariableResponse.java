@@ -34,14 +34,14 @@ public final class MatchVariableResponse {
      * The selector of match variable.
      * 
     */
-    public Optional<String> getSelector() {
+    public Optional<String> selector() {
         return Optional.ofNullable(this.selector);
     }
     /**
      * Match Variable.
      * 
     */
-    public String getVariableName() {
+    public String variableName() {
         return this.variableName;
     }
 

@@ -34,7 +34,7 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
     @Import(name="kerberosArmoring")
       private final @Nullable Output<Either<String,KerberosArmoring>> kerberosArmoring;
 
-    public Output<Either<String,KerberosArmoring>> getKerberosArmoring() {
+    public Output<Either<String,KerberosArmoring>> kerberosArmoring() {
         return this.kerberosArmoring == null ? Codegen.empty() : this.kerberosArmoring;
     }
 
@@ -45,7 +45,7 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
     @Import(name="kerberosRc4Encryption")
       private final @Nullable Output<Either<String,KerberosRc4Encryption>> kerberosRc4Encryption;
 
-    public Output<Either<String,KerberosRc4Encryption>> getKerberosRc4Encryption() {
+    public Output<Either<String,KerberosRc4Encryption>> kerberosRc4Encryption() {
         return this.kerberosRc4Encryption == null ? Codegen.empty() : this.kerberosRc4Encryption;
     }
 
@@ -56,7 +56,7 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
     @Import(name="ntlmV1")
       private final @Nullable Output<Either<String,NtlmV1>> ntlmV1;
 
-    public Output<Either<String,NtlmV1>> getNtlmV1() {
+    public Output<Either<String,NtlmV1>> ntlmV1() {
         return this.ntlmV1 == null ? Codegen.empty() : this.ntlmV1;
     }
 
@@ -67,7 +67,7 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
     @Import(name="syncKerberosPasswords")
       private final @Nullable Output<Either<String,SyncKerberosPasswords>> syncKerberosPasswords;
 
-    public Output<Either<String,SyncKerberosPasswords>> getSyncKerberosPasswords() {
+    public Output<Either<String,SyncKerberosPasswords>> syncKerberosPasswords() {
         return this.syncKerberosPasswords == null ? Codegen.empty() : this.syncKerberosPasswords;
     }
 
@@ -78,7 +78,7 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
     @Import(name="syncNtlmPasswords")
       private final @Nullable Output<Either<String,SyncNtlmPasswords>> syncNtlmPasswords;
 
-    public Output<Either<String,SyncNtlmPasswords>> getSyncNtlmPasswords() {
+    public Output<Either<String,SyncNtlmPasswords>> syncNtlmPasswords() {
         return this.syncNtlmPasswords == null ? Codegen.empty() : this.syncNtlmPasswords;
     }
 
@@ -89,7 +89,7 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
     @Import(name="syncOnPremPasswords")
       private final @Nullable Output<Either<String,SyncOnPremPasswords>> syncOnPremPasswords;
 
-    public Output<Either<String,SyncOnPremPasswords>> getSyncOnPremPasswords() {
+    public Output<Either<String,SyncOnPremPasswords>> syncOnPremPasswords() {
         return this.syncOnPremPasswords == null ? Codegen.empty() : this.syncOnPremPasswords;
     }
 
@@ -100,7 +100,7 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
     @Import(name="tlsV1")
       private final @Nullable Output<Either<String,TlsV1>> tlsV1;
 
-    public Output<Either<String,TlsV1>> getTlsV1() {
+    public Output<Either<String,TlsV1>> tlsV1() {
         return this.tlsV1 == null ? Codegen.empty() : this.tlsV1;
     }
 

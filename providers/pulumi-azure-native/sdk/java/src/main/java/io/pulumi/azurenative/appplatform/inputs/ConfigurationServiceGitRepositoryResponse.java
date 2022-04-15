@@ -27,7 +27,7 @@ public final class ConfigurationServiceGitRepositoryResponse extends io.pulumi.r
     @Import(name="hostKey")
       private final @Nullable String hostKey;
 
-    public Optional<String> getHostKey() {
+    public Optional<String> hostKey() {
         return this.hostKey == null ? Optional.empty() : Optional.ofNullable(this.hostKey);
     }
 
@@ -38,7 +38,7 @@ public final class ConfigurationServiceGitRepositoryResponse extends io.pulumi.r
     @Import(name="hostKeyAlgorithm")
       private final @Nullable String hostKeyAlgorithm;
 
-    public Optional<String> getHostKeyAlgorithm() {
+    public Optional<String> hostKeyAlgorithm() {
         return this.hostKeyAlgorithm == null ? Optional.empty() : Optional.ofNullable(this.hostKeyAlgorithm);
     }
 
@@ -49,7 +49,7 @@ public final class ConfigurationServiceGitRepositoryResponse extends io.pulumi.r
     @Import(name="label", required=true)
       private final String label;
 
-    public String getLabel() {
+    public String label() {
         return this.label;
     }
 
@@ -60,7 +60,7 @@ public final class ConfigurationServiceGitRepositoryResponse extends io.pulumi.r
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -71,7 +71,7 @@ public final class ConfigurationServiceGitRepositoryResponse extends io.pulumi.r
     @Import(name="password")
       private final @Nullable String password;
 
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
@@ -82,7 +82,7 @@ public final class ConfigurationServiceGitRepositoryResponse extends io.pulumi.r
     @Import(name="patterns", required=true)
       private final List<String> patterns;
 
-    public List<String> getPatterns() {
+    public List<String> patterns() {
         return this.patterns;
     }
 
@@ -93,7 +93,7 @@ public final class ConfigurationServiceGitRepositoryResponse extends io.pulumi.r
     @Import(name="privateKey")
       private final @Nullable String privateKey;
 
-    public Optional<String> getPrivateKey() {
+    public Optional<String> privateKey() {
         return this.privateKey == null ? Optional.empty() : Optional.ofNullable(this.privateKey);
     }
 
@@ -104,7 +104,7 @@ public final class ConfigurationServiceGitRepositoryResponse extends io.pulumi.r
     @Import(name="searchPaths")
       private final @Nullable List<String> searchPaths;
 
-    public List<String> getSearchPaths() {
+    public List<String> searchPaths() {
         return this.searchPaths == null ? List.of() : this.searchPaths;
     }
 
@@ -115,7 +115,7 @@ public final class ConfigurationServiceGitRepositoryResponse extends io.pulumi.r
     @Import(name="strictHostKeyChecking")
       private final @Nullable Boolean strictHostKeyChecking;
 
-    public Optional<Boolean> getStrictHostKeyChecking() {
+    public Optional<Boolean> strictHostKeyChecking() {
         return this.strictHostKeyChecking == null ? Optional.empty() : Optional.ofNullable(this.strictHostKeyChecking);
     }
 
@@ -126,7 +126,7 @@ public final class ConfigurationServiceGitRepositoryResponse extends io.pulumi.r
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 
@@ -137,7 +137,7 @@ public final class ConfigurationServiceGitRepositoryResponse extends io.pulumi.r
     @Import(name="username")
       private final @Nullable String username;
 
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
     }
 

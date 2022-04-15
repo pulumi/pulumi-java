@@ -51,7 +51,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * @return ActiveActive flag.
      * 
      */
-    public Output</* @Nullable */ Boolean> getActiveActive() {
+    public Output</* @Nullable */ Boolean> activeActive() {
         return this.activeActive;
     }
     /**
@@ -65,7 +65,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * @return Virtual network gateway's BGP speaker settings.
      * 
      */
-    public Output</* @Nullable */ BgpSettingsResponse> getBgpSettings() {
+    public Output</* @Nullable */ BgpSettingsResponse> bgpSettings() {
         return this.bgpSettings;
     }
     /**
@@ -79,7 +79,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * @return The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.
      * 
      */
-    public Output</* @Nullable */ AddressSpaceResponse> getCustomRoutes() {
+    public Output</* @Nullable */ AddressSpaceResponse> customRoutes() {
         return this.customRoutes;
     }
     /**
@@ -93,7 +93,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * @return Whether BGP is enabled for this virtual network gateway or not.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableBgp() {
+    public Output</* @Nullable */ Boolean> enableBgp() {
         return this.enableBgp;
     }
     /**
@@ -107,7 +107,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * @return Whether dns forwarding is enabled or not.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableDnsForwarding() {
+    public Output</* @Nullable */ Boolean> enableDnsForwarding() {
         return this.enableDnsForwarding;
     }
     /**
@@ -121,7 +121,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * @return Whether private IP needs to be enabled on this gateway for connections or not.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnablePrivateIpAddress() {
+    public Output</* @Nullable */ Boolean> enablePrivateIpAddress() {
         return this.enablePrivateIpAddress;
     }
     /**
@@ -135,7 +135,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -149,7 +149,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * @return The extended location of type local virtual network gateway.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
+    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
         return this.extendedLocation;
     }
     /**
@@ -163,7 +163,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * @return The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getGatewayDefaultSite() {
+    public Output</* @Nullable */ SubResourceResponse> gatewayDefaultSite() {
         return this.gatewayDefaultSite;
     }
     /**
@@ -177,7 +177,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * @return The type of this virtual network gateway.
      * 
      */
-    public Output</* @Nullable */ String> getGatewayType() {
+    public Output</* @Nullable */ String> gatewayType() {
         return this.gatewayType;
     }
     /**
@@ -191,7 +191,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * @return The IP address allocated by the gateway to which dns requests can be sent.
      * 
      */
-    public Output<String> getInboundDnsForwardingEndpoint() {
+    public Output<String> inboundDnsForwardingEndpoint() {
         return this.inboundDnsForwardingEndpoint;
     }
     /**
@@ -205,7 +205,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * @return IP configurations for virtual network gateway.
      * 
      */
-    public Output</* @Nullable */ List<VirtualNetworkGatewayIPConfigurationResponse>> getIpConfigurations() {
+    public Output</* @Nullable */ List<VirtualNetworkGatewayIPConfigurationResponse>> ipConfigurations() {
         return this.ipConfigurations;
     }
     /**
@@ -219,7 +219,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -233,7 +233,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -247,7 +247,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the virtual network gateway resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -261,7 +261,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * @return The resource GUID property of the virtual network gateway resource.
      * 
      */
-    public Output<String> getResourceGuid() {
+    public Output<String> resourceGuid() {
         return this.resourceGuid;
     }
     /**
@@ -275,7 +275,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * @return The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.
      * 
      */
-    public Output</* @Nullable */ VirtualNetworkGatewaySkuResponse> getSku() {
+    public Output</* @Nullable */ VirtualNetworkGatewaySkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -289,7 +289,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -303,7 +303,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -317,7 +317,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * @return Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.
      * 
      */
-    public Output</* @Nullable */ String> getVNetExtendedLocationResourceId() {
+    public Output</* @Nullable */ String> vNetExtendedLocationResourceId() {
         return this.vNetExtendedLocationResourceId;
     }
     /**
@@ -331,7 +331,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * @return The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.
      * 
      */
-    public Output</* @Nullable */ VpnClientConfigurationResponse> getVpnClientConfiguration() {
+    public Output</* @Nullable */ VpnClientConfigurationResponse> vpnClientConfiguration() {
         return this.vpnClientConfiguration;
     }
     /**
@@ -345,7 +345,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * @return The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.
      * 
      */
-    public Output</* @Nullable */ String> getVpnGatewayGeneration() {
+    public Output</* @Nullable */ String> vpnGatewayGeneration() {
         return this.vpnGatewayGeneration;
     }
     /**
@@ -359,7 +359,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * @return The type of this virtual network gateway.
      * 
      */
-    public Output</* @Nullable */ String> getVpnType() {
+    public Output</* @Nullable */ String> vpnType() {
         return this.vpnType;
     }
 

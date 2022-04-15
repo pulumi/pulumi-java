@@ -30,7 +30,7 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -41,7 +41,7 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="dependsOn", required=true)
       private final Output<List<PipelineReferenceArgs>> dependsOn;
 
-    public Output<List<PipelineReferenceArgs>> getDependsOn() {
+    public Output<List<PipelineReferenceArgs>> dependsOn() {
         return this.dependsOn;
     }
 
@@ -52,7 +52,7 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -63,7 +63,7 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="pipeline", required=true)
       private final Output<TriggerPipelineReferenceArgs> pipeline;
 
-    public Output<TriggerPipelineReferenceArgs> getPipeline() {
+    public Output<TriggerPipelineReferenceArgs> pipeline() {
         return this.pipeline;
     }
 
@@ -74,7 +74,7 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="runDimension", required=true)
       private final Output<String> runDimension;
 
-    public Output<String> getRunDimension() {
+    public Output<String> runDimension() {
         return this.runDimension;
     }
 
@@ -86,7 +86,7 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -27,7 +27,7 @@ public final class RateLimitRuleListArgs extends io.pulumi.resources.ResourceArg
     @Import(name="rules")
       private final @Nullable Output<List<RateLimitRuleArgs>> rules;
 
-    public Output<List<RateLimitRuleArgs>> getRules() {
+    public Output<List<RateLimitRuleArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 

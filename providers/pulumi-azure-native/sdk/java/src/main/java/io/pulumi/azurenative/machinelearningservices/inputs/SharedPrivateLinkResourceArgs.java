@@ -24,7 +24,7 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
     @Import(name="groupId")
       private final @Nullable Output<String> groupId;
 
-    public Output<String> getGroupId() {
+    public Output<String> groupId() {
         return this.groupId == null ? Codegen.empty() : this.groupId;
     }
 
@@ -35,7 +35,7 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -46,7 +46,7 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
     @Import(name="privateLinkResourceId")
       private final @Nullable Output<String> privateLinkResourceId;
 
-    public Output<String> getPrivateLinkResourceId() {
+    public Output<String> privateLinkResourceId() {
         return this.privateLinkResourceId == null ? Codegen.empty() : this.privateLinkResourceId;
     }
 
@@ -57,7 +57,7 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
     @Import(name="requestMessage")
       private final @Nullable Output<String> requestMessage;
 
-    public Output<String> getRequestMessage() {
+    public Output<String> requestMessage() {
         return this.requestMessage == null ? Codegen.empty() : this.requestMessage;
     }
 
@@ -68,7 +68,7 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
     @Import(name="status")
       private final @Nullable Output<Either<String,PrivateEndpointServiceConnectionStatus>> status;
 
-    public Output<Either<String,PrivateEndpointServiceConnectionStatus>> getStatus() {
+    public Output<Either<String,PrivateEndpointServiceConnectionStatus>> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

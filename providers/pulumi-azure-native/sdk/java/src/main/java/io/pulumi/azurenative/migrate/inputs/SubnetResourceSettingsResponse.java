@@ -26,7 +26,7 @@ public final class SubnetResourceSettingsResponse extends io.pulumi.resources.In
     @Import(name="addressPrefix")
       private final @Nullable String addressPrefix;
 
-    public Optional<String> getAddressPrefix() {
+    public Optional<String> addressPrefix() {
         return this.addressPrefix == null ? Optional.empty() : Optional.ofNullable(this.addressPrefix);
     }
 
@@ -37,7 +37,7 @@ public final class SubnetResourceSettingsResponse extends io.pulumi.resources.In
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -48,7 +48,7 @@ public final class SubnetResourceSettingsResponse extends io.pulumi.resources.In
     @Import(name="networkSecurityGroup")
       private final @Nullable NsgReferenceResponse networkSecurityGroup;
 
-    public Optional<NsgReferenceResponse> getNetworkSecurityGroup() {
+    public Optional<NsgReferenceResponse> networkSecurityGroup() {
         return this.networkSecurityGroup == null ? Optional.empty() : Optional.ofNullable(this.networkSecurityGroup);
     }
 

@@ -70,35 +70,35 @@ public final class GetUserTablesSqlTaskPropertiesResponse {
      * Array of command properties.
      * 
     */
-    public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> getCommands() {
+    public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands() {
         return this.commands;
     }
     /**
      * Array of errors. This is ignored if submitted.
      * 
     */
-    public List<ODataErrorResponse> getErrors() {
+    public List<ODataErrorResponse> errors() {
         return this.errors;
     }
     /**
      * Task input
      * 
     */
-    public Optional<GetUserTablesSqlTaskInputResponse> getInput() {
+    public Optional<GetUserTablesSqlTaskInputResponse> input() {
         return Optional.ofNullable(this.input);
     }
     /**
      * Task output. This is ignored if submitted.
      * 
     */
-    public List<GetUserTablesSqlTaskOutputResponse> getOutput() {
+    public List<GetUserTablesSqlTaskOutputResponse> output() {
         return this.output;
     }
     /**
      * The state of the task. This is ignored if submitted.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
@@ -106,7 +106,7 @@ public final class GetUserTablesSqlTaskPropertiesResponse {
      * Expected value is 'GetUserTables.Sql'.
      * 
     */
-    public String getTaskType() {
+    public String taskType() {
         return this.taskType;
     }
 

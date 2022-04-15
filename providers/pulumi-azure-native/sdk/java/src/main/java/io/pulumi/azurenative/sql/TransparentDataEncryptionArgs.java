@@ -24,7 +24,7 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -35,7 +35,7 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -46,7 +46,7 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -57,7 +57,7 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
     @Import(name="status")
       private final @Nullable Output<Either<String,TransparentDataEncryptionStatus>> status;
 
-    public Output<Either<String,TransparentDataEncryptionStatus>> getStatus() {
+    public Output<Either<String,TransparentDataEncryptionStatus>> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -68,7 +68,7 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
     @Import(name="transparentDataEncryptionName")
       private final @Nullable Output<String> transparentDataEncryptionName;
 
-    public Output<String> getTransparentDataEncryptionName() {
+    public Output<String> transparentDataEncryptionName() {
         return this.transparentDataEncryptionName == null ? Codegen.empty() : this.transparentDataEncryptionName;
     }
 

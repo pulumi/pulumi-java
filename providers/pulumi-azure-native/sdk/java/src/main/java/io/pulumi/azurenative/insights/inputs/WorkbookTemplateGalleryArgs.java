@@ -27,7 +27,7 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
     @Import(name="category")
       private final @Nullable Output<String> category;
 
-    public Output<String> getCategory() {
+    public Output<String> category() {
         return this.category == null ? Codegen.empty() : this.category;
     }
 
@@ -38,7 +38,7 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -49,7 +49,7 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
     @Import(name="order")
       private final @Nullable Output<Integer> order;
 
-    public Output<Integer> getOrder() {
+    public Output<Integer> order() {
         return this.order == null ? Codegen.empty() : this.order;
     }
 
@@ -60,7 +60,7 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
@@ -71,7 +71,7 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

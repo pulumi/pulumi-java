@@ -26,7 +26,7 @@ public final class AzureResourceDetailsArgs extends io.pulumi.resources.Resource
     @Import(name="source", required=true)
       private final Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source;
     }
 

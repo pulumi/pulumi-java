@@ -44,7 +44,7 @@ public class ManagedInstancePrivateEndpointConnection extends io.pulumi.resource
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -58,7 +58,7 @@ public class ManagedInstancePrivateEndpointConnection extends io.pulumi.resource
      * @return Private endpoint which the connection belongs to.
      * 
      */
-    public Output</* @Nullable */ ManagedInstancePrivateEndpointPropertyResponse> getPrivateEndpoint() {
+    public Output</* @Nullable */ ManagedInstancePrivateEndpointPropertyResponse> privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
@@ -72,7 +72,7 @@ public class ManagedInstancePrivateEndpointConnection extends io.pulumi.resource
      * @return Connection State of the Private Endpoint Connection.
      * 
      */
-    public Output</* @Nullable */ ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse> getPrivateLinkServiceConnectionState() {
+    public Output</* @Nullable */ ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
@@ -86,7 +86,7 @@ public class ManagedInstancePrivateEndpointConnection extends io.pulumi.resource
      * @return State of the Private Endpoint Connection.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -100,7 +100,7 @@ public class ManagedInstancePrivateEndpointConnection extends io.pulumi.resource
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

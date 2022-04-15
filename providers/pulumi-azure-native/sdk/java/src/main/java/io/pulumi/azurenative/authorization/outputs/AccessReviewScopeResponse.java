@@ -63,42 +63,42 @@ public final class AccessReviewScopeResponse {
      * The role assignment state eligible/active to review
      * 
     */
-    public String getAssignmentState() {
+    public String assignmentState() {
         return this.assignmentState;
     }
     /**
      * Flag to indicate whether to expand nested memberships or not.
      * 
     */
-    public Optional<Boolean> getExpandNestedMemberships() {
+    public Optional<Boolean> expandNestedMemberships() {
         return Optional.ofNullable(this.expandNestedMemberships);
     }
     /**
      * Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
      * 
     */
-    public Optional<String> getInactiveDuration() {
+    public Optional<String> inactiveDuration() {
         return Optional.ofNullable(this.inactiveDuration);
     }
     /**
      * The identity type user/servicePrincipal to review
      * 
     */
-    public String getPrincipalType() {
+    public String principalType() {
         return this.principalType;
     }
     /**
      * ResourceId in which this review is getting created
      * 
     */
-    public String getResourceId() {
+    public String resourceId() {
         return this.resourceId;
     }
     /**
      * This is used to indicate the role being reviewed
      * 
     */
-    public String getRoleDefinitionId() {
+    public String roleDefinitionId() {
         return this.roleDefinitionId;
     }
 

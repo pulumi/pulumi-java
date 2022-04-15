@@ -34,14 +34,14 @@ public final class RCranPackageResponse {
      * The package name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The repository name.
      * 
     */
-    public Optional<String> getRepository() {
+    public Optional<String> repository() {
         return Optional.ofNullable(this.repository);
     }
 

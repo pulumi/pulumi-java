@@ -26,7 +26,7 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
     @Import(name="aadTenantId")
       private final @Nullable Output<String> aadTenantId;
 
-    public Output<String> getAadTenantId() {
+    public Output<String> aadTenantId() {
         return this.aadTenantId == null ? Codegen.empty() : this.aadTenantId;
     }
 
@@ -37,7 +37,7 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
     @Import(name="audience")
       private final @Nullable Output<String> audience;
 
-    public Output<String> getAudience() {
+    public Output<String> audience() {
         return this.audience == null ? Codegen.empty() : this.audience;
     }
 
@@ -48,7 +48,7 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
     @Import(name="servicePrincipalClientId")
       private final @Nullable Output<String> servicePrincipalClientId;
 
-    public Output<String> getServicePrincipalClientId() {
+    public Output<String> servicePrincipalClientId() {
         return this.servicePrincipalClientId == null ? Codegen.empty() : this.servicePrincipalClientId;
     }
 
@@ -59,7 +59,7 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
     @Import(name="uniqueName")
       private final @Nullable Output<String> uniqueName;
 
-    public Output<String> getUniqueName() {
+    public Output<String> uniqueName() {
         return this.uniqueName == null ? Codegen.empty() : this.uniqueName;
     }
 

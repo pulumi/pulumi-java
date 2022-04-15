@@ -26,7 +26,7 @@ public final class AdhocBasedTaggingCriteriaArgs extends io.pulumi.resources.Res
     @Import(name="tagInfo")
       private final @Nullable Output<RetentionTagArgs> tagInfo;
 
-    public Output<RetentionTagArgs> getTagInfo() {
+    public Output<RetentionTagArgs> tagInfo() {
         return this.tagInfo == null ? Codegen.empty() : this.tagInfo;
     }
 

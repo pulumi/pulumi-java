@@ -41,21 +41,21 @@ public final class AdmCredentialResponse {
      * The URL of the authorization token.
      * 
     */
-    public Optional<String> getAuthTokenUrl() {
+    public Optional<String> authTokenUrl() {
         return Optional.ofNullable(this.authTokenUrl);
     }
     /**
      * The client identifier.
      * 
     */
-    public Optional<String> getClientId() {
+    public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
      * The credential secret access key.
      * 
     */
-    public Optional<String> getClientSecret() {
+    public Optional<String> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
 

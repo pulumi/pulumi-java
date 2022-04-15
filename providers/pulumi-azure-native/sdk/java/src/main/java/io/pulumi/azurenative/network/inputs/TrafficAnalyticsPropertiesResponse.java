@@ -25,7 +25,7 @@ public final class TrafficAnalyticsPropertiesResponse extends io.pulumi.resource
     @Import(name="networkWatcherFlowAnalyticsConfiguration")
       private final @Nullable TrafficAnalyticsConfigurationPropertiesResponse networkWatcherFlowAnalyticsConfiguration;
 
-    public Optional<TrafficAnalyticsConfigurationPropertiesResponse> getNetworkWatcherFlowAnalyticsConfiguration() {
+    public Optional<TrafficAnalyticsConfigurationPropertiesResponse> networkWatcherFlowAnalyticsConfiguration() {
         return this.networkWatcherFlowAnalyticsConfiguration == null ? Optional.empty() : Optional.ofNullable(this.networkWatcherFlowAnalyticsConfiguration);
     }
 

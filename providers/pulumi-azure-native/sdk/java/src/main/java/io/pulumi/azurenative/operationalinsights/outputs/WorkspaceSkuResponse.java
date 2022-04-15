@@ -42,21 +42,21 @@ public final class WorkspaceSkuResponse {
      * The capacity reservation level for this workspace, when CapacityReservation sku is selected.
      * 
     */
-    public Optional<Integer> getCapacityReservationLevel() {
+    public Optional<Integer> capacityReservationLevel() {
         return Optional.ofNullable(this.capacityReservationLevel);
     }
     /**
      * The last time when the sku was updated.
      * 
     */
-    public String getLastSkuUpdate() {
+    public String lastSkuUpdate() {
         return this.lastSkuUpdate;
     }
     /**
      * The name of the SKU.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

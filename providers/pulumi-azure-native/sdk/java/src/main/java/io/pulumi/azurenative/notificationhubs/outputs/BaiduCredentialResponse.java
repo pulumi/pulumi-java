@@ -41,21 +41,21 @@ public final class BaiduCredentialResponse {
      * Baidu Api Key.
      * 
     */
-    public Optional<String> getBaiduApiKey() {
+    public Optional<String> baiduApiKey() {
         return Optional.ofNullable(this.baiduApiKey);
     }
     /**
      * Baidu Endpoint.
      * 
     */
-    public Optional<String> getBaiduEndPoint() {
+    public Optional<String> baiduEndPoint() {
         return Optional.ofNullable(this.baiduEndPoint);
     }
     /**
      * Baidu Secret Key
      * 
     */
-    public Optional<String> getBaiduSecretKey() {
+    public Optional<String> baiduSecretKey() {
         return Optional.ofNullable(this.baiduSecretKey);
     }
 

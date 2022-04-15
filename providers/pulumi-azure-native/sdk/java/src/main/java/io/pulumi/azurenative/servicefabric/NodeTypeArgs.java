@@ -29,7 +29,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationPorts")
       private final @Nullable Output<EndpointRangeDescriptionArgs> applicationPorts;
 
-    public Output<EndpointRangeDescriptionArgs> getApplicationPorts() {
+    public Output<EndpointRangeDescriptionArgs> applicationPorts() {
         return this.applicationPorts == null ? Codegen.empty() : this.applicationPorts;
     }
 
@@ -40,7 +40,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="capacities")
       private final @Nullable Output<Map<String,String>> capacities;
 
-    public Output<Map<String,String>> getCapacities() {
+    public Output<Map<String,String>> capacities() {
         return this.capacities == null ? Codegen.empty() : this.capacities;
     }
 
@@ -51,7 +51,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -62,7 +62,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataDiskSizeGB", required=true)
       private final Output<Integer> dataDiskSizeGB;
 
-    public Output<Integer> getDataDiskSizeGB() {
+    public Output<Integer> dataDiskSizeGB() {
         return this.dataDiskSizeGB;
     }
 
@@ -73,7 +73,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ephemeralPorts")
       private final @Nullable Output<EndpointRangeDescriptionArgs> ephemeralPorts;
 
-    public Output<EndpointRangeDescriptionArgs> getEphemeralPorts() {
+    public Output<EndpointRangeDescriptionArgs> ephemeralPorts() {
         return this.ephemeralPorts == null ? Codegen.empty() : this.ephemeralPorts;
     }
 
@@ -84,7 +84,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isPrimary", required=true)
       private final Output<Boolean> isPrimary;
 
-    public Output<Boolean> getIsPrimary() {
+    public Output<Boolean> isPrimary() {
         return this.isPrimary;
     }
 
@@ -95,7 +95,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeTypeName")
       private final @Nullable Output<String> nodeTypeName;
 
-    public Output<String> getNodeTypeName() {
+    public Output<String> nodeTypeName() {
         return this.nodeTypeName == null ? Codegen.empty() : this.nodeTypeName;
     }
 
@@ -106,7 +106,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="placementProperties")
       private final @Nullable Output<Map<String,String>> placementProperties;
 
-    public Output<Map<String,String>> getPlacementProperties() {
+    public Output<Map<String,String>> placementProperties() {
         return this.placementProperties == null ? Codegen.empty() : this.placementProperties;
     }
 
@@ -117,7 +117,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -128,7 +128,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -139,7 +139,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vmExtensions")
       private final @Nullable Output<List<VMSSExtensionArgs>> vmExtensions;
 
-    public Output<List<VMSSExtensionArgs>> getVmExtensions() {
+    public Output<List<VMSSExtensionArgs>> vmExtensions() {
         return this.vmExtensions == null ? Codegen.empty() : this.vmExtensions;
     }
 
@@ -150,7 +150,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vmImageOffer")
       private final @Nullable Output<String> vmImageOffer;
 
-    public Output<String> getVmImageOffer() {
+    public Output<String> vmImageOffer() {
         return this.vmImageOffer == null ? Codegen.empty() : this.vmImageOffer;
     }
 
@@ -161,7 +161,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vmImagePublisher")
       private final @Nullable Output<String> vmImagePublisher;
 
-    public Output<String> getVmImagePublisher() {
+    public Output<String> vmImagePublisher() {
         return this.vmImagePublisher == null ? Codegen.empty() : this.vmImagePublisher;
     }
 
@@ -172,7 +172,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vmImageSku")
       private final @Nullable Output<String> vmImageSku;
 
-    public Output<String> getVmImageSku() {
+    public Output<String> vmImageSku() {
         return this.vmImageSku == null ? Codegen.empty() : this.vmImageSku;
     }
 
@@ -183,7 +183,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vmImageVersion")
       private final @Nullable Output<String> vmImageVersion;
 
-    public Output<String> getVmImageVersion() {
+    public Output<String> vmImageVersion() {
         return this.vmImageVersion == null ? Codegen.empty() : this.vmImageVersion;
     }
 
@@ -194,7 +194,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vmInstanceCount", required=true)
       private final Output<Integer> vmInstanceCount;
 
-    public Output<Integer> getVmInstanceCount() {
+    public Output<Integer> vmInstanceCount() {
         return this.vmInstanceCount;
     }
 
@@ -205,7 +205,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vmSecrets")
       private final @Nullable Output<List<VaultSecretGroupArgs>> vmSecrets;
 
-    public Output<List<VaultSecretGroupArgs>> getVmSecrets() {
+    public Output<List<VaultSecretGroupArgs>> vmSecrets() {
         return this.vmSecrets == null ? Codegen.empty() : this.vmSecrets;
     }
 
@@ -216,7 +216,7 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vmSize")
       private final @Nullable Output<String> vmSize;
 
-    public Output<String> getVmSize() {
+    public Output<String> vmSize() {
         return this.vmSize == null ? Codegen.empty() : this.vmSize;
     }
 

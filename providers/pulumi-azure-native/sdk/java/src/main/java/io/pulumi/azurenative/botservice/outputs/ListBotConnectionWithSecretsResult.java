@@ -94,70 +94,70 @@ public final class ListBotConnectionWithSecretsResult {
      * Entity Tag
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Specifies the resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Required. Gets or sets the Kind of the resource.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Specifies the location of the resource.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Specifies the name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The set of properties specific to bot channel resource
      * 
     */
-    public ConnectionSettingPropertiesResponse getProperties() {
+    public ConnectionSettingPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * Gets or sets the SKU of the resource.
      * 
     */
-    public Optional<SkuResponse> getSku() {
+    public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Contains resource tags defined as key/value pairs.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Specifies the type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Entity zones
      * 
     */
-    public List<String> getZones() {
+    public List<String> zones() {
         return this.zones;
     }
 

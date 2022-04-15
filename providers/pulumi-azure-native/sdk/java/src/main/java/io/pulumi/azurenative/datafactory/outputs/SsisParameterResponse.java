@@ -106,84 +106,84 @@ public final class SsisParameterResponse {
      * Parameter type.
      * 
     */
-    public Optional<String> getDataType() {
+    public Optional<String> dataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
      * Default value of parameter.
      * 
     */
-    public Optional<String> getDefaultValue() {
+    public Optional<String> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
     /**
      * Parameter description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Design default value of parameter.
      * 
     */
-    public Optional<String> getDesignDefaultValue() {
+    public Optional<String> designDefaultValue() {
         return Optional.ofNullable(this.designDefaultValue);
     }
     /**
      * Parameter id.
      * 
     */
-    public Optional<Double> getId() {
+    public Optional<Double> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Parameter name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Whether parameter is required.
      * 
     */
-    public Optional<Boolean> getRequired() {
+    public Optional<Boolean> required() {
         return Optional.ofNullable(this.required);
     }
     /**
      * Whether parameter is sensitive.
      * 
     */
-    public Optional<Boolean> getSensitive() {
+    public Optional<Boolean> sensitive() {
         return Optional.ofNullable(this.sensitive);
     }
     /**
      * Default sensitive value of parameter.
      * 
     */
-    public Optional<String> getSensitiveDefaultValue() {
+    public Optional<String> sensitiveDefaultValue() {
         return Optional.ofNullable(this.sensitiveDefaultValue);
     }
     /**
      * Parameter value set.
      * 
     */
-    public Optional<Boolean> getValueSet() {
+    public Optional<Boolean> valueSet() {
         return Optional.ofNullable(this.valueSet);
     }
     /**
      * Parameter value type.
      * 
     */
-    public Optional<String> getValueType() {
+    public Optional<String> valueType() {
         return Optional.ofNullable(this.valueType);
     }
     /**
      * Parameter reference variable.
      * 
     */
-    public Optional<String> getVariable() {
+    public Optional<String> variable() {
         return Optional.ofNullable(this.variable);
     }
 

@@ -26,7 +26,7 @@ public final class ReportConfigSortingArgs extends io.pulumi.resources.ResourceA
     @Import(name="direction")
       private final @Nullable Output<String> direction;
 
-    public Output<String> getDirection() {
+    public Output<String> direction() {
         return this.direction == null ? Codegen.empty() : this.direction;
     }
 
@@ -37,7 +37,7 @@ public final class ReportConfigSortingArgs extends io.pulumi.resources.ResourceA
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

@@ -43,7 +43,7 @@ public final class StringInAdvancedFilterResponse {
      * The field/property in the event based on which you want to filter.
      * 
     */
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
@@ -51,14 +51,14 @@ public final class StringInAdvancedFilterResponse {
      * Expected value is 'StringIn'.
      * 
     */
-    public String getOperatorType() {
+    public String operatorType() {
         return this.operatorType;
     }
     /**
      * The set of filter values.
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }
 

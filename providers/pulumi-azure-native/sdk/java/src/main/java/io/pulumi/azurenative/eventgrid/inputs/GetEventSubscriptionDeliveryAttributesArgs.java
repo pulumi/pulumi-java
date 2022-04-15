@@ -19,7 +19,7 @@ public final class GetEventSubscriptionDeliveryAttributesArgs extends io.pulumi.
     @Import(name="eventSubscriptionName", required=true)
       private final String eventSubscriptionName;
 
-    public String getEventSubscriptionName() {
+    public String eventSubscriptionName() {
         return this.eventSubscriptionName;
     }
 
@@ -30,7 +30,7 @@ public final class GetEventSubscriptionDeliveryAttributesArgs extends io.pulumi.
     @Import(name="scope", required=true)
       private final String scope;
 
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
 

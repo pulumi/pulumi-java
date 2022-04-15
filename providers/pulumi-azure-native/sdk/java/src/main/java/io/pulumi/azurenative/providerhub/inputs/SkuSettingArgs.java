@@ -23,84 +23,84 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="capabilities")
       private final @Nullable Output<List<SkuCapabilityArgs>> capabilities;
 
-    public Output<List<SkuCapabilityArgs>> getCapabilities() {
+    public Output<List<SkuCapabilityArgs>> capabilities() {
         return this.capabilities == null ? Codegen.empty() : this.capabilities;
     }
 
     @Import(name="capacity")
       private final @Nullable Output<SkuSettingCapacityArgs> capacity;
 
-    public Output<SkuSettingCapacityArgs> getCapacity() {
+    public Output<SkuSettingCapacityArgs> capacity() {
         return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
     @Import(name="costs")
       private final @Nullable Output<List<SkuCostArgs>> costs;
 
-    public Output<List<SkuCostArgs>> getCosts() {
+    public Output<List<SkuCostArgs>> costs() {
         return this.costs == null ? Codegen.empty() : this.costs;
     }
 
     @Import(name="family")
       private final @Nullable Output<String> family;
 
-    public Output<String> getFamily() {
+    public Output<String> family() {
         return this.family == null ? Codegen.empty() : this.family;
     }
 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     @Import(name="locationInfo")
       private final @Nullable Output<List<SkuLocationInfoArgs>> locationInfo;
 
-    public Output<List<SkuLocationInfoArgs>> getLocationInfo() {
+    public Output<List<SkuLocationInfoArgs>> locationInfo() {
         return this.locationInfo == null ? Codegen.empty() : this.locationInfo;
     }
 
     @Import(name="locations")
       private final @Nullable Output<List<String>> locations;
 
-    public Output<List<String>> getLocations() {
+    public Output<List<String>> locations() {
         return this.locations == null ? Codegen.empty() : this.locations;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="requiredFeatures")
       private final @Nullable Output<List<String>> requiredFeatures;
 
-    public Output<List<String>> getRequiredFeatures() {
+    public Output<List<String>> requiredFeatures() {
         return this.requiredFeatures == null ? Codegen.empty() : this.requiredFeatures;
     }
 
     @Import(name="requiredQuotaIds")
       private final @Nullable Output<List<String>> requiredQuotaIds;
 
-    public Output<List<String>> getRequiredQuotaIds() {
+    public Output<List<String>> requiredQuotaIds() {
         return this.requiredQuotaIds == null ? Codegen.empty() : this.requiredQuotaIds;
     }
 
     @Import(name="size")
       private final @Nullable Output<String> size;
 
-    public Output<String> getSize() {
+    public Output<String> size() {
         return this.size == null ? Codegen.empty() : this.size;
     }
 
     @Import(name="tier")
       private final @Nullable Output<String> tier;
 
-    public Output<String> getTier() {
+    public Output<String> tier() {
         return this.tier == null ? Codegen.empty() : this.tier;
     }
 

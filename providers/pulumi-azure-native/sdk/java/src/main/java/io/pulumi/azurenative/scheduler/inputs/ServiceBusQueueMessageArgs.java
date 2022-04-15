@@ -26,7 +26,7 @@ public final class ServiceBusQueueMessageArgs extends io.pulumi.resources.Resour
     @Import(name="authentication")
       private final @Nullable Output<ServiceBusAuthenticationArgs> authentication;
 
-    public Output<ServiceBusAuthenticationArgs> getAuthentication() {
+    public Output<ServiceBusAuthenticationArgs> authentication() {
         return this.authentication == null ? Codegen.empty() : this.authentication;
     }
 
@@ -37,7 +37,7 @@ public final class ServiceBusQueueMessageArgs extends io.pulumi.resources.Resour
     @Import(name="brokeredMessageProperties")
       private final @Nullable Output<ServiceBusBrokeredMessagePropertiesArgs> brokeredMessageProperties;
 
-    public Output<ServiceBusBrokeredMessagePropertiesArgs> getBrokeredMessageProperties() {
+    public Output<ServiceBusBrokeredMessagePropertiesArgs> brokeredMessageProperties() {
         return this.brokeredMessageProperties == null ? Codegen.empty() : this.brokeredMessageProperties;
     }
 
@@ -48,7 +48,7 @@ public final class ServiceBusQueueMessageArgs extends io.pulumi.resources.Resour
     @Import(name="customMessageProperties")
       private final @Nullable Output<Map<String,String>> customMessageProperties;
 
-    public Output<Map<String,String>> getCustomMessageProperties() {
+    public Output<Map<String,String>> customMessageProperties() {
         return this.customMessageProperties == null ? Codegen.empty() : this.customMessageProperties;
     }
 
@@ -59,7 +59,7 @@ public final class ServiceBusQueueMessageArgs extends io.pulumi.resources.Resour
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message == null ? Codegen.empty() : this.message;
     }
 
@@ -70,7 +70,7 @@ public final class ServiceBusQueueMessageArgs extends io.pulumi.resources.Resour
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
@@ -81,7 +81,7 @@ public final class ServiceBusQueueMessageArgs extends io.pulumi.resources.Resour
     @Import(name="queueName")
       private final @Nullable Output<String> queueName;
 
-    public Output<String> getQueueName() {
+    public Output<String> queueName() {
         return this.queueName == null ? Codegen.empty() : this.queueName;
     }
 
@@ -92,7 +92,7 @@ public final class ServiceBusQueueMessageArgs extends io.pulumi.resources.Resour
     @Import(name="transportType")
       private final @Nullable Output<ServiceBusTransportType> transportType;
 
-    public Output<ServiceBusTransportType> getTransportType() {
+    public Output<ServiceBusTransportType> transportType() {
         return this.transportType == null ? Codegen.empty() : this.transportType;
     }
 

@@ -25,7 +25,7 @@ public final class WebTestGeolocationResponse extends io.pulumi.resources.Invoke
     @Import(name="location")
       private final @Nullable String location;
 
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 

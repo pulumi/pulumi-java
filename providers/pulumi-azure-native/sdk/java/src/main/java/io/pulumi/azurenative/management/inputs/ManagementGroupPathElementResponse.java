@@ -25,7 +25,7 @@ public final class ManagementGroupPathElementResponse extends io.pulumi.resource
     @Import(name="displayName")
       private final @Nullable String displayName;
 
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
@@ -36,7 +36,7 @@ public final class ManagementGroupPathElementResponse extends io.pulumi.resource
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 

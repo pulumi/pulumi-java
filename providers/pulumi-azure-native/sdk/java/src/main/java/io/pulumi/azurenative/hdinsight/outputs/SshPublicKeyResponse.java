@@ -26,7 +26,7 @@ public final class SshPublicKeyResponse {
      * The certificate for SSH.
      * 
     */
-    public Optional<String> getCertificateData() {
+    public Optional<String> certificateData() {
         return Optional.ofNullable(this.certificateData);
     }
 

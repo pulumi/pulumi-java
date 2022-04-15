@@ -26,7 +26,7 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
-    public Output<String> getAutomationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -37,7 +37,7 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
     @Import(name="configuration", required=true)
       private final Output<DscConfigurationAssociationPropertyArgs> configuration;
 
-    public Output<DscConfigurationAssociationPropertyArgs> getConfiguration() {
+    public Output<DscConfigurationAssociationPropertyArgs> configuration() {
         return this.configuration;
     }
 
@@ -48,7 +48,7 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
     @Import(name="incrementNodeConfigurationBuild")
       private final @Nullable Output<Boolean> incrementNodeConfigurationBuild;
 
-    public Output<Boolean> getIncrementNodeConfigurationBuild() {
+    public Output<Boolean> incrementNodeConfigurationBuild() {
         return this.incrementNodeConfigurationBuild == null ? Codegen.empty() : this.incrementNodeConfigurationBuild;
     }
 
@@ -59,7 +59,7 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -70,7 +70,7 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
     @Import(name="nodeConfigurationName")
       private final @Nullable Output<String> nodeConfigurationName;
 
-    public Output<String> getNodeConfigurationName() {
+    public Output<String> nodeConfigurationName() {
         return this.nodeConfigurationName == null ? Codegen.empty() : this.nodeConfigurationName;
     }
 
@@ -81,7 +81,7 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -92,7 +92,7 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
     @Import(name="source", required=true)
       private final Output<ContentSourceArgs> source;
 
-    public Output<ContentSourceArgs> getSource() {
+    public Output<ContentSourceArgs> source() {
         return this.source;
     }
 
@@ -103,7 +103,7 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

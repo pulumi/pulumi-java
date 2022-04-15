@@ -48,28 +48,28 @@ public final class SslConfigurationResponse {
      * Cert data
      * 
     */
-    public Optional<String> getCert() {
+    public Optional<String> cert() {
         return Optional.ofNullable(this.cert);
     }
     /**
      * CNAME of the cert
      * 
     */
-    public Optional<String> getCname() {
+    public Optional<String> cname() {
         return Optional.ofNullable(this.cname);
     }
     /**
      * Key data
      * 
     */
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
      * Enable or disable ssl for scoring
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
 

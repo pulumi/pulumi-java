@@ -232,171 +232,171 @@ public final class GetManagedInstanceResult {
      * Administrator username for the managed instance. Can only be specified when the managed instance is being created (and is required for creation).
      * 
     */
-    public Optional<String> getAdministratorLogin() {
+    public Optional<String> administratorLogin() {
         return Optional.ofNullable(this.administratorLogin);
     }
     /**
      * The Azure Active Directory administrator of the server.
      * 
     */
-    public Optional<ManagedInstanceExternalAdministratorResponse> getAdministrators() {
+    public Optional<ManagedInstanceExternalAdministratorResponse> administrators() {
         return Optional.ofNullable(this.administrators);
     }
     /**
      * Collation of the managed instance.
      * 
     */
-    public Optional<String> getCollation() {
+    public Optional<String> collation() {
         return Optional.ofNullable(this.collation);
     }
     /**
      * The Dns Zone that the managed instance is in.
      * 
     */
-    public String getDnsZone() {
+    public String dnsZone() {
         return this.dnsZone;
     }
     /**
      * The fully qualified domain name of the managed instance.
      * 
     */
-    public String getFullyQualifiedDomainName() {
+    public String fullyQualifiedDomainName() {
         return this.fullyQualifiedDomainName;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The Azure Active Directory identity of the managed instance.
      * 
     */
-    public Optional<ResourceIdentityResponse> getIdentity() {
+    public Optional<ResourceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The Id of the instance pool this managed server belongs to.
      * 
     */
-    public Optional<String> getInstancePoolId() {
+    public Optional<String> instancePoolId() {
         return Optional.ofNullable(this.instancePoolId);
     }
     /**
      * A CMK URI of the key to use for encryption.
      * 
     */
-    public Optional<String> getKeyId() {
+    public Optional<String> keyId() {
         return Optional.ofNullable(this.keyId);
     }
     /**
      * The license type. Possible values are 'LicenseIncluded' (regular price inclusive of a new SQL license) and 'BasePrice' (discounted AHB price for bringing your own SQL licenses).
      * 
     */
-    public Optional<String> getLicenseType() {
+    public Optional<String> licenseType() {
         return Optional.ofNullable(this.licenseType);
     }
     /**
      * Resource location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Specifies maintenance configuration id to apply to this managed instance.
      * 
     */
-    public Optional<String> getMaintenanceConfigurationId() {
+    public Optional<String> maintenanceConfigurationId() {
         return Optional.ofNullable(this.maintenanceConfigurationId);
     }
     /**
      * Minimal TLS version. Allowed values: 'None', '1.0', '1.1', '1.2'
      * 
     */
-    public Optional<String> getMinimalTlsVersion() {
+    public Optional<String> minimalTlsVersion() {
         return Optional.ofNullable(this.minimalTlsVersion);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The resource id of a user assigned identity to be used by default.
      * 
     */
-    public Optional<String> getPrimaryUserAssignedIdentityId() {
+    public Optional<String> primaryUserAssignedIdentityId() {
         return Optional.ofNullable(this.primaryUserAssignedIdentityId);
     }
     /**
      * List of private endpoint connections on a managed instance.
      * 
     */
-    public List<ManagedInstancePecPropertyResponse> getPrivateEndpointConnections() {
+    public List<ManagedInstancePecPropertyResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Connection type used for connecting to the instance.
      * 
     */
-    public Optional<String> getProxyOverride() {
+    public Optional<String> proxyOverride() {
         return Optional.ofNullable(this.proxyOverride);
     }
     /**
      * Whether or not the public data endpoint is enabled.
      * 
     */
-    public Optional<Boolean> getPublicDataEndpointEnabled() {
+    public Optional<Boolean> publicDataEndpointEnabled() {
         return Optional.ofNullable(this.publicDataEndpointEnabled);
     }
     /**
      * Managed instance SKU. Allowed values for sku.name: GP_Gen4, GP_Gen5, BC_Gen4, BC_Gen5
      * 
     */
-    public Optional<SkuResponse> getSku() {
+    public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * The state of the managed instance.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The storage account type used to store backups for this instance. The options are LRS (LocallyRedundantStorage), ZRS (ZoneRedundantStorage) and GRS (GeoRedundantStorage)
      * 
     */
-    public Optional<String> getStorageAccountType() {
+    public Optional<String> storageAccountType() {
         return Optional.ofNullable(this.storageAccountType);
     }
     /**
      * Storage size in GB. Minimum value: 32. Maximum value: 8192. Increments of 32 GB allowed only.
      * 
     */
-    public Optional<Integer> getStorageSizeInGB() {
+    public Optional<Integer> storageSizeInGB() {
         return Optional.ofNullable(this.storageSizeInGB);
     }
     /**
      * Subnet resource ID for the managed instance.
      * 
     */
-    public Optional<String> getSubnetId() {
+    public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
@@ -408,28 +408,28 @@ public final class GetManagedInstanceResult {
      * An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standard Time".
      * 
     */
-    public Optional<String> getTimezoneId() {
+    public Optional<String> timezoneId() {
         return Optional.ofNullable(this.timezoneId);
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The number of vCores. Allowed values: 8, 16, 24, 32, 40, 64, 80.
      * 
     */
-    public Optional<Integer> getVCores() {
+    public Optional<Integer> vCores() {
         return Optional.ofNullable(this.vCores);
     }
     /**
      * Whether or not the multi-az is enabled.
      * 
     */
-    public Optional<Boolean> getZoneRedundant() {
+    public Optional<Boolean> zoneRedundant() {
         return Optional.ofNullable(this.zoneRedundant);
     }
 

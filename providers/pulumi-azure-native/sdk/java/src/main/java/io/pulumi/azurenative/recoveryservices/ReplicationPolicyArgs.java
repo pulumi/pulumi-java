@@ -23,7 +23,7 @@ public final class ReplicationPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="policyName")
       private final @Nullable Output<String> policyName;
 
-    public Output<String> getPolicyName() {
+    public Output<String> policyName() {
         return this.policyName == null ? Codegen.empty() : this.policyName;
     }
 
@@ -34,7 +34,7 @@ public final class ReplicationPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="properties")
       private final @Nullable Output<CreatePolicyInputPropertiesArgs> properties;
 
-    public Output<CreatePolicyInputPropertiesArgs> getProperties() {
+    public Output<CreatePolicyInputPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -45,7 +45,7 @@ public final class ReplicationPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,7 +56,7 @@ public final class ReplicationPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 

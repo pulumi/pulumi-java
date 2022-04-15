@@ -42,21 +42,21 @@ public final class HourlyScheduleResponse {
      * Indicates which minute snapshot should be taken
      * 
     */
-    public Optional<Integer> getMinute() {
+    public Optional<Integer> minute() {
         return Optional.ofNullable(this.minute);
     }
     /**
      * Hourly snapshot count to keep
      * 
     */
-    public Optional<Integer> getSnapshotsToKeep() {
+    public Optional<Integer> snapshotsToKeep() {
         return Optional.ofNullable(this.snapshotsToKeep);
     }
     /**
      * Resource size in bytes, current storage usage for the volume in bytes
      * 
     */
-    public Optional<Double> getUsedBytes() {
+    public Optional<Double> usedBytes() {
         return Optional.ofNullable(this.usedBytes);
     }
 

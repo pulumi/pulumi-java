@@ -51,7 +51,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The cluster data ingestion URI.
      * 
      */
-    public Output<String> getDataIngestionUri() {
+    public Output<String> dataIngestionUri() {
         return this.dataIngestionUri;
     }
     /**
@@ -65,7 +65,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return A boolean value that indicates if the cluster's disks are encrypted.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableDiskEncryption() {
+    public Output</* @Nullable */ Boolean> enableDiskEncryption() {
         return this.enableDiskEncryption;
     }
     /**
@@ -79,7 +79,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return A boolean value that indicates if double encryption is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableDoubleEncryption() {
+    public Output</* @Nullable */ Boolean> enableDoubleEncryption() {
         return this.enableDoubleEncryption;
     }
     /**
@@ -93,7 +93,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return A boolean value that indicates if the purge operations are enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnablePurge() {
+    public Output</* @Nullable */ Boolean> enablePurge() {
         return this.enablePurge;
     }
     /**
@@ -107,7 +107,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return A boolean value that indicates if the streaming ingest is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableStreamingIngest() {
+    public Output</* @Nullable */ Boolean> enableStreamingIngest() {
         return this.enableStreamingIngest;
     }
     /**
@@ -121,7 +121,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The engine type
      * 
      */
-    public Output</* @Nullable */ String> getEngineType() {
+    public Output</* @Nullable */ String> engineType() {
         return this.engineType;
     }
     /**
@@ -135,7 +135,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -149,7 +149,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The identity of the cluster, if configured.
      * 
      */
-    public Output</* @Nullable */ IdentityResponse> getIdentity() {
+    public Output</* @Nullable */ IdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -163,7 +163,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return KeyVault properties for the cluster encryption.
      * 
      */
-    public Output</* @Nullable */ KeyVaultPropertiesResponse> getKeyVaultProperties() {
+    public Output</* @Nullable */ KeyVaultPropertiesResponse> keyVaultProperties() {
         return this.keyVaultProperties;
     }
     /**
@@ -177,7 +177,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return List of the cluster's language extensions.
      * 
      */
-    public Output<LanguageExtensionsListResponse> getLanguageExtensions() {
+    public Output<LanguageExtensionsListResponse> languageExtensions() {
         return this.languageExtensions;
     }
     /**
@@ -191,7 +191,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -205,7 +205,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -219,7 +219,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Optimized auto scale definition.
      * 
      */
-    public Output</* @Nullable */ OptimizedAutoscaleResponse> getOptimizedAutoscale() {
+    public Output</* @Nullable */ OptimizedAutoscaleResponse> optimizedAutoscale() {
         return this.optimizedAutoscale;
     }
     /**
@@ -233,7 +233,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The provisioned state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -247,7 +247,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The SKU of the cluster.
      * 
      */
-    public Output<AzureSkuResponse> getSku() {
+    public Output<AzureSkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -261,7 +261,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The state of the resource.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -275,7 +275,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The reason for the cluster's current state.
      * 
      */
-    public Output<String> getStateReason() {
+    public Output<String> stateReason() {
         return this.stateReason;
     }
     /**
@@ -289,7 +289,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -303,7 +303,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The cluster's external tenants.
      * 
      */
-    public Output</* @Nullable */ List<TrustedExternalTenantResponse>> getTrustedExternalTenants() {
+    public Output</* @Nullable */ List<TrustedExternalTenantResponse>> trustedExternalTenants() {
         return this.trustedExternalTenants;
     }
     /**
@@ -317,7 +317,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -331,7 +331,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The cluster URI.
      * 
      */
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
     /**
@@ -345,7 +345,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Virtual network definition.
      * 
      */
-    public Output</* @Nullable */ VirtualNetworkConfigurationResponse> getVirtualNetworkConfiguration() {
+    public Output</* @Nullable */ VirtualNetworkConfigurationResponse> virtualNetworkConfiguration() {
         return this.virtualNetworkConfiguration;
     }
     /**
@@ -359,7 +359,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The availability zones of the cluster.
      * 
      */
-    public Output</* @Nullable */ List<String>> getZones() {
+    public Output</* @Nullable */ List<String>> zones() {
         return this.zones;
     }
 

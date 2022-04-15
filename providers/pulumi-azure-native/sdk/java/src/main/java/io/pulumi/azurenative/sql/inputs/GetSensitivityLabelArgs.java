@@ -19,7 +19,7 @@ public final class GetSensitivityLabelArgs extends io.pulumi.resources.InvokeArg
     @Import(name="columnName", required=true)
       private final String columnName;
 
-    public String getColumnName() {
+    public String columnName() {
         return this.columnName;
     }
 
@@ -30,7 +30,7 @@ public final class GetSensitivityLabelArgs extends io.pulumi.resources.InvokeArg
     @Import(name="databaseName", required=true)
       private final String databaseName;
 
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
 
@@ -41,7 +41,7 @@ public final class GetSensitivityLabelArgs extends io.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,7 +52,7 @@ public final class GetSensitivityLabelArgs extends io.pulumi.resources.InvokeArg
     @Import(name="schemaName", required=true)
       private final String schemaName;
 
-    public String getSchemaName() {
+    public String schemaName() {
         return this.schemaName;
     }
 
@@ -63,7 +63,7 @@ public final class GetSensitivityLabelArgs extends io.pulumi.resources.InvokeArg
     @Import(name="sensitivityLabelSource", required=true)
       private final String sensitivityLabelSource;
 
-    public String getSensitivityLabelSource() {
+    public String sensitivityLabelSource() {
         return this.sensitivityLabelSource;
     }
 
@@ -74,7 +74,7 @@ public final class GetSensitivityLabelArgs extends io.pulumi.resources.InvokeArg
     @Import(name="serverName", required=true)
       private final String serverName;
 
-    public String getServerName() {
+    public String serverName() {
         return this.serverName;
     }
 
@@ -85,7 +85,7 @@ public final class GetSensitivityLabelArgs extends io.pulumi.resources.InvokeArg
     @Import(name="tableName", required=true)
       private final String tableName;
 
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
 

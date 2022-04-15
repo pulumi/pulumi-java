@@ -28,7 +28,7 @@ public final class StepGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dependsOnStepGroups")
       private final @Nullable Output<List<String>> dependsOnStepGroups;
 
-    public Output<List<String>> getDependsOnStepGroups() {
+    public Output<List<String>> dependsOnStepGroups() {
         return this.dependsOnStepGroups == null ? Codegen.empty() : this.dependsOnStepGroups;
     }
 
@@ -39,7 +39,7 @@ public final class StepGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deploymentTargetId", required=true)
       private final Output<String> deploymentTargetId;
 
-    public Output<String> getDeploymentTargetId() {
+    public Output<String> deploymentTargetId() {
         return this.deploymentTargetId;
     }
 
@@ -50,7 +50,7 @@ public final class StepGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -61,7 +61,7 @@ public final class StepGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="postDeploymentSteps")
       private final @Nullable Output<List<PrePostStepArgs>> postDeploymentSteps;
 
-    public Output<List<PrePostStepArgs>> getPostDeploymentSteps() {
+    public Output<List<PrePostStepArgs>> postDeploymentSteps() {
         return this.postDeploymentSteps == null ? Codegen.empty() : this.postDeploymentSteps;
     }
 
@@ -72,7 +72,7 @@ public final class StepGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preDeploymentSteps")
       private final @Nullable Output<List<PrePostStepArgs>> preDeploymentSteps;
 
-    public Output<List<PrePostStepArgs>> getPreDeploymentSteps() {
+    public Output<List<PrePostStepArgs>> preDeploymentSteps() {
         return this.preDeploymentSteps == null ? Codegen.empty() : this.preDeploymentSteps;
     }
 

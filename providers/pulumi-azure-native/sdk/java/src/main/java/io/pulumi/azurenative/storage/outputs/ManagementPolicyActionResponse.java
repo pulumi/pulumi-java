@@ -43,21 +43,21 @@ public final class ManagementPolicyActionResponse {
      * The management policy action for base blob
      * 
     */
-    public Optional<ManagementPolicyBaseBlobResponse> getBaseBlob() {
+    public Optional<ManagementPolicyBaseBlobResponse> baseBlob() {
         return Optional.ofNullable(this.baseBlob);
     }
     /**
      * The management policy action for snapshot
      * 
     */
-    public Optional<ManagementPolicySnapShotResponse> getSnapshot() {
+    public Optional<ManagementPolicySnapShotResponse> snapshot() {
         return Optional.ofNullable(this.snapshot);
     }
     /**
      * The management policy action for version
      * 
     */
-    public Optional<ManagementPolicyVersionResponse> getVersion() {
+    public Optional<ManagementPolicyVersionResponse> version() {
         return Optional.ofNullable(this.version);
     }
 

@@ -124,98 +124,98 @@ public final class GetPolicyAssignmentResult {
      * This message will be part of response in case of policy violation.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The display name of the policy assignment.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.
      * 
     */
-    public Optional<String> getEnforcementMode() {
+    public Optional<String> enforcementMode() {
         return Optional.ofNullable(this.enforcementMode);
     }
     /**
      * The ID of the policy assignment.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The managed identity associated with the policy assignment.
      * 
     */
-    public Optional<IdentityResponse> getIdentity() {
+    public Optional<IdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The location of the policy assignment. Only required when utilizing managed identity.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The policy assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
      * 
     */
-    public Optional<Object> getMetadata() {
+    public Optional<Object> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * The name of the policy assignment.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The messages that describe why a resource is non-compliant with the policy.
      * 
     */
-    public List<NonComplianceMessageResponse> getNonComplianceMessages() {
+    public List<NonComplianceMessageResponse> nonComplianceMessages() {
         return this.nonComplianceMessages == null ? List.of() : this.nonComplianceMessages;
     }
     /**
      * The policy's excluded scopes.
      * 
     */
-    public List<String> getNotScopes() {
+    public List<String> notScopes() {
         return this.notScopes == null ? List.of() : this.notScopes;
     }
     /**
      * The parameter values for the assigned policy rule. The keys are the parameter names.
      * 
     */
-    public Map<String,ParameterValuesValueResponse> getParameters() {
+    public Map<String,ParameterValuesValueResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * The ID of the policy definition or policy set definition being assigned.
      * 
     */
-    public Optional<String> getPolicyDefinitionId() {
+    public Optional<String> policyDefinitionId() {
         return Optional.ofNullable(this.policyDefinitionId);
     }
     /**
      * The scope for the policy assignment.
      * 
     */
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
     /**
      * The type of the policy assignment.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

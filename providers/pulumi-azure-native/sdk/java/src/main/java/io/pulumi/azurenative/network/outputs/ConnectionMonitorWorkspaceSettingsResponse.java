@@ -26,7 +26,7 @@ public final class ConnectionMonitorWorkspaceSettingsResponse {
      * Log analytics workspace resource ID.
      * 
     */
-    public Optional<String> getWorkspaceResourceId() {
+    public Optional<String> workspaceResourceId() {
         return Optional.ofNullable(this.workspaceResourceId);
     }
 

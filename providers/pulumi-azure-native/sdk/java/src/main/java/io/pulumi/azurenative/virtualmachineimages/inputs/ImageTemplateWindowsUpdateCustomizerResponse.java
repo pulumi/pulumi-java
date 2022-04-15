@@ -27,7 +27,7 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse extends io.pulum
     @Import(name="filters")
       private final @Nullable List<String> filters;
 
-    public List<String> getFilters() {
+    public List<String> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -38,7 +38,7 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse extends io.pulum
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -49,7 +49,7 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse extends io.pulum
     @Import(name="searchCriteria")
       private final @Nullable String searchCriteria;
 
-    public Optional<String> getSearchCriteria() {
+    public Optional<String> searchCriteria() {
         return this.searchCriteria == null ? Optional.empty() : Optional.ofNullable(this.searchCriteria);
     }
 
@@ -61,7 +61,7 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse extends io.pulum
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -72,7 +72,7 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse extends io.pulum
     @Import(name="updateLimit")
       private final @Nullable Integer updateLimit;
 
-    public Optional<Integer> getUpdateLimit() {
+    public Optional<Integer> updateLimit() {
         return this.updateLimit == null ? Optional.empty() : Optional.ofNullable(this.updateLimit);
     }
 

@@ -44,7 +44,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * @return Connector billing model
      * 
      */
-    public Output</* @Nullable */ String> getBillingModel() {
+    public Output</* @Nullable */ String> billingModel() {
         return this.billingModel;
     }
     /**
@@ -58,7 +58,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * @return Collection information
      * 
      */
-    public Output<ConnectorCollectionInfoResponse> getCollectionInfo() {
+    public Output<ConnectorCollectionInfoResponse> collectionInfo() {
         return this.collectionInfo;
     }
     /**
@@ -72,7 +72,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * @return Connector definition creation datetime
      * 
      */
-    public Output<String> getCreatedOn() {
+    public Output<String> createdOn() {
         return this.createdOn;
     }
     /**
@@ -86,7 +86,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * @return Credentials authentication key (eg AWS ARN)
      * 
      */
-    public Output</* @Nullable */ String> getCredentialsKey() {
+    public Output</* @Nullable */ String> credentialsKey() {
         return this.credentialsKey;
     }
     /**
@@ -100,7 +100,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * @return Number of days remaining of trial
      * 
      */
-    public Output<Integer> getDaysTrialRemaining() {
+    public Output<Integer> daysTrialRemaining() {
         return this.daysTrialRemaining;
     }
     /**
@@ -114,7 +114,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * @return Default ManagementGroupId
      * 
      */
-    public Output</* @Nullable */ String> getDefaultManagementGroupId() {
+    public Output</* @Nullable */ String> defaultManagementGroupId() {
         return this.defaultManagementGroupId;
     }
     /**
@@ -128,7 +128,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * @return Connector DisplayName
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -142,7 +142,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * @return Associated ExternalBillingAccountId
      * 
      */
-    public Output<String> getExternalBillingAccountId() {
+    public Output<String> externalBillingAccountId() {
         return this.externalBillingAccountId;
     }
     /**
@@ -156,7 +156,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * @return Connector kind (eg aws)
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -170,7 +170,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * @return Connector last modified datetime
      * 
      */
-    public Output<String> getModifiedOn() {
+    public Output<String> modifiedOn() {
         return this.modifiedOn;
     }
     /**
@@ -184,7 +184,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * @return Connector name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -198,7 +198,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * @return The display name of the providerBillingAccountId as defined on the external provider
      * 
      */
-    public Output<String> getProviderBillingAccountDisplayName() {
+    public Output<String> providerBillingAccountDisplayName() {
         return this.providerBillingAccountDisplayName;
     }
     /**
@@ -212,7 +212,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * @return Connector providerBillingAccountId, determined from credentials (eg AWS Consolidated account number)
      * 
      */
-    public Output<String> getProviderBillingAccountId() {
+    public Output<String> providerBillingAccountId() {
         return this.providerBillingAccountId;
     }
     /**
@@ -226,7 +226,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * @return Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)
      * 
      */
-    public Output</* @Nullable */ String> getReportId() {
+    public Output</* @Nullable */ String> reportId() {
         return this.reportId;
     }
     /**
@@ -240,7 +240,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * @return Connector status
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -254,7 +254,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * @return Billing SubscriptionId
      * 
      */
-    public Output</* @Nullable */ String> getSubscriptionId() {
+    public Output</* @Nullable */ String> subscriptionId() {
         return this.subscriptionId;
     }
     /**
@@ -268,7 +268,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * @return Connector type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

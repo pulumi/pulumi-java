@@ -25,7 +25,7 @@ public final class WsfcDomainProfileResponse extends io.pulumi.resources.InvokeA
     @Import(name="clusterBootstrapAccount")
       private final @Nullable String clusterBootstrapAccount;
 
-    public Optional<String> getClusterBootstrapAccount() {
+    public Optional<String> clusterBootstrapAccount() {
         return this.clusterBootstrapAccount == null ? Optional.empty() : Optional.ofNullable(this.clusterBootstrapAccount);
     }
 
@@ -36,7 +36,7 @@ public final class WsfcDomainProfileResponse extends io.pulumi.resources.InvokeA
     @Import(name="clusterOperatorAccount")
       private final @Nullable String clusterOperatorAccount;
 
-    public Optional<String> getClusterOperatorAccount() {
+    public Optional<String> clusterOperatorAccount() {
         return this.clusterOperatorAccount == null ? Optional.empty() : Optional.ofNullable(this.clusterOperatorAccount);
     }
 
@@ -47,7 +47,7 @@ public final class WsfcDomainProfileResponse extends io.pulumi.resources.InvokeA
     @Import(name="domainFqdn")
       private final @Nullable String domainFqdn;
 
-    public Optional<String> getDomainFqdn() {
+    public Optional<String> domainFqdn() {
         return this.domainFqdn == null ? Optional.empty() : Optional.ofNullable(this.domainFqdn);
     }
 
@@ -58,7 +58,7 @@ public final class WsfcDomainProfileResponse extends io.pulumi.resources.InvokeA
     @Import(name="fileShareWitnessPath")
       private final @Nullable String fileShareWitnessPath;
 
-    public Optional<String> getFileShareWitnessPath() {
+    public Optional<String> fileShareWitnessPath() {
         return this.fileShareWitnessPath == null ? Optional.empty() : Optional.ofNullable(this.fileShareWitnessPath);
     }
 
@@ -69,7 +69,7 @@ public final class WsfcDomainProfileResponse extends io.pulumi.resources.InvokeA
     @Import(name="ouPath")
       private final @Nullable String ouPath;
 
-    public Optional<String> getOuPath() {
+    public Optional<String> ouPath() {
         return this.ouPath == null ? Optional.empty() : Optional.ofNullable(this.ouPath);
     }
 
@@ -80,7 +80,7 @@ public final class WsfcDomainProfileResponse extends io.pulumi.resources.InvokeA
     @Import(name="sqlServiceAccount")
       private final @Nullable String sqlServiceAccount;
 
-    public Optional<String> getSqlServiceAccount() {
+    public Optional<String> sqlServiceAccount() {
         return this.sqlServiceAccount == null ? Optional.empty() : Optional.ofNullable(this.sqlServiceAccount);
     }
 
@@ -91,7 +91,7 @@ public final class WsfcDomainProfileResponse extends io.pulumi.resources.InvokeA
     @Import(name="storageAccountUrl")
       private final @Nullable String storageAccountUrl;
 
-    public Optional<String> getStorageAccountUrl() {
+    public Optional<String> storageAccountUrl() {
         return this.storageAccountUrl == null ? Optional.empty() : Optional.ofNullable(this.storageAccountUrl);
     }
 

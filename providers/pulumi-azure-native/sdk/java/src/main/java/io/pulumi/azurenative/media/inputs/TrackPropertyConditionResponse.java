@@ -25,7 +25,7 @@ public final class TrackPropertyConditionResponse extends io.pulumi.resources.In
     @Import(name="operation", required=true)
       private final String operation;
 
-    public String getOperation() {
+    public String operation() {
         return this.operation;
     }
 
@@ -36,7 +36,7 @@ public final class TrackPropertyConditionResponse extends io.pulumi.resources.In
     @Import(name="property", required=true)
       private final String property;
 
-    public String getProperty() {
+    public String property() {
         return this.property;
     }
 
@@ -47,7 +47,7 @@ public final class TrackPropertyConditionResponse extends io.pulumi.resources.In
     @Import(name="value")
       private final @Nullable String value;
 
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

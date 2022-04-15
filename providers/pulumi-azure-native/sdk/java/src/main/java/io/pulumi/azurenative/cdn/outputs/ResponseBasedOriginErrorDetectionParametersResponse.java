@@ -44,21 +44,21 @@ public final class ResponseBasedOriginErrorDetectionParametersResponse {
      * The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.
      * 
     */
-    public List<HttpErrorRangeParametersResponse> getHttpErrorRanges() {
+    public List<HttpErrorRangeParametersResponse> httpErrorRanges() {
         return this.httpErrorRanges == null ? List.of() : this.httpErrorRanges;
     }
     /**
      * Type of response errors for real user requests for which origin will be deemed unhealthy
      * 
     */
-    public Optional<String> getResponseBasedDetectedErrorTypes() {
+    public Optional<String> responseBasedDetectedErrorTypes() {
         return Optional.ofNullable(this.responseBasedDetectedErrorTypes);
     }
     /**
      * The percentage of failed requests in the sample where failover should trigger.
      * 
     */
-    public Optional<Integer> getResponseBasedFailoverThresholdPercentage() {
+    public Optional<Integer> responseBasedFailoverThresholdPercentage() {
         return Optional.ofNullable(this.responseBasedFailoverThresholdPercentage);
     }
 

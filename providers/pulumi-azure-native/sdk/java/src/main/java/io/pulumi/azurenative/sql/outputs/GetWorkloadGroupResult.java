@@ -85,63 +85,63 @@ public final class GetWorkloadGroupResult {
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The workload group importance level.
      * 
     */
-    public Optional<String> getImportance() {
+    public Optional<String> importance() {
         return Optional.ofNullable(this.importance);
     }
     /**
      * The workload group cap percentage resource.
      * 
     */
-    public Integer getMaxResourcePercent() {
+    public Integer maxResourcePercent() {
         return this.maxResourcePercent;
     }
     /**
      * The workload group request maximum grant percentage.
      * 
     */
-    public Optional<Double> getMaxResourcePercentPerRequest() {
+    public Optional<Double> maxResourcePercentPerRequest() {
         return Optional.ofNullable(this.maxResourcePercentPerRequest);
     }
     /**
      * The workload group minimum percentage resource.
      * 
     */
-    public Integer getMinResourcePercent() {
+    public Integer minResourcePercent() {
         return this.minResourcePercent;
     }
     /**
      * The workload group request minimum grant percentage.
      * 
     */
-    public Double getMinResourcePercentPerRequest() {
+    public Double minResourcePercentPerRequest() {
         return this.minResourcePercentPerRequest;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The workload group query execution timeout.
      * 
     */
-    public Optional<Integer> getQueryExecutionTimeout() {
+    public Optional<Integer> queryExecutionTimeout() {
         return Optional.ofNullable(this.queryExecutionTimeout);
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

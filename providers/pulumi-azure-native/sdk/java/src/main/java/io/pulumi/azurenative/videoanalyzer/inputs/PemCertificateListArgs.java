@@ -26,7 +26,7 @@ public final class PemCertificateListArgs extends io.pulumi.resources.ResourceAr
     @Import(name="certificates", required=true)
       private final Output<List<String>> certificates;
 
-    public Output<List<String>> getCertificates() {
+    public Output<List<String>> certificates() {
         return this.certificates;
     }
 
@@ -38,7 +38,7 @@ public final class PemCertificateListArgs extends io.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

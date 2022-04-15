@@ -26,7 +26,7 @@ public final class X509CertificateNameArgs extends io.pulumi.resources.ResourceA
     @Import(name="issuerCertificateThumbprint")
       private final @Nullable Output<String> issuerCertificateThumbprint;
 
-    public Output<String> getIssuerCertificateThumbprint() {
+    public Output<String> issuerCertificateThumbprint() {
         return this.issuerCertificateThumbprint == null ? Codegen.empty() : this.issuerCertificateThumbprint;
     }
 
@@ -37,7 +37,7 @@ public final class X509CertificateNameArgs extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

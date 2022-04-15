@@ -51,28 +51,28 @@ public final class DataCollectionRuleResponseDataSources {
      * The list of Azure VM extension data source configurations.
      * 
     */
-    public List<ExtensionDataSourceResponse> getExtensions() {
+    public List<ExtensionDataSourceResponse> extensions() {
         return this.extensions == null ? List.of() : this.extensions;
     }
     /**
      * The list of performance counter data source configurations.
      * 
     */
-    public List<PerfCounterDataSourceResponse> getPerformanceCounters() {
+    public List<PerfCounterDataSourceResponse> performanceCounters() {
         return this.performanceCounters == null ? List.of() : this.performanceCounters;
     }
     /**
      * The list of Syslog data source configurations.
      * 
     */
-    public List<SyslogDataSourceResponse> getSyslog() {
+    public List<SyslogDataSourceResponse> syslog() {
         return this.syslog == null ? List.of() : this.syslog;
     }
     /**
      * The list of Windows Event Log data source configurations.
      * 
     */
-    public List<WindowsEventLogDataSourceResponse> getWindowsEventLogs() {
+    public List<WindowsEventLogDataSourceResponse> windowsEventLogs() {
         return this.windowsEventLogs == null ? List.of() : this.windowsEventLogs;
     }
 

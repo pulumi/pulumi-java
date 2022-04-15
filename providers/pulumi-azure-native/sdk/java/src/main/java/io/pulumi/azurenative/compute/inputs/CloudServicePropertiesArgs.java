@@ -34,7 +34,7 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="allowModelOverride")
       private final @Nullable Output<Boolean> allowModelOverride;
 
-    public Output<Boolean> getAllowModelOverride() {
+    public Output<Boolean> allowModelOverride() {
         return this.allowModelOverride == null ? Codegen.empty() : this.allowModelOverride;
     }
 
@@ -45,7 +45,7 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="configuration")
       private final @Nullable Output<String> configuration;
 
-    public Output<String> getConfiguration() {
+    public Output<String> configuration() {
         return this.configuration == null ? Codegen.empty() : this.configuration;
     }
 
@@ -57,7 +57,7 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="configurationUrl")
       private final @Nullable Output<String> configurationUrl;
 
-    public Output<String> getConfigurationUrl() {
+    public Output<String> configurationUrl() {
         return this.configurationUrl == null ? Codegen.empty() : this.configurationUrl;
     }
 
@@ -68,7 +68,7 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="extensionProfile")
       private final @Nullable Output<CloudServiceExtensionProfileArgs> extensionProfile;
 
-    public Output<CloudServiceExtensionProfileArgs> getExtensionProfile() {
+    public Output<CloudServiceExtensionProfileArgs> extensionProfile() {
         return this.extensionProfile == null ? Codegen.empty() : this.extensionProfile;
     }
 
@@ -79,7 +79,7 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="networkProfile")
       private final @Nullable Output<CloudServiceNetworkProfileArgs> networkProfile;
 
-    public Output<CloudServiceNetworkProfileArgs> getNetworkProfile() {
+    public Output<CloudServiceNetworkProfileArgs> networkProfile() {
         return this.networkProfile == null ? Codegen.empty() : this.networkProfile;
     }
 
@@ -90,7 +90,7 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="osProfile")
       private final @Nullable Output<CloudServiceOsProfileArgs> osProfile;
 
-    public Output<CloudServiceOsProfileArgs> getOsProfile() {
+    public Output<CloudServiceOsProfileArgs> osProfile() {
         return this.osProfile == null ? Codegen.empty() : this.osProfile;
     }
 
@@ -102,7 +102,7 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="packageUrl")
       private final @Nullable Output<String> packageUrl;
 
-    public Output<String> getPackageUrl() {
+    public Output<String> packageUrl() {
         return this.packageUrl == null ? Codegen.empty() : this.packageUrl;
     }
 
@@ -113,7 +113,7 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="roleProfile")
       private final @Nullable Output<CloudServiceRoleProfileArgs> roleProfile;
 
-    public Output<CloudServiceRoleProfileArgs> getRoleProfile() {
+    public Output<CloudServiceRoleProfileArgs> roleProfile() {
         return this.roleProfile == null ? Codegen.empty() : this.roleProfile;
     }
 
@@ -125,7 +125,7 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="startCloudService")
       private final @Nullable Output<Boolean> startCloudService;
 
-    public Output<Boolean> getStartCloudService() {
+    public Output<Boolean> startCloudService() {
         return this.startCloudService == null ? Codegen.empty() : this.startCloudService;
     }
 
@@ -138,7 +138,7 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="upgradeMode")
       private final @Nullable Output<Either<String,CloudServiceUpgradeMode>> upgradeMode;
 
-    public Output<Either<String,CloudServiceUpgradeMode>> getUpgradeMode() {
+    public Output<Either<String,CloudServiceUpgradeMode>> upgradeMode() {
         return this.upgradeMode == null ? Codegen.empty() : this.upgradeMode;
     }
 

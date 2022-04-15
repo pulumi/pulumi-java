@@ -22,14 +22,14 @@ public final class ResourceGuardProxyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
     @Import(name="resourceGuardProxyName")
       private final @Nullable Output<String> resourceGuardProxyName;
 
-    public Output<String> getResourceGuardProxyName() {
+    public Output<String> resourceGuardProxyName() {
         return this.resourceGuardProxyName == null ? Codegen.empty() : this.resourceGuardProxyName;
     }
 
@@ -40,7 +40,7 @@ public final class ResourceGuardProxyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="vaultName", required=true)
       private final Output<String> vaultName;
 
-    public Output<String> getVaultName() {
+    public Output<String> vaultName() {
         return this.vaultName;
     }
 

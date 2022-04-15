@@ -19,7 +19,7 @@ public final class GetDeviceExtendedInformationArgs extends io.pulumi.resources.
     @Import(name="deviceName", required=true)
       private final String deviceName;
 
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDeviceExtendedInformationArgs extends io.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

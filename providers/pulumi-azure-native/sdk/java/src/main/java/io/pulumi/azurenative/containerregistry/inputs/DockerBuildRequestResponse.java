@@ -32,7 +32,7 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
     @Import(name="agentConfiguration")
       private final @Nullable AgentPropertiesResponse agentConfiguration;
 
-    public Optional<AgentPropertiesResponse> getAgentConfiguration() {
+    public Optional<AgentPropertiesResponse> agentConfiguration() {
         return this.agentConfiguration == null ? Optional.empty() : Optional.ofNullable(this.agentConfiguration);
     }
 
@@ -43,7 +43,7 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
     @Import(name="agentPoolName")
       private final @Nullable String agentPoolName;
 
-    public Optional<String> getAgentPoolName() {
+    public Optional<String> agentPoolName() {
         return this.agentPoolName == null ? Optional.empty() : Optional.ofNullable(this.agentPoolName);
     }
 
@@ -54,7 +54,7 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
     @Import(name="arguments")
       private final @Nullable List<ArgumentResponse> arguments;
 
-    public List<ArgumentResponse> getArguments() {
+    public List<ArgumentResponse> arguments() {
         return this.arguments == null ? List.of() : this.arguments;
     }
 
@@ -65,7 +65,7 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
     @Import(name="credentials")
       private final @Nullable CredentialsResponse credentials;
 
-    public Optional<CredentialsResponse> getCredentials() {
+    public Optional<CredentialsResponse> credentials() {
         return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
     }
 
@@ -76,7 +76,7 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
     @Import(name="dockerFilePath", required=true)
       private final String dockerFilePath;
 
-    public String getDockerFilePath() {
+    public String dockerFilePath() {
         return this.dockerFilePath;
     }
 
@@ -87,7 +87,7 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
     @Import(name="imageNames")
       private final @Nullable List<String> imageNames;
 
-    public List<String> getImageNames() {
+    public List<String> imageNames() {
         return this.imageNames == null ? List.of() : this.imageNames;
     }
 
@@ -98,7 +98,7 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
     @Import(name="isArchiveEnabled")
       private final @Nullable Boolean isArchiveEnabled;
 
-    public Optional<Boolean> getIsArchiveEnabled() {
+    public Optional<Boolean> isArchiveEnabled() {
         return this.isArchiveEnabled == null ? Optional.empty() : Optional.ofNullable(this.isArchiveEnabled);
     }
 
@@ -109,7 +109,7 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
     @Import(name="isPushEnabled")
       private final @Nullable Boolean isPushEnabled;
 
-    public Optional<Boolean> getIsPushEnabled() {
+    public Optional<Boolean> isPushEnabled() {
         return this.isPushEnabled == null ? Optional.empty() : Optional.ofNullable(this.isPushEnabled);
     }
 
@@ -120,7 +120,7 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
     @Import(name="logTemplate")
       private final @Nullable String logTemplate;
 
-    public Optional<String> getLogTemplate() {
+    public Optional<String> logTemplate() {
         return this.logTemplate == null ? Optional.empty() : Optional.ofNullable(this.logTemplate);
     }
 
@@ -131,7 +131,7 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
     @Import(name="noCache")
       private final @Nullable Boolean noCache;
 
-    public Optional<Boolean> getNoCache() {
+    public Optional<Boolean> noCache() {
         return this.noCache == null ? Optional.empty() : Optional.ofNullable(this.noCache);
     }
 
@@ -142,7 +142,7 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
     @Import(name="platform", required=true)
       private final PlatformPropertiesResponse platform;
 
-    public PlatformPropertiesResponse getPlatform() {
+    public PlatformPropertiesResponse platform() {
         return this.platform;
     }
 
@@ -154,7 +154,7 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
     @Import(name="sourceLocation")
       private final @Nullable String sourceLocation;
 
-    public Optional<String> getSourceLocation() {
+    public Optional<String> sourceLocation() {
         return this.sourceLocation == null ? Optional.empty() : Optional.ofNullable(this.sourceLocation);
     }
 
@@ -165,7 +165,7 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
     @Import(name="target")
       private final @Nullable String target;
 
-    public Optional<String> getTarget() {
+    public Optional<String> target() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
     }
 
@@ -176,7 +176,7 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
     @Import(name="timeout")
       private final @Nullable Integer timeout;
 
-    public Optional<Integer> getTimeout() {
+    public Optional<Integer> timeout() {
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
     }
 
@@ -188,7 +188,7 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

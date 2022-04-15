@@ -27,7 +27,7 @@ public final class HandlerMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="arguments")
       private final @Nullable Output<String> arguments;
 
-    public Output<String> getArguments() {
+    public Output<String> arguments() {
         return this.arguments == null ? Codegen.empty() : this.arguments;
     }
 
@@ -38,7 +38,7 @@ public final class HandlerMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="extension")
       private final @Nullable Output<String> extension;
 
-    public Output<String> getExtension() {
+    public Output<String> extension() {
         return this.extension == null ? Codegen.empty() : this.extension;
     }
 
@@ -49,7 +49,7 @@ public final class HandlerMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scriptProcessor")
       private final @Nullable Output<String> scriptProcessor;
 
-    public Output<String> getScriptProcessor() {
+    public Output<String> scriptProcessor() {
         return this.scriptProcessor == null ? Codegen.empty() : this.scriptProcessor;
     }
 

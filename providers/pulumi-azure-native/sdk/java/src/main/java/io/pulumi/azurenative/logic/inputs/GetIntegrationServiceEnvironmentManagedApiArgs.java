@@ -19,7 +19,7 @@ public final class GetIntegrationServiceEnvironmentManagedApiArgs extends io.pul
     @Import(name="apiName", required=true)
       private final String apiName;
 
-    public String getApiName() {
+    public String apiName() {
         return this.apiName;
     }
 
@@ -30,7 +30,7 @@ public final class GetIntegrationServiceEnvironmentManagedApiArgs extends io.pul
     @Import(name="integrationServiceEnvironmentName", required=true)
       private final String integrationServiceEnvironmentName;
 
-    public String getIntegrationServiceEnvironmentName() {
+    public String integrationServiceEnvironmentName() {
         return this.integrationServiceEnvironmentName;
     }
 
@@ -41,7 +41,7 @@ public final class GetIntegrationServiceEnvironmentManagedApiArgs extends io.pul
     @Import(name="resourceGroup", required=true)
       private final String resourceGroup;
 
-    public String getResourceGroup() {
+    public String resourceGroup() {
         return this.resourceGroup;
     }
 

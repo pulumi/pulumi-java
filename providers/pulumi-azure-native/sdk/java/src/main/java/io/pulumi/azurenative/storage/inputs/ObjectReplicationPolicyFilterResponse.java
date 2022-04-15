@@ -26,7 +26,7 @@ public final class ObjectReplicationPolicyFilterResponse extends io.pulumi.resou
     @Import(name="minCreationTime")
       private final @Nullable String minCreationTime;
 
-    public Optional<String> getMinCreationTime() {
+    public Optional<String> minCreationTime() {
         return this.minCreationTime == null ? Optional.empty() : Optional.ofNullable(this.minCreationTime);
     }
 
@@ -37,7 +37,7 @@ public final class ObjectReplicationPolicyFilterResponse extends io.pulumi.resou
     @Import(name="prefixMatch")
       private final @Nullable List<String> prefixMatch;
 
-    public List<String> getPrefixMatch() {
+    public List<String> prefixMatch() {
         return this.prefixMatch == null ? List.of() : this.prefixMatch;
     }
 

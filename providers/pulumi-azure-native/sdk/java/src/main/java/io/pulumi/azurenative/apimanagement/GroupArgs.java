@@ -23,7 +23,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -34,7 +34,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -45,7 +45,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="externalId")
       private final @Nullable Output<String> externalId;
 
-    public Output<String> getExternalId() {
+    public Output<String> externalId() {
         return this.externalId == null ? Codegen.empty() : this.externalId;
     }
 
@@ -56,7 +56,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="groupId")
       private final @Nullable Output<String> groupId;
 
-    public Output<String> getGroupId() {
+    public Output<String> groupId() {
         return this.groupId == null ? Codegen.empty() : this.groupId;
     }
 
@@ -67,7 +67,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,7 +78,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -89,7 +89,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<GroupType> type;
 
-    public Output<GroupType> getType() {
+    public Output<GroupType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

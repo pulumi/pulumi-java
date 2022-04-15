@@ -57,35 +57,35 @@ public final class CodeRepositoryResponse {
      * Authorization info to access the code repository.
      * 
     */
-    public Optional<AuthorizationResponse> getAuthorization() {
+    public Optional<AuthorizationResponse> authorization() {
         return Optional.ofNullable(this.authorization);
     }
     /**
      * Default branch used to configure Continuous Integration (CI) in the pipeline.
      * 
     */
-    public String getDefaultBranch() {
+    public String defaultBranch() {
         return this.defaultBranch;
     }
     /**
      * Unique immutable identifier of the code repository.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Repository-specific properties.
      * 
     */
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * Type of code repository.
      * 
     */
-    public String getRepositoryType() {
+    public String repositoryType() {
         return this.repositoryType;
     }
 

@@ -56,31 +56,31 @@ public final class AzureBackupRuleResponse {
      * BackupParameters base
      * 
     */
-    public Optional<AzureBackupParamsResponse> getBackupParameters() {
+    public Optional<AzureBackupParamsResponse> backupParameters() {
         return Optional.ofNullable(this.backupParameters);
     }
     /**
      * DataStoreInfo base
      * 
     */
-    public DataStoreInfoBaseResponse getDataStore() {
+    public DataStoreInfoBaseResponse dataStore() {
         return this.dataStore;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Expected value is 'AzureBackupRule'.
      * 
     */
-    public String getObjectType() {
+    public String objectType() {
         return this.objectType;
     }
     /**
      * Trigger context
      * 
     */
-    public Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> getTrigger() {
+    public Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> trigger() {
         return this.trigger;
     }
 

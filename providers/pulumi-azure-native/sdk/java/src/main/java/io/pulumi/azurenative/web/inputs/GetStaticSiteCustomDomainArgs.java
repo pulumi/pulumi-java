@@ -19,7 +19,7 @@ public final class GetStaticSiteCustomDomainArgs extends io.pulumi.resources.Inv
     @Import(name="domainName", required=true)
       private final String domainName;
 
-    public String getDomainName() {
+    public String domainName() {
         return this.domainName;
     }
 
@@ -30,7 +30,7 @@ public final class GetStaticSiteCustomDomainArgs extends io.pulumi.resources.Inv
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -41,7 +41,7 @@ public final class GetStaticSiteCustomDomainArgs extends io.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

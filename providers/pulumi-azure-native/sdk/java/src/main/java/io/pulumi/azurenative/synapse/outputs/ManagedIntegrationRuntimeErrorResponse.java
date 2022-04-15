@@ -47,28 +47,28 @@ public final class ManagedIntegrationRuntimeErrorResponse {
      * Error code.
      * 
     */
-    public String getCode() {
+    public String code() {
         return this.code;
     }
     /**
      * Error message.
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
     /**
      * Managed integration runtime error parameters.
      * 
     */
-    public List<String> getParameters() {
+    public List<String> parameters() {
         return this.parameters;
     }
     /**
      * The time when the error occurred.
      * 
     */
-    public String getTime() {
+    public String time() {
         return this.time;
     }
 

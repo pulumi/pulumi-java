@@ -26,7 +26,7 @@ public final class RedirectIncompatibleRowSettingsArgs extends io.pulumi.resourc
     @Import(name="linkedServiceName", required=true)
       private final Output<Object> linkedServiceName;
 
-    public Output<Object> getLinkedServiceName() {
+    public Output<Object> linkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -37,7 +37,7 @@ public final class RedirectIncompatibleRowSettingsArgs extends io.pulumi.resourc
     @Import(name="path")
       private final @Nullable Output<Object> path;
 
-    public Output<Object> getPath() {
+    public Output<Object> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 

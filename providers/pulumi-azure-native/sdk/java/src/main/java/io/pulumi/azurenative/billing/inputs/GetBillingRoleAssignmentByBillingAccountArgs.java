@@ -19,7 +19,7 @@ public final class GetBillingRoleAssignmentByBillingAccountArgs extends io.pulum
     @Import(name="billingAccountName", required=true)
       private final String billingAccountName;
 
-    public String getBillingAccountName() {
+    public String billingAccountName() {
         return this.billingAccountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetBillingRoleAssignmentByBillingAccountArgs extends io.pulum
     @Import(name="billingRoleAssignmentName", required=true)
       private final String billingRoleAssignmentName;
 
-    public String getBillingRoleAssignmentName() {
+    public String billingRoleAssignmentName() {
         return this.billingRoleAssignmentName;
     }
 

@@ -28,7 +28,7 @@ public final class MLAssistConfigurationResponse extends io.pulumi.resources.Inv
     @Import(name="inferencingComputeBinding", required=true)
       private final ComputeBindingResponse inferencingComputeBinding;
 
-    public ComputeBindingResponse getInferencingComputeBinding() {
+    public ComputeBindingResponse inferencingComputeBinding() {
         return this.inferencingComputeBinding;
     }
 
@@ -39,7 +39,7 @@ public final class MLAssistConfigurationResponse extends io.pulumi.resources.Inv
     @Import(name="mlAssistEnabled")
       private final @Nullable Boolean mlAssistEnabled;
 
-    public Optional<Boolean> getMlAssistEnabled() {
+    public Optional<Boolean> mlAssistEnabled() {
         return this.mlAssistEnabled == null ? Optional.empty() : Optional.ofNullable(this.mlAssistEnabled);
     }
 
@@ -50,7 +50,7 @@ public final class MLAssistConfigurationResponse extends io.pulumi.resources.Inv
     @Import(name="modelNamePrefix", required=true)
       private final String modelNamePrefix;
 
-    public String getModelNamePrefix() {
+    public String modelNamePrefix() {
         return this.modelNamePrefix;
     }
 
@@ -61,7 +61,7 @@ public final class MLAssistConfigurationResponse extends io.pulumi.resources.Inv
     @Import(name="prelabelAccuracyThreshold")
       private final @Nullable Double prelabelAccuracyThreshold;
 
-    public Optional<Double> getPrelabelAccuracyThreshold() {
+    public Optional<Double> prelabelAccuracyThreshold() {
         return this.prelabelAccuracyThreshold == null ? Optional.empty() : Optional.ofNullable(this.prelabelAccuracyThreshold);
     }
 
@@ -72,7 +72,7 @@ public final class MLAssistConfigurationResponse extends io.pulumi.resources.Inv
     @Import(name="trainingComputeBinding", required=true)
       private final ComputeBindingResponse trainingComputeBinding;
 
-    public ComputeBindingResponse getTrainingComputeBinding() {
+    public ComputeBindingResponse trainingComputeBinding() {
         return this.trainingComputeBinding;
     }
 

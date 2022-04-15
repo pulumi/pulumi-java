@@ -25,7 +25,7 @@ public final class SelfDependencyTumblingWindowTriggerReferenceResponse extends 
     @Import(name="offset", required=true)
       private final String offset;
 
-    public String getOffset() {
+    public String offset() {
         return this.offset;
     }
 
@@ -36,7 +36,7 @@ public final class SelfDependencyTumblingWindowTriggerReferenceResponse extends 
     @Import(name="size")
       private final @Nullable String size;
 
-    public Optional<String> getSize() {
+    public Optional<String> size() {
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
     }
 
@@ -48,7 +48,7 @@ public final class SelfDependencyTumblingWindowTriggerReferenceResponse extends 
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

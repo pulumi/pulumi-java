@@ -26,7 +26,7 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="additionalColumns")
       private final @Nullable Object additionalColumns;
 
-    public Optional<Object> getAdditionalColumns() {
+    public Optional<Object> additionalColumns() {
         return this.additionalColumns == null ? Optional.empty() : Optional.ofNullable(this.additionalColumns);
     }
 
@@ -37,7 +37,7 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="additionalHeaders")
       private final @Nullable Object additionalHeaders;
 
-    public Optional<Object> getAdditionalHeaders() {
+    public Optional<Object> additionalHeaders() {
         return this.additionalHeaders == null ? Optional.empty() : Optional.ofNullable(this.additionalHeaders);
     }
 
@@ -48,7 +48,7 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
-    public Optional<Object> getDisableMetricsCollection() {
+    public Optional<Object> disableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
@@ -59,7 +59,7 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="httpRequestTimeout")
       private final @Nullable Object httpRequestTimeout;
 
-    public Optional<Object> getHttpRequestTimeout() {
+    public Optional<Object> httpRequestTimeout() {
         return this.httpRequestTimeout == null ? Optional.empty() : Optional.ofNullable(this.httpRequestTimeout);
     }
 
@@ -70,7 +70,7 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
-    public Optional<Object> getMaxConcurrentConnections() {
+    public Optional<Object> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
@@ -81,7 +81,7 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="paginationRules")
       private final @Nullable Object paginationRules;
 
-    public Optional<Object> getPaginationRules() {
+    public Optional<Object> paginationRules() {
         return this.paginationRules == null ? Optional.empty() : Optional.ofNullable(this.paginationRules);
     }
 
@@ -92,7 +92,7 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="requestBody")
       private final @Nullable Object requestBody;
 
-    public Optional<Object> getRequestBody() {
+    public Optional<Object> requestBody() {
         return this.requestBody == null ? Optional.empty() : Optional.ofNullable(this.requestBody);
     }
 
@@ -103,7 +103,7 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="requestInterval")
       private final @Nullable Object requestInterval;
 
-    public Optional<Object> getRequestInterval() {
+    public Optional<Object> requestInterval() {
         return this.requestInterval == null ? Optional.empty() : Optional.ofNullable(this.requestInterval);
     }
 
@@ -114,7 +114,7 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="requestMethod")
       private final @Nullable Object requestMethod;
 
-    public Optional<Object> getRequestMethod() {
+    public Optional<Object> requestMethod() {
         return this.requestMethod == null ? Optional.empty() : Optional.ofNullable(this.requestMethod);
     }
 
@@ -125,7 +125,7 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sourceRetryCount")
       private final @Nullable Object sourceRetryCount;
 
-    public Optional<Object> getSourceRetryCount() {
+    public Optional<Object> sourceRetryCount() {
         return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
     }
 
@@ -136,7 +136,7 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sourceRetryWait")
       private final @Nullable Object sourceRetryWait;
 
-    public Optional<Object> getSourceRetryWait() {
+    public Optional<Object> sourceRetryWait() {
         return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
     }
 
@@ -148,7 +148,7 @@ public final class RestSourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

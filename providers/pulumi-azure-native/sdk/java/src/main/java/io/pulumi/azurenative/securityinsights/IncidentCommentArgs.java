@@ -22,7 +22,7 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="incidentCommentId")
       private final @Nullable Output<String> incidentCommentId;
 
-    public Output<String> getIncidentCommentId() {
+    public Output<String> incidentCommentId() {
         return this.incidentCommentId == null ? Codegen.empty() : this.incidentCommentId;
     }
 
@@ -33,7 +33,7 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="incidentId", required=true)
       private final Output<String> incidentId;
 
-    public Output<String> getIncidentId() {
+    public Output<String> incidentId() {
         return this.incidentId;
     }
 
@@ -44,7 +44,7 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="message", required=true)
       private final Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message;
     }
 
@@ -55,7 +55,7 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
 
-    public Output<String> getOperationalInsightsResourceProvider() {
+    public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
 
@@ -66,7 +66,7 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,7 +77,7 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

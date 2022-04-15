@@ -45,7 +45,7 @@ public class VendorSkus extends io.pulumi.resources.CustomResource {
      * @return The sku deployment mode.
      * 
      */
-    public Output</* @Nullable */ String> getDeploymentMode() {
+    public Output</* @Nullable */ String> deploymentMode() {
         return this.deploymentMode;
     }
     /**
@@ -59,7 +59,7 @@ public class VendorSkus extends io.pulumi.resources.CustomResource {
      * @return The parameters for the managed application to be supplied by the vendor.
      * 
      */
-    public Output</* @Nullable */ Object> getManagedApplicationParameters() {
+    public Output</* @Nullable */ Object> managedApplicationParameters() {
         return this.managedApplicationParameters;
     }
     /**
@@ -73,7 +73,7 @@ public class VendorSkus extends io.pulumi.resources.CustomResource {
      * @return The template for the managed application deployment.
      * 
      */
-    public Output</* @Nullable */ Object> getManagedApplicationTemplate() {
+    public Output</* @Nullable */ Object> managedApplicationTemplate() {
         return this.managedApplicationTemplate;
     }
     /**
@@ -87,7 +87,7 @@ public class VendorSkus extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +101,7 @@ public class VendorSkus extends io.pulumi.resources.CustomResource {
      * @return The template definition of the network function.
      * 
      */
-    public Output</* @Nullable */ NetworkFunctionTemplateResponse> getNetworkFunctionTemplate() {
+    public Output</* @Nullable */ NetworkFunctionTemplateResponse> networkFunctionTemplate() {
         return this.networkFunctionTemplate;
     }
     /**
@@ -115,7 +115,7 @@ public class VendorSkus extends io.pulumi.resources.CustomResource {
      * @return Indicates if the vendor sku is in preview mode.
      * 
      */
-    public Output</* @Nullable */ Boolean> getPreview() {
+    public Output</* @Nullable */ Boolean> preview() {
         return this.preview;
     }
     /**
@@ -129,7 +129,7 @@ public class VendorSkus extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the vendor sku sub resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -143,7 +143,7 @@ public class VendorSkus extends io.pulumi.resources.CustomResource {
      * @return The sku type.
      * 
      */
-    public Output</* @Nullable */ String> getSkuType() {
+    public Output</* @Nullable */ String> skuType() {
         return this.skuType;
     }
     /**
@@ -157,7 +157,7 @@ public class VendorSkus extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

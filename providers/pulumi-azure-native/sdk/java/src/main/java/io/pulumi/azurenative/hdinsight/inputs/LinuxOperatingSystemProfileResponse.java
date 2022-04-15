@@ -26,7 +26,7 @@ public final class LinuxOperatingSystemProfileResponse extends io.pulumi.resourc
     @Import(name="password")
       private final @Nullable String password;
 
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
@@ -37,7 +37,7 @@ public final class LinuxOperatingSystemProfileResponse extends io.pulumi.resourc
     @Import(name="sshProfile")
       private final @Nullable SshProfileResponse sshProfile;
 
-    public Optional<SshProfileResponse> getSshProfile() {
+    public Optional<SshProfileResponse> sshProfile() {
         return this.sshProfile == null ? Optional.empty() : Optional.ofNullable(this.sshProfile);
     }
 
@@ -48,7 +48,7 @@ public final class LinuxOperatingSystemProfileResponse extends io.pulumi.resourc
     @Import(name="username")
       private final @Nullable String username;
 
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
     }
 

@@ -26,7 +26,7 @@ public final class AttachNewDataDiskOptionsResponse extends io.pulumi.resources.
     @Import(name="diskName")
       private final @Nullable String diskName;
 
-    public Optional<String> getDiskName() {
+    public Optional<String> diskName() {
         return this.diskName == null ? Optional.empty() : Optional.ofNullable(this.diskName);
     }
 
@@ -37,7 +37,7 @@ public final class AttachNewDataDiskOptionsResponse extends io.pulumi.resources.
     @Import(name="diskSizeGiB")
       private final @Nullable Integer diskSizeGiB;
 
-    public Optional<Integer> getDiskSizeGiB() {
+    public Optional<Integer> diskSizeGiB() {
         return this.diskSizeGiB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGiB);
     }
 
@@ -48,7 +48,7 @@ public final class AttachNewDataDiskOptionsResponse extends io.pulumi.resources.
     @Import(name="diskType")
       private final @Nullable String diskType;
 
-    public Optional<String> getDiskType() {
+    public Optional<String> diskType() {
         return this.diskType == null ? Optional.empty() : Optional.ofNullable(this.diskType);
     }
 

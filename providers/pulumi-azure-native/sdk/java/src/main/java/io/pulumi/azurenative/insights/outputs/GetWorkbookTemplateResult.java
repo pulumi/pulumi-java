@@ -96,70 +96,70 @@ public final class GetWorkbookTemplateResult {
      * Information about the author of the workbook template.
      * 
     */
-    public Optional<String> getAuthor() {
+    public Optional<String> author() {
         return Optional.ofNullable(this.author);
     }
     /**
      * Workbook galleries supported by the template.
      * 
     */
-    public List<WorkbookTemplateGalleryResponse> getGalleries() {
+    public List<WorkbookTemplateGalleryResponse> galleries() {
         return this.galleries;
     }
     /**
      * Azure resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.
      * 
     */
-    public Map<String,List<WorkbookTemplateLocalizedGalleryResponse>> getLocalized() {
+    public Map<String,List<WorkbookTemplateLocalizedGalleryResponse>> localized() {
         return this.localized == null ? Map.of() : this.localized;
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Azure resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Priority of the template. Determines which template to open when a workbook gallery is opened in viewer mode.
      * 
     */
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Valid JSON object containing workbook template payload.
      * 
     */
-    public Object getTemplateData() {
+    public Object templateData() {
         return this.templateData;
     }
     /**
      * Azure resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

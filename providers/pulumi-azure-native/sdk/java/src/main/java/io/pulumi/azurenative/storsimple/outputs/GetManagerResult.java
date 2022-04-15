@@ -86,63 +86,63 @@ public final class GetManagerResult {
      * Represents the type of StorSimple Manager.
      * 
     */
-    public Optional<ManagerIntrinsicSettingsResponse> getCisIntrinsicSettings() {
+    public Optional<ManagerIntrinsicSettingsResponse> cisIntrinsicSettings() {
         return Optional.ofNullable(this.cisIntrinsicSettings);
     }
     /**
      * The etag of the manager.
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * The resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The geo location of the resource.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Specifies the state of the resource as it is getting provisioned. Value of "Succeeded" means the Manager was successfully created.
      * 
     */
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Specifies the Sku.
      * 
     */
-    public Optional<ManagerSkuResponse> getSku() {
+    public Optional<ManagerSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * The tags attached to the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

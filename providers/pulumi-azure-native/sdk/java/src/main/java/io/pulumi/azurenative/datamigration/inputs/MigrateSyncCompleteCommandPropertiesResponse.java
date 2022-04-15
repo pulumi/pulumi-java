@@ -30,7 +30,7 @@ public final class MigrateSyncCompleteCommandPropertiesResponse extends io.pulum
     @Import(name="commandType", required=true)
       private final String commandType;
 
-    public String getCommandType() {
+    public String commandType() {
         return this.commandType;
     }
 
@@ -41,7 +41,7 @@ public final class MigrateSyncCompleteCommandPropertiesResponse extends io.pulum
     @Import(name="errors", required=true)
       private final List<ODataErrorResponse> errors;
 
-    public List<ODataErrorResponse> getErrors() {
+    public List<ODataErrorResponse> errors() {
         return this.errors;
     }
 
@@ -52,7 +52,7 @@ public final class MigrateSyncCompleteCommandPropertiesResponse extends io.pulum
     @Import(name="input")
       private final @Nullable MigrateSyncCompleteCommandInputResponse input;
 
-    public Optional<MigrateSyncCompleteCommandInputResponse> getInput() {
+    public Optional<MigrateSyncCompleteCommandInputResponse> input() {
         return this.input == null ? Optional.empty() : Optional.ofNullable(this.input);
     }
 
@@ -63,7 +63,7 @@ public final class MigrateSyncCompleteCommandPropertiesResponse extends io.pulum
     @Import(name="output", required=true)
       private final MigrateSyncCompleteCommandOutputResponse output;
 
-    public MigrateSyncCompleteCommandOutputResponse getOutput() {
+    public MigrateSyncCompleteCommandOutputResponse output() {
         return this.output;
     }
 
@@ -74,7 +74,7 @@ public final class MigrateSyncCompleteCommandPropertiesResponse extends io.pulum
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

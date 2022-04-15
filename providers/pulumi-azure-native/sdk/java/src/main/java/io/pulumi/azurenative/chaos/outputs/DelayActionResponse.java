@@ -40,14 +40,14 @@ public final class DelayActionResponse {
      * ISO8601 formatted string that represents a duration.
      * 
     */
-    public String getDuration() {
+    public String duration() {
         return this.duration;
     }
     /**
      * String that represents a Capability URN.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -55,7 +55,7 @@ public final class DelayActionResponse {
      * Expected value is 'delay'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

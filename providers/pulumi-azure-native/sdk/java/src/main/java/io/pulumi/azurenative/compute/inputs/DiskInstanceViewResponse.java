@@ -28,7 +28,7 @@ public final class DiskInstanceViewResponse extends io.pulumi.resources.InvokeAr
     @Import(name="encryptionSettings")
       private final @Nullable List<DiskEncryptionSettingsResponse> encryptionSettings;
 
-    public List<DiskEncryptionSettingsResponse> getEncryptionSettings() {
+    public List<DiskEncryptionSettingsResponse> encryptionSettings() {
         return this.encryptionSettings == null ? List.of() : this.encryptionSettings;
     }
 
@@ -39,7 +39,7 @@ public final class DiskInstanceViewResponse extends io.pulumi.resources.InvokeAr
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -50,7 +50,7 @@ public final class DiskInstanceViewResponse extends io.pulumi.resources.InvokeAr
     @Import(name="statuses")
       private final @Nullable List<InstanceViewStatusResponse> statuses;
 
-    public List<InstanceViewStatusResponse> getStatuses() {
+    public List<InstanceViewStatusResponse> statuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
 

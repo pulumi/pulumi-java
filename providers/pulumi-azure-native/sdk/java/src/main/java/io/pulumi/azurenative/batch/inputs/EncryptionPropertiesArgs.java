@@ -27,7 +27,7 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="keySource")
       private final @Nullable Output<KeySource> keySource;
 
-    public Output<KeySource> getKeySource() {
+    public Output<KeySource> keySource() {
         return this.keySource == null ? Codegen.empty() : this.keySource;
     }
 
@@ -38,7 +38,7 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="keyVaultProperties")
       private final @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
-    public Output<KeyVaultPropertiesArgs> getKeyVaultProperties() {
+    public Output<KeyVaultPropertiesArgs> keyVaultProperties() {
         return this.keyVaultProperties == null ? Codegen.empty() : this.keyVaultProperties;
     }
 

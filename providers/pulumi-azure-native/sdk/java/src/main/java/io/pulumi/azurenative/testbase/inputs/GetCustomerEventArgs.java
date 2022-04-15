@@ -19,7 +19,7 @@ public final class GetCustomerEventArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="customerEventName", required=true)
       private final String customerEventName;
 
-    public String getCustomerEventName() {
+    public String customerEventName() {
         return this.customerEventName;
     }
 
@@ -30,7 +30,7 @@ public final class GetCustomerEventArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetCustomerEventArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="testBaseAccountName", required=true)
       private final String testBaseAccountName;
 
-    public String getTestBaseAccountName() {
+    public String testBaseAccountName() {
         return this.testBaseAccountName;
     }
 

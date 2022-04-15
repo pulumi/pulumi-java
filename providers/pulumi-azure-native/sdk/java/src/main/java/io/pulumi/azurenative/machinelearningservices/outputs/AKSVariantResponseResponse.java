@@ -96,70 +96,70 @@ public final class AKSVariantResponseResponse {
      * Expected value is 'Custom'.
      * 
     */
-    public String getComputeType() {
+    public String computeType() {
         return this.computeType;
     }
     /**
      * The deployment type for the service.
      * 
     */
-    public Optional<String> getDeploymentType() {
+    public Optional<String> deploymentType() {
         return Optional.ofNullable(this.deploymentType);
     }
     /**
      * The service description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The error details.
      * 
     */
-    public ServiceResponseBaseResponseError getError() {
+    public ServiceResponseBaseResponseError error() {
         return this.error;
     }
     /**
      * Is this the default variant.
      * 
     */
-    public Optional<Boolean> getIsDefault() {
+    public Optional<Boolean> isDefault() {
         return Optional.ofNullable(this.isDefault);
     }
     /**
      * The service tag dictionary. Tags are mutable.
      * 
     */
-    public Map<String,String> getKvTags() {
+    public Map<String,String> kvTags() {
         return this.kvTags == null ? Map.of() : this.kvTags;
     }
     /**
      * The service property dictionary. Properties are immutable.
      * 
     */
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * The current state of the service.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The amount of traffic variant receives.
      * 
     */
-    public Optional<Double> getTrafficPercentile() {
+    public Optional<Double> trafficPercentile() {
         return Optional.ofNullable(this.trafficPercentile);
     }
     /**
      * The type of the variant.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

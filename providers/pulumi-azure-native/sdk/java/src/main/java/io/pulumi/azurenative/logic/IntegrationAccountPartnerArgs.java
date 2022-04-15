@@ -27,7 +27,7 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
     @Import(name="content", required=true)
       private final Output<PartnerContentArgs> content;
 
-    public Output<PartnerContentArgs> getContent() {
+    public Output<PartnerContentArgs> content() {
         return this.content;
     }
 
@@ -38,7 +38,7 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
     @Import(name="integrationAccountName", required=true)
       private final Output<String> integrationAccountName;
 
-    public Output<String> getIntegrationAccountName() {
+    public Output<String> integrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -49,7 +49,7 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -60,7 +60,7 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
-    public Output<Object> getMetadata() {
+    public Output<Object> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -71,7 +71,7 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
     @Import(name="partnerName")
       private final @Nullable Output<String> partnerName;
 
-    public Output<String> getPartnerName() {
+    public Output<String> partnerName() {
         return this.partnerName == null ? Codegen.empty() : this.partnerName;
     }
 
@@ -82,7 +82,7 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
     @Import(name="partnerType", required=true)
       private final Output<Either<String,PartnerType>> partnerType;
 
-    public Output<Either<String,PartnerType>> getPartnerType() {
+    public Output<Either<String,PartnerType>> partnerType() {
         return this.partnerType;
     }
 
@@ -93,7 +93,7 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -104,7 +104,7 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

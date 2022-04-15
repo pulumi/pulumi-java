@@ -34,14 +34,14 @@ public final class SubscriptionKeyParameterNamesContractResponse {
      * Subscription key header name.
      * 
     */
-    public Optional<String> getHeader() {
+    public Optional<String> header() {
         return Optional.ofNullable(this.header);
     }
     /**
      * Subscription key query string parameter name.
      * 
     */
-    public Optional<String> getQuery() {
+    public Optional<String> query() {
         return Optional.ofNullable(this.query);
     }
 

@@ -35,14 +35,14 @@ public final class VariableSpecificationResponse {
      * Default value of variable.
      * 
     */
-    public Optional<Object> getDefaultValue() {
+    public Optional<Object> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
     /**
      * Variable type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

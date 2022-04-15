@@ -70,49 +70,49 @@ public final class ColumnResponse {
      * Column data type logical hint.
      * 
     */
-    public Optional<String> getDataTypeHint() {
+    public Optional<String> dataTypeHint() {
         return Optional.ofNullable(this.dataTypeHint);
     }
     /**
      * Column description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Column display name.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Is displayed by default.
      * 
     */
-    public Boolean getIsDefaultDisplay() {
+    public Boolean isDefaultDisplay() {
         return this.isDefaultDisplay;
     }
     /**
      * Is column hidden.
      * 
     */
-    public Boolean getIsHidden() {
+    public Boolean isHidden() {
         return this.isHidden;
     }
     /**
      * Column name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Column data type.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

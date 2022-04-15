@@ -28,7 +28,7 @@ public final class MetricSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="category")
       private final @Nullable Output<String> category;
 
-    public Output<String> getCategory() {
+    public Output<String> category() {
         return this.category == null ? Codegen.empty() : this.category;
     }
 
@@ -39,7 +39,7 @@ public final class MetricSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -50,7 +50,7 @@ public final class MetricSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retentionPolicy")
       private final @Nullable Output<RetentionPolicyArgs> retentionPolicy;
 
-    public Output<RetentionPolicyArgs> getRetentionPolicy() {
+    public Output<RetentionPolicyArgs> retentionPolicy() {
         return this.retentionPolicy == null ? Codegen.empty() : this.retentionPolicy;
     }
 
@@ -61,7 +61,7 @@ public final class MetricSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeGrain")
       private final @Nullable Output<String> timeGrain;
 
-    public Output<String> getTimeGrain() {
+    public Output<String> timeGrain() {
         return this.timeGrain == null ? Codegen.empty() : this.timeGrain;
     }
 

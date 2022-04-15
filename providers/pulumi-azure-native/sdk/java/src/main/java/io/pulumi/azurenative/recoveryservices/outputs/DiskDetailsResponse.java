@@ -49,28 +49,28 @@ public final class DiskDetailsResponse {
      * The hard disk max size in MB.
      * 
     */
-    public Optional<Double> getMaxSizeMB() {
+    public Optional<Double> maxSizeMB() {
         return Optional.ofNullable(this.maxSizeMB);
     }
     /**
      * The VHD Id.
      * 
     */
-    public Optional<String> getVhdId() {
+    public Optional<String> vhdId() {
         return Optional.ofNullable(this.vhdId);
     }
     /**
      * The VHD name.
      * 
     */
-    public Optional<String> getVhdName() {
+    public Optional<String> vhdName() {
         return Optional.ofNullable(this.vhdName);
     }
     /**
      * The type of the volume.
      * 
     */
-    public Optional<String> getVhdType() {
+    public Optional<String> vhdType() {
         return Optional.ofNullable(this.vhdType);
     }
 

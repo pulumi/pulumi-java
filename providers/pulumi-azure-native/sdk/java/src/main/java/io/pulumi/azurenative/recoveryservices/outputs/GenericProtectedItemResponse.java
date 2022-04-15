@@ -164,105 +164,105 @@ public final class GenericProtectedItemResponse {
      * Type of backup management for the backed up item.
      * 
     */
-    public Optional<String> getBackupManagementType() {
+    public Optional<String> backupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
     /**
      * Name of the backup set the backup item belongs to
      * 
     */
-    public Optional<String> getBackupSetName() {
+    public Optional<String> backupSetName() {
         return Optional.ofNullable(this.backupSetName);
     }
     /**
      * Unique name of container
      * 
     */
-    public Optional<String> getContainerName() {
+    public Optional<String> containerName() {
         return Optional.ofNullable(this.containerName);
     }
     /**
      * Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
      * 
     */
-    public Optional<String> getCreateMode() {
+    public Optional<String> createMode() {
         return Optional.ofNullable(this.createMode);
     }
     /**
      * Time for deferred deletion in UTC
      * 
     */
-    public Optional<String> getDeferredDeleteTimeInUTC() {
+    public Optional<String> deferredDeleteTimeInUTC() {
         return Optional.ofNullable(this.deferredDeleteTimeInUTC);
     }
     /**
      * Time remaining before the DS marked for deferred delete is permanently deleted
      * 
     */
-    public Optional<String> getDeferredDeleteTimeRemaining() {
+    public Optional<String> deferredDeleteTimeRemaining() {
         return Optional.ofNullable(this.deferredDeleteTimeRemaining);
     }
     /**
      * Name of this backup item's fabric.
      * 
     */
-    public Optional<String> getFabricName() {
+    public Optional<String> fabricName() {
         return Optional.ofNullable(this.fabricName);
     }
     /**
      * Friendly name of the container.
      * 
     */
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * Flag to identify whether the deferred deleted DS is to be purged soon
      * 
     */
-    public Optional<Boolean> getIsDeferredDeleteScheduleUpcoming() {
+    public Optional<Boolean> isDeferredDeleteScheduleUpcoming() {
         return Optional.ofNullable(this.isDeferredDeleteScheduleUpcoming);
     }
     /**
      * Flag to identify that deferred deleted DS is to be moved into Pause state
      * 
     */
-    public Optional<Boolean> getIsRehydrate() {
+    public Optional<Boolean> isRehydrate() {
         return Optional.ofNullable(this.isRehydrate);
     }
     /**
      * Flag to identify whether the DS is scheduled for deferred delete
      * 
     */
-    public Optional<Boolean> getIsScheduledForDeferredDelete() {
+    public Optional<Boolean> isScheduledForDeferredDelete() {
         return Optional.ofNullable(this.isScheduledForDeferredDelete);
     }
     /**
      * Timestamp when the last (latest) backup copy was created for this backup item.
      * 
     */
-    public Optional<String> getLastRecoveryPoint() {
+    public Optional<String> lastRecoveryPoint() {
         return Optional.ofNullable(this.lastRecoveryPoint);
     }
     /**
      * ID of the backup policy with which this item is backed up.
      * 
     */
-    public Optional<String> getPolicyId() {
+    public Optional<String> policyId() {
         return Optional.ofNullable(this.policyId);
     }
     /**
      * Indicates consistency of policy object and policy applied to this backup item.
      * 
     */
-    public Optional<String> getPolicyState() {
+    public Optional<String> policyState() {
         return Optional.ofNullable(this.policyState);
     }
     /**
      * Data Plane Service ID of the protected item.
      * 
     */
-    public Optional<Double> getProtectedItemId() {
+    public Optional<Double> protectedItemId() {
         return Optional.ofNullable(this.protectedItemId);
     }
     /**
@@ -270,35 +270,35 @@ public final class GenericProtectedItemResponse {
      * Expected value is 'GenericProtectedItem'.
      * 
     */
-    public String getProtectedItemType() {
+    public String protectedItemType() {
         return this.protectedItemType;
     }
     /**
      * Backup state of this backup item.
      * 
     */
-    public Optional<String> getProtectionState() {
+    public Optional<String> protectionState() {
         return Optional.ofNullable(this.protectionState);
     }
     /**
      * Loosely coupled (type, value) associations (example - parent of a protected item)
      * 
     */
-    public Map<String,String> getSourceAssociations() {
+    public Map<String,String> sourceAssociations() {
         return this.sourceAssociations == null ? Map.of() : this.sourceAssociations;
     }
     /**
      * ARM ID of the resource to be backed up.
      * 
     */
-    public Optional<String> getSourceResourceId() {
+    public Optional<String> sourceResourceId() {
         return Optional.ofNullable(this.sourceResourceId);
     }
     /**
      * Type of workload this item represents.
      * 
     */
-    public Optional<String> getWorkloadType() {
+    public Optional<String> workloadType() {
         return Optional.ofNullable(this.workloadType);
     }
 

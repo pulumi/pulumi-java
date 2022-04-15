@@ -23,14 +23,14 @@ public final class NotificationRegistrationArgs extends io.pulumi.resources.Reso
     @Import(name="notificationRegistrationName")
       private final @Nullable Output<String> notificationRegistrationName;
 
-    public Output<String> getNotificationRegistrationName() {
+    public Output<String> notificationRegistrationName() {
         return this.notificationRegistrationName == null ? Codegen.empty() : this.notificationRegistrationName;
     }
 
     @Import(name="properties")
       private final @Nullable Output<NotificationRegistrationPropertiesArgs> properties;
 
-    public Output<NotificationRegistrationPropertiesArgs> getProperties() {
+    public Output<NotificationRegistrationPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -41,7 +41,7 @@ public final class NotificationRegistrationArgs extends io.pulumi.resources.Reso
     @Import(name="providerNamespace", required=true)
       private final Output<String> providerNamespace;
 
-    public Output<String> getProviderNamespace() {
+    public Output<String> providerNamespace() {
         return this.providerNamespace;
     }
 

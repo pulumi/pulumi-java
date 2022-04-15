@@ -36,14 +36,14 @@ public final class AzureMachineLearningWebServiceInputsResponse {
      * A list of input columns for the Azure Machine Learning web service endpoint.
      * 
     */
-    public List<AzureMachineLearningWebServiceInputColumnResponse> getColumnNames() {
+    public List<AzureMachineLearningWebServiceInputColumnResponse> columnNames() {
         return this.columnNames == null ? List.of() : this.columnNames;
     }
     /**
      * The name of the input. This is the name provided while authoring the endpoint.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

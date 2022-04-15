@@ -28,7 +28,7 @@ public final class LabelCategoryResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="allowMultiSelect")
       private final @Nullable Boolean allowMultiSelect;
 
-    public Optional<Boolean> getAllowMultiSelect() {
+    public Optional<Boolean> allowMultiSelect() {
         return this.allowMultiSelect == null ? Optional.empty() : Optional.ofNullable(this.allowMultiSelect);
     }
 
@@ -39,7 +39,7 @@ public final class LabelCategoryResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="classes", required=true)
       private final Map<String,LabelClassResponse> classes;
 
-    public Map<String,LabelClassResponse> getClasses() {
+    public Map<String,LabelClassResponse> classes() {
         return this.classes;
     }
 
@@ -50,7 +50,7 @@ public final class LabelCategoryResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="displayName")
       private final @Nullable String displayName;
 
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 

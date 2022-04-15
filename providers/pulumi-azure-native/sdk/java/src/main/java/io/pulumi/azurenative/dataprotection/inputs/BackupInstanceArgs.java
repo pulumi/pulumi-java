@@ -29,7 +29,7 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataSourceInfo", required=true)
       private final Output<DatasourceArgs> dataSourceInfo;
 
-    public Output<DatasourceArgs> getDataSourceInfo() {
+    public Output<DatasourceArgs> dataSourceInfo() {
         return this.dataSourceInfo;
     }
 
@@ -40,7 +40,7 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataSourceSetInfo")
       private final @Nullable Output<DatasourceSetArgs> dataSourceSetInfo;
 
-    public Output<DatasourceSetArgs> getDataSourceSetInfo() {
+    public Output<DatasourceSetArgs> dataSourceSetInfo() {
         return this.dataSourceSetInfo == null ? Codegen.empty() : this.dataSourceSetInfo;
     }
 
@@ -51,14 +51,14 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
     @Import(name="objectType", required=true)
       private final Output<String> objectType;
 
-    public Output<String> getObjectType() {
+    public Output<String> objectType() {
         return this.objectType;
     }
 
@@ -69,7 +69,7 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policyInfo", required=true)
       private final Output<PolicyInfoArgs> policyInfo;
 
-    public Output<PolicyInfoArgs> getPolicyInfo() {
+    public Output<PolicyInfoArgs> policyInfo() {
         return this.policyInfo;
     }
 

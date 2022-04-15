@@ -50,21 +50,21 @@ public final class HttpServerLocationResponse {
      * Specify the file name of dataset. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getFileName() {
+    public Optional<Object> fileName() {
         return Optional.ofNullable(this.fileName);
     }
     /**
      * Specify the folder path of dataset. Type: string (or Expression with resultType string)
      * 
     */
-    public Optional<Object> getFolderPath() {
+    public Optional<Object> folderPath() {
         return Optional.ofNullable(this.folderPath);
     }
     /**
      * Specify the relativeUrl of http server. Type: string (or Expression with resultType string)
      * 
     */
-    public Optional<Object> getRelativeUrl() {
+    public Optional<Object> relativeUrl() {
         return Optional.ofNullable(this.relativeUrl);
     }
     /**
@@ -72,7 +72,7 @@ public final class HttpServerLocationResponse {
      * Expected value is 'HttpServerLocation'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

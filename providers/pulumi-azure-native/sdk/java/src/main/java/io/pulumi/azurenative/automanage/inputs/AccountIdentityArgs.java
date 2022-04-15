@@ -26,7 +26,7 @@ public final class AccountIdentityArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="type")
       private final @Nullable Output<ResourceIdentityType> type;
 
-    public Output<ResourceIdentityType> getType() {
+    public Output<ResourceIdentityType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

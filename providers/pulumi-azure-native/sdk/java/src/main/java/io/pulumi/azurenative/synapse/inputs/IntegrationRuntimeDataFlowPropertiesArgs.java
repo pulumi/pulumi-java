@@ -29,7 +29,7 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends io.pulumi.re
     @Import(name="computeType")
       private final @Nullable Output<Either<String,DataFlowComputeType>> computeType;
 
-    public Output<Either<String,DataFlowComputeType>> getComputeType() {
+    public Output<Either<String,DataFlowComputeType>> computeType() {
         return this.computeType == null ? Codegen.empty() : this.computeType;
     }
 
@@ -40,7 +40,7 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends io.pulumi.re
     @Import(name="coreCount")
       private final @Nullable Output<Integer> coreCount;
 
-    public Output<Integer> getCoreCount() {
+    public Output<Integer> coreCount() {
         return this.coreCount == null ? Codegen.empty() : this.coreCount;
     }
 
@@ -51,7 +51,7 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends io.pulumi.re
     @Import(name="timeToLive")
       private final @Nullable Output<Integer> timeToLive;
 
-    public Output<Integer> getTimeToLive() {
+    public Output<Integer> timeToLive() {
         return this.timeToLive == null ? Codegen.empty() : this.timeToLive;
     }
 

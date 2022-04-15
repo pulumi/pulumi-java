@@ -147,126 +147,126 @@ public final class GetConnectorMappingResult {
      * The connector mapping name
      * 
     */
-    public String getConnectorMappingName() {
+    public String connectorMappingName() {
         return this.connectorMappingName;
     }
     /**
      * The connector name.
      * 
     */
-    public String getConnectorName() {
+    public String connectorName() {
         return this.connectorName;
     }
     /**
      * Type of connector.
      * 
     */
-    public Optional<String> getConnectorType() {
+    public Optional<String> connectorType() {
         return Optional.ofNullable(this.connectorType);
     }
     /**
      * The created time.
      * 
     */
-    public String getCreated() {
+    public String created() {
         return this.created;
     }
     /**
      * The DataFormat ID.
      * 
     */
-    public String getDataFormatId() {
+    public String dataFormatId() {
         return this.dataFormatId;
     }
     /**
      * The description of the connector mapping.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Display name for the connector mapping.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Defines which entity type the file should map to.
      * 
     */
-    public String getEntityType() {
+    public String entityType() {
         return this.entityType;
     }
     /**
      * The mapping entity name.
      * 
     */
-    public String getEntityTypeName() {
+    public String entityTypeName() {
         return this.entityTypeName;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The last modified time.
      * 
     */
-    public String getLastModified() {
+    public String lastModified() {
         return this.lastModified;
     }
     /**
      * The properties of the mapping.
      * 
     */
-    public ConnectorMappingPropertiesResponse getMappingProperties() {
+    public ConnectorMappingPropertiesResponse mappingProperties() {
         return this.mappingProperties;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The next run time based on customer's settings.
      * 
     */
-    public String getNextRunTime() {
+    public String nextRunTime() {
         return this.nextRunTime;
     }
     /**
      * The RunId.
      * 
     */
-    public String getRunId() {
+    public String runId() {
         return this.runId;
     }
     /**
      * State of connector mapping.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The hub name.
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

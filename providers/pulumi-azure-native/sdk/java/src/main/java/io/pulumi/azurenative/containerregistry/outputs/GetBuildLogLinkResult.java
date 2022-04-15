@@ -26,7 +26,7 @@ public final class GetBuildLogLinkResult {
      * The link to logs for a azure container registry build.
      * 
     */
-    public Optional<String> getLogLink() {
+    public Optional<String> logLink() {
         return Optional.ofNullable(this.logLink);
     }
 

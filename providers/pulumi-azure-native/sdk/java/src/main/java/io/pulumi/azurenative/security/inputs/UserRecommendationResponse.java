@@ -25,7 +25,7 @@ public final class UserRecommendationResponse extends io.pulumi.resources.Invoke
     @Import(name="recommendationAction")
       private final @Nullable String recommendationAction;
 
-    public Optional<String> getRecommendationAction() {
+    public Optional<String> recommendationAction() {
         return this.recommendationAction == null ? Optional.empty() : Optional.ofNullable(this.recommendationAction);
     }
 
@@ -36,7 +36,7 @@ public final class UserRecommendationResponse extends io.pulumi.resources.Invoke
     @Import(name="username")
       private final @Nullable String username;
 
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
     }
 

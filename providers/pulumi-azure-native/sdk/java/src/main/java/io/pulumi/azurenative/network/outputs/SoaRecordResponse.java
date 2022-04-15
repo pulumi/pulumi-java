@@ -70,49 +70,49 @@ public final class SoaRecordResponse {
      * The email contact for this SOA record.
      * 
     */
-    public Optional<String> getEmail() {
+    public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
     /**
      * The expire time for this SOA record.
      * 
     */
-    public Optional<Double> getExpireTime() {
+    public Optional<Double> expireTime() {
         return Optional.ofNullable(this.expireTime);
     }
     /**
      * The domain name of the authoritative name server for this SOA record.
      * 
     */
-    public Optional<String> getHost() {
+    public Optional<String> host() {
         return Optional.ofNullable(this.host);
     }
     /**
      * The minimum value for this SOA record. By convention this is used to determine the negative caching duration.
      * 
     */
-    public Optional<Double> getMinimumTtl() {
+    public Optional<Double> minimumTtl() {
         return Optional.ofNullable(this.minimumTtl);
     }
     /**
      * The refresh value for this SOA record.
      * 
     */
-    public Optional<Double> getRefreshTime() {
+    public Optional<Double> refreshTime() {
         return Optional.ofNullable(this.refreshTime);
     }
     /**
      * The retry time for this SOA record.
      * 
     */
-    public Optional<Double> getRetryTime() {
+    public Optional<Double> retryTime() {
         return Optional.ofNullable(this.retryTime);
     }
     /**
      * The serial number for this SOA record.
      * 
     */
-    public Optional<Double> getSerialNumber() {
+    public Optional<Double> serialNumber() {
         return Optional.ofNullable(this.serialNumber);
     }
 

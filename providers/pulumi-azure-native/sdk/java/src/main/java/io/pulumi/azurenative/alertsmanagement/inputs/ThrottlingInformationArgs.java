@@ -26,7 +26,7 @@ public final class ThrottlingInformationArgs extends io.pulumi.resources.Resourc
     @Import(name="duration")
       private final @Nullable Output<String> duration;
 
-    public Output<String> getDuration() {
+    public Output<String> duration() {
         return this.duration == null ? Codegen.empty() : this.duration;
     }
 

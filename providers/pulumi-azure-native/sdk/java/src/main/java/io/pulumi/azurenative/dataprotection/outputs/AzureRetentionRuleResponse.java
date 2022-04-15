@@ -35,20 +35,20 @@ public final class AzureRetentionRuleResponse {
         this.objectType = objectType;
     }
 
-    public Optional<Boolean> getIsDefault() {
+    public Optional<Boolean> isDefault() {
         return Optional.ofNullable(this.isDefault);
     }
-    public List<SourceLifeCycleResponse> getLifecycles() {
+    public List<SourceLifeCycleResponse> lifecycles() {
         return this.lifecycles;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Expected value is 'AzureRetentionRule'.
      * 
     */
-    public String getObjectType() {
+    public String objectType() {
         return this.objectType;
     }
 

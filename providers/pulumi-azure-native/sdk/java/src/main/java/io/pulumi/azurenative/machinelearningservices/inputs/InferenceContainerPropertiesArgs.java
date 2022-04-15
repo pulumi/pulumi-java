@@ -22,7 +22,7 @@ public final class InferenceContainerPropertiesArgs extends io.pulumi.resources.
     @Import(name="livenessRoute")
       private final @Nullable Output<RouteArgs> livenessRoute;
 
-    public Output<RouteArgs> getLivenessRoute() {
+    public Output<RouteArgs> livenessRoute() {
         return this.livenessRoute == null ? Codegen.empty() : this.livenessRoute;
     }
 
@@ -33,7 +33,7 @@ public final class InferenceContainerPropertiesArgs extends io.pulumi.resources.
     @Import(name="readinessRoute")
       private final @Nullable Output<RouteArgs> readinessRoute;
 
-    public Output<RouteArgs> getReadinessRoute() {
+    public Output<RouteArgs> readinessRoute() {
         return this.readinessRoute == null ? Codegen.empty() : this.readinessRoute;
     }
 
@@ -44,7 +44,7 @@ public final class InferenceContainerPropertiesArgs extends io.pulumi.resources.
     @Import(name="scoringRoute")
       private final @Nullable Output<RouteArgs> scoringRoute;
 
-    public Output<RouteArgs> getScoringRoute() {
+    public Output<RouteArgs> scoringRoute() {
         return this.scoringRoute == null ? Codegen.empty() : this.scoringRoute;
     }
 

@@ -78,56 +78,56 @@ public final class GetPrivateEndpointConnectionProxyResult {
      * ETag from NRP.
      * 
     */
-    public String getETag() {
+    public String eTag() {
         return this.eTag;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning state of the private endpoint connection proxy resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Remote private endpoint details.
      * 
     */
-    public Optional<RemotePrivateEndpointResponse> getRemotePrivateEndpoint() {
+    public Optional<RemotePrivateEndpointResponse> remotePrivateEndpoint() {
         return Optional.ofNullable(this.remotePrivateEndpoint);
     }
     /**
      * Operation status.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

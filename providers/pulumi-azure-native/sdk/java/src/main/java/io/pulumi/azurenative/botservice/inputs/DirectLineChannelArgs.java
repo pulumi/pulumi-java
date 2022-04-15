@@ -28,7 +28,7 @@ public final class DirectLineChannelArgs extends io.pulumi.resources.ResourceArg
     @Import(name="channelName", required=true)
       private final Output<String> channelName;
 
-    public Output<String> getChannelName() {
+    public Output<String> channelName() {
         return this.channelName;
     }
 
@@ -39,7 +39,7 @@ public final class DirectLineChannelArgs extends io.pulumi.resources.ResourceArg
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -50,7 +50,7 @@ public final class DirectLineChannelArgs extends io.pulumi.resources.ResourceArg
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -61,7 +61,7 @@ public final class DirectLineChannelArgs extends io.pulumi.resources.ResourceArg
     @Import(name="properties")
       private final @Nullable Output<DirectLineChannelPropertiesArgs> properties;
 
-    public Output<DirectLineChannelPropertiesArgs> getProperties() {
+    public Output<DirectLineChannelPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 

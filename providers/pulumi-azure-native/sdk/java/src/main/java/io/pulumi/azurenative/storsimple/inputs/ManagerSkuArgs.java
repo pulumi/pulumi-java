@@ -25,7 +25,7 @@ public final class ManagerSkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<ManagerSkuType> name;
 
-    public Output<ManagerSkuType> getName() {
+    public Output<ManagerSkuType> name() {
         return this.name;
     }
 

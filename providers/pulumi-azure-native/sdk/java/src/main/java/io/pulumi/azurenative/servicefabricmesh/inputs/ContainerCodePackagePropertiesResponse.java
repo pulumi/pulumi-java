@@ -37,7 +37,7 @@ public final class ContainerCodePackagePropertiesResponse extends io.pulumi.reso
     @Import(name="commands")
       private final @Nullable List<String> commands;
 
-    public List<String> getCommands() {
+    public List<String> commands() {
         return this.commands == null ? List.of() : this.commands;
     }
 
@@ -48,7 +48,7 @@ public final class ContainerCodePackagePropertiesResponse extends io.pulumi.reso
     @Import(name="diagnostics")
       private final @Nullable DiagnosticsRefResponse diagnostics;
 
-    public Optional<DiagnosticsRefResponse> getDiagnostics() {
+    public Optional<DiagnosticsRefResponse> diagnostics() {
         return this.diagnostics == null ? Optional.empty() : Optional.ofNullable(this.diagnostics);
     }
 
@@ -59,7 +59,7 @@ public final class ContainerCodePackagePropertiesResponse extends io.pulumi.reso
     @Import(name="endpoints")
       private final @Nullable List<EndpointPropertiesResponse> endpoints;
 
-    public List<EndpointPropertiesResponse> getEndpoints() {
+    public List<EndpointPropertiesResponse> endpoints() {
         return this.endpoints == null ? List.of() : this.endpoints;
     }
 
@@ -70,7 +70,7 @@ public final class ContainerCodePackagePropertiesResponse extends io.pulumi.reso
     @Import(name="entrypoint")
       private final @Nullable String entrypoint;
 
-    public Optional<String> getEntrypoint() {
+    public Optional<String> entrypoint() {
         return this.entrypoint == null ? Optional.empty() : Optional.ofNullable(this.entrypoint);
     }
 
@@ -81,7 +81,7 @@ public final class ContainerCodePackagePropertiesResponse extends io.pulumi.reso
     @Import(name="environmentVariables")
       private final @Nullable List<EnvironmentVariableResponse> environmentVariables;
 
-    public List<EnvironmentVariableResponse> getEnvironmentVariables() {
+    public List<EnvironmentVariableResponse> environmentVariables() {
         return this.environmentVariables == null ? List.of() : this.environmentVariables;
     }
 
@@ -92,7 +92,7 @@ public final class ContainerCodePackagePropertiesResponse extends io.pulumi.reso
     @Import(name="image", required=true)
       private final String image;
 
-    public String getImage() {
+    public String image() {
         return this.image;
     }
 
@@ -103,7 +103,7 @@ public final class ContainerCodePackagePropertiesResponse extends io.pulumi.reso
     @Import(name="imageRegistryCredential")
       private final @Nullable ImageRegistryCredentialResponse imageRegistryCredential;
 
-    public Optional<ImageRegistryCredentialResponse> getImageRegistryCredential() {
+    public Optional<ImageRegistryCredentialResponse> imageRegistryCredential() {
         return this.imageRegistryCredential == null ? Optional.empty() : Optional.ofNullable(this.imageRegistryCredential);
     }
 
@@ -114,7 +114,7 @@ public final class ContainerCodePackagePropertiesResponse extends io.pulumi.reso
     @Import(name="instanceView", required=true)
       private final ContainerInstanceViewResponse instanceView;
 
-    public ContainerInstanceViewResponse getInstanceView() {
+    public ContainerInstanceViewResponse instanceView() {
         return this.instanceView;
     }
 
@@ -125,7 +125,7 @@ public final class ContainerCodePackagePropertiesResponse extends io.pulumi.reso
     @Import(name="labels")
       private final @Nullable List<ContainerLabelResponse> labels;
 
-    public List<ContainerLabelResponse> getLabels() {
+    public List<ContainerLabelResponse> labels() {
         return this.labels == null ? List.of() : this.labels;
     }
 
@@ -136,7 +136,7 @@ public final class ContainerCodePackagePropertiesResponse extends io.pulumi.reso
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -147,7 +147,7 @@ public final class ContainerCodePackagePropertiesResponse extends io.pulumi.reso
     @Import(name="reliableCollectionsRefs")
       private final @Nullable List<ReliableCollectionsRefResponse> reliableCollectionsRefs;
 
-    public List<ReliableCollectionsRefResponse> getReliableCollectionsRefs() {
+    public List<ReliableCollectionsRefResponse> reliableCollectionsRefs() {
         return this.reliableCollectionsRefs == null ? List.of() : this.reliableCollectionsRefs;
     }
 
@@ -158,7 +158,7 @@ public final class ContainerCodePackagePropertiesResponse extends io.pulumi.reso
     @Import(name="resources", required=true)
       private final ResourceRequirementsResponse resources;
 
-    public ResourceRequirementsResponse getResources() {
+    public ResourceRequirementsResponse resources() {
         return this.resources;
     }
 
@@ -169,7 +169,7 @@ public final class ContainerCodePackagePropertiesResponse extends io.pulumi.reso
     @Import(name="settings")
       private final @Nullable List<SettingResponse> settings;
 
-    public List<SettingResponse> getSettings() {
+    public List<SettingResponse> settings() {
         return this.settings == null ? List.of() : this.settings;
     }
 
@@ -180,7 +180,7 @@ public final class ContainerCodePackagePropertiesResponse extends io.pulumi.reso
     @Import(name="volumeRefs")
       private final @Nullable List<VolumeReferenceResponse> volumeRefs;
 
-    public List<VolumeReferenceResponse> getVolumeRefs() {
+    public List<VolumeReferenceResponse> volumeRefs() {
         return this.volumeRefs == null ? List.of() : this.volumeRefs;
     }
 
@@ -191,7 +191,7 @@ public final class ContainerCodePackagePropertiesResponse extends io.pulumi.reso
     @Import(name="volumes")
       private final @Nullable List<ApplicationScopedVolumeResponse> volumes;
 
-    public List<ApplicationScopedVolumeResponse> getVolumes() {
+    public List<ApplicationScopedVolumeResponse> volumes() {
         return this.volumes == null ? List.of() : this.volumes;
     }
 

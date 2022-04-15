@@ -35,14 +35,14 @@ public final class LabelClassResponse {
      * Display name of the label class.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Dictionary of subclasses of the label class.
      * 
     */
-    public Map<String,LabelClassResponse> getSubclasses() {
+    public Map<String,LabelClassResponse> subclasses() {
         return this.subclasses == null ? Map.of() : this.subclasses;
     }
 

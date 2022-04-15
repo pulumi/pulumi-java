@@ -28,7 +28,7 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="failoverPriority")
       private final @Nullable Output<Integer> failoverPriority;
 
-    public Output<Integer> getFailoverPriority() {
+    public Output<Integer> failoverPriority() {
         return this.failoverPriority == null ? Codegen.empty() : this.failoverPriority;
     }
 
@@ -39,7 +39,7 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isZoneRedundant")
       private final @Nullable Output<Boolean> isZoneRedundant;
 
-    public Output<Boolean> getIsZoneRedundant() {
+    public Output<Boolean> isZoneRedundant() {
         return this.isZoneRedundant == null ? Codegen.empty() : this.isZoneRedundant;
     }
 
@@ -50,7 +50,7 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locationName")
       private final @Nullable Output<String> locationName;
 
-    public Output<String> getLocationName() {
+    public Output<String> locationName() {
         return this.locationName == null ? Codegen.empty() : this.locationName;
     }
 

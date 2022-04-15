@@ -18,14 +18,14 @@ public final class LoggingRuleResponseHiddenPropertyPaths extends io.pulumi.reso
     @Import(name="hiddenPathsOnRequest")
       private final @Nullable List<String> hiddenPathsOnRequest;
 
-    public List<String> getHiddenPathsOnRequest() {
+    public List<String> hiddenPathsOnRequest() {
         return this.hiddenPathsOnRequest == null ? List.of() : this.hiddenPathsOnRequest;
     }
 
     @Import(name="hiddenPathsOnResponse")
       private final @Nullable List<String> hiddenPathsOnResponse;
 
-    public List<String> getHiddenPathsOnResponse() {
+    public List<String> hiddenPathsOnResponse() {
         return this.hiddenPathsOnResponse == null ? List.of() : this.hiddenPathsOnResponse;
     }
 

@@ -25,7 +25,7 @@ public final class RecurrentScheduleResponse extends io.pulumi.resources.InvokeA
     @Import(name="days", required=true)
       private final List<String> days;
 
-    public List<String> getDays() {
+    public List<String> days() {
         return this.days;
     }
 
@@ -36,7 +36,7 @@ public final class RecurrentScheduleResponse extends io.pulumi.resources.InvokeA
     @Import(name="hours", required=true)
       private final List<Integer> hours;
 
-    public List<Integer> getHours() {
+    public List<Integer> hours() {
         return this.hours;
     }
 
@@ -47,7 +47,7 @@ public final class RecurrentScheduleResponse extends io.pulumi.resources.InvokeA
     @Import(name="minutes", required=true)
       private final List<Integer> minutes;
 
-    public List<Integer> getMinutes() {
+    public List<Integer> minutes() {
         return this.minutes;
     }
 
@@ -58,7 +58,7 @@ public final class RecurrentScheduleResponse extends io.pulumi.resources.InvokeA
     @Import(name="timeZone", required=true)
       private final String timeZone;
 
-    public String getTimeZone() {
+    public String timeZone() {
         return this.timeZone;
     }
 

@@ -27,7 +27,7 @@ public final class AzureContainerInfoArgs extends io.pulumi.resources.ResourceAr
     @Import(name="containerName", required=true)
       private final Output<String> containerName;
 
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName;
     }
 
@@ -38,7 +38,7 @@ public final class AzureContainerInfoArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dataFormat", required=true)
       private final Output<Either<String,AzureContainerDataFormat>> dataFormat;
 
-    public Output<Either<String,AzureContainerDataFormat>> getDataFormat() {
+    public Output<Either<String,AzureContainerDataFormat>> dataFormat() {
         return this.dataFormat;
     }
 
@@ -49,7 +49,7 @@ public final class AzureContainerInfoArgs extends io.pulumi.resources.ResourceAr
     @Import(name="storageAccountCredentialId", required=true)
       private final Output<String> storageAccountCredentialId;
 
-    public Output<String> getStorageAccountCredentialId() {
+    public Output<String> storageAccountCredentialId() {
         return this.storageAccountCredentialId;
     }
 

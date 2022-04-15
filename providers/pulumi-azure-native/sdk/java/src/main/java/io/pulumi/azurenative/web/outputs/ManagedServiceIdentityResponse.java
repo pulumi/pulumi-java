@@ -50,28 +50,28 @@ public final class ManagedServiceIdentityResponse {
      * Principal Id of managed service identity.
      * 
     */
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
     /**
      * Tenant of managed service identity.
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
     /**
      * Type of managed service identity.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
      * The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}
      * 
     */
-    public Map<String,ManagedServiceIdentityResponseUserAssignedIdentities> getUserAssignedIdentities() {
+    public Map<String,ManagedServiceIdentityResponseUserAssignedIdentities> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }
 

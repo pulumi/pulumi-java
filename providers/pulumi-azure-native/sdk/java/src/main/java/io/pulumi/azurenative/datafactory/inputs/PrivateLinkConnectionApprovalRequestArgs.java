@@ -26,7 +26,7 @@ public final class PrivateLinkConnectionApprovalRequestArgs extends io.pulumi.re
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<PrivateLinkConnectionStateArgs> privateLinkServiceConnectionState;
 
-    public Output<PrivateLinkConnectionStateArgs> getPrivateLinkServiceConnectionState() {
+    public Output<PrivateLinkConnectionStateArgs> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Codegen.empty() : this.privateLinkServiceConnectionState;
     }
 

@@ -33,7 +33,7 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
     @Import(name="dnsServiceIP")
       private final @Nullable Output<String> dnsServiceIP;
 
-    public Output<String> getDnsServiceIP() {
+    public Output<String> dnsServiceIP() {
         return this.dnsServiceIP == null ? Codegen.empty() : this.dnsServiceIP;
     }
 
@@ -44,7 +44,7 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
     @Import(name="dockerBridgeCidr")
       private final @Nullable Output<String> dockerBridgeCidr;
 
-    public Output<String> getDockerBridgeCidr() {
+    public Output<String> dockerBridgeCidr() {
         return this.dockerBridgeCidr == null ? Codegen.empty() : this.dockerBridgeCidr;
     }
 
@@ -55,7 +55,7 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
     @Import(name="loadBalancerProfile")
       private final @Nullable Output<ManagedClusterLoadBalancerProfileArgs> loadBalancerProfile;
 
-    public Output<ManagedClusterLoadBalancerProfileArgs> getLoadBalancerProfile() {
+    public Output<ManagedClusterLoadBalancerProfileArgs> loadBalancerProfile() {
         return this.loadBalancerProfile == null ? Codegen.empty() : this.loadBalancerProfile;
     }
 
@@ -66,7 +66,7 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
     @Import(name="loadBalancerSku")
       private final @Nullable Output<Either<String,LoadBalancerSku>> loadBalancerSku;
 
-    public Output<Either<String,LoadBalancerSku>> getLoadBalancerSku() {
+    public Output<Either<String,LoadBalancerSku>> loadBalancerSku() {
         return this.loadBalancerSku == null ? Codegen.empty() : this.loadBalancerSku;
     }
 
@@ -77,7 +77,7 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
     @Import(name="networkMode")
       private final @Nullable Output<Either<String,NetworkMode>> networkMode;
 
-    public Output<Either<String,NetworkMode>> getNetworkMode() {
+    public Output<Either<String,NetworkMode>> networkMode() {
         return this.networkMode == null ? Codegen.empty() : this.networkMode;
     }
 
@@ -88,7 +88,7 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
     @Import(name="networkPlugin")
       private final @Nullable Output<Either<String,NetworkPlugin>> networkPlugin;
 
-    public Output<Either<String,NetworkPlugin>> getNetworkPlugin() {
+    public Output<Either<String,NetworkPlugin>> networkPlugin() {
         return this.networkPlugin == null ? Codegen.empty() : this.networkPlugin;
     }
 
@@ -99,7 +99,7 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
     @Import(name="networkPolicy")
       private final @Nullable Output<Either<String,NetworkPolicy>> networkPolicy;
 
-    public Output<Either<String,NetworkPolicy>> getNetworkPolicy() {
+    public Output<Either<String,NetworkPolicy>> networkPolicy() {
         return this.networkPolicy == null ? Codegen.empty() : this.networkPolicy;
     }
 
@@ -110,7 +110,7 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
     @Import(name="outboundType")
       private final @Nullable Output<Either<String,OutboundType>> outboundType;
 
-    public Output<Either<String,OutboundType>> getOutboundType() {
+    public Output<Either<String,OutboundType>> outboundType() {
         return this.outboundType == null ? Codegen.empty() : this.outboundType;
     }
 
@@ -121,7 +121,7 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
     @Import(name="podCidr")
       private final @Nullable Output<String> podCidr;
 
-    public Output<String> getPodCidr() {
+    public Output<String> podCidr() {
         return this.podCidr == null ? Codegen.empty() : this.podCidr;
     }
 
@@ -132,7 +132,7 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
     @Import(name="serviceCidr")
       private final @Nullable Output<String> serviceCidr;
 
-    public Output<String> getServiceCidr() {
+    public Output<String> serviceCidr() {
         return this.serviceCidr == null ? Codegen.empty() : this.serviceCidr;
     }
 

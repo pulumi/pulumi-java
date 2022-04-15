@@ -21,7 +21,7 @@ public final class GetMachineGroupArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="endTime")
       private final @Nullable String endTime;
 
-    public Optional<String> getEndTime() {
+    public Optional<String> endTime() {
         return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
     }
 
@@ -32,7 +32,7 @@ public final class GetMachineGroupArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="machineGroupName", required=true)
       private final String machineGroupName;
 
-    public String getMachineGroupName() {
+    public String machineGroupName() {
         return this.machineGroupName;
     }
 
@@ -43,7 +43,7 @@ public final class GetMachineGroupArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,7 +54,7 @@ public final class GetMachineGroupArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="startTime")
       private final @Nullable String startTime;
 
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 
@@ -65,7 +65,7 @@ public final class GetMachineGroupArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
-    public String getWorkspaceName() {
+    public String workspaceName() {
         return this.workspaceName;
     }
 

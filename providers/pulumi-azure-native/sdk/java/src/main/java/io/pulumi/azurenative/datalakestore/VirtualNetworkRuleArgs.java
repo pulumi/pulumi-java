@@ -22,7 +22,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -33,7 +33,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -44,7 +44,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 
@@ -55,7 +55,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="virtualNetworkRuleName")
       private final @Nullable Output<String> virtualNetworkRuleName;
 
-    public Output<String> getVirtualNetworkRuleName() {
+    public Output<String> virtualNetworkRuleName() {
         return this.virtualNetworkRuleName == null ? Codegen.empty() : this.virtualNetworkRuleName;
     }
 

@@ -48,28 +48,28 @@ public final class GetSupportPlanTypeResult {
      * The id of the ARM resource, e.g. "/subscriptions/{id}/providers/Microsoft.Addons/supportProvider/{supportProviderName}/supportPlanTypes/{planTypeName}".
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the Canonical support plan, i.e. "essential", "standard" or "advanced".
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning state of the resource.
      * 
     */
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Microsoft.Addons/supportProvider
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

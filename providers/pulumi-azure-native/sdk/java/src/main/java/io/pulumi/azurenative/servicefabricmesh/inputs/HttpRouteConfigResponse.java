@@ -25,7 +25,7 @@ public final class HttpRouteConfigResponse extends io.pulumi.resources.InvokeArg
     @Import(name="destination", required=true)
       private final GatewayDestinationResponse destination;
 
-    public GatewayDestinationResponse getDestination() {
+    public GatewayDestinationResponse destination() {
         return this.destination;
     }
 
@@ -36,7 +36,7 @@ public final class HttpRouteConfigResponse extends io.pulumi.resources.InvokeArg
     @Import(name="match", required=true)
       private final HttpRouteMatchRuleResponse match;
 
-    public HttpRouteMatchRuleResponse getMatch() {
+    public HttpRouteMatchRuleResponse match() {
         return this.match;
     }
 
@@ -47,7 +47,7 @@ public final class HttpRouteConfigResponse extends io.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

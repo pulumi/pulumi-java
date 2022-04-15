@@ -18,7 +18,7 @@ public final class ProviderHubMetadataProviderAuthenticationArgs extends io.pulu
     @Import(name="allowedAudiences", required=true)
       private final Output<List<String>> allowedAudiences;
 
-    public Output<List<String>> getAllowedAudiences() {
+    public Output<List<String>> allowedAudiences() {
         return this.allowedAudiences;
     }
 

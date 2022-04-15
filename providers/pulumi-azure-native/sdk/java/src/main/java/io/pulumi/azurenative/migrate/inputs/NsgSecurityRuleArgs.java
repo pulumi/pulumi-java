@@ -28,7 +28,7 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="access")
       private final @Nullable Output<String> access;
 
-    public Output<String> getAccess() {
+    public Output<String> access() {
         return this.access == null ? Codegen.empty() : this.access;
     }
 
@@ -39,7 +39,7 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -52,7 +52,7 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="destinationAddressPrefix")
       private final @Nullable Output<String> destinationAddressPrefix;
 
-    public Output<String> getDestinationAddressPrefix() {
+    public Output<String> destinationAddressPrefix() {
         return this.destinationAddressPrefix == null ? Codegen.empty() : this.destinationAddressPrefix;
     }
 
@@ -64,7 +64,7 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="destinationPortRange")
       private final @Nullable Output<String> destinationPortRange;
 
-    public Output<String> getDestinationPortRange() {
+    public Output<String> destinationPortRange() {
         return this.destinationPortRange == null ? Codegen.empty() : this.destinationPortRange;
     }
 
@@ -76,7 +76,7 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="direction")
       private final @Nullable Output<String> direction;
 
-    public Output<String> getDirection() {
+    public Output<String> direction() {
         return this.direction == null ? Codegen.empty() : this.direction;
     }
 
@@ -87,7 +87,7 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -100,7 +100,7 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -111,7 +111,7 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
@@ -125,7 +125,7 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="sourceAddressPrefix")
       private final @Nullable Output<String> sourceAddressPrefix;
 
-    public Output<String> getSourceAddressPrefix() {
+    public Output<String> sourceAddressPrefix() {
         return this.sourceAddressPrefix == null ? Codegen.empty() : this.sourceAddressPrefix;
     }
 
@@ -137,7 +137,7 @@ public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="sourcePortRange")
       private final @Nullable Output<String> sourcePortRange;
 
-    public Output<String> getSourcePortRange() {
+    public Output<String> sourcePortRange() {
         return this.sourcePortRange == null ? Codegen.empty() : this.sourcePortRange;
     }
 

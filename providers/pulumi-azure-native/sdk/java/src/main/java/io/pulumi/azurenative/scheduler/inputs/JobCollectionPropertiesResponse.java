@@ -23,7 +23,7 @@ public final class JobCollectionPropertiesResponse extends io.pulumi.resources.I
     @Import(name="quota")
       private final @Nullable JobCollectionQuotaResponse quota;
 
-    public Optional<JobCollectionQuotaResponse> getQuota() {
+    public Optional<JobCollectionQuotaResponse> quota() {
         return this.quota == null ? Optional.empty() : Optional.ofNullable(this.quota);
     }
 
@@ -34,7 +34,7 @@ public final class JobCollectionPropertiesResponse extends io.pulumi.resources.I
     @Import(name="sku")
       private final @Nullable SkuResponse sku;
 
-    public Optional<SkuResponse> getSku() {
+    public Optional<SkuResponse> sku() {
         return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
     }
 
@@ -45,7 +45,7 @@ public final class JobCollectionPropertiesResponse extends io.pulumi.resources.I
     @Import(name="state")
       private final @Nullable String state;
 
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 

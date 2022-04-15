@@ -45,7 +45,7 @@ public class PipelineJob extends io.pulumi.resources.CustomResource {
      * @return An optional description for the pipeline.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -59,7 +59,7 @@ public class PipelineJob extends io.pulumi.resources.CustomResource {
      * @return Details about the error, in case the pipeline job fails.
      * 
      */
-    public Output<PipelineJobErrorResponse> getError() {
+    public Output<PipelineJobErrorResponse> error() {
         return this.error;
     }
     /**
@@ -73,7 +73,7 @@ public class PipelineJob extends io.pulumi.resources.CustomResource {
      * @return The date-time by when this pipeline job will be automatically deleted from your account.
      * 
      */
-    public Output<String> getExpiration() {
+    public Output<String> expiration() {
         return this.expiration;
     }
     /**
@@ -87,7 +87,7 @@ public class PipelineJob extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +101,7 @@ public class PipelineJob extends io.pulumi.resources.CustomResource {
      * @return List of the instance level parameter values for the user-defined topology parameters. A pipeline can only define or override parameters values for parameters which have been declared in the referenced topology. Topology parameters without a default value must be defined. Topology parameters with a default value can be optionally be overridden.
      * 
      */
-    public Output</* @Nullable */ List<ParameterDefinitionResponse>> getParameters() {
+    public Output</* @Nullable */ List<ParameterDefinitionResponse>> parameters() {
         return this.parameters;
     }
     /**
@@ -115,7 +115,7 @@ public class PipelineJob extends io.pulumi.resources.CustomResource {
      * @return Current state of the pipeline (read-only).
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -129,7 +129,7 @@ public class PipelineJob extends io.pulumi.resources.CustomResource {
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -143,7 +143,7 @@ public class PipelineJob extends io.pulumi.resources.CustomResource {
      * @return Reference to an existing pipeline topology. When activated, this pipeline job will process content according to the pipeline topology definition.
      * 
      */
-    public Output<String> getTopologyName() {
+    public Output<String> topologyName() {
         return this.topologyName;
     }
     /**
@@ -157,7 +157,7 @@ public class PipelineJob extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

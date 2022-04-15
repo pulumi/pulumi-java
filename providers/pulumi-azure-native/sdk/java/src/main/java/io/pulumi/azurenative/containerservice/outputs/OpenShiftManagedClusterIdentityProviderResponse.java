@@ -35,14 +35,14 @@ public final class OpenShiftManagedClusterIdentityProviderResponse {
      * Name of the provider.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Configuration of the provider.
      * 
     */
-    public Optional<OpenShiftManagedClusterAADIdentityProviderResponse> getProvider() {
+    public Optional<OpenShiftManagedClusterAADIdentityProviderResponse> provider() {
         return Optional.ofNullable(this.provider);
     }
 

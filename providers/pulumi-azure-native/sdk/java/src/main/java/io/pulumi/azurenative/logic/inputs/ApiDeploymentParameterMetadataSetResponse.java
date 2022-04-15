@@ -25,7 +25,7 @@ public final class ApiDeploymentParameterMetadataSetResponse extends io.pulumi.r
     @Import(name="packageContentLink")
       private final @Nullable ApiDeploymentParameterMetadataResponse packageContentLink;
 
-    public Optional<ApiDeploymentParameterMetadataResponse> getPackageContentLink() {
+    public Optional<ApiDeploymentParameterMetadataResponse> packageContentLink() {
         return this.packageContentLink == null ? Optional.empty() : Optional.ofNullable(this.packageContentLink);
     }
 
@@ -36,7 +36,7 @@ public final class ApiDeploymentParameterMetadataSetResponse extends io.pulumi.r
     @Import(name="redisCacheConnectionString")
       private final @Nullable ApiDeploymentParameterMetadataResponse redisCacheConnectionString;
 
-    public Optional<ApiDeploymentParameterMetadataResponse> getRedisCacheConnectionString() {
+    public Optional<ApiDeploymentParameterMetadataResponse> redisCacheConnectionString() {
         return this.redisCacheConnectionString == null ? Optional.empty() : Optional.ofNullable(this.redisCacheConnectionString);
     }
 

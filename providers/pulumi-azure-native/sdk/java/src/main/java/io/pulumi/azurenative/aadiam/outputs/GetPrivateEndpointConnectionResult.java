@@ -64,42 +64,42 @@ public final class GetPrivateEndpointConnectionResult {
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Properties of the private endpoint object.
      * 
     */
-    public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
+    public Optional<PrivateEndpointResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * Approval state of the private link connection.
      * 
     */
-    public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Optional<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
      * Provisioning state of the private endpoint connection.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

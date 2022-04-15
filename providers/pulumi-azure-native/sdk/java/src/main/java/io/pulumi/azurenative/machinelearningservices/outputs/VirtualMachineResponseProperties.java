@@ -50,28 +50,28 @@ public final class VirtualMachineResponseProperties {
      * Public IP address of the virtual machine.
      * 
     */
-    public Optional<String> getAddress() {
+    public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
     /**
      * Admin credentials for virtual machine
      * 
     */
-    public Optional<VirtualMachineSshCredentialsResponse> getAdministratorAccount() {
+    public Optional<VirtualMachineSshCredentialsResponse> administratorAccount() {
         return Optional.ofNullable(this.administratorAccount);
     }
     /**
      * Port open for ssh connections.
      * 
     */
-    public Optional<Integer> getSshPort() {
+    public Optional<Integer> sshPort() {
         return Optional.ofNullable(this.sshPort);
     }
     /**
      * Virtual Machine size
      * 
     */
-    public Optional<String> getVirtualMachineSize() {
+    public Optional<String> virtualMachineSize() {
         return Optional.ofNullable(this.virtualMachineSize);
     }
 

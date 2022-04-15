@@ -28,7 +28,7 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="assessmentSolutionId")
       private final @Nullable Output<String> assessmentSolutionId;
 
-    public Output<String> getAssessmentSolutionId() {
+    public Output<String> assessmentSolutionId() {
         return this.assessmentSolutionId == null ? Codegen.empty() : this.assessmentSolutionId;
     }
 
@@ -39,7 +39,7 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="customerStorageAccountArmId")
       private final @Nullable Output<String> customerStorageAccountArmId;
 
-    public Output<String> getCustomerStorageAccountArmId() {
+    public Output<String> customerStorageAccountArmId() {
         return this.customerStorageAccountArmId == null ? Codegen.empty() : this.customerStorageAccountArmId;
     }
 
@@ -50,7 +50,7 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="customerWorkspaceId")
       private final @Nullable Output<String> customerWorkspaceId;
 
-    public Output<String> getCustomerWorkspaceId() {
+    public Output<String> customerWorkspaceId() {
         return this.customerWorkspaceId == null ? Codegen.empty() : this.customerWorkspaceId;
     }
 
@@ -61,7 +61,7 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="customerWorkspaceLocation")
       private final @Nullable Output<String> customerWorkspaceLocation;
 
-    public Output<String> getCustomerWorkspaceLocation() {
+    public Output<String> customerWorkspaceLocation() {
         return this.customerWorkspaceLocation == null ? Codegen.empty() : this.customerWorkspaceLocation;
     }
 
@@ -72,7 +72,7 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="projectStatus")
       private final @Nullable Output<Either<String,ProjectStatus>> projectStatus;
 
-    public Output<Either<String,ProjectStatus>> getProjectStatus() {
+    public Output<Either<String,ProjectStatus>> projectStatus() {
         return this.projectStatus == null ? Codegen.empty() : this.projectStatus;
     }
 
@@ -83,7 +83,7 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<String> publicNetworkAccess;
 
-    public Output<String> getPublicNetworkAccess() {
+    public Output<String> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 

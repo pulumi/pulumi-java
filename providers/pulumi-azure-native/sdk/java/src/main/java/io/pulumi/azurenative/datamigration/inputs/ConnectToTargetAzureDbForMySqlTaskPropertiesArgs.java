@@ -27,7 +27,7 @@ public final class ConnectToTargetAzureDbForMySqlTaskPropertiesArgs extends io.p
     @Import(name="input")
       private final @Nullable Output<ConnectToTargetAzureDbForMySqlTaskInputArgs> input;
 
-    public Output<ConnectToTargetAzureDbForMySqlTaskInputArgs> getInput() {
+    public Output<ConnectToTargetAzureDbForMySqlTaskInputArgs> input() {
         return this.input == null ? Codegen.empty() : this.input;
     }
 
@@ -39,7 +39,7 @@ public final class ConnectToTargetAzureDbForMySqlTaskPropertiesArgs extends io.p
     @Import(name="taskType", required=true)
       private final Output<String> taskType;
 
-    public Output<String> getTaskType() {
+    public Output<String> taskType() {
         return this.taskType;
     }
 

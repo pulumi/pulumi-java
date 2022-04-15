@@ -23,7 +23,7 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
     @Import(name="fabricName", required=true)
       private final Output<String> fabricName;
 
-    public Output<String> getFabricName() {
+    public Output<String> fabricName() {
         return this.fabricName;
     }
 
@@ -34,7 +34,7 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
     @Import(name="mappingName")
       private final @Nullable Output<String> mappingName;
 
-    public Output<String> getMappingName() {
+    public Output<String> mappingName() {
         return this.mappingName == null ? Codegen.empty() : this.mappingName;
     }
 
@@ -45,7 +45,7 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
     @Import(name="properties")
       private final @Nullable Output<CreateProtectionContainerMappingInputPropertiesArgs> properties;
 
-    public Output<CreateProtectionContainerMappingInputPropertiesArgs> getProperties() {
+    public Output<CreateProtectionContainerMappingInputPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -56,7 +56,7 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
     @Import(name="protectionContainerName", required=true)
       private final Output<String> protectionContainerName;
 
-    public Output<String> getProtectionContainerName() {
+    public Output<String> protectionContainerName() {
         return this.protectionContainerName;
     }
 
@@ -67,7 +67,7 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,7 +78,7 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 

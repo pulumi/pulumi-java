@@ -27,7 +27,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="groupIds")
       private final @Nullable Output<List<String>> groupIds;
 
-    public Output<List<String>> getGroupIds() {
+    public Output<List<String>> groupIds() {
         return this.groupIds == null ? Codegen.empty() : this.groupIds;
     }
 
@@ -38,7 +38,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="parentName", required=true)
       private final Output<String> parentName;
 
-    public Output<String> getParentName() {
+    public Output<String> parentName() {
         return this.parentName;
     }
 
@@ -49,7 +49,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="parentType", required=true)
       private final Output<String> parentType;
 
-    public Output<String> getParentType() {
+    public Output<String> parentType() {
         return this.parentType;
     }
 
@@ -60,7 +60,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="privateEndpoint")
       private final @Nullable Output<PrivateEndpointArgs> privateEndpoint;
 
-    public Output<PrivateEndpointArgs> getPrivateEndpoint() {
+    public Output<PrivateEndpointArgs> privateEndpoint() {
         return this.privateEndpoint == null ? Codegen.empty() : this.privateEndpoint;
     }
 
@@ -71,7 +71,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
 
-    public Output<String> getPrivateEndpointConnectionName() {
+    public Output<String> privateEndpointConnectionName() {
         return this.privateEndpointConnectionName == null ? Codegen.empty() : this.privateEndpointConnectionName;
     }
 
@@ -82,7 +82,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<ConnectionStateArgs> privateLinkServiceConnectionState;
 
-    public Output<ConnectionStateArgs> getPrivateLinkServiceConnectionState() {
+    public Output<ConnectionStateArgs> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Codegen.empty() : this.privateLinkServiceConnectionState;
     }
 
@@ -93,7 +93,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ResourceProvisioningState>> provisioningState;
 
-    public Output<Either<String,ResourceProvisioningState>> getProvisioningState() {
+    public Output<Either<String,ResourceProvisioningState>> provisioningState() {
         return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
@@ -104,7 +104,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -19,7 +19,7 @@ public final class GetSkusArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="providerNamespace", required=true)
       private final String providerNamespace;
 
-    public String getProviderNamespace() {
+    public String providerNamespace() {
         return this.providerNamespace;
     }
 
@@ -30,7 +30,7 @@ public final class GetSkusArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceType", required=true)
       private final String resourceType;
 
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
 
@@ -41,7 +41,7 @@ public final class GetSkusArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="sku", required=true)
       private final String sku;
 
-    public String getSku() {
+    public String sku() {
         return this.sku;
     }
 

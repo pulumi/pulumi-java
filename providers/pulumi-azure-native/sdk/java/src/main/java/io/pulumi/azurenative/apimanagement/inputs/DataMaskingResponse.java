@@ -22,7 +22,7 @@ public final class DataMaskingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="headers")
       private final @Nullable List<DataMaskingEntityResponse> headers;
 
-    public List<DataMaskingEntityResponse> getHeaders() {
+    public List<DataMaskingEntityResponse> headers() {
         return this.headers == null ? List.of() : this.headers;
     }
 
@@ -33,7 +33,7 @@ public final class DataMaskingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="queryParams")
       private final @Nullable List<DataMaskingEntityResponse> queryParams;
 
-    public List<DataMaskingEntityResponse> getQueryParams() {
+    public List<DataMaskingEntityResponse> queryParams() {
         return this.queryParams == null ? List.of() : this.queryParams;
     }
 

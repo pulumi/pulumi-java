@@ -24,7 +24,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appName", required=true)
       private final Output<String> appName;
 
-    public Output<String> getAppName() {
+    public Output<String> appName() {
         return this.appName;
     }
 
@@ -35,7 +35,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deploymentName")
       private final @Nullable Output<String> deploymentName;
 
-    public Output<String> getDeploymentName() {
+    public Output<String> deploymentName() {
         return this.deploymentName == null ? Codegen.empty() : this.deploymentName;
     }
 
@@ -46,7 +46,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<DeploymentResourcePropertiesArgs> properties;
 
-    public Output<DeploymentResourcePropertiesArgs> getProperties() {
+    public Output<DeploymentResourcePropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -57,7 +57,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,7 +68,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -79,7 +79,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 

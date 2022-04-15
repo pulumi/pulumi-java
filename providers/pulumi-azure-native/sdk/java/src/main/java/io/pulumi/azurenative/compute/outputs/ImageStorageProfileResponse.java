@@ -44,21 +44,21 @@ public final class ImageStorageProfileResponse {
      * Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
      * 
     */
-    public List<ImageDataDiskResponse> getDataDisks() {
+    public List<ImageDataDiskResponse> dataDisks() {
         return this.dataDisks == null ? List.of() : this.dataDisks;
     }
     /**
      * Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
      * 
     */
-    public Optional<ImageOSDiskResponse> getOsDisk() {
+    public Optional<ImageOSDiskResponse> osDisk() {
         return Optional.ofNullable(this.osDisk);
     }
     /**
      * Specifies whether an image is zone resilient or not. Default is false. Zone resilient images can be created only in regions that provide Zone Redundant Storage (ZRS).
      * 
     */
-    public Optional<Boolean> getZoneResilient() {
+    public Optional<Boolean> zoneResilient() {
         return Optional.ofNullable(this.zoneResilient);
     }
 

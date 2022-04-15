@@ -27,7 +27,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudTiering")
       private final @Nullable Output<Either<String,FeatureStatus>> cloudTiering;
 
-    public Output<Either<String,FeatureStatus>> getCloudTiering() {
+    public Output<Either<String,FeatureStatus>> cloudTiering() {
         return this.cloudTiering == null ? Codegen.empty() : this.cloudTiering;
     }
 
@@ -38,7 +38,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
@@ -49,7 +49,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="initialDownloadPolicy")
       private final @Nullable Output<Either<String,InitialDownloadPolicy>> initialDownloadPolicy;
 
-    public Output<Either<String,InitialDownloadPolicy>> getInitialDownloadPolicy() {
+    public Output<Either<String,InitialDownloadPolicy>> initialDownloadPolicy() {
         return this.initialDownloadPolicy == null ? Codegen.empty() : this.initialDownloadPolicy;
     }
 
@@ -60,7 +60,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="localCacheMode")
       private final @Nullable Output<Either<String,LocalCacheMode>> localCacheMode;
 
-    public Output<Either<String,LocalCacheMode>> getLocalCacheMode() {
+    public Output<Either<String,LocalCacheMode>> localCacheMode() {
         return this.localCacheMode == null ? Codegen.empty() : this.localCacheMode;
     }
 
@@ -71,7 +71,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="offlineDataTransfer")
       private final @Nullable Output<Either<String,FeatureStatus>> offlineDataTransfer;
 
-    public Output<Either<String,FeatureStatus>> getOfflineDataTransfer() {
+    public Output<Either<String,FeatureStatus>> offlineDataTransfer() {
         return this.offlineDataTransfer == null ? Codegen.empty() : this.offlineDataTransfer;
     }
 
@@ -82,7 +82,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="offlineDataTransferShareName")
       private final @Nullable Output<String> offlineDataTransferShareName;
 
-    public Output<String> getOfflineDataTransferShareName() {
+    public Output<String> offlineDataTransferShareName() {
         return this.offlineDataTransferShareName == null ? Codegen.empty() : this.offlineDataTransferShareName;
     }
 
@@ -93,7 +93,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -104,7 +104,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverEndpointName")
       private final @Nullable Output<String> serverEndpointName;
 
-    public Output<String> getServerEndpointName() {
+    public Output<String> serverEndpointName() {
         return this.serverEndpointName == null ? Codegen.empty() : this.serverEndpointName;
     }
 
@@ -115,7 +115,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverLocalPath")
       private final @Nullable Output<String> serverLocalPath;
 
-    public Output<String> getServerLocalPath() {
+    public Output<String> serverLocalPath() {
         return this.serverLocalPath == null ? Codegen.empty() : this.serverLocalPath;
     }
 
@@ -126,7 +126,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverResourceId")
       private final @Nullable Output<String> serverResourceId;
 
-    public Output<String> getServerResourceId() {
+    public Output<String> serverResourceId() {
         return this.serverResourceId == null ? Codegen.empty() : this.serverResourceId;
     }
 
@@ -137,7 +137,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageSyncServiceName", required=true)
       private final Output<String> storageSyncServiceName;
 
-    public Output<String> getStorageSyncServiceName() {
+    public Output<String> storageSyncServiceName() {
         return this.storageSyncServiceName;
     }
 
@@ -148,7 +148,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="syncGroupName", required=true)
       private final Output<String> syncGroupName;
 
-    public Output<String> getSyncGroupName() {
+    public Output<String> syncGroupName() {
         return this.syncGroupName;
     }
 
@@ -159,7 +159,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tierFilesOlderThanDays")
       private final @Nullable Output<Integer> tierFilesOlderThanDays;
 
-    public Output<Integer> getTierFilesOlderThanDays() {
+    public Output<Integer> tierFilesOlderThanDays() {
         return this.tierFilesOlderThanDays == null ? Codegen.empty() : this.tierFilesOlderThanDays;
     }
 
@@ -170,7 +170,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumeFreeSpacePercent")
       private final @Nullable Output<Integer> volumeFreeSpacePercent;
 
-    public Output<Integer> getVolumeFreeSpacePercent() {
+    public Output<Integer> volumeFreeSpacePercent() {
         return this.volumeFreeSpacePercent == null ? Codegen.empty() : this.volumeFreeSpacePercent;
     }
 

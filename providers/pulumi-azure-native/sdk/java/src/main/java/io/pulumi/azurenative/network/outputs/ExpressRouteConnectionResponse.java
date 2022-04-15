@@ -87,63 +87,63 @@ public final class ExpressRouteConnectionResponse {
      * Authorization key to establish the connection.
      * 
     */
-    public Optional<String> getAuthorizationKey() {
+    public Optional<String> authorizationKey() {
         return Optional.ofNullable(this.authorizationKey);
     }
     /**
      * Enable internet security.
      * 
     */
-    public Optional<Boolean> getEnableInternetSecurity() {
+    public Optional<Boolean> enableInternetSecurity() {
         return Optional.ofNullable(this.enableInternetSecurity);
     }
     /**
      * The ExpressRoute circuit peering.
      * 
     */
-    public ExpressRouteCircuitPeeringIdResponse getExpressRouteCircuitPeering() {
+    public ExpressRouteCircuitPeeringIdResponse expressRouteCircuitPeering() {
         return this.expressRouteCircuitPeering;
     }
     /**
      * Enable FastPath to vWan Firewall hub.
      * 
     */
-    public Optional<Boolean> getExpressRouteGatewayBypass() {
+    public Optional<Boolean> expressRouteGatewayBypass() {
         return Optional.ofNullable(this.expressRouteGatewayBypass);
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning state of the express route connection resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The Routing Configuration indicating the associated and propagated route tables on this connection.
      * 
     */
-    public Optional<RoutingConfigurationResponse> getRoutingConfiguration() {
+    public Optional<RoutingConfigurationResponse> routingConfiguration() {
         return Optional.ofNullable(this.routingConfiguration);
     }
     /**
      * The routing weight associated to the connection.
      * 
     */
-    public Optional<Integer> getRoutingWeight() {
+    public Optional<Integer> routingWeight() {
         return Optional.ofNullable(this.routingWeight);
     }
 

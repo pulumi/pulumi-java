@@ -31,7 +31,7 @@ public final class RecoveryPlanGroupArgs extends io.pulumi.resources.ResourceArg
     @Import(name="endGroupActions")
       private final @Nullable Output<List<RecoveryPlanActionArgs>> endGroupActions;
 
-    public Output<List<RecoveryPlanActionArgs>> getEndGroupActions() {
+    public Output<List<RecoveryPlanActionArgs>> endGroupActions() {
         return this.endGroupActions == null ? Codegen.empty() : this.endGroupActions;
     }
 
@@ -42,7 +42,7 @@ public final class RecoveryPlanGroupArgs extends io.pulumi.resources.ResourceArg
     @Import(name="groupType", required=true)
       private final Output<Either<String,RecoveryPlanGroupType>> groupType;
 
-    public Output<Either<String,RecoveryPlanGroupType>> getGroupType() {
+    public Output<Either<String,RecoveryPlanGroupType>> groupType() {
         return this.groupType;
     }
 
@@ -53,7 +53,7 @@ public final class RecoveryPlanGroupArgs extends io.pulumi.resources.ResourceArg
     @Import(name="replicationProtectedItems")
       private final @Nullable Output<List<RecoveryPlanProtectedItemArgs>> replicationProtectedItems;
 
-    public Output<List<RecoveryPlanProtectedItemArgs>> getReplicationProtectedItems() {
+    public Output<List<RecoveryPlanProtectedItemArgs>> replicationProtectedItems() {
         return this.replicationProtectedItems == null ? Codegen.empty() : this.replicationProtectedItems;
     }
 
@@ -64,7 +64,7 @@ public final class RecoveryPlanGroupArgs extends io.pulumi.resources.ResourceArg
     @Import(name="startGroupActions")
       private final @Nullable Output<List<RecoveryPlanActionArgs>> startGroupActions;
 
-    public Output<List<RecoveryPlanActionArgs>> getStartGroupActions() {
+    public Output<List<RecoveryPlanActionArgs>> startGroupActions() {
         return this.startGroupActions == null ? Codegen.empty() : this.startGroupActions;
     }
 

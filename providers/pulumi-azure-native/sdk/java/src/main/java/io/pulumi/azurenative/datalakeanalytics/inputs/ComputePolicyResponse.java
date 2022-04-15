@@ -24,7 +24,7 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -35,7 +35,7 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="maxDegreeOfParallelismPerJob", required=true)
       private final Integer maxDegreeOfParallelismPerJob;
 
-    public Integer getMaxDegreeOfParallelismPerJob() {
+    public Integer maxDegreeOfParallelismPerJob() {
         return this.maxDegreeOfParallelismPerJob;
     }
 
@@ -46,7 +46,7 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="minPriorityPerJob", required=true)
       private final Integer minPriorityPerJob;
 
-    public Integer getMinPriorityPerJob() {
+    public Integer minPriorityPerJob() {
         return this.minPriorityPerJob;
     }
 
@@ -57,7 +57,7 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -68,7 +68,7 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="objectId", required=true)
       private final String objectId;
 
-    public String getObjectId() {
+    public String objectId() {
         return this.objectId;
     }
 
@@ -79,7 +79,7 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="objectType", required=true)
       private final String objectType;
 
-    public String getObjectType() {
+    public String objectType() {
         return this.objectType;
     }
 
@@ -90,7 +90,7 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

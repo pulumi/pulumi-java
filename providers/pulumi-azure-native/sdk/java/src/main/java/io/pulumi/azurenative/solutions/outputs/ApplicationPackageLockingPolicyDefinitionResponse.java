@@ -34,14 +34,14 @@ public final class ApplicationPackageLockingPolicyDefinitionResponse {
      * The deny assignment excluded actions.
      * 
     */
-    public List<String> getAllowedActions() {
+    public List<String> allowedActions() {
         return this.allowedActions == null ? List.of() : this.allowedActions;
     }
     /**
      * The deny assignment excluded data actions.
      * 
     */
-    public List<String> getAllowedDataActions() {
+    public List<String> allowedDataActions() {
         return this.allowedDataActions == null ? List.of() : this.allowedDataActions;
     }
 

@@ -18,21 +18,21 @@ public final class ResourceTypeRegistrationPropertiesResourceMovePolicyArgs exte
     @Import(name="crossResourceGroupMoveEnabled")
       private final @Nullable Output<Boolean> crossResourceGroupMoveEnabled;
 
-    public Output<Boolean> getCrossResourceGroupMoveEnabled() {
+    public Output<Boolean> crossResourceGroupMoveEnabled() {
         return this.crossResourceGroupMoveEnabled == null ? Codegen.empty() : this.crossResourceGroupMoveEnabled;
     }
 
     @Import(name="crossSubscriptionMoveEnabled")
       private final @Nullable Output<Boolean> crossSubscriptionMoveEnabled;
 
-    public Output<Boolean> getCrossSubscriptionMoveEnabled() {
+    public Output<Boolean> crossSubscriptionMoveEnabled() {
         return this.crossSubscriptionMoveEnabled == null ? Codegen.empty() : this.crossSubscriptionMoveEnabled;
     }
 
     @Import(name="validationRequired")
       private final @Nullable Output<Boolean> validationRequired;
 
-    public Output<Boolean> getValidationRequired() {
+    public Output<Boolean> validationRequired() {
         return this.validationRequired == null ? Codegen.empty() : this.validationRequired;
     }
 

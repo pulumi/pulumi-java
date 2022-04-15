@@ -24,7 +24,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -35,7 +35,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="endOfLifeDate")
       private final @Nullable Output<String> endOfLifeDate;
 
-    public Output<String> getEndOfLifeDate() {
+    public Output<String> endOfLifeDate() {
         return this.endOfLifeDate == null ? Codegen.empty() : this.endOfLifeDate;
     }
 
@@ -46,7 +46,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="eula")
       private final @Nullable Output<String> eula;
 
-    public Output<String> getEula() {
+    public Output<String> eula() {
         return this.eula == null ? Codegen.empty() : this.eula;
     }
 
@@ -57,7 +57,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="galleryApplicationName")
       private final @Nullable Output<String> galleryApplicationName;
 
-    public Output<String> getGalleryApplicationName() {
+    public Output<String> galleryApplicationName() {
         return this.galleryApplicationName == null ? Codegen.empty() : this.galleryApplicationName;
     }
 
@@ -68,7 +68,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="galleryName", required=true)
       private final Output<String> galleryName;
 
-    public Output<String> getGalleryName() {
+    public Output<String> galleryName() {
         return this.galleryName;
     }
 
@@ -79,7 +79,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -90,7 +90,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="privacyStatementUri")
       private final @Nullable Output<String> privacyStatementUri;
 
-    public Output<String> getPrivacyStatementUri() {
+    public Output<String> privacyStatementUri() {
         return this.privacyStatementUri == null ? Codegen.empty() : this.privacyStatementUri;
     }
 
@@ -101,7 +101,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="releaseNoteUri")
       private final @Nullable Output<String> releaseNoteUri;
 
-    public Output<String> getReleaseNoteUri() {
+    public Output<String> releaseNoteUri() {
         return this.releaseNoteUri == null ? Codegen.empty() : this.releaseNoteUri;
     }
 
@@ -112,7 +112,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -123,7 +123,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="supportedOSType", required=true)
       private final Output<OperatingSystemTypes> supportedOSType;
 
-    public Output<OperatingSystemTypes> getSupportedOSType() {
+    public Output<OperatingSystemTypes> supportedOSType() {
         return this.supportedOSType;
     }
 
@@ -134,7 +134,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

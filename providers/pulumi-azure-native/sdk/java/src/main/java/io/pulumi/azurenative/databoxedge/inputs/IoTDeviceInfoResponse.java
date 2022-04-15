@@ -26,7 +26,7 @@ public final class IoTDeviceInfoResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="authentication")
       private final @Nullable AuthenticationResponse authentication;
 
-    public Optional<AuthenticationResponse> getAuthentication() {
+    public Optional<AuthenticationResponse> authentication() {
         return this.authentication == null ? Optional.empty() : Optional.ofNullable(this.authentication);
     }
 
@@ -37,7 +37,7 @@ public final class IoTDeviceInfoResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="deviceId", required=true)
       private final String deviceId;
 
-    public String getDeviceId() {
+    public String deviceId() {
         return this.deviceId;
     }
 
@@ -48,7 +48,7 @@ public final class IoTDeviceInfoResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="ioTHostHub", required=true)
       private final String ioTHostHub;
 
-    public String getIoTHostHub() {
+    public String ioTHostHub() {
         return this.ioTHostHub;
     }
 
@@ -59,7 +59,7 @@ public final class IoTDeviceInfoResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="ioTHostHubId")
       private final @Nullable String ioTHostHubId;
 
-    public Optional<String> getIoTHostHubId() {
+    public Optional<String> ioTHostHubId() {
         return this.ioTHostHubId == null ? Optional.empty() : Optional.ofNullable(this.ioTHostHubId);
     }
 

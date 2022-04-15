@@ -38,7 +38,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
     @Import(name="connectVia", required=true)
       private final IntegrationRuntimeReferenceResponse connectVia;
 
-    public IntegrationRuntimeReferenceResponse getConnectVia() {
+    public IntegrationRuntimeReferenceResponse connectVia() {
         return this.connectVia;
     }
 
@@ -49,7 +49,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
@@ -60,7 +60,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -71,7 +71,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
     @Import(name="environmentPath")
       private final @Nullable Object environmentPath;
 
-    public Optional<Object> getEnvironmentPath() {
+    public Optional<Object> environmentPath() {
         return this.environmentPath == null ? Optional.empty() : Optional.ofNullable(this.environmentPath);
     }
 
@@ -82,7 +82,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
     @Import(name="executionCredential")
       private final @Nullable SSISExecutionCredentialResponse executionCredential;
 
-    public Optional<SSISExecutionCredentialResponse> getExecutionCredential() {
+    public Optional<SSISExecutionCredentialResponse> executionCredential() {
         return this.executionCredential == null ? Optional.empty() : Optional.ofNullable(this.executionCredential);
     }
 
@@ -93,7 +93,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
     @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
-    public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
+    public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
     }
 
@@ -104,7 +104,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
     @Import(name="logLocation")
       private final @Nullable SSISLogLocationResponse logLocation;
 
-    public Optional<SSISLogLocationResponse> getLogLocation() {
+    public Optional<SSISLogLocationResponse> logLocation() {
         return this.logLocation == null ? Optional.empty() : Optional.ofNullable(this.logLocation);
     }
 
@@ -115,7 +115,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
     @Import(name="loggingLevel")
       private final @Nullable Object loggingLevel;
 
-    public Optional<Object> getLoggingLevel() {
+    public Optional<Object> loggingLevel() {
         return this.loggingLevel == null ? Optional.empty() : Optional.ofNullable(this.loggingLevel);
     }
 
@@ -126,7 +126,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -137,7 +137,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
     @Import(name="packageConnectionManagers")
       private final @Nullable Map<String,Map<String,SSISExecutionParameterResponse>> packageConnectionManagers;
 
-    public Map<String,Map<String,SSISExecutionParameterResponse>> getPackageConnectionManagers() {
+    public Map<String,Map<String,SSISExecutionParameterResponse>> packageConnectionManagers() {
         return this.packageConnectionManagers == null ? Map.of() : this.packageConnectionManagers;
     }
 
@@ -148,7 +148,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
     @Import(name="packageLocation", required=true)
       private final SSISPackageLocationResponse packageLocation;
 
-    public SSISPackageLocationResponse getPackageLocation() {
+    public SSISPackageLocationResponse packageLocation() {
         return this.packageLocation;
     }
 
@@ -159,7 +159,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
     @Import(name="packageParameters")
       private final @Nullable Map<String,SSISExecutionParameterResponse> packageParameters;
 
-    public Map<String,SSISExecutionParameterResponse> getPackageParameters() {
+    public Map<String,SSISExecutionParameterResponse> packageParameters() {
         return this.packageParameters == null ? Map.of() : this.packageParameters;
     }
 
@@ -170,7 +170,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
     @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
 
-    public Optional<ActivityPolicyResponse> getPolicy() {
+    public Optional<ActivityPolicyResponse> policy() {
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
     }
 
@@ -181,7 +181,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
     @Import(name="projectConnectionManagers")
       private final @Nullable Map<String,Map<String,SSISExecutionParameterResponse>> projectConnectionManagers;
 
-    public Map<String,Map<String,SSISExecutionParameterResponse>> getProjectConnectionManagers() {
+    public Map<String,Map<String,SSISExecutionParameterResponse>> projectConnectionManagers() {
         return this.projectConnectionManagers == null ? Map.of() : this.projectConnectionManagers;
     }
 
@@ -192,7 +192,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
     @Import(name="projectParameters")
       private final @Nullable Map<String,SSISExecutionParameterResponse> projectParameters;
 
-    public Map<String,SSISExecutionParameterResponse> getProjectParameters() {
+    public Map<String,SSISExecutionParameterResponse> projectParameters() {
         return this.projectParameters == null ? Map.of() : this.projectParameters;
     }
 
@@ -203,7 +203,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
     @Import(name="propertyOverrides")
       private final @Nullable Map<String,SSISPropertyOverrideResponse> propertyOverrides;
 
-    public Map<String,SSISPropertyOverrideResponse> getPropertyOverrides() {
+    public Map<String,SSISPropertyOverrideResponse> propertyOverrides() {
         return this.propertyOverrides == null ? Map.of() : this.propertyOverrides;
     }
 
@@ -214,7 +214,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
     @Import(name="runtime")
       private final @Nullable Object runtime;
 
-    public Optional<Object> getRuntime() {
+    public Optional<Object> runtime() {
         return this.runtime == null ? Optional.empty() : Optional.ofNullable(this.runtime);
     }
 
@@ -226,7 +226,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -237,7 +237,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 

@@ -55,35 +55,35 @@ public final class IconUrisResponse {
      * URI to hero icon.
      * 
     */
-    public Optional<String> getHero() {
+    public Optional<String> hero() {
         return Optional.ofNullable(this.hero);
     }
     /**
      * URI to large icon.
      * 
     */
-    public Optional<String> getLarge() {
+    public Optional<String> large() {
         return Optional.ofNullable(this.large);
     }
     /**
      * URI to medium icon.
      * 
     */
-    public Optional<String> getMedium() {
+    public Optional<String> medium() {
         return Optional.ofNullable(this.medium);
     }
     /**
      * URI to small icon.
      * 
     */
-    public Optional<String> getSmall() {
+    public Optional<String> small() {
         return Optional.ofNullable(this.small);
     }
     /**
      * URI to wide icon.
      * 
     */
-    public Optional<String> getWide() {
+    public Optional<String> wide() {
         return Optional.ofNullable(this.wide);
     }
 

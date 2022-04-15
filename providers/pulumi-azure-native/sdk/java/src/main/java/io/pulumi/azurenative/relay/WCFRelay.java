@@ -44,7 +44,7 @@ public class WCFRelay extends io.pulumi.resources.CustomResource {
      * @return The time the WCF relay was created.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -58,7 +58,7 @@ public class WCFRelay extends io.pulumi.resources.CustomResource {
      * @return Returns true if the relay is dynamic; otherwise, false.
      * 
      */
-    public Output<Boolean> getIsDynamic() {
+    public Output<Boolean> isDynamic() {
         return this.isDynamic;
     }
     /**
@@ -72,7 +72,7 @@ public class WCFRelay extends io.pulumi.resources.CustomResource {
      * @return The number of listeners for this relay. Note that min :1 and max:25 are supported.
      * 
      */
-    public Output<Integer> getListenerCount() {
+    public Output<Integer> listenerCount() {
         return this.listenerCount;
     }
     /**
@@ -86,7 +86,7 @@ public class WCFRelay extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +100,7 @@ public class WCFRelay extends io.pulumi.resources.CustomResource {
      * @return WCF relay type.
      * 
      */
-    public Output</* @Nullable */ String> getRelayType() {
+    public Output</* @Nullable */ String> relayType() {
         return this.relayType;
     }
     /**
@@ -114,7 +114,7 @@ public class WCFRelay extends io.pulumi.resources.CustomResource {
      * @return Returns true if client authorization is needed for this relay; otherwise, false.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRequiresClientAuthorization() {
+    public Output</* @Nullable */ Boolean> requiresClientAuthorization() {
         return this.requiresClientAuthorization;
     }
     /**
@@ -128,7 +128,7 @@ public class WCFRelay extends io.pulumi.resources.CustomResource {
      * @return Returns true if transport security is needed for this relay; otherwise, false.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRequiresTransportSecurity() {
+    public Output</* @Nullable */ Boolean> requiresTransportSecurity() {
         return this.requiresTransportSecurity;
     }
     /**
@@ -142,7 +142,7 @@ public class WCFRelay extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -156,7 +156,7 @@ public class WCFRelay extends io.pulumi.resources.CustomResource {
      * @return The time the namespace was updated.
      * 
      */
-    public Output<String> getUpdatedAt() {
+    public Output<String> updatedAt() {
         return this.updatedAt;
     }
     /**
@@ -170,7 +170,7 @@ public class WCFRelay extends io.pulumi.resources.CustomResource {
      * @return The usermetadata is a placeholder to store user-defined string data for the WCF Relay endpoint. For example, it can be used to store descriptive data, such as list of teams and their contact information. Also, user-defined configuration settings can be stored.
      * 
      */
-    public Output</* @Nullable */ String> getUserMetadata() {
+    public Output</* @Nullable */ String> userMetadata() {
         return this.userMetadata;
     }
 

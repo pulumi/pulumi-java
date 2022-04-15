@@ -30,7 +30,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -41,7 +41,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -52,7 +52,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="enforcementMode")
       private final @Nullable Output<Either<String,EnforcementMode>> enforcementMode;
 
-    public Output<Either<String,EnforcementMode>> getEnforcementMode() {
+    public Output<Either<String,EnforcementMode>> enforcementMode() {
         return this.enforcementMode == null ? Codegen.empty() : this.enforcementMode;
     }
 
@@ -63,7 +63,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
 
-    public Output<IdentityArgs> getIdentity() {
+    public Output<IdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -74,7 +74,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -85,7 +85,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
-    public Output<Object> getMetadata() {
+    public Output<Object> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -96,7 +96,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="nonComplianceMessages")
       private final @Nullable Output<List<NonComplianceMessageArgs>> nonComplianceMessages;
 
-    public Output<List<NonComplianceMessageArgs>> getNonComplianceMessages() {
+    public Output<List<NonComplianceMessageArgs>> nonComplianceMessages() {
         return this.nonComplianceMessages == null ? Codegen.empty() : this.nonComplianceMessages;
     }
 
@@ -107,7 +107,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="notScopes")
       private final @Nullable Output<List<String>> notScopes;
 
-    public Output<List<String>> getNotScopes() {
+    public Output<List<String>> notScopes() {
         return this.notScopes == null ? Codegen.empty() : this.notScopes;
     }
 
@@ -118,7 +118,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterValuesValueArgs>> parameters;
 
-    public Output<Map<String,ParameterValuesValueArgs>> getParameters() {
+    public Output<Map<String,ParameterValuesValueArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -129,7 +129,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="policyAssignmentName")
       private final @Nullable Output<String> policyAssignmentName;
 
-    public Output<String> getPolicyAssignmentName() {
+    public Output<String> policyAssignmentName() {
         return this.policyAssignmentName == null ? Codegen.empty() : this.policyAssignmentName;
     }
 
@@ -140,7 +140,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="policyDefinitionId")
       private final @Nullable Output<String> policyDefinitionId;
 
-    public Output<String> getPolicyDefinitionId() {
+    public Output<String> policyDefinitionId() {
         return this.policyDefinitionId == null ? Codegen.empty() : this.policyDefinitionId;
     }
 
@@ -151,7 +151,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 

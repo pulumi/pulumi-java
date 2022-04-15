@@ -19,7 +19,7 @@ public final class GetConnectionMonitorArgs extends io.pulumi.resources.InvokeAr
     @Import(name="connectionMonitorName", required=true)
       private final String connectionMonitorName;
 
-    public String getConnectionMonitorName() {
+    public String connectionMonitorName() {
         return this.connectionMonitorName;
     }
 
@@ -30,7 +30,7 @@ public final class GetConnectionMonitorArgs extends io.pulumi.resources.InvokeAr
     @Import(name="networkWatcherName", required=true)
       private final String networkWatcherName;
 
-    public String getNetworkWatcherName() {
+    public String networkWatcherName() {
         return this.networkWatcherName;
     }
 
@@ -41,7 +41,7 @@ public final class GetConnectionMonitorArgs extends io.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

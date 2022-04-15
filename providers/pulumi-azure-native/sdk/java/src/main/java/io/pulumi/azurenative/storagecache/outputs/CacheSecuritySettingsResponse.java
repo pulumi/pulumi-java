@@ -26,7 +26,7 @@ public final class CacheSecuritySettingsResponse {
      * NFS access policies defined for this cache.
      * 
     */
-    public List<NfsAccessPolicyResponse> getAccessPolicies() {
+    public List<NfsAccessPolicyResponse> accessPolicies() {
         return this.accessPolicies == null ? List.of() : this.accessPolicies;
     }
 

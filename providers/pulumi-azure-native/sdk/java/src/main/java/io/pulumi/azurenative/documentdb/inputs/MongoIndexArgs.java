@@ -27,7 +27,7 @@ public final class MongoIndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="key")
       private final @Nullable Output<MongoIndexKeysArgs> key;
 
-    public Output<MongoIndexKeysArgs> getKey() {
+    public Output<MongoIndexKeysArgs> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
@@ -38,7 +38,7 @@ public final class MongoIndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="options")
       private final @Nullable Output<MongoIndexOptionsArgs> options;
 
-    public Output<MongoIndexOptionsArgs> getOptions() {
+    public Output<MongoIndexOptionsArgs> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 

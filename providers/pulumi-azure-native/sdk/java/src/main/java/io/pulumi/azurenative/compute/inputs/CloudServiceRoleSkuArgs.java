@@ -27,7 +27,7 @@ public final class CloudServiceRoleSkuArgs extends io.pulumi.resources.ResourceA
     @Import(name="capacity")
       private final @Nullable Output<Double> capacity;
 
-    public Output<Double> getCapacity() {
+    public Output<Double> capacity() {
         return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
@@ -38,7 +38,7 @@ public final class CloudServiceRoleSkuArgs extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -49,7 +49,7 @@ public final class CloudServiceRoleSkuArgs extends io.pulumi.resources.ResourceA
     @Import(name="tier")
       private final @Nullable Output<String> tier;
 
-    public Output<String> getTier() {
+    public Output<String> tier() {
         return this.tier == null ? Codegen.empty() : this.tier;
     }
 

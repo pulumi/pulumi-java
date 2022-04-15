@@ -27,7 +27,7 @@ public final class BlobInventoryPolicyRuleArgs extends io.pulumi.resources.Resou
     @Import(name="definition", required=true)
       private final Output<BlobInventoryPolicyDefinitionArgs> definition;
 
-    public Output<BlobInventoryPolicyDefinitionArgs> getDefinition() {
+    public Output<BlobInventoryPolicyDefinitionArgs> definition() {
         return this.definition;
     }
 
@@ -38,7 +38,7 @@ public final class BlobInventoryPolicyRuleArgs extends io.pulumi.resources.Resou
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -49,7 +49,7 @@ public final class BlobInventoryPolicyRuleArgs extends io.pulumi.resources.Resou
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

@@ -22,7 +22,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="associationName")
       private final @Nullable Output<String> associationName;
 
-    public Output<String> getAssociationName() {
+    public Output<String> associationName() {
         return this.associationName == null ? Codegen.empty() : this.associationName;
     }
 
@@ -33,7 +33,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -44,7 +44,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetResourceId")
       private final @Nullable Output<String> targetResourceId;
 
-    public Output<String> getTargetResourceId() {
+    public Output<String> targetResourceId() {
         return this.targetResourceId == null ? Codegen.empty() : this.targetResourceId;
     }
 

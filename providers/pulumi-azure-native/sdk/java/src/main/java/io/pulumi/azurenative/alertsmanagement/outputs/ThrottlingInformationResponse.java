@@ -26,7 +26,7 @@ public final class ThrottlingInformationResponse {
      * The required duration (in ISO8601 format) to wait before notifying on the alert rule again. The time granularity must be in minutes and minimum value is 0 minutes
      * 
     */
-    public Optional<String> getDuration() {
+    public Optional<String> duration() {
         return Optional.ofNullable(this.duration);
     }
 

@@ -32,14 +32,14 @@ public final class AS2AgreementContentResponse {
      * The AS2 one-way receive agreement.
      * 
     */
-    public AS2OneWayAgreementResponse getReceiveAgreement() {
+    public AS2OneWayAgreementResponse receiveAgreement() {
         return this.receiveAgreement;
     }
     /**
      * The AS2 one-way send agreement.
      * 
     */
-    public AS2OneWayAgreementResponse getSendAgreement() {
+    public AS2OneWayAgreementResponse sendAgreement() {
         return this.sendAgreement;
     }
 

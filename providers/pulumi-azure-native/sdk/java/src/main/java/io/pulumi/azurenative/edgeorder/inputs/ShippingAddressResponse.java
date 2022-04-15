@@ -25,7 +25,7 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
     @Import(name="addressType")
       private final @Nullable String addressType;
 
-    public Optional<String> getAddressType() {
+    public Optional<String> addressType() {
         return this.addressType == null ? Optional.empty() : Optional.ofNullable(this.addressType);
     }
 
@@ -36,7 +36,7 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
     @Import(name="city")
       private final @Nullable String city;
 
-    public Optional<String> getCity() {
+    public Optional<String> city() {
         return this.city == null ? Optional.empty() : Optional.ofNullable(this.city);
     }
 
@@ -47,7 +47,7 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
     @Import(name="companyName")
       private final @Nullable String companyName;
 
-    public Optional<String> getCompanyName() {
+    public Optional<String> companyName() {
         return this.companyName == null ? Optional.empty() : Optional.ofNullable(this.companyName);
     }
 
@@ -58,7 +58,7 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
     @Import(name="country", required=true)
       private final String country;
 
-    public String getCountry() {
+    public String country() {
         return this.country;
     }
 
@@ -69,7 +69,7 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
     @Import(name="postalCode")
       private final @Nullable String postalCode;
 
-    public Optional<String> getPostalCode() {
+    public Optional<String> postalCode() {
         return this.postalCode == null ? Optional.empty() : Optional.ofNullable(this.postalCode);
     }
 
@@ -80,7 +80,7 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
     @Import(name="stateOrProvince")
       private final @Nullable String stateOrProvince;
 
-    public Optional<String> getStateOrProvince() {
+    public Optional<String> stateOrProvince() {
         return this.stateOrProvince == null ? Optional.empty() : Optional.ofNullable(this.stateOrProvince);
     }
 
@@ -91,7 +91,7 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
     @Import(name="streetAddress1", required=true)
       private final String streetAddress1;
 
-    public String getStreetAddress1() {
+    public String streetAddress1() {
         return this.streetAddress1;
     }
 
@@ -102,7 +102,7 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
     @Import(name="streetAddress2")
       private final @Nullable String streetAddress2;
 
-    public Optional<String> getStreetAddress2() {
+    public Optional<String> streetAddress2() {
         return this.streetAddress2 == null ? Optional.empty() : Optional.ofNullable(this.streetAddress2);
     }
 
@@ -113,7 +113,7 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
     @Import(name="streetAddress3")
       private final @Nullable String streetAddress3;
 
-    public Optional<String> getStreetAddress3() {
+    public Optional<String> streetAddress3() {
         return this.streetAddress3 == null ? Optional.empty() : Optional.ofNullable(this.streetAddress3);
     }
 
@@ -124,7 +124,7 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
     @Import(name="zipExtendedCode")
       private final @Nullable String zipExtendedCode;
 
-    public Optional<String> getZipExtendedCode() {
+    public Optional<String> zipExtendedCode() {
         return this.zipExtendedCode == null ? Optional.empty() : Optional.ofNullable(this.zipExtendedCode);
     }
 

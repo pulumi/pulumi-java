@@ -43,21 +43,21 @@ public final class ScaleResponse {
      * Optional. Maximum number of container replicas. Defaults to 10 if not set.
      * 
     */
-    public Optional<Integer> getMaxReplicas() {
+    public Optional<Integer> maxReplicas() {
         return Optional.ofNullable(this.maxReplicas);
     }
     /**
      * Optional. Minimum number of container replicas.
      * 
     */
-    public Optional<Integer> getMinReplicas() {
+    public Optional<Integer> minReplicas() {
         return Optional.ofNullable(this.minReplicas);
     }
     /**
      * Scaling rules.
      * 
     */
-    public List<ScaleRuleResponse> getRules() {
+    public List<ScaleRuleResponse> rules() {
         return this.rules == null ? List.of() : this.rules;
     }
 

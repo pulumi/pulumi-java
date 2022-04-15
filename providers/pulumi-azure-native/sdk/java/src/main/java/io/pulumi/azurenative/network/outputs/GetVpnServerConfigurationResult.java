@@ -163,133 +163,133 @@ public final class GetVpnServerConfigurationResult {
      * The set of aad vpn authentication parameters.
      * 
     */
-    public Optional<AadAuthenticationParametersResponse> getAadAuthenticationParameters() {
+    public Optional<AadAuthenticationParametersResponse> aadAuthenticationParameters() {
         return Optional.ofNullable(this.aadAuthenticationParameters);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * List of references to P2SVpnGateways.
      * 
     */
-    public List<P2SVpnGatewayResponse> getP2SVpnGateways() {
+    public List<P2SVpnGatewayResponse> p2SVpnGateways() {
         return this.p2SVpnGateways;
     }
     /**
      * The provisioning state of the VpnServerConfiguration resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Radius client root certificate of VpnServerConfiguration.
      * 
     */
-    public List<VpnServerConfigRadiusClientRootCertificateResponse> getRadiusClientRootCertificates() {
+    public List<VpnServerConfigRadiusClientRootCertificateResponse> radiusClientRootCertificates() {
         return this.radiusClientRootCertificates == null ? List.of() : this.radiusClientRootCertificates;
     }
     /**
      * The radius server address property of the VpnServerConfiguration resource for point to site client connection.
      * 
     */
-    public Optional<String> getRadiusServerAddress() {
+    public Optional<String> radiusServerAddress() {
         return Optional.ofNullable(this.radiusServerAddress);
     }
     /**
      * Radius Server root certificate of VpnServerConfiguration.
      * 
     */
-    public List<VpnServerConfigRadiusServerRootCertificateResponse> getRadiusServerRootCertificates() {
+    public List<VpnServerConfigRadiusServerRootCertificateResponse> radiusServerRootCertificates() {
         return this.radiusServerRootCertificates == null ? List.of() : this.radiusServerRootCertificates;
     }
     /**
      * The radius secret property of the VpnServerConfiguration resource for point to site client connection.
      * 
     */
-    public Optional<String> getRadiusServerSecret() {
+    public Optional<String> radiusServerSecret() {
         return Optional.ofNullable(this.radiusServerSecret);
     }
     /**
      * Multiple Radius Server configuration for VpnServerConfiguration.
      * 
     */
-    public List<RadiusServerResponse> getRadiusServers() {
+    public List<RadiusServerResponse> radiusServers() {
         return this.radiusServers == null ? List.of() : this.radiusServers;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * VPN authentication types for the VpnServerConfiguration.
      * 
     */
-    public List<String> getVpnAuthenticationTypes() {
+    public List<String> vpnAuthenticationTypes() {
         return this.vpnAuthenticationTypes == null ? List.of() : this.vpnAuthenticationTypes;
     }
     /**
      * VpnClientIpsecPolicies for VpnServerConfiguration.
      * 
     */
-    public List<IpsecPolicyResponse> getVpnClientIpsecPolicies() {
+    public List<IpsecPolicyResponse> vpnClientIpsecPolicies() {
         return this.vpnClientIpsecPolicies == null ? List.of() : this.vpnClientIpsecPolicies;
     }
     /**
      * VPN client revoked certificate of VpnServerConfiguration.
      * 
     */
-    public List<VpnServerConfigVpnClientRevokedCertificateResponse> getVpnClientRevokedCertificates() {
+    public List<VpnServerConfigVpnClientRevokedCertificateResponse> vpnClientRevokedCertificates() {
         return this.vpnClientRevokedCertificates == null ? List.of() : this.vpnClientRevokedCertificates;
     }
     /**
      * VPN client root certificate of VpnServerConfiguration.
      * 
     */
-    public List<VpnServerConfigVpnClientRootCertificateResponse> getVpnClientRootCertificates() {
+    public List<VpnServerConfigVpnClientRootCertificateResponse> vpnClientRootCertificates() {
         return this.vpnClientRootCertificates == null ? List.of() : this.vpnClientRootCertificates;
     }
     /**
      * VPN protocols for the VpnServerConfiguration.
      * 
     */
-    public List<String> getVpnProtocols() {
+    public List<String> vpnProtocols() {
         return this.vpnProtocols == null ? List.of() : this.vpnProtocols;
     }
 

@@ -87,63 +87,63 @@ public final class GetVideoResult {
      * Optional video description provided by the user. Value can be up to 2048 characters long.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Video flags contain information about the available video actions and its dynamic properties based on the current video state.
      * 
     */
-    public VideoFlagsResponse getFlags() {
+    public VideoFlagsResponse flags() {
         return this.flags;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Contains information about the video and audio content.
      * 
     */
-    public VideoMediaInfoResponse getMediaInfo() {
+    public VideoMediaInfoResponse mediaInfo() {
         return this.mediaInfo;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Video streaming holds information about video streaming URLs.
      * 
     */
-    public VideoStreamingResponse getStreaming() {
+    public VideoStreamingResponse streaming() {
         return this.streaming;
     }
     /**
      * The system metadata relating to this resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Optional video title provided by the user. Value can be up to 256 characters long.
      * 
     */
-    public Optional<String> getTitle() {
+    public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

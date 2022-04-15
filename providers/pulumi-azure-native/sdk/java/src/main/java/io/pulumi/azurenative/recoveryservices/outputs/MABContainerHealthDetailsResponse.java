@@ -50,28 +50,28 @@ public final class MABContainerHealthDetailsResponse {
      * Health Code
      * 
     */
-    public Optional<Integer> getCode() {
+    public Optional<Integer> code() {
         return Optional.ofNullable(this.code);
     }
     /**
      * Health Message
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
      * Health Recommended Actions
      * 
     */
-    public List<String> getRecommendations() {
+    public List<String> recommendations() {
         return this.recommendations == null ? List.of() : this.recommendations;
     }
     /**
      * Health Title
      * 
     */
-    public Optional<String> getTitle() {
+    public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
 

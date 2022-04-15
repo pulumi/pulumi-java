@@ -28,7 +28,7 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="bandwidthInMbps")
       private final @Nullable Integer bandwidthInMbps;
 
-    public Optional<Integer> getBandwidthInMbps() {
+    public Optional<Integer> bandwidthInMbps() {
         return this.bandwidthInMbps == null ? Optional.empty() : Optional.ofNullable(this.bandwidthInMbps);
     }
 
@@ -39,7 +39,7 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="bgpSession")
       private final @Nullable BgpSessionResponse bgpSession;
 
-    public Optional<BgpSessionResponse> getBgpSession() {
+    public Optional<BgpSessionResponse> bgpSession() {
         return this.bgpSession == null ? Optional.empty() : Optional.ofNullable(this.bgpSession);
     }
 
@@ -50,7 +50,7 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="connectionIdentifier")
       private final @Nullable String connectionIdentifier;
 
-    public Optional<String> getConnectionIdentifier() {
+    public Optional<String> connectionIdentifier() {
         return this.connectionIdentifier == null ? Optional.empty() : Optional.ofNullable(this.connectionIdentifier);
     }
 
@@ -61,7 +61,7 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="connectionState", required=true)
       private final String connectionState;
 
-    public String getConnectionState() {
+    public String connectionState() {
         return this.connectionState;
     }
 
@@ -72,7 +72,7 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="errorMessage", required=true)
       private final String errorMessage;
 
-    public String getErrorMessage() {
+    public String errorMessage() {
         return this.errorMessage;
     }
 
@@ -83,7 +83,7 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="microsoftTrackingId", required=true)
       private final String microsoftTrackingId;
 
-    public String getMicrosoftTrackingId() {
+    public String microsoftTrackingId() {
         return this.microsoftTrackingId;
     }
 
@@ -94,7 +94,7 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="peeringDBFacilityId")
       private final @Nullable Integer peeringDBFacilityId;
 
-    public Optional<Integer> getPeeringDBFacilityId() {
+    public Optional<Integer> peeringDBFacilityId() {
         return this.peeringDBFacilityId == null ? Optional.empty() : Optional.ofNullable(this.peeringDBFacilityId);
     }
 
@@ -105,7 +105,7 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="provisionedBandwidthInMbps", required=true)
       private final Integer provisionedBandwidthInMbps;
 
-    public Integer getProvisionedBandwidthInMbps() {
+    public Integer provisionedBandwidthInMbps() {
         return this.provisionedBandwidthInMbps;
     }
 
@@ -116,7 +116,7 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="sessionAddressProvider")
       private final @Nullable String sessionAddressProvider;
 
-    public Optional<String> getSessionAddressProvider() {
+    public Optional<String> sessionAddressProvider() {
         return this.sessionAddressProvider == null ? Optional.empty() : Optional.ofNullable(this.sessionAddressProvider);
     }
 
@@ -127,7 +127,7 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="useForPeeringService")
       private final @Nullable Boolean useForPeeringService;
 
-    public Optional<Boolean> getUseForPeeringService() {
+    public Optional<Boolean> useForPeeringService() {
         return this.useForPeeringService == null ? Optional.empty() : Optional.ofNullable(this.useForPeeringService);
     }
 

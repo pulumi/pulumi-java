@@ -32,14 +32,14 @@ public final class ResourceGuardOperationResponse {
      * Type of resource request.
      * 
     */
-    public String getRequestResourceType() {
+    public String requestResourceType() {
         return this.requestResourceType;
     }
     /**
      * Name of the critical operation.
      * 
     */
-    public String getVaultCriticalOperation() {
+    public String vaultCriticalOperation() {
         return this.vaultCriticalOperation;
     }
 

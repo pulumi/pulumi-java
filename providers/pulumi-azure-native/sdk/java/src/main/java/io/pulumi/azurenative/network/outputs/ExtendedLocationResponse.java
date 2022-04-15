@@ -32,14 +32,14 @@ public final class ExtendedLocationResponse {
      * The name of the extended location.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The type of the extended location.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

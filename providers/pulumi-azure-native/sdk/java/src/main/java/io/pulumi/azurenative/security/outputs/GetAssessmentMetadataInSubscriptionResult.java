@@ -120,97 +120,97 @@ public final class GetAssessmentMetadataInSubscriptionResult {
      * BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
      * 
     */
-    public String getAssessmentType() {
+    public String assessmentType() {
         return this.assessmentType;
     }
-    public List<String> getCategories() {
+    public List<String> categories() {
         return this.categories == null ? List.of() : this.categories;
     }
     /**
      * Human readable description of the assessment
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * User friendly display name of the assessment
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The implementation effort required to remediate this assessment
      * 
     */
-    public Optional<String> getImplementationEffort() {
+    public Optional<String> implementationEffort() {
         return Optional.ofNullable(this.implementationEffort);
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Describes the partner that created the assessment
      * 
     */
-    public Optional<SecurityAssessmentMetadataPartnerDataResponse> getPartnerData() {
+    public Optional<SecurityAssessmentMetadataPartnerDataResponse> partnerData() {
         return Optional.ofNullable(this.partnerData);
     }
     /**
      * Azure resource ID of the policy definition that turns this assessment calculation on
      * 
     */
-    public String getPolicyDefinitionId() {
+    public String policyDefinitionId() {
         return this.policyDefinitionId;
     }
     /**
      * True if this assessment is in preview release status
      * 
     */
-    public Optional<Boolean> getPreview() {
+    public Optional<Boolean> preview() {
         return Optional.ofNullable(this.preview);
     }
     /**
      * Human readable description of what you should do to mitigate this security issue
      * 
     */
-    public Optional<String> getRemediationDescription() {
+    public Optional<String> remediationDescription() {
         return Optional.ofNullable(this.remediationDescription);
     }
     /**
      * The severity level of the assessment
      * 
     */
-    public String getSeverity() {
+    public String severity() {
         return this.severity;
     }
-    public List<String> getThreats() {
+    public List<String> threats() {
         return this.threats == null ? List.of() : this.threats;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The user impact of the assessment
      * 
     */
-    public Optional<String> getUserImpact() {
+    public Optional<String> userImpact() {
         return Optional.ofNullable(this.userImpact);
     }
 

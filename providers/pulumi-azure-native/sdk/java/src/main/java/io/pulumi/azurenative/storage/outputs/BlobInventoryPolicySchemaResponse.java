@@ -49,28 +49,28 @@ public final class BlobInventoryPolicySchemaResponse {
      * Container name where blob inventory files are stored. Must be pre-created.
      * 
     */
-    public String getDestination() {
+    public String destination() {
         return this.destination;
     }
     /**
      * Policy is enabled if set to true.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
     /**
      * The storage account blob inventory policy rules. The rule is applied when it is enabled.
      * 
     */
-    public List<BlobInventoryPolicyRuleResponse> getRules() {
+    public List<BlobInventoryPolicyRuleResponse> rules() {
         return this.rules;
     }
     /**
      * The valid value is Inventory
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

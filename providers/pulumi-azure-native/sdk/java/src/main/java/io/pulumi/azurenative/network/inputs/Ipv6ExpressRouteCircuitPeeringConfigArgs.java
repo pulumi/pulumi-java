@@ -30,7 +30,7 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.re
     @Import(name="microsoftPeeringConfig")
       private final @Nullable Output<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig;
 
-    public Output<ExpressRouteCircuitPeeringConfigArgs> getMicrosoftPeeringConfig() {
+    public Output<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig() {
         return this.microsoftPeeringConfig == null ? Codegen.empty() : this.microsoftPeeringConfig;
     }
 
@@ -41,7 +41,7 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.re
     @Import(name="primaryPeerAddressPrefix")
       private final @Nullable Output<String> primaryPeerAddressPrefix;
 
-    public Output<String> getPrimaryPeerAddressPrefix() {
+    public Output<String> primaryPeerAddressPrefix() {
         return this.primaryPeerAddressPrefix == null ? Codegen.empty() : this.primaryPeerAddressPrefix;
     }
 
@@ -52,7 +52,7 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.re
     @Import(name="routeFilter")
       private final @Nullable Output<SubResourceArgs> routeFilter;
 
-    public Output<SubResourceArgs> getRouteFilter() {
+    public Output<SubResourceArgs> routeFilter() {
         return this.routeFilter == null ? Codegen.empty() : this.routeFilter;
     }
 
@@ -63,7 +63,7 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.re
     @Import(name="secondaryPeerAddressPrefix")
       private final @Nullable Output<String> secondaryPeerAddressPrefix;
 
-    public Output<String> getSecondaryPeerAddressPrefix() {
+    public Output<String> secondaryPeerAddressPrefix() {
         return this.secondaryPeerAddressPrefix == null ? Codegen.empty() : this.secondaryPeerAddressPrefix;
     }
 
@@ -74,7 +74,7 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.re
     @Import(name="state")
       private final @Nullable Output<Either<String,ExpressRouteCircuitPeeringState>> state;
 
-    public Output<Either<String,ExpressRouteCircuitPeeringState>> getState() {
+    public Output<Either<String,ExpressRouteCircuitPeeringState>> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

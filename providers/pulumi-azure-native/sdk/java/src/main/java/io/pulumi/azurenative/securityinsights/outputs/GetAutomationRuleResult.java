@@ -111,84 +111,84 @@ public final class GetAutomationRuleResult {
      * The actions to execute when the automation rule is triggered
      * 
     */
-    public List<Either<AutomationRuleModifyPropertiesActionResponse,AutomationRuleRunPlaybookActionResponse>> getActions() {
+    public List<Either<AutomationRuleModifyPropertiesActionResponse,AutomationRuleRunPlaybookActionResponse>> actions() {
         return this.actions;
     }
     /**
      * Describes the client that created the automation rule
      * 
     */
-    public ClientInfoResponse getCreatedBy() {
+    public ClientInfoResponse createdBy() {
         return this.createdBy;
     }
     /**
      * The time the automation rule was created
      * 
     */
-    public String getCreatedTimeUtc() {
+    public String createdTimeUtc() {
         return this.createdTimeUtc;
     }
     /**
      * The display name of the automation  rule
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Etag of the azure resource
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Azure resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Describes the client that last updated the automation rule
      * 
     */
-    public ClientInfoResponse getLastModifiedBy() {
+    public ClientInfoResponse lastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
      * The last time the automation rule was updated
      * 
     */
-    public String getLastModifiedTimeUtc() {
+    public String lastModifiedTimeUtc() {
         return this.lastModifiedTimeUtc;
     }
     /**
      * Azure resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The order of execution of the automation rule
      * 
     */
-    public Integer getOrder() {
+    public Integer order() {
         return this.order;
     }
     /**
      * The triggering logic of the automation rule
      * 
     */
-    public AutomationRuleTriggeringLogicResponse getTriggeringLogic() {
+    public AutomationRuleTriggeringLogicResponse triggeringLogic() {
         return this.triggeringLogic;
     }
     /**
      * Azure resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

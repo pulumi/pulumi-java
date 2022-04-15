@@ -23,7 +23,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isActiveCMK")
       private final @Nullable Output<Boolean> isActiveCMK;
 
-    public Output<Boolean> getIsActiveCMK() {
+    public Output<Boolean> isActiveCMK() {
         return this.isActiveCMK == null ? Codegen.empty() : this.isActiveCMK;
     }
 
@@ -34,7 +34,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
-    public Output<String> getKeyName() {
+    public Output<String> keyName() {
         return this.keyName == null ? Codegen.empty() : this.keyName;
     }
 
@@ -45,7 +45,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyVaultUrl")
       private final @Nullable Output<String> keyVaultUrl;
 
-    public Output<String> getKeyVaultUrl() {
+    public Output<String> keyVaultUrl() {
         return this.keyVaultUrl == null ? Codegen.empty() : this.keyVaultUrl;
     }
 
@@ -56,7 +56,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +67,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

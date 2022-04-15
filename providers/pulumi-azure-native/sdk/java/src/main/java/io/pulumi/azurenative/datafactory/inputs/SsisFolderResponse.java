@@ -26,7 +26,7 @@ public final class SsisFolderResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -37,7 +37,7 @@ public final class SsisFolderResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="id")
       private final @Nullable Double id;
 
-    public Optional<Double> getId() {
+    public Optional<Double> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -48,7 +48,7 @@ public final class SsisFolderResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -60,7 +60,7 @@ public final class SsisFolderResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

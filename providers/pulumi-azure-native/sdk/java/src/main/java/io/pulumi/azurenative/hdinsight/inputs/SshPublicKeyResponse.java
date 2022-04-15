@@ -25,7 +25,7 @@ public final class SshPublicKeyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="certificateData")
       private final @Nullable String certificateData;
 
-    public Optional<String> getCertificateData() {
+    public Optional<String> certificateData() {
         return this.certificateData == null ? Optional.empty() : Optional.ofNullable(this.certificateData);
     }
 

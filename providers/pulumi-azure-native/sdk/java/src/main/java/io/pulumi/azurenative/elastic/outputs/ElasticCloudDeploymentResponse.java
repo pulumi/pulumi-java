@@ -67,49 +67,49 @@ public final class ElasticCloudDeploymentResponse {
      * Associated Azure subscription Id for the elastic deployment.
      * 
     */
-    public String getAzureSubscriptionId() {
+    public String azureSubscriptionId() {
         return this.azureSubscriptionId;
     }
     /**
      * Elastic deployment Id
      * 
     */
-    public String getDeploymentId() {
+    public String deploymentId() {
         return this.deploymentId;
     }
     /**
      * Region where Deployment at Elastic side took place.
      * 
     */
-    public String getElasticsearchRegion() {
+    public String elasticsearchRegion() {
         return this.elasticsearchRegion;
     }
     /**
      * Elasticsearch ingestion endpoint of the Elastic deployment.
      * 
     */
-    public String getElasticsearchServiceUrl() {
+    public String elasticsearchServiceUrl() {
         return this.elasticsearchServiceUrl;
     }
     /**
      * Kibana endpoint of the Elastic deployment.
      * 
     */
-    public String getKibanaServiceUrl() {
+    public String kibanaServiceUrl() {
         return this.kibanaServiceUrl;
     }
     /**
      * Kibana dashboard sso URL of the Elastic deployment.
      * 
     */
-    public String getKibanaSsoUrl() {
+    public String kibanaSsoUrl() {
         return this.kibanaSsoUrl;
     }
     /**
      * Elastic deployment name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

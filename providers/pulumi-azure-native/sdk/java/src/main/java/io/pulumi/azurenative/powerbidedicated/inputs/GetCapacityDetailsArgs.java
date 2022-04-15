@@ -19,7 +19,7 @@ public final class GetCapacityDetailsArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="dedicatedCapacityName", required=true)
       private final String dedicatedCapacityName;
 
-    public String getDedicatedCapacityName() {
+    public String dedicatedCapacityName() {
         return this.dedicatedCapacityName;
     }
 
@@ -30,7 +30,7 @@ public final class GetCapacityDetailsArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

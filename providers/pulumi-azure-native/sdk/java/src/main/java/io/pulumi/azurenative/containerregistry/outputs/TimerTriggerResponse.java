@@ -41,21 +41,21 @@ public final class TimerTriggerResponse {
      * The name of the trigger.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The CRON expression for the task schedule
      * 
     */
-    public String getSchedule() {
+    public String schedule() {
         return this.schedule;
     }
     /**
      * The current status of trigger.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
 

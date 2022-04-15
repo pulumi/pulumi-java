@@ -33,7 +33,7 @@ public final class FiltersArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="crop")
       private final @Nullable Output<RectangleArgs> crop;
 
-    public Output<RectangleArgs> getCrop() {
+    public Output<RectangleArgs> crop() {
         return this.crop == null ? Codegen.empty() : this.crop;
     }
 
@@ -44,7 +44,7 @@ public final class FiltersArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deinterlace")
       private final @Nullable Output<DeinterlaceArgs> deinterlace;
 
-    public Output<DeinterlaceArgs> getDeinterlace() {
+    public Output<DeinterlaceArgs> deinterlace() {
         return this.deinterlace == null ? Codegen.empty() : this.deinterlace;
     }
 
@@ -55,7 +55,7 @@ public final class FiltersArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="overlays")
       private final @Nullable Output<List<Either<AudioOverlayArgs,VideoOverlayArgs>>> overlays;
 
-    public Output<List<Either<AudioOverlayArgs,VideoOverlayArgs>>> getOverlays() {
+    public Output<List<Either<AudioOverlayArgs,VideoOverlayArgs>>> overlays() {
         return this.overlays == null ? Codegen.empty() : this.overlays;
     }
 
@@ -66,7 +66,7 @@ public final class FiltersArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rotation")
       private final @Nullable Output<Either<String,Rotation>> rotation;
 
-    public Output<Either<String,Rotation>> getRotation() {
+    public Output<Either<String,Rotation>> rotation() {
         return this.rotation == null ? Codegen.empty() : this.rotation;
     }
 

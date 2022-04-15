@@ -19,7 +19,7 @@ public final class GetNetworkWatcherArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="networkWatcherName", required=true)
       private final String networkWatcherName;
 
-    public String getNetworkWatcherName() {
+    public String networkWatcherName() {
         return this.networkWatcherName;
     }
 
@@ -30,7 +30,7 @@ public final class GetNetworkWatcherArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -23,7 +23,7 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
     @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
-    public Output<String> getHostname() {
+    public Output<String> hostname() {
         return this.hostname == null ? Codegen.empty() : this.hostname;
     }
 
@@ -34,7 +34,7 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -45,7 +45,7 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -56,7 +56,7 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
-    public Output<String> getNamespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -67,7 +67,7 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -78,7 +78,7 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
     @Import(name="relayArmUri")
       private final @Nullable Output<String> relayArmUri;
 
-    public Output<String> getRelayArmUri() {
+    public Output<String> relayArmUri() {
         return this.relayArmUri == null ? Codegen.empty() : this.relayArmUri;
     }
 
@@ -89,7 +89,7 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
     @Import(name="relayName")
       private final @Nullable Output<String> relayName;
 
-    public Output<String> getRelayName() {
+    public Output<String> relayName() {
         return this.relayName == null ? Codegen.empty() : this.relayName;
     }
 
@@ -100,7 +100,7 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -111,7 +111,7 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
     @Import(name="sendKeyName")
       private final @Nullable Output<String> sendKeyName;
 
-    public Output<String> getSendKeyName() {
+    public Output<String> sendKeyName() {
         return this.sendKeyName == null ? Codegen.empty() : this.sendKeyName;
     }
 
@@ -123,7 +123,7 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
     @Import(name="sendKeyValue")
       private final @Nullable Output<String> sendKeyValue;
 
-    public Output<String> getSendKeyValue() {
+    public Output<String> sendKeyValue() {
         return this.sendKeyValue == null ? Codegen.empty() : this.sendKeyValue;
     }
 
@@ -134,7 +134,7 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
     @Import(name="serviceBusNamespace")
       private final @Nullable Output<String> serviceBusNamespace;
 
-    public Output<String> getServiceBusNamespace() {
+    public Output<String> serviceBusNamespace() {
         return this.serviceBusNamespace == null ? Codegen.empty() : this.serviceBusNamespace;
     }
 
@@ -145,7 +145,7 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
     @Import(name="serviceBusSuffix")
       private final @Nullable Output<String> serviceBusSuffix;
 
-    public Output<String> getServiceBusSuffix() {
+    public Output<String> serviceBusSuffix() {
         return this.serviceBusSuffix == null ? Codegen.empty() : this.serviceBusSuffix;
     }
 
@@ -156,7 +156,7 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
     @Import(name="slot", required=true)
       private final Output<String> slot;
 
-    public Output<String> getSlot() {
+    public Output<String> slot() {
         return this.slot;
     }
 

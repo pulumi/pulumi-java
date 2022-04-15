@@ -48,28 +48,28 @@ public final class SupportInfoResponse {
      * Support contact email address.
      * 
     */
-    public Optional<String> getEmail() {
+    public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
     /**
      * Support instructions.
      * 
     */
-    public Optional<String> getInstructions() {
+    public Optional<String> instructions() {
         return Optional.ofNullable(this.instructions);
     }
     /**
      * Support contact phone number.
      * 
     */
-    public Optional<String> getPhone() {
+    public Optional<String> phone() {
         return Optional.ofNullable(this.phone);
     }
     /**
      * Support web address.
      * 
     */
-    public Optional<String> getUrl() {
+    public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
 

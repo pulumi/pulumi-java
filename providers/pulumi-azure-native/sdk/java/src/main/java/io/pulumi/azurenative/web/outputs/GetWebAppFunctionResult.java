@@ -142,119 +142,119 @@ public final class GetWebAppFunctionResult {
      * Config information.
      * 
     */
-    public Optional<Object> getConfig() {
+    public Optional<Object> config() {
         return Optional.ofNullable(this.config);
     }
     /**
      * Config URI.
      * 
     */
-    public Optional<String> getConfigHref() {
+    public Optional<String> configHref() {
         return Optional.ofNullable(this.configHref);
     }
     /**
      * File list.
      * 
     */
-    public Map<String,String> getFiles() {
+    public Map<String,String> files() {
         return this.files == null ? Map.of() : this.files;
     }
     /**
      * Function App ID.
      * 
     */
-    public Optional<String> getFunctionAppId() {
+    public Optional<String> functionAppId() {
         return Optional.ofNullable(this.functionAppId);
     }
     /**
      * Function URI.
      * 
     */
-    public Optional<String> getHref() {
+    public Optional<String> href() {
         return Optional.ofNullable(this.href);
     }
     /**
      * Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The invocation URL
      * 
     */
-    public Optional<String> getInvokeUrlTemplate() {
+    public Optional<String> invokeUrlTemplate() {
         return Optional.ofNullable(this.invokeUrlTemplate);
     }
     /**
      * Gets or sets a value indicating whether the function is disabled
      * 
     */
-    public Optional<Boolean> getIsDisabled() {
+    public Optional<Boolean> isDisabled() {
         return Optional.ofNullable(this.isDisabled);
     }
     /**
      * Kind of resource.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The function language
      * 
     */
-    public Optional<String> getLanguage() {
+    public Optional<String> language() {
         return Optional.ofNullable(this.language);
     }
     /**
      * Resource Name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Script URI.
      * 
     */
-    public Optional<String> getScriptHref() {
+    public Optional<String> scriptHref() {
         return Optional.ofNullable(this.scriptHref);
     }
     /**
      * Script root path URI.
      * 
     */
-    public Optional<String> getScriptRootPathHref() {
+    public Optional<String> scriptRootPathHref() {
         return Optional.ofNullable(this.scriptRootPathHref);
     }
     /**
      * Secrets file URI.
      * 
     */
-    public Optional<String> getSecretsFileHref() {
+    public Optional<String> secretsFileHref() {
         return Optional.ofNullable(this.secretsFileHref);
     }
     /**
      * Test data used when testing via the Azure Portal.
      * 
     */
-    public Optional<String> getTestData() {
+    public Optional<String> testData() {
         return Optional.ofNullable(this.testData);
     }
     /**
      * Test data URI.
      * 
     */
-    public Optional<String> getTestDataHref() {
+    public Optional<String> testDataHref() {
         return Optional.ofNullable(this.testDataHref);
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

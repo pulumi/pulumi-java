@@ -27,7 +27,7 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -38,7 +38,7 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
     @Import(name="isPrivate")
       private final @Nullable Output<Boolean> isPrivate;
 
-    public Output<Boolean> getIsPrivate() {
+    public Output<Boolean> isPrivate() {
         return this.isPrivate == null ? Codegen.empty() : this.isPrivate;
     }
 
@@ -49,7 +49,7 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
     @Import(name="owner")
       private final @Nullable Output<String> owner;
 
-    public Output<String> getOwner() {
+    public Output<String> owner() {
         return this.owner == null ? Codegen.empty() : this.owner;
     }
 
@@ -60,7 +60,7 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
     @Import(name="repositoryName")
       private final @Nullable Output<String> repositoryName;
 
-    public Output<String> getRepositoryName() {
+    public Output<String> repositoryName() {
         return this.repositoryName == null ? Codegen.empty() : this.repositoryName;
     }
 
@@ -71,7 +71,7 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
     @Import(name="templateRepositoryUrl")
       private final @Nullable Output<String> templateRepositoryUrl;
 
-    public Output<String> getTemplateRepositoryUrl() {
+    public Output<String> templateRepositoryUrl() {
         return this.templateRepositoryUrl == null ? Codegen.empty() : this.templateRepositoryUrl;
     }
 

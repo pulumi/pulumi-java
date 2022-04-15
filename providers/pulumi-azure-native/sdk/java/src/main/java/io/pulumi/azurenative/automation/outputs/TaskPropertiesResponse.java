@@ -35,14 +35,14 @@ public final class TaskPropertiesResponse {
      * Gets or sets the parameters of the task.
      * 
     */
-    public Map<String,String> getParameters() {
+    public Map<String,String> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Gets or sets the name of the runbook.
      * 
     */
-    public Optional<String> getSource() {
+    public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
 

@@ -25,7 +25,7 @@ public final class ExtensionStatusResponse extends io.pulumi.resources.InvokeArg
     @Import(name="code")
       private final @Nullable String code;
 
-    public Optional<String> getCode() {
+    public Optional<String> code() {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
     }
 
@@ -36,7 +36,7 @@ public final class ExtensionStatusResponse extends io.pulumi.resources.InvokeArg
     @Import(name="displayStatus")
       private final @Nullable String displayStatus;
 
-    public Optional<String> getDisplayStatus() {
+    public Optional<String> displayStatus() {
         return this.displayStatus == null ? Optional.empty() : Optional.ofNullable(this.displayStatus);
     }
 
@@ -47,7 +47,7 @@ public final class ExtensionStatusResponse extends io.pulumi.resources.InvokeArg
     @Import(name="level")
       private final @Nullable String level;
 
-    public Optional<String> getLevel() {
+    public Optional<String> level() {
         return this.level == null ? Optional.empty() : Optional.ofNullable(this.level);
     }
 
@@ -58,7 +58,7 @@ public final class ExtensionStatusResponse extends io.pulumi.resources.InvokeArg
     @Import(name="message")
       private final @Nullable String message;
 
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
@@ -69,7 +69,7 @@ public final class ExtensionStatusResponse extends io.pulumi.resources.InvokeArg
     @Import(name="time")
       private final @Nullable String time;
 
-    public Optional<String> getTime() {
+    public Optional<String> time() {
         return this.time == null ? Optional.empty() : Optional.ofNullable(this.time);
     }
 

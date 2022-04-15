@@ -22,7 +22,7 @@ public final class ResourceModelWithAllowedPropertySetResponseSku extends io.pul
     @Import(name="capacity")
       private final @Nullable Integer capacity;
 
-    public Optional<Integer> getCapacity() {
+    public Optional<Integer> capacity() {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
@@ -33,7 +33,7 @@ public final class ResourceModelWithAllowedPropertySetResponseSku extends io.pul
     @Import(name="family")
       private final @Nullable String family;
 
-    public Optional<String> getFamily() {
+    public Optional<String> family() {
         return this.family == null ? Optional.empty() : Optional.ofNullable(this.family);
     }
 
@@ -44,7 +44,7 @@ public final class ResourceModelWithAllowedPropertySetResponseSku extends io.pul
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -55,7 +55,7 @@ public final class ResourceModelWithAllowedPropertySetResponseSku extends io.pul
     @Import(name="size")
       private final @Nullable String size;
 
-    public Optional<String> getSize() {
+    public Optional<String> size() {
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
     }
 
@@ -66,7 +66,7 @@ public final class ResourceModelWithAllowedPropertySetResponseSku extends io.pul
     @Import(name="tier")
       private final @Nullable String tier;
 
-    public Optional<String> getTier() {
+    public Optional<String> tier() {
         return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
     }
 

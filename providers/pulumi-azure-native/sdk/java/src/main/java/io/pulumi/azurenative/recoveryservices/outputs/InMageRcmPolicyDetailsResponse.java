@@ -55,21 +55,21 @@ public final class InMageRcmPolicyDetailsResponse {
      * The app consistent snapshot frequency in minutes.
      * 
     */
-    public Integer getAppConsistentFrequencyInMinutes() {
+    public Integer appConsistentFrequencyInMinutes() {
         return this.appConsistentFrequencyInMinutes;
     }
     /**
      * The crash consistent snapshot frequency in minutes.
      * 
     */
-    public Integer getCrashConsistentFrequencyInMinutes() {
+    public Integer crashConsistentFrequencyInMinutes() {
         return this.crashConsistentFrequencyInMinutes;
     }
     /**
      * A value indicating whether multi-VM sync has to be enabled.
      * 
     */
-    public String getEnableMultiVmSync() {
+    public String enableMultiVmSync() {
         return this.enableMultiVmSync;
     }
     /**
@@ -77,14 +77,14 @@ public final class InMageRcmPolicyDetailsResponse {
      * Expected value is 'InMageRcm'.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
     /**
      * The duration in minutes until which the recovery points need to be stored.
      * 
     */
-    public Integer getRecoveryPointHistoryInMinutes() {
+    public Integer recoveryPointHistoryInMinutes() {
         return this.recoveryPointHistoryInMinutes;
     }
 

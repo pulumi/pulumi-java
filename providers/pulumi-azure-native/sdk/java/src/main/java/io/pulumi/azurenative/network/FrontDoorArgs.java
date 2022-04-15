@@ -32,7 +32,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backendPools")
       private final @Nullable Output<List<BackendPoolArgs>> backendPools;
 
-    public Output<List<BackendPoolArgs>> getBackendPools() {
+    public Output<List<BackendPoolArgs>> backendPools() {
         return this.backendPools == null ? Codegen.empty() : this.backendPools;
     }
 
@@ -43,7 +43,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backendPoolsSettings")
       private final @Nullable Output<BackendPoolsSettingsArgs> backendPoolsSettings;
 
-    public Output<BackendPoolsSettingsArgs> getBackendPoolsSettings() {
+    public Output<BackendPoolsSettingsArgs> backendPoolsSettings() {
         return this.backendPoolsSettings == null ? Codegen.empty() : this.backendPoolsSettings;
     }
 
@@ -54,7 +54,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabledState")
       private final @Nullable Output<Either<String,FrontDoorEnabledState>> enabledState;
 
-    public Output<Either<String,FrontDoorEnabledState>> getEnabledState() {
+    public Output<Either<String,FrontDoorEnabledState>> enabledState() {
         return this.enabledState == null ? Codegen.empty() : this.enabledState;
     }
 
@@ -65,7 +65,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
@@ -76,7 +76,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="frontDoorName")
       private final @Nullable Output<String> frontDoorName;
 
-    public Output<String> getFrontDoorName() {
+    public Output<String> frontDoorName() {
         return this.frontDoorName == null ? Codegen.empty() : this.frontDoorName;
     }
 
@@ -87,7 +87,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="frontendEndpoints")
       private final @Nullable Output<List<FrontendEndpointArgs>> frontendEndpoints;
 
-    public Output<List<FrontendEndpointArgs>> getFrontendEndpoints() {
+    public Output<List<FrontendEndpointArgs>> frontendEndpoints() {
         return this.frontendEndpoints == null ? Codegen.empty() : this.frontendEndpoints;
     }
 
@@ -98,7 +98,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="healthProbeSettings")
       private final @Nullable Output<List<HealthProbeSettingsModelArgs>> healthProbeSettings;
 
-    public Output<List<HealthProbeSettingsModelArgs>> getHealthProbeSettings() {
+    public Output<List<HealthProbeSettingsModelArgs>> healthProbeSettings() {
         return this.healthProbeSettings == null ? Codegen.empty() : this.healthProbeSettings;
     }
 
@@ -109,7 +109,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancingSettings")
       private final @Nullable Output<List<LoadBalancingSettingsModelArgs>> loadBalancingSettings;
 
-    public Output<List<LoadBalancingSettingsModelArgs>> getLoadBalancingSettings() {
+    public Output<List<LoadBalancingSettingsModelArgs>> loadBalancingSettings() {
         return this.loadBalancingSettings == null ? Codegen.empty() : this.loadBalancingSettings;
     }
 
@@ -120,7 +120,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -131,7 +131,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -142,7 +142,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="routingRules")
       private final @Nullable Output<List<RoutingRuleArgs>> routingRules;
 
-    public Output<List<RoutingRuleArgs>> getRoutingRules() {
+    public Output<List<RoutingRuleArgs>> routingRules() {
         return this.routingRules == null ? Codegen.empty() : this.routingRules;
     }
 
@@ -153,7 +153,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

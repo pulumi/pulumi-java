@@ -25,7 +25,7 @@ public final class MediaGraphTlsValidationOptionsArgs extends io.pulumi.resource
     @Import(name="ignoreHostname", required=true)
       private final Output<Boolean> ignoreHostname;
 
-    public Output<Boolean> getIgnoreHostname() {
+    public Output<Boolean> ignoreHostname() {
         return this.ignoreHostname;
     }
 
@@ -36,7 +36,7 @@ public final class MediaGraphTlsValidationOptionsArgs extends io.pulumi.resource
     @Import(name="ignoreSignature", required=true)
       private final Output<Boolean> ignoreSignature;
 
-    public Output<Boolean> getIgnoreSignature() {
+    public Output<Boolean> ignoreSignature() {
         return this.ignoreSignature;
     }
 

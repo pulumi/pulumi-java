@@ -41,21 +41,21 @@ public final class HttpRouteConfigResponse {
      * Describes destination endpoint for routing traffic.
      * 
     */
-    public GatewayDestinationResponse getDestination() {
+    public GatewayDestinationResponse destination() {
         return this.destination;
     }
     /**
      * Describes a rule for http route matching.
      * 
     */
-    public HttpRouteMatchRuleResponse getMatch() {
+    public HttpRouteMatchRuleResponse match() {
         return this.match;
     }
     /**
      * http route name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

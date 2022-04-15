@@ -25,7 +25,7 @@ public final class DatasourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="datasourceType")
       private final @Nullable String datasourceType;
 
-    public Optional<String> getDatasourceType() {
+    public Optional<String> datasourceType() {
         return this.datasourceType == null ? Optional.empty() : Optional.ofNullable(this.datasourceType);
     }
 
@@ -36,7 +36,7 @@ public final class DatasourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="objectType")
       private final @Nullable String objectType;
 
-    public Optional<String> getObjectType() {
+    public Optional<String> objectType() {
         return this.objectType == null ? Optional.empty() : Optional.ofNullable(this.objectType);
     }
 
@@ -47,7 +47,7 @@ public final class DatasourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceID", required=true)
       private final String resourceID;
 
-    public String getResourceID() {
+    public String resourceID() {
         return this.resourceID;
     }
 
@@ -58,7 +58,7 @@ public final class DatasourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceLocation")
       private final @Nullable String resourceLocation;
 
-    public Optional<String> getResourceLocation() {
+    public Optional<String> resourceLocation() {
         return this.resourceLocation == null ? Optional.empty() : Optional.ofNullable(this.resourceLocation);
     }
 
@@ -69,7 +69,7 @@ public final class DatasourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceName")
       private final @Nullable String resourceName;
 
-    public Optional<String> getPropResourceName() {
+    public Optional<String> resourceName() {
         return this.resourceName == null ? Optional.empty() : Optional.ofNullable(this.resourceName);
     }
 
@@ -80,7 +80,7 @@ public final class DatasourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceType")
       private final @Nullable String resourceType;
 
-    public Optional<String> getPropResourceType() {
+    public Optional<String> resourceType() {
         return this.resourceType == null ? Optional.empty() : Optional.ofNullable(this.resourceType);
     }
 
@@ -91,7 +91,7 @@ public final class DatasourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceUri")
       private final @Nullable String resourceUri;
 
-    public Optional<String> getResourceUri() {
+    public Optional<String> resourceUri() {
         return this.resourceUri == null ? Optional.empty() : Optional.ofNullable(this.resourceUri);
     }
 

@@ -57,35 +57,35 @@ public final class ProviderResponse {
      * The provider ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The namespace of the resource provider.
      * 
     */
-    public Optional<String> getNamespace() {
+    public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
     /**
      * The registration policy of the resource provider.
      * 
     */
-    public String getRegistrationPolicy() {
+    public String registrationPolicy() {
         return this.registrationPolicy;
     }
     /**
      * The registration state of the resource provider.
      * 
     */
-    public String getRegistrationState() {
+    public String registrationState() {
         return this.registrationState;
     }
     /**
      * The collection of provider resource types.
      * 
     */
-    public List<ProviderResourceTypeResponse> getResourceTypes() {
+    public List<ProviderResourceTypeResponse> resourceTypes() {
         return this.resourceTypes;
     }
 

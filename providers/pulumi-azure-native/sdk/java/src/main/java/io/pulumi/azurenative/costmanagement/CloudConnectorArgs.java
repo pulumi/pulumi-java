@@ -24,7 +24,7 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="billingModel")
       private final @Nullable Output<Either<String,ConnectorBillingModel>> billingModel;
 
-    public Output<Either<String,ConnectorBillingModel>> getBillingModel() {
+    public Output<Either<String,ConnectorBillingModel>> billingModel() {
         return this.billingModel == null ? Codegen.empty() : this.billingModel;
     }
 
@@ -35,7 +35,7 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectorName")
       private final @Nullable Output<String> connectorName;
 
-    public Output<String> getConnectorName() {
+    public Output<String> connectorName() {
         return this.connectorName == null ? Codegen.empty() : this.connectorName;
     }
 
@@ -46,7 +46,7 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="credentialsKey")
       private final @Nullable Output<String> credentialsKey;
 
-    public Output<String> getCredentialsKey() {
+    public Output<String> credentialsKey() {
         return this.credentialsKey == null ? Codegen.empty() : this.credentialsKey;
     }
 
@@ -57,7 +57,7 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="credentialsSecret")
       private final @Nullable Output<String> credentialsSecret;
 
-    public Output<String> getCredentialsSecret() {
+    public Output<String> credentialsSecret() {
         return this.credentialsSecret == null ? Codegen.empty() : this.credentialsSecret;
     }
 
@@ -68,7 +68,7 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultManagementGroupId")
       private final @Nullable Output<String> defaultManagementGroupId;
 
-    public Output<String> getDefaultManagementGroupId() {
+    public Output<String> defaultManagementGroupId() {
         return this.defaultManagementGroupId == null ? Codegen.empty() : this.defaultManagementGroupId;
     }
 
@@ -79,7 +79,7 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -90,7 +90,7 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -101,7 +101,7 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reportId")
       private final @Nullable Output<String> reportId;
 
-    public Output<String> getReportId() {
+    public Output<String> reportId() {
         return this.reportId == null ? Codegen.empty() : this.reportId;
     }
 
@@ -112,7 +112,7 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
 
-    public Output<String> getSubscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
     }
 

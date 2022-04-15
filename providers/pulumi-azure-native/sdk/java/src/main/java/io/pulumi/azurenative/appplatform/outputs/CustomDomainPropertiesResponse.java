@@ -41,21 +41,21 @@ public final class CustomDomainPropertiesResponse {
      * The app name of domain.
      * 
     */
-    public String getAppName() {
+    public String appName() {
         return this.appName;
     }
     /**
      * The bound certificate name of domain.
      * 
     */
-    public Optional<String> getCertName() {
+    public Optional<String> certName() {
         return Optional.ofNullable(this.certName);
     }
     /**
      * The thumbprint of bound certificate.
      * 
     */
-    public Optional<String> getThumbprint() {
+    public Optional<String> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
 

@@ -23,7 +23,7 @@ public final class ManagerIntrinsicSettingsResponse extends io.pulumi.resources.
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

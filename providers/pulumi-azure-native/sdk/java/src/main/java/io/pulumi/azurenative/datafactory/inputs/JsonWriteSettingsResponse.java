@@ -26,7 +26,7 @@ public final class JsonWriteSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="filePattern")
       private final @Nullable Object filePattern;
 
-    public Optional<Object> getFilePattern() {
+    public Optional<Object> filePattern() {
         return this.filePattern == null ? Optional.empty() : Optional.ofNullable(this.filePattern);
     }
 
@@ -38,7 +38,7 @@ public final class JsonWriteSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

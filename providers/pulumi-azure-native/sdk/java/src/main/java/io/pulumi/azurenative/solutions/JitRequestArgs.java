@@ -26,7 +26,7 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationResourceId", required=true)
       private final Output<String> applicationResourceId;
 
-    public Output<String> getApplicationResourceId() {
+    public Output<String> applicationResourceId() {
         return this.applicationResourceId;
     }
 
@@ -37,7 +37,7 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jitAuthorizationPolicies", required=true)
       private final Output<List<JitAuthorizationPoliciesArgs>> jitAuthorizationPolicies;
 
-    public Output<List<JitAuthorizationPoliciesArgs>> getJitAuthorizationPolicies() {
+    public Output<List<JitAuthorizationPoliciesArgs>> jitAuthorizationPolicies() {
         return this.jitAuthorizationPolicies;
     }
 
@@ -48,7 +48,7 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jitRequestName")
       private final @Nullable Output<String> jitRequestName;
 
-    public Output<String> getJitRequestName() {
+    public Output<String> jitRequestName() {
         return this.jitRequestName == null ? Codegen.empty() : this.jitRequestName;
     }
 
@@ -59,7 +59,7 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jitSchedulingPolicy", required=true)
       private final Output<JitSchedulingPolicyArgs> jitSchedulingPolicy;
 
-    public Output<JitSchedulingPolicyArgs> getJitSchedulingPolicy() {
+    public Output<JitSchedulingPolicyArgs> jitSchedulingPolicy() {
         return this.jitSchedulingPolicy;
     }
 
@@ -70,7 +70,7 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -81,7 +81,7 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -92,7 +92,7 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -25,7 +25,7 @@ public final class EnvironmentVariableResponse extends io.pulumi.resources.Invok
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -36,7 +36,7 @@ public final class EnvironmentVariableResponse extends io.pulumi.resources.Invok
     @Import(name="secureValue")
       private final @Nullable String secureValue;
 
-    public Optional<String> getSecureValue() {
+    public Optional<String> secureValue() {
         return this.secureValue == null ? Optional.empty() : Optional.ofNullable(this.secureValue);
     }
 
@@ -47,7 +47,7 @@ public final class EnvironmentVariableResponse extends io.pulumi.resources.Invok
     @Import(name="value")
       private final @Nullable String value;
 
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

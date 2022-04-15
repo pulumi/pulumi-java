@@ -127,105 +127,105 @@ public final class GetAccountResult {
      * The immutable id associated with this team account.
      * 
     */
-    public String getAccountId() {
+    public String accountId() {
         return this.accountId;
     }
     /**
      * The creation date of the machine learning team account in ISO8601 format.
      * 
     */
-    public String getCreationDate() {
+    public String creationDate() {
         return this.creationDate;
     }
     /**
      * The description of this workspace.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The uri for this machine learning team account.
      * 
     */
-    public String getDiscoveryUri() {
+    public String discoveryUri() {
         return this.discoveryUri;
     }
     /**
      * The friendly name for this workspace. This will be the workspace name in the arm id when the workspace object gets created
      * 
     */
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * The resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The fully qualified arm id of the user key vault.
      * 
     */
-    public String getKeyVaultId() {
+    public String keyVaultId() {
         return this.keyVaultId;
     }
     /**
      * The location of the resource. This cannot be changed after the resource is created.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The current deployment state of team account resource. The provisioningState is to indicate states for resource provisioning.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The no of users/seats who can access this team account. This property defines the charge on the team account.
      * 
     */
-    public Optional<String> getSeats() {
+    public Optional<String> seats() {
         return Optional.ofNullable(this.seats);
     }
     /**
      * The properties of the storage account for the machine learning team account.
      * 
     */
-    public StorageAccountPropertiesResponse getStorageAccount() {
+    public StorageAccountPropertiesResponse storageAccount() {
         return this.storageAccount;
     }
     /**
      * The tags of the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The fully qualified arm id of the vso account to be used for this team account.
      * 
     */
-    public String getVsoAccountId() {
+    public String vsoAccountId() {
         return this.vsoAccountId;
     }
 

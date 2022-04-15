@@ -28,7 +28,7 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
     @Import(name="dnsSearchDomain")
       private final @Nullable Output<String> dnsSearchDomain;
 
-    public Output<String> getDnsSearchDomain() {
+    public Output<String> dnsSearchDomain() {
         return this.dnsSearchDomain == null ? Codegen.empty() : this.dnsSearchDomain;
     }
 
@@ -39,7 +39,7 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
     @Import(name="dnsServers")
       private final @Nullable Output<List<String>> dnsServers;
 
-    public Output<List<String>> getDnsServers() {
+    public Output<List<String>> dnsServers() {
         return this.dnsServers == null ? Codegen.empty() : this.dnsServers;
     }
 
@@ -50,7 +50,7 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
     @Import(name="mtu")
       private final @Nullable Output<Integer> mtu;
 
-    public Output<Integer> getMtu() {
+    public Output<Integer> mtu() {
         return this.mtu == null ? Codegen.empty() : this.mtu;
     }
 
@@ -61,7 +61,7 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
     @Import(name="ntpServer")
       private final @Nullable Output<String> ntpServer;
 
-    public Output<String> getNtpServer() {
+    public Output<String> ntpServer() {
         return this.ntpServer == null ? Codegen.empty() : this.ntpServer;
     }
 

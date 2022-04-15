@@ -26,7 +26,7 @@ public final class HttpProxyConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="httpsProxy")
       private final @Nullable Output<String> httpsProxy;
 
-    public Output<String> getHttpsProxy() {
+    public Output<String> httpsProxy() {
         return this.httpsProxy == null ? Codegen.empty() : this.httpsProxy;
     }
 

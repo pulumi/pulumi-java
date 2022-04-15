@@ -26,7 +26,7 @@ public final class VpnClientRootCertificateArgs extends io.pulumi.resources.Reso
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -37,7 +37,7 @@ public final class VpnClientRootCertificateArgs extends io.pulumi.resources.Reso
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -48,7 +48,7 @@ public final class VpnClientRootCertificateArgs extends io.pulumi.resources.Reso
     @Import(name="publicCertData", required=true)
       private final Output<String> publicCertData;
 
-    public Output<String> getPublicCertData() {
+    public Output<String> publicCertData() {
         return this.publicCertData;
     }
 

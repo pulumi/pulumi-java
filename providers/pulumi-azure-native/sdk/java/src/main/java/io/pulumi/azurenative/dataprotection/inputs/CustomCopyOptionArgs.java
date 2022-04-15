@@ -26,7 +26,7 @@ public final class CustomCopyOptionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="duration")
       private final @Nullable Output<String> duration;
 
-    public Output<String> getDuration() {
+    public Output<String> duration() {
         return this.duration == null ? Codegen.empty() : this.duration;
     }
 
@@ -38,7 +38,7 @@ public final class CustomCopyOptionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="objectType", required=true)
       private final Output<String> objectType;
 
-    public Output<String> getObjectType() {
+    public Output<String> objectType() {
         return this.objectType;
     }
 

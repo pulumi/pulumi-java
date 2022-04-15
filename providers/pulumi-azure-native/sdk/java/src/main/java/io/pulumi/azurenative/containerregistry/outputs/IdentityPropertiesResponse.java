@@ -53,21 +53,21 @@ public final class IdentityPropertiesResponse {
      * The principal ID of resource identity.
      * 
     */
-    public Optional<String> getPrincipalId() {
+    public Optional<String> principalId() {
         return Optional.ofNullable(this.principalId);
     }
     /**
      * The tenant ID of resource.
      * 
     */
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * The identity type.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
@@ -77,7 +77,7 @@ public final class IdentityPropertiesResponse {
      *     providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
      * 
     */
-    public Map<String,UserIdentityPropertiesResponse> getUserAssignedIdentities() {
+    public Map<String,UserIdentityPropertiesResponse> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }
 

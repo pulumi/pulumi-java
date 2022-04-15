@@ -24,7 +24,7 @@ public final class FilesNotTieringErrorResponse extends io.pulumi.resources.Invo
     @Import(name="errorCode", required=true)
       private final Integer errorCode;
 
-    public Integer getErrorCode() {
+    public Integer errorCode() {
         return this.errorCode;
     }
 
@@ -35,7 +35,7 @@ public final class FilesNotTieringErrorResponse extends io.pulumi.resources.Invo
     @Import(name="fileCount", required=true)
       private final Double fileCount;
 
-    public Double getFileCount() {
+    public Double fileCount() {
         return this.fileCount;
     }
 

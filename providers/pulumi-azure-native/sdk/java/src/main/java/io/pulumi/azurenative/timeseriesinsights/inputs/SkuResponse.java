@@ -24,7 +24,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="capacity", required=true)
       private final Integer capacity;
 
-    public Integer getCapacity() {
+    public Integer capacity() {
         return this.capacity;
     }
 
@@ -35,7 +35,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

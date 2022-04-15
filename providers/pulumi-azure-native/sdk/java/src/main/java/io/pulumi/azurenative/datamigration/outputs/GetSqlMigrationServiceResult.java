@@ -50,36 +50,36 @@ public final class GetSqlMigrationServiceResult {
         this.type = type;
     }
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Current state of the Integration runtime.
      * 
     */
-    public String getIntegrationRuntimeState() {
+    public String integrationRuntimeState() {
         return this.integrationRuntimeState;
     }
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Provisioning state to track the async operation status.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

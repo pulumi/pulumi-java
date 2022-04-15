@@ -19,21 +19,21 @@ public final class EtwEventConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     @Import(name="id", required=true)
       private final Output<Integer> id;
 
-    public Output<Integer> getId() {
+    public Output<Integer> id() {
         return this.id;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

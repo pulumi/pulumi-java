@@ -31,7 +31,7 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
     @Import(name="cloudName")
       private final @Nullable Output<Either<String,CloudName>> cloudName;
 
-    public Output<Either<String,CloudName>> getCloudName() {
+    public Output<Either<String,CloudName>> cloudName() {
         return this.cloudName == null ? Codegen.empty() : this.cloudName;
     }
 
@@ -42,7 +42,7 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
     @Import(name="hierarchyIdentifier")
       private final @Nullable Output<String> hierarchyIdentifier;
 
-    public Output<String> getHierarchyIdentifier() {
+    public Output<String> hierarchyIdentifier() {
         return this.hierarchyIdentifier == null ? Codegen.empty() : this.hierarchyIdentifier;
     }
 
@@ -53,7 +53,7 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -64,7 +64,7 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -75,7 +75,7 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
     @Import(name="offerings")
       private final @Nullable Output<List<Object>> offerings;
 
-    public Output<List<Object>> getOfferings() {
+    public Output<List<Object>> offerings() {
         return this.offerings == null ? Codegen.empty() : this.offerings;
     }
 
@@ -86,7 +86,7 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
     @Import(name="organizationalData")
       private final @Nullable Output<SecurityConnectorPropertiesOrganizationalDataArgs> organizationalData;
 
-    public Output<SecurityConnectorPropertiesOrganizationalDataArgs> getOrganizationalData() {
+    public Output<SecurityConnectorPropertiesOrganizationalDataArgs> organizationalData() {
         return this.organizationalData == null ? Codegen.empty() : this.organizationalData;
     }
 
@@ -97,7 +97,7 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -108,7 +108,7 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
     @Import(name="securityConnectorName")
       private final @Nullable Output<String> securityConnectorName;
 
-    public Output<String> getSecurityConnectorName() {
+    public Output<String> securityConnectorName() {
         return this.securityConnectorName == null ? Codegen.empty() : this.securityConnectorName;
     }
 
@@ -119,7 +119,7 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

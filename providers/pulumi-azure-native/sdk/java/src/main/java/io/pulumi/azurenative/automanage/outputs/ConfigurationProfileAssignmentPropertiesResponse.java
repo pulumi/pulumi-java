@@ -63,42 +63,42 @@ public final class ConfigurationProfileAssignmentPropertiesResponse {
      * The Automanage account ARM Resource URI
      * 
     */
-    public Optional<String> getAccountId() {
+    public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
     }
     /**
      * The configuration setting for the configuration profile.
      * 
     */
-    public Optional<ConfigurationProfileAssignmentComplianceResponse> getCompliance() {
+    public Optional<ConfigurationProfileAssignmentComplianceResponse> compliance() {
         return Optional.ofNullable(this.compliance);
     }
     /**
      * A value indicating configuration profile.
      * 
     */
-    public Optional<String> getConfigurationProfile() {
+    public Optional<String> configurationProfile() {
         return Optional.ofNullable(this.configurationProfile);
     }
     /**
      * The configuration profile custom preferences ARM resource URI
      * 
     */
-    public Optional<String> getConfigurationProfilePreferenceId() {
+    public Optional<String> configurationProfilePreferenceId() {
         return Optional.ofNullable(this.configurationProfilePreferenceId);
     }
     /**
      * The state of onboarding, which only appears in the response.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The target VM resource URI
      * 
     */
-    public Optional<String> getTargetId() {
+    public Optional<String> targetId() {
         return Optional.ofNullable(this.targetId);
     }
 

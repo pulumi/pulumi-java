@@ -27,7 +27,7 @@ public final class TestBaseAccountSKUResponse extends io.pulumi.resources.Invoke
     @Import(name="capabilities", required=true)
       private final List<TestBaseAccountSKUCapabilityResponse> capabilities;
 
-    public List<TestBaseAccountSKUCapabilityResponse> getCapabilities() {
+    public List<TestBaseAccountSKUCapabilityResponse> capabilities() {
         return this.capabilities;
     }
 
@@ -38,7 +38,7 @@ public final class TestBaseAccountSKUResponse extends io.pulumi.resources.Invoke
     @Import(name="locations")
       private final @Nullable List<String> locations;
 
-    public List<String> getLocations() {
+    public List<String> locations() {
         return this.locations == null ? List.of() : this.locations;
     }
 
@@ -49,7 +49,7 @@ public final class TestBaseAccountSKUResponse extends io.pulumi.resources.Invoke
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -60,7 +60,7 @@ public final class TestBaseAccountSKUResponse extends io.pulumi.resources.Invoke
     @Import(name="resourceType")
       private final @Nullable String resourceType;
 
-    public Optional<String> getPropResourceType() {
+    public Optional<String> resourceType() {
         return this.resourceType == null ? Optional.empty() : Optional.ofNullable(this.resourceType);
     }
 
@@ -71,7 +71,7 @@ public final class TestBaseAccountSKUResponse extends io.pulumi.resources.Invoke
     @Import(name="tier", required=true)
       private final String tier;
 
-    public String getTier() {
+    public String tier() {
         return this.tier;
     }
 

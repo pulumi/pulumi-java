@@ -25,7 +25,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="artifacts")
       private final @Nullable Output<ServiceUnitArtifactsArgs> artifacts;
 
-    public Output<ServiceUnitArtifactsArgs> getArtifacts() {
+    public Output<ServiceUnitArtifactsArgs> artifacts() {
         return this.artifacts == null ? Codegen.empty() : this.artifacts;
     }
 
@@ -36,7 +36,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deploymentMode", required=true)
       private final Output<DeploymentMode> deploymentMode;
 
-    public Output<DeploymentMode> getDeploymentMode() {
+    public Output<DeploymentMode> deploymentMode() {
         return this.deploymentMode;
     }
 
@@ -47,7 +47,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -58,7 +58,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -69,7 +69,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -80,7 +80,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceTopologyName", required=true)
       private final Output<String> serviceTopologyName;
 
-    public Output<String> getServiceTopologyName() {
+    public Output<String> serviceTopologyName() {
         return this.serviceTopologyName;
     }
 
@@ -91,7 +91,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceUnitName")
       private final @Nullable Output<String> serviceUnitName;
 
-    public Output<String> getServiceUnitName() {
+    public Output<String> serviceUnitName() {
         return this.serviceUnitName == null ? Codegen.empty() : this.serviceUnitName;
     }
 
@@ -102,7 +102,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -113,7 +113,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetResourceGroup", required=true)
       private final Output<String> targetResourceGroup;
 
-    public Output<String> getTargetResourceGroup() {
+    public Output<String> targetResourceGroup() {
         return this.targetResourceGroup;
     }
 

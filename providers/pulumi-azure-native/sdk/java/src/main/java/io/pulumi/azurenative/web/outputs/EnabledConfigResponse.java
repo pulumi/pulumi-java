@@ -26,7 +26,7 @@ public final class EnabledConfigResponse {
      * True if configuration is enabled, false if it is disabled and null if configuration is not set.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
 

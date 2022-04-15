@@ -119,77 +119,77 @@ public final class HDInsightPigActivityResponse {
      * User specified arguments to HDInsightActivity. Type: array (or Expression with resultType array).
      * 
     */
-    public Optional<Object> getArguments() {
+    public Optional<Object> arguments() {
         return Optional.ofNullable(this.arguments);
     }
     /**
      * Allows user to specify defines for Pig job request.
      * 
     */
-    public Map<String,Object> getDefines() {
+    public Map<String,Object> defines() {
         return this.defines == null ? Map.of() : this.defines;
     }
     /**
      * Activity depends on condition.
      * 
     */
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Debug info option.
      * 
     */
-    public Optional<String> getGetDebugInfo() {
+    public Optional<String> getDebugInfo() {
         return Optional.ofNullable(this.getDebugInfo);
     }
     /**
      * Linked service reference.
      * 
     */
-    public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
+    public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
      * Activity name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Activity policy.
      * 
     */
-    public Optional<ActivityPolicyResponse> getPolicy() {
+    public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
     /**
      * Script linked service reference.
      * 
     */
-    public Optional<LinkedServiceReferenceResponse> getScriptLinkedService() {
+    public Optional<LinkedServiceReferenceResponse> scriptLinkedService() {
         return Optional.ofNullable(this.scriptLinkedService);
     }
     /**
      * Script path. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getScriptPath() {
+    public Optional<Object> scriptPath() {
         return Optional.ofNullable(this.scriptPath);
     }
     /**
      * Storage linked service references.
      * 
     */
-    public List<LinkedServiceReferenceResponse> getStorageLinkedServices() {
+    public List<LinkedServiceReferenceResponse> storageLinkedServices() {
         return this.storageLinkedServices == null ? List.of() : this.storageLinkedServices;
     }
     /**
@@ -197,14 +197,14 @@ public final class HDInsightPigActivityResponse {
      * Expected value is 'HDInsightPig'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
     */
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 

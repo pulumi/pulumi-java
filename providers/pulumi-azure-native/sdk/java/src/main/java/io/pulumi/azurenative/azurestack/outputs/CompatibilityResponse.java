@@ -50,28 +50,28 @@ public final class CompatibilityResponse {
      * Full error message if any compatibility issues are found
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Tells if product is compatible with current device
      * 
     */
-    public Optional<Boolean> getIsCompatible() {
+    public Optional<Boolean> isCompatible() {
         return Optional.ofNullable(this.isCompatible);
     }
     /**
      * List of all issues found
      * 
     */
-    public List<String> getIssues() {
+    public List<String> issues() {
         return this.issues == null ? List.of() : this.issues;
     }
     /**
      * Short error message if any compatibility issues are found
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
 

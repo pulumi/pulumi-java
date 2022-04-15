@@ -33,7 +33,7 @@ public final class StreamInputPropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="datasource")
       private final @Nullable Output<Object> datasource;
 
-    public Output<Object> getDatasource() {
+    public Output<Object> datasource() {
         return this.datasource == null ? Codegen.empty() : this.datasource;
     }
 
@@ -44,7 +44,7 @@ public final class StreamInputPropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="serialization")
       private final @Nullable Output<Object> serialization;
 
-    public Output<Object> getSerialization() {
+    public Output<Object> serialization() {
         return this.serialization == null ? Codegen.empty() : this.serialization;
     }
 
@@ -56,7 +56,7 @@ public final class StreamInputPropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

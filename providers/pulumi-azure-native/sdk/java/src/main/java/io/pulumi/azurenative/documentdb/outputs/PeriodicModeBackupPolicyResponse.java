@@ -36,7 +36,7 @@ public final class PeriodicModeBackupPolicyResponse {
      * Configuration values for periodic mode backup
      * 
     */
-    public Optional<PeriodicModePropertiesResponse> getPeriodicModeProperties() {
+    public Optional<PeriodicModePropertiesResponse> periodicModeProperties() {
         return Optional.ofNullable(this.periodicModeProperties);
     }
     /**
@@ -44,7 +44,7 @@ public final class PeriodicModeBackupPolicyResponse {
      * Expected value is 'Periodic'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

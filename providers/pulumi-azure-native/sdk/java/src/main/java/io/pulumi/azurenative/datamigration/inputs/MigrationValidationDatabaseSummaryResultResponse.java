@@ -23,7 +23,7 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
     @Import(name="endedOn", required=true)
       private final String endedOn;
 
-    public String getEndedOn() {
+    public String endedOn() {
         return this.endedOn;
     }
 
@@ -34,7 +34,7 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -45,7 +45,7 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
     @Import(name="migrationId", required=true)
       private final String migrationId;
 
-    public String getMigrationId() {
+    public String migrationId() {
         return this.migrationId;
     }
 
@@ -56,7 +56,7 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
     @Import(name="sourceDatabaseName", required=true)
       private final String sourceDatabaseName;
 
-    public String getSourceDatabaseName() {
+    public String sourceDatabaseName() {
         return this.sourceDatabaseName;
     }
 
@@ -67,7 +67,7 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
     @Import(name="startedOn", required=true)
       private final String startedOn;
 
-    public String getStartedOn() {
+    public String startedOn() {
         return this.startedOn;
     }
 
@@ -78,7 +78,7 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
@@ -89,7 +89,7 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
     @Import(name="targetDatabaseName", required=true)
       private final String targetDatabaseName;
 
-    public String getTargetDatabaseName() {
+    public String targetDatabaseName() {
         return this.targetDatabaseName;
     }
 

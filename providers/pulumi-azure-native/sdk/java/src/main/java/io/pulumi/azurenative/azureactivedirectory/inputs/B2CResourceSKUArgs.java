@@ -27,7 +27,7 @@ public final class B2CResourceSKUArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<B2CResourceSKUName> name;
 
-    public Output<B2CResourceSKUName> getName() {
+    public Output<B2CResourceSKUName> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -38,7 +38,7 @@ public final class B2CResourceSKUArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tier")
       private final @Nullable Output<B2CResourceSKUTier> tier;
 
-    public Output<B2CResourceSKUTier> getTier() {
+    public Output<B2CResourceSKUTier> tier() {
         return this.tier == null ? Codegen.empty() : this.tier;
     }
 

@@ -34,14 +34,14 @@ public final class ResourceSetResponse {
      * resourceSettingId for the environment
      * 
     */
-    public Optional<String> getResourceSettingId() {
+    public Optional<String> resourceSettingId() {
         return Optional.ofNullable(this.resourceSettingId);
     }
     /**
      * VM resource Id for the environment
      * 
     */
-    public Optional<String> getVmResourceId() {
+    public Optional<String> vmResourceId() {
         return Optional.ofNullable(this.vmResourceId);
     }
 

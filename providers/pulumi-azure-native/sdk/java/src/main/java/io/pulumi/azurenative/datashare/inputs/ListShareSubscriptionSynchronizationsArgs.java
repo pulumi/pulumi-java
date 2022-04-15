@@ -21,7 +21,7 @@ public final class ListShareSubscriptionSynchronizationsArgs extends io.pulumi.r
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -32,7 +32,7 @@ public final class ListShareSubscriptionSynchronizationsArgs extends io.pulumi.r
     @Import(name="filter")
       private final @Nullable String filter;
 
-    public Optional<String> getFilter() {
+    public Optional<String> filter() {
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
     }
 
@@ -43,7 +43,7 @@ public final class ListShareSubscriptionSynchronizationsArgs extends io.pulumi.r
     @Import(name="orderby")
       private final @Nullable String orderby;
 
-    public Optional<String> getOrderby() {
+    public Optional<String> orderby() {
         return this.orderby == null ? Optional.empty() : Optional.ofNullable(this.orderby);
     }
 
@@ -54,7 +54,7 @@ public final class ListShareSubscriptionSynchronizationsArgs extends io.pulumi.r
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,7 +65,7 @@ public final class ListShareSubscriptionSynchronizationsArgs extends io.pulumi.r
     @Import(name="shareSubscriptionName", required=true)
       private final String shareSubscriptionName;
 
-    public String getShareSubscriptionName() {
+    public String shareSubscriptionName() {
         return this.shareSubscriptionName;
     }
 
@@ -76,7 +76,7 @@ public final class ListShareSubscriptionSynchronizationsArgs extends io.pulumi.r
     @Import(name="skipToken")
       private final @Nullable String skipToken;
 
-    public Optional<String> getSkipToken() {
+    public Optional<String> skipToken() {
         return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
     }
 

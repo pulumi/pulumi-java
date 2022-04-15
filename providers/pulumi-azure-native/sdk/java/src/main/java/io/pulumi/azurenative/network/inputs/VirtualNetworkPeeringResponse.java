@@ -29,7 +29,7 @@ public final class VirtualNetworkPeeringResponse extends io.pulumi.resources.Inv
     @Import(name="allowForwardedTraffic")
       private final @Nullable Boolean allowForwardedTraffic;
 
-    public Optional<Boolean> getAllowForwardedTraffic() {
+    public Optional<Boolean> allowForwardedTraffic() {
         return this.allowForwardedTraffic == null ? Optional.empty() : Optional.ofNullable(this.allowForwardedTraffic);
     }
 
@@ -40,7 +40,7 @@ public final class VirtualNetworkPeeringResponse extends io.pulumi.resources.Inv
     @Import(name="allowGatewayTransit")
       private final @Nullable Boolean allowGatewayTransit;
 
-    public Optional<Boolean> getAllowGatewayTransit() {
+    public Optional<Boolean> allowGatewayTransit() {
         return this.allowGatewayTransit == null ? Optional.empty() : Optional.ofNullable(this.allowGatewayTransit);
     }
 
@@ -51,7 +51,7 @@ public final class VirtualNetworkPeeringResponse extends io.pulumi.resources.Inv
     @Import(name="allowVirtualNetworkAccess")
       private final @Nullable Boolean allowVirtualNetworkAccess;
 
-    public Optional<Boolean> getAllowVirtualNetworkAccess() {
+    public Optional<Boolean> allowVirtualNetworkAccess() {
         return this.allowVirtualNetworkAccess == null ? Optional.empty() : Optional.ofNullable(this.allowVirtualNetworkAccess);
     }
 
@@ -62,7 +62,7 @@ public final class VirtualNetworkPeeringResponse extends io.pulumi.resources.Inv
     @Import(name="doNotVerifyRemoteGateways")
       private final @Nullable Boolean doNotVerifyRemoteGateways;
 
-    public Optional<Boolean> getDoNotVerifyRemoteGateways() {
+    public Optional<Boolean> doNotVerifyRemoteGateways() {
         return this.doNotVerifyRemoteGateways == null ? Optional.empty() : Optional.ofNullable(this.doNotVerifyRemoteGateways);
     }
 
@@ -73,7 +73,7 @@ public final class VirtualNetworkPeeringResponse extends io.pulumi.resources.Inv
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -84,7 +84,7 @@ public final class VirtualNetworkPeeringResponse extends io.pulumi.resources.Inv
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -95,7 +95,7 @@ public final class VirtualNetworkPeeringResponse extends io.pulumi.resources.Inv
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -106,7 +106,7 @@ public final class VirtualNetworkPeeringResponse extends io.pulumi.resources.Inv
     @Import(name="peeringState")
       private final @Nullable String peeringState;
 
-    public Optional<String> getPeeringState() {
+    public Optional<String> peeringState() {
         return this.peeringState == null ? Optional.empty() : Optional.ofNullable(this.peeringState);
     }
 
@@ -117,7 +117,7 @@ public final class VirtualNetworkPeeringResponse extends io.pulumi.resources.Inv
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -128,7 +128,7 @@ public final class VirtualNetworkPeeringResponse extends io.pulumi.resources.Inv
     @Import(name="remoteAddressSpace")
       private final @Nullable AddressSpaceResponse remoteAddressSpace;
 
-    public Optional<AddressSpaceResponse> getRemoteAddressSpace() {
+    public Optional<AddressSpaceResponse> remoteAddressSpace() {
         return this.remoteAddressSpace == null ? Optional.empty() : Optional.ofNullable(this.remoteAddressSpace);
     }
 
@@ -139,7 +139,7 @@ public final class VirtualNetworkPeeringResponse extends io.pulumi.resources.Inv
     @Import(name="remoteBgpCommunities")
       private final @Nullable VirtualNetworkBgpCommunitiesResponse remoteBgpCommunities;
 
-    public Optional<VirtualNetworkBgpCommunitiesResponse> getRemoteBgpCommunities() {
+    public Optional<VirtualNetworkBgpCommunitiesResponse> remoteBgpCommunities() {
         return this.remoteBgpCommunities == null ? Optional.empty() : Optional.ofNullable(this.remoteBgpCommunities);
     }
 
@@ -150,7 +150,7 @@ public final class VirtualNetworkPeeringResponse extends io.pulumi.resources.Inv
     @Import(name="remoteVirtualNetwork")
       private final @Nullable SubResourceResponse remoteVirtualNetwork;
 
-    public Optional<SubResourceResponse> getRemoteVirtualNetwork() {
+    public Optional<SubResourceResponse> remoteVirtualNetwork() {
         return this.remoteVirtualNetwork == null ? Optional.empty() : Optional.ofNullable(this.remoteVirtualNetwork);
     }
 
@@ -161,7 +161,7 @@ public final class VirtualNetworkPeeringResponse extends io.pulumi.resources.Inv
     @Import(name="resourceGuid", required=true)
       private final String resourceGuid;
 
-    public String getResourceGuid() {
+    public String resourceGuid() {
         return this.resourceGuid;
     }
 
@@ -172,7 +172,7 @@ public final class VirtualNetworkPeeringResponse extends io.pulumi.resources.Inv
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
@@ -183,7 +183,7 @@ public final class VirtualNetworkPeeringResponse extends io.pulumi.resources.Inv
     @Import(name="useRemoteGateways")
       private final @Nullable Boolean useRemoteGateways;
 
-    public Optional<Boolean> getUseRemoteGateways() {
+    public Optional<Boolean> useRemoteGateways() {
         return this.useRemoteGateways == null ? Optional.empty() : Optional.ofNullable(this.useRemoteGateways);
     }
 

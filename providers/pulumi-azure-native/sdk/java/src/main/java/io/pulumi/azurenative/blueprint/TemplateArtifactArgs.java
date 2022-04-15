@@ -26,7 +26,7 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="artifactName")
       private final @Nullable Output<String> artifactName;
 
-    public Output<String> getArtifactName() {
+    public Output<String> artifactName() {
         return this.artifactName == null ? Codegen.empty() : this.artifactName;
     }
 
@@ -37,7 +37,7 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="blueprintName", required=true)
       private final Output<String> blueprintName;
 
-    public Output<String> getBlueprintName() {
+    public Output<String> blueprintName() {
         return this.blueprintName;
     }
 
@@ -48,7 +48,7 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="dependsOn")
       private final @Nullable Output<List<String>> dependsOn;
 
-    public Output<List<String>> getDependsOn() {
+    public Output<List<String>> dependsOn() {
         return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
@@ -59,7 +59,7 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -70,7 +70,7 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -82,7 +82,7 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -93,7 +93,7 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="parameters", required=true)
       private final Output<Map<String,ParameterValueArgs>> parameters;
 
-    public Output<Map<String,ParameterValueArgs>> getParameters() {
+    public Output<Map<String,ParameterValueArgs>> parameters() {
         return this.parameters;
     }
 
@@ -104,7 +104,7 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroup")
       private final @Nullable Output<String> resourceGroup;
 
-    public Output<String> getResourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup == null ? Codegen.empty() : this.resourceGroup;
     }
 
@@ -115,7 +115,7 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceScope", required=true)
       private final Output<String> resourceScope;
 
-    public Output<String> getResourceScope() {
+    public Output<String> resourceScope() {
         return this.resourceScope;
     }
 
@@ -126,7 +126,7 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="template", required=true)
       private final Output<Object> template;
 
-    public Output<Object> getTemplate() {
+    public Output<Object> template() {
         return this.template;
     }
 

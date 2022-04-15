@@ -45,7 +45,7 @@ public class Manager extends io.pulumi.resources.CustomResource {
      * @return Represents the type of StorSimple Manager.
      * 
      */
-    public Output</* @Nullable */ ManagerIntrinsicSettingsResponse> getCisIntrinsicSettings() {
+    public Output</* @Nullable */ ManagerIntrinsicSettingsResponse> cisIntrinsicSettings() {
         return this.cisIntrinsicSettings;
     }
     /**
@@ -59,7 +59,7 @@ public class Manager extends io.pulumi.resources.CustomResource {
      * @return The etag of the manager.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -73,7 +73,7 @@ public class Manager extends io.pulumi.resources.CustomResource {
      * @return The geo location of the resource.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -87,7 +87,7 @@ public class Manager extends io.pulumi.resources.CustomResource {
      * @return The resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +101,7 @@ public class Manager extends io.pulumi.resources.CustomResource {
      * @return Specifies the state of the resource as it is getting provisioned. Value of "Succeeded" means the Manager was successfully created.
      * 
      */
-    public Output</* @Nullable */ String> getProvisioningState() {
+    public Output</* @Nullable */ String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -115,7 +115,7 @@ public class Manager extends io.pulumi.resources.CustomResource {
      * @return Specifies the Sku.
      * 
      */
-    public Output</* @Nullable */ ManagerSkuResponse> getSku() {
+    public Output</* @Nullable */ ManagerSkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -129,7 +129,7 @@ public class Manager extends io.pulumi.resources.CustomResource {
      * @return The tags attached to the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -143,7 +143,7 @@ public class Manager extends io.pulumi.resources.CustomResource {
      * @return The resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

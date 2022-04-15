@@ -27,7 +27,7 @@ public final class ConnectionMonitorSourceArgs extends io.pulumi.resources.Resou
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -38,7 +38,7 @@ public final class ConnectionMonitorSourceArgs extends io.pulumi.resources.Resou
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 

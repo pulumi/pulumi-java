@@ -27,7 +27,7 @@ public final class AzureTableStorageApplicationLogsConfigArgs extends io.pulumi.
     @Import(name="level")
       private final @Nullable Output<LogLevel> level;
 
-    public Output<LogLevel> getLevel() {
+    public Output<LogLevel> level() {
         return this.level == null ? Codegen.empty() : this.level;
     }
 
@@ -38,7 +38,7 @@ public final class AzureTableStorageApplicationLogsConfigArgs extends io.pulumi.
     @Import(name="sasUrl", required=true)
       private final Output<String> sasUrl;
 
-    public Output<String> getSasUrl() {
+    public Output<String> sasUrl() {
         return this.sasUrl;
     }
 

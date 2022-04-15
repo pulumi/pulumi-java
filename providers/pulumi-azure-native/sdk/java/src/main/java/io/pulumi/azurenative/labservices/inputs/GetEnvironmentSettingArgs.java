@@ -21,7 +21,7 @@ public final class GetEnvironmentSettingArgs extends io.pulumi.resources.InvokeA
     @Import(name="environmentSettingName", required=true)
       private final String environmentSettingName;
 
-    public String getEnvironmentSettingName() {
+    public String environmentSettingName() {
         return this.environmentSettingName;
     }
 
@@ -32,7 +32,7 @@ public final class GetEnvironmentSettingArgs extends io.pulumi.resources.InvokeA
     @Import(name="expand")
       private final @Nullable String expand;
 
-    public Optional<String> getExpand() {
+    public Optional<String> expand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
@@ -43,7 +43,7 @@ public final class GetEnvironmentSettingArgs extends io.pulumi.resources.InvokeA
     @Import(name="labAccountName", required=true)
       private final String labAccountName;
 
-    public String getLabAccountName() {
+    public String labAccountName() {
         return this.labAccountName;
     }
 
@@ -54,7 +54,7 @@ public final class GetEnvironmentSettingArgs extends io.pulumi.resources.InvokeA
     @Import(name="labName", required=true)
       private final String labName;
 
-    public String getLabName() {
+    public String labName() {
         return this.labName;
     }
 
@@ -65,7 +65,7 @@ public final class GetEnvironmentSettingArgs extends io.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

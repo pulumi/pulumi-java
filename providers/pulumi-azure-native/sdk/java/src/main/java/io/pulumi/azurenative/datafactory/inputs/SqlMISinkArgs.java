@@ -30,7 +30,7 @@ public final class SqlMISinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> getDisableMetricsCollection() {
+    public Output<Object> disableMetricsCollection() {
         return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
     }
 
@@ -41,7 +41,7 @@ public final class SqlMISinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> getMaxConcurrentConnections() {
+    public Output<Object> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
     }
 
@@ -52,7 +52,7 @@ public final class SqlMISinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preCopyScript")
       private final @Nullable Output<Object> preCopyScript;
 
-    public Output<Object> getPreCopyScript() {
+    public Output<Object> preCopyScript() {
         return this.preCopyScript == null ? Codegen.empty() : this.preCopyScript;
     }
 
@@ -63,7 +63,7 @@ public final class SqlMISinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sinkRetryCount")
       private final @Nullable Output<Object> sinkRetryCount;
 
-    public Output<Object> getSinkRetryCount() {
+    public Output<Object> sinkRetryCount() {
         return this.sinkRetryCount == null ? Codegen.empty() : this.sinkRetryCount;
     }
 
@@ -74,7 +74,7 @@ public final class SqlMISinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sinkRetryWait")
       private final @Nullable Output<Object> sinkRetryWait;
 
-    public Output<Object> getSinkRetryWait() {
+    public Output<Object> sinkRetryWait() {
         return this.sinkRetryWait == null ? Codegen.empty() : this.sinkRetryWait;
     }
 
@@ -85,7 +85,7 @@ public final class SqlMISinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sqlWriterStoredProcedureName")
       private final @Nullable Output<Object> sqlWriterStoredProcedureName;
 
-    public Output<Object> getSqlWriterStoredProcedureName() {
+    public Output<Object> sqlWriterStoredProcedureName() {
         return this.sqlWriterStoredProcedureName == null ? Codegen.empty() : this.sqlWriterStoredProcedureName;
     }
 
@@ -96,7 +96,7 @@ public final class SqlMISinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sqlWriterTableType")
       private final @Nullable Output<Object> sqlWriterTableType;
 
-    public Output<Object> getSqlWriterTableType() {
+    public Output<Object> sqlWriterTableType() {
         return this.sqlWriterTableType == null ? Codegen.empty() : this.sqlWriterTableType;
     }
 
@@ -107,7 +107,7 @@ public final class SqlMISinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sqlWriterUseTableLock")
       private final @Nullable Output<Object> sqlWriterUseTableLock;
 
-    public Output<Object> getSqlWriterUseTableLock() {
+    public Output<Object> sqlWriterUseTableLock() {
         return this.sqlWriterUseTableLock == null ? Codegen.empty() : this.sqlWriterUseTableLock;
     }
 
@@ -118,7 +118,7 @@ public final class SqlMISinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storedProcedureParameters")
       private final @Nullable Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters;
 
-    public Output<Map<String,StoredProcedureParameterArgs>> getStoredProcedureParameters() {
+    public Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters() {
         return this.storedProcedureParameters == null ? Codegen.empty() : this.storedProcedureParameters;
     }
 
@@ -129,7 +129,7 @@ public final class SqlMISinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storedProcedureTableTypeParameterName")
       private final @Nullable Output<Object> storedProcedureTableTypeParameterName;
 
-    public Output<Object> getStoredProcedureTableTypeParameterName() {
+    public Output<Object> storedProcedureTableTypeParameterName() {
         return this.storedProcedureTableTypeParameterName == null ? Codegen.empty() : this.storedProcedureTableTypeParameterName;
     }
 
@@ -140,7 +140,7 @@ public final class SqlMISinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tableOption")
       private final @Nullable Output<Object> tableOption;
 
-    public Output<Object> getTableOption() {
+    public Output<Object> tableOption() {
         return this.tableOption == null ? Codegen.empty() : this.tableOption;
     }
 
@@ -152,7 +152,7 @@ public final class SqlMISinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -163,7 +163,7 @@ public final class SqlMISinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="upsertSettings")
       private final @Nullable Output<SqlUpsertSettingsArgs> upsertSettings;
 
-    public Output<SqlUpsertSettingsArgs> getUpsertSettings() {
+    public Output<SqlUpsertSettingsArgs> upsertSettings() {
         return this.upsertSettings == null ? Codegen.empty() : this.upsertSettings;
     }
 
@@ -174,7 +174,7 @@ public final class SqlMISinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="writeBatchSize")
       private final @Nullable Output<Object> writeBatchSize;
 
-    public Output<Object> getWriteBatchSize() {
+    public Output<Object> writeBatchSize() {
         return this.writeBatchSize == null ? Codegen.empty() : this.writeBatchSize;
     }
 
@@ -185,7 +185,7 @@ public final class SqlMISinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="writeBatchTimeout")
       private final @Nullable Output<Object> writeBatchTimeout;
 
-    public Output<Object> getWriteBatchTimeout() {
+    public Output<Object> writeBatchTimeout() {
         return this.writeBatchTimeout == null ? Codegen.empty() : this.writeBatchTimeout;
     }
 
@@ -196,7 +196,7 @@ public final class SqlMISinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="writeBehavior")
       private final @Nullable Output<Object> writeBehavior;
 
-    public Output<Object> getWriteBehavior() {
+    public Output<Object> writeBehavior() {
         return this.writeBehavior == null ? Codegen.empty() : this.writeBehavior;
     }
 

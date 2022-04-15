@@ -25,7 +25,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="policyName", required=true)
       private final Output<String> policyName;
 
-    public Output<String> getPolicyName() {
+    public Output<String> policyName() {
         return this.policyName;
     }
 
@@ -36,7 +36,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="privateEndpoint")
       private final @Nullable Output<PrivateEndpointArgs> privateEndpoint;
 
-    public Output<PrivateEndpointArgs> getPrivateEndpoint() {
+    public Output<PrivateEndpointArgs> privateEndpoint() {
         return this.privateEndpoint == null ? Codegen.empty() : this.privateEndpoint;
     }
 
@@ -47,7 +47,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
 
-    public Output<String> getPrivateEndpointConnectionName() {
+    public Output<String> privateEndpointConnectionName() {
         return this.privateEndpointConnectionName == null ? Codegen.empty() : this.privateEndpointConnectionName;
     }
 
@@ -58,7 +58,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="privateLinkConnectionTags")
       private final @Nullable Output<TagsResourceArgs> privateLinkConnectionTags;
 
-    public Output<TagsResourceArgs> getPrivateLinkConnectionTags() {
+    public Output<TagsResourceArgs> privateLinkConnectionTags() {
         return this.privateLinkConnectionTags == null ? Codegen.empty() : this.privateLinkConnectionTags;
     }
 
@@ -69,7 +69,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
-    public Output<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
+    public Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Codegen.empty() : this.privateLinkServiceConnectionState;
     }
 
@@ -80,7 +80,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

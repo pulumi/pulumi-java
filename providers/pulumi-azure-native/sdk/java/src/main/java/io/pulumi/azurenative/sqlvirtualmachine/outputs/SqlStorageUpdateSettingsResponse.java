@@ -42,21 +42,21 @@ public final class SqlStorageUpdateSettingsResponse {
      * Disk configuration to apply to SQL Server.
      * 
     */
-    public Optional<String> getDiskConfigurationType() {
+    public Optional<String> diskConfigurationType() {
         return Optional.ofNullable(this.diskConfigurationType);
     }
     /**
      * Virtual machine disk count.
      * 
     */
-    public Optional<Integer> getDiskCount() {
+    public Optional<Integer> diskCount() {
         return Optional.ofNullable(this.diskCount);
     }
     /**
      * Device id of the first disk to be updated.
      * 
     */
-    public Optional<Integer> getStartingDeviceId() {
+    public Optional<Integer> startingDeviceId() {
         return Optional.ofNullable(this.startingDeviceId);
     }
 

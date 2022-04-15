@@ -28,7 +28,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventName")
       private final @Nullable Output<Either<String,NotificationChannelEventType>> eventName;
 
-    public Output<Either<String,NotificationChannelEventType>> getEventName() {
+    public Output<Either<String,NotificationChannelEventType>> eventName() {
         return this.eventName == null ? Codegen.empty() : this.eventName;
     }
 

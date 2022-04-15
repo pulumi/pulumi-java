@@ -32,14 +32,14 @@ public final class ComputeInstanceConnectivityEndpointsResponse {
      * Private IP Address of this ComputeInstance (local to the VNET in which the compute instance is deployed).
      * 
     */
-    public String getPrivateIpAddress() {
+    public String privateIpAddress() {
         return this.privateIpAddress;
     }
     /**
      * Public IP Address of this ComputeInstance.
      * 
     */
-    public String getPublicIpAddress() {
+    public String publicIpAddress() {
         return this.publicIpAddress;
     }
 

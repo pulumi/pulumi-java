@@ -62,42 +62,42 @@ public final class GetNamespaceIpFilterRuleResult {
      * The IP Filter Action
      * 
     */
-    public Optional<String> getAction() {
+    public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
     /**
      * IP Filter name
      * 
     */
-    public Optional<String> getFilterName() {
+    public Optional<String> filterName() {
         return Optional.ofNullable(this.filterName);
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * IP Mask
      * 
     */
-    public Optional<String> getIpMask() {
+    public Optional<String> ipMask() {
         return Optional.ofNullable(this.ipMask);
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

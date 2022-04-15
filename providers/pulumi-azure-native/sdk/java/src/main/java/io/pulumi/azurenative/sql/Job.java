@@ -44,7 +44,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return User-defined description of the job.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -58,7 +58,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +72,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Schedule properties of the job.
      * 
      */
-    public Output</* @Nullable */ JobScheduleResponse> getSchedule() {
+    public Output</* @Nullable */ JobScheduleResponse> schedule() {
         return this.schedule;
     }
     /**
@@ -86,7 +86,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -100,7 +100,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The job version number.
      * 
      */
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version;
     }
 

@@ -44,7 +44,7 @@ public class NatRule extends io.pulumi.resources.CustomResource {
      * @return List of egress VpnSiteLinkConnections.
      * 
      */
-    public Output<List<SubResourceResponse>> getEgressVpnSiteLinkConnections() {
+    public Output<List<SubResourceResponse>> egressVpnSiteLinkConnections() {
         return this.egressVpnSiteLinkConnections;
     }
     /**
@@ -58,7 +58,7 @@ public class NatRule extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -72,7 +72,7 @@ public class NatRule extends io.pulumi.resources.CustomResource {
      * @return The private IP address external mapping for NAT.
      * 
      */
-    public Output</* @Nullable */ List<VpnNatRuleMappingResponse>> getExternalMappings() {
+    public Output</* @Nullable */ List<VpnNatRuleMappingResponse>> externalMappings() {
         return this.externalMappings;
     }
     /**
@@ -86,7 +86,7 @@ public class NatRule extends io.pulumi.resources.CustomResource {
      * @return List of ingress VpnSiteLinkConnections.
      * 
      */
-    public Output<List<SubResourceResponse>> getIngressVpnSiteLinkConnections() {
+    public Output<List<SubResourceResponse>> ingressVpnSiteLinkConnections() {
         return this.ingressVpnSiteLinkConnections;
     }
     /**
@@ -100,7 +100,7 @@ public class NatRule extends io.pulumi.resources.CustomResource {
      * @return The private IP address internal mapping for NAT.
      * 
      */
-    public Output</* @Nullable */ List<VpnNatRuleMappingResponse>> getInternalMappings() {
+    public Output</* @Nullable */ List<VpnNatRuleMappingResponse>> internalMappings() {
         return this.internalMappings;
     }
     /**
@@ -114,7 +114,7 @@ public class NatRule extends io.pulumi.resources.CustomResource {
      * @return The IP Configuration ID this NAT rule applies to.
      * 
      */
-    public Output</* @Nullable */ String> getIpConfigurationId() {
+    public Output</* @Nullable */ String> ipConfigurationId() {
         return this.ipConfigurationId;
     }
     /**
@@ -128,7 +128,7 @@ public class NatRule extends io.pulumi.resources.CustomResource {
      * @return The Source NAT direction of a VPN NAT.
      * 
      */
-    public Output</* @Nullable */ String> getMode() {
+    public Output</* @Nullable */ String> mode() {
         return this.mode;
     }
     /**
@@ -142,7 +142,7 @@ public class NatRule extends io.pulumi.resources.CustomResource {
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -156,7 +156,7 @@ public class NatRule extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the NAT Rule resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -170,7 +170,7 @@ public class NatRule extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

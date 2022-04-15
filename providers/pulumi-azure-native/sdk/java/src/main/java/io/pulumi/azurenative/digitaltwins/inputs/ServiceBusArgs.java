@@ -28,7 +28,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authenticationType")
       private final @Nullable Output<Either<String,AuthenticationType>> authenticationType;
 
-    public Output<Either<String,AuthenticationType>> getAuthenticationType() {
+    public Output<Either<String,AuthenticationType>> authenticationType() {
         return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
     }
 
@@ -39,7 +39,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deadLetterSecret")
       private final @Nullable Output<String> deadLetterSecret;
 
-    public Output<String> getDeadLetterSecret() {
+    public Output<String> deadLetterSecret() {
         return this.deadLetterSecret == null ? Codegen.empty() : this.deadLetterSecret;
     }
 
@@ -50,7 +50,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deadLetterUri")
       private final @Nullable Output<String> deadLetterUri;
 
-    public Output<String> getDeadLetterUri() {
+    public Output<String> deadLetterUri() {
         return this.deadLetterUri == null ? Codegen.empty() : this.deadLetterUri;
     }
 
@@ -62,7 +62,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointType", required=true)
       private final Output<String> endpointType;
 
-    public Output<String> getEndpointType() {
+    public Output<String> endpointType() {
         return this.endpointType;
     }
 
@@ -73,7 +73,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointUri")
       private final @Nullable Output<String> endpointUri;
 
-    public Output<String> getEndpointUri() {
+    public Output<String> endpointUri() {
         return this.endpointUri == null ? Codegen.empty() : this.endpointUri;
     }
 
@@ -84,7 +84,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="entityPath")
       private final @Nullable Output<String> entityPath;
 
-    public Output<String> getEntityPath() {
+    public Output<String> entityPath() {
         return this.entityPath == null ? Codegen.empty() : this.entityPath;
     }
 
@@ -95,7 +95,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="primaryConnectionString")
       private final @Nullable Output<String> primaryConnectionString;
 
-    public Output<String> getPrimaryConnectionString() {
+    public Output<String> primaryConnectionString() {
         return this.primaryConnectionString == null ? Codegen.empty() : this.primaryConnectionString;
     }
 
@@ -106,7 +106,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secondaryConnectionString")
       private final @Nullable Output<String> secondaryConnectionString;
 
-    public Output<String> getSecondaryConnectionString() {
+    public Output<String> secondaryConnectionString() {
         return this.secondaryConnectionString == null ? Codegen.empty() : this.secondaryConnectionString;
     }
 

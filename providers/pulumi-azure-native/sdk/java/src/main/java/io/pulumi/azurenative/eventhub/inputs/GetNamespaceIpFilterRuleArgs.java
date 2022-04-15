@@ -19,7 +19,7 @@ public final class GetNamespaceIpFilterRuleArgs extends io.pulumi.resources.Invo
     @Import(name="ipFilterRuleName", required=true)
       private final String ipFilterRuleName;
 
-    public String getIpFilterRuleName() {
+    public String ipFilterRuleName() {
         return this.ipFilterRuleName;
     }
 
@@ -30,7 +30,7 @@ public final class GetNamespaceIpFilterRuleArgs extends io.pulumi.resources.Invo
     @Import(name="namespaceName", required=true)
       private final String namespaceName;
 
-    public String getNamespaceName() {
+    public String namespaceName() {
         return this.namespaceName;
     }
 
@@ -41,7 +41,7 @@ public final class GetNamespaceIpFilterRuleArgs extends io.pulumi.resources.Invo
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

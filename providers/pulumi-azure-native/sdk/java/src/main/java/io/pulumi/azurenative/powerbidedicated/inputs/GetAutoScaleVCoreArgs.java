@@ -19,7 +19,7 @@ public final class GetAutoScaleVCoreArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetAutoScaleVCoreArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="vcoreName", required=true)
       private final String vcoreName;
 
-    public String getVcoreName() {
+    public String vcoreName() {
         return this.vcoreName;
     }
 

@@ -27,7 +27,7 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bytesToCapturePerPacket")
       private final @Nullable Output<Double> bytesToCapturePerPacket;
 
-    public Output<Double> getBytesToCapturePerPacket() {
+    public Output<Double> bytesToCapturePerPacket() {
         return this.bytesToCapturePerPacket == null ? Codegen.empty() : this.bytesToCapturePerPacket;
     }
 
@@ -38,7 +38,7 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filters")
       private final @Nullable Output<List<PacketCaptureFilterArgs>> filters;
 
-    public Output<List<PacketCaptureFilterArgs>> getFilters() {
+    public Output<List<PacketCaptureFilterArgs>> filters() {
         return this.filters == null ? Codegen.empty() : this.filters;
     }
 
@@ -49,7 +49,7 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkWatcherName", required=true)
       private final Output<String> networkWatcherName;
 
-    public Output<String> getNetworkWatcherName() {
+    public Output<String> networkWatcherName() {
         return this.networkWatcherName;
     }
 
@@ -60,7 +60,7 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="packetCaptureName")
       private final @Nullable Output<String> packetCaptureName;
 
-    public Output<String> getPacketCaptureName() {
+    public Output<String> packetCaptureName() {
         return this.packetCaptureName == null ? Codegen.empty() : this.packetCaptureName;
     }
 
@@ -71,7 +71,7 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -82,7 +82,7 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageLocation", required=true)
       private final Output<PacketCaptureStorageLocationArgs> storageLocation;
 
-    public Output<PacketCaptureStorageLocationArgs> getStorageLocation() {
+    public Output<PacketCaptureStorageLocationArgs> storageLocation() {
         return this.storageLocation;
     }
 
@@ -93,7 +93,7 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="target", required=true)
       private final Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target;
     }
 
@@ -104,7 +104,7 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeLimitInSeconds")
       private final @Nullable Output<Integer> timeLimitInSeconds;
 
-    public Output<Integer> getTimeLimitInSeconds() {
+    public Output<Integer> timeLimitInSeconds() {
         return this.timeLimitInSeconds == null ? Codegen.empty() : this.timeLimitInSeconds;
     }
 
@@ -115,7 +115,7 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="totalBytesPerSession")
       private final @Nullable Output<Double> totalBytesPerSession;
 
-    public Output<Double> getTotalBytesPerSession() {
+    public Output<Double> totalBytesPerSession() {
         return this.totalBytesPerSession == null ? Codegen.empty() : this.totalBytesPerSession;
     }
 

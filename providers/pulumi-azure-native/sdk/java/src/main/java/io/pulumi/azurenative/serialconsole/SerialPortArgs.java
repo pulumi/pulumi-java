@@ -23,7 +23,7 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parentResource", required=true)
       private final Output<String> parentResource;
 
-    public Output<String> getParentResource() {
+    public Output<String> parentResource() {
         return this.parentResource;
     }
 
@@ -34,7 +34,7 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parentResourceType", required=true)
       private final Output<String> parentResourceType;
 
-    public Output<String> getParentResourceType() {
+    public Output<String> parentResourceType() {
         return this.parentResourceType;
     }
 
@@ -45,7 +45,7 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,7 +56,7 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceProviderNamespace", required=true)
       private final Output<String> resourceProviderNamespace;
 
-    public Output<String> getResourceProviderNamespace() {
+    public Output<String> resourceProviderNamespace() {
         return this.resourceProviderNamespace;
     }
 
@@ -67,7 +67,7 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serialPort")
       private final @Nullable Output<String> serialPort;
 
-    public Output<String> getSerialPort() {
+    public Output<String> serialPort() {
         return this.serialPort == null ? Codegen.empty() : this.serialPort;
     }
 
@@ -78,7 +78,7 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<SerialPortState> state;
 
-    public Output<SerialPortState> getState() {
+    public Output<SerialPortState> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

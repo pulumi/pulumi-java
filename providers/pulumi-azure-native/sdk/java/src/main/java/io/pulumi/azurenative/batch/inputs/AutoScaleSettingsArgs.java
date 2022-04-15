@@ -22,14 +22,14 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="evaluationInterval")
       private final @Nullable Output<String> evaluationInterval;
 
-    public Output<String> getEvaluationInterval() {
+    public Output<String> evaluationInterval() {
         return this.evaluationInterval == null ? Codegen.empty() : this.evaluationInterval;
     }
 
     @Import(name="formula", required=true)
       private final Output<String> formula;
 
-    public Output<String> getFormula() {
+    public Output<String> formula() {
         return this.formula;
     }
 

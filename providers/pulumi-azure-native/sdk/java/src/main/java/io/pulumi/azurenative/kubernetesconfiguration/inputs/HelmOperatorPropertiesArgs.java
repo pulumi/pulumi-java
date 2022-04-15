@@ -26,7 +26,7 @@ public final class HelmOperatorPropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="chartValues")
       private final @Nullable Output<String> chartValues;
 
-    public Output<String> getChartValues() {
+    public Output<String> chartValues() {
         return this.chartValues == null ? Codegen.empty() : this.chartValues;
     }
 
@@ -37,7 +37,7 @@ public final class HelmOperatorPropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="chartVersion")
       private final @Nullable Output<String> chartVersion;
 
-    public Output<String> getChartVersion() {
+    public Output<String> chartVersion() {
         return this.chartVersion == null ? Codegen.empty() : this.chartVersion;
     }
 

@@ -29,7 +29,7 @@ public final class ScheduleBasedTriggerContextArgs extends io.pulumi.resources.R
     @Import(name="objectType", required=true)
       private final Output<String> objectType;
 
-    public Output<String> getObjectType() {
+    public Output<String> objectType() {
         return this.objectType;
     }
 
@@ -40,7 +40,7 @@ public final class ScheduleBasedTriggerContextArgs extends io.pulumi.resources.R
     @Import(name="schedule", required=true)
       private final Output<BackupScheduleArgs> schedule;
 
-    public Output<BackupScheduleArgs> getSchedule() {
+    public Output<BackupScheduleArgs> schedule() {
         return this.schedule;
     }
 
@@ -51,7 +51,7 @@ public final class ScheduleBasedTriggerContextArgs extends io.pulumi.resources.R
     @Import(name="taggingCriteria", required=true)
       private final Output<List<TaggingCriteriaArgs>> taggingCriteria;
 
-    public Output<List<TaggingCriteriaArgs>> getTaggingCriteria() {
+    public Output<List<TaggingCriteriaArgs>> taggingCriteria() {
         return this.taggingCriteria;
     }
 

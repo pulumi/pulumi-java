@@ -26,7 +26,7 @@ public final class MarkdownPartMetadataSettingsArgs extends io.pulumi.resources.
     @Import(name="content")
       private final @Nullable Output<MarkdownPartMetadataContentArgs> content;
 
-    public Output<MarkdownPartMetadataContentArgs> getContent() {
+    public Output<MarkdownPartMetadataContentArgs> content() {
         return this.content == null ? Codegen.empty() : this.content;
     }
 

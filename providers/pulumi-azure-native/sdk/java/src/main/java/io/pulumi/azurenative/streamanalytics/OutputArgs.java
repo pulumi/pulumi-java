@@ -35,7 +35,7 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datasource")
       private final @Nullable Output<Object> datasource;
 
-    public Output<Object> getDatasource() {
+    public Output<Object> datasource() {
         return this.datasource == null ? Codegen.empty() : this.datasource;
     }
 
@@ -46,7 +46,7 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobName", required=true)
       private final Output<String> jobName;
 
-    public Output<String> getJobName() {
+    public Output<String> jobName() {
         return this.jobName;
     }
 
@@ -57,7 +57,7 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -68,7 +68,7 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputName")
       private final @Nullable Output<String> outputName;
 
-    public Output<String> getOutputName() {
+    public Output<String> outputName() {
         return this.outputName == null ? Codegen.empty() : this.outputName;
     }
 
@@ -79,7 +79,7 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -90,7 +90,7 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serialization")
       private final @Nullable Output<Object> serialization;
 
-    public Output<Object> getSerialization() {
+    public Output<Object> serialization() {
         return this.serialization == null ? Codegen.empty() : this.serialization;
     }
 

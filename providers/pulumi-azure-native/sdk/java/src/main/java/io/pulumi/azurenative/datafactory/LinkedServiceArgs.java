@@ -125,7 +125,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="factoryName", required=true)
       private final Output<String> factoryName;
 
-    public Output<String> getFactoryName() {
+    public Output<String> factoryName() {
         return this.factoryName;
     }
 
@@ -136,7 +136,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="linkedServiceName")
       private final @Nullable Output<String> linkedServiceName;
 
-    public Output<String> getLinkedServiceName() {
+    public Output<String> linkedServiceName() {
         return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
     }
 
@@ -147,7 +147,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
       private final Output<Object> properties;
 
-    public Output<Object> getProperties() {
+    public Output<Object> properties() {
         return this.properties;
     }
 
@@ -158,7 +158,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

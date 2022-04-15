@@ -22,7 +22,7 @@ public final class ClusterIdentityUserAssignedIdentitiesArgs extends io.pulumi.r
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 

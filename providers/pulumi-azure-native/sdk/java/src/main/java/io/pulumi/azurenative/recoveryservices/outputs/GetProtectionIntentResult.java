@@ -75,49 +75,49 @@ public final class GetProtectionIntentResult {
      * Optional ETag.
      * 
     */
-    public Optional<String> getETag() {
+    public Optional<String> eTag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
      * Resource Id represents the complete path to the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name associated with the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * ProtectionIntentResource properties
      * 
     */
-    public Object getProperties() {
+    public Object properties() {
         return this.properties;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

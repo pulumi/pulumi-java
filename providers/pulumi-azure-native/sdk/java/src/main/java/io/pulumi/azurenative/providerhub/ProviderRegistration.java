@@ -42,13 +42,13 @@ public class ProviderRegistration extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="properties", type=ProviderRegistrationResponseProperties.class, parameters={})
     private Output<ProviderRegistrationResponseProperties> properties;
 
-    public Output<ProviderRegistrationResponseProperties> getProperties() {
+    public Output<ProviderRegistrationResponseProperties> properties() {
         return this.properties;
     }
     /**
@@ -62,7 +62,7 @@ public class ProviderRegistration extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -65,42 +65,42 @@ public final class DataCenterResourceResponseProperties {
      * A fragment of a cassandra.yaml configuration file to be included in the cassandra.yaml for all nodes in this data center. The fragment should be Base64 encoded, and only a subset of keys are allowed.
      * 
     */
-    public Optional<String> getBase64EncodedCassandraYamlFragment() {
+    public Optional<String> base64EncodedCassandraYamlFragment() {
         return Optional.ofNullable(this.base64EncodedCassandraYamlFragment);
     }
     /**
      * The region this data center should be created in.
      * 
     */
-    public Optional<String> getDataCenterLocation() {
+    public Optional<String> dataCenterLocation() {
         return Optional.ofNullable(this.dataCenterLocation);
     }
     /**
      * Resource id of a subnet the nodes in this data center should have their network interfaces connected to. The subnet must be in the same region specified in 'dataCenterLocation' and must be able to route to the subnet specified in the cluster's 'delegatedManagementSubnetId' property. This resource id will be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'.
      * 
     */
-    public Optional<String> getDelegatedSubnetId() {
+    public Optional<String> delegatedSubnetId() {
         return Optional.ofNullable(this.delegatedSubnetId);
     }
     /**
      * The number of nodes the data center should have. This is the desired number. After it is set, it may take some time for the data center to be scaled to match. To monitor the number of nodes and their status, use the fetchNodeStatus method on the cluster.
      * 
     */
-    public Optional<Integer> getNodeCount() {
+    public Optional<Integer> nodeCount() {
         return Optional.ofNullable(this.nodeCount);
     }
     /**
      * The status of the resource at the time the operation was called.
      * 
     */
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * IP addresses for seed nodes in this data center. This is for reference. Generally you will want to use the seedNodes property on the cluster, which aggregates the seed nodes from all data centers in the cluster.
      * 
     */
-    public List<SeedNodeResponse> getSeedNodes() {
+    public List<SeedNodeResponse> seedNodes() {
         return this.seedNodes;
     }
 

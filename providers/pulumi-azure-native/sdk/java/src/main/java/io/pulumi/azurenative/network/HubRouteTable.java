@@ -43,7 +43,7 @@ public class HubRouteTable extends io.pulumi.resources.CustomResource {
      * @return List of all connections associated with this route table.
      * 
      */
-    public Output<List<String>> getAssociatedConnections() {
+    public Output<List<String>> associatedConnections() {
         return this.associatedConnections;
     }
     /**
@@ -57,7 +57,7 @@ public class HubRouteTable extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -71,7 +71,7 @@ public class HubRouteTable extends io.pulumi.resources.CustomResource {
      * @return List of labels associated with this route table.
      * 
      */
-    public Output</* @Nullable */ List<String>> getLabels() {
+    public Output</* @Nullable */ List<String>> labels() {
         return this.labels;
     }
     /**
@@ -85,7 +85,7 @@ public class HubRouteTable extends io.pulumi.resources.CustomResource {
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -99,7 +99,7 @@ public class HubRouteTable extends io.pulumi.resources.CustomResource {
      * @return List of all connections that advertise to this route table.
      * 
      */
-    public Output<List<String>> getPropagatingConnections() {
+    public Output<List<String>> propagatingConnections() {
         return this.propagatingConnections;
     }
     /**
@@ -113,7 +113,7 @@ public class HubRouteTable extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the RouteTable resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -127,7 +127,7 @@ public class HubRouteTable extends io.pulumi.resources.CustomResource {
      * @return List of all routes.
      * 
      */
-    public Output</* @Nullable */ List<HubRouteResponse>> getRoutes() {
+    public Output</* @Nullable */ List<HubRouteResponse>> routes() {
         return this.routes;
     }
     /**
@@ -141,7 +141,7 @@ public class HubRouteTable extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

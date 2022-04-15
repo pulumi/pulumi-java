@@ -28,7 +28,7 @@ public final class BackendAddressPoolArgs extends io.pulumi.resources.ResourceAr
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -39,7 +39,7 @@ public final class BackendAddressPoolArgs extends io.pulumi.resources.ResourceAr
     @Import(name="loadBalancerBackendAddresses")
       private final @Nullable Output<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses;
 
-    public Output<List<LoadBalancerBackendAddressArgs>> getLoadBalancerBackendAddresses() {
+    public Output<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses() {
         return this.loadBalancerBackendAddresses == null ? Codegen.empty() : this.loadBalancerBackendAddresses;
     }
 
@@ -50,7 +50,7 @@ public final class BackendAddressPoolArgs extends io.pulumi.resources.ResourceAr
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -61,7 +61,7 @@ public final class BackendAddressPoolArgs extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

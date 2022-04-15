@@ -49,7 +49,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="applicationGatewayName")
       private final @Nullable Output<String> applicationGatewayName;
 
-    public Output<String> getApplicationGatewayName() {
+    public Output<String> applicationGatewayName() {
         return this.applicationGatewayName == null ? Codegen.empty() : this.applicationGatewayName;
     }
 
@@ -60,7 +60,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="authenticationCertificates")
       private final @Nullable Output<List<ApplicationGatewayAuthenticationCertificateArgs>> authenticationCertificates;
 
-    public Output<List<ApplicationGatewayAuthenticationCertificateArgs>> getAuthenticationCertificates() {
+    public Output<List<ApplicationGatewayAuthenticationCertificateArgs>> authenticationCertificates() {
         return this.authenticationCertificates == null ? Codegen.empty() : this.authenticationCertificates;
     }
 
@@ -71,7 +71,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="autoscaleConfiguration")
       private final @Nullable Output<ApplicationGatewayAutoscaleConfigurationArgs> autoscaleConfiguration;
 
-    public Output<ApplicationGatewayAutoscaleConfigurationArgs> getAutoscaleConfiguration() {
+    public Output<ApplicationGatewayAutoscaleConfigurationArgs> autoscaleConfiguration() {
         return this.autoscaleConfiguration == null ? Codegen.empty() : this.autoscaleConfiguration;
     }
 
@@ -82,7 +82,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="backendAddressPools")
       private final @Nullable Output<List<ApplicationGatewayBackendAddressPoolArgs>> backendAddressPools;
 
-    public Output<List<ApplicationGatewayBackendAddressPoolArgs>> getBackendAddressPools() {
+    public Output<List<ApplicationGatewayBackendAddressPoolArgs>> backendAddressPools() {
         return this.backendAddressPools == null ? Codegen.empty() : this.backendAddressPools;
     }
 
@@ -93,7 +93,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="backendHttpSettingsCollection")
       private final @Nullable Output<List<ApplicationGatewayBackendHttpSettingsArgs>> backendHttpSettingsCollection;
 
-    public Output<List<ApplicationGatewayBackendHttpSettingsArgs>> getBackendHttpSettingsCollection() {
+    public Output<List<ApplicationGatewayBackendHttpSettingsArgs>> backendHttpSettingsCollection() {
         return this.backendHttpSettingsCollection == null ? Codegen.empty() : this.backendHttpSettingsCollection;
     }
 
@@ -104,7 +104,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="customErrorConfigurations")
       private final @Nullable Output<List<ApplicationGatewayCustomErrorArgs>> customErrorConfigurations;
 
-    public Output<List<ApplicationGatewayCustomErrorArgs>> getCustomErrorConfigurations() {
+    public Output<List<ApplicationGatewayCustomErrorArgs>> customErrorConfigurations() {
         return this.customErrorConfigurations == null ? Codegen.empty() : this.customErrorConfigurations;
     }
 
@@ -115,7 +115,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="enableFips")
       private final @Nullable Output<Boolean> enableFips;
 
-    public Output<Boolean> getEnableFips() {
+    public Output<Boolean> enableFips() {
         return this.enableFips == null ? Codegen.empty() : this.enableFips;
     }
 
@@ -126,7 +126,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="enableHttp2")
       private final @Nullable Output<Boolean> enableHttp2;
 
-    public Output<Boolean> getEnableHttp2() {
+    public Output<Boolean> enableHttp2() {
         return this.enableHttp2 == null ? Codegen.empty() : this.enableHttp2;
     }
 
@@ -137,7 +137,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="firewallPolicy")
       private final @Nullable Output<SubResourceArgs> firewallPolicy;
 
-    public Output<SubResourceArgs> getFirewallPolicy() {
+    public Output<SubResourceArgs> firewallPolicy() {
         return this.firewallPolicy == null ? Codegen.empty() : this.firewallPolicy;
     }
 
@@ -148,7 +148,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="forceFirewallPolicyAssociation")
       private final @Nullable Output<Boolean> forceFirewallPolicyAssociation;
 
-    public Output<Boolean> getForceFirewallPolicyAssociation() {
+    public Output<Boolean> forceFirewallPolicyAssociation() {
         return this.forceFirewallPolicyAssociation == null ? Codegen.empty() : this.forceFirewallPolicyAssociation;
     }
 
@@ -159,7 +159,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="frontendIPConfigurations")
       private final @Nullable Output<List<ApplicationGatewayFrontendIPConfigurationArgs>> frontendIPConfigurations;
 
-    public Output<List<ApplicationGatewayFrontendIPConfigurationArgs>> getFrontendIPConfigurations() {
+    public Output<List<ApplicationGatewayFrontendIPConfigurationArgs>> frontendIPConfigurations() {
         return this.frontendIPConfigurations == null ? Codegen.empty() : this.frontendIPConfigurations;
     }
 
@@ -170,7 +170,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="frontendPorts")
       private final @Nullable Output<List<ApplicationGatewayFrontendPortArgs>> frontendPorts;
 
-    public Output<List<ApplicationGatewayFrontendPortArgs>> getFrontendPorts() {
+    public Output<List<ApplicationGatewayFrontendPortArgs>> frontendPorts() {
         return this.frontendPorts == null ? Codegen.empty() : this.frontendPorts;
     }
 
@@ -181,7 +181,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="gatewayIPConfigurations")
       private final @Nullable Output<List<ApplicationGatewayIPConfigurationArgs>> gatewayIPConfigurations;
 
-    public Output<List<ApplicationGatewayIPConfigurationArgs>> getGatewayIPConfigurations() {
+    public Output<List<ApplicationGatewayIPConfigurationArgs>> gatewayIPConfigurations() {
         return this.gatewayIPConfigurations == null ? Codegen.empty() : this.gatewayIPConfigurations;
     }
 
@@ -192,7 +192,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="httpListeners")
       private final @Nullable Output<List<ApplicationGatewayHttpListenerArgs>> httpListeners;
 
-    public Output<List<ApplicationGatewayHttpListenerArgs>> getHttpListeners() {
+    public Output<List<ApplicationGatewayHttpListenerArgs>> httpListeners() {
         return this.httpListeners == null ? Codegen.empty() : this.httpListeners;
     }
 
@@ -203,7 +203,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -214,7 +214,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Output<ManagedServiceIdentityArgs> getIdentity() {
+    public Output<ManagedServiceIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -225,7 +225,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -236,7 +236,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="privateLinkConfigurations")
       private final @Nullable Output<List<ApplicationGatewayPrivateLinkConfigurationArgs>> privateLinkConfigurations;
 
-    public Output<List<ApplicationGatewayPrivateLinkConfigurationArgs>> getPrivateLinkConfigurations() {
+    public Output<List<ApplicationGatewayPrivateLinkConfigurationArgs>> privateLinkConfigurations() {
         return this.privateLinkConfigurations == null ? Codegen.empty() : this.privateLinkConfigurations;
     }
 
@@ -247,7 +247,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="probes")
       private final @Nullable Output<List<ApplicationGatewayProbeArgs>> probes;
 
-    public Output<List<ApplicationGatewayProbeArgs>> getProbes() {
+    public Output<List<ApplicationGatewayProbeArgs>> probes() {
         return this.probes == null ? Codegen.empty() : this.probes;
     }
 
@@ -258,7 +258,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="redirectConfigurations")
       private final @Nullable Output<List<ApplicationGatewayRedirectConfigurationArgs>> redirectConfigurations;
 
-    public Output<List<ApplicationGatewayRedirectConfigurationArgs>> getRedirectConfigurations() {
+    public Output<List<ApplicationGatewayRedirectConfigurationArgs>> redirectConfigurations() {
         return this.redirectConfigurations == null ? Codegen.empty() : this.redirectConfigurations;
     }
 
@@ -269,7 +269,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="requestRoutingRules")
       private final @Nullable Output<List<ApplicationGatewayRequestRoutingRuleArgs>> requestRoutingRules;
 
-    public Output<List<ApplicationGatewayRequestRoutingRuleArgs>> getRequestRoutingRules() {
+    public Output<List<ApplicationGatewayRequestRoutingRuleArgs>> requestRoutingRules() {
         return this.requestRoutingRules == null ? Codegen.empty() : this.requestRoutingRules;
     }
 
@@ -280,7 +280,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -291,7 +291,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="rewriteRuleSets")
       private final @Nullable Output<List<ApplicationGatewayRewriteRuleSetArgs>> rewriteRuleSets;
 
-    public Output<List<ApplicationGatewayRewriteRuleSetArgs>> getRewriteRuleSets() {
+    public Output<List<ApplicationGatewayRewriteRuleSetArgs>> rewriteRuleSets() {
         return this.rewriteRuleSets == null ? Codegen.empty() : this.rewriteRuleSets;
     }
 
@@ -302,7 +302,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="sku")
       private final @Nullable Output<ApplicationGatewaySkuArgs> sku;
 
-    public Output<ApplicationGatewaySkuArgs> getSku() {
+    public Output<ApplicationGatewaySkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -313,7 +313,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="sslCertificates")
       private final @Nullable Output<List<ApplicationGatewaySslCertificateArgs>> sslCertificates;
 
-    public Output<List<ApplicationGatewaySslCertificateArgs>> getSslCertificates() {
+    public Output<List<ApplicationGatewaySslCertificateArgs>> sslCertificates() {
         return this.sslCertificates == null ? Codegen.empty() : this.sslCertificates;
     }
 
@@ -324,7 +324,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="sslPolicy")
       private final @Nullable Output<ApplicationGatewaySslPolicyArgs> sslPolicy;
 
-    public Output<ApplicationGatewaySslPolicyArgs> getSslPolicy() {
+    public Output<ApplicationGatewaySslPolicyArgs> sslPolicy() {
         return this.sslPolicy == null ? Codegen.empty() : this.sslPolicy;
     }
 
@@ -335,7 +335,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="sslProfiles")
       private final @Nullable Output<List<ApplicationGatewaySslProfileArgs>> sslProfiles;
 
-    public Output<List<ApplicationGatewaySslProfileArgs>> getSslProfiles() {
+    public Output<List<ApplicationGatewaySslProfileArgs>> sslProfiles() {
         return this.sslProfiles == null ? Codegen.empty() : this.sslProfiles;
     }
 
@@ -346,7 +346,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -357,7 +357,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="trustedClientCertificates")
       private final @Nullable Output<List<ApplicationGatewayTrustedClientCertificateArgs>> trustedClientCertificates;
 
-    public Output<List<ApplicationGatewayTrustedClientCertificateArgs>> getTrustedClientCertificates() {
+    public Output<List<ApplicationGatewayTrustedClientCertificateArgs>> trustedClientCertificates() {
         return this.trustedClientCertificates == null ? Codegen.empty() : this.trustedClientCertificates;
     }
 
@@ -368,7 +368,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="trustedRootCertificates")
       private final @Nullable Output<List<ApplicationGatewayTrustedRootCertificateArgs>> trustedRootCertificates;
 
-    public Output<List<ApplicationGatewayTrustedRootCertificateArgs>> getTrustedRootCertificates() {
+    public Output<List<ApplicationGatewayTrustedRootCertificateArgs>> trustedRootCertificates() {
         return this.trustedRootCertificates == null ? Codegen.empty() : this.trustedRootCertificates;
     }
 
@@ -379,7 +379,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="urlPathMaps")
       private final @Nullable Output<List<ApplicationGatewayUrlPathMapArgs>> urlPathMaps;
 
-    public Output<List<ApplicationGatewayUrlPathMapArgs>> getUrlPathMaps() {
+    public Output<List<ApplicationGatewayUrlPathMapArgs>> urlPathMaps() {
         return this.urlPathMaps == null ? Codegen.empty() : this.urlPathMaps;
     }
 
@@ -390,7 +390,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="webApplicationFirewallConfiguration")
       private final @Nullable Output<ApplicationGatewayWebApplicationFirewallConfigurationArgs> webApplicationFirewallConfiguration;
 
-    public Output<ApplicationGatewayWebApplicationFirewallConfigurationArgs> getWebApplicationFirewallConfiguration() {
+    public Output<ApplicationGatewayWebApplicationFirewallConfigurationArgs> webApplicationFirewallConfiguration() {
         return this.webApplicationFirewallConfiguration == null ? Codegen.empty() : this.webApplicationFirewallConfiguration;
     }
 
@@ -401,7 +401,7 @@ public final class ApplicationGatewayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> getZones() {
+    public Output<List<String>> zones() {
         return this.zones == null ? Codegen.empty() : this.zones;
     }
 

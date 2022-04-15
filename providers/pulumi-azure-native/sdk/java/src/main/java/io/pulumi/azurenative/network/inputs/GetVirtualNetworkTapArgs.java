@@ -19,7 +19,7 @@ public final class GetVirtualNetworkTapArgs extends io.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetVirtualNetworkTapArgs extends io.pulumi.resources.InvokeAr
     @Import(name="tapName", required=true)
       private final String tapName;
 
-    public String getTapName() {
+    public String tapName() {
         return this.tapName;
     }
 

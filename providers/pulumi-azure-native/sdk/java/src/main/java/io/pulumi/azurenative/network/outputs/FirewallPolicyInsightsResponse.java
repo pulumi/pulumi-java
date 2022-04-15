@@ -43,21 +43,21 @@ public final class FirewallPolicyInsightsResponse {
      * A flag to indicate if the insights are enabled on the policy.
      * 
     */
-    public Optional<Boolean> getIsEnabled() {
+    public Optional<Boolean> isEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
     /**
      * Workspaces needed to configure the Firewall Policy Insights.
      * 
     */
-    public Optional<FirewallPolicyLogAnalyticsResourcesResponse> getLogAnalyticsResources() {
+    public Optional<FirewallPolicyLogAnalyticsResourcesResponse> logAnalyticsResources() {
         return Optional.ofNullable(this.logAnalyticsResources);
     }
     /**
      * Number of days the insights should be enabled on the policy.
      * 
     */
-    public Optional<Integer> getRetentionDays() {
+    public Optional<Integer> retentionDays() {
         return Optional.ofNullable(this.retentionDays);
     }
 

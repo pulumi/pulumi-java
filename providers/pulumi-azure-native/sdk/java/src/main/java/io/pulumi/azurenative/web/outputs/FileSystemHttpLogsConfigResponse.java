@@ -46,7 +46,7 @@ public final class FileSystemHttpLogsConfigResponse {
      * True if configuration is enabled, false if it is disabled and null if configuration is not set.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
@@ -55,7 +55,7 @@ public final class FileSystemHttpLogsConfigResponse {
      * 0 or lower means no retention.
      * 
     */
-    public Optional<Integer> getRetentionInDays() {
+    public Optional<Integer> retentionInDays() {
         return Optional.ofNullable(this.retentionInDays);
     }
     /**
@@ -64,7 +64,7 @@ public final class FileSystemHttpLogsConfigResponse {
      * Value can range between 25 and 100.
      * 
     */
-    public Optional<Integer> getRetentionInMb() {
+    public Optional<Integer> retentionInMb() {
         return Optional.ofNullable(this.retentionInMb);
     }
 

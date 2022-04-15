@@ -25,7 +25,7 @@ public final class PredictionMappingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="grade", required=true)
       private final Output<String> grade;
 
-    public Output<String> getGrade() {
+    public Output<String> grade() {
         return this.grade;
     }
 
@@ -36,7 +36,7 @@ public final class PredictionMappingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="reason", required=true)
       private final Output<String> reason;
 
-    public Output<String> getReason() {
+    public Output<String> reason() {
         return this.reason;
     }
 
@@ -47,7 +47,7 @@ public final class PredictionMappingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="score", required=true)
       private final Output<String> score;
 
-    public Output<String> getScore() {
+    public Output<String> score() {
         return this.score;
     }
 

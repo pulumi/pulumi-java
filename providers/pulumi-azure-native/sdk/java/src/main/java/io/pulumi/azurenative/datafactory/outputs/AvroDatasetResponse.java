@@ -114,66 +114,66 @@ public final class AvroDatasetResponse {
      * List of tags that can be used for describing the Dataset.
      * 
     */
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The data avroCompressionCodec. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getAvroCompressionCodec() {
+    public Optional<Object> avroCompressionCodec() {
         return Optional.ofNullable(this.avroCompressionCodec);
     }
-    public Optional<Integer> getAvroCompressionLevel() {
+    public Optional<Integer> avroCompressionLevel() {
         return Optional.ofNullable(this.avroCompressionLevel);
     }
     /**
      * Dataset description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
      * 
     */
-    public Optional<DatasetResponseFolder> getFolder() {
+    public Optional<DatasetResponseFolder> folder() {
         return Optional.ofNullable(this.folder);
     }
     /**
      * Linked service reference.
      * 
     */
-    public LinkedServiceReferenceResponse getLinkedServiceName() {
+    public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
     /**
      * The location of the avro storage.
      * 
     */
-    public Object getLocation() {
+    public Object location() {
         return this.location;
     }
     /**
      * Parameters for dataset.
      * 
     */
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
      * 
     */
-    public Optional<Object> getSchema() {
+    public Optional<Object> schema() {
         return Optional.ofNullable(this.schema);
     }
     /**
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
      * 
     */
-    public Optional<Object> getStructure() {
+    public Optional<Object> structure() {
         return Optional.ofNullable(this.structure);
     }
     /**
@@ -181,7 +181,7 @@ public final class AvroDatasetResponse {
      * Expected value is 'Avro'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -27,7 +27,7 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -38,7 +38,7 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
     @Import(name="reasonForLogsStatus")
       private final @Nullable String reasonForLogsStatus;
 
-    public Optional<String> getReasonForLogsStatus() {
+    public Optional<String> reasonForLogsStatus() {
         return this.reasonForLogsStatus == null ? Optional.empty() : Optional.ofNullable(this.reasonForLogsStatus);
     }
 
@@ -49,7 +49,7 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
     @Import(name="reasonForMetricsStatus")
       private final @Nullable String reasonForMetricsStatus;
 
-    public Optional<String> getReasonForMetricsStatus() {
+    public Optional<String> reasonForMetricsStatus() {
         return this.reasonForMetricsStatus == null ? Optional.empty() : Optional.ofNullable(this.reasonForMetricsStatus);
     }
 
@@ -60,7 +60,7 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
     @Import(name="sendingLogs")
       private final @Nullable Boolean sendingLogs;
 
-    public Optional<Boolean> getSendingLogs() {
+    public Optional<Boolean> sendingLogs() {
         return this.sendingLogs == null ? Optional.empty() : Optional.ofNullable(this.sendingLogs);
     }
 
@@ -71,7 +71,7 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
     @Import(name="sendingMetrics")
       private final @Nullable Boolean sendingMetrics;
 
-    public Optional<Boolean> getSendingMetrics() {
+    public Optional<Boolean> sendingMetrics() {
         return this.sendingMetrics == null ? Optional.empty() : Optional.ofNullable(this.sendingMetrics);
     }
 
@@ -82,7 +82,7 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
     @Import(name="systemData", required=true)
       private final SystemDataResponse systemData;
 
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
 

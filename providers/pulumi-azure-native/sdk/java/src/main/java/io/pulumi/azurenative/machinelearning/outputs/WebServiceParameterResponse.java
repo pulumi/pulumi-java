@@ -35,14 +35,14 @@ public final class WebServiceParameterResponse {
      * If the parameter value in 'value' field is encrypted, the thumbprint of the certificate should be put here.
      * 
     */
-    public Optional<String> getCertificateThumbprint() {
+    public Optional<String> certificateThumbprint() {
         return Optional.ofNullable(this.certificateThumbprint);
     }
     /**
      * The parameter value
      * 
     */
-    public Optional<Object> getValue() {
+    public Optional<Object> value() {
         return Optional.ofNullable(this.value);
     }
 

@@ -22,7 +22,7 @@ public final class ServerCommunicationLinkArgs extends io.pulumi.resources.Resou
     @Import(name="communicationLinkName")
       private final @Nullable Output<String> communicationLinkName;
 
-    public Output<String> getCommunicationLinkName() {
+    public Output<String> communicationLinkName() {
         return this.communicationLinkName == null ? Codegen.empty() : this.communicationLinkName;
     }
 
@@ -33,7 +33,7 @@ public final class ServerCommunicationLinkArgs extends io.pulumi.resources.Resou
     @Import(name="partnerServer", required=true)
       private final Output<String> partnerServer;
 
-    public Output<String> getPartnerServer() {
+    public Output<String> partnerServer() {
         return this.partnerServer;
     }
 
@@ -44,7 +44,7 @@ public final class ServerCommunicationLinkArgs extends io.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,7 +55,7 @@ public final class ServerCommunicationLinkArgs extends io.pulumi.resources.Resou
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 

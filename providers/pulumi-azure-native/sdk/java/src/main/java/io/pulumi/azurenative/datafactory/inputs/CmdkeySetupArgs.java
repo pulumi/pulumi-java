@@ -29,7 +29,7 @@ public final class CmdkeySetupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="password", required=true)
       private final Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
         return this.password;
     }
 
@@ -40,7 +40,7 @@ public final class CmdkeySetupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetName", required=true)
       private final Output<Object> targetName;
 
-    public Output<Object> getTargetName() {
+    public Output<Object> targetName() {
         return this.targetName;
     }
 
@@ -52,7 +52,7 @@ public final class CmdkeySetupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -63,7 +63,7 @@ public final class CmdkeySetupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userName", required=true)
       private final Output<Object> userName;
 
-    public Output<Object> getUserName() {
+    public Output<Object> userName() {
         return this.userName;
     }
 

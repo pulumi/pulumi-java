@@ -26,7 +26,7 @@ public final class HealthCheckStepPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="attributes", required=true)
       private final Output<RestHealthCheckStepAttributesArgs> attributes;
 
-    public Output<RestHealthCheckStepAttributesArgs> getAttributes() {
+    public Output<RestHealthCheckStepAttributesArgs> attributes() {
         return this.attributes;
     }
 
@@ -38,7 +38,7 @@ public final class HealthCheckStepPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="stepType", required=true)
       private final Output<String> stepType;
 
-    public Output<String> getStepType() {
+    public Output<String> stepType() {
         return this.stepType;
     }
 

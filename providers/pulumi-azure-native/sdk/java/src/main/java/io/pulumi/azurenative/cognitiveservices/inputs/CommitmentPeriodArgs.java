@@ -27,7 +27,7 @@ public final class CommitmentPeriodArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="count")
       private final @Nullable Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count == null ? Codegen.empty() : this.count;
     }
 
@@ -38,7 +38,7 @@ public final class CommitmentPeriodArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tier")
       private final @Nullable Output<String> tier;
 
-    public Output<String> getTier() {
+    public Output<String> tier() {
         return this.tier == null ? Codegen.empty() : this.tier;
     }
 

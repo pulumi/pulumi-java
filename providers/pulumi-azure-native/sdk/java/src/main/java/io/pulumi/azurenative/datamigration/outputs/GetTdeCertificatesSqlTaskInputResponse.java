@@ -42,21 +42,21 @@ public final class GetTdeCertificatesSqlTaskInputResponse {
      * Backup file share information for file share to be used for temporarily storing files.
      * 
     */
-    public FileShareResponse getBackupFileShare() {
+    public FileShareResponse backupFileShare() {
         return this.backupFileShare;
     }
     /**
      * Connection information for SQL Server
      * 
     */
-    public SqlConnectionInfoResponse getConnectionInfo() {
+    public SqlConnectionInfoResponse connectionInfo() {
         return this.connectionInfo;
     }
     /**
      * List containing certificate names and corresponding password to use for encrypting the exported certificate.
      * 
     */
-    public List<SelectedCertificateInputResponse> getSelectedCertificates() {
+    public List<SelectedCertificateInputResponse> selectedCertificates() {
         return this.selectedCertificates;
     }
 

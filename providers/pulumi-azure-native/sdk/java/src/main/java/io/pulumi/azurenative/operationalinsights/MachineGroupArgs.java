@@ -27,7 +27,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="count")
       private final @Nullable Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count == null ? Codegen.empty() : this.count;
     }
 
@@ -38,7 +38,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -49,7 +49,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="groupType")
       private final @Nullable Output<Either<String,MachineGroupType>> groupType;
 
-    public Output<Either<String,MachineGroupType>> getGroupType() {
+    public Output<Either<String,MachineGroupType>> groupType() {
         return this.groupType == null ? Codegen.empty() : this.groupType;
     }
 
@@ -61,7 +61,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -72,7 +72,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="machineGroupName")
       private final @Nullable Output<String> machineGroupName;
 
-    public Output<String> getMachineGroupName() {
+    public Output<String> machineGroupName() {
         return this.machineGroupName == null ? Codegen.empty() : this.machineGroupName;
     }
 
@@ -83,7 +83,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="machines")
       private final @Nullable Output<List<MachineReferenceWithHintsArgs>> machines;
 
-    public Output<List<MachineReferenceWithHintsArgs>> getMachines() {
+    public Output<List<MachineReferenceWithHintsArgs>> machines() {
         return this.machines == null ? Codegen.empty() : this.machines;
     }
 
@@ -94,7 +94,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -105,7 +105,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

@@ -28,7 +28,7 @@ public final class EncryptionKeyDetailsArgs extends io.pulumi.resources.Resource
     @Import(name="kekType")
       private final @Nullable Output<Either<String,EncryptionKekType>> kekType;
 
-    public Output<Either<String,EncryptionKekType>> getKekType() {
+    public Output<Either<String,EncryptionKekType>> kekType() {
         return this.kekType == null ? Codegen.empty() : this.kekType;
     }
 
@@ -39,7 +39,7 @@ public final class EncryptionKeyDetailsArgs extends io.pulumi.resources.Resource
     @Import(name="kekUrl")
       private final @Nullable Output<String> kekUrl;
 
-    public Output<String> getKekUrl() {
+    public Output<String> kekUrl() {
         return this.kekUrl == null ? Codegen.empty() : this.kekUrl;
     }
 
@@ -50,7 +50,7 @@ public final class EncryptionKeyDetailsArgs extends io.pulumi.resources.Resource
     @Import(name="kekVaultResourceID")
       private final @Nullable Output<String> kekVaultResourceID;
 
-    public Output<String> getKekVaultResourceID() {
+    public Output<String> kekVaultResourceID() {
         return this.kekVaultResourceID == null ? Codegen.empty() : this.kekVaultResourceID;
     }
 

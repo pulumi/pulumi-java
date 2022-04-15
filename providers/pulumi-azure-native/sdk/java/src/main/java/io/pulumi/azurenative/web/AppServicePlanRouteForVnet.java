@@ -39,7 +39,7 @@ public class AppServicePlanRouteForVnet extends io.pulumi.resources.CustomResour
      * @return The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
      * 
      */
-    public Output</* @Nullable */ String> getEndAddress() {
+    public Output</* @Nullable */ String> endAddress() {
         return this.endAddress;
     }
     /**
@@ -53,7 +53,7 @@ public class AppServicePlanRouteForVnet extends io.pulumi.resources.CustomResour
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -67,7 +67,7 @@ public class AppServicePlanRouteForVnet extends io.pulumi.resources.CustomResour
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -91,7 +91,7 @@ public class AppServicePlanRouteForVnet extends io.pulumi.resources.CustomResour
      * These values will be used for syncing an app's routes with those from a Virtual Network.
      * 
      */
-    public Output</* @Nullable */ String> getRouteType() {
+    public Output</* @Nullable */ String> routeType() {
         return this.routeType;
     }
     /**
@@ -105,7 +105,7 @@ public class AppServicePlanRouteForVnet extends io.pulumi.resources.CustomResour
      * @return The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
      * 
      */
-    public Output</* @Nullable */ String> getStartAddress() {
+    public Output</* @Nullable */ String> startAddress() {
         return this.startAddress;
     }
     /**
@@ -119,7 +119,7 @@ public class AppServicePlanRouteForVnet extends io.pulumi.resources.CustomResour
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

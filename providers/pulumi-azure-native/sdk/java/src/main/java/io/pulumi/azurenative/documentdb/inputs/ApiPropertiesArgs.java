@@ -24,7 +24,7 @@ public final class ApiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverVersion")
       private final @Nullable Output<Either<String,ServerVersion>> serverVersion;
 
-    public Output<Either<String,ServerVersion>> getServerVersion() {
+    public Output<Either<String,ServerVersion>> serverVersion() {
         return this.serverVersion == null ? Codegen.empty() : this.serverVersion;
     }
 

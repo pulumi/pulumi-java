@@ -127,84 +127,84 @@ public final class CustomActivityResponse {
      * Elevation level and scope for the user, default is nonadmin task. Type: string (or Expression with resultType double).
      * 
     */
-    public Optional<Object> getAutoUserSpecification() {
+    public Optional<Object> autoUserSpecification() {
         return Optional.ofNullable(this.autoUserSpecification);
     }
     /**
      * Command for custom activity Type: string (or Expression with resultType string).
      * 
     */
-    public Object getCommand() {
+    public Object command() {
         return this.command;
     }
     /**
      * Activity depends on condition.
      * 
     */
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * User defined property bag. There is no restriction on the keys or values that can be used. The user specified custom activity has the full responsibility to consume and interpret the content defined.
      * 
     */
-    public Map<String,Object> getExtendedProperties() {
+    public Map<String,Object> extendedProperties() {
         return this.extendedProperties == null ? Map.of() : this.extendedProperties;
     }
     /**
      * Folder path for resource files Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getFolderPath() {
+    public Optional<Object> folderPath() {
         return Optional.ofNullable(this.folderPath);
     }
     /**
      * Linked service reference.
      * 
     */
-    public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
+    public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
      * Activity name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Activity policy.
      * 
     */
-    public Optional<ActivityPolicyResponse> getPolicy() {
+    public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
     /**
      * Reference objects
      * 
     */
-    public Optional<CustomActivityReferenceObjectResponse> getReferenceObjects() {
+    public Optional<CustomActivityReferenceObjectResponse> referenceObjects() {
         return Optional.ofNullable(this.referenceObjects);
     }
     /**
      * Resource linked service reference.
      * 
     */
-    public Optional<LinkedServiceReferenceResponse> getResourceLinkedService() {
+    public Optional<LinkedServiceReferenceResponse> resourceLinkedService() {
         return Optional.ofNullable(this.resourceLinkedService);
     }
     /**
      * The retention time for the files submitted for custom activity. Type: double (or Expression with resultType double).
      * 
     */
-    public Optional<Object> getRetentionTimeInDays() {
+    public Optional<Object> retentionTimeInDays() {
         return Optional.ofNullable(this.retentionTimeInDays);
     }
     /**
@@ -212,14 +212,14 @@ public final class CustomActivityResponse {
      * Expected value is 'Custom'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
     */
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 

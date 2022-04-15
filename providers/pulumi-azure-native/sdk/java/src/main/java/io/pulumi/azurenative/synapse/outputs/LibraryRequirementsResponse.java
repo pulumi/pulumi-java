@@ -41,21 +41,21 @@ public final class LibraryRequirementsResponse {
      * The library requirements.
      * 
     */
-    public Optional<String> getContent() {
+    public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
     /**
      * The filename of the library requirements file.
      * 
     */
-    public Optional<String> getFilename() {
+    public Optional<String> filename() {
         return Optional.ofNullable(this.filename);
     }
     /**
      * The last update time of the library requirements file.
      * 
     */
-    public String getTime() {
+    public String time() {
         return this.time;
     }
 

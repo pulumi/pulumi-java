@@ -24,7 +24,7 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
-    public Output<String> getKeyName() {
+    public Output<String> keyName() {
         return this.keyName == null ? Codegen.empty() : this.keyName;
     }
 
@@ -35,7 +35,7 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -46,7 +46,7 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverKeyType", required=true)
       private final Output<Either<String,ServerKeyType>> serverKeyType;
 
-    public Output<Either<String,ServerKeyType>> getServerKeyType() {
+    public Output<Either<String,ServerKeyType>> serverKeyType() {
         return this.serverKeyType;
     }
 
@@ -57,7 +57,7 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -68,7 +68,7 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri == null ? Codegen.empty() : this.uri;
     }
 

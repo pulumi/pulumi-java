@@ -21,21 +21,21 @@ public final class ProviderRegistrationPropertiesProviderHubMetadataArgs extends
     @Import(name="providerAuthentication")
       private final @Nullable Output<ProviderHubMetadataProviderAuthenticationArgs> providerAuthentication;
 
-    public Output<ProviderHubMetadataProviderAuthenticationArgs> getProviderAuthentication() {
+    public Output<ProviderHubMetadataProviderAuthenticationArgs> providerAuthentication() {
         return this.providerAuthentication == null ? Codegen.empty() : this.providerAuthentication;
     }
 
     @Import(name="providerAuthorizations")
       private final @Nullable Output<List<ResourceProviderAuthorizationArgs>> providerAuthorizations;
 
-    public Output<List<ResourceProviderAuthorizationArgs>> getProviderAuthorizations() {
+    public Output<List<ResourceProviderAuthorizationArgs>> providerAuthorizations() {
         return this.providerAuthorizations == null ? Codegen.empty() : this.providerAuthorizations;
     }
 
     @Import(name="thirdPartyProviderAuthorization")
       private final @Nullable Output<ProviderHubMetadataThirdPartyProviderAuthorizationArgs> thirdPartyProviderAuthorization;
 
-    public Output<ProviderHubMetadataThirdPartyProviderAuthorizationArgs> getThirdPartyProviderAuthorization() {
+    public Output<ProviderHubMetadataThirdPartyProviderAuthorizationArgs> thirdPartyProviderAuthorization() {
         return this.thirdPartyProviderAuthorization == null ? Codegen.empty() : this.thirdPartyProviderAuthorization;
     }
 

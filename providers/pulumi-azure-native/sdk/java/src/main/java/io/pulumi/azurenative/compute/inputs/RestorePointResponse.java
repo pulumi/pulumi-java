@@ -28,7 +28,7 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="consistencyMode", required=true)
       private final String consistencyMode;
 
-    public String getConsistencyMode() {
+    public String consistencyMode() {
         return this.consistencyMode;
     }
 
@@ -39,7 +39,7 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="excludeDisks")
       private final @Nullable List<ApiEntityReferenceResponse> excludeDisks;
 
-    public List<ApiEntityReferenceResponse> getExcludeDisks() {
+    public List<ApiEntityReferenceResponse> excludeDisks() {
         return this.excludeDisks == null ? List.of() : this.excludeDisks;
     }
 
@@ -50,7 +50,7 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -61,7 +61,7 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -72,7 +72,7 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -83,7 +83,7 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sourceMetadata", required=true)
       private final RestorePointSourceMetadataResponse sourceMetadata;
 
-    public RestorePointSourceMetadataResponse getSourceMetadata() {
+    public RestorePointSourceMetadataResponse sourceMetadata() {
         return this.sourceMetadata;
     }
 
@@ -94,7 +94,7 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="timeCreated")
       private final @Nullable String timeCreated;
 
-    public Optional<String> getTimeCreated() {
+    public Optional<String> timeCreated() {
         return this.timeCreated == null ? Optional.empty() : Optional.ofNullable(this.timeCreated);
     }
 
@@ -105,7 +105,7 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

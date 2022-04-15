@@ -25,7 +25,7 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action")
       private final @Nullable Output<JobActionArgs> action;
 
-    public Output<JobActionArgs> getAction() {
+    public Output<JobActionArgs> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -36,7 +36,7 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="recurrence")
       private final @Nullable Output<JobRecurrenceArgs> recurrence;
 
-    public Output<JobRecurrenceArgs> getRecurrence() {
+    public Output<JobRecurrenceArgs> recurrence() {
         return this.recurrence == null ? Codegen.empty() : this.recurrence;
     }
 
@@ -47,7 +47,7 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
@@ -58,7 +58,7 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<JobState> state;
 
-    public Output<JobState> getState() {
+    public Output<JobState> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

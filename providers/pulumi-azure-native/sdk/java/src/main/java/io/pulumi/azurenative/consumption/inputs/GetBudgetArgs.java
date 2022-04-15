@@ -19,7 +19,7 @@ public final class GetBudgetArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="budgetName", required=true)
       private final String budgetName;
 
-    public String getBudgetName() {
+    public String budgetName() {
         return this.budgetName;
     }
 
@@ -30,7 +30,7 @@ public final class GetBudgetArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="scope", required=true)
       private final String scope;
 
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
 

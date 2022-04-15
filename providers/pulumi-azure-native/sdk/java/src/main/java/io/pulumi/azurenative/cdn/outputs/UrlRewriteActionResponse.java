@@ -35,14 +35,14 @@ public final class UrlRewriteActionResponse {
      * Expected value is 'UrlRewrite'.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Defines the parameters for the action.
      * 
     */
-    public UrlRewriteActionParametersResponse getParameters() {
+    public UrlRewriteActionParametersResponse parameters() {
         return this.parameters;
     }
 

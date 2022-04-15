@@ -112,91 +112,91 @@ public final class AzureDataLakeSectionResponse {
      * The authority URL used for authentication.
      * 
     */
-    public Optional<String> getAuthorityUrl() {
+    public Optional<String> authorityUrl() {
         return Optional.ofNullable(this.authorityUrl);
     }
     /**
      * The content of the certificate used for authentication.
      * 
     */
-    public Optional<String> getCertificate() {
+    public Optional<String> certificate() {
         return Optional.ofNullable(this.certificate);
     }
     /**
      * The Client ID/Application ID
      * 
     */
-    public Optional<String> getClientId() {
+    public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
      * The client secret.
      * 
     */
-    public Optional<String> getClientSecret() {
+    public Optional<String> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
     /**
      * The Azure Data Lake credential type.
      * 
     */
-    public Optional<String> getCredentialType() {
+    public Optional<String> credentialType() {
         return Optional.ofNullable(this.credentialType);
     }
     /**
      *  Is it using certificate to authenticate. If false then use client secret.
      * 
     */
-    public Optional<Boolean> getIsCertAuth() {
+    public Optional<Boolean> isCertAuth() {
         return Optional.ofNullable(this.isCertAuth);
     }
     /**
      * Resource Group.
      * 
     */
-    public Optional<String> getResourceGroup() {
+    public Optional<String> resourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
     /**
      * The resource the service principal/app has access to.
      * 
     */
-    public Optional<String> getResourceUri() {
+    public Optional<String> resourceUri() {
         return Optional.ofNullable(this.resourceUri);
     }
     /**
      * Indicates which identity to use to authenticate service data access to customer's storage.
      * 
     */
-    public Optional<String> getServiceDataAccessAuthIdentity() {
+    public Optional<String> serviceDataAccessAuthIdentity() {
         return Optional.ofNullable(this.serviceDataAccessAuthIdentity);
     }
     /**
      * The Azure Data Lake store name.
      * 
     */
-    public Optional<String> getStoreName() {
+    public Optional<String> storeName() {
         return Optional.ofNullable(this.storeName);
     }
     /**
      * Subscription ID.
      * 
     */
-    public Optional<String> getSubscriptionId() {
+    public Optional<String> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
     /**
      * The ID of the tenant the service principal/app belongs to.
      * 
     */
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * The thumbprint of the certificate above.
      * 
     */
-    public Optional<String> getThumbprint() {
+    public Optional<String> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
 

@@ -27,7 +27,7 @@ public final class TelegramChannelPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="accessToken")
       private final @Nullable Output<String> accessToken;
 
-    public Output<String> getAccessToken() {
+    public Output<String> accessToken() {
         return this.accessToken == null ? Codegen.empty() : this.accessToken;
     }
 
@@ -38,7 +38,7 @@ public final class TelegramChannelPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 
@@ -49,7 +49,7 @@ public final class TelegramChannelPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="isValidated")
       private final @Nullable Output<Boolean> isValidated;
 
-    public Output<Boolean> getIsValidated() {
+    public Output<Boolean> isValidated() {
         return this.isValidated == null ? Codegen.empty() : this.isValidated;
     }
 

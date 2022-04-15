@@ -43,21 +43,21 @@ public final class VaultPropertiesResponseEncryption {
      * Enabling/Disabling the Double Encryption state
      * 
     */
-    public Optional<String> getInfrastructureEncryption() {
+    public Optional<String> infrastructureEncryption() {
         return Optional.ofNullable(this.infrastructureEncryption);
     }
     /**
      * The details of the identity used for CMK
      * 
     */
-    public Optional<CmkKekIdentityResponse> getKekIdentity() {
+    public Optional<CmkKekIdentityResponse> kekIdentity() {
         return Optional.ofNullable(this.kekIdentity);
     }
     /**
      * The properties of the Key Vault which hosts CMK
      * 
     */
-    public Optional<CmkKeyVaultPropertiesResponse> getKeyVaultProperties() {
+    public Optional<CmkKeyVaultPropertiesResponse> keyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
 

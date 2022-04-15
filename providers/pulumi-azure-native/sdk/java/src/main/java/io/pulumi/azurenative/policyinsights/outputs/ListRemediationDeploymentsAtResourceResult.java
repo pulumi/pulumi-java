@@ -34,14 +34,14 @@ public final class ListRemediationDeploymentsAtResourceResult {
      * The URL to get the next set of results.
      * 
     */
-    public String getNextLink() {
+    public String nextLink() {
         return this.nextLink;
     }
     /**
      * Array of deployments for the remediation.
      * 
     */
-    public List<RemediationDeploymentResponse> getValue() {
+    public List<RemediationDeploymentResponse> value() {
         return this.value;
     }
 

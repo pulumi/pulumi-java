@@ -27,7 +27,7 @@ public final class VirtualNetworkPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -38,7 +38,7 @@ public final class VirtualNetworkPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="subnet")
       private final @Nullable Output<SubnetPropertiesArgs> subnet;
 
-    public Output<SubnetPropertiesArgs> getSubnet() {
+    public Output<SubnetPropertiesArgs> subnet() {
         return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 

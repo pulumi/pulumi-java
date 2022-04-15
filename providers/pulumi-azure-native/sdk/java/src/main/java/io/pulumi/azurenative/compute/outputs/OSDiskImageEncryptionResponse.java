@@ -26,7 +26,7 @@ public final class OSDiskImageEncryptionResponse {
      * A relative URI containing the resource ID of the disk encryption set.
      * 
     */
-    public Optional<String> getDiskEncryptionSetId() {
+    public Optional<String> diskEncryptionSetId() {
         return Optional.ofNullable(this.diskEncryptionSetId);
     }
 

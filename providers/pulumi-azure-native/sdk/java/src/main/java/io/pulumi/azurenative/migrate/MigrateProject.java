@@ -44,7 +44,7 @@ public class MigrateProject extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the eTag for concurrency control.
      * 
      */
-    public Output</* @Nullable */ String> getETag() {
+    public Output</* @Nullable */ String> eTag() {
         return this.eTag;
     }
     /**
@@ -58,7 +58,7 @@ public class MigrateProject extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the Azure location in which migrate project is created.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -72,7 +72,7 @@ public class MigrateProject extends io.pulumi.resources.CustomResource {
      * @return Gets the name of the migrate project.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +86,7 @@ public class MigrateProject extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the nested properties.
      * 
      */
-    public Output<MigrateProjectPropertiesResponse> getProperties() {
+    public Output<MigrateProjectPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -100,7 +100,7 @@ public class MigrateProject extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the tags.
      * 
      */
-    public Output</* @Nullable */ MigrateProjectResponseTags> getTags() {
+    public Output</* @Nullable */ MigrateProjectResponseTags> tags() {
         return this.tags;
     }
     /**
@@ -114,7 +114,7 @@ public class MigrateProject extends io.pulumi.resources.CustomResource {
      * @return Handled by resource provider. Type = Microsoft.Migrate/MigrateProject.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

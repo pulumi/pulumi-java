@@ -48,28 +48,28 @@ public final class MountTargetPropertiesResponse {
      * UUID v4 used to identify the MountTarget
      * 
     */
-    public String getFileSystemId() {
+    public String fileSystemId() {
         return this.fileSystemId;
     }
     /**
      * The mount target's IPv4 address
      * 
     */
-    public String getIpAddress() {
+    public String ipAddress() {
         return this.ipAddress;
     }
     /**
      * UUID v4 used to identify the MountTarget
      * 
     */
-    public String getMountTargetId() {
+    public String mountTargetId() {
         return this.mountTargetId;
     }
     /**
      * The SMB server's Fully Qualified Domain Name, FQDN
      * 
     */
-    public Optional<String> getSmbServerFqdn() {
+    public Optional<String> smbServerFqdn() {
         return Optional.ofNullable(this.smbServerFqdn);
     }
 

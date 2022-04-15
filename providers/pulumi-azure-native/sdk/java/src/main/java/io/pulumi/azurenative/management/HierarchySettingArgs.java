@@ -23,7 +23,7 @@ public final class HierarchySettingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="defaultManagementGroup")
       private final @Nullable Output<String> defaultManagementGroup;
 
-    public Output<String> getDefaultManagementGroup() {
+    public Output<String> defaultManagementGroup() {
         return this.defaultManagementGroup == null ? Codegen.empty() : this.defaultManagementGroup;
     }
 
@@ -34,7 +34,7 @@ public final class HierarchySettingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="groupId", required=true)
       private final Output<String> groupId;
 
-    public Output<String> getGroupId() {
+    public Output<String> groupId() {
         return this.groupId;
     }
 
@@ -45,7 +45,7 @@ public final class HierarchySettingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="requireAuthorizationForGroupCreation")
       private final @Nullable Output<Boolean> requireAuthorizationForGroupCreation;
 
-    public Output<Boolean> getRequireAuthorizationForGroupCreation() {
+    public Output<Boolean> requireAuthorizationForGroupCreation() {
         return this.requireAuthorizationForGroupCreation == null ? Codegen.empty() : this.requireAuthorizationForGroupCreation;
     }
 

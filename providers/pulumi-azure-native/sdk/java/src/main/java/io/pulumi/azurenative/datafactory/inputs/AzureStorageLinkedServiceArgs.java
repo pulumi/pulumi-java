@@ -32,7 +32,7 @@ public final class AzureStorageLinkedServiceArgs extends io.pulumi.resources.Res
     @Import(name="accountKey")
       private final @Nullable Output<AzureKeyVaultSecretReferenceArgs> accountKey;
 
-    public Output<AzureKeyVaultSecretReferenceArgs> getAccountKey() {
+    public Output<AzureKeyVaultSecretReferenceArgs> accountKey() {
         return this.accountKey == null ? Codegen.empty() : this.accountKey;
     }
 
@@ -43,7 +43,7 @@ public final class AzureStorageLinkedServiceArgs extends io.pulumi.resources.Res
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -54,7 +54,7 @@ public final class AzureStorageLinkedServiceArgs extends io.pulumi.resources.Res
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
         return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
@@ -65,7 +65,7 @@ public final class AzureStorageLinkedServiceArgs extends io.pulumi.resources.Res
     @Import(name="connectionString")
       private final @Nullable Output<Object> connectionString;
 
-    public Output<Object> getConnectionString() {
+    public Output<Object> connectionString() {
         return this.connectionString == null ? Codegen.empty() : this.connectionString;
     }
 
@@ -76,7 +76,7 @@ public final class AzureStorageLinkedServiceArgs extends io.pulumi.resources.Res
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -87,7 +87,7 @@ public final class AzureStorageLinkedServiceArgs extends io.pulumi.resources.Res
     @Import(name="encryptedCredential")
       private final @Nullable Output<String> encryptedCredential;
 
-    public Output<String> getEncryptedCredential() {
+    public Output<String> encryptedCredential() {
         return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
@@ -98,7 +98,7 @@ public final class AzureStorageLinkedServiceArgs extends io.pulumi.resources.Res
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -109,7 +109,7 @@ public final class AzureStorageLinkedServiceArgs extends io.pulumi.resources.Res
     @Import(name="sasToken")
       private final @Nullable Output<AzureKeyVaultSecretReferenceArgs> sasToken;
 
-    public Output<AzureKeyVaultSecretReferenceArgs> getSasToken() {
+    public Output<AzureKeyVaultSecretReferenceArgs> sasToken() {
         return this.sasToken == null ? Codegen.empty() : this.sasToken;
     }
 
@@ -120,7 +120,7 @@ public final class AzureStorageLinkedServiceArgs extends io.pulumi.resources.Res
     @Import(name="sasUri")
       private final @Nullable Output<Object> sasUri;
 
-    public Output<Object> getSasUri() {
+    public Output<Object> sasUri() {
         return this.sasUri == null ? Codegen.empty() : this.sasUri;
     }
 
@@ -132,7 +132,7 @@ public final class AzureStorageLinkedServiceArgs extends io.pulumi.resources.Res
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

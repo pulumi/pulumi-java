@@ -91,70 +91,70 @@ public final class VirtualDiskResponse {
      * Gets or sets the controller id.
      * 
     */
-    public Optional<Integer> getControllerKey() {
+    public Optional<Integer> controllerKey() {
         return Optional.ofNullable(this.controllerKey);
     }
     /**
      * Gets or sets the device key value.
      * 
     */
-    public Optional<Integer> getDeviceKey() {
+    public Optional<Integer> deviceKey() {
         return Optional.ofNullable(this.deviceKey);
     }
     /**
      * Gets or sets the device name.
      * 
     */
-    public Optional<String> getDeviceName() {
+    public Optional<String> deviceName() {
         return Optional.ofNullable(this.deviceName);
     }
     /**
      * Gets or sets the disk mode.
      * 
     */
-    public Optional<String> getDiskMode() {
+    public Optional<String> diskMode() {
         return Optional.ofNullable(this.diskMode);
     }
     /**
      * Gets or sets the disk object id.
      * 
     */
-    public String getDiskObjectId() {
+    public String diskObjectId() {
         return this.diskObjectId;
     }
     /**
      * Gets or sets the disk total size.
      * 
     */
-    public Optional<Integer> getDiskSizeGB() {
+    public Optional<Integer> diskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
     /**
      * Gets or sets the disk backing type.
      * 
     */
-    public Optional<String> getDiskType() {
+    public Optional<String> diskType() {
         return Optional.ofNullable(this.diskType);
     }
     /**
      * Gets or sets the label of the virtual disk in vCenter.
      * 
     */
-    public String getLabel() {
+    public String label() {
         return this.label;
     }
     /**
      * Gets or sets the name of the virtual disk.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Gets or sets the unit number of the disk on the controller.
      * 
     */
-    public Optional<Integer> getUnitNumber() {
+    public Optional<Integer> unitNumber() {
         return Optional.ofNullable(this.unitNumber);
     }
 

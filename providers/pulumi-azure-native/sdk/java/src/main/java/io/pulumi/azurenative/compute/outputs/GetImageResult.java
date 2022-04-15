@@ -94,70 +94,70 @@ public final class GetImageResult {
      * The extended location of the Image.
      * 
     */
-    public Optional<ExtendedLocationResponse> getExtendedLocation() {
+    public Optional<ExtendedLocationResponse> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
      * Specifies the HyperVGenerationType of the VirtualMachine created from the image. From API Version 2019-03-01 if the image source is a blob, then we need the user to specify the value, if the source is managed resource like disk or snapshot, we may require the user to specify the property if we cannot deduce it from the source managed resource.
      * 
     */
-    public Optional<String> getHyperVGeneration() {
+    public Optional<String> hyperVGeneration() {
         return Optional.ofNullable(this.hyperVGeneration);
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning state.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The source virtual machine from which Image is created.
      * 
     */
-    public Optional<SubResourceResponse> getSourceVirtualMachine() {
+    public Optional<SubResourceResponse> sourceVirtualMachine() {
         return Optional.ofNullable(this.sourceVirtualMachine);
     }
     /**
      * Specifies the storage settings for the virtual machine disks.
      * 
     */
-    public Optional<ImageStorageProfileResponse> getStorageProfile() {
+    public Optional<ImageStorageProfileResponse> storageProfile() {
         return Optional.ofNullable(this.storageProfile);
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

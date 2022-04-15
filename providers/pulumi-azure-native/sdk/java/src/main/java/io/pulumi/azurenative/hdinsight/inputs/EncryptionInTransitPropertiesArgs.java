@@ -26,7 +26,7 @@ public final class EncryptionInTransitPropertiesArgs extends io.pulumi.resources
     @Import(name="isEncryptionInTransitEnabled")
       private final @Nullable Output<Boolean> isEncryptionInTransitEnabled;
 
-    public Output<Boolean> getIsEncryptionInTransitEnabled() {
+    public Output<Boolean> isEncryptionInTransitEnabled() {
         return this.isEncryptionInTransitEnabled == null ? Codegen.empty() : this.isEncryptionInTransitEnabled;
     }
 

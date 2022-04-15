@@ -47,7 +47,7 @@ public class OnlineDeployment extends io.pulumi.resources.CustomResource {
      * @return Service identity associated with a resource.
      * 
      */
-    public Output</* @Nullable */ ResourceIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ ResourceIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -61,7 +61,7 @@ public class OnlineDeployment extends io.pulumi.resources.CustomResource {
      * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -75,7 +75,7 @@ public class OnlineDeployment extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -89,7 +89,7 @@ public class OnlineDeployment extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -103,7 +103,7 @@ public class OnlineDeployment extends io.pulumi.resources.CustomResource {
      * @return Additional attributes of the entity.
      * 
      */
-    public Output<Either<K8sOnlineDeploymentResponse,ManagedOnlineDeploymentResponse>> getProperties() {
+    public Output<Either<K8sOnlineDeploymentResponse,ManagedOnlineDeploymentResponse>> properties() {
         return this.properties;
     }
     /**
@@ -117,7 +117,7 @@ public class OnlineDeployment extends io.pulumi.resources.CustomResource {
      * @return System data associated with resource provider
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -131,7 +131,7 @@ public class OnlineDeployment extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -145,7 +145,7 @@ public class OnlineDeployment extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

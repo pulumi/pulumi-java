@@ -24,7 +24,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="canonicalName")
       private final @Nullable Output<String> canonicalName;
 
-    public Output<String> getCanonicalName() {
+    public Output<String> canonicalName() {
         return this.canonicalName == null ? Codegen.empty() : this.canonicalName;
     }
 
@@ -35,7 +35,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainValidationMethod")
       private final @Nullable Output<String> domainValidationMethod;
 
-    public Output<String> getDomainValidationMethod() {
+    public Output<String> domainValidationMethod() {
         return this.domainValidationMethod == null ? Codegen.empty() : this.domainValidationMethod;
     }
 
@@ -46,7 +46,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostNames")
       private final @Nullable Output<List<String>> hostNames;
 
-    public Output<List<String>> getHostNames() {
+    public Output<List<String>> hostNames() {
         return this.hostNames == null ? Codegen.empty() : this.hostNames;
     }
 
@@ -57,7 +57,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyVaultId")
       private final @Nullable Output<String> keyVaultId;
 
-    public Output<String> getKeyVaultId() {
+    public Output<String> keyVaultId() {
         return this.keyVaultId == null ? Codegen.empty() : this.keyVaultId;
     }
 
@@ -68,7 +68,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyVaultSecretName")
       private final @Nullable Output<String> keyVaultSecretName;
 
-    public Output<String> getKeyVaultSecretName() {
+    public Output<String> keyVaultSecretName() {
         return this.keyVaultSecretName == null ? Codegen.empty() : this.keyVaultSecretName;
     }
 
@@ -79,7 +79,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -90,7 +90,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -101,7 +101,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -112,7 +112,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -123,7 +123,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pfxBlob")
       private final @Nullable Output<String> pfxBlob;
 
-    public Output<String> getPfxBlob() {
+    public Output<String> pfxBlob() {
         return this.pfxBlob == null ? Codegen.empty() : this.pfxBlob;
     }
 
@@ -134,7 +134,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -145,7 +145,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverFarmId")
       private final @Nullable Output<String> serverFarmId;
 
-    public Output<String> getServerFarmId() {
+    public Output<String> serverFarmId() {
         return this.serverFarmId == null ? Codegen.empty() : this.serverFarmId;
     }
 
@@ -156,7 +156,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

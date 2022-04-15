@@ -18,21 +18,21 @@ public final class ResourceProviderCapabilitiesResponse extends io.pulumi.resour
     @Import(name="effect", required=true)
       private final String effect;
 
-    public String getEffect() {
+    public String effect() {
         return this.effect;
     }
 
     @Import(name="quotaId", required=true)
       private final String quotaId;
 
-    public String getQuotaId() {
+    public String quotaId() {
         return this.quotaId;
     }
 
     @Import(name="requiredFeatures")
       private final @Nullable List<String> requiredFeatures;
 
-    public List<String> getRequiredFeatures() {
+    public List<String> requiredFeatures() {
         return this.requiredFeatures == null ? List.of() : this.requiredFeatures;
     }
 

@@ -41,21 +41,21 @@ public final class ComputeInstanceLastOperationResponse {
      * Name of the last operation.
      * 
     */
-    public Optional<String> getOperationName() {
+    public Optional<String> operationName() {
         return Optional.ofNullable(this.operationName);
     }
     /**
      * Operation status.
      * 
     */
-    public Optional<String> getOperationStatus() {
+    public Optional<String> operationStatus() {
         return Optional.ofNullable(this.operationStatus);
     }
     /**
      * Time of the last operation.
      * 
     */
-    public Optional<String> getOperationTime() {
+    public Optional<String> operationTime() {
         return Optional.ofNullable(this.operationTime);
     }
 

@@ -42,21 +42,21 @@ public final class MedianStoppingPolicyResponse {
      * Number of intervals by which to delay the first evaluation.
      * 
     */
-    public Optional<Integer> getDelayEvaluation() {
+    public Optional<Integer> delayEvaluation() {
         return Optional.ofNullable(this.delayEvaluation);
     }
     /**
      * Interval (number of runs) between policy evaluations.
      * 
     */
-    public Optional<Integer> getEvaluationInterval() {
+    public Optional<Integer> evaluationInterval() {
         return Optional.ofNullable(this.evaluationInterval);
     }
     /**
      * Expected value is 'MedianStopping'.
      * 
     */
-    public String getPolicyType() {
+    public String policyType() {
         return this.policyType;
     }
 

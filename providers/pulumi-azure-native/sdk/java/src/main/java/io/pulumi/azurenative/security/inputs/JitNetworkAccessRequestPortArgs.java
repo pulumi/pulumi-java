@@ -27,7 +27,7 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
     @Import(name="allowedSourceAddressPrefix")
       private final @Nullable Output<String> allowedSourceAddressPrefix;
 
-    public Output<String> getAllowedSourceAddressPrefix() {
+    public Output<String> allowedSourceAddressPrefix() {
         return this.allowedSourceAddressPrefix == null ? Codegen.empty() : this.allowedSourceAddressPrefix;
     }
 
@@ -38,7 +38,7 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
     @Import(name="allowedSourceAddressPrefixes")
       private final @Nullable Output<List<String>> allowedSourceAddressPrefixes;
 
-    public Output<List<String>> getAllowedSourceAddressPrefixes() {
+    public Output<List<String>> allowedSourceAddressPrefixes() {
         return this.allowedSourceAddressPrefixes == null ? Codegen.empty() : this.allowedSourceAddressPrefixes;
     }
 
@@ -49,7 +49,7 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
     @Import(name="endTimeUtc", required=true)
       private final Output<String> endTimeUtc;
 
-    public Output<String> getEndTimeUtc() {
+    public Output<String> endTimeUtc() {
         return this.endTimeUtc;
     }
 
@@ -60,14 +60,14 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
     @Import(name="mappedPort")
       private final @Nullable Output<Integer> mappedPort;
 
-    public Output<Integer> getMappedPort() {
+    public Output<Integer> mappedPort() {
         return this.mappedPort == null ? Codegen.empty() : this.mappedPort;
     }
 
     @Import(name="number", required=true)
       private final Output<Integer> number;
 
-    public Output<Integer> getNumber() {
+    public Output<Integer> number() {
         return this.number;
     }
 
@@ -78,7 +78,7 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
     @Import(name="status", required=true)
       private final Output<Either<String,Status>> status;
 
-    public Output<Either<String,Status>> getStatus() {
+    public Output<Either<String,Status>> status() {
         return this.status;
     }
 
@@ -89,7 +89,7 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
     @Import(name="statusReason", required=true)
       private final Output<Either<String,StatusReason>> statusReason;
 
-    public Output<Either<String,StatusReason>> getStatusReason() {
+    public Output<Either<String,StatusReason>> statusReason() {
         return this.statusReason;
     }
 

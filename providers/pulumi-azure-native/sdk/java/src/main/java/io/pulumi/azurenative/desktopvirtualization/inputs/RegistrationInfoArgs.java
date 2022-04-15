@@ -28,7 +28,7 @@ public final class RegistrationInfoArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="expirationTime")
       private final @Nullable Output<String> expirationTime;
 
-    public Output<String> getExpirationTime() {
+    public Output<String> expirationTime() {
         return this.expirationTime == null ? Codegen.empty() : this.expirationTime;
     }
 
@@ -39,7 +39,7 @@ public final class RegistrationInfoArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="registrationTokenOperation")
       private final @Nullable Output<Either<String,RegistrationTokenOperation>> registrationTokenOperation;
 
-    public Output<Either<String,RegistrationTokenOperation>> getRegistrationTokenOperation() {
+    public Output<Either<String,RegistrationTokenOperation>> registrationTokenOperation() {
         return this.registrationTokenOperation == null ? Codegen.empty() : this.registrationTokenOperation;
     }
 
@@ -50,7 +50,7 @@ public final class RegistrationInfoArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="token")
       private final @Nullable Output<String> token;
 
-    public Output<String> getToken() {
+    public Output<String> token() {
         return this.token == null ? Codegen.empty() : this.token;
     }
 

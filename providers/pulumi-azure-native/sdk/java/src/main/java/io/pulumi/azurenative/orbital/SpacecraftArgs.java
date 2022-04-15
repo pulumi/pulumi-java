@@ -25,7 +25,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="links")
       private final @Nullable Output<List<SpacecraftLinkArgs>> links;
 
-    public Output<List<SpacecraftLinkArgs>> getLinks() {
+    public Output<List<SpacecraftLinkArgs>> links() {
         return this.links == null ? Codegen.empty() : this.links;
     }
 
@@ -36,7 +36,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -47,7 +47,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="noradId", required=true)
       private final Output<String> noradId;
 
-    public Output<String> getNoradId() {
+    public Output<String> noradId() {
         return this.noradId;
     }
 
@@ -58,7 +58,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -69,7 +69,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="spacecraftName")
       private final @Nullable Output<String> spacecraftName;
 
-    public Output<String> getSpacecraftName() {
+    public Output<String> spacecraftName() {
         return this.spacecraftName == null ? Codegen.empty() : this.spacecraftName;
     }
 
@@ -80,7 +80,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -91,7 +91,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="titleLine")
       private final @Nullable Output<String> titleLine;
 
-    public Output<String> getTitleLine() {
+    public Output<String> titleLine() {
         return this.titleLine == null ? Codegen.empty() : this.titleLine;
     }
 
@@ -102,7 +102,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tleLine1")
       private final @Nullable Output<String> tleLine1;
 
-    public Output<String> getTleLine1() {
+    public Output<String> tleLine1() {
         return this.tleLine1 == null ? Codegen.empty() : this.tleLine1;
     }
 
@@ -113,7 +113,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tleLine2")
       private final @Nullable Output<String> tleLine2;
 
-    public Output<String> getTleLine2() {
+    public Output<String> tleLine2() {
         return this.tleLine2 == null ? Codegen.empty() : this.tleLine2;
     }
 

@@ -36,14 +36,14 @@ public final class ListJobCredentialsResult {
      * Link for the next set of unencrypted credentials.
      * 
     */
-    public Optional<String> getNextLink() {
+    public Optional<String> nextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * List of unencrypted credentials.
      * 
     */
-    public List<UnencryptedCredentialsResponse> getValue() {
+    public List<UnencryptedCredentialsResponse> value() {
         return this.value == null ? List.of() : this.value;
     }
 

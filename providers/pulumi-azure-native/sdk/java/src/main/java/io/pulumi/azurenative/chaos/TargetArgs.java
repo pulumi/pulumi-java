@@ -23,7 +23,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -34,7 +34,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parentProviderNamespace", required=true)
       private final Output<String> parentProviderNamespace;
 
-    public Output<String> getParentProviderNamespace() {
+    public Output<String> parentProviderNamespace() {
         return this.parentProviderNamespace;
     }
 
@@ -45,7 +45,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parentResourceName", required=true)
       private final Output<String> parentResourceName;
 
-    public Output<String> getParentResourceName() {
+    public Output<String> parentResourceName() {
         return this.parentResourceName;
     }
 
@@ -56,7 +56,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parentResourceType", required=true)
       private final Output<String> parentResourceType;
 
-    public Output<String> getParentResourceType() {
+    public Output<String> parentResourceType() {
         return this.parentResourceType;
     }
 
@@ -67,7 +67,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
       private final Output<Object> properties;
 
-    public Output<Object> getProperties() {
+    public Output<Object> properties() {
         return this.properties;
     }
 
@@ -78,7 +78,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,7 +89,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetName")
       private final @Nullable Output<String> targetName;
 
-    public Output<String> getTargetName() {
+    public Output<String> targetName() {
         return this.targetName == null ? Codegen.empty() : this.targetName;
     }
 

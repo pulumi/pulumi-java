@@ -24,7 +24,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="certificate", required=true)
       private final String certificate;
 
-    public String getCertificate() {
+    public String certificate() {
         return this.certificate;
     }
 
@@ -35,7 +35,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="created", required=true)
       private final String created;
 
-    public String getCreated() {
+    public String created() {
         return this.created;
     }
 
@@ -46,7 +46,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="expiry", required=true)
       private final String expiry;
 
-    public String getExpiry() {
+    public String expiry() {
         return this.expiry;
     }
 
@@ -57,7 +57,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="isVerified", required=true)
       private final Boolean isVerified;
 
-    public Boolean getIsVerified() {
+    public Boolean isVerified() {
         return this.isVerified;
     }
 
@@ -68,7 +68,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="subject", required=true)
       private final String subject;
 
-    public String getSubject() {
+    public String subject() {
         return this.subject;
     }
 
@@ -79,7 +79,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="thumbprint", required=true)
       private final String thumbprint;
 
-    public String getThumbprint() {
+    public String thumbprint() {
         return this.thumbprint;
     }
 
@@ -90,7 +90,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="updated", required=true)
       private final String updated;
 
-    public String getUpdated() {
+    public String updated() {
         return this.updated;
     }
 

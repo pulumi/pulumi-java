@@ -75,56 +75,56 @@ public final class GetMigrationConfigResult {
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * State in which Standard to Premium Migration is, possible values : Unknown, Reverting, Completing, Initiating, Syncing, Active
      * 
     */
-    public String getMigrationState() {
+    public String migrationState() {
         return this.migrationState;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Number of entities pending to be replicated.
      * 
     */
-    public Double getPendingReplicationOperationsCount() {
+    public Double pendingReplicationOperationsCount() {
         return this.pendingReplicationOperationsCount;
     }
     /**
      * Name to access Standard Namespace after migration
      * 
     */
-    public String getPostMigrationName() {
+    public String postMigrationName() {
         return this.postMigrationName;
     }
     /**
      * Provisioning state of Migration Configuration
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Existing premium Namespace ARM Id name which has no entities, will be used for migration
      * 
     */
-    public String getTargetNamespace() {
+    public String targetNamespace() {
         return this.targetNamespace;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

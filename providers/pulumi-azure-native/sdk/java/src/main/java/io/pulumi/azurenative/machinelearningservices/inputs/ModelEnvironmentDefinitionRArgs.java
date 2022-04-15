@@ -30,7 +30,7 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
     @Import(name="bioConductorPackages")
       private final @Nullable Output<List<String>> bioConductorPackages;
 
-    public Output<List<String>> getBioConductorPackages() {
+    public Output<List<String>> bioConductorPackages() {
         return this.bioConductorPackages == null ? Codegen.empty() : this.bioConductorPackages;
     }
 
@@ -41,7 +41,7 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
     @Import(name="cranPackages")
       private final @Nullable Output<List<RCranPackageArgs>> cranPackages;
 
-    public Output<List<RCranPackageArgs>> getCranPackages() {
+    public Output<List<RCranPackageArgs>> cranPackages() {
         return this.cranPackages == null ? Codegen.empty() : this.cranPackages;
     }
 
@@ -52,7 +52,7 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
     @Import(name="customUrlPackages")
       private final @Nullable Output<List<String>> customUrlPackages;
 
-    public Output<List<String>> getCustomUrlPackages() {
+    public Output<List<String>> customUrlPackages() {
         return this.customUrlPackages == null ? Codegen.empty() : this.customUrlPackages;
     }
 
@@ -63,7 +63,7 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
     @Import(name="gitHubPackages")
       private final @Nullable Output<List<RGitHubPackageArgs>> gitHubPackages;
 
-    public Output<List<RGitHubPackageArgs>> getGitHubPackages() {
+    public Output<List<RGitHubPackageArgs>> gitHubPackages() {
         return this.gitHubPackages == null ? Codegen.empty() : this.gitHubPackages;
     }
 
@@ -74,7 +74,7 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
     @Import(name="rVersion")
       private final @Nullable Output<String> rVersion;
 
-    public Output<String> getRVersion() {
+    public Output<String> rVersion() {
         return this.rVersion == null ? Codegen.empty() : this.rVersion;
     }
 
@@ -86,7 +86,7 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
     @Import(name="rscriptPath")
       private final @Nullable Output<String> rscriptPath;
 
-    public Output<String> getRscriptPath() {
+    public Output<String> rscriptPath() {
         return this.rscriptPath == null ? Codegen.empty() : this.rscriptPath;
     }
 
@@ -97,7 +97,7 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
     @Import(name="snapshotDate")
       private final @Nullable Output<String> snapshotDate;
 
-    public Output<String> getSnapshotDate() {
+    public Output<String> snapshotDate() {
         return this.snapshotDate == null ? Codegen.empty() : this.snapshotDate;
     }
 
@@ -108,7 +108,7 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
     @Import(name="userManaged")
       private final @Nullable Output<Boolean> userManaged;
 
-    public Output<Boolean> getUserManaged() {
+    public Output<Boolean> userManaged() {
         return this.userManaged == null ? Codegen.empty() : this.userManaged;
     }
 

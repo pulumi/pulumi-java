@@ -49,7 +49,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="acrUseManagedIdentityCreds")
       private final @Nullable Output<Boolean> acrUseManagedIdentityCreds;
 
-    public Output<Boolean> getAcrUseManagedIdentityCreds() {
+    public Output<Boolean> acrUseManagedIdentityCreds() {
         return this.acrUseManagedIdentityCreds == null ? Codegen.empty() : this.acrUseManagedIdentityCreds;
     }
 
@@ -60,7 +60,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="acrUserManagedIdentityID")
       private final @Nullable Output<String> acrUserManagedIdentityID;
 
-    public Output<String> getAcrUserManagedIdentityID() {
+    public Output<String> acrUserManagedIdentityID() {
         return this.acrUserManagedIdentityID == null ? Codegen.empty() : this.acrUserManagedIdentityID;
     }
 
@@ -71,7 +71,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alwaysOn")
       private final @Nullable Output<Boolean> alwaysOn;
 
-    public Output<Boolean> getAlwaysOn() {
+    public Output<Boolean> alwaysOn() {
         return this.alwaysOn == null ? Codegen.empty() : this.alwaysOn;
     }
 
@@ -82,7 +82,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiDefinition")
       private final @Nullable Output<ApiDefinitionInfoArgs> apiDefinition;
 
-    public Output<ApiDefinitionInfoArgs> getApiDefinition() {
+    public Output<ApiDefinitionInfoArgs> apiDefinition() {
         return this.apiDefinition == null ? Codegen.empty() : this.apiDefinition;
     }
 
@@ -93,7 +93,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiManagementConfig")
       private final @Nullable Output<ApiManagementConfigArgs> apiManagementConfig;
 
-    public Output<ApiManagementConfigArgs> getApiManagementConfig() {
+    public Output<ApiManagementConfigArgs> apiManagementConfig() {
         return this.apiManagementConfig == null ? Codegen.empty() : this.apiManagementConfig;
     }
 
@@ -104,7 +104,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appCommandLine")
       private final @Nullable Output<String> appCommandLine;
 
-    public Output<String> getAppCommandLine() {
+    public Output<String> appCommandLine() {
         return this.appCommandLine == null ? Codegen.empty() : this.appCommandLine;
     }
 
@@ -115,7 +115,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appSettings")
       private final @Nullable Output<List<NameValuePairArgs>> appSettings;
 
-    public Output<List<NameValuePairArgs>> getAppSettings() {
+    public Output<List<NameValuePairArgs>> appSettings() {
         return this.appSettings == null ? Codegen.empty() : this.appSettings;
     }
 
@@ -126,7 +126,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoHealEnabled")
       private final @Nullable Output<Boolean> autoHealEnabled;
 
-    public Output<Boolean> getAutoHealEnabled() {
+    public Output<Boolean> autoHealEnabled() {
         return this.autoHealEnabled == null ? Codegen.empty() : this.autoHealEnabled;
     }
 
@@ -137,7 +137,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoHealRules")
       private final @Nullable Output<AutoHealRulesArgs> autoHealRules;
 
-    public Output<AutoHealRulesArgs> getAutoHealRules() {
+    public Output<AutoHealRulesArgs> autoHealRules() {
         return this.autoHealRules == null ? Codegen.empty() : this.autoHealRules;
     }
 
@@ -148,7 +148,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoSwapSlotName")
       private final @Nullable Output<String> autoSwapSlotName;
 
-    public Output<String> getAutoSwapSlotName() {
+    public Output<String> autoSwapSlotName() {
         return this.autoSwapSlotName == null ? Codegen.empty() : this.autoSwapSlotName;
     }
 
@@ -159,7 +159,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="azureStorageAccounts")
       private final @Nullable Output<Map<String,AzureStorageInfoValueArgs>> azureStorageAccounts;
 
-    public Output<Map<String,AzureStorageInfoValueArgs>> getAzureStorageAccounts() {
+    public Output<Map<String,AzureStorageInfoValueArgs>> azureStorageAccounts() {
         return this.azureStorageAccounts == null ? Codegen.empty() : this.azureStorageAccounts;
     }
 
@@ -170,7 +170,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectionStrings")
       private final @Nullable Output<List<ConnStringInfoArgs>> connectionStrings;
 
-    public Output<List<ConnStringInfoArgs>> getConnectionStrings() {
+    public Output<List<ConnStringInfoArgs>> connectionStrings() {
         return this.connectionStrings == null ? Codegen.empty() : this.connectionStrings;
     }
 
@@ -181,7 +181,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cors")
       private final @Nullable Output<CorsSettingsArgs> cors;
 
-    public Output<CorsSettingsArgs> getCors() {
+    public Output<CorsSettingsArgs> cors() {
         return this.cors == null ? Codegen.empty() : this.cors;
     }
 
@@ -192,7 +192,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultDocuments")
       private final @Nullable Output<List<String>> defaultDocuments;
 
-    public Output<List<String>> getDefaultDocuments() {
+    public Output<List<String>> defaultDocuments() {
         return this.defaultDocuments == null ? Codegen.empty() : this.defaultDocuments;
     }
 
@@ -203,7 +203,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="detailedErrorLoggingEnabled")
       private final @Nullable Output<Boolean> detailedErrorLoggingEnabled;
 
-    public Output<Boolean> getDetailedErrorLoggingEnabled() {
+    public Output<Boolean> detailedErrorLoggingEnabled() {
         return this.detailedErrorLoggingEnabled == null ? Codegen.empty() : this.detailedErrorLoggingEnabled;
     }
 
@@ -214,7 +214,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="documentRoot")
       private final @Nullable Output<String> documentRoot;
 
-    public Output<String> getDocumentRoot() {
+    public Output<String> documentRoot() {
         return this.documentRoot == null ? Codegen.empty() : this.documentRoot;
     }
 
@@ -225,7 +225,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="experiments")
       private final @Nullable Output<ExperimentsArgs> experiments;
 
-    public Output<ExperimentsArgs> getExperiments() {
+    public Output<ExperimentsArgs> experiments() {
         return this.experiments == null ? Codegen.empty() : this.experiments;
     }
 
@@ -236,7 +236,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ftpsState")
       private final @Nullable Output<Either<String,FtpsState>> ftpsState;
 
-    public Output<Either<String,FtpsState>> getFtpsState() {
+    public Output<Either<String,FtpsState>> ftpsState() {
         return this.ftpsState == null ? Codegen.empty() : this.ftpsState;
     }
 
@@ -248,7 +248,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="functionAppScaleLimit")
       private final @Nullable Output<Integer> functionAppScaleLimit;
 
-    public Output<Integer> getFunctionAppScaleLimit() {
+    public Output<Integer> functionAppScaleLimit() {
         return this.functionAppScaleLimit == null ? Codegen.empty() : this.functionAppScaleLimit;
     }
 
@@ -261,7 +261,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="functionsRuntimeScaleMonitoringEnabled")
       private final @Nullable Output<Boolean> functionsRuntimeScaleMonitoringEnabled;
 
-    public Output<Boolean> getFunctionsRuntimeScaleMonitoringEnabled() {
+    public Output<Boolean> functionsRuntimeScaleMonitoringEnabled() {
         return this.functionsRuntimeScaleMonitoringEnabled == null ? Codegen.empty() : this.functionsRuntimeScaleMonitoringEnabled;
     }
 
@@ -272,7 +272,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="handlerMappings")
       private final @Nullable Output<List<HandlerMappingArgs>> handlerMappings;
 
-    public Output<List<HandlerMappingArgs>> getHandlerMappings() {
+    public Output<List<HandlerMappingArgs>> handlerMappings() {
         return this.handlerMappings == null ? Codegen.empty() : this.handlerMappings;
     }
 
@@ -283,7 +283,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="healthCheckPath")
       private final @Nullable Output<String> healthCheckPath;
 
-    public Output<String> getHealthCheckPath() {
+    public Output<String> healthCheckPath() {
         return this.healthCheckPath == null ? Codegen.empty() : this.healthCheckPath;
     }
 
@@ -294,7 +294,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="http20Enabled")
       private final @Nullable Output<Boolean> http20Enabled;
 
-    public Output<Boolean> getHttp20Enabled() {
+    public Output<Boolean> http20Enabled() {
         return this.http20Enabled == null ? Codegen.empty() : this.http20Enabled;
     }
 
@@ -305,7 +305,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpLoggingEnabled")
       private final @Nullable Output<Boolean> httpLoggingEnabled;
 
-    public Output<Boolean> getHttpLoggingEnabled() {
+    public Output<Boolean> httpLoggingEnabled() {
         return this.httpLoggingEnabled == null ? Codegen.empty() : this.httpLoggingEnabled;
     }
 
@@ -316,7 +316,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipSecurityRestrictions")
       private final @Nullable Output<List<IpSecurityRestrictionArgs>> ipSecurityRestrictions;
 
-    public Output<List<IpSecurityRestrictionArgs>> getIpSecurityRestrictions() {
+    public Output<List<IpSecurityRestrictionArgs>> ipSecurityRestrictions() {
         return this.ipSecurityRestrictions == null ? Codegen.empty() : this.ipSecurityRestrictions;
     }
 
@@ -327,7 +327,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="javaContainer")
       private final @Nullable Output<String> javaContainer;
 
-    public Output<String> getJavaContainer() {
+    public Output<String> javaContainer() {
         return this.javaContainer == null ? Codegen.empty() : this.javaContainer;
     }
 
@@ -338,7 +338,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="javaContainerVersion")
       private final @Nullable Output<String> javaContainerVersion;
 
-    public Output<String> getJavaContainerVersion() {
+    public Output<String> javaContainerVersion() {
         return this.javaContainerVersion == null ? Codegen.empty() : this.javaContainerVersion;
     }
 
@@ -349,7 +349,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="javaVersion")
       private final @Nullable Output<String> javaVersion;
 
-    public Output<String> getJavaVersion() {
+    public Output<String> javaVersion() {
         return this.javaVersion == null ? Codegen.empty() : this.javaVersion;
     }
 
@@ -360,7 +360,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyVaultReferenceIdentity")
       private final @Nullable Output<String> keyVaultReferenceIdentity;
 
-    public Output<String> getKeyVaultReferenceIdentity() {
+    public Output<String> keyVaultReferenceIdentity() {
         return this.keyVaultReferenceIdentity == null ? Codegen.empty() : this.keyVaultReferenceIdentity;
     }
 
@@ -371,7 +371,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="limits")
       private final @Nullable Output<SiteLimitsArgs> limits;
 
-    public Output<SiteLimitsArgs> getLimits() {
+    public Output<SiteLimitsArgs> limits() {
         return this.limits == null ? Codegen.empty() : this.limits;
     }
 
@@ -382,7 +382,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="linuxFxVersion")
       private final @Nullable Output<String> linuxFxVersion;
 
-    public Output<String> getLinuxFxVersion() {
+    public Output<String> linuxFxVersion() {
         return this.linuxFxVersion == null ? Codegen.empty() : this.linuxFxVersion;
     }
 
@@ -393,7 +393,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancing")
       private final @Nullable Output<SiteLoadBalancing> loadBalancing;
 
-    public Output<SiteLoadBalancing> getLoadBalancing() {
+    public Output<SiteLoadBalancing> loadBalancing() {
         return this.loadBalancing == null ? Codegen.empty() : this.loadBalancing;
     }
 
@@ -404,7 +404,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="localMySqlEnabled")
       private final @Nullable Output<Boolean> localMySqlEnabled;
 
-    public Output<Boolean> getLocalMySqlEnabled() {
+    public Output<Boolean> localMySqlEnabled() {
         return this.localMySqlEnabled == null ? Codegen.empty() : this.localMySqlEnabled;
     }
 
@@ -415,7 +415,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logsDirectorySizeLimit")
       private final @Nullable Output<Integer> logsDirectorySizeLimit;
 
-    public Output<Integer> getLogsDirectorySizeLimit() {
+    public Output<Integer> logsDirectorySizeLimit() {
         return this.logsDirectorySizeLimit == null ? Codegen.empty() : this.logsDirectorySizeLimit;
     }
 
@@ -426,7 +426,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="managedPipelineMode")
       private final @Nullable Output<ManagedPipelineMode> managedPipelineMode;
 
-    public Output<ManagedPipelineMode> getManagedPipelineMode() {
+    public Output<ManagedPipelineMode> managedPipelineMode() {
         return this.managedPipelineMode == null ? Codegen.empty() : this.managedPipelineMode;
     }
 
@@ -437,7 +437,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="managedServiceIdentityId")
       private final @Nullable Output<Integer> managedServiceIdentityId;
 
-    public Output<Integer> getManagedServiceIdentityId() {
+    public Output<Integer> managedServiceIdentityId() {
         return this.managedServiceIdentityId == null ? Codegen.empty() : this.managedServiceIdentityId;
     }
 
@@ -448,7 +448,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minTlsVersion")
       private final @Nullable Output<Either<String,SupportedTlsVersions>> minTlsVersion;
 
-    public Output<Either<String,SupportedTlsVersions>> getMinTlsVersion() {
+    public Output<Either<String,SupportedTlsVersions>> minTlsVersion() {
         return this.minTlsVersion == null ? Codegen.empty() : this.minTlsVersion;
     }
 
@@ -460,7 +460,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minimumElasticInstanceCount")
       private final @Nullable Output<Integer> minimumElasticInstanceCount;
 
-    public Output<Integer> getMinimumElasticInstanceCount() {
+    public Output<Integer> minimumElasticInstanceCount() {
         return this.minimumElasticInstanceCount == null ? Codegen.empty() : this.minimumElasticInstanceCount;
     }
 
@@ -471,7 +471,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="netFrameworkVersion")
       private final @Nullable Output<String> netFrameworkVersion;
 
-    public Output<String> getNetFrameworkVersion() {
+    public Output<String> netFrameworkVersion() {
         return this.netFrameworkVersion == null ? Codegen.empty() : this.netFrameworkVersion;
     }
 
@@ -482,7 +482,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeVersion")
       private final @Nullable Output<String> nodeVersion;
 
-    public Output<String> getNodeVersion() {
+    public Output<String> nodeVersion() {
         return this.nodeVersion == null ? Codegen.empty() : this.nodeVersion;
     }
 
@@ -493,7 +493,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="numberOfWorkers")
       private final @Nullable Output<Integer> numberOfWorkers;
 
-    public Output<Integer> getNumberOfWorkers() {
+    public Output<Integer> numberOfWorkers() {
         return this.numberOfWorkers == null ? Codegen.empty() : this.numberOfWorkers;
     }
 
@@ -504,7 +504,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="phpVersion")
       private final @Nullable Output<String> phpVersion;
 
-    public Output<String> getPhpVersion() {
+    public Output<String> phpVersion() {
         return this.phpVersion == null ? Codegen.empty() : this.phpVersion;
     }
 
@@ -515,7 +515,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="powerShellVersion")
       private final @Nullable Output<String> powerShellVersion;
 
-    public Output<String> getPowerShellVersion() {
+    public Output<String> powerShellVersion() {
         return this.powerShellVersion == null ? Codegen.empty() : this.powerShellVersion;
     }
 
@@ -527,7 +527,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preWarmedInstanceCount")
       private final @Nullable Output<Integer> preWarmedInstanceCount;
 
-    public Output<Integer> getPreWarmedInstanceCount() {
+    public Output<Integer> preWarmedInstanceCount() {
         return this.preWarmedInstanceCount == null ? Codegen.empty() : this.preWarmedInstanceCount;
     }
 
@@ -538,7 +538,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<String> publicNetworkAccess;
 
-    public Output<String> getPublicNetworkAccess() {
+    public Output<String> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
@@ -549,7 +549,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publishingUsername")
       private final @Nullable Output<String> publishingUsername;
 
-    public Output<String> getPublishingUsername() {
+    public Output<String> publishingUsername() {
         return this.publishingUsername == null ? Codegen.empty() : this.publishingUsername;
     }
 
@@ -560,7 +560,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="push")
       private final @Nullable Output<PushSettingsArgs> push;
 
-    public Output<PushSettingsArgs> getPush() {
+    public Output<PushSettingsArgs> push() {
         return this.push == null ? Codegen.empty() : this.push;
     }
 
@@ -571,7 +571,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pythonVersion")
       private final @Nullable Output<String> pythonVersion;
 
-    public Output<String> getPythonVersion() {
+    public Output<String> pythonVersion() {
         return this.pythonVersion == null ? Codegen.empty() : this.pythonVersion;
     }
 
@@ -582,7 +582,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="remoteDebuggingEnabled")
       private final @Nullable Output<Boolean> remoteDebuggingEnabled;
 
-    public Output<Boolean> getRemoteDebuggingEnabled() {
+    public Output<Boolean> remoteDebuggingEnabled() {
         return this.remoteDebuggingEnabled == null ? Codegen.empty() : this.remoteDebuggingEnabled;
     }
 
@@ -593,7 +593,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="remoteDebuggingVersion")
       private final @Nullable Output<String> remoteDebuggingVersion;
 
-    public Output<String> getRemoteDebuggingVersion() {
+    public Output<String> remoteDebuggingVersion() {
         return this.remoteDebuggingVersion == null ? Codegen.empty() : this.remoteDebuggingVersion;
     }
 
@@ -604,7 +604,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requestTracingEnabled")
       private final @Nullable Output<Boolean> requestTracingEnabled;
 
-    public Output<Boolean> getRequestTracingEnabled() {
+    public Output<Boolean> requestTracingEnabled() {
         return this.requestTracingEnabled == null ? Codegen.empty() : this.requestTracingEnabled;
     }
 
@@ -615,7 +615,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requestTracingExpirationTime")
       private final @Nullable Output<String> requestTracingExpirationTime;
 
-    public Output<String> getRequestTracingExpirationTime() {
+    public Output<String> requestTracingExpirationTime() {
         return this.requestTracingExpirationTime == null ? Codegen.empty() : this.requestTracingExpirationTime;
     }
 
@@ -626,7 +626,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scmIpSecurityRestrictions")
       private final @Nullable Output<List<IpSecurityRestrictionArgs>> scmIpSecurityRestrictions;
 
-    public Output<List<IpSecurityRestrictionArgs>> getScmIpSecurityRestrictions() {
+    public Output<List<IpSecurityRestrictionArgs>> scmIpSecurityRestrictions() {
         return this.scmIpSecurityRestrictions == null ? Codegen.empty() : this.scmIpSecurityRestrictions;
     }
 
@@ -637,7 +637,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scmIpSecurityRestrictionsUseMain")
       private final @Nullable Output<Boolean> scmIpSecurityRestrictionsUseMain;
 
-    public Output<Boolean> getScmIpSecurityRestrictionsUseMain() {
+    public Output<Boolean> scmIpSecurityRestrictionsUseMain() {
         return this.scmIpSecurityRestrictionsUseMain == null ? Codegen.empty() : this.scmIpSecurityRestrictionsUseMain;
     }
 
@@ -648,7 +648,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scmMinTlsVersion")
       private final @Nullable Output<Either<String,SupportedTlsVersions>> scmMinTlsVersion;
 
-    public Output<Either<String,SupportedTlsVersions>> getScmMinTlsVersion() {
+    public Output<Either<String,SupportedTlsVersions>> scmMinTlsVersion() {
         return this.scmMinTlsVersion == null ? Codegen.empty() : this.scmMinTlsVersion;
     }
 
@@ -659,7 +659,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scmType")
       private final @Nullable Output<Either<String,ScmType>> scmType;
 
-    public Output<Either<String,ScmType>> getScmType() {
+    public Output<Either<String,ScmType>> scmType() {
         return this.scmType == null ? Codegen.empty() : this.scmType;
     }
 
@@ -670,7 +670,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tracingOptions")
       private final @Nullable Output<String> tracingOptions;
 
-    public Output<String> getTracingOptions() {
+    public Output<String> tracingOptions() {
         return this.tracingOptions == null ? Codegen.empty() : this.tracingOptions;
     }
 
@@ -681,7 +681,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="use32BitWorkerProcess")
       private final @Nullable Output<Boolean> use32BitWorkerProcess;
 
-    public Output<Boolean> getUse32BitWorkerProcess() {
+    public Output<Boolean> use32BitWorkerProcess() {
         return this.use32BitWorkerProcess == null ? Codegen.empty() : this.use32BitWorkerProcess;
     }
 
@@ -692,7 +692,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="virtualApplications")
       private final @Nullable Output<List<VirtualApplicationArgs>> virtualApplications;
 
-    public Output<List<VirtualApplicationArgs>> getVirtualApplications() {
+    public Output<List<VirtualApplicationArgs>> virtualApplications() {
         return this.virtualApplications == null ? Codegen.empty() : this.virtualApplications;
     }
 
@@ -703,7 +703,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vnetName")
       private final @Nullable Output<String> vnetName;
 
-    public Output<String> getVnetName() {
+    public Output<String> vnetName() {
         return this.vnetName == null ? Codegen.empty() : this.vnetName;
     }
 
@@ -714,7 +714,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vnetPrivatePortsCount")
       private final @Nullable Output<Integer> vnetPrivatePortsCount;
 
-    public Output<Integer> getVnetPrivatePortsCount() {
+    public Output<Integer> vnetPrivatePortsCount() {
         return this.vnetPrivatePortsCount == null ? Codegen.empty() : this.vnetPrivatePortsCount;
     }
 
@@ -725,7 +725,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vnetRouteAllEnabled")
       private final @Nullable Output<Boolean> vnetRouteAllEnabled;
 
-    public Output<Boolean> getVnetRouteAllEnabled() {
+    public Output<Boolean> vnetRouteAllEnabled() {
         return this.vnetRouteAllEnabled == null ? Codegen.empty() : this.vnetRouteAllEnabled;
     }
 
@@ -736,7 +736,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="webSocketsEnabled")
       private final @Nullable Output<Boolean> webSocketsEnabled;
 
-    public Output<Boolean> getWebSocketsEnabled() {
+    public Output<Boolean> webSocketsEnabled() {
         return this.webSocketsEnabled == null ? Codegen.empty() : this.webSocketsEnabled;
     }
 
@@ -747,7 +747,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="websiteTimeZone")
       private final @Nullable Output<String> websiteTimeZone;
 
-    public Output<String> getWebsiteTimeZone() {
+    public Output<String> websiteTimeZone() {
         return this.websiteTimeZone == null ? Codegen.empty() : this.websiteTimeZone;
     }
 
@@ -758,7 +758,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="windowsFxVersion")
       private final @Nullable Output<String> windowsFxVersion;
 
-    public Output<String> getWindowsFxVersion() {
+    public Output<String> windowsFxVersion() {
         return this.windowsFxVersion == null ? Codegen.empty() : this.windowsFxVersion;
     }
 
@@ -769,7 +769,7 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="xManagedServiceIdentityId")
       private final @Nullable Output<Integer> xManagedServiceIdentityId;
 
-    public Output<Integer> getXManagedServiceIdentityId() {
+    public Output<Integer> xManagedServiceIdentityId() {
         return this.xManagedServiceIdentityId == null ? Codegen.empty() : this.xManagedServiceIdentityId;
     }
 

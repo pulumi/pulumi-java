@@ -23,7 +23,7 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -34,7 +34,7 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentType", required=true)
       private final Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType;
     }
 
@@ -45,7 +45,7 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="definitions")
       private final @Nullable Output<Object> definitions;
 
-    public Output<Object> getDefinitions() {
+    public Output<Object> definitions() {
         return this.definitions == null ? Codegen.empty() : this.definitions;
     }
 
@@ -56,7 +56,7 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +67,7 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schemaId")
       private final @Nullable Output<String> schemaId;
 
-    public Output<String> getSchemaId() {
+    public Output<String> schemaId() {
         return this.schemaId == null ? Codegen.empty() : this.schemaId;
     }
 
@@ -78,7 +78,7 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -89,7 +89,7 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

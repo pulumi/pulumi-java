@@ -28,7 +28,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
     @Import(name="actionsRequired")
       private final @Nullable Output<String> actionsRequired;
 
-    public Output<String> getActionsRequired() {
+    public Output<String> actionsRequired() {
         return this.actionsRequired == null ? Codegen.empty() : this.actionsRequired;
     }
 
@@ -39,7 +39,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
     @Import(name="description", required=true)
       private final Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
 
@@ -50,7 +50,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
     @Import(name="status", required=true)
       private final Output<Either<String,PrivateLinkServiceConnectionStatus>> status;
 
-    public Output<Either<String,PrivateLinkServiceConnectionStatus>> getStatus() {
+    public Output<Either<String,PrivateLinkServiceConnectionStatus>> status() {
         return this.status;
     }
 

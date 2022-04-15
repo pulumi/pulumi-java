@@ -19,7 +19,7 @@ public final class GetWebAppDomainOwnershipIdentifierSlotArgs extends io.pulumi.
     @Import(name="domainOwnershipIdentifierName", required=true)
       private final String domainOwnershipIdentifierName;
 
-    public String getDomainOwnershipIdentifierName() {
+    public String domainOwnershipIdentifierName() {
         return this.domainOwnershipIdentifierName;
     }
 
@@ -30,7 +30,7 @@ public final class GetWebAppDomainOwnershipIdentifierSlotArgs extends io.pulumi.
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -41,7 +41,7 @@ public final class GetWebAppDomainOwnershipIdentifierSlotArgs extends io.pulumi.
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,7 +52,7 @@ public final class GetWebAppDomainOwnershipIdentifierSlotArgs extends io.pulumi.
     @Import(name="slot", required=true)
       private final String slot;
 
-    public String getSlot() {
+    public String slot() {
         return this.slot;
     }
 

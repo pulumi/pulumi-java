@@ -42,21 +42,21 @@ public final class KubernetesClusterInfoResponse {
      * Etcd configuration
      * 
     */
-    public EtcdInfoResponse getEtcdInfo() {
+    public EtcdInfoResponse etcdInfo() {
         return this.etcdInfo;
     }
     /**
      * Kubernetes cluster nodes
      * 
     */
-    public List<NodeInfoResponse> getNodes() {
+    public List<NodeInfoResponse> nodes() {
         return this.nodes;
     }
     /**
      * Kubernetes cluster version
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

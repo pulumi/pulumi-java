@@ -25,7 +25,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="linkedServiceName")
       private final @Nullable Output<String> linkedServiceName;
 
-    public Output<String> getLinkedServiceName() {
+    public Output<String> linkedServiceName() {
         return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
     }
 
@@ -36,7 +36,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,LinkedServiceEntityStatus>> provisioningState;
 
-    public Output<Either<String,LinkedServiceEntityStatus>> getProvisioningState() {
+    public Output<Either<String,LinkedServiceEntityStatus>> provisioningState() {
         return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
@@ -47,7 +47,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -58,7 +58,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
@@ -69,7 +69,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -80,7 +80,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -91,7 +91,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="writeAccessResourceId")
       private final @Nullable Output<String> writeAccessResourceId;
 
-    public Output<String> getWriteAccessResourceId() {
+    public Output<String> writeAccessResourceId() {
         return this.writeAccessResourceId == null ? Codegen.empty() : this.writeAccessResourceId;
     }
 

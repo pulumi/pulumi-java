@@ -26,7 +26,7 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="end", required=true)
       private final Output<String> end;
 
-    public Output<String> getEnd() {
+    public Output<String> end() {
         return this.end;
     }
 
@@ -37,7 +37,7 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="start", required=true)
       private final Output<String> start;
 
-    public Output<String> getStart() {
+    public Output<String> start() {
         return this.start;
     }
 
@@ -48,7 +48,7 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 

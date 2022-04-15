@@ -26,7 +26,7 @@ public final class GroupPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="groupType")
       private final @Nullable Output<String> groupType;
 
-    public Output<String> getGroupType() {
+    public Output<String> groupType() {
         return this.groupType == null ? Codegen.empty() : this.groupType;
     }
 

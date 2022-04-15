@@ -43,7 +43,7 @@ public class QueryPack extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -57,7 +57,7 @@ public class QueryPack extends io.pulumi.resources.CustomResource {
      * @return Azure resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class QueryPack extends io.pulumi.resources.CustomResource {
      * @return Current state of this QueryPack: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -85,7 +85,7 @@ public class QueryPack extends io.pulumi.resources.CustomResource {
      * @return The unique ID of your application. This field cannot be changed.
      * 
      */
-    public Output<String> getQueryPackId() {
+    public Output<String> queryPackId() {
         return this.queryPackId;
     }
     /**
@@ -99,7 +99,7 @@ public class QueryPack extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -113,7 +113,7 @@ public class QueryPack extends io.pulumi.resources.CustomResource {
      * @return Creation Date for the Log Analytics QueryPack, in ISO 8601 format.
      * 
      */
-    public Output<String> getTimeCreated() {
+    public Output<String> timeCreated() {
         return this.timeCreated;
     }
     /**
@@ -127,7 +127,7 @@ public class QueryPack extends io.pulumi.resources.CustomResource {
      * @return Last modified date of the Log Analytics QueryPack, in ISO 8601 format.
      * 
      */
-    public Output<String> getTimeModified() {
+    public Output<String> timeModified() {
         return this.timeModified;
     }
     /**
@@ -141,7 +141,7 @@ public class QueryPack extends io.pulumi.resources.CustomResource {
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

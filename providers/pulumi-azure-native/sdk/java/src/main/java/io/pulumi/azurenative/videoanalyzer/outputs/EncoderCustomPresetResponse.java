@@ -44,7 +44,7 @@ public final class EncoderCustomPresetResponse {
      * Describes a custom preset for encoding audio.
      * 
     */
-    public Optional<AudioEncoderAacResponse> getAudioEncoder() {
+    public Optional<AudioEncoderAacResponse> audioEncoder() {
         return Optional.ofNullable(this.audioEncoder);
     }
     /**
@@ -52,14 +52,14 @@ public final class EncoderCustomPresetResponse {
      * Expected value is '#Microsoft.VideoAnalyzer.EncoderCustomPreset'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Describes a custom preset for encoding video.
      * 
     */
-    public Optional<VideoEncoderH264Response> getVideoEncoder() {
+    public Optional<VideoEncoderH264Response> videoEncoder() {
         return Optional.ofNullable(this.videoEncoder);
     }
 

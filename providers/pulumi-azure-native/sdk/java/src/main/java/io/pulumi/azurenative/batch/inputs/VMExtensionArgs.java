@@ -25,14 +25,14 @@ public final class VMExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoUpgradeMinorVersion")
       private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
 
-    public Output<Boolean> getAutoUpgradeMinorVersion() {
+    public Output<Boolean> autoUpgradeMinorVersion() {
         return this.autoUpgradeMinorVersion == null ? Codegen.empty() : this.autoUpgradeMinorVersion;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -43,7 +43,7 @@ public final class VMExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="protectedSettings")
       private final @Nullable Output<Object> protectedSettings;
 
-    public Output<Object> getProtectedSettings() {
+    public Output<Object> protectedSettings() {
         return this.protectedSettings == null ? Codegen.empty() : this.protectedSettings;
     }
 
@@ -54,35 +54,35 @@ public final class VMExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="provisionAfterExtensions")
       private final @Nullable Output<List<String>> provisionAfterExtensions;
 
-    public Output<List<String>> getProvisionAfterExtensions() {
+    public Output<List<String>> provisionAfterExtensions() {
         return this.provisionAfterExtensions == null ? Codegen.empty() : this.provisionAfterExtensions;
     }
 
     @Import(name="publisher", required=true)
       private final Output<String> publisher;
 
-    public Output<String> getPublisher() {
+    public Output<String> publisher() {
         return this.publisher;
     }
 
     @Import(name="settings")
       private final @Nullable Output<Object> settings;
 
-    public Output<Object> getSettings() {
+    public Output<Object> settings() {
         return this.settings == null ? Codegen.empty() : this.settings;
     }
 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
     @Import(name="typeHandlerVersion")
       private final @Nullable Output<String> typeHandlerVersion;
 
-    public Output<String> getTypeHandlerVersion() {
+    public Output<String> typeHandlerVersion() {
         return this.typeHandlerVersion == null ? Codegen.empty() : this.typeHandlerVersion;
     }
 

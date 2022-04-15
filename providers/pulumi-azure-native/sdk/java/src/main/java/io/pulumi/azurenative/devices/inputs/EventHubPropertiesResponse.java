@@ -28,7 +28,7 @@ public final class EventHubPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="endpoint", required=true)
       private final String endpoint;
 
-    public String getEndpoint() {
+    public String endpoint() {
         return this.endpoint;
     }
 
@@ -39,7 +39,7 @@ public final class EventHubPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="partitionCount")
       private final @Nullable Integer partitionCount;
 
-    public Optional<Integer> getPartitionCount() {
+    public Optional<Integer> partitionCount() {
         return this.partitionCount == null ? Optional.empty() : Optional.ofNullable(this.partitionCount);
     }
 
@@ -50,7 +50,7 @@ public final class EventHubPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="partitionIds", required=true)
       private final List<String> partitionIds;
 
-    public List<String> getPartitionIds() {
+    public List<String> partitionIds() {
         return this.partitionIds;
     }
 
@@ -61,7 +61,7 @@ public final class EventHubPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 
@@ -72,7 +72,7 @@ public final class EventHubPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="retentionTimeInDays")
       private final @Nullable Double retentionTimeInDays;
 
-    public Optional<Double> getRetentionTimeInDays() {
+    public Optional<Double> retentionTimeInDays() {
         return this.retentionTimeInDays == null ? Optional.empty() : Optional.ofNullable(this.retentionTimeInDays);
     }
 

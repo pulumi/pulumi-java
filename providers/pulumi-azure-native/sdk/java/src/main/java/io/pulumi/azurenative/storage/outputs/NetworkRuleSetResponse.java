@@ -59,35 +59,35 @@ public final class NetworkRuleSetResponse {
      * Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, "Logging, Metrics"), or None to bypass none of those traffics.
      * 
     */
-    public Optional<String> getBypass() {
+    public Optional<String> bypass() {
         return Optional.ofNullable(this.bypass);
     }
     /**
      * Specifies the default action of allow or deny when no other rules match.
      * 
     */
-    public String getDefaultAction() {
+    public String defaultAction() {
         return this.defaultAction;
     }
     /**
      * Sets the IP ACL rules
      * 
     */
-    public List<IPRuleResponse> getIpRules() {
+    public List<IPRuleResponse> ipRules() {
         return this.ipRules == null ? List.of() : this.ipRules;
     }
     /**
      * Sets the resource access rules
      * 
     */
-    public List<ResourceAccessRuleResponse> getResourceAccessRules() {
+    public List<ResourceAccessRuleResponse> resourceAccessRules() {
         return this.resourceAccessRules == null ? List.of() : this.resourceAccessRules;
     }
     /**
      * Sets the virtual network rules
      * 
     */
-    public List<VirtualNetworkRuleResponse> getVirtualNetworkRules() {
+    public List<VirtualNetworkRuleResponse> virtualNetworkRules() {
         return this.virtualNetworkRules == null ? List.of() : this.virtualNetworkRules;
     }
 

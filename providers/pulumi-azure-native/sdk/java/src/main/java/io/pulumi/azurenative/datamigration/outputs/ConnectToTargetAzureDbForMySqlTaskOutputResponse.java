@@ -55,35 +55,35 @@ public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse {
      * List of databases on target server
      * 
     */
-    public List<String> getDatabases() {
+    public List<String> databases() {
         return this.databases;
     }
     /**
      * Result identifier
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Version of the target server
      * 
     */
-    public String getServerVersion() {
+    public String serverVersion() {
         return this.serverVersion;
     }
     /**
      * Target server brand version
      * 
     */
-    public String getTargetServerBrandVersion() {
+    public String targetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
     /**
      * Validation errors associated with the task
      * 
     */
-    public List<ReportableExceptionResponse> getValidationErrors() {
+    public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
 

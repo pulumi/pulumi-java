@@ -76,56 +76,56 @@ public final class GetApiTagDescriptionResult {
      * Description of the Tag.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Tag name.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Description of the external resources describing the tag.
      * 
     */
-    public Optional<String> getExternalDocsDescription() {
+    public Optional<String> externalDocsDescription() {
         return Optional.ofNullable(this.externalDocsDescription);
     }
     /**
      * Absolute URL of external resources describing the tag.
      * 
     */
-    public Optional<String> getExternalDocsUrl() {
+    public Optional<String> externalDocsUrl() {
         return Optional.ofNullable(this.externalDocsUrl);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Identifier of the tag in the form of /tags/{tagId}
      * 
     */
-    public Optional<String> getTagId() {
+    public Optional<String> tagId() {
         return Optional.ofNullable(this.tagId);
     }
     /**
      * Resource type for API Management resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

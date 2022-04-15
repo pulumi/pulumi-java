@@ -27,7 +27,7 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceArgs extend
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
-    public Output<String> getKeyName() {
+    public Output<String> keyName() {
         return this.keyName == null ? Codegen.empty() : this.keyName;
     }
 
@@ -38,7 +38,7 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceArgs extend
     @Import(name="keyVault")
       private final @Nullable Output<ResourceReferenceArgs> keyVault;
 
-    public Output<ResourceReferenceArgs> getKeyVault() {
+    public Output<ResourceReferenceArgs> keyVault() {
         return this.keyVault == null ? Codegen.empty() : this.keyVault;
     }
 
@@ -49,7 +49,7 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceArgs extend
     @Import(name="keyVersion")
       private final @Nullable Output<String> keyVersion;
 
-    public Output<String> getKeyVersion() {
+    public Output<String> keyVersion() {
         return this.keyVersion == null ? Codegen.empty() : this.keyVersion;
     }
 

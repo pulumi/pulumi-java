@@ -24,7 +24,7 @@ public final class ActivationPropertiesResponse {
      * The activation status of the connected registry.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

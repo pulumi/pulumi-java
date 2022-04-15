@@ -100,77 +100,77 @@ public final class GetOrganizationResult {
      * The creation time of the resource.
      * 
     */
-    public String getCreatedTime() {
+    public String createdTime() {
         return this.createdTime;
     }
     /**
      * The ARM id of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Location of Organization resource
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Confluent offer detail
      * 
     */
-    public Optional<OrganizationResourcePropertiesResponseOfferDetail> getOfferDetail() {
+    public Optional<OrganizationResourcePropertiesResponseOfferDetail> offerDetail() {
         return Optional.ofNullable(this.offerDetail);
     }
     /**
      * Id of the Confluent organization.
      * 
     */
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
     /**
      * Provision states for confluent RP
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * SSO url for the Confluent organization.
      * 
     */
-    public String getSsoUrl() {
+    public String ssoUrl() {
         return this.ssoUrl;
     }
     /**
      * Organization resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Subscriber detail
      * 
     */
-    public Optional<OrganizationResourcePropertiesResponseUserDetail> getUserDetail() {
+    public Optional<OrganizationResourcePropertiesResponseUserDetail> userDetail() {
         return Optional.ofNullable(this.userDetail);
     }
 

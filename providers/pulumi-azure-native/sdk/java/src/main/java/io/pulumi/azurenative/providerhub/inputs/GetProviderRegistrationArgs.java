@@ -19,7 +19,7 @@ public final class GetProviderRegistrationArgs extends io.pulumi.resources.Invok
     @Import(name="providerNamespace", required=true)
       private final String providerNamespace;
 
-    public String getProviderNamespace() {
+    public String providerNamespace() {
         return this.providerNamespace;
     }
 

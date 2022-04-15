@@ -136,56 +136,56 @@ public final class GetDefaultUserRuleResult {
      * A description for this rule. Restricted to 140 chars.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The destination port ranges.
      * 
     */
-    public List<String> getDestinationPortRanges() {
+    public List<String> destinationPortRanges() {
         return this.destinationPortRanges;
     }
     /**
      * The destination address prefixes. CIDR or destination IP ranges.
      * 
     */
-    public List<AddressPrefixItemResponse> getDestinations() {
+    public List<AddressPrefixItemResponse> destinations() {
         return this.destinations;
     }
     /**
      * Indicates if the traffic matched against the rule in inbound or outbound.
      * 
     */
-    public String getDirection() {
+    public String direction() {
         return this.direction;
     }
     /**
      * A friendly name for the rule.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Default rule flag.
      * 
     */
-    public Optional<String> getFlag() {
+    public Optional<String> flag() {
         return Optional.ofNullable(this.flag);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -193,56 +193,56 @@ public final class GetDefaultUserRuleResult {
      * Expected value is 'Default'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Network protocol this rule applies to.
      * 
     */
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
     /**
      * The provisioning state of the security configuration user rule resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The source port ranges.
      * 
     */
-    public List<String> getSourcePortRanges() {
+    public List<String> sourcePortRanges() {
         return this.sourcePortRanges;
     }
     /**
      * The CIDR or source IP ranges.
      * 
     */
-    public List<AddressPrefixItemResponse> getSources() {
+    public List<AddressPrefixItemResponse> sources() {
         return this.sources;
     }
     /**
      * The system metadata related to this resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

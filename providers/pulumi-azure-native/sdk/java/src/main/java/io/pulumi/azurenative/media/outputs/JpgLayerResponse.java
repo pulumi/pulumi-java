@@ -57,14 +57,14 @@ public final class JpgLayerResponse {
      * The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.
      * 
     */
-    public Optional<String> getHeight() {
+    public Optional<String> height() {
         return Optional.ofNullable(this.height);
     }
     /**
      * The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.
      * 
     */
-    public Optional<String> getLabel() {
+    public Optional<String> label() {
         return Optional.ofNullable(this.label);
     }
     /**
@@ -72,21 +72,21 @@ public final class JpgLayerResponse {
      * Expected value is '#Microsoft.Media.JpgLayer'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
     /**
      * The compression quality of the JPEG output. Range is from 0-100 and the default is 70.
      * 
     */
-    public Optional<Integer> getQuality() {
+    public Optional<Integer> quality() {
         return Optional.ofNullable(this.quality);
     }
     /**
      * The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.
      * 
     */
-    public Optional<String> getWidth() {
+    public Optional<String> width() {
         return Optional.ofNullable(this.width);
     }
 

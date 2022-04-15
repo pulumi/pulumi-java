@@ -26,7 +26,7 @@ public final class SmsChannelPropertiesResponse extends io.pulumi.resources.Invo
     @Import(name="accountSID", required=true)
       private final String accountSID;
 
-    public String getAccountSID() {
+    public String accountSID() {
         return this.accountSID;
     }
 
@@ -37,7 +37,7 @@ public final class SmsChannelPropertiesResponse extends io.pulumi.resources.Invo
     @Import(name="authToken")
       private final @Nullable String authToken;
 
-    public Optional<String> getAuthToken() {
+    public Optional<String> authToken() {
         return this.authToken == null ? Optional.empty() : Optional.ofNullable(this.authToken);
     }
 
@@ -48,7 +48,7 @@ public final class SmsChannelPropertiesResponse extends io.pulumi.resources.Invo
     @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
 
@@ -59,7 +59,7 @@ public final class SmsChannelPropertiesResponse extends io.pulumi.resources.Invo
     @Import(name="isValidated")
       private final @Nullable Boolean isValidated;
 
-    public Optional<Boolean> getIsValidated() {
+    public Optional<Boolean> isValidated() {
         return this.isValidated == null ? Optional.empty() : Optional.ofNullable(this.isValidated);
     }
 
@@ -70,7 +70,7 @@ public final class SmsChannelPropertiesResponse extends io.pulumi.resources.Invo
     @Import(name="phone", required=true)
       private final String phone;
 
-    public String getPhone() {
+    public String phone() {
         return this.phone;
     }
 

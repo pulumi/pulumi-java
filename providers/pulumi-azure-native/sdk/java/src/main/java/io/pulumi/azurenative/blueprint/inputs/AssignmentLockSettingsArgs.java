@@ -29,7 +29,7 @@ public final class AssignmentLockSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="excludedActions")
       private final @Nullable Output<List<String>> excludedActions;
 
-    public Output<List<String>> getExcludedActions() {
+    public Output<List<String>> excludedActions() {
         return this.excludedActions == null ? Codegen.empty() : this.excludedActions;
     }
 
@@ -40,7 +40,7 @@ public final class AssignmentLockSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="excludedPrincipals")
       private final @Nullable Output<List<String>> excludedPrincipals;
 
-    public Output<List<String>> getExcludedPrincipals() {
+    public Output<List<String>> excludedPrincipals() {
         return this.excludedPrincipals == null ? Codegen.empty() : this.excludedPrincipals;
     }
 
@@ -51,7 +51,7 @@ public final class AssignmentLockSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="mode")
       private final @Nullable Output<Either<String,AssignmentLockMode>> mode;
 
-    public Output<Either<String,AssignmentLockMode>> getMode() {
+    public Output<Either<String,AssignmentLockMode>> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 

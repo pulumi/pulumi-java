@@ -29,7 +29,7 @@ public final class JsonFieldWithDefaultArgs extends io.pulumi.resources.Resource
     @Import(name="defaultValue")
       private final @Nullable Output<String> defaultValue;
 
-    public Output<String> getDefaultValue() {
+    public Output<String> defaultValue() {
         return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 
@@ -40,7 +40,7 @@ public final class JsonFieldWithDefaultArgs extends io.pulumi.resources.Resource
     @Import(name="sourceField")
       private final @Nullable Output<String> sourceField;
 
-    public Output<String> getSourceField() {
+    public Output<String> sourceField() {
         return this.sourceField == null ? Codegen.empty() : this.sourceField;
     }
 

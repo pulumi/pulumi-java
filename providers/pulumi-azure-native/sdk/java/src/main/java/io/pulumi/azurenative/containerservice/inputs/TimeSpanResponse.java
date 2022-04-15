@@ -25,7 +25,7 @@ public final class TimeSpanResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="end")
       private final @Nullable String end;
 
-    public Optional<String> getEnd() {
+    public Optional<String> end() {
         return this.end == null ? Optional.empty() : Optional.ofNullable(this.end);
     }
 
@@ -36,7 +36,7 @@ public final class TimeSpanResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="start")
       private final @Nullable String start;
 
-    public Optional<String> getStart() {
+    public Optional<String> start() {
         return this.start == null ? Optional.empty() : Optional.ofNullable(this.start);
     }
 

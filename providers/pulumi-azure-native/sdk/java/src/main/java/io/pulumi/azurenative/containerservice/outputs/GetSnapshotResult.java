@@ -79,56 +79,56 @@ public final class GetSnapshotResult {
      * CreationData to be used to specify the source agent pool resource ID to create this snapshot.
      * 
     */
-    public Optional<CreationDataResponse> getCreationData() {
+    public Optional<CreationDataResponse> creationData() {
         return Optional.ofNullable(this.creationData);
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The type of a snapshot. The default is NodePool.
      * 
     */
-    public Optional<String> getSnapshotType() {
+    public Optional<String> snapshotType() {
         return Optional.ofNullable(this.snapshotType);
     }
     /**
      * The system metadata relating to this snapshot.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

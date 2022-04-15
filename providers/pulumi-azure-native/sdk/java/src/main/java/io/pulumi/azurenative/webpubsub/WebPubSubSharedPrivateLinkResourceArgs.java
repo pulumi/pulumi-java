@@ -22,7 +22,7 @@ public final class WebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.reso
     @Import(name="groupId", required=true)
       private final Output<String> groupId;
 
-    public Output<String> getGroupId() {
+    public Output<String> groupId() {
         return this.groupId;
     }
 
@@ -33,7 +33,7 @@ public final class WebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.reso
     @Import(name="privateLinkResourceId", required=true)
       private final Output<String> privateLinkResourceId;
 
-    public Output<String> getPrivateLinkResourceId() {
+    public Output<String> privateLinkResourceId() {
         return this.privateLinkResourceId;
     }
 
@@ -44,7 +44,7 @@ public final class WebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.reso
     @Import(name="requestMessage")
       private final @Nullable Output<String> requestMessage;
 
-    public Output<String> getRequestMessage() {
+    public Output<String> requestMessage() {
         return this.requestMessage == null ? Codegen.empty() : this.requestMessage;
     }
 
@@ -55,7 +55,7 @@ public final class WebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.reso
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,7 +66,7 @@ public final class WebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.reso
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -77,7 +77,7 @@ public final class WebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.reso
     @Import(name="sharedPrivateLinkResourceName")
       private final @Nullable Output<String> sharedPrivateLinkResourceName;
 
-    public Output<String> getSharedPrivateLinkResourceName() {
+    public Output<String> sharedPrivateLinkResourceName() {
         return this.sharedPrivateLinkResourceName == null ? Codegen.empty() : this.sharedPrivateLinkResourceName;
     }
 

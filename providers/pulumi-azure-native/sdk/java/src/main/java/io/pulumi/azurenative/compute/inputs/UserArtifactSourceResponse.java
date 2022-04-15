@@ -25,7 +25,7 @@ public final class UserArtifactSourceResponse extends io.pulumi.resources.Invoke
     @Import(name="defaultConfigurationLink")
       private final @Nullable String defaultConfigurationLink;
 
-    public Optional<String> getDefaultConfigurationLink() {
+    public Optional<String> defaultConfigurationLink() {
         return this.defaultConfigurationLink == null ? Optional.empty() : Optional.ofNullable(this.defaultConfigurationLink);
     }
 
@@ -36,7 +36,7 @@ public final class UserArtifactSourceResponse extends io.pulumi.resources.Invoke
     @Import(name="mediaLink", required=true)
       private final String mediaLink;
 
-    public String getMediaLink() {
+    public String mediaLink() {
         return this.mediaLink;
     }
 

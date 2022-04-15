@@ -26,7 +26,7 @@ public final class IntegrationServiceEnvironmentManagedApiDeploymentParametersRe
      * The integration service environment managed api content link for deployment.
      * 
     */
-    public Optional<ContentLinkResponse> getContentLinkDefinition() {
+    public Optional<ContentLinkResponse> contentLinkDefinition() {
         return Optional.ofNullable(this.contentLinkDefinition);
     }
 

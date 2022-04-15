@@ -22,7 +22,7 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="accessKeyName")
       private final @Nullable Output<String> accessKeyName;
 
-    public Output<String> getAccessKeyName() {
+    public Output<String> accessKeyName() {
         return this.accessKeyName == null ? Codegen.empty() : this.accessKeyName;
     }
 
@@ -33,7 +33,7 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -44,7 +44,7 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="notAfter")
       private final @Nullable Output<String> notAfter;
 
-    public Output<String> getNotAfter() {
+    public Output<String> notAfter() {
         return this.notAfter == null ? Codegen.empty() : this.notAfter;
     }
 
@@ -55,7 +55,7 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="notBefore")
       private final @Nullable Output<String> notBefore;
 
-    public Output<String> getNotBefore() {
+    public Output<String> notBefore() {
         return this.notBefore == null ? Codegen.empty() : this.notBefore;
     }
 
@@ -66,7 +66,7 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,7 +77,7 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="workflowName", required=true)
       private final Output<String> workflowName;
 
-    public Output<String> getWorkflowName() {
+    public Output<String> workflowName() {
         return this.workflowName;
     }
 

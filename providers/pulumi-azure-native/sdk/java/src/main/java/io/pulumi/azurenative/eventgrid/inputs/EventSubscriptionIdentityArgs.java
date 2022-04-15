@@ -28,7 +28,7 @@ public final class EventSubscriptionIdentityArgs extends io.pulumi.resources.Res
     @Import(name="type")
       private final @Nullable Output<Either<String,EventSubscriptionIdentityType>> type;
 
-    public Output<Either<String,EventSubscriptionIdentityType>> getType() {
+    public Output<Either<String,EventSubscriptionIdentityType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -39,7 +39,7 @@ public final class EventSubscriptionIdentityArgs extends io.pulumi.resources.Res
     @Import(name="userAssignedIdentity")
       private final @Nullable Output<String> userAssignedIdentity;
 
-    public Output<String> getUserAssignedIdentity() {
+    public Output<String> userAssignedIdentity() {
         return this.userAssignedIdentity == null ? Codegen.empty() : this.userAssignedIdentity;
     }
 

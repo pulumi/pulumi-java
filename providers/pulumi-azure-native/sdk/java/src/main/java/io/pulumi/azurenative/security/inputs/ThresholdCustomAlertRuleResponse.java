@@ -25,7 +25,7 @@ public final class ThresholdCustomAlertRuleResponse extends io.pulumi.resources.
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -36,7 +36,7 @@ public final class ThresholdCustomAlertRuleResponse extends io.pulumi.resources.
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -47,7 +47,7 @@ public final class ThresholdCustomAlertRuleResponse extends io.pulumi.resources.
     @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
 
@@ -58,7 +58,7 @@ public final class ThresholdCustomAlertRuleResponse extends io.pulumi.resources.
     @Import(name="maxThreshold", required=true)
       private final Integer maxThreshold;
 
-    public Integer getMaxThreshold() {
+    public Integer maxThreshold() {
         return this.maxThreshold;
     }
 
@@ -69,7 +69,7 @@ public final class ThresholdCustomAlertRuleResponse extends io.pulumi.resources.
     @Import(name="minThreshold", required=true)
       private final Integer minThreshold;
 
-    public Integer getMinThreshold() {
+    public Integer minThreshold() {
         return this.minThreshold;
     }
 
@@ -81,7 +81,7 @@ public final class ThresholdCustomAlertRuleResponse extends io.pulumi.resources.
     @Import(name="ruleType", required=true)
       private final String ruleType;
 
-    public String getRuleType() {
+    public String ruleType() {
         return this.ruleType;
     }
 

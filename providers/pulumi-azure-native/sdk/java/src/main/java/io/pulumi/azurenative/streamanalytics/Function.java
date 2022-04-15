@@ -43,7 +43,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -57,7 +57,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The properties that are associated with a function.
      * 
      */
-    public Output<ScalarFunctionPropertiesResponse> getProperties() {
+    public Output<ScalarFunctionPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -71,7 +71,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

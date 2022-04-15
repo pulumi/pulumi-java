@@ -30,7 +30,7 @@ public final class CommitmentPlanPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="autoRenew")
       private final @Nullable Output<Boolean> autoRenew;
 
-    public Output<Boolean> getAutoRenew() {
+    public Output<Boolean> autoRenew() {
         return this.autoRenew == null ? Codegen.empty() : this.autoRenew;
     }
 
@@ -41,7 +41,7 @@ public final class CommitmentPlanPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="current")
       private final @Nullable Output<CommitmentPeriodArgs> current;
 
-    public Output<CommitmentPeriodArgs> getCurrent() {
+    public Output<CommitmentPeriodArgs> current() {
         return this.current == null ? Codegen.empty() : this.current;
     }
 
@@ -52,7 +52,7 @@ public final class CommitmentPlanPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="hostingModel")
       private final @Nullable Output<Either<String,HostingModel>> hostingModel;
 
-    public Output<Either<String,HostingModel>> getHostingModel() {
+    public Output<Either<String,HostingModel>> hostingModel() {
         return this.hostingModel == null ? Codegen.empty() : this.hostingModel;
     }
 
@@ -63,7 +63,7 @@ public final class CommitmentPlanPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="next")
       private final @Nullable Output<CommitmentPeriodArgs> next;
 
-    public Output<CommitmentPeriodArgs> getNext() {
+    public Output<CommitmentPeriodArgs> next() {
         return this.next == null ? Codegen.empty() : this.next;
     }
 
@@ -74,7 +74,7 @@ public final class CommitmentPlanPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="planType")
       private final @Nullable Output<String> planType;
 
-    public Output<String> getPlanType() {
+    public Output<String> planType() {
         return this.planType == null ? Codegen.empty() : this.planType;
     }
 

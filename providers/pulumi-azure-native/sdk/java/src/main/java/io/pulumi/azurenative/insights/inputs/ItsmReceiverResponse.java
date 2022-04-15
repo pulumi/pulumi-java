@@ -23,7 +23,7 @@ public final class ItsmReceiverResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="connectionId", required=true)
       private final String connectionId;
 
-    public String getConnectionId() {
+    public String connectionId() {
         return this.connectionId;
     }
 
@@ -34,7 +34,7 @@ public final class ItsmReceiverResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -45,7 +45,7 @@ public final class ItsmReceiverResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="region", required=true)
       private final String region;
 
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 
@@ -56,7 +56,7 @@ public final class ItsmReceiverResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="ticketConfiguration", required=true)
       private final String ticketConfiguration;
 
-    public String getTicketConfiguration() {
+    public String ticketConfiguration() {
         return this.ticketConfiguration;
     }
 
@@ -67,7 +67,7 @@ public final class ItsmReceiverResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="workspaceId", required=true)
       private final String workspaceId;
 
-    public String getWorkspaceId() {
+    public String workspaceId() {
         return this.workspaceId;
     }
 

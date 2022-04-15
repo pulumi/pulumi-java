@@ -47,28 +47,28 @@ public final class GetTagAtScopeResult {
      * The ID of the tags wrapper resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the tags wrapper resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The set of tags.
      * 
     */
-    public TagsResponse getProperties() {
+    public TagsResponse properties() {
         return this.properties;
     }
     /**
      * The type of the tags wrapper resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

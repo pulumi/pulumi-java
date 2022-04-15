@@ -145,7 +145,7 @@ public final class GetPartnerTopicEventSubscriptionResult {
      * Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
     */
-    public Optional<StorageBlobDeadLetterDestinationResponse> getDeadLetterDestination() {
+    public Optional<StorageBlobDeadLetterDestinationResponse> deadLetterDestination() {
         return Optional.ofNullable(this.deadLetterDestination);
     }
     /**
@@ -153,7 +153,7 @@ public final class GetPartnerTopicEventSubscriptionResult {
      * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
     */
-    public Optional<DeadLetterWithResourceIdentityResponse> getDeadLetterWithResourceIdentity() {
+    public Optional<DeadLetterWithResourceIdentityResponse> deadLetterWithResourceIdentity() {
         return Optional.ofNullable(this.deadLetterWithResourceIdentity);
     }
     /**
@@ -161,7 +161,7 @@ public final class GetPartnerTopicEventSubscriptionResult {
      * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
     */
-    public Optional<DeliveryWithResourceIdentityResponse> getDeliveryWithResourceIdentity() {
+    public Optional<DeliveryWithResourceIdentityResponse> deliveryWithResourceIdentity() {
         return Optional.ofNullable(this.deliveryWithResourceIdentity);
     }
     /**
@@ -169,84 +169,84 @@ public final class GetPartnerTopicEventSubscriptionResult {
      * Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
     */
-    public Optional<Object> getDestination() {
+    public Optional<Object> destination() {
         return Optional.ofNullable(this.destination);
     }
     /**
      * The event delivery schema for the event subscription.
      * 
     */
-    public Optional<String> getEventDeliverySchema() {
+    public Optional<String> eventDeliverySchema() {
         return Optional.ofNullable(this.eventDeliverySchema);
     }
     /**
      * Expiration time of the event subscription.
      * 
     */
-    public Optional<String> getExpirationTimeUtc() {
+    public Optional<String> expirationTimeUtc() {
         return Optional.ofNullable(this.expirationTimeUtc);
     }
     /**
      * Information about the filter for the event subscription.
      * 
     */
-    public Optional<EventSubscriptionFilterResponse> getFilter() {
+    public Optional<EventSubscriptionFilterResponse> filter() {
         return Optional.ofNullable(this.filter);
     }
     /**
      * Fully qualified identifier of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * List of user defined labels.
      * 
     */
-    public List<String> getLabels() {
+    public List<String> labels() {
         return this.labels == null ? List.of() : this.labels;
     }
     /**
      * Name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Provisioning state of the event subscription.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.
      * 
     */
-    public Optional<RetryPolicyResponse> getRetryPolicy() {
+    public Optional<RetryPolicyResponse> retryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
     /**
      * The system metadata relating to Event Subscription resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Name of the topic of the event subscription.
      * 
     */
-    public String getTopic() {
+    public String topic() {
         return this.topic;
     }
     /**
      * Type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

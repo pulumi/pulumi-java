@@ -44,7 +44,7 @@ public class PowerBIResource extends io.pulumi.resources.CustomResource {
      * @return Specifies the location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -58,7 +58,7 @@ public class PowerBIResource extends io.pulumi.resources.CustomResource {
      * @return Specifies the name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +72,7 @@ public class PowerBIResource extends io.pulumi.resources.CustomResource {
      * @return Specifies the private endpoint connections of the resource.
      * 
      */
-    public Output</* @Nullable */ List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
+    public Output</* @Nullable */ List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
@@ -86,7 +86,7 @@ public class PowerBIResource extends io.pulumi.resources.CustomResource {
      * @return The system metadata relating to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -100,7 +100,7 @@ public class PowerBIResource extends io.pulumi.resources.CustomResource {
      * @return Specifies the tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -114,7 +114,7 @@ public class PowerBIResource extends io.pulumi.resources.CustomResource {
      * @return Specifies the tenant id of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getTenantId() {
+    public Output</* @Nullable */ String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -128,7 +128,7 @@ public class PowerBIResource extends io.pulumi.resources.CustomResource {
      * @return Specifies the type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

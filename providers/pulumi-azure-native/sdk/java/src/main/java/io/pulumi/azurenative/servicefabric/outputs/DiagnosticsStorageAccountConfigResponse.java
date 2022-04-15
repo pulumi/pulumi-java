@@ -62,42 +62,42 @@ public final class DiagnosticsStorageAccountConfigResponse {
      * The blob endpoint of the azure storage account.
      * 
     */
-    public String getBlobEndpoint() {
+    public String blobEndpoint() {
         return this.blobEndpoint;
     }
     /**
      * The protected diagnostics storage key name.
      * 
     */
-    public String getProtectedAccountKeyName() {
+    public String protectedAccountKeyName() {
         return this.protectedAccountKeyName;
     }
     /**
      * The secondary protected diagnostics storage key name. If one of the storage account keys is rotated the cluster will fallback to using the other.
      * 
     */
-    public Optional<String> getProtectedAccountKeyName2() {
+    public Optional<String> protectedAccountKeyName2() {
         return Optional.ofNullable(this.protectedAccountKeyName2);
     }
     /**
      * The queue endpoint of the azure storage account.
      * 
     */
-    public String getQueueEndpoint() {
+    public String queueEndpoint() {
         return this.queueEndpoint;
     }
     /**
      * The Azure storage account name.
      * 
     */
-    public String getStorageAccountName() {
+    public String storageAccountName() {
         return this.storageAccountName;
     }
     /**
      * The table endpoint of the azure storage account.
      * 
     */
-    public String getTableEndpoint() {
+    public String tableEndpoint() {
         return this.tableEndpoint;
     }
 

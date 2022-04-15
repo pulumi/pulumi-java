@@ -25,7 +25,7 @@ public final class LivePipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -36,7 +36,7 @@ public final class LivePipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bitrateKbps", required=true)
       private final Output<Integer> bitrateKbps;
 
-    public Output<Integer> getBitrateKbps() {
+    public Output<Integer> bitrateKbps() {
         return this.bitrateKbps;
     }
 
@@ -47,7 +47,7 @@ public final class LivePipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -58,7 +58,7 @@ public final class LivePipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="livePipelineName")
       private final @Nullable Output<String> livePipelineName;
 
-    public Output<String> getLivePipelineName() {
+    public Output<String> livePipelineName() {
         return this.livePipelineName == null ? Codegen.empty() : this.livePipelineName;
     }
 
@@ -69,7 +69,7 @@ public final class LivePipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<List<ParameterDefinitionArgs>> parameters;
 
-    public Output<List<ParameterDefinitionArgs>> getParameters() {
+    public Output<List<ParameterDefinitionArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -80,7 +80,7 @@ public final class LivePipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,7 +91,7 @@ public final class LivePipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="topologyName", required=true)
       private final Output<String> topologyName;
 
-    public Output<String> getTopologyName() {
+    public Output<String> topologyName() {
         return this.topologyName;
     }
 

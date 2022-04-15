@@ -29,7 +29,7 @@ public final class SqlMISinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
-    public Optional<Object> getDisableMetricsCollection() {
+    public Optional<Object> disableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
@@ -40,7 +40,7 @@ public final class SqlMISinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
-    public Optional<Object> getMaxConcurrentConnections() {
+    public Optional<Object> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
@@ -51,7 +51,7 @@ public final class SqlMISinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="preCopyScript")
       private final @Nullable Object preCopyScript;
 
-    public Optional<Object> getPreCopyScript() {
+    public Optional<Object> preCopyScript() {
         return this.preCopyScript == null ? Optional.empty() : Optional.ofNullable(this.preCopyScript);
     }
 
@@ -62,7 +62,7 @@ public final class SqlMISinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sinkRetryCount")
       private final @Nullable Object sinkRetryCount;
 
-    public Optional<Object> getSinkRetryCount() {
+    public Optional<Object> sinkRetryCount() {
         return this.sinkRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryCount);
     }
 
@@ -73,7 +73,7 @@ public final class SqlMISinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sinkRetryWait")
       private final @Nullable Object sinkRetryWait;
 
-    public Optional<Object> getSinkRetryWait() {
+    public Optional<Object> sinkRetryWait() {
         return this.sinkRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryWait);
     }
 
@@ -84,7 +84,7 @@ public final class SqlMISinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sqlWriterStoredProcedureName")
       private final @Nullable Object sqlWriterStoredProcedureName;
 
-    public Optional<Object> getSqlWriterStoredProcedureName() {
+    public Optional<Object> sqlWriterStoredProcedureName() {
         return this.sqlWriterStoredProcedureName == null ? Optional.empty() : Optional.ofNullable(this.sqlWriterStoredProcedureName);
     }
 
@@ -95,7 +95,7 @@ public final class SqlMISinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sqlWriterTableType")
       private final @Nullable Object sqlWriterTableType;
 
-    public Optional<Object> getSqlWriterTableType() {
+    public Optional<Object> sqlWriterTableType() {
         return this.sqlWriterTableType == null ? Optional.empty() : Optional.ofNullable(this.sqlWriterTableType);
     }
 
@@ -106,7 +106,7 @@ public final class SqlMISinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sqlWriterUseTableLock")
       private final @Nullable Object sqlWriterUseTableLock;
 
-    public Optional<Object> getSqlWriterUseTableLock() {
+    public Optional<Object> sqlWriterUseTableLock() {
         return this.sqlWriterUseTableLock == null ? Optional.empty() : Optional.ofNullable(this.sqlWriterUseTableLock);
     }
 
@@ -117,7 +117,7 @@ public final class SqlMISinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="storedProcedureParameters")
       private final @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters;
 
-    public Map<String,StoredProcedureParameterResponse> getStoredProcedureParameters() {
+    public Map<String,StoredProcedureParameterResponse> storedProcedureParameters() {
         return this.storedProcedureParameters == null ? Map.of() : this.storedProcedureParameters;
     }
 
@@ -128,7 +128,7 @@ public final class SqlMISinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="storedProcedureTableTypeParameterName")
       private final @Nullable Object storedProcedureTableTypeParameterName;
 
-    public Optional<Object> getStoredProcedureTableTypeParameterName() {
+    public Optional<Object> storedProcedureTableTypeParameterName() {
         return this.storedProcedureTableTypeParameterName == null ? Optional.empty() : Optional.ofNullable(this.storedProcedureTableTypeParameterName);
     }
 
@@ -139,7 +139,7 @@ public final class SqlMISinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tableOption")
       private final @Nullable Object tableOption;
 
-    public Optional<Object> getTableOption() {
+    public Optional<Object> tableOption() {
         return this.tableOption == null ? Optional.empty() : Optional.ofNullable(this.tableOption);
     }
 
@@ -151,7 +151,7 @@ public final class SqlMISinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -162,7 +162,7 @@ public final class SqlMISinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="upsertSettings")
       private final @Nullable SqlUpsertSettingsResponse upsertSettings;
 
-    public Optional<SqlUpsertSettingsResponse> getUpsertSettings() {
+    public Optional<SqlUpsertSettingsResponse> upsertSettings() {
         return this.upsertSettings == null ? Optional.empty() : Optional.ofNullable(this.upsertSettings);
     }
 
@@ -173,7 +173,7 @@ public final class SqlMISinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="writeBatchSize")
       private final @Nullable Object writeBatchSize;
 
-    public Optional<Object> getWriteBatchSize() {
+    public Optional<Object> writeBatchSize() {
         return this.writeBatchSize == null ? Optional.empty() : Optional.ofNullable(this.writeBatchSize);
     }
 
@@ -184,7 +184,7 @@ public final class SqlMISinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="writeBatchTimeout")
       private final @Nullable Object writeBatchTimeout;
 
-    public Optional<Object> getWriteBatchTimeout() {
+    public Optional<Object> writeBatchTimeout() {
         return this.writeBatchTimeout == null ? Optional.empty() : Optional.ofNullable(this.writeBatchTimeout);
     }
 
@@ -195,7 +195,7 @@ public final class SqlMISinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="writeBehavior")
       private final @Nullable Object writeBehavior;
 
-    public Optional<Object> getWriteBehavior() {
+    public Optional<Object> writeBehavior() {
         return this.writeBehavior == null ? Optional.empty() : Optional.ofNullable(this.writeBehavior);
     }
 

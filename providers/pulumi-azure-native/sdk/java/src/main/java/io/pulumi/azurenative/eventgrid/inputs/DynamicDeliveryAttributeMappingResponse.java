@@ -25,7 +25,7 @@ public final class DynamicDeliveryAttributeMappingResponse extends io.pulumi.res
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -36,7 +36,7 @@ public final class DynamicDeliveryAttributeMappingResponse extends io.pulumi.res
     @Import(name="sourceField")
       private final @Nullable String sourceField;
 
-    public Optional<String> getSourceField() {
+    public Optional<String> sourceField() {
         return this.sourceField == null ? Optional.empty() : Optional.ofNullable(this.sourceField);
     }
 
@@ -48,7 +48,7 @@ public final class DynamicDeliveryAttributeMappingResponse extends io.pulumi.res
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

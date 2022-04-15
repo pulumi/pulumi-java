@@ -36,14 +36,14 @@ public final class ListConfigurationStoreKeysResult {
      * The URI that can be used to request the next set of paged results.
      * 
     */
-    public Optional<String> getNextLink() {
+    public Optional<String> nextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * The collection value.
      * 
     */
-    public List<ApiKeyResponse> getValue() {
+    public List<ApiKeyResponse> value() {
         return this.value == null ? List.of() : this.value;
     }
 

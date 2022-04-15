@@ -24,7 +24,7 @@ public final class PackageStoreResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -35,7 +35,7 @@ public final class PackageStoreResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="packageStoreLinkedService", required=true)
       private final EntityReferenceResponse packageStoreLinkedService;
 
-    public EntityReferenceResponse getPackageStoreLinkedService() {
+    public EntityReferenceResponse packageStoreLinkedService() {
         return this.packageStoreLinkedService;
     }
 

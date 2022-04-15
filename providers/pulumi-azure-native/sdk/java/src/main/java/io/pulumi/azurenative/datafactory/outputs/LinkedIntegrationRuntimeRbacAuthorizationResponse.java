@@ -44,21 +44,21 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse {
      * Expected value is 'RBAC'.
      * 
     */
-    public String getAuthorizationType() {
+    public String authorizationType() {
         return this.authorizationType;
     }
     /**
      * The credential reference containing authentication information.
      * 
     */
-    public Optional<CredentialReferenceResponse> getCredential() {
+    public Optional<CredentialReferenceResponse> credential() {
         return Optional.ofNullable(this.credential);
     }
     /**
      * The resource identifier of the integration runtime to be shared.
      * 
     */
-    public String getResourceId() {
+    public String resourceId() {
         return this.resourceId;
     }
 

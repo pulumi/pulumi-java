@@ -23,7 +23,7 @@ public final class DateAfterCreationResponse extends io.pulumi.resources.InvokeA
     @Import(name="daysAfterCreationGreaterThan", required=true)
       private final Double daysAfterCreationGreaterThan;
 
-    public Double getDaysAfterCreationGreaterThan() {
+    public Double daysAfterCreationGreaterThan() {
         return this.daysAfterCreationGreaterThan;
     }
 

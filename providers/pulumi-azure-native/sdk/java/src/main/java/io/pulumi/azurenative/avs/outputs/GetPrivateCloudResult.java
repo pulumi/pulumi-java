@@ -167,140 +167,140 @@ public final class GetPrivateCloudResult {
      * An ExpressRoute Circuit
      * 
     */
-    public Optional<CircuitResponse> getCircuit() {
+    public Optional<CircuitResponse> circuit() {
         return Optional.ofNullable(this.circuit);
     }
     /**
      * The endpoints
      * 
     */
-    public EndpointsResponse getEndpoints() {
+    public EndpointsResponse endpoints() {
         return this.endpoints;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * vCenter Single Sign On Identity Sources
      * 
     */
-    public List<IdentitySourceResponse> getIdentitySources() {
+    public List<IdentitySourceResponse> identitySources() {
         return this.identitySources == null ? List.of() : this.identitySources;
     }
     /**
      * Connectivity to internet is enabled or disabled
      * 
     */
-    public Optional<String> getInternet() {
+    public Optional<String> internet() {
         return Optional.ofNullable(this.internet);
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The default cluster used for management
      * 
     */
-    public ManagementClusterResponse getManagementCluster() {
+    public ManagementClusterResponse managementCluster() {
         return this.managementCluster;
     }
     /**
      * Network used to access vCenter Server and NSX-T Manager
      * 
     */
-    public String getManagementNetwork() {
+    public String managementNetwork() {
         return this.managementNetwork;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22
      * 
     */
-    public String getNetworkBlock() {
+    public String networkBlock() {
         return this.networkBlock;
     }
     /**
      * Thumbprint of the NSX-T Manager SSL certificate
      * 
     */
-    public String getNsxtCertificateThumbprint() {
+    public String nsxtCertificateThumbprint() {
         return this.nsxtCertificateThumbprint;
     }
     /**
      * Optionally, set the NSX-T Manager password when the private cloud is created
      * 
     */
-    public Optional<String> getNsxtPassword() {
+    public Optional<String> nsxtPassword() {
         return Optional.ofNullable(this.nsxtPassword);
     }
     /**
      * Used for virtual machine cold migration, cloning, and snapshot migration
      * 
     */
-    public String getProvisioningNetwork() {
+    public String provisioningNetwork() {
         return this.provisioningNetwork;
     }
     /**
      * The provisioning state
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The private cloud SKU
      * 
     */
-    public SkuResponse getSku() {
+    public SkuResponse sku() {
         return this.sku;
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Thumbprint of the vCenter Server SSL certificate
      * 
     */
-    public String getVcenterCertificateThumbprint() {
+    public String vcenterCertificateThumbprint() {
         return this.vcenterCertificateThumbprint;
     }
     /**
      * Optionally, set the vCenter admin password when the private cloud is created
      * 
     */
-    public Optional<String> getVcenterPassword() {
+    public Optional<String> vcenterPassword() {
         return Optional.ofNullable(this.vcenterPassword);
     }
     /**
      * Used for live migration of virtual machines
      * 
     */
-    public String getVmotionNetwork() {
+    public String vmotionNetwork() {
         return this.vmotionNetwork;
     }
 

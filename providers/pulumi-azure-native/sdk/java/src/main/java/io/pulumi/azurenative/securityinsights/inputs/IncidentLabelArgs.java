@@ -25,7 +25,7 @@ public final class IncidentLabelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labelName", required=true)
       private final Output<String> labelName;
 
-    public Output<String> getLabelName() {
+    public Output<String> labelName() {
         return this.labelName;
     }
 

@@ -218,189 +218,189 @@ public final class GetVirtualMachineResult {
      * The amount of memory
      * 
     */
-    public Integer getAmountOfRam() {
+    public Integer amountOfRam() {
         return this.amountOfRam;
     }
     /**
      * The list of Virtual Disks' Controllers
      * 
     */
-    public List<VirtualDiskControllerResponse> getControllers() {
+    public List<VirtualDiskControllerResponse> controllers() {
         return this.controllers;
     }
     /**
      * Virtual machine properties
      * 
     */
-    public Optional<GuestOSCustomizationResponse> getCustomization() {
+    public Optional<GuestOSCustomizationResponse> customization() {
         return Optional.ofNullable(this.customization);
     }
     /**
      * The list of Virtual Disks
      * 
     */
-    public List<VirtualDiskResponse> getDisks() {
+    public List<VirtualDiskResponse> disks() {
         return this.disks == null ? List.of() : this.disks;
     }
     /**
      * The DNS name of Virtual Machine in VCenter
      * 
     */
-    public String getDnsname() {
+    public String dnsname() {
         return this.dnsname;
     }
     /**
      * Expose Guest OS or not
      * 
     */
-    public Optional<Boolean> getExposeToGuestVM() {
+    public Optional<Boolean> exposeToGuestVM() {
         return Optional.ofNullable(this.exposeToGuestVM);
     }
     /**
      * The path to virtual machine folder in VCenter
      * 
     */
-    public String getFolder() {
+    public String folder() {
         return this.folder;
     }
     /**
      * The name of Guest OS
      * 
     */
-    public String getGuestOS() {
+    public String guestOS() {
         return this.guestOS;
     }
     /**
      * The Guest OS type
      * 
     */
-    public String getGuestOSType() {
+    public String guestOSType() {
         return this.guestOSType;
     }
     /**
      * /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/virtualMachines/{virtualMachineName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Azure region
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * {virtualMachineName}
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The list of Virtual NICs
      * 
     */
-    public List<VirtualNicResponse> getNics() {
+    public List<VirtualNicResponse> nics() {
         return this.nics == null ? List.of() : this.nics;
     }
     /**
      * The number of CPU cores
      * 
     */
-    public Integer getNumberOfCores() {
+    public Integer numberOfCores() {
         return this.numberOfCores;
     }
     /**
      * Password for login. Deprecated - use customization property
      * 
     */
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
      * Private Cloud Id
      * 
     */
-    public String getPrivateCloudId() {
+    public String privateCloudId() {
         return this.privateCloudId;
     }
     /**
      * The provisioning status of the resource
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The public ip of Virtual Machine
      * 
     */
-    public String getPublicIP() {
+    public String publicIP() {
         return this.publicIP;
     }
     /**
      * Virtual Machines Resource Pool
      * 
     */
-    public Optional<ResourcePoolResponse> getResourcePool() {
+    public Optional<ResourcePoolResponse> resourcePool() {
         return Optional.ofNullable(this.resourcePool);
     }
     /**
      * The status of Virtual machine
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * The list of tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Virtual Machine Template Id
      * 
     */
-    public Optional<String> getTemplateId() {
+    public Optional<String> templateId() {
         return Optional.ofNullable(this.templateId);
     }
     /**
      * {resourceProviderNamespace}/{resourceType}
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Username for login. Deprecated - use customization property
      * 
     */
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
     /**
      * The list of Virtual VSphere Networks
      * 
     */
-    public List<String> getVSphereNetworks() {
+    public List<String> vSphereNetworks() {
         return this.vSphereNetworks == null ? List.of() : this.vSphereNetworks;
     }
     /**
      * The internal id of Virtual Machine in VCenter
      * 
     */
-    public String getVmId() {
+    public String vmId() {
         return this.vmId;
     }
     /**
      * VMware tools version
      * 
     */
-    public String getVmwaretools() {
+    public String vmwaretools() {
         return this.vmwaretools;
     }
 

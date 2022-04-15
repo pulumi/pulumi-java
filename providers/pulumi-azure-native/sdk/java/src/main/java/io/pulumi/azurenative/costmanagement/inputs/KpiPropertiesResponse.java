@@ -26,7 +26,7 @@ public final class KpiPropertiesResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
@@ -37,7 +37,7 @@ public final class KpiPropertiesResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -48,7 +48,7 @@ public final class KpiPropertiesResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

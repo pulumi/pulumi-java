@@ -53,28 +53,28 @@ public final class SqlAlwaysEncryptedPropertiesResponse {
      * Sql always encrypted AKV authentication type. Type: string (or Expression with resultType string).
      * 
     */
-    public String getAlwaysEncryptedAkvAuthType() {
+    public String alwaysEncryptedAkvAuthType() {
         return this.alwaysEncryptedAkvAuthType;
     }
     /**
      * The credential reference containing authentication information.
      * 
     */
-    public Optional<CredentialReferenceResponse> getCredential() {
+    public Optional<CredentialReferenceResponse> credential() {
         return Optional.ofNullable(this.credential);
     }
     /**
      * The client ID of the application in Azure Active Directory used for Azure Key Vault authentication. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getServicePrincipalId() {
+    public Optional<Object> servicePrincipalId() {
         return Optional.ofNullable(this.servicePrincipalId);
     }
     /**
      * The key of the service principal used to authenticate against Azure Key Vault.
      * 
     */
-    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getServicePrincipalKey() {
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> servicePrincipalKey() {
         return Optional.ofNullable(this.servicePrincipalKey);
     }
 

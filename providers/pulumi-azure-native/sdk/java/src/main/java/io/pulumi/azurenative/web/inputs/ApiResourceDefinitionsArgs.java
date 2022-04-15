@@ -26,7 +26,7 @@ public final class ApiResourceDefinitionsArgs extends io.pulumi.resources.Resour
     @Import(name="modifiedSwaggerUrl")
       private final @Nullable Output<String> modifiedSwaggerUrl;
 
-    public Output<String> getModifiedSwaggerUrl() {
+    public Output<String> modifiedSwaggerUrl() {
         return this.modifiedSwaggerUrl == null ? Codegen.empty() : this.modifiedSwaggerUrl;
     }
 
@@ -37,7 +37,7 @@ public final class ApiResourceDefinitionsArgs extends io.pulumi.resources.Resour
     @Import(name="originalSwaggerUrl")
       private final @Nullable Output<String> originalSwaggerUrl;
 
-    public Output<String> getOriginalSwaggerUrl() {
+    public Output<String> originalSwaggerUrl() {
         return this.originalSwaggerUrl == null ? Codegen.empty() : this.originalSwaggerUrl;
     }
 

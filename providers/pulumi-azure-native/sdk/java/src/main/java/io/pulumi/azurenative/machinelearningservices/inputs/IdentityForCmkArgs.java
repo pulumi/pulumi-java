@@ -25,7 +25,7 @@ public final class IdentityForCmkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userAssignedIdentity", required=true)
       private final Output<String> userAssignedIdentity;
 
-    public Output<String> getUserAssignedIdentity() {
+    public Output<String> userAssignedIdentity() {
         return this.userAssignedIdentity;
     }
 

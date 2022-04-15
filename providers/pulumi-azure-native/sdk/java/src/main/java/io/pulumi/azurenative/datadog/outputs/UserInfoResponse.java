@@ -41,21 +41,21 @@ public final class UserInfoResponse {
      * Email of the user used by Datadog for contacting them if needed
      * 
     */
-    public Optional<String> getEmailAddress() {
+    public Optional<String> emailAddress() {
         return Optional.ofNullable(this.emailAddress);
     }
     /**
      * Name of the user
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Phone number of the user used by Datadog for contacting them if needed
      * 
     */
-    public Optional<String> getPhoneNumber() {
+    public Optional<String> phoneNumber() {
         return Optional.ofNullable(this.phoneNumber);
     }
 

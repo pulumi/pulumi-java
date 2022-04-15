@@ -69,49 +69,49 @@ public final class GetCacheResult {
      * Runtime connection string to cache
      * 
     */
-    public String getConnectionString() {
+    public String connectionString() {
         return this.connectionString;
     }
     /**
      * Cache description
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Original uri of entity in external system cache points to
      * 
     */
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
      * Resource type for API Management resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Location identifier to use cache from (should be either 'default' or valid Azure region identifier)
      * 
     */
-    public String getUseFromLocation() {
+    public String useFromLocation() {
         return this.useFromLocation;
     }
 

@@ -27,7 +27,7 @@ public final class VmmToVmmCreateNetworkMappingInputArgs extends io.pulumi.resou
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 

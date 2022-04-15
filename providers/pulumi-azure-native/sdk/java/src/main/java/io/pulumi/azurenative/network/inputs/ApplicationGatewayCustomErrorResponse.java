@@ -25,7 +25,7 @@ public final class ApplicationGatewayCustomErrorResponse extends io.pulumi.resou
     @Import(name="customErrorPageUrl")
       private final @Nullable String customErrorPageUrl;
 
-    public Optional<String> getCustomErrorPageUrl() {
+    public Optional<String> customErrorPageUrl() {
         return this.customErrorPageUrl == null ? Optional.empty() : Optional.ofNullable(this.customErrorPageUrl);
     }
 
@@ -36,7 +36,7 @@ public final class ApplicationGatewayCustomErrorResponse extends io.pulumi.resou
     @Import(name="statusCode")
       private final @Nullable String statusCode;
 
-    public Optional<String> getStatusCode() {
+    public Optional<String> statusCode() {
         return this.statusCode == null ? Optional.empty() : Optional.ofNullable(this.statusCode);
     }
 

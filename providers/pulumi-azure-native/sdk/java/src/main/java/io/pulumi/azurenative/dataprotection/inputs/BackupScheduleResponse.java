@@ -24,7 +24,7 @@ public final class BackupScheduleResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="repeatingTimeIntervals", required=true)
       private final List<String> repeatingTimeIntervals;
 
-    public List<String> getRepeatingTimeIntervals() {
+    public List<String> repeatingTimeIntervals() {
         return this.repeatingTimeIntervals;
     }
 

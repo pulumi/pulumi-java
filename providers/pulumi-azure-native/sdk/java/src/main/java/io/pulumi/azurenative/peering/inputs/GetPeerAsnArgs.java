@@ -19,7 +19,7 @@ public final class GetPeerAsnArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="peerAsnName", required=true)
       private final String peerAsnName;
 
-    public String getPeerAsnName() {
+    public String peerAsnName() {
         return this.peerAsnName;
     }
 

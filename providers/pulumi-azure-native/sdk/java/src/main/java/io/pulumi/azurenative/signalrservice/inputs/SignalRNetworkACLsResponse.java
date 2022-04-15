@@ -28,7 +28,7 @@ public final class SignalRNetworkACLsResponse extends io.pulumi.resources.Invoke
     @Import(name="defaultAction")
       private final @Nullable String defaultAction;
 
-    public Optional<String> getDefaultAction() {
+    public Optional<String> defaultAction() {
         return this.defaultAction == null ? Optional.empty() : Optional.ofNullable(this.defaultAction);
     }
 
@@ -39,7 +39,7 @@ public final class SignalRNetworkACLsResponse extends io.pulumi.resources.Invoke
     @Import(name="privateEndpoints")
       private final @Nullable List<PrivateEndpointACLResponse> privateEndpoints;
 
-    public List<PrivateEndpointACLResponse> getPrivateEndpoints() {
+    public List<PrivateEndpointACLResponse> privateEndpoints() {
         return this.privateEndpoints == null ? List.of() : this.privateEndpoints;
     }
 
@@ -50,7 +50,7 @@ public final class SignalRNetworkACLsResponse extends io.pulumi.resources.Invoke
     @Import(name="publicNetwork")
       private final @Nullable NetworkACLResponse publicNetwork;
 
-    public Optional<NetworkACLResponse> getPublicNetwork() {
+    public Optional<NetworkACLResponse> publicNetwork() {
         return this.publicNetwork == null ? Optional.empty() : Optional.ofNullable(this.publicNetwork);
     }
 

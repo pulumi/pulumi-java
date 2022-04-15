@@ -72,42 +72,42 @@ public final class ManagedIntegrationRuntimeStatusResponse {
      * The time at which the integration runtime was created, in ISO8601 format.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The workspace name which the integration runtime belong to.
      * 
     */
-    public String getDataFactoryName() {
+    public String dataFactoryName() {
         return this.dataFactoryName;
     }
     /**
      * The last operation result that occurred on this integration runtime.
      * 
     */
-    public ManagedIntegrationRuntimeOperationResultResponse getLastOperation() {
+    public ManagedIntegrationRuntimeOperationResultResponse lastOperation() {
         return this.lastOperation;
     }
     /**
      * The list of nodes for managed integration runtime.
      * 
     */
-    public List<ManagedIntegrationRuntimeNodeResponse> getNodes() {
+    public List<ManagedIntegrationRuntimeNodeResponse> nodes() {
         return this.nodes;
     }
     /**
      * The errors that occurred on this integration runtime.
      * 
     */
-    public List<ManagedIntegrationRuntimeErrorResponse> getOtherErrors() {
+    public List<ManagedIntegrationRuntimeErrorResponse> otherErrors() {
         return this.otherErrors;
     }
     /**
      * The state of integration runtime.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
@@ -115,7 +115,7 @@ public final class ManagedIntegrationRuntimeStatusResponse {
      * Expected value is 'Managed'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

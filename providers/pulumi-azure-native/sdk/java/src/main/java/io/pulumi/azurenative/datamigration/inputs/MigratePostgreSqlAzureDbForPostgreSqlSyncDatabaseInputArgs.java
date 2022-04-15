@@ -27,7 +27,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs ex
     @Import(name="migrationSetting")
       private final @Nullable Output<Map<String,String>> migrationSetting;
 
-    public Output<Map<String,String>> getMigrationSetting() {
+    public Output<Map<String,String>> migrationSetting() {
         return this.migrationSetting == null ? Codegen.empty() : this.migrationSetting;
     }
 
@@ -38,7 +38,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs ex
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -49,7 +49,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs ex
     @Import(name="sourceSetting")
       private final @Nullable Output<Map<String,String>> sourceSetting;
 
-    public Output<Map<String,String>> getSourceSetting() {
+    public Output<Map<String,String>> sourceSetting() {
         return this.sourceSetting == null ? Codegen.empty() : this.sourceSetting;
     }
 
@@ -60,7 +60,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs ex
     @Import(name="targetDatabaseName")
       private final @Nullable Output<String> targetDatabaseName;
 
-    public Output<String> getTargetDatabaseName() {
+    public Output<String> targetDatabaseName() {
         return this.targetDatabaseName == null ? Codegen.empty() : this.targetDatabaseName;
     }
 
@@ -71,7 +71,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs ex
     @Import(name="targetSetting")
       private final @Nullable Output<Map<String,String>> targetSetting;
 
-    public Output<Map<String,String>> getTargetSetting() {
+    public Output<Map<String,String>> targetSetting() {
         return this.targetSetting == null ? Codegen.empty() : this.targetSetting;
     }
 

@@ -29,7 +29,7 @@ public final class ApplicationGatewayRewriteRuleResponse extends io.pulumi.resou
     @Import(name="actionSet")
       private final @Nullable ApplicationGatewayRewriteRuleActionSetResponse actionSet;
 
-    public Optional<ApplicationGatewayRewriteRuleActionSetResponse> getActionSet() {
+    public Optional<ApplicationGatewayRewriteRuleActionSetResponse> actionSet() {
         return this.actionSet == null ? Optional.empty() : Optional.ofNullable(this.actionSet);
     }
 
@@ -40,7 +40,7 @@ public final class ApplicationGatewayRewriteRuleResponse extends io.pulumi.resou
     @Import(name="conditions")
       private final @Nullable List<ApplicationGatewayRewriteRuleConditionResponse> conditions;
 
-    public List<ApplicationGatewayRewriteRuleConditionResponse> getConditions() {
+    public List<ApplicationGatewayRewriteRuleConditionResponse> conditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
 
@@ -51,7 +51,7 @@ public final class ApplicationGatewayRewriteRuleResponse extends io.pulumi.resou
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -62,7 +62,7 @@ public final class ApplicationGatewayRewriteRuleResponse extends io.pulumi.resou
     @Import(name="ruleSequence")
       private final @Nullable Integer ruleSequence;
 
-    public Optional<Integer> getRuleSequence() {
+    public Optional<Integer> ruleSequence() {
         return this.ruleSequence == null ? Optional.empty() : Optional.ofNullable(this.ruleSequence);
     }
 

@@ -26,7 +26,7 @@ public final class GetUserSharedAccessTokenResult {
      * Shared Access Authorization token for the User.
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

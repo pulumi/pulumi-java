@@ -38,7 +38,7 @@ public final class VideoStreamingResponse {
      * Moreover, an ongoing video recording can be played in "live mode" with latencies which are approximately double of the chosen video segment length.
      * 
     */
-    public Optional<String> getArchiveBaseUrl() {
+    public Optional<String> archiveBaseUrl() {
         return Optional.ofNullable(this.archiveBaseUrl);
     }
 

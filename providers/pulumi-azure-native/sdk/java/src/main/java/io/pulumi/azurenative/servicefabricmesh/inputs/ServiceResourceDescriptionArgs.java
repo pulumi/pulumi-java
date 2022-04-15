@@ -34,7 +34,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
     @Import(name="autoScalingPolicies")
       private final @Nullable Output<List<AutoScalingPolicyArgs>> autoScalingPolicies;
 
-    public Output<List<AutoScalingPolicyArgs>> getAutoScalingPolicies() {
+    public Output<List<AutoScalingPolicyArgs>> autoScalingPolicies() {
         return this.autoScalingPolicies == null ? Codegen.empty() : this.autoScalingPolicies;
     }
 
@@ -45,7 +45,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
     @Import(name="codePackages", required=true)
       private final Output<List<ContainerCodePackagePropertiesArgs>> codePackages;
 
-    public Output<List<ContainerCodePackagePropertiesArgs>> getCodePackages() {
+    public Output<List<ContainerCodePackagePropertiesArgs>> codePackages() {
         return this.codePackages;
     }
 
@@ -56,7 +56,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -67,7 +67,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
     @Import(name="diagnostics")
       private final @Nullable Output<DiagnosticsRefArgs> diagnostics;
 
-    public Output<DiagnosticsRefArgs> getDiagnostics() {
+    public Output<DiagnosticsRefArgs> diagnostics() {
         return this.diagnostics == null ? Codegen.empty() : this.diagnostics;
     }
 
@@ -78,7 +78,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -89,7 +89,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
     @Import(name="networkRefs")
       private final @Nullable Output<List<NetworkRefArgs>> networkRefs;
 
-    public Output<List<NetworkRefArgs>> getNetworkRefs() {
+    public Output<List<NetworkRefArgs>> networkRefs() {
         return this.networkRefs == null ? Codegen.empty() : this.networkRefs;
     }
 
@@ -100,7 +100,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
     @Import(name="osType", required=true)
       private final Output<Either<String,OperatingSystemType>> osType;
 
-    public Output<Either<String,OperatingSystemType>> getOsType() {
+    public Output<Either<String,OperatingSystemType>> osType() {
         return this.osType;
     }
 
@@ -111,7 +111,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
     @Import(name="replicaCount")
       private final @Nullable Output<Integer> replicaCount;
 
-    public Output<Integer> getReplicaCount() {
+    public Output<Integer> replicaCount() {
         return this.replicaCount == null ? Codegen.empty() : this.replicaCount;
     }
 

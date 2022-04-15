@@ -27,7 +27,7 @@ public final class GuestConfigurationAssignmentPropertiesArgs extends io.pulumi.
     @Import(name="context")
       private final @Nullable Output<String> context;
 
-    public Output<String> getContext() {
+    public Output<String> context() {
         return this.context == null ? Codegen.empty() : this.context;
     }
 
@@ -38,7 +38,7 @@ public final class GuestConfigurationAssignmentPropertiesArgs extends io.pulumi.
     @Import(name="guestConfiguration")
       private final @Nullable Output<GuestConfigurationNavigationArgs> guestConfiguration;
 
-    public Output<GuestConfigurationNavigationArgs> getGuestConfiguration() {
+    public Output<GuestConfigurationNavigationArgs> guestConfiguration() {
         return this.guestConfiguration == null ? Codegen.empty() : this.guestConfiguration;
     }
 

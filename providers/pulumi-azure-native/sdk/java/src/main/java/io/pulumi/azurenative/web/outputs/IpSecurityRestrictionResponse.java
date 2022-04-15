@@ -118,14 +118,14 @@ public final class IpSecurityRestrictionResponse {
      * Allow or Deny access for this IP range.
      * 
     */
-    public Optional<String> getAction() {
+    public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
     /**
      * IP restriction rule description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
@@ -147,7 +147,7 @@ public final class IpSecurityRestrictionResponse {
      * The matching logic is exact match.
      * 
     */
-    public Map<String,List<String>> getHeaders() {
+    public Map<String,List<String>> headers() {
         return this.headers == null ? Map.of() : this.headers;
     }
     /**
@@ -157,56 +157,56 @@ public final class IpSecurityRestrictionResponse {
      * SubnetMask property must not be specified.
      * 
     */
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * IP restriction rule name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Priority of IP restriction rule.
      * 
     */
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * Subnet mask for the range of IP addresses the restriction is valid for.
      * 
     */
-    public Optional<String> getSubnetMask() {
+    public Optional<String> subnetMask() {
         return Optional.ofNullable(this.subnetMask);
     }
     /**
      * (internal) Subnet traffic tag
      * 
     */
-    public Optional<Integer> getSubnetTrafficTag() {
+    public Optional<Integer> subnetTrafficTag() {
         return Optional.ofNullable(this.subnetTrafficTag);
     }
     /**
      * Defines what this IP filter will be used for. This is to support IP filtering on proxies.
      * 
     */
-    public Optional<String> getTag() {
+    public Optional<String> tag() {
         return Optional.ofNullable(this.tag);
     }
     /**
      * Virtual network resource id
      * 
     */
-    public Optional<String> getVnetSubnetResourceId() {
+    public Optional<String> vnetSubnetResourceId() {
         return Optional.ofNullable(this.vnetSubnetResourceId);
     }
     /**
      * (internal) Vnet traffic tag
      * 
     */
-    public Optional<Integer> getVnetTrafficTag() {
+    public Optional<Integer> vnetTrafficTag() {
         return Optional.ofNullable(this.vnetTrafficTag);
     }
 

@@ -26,7 +26,7 @@ public final class WsfcDomainProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="clusterBootstrapAccount")
       private final @Nullable Output<String> clusterBootstrapAccount;
 
-    public Output<String> getClusterBootstrapAccount() {
+    public Output<String> clusterBootstrapAccount() {
         return this.clusterBootstrapAccount == null ? Codegen.empty() : this.clusterBootstrapAccount;
     }
 
@@ -37,7 +37,7 @@ public final class WsfcDomainProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="clusterOperatorAccount")
       private final @Nullable Output<String> clusterOperatorAccount;
 
-    public Output<String> getClusterOperatorAccount() {
+    public Output<String> clusterOperatorAccount() {
         return this.clusterOperatorAccount == null ? Codegen.empty() : this.clusterOperatorAccount;
     }
 
@@ -48,7 +48,7 @@ public final class WsfcDomainProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="domainFqdn")
       private final @Nullable Output<String> domainFqdn;
 
-    public Output<String> getDomainFqdn() {
+    public Output<String> domainFqdn() {
         return this.domainFqdn == null ? Codegen.empty() : this.domainFqdn;
     }
 
@@ -59,7 +59,7 @@ public final class WsfcDomainProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="fileShareWitnessPath")
       private final @Nullable Output<String> fileShareWitnessPath;
 
-    public Output<String> getFileShareWitnessPath() {
+    public Output<String> fileShareWitnessPath() {
         return this.fileShareWitnessPath == null ? Codegen.empty() : this.fileShareWitnessPath;
     }
 
@@ -70,7 +70,7 @@ public final class WsfcDomainProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="ouPath")
       private final @Nullable Output<String> ouPath;
 
-    public Output<String> getOuPath() {
+    public Output<String> ouPath() {
         return this.ouPath == null ? Codegen.empty() : this.ouPath;
     }
 
@@ -81,7 +81,7 @@ public final class WsfcDomainProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="sqlServiceAccount")
       private final @Nullable Output<String> sqlServiceAccount;
 
-    public Output<String> getSqlServiceAccount() {
+    public Output<String> sqlServiceAccount() {
         return this.sqlServiceAccount == null ? Codegen.empty() : this.sqlServiceAccount;
     }
 
@@ -92,7 +92,7 @@ public final class WsfcDomainProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="storageAccountPrimaryKey")
       private final @Nullable Output<String> storageAccountPrimaryKey;
 
-    public Output<String> getStorageAccountPrimaryKey() {
+    public Output<String> storageAccountPrimaryKey() {
         return this.storageAccountPrimaryKey == null ? Codegen.empty() : this.storageAccountPrimaryKey;
     }
 
@@ -103,7 +103,7 @@ public final class WsfcDomainProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="storageAccountUrl")
       private final @Nullable Output<String> storageAccountUrl;
 
-    public Output<String> getStorageAccountUrl() {
+    public Output<String> storageAccountUrl() {
         return this.storageAccountUrl == null ? Codegen.empty() : this.storageAccountUrl;
     }
 

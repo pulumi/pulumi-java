@@ -19,7 +19,7 @@ public final class GetVolumeArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetVolumeArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="volumeResourceName", required=true)
       private final String volumeResourceName;
 
-    public String getVolumeResourceName() {
+    public String volumeResourceName() {
         return this.volumeResourceName;
     }
 

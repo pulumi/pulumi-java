@@ -28,7 +28,7 @@ public final class OrderStatusResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="additionalOrderDetails", required=true)
       private final Map<String,String> additionalOrderDetails;
 
-    public Map<String,String> getAdditionalOrderDetails() {
+    public Map<String,String> additionalOrderDetails() {
         return this.additionalOrderDetails;
     }
 
@@ -39,7 +39,7 @@ public final class OrderStatusResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="comments")
       private final @Nullable String comments;
 
-    public Optional<String> getComments() {
+    public Optional<String> comments() {
         return this.comments == null ? Optional.empty() : Optional.ofNullable(this.comments);
     }
 
@@ -50,7 +50,7 @@ public final class OrderStatusResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
@@ -61,7 +61,7 @@ public final class OrderStatusResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="trackingInformation", required=true)
       private final TrackingInfoResponse trackingInformation;
 
-    public TrackingInfoResponse getTrackingInformation() {
+    public TrackingInfoResponse trackingInformation() {
         return this.trackingInformation;
     }
 
@@ -72,7 +72,7 @@ public final class OrderStatusResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="updateDateTime", required=true)
       private final String updateDateTime;
 
-    public String getUpdateDateTime() {
+    public String updateDateTime() {
         return this.updateDateTime;
     }
 

@@ -42,7 +42,7 @@ public class ApiIssueComment extends io.pulumi.resources.CustomResource {
      * @return Date and time when the comment was created.
      * 
      */
-    public Output</* @Nullable */ String> getCreatedDate() {
+    public Output</* @Nullable */ String> createdDate() {
         return this.createdDate;
     }
     /**
@@ -56,7 +56,7 @@ public class ApiIssueComment extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +70,7 @@ public class ApiIssueComment extends io.pulumi.resources.CustomResource {
      * @return Comment text.
      * 
      */
-    public Output<String> getText() {
+    public Output<String> text() {
         return this.text;
     }
     /**
@@ -84,7 +84,7 @@ public class ApiIssueComment extends io.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -98,7 +98,7 @@ public class ApiIssueComment extends io.pulumi.resources.CustomResource {
      * @return A resource identifier for the user who left the comment.
      * 
      */
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId;
     }
 

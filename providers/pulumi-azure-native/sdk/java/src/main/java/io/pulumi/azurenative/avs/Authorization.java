@@ -42,7 +42,7 @@ public class Authorization extends io.pulumi.resources.CustomResource {
      * @return The ID of the ExpressRoute Circuit Authorization
      * 
      */
-    public Output<String> getExpressRouteAuthorizationId() {
+    public Output<String> expressRouteAuthorizationId() {
         return this.expressRouteAuthorizationId;
     }
     /**
@@ -56,7 +56,7 @@ public class Authorization extends io.pulumi.resources.CustomResource {
      * @return The key of the ExpressRoute Circuit Authorization
      * 
      */
-    public Output<String> getExpressRouteAuthorizationKey() {
+    public Output<String> expressRouteAuthorizationKey() {
         return this.expressRouteAuthorizationKey;
     }
     /**
@@ -70,7 +70,7 @@ public class Authorization extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +84,7 @@ public class Authorization extends io.pulumi.resources.CustomResource {
      * @return The state of the  ExpressRoute Circuit Authorization provisioning
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -98,7 +98,7 @@ public class Authorization extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

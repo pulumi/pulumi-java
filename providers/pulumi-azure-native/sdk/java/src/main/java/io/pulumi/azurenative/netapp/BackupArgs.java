@@ -22,7 +22,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -33,7 +33,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backupName")
       private final @Nullable Output<String> backupName;
 
-    public Output<String> getBackupName() {
+    public Output<String> backupName() {
         return this.backupName == null ? Codegen.empty() : this.backupName;
     }
 
@@ -44,7 +44,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
+    public Output<String> label() {
         return this.label == null ? Codegen.empty() : this.label;
     }
 
@@ -55,7 +55,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -66,7 +66,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="poolName", required=true)
       private final Output<String> poolName;
 
-    public Output<String> getPoolName() {
+    public Output<String> poolName() {
         return this.poolName;
     }
 
@@ -77,7 +77,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -88,7 +88,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumeName", required=true)
       private final Output<String> volumeName;
 
-    public Output<String> getVolumeName() {
+    public Output<String> volumeName() {
         return this.volumeName;
     }
 

@@ -23,7 +23,7 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -34,7 +34,7 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
     @Import(name="managedNetworkName", required=true)
       private final Output<String> managedNetworkName;
 
-    public Output<String> getManagedNetworkName() {
+    public Output<String> managedNetworkName() {
         return this.managedNetworkName;
     }
 
@@ -45,7 +45,7 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
     @Import(name="managedNetworkPeeringPolicyName")
       private final @Nullable Output<String> managedNetworkPeeringPolicyName;
 
-    public Output<String> getManagedNetworkPeeringPolicyName() {
+    public Output<String> managedNetworkPeeringPolicyName() {
         return this.managedNetworkPeeringPolicyName == null ? Codegen.empty() : this.managedNetworkPeeringPolicyName;
     }
 
@@ -56,7 +56,7 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
     @Import(name="properties")
       private final @Nullable Output<ManagedNetworkPeeringPolicyPropertiesArgs> properties;
 
-    public Output<ManagedNetworkPeeringPolicyPropertiesArgs> getProperties() {
+    public Output<ManagedNetworkPeeringPolicyPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -67,7 +67,7 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

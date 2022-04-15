@@ -119,21 +119,21 @@ public final class DpmContainerResponse {
      * Type of backup management for the container.
      * 
     */
-    public Optional<String> getBackupManagementType() {
+    public Optional<String> backupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
     /**
      * Specifies whether the container is re-registrable.
      * 
     */
-    public Optional<Boolean> getCanReRegister() {
+    public Optional<Boolean> canReRegister() {
         return Optional.ofNullable(this.canReRegister);
     }
     /**
      * ID of container.
      * 
     */
-    public Optional<String> getContainerId() {
+    public Optional<String> containerId() {
         return Optional.ofNullable(this.containerId);
     }
     /**
@@ -144,70 +144,70 @@ public final class DpmContainerResponse {
      * Expected value is 'DPMContainer'.
      * 
     */
-    public String getContainerType() {
+    public String containerType() {
         return this.containerType;
     }
     /**
      * Backup engine Agent version
      * 
     */
-    public Optional<String> getDpmAgentVersion() {
+    public Optional<String> dpmAgentVersion() {
         return Optional.ofNullable(this.dpmAgentVersion);
     }
     /**
      * List of BackupEngines protecting the container
      * 
     */
-    public List<String> getDpmServers() {
+    public List<String> dpmServers() {
         return this.dpmServers == null ? List.of() : this.dpmServers;
     }
     /**
      * Extended Info of the container.
      * 
     */
-    public Optional<DPMContainerExtendedInfoResponse> getExtendedInfo() {
+    public Optional<DPMContainerExtendedInfoResponse> extendedInfo() {
         return Optional.ofNullable(this.extendedInfo);
     }
     /**
      * Friendly name of the container.
      * 
     */
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * Status of health of the container.
      * 
     */
-    public Optional<String> getHealthStatus() {
+    public Optional<String> healthStatus() {
         return Optional.ofNullable(this.healthStatus);
     }
     /**
      * Number of protected items in the BackupEngine
      * 
     */
-    public Optional<Double> getProtectedItemCount() {
+    public Optional<Double> protectedItemCount() {
         return Optional.ofNullable(this.protectedItemCount);
     }
     /**
      * Protection status of the container.
      * 
     */
-    public Optional<String> getProtectionStatus() {
+    public Optional<String> protectionStatus() {
         return Optional.ofNullable(this.protectionStatus);
     }
     /**
      * Status of registration of the container with the Recovery Services Vault.
      * 
     */
-    public Optional<String> getRegistrationStatus() {
+    public Optional<String> registrationStatus() {
         return Optional.ofNullable(this.registrationStatus);
     }
     /**
      * To check if upgrade available
      * 
     */
-    public Optional<Boolean> getUpgradeAvailable() {
+    public Optional<Boolean> upgradeAvailable() {
         return Optional.ofNullable(this.upgradeAvailable);
     }
 

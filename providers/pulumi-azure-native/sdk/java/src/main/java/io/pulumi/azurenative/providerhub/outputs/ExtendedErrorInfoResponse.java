@@ -33,19 +33,19 @@ public final class ExtendedErrorInfoResponse {
         this.target = target;
     }
 
-    public List<TypedErrorInfoResponse> getAdditionalInfo() {
+    public List<TypedErrorInfoResponse> additionalInfo() {
         return this.additionalInfo == null ? List.of() : this.additionalInfo;
     }
-    public Optional<String> getCode() {
+    public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
-    public List<ExtendedErrorInfoResponse> getDetails() {
+    public List<ExtendedErrorInfoResponse> details() {
         return this.details == null ? List.of() : this.details;
     }
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
-    public Optional<String> getTarget() {
+    public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
 

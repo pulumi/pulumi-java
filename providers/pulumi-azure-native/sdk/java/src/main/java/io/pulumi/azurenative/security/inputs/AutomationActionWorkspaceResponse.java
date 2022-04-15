@@ -26,7 +26,7 @@ public final class AutomationActionWorkspaceResponse extends io.pulumi.resources
     @Import(name="actionType", required=true)
       private final String actionType;
 
-    public String getActionType() {
+    public String actionType() {
         return this.actionType;
     }
 
@@ -37,7 +37,7 @@ public final class AutomationActionWorkspaceResponse extends io.pulumi.resources
     @Import(name="workspaceResourceId")
       private final @Nullable String workspaceResourceId;
 
-    public Optional<String> getWorkspaceResourceId() {
+    public Optional<String> workspaceResourceId() {
         return this.workspaceResourceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceResourceId);
     }
 

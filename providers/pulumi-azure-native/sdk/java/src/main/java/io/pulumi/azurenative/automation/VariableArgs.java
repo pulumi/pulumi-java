@@ -23,7 +23,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
-    public Output<String> getAutomationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -34,7 +34,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -45,7 +45,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isEncrypted")
       private final @Nullable Output<Boolean> isEncrypted;
 
-    public Output<Boolean> getIsEncrypted() {
+    public Output<Boolean> isEncrypted() {
         return this.isEncrypted == null ? Codegen.empty() : this.isEncrypted;
     }
 
@@ -56,7 +56,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -67,7 +67,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,7 +78,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 
@@ -89,7 +89,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="variableName")
       private final @Nullable Output<String> variableName;
 
-    public Output<String> getVariableName() {
+    public Output<String> variableName() {
         return this.variableName == null ? Codegen.empty() : this.variableName;
     }
 

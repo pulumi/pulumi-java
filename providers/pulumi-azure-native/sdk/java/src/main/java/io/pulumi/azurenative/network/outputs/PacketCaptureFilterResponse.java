@@ -55,35 +55,35 @@ public final class PacketCaptureFilterResponse {
      * Local IP Address to be filtered on. Notation: "127.0.0.1" for single address entry. "127.0.0.1-127.0.0.255" for range. "127.0.0.1;127.0.0.5"? for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
      * 
     */
-    public Optional<String> getLocalIPAddress() {
+    public Optional<String> localIPAddress() {
         return Optional.ofNullable(this.localIPAddress);
     }
     /**
      * Local port to be filtered on. Notation: "80" for single port entry."80-85" for range. "80;443;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
      * 
     */
-    public Optional<String> getLocalPort() {
+    public Optional<String> localPort() {
         return Optional.ofNullable(this.localPort);
     }
     /**
      * Protocol to be filtered on.
      * 
     */
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
      * Local IP Address to be filtered on. Notation: "127.0.0.1" for single address entry. "127.0.0.1-127.0.0.255" for range. "127.0.0.1;127.0.0.5;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
      * 
     */
-    public Optional<String> getRemoteIPAddress() {
+    public Optional<String> remoteIPAddress() {
         return Optional.ofNullable(this.remoteIPAddress);
     }
     /**
      * Remote port to be filtered on. Notation: "80" for single port entry."80-85" for range. "80;443;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
      * 
     */
-    public Optional<String> getRemotePort() {
+    public Optional<String> remotePort() {
         return Optional.ofNullable(this.remotePort);
     }
 

@@ -34,14 +34,14 @@ public final class CodeConfigurationResponse {
      * ARM resource ID of the code asset.
      * 
     */
-    public Optional<String> getCodeId() {
+    public Optional<String> codeId() {
         return Optional.ofNullable(this.codeId);
     }
     /**
      * The script to execute on startup. eg. "score.py"
      * 
     */
-    public String getScoringScript() {
+    public String scoringScript() {
         return this.scoringScript;
     }
 

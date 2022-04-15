@@ -31,7 +31,7 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
     @Import(name="backupManagementType")
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
-    public Output<Either<String,BackupManagementType>> getBackupManagementType() {
+    public Output<Either<String,BackupManagementType>> backupManagementType() {
         return this.backupManagementType == null ? Codegen.empty() : this.backupManagementType;
     }
 
@@ -46,7 +46,7 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
     @Import(name="containerType", required=true)
       private final Output<String> containerType;
 
-    public Output<String> getContainerType() {
+    public Output<String> containerType() {
         return this.containerType;
     }
 
@@ -57,7 +57,7 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
     @Import(name="extendedInfo")
       private final @Nullable Output<AzureWorkloadContainerExtendedInfoArgs> extendedInfo;
 
-    public Output<AzureWorkloadContainerExtendedInfoArgs> getExtendedInfo() {
+    public Output<AzureWorkloadContainerExtendedInfoArgs> extendedInfo() {
         return this.extendedInfo == null ? Codegen.empty() : this.extendedInfo;
     }
 
@@ -68,7 +68,7 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
@@ -79,7 +79,7 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
     @Import(name="healthStatus")
       private final @Nullable Output<String> healthStatus;
 
-    public Output<String> getHealthStatus() {
+    public Output<String> healthStatus() {
         return this.healthStatus == null ? Codegen.empty() : this.healthStatus;
     }
 
@@ -90,7 +90,7 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
     @Import(name="lastUpdatedTime")
       private final @Nullable Output<String> lastUpdatedTime;
 
-    public Output<String> getLastUpdatedTime() {
+    public Output<String> lastUpdatedTime() {
         return this.lastUpdatedTime == null ? Codegen.empty() : this.lastUpdatedTime;
     }
 
@@ -101,7 +101,7 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
     @Import(name="operationType")
       private final @Nullable Output<Either<String,OperationType>> operationType;
 
-    public Output<Either<String,OperationType>> getOperationType() {
+    public Output<Either<String,OperationType>> operationType() {
         return this.operationType == null ? Codegen.empty() : this.operationType;
     }
 
@@ -112,7 +112,7 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
     @Import(name="registrationStatus")
       private final @Nullable Output<String> registrationStatus;
 
-    public Output<String> getRegistrationStatus() {
+    public Output<String> registrationStatus() {
         return this.registrationStatus == null ? Codegen.empty() : this.registrationStatus;
     }
 
@@ -123,7 +123,7 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
     @Import(name="sourceResourceId")
       private final @Nullable Output<String> sourceResourceId;
 
-    public Output<String> getSourceResourceId() {
+    public Output<String> sourceResourceId() {
         return this.sourceResourceId == null ? Codegen.empty() : this.sourceResourceId;
     }
 
@@ -134,7 +134,7 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
     @Import(name="workloadType")
       private final @Nullable Output<Either<String,WorkloadType>> workloadType;
 
-    public Output<Either<String,WorkloadType>> getWorkloadType() {
+    public Output<Either<String,WorkloadType>> workloadType() {
         return this.workloadType == null ? Codegen.empty() : this.workloadType;
     }
 

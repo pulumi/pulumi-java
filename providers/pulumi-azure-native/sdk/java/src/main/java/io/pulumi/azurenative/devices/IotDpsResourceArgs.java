@@ -25,7 +25,7 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -36,7 +36,7 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
       private final Output<IotDpsPropertiesDescriptionArgs> properties;
 
-    public Output<IotDpsPropertiesDescriptionArgs> getProperties() {
+    public Output<IotDpsPropertiesDescriptionArgs> properties() {
         return this.properties;
     }
 
@@ -47,7 +47,7 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="provisioningServiceName")
       private final @Nullable Output<String> provisioningServiceName;
 
-    public Output<String> getProvisioningServiceName() {
+    public Output<String> provisioningServiceName() {
         return this.provisioningServiceName == null ? Codegen.empty() : this.provisioningServiceName;
     }
 
@@ -58,7 +58,7 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -69,7 +69,7 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku", required=true)
       private final Output<IotDpsSkuInfoArgs> sku;
 
-    public Output<IotDpsSkuInfoArgs> getSku() {
+    public Output<IotDpsSkuInfoArgs> sku() {
         return this.sku;
     }
 
@@ -80,7 +80,7 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

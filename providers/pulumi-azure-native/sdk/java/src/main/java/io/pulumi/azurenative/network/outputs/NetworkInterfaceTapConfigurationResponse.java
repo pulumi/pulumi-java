@@ -63,42 +63,42 @@ public final class NetworkInterfaceTapConfigurationResponse {
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the network interface tap configuration resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Sub Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The reference to the Virtual Network Tap resource.
      * 
     */
-    public Optional<VirtualNetworkTapResponse> getVirtualNetworkTap() {
+    public Optional<VirtualNetworkTapResponse> virtualNetworkTap() {
         return Optional.ofNullable(this.virtualNetworkTap);
     }
 

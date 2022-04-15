@@ -26,7 +26,7 @@ public final class DashboardPartsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="metadata")
       private final @Nullable MarkdownPartMetadataResponse metadata;
 
-    public Optional<MarkdownPartMetadataResponse> getMetadata() {
+    public Optional<MarkdownPartMetadataResponse> metadata() {
         return this.metadata == null ? Optional.empty() : Optional.ofNullable(this.metadata);
     }
 
@@ -37,7 +37,7 @@ public final class DashboardPartsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="position", required=true)
       private final DashboardPartsResponsePosition position;
 
-    public DashboardPartsResponsePosition getPosition() {
+    public DashboardPartsResponsePosition position() {
         return this.position;
     }
 

@@ -22,7 +22,7 @@ public final class ManagementGroupNetworkManagerConnectionArgs extends io.pulumi
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -33,7 +33,7 @@ public final class ManagementGroupNetworkManagerConnectionArgs extends io.pulumi
     @Import(name="managementGroupId", required=true)
       private final Output<String> managementGroupId;
 
-    public Output<String> getManagementGroupId() {
+    public Output<String> managementGroupId() {
         return this.managementGroupId;
     }
 
@@ -44,7 +44,7 @@ public final class ManagementGroupNetworkManagerConnectionArgs extends io.pulumi
     @Import(name="networkManagerConnectionName")
       private final @Nullable Output<String> networkManagerConnectionName;
 
-    public Output<String> getNetworkManagerConnectionName() {
+    public Output<String> networkManagerConnectionName() {
         return this.networkManagerConnectionName == null ? Codegen.empty() : this.networkManagerConnectionName;
     }
 
@@ -55,7 +55,7 @@ public final class ManagementGroupNetworkManagerConnectionArgs extends io.pulumi
     @Import(name="networkManagerId")
       private final @Nullable Output<String> networkManagerId;
 
-    public Output<String> getNetworkManagerId() {
+    public Output<String> networkManagerId() {
         return this.networkManagerId == null ? Codegen.empty() : this.networkManagerId;
     }
 

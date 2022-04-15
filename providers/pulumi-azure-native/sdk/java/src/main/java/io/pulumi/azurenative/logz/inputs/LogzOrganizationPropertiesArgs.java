@@ -22,7 +22,7 @@ public final class LogzOrganizationPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="companyName")
       private final @Nullable Output<String> companyName;
 
-    public Output<String> getCompanyName() {
+    public Output<String> companyName() {
         return this.companyName == null ? Codegen.empty() : this.companyName;
     }
 
@@ -33,7 +33,7 @@ public final class LogzOrganizationPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="enterpriseAppId")
       private final @Nullable Output<String> enterpriseAppId;
 
-    public Output<String> getEnterpriseAppId() {
+    public Output<String> enterpriseAppId() {
         return this.enterpriseAppId == null ? Codegen.empty() : this.enterpriseAppId;
     }
 
@@ -44,7 +44,7 @@ public final class LogzOrganizationPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="singleSignOnUrl")
       private final @Nullable Output<String> singleSignOnUrl;
 
-    public Output<String> getSingleSignOnUrl() {
+    public Output<String> singleSignOnUrl() {
         return this.singleSignOnUrl == null ? Codegen.empty() : this.singleSignOnUrl;
     }
 

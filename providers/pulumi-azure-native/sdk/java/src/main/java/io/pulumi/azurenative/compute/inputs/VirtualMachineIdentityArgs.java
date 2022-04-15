@@ -29,7 +29,7 @@ public final class VirtualMachineIdentityArgs extends io.pulumi.resources.Resour
     @Import(name="type")
       private final @Nullable Output<ResourceIdentityType> type;
 
-    public Output<ResourceIdentityType> getType() {
+    public Output<ResourceIdentityType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -40,7 +40,7 @@ public final class VirtualMachineIdentityArgs extends io.pulumi.resources.Resour
     @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
-    public Output<Map<String,Object>> getUserAssignedIdentities() {
+    public Output<Map<String,Object>> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Codegen.empty() : this.userAssignedIdentities;
     }
 

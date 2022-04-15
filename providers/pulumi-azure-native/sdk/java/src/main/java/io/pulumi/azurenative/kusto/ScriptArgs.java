@@ -23,7 +23,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -34,7 +34,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="continueOnErrors")
       private final @Nullable Output<Boolean> continueOnErrors;
 
-    public Output<Boolean> getContinueOnErrors() {
+    public Output<Boolean> continueOnErrors() {
         return this.continueOnErrors == null ? Codegen.empty() : this.continueOnErrors;
     }
 
@@ -45,7 +45,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -56,7 +56,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="forceUpdateTag")
       private final @Nullable Output<String> forceUpdateTag;
 
-    public Output<String> getForceUpdateTag() {
+    public Output<String> forceUpdateTag() {
         return this.forceUpdateTag == null ? Codegen.empty() : this.forceUpdateTag;
     }
 
@@ -67,7 +67,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,7 +78,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scriptName")
       private final @Nullable Output<String> scriptName;
 
-    public Output<String> getScriptName() {
+    public Output<String> scriptName() {
         return this.scriptName == null ? Codegen.empty() : this.scriptName;
     }
 
@@ -89,7 +89,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scriptUrl", required=true)
       private final Output<String> scriptUrl;
 
-    public Output<String> getScriptUrl() {
+    public Output<String> scriptUrl() {
         return this.scriptUrl;
     }
 
@@ -100,7 +100,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scriptUrlSasToken", required=true)
       private final Output<String> scriptUrlSasToken;
 
-    public Output<String> getScriptUrlSasToken() {
+    public Output<String> scriptUrlSasToken() {
         return this.scriptUrlSasToken;
     }
 

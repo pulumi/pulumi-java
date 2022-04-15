@@ -29,7 +29,7 @@ public final class MonitorConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="customHeaders")
       private final @Nullable List<MonitorConfigResponseCustomHeaders> customHeaders;
 
-    public List<MonitorConfigResponseCustomHeaders> getCustomHeaders() {
+    public List<MonitorConfigResponseCustomHeaders> customHeaders() {
         return this.customHeaders == null ? List.of() : this.customHeaders;
     }
 
@@ -40,7 +40,7 @@ public final class MonitorConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="expectedStatusCodeRanges")
       private final @Nullable List<MonitorConfigResponseExpectedStatusCodeRanges> expectedStatusCodeRanges;
 
-    public List<MonitorConfigResponseExpectedStatusCodeRanges> getExpectedStatusCodeRanges() {
+    public List<MonitorConfigResponseExpectedStatusCodeRanges> expectedStatusCodeRanges() {
         return this.expectedStatusCodeRanges == null ? List.of() : this.expectedStatusCodeRanges;
     }
 
@@ -51,7 +51,7 @@ public final class MonitorConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="intervalInSeconds")
       private final @Nullable Double intervalInSeconds;
 
-    public Optional<Double> getIntervalInSeconds() {
+    public Optional<Double> intervalInSeconds() {
         return this.intervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.intervalInSeconds);
     }
 
@@ -62,7 +62,7 @@ public final class MonitorConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="path")
       private final @Nullable String path;
 
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
@@ -73,7 +73,7 @@ public final class MonitorConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="port")
       private final @Nullable Double port;
 
-    public Optional<Double> getPort() {
+    public Optional<Double> port() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
@@ -84,7 +84,7 @@ public final class MonitorConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="profileMonitorStatus")
       private final @Nullable String profileMonitorStatus;
 
-    public Optional<String> getProfileMonitorStatus() {
+    public Optional<String> profileMonitorStatus() {
         return this.profileMonitorStatus == null ? Optional.empty() : Optional.ofNullable(this.profileMonitorStatus);
     }
 
@@ -95,7 +95,7 @@ public final class MonitorConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="protocol")
       private final @Nullable String protocol;
 
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
@@ -106,7 +106,7 @@ public final class MonitorConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="timeoutInSeconds")
       private final @Nullable Double timeoutInSeconds;
 
-    public Optional<Double> getTimeoutInSeconds() {
+    public Optional<Double> timeoutInSeconds() {
         return this.timeoutInSeconds == null ? Optional.empty() : Optional.ofNullable(this.timeoutInSeconds);
     }
 
@@ -117,7 +117,7 @@ public final class MonitorConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="toleratedNumberOfFailures")
       private final @Nullable Double toleratedNumberOfFailures;
 
-    public Optional<Double> getToleratedNumberOfFailures() {
+    public Optional<Double> toleratedNumberOfFailures() {
         return this.toleratedNumberOfFailures == null ? Optional.empty() : Optional.ofNullable(this.toleratedNumberOfFailures);
     }
 

@@ -24,7 +24,7 @@ public final class PackageInformationResponse extends io.pulumi.resources.Invoke
     @Import(name="carrierName", required=true)
       private final String carrierName;
 
-    public String getCarrierName() {
+    public String carrierName() {
         return this.carrierName;
     }
 
@@ -35,7 +35,7 @@ public final class PackageInformationResponse extends io.pulumi.resources.Invoke
     @Import(name="driveCount", required=true)
       private final Double driveCount;
 
-    public Double getDriveCount() {
+    public Double driveCount() {
         return this.driveCount;
     }
 
@@ -46,7 +46,7 @@ public final class PackageInformationResponse extends io.pulumi.resources.Invoke
     @Import(name="shipDate", required=true)
       private final String shipDate;
 
-    public String getShipDate() {
+    public String shipDate() {
         return this.shipDate;
     }
 
@@ -57,7 +57,7 @@ public final class PackageInformationResponse extends io.pulumi.resources.Invoke
     @Import(name="trackingNumber", required=true)
       private final String trackingNumber;
 
-    public String getTrackingNumber() {
+    public String trackingNumber() {
         return this.trackingNumber;
     }
 

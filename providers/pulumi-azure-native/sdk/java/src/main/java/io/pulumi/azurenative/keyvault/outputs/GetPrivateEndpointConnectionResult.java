@@ -86,63 +86,63 @@ public final class GetPrivateEndpointConnectionResult {
      * Modified whenever there is a change in the state of private endpoint connection.
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Fully qualified identifier of the key vault resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Azure location of the key vault resource.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Name of the key vault resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Properties of the private endpoint object.
      * 
     */
-    public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
+    public Optional<PrivateEndpointResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * Approval state of the private link connection.
      * 
     */
-    public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Optional<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
      * Provisioning state of the private endpoint connection.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Tags assigned to the key vault resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * Resource type of the key vault resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

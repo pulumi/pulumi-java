@@ -27,7 +27,7 @@ public final class RecurrentScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="days", required=true)
       private final Output<List<String>> days;
 
-    public Output<List<String>> getDays() {
+    public Output<List<String>> days() {
         return this.days;
     }
 
@@ -38,7 +38,7 @@ public final class RecurrentScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="hours", required=true)
       private final Output<List<Integer>> hours;
 
-    public Output<List<Integer>> getHours() {
+    public Output<List<Integer>> hours() {
         return this.hours;
     }
 
@@ -49,7 +49,7 @@ public final class RecurrentScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="minutes", required=true)
       private final Output<List<Integer>> minutes;
 
-    public Output<List<Integer>> getMinutes() {
+    public Output<List<Integer>> minutes() {
         return this.minutes;
     }
 
@@ -60,7 +60,7 @@ public final class RecurrentScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="timeZone", required=true)
       private final Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone;
     }
 

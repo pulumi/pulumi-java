@@ -44,7 +44,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @return This type describes a volume provided by an Azure Files file share.
      * 
      */
-    public Output</* @Nullable */ VolumeProviderParametersAzureFileResponse> getAzureFileParameters() {
+    public Output</* @Nullable */ VolumeProviderParametersAzureFileResponse> azureFileParameters() {
         return this.azureFileParameters;
     }
     /**
@@ -58,7 +58,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @return User readable description of the volume.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -72,7 +72,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -86,7 +86,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +100,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @return Provider of the volume.
      * 
      */
-    public Output<String> getProvider() {
+    public Output<String> provider() {
         return this.provider;
     }
     /**
@@ -114,7 +114,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @return State of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -128,7 +128,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @return Status of the volume.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -142,7 +142,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @return Gives additional information about the current status of the volume.
      * 
      */
-    public Output<String> getStatusDetails() {
+    public Output<String> statusDetails() {
         return this.statusDetails;
     }
     /**
@@ -156,7 +156,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -170,7 +170,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

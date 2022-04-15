@@ -26,7 +26,7 @@ public final class SyncPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="messageTtl", required=true)
       private final Output<String> messageTtl;
 
-    public Output<String> getMessageTtl() {
+    public Output<String> messageTtl() {
         return this.messageTtl;
     }
 
@@ -37,7 +37,7 @@ public final class SyncPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
       private final @Nullable Output<String> schedule;
 
-    public Output<String> getSchedule() {
+    public Output<String> schedule() {
         return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
@@ -48,7 +48,7 @@ public final class SyncPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="syncWindow")
       private final @Nullable Output<String> syncWindow;
 
-    public Output<String> getSyncWindow() {
+    public Output<String> syncWindow() {
         return this.syncWindow == null ? Codegen.empty() : this.syncWindow;
     }
 
@@ -59,7 +59,7 @@ public final class SyncPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tokenId", required=true)
       private final Output<String> tokenId;
 
-    public Output<String> getTokenId() {
+    public Output<String> tokenId() {
         return this.tokenId;
     }
 

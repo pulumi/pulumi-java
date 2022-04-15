@@ -22,7 +22,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cacheId")
       private final @Nullable Output<String> cacheId;
 
-    public Output<String> getCacheId() {
+    public Output<String> cacheId() {
         return this.cacheId == null ? Codegen.empty() : this.cacheId;
     }
 
@@ -33,7 +33,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectionString", required=true)
       private final Output<String> connectionString;
 
-    public Output<String> getConnectionString() {
+    public Output<String> connectionString() {
         return this.connectionString;
     }
 
@@ -44,7 +44,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -55,7 +55,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,7 +66,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
@@ -77,7 +77,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -88,7 +88,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="useFromLocation", required=true)
       private final Output<String> useFromLocation;
 
-    public Output<String> getUseFromLocation() {
+    public Output<String> useFromLocation() {
         return this.useFromLocation;
     }
 

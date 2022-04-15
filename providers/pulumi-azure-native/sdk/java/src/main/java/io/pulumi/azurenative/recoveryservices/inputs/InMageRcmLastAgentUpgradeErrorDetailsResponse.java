@@ -24,7 +24,7 @@ public final class InMageRcmLastAgentUpgradeErrorDetailsResponse extends io.pulu
     @Import(name="errorCode", required=true)
       private final String errorCode;
 
-    public String getErrorCode() {
+    public String errorCode() {
         return this.errorCode;
     }
 
@@ -35,7 +35,7 @@ public final class InMageRcmLastAgentUpgradeErrorDetailsResponse extends io.pulu
     @Import(name="errorMessage", required=true)
       private final String errorMessage;
 
-    public String getErrorMessage() {
+    public String errorMessage() {
         return this.errorMessage;
     }
 
@@ -46,7 +46,7 @@ public final class InMageRcmLastAgentUpgradeErrorDetailsResponse extends io.pulu
     @Import(name="errorMessageParameters", required=true)
       private final Map<String,String> errorMessageParameters;
 
-    public Map<String,String> getErrorMessageParameters() {
+    public Map<String,String> errorMessageParameters() {
         return this.errorMessageParameters;
     }
 
@@ -57,7 +57,7 @@ public final class InMageRcmLastAgentUpgradeErrorDetailsResponse extends io.pulu
     @Import(name="errorTags", required=true)
       private final Map<String,String> errorTags;
 
-    public Map<String,String> getErrorTags() {
+    public Map<String,String> errorTags() {
         return this.errorTags;
     }
 
@@ -68,7 +68,7 @@ public final class InMageRcmLastAgentUpgradeErrorDetailsResponse extends io.pulu
     @Import(name="possibleCauses", required=true)
       private final String possibleCauses;
 
-    public String getPossibleCauses() {
+    public String possibleCauses() {
         return this.possibleCauses;
     }
 
@@ -79,7 +79,7 @@ public final class InMageRcmLastAgentUpgradeErrorDetailsResponse extends io.pulu
     @Import(name="recommendedAction", required=true)
       private final String recommendedAction;
 
-    public String getRecommendedAction() {
+    public String recommendedAction() {
         return this.recommendedAction;
     }
 

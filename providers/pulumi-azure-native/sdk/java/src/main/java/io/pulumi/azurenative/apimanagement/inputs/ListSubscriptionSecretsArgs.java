@@ -19,7 +19,7 @@ public final class ListSubscriptionSecretsArgs extends io.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class ListSubscriptionSecretsArgs extends io.pulumi.resources.Invok
     @Import(name="serviceName", required=true)
       private final String serviceName;
 
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 
@@ -41,7 +41,7 @@ public final class ListSubscriptionSecretsArgs extends io.pulumi.resources.Invok
     @Import(name="sid", required=true)
       private final String sid;
 
-    public String getSid() {
+    public String sid() {
         return this.sid;
     }
 

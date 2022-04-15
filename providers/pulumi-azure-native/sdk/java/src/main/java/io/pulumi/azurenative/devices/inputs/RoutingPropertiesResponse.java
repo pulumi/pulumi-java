@@ -29,7 +29,7 @@ public final class RoutingPropertiesResponse extends io.pulumi.resources.InvokeA
     @Import(name="endpoints")
       private final @Nullable RoutingEndpointsResponse endpoints;
 
-    public Optional<RoutingEndpointsResponse> getEndpoints() {
+    public Optional<RoutingEndpointsResponse> endpoints() {
         return this.endpoints == null ? Optional.empty() : Optional.ofNullable(this.endpoints);
     }
 
@@ -40,7 +40,7 @@ public final class RoutingPropertiesResponse extends io.pulumi.resources.InvokeA
     @Import(name="enrichments")
       private final @Nullable List<EnrichmentPropertiesResponse> enrichments;
 
-    public List<EnrichmentPropertiesResponse> getEnrichments() {
+    public List<EnrichmentPropertiesResponse> enrichments() {
         return this.enrichments == null ? List.of() : this.enrichments;
     }
 
@@ -51,7 +51,7 @@ public final class RoutingPropertiesResponse extends io.pulumi.resources.InvokeA
     @Import(name="fallbackRoute")
       private final @Nullable FallbackRoutePropertiesResponse fallbackRoute;
 
-    public Optional<FallbackRoutePropertiesResponse> getFallbackRoute() {
+    public Optional<FallbackRoutePropertiesResponse> fallbackRoute() {
         return this.fallbackRoute == null ? Optional.empty() : Optional.ofNullable(this.fallbackRoute);
     }
 
@@ -62,7 +62,7 @@ public final class RoutingPropertiesResponse extends io.pulumi.resources.InvokeA
     @Import(name="routes")
       private final @Nullable List<RoutePropertiesResponse> routes;
 
-    public List<RoutePropertiesResponse> getRoutes() {
+    public List<RoutePropertiesResponse> routes() {
         return this.routes == null ? List.of() : this.routes;
     }
 

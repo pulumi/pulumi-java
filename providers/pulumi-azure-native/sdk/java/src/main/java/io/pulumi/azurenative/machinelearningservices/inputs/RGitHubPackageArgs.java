@@ -22,7 +22,7 @@ public final class RGitHubPackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authToken")
       private final @Nullable Output<String> authToken;
 
-    public Output<String> getAuthToken() {
+    public Output<String> authToken() {
         return this.authToken == null ? Codegen.empty() : this.authToken;
     }
 
@@ -33,7 +33,7 @@ public final class RGitHubPackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="repository")
       private final @Nullable Output<String> repository;
 
-    public Output<String> getRepository() {
+    public Output<String> repository() {
         return this.repository == null ? Codegen.empty() : this.repository;
     }
 

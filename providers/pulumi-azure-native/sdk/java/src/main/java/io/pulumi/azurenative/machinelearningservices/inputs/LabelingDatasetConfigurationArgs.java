@@ -27,7 +27,7 @@ public final class LabelingDatasetConfigurationArgs extends io.pulumi.resources.
     @Import(name="assetName", required=true)
       private final Output<String> assetName;
 
-    public Output<String> getAssetName() {
+    public Output<String> assetName() {
         return this.assetName;
     }
 
@@ -38,7 +38,7 @@ public final class LabelingDatasetConfigurationArgs extends io.pulumi.resources.
     @Import(name="datasetVersion", required=true)
       private final Output<String> datasetVersion;
 
-    public Output<String> getDatasetVersion() {
+    public Output<String> datasetVersion() {
         return this.datasetVersion;
     }
 
@@ -49,7 +49,7 @@ public final class LabelingDatasetConfigurationArgs extends io.pulumi.resources.
     @Import(name="enableIncrementalDatasetRefresh")
       private final @Nullable Output<Boolean> enableIncrementalDatasetRefresh;
 
-    public Output<Boolean> getEnableIncrementalDatasetRefresh() {
+    public Output<Boolean> enableIncrementalDatasetRefresh() {
         return this.enableIncrementalDatasetRefresh == null ? Codegen.empty() : this.enableIncrementalDatasetRefresh;
     }
 

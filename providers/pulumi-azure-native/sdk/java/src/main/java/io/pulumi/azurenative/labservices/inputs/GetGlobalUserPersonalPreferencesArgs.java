@@ -23,7 +23,7 @@ public final class GetGlobalUserPersonalPreferencesArgs extends io.pulumi.resour
     @Import(name="addRemove")
       private final @Nullable Either<String,AddRemove> addRemove;
 
-    public Either<String,AddRemove> getAddRemove() {
+    public Either<String,AddRemove> addRemove() {
         return this.addRemove == null ? null : this.addRemove;
     }
 
@@ -34,7 +34,7 @@ public final class GetGlobalUserPersonalPreferencesArgs extends io.pulumi.resour
     @Import(name="labAccountResourceId")
       private final @Nullable String labAccountResourceId;
 
-    public Optional<String> getLabAccountResourceId() {
+    public Optional<String> labAccountResourceId() {
         return this.labAccountResourceId == null ? Optional.empty() : Optional.ofNullable(this.labAccountResourceId);
     }
 
@@ -45,7 +45,7 @@ public final class GetGlobalUserPersonalPreferencesArgs extends io.pulumi.resour
     @Import(name="labResourceId")
       private final @Nullable String labResourceId;
 
-    public Optional<String> getLabResourceId() {
+    public Optional<String> labResourceId() {
         return this.labResourceId == null ? Optional.empty() : Optional.ofNullable(this.labResourceId);
     }
 
@@ -56,7 +56,7 @@ public final class GetGlobalUserPersonalPreferencesArgs extends io.pulumi.resour
     @Import(name="userName", required=true)
       private final String userName;
 
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

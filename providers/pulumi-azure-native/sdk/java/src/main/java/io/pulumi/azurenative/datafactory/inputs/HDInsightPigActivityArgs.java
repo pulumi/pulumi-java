@@ -35,7 +35,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
     @Import(name="arguments")
       private final @Nullable Output<Object> arguments;
 
-    public Output<Object> getArguments() {
+    public Output<Object> arguments() {
         return this.arguments == null ? Codegen.empty() : this.arguments;
     }
 
@@ -46,7 +46,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
     @Import(name="defines")
       private final @Nullable Output<Map<String,Object>> defines;
 
-    public Output<Map<String,Object>> getDefines() {
+    public Output<Map<String,Object>> defines() {
         return this.defines == null ? Codegen.empty() : this.defines;
     }
 
@@ -57,7 +57,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+    public Output<List<ActivityDependencyArgs>> dependsOn() {
         return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
@@ -68,7 +68,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -79,7 +79,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
     @Import(name="getDebugInfo")
       private final @Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
 
-    public Output<Either<String,HDInsightActivityDebugInfoOption>> getGetDebugInfo() {
+    public Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo() {
         return this.getDebugInfo == null ? Codegen.empty() : this.getDebugInfo;
     }
 
@@ -90,7 +90,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
     }
 
@@ -101,7 +101,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -112,7 +112,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Output<ActivityPolicyArgs> getPolicy() {
+    public Output<ActivityPolicyArgs> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -123,7 +123,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
     @Import(name="scriptLinkedService")
       private final @Nullable Output<LinkedServiceReferenceArgs> scriptLinkedService;
 
-    public Output<LinkedServiceReferenceArgs> getScriptLinkedService() {
+    public Output<LinkedServiceReferenceArgs> scriptLinkedService() {
         return this.scriptLinkedService == null ? Codegen.empty() : this.scriptLinkedService;
     }
 
@@ -134,7 +134,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
     @Import(name="scriptPath")
       private final @Nullable Output<Object> scriptPath;
 
-    public Output<Object> getScriptPath() {
+    public Output<Object> scriptPath() {
         return this.scriptPath == null ? Codegen.empty() : this.scriptPath;
     }
 
@@ -145,7 +145,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
     @Import(name="storageLinkedServices")
       private final @Nullable Output<List<LinkedServiceReferenceArgs>> storageLinkedServices;
 
-    public Output<List<LinkedServiceReferenceArgs>> getStorageLinkedServices() {
+    public Output<List<LinkedServiceReferenceArgs>> storageLinkedServices() {
         return this.storageLinkedServices == null ? Codegen.empty() : this.storageLinkedServices;
     }
 
@@ -157,7 +157,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -168,7 +168,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> getUserProperties() {
+    public Output<List<UserPropertyArgs>> userProperties() {
         return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 

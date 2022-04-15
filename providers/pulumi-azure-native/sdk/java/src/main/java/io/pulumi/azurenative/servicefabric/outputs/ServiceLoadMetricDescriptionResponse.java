@@ -56,35 +56,35 @@ public final class ServiceLoadMetricDescriptionResponse {
      * Used only for Stateless services. The default amount of load, as a number, that this service creates for this metric.
      * 
     */
-    public Optional<Integer> getDefaultLoad() {
+    public Optional<Integer> defaultLoad() {
         return Optional.ofNullable(this.defaultLoad);
     }
     /**
      * The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.
      * 
     */
-    public Optional<Integer> getPrimaryDefaultLoad() {
+    public Optional<Integer> primaryDefaultLoad() {
         return Optional.ofNullable(this.primaryDefaultLoad);
     }
     /**
      * Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.
      * 
     */
-    public Optional<Integer> getSecondaryDefaultLoad() {
+    public Optional<Integer> secondaryDefaultLoad() {
         return Optional.ofNullable(this.secondaryDefaultLoad);
     }
     /**
      * The service load metric relative weight, compared to other metrics configured for this service, as a number.
      * 
     */
-    public Optional<String> getWeight() {
+    public Optional<String> weight() {
         return Optional.ofNullable(this.weight);
     }
 

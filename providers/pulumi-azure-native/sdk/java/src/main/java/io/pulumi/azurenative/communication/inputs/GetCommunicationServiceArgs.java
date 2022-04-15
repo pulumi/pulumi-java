@@ -19,7 +19,7 @@ public final class GetCommunicationServiceArgs extends io.pulumi.resources.Invok
     @Import(name="communicationServiceName", required=true)
       private final String communicationServiceName;
 
-    public String getCommunicationServiceName() {
+    public String communicationServiceName() {
         return this.communicationServiceName;
     }
 
@@ -30,7 +30,7 @@ public final class GetCommunicationServiceArgs extends io.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

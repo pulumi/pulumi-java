@@ -23,7 +23,7 @@ public final class SelectedCertificateInputResponse extends io.pulumi.resources.
     @Import(name="certificateName", required=true)
       private final String certificateName;
 
-    public String getCertificateName() {
+    public String certificateName() {
         return this.certificateName;
     }
 
@@ -34,7 +34,7 @@ public final class SelectedCertificateInputResponse extends io.pulumi.resources.
     @Import(name="password", required=true)
       private final String password;
 
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
 

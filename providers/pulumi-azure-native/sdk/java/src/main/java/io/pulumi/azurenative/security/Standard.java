@@ -45,7 +45,7 @@ public class Standard extends io.pulumi.resources.CustomResource {
      * @return category of the standard provided
      * 
      */
-    public Output</* @Nullable */ String> getCategory() {
+    public Output</* @Nullable */ String> category() {
         return this.category;
     }
     /**
@@ -59,7 +59,7 @@ public class Standard extends io.pulumi.resources.CustomResource {
      * @return List of component objects containing component unique keys (such as assessment keys) to apply to standard scope.  Currently only supports assessment keys.
      * 
      */
-    public Output</* @Nullable */ List<StandardComponentPropertiesResponse>> getComponents() {
+    public Output</* @Nullable */ List<StandardComponentPropertiesResponse>> components() {
         return this.components;
     }
     /**
@@ -73,7 +73,7 @@ public class Standard extends io.pulumi.resources.CustomResource {
      * @return description of the standard
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -87,7 +87,7 @@ public class Standard extends io.pulumi.resources.CustomResource {
      * @return display name of the standard, equivalent to the standardId
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -101,7 +101,7 @@ public class Standard extends io.pulumi.resources.CustomResource {
      * @return Entity tag is used for comparing two or more entities from the same requested resource.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -115,7 +115,7 @@ public class Standard extends io.pulumi.resources.CustomResource {
      * @return Kind of the resource
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -129,7 +129,7 @@ public class Standard extends io.pulumi.resources.CustomResource {
      * @return Location where the resource is stored
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -143,7 +143,7 @@ public class Standard extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -157,7 +157,7 @@ public class Standard extends io.pulumi.resources.CustomResource {
      * @return standard type (Custom or BuiltIn only currently)
      * 
      */
-    public Output<String> getStandardType() {
+    public Output<String> standardType() {
         return this.standardType;
     }
     /**
@@ -171,7 +171,7 @@ public class Standard extends io.pulumi.resources.CustomResource {
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -185,7 +185,7 @@ public class Standard extends io.pulumi.resources.CustomResource {
      * @return A list of key value pairs that describe the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -199,7 +199,7 @@ public class Standard extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

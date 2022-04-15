@@ -26,7 +26,7 @@ public final class StreamingLocatorContentKeyArgs extends io.pulumi.resources.Re
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -37,7 +37,7 @@ public final class StreamingLocatorContentKeyArgs extends io.pulumi.resources.Re
     @Import(name="labelReferenceInStreamingPolicy")
       private final @Nullable Output<String> labelReferenceInStreamingPolicy;
 
-    public Output<String> getLabelReferenceInStreamingPolicy() {
+    public Output<String> labelReferenceInStreamingPolicy() {
         return this.labelReferenceInStreamingPolicy == null ? Codegen.empty() : this.labelReferenceInStreamingPolicy;
     }
 
@@ -48,7 +48,7 @@ public final class StreamingLocatorContentKeyArgs extends io.pulumi.resources.Re
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

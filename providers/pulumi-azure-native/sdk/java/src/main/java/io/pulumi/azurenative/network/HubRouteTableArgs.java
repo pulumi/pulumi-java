@@ -24,7 +24,7 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -35,7 +35,7 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<List<String>> labels;
 
-    public Output<List<String>> getLabels() {
+    public Output<List<String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -46,7 +46,7 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -57,7 +57,7 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,7 +68,7 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="routeTableName")
       private final @Nullable Output<String> routeTableName;
 
-    public Output<String> getRouteTableName() {
+    public Output<String> routeTableName() {
         return this.routeTableName == null ? Codegen.empty() : this.routeTableName;
     }
 
@@ -79,7 +79,7 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="routes")
       private final @Nullable Output<List<HubRouteArgs>> routes;
 
-    public Output<List<HubRouteArgs>> getRoutes() {
+    public Output<List<HubRouteArgs>> routes() {
         return this.routes == null ? Codegen.empty() : this.routes;
     }
 
@@ -90,7 +90,7 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="virtualHubName", required=true)
       private final Output<String> virtualHubName;
 
-    public Output<String> getVirtualHubName() {
+    public Output<String> virtualHubName() {
         return this.virtualHubName;
     }
 

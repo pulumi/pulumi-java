@@ -46,7 +46,7 @@ public class SoftwareUpdateConfigurationByName extends io.pulumi.resources.Custo
      * @return CreatedBy property, which only appears in the response.
      * 
      */
-    public Output<String> getCreatedBy() {
+    public Output<String> createdBy() {
         return this.createdBy;
     }
     /**
@@ -60,7 +60,7 @@ public class SoftwareUpdateConfigurationByName extends io.pulumi.resources.Custo
      * @return Creation time of the resource, which only appears in the response.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -74,7 +74,7 @@ public class SoftwareUpdateConfigurationByName extends io.pulumi.resources.Custo
      * @return Details of provisioning error
      * 
      */
-    public Output</* @Nullable */ ErrorResponseResponse> getError() {
+    public Output</* @Nullable */ ErrorResponseResponse> error() {
         return this.error;
     }
     /**
@@ -88,7 +88,7 @@ public class SoftwareUpdateConfigurationByName extends io.pulumi.resources.Custo
      * @return LastModifiedBy property, which only appears in the response.
      * 
      */
-    public Output<String> getLastModifiedBy() {
+    public Output<String> lastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
@@ -102,7 +102,7 @@ public class SoftwareUpdateConfigurationByName extends io.pulumi.resources.Custo
      * @return Last time resource was modified, which only appears in the response.
      * 
      */
-    public Output<String> getLastModifiedTime() {
+    public Output<String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -116,7 +116,7 @@ public class SoftwareUpdateConfigurationByName extends io.pulumi.resources.Custo
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -130,7 +130,7 @@ public class SoftwareUpdateConfigurationByName extends io.pulumi.resources.Custo
      * @return Provisioning state for the software update configuration, which only appears in the response.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -144,7 +144,7 @@ public class SoftwareUpdateConfigurationByName extends io.pulumi.resources.Custo
      * @return Schedule information for the Software update configuration
      * 
      */
-    public Output<SUCSchedulePropertiesResponse> getScheduleInfo() {
+    public Output<SUCSchedulePropertiesResponse> scheduleInfo() {
         return this.scheduleInfo;
     }
     /**
@@ -158,7 +158,7 @@ public class SoftwareUpdateConfigurationByName extends io.pulumi.resources.Custo
      * @return Tasks information for the Software update configuration.
      * 
      */
-    public Output</* @Nullable */ SoftwareUpdateConfigurationTasksResponse> getTasks() {
+    public Output</* @Nullable */ SoftwareUpdateConfigurationTasksResponse> tasks() {
         return this.tasks;
     }
     /**
@@ -172,7 +172,7 @@ public class SoftwareUpdateConfigurationByName extends io.pulumi.resources.Custo
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -186,7 +186,7 @@ public class SoftwareUpdateConfigurationByName extends io.pulumi.resources.Custo
      * @return update specific properties for the Software update configuration
      * 
      */
-    public Output<UpdateConfigurationResponse> getUpdateConfiguration() {
+    public Output<UpdateConfigurationResponse> updateConfiguration() {
         return this.updateConfiguration;
     }
 

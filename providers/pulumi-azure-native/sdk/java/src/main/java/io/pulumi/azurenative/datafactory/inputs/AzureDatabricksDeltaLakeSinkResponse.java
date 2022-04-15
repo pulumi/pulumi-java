@@ -27,7 +27,7 @@ public final class AzureDatabricksDeltaLakeSinkResponse extends io.pulumi.resour
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
-    public Optional<Object> getDisableMetricsCollection() {
+    public Optional<Object> disableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
@@ -38,7 +38,7 @@ public final class AzureDatabricksDeltaLakeSinkResponse extends io.pulumi.resour
     @Import(name="importSettings")
       private final @Nullable AzureDatabricksDeltaLakeImportCommandResponse importSettings;
 
-    public Optional<AzureDatabricksDeltaLakeImportCommandResponse> getImportSettings() {
+    public Optional<AzureDatabricksDeltaLakeImportCommandResponse> importSettings() {
         return this.importSettings == null ? Optional.empty() : Optional.ofNullable(this.importSettings);
     }
 
@@ -49,7 +49,7 @@ public final class AzureDatabricksDeltaLakeSinkResponse extends io.pulumi.resour
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
-    public Optional<Object> getMaxConcurrentConnections() {
+    public Optional<Object> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
@@ -60,7 +60,7 @@ public final class AzureDatabricksDeltaLakeSinkResponse extends io.pulumi.resour
     @Import(name="preCopyScript")
       private final @Nullable Object preCopyScript;
 
-    public Optional<Object> getPreCopyScript() {
+    public Optional<Object> preCopyScript() {
         return this.preCopyScript == null ? Optional.empty() : Optional.ofNullable(this.preCopyScript);
     }
 
@@ -71,7 +71,7 @@ public final class AzureDatabricksDeltaLakeSinkResponse extends io.pulumi.resour
     @Import(name="sinkRetryCount")
       private final @Nullable Object sinkRetryCount;
 
-    public Optional<Object> getSinkRetryCount() {
+    public Optional<Object> sinkRetryCount() {
         return this.sinkRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryCount);
     }
 
@@ -82,7 +82,7 @@ public final class AzureDatabricksDeltaLakeSinkResponse extends io.pulumi.resour
     @Import(name="sinkRetryWait")
       private final @Nullable Object sinkRetryWait;
 
-    public Optional<Object> getSinkRetryWait() {
+    public Optional<Object> sinkRetryWait() {
         return this.sinkRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryWait);
     }
 
@@ -94,7 +94,7 @@ public final class AzureDatabricksDeltaLakeSinkResponse extends io.pulumi.resour
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -105,7 +105,7 @@ public final class AzureDatabricksDeltaLakeSinkResponse extends io.pulumi.resour
     @Import(name="writeBatchSize")
       private final @Nullable Object writeBatchSize;
 
-    public Optional<Object> getWriteBatchSize() {
+    public Optional<Object> writeBatchSize() {
         return this.writeBatchSize == null ? Optional.empty() : Optional.ofNullable(this.writeBatchSize);
     }
 
@@ -116,7 +116,7 @@ public final class AzureDatabricksDeltaLakeSinkResponse extends io.pulumi.resour
     @Import(name="writeBatchTimeout")
       private final @Nullable Object writeBatchTimeout;
 
-    public Optional<Object> getWriteBatchTimeout() {
+    public Optional<Object> writeBatchTimeout() {
         return this.writeBatchTimeout == null ? Optional.empty() : Optional.ofNullable(this.writeBatchTimeout);
     }
 

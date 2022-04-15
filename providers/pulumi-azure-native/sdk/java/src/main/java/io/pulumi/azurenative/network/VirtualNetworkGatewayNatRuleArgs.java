@@ -27,7 +27,7 @@ public final class VirtualNetworkGatewayNatRuleArgs extends io.pulumi.resources.
     @Import(name="externalMappings")
       private final @Nullable Output<List<VpnNatRuleMappingArgs>> externalMappings;
 
-    public Output<List<VpnNatRuleMappingArgs>> getExternalMappings() {
+    public Output<List<VpnNatRuleMappingArgs>> externalMappings() {
         return this.externalMappings == null ? Codegen.empty() : this.externalMappings;
     }
 
@@ -38,7 +38,7 @@ public final class VirtualNetworkGatewayNatRuleArgs extends io.pulumi.resources.
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -49,7 +49,7 @@ public final class VirtualNetworkGatewayNatRuleArgs extends io.pulumi.resources.
     @Import(name="internalMappings")
       private final @Nullable Output<List<VpnNatRuleMappingArgs>> internalMappings;
 
-    public Output<List<VpnNatRuleMappingArgs>> getInternalMappings() {
+    public Output<List<VpnNatRuleMappingArgs>> internalMappings() {
         return this.internalMappings == null ? Codegen.empty() : this.internalMappings;
     }
 
@@ -60,7 +60,7 @@ public final class VirtualNetworkGatewayNatRuleArgs extends io.pulumi.resources.
     @Import(name="ipConfigurationId")
       private final @Nullable Output<String> ipConfigurationId;
 
-    public Output<String> getIpConfigurationId() {
+    public Output<String> ipConfigurationId() {
         return this.ipConfigurationId == null ? Codegen.empty() : this.ipConfigurationId;
     }
 
@@ -71,7 +71,7 @@ public final class VirtualNetworkGatewayNatRuleArgs extends io.pulumi.resources.
     @Import(name="mode")
       private final @Nullable Output<Either<String,VpnNatRuleMode>> mode;
 
-    public Output<Either<String,VpnNatRuleMode>> getMode() {
+    public Output<Either<String,VpnNatRuleMode>> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -82,7 +82,7 @@ public final class VirtualNetworkGatewayNatRuleArgs extends io.pulumi.resources.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -93,7 +93,7 @@ public final class VirtualNetworkGatewayNatRuleArgs extends io.pulumi.resources.
     @Import(name="natRuleName")
       private final @Nullable Output<String> natRuleName;
 
-    public Output<String> getNatRuleName() {
+    public Output<String> natRuleName() {
         return this.natRuleName == null ? Codegen.empty() : this.natRuleName;
     }
 
@@ -104,7 +104,7 @@ public final class VirtualNetworkGatewayNatRuleArgs extends io.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -115,7 +115,7 @@ public final class VirtualNetworkGatewayNatRuleArgs extends io.pulumi.resources.
     @Import(name="type")
       private final @Nullable Output<Either<String,VpnNatRuleType>> type;
 
-    public Output<Either<String,VpnNatRuleType>> getType() {
+    public Output<Either<String,VpnNatRuleType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -126,7 +126,7 @@ public final class VirtualNetworkGatewayNatRuleArgs extends io.pulumi.resources.
     @Import(name="virtualNetworkGatewayName", required=true)
       private final Output<String> virtualNetworkGatewayName;
 
-    public Output<String> getVirtualNetworkGatewayName() {
+    public Output<String> virtualNetworkGatewayName() {
         return this.virtualNetworkGatewayName;
     }
 

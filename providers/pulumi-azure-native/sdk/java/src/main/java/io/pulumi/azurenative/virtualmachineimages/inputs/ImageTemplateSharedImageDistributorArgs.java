@@ -31,7 +31,7 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
     @Import(name="artifactTags")
       private final @Nullable Output<Map<String,String>> artifactTags;
 
-    public Output<Map<String,String>> getArtifactTags() {
+    public Output<Map<String,String>> artifactTags() {
         return this.artifactTags == null ? Codegen.empty() : this.artifactTags;
     }
 
@@ -42,7 +42,7 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
     @Import(name="excludeFromLatest")
       private final @Nullable Output<Boolean> excludeFromLatest;
 
-    public Output<Boolean> getExcludeFromLatest() {
+    public Output<Boolean> excludeFromLatest() {
         return this.excludeFromLatest == null ? Codegen.empty() : this.excludeFromLatest;
     }
 
@@ -53,7 +53,7 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
     @Import(name="galleryImageId", required=true)
       private final Output<String> galleryImageId;
 
-    public Output<String> getGalleryImageId() {
+    public Output<String> galleryImageId() {
         return this.galleryImageId;
     }
 
@@ -64,7 +64,7 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
     @Import(name="replicationRegions", required=true)
       private final Output<List<String>> replicationRegions;
 
-    public Output<List<String>> getReplicationRegions() {
+    public Output<List<String>> replicationRegions() {
         return this.replicationRegions;
     }
 
@@ -75,7 +75,7 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
     @Import(name="runOutputName", required=true)
       private final Output<String> runOutputName;
 
-    public Output<String> getRunOutputName() {
+    public Output<String> runOutputName() {
         return this.runOutputName;
     }
 
@@ -86,7 +86,7 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
     @Import(name="storageAccountType")
       private final @Nullable Output<Either<String,SharedImageStorageAccountType>> storageAccountType;
 
-    public Output<Either<String,SharedImageStorageAccountType>> getStorageAccountType() {
+    public Output<Either<String,SharedImageStorageAccountType>> storageAccountType() {
         return this.storageAccountType == null ? Codegen.empty() : this.storageAccountType;
     }
 
@@ -98,7 +98,7 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

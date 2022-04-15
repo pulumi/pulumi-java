@@ -42,21 +42,21 @@ public final class ManagedIntegrationRuntimeNodeResponse {
      * The errors that occurred on this integration runtime node.
      * 
     */
-    public List<ManagedIntegrationRuntimeErrorResponse> getErrors() {
+    public List<ManagedIntegrationRuntimeErrorResponse> errors() {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
      * The managed integration runtime node id.
      * 
     */
-    public String getNodeId() {
+    public String nodeId() {
         return this.nodeId;
     }
     /**
      * The managed integration runtime node status.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

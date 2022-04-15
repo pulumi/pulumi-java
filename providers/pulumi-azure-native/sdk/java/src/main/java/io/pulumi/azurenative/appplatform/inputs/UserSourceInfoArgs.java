@@ -29,7 +29,7 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="artifactSelector")
       private final @Nullable Output<String> artifactSelector;
 
-    public Output<String> getArtifactSelector() {
+    public Output<String> artifactSelector() {
         return this.artifactSelector == null ? Codegen.empty() : this.artifactSelector;
     }
 
@@ -40,7 +40,7 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="relativePath")
       private final @Nullable Output<String> relativePath;
 
-    public Output<String> getRelativePath() {
+    public Output<String> relativePath() {
         return this.relativePath == null ? Codegen.empty() : this.relativePath;
     }
 
@@ -51,7 +51,7 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<Either<String,UserSourceType>> type;
 
-    public Output<Either<String,UserSourceType>> getType() {
+    public Output<Either<String,UserSourceType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -62,7 +62,7 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

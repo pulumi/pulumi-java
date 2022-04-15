@@ -28,7 +28,7 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -40,7 +40,7 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -51,7 +51,7 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
     @Import(name="sizeDisk", required=true)
       private final Output<Either<String,SizeTypes>> sizeDisk;
 
-    public Output<Either<String,SizeTypes>> getSizeDisk() {
+    public Output<Either<String,SizeTypes>> sizeDisk() {
         return this.sizeDisk;
     }
 

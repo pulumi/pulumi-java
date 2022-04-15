@@ -27,7 +27,7 @@ public final class DnsSettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="enableProxy")
       private final @Nullable Boolean enableProxy;
 
-    public Optional<Boolean> getEnableProxy() {
+    public Optional<Boolean> enableProxy() {
         return this.enableProxy == null ? Optional.empty() : Optional.ofNullable(this.enableProxy);
     }
 
@@ -38,7 +38,7 @@ public final class DnsSettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="requireProxyForNetworkRules")
       private final @Nullable Boolean requireProxyForNetworkRules;
 
-    public Optional<Boolean> getRequireProxyForNetworkRules() {
+    public Optional<Boolean> requireProxyForNetworkRules() {
         return this.requireProxyForNetworkRules == null ? Optional.empty() : Optional.ofNullable(this.requireProxyForNetworkRules);
     }
 
@@ -49,7 +49,7 @@ public final class DnsSettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="servers")
       private final @Nullable List<String> servers;
 
-    public List<String> getServers() {
+    public List<String> servers() {
         return this.servers == null ? List.of() : this.servers;
     }
 

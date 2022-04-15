@@ -32,7 +32,7 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backupManagementType")
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
-    public Output<Either<String,BackupManagementType>> getBackupManagementType() {
+    public Output<Either<String,BackupManagementType>> backupManagementType() {
         return this.backupManagementType == null ? Codegen.empty() : this.backupManagementType;
     }
 
@@ -43,7 +43,7 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="canReRegister")
       private final @Nullable Output<Boolean> canReRegister;
 
-    public Output<Boolean> getCanReRegister() {
+    public Output<Boolean> canReRegister() {
         return this.canReRegister == null ? Codegen.empty() : this.canReRegister;
     }
 
@@ -54,7 +54,7 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containerId")
       private final @Nullable Output<String> containerId;
 
-    public Output<String> getContainerId() {
+    public Output<String> containerId() {
         return this.containerId == null ? Codegen.empty() : this.containerId;
     }
 
@@ -69,7 +69,7 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containerType", required=true)
       private final Output<String> containerType;
 
-    public Output<String> getContainerType() {
+    public Output<String> containerType() {
         return this.containerType;
     }
 
@@ -80,7 +80,7 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dpmAgentVersion")
       private final @Nullable Output<String> dpmAgentVersion;
 
-    public Output<String> getDpmAgentVersion() {
+    public Output<String> dpmAgentVersion() {
         return this.dpmAgentVersion == null ? Codegen.empty() : this.dpmAgentVersion;
     }
 
@@ -91,7 +91,7 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dpmServers")
       private final @Nullable Output<List<String>> dpmServers;
 
-    public Output<List<String>> getDpmServers() {
+    public Output<List<String>> dpmServers() {
         return this.dpmServers == null ? Codegen.empty() : this.dpmServers;
     }
 
@@ -102,7 +102,7 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="extendedInfo")
       private final @Nullable Output<DPMContainerExtendedInfoArgs> extendedInfo;
 
-    public Output<DPMContainerExtendedInfoArgs> getExtendedInfo() {
+    public Output<DPMContainerExtendedInfoArgs> extendedInfo() {
         return this.extendedInfo == null ? Codegen.empty() : this.extendedInfo;
     }
 
@@ -113,7 +113,7 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
@@ -124,7 +124,7 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="healthStatus")
       private final @Nullable Output<String> healthStatus;
 
-    public Output<String> getHealthStatus() {
+    public Output<String> healthStatus() {
         return this.healthStatus == null ? Codegen.empty() : this.healthStatus;
     }
 
@@ -135,7 +135,7 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="protectedItemCount")
       private final @Nullable Output<Double> protectedItemCount;
 
-    public Output<Double> getProtectedItemCount() {
+    public Output<Double> protectedItemCount() {
         return this.protectedItemCount == null ? Codegen.empty() : this.protectedItemCount;
     }
 
@@ -146,7 +146,7 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="protectionStatus")
       private final @Nullable Output<String> protectionStatus;
 
-    public Output<String> getProtectionStatus() {
+    public Output<String> protectionStatus() {
         return this.protectionStatus == null ? Codegen.empty() : this.protectionStatus;
     }
 
@@ -157,7 +157,7 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="registrationStatus")
       private final @Nullable Output<String> registrationStatus;
 
-    public Output<String> getRegistrationStatus() {
+    public Output<String> registrationStatus() {
         return this.registrationStatus == null ? Codegen.empty() : this.registrationStatus;
     }
 
@@ -168,7 +168,7 @@ public final class DpmContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="upgradeAvailable")
       private final @Nullable Output<Boolean> upgradeAvailable;
 
-    public Output<Boolean> getUpgradeAvailable() {
+    public Output<Boolean> upgradeAvailable() {
         return this.upgradeAvailable == null ? Codegen.empty() : this.upgradeAvailable;
     }
 

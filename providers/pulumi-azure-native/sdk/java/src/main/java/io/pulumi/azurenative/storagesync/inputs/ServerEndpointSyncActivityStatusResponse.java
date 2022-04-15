@@ -24,7 +24,7 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
     @Import(name="appliedBytes", required=true)
       private final Double appliedBytes;
 
-    public Double getAppliedBytes() {
+    public Double appliedBytes() {
         return this.appliedBytes;
     }
 
@@ -35,7 +35,7 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
     @Import(name="appliedItemCount", required=true)
       private final Double appliedItemCount;
 
-    public Double getAppliedItemCount() {
+    public Double appliedItemCount() {
         return this.appliedItemCount;
     }
 
@@ -46,7 +46,7 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
     @Import(name="perItemErrorCount", required=true)
       private final Double perItemErrorCount;
 
-    public Double getPerItemErrorCount() {
+    public Double perItemErrorCount() {
         return this.perItemErrorCount;
     }
 
@@ -57,7 +57,7 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
     @Import(name="syncMode", required=true)
       private final String syncMode;
 
-    public String getSyncMode() {
+    public String syncMode() {
         return this.syncMode;
     }
 
@@ -68,7 +68,7 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
     @Import(name="timestamp", required=true)
       private final String timestamp;
 
-    public String getTimestamp() {
+    public String timestamp() {
         return this.timestamp;
     }
 
@@ -79,7 +79,7 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
     @Import(name="totalBytes", required=true)
       private final Double totalBytes;
 
-    public Double getTotalBytes() {
+    public Double totalBytes() {
         return this.totalBytes;
     }
 
@@ -90,7 +90,7 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
     @Import(name="totalItemCount", required=true)
       private final Double totalItemCount;
 
-    public Double getTotalItemCount() {
+    public Double totalItemCount() {
         return this.totalItemCount;
     }
 

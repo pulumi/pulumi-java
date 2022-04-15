@@ -26,7 +26,7 @@ public final class SecretAttributesResponse extends io.pulumi.resources.InvokeAr
     @Import(name="created", required=true)
       private final Integer created;
 
-    public Integer getCreated() {
+    public Integer created() {
         return this.created;
     }
 
@@ -37,7 +37,7 @@ public final class SecretAttributesResponse extends io.pulumi.resources.InvokeAr
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
@@ -48,7 +48,7 @@ public final class SecretAttributesResponse extends io.pulumi.resources.InvokeAr
     @Import(name="expires")
       private final @Nullable Integer expires;
 
-    public Optional<Integer> getExpires() {
+    public Optional<Integer> expires() {
         return this.expires == null ? Optional.empty() : Optional.ofNullable(this.expires);
     }
 
@@ -59,7 +59,7 @@ public final class SecretAttributesResponse extends io.pulumi.resources.InvokeAr
     @Import(name="notBefore")
       private final @Nullable Integer notBefore;
 
-    public Optional<Integer> getNotBefore() {
+    public Optional<Integer> notBefore() {
         return this.notBefore == null ? Optional.empty() : Optional.ofNullable(this.notBefore);
     }
 
@@ -70,7 +70,7 @@ public final class SecretAttributesResponse extends io.pulumi.resources.InvokeAr
     @Import(name="updated", required=true)
       private final Integer updated;
 
-    public Integer getUpdated() {
+    public Integer updated() {
         return this.updated;
     }
 

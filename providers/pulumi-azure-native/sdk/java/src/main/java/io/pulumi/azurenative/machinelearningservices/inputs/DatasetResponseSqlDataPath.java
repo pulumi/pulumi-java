@@ -24,7 +24,7 @@ public final class DatasetResponseSqlDataPath extends io.pulumi.resources.Invoke
     @Import(name="queryTimeout", required=true)
       private final Double queryTimeout;
 
-    public Double getQueryTimeout() {
+    public Double queryTimeout() {
         return this.queryTimeout;
     }
 
@@ -35,7 +35,7 @@ public final class DatasetResponseSqlDataPath extends io.pulumi.resources.Invoke
     @Import(name="sqlQuery", required=true)
       private final String sqlQuery;
 
-    public String getSqlQuery() {
+    public String sqlQuery() {
         return this.sqlQuery;
     }
 
@@ -46,7 +46,7 @@ public final class DatasetResponseSqlDataPath extends io.pulumi.resources.Invoke
     @Import(name="sqlStoredProcedureName", required=true)
       private final String sqlStoredProcedureName;
 
-    public String getSqlStoredProcedureName() {
+    public String sqlStoredProcedureName() {
         return this.sqlStoredProcedureName;
     }
 
@@ -57,7 +57,7 @@ public final class DatasetResponseSqlDataPath extends io.pulumi.resources.Invoke
     @Import(name="sqlTableName", required=true)
       private final String sqlTableName;
 
-    public String getSqlTableName() {
+    public String sqlTableName() {
         return this.sqlTableName;
     }
 

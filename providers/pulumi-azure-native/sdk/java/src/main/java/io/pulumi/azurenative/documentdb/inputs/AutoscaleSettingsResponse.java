@@ -21,7 +21,7 @@ public final class AutoscaleSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="maxThroughput")
       private final @Nullable Integer maxThroughput;
 
-    public Optional<Integer> getMaxThroughput() {
+    public Optional<Integer> maxThroughput() {
         return this.maxThroughput == null ? Optional.empty() : Optional.ofNullable(this.maxThroughput);
     }
 

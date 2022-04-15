@@ -55,35 +55,35 @@ public final class BaseImageTriggerResponse {
      * The type of the auto trigger for base image dependency updates.
      * 
     */
-    public String getBaseImageTriggerType() {
+    public String baseImageTriggerType() {
         return this.baseImageTriggerType;
     }
     /**
      * The name of the trigger.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The current status of trigger.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The endpoint URL for receiving update triggers.
      * 
     */
-    public Optional<String> getUpdateTriggerEndpoint() {
+    public Optional<String> updateTriggerEndpoint() {
         return Optional.ofNullable(this.updateTriggerEndpoint);
     }
     /**
      * Type of Payload body for Base image update triggers.
      * 
     */
-    public Optional<String> getUpdateTriggerPayloadType() {
+    public Optional<String> updateTriggerPayloadType() {
         return Optional.ofNullable(this.updateTriggerPayloadType);
     }
 

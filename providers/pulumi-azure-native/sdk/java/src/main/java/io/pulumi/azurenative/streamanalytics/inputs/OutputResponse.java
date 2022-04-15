@@ -39,7 +39,7 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="datasource")
       private final @Nullable Object datasource;
 
-    public Object getDatasource() {
+    public Object datasource() {
         return this.datasource == null ? null : this.datasource;
     }
 
@@ -50,7 +50,7 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="diagnostics", required=true)
       private final DiagnosticsResponse diagnostics;
 
-    public DiagnosticsResponse getDiagnostics() {
+    public DiagnosticsResponse diagnostics() {
         return this.diagnostics;
     }
 
@@ -61,7 +61,7 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -72,7 +72,7 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -83,7 +83,7 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -94,7 +94,7 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="serialization")
       private final @Nullable Object serialization;
 
-    public Object getSerialization() {
+    public Object serialization() {
         return this.serialization == null ? null : this.serialization;
     }
 
@@ -105,7 +105,7 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

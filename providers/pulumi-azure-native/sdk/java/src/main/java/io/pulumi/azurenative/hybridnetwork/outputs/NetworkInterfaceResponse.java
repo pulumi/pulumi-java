@@ -50,28 +50,28 @@ public final class NetworkInterfaceResponse {
      * A list of IP configurations of the network interface.
      * 
     */
-    public List<NetworkInterfaceIPConfigurationResponse> getIpConfigurations() {
+    public List<NetworkInterfaceIPConfigurationResponse> ipConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
     /**
      * The MAC address of the network interface.
      * 
     */
-    public Optional<String> getMacAddress() {
+    public Optional<String> macAddress() {
         return Optional.ofNullable(this.macAddress);
     }
     /**
      * The name of the network interface.
      * 
     */
-    public Optional<String> getNetworkInterfaceName() {
+    public Optional<String> networkInterfaceName() {
         return Optional.ofNullable(this.networkInterfaceName);
     }
     /**
      * The type of the VM switch.
      * 
     */
-    public Optional<String> getVmSwitchType() {
+    public Optional<String> vmSwitchType() {
         return Optional.ofNullable(this.vmSwitchType);
     }
 

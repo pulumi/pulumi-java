@@ -35,14 +35,14 @@ public final class DeliveryRuleRequestSchemeConditionResponse {
      * Expected value is 'RequestScheme'.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Defines the parameters for the condition.
      * 
     */
-    public RequestSchemeMatchConditionParametersResponse getParameters() {
+    public RequestSchemeMatchConditionParametersResponse parameters() {
         return this.parameters;
     }
 

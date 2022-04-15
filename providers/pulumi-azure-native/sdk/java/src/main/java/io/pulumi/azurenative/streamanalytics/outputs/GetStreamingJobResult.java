@@ -196,168 +196,168 @@ public final class GetStreamingJobResult {
      * Controls certain runtime behaviors of the streaming job.
      * 
     */
-    public Optional<String> getCompatibilityLevel() {
+    public Optional<String> compatibilityLevel() {
         return Optional.ofNullable(this.compatibilityLevel);
     }
     /**
      * Value is an ISO-8601 formatted UTC timestamp indicating when the streaming job was created.
      * 
     */
-    public String getCreatedDate() {
+    public String createdDate() {
         return this.createdDate;
     }
     /**
      * The data locale of the stream analytics job. Value should be the name of a supported .NET Culture from the set https://msdn.microsoft.com/en-us/library/system.globalization.culturetypes(v=vs.110).aspx. Defaults to 'en-US' if none specified.
      * 
     */
-    public Optional<String> getDataLocale() {
+    public Optional<String> dataLocale() {
         return Optional.ofNullable(this.dataLocale);
     }
     /**
      * The current entity tag for the streaming job. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * The maximum tolerable delay in seconds where events arriving late could be included.  Supported range is -1 to 1814399 (20.23:59:59 days) and -1 is used to specify wait indefinitely. If the property is absent, it is interpreted to have a value of -1.
      * 
     */
-    public Optional<Integer> getEventsLateArrivalMaxDelayInSeconds() {
+    public Optional<Integer> eventsLateArrivalMaxDelayInSeconds() {
         return Optional.ofNullable(this.eventsLateArrivalMaxDelayInSeconds);
     }
     /**
      * The maximum tolerable delay in seconds where out-of-order events can be adjusted to be back in order.
      * 
     */
-    public Optional<Integer> getEventsOutOfOrderMaxDelayInSeconds() {
+    public Optional<Integer> eventsOutOfOrderMaxDelayInSeconds() {
         return Optional.ofNullable(this.eventsOutOfOrderMaxDelayInSeconds);
     }
     /**
      * Indicates the policy to apply to events that arrive out of order in the input event stream.
      * 
     */
-    public Optional<String> getEventsOutOfOrderPolicy() {
+    public Optional<String> eventsOutOfOrderPolicy() {
         return Optional.ofNullable(this.eventsOutOfOrderPolicy);
     }
     /**
      * A list of one or more functions for the streaming job. The name property for each function is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual transformation.
      * 
     */
-    public List<FunctionResponse> getFunctions() {
+    public List<FunctionResponse> functions() {
         return this.functions == null ? List.of() : this.functions;
     }
     /**
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * A list of one or more inputs to the streaming job. The name property for each input is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual input.
      * 
     */
-    public List<InputResponse> getInputs() {
+    public List<InputResponse> inputs() {
         return this.inputs == null ? List.of() : this.inputs;
     }
     /**
      * A GUID uniquely identifying the streaming job. This GUID is generated upon creation of the streaming job.
      * 
     */
-    public String getJobId() {
+    public String jobId() {
         return this.jobId;
     }
     /**
      * Describes the state of the streaming job.
      * 
     */
-    public String getJobState() {
+    public String jobState() {
         return this.jobState;
     }
     /**
      * Value is either an ISO-8601 formatted timestamp indicating the last output event time of the streaming job or null indicating that output has not yet been produced. In case of multiple outputs or multiple streams, this shows the latest value in that set.
      * 
     */
-    public String getLastOutputEventTime() {
+    public String lastOutputEventTime() {
         return this.lastOutputEventTime;
     }
     /**
      * The geo-location where the resource lives
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Indicates the policy to apply to events that arrive at the output and cannot be written to the external storage due to being malformed (missing column values, column values of wrong type or size).
      * 
     */
-    public Optional<String> getOutputErrorPolicy() {
+    public Optional<String> outputErrorPolicy() {
         return Optional.ofNullable(this.outputErrorPolicy);
     }
     /**
      * This property should only be utilized when it is desired that the job be started immediately upon creation. Value may be JobStartTime, CustomTime, or LastOutputEventTime to indicate whether the starting point of the output event stream should start whenever the job is started, start at a custom user time stamp specified via the outputStartTime property, or start from the last event output time.
      * 
     */
-    public Optional<String> getOutputStartMode() {
+    public Optional<String> outputStartMode() {
         return Optional.ofNullable(this.outputStartMode);
     }
     /**
      * Value is either an ISO-8601 formatted time stamp that indicates the starting point of the output event stream, or null to indicate that the output event stream will start whenever the streaming job is started. This property must have a value if outputStartMode is set to CustomTime.
      * 
     */
-    public Optional<String> getOutputStartTime() {
+    public Optional<String> outputStartTime() {
         return Optional.ofNullable(this.outputStartTime);
     }
     /**
      * A list of one or more outputs for the streaming job. The name property for each output is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual output.
      * 
     */
-    public List<OutputResponse> getOutputs() {
+    public List<OutputResponse> outputs() {
         return this.outputs == null ? List.of() : this.outputs;
     }
     /**
      * Describes the provisioning status of the streaming job.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Describes the SKU of the streaming job. Required on PUT (CreateOrReplace) requests.
      * 
     */
-    public Optional<SkuResponse> getSku() {
+    public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Indicates the query and the number of streaming units to use for the streaming job. The name property of the transformation is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual transformation.
      * 
     */
-    public Optional<TransformationResponse> getTransformation() {
+    public Optional<TransformationResponse> transformation() {
         return Optional.ofNullable(this.transformation);
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

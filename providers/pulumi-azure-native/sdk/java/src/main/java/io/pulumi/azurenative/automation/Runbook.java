@@ -48,7 +48,7 @@ public class Runbook extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the creation time.
      * 
      */
-    public Output</* @Nullable */ String> getCreationTime() {
+    public Output</* @Nullable */ String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -62,7 +62,7 @@ public class Runbook extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -76,7 +76,7 @@ public class Runbook extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the draft runbook properties.
      * 
      */
-    public Output</* @Nullable */ RunbookDraftResponse> getDraft() {
+    public Output</* @Nullable */ RunbookDraftResponse> draft() {
         return this.draft;
     }
     /**
@@ -90,7 +90,7 @@ public class Runbook extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the etag of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -104,7 +104,7 @@ public class Runbook extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the job count of the runbook.
      * 
      */
-    public Output</* @Nullable */ Integer> getJobCount() {
+    public Output</* @Nullable */ Integer> jobCount() {
         return this.jobCount;
     }
     /**
@@ -118,7 +118,7 @@ public class Runbook extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the last modified by.
      * 
      */
-    public Output</* @Nullable */ String> getLastModifiedBy() {
+    public Output</* @Nullable */ String> lastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
@@ -132,7 +132,7 @@ public class Runbook extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the last modified time.
      * 
      */
-    public Output</* @Nullable */ String> getLastModifiedTime() {
+    public Output</* @Nullable */ String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -146,7 +146,7 @@ public class Runbook extends io.pulumi.resources.CustomResource {
      * @return The Azure Region where the resource lives
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -160,7 +160,7 @@ public class Runbook extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the option to log activity trace of the runbook.
      * 
      */
-    public Output</* @Nullable */ Integer> getLogActivityTrace() {
+    public Output</* @Nullable */ Integer> logActivityTrace() {
         return this.logActivityTrace;
     }
     /**
@@ -174,7 +174,7 @@ public class Runbook extends io.pulumi.resources.CustomResource {
      * @return Gets or sets progress log option.
      * 
      */
-    public Output</* @Nullable */ Boolean> getLogProgress() {
+    public Output</* @Nullable */ Boolean> logProgress() {
         return this.logProgress;
     }
     /**
@@ -188,7 +188,7 @@ public class Runbook extends io.pulumi.resources.CustomResource {
      * @return Gets or sets verbose log option.
      * 
      */
-    public Output</* @Nullable */ Boolean> getLogVerbose() {
+    public Output</* @Nullable */ Boolean> logVerbose() {
         return this.logVerbose;
     }
     /**
@@ -202,7 +202,7 @@ public class Runbook extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -216,7 +216,7 @@ public class Runbook extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the runbook output types.
      * 
      */
-    public Output</* @Nullable */ List<String>> getOutputTypes() {
+    public Output</* @Nullable */ List<String>> outputTypes() {
         return this.outputTypes;
     }
     /**
@@ -230,7 +230,7 @@ public class Runbook extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the runbook parameters.
      * 
      */
-    public Output</* @Nullable */ Map<String,RunbookParameterResponse>> getParameters() {
+    public Output</* @Nullable */ Map<String,RunbookParameterResponse>> parameters() {
         return this.parameters;
     }
     /**
@@ -244,7 +244,7 @@ public class Runbook extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the provisioning state of the runbook.
      * 
      */
-    public Output</* @Nullable */ String> getProvisioningState() {
+    public Output</* @Nullable */ String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -258,7 +258,7 @@ public class Runbook extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the published runbook content link.
      * 
      */
-    public Output</* @Nullable */ ContentLinkResponse> getPublishContentLink() {
+    public Output</* @Nullable */ ContentLinkResponse> publishContentLink() {
         return this.publishContentLink;
     }
     /**
@@ -272,7 +272,7 @@ public class Runbook extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the type of the runbook.
      * 
      */
-    public Output</* @Nullable */ String> getRunbookType() {
+    public Output</* @Nullable */ String> runbookType() {
         return this.runbookType;
     }
     /**
@@ -286,7 +286,7 @@ public class Runbook extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the state of the runbook.
      * 
      */
-    public Output</* @Nullable */ String> getState() {
+    public Output</* @Nullable */ String> state() {
         return this.state;
     }
     /**
@@ -300,7 +300,7 @@ public class Runbook extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -314,7 +314,7 @@ public class Runbook extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

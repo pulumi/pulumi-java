@@ -16,7 +16,7 @@ public final class PrivateEndpointResponse {
         this.id = id;
     }
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

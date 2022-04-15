@@ -118,96 +118,96 @@ public final class DatastoreResponse {
         this.tags = tags;
     }
 
-    public Optional<AzureDataLakeSectionResponse> getAzureDataLakeSection() {
+    public Optional<AzureDataLakeSectionResponse> azureDataLakeSection() {
         return Optional.ofNullable(this.azureDataLakeSection);
     }
-    public Optional<AzureMySqlSectionResponse> getAzureMySqlSection() {
+    public Optional<AzureMySqlSectionResponse> azureMySqlSection() {
         return Optional.ofNullable(this.azureMySqlSection);
     }
-    public Optional<AzurePostgreSqlSectionResponse> getAzurePostgreSqlSection() {
+    public Optional<AzurePostgreSqlSectionResponse> azurePostgreSqlSection() {
         return Optional.ofNullable(this.azurePostgreSqlSection);
     }
-    public Optional<AzureSqlDatabaseSectionResponse> getAzureSqlDatabaseSection() {
+    public Optional<AzureSqlDatabaseSectionResponse> azureSqlDatabaseSection() {
         return Optional.ofNullable(this.azureSqlDatabaseSection);
     }
-    public Optional<AzureStorageSectionResponse> getAzureStorageSection() {
+    public Optional<AzureStorageSectionResponse> azureStorageSection() {
         return Optional.ofNullable(this.azureStorageSection);
     }
     /**
      * The User who created the datastore.
      * 
     */
-    public UserInfoResponse getCreatedBy() {
+    public UserInfoResponse createdBy() {
         return this.createdBy;
     }
     /**
      * The date and time when the datastore was created.
      * 
     */
-    public String getCreatedTime() {
+    public String createdTime() {
         return this.createdTime;
     }
     /**
      * The datastore type.
      * 
     */
-    public Optional<String> getDataStoreType() {
+    public Optional<String> dataStoreType() {
         return Optional.ofNullable(this.dataStoreType);
     }
     /**
      * Description of the datastore.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Data specific to GlusterFS.
      * 
     */
-    public Optional<GlusterFsSectionResponse> getGlusterFsSection() {
+    public Optional<GlusterFsSectionResponse> glusterFsSection() {
         return Optional.ofNullable(this.glusterFsSection);
     }
     /**
      * A read only property that denotes whether the service datastore has been validated with credentials.
      * 
     */
-    public Optional<Boolean> getHasBeenValidated() {
+    public Optional<Boolean> hasBeenValidated() {
         return Optional.ofNullable(this.hasBeenValidated);
     }
     /**
      * Info about origin if it is linked.
      * 
     */
-    public Optional<LinkedInfoResponse> getLinkedInfo() {
+    public Optional<LinkedInfoResponse> linkedInfo() {
         return Optional.ofNullable(this.linkedInfo);
     }
     /**
      * The User who modified the datastore.
      * 
     */
-    public UserInfoResponse getModifiedBy() {
+    public UserInfoResponse modifiedBy() {
         return this.modifiedBy;
     }
     /**
      * The date and time when the datastore was last modified.
      * 
     */
-    public String getModifiedTime() {
+    public String modifiedTime() {
         return this.modifiedTime;
     }
     /**
      * Name of the datastore.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Tags for this datastore.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

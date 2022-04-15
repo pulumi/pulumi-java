@@ -22,7 +22,7 @@ public final class DiagnosticLoggerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="diagnosticId", required=true)
       private final Output<String> diagnosticId;
 
-    public Output<String> getDiagnosticId() {
+    public Output<String> diagnosticId() {
         return this.diagnosticId;
     }
 
@@ -33,7 +33,7 @@ public final class DiagnosticLoggerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="loggerid")
       private final @Nullable Output<String> loggerid;
 
-    public Output<String> getLoggerid() {
+    public Output<String> loggerid() {
         return this.loggerid == null ? Codegen.empty() : this.loggerid;
     }
 
@@ -44,7 +44,7 @@ public final class DiagnosticLoggerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,7 +55,7 @@ public final class DiagnosticLoggerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 

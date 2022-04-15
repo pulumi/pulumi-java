@@ -42,21 +42,21 @@ public final class JobCollectionQuotaResponse {
      * Gets or set the maximum job count.
      * 
     */
-    public Optional<Integer> getMaxJobCount() {
+    public Optional<Integer> maxJobCount() {
         return Optional.ofNullable(this.maxJobCount);
     }
     /**
      * Gets or sets the maximum job occurrence.
      * 
     */
-    public Optional<Integer> getMaxJobOccurrence() {
+    public Optional<Integer> maxJobOccurrence() {
         return Optional.ofNullable(this.maxJobOccurrence);
     }
     /**
      * Gets or set the maximum recurrence.
      * 
     */
-    public Optional<JobMaxRecurrenceResponse> getMaxRecurrence() {
+    public Optional<JobMaxRecurrenceResponse> maxRecurrence() {
         return Optional.ofNullable(this.maxRecurrence);
     }
 

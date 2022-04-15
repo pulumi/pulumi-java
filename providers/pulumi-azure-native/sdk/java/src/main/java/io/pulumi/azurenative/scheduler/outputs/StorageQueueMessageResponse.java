@@ -48,28 +48,28 @@ public final class StorageQueueMessageResponse {
      * Gets or sets the message.
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
      * Gets or sets the queue name.
      * 
     */
-    public Optional<String> getQueueName() {
+    public Optional<String> queueName() {
         return Optional.ofNullable(this.queueName);
     }
     /**
      * Gets or sets the SAS key.
      * 
     */
-    public Optional<String> getSasToken() {
+    public Optional<String> sasToken() {
         return Optional.ofNullable(this.sasToken);
     }
     /**
      * Gets or sets the storage account name.
      * 
     */
-    public Optional<String> getStorageAccount() {
+    public Optional<String> storageAccount() {
         return Optional.ofNullable(this.storageAccount);
     }
 

@@ -38,7 +38,7 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="addressPrefix")
       private final @Nullable String addressPrefix;
 
-    public Optional<String> getAddressPrefix() {
+    public Optional<String> addressPrefix() {
         return this.addressPrefix == null ? Optional.empty() : Optional.ofNullable(this.addressPrefix);
     }
 
@@ -49,7 +49,7 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="addressPrefixes")
       private final @Nullable List<String> addressPrefixes;
 
-    public List<String> getAddressPrefixes() {
+    public List<String> addressPrefixes() {
         return this.addressPrefixes == null ? List.of() : this.addressPrefixes;
     }
 
@@ -60,7 +60,7 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="applicationGatewayIpConfigurations")
       private final @Nullable List<ApplicationGatewayIPConfigurationResponse> applicationGatewayIpConfigurations;
 
-    public List<ApplicationGatewayIPConfigurationResponse> getApplicationGatewayIpConfigurations() {
+    public List<ApplicationGatewayIPConfigurationResponse> applicationGatewayIpConfigurations() {
         return this.applicationGatewayIpConfigurations == null ? List.of() : this.applicationGatewayIpConfigurations;
     }
 
@@ -71,7 +71,7 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="delegations")
       private final @Nullable List<DelegationResponse> delegations;
 
-    public List<DelegationResponse> getDelegations() {
+    public List<DelegationResponse> delegations() {
         return this.delegations == null ? List.of() : this.delegations;
     }
 
@@ -82,7 +82,7 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -93,7 +93,7 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -104,7 +104,7 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="ipAllocations")
       private final @Nullable List<SubResourceResponse> ipAllocations;
 
-    public List<SubResourceResponse> getIpAllocations() {
+    public List<SubResourceResponse> ipAllocations() {
         return this.ipAllocations == null ? List.of() : this.ipAllocations;
     }
 
@@ -115,7 +115,7 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="ipConfigurationProfiles", required=true)
       private final List<IPConfigurationProfileResponse> ipConfigurationProfiles;
 
-    public List<IPConfigurationProfileResponse> getIpConfigurationProfiles() {
+    public List<IPConfigurationProfileResponse> ipConfigurationProfiles() {
         return this.ipConfigurationProfiles;
     }
 
@@ -126,7 +126,7 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="ipConfigurations", required=true)
       private final List<IPConfigurationResponse> ipConfigurations;
 
-    public List<IPConfigurationResponse> getIpConfigurations() {
+    public List<IPConfigurationResponse> ipConfigurations() {
         return this.ipConfigurations;
     }
 
@@ -137,7 +137,7 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -148,7 +148,7 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="natGateway")
       private final @Nullable SubResourceResponse natGateway;
 
-    public Optional<SubResourceResponse> getNatGateway() {
+    public Optional<SubResourceResponse> natGateway() {
         return this.natGateway == null ? Optional.empty() : Optional.ofNullable(this.natGateway);
     }
 
@@ -159,7 +159,7 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="networkSecurityGroup")
       private final @Nullable NetworkSecurityGroupResponse networkSecurityGroup;
 
-    public Optional<NetworkSecurityGroupResponse> getNetworkSecurityGroup() {
+    public Optional<NetworkSecurityGroupResponse> networkSecurityGroup() {
         return this.networkSecurityGroup == null ? Optional.empty() : Optional.ofNullable(this.networkSecurityGroup);
     }
 
@@ -170,7 +170,7 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="privateEndpointNetworkPolicies")
       private final @Nullable String privateEndpointNetworkPolicies;
 
-    public Optional<String> getPrivateEndpointNetworkPolicies() {
+    public Optional<String> privateEndpointNetworkPolicies() {
         return this.privateEndpointNetworkPolicies == null ? Optional.empty() : Optional.ofNullable(this.privateEndpointNetworkPolicies);
     }
 
@@ -181,7 +181,7 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="privateEndpoints", required=true)
       private final List<PrivateEndpointResponse> privateEndpoints;
 
-    public List<PrivateEndpointResponse> getPrivateEndpoints() {
+    public List<PrivateEndpointResponse> privateEndpoints() {
         return this.privateEndpoints;
     }
 
@@ -192,7 +192,7 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="privateLinkServiceNetworkPolicies")
       private final @Nullable String privateLinkServiceNetworkPolicies;
 
-    public Optional<String> getPrivateLinkServiceNetworkPolicies() {
+    public Optional<String> privateLinkServiceNetworkPolicies() {
         return this.privateLinkServiceNetworkPolicies == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceNetworkPolicies);
     }
 
@@ -203,7 +203,7 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -214,7 +214,7 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="purpose", required=true)
       private final String purpose;
 
-    public String getPurpose() {
+    public String purpose() {
         return this.purpose;
     }
 
@@ -225,7 +225,7 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceNavigationLinks", required=true)
       private final List<ResourceNavigationLinkResponse> resourceNavigationLinks;
 
-    public List<ResourceNavigationLinkResponse> getResourceNavigationLinks() {
+    public List<ResourceNavigationLinkResponse> resourceNavigationLinks() {
         return this.resourceNavigationLinks;
     }
 
@@ -236,7 +236,7 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="routeTable")
       private final @Nullable RouteTableResponse routeTable;
 
-    public Optional<RouteTableResponse> getRouteTable() {
+    public Optional<RouteTableResponse> routeTable() {
         return this.routeTable == null ? Optional.empty() : Optional.ofNullable(this.routeTable);
     }
 
@@ -247,7 +247,7 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="serviceAssociationLinks", required=true)
       private final List<ServiceAssociationLinkResponse> serviceAssociationLinks;
 
-    public List<ServiceAssociationLinkResponse> getServiceAssociationLinks() {
+    public List<ServiceAssociationLinkResponse> serviceAssociationLinks() {
         return this.serviceAssociationLinks;
     }
 
@@ -258,7 +258,7 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="serviceEndpointPolicies")
       private final @Nullable List<ServiceEndpointPolicyResponse> serviceEndpointPolicies;
 
-    public List<ServiceEndpointPolicyResponse> getServiceEndpointPolicies() {
+    public List<ServiceEndpointPolicyResponse> serviceEndpointPolicies() {
         return this.serviceEndpointPolicies == null ? List.of() : this.serviceEndpointPolicies;
     }
 
@@ -269,7 +269,7 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="serviceEndpoints")
       private final @Nullable List<ServiceEndpointPropertiesFormatResponse> serviceEndpoints;
 
-    public List<ServiceEndpointPropertiesFormatResponse> getServiceEndpoints() {
+    public List<ServiceEndpointPropertiesFormatResponse> serviceEndpoints() {
         return this.serviceEndpoints == null ? List.of() : this.serviceEndpoints;
     }
 
@@ -280,7 +280,7 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

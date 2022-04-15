@@ -43,7 +43,7 @@ public class JitRequest extends io.pulumi.resources.CustomResource {
      * @return The parent application id.
      * 
      */
-    public Output<String> getApplicationResourceId() {
+    public Output<String> applicationResourceId() {
         return this.applicationResourceId;
     }
     /**
@@ -57,7 +57,7 @@ public class JitRequest extends io.pulumi.resources.CustomResource {
      * @return The client entity that created the JIT request.
      * 
      */
-    public Output<ApplicationClientDetailsResponse> getCreatedBy() {
+    public Output<ApplicationClientDetailsResponse> createdBy() {
         return this.createdBy;
     }
     /**
@@ -71,7 +71,7 @@ public class JitRequest extends io.pulumi.resources.CustomResource {
      * @return The JIT authorization policies.
      * 
      */
-    public Output<List<JitAuthorizationPoliciesResponse>> getJitAuthorizationPolicies() {
+    public Output<List<JitAuthorizationPoliciesResponse>> jitAuthorizationPolicies() {
         return this.jitAuthorizationPolicies;
     }
     /**
@@ -85,7 +85,7 @@ public class JitRequest extends io.pulumi.resources.CustomResource {
      * @return The JIT request state.
      * 
      */
-    public Output<String> getJitRequestState() {
+    public Output<String> jitRequestState() {
         return this.jitRequestState;
     }
     /**
@@ -99,7 +99,7 @@ public class JitRequest extends io.pulumi.resources.CustomResource {
      * @return The JIT request properties.
      * 
      */
-    public Output<JitSchedulingPolicyResponse> getJitSchedulingPolicy() {
+    public Output<JitSchedulingPolicyResponse> jitSchedulingPolicy() {
         return this.jitSchedulingPolicy;
     }
     /**
@@ -113,7 +113,7 @@ public class JitRequest extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -127,7 +127,7 @@ public class JitRequest extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -141,7 +141,7 @@ public class JitRequest extends io.pulumi.resources.CustomResource {
      * @return The JIT request provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -155,7 +155,7 @@ public class JitRequest extends io.pulumi.resources.CustomResource {
      * @return The publisher tenant id.
      * 
      */
-    public Output<String> getPublisherTenantId() {
+    public Output<String> publisherTenantId() {
         return this.publisherTenantId;
     }
     /**
@@ -169,7 +169,7 @@ public class JitRequest extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -183,7 +183,7 @@ public class JitRequest extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -197,7 +197,7 @@ public class JitRequest extends io.pulumi.resources.CustomResource {
      * @return The client entity that last updated the JIT request.
      * 
      */
-    public Output<ApplicationClientDetailsResponse> getUpdatedBy() {
+    public Output<ApplicationClientDetailsResponse> updatedBy() {
         return this.updatedBy;
     }
 

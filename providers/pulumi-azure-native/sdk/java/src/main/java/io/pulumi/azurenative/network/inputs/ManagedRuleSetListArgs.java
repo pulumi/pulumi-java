@@ -27,7 +27,7 @@ public final class ManagedRuleSetListArgs extends io.pulumi.resources.ResourceAr
     @Import(name="managedRuleSets")
       private final @Nullable Output<List<FrontDoorManagedRuleSetArgs>> managedRuleSets;
 
-    public Output<List<FrontDoorManagedRuleSetArgs>> getManagedRuleSets() {
+    public Output<List<FrontDoorManagedRuleSetArgs>> managedRuleSets() {
         return this.managedRuleSets == null ? Codegen.empty() : this.managedRuleSets;
     }
 

@@ -24,7 +24,7 @@ public final class PemCertificateListResponse extends io.pulumi.resources.Invoke
     @Import(name="certificates", required=true)
       private final List<String> certificates;
 
-    public List<String> getCertificates() {
+    public List<String> certificates() {
         return this.certificates;
     }
 
@@ -36,7 +36,7 @@ public final class PemCertificateListResponse extends io.pulumi.resources.Invoke
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

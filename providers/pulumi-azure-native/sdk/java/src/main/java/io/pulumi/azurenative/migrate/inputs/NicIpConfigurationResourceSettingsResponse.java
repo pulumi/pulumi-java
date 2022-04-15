@@ -31,7 +31,7 @@ public final class NicIpConfigurationResourceSettingsResponse extends io.pulumi.
     @Import(name="loadBalancerBackendAddressPools")
       private final @Nullable List<LoadBalancerBackendAddressPoolReferenceResponse> loadBalancerBackendAddressPools;
 
-    public List<LoadBalancerBackendAddressPoolReferenceResponse> getLoadBalancerBackendAddressPools() {
+    public List<LoadBalancerBackendAddressPoolReferenceResponse> loadBalancerBackendAddressPools() {
         return this.loadBalancerBackendAddressPools == null ? List.of() : this.loadBalancerBackendAddressPools;
     }
 
@@ -42,7 +42,7 @@ public final class NicIpConfigurationResourceSettingsResponse extends io.pulumi.
     @Import(name="loadBalancerNatRules")
       private final @Nullable List<LoadBalancerNatRuleReferenceResponse> loadBalancerNatRules;
 
-    public List<LoadBalancerNatRuleReferenceResponse> getLoadBalancerNatRules() {
+    public List<LoadBalancerNatRuleReferenceResponse> loadBalancerNatRules() {
         return this.loadBalancerNatRules == null ? List.of() : this.loadBalancerNatRules;
     }
 
@@ -53,7 +53,7 @@ public final class NicIpConfigurationResourceSettingsResponse extends io.pulumi.
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -64,7 +64,7 @@ public final class NicIpConfigurationResourceSettingsResponse extends io.pulumi.
     @Import(name="primary")
       private final @Nullable Boolean primary;
 
-    public Optional<Boolean> getPrimary() {
+    public Optional<Boolean> primary() {
         return this.primary == null ? Optional.empty() : Optional.ofNullable(this.primary);
     }
 
@@ -75,7 +75,7 @@ public final class NicIpConfigurationResourceSettingsResponse extends io.pulumi.
     @Import(name="privateIpAddress")
       private final @Nullable String privateIpAddress;
 
-    public Optional<String> getPrivateIpAddress() {
+    public Optional<String> privateIpAddress() {
         return this.privateIpAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIpAddress);
     }
 
@@ -86,7 +86,7 @@ public final class NicIpConfigurationResourceSettingsResponse extends io.pulumi.
     @Import(name="privateIpAllocationMethod")
       private final @Nullable String privateIpAllocationMethod;
 
-    public Optional<String> getPrivateIpAllocationMethod() {
+    public Optional<String> privateIpAllocationMethod() {
         return this.privateIpAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.privateIpAllocationMethod);
     }
 
@@ -97,7 +97,7 @@ public final class NicIpConfigurationResourceSettingsResponse extends io.pulumi.
     @Import(name="publicIp")
       private final @Nullable PublicIpReferenceResponse publicIp;
 
-    public Optional<PublicIpReferenceResponse> getPublicIp() {
+    public Optional<PublicIpReferenceResponse> publicIp() {
         return this.publicIp == null ? Optional.empty() : Optional.ofNullable(this.publicIp);
     }
 
@@ -108,7 +108,7 @@ public final class NicIpConfigurationResourceSettingsResponse extends io.pulumi.
     @Import(name="subnet")
       private final @Nullable SubnetReferenceResponse subnet;
 
-    public Optional<SubnetReferenceResponse> getSubnet() {
+    public Optional<SubnetReferenceResponse> subnet() {
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
     }
 

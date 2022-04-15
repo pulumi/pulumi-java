@@ -156,7 +156,7 @@ public class ExtendedDatabaseBlobAuditingPolicy extends io.pulumi.resources.Cust
      * For more information, see [Database-Level Audit Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)
      * 
      */
-    public Output</* @Nullable */ List<String>> getAuditActionsAndGroups() {
+    public Output</* @Nullable */ List<String>> auditActionsAndGroups() {
         return this.auditActionsAndGroups;
     }
     /**
@@ -190,7 +190,7 @@ public class ExtendedDatabaseBlobAuditingPolicy extends io.pulumi.resources.Cust
      * or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsAzureMonitorTargetEnabled() {
+    public Output</* @Nullable */ Boolean> isAzureMonitorTargetEnabled() {
         return this.isAzureMonitorTargetEnabled;
     }
     /**
@@ -204,7 +204,7 @@ public class ExtendedDatabaseBlobAuditingPolicy extends io.pulumi.resources.Cust
      * @return Specifies whether storageAccountAccessKey value is the storage's secondary key.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsStorageSecondaryKeyInUse() {
+    public Output</* @Nullable */ Boolean> isStorageSecondaryKeyInUse() {
         return this.isStorageSecondaryKeyInUse;
     }
     /**
@@ -218,7 +218,7 @@ public class ExtendedDatabaseBlobAuditingPolicy extends io.pulumi.resources.Cust
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -232,7 +232,7 @@ public class ExtendedDatabaseBlobAuditingPolicy extends io.pulumi.resources.Cust
      * @return Specifies condition of where clause when creating an audit.
      * 
      */
-    public Output</* @Nullable */ String> getPredicateExpression() {
+    public Output</* @Nullable */ String> predicateExpression() {
         return this.predicateExpression;
     }
     /**
@@ -248,7 +248,7 @@ public class ExtendedDatabaseBlobAuditingPolicy extends io.pulumi.resources.Cust
      * The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
      * 
      */
-    public Output</* @Nullable */ Integer> getQueueDelayMs() {
+    public Output</* @Nullable */ Integer> queueDelayMs() {
         return this.queueDelayMs;
     }
     /**
@@ -262,7 +262,7 @@ public class ExtendedDatabaseBlobAuditingPolicy extends io.pulumi.resources.Cust
      * @return Specifies the number of days to keep in the audit logs in the storage account.
      * 
      */
-    public Output</* @Nullable */ Integer> getRetentionDays() {
+    public Output</* @Nullable */ Integer> retentionDays() {
         return this.retentionDays;
     }
     /**
@@ -276,7 +276,7 @@ public class ExtendedDatabaseBlobAuditingPolicy extends io.pulumi.resources.Cust
      * @return Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -290,7 +290,7 @@ public class ExtendedDatabaseBlobAuditingPolicy extends io.pulumi.resources.Cust
      * @return Specifies the blob storage subscription Id.
      * 
      */
-    public Output</* @Nullable */ String> getStorageAccountSubscriptionId() {
+    public Output</* @Nullable */ String> storageAccountSubscriptionId() {
         return this.storageAccountSubscriptionId;
     }
     /**
@@ -304,7 +304,7 @@ public class ExtendedDatabaseBlobAuditingPolicy extends io.pulumi.resources.Cust
      * @return Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
      * 
      */
-    public Output</* @Nullable */ String> getStorageEndpoint() {
+    public Output</* @Nullable */ String> storageEndpoint() {
         return this.storageEndpoint;
     }
     /**
@@ -318,7 +318,7 @@ public class ExtendedDatabaseBlobAuditingPolicy extends io.pulumi.resources.Cust
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

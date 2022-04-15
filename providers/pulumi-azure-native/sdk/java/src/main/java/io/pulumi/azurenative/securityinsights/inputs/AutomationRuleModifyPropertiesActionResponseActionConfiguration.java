@@ -28,7 +28,7 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
     @Import(name="classification")
       private final @Nullable String classification;
 
-    public Optional<String> getClassification() {
+    public Optional<String> classification() {
         return this.classification == null ? Optional.empty() : Optional.ofNullable(this.classification);
     }
 
@@ -39,7 +39,7 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
     @Import(name="classificationComment")
       private final @Nullable String classificationComment;
 
-    public Optional<String> getClassificationComment() {
+    public Optional<String> classificationComment() {
         return this.classificationComment == null ? Optional.empty() : Optional.ofNullable(this.classificationComment);
     }
 
@@ -50,7 +50,7 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
     @Import(name="classificationReason")
       private final @Nullable String classificationReason;
 
-    public Optional<String> getClassificationReason() {
+    public Optional<String> classificationReason() {
         return this.classificationReason == null ? Optional.empty() : Optional.ofNullable(this.classificationReason);
     }
 
@@ -61,7 +61,7 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
     @Import(name="labels")
       private final @Nullable List<IncidentLabelResponse> labels;
 
-    public List<IncidentLabelResponse> getLabels() {
+    public List<IncidentLabelResponse> labels() {
         return this.labels == null ? List.of() : this.labels;
     }
 
@@ -72,7 +72,7 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
     @Import(name="owner")
       private final @Nullable IncidentOwnerInfoResponse owner;
 
-    public Optional<IncidentOwnerInfoResponse> getOwner() {
+    public Optional<IncidentOwnerInfoResponse> owner() {
         return this.owner == null ? Optional.empty() : Optional.ofNullable(this.owner);
     }
 
@@ -83,7 +83,7 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
     @Import(name="severity")
       private final @Nullable String severity;
 
-    public Optional<String> getSeverity() {
+    public Optional<String> severity() {
         return this.severity == null ? Optional.empty() : Optional.ofNullable(this.severity);
     }
 
@@ -94,7 +94,7 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 

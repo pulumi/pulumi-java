@@ -26,7 +26,7 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
     @Import(name="availabilityGroupListenerName")
       private final @Nullable Output<String> availabilityGroupListenerName;
 
-    public Output<String> getAvailabilityGroupListenerName() {
+    public Output<String> availabilityGroupListenerName() {
         return this.availabilityGroupListenerName == null ? Codegen.empty() : this.availabilityGroupListenerName;
     }
 
@@ -37,7 +37,7 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
     @Import(name="availabilityGroupName")
       private final @Nullable Output<String> availabilityGroupName;
 
-    public Output<String> getAvailabilityGroupName() {
+    public Output<String> availabilityGroupName() {
         return this.availabilityGroupName == null ? Codegen.empty() : this.availabilityGroupName;
     }
 
@@ -48,7 +48,7 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
     @Import(name="createDefaultAvailabilityGroupIfNotExist")
       private final @Nullable Output<Boolean> createDefaultAvailabilityGroupIfNotExist;
 
-    public Output<Boolean> getCreateDefaultAvailabilityGroupIfNotExist() {
+    public Output<Boolean> createDefaultAvailabilityGroupIfNotExist() {
         return this.createDefaultAvailabilityGroupIfNotExist == null ? Codegen.empty() : this.createDefaultAvailabilityGroupIfNotExist;
     }
 
@@ -59,7 +59,7 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
     @Import(name="loadBalancerConfigurations")
       private final @Nullable Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations;
 
-    public Output<List<LoadBalancerConfigurationArgs>> getLoadBalancerConfigurations() {
+    public Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations() {
         return this.loadBalancerConfigurations == null ? Codegen.empty() : this.loadBalancerConfigurations;
     }
 
@@ -70,7 +70,7 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -81,7 +81,7 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -92,7 +92,7 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
     @Import(name="sqlVirtualMachineGroupName", required=true)
       private final Output<String> sqlVirtualMachineGroupName;
 
-    public Output<String> getSqlVirtualMachineGroupName() {
+    public Output<String> sqlVirtualMachineGroupName() {
         return this.sqlVirtualMachineGroupName;
     }
 

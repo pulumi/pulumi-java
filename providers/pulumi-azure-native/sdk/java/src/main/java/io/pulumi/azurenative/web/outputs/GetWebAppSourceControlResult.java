@@ -99,77 +99,77 @@ public final class GetWebAppSourceControlResult {
      * Name of branch to use for deployment.
      * 
     */
-    public Optional<String> getBranch() {
+    public Optional<String> branch() {
         return Optional.ofNullable(this.branch);
     }
     /**
      * <code>true</code> to enable deployment rollback; otherwise, <code>false</code>.
      * 
     */
-    public Optional<Boolean> getDeploymentRollbackEnabled() {
+    public Optional<Boolean> deploymentRollbackEnabled() {
         return Optional.ofNullable(this.deploymentRollbackEnabled);
     }
     /**
      * If GitHub Action is selected, than the associated configuration.
      * 
     */
-    public Optional<GitHubActionConfigurationResponse> getGitHubActionConfiguration() {
+    public Optional<GitHubActionConfigurationResponse> gitHubActionConfiguration() {
         return Optional.ofNullable(this.gitHubActionConfiguration);
     }
     /**
      * Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * <code>true</code> if this is deployed via GitHub action.
      * 
     */
-    public Optional<Boolean> getIsGitHubAction() {
+    public Optional<Boolean> isGitHubAction() {
         return Optional.ofNullable(this.isGitHubAction);
     }
     /**
      * <code>true</code> to limit to manual integration; <code>false</code> to enable continuous integration (which configures webhooks into online repos like GitHub).
      * 
     */
-    public Optional<Boolean> getIsManualIntegration() {
+    public Optional<Boolean> isManualIntegration() {
         return Optional.ofNullable(this.isManualIntegration);
     }
     /**
      * <code>true</code> for a Mercurial repository; <code>false</code> for a Git repository.
      * 
     */
-    public Optional<Boolean> getIsMercurial() {
+    public Optional<Boolean> isMercurial() {
         return Optional.ofNullable(this.isMercurial);
     }
     /**
      * Kind of resource.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Repository or source control URL.
      * 
     */
-    public Optional<String> getRepoUrl() {
+    public Optional<String> repoUrl() {
         return Optional.ofNullable(this.repoUrl);
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

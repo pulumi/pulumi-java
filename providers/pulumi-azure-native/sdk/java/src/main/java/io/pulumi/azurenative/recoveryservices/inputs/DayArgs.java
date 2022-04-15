@@ -27,7 +27,7 @@ public final class DayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="date")
       private final @Nullable Output<Integer> date;
 
-    public Output<Integer> getDate() {
+    public Output<Integer> date() {
         return this.date == null ? Codegen.empty() : this.date;
     }
 
@@ -38,7 +38,7 @@ public final class DayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isLast")
       private final @Nullable Output<Boolean> isLast;
 
-    public Output<Boolean> getIsLast() {
+    public Output<Boolean> isLast() {
         return this.isLast == null ? Codegen.empty() : this.isLast;
     }
 

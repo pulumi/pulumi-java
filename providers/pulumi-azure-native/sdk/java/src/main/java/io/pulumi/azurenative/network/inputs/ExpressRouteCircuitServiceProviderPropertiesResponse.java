@@ -26,7 +26,7 @@ public final class ExpressRouteCircuitServiceProviderPropertiesResponse extends 
     @Import(name="bandwidthInMbps")
       private final @Nullable Integer bandwidthInMbps;
 
-    public Optional<Integer> getBandwidthInMbps() {
+    public Optional<Integer> bandwidthInMbps() {
         return this.bandwidthInMbps == null ? Optional.empty() : Optional.ofNullable(this.bandwidthInMbps);
     }
 
@@ -37,7 +37,7 @@ public final class ExpressRouteCircuitServiceProviderPropertiesResponse extends 
     @Import(name="peeringLocation")
       private final @Nullable String peeringLocation;
 
-    public Optional<String> getPeeringLocation() {
+    public Optional<String> peeringLocation() {
         return this.peeringLocation == null ? Optional.empty() : Optional.ofNullable(this.peeringLocation);
     }
 
@@ -48,7 +48,7 @@ public final class ExpressRouteCircuitServiceProviderPropertiesResponse extends 
     @Import(name="serviceProviderName")
       private final @Nullable String serviceProviderName;
 
-    public Optional<String> getServiceProviderName() {
+    public Optional<String> serviceProviderName() {
         return this.serviceProviderName == null ? Optional.empty() : Optional.ofNullable(this.serviceProviderName);
     }
 

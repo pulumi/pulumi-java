@@ -29,7 +29,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createOption")
       private final @Nullable Output<Either<String,DiskCreateOptionTypes>> createOption;
 
-    public Output<Either<String,DiskCreateOptionTypes>> getCreateOption() {
+    public Output<Either<String,DiskCreateOptionTypes>> createOption() {
         return this.createOption == null ? Codegen.empty() : this.createOption;
     }
 
@@ -40,7 +40,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGB")
       private final @Nullable Output<Integer> diskSizeGB;
 
-    public Output<Integer> getDiskSizeGB() {
+    public Output<Integer> diskSizeGB() {
         return this.diskSizeGB == null ? Codegen.empty() : this.diskSizeGB;
     }
 
@@ -51,7 +51,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

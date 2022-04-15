@@ -154,133 +154,133 @@ public final class AzurePostgreSqlSectionResponse {
      * The authority URL used for authentication.
      * 
     */
-    public Optional<String> getAuthorityUrl() {
+    public Optional<String> authorityUrl() {
         return Optional.ofNullable(this.authorityUrl);
     }
     /**
      * The content of the certificate used for authentication.
      * 
     */
-    public Optional<String> getCertificate() {
+    public Optional<String> certificate() {
         return Optional.ofNullable(this.certificate);
     }
     /**
      * The Client ID/Application ID
      * 
     */
-    public Optional<String> getClientId() {
+    public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
      * The client secret.
      * 
     */
-    public Optional<String> getClientSecret() {
+    public Optional<String> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
     /**
      * Sql Authentication type.
      * 
     */
-    public Optional<String> getCredentialType() {
+    public Optional<String> credentialType() {
         return Optional.ofNullable(this.credentialType);
     }
     /**
      * The Azure SQL database name.
      * 
     */
-    public Optional<String> getDatabaseName() {
+    public Optional<String> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
     /**
      * Indicates SSL requirement of Azure Postgresql server.
      * 
     */
-    public Optional<Boolean> getEnableSsl() {
+    public Optional<Boolean> enableSsl() {
         return Optional.ofNullable(this.enableSsl);
     }
     /**
      * The server host endpoint.
      * 
     */
-    public Optional<String> getEndpoint() {
+    public Optional<String> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
     /**
      *  Is it using certificate to authenticate. If false then use client secret.
      * 
     */
-    public Optional<Boolean> getIsCertAuth() {
+    public Optional<Boolean> isCertAuth() {
         return Optional.ofNullable(this.isCertAuth);
     }
     /**
      * / The Azure SQL port number.
      * 
     */
-    public Optional<String> getPortNumber() {
+    public Optional<String> portNumber() {
         return Optional.ofNullable(this.portNumber);
     }
     /**
      * Resource Group.
      * 
     */
-    public Optional<String> getResourceGroup() {
+    public Optional<String> resourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
     /**
      * The resource the service principal/app has access to.
      * 
     */
-    public Optional<String> getResourceUri() {
+    public Optional<String> resourceUri() {
         return Optional.ofNullable(this.resourceUri);
     }
     /**
      * The Azure SQL server name.
      * 
     */
-    public Optional<String> getServerName() {
+    public Optional<String> serverName() {
         return Optional.ofNullable(this.serverName);
     }
     /**
      * Indicates which identity to use to authenticate service data access to customer's storage.
      * 
     */
-    public Optional<String> getServiceDataAccessAuthIdentity() {
+    public Optional<String> serviceDataAccessAuthIdentity() {
         return Optional.ofNullable(this.serviceDataAccessAuthIdentity);
     }
     /**
      * Subscription ID.
      * 
     */
-    public Optional<String> getSubscriptionId() {
+    public Optional<String> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
     /**
      * The ID of the tenant the service principal/app belongs to.
      * 
     */
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * The thumbprint of the certificate above.
      * 
     */
-    public Optional<String> getThumbprint() {
+    public Optional<String> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
     /**
      * The Azure SQL user id.
      * 
     */
-    public Optional<String> getUserId() {
+    public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
     /**
      * The Azure SQL user password.
      * 
     */
-    public Optional<String> getUserPassword() {
+    public Optional<String> userPassword() {
         return Optional.ofNullable(this.userPassword);
     }
 

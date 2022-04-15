@@ -26,7 +26,7 @@ public final class FlowLogFormatParametersResponse extends io.pulumi.resources.I
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
@@ -37,7 +37,7 @@ public final class FlowLogFormatParametersResponse extends io.pulumi.resources.I
     @Import(name="version")
       private final @Nullable Integer version;
 
-    public Optional<Integer> getVersion() {
+    public Optional<Integer> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

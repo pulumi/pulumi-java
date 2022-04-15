@@ -92,70 +92,70 @@ public final class AS2ValidationSettingsResponse {
      * The value indicating whether to check for certificate revocation list on receive.
      * 
     */
-    public Boolean getCheckCertificateRevocationListOnReceive() {
+    public Boolean checkCertificateRevocationListOnReceive() {
         return this.checkCertificateRevocationListOnReceive;
     }
     /**
      * The value indicating whether to check for certificate revocation list on send.
      * 
     */
-    public Boolean getCheckCertificateRevocationListOnSend() {
+    public Boolean checkCertificateRevocationListOnSend() {
         return this.checkCertificateRevocationListOnSend;
     }
     /**
      * The value indicating whether to check for duplicate message.
      * 
     */
-    public Boolean getCheckDuplicateMessage() {
+    public Boolean checkDuplicateMessage() {
         return this.checkDuplicateMessage;
     }
     /**
      * The value indicating whether the message has to be compressed.
      * 
     */
-    public Boolean getCompressMessage() {
+    public Boolean compressMessage() {
         return this.compressMessage;
     }
     /**
      * The value indicating whether the message has to be encrypted.
      * 
     */
-    public Boolean getEncryptMessage() {
+    public Boolean encryptMessage() {
         return this.encryptMessage;
     }
     /**
      * The encryption algorithm.
      * 
     */
-    public String getEncryptionAlgorithm() {
+    public String encryptionAlgorithm() {
         return this.encryptionAlgorithm;
     }
     /**
      * The number of days to look back for duplicate interchange.
      * 
     */
-    public Integer getInterchangeDuplicatesValidityDays() {
+    public Integer interchangeDuplicatesValidityDays() {
         return this.interchangeDuplicatesValidityDays;
     }
     /**
      * The value indicating whether to override incoming message properties with those in agreement.
      * 
     */
-    public Boolean getOverrideMessageProperties() {
+    public Boolean overrideMessageProperties() {
         return this.overrideMessageProperties;
     }
     /**
      * The value indicating whether the message has to be signed.
      * 
     */
-    public Boolean getSignMessage() {
+    public Boolean signMessage() {
         return this.signMessage;
     }
     /**
      * The signing algorithm.
      * 
     */
-    public Optional<String> getSigningAlgorithm() {
+    public Optional<String> signingAlgorithm() {
         return Optional.ofNullable(this.signingAlgorithm);
     }
 

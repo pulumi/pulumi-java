@@ -25,7 +25,7 @@ public final class ManagedClusterServicePrincipalProfileResponse extends io.pulu
     @Import(name="clientId", required=true)
       private final String clientId;
 
-    public String getClientId() {
+    public String clientId() {
         return this.clientId;
     }
 
@@ -36,7 +36,7 @@ public final class ManagedClusterServicePrincipalProfileResponse extends io.pulu
     @Import(name="secret")
       private final @Nullable String secret;
 
-    public Optional<String> getSecret() {
+    public Optional<String> secret() {
         return this.secret == null ? Optional.empty() : Optional.ofNullable(this.secret);
     }
 

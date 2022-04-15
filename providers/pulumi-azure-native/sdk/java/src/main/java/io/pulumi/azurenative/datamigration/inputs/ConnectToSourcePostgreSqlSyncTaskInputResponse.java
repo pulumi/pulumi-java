@@ -23,7 +23,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskInputResponse extends io.pul
     @Import(name="sourceConnectionInfo", required=true)
       private final PostgreSqlConnectionInfoResponse sourceConnectionInfo;
 
-    public PostgreSqlConnectionInfoResponse getSourceConnectionInfo() {
+    public PostgreSqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 

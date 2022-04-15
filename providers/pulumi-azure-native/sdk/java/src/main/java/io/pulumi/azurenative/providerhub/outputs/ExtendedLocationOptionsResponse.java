@@ -22,10 +22,10 @@ public final class ExtendedLocationOptionsResponse {
         this.type = type;
     }
 
-    public Optional<String> getSupportedPolicy() {
+    public Optional<String> supportedPolicy() {
         return Optional.ofNullable(this.supportedPolicy);
     }
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

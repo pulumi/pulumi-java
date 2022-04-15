@@ -18,14 +18,14 @@ public final class EventLogConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     @Import(name="logName", required=true)
       private final Output<String> logName;
 
-    public Output<String> getLogName() {
+    public Output<String> logName() {
         return this.logName;
     }
 

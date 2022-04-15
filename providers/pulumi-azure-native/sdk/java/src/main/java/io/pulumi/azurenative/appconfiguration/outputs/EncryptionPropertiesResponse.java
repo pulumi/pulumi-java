@@ -26,7 +26,7 @@ public final class EncryptionPropertiesResponse {
      * Key vault properties.
      * 
     */
-    public Optional<KeyVaultPropertiesResponse> getKeyVaultProperties() {
+    public Optional<KeyVaultPropertiesResponse> keyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
 

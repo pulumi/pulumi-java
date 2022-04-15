@@ -28,7 +28,7 @@ public final class AzureActiveDirectoryValidationArgs extends io.pulumi.resource
     @Import(name="allowedAudiences")
       private final @Nullable Output<List<String>> allowedAudiences;
 
-    public Output<List<String>> getAllowedAudiences() {
+    public Output<List<String>> allowedAudiences() {
         return this.allowedAudiences == null ? Codegen.empty() : this.allowedAudiences;
     }
 
@@ -39,7 +39,7 @@ public final class AzureActiveDirectoryValidationArgs extends io.pulumi.resource
     @Import(name="jwtClaimChecks")
       private final @Nullable Output<JwtClaimChecksArgs> jwtClaimChecks;
 
-    public Output<JwtClaimChecksArgs> getJwtClaimChecks() {
+    public Output<JwtClaimChecksArgs> jwtClaimChecks() {
         return this.jwtClaimChecks == null ? Codegen.empty() : this.jwtClaimChecks;
     }
 

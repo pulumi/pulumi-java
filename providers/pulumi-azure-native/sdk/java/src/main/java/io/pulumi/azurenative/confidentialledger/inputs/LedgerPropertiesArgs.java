@@ -31,7 +31,7 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="aadBasedSecurityPrincipals")
       private final @Nullable Output<List<AADBasedSecurityPrincipalArgs>> aadBasedSecurityPrincipals;
 
-    public Output<List<AADBasedSecurityPrincipalArgs>> getAadBasedSecurityPrincipals() {
+    public Output<List<AADBasedSecurityPrincipalArgs>> aadBasedSecurityPrincipals() {
         return this.aadBasedSecurityPrincipals == null ? Codegen.empty() : this.aadBasedSecurityPrincipals;
     }
 
@@ -42,7 +42,7 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="certBasedSecurityPrincipals")
       private final @Nullable Output<List<CertBasedSecurityPrincipalArgs>> certBasedSecurityPrincipals;
 
-    public Output<List<CertBasedSecurityPrincipalArgs>> getCertBasedSecurityPrincipals() {
+    public Output<List<CertBasedSecurityPrincipalArgs>> certBasedSecurityPrincipals() {
         return this.certBasedSecurityPrincipals == null ? Codegen.empty() : this.certBasedSecurityPrincipals;
     }
 
@@ -53,7 +53,7 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ledgerStorageAccount")
       private final @Nullable Output<String> ledgerStorageAccount;
 
-    public Output<String> getLedgerStorageAccount() {
+    public Output<String> ledgerStorageAccount() {
         return this.ledgerStorageAccount == null ? Codegen.empty() : this.ledgerStorageAccount;
     }
 
@@ -64,7 +64,7 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ledgerType")
       private final @Nullable Output<Either<String,LedgerType>> ledgerType;
 
-    public Output<Either<String,LedgerType>> getLedgerType() {
+    public Output<Either<String,LedgerType>> ledgerType() {
         return this.ledgerType == null ? Codegen.empty() : this.ledgerType;
     }
 

@@ -19,7 +19,7 @@ public final class GetWebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.r
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetWebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.r
     @Import(name="resourceName", required=true)
       private final String resourceName;
 
-    public String getPropResourceName() {
+    public String resourceName() {
         return this.resourceName;
     }
 
@@ -41,7 +41,7 @@ public final class GetWebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.r
     @Import(name="sharedPrivateLinkResourceName", required=true)
       private final String sharedPrivateLinkResourceName;
 
-    public String getSharedPrivateLinkResourceName() {
+    public String sharedPrivateLinkResourceName() {
         return this.sharedPrivateLinkResourceName;
     }
 

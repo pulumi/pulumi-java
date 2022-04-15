@@ -26,7 +26,7 @@ public final class DefenderForServersAwsOfferingServicePrincipalSecretMetadataAr
     @Import(name="expiryDate")
       private final @Nullable Output<String> expiryDate;
 
-    public Output<String> getExpiryDate() {
+    public Output<String> expiryDate() {
         return this.expiryDate == null ? Codegen.empty() : this.expiryDate;
     }
 
@@ -37,7 +37,7 @@ public final class DefenderForServersAwsOfferingServicePrincipalSecretMetadataAr
     @Import(name="parameterNameInStore")
       private final @Nullable Output<String> parameterNameInStore;
 
-    public Output<String> getParameterNameInStore() {
+    public Output<String> parameterNameInStore() {
         return this.parameterNameInStore == null ? Codegen.empty() : this.parameterNameInStore;
     }
 
@@ -48,7 +48,7 @@ public final class DefenderForServersAwsOfferingServicePrincipalSecretMetadataAr
     @Import(name="parameterStoreRegion")
       private final @Nullable Output<String> parameterStoreRegion;
 
-    public Output<String> getParameterStoreRegion() {
+    public Output<String> parameterStoreRegion() {
         return this.parameterStoreRegion == null ? Codegen.empty() : this.parameterStoreRegion;
     }
 

@@ -115,91 +115,91 @@ public final class GetRedisEnterpriseResult {
      * DNS name of the cluster endpoint
      * 
     */
-    public String getHostName() {
+    public String hostName() {
         return this.hostName;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The minimum TLS version for the cluster to support, e.g. '1.2'
      * 
     */
-    public Optional<String> getMinimumTlsVersion() {
+    public Optional<String> minimumTlsVersion() {
         return Optional.ofNullable(this.minimumTlsVersion);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * List of private endpoint connections associated with the specified RedisEnterprise cluster
      * 
     */
-    public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
+    public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * Current provisioning status of the cluster
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Version of redis the cluster supports, e.g. '6'
      * 
     */
-    public String getRedisVersion() {
+    public String redisVersion() {
         return this.redisVersion;
     }
     /**
      * Current resource status of the cluster
      * 
     */
-    public String getResourceState() {
+    public String resourceState() {
         return this.resourceState;
     }
     /**
      * The SKU to create, which affects price, performance, and features.
      * 
     */
-    public EnterpriseSkuResponse getSku() {
+    public EnterpriseSkuResponse sku() {
         return this.sku;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The Availability Zones where this cluster will be deployed.
      * 
     */
-    public List<String> getZones() {
+    public List<String> zones() {
         return this.zones == null ? List.of() : this.zones;
     }
 

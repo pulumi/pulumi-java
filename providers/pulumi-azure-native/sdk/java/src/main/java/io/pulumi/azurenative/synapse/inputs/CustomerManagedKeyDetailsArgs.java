@@ -26,7 +26,7 @@ public final class CustomerManagedKeyDetailsArgs extends io.pulumi.resources.Res
     @Import(name="key")
       private final @Nullable Output<WorkspaceKeyDetailsArgs> key;
 
-    public Output<WorkspaceKeyDetailsArgs> getKey() {
+    public Output<WorkspaceKeyDetailsArgs> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 

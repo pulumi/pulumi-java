@@ -62,42 +62,42 @@ public final class ListWebAppHybridConnectionKeysSlotResult {
      * Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The name of the send key.
      * 
     */
-    public String getSendKeyName() {
+    public String sendKeyName() {
         return this.sendKeyName;
     }
     /**
      * The value of the send key.
      * 
     */
-    public String getSendKeyValue() {
+    public String sendKeyValue() {
         return this.sendKeyValue;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

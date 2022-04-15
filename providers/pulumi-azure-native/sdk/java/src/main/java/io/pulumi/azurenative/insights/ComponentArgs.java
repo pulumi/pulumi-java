@@ -31,7 +31,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationType", required=true)
       private final Output<Either<String,ApplicationType>> applicationType;
 
-    public Output<Either<String,ApplicationType>> getApplicationType() {
+    public Output<Either<String,ApplicationType>> applicationType() {
         return this.applicationType;
     }
 
@@ -42,7 +42,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableIpMasking")
       private final @Nullable Output<Boolean> disableIpMasking;
 
-    public Output<Boolean> getDisableIpMasking() {
+    public Output<Boolean> disableIpMasking() {
         return this.disableIpMasking == null ? Codegen.empty() : this.disableIpMasking;
     }
 
@@ -53,7 +53,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="flowType")
       private final @Nullable Output<Either<String,FlowType>> flowType;
 
-    public Output<Either<String,FlowType>> getFlowType() {
+    public Output<Either<String,FlowType>> flowType() {
         return this.flowType == null ? Codegen.empty() : this.flowType;
     }
 
@@ -64,7 +64,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hockeyAppId")
       private final @Nullable Output<String> hockeyAppId;
 
-    public Output<String> getHockeyAppId() {
+    public Output<String> hockeyAppId() {
         return this.hockeyAppId == null ? Codegen.empty() : this.hockeyAppId;
     }
 
@@ -75,7 +75,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="immediatePurgeDataOn30Days")
       private final @Nullable Output<Boolean> immediatePurgeDataOn30Days;
 
-    public Output<Boolean> getImmediatePurgeDataOn30Days() {
+    public Output<Boolean> immediatePurgeDataOn30Days() {
         return this.immediatePurgeDataOn30Days == null ? Codegen.empty() : this.immediatePurgeDataOn30Days;
     }
 
@@ -86,7 +86,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ingestionMode")
       private final @Nullable Output<Either<String,IngestionMode>> ingestionMode;
 
-    public Output<Either<String,IngestionMode>> getIngestionMode() {
+    public Output<Either<String,IngestionMode>> ingestionMode() {
         return this.ingestionMode == null ? Codegen.empty() : this.ingestionMode;
     }
 
@@ -97,7 +97,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -108,7 +108,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -119,7 +119,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requestSource")
       private final @Nullable Output<Either<String,RequestSource>> requestSource;
 
-    public Output<Either<String,RequestSource>> getRequestSource() {
+    public Output<Either<String,RequestSource>> requestSource() {
         return this.requestSource == null ? Codegen.empty() : this.requestSource;
     }
 
@@ -130,7 +130,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -141,7 +141,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
@@ -152,7 +152,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retentionInDays")
       private final @Nullable Output<Integer> retentionInDays;
 
-    public Output<Integer> getRetentionInDays() {
+    public Output<Integer> retentionInDays() {
         return this.retentionInDays == null ? Codegen.empty() : this.retentionInDays;
     }
 
@@ -163,7 +163,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="samplingPercentage")
       private final @Nullable Output<Double> samplingPercentage;
 
-    public Output<Double> getSamplingPercentage() {
+    public Output<Double> samplingPercentage() {
         return this.samplingPercentage == null ? Codegen.empty() : this.samplingPercentage;
     }
 
@@ -174,7 +174,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

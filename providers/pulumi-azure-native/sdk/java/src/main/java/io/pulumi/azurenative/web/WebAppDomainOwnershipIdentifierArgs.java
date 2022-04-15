@@ -22,7 +22,7 @@ public final class WebAppDomainOwnershipIdentifierArgs extends io.pulumi.resourc
     @Import(name="domainOwnershipIdentifierName")
       private final @Nullable Output<String> domainOwnershipIdentifierName;
 
-    public Output<String> getDomainOwnershipIdentifierName() {
+    public Output<String> domainOwnershipIdentifierName() {
         return this.domainOwnershipIdentifierName == null ? Codegen.empty() : this.domainOwnershipIdentifierName;
     }
 
@@ -33,7 +33,7 @@ public final class WebAppDomainOwnershipIdentifierArgs extends io.pulumi.resourc
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -44,7 +44,7 @@ public final class WebAppDomainOwnershipIdentifierArgs extends io.pulumi.resourc
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -55,7 +55,7 @@ public final class WebAppDomainOwnershipIdentifierArgs extends io.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,7 +66,7 @@ public final class WebAppDomainOwnershipIdentifierArgs extends io.pulumi.resourc
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

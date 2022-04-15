@@ -41,21 +41,21 @@ public final class ConflictResolutionPolicyResponse {
      * The conflict resolution path in the case of LastWriterWins mode.
      * 
     */
-    public Optional<String> getConflictResolutionPath() {
+    public Optional<String> conflictResolutionPath() {
         return Optional.ofNullable(this.conflictResolutionPath);
     }
     /**
      * The procedure to resolve conflicts in the case of custom mode.
      * 
     */
-    public Optional<String> getConflictResolutionProcedure() {
+    public Optional<String> conflictResolutionProcedure() {
         return Optional.ofNullable(this.conflictResolutionProcedure);
     }
     /**
      * Indicates the conflict resolution mode.
      * 
     */
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
 

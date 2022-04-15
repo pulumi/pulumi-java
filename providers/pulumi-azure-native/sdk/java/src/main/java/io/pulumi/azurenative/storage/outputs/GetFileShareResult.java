@@ -150,126 +150,126 @@ public final class GetFileShareResult {
      * Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.
      * 
     */
-    public Optional<String> getAccessTier() {
+    public Optional<String> accessTier() {
         return Optional.ofNullable(this.accessTier);
     }
     /**
      * Indicates the last modification time for share access tier.
      * 
     */
-    public String getAccessTierChangeTime() {
+    public String accessTierChangeTime() {
         return this.accessTierChangeTime;
     }
     /**
      * Indicates if there is a pending transition for access tier.
      * 
     */
-    public String getAccessTierStatus() {
+    public String accessTierStatus() {
         return this.accessTierStatus;
     }
     /**
      * Indicates whether the share was deleted.
      * 
     */
-    public Boolean getDeleted() {
+    public Boolean deleted() {
         return this.deleted;
     }
     /**
      * The deleted time if the share was deleted.
      * 
     */
-    public String getDeletedTime() {
+    public String deletedTime() {
         return this.deletedTime;
     }
     /**
      * The authentication protocol that is used for the file share. Can only be specified when creating a share.
      * 
     */
-    public Optional<String> getEnabledProtocols() {
+    public Optional<String> enabledProtocols() {
         return Optional.ofNullable(this.enabledProtocols);
     }
     /**
      * Resource Etag.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Returns the date and time the share was last modified.
      * 
     */
-    public String getLastModifiedTime() {
+    public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * A name-value pair to associate with the share as metadata.
      * 
     */
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Remaining retention days for share that was soft deleted.
      * 
     */
-    public Integer getRemainingRetentionDays() {
+    public Integer remainingRetentionDays() {
         return this.remainingRetentionDays;
     }
     /**
      * The property is for NFS share only. The default is NoRootSquash.
      * 
     */
-    public Optional<String> getRootSquash() {
+    public Optional<String> rootSquash() {
         return Optional.ofNullable(this.rootSquash);
     }
     /**
      * The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.
      * 
     */
-    public Optional<Integer> getShareQuota() {
+    public Optional<Integer> shareQuota() {
         return Optional.ofNullable(this.shareQuota);
     }
     /**
      * The approximate size of the data stored on the share. Note that this value may not include all recently created or recently resized files.
      * 
     */
-    public Double getShareUsageBytes() {
+    public Double shareUsageBytes() {
         return this.shareUsageBytes;
     }
     /**
      * Creation time of share snapshot returned in the response of list shares with expand param "snapshots".
      * 
     */
-    public String getSnapshotTime() {
+    public String snapshotTime() {
         return this.snapshotTime;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The version of the share.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

@@ -44,7 +44,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The ETag for the application
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -58,7 +58,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +72,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The properties of the application.
      * 
      */
-    public Output<ApplicationPropertiesResponse> getProperties() {
+    public Output<ApplicationPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -86,7 +86,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The tags for the application.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -100,7 +100,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

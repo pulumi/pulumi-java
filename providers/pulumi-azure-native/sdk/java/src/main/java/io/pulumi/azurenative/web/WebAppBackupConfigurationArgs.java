@@ -26,7 +26,7 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="backupName")
       private final @Nullable Output<String> backupName;
 
-    public Output<String> getBackupName() {
+    public Output<String> backupName() {
         return this.backupName == null ? Codegen.empty() : this.backupName;
     }
 
@@ -37,7 +37,7 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="backupSchedule")
       private final @Nullable Output<BackupScheduleArgs> backupSchedule;
 
-    public Output<BackupScheduleArgs> getBackupSchedule() {
+    public Output<BackupScheduleArgs> backupSchedule() {
         return this.backupSchedule == null ? Codegen.empty() : this.backupSchedule;
     }
 
@@ -48,7 +48,7 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="databases")
       private final @Nullable Output<List<DatabaseBackupSettingArgs>> databases;
 
-    public Output<List<DatabaseBackupSettingArgs>> getDatabases() {
+    public Output<List<DatabaseBackupSettingArgs>> databases() {
         return this.databases == null ? Codegen.empty() : this.databases;
     }
 
@@ -59,7 +59,7 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -70,7 +70,7 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -81,7 +81,7 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -92,7 +92,7 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -103,7 +103,7 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="storageAccountUrl", required=true)
       private final Output<String> storageAccountUrl;
 
-    public Output<String> getStorageAccountUrl() {
+    public Output<String> storageAccountUrl() {
         return this.storageAccountUrl;
     }
 

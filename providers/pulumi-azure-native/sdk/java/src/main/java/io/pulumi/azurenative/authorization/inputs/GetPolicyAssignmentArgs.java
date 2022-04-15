@@ -19,7 +19,7 @@ public final class GetPolicyAssignmentArgs extends io.pulumi.resources.InvokeArg
     @Import(name="policyAssignmentName", required=true)
       private final String policyAssignmentName;
 
-    public String getPolicyAssignmentName() {
+    public String policyAssignmentName() {
         return this.policyAssignmentName;
     }
 
@@ -30,7 +30,7 @@ public final class GetPolicyAssignmentArgs extends io.pulumi.resources.InvokeArg
     @Import(name="scope", required=true)
       private final String scope;
 
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
 

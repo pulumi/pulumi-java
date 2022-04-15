@@ -30,7 +30,7 @@ public final class EnterpriseChannelPropertiesArgs extends io.pulumi.resources.R
     @Import(name="nodes", required=true)
       private final Output<List<EnterpriseChannelNodeArgs>> nodes;
 
-    public Output<List<EnterpriseChannelNodeArgs>> getNodes() {
+    public Output<List<EnterpriseChannelNodeArgs>> nodes() {
         return this.nodes;
     }
 
@@ -41,7 +41,7 @@ public final class EnterpriseChannelPropertiesArgs extends io.pulumi.resources.R
     @Import(name="state")
       private final @Nullable Output<Either<String,EnterpriseChannelState>> state;
 
-    public Output<Either<String,EnterpriseChannelState>> getState() {
+    public Output<Either<String,EnterpriseChannelState>> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

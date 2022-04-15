@@ -33,7 +33,7 @@ public final class GoogleCloudStorageLinkedServiceResponse extends io.pulumi.res
     @Import(name="accessKeyId")
       private final @Nullable Object accessKeyId;
 
-    public Optional<Object> getAccessKeyId() {
+    public Optional<Object> accessKeyId() {
         return this.accessKeyId == null ? Optional.empty() : Optional.ofNullable(this.accessKeyId);
     }
 
@@ -44,7 +44,7 @@ public final class GoogleCloudStorageLinkedServiceResponse extends io.pulumi.res
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -55,7 +55,7 @@ public final class GoogleCloudStorageLinkedServiceResponse extends io.pulumi.res
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
@@ -66,7 +66,7 @@ public final class GoogleCloudStorageLinkedServiceResponse extends io.pulumi.res
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -77,7 +77,7 @@ public final class GoogleCloudStorageLinkedServiceResponse extends io.pulumi.res
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
@@ -88,7 +88,7 @@ public final class GoogleCloudStorageLinkedServiceResponse extends io.pulumi.res
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -99,7 +99,7 @@ public final class GoogleCloudStorageLinkedServiceResponse extends io.pulumi.res
     @Import(name="secretAccessKey")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretAccessKey;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getSecretAccessKey() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretAccessKey() {
         return this.secretAccessKey == null ? null : this.secretAccessKey;
     }
 
@@ -110,7 +110,7 @@ public final class GoogleCloudStorageLinkedServiceResponse extends io.pulumi.res
     @Import(name="serviceUrl")
       private final @Nullable Object serviceUrl;
 
-    public Optional<Object> getServiceUrl() {
+    public Optional<Object> serviceUrl() {
         return this.serviceUrl == null ? Optional.empty() : Optional.ofNullable(this.serviceUrl);
     }
 
@@ -122,7 +122,7 @@ public final class GoogleCloudStorageLinkedServiceResponse extends io.pulumi.res
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -43,7 +43,7 @@ public class AlertsSuppressionRule extends io.pulumi.resources.CustomResource {
      * @return Type of the alert to automatically suppress. For all alert types, use '*'
      * 
      */
-    public Output<String> getAlertType() {
+    public Output<String> alertType() {
         return this.alertType;
     }
     /**
@@ -57,7 +57,7 @@ public class AlertsSuppressionRule extends io.pulumi.resources.CustomResource {
      * @return Any comment regarding the rule
      * 
      */
-    public Output</* @Nullable */ String> getComment() {
+    public Output</* @Nullable */ String> comment() {
         return this.comment;
     }
     /**
@@ -71,7 +71,7 @@ public class AlertsSuppressionRule extends io.pulumi.resources.CustomResource {
      * @return Expiration date of the rule, if value is not provided or provided as null this field will default to the maximum allowed expiration date.
      * 
      */
-    public Output</* @Nullable */ String> getExpirationDateUtc() {
+    public Output</* @Nullable */ String> expirationDateUtc() {
         return this.expirationDateUtc;
     }
     /**
@@ -85,7 +85,7 @@ public class AlertsSuppressionRule extends io.pulumi.resources.CustomResource {
      * @return The last time this rule was modified
      * 
      */
-    public Output<String> getLastModifiedUtc() {
+    public Output<String> lastModifiedUtc() {
         return this.lastModifiedUtc;
     }
     /**
@@ -99,7 +99,7 @@ public class AlertsSuppressionRule extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -113,7 +113,7 @@ public class AlertsSuppressionRule extends io.pulumi.resources.CustomResource {
      * @return The reason for dismissing the alert
      * 
      */
-    public Output<String> getReason() {
+    public Output<String> reason() {
         return this.reason;
     }
     /**
@@ -127,7 +127,7 @@ public class AlertsSuppressionRule extends io.pulumi.resources.CustomResource {
      * @return Possible states of the rule
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -141,7 +141,7 @@ public class AlertsSuppressionRule extends io.pulumi.resources.CustomResource {
      * @return The suppression conditions
      * 
      */
-    public Output</* @Nullable */ SuppressionAlertsScopeResponse> getSuppressionAlertsScope() {
+    public Output</* @Nullable */ SuppressionAlertsScopeResponse> suppressionAlertsScope() {
         return this.suppressionAlertsScope;
     }
     /**
@@ -155,7 +155,7 @@ public class AlertsSuppressionRule extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

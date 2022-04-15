@@ -26,7 +26,7 @@ public final class CacheUsernameDownloadSettingsCredentialsArgs extends io.pulum
     @Import(name="bindDn")
       private final @Nullable Output<String> bindDn;
 
-    public Output<String> getBindDn() {
+    public Output<String> bindDn() {
         return this.bindDn == null ? Codegen.empty() : this.bindDn;
     }
 
@@ -37,7 +37,7 @@ public final class CacheUsernameDownloadSettingsCredentialsArgs extends io.pulum
     @Import(name="bindPassword")
       private final @Nullable Output<String> bindPassword;
 
-    public Output<String> getBindPassword() {
+    public Output<String> bindPassword() {
         return this.bindPassword == null ? Codegen.empty() : this.bindPassword;
     }
 

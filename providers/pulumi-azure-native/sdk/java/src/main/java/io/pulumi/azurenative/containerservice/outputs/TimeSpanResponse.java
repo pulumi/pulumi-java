@@ -34,14 +34,14 @@ public final class TimeSpanResponse {
      * The end of a time span
      * 
     */
-    public Optional<String> getEnd() {
+    public Optional<String> end() {
         return Optional.ofNullable(this.end);
     }
     /**
      * The start of a time span
      * 
     */
-    public Optional<String> getStart() {
+    public Optional<String> start() {
         return Optional.ofNullable(this.start);
     }
 

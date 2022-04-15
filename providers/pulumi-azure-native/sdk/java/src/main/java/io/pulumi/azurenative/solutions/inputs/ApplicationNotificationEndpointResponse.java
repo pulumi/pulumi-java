@@ -23,7 +23,7 @@ public final class ApplicationNotificationEndpointResponse extends io.pulumi.res
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

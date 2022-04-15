@@ -24,7 +24,7 @@ public final class UserAssignedIdentityAuthInfoResponse extends io.pulumi.resour
     @Import(name="authType", required=true)
       private final String authType;
 
-    public String getAuthType() {
+    public String authType() {
         return this.authType;
     }
 
@@ -35,7 +35,7 @@ public final class UserAssignedIdentityAuthInfoResponse extends io.pulumi.resour
     @Import(name="clientId", required=true)
       private final String clientId;
 
-    public String getClientId() {
+    public String clientId() {
         return this.clientId;
     }
 
@@ -46,7 +46,7 @@ public final class UserAssignedIdentityAuthInfoResponse extends io.pulumi.resour
     @Import(name="subscriptionId", required=true)
       private final String subscriptionId;
 
-    public String getSubscriptionId() {
+    public String subscriptionId() {
         return this.subscriptionId;
     }
 

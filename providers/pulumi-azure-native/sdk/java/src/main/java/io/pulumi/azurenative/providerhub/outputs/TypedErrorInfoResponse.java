@@ -21,10 +21,10 @@ public final class TypedErrorInfoResponse {
         this.type = type;
     }
 
-    public Object getInfo() {
+    public Object info() {
         return this.info;
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

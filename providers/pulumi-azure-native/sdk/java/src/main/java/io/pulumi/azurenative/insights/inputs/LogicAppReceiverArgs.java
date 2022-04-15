@@ -27,7 +27,7 @@ public final class LogicAppReceiverArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="callbackUrl", required=true)
       private final Output<String> callbackUrl;
 
-    public Output<String> getCallbackUrl() {
+    public Output<String> callbackUrl() {
         return this.callbackUrl;
     }
 
@@ -38,7 +38,7 @@ public final class LogicAppReceiverArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -49,7 +49,7 @@ public final class LogicAppReceiverArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 
@@ -60,7 +60,7 @@ public final class LogicAppReceiverArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="useCommonAlertSchema")
       private final @Nullable Output<Boolean> useCommonAlertSchema;
 
-    public Output<Boolean> getUseCommonAlertSchema() {
+    public Output<Boolean> useCommonAlertSchema() {
         return this.useCommonAlertSchema == null ? Codegen.empty() : this.useCommonAlertSchema;
     }
 

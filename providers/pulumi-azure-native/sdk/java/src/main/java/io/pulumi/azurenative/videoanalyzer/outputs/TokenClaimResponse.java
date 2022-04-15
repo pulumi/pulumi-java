@@ -32,14 +32,14 @@ public final class TokenClaimResponse {
      * Name of the claim which must be present on the token.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Expected value of the claim to be present on the token.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

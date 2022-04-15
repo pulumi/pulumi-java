@@ -44,7 +44,7 @@ public final class NumberNotInAdvancedFilterResponse {
      * The field/property in the event based on which you want to filter.
      * 
     */
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
@@ -52,14 +52,14 @@ public final class NumberNotInAdvancedFilterResponse {
      * Expected value is 'NumberNotIn'.
      * 
     */
-    public String getOperatorType() {
+    public String operatorType() {
         return this.operatorType;
     }
     /**
      * The set of filter values.
      * 
     */
-    public List<Double> getValues() {
+    public List<Double> values() {
         return this.values == null ? List.of() : this.values;
     }
 

@@ -26,7 +26,7 @@ public final class SapTablePartitionSettingsArgs extends io.pulumi.resources.Res
     @Import(name="maxPartitionsNumber")
       private final @Nullable Output<Object> maxPartitionsNumber;
 
-    public Output<Object> getMaxPartitionsNumber() {
+    public Output<Object> maxPartitionsNumber() {
         return this.maxPartitionsNumber == null ? Codegen.empty() : this.maxPartitionsNumber;
     }
 
@@ -37,7 +37,7 @@ public final class SapTablePartitionSettingsArgs extends io.pulumi.resources.Res
     @Import(name="partitionColumnName")
       private final @Nullable Output<Object> partitionColumnName;
 
-    public Output<Object> getPartitionColumnName() {
+    public Output<Object> partitionColumnName() {
         return this.partitionColumnName == null ? Codegen.empty() : this.partitionColumnName;
     }
 
@@ -48,7 +48,7 @@ public final class SapTablePartitionSettingsArgs extends io.pulumi.resources.Res
     @Import(name="partitionLowerBound")
       private final @Nullable Output<Object> partitionLowerBound;
 
-    public Output<Object> getPartitionLowerBound() {
+    public Output<Object> partitionLowerBound() {
         return this.partitionLowerBound == null ? Codegen.empty() : this.partitionLowerBound;
     }
 
@@ -59,7 +59,7 @@ public final class SapTablePartitionSettingsArgs extends io.pulumi.resources.Res
     @Import(name="partitionUpperBound")
       private final @Nullable Output<Object> partitionUpperBound;
 
-    public Output<Object> getPartitionUpperBound() {
+    public Output<Object> partitionUpperBound() {
         return this.partitionUpperBound == null ? Codegen.empty() : this.partitionUpperBound;
     }
 

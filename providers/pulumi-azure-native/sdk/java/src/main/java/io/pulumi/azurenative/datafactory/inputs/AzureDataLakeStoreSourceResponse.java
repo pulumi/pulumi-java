@@ -26,7 +26,7 @@ public final class AzureDataLakeStoreSourceResponse extends io.pulumi.resources.
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
-    public Optional<Object> getDisableMetricsCollection() {
+    public Optional<Object> disableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
@@ -37,7 +37,7 @@ public final class AzureDataLakeStoreSourceResponse extends io.pulumi.resources.
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
-    public Optional<Object> getMaxConcurrentConnections() {
+    public Optional<Object> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
@@ -48,7 +48,7 @@ public final class AzureDataLakeStoreSourceResponse extends io.pulumi.resources.
     @Import(name="recursive")
       private final @Nullable Object recursive;
 
-    public Optional<Object> getRecursive() {
+    public Optional<Object> recursive() {
         return this.recursive == null ? Optional.empty() : Optional.ofNullable(this.recursive);
     }
 
@@ -59,7 +59,7 @@ public final class AzureDataLakeStoreSourceResponse extends io.pulumi.resources.
     @Import(name="sourceRetryCount")
       private final @Nullable Object sourceRetryCount;
 
-    public Optional<Object> getSourceRetryCount() {
+    public Optional<Object> sourceRetryCount() {
         return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
     }
 
@@ -70,7 +70,7 @@ public final class AzureDataLakeStoreSourceResponse extends io.pulumi.resources.
     @Import(name="sourceRetryWait")
       private final @Nullable Object sourceRetryWait;
 
-    public Optional<Object> getSourceRetryWait() {
+    public Optional<Object> sourceRetryWait() {
         return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
     }
 
@@ -82,7 +82,7 @@ public final class AzureDataLakeStoreSourceResponse extends io.pulumi.resources.
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

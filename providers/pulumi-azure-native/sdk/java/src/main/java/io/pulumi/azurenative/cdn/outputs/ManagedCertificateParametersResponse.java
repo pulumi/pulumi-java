@@ -26,7 +26,7 @@ public final class ManagedCertificateParametersResponse {
      * Expected value is 'ManagedCertificate'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

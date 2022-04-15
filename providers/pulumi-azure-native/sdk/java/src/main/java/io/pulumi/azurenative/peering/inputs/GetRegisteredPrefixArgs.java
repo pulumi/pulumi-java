@@ -19,7 +19,7 @@ public final class GetRegisteredPrefixArgs extends io.pulumi.resources.InvokeArg
     @Import(name="peeringName", required=true)
       private final String peeringName;
 
-    public String getPeeringName() {
+    public String peeringName() {
         return this.peeringName;
     }
 
@@ -30,7 +30,7 @@ public final class GetRegisteredPrefixArgs extends io.pulumi.resources.InvokeArg
     @Import(name="registeredPrefixName", required=true)
       private final String registeredPrefixName;
 
-    public String getRegisteredPrefixName() {
+    public String registeredPrefixName() {
         return this.registeredPrefixName;
     }
 
@@ -41,7 +41,7 @@ public final class GetRegisteredPrefixArgs extends io.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

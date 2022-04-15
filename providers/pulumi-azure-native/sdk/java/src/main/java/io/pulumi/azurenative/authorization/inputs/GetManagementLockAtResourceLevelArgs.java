@@ -19,7 +19,7 @@ public final class GetManagementLockAtResourceLevelArgs extends io.pulumi.resour
     @Import(name="lockName", required=true)
       private final String lockName;
 
-    public String getLockName() {
+    public String lockName() {
         return this.lockName;
     }
 
@@ -30,7 +30,7 @@ public final class GetManagementLockAtResourceLevelArgs extends io.pulumi.resour
     @Import(name="parentResourcePath", required=true)
       private final String parentResourcePath;
 
-    public String getParentResourcePath() {
+    public String parentResourcePath() {
         return this.parentResourcePath;
     }
 
@@ -41,7 +41,7 @@ public final class GetManagementLockAtResourceLevelArgs extends io.pulumi.resour
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,7 +52,7 @@ public final class GetManagementLockAtResourceLevelArgs extends io.pulumi.resour
     @Import(name="resourceName", required=true)
       private final String resourceName;
 
-    public String getPropResourceName() {
+    public String resourceName() {
         return this.resourceName;
     }
 
@@ -63,7 +63,7 @@ public final class GetManagementLockAtResourceLevelArgs extends io.pulumi.resour
     @Import(name="resourceProviderNamespace", required=true)
       private final String resourceProviderNamespace;
 
-    public String getResourceProviderNamespace() {
+    public String resourceProviderNamespace() {
         return this.resourceProviderNamespace;
     }
 
@@ -74,7 +74,7 @@ public final class GetManagementLockAtResourceLevelArgs extends io.pulumi.resour
     @Import(name="resourceType", required=true)
       private final String resourceType;
 
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
 

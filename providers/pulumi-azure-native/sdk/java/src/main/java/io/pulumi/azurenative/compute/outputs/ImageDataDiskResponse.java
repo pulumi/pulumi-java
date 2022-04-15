@@ -79,56 +79,56 @@ public final class ImageDataDiskResponse {
      * The Virtual Hard Disk.
      * 
     */
-    public Optional<String> getBlobUri() {
+    public Optional<String> blobUri() {
         return Optional.ofNullable(this.blobUri);
     }
     /**
      * Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**
      * 
     */
-    public Optional<String> getCaching() {
+    public Optional<String> caching() {
         return Optional.ofNullable(this.caching);
     }
     /**
      * Specifies the customer managed disk encryption set resource id for the managed image disk.
      * 
     */
-    public Optional<DiskEncryptionSetParametersResponse> getDiskEncryptionSet() {
+    public Optional<DiskEncryptionSetParametersResponse> diskEncryptionSet() {
         return Optional.ofNullable(this.diskEncryptionSet);
     }
     /**
      * Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB
      * 
     */
-    public Optional<Integer> getDiskSizeGB() {
+    public Optional<Integer> diskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
     /**
      * Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
      * 
     */
-    public Integer getLun() {
+    public Integer lun() {
         return this.lun;
     }
     /**
      * The managedDisk.
      * 
     */
-    public Optional<SubResourceResponse> getManagedDisk() {
+    public Optional<SubResourceResponse> managedDisk() {
         return Optional.ofNullable(this.managedDisk);
     }
     /**
      * The snapshot.
      * 
     */
-    public Optional<SubResourceResponse> getSnapshot() {
+    public Optional<SubResourceResponse> snapshot() {
         return Optional.ofNullable(this.snapshot);
     }
     /**
      * Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
      * 
     */
-    public Optional<String> getStorageAccountType() {
+    public Optional<String> storageAccountType() {
         return Optional.ofNullable(this.storageAccountType);
     }
 

@@ -26,7 +26,7 @@ public final class EventHubStreamInputDataSourceArgs extends io.pulumi.resources
     @Import(name="consumerGroupName")
       private final @Nullable Output<String> consumerGroupName;
 
-    public Output<String> getConsumerGroupName() {
+    public Output<String> consumerGroupName() {
         return this.consumerGroupName == null ? Codegen.empty() : this.consumerGroupName;
     }
 
@@ -37,7 +37,7 @@ public final class EventHubStreamInputDataSourceArgs extends io.pulumi.resources
     @Import(name="eventHubName")
       private final @Nullable Output<String> eventHubName;
 
-    public Output<String> getEventHubName() {
+    public Output<String> eventHubName() {
         return this.eventHubName == null ? Codegen.empty() : this.eventHubName;
     }
 
@@ -48,7 +48,7 @@ public final class EventHubStreamInputDataSourceArgs extends io.pulumi.resources
     @Import(name="serviceBusNamespace")
       private final @Nullable Output<String> serviceBusNamespace;
 
-    public Output<String> getServiceBusNamespace() {
+    public Output<String> serviceBusNamespace() {
         return this.serviceBusNamespace == null ? Codegen.empty() : this.serviceBusNamespace;
     }
 
@@ -59,7 +59,7 @@ public final class EventHubStreamInputDataSourceArgs extends io.pulumi.resources
     @Import(name="sharedAccessPolicyKey")
       private final @Nullable Output<String> sharedAccessPolicyKey;
 
-    public Output<String> getSharedAccessPolicyKey() {
+    public Output<String> sharedAccessPolicyKey() {
         return this.sharedAccessPolicyKey == null ? Codegen.empty() : this.sharedAccessPolicyKey;
     }
 
@@ -70,7 +70,7 @@ public final class EventHubStreamInputDataSourceArgs extends io.pulumi.resources
     @Import(name="sharedAccessPolicyName")
       private final @Nullable Output<String> sharedAccessPolicyName;
 
-    public Output<String> getSharedAccessPolicyName() {
+    public Output<String> sharedAccessPolicyName() {
         return this.sharedAccessPolicyName == null ? Codegen.empty() : this.sharedAccessPolicyName;
     }
 
@@ -82,7 +82,7 @@ public final class EventHubStreamInputDataSourceArgs extends io.pulumi.resources
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

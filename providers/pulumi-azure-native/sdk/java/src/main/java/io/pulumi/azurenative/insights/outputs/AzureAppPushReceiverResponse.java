@@ -32,14 +32,14 @@ public final class AzureAppPushReceiverResponse {
      * The email address registered for the Azure mobile app.
      * 
     */
-    public String getEmailAddress() {
+    public String emailAddress() {
         return this.emailAddress;
     }
     /**
      * The name of the Azure mobile app push receiver. Names must be unique across all receivers within an action group.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

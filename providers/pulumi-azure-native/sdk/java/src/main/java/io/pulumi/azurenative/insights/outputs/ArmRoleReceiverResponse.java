@@ -42,21 +42,21 @@ public final class ArmRoleReceiverResponse {
      * The name of the arm role receiver. Names must be unique across all receivers within an action group.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The arm role id.
      * 
     */
-    public String getRoleId() {
+    public String roleId() {
         return this.roleId;
     }
     /**
      * Indicates whether to use common alert schema.
      * 
     */
-    public Optional<Boolean> getUseCommonAlertSchema() {
+    public Optional<Boolean> useCommonAlertSchema() {
         return Optional.ofNullable(this.useCommonAlertSchema);
     }
 

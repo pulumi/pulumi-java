@@ -49,7 +49,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * @return The access control definition of the streaming endpoint.
      * 
      */
-    public Output</* @Nullable */ StreamingEndpointAccessControlResponse> getAccessControl() {
+    public Output</* @Nullable */ StreamingEndpointAccessControlResponse> accessControl() {
         return this.accessControl;
     }
     /**
@@ -63,7 +63,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * @return This feature is deprecated, do not set a value for this property.
      * 
      */
-    public Output</* @Nullable */ String> getAvailabilitySetName() {
+    public Output</* @Nullable */ String> availabilitySetName() {
         return this.availabilitySetName;
     }
     /**
@@ -77,7 +77,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * @return The CDN enabled flag.
      * 
      */
-    public Output</* @Nullable */ Boolean> getCdnEnabled() {
+    public Output</* @Nullable */ Boolean> cdnEnabled() {
         return this.cdnEnabled;
     }
     /**
@@ -91,7 +91,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * @return The CDN profile name.
      * 
      */
-    public Output</* @Nullable */ String> getCdnProfile() {
+    public Output</* @Nullable */ String> cdnProfile() {
         return this.cdnProfile;
     }
     /**
@@ -105,7 +105,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * @return The CDN provider name.
      * 
      */
-    public Output</* @Nullable */ String> getCdnProvider() {
+    public Output</* @Nullable */ String> cdnProvider() {
         return this.cdnProvider;
     }
     /**
@@ -119,7 +119,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * @return The exact time the streaming endpoint was created.
      * 
      */
-    public Output<String> getCreated() {
+    public Output<String> created() {
         return this.created;
     }
     /**
@@ -133,7 +133,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * @return The streaming endpoint access policies.
      * 
      */
-    public Output</* @Nullable */ CrossSiteAccessPoliciesResponse> getCrossSiteAccessPolicies() {
+    public Output</* @Nullable */ CrossSiteAccessPoliciesResponse> crossSiteAccessPolicies() {
         return this.crossSiteAccessPolicies;
     }
     /**
@@ -147,7 +147,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * @return The custom host names of the streaming endpoint
      * 
      */
-    public Output</* @Nullable */ List<String>> getCustomHostNames() {
+    public Output</* @Nullable */ List<String>> customHostNames() {
         return this.customHostNames;
     }
     /**
@@ -161,7 +161,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * @return The streaming endpoint description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -175,7 +175,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * @return The free trial expiration time.
      * 
      */
-    public Output<String> getFreeTrialEndTime() {
+    public Output<String> freeTrialEndTime() {
         return this.freeTrialEndTime;
     }
     /**
@@ -189,7 +189,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * @return The streaming endpoint host name.
      * 
      */
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName;
     }
     /**
@@ -203,7 +203,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * @return The exact time the streaming endpoint was last modified.
      * 
      */
-    public Output<String> getLastModified() {
+    public Output<String> lastModified() {
         return this.lastModified;
     }
     /**
@@ -217,7 +217,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -231,7 +231,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * @return Max cache age
      * 
      */
-    public Output</* @Nullable */ Double> getMaxCacheAge() {
+    public Output</* @Nullable */ Double> maxCacheAge() {
         return this.maxCacheAge;
     }
     /**
@@ -245,7 +245,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -259,7 +259,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the streaming endpoint.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -273,7 +273,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * @return The resource state of the streaming endpoint.
      * 
      */
-    public Output<String> getResourceState() {
+    public Output<String> resourceState() {
         return this.resourceState;
     }
     /**
@@ -287,7 +287,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * @return The number of scale units. Use the Scale operation to adjust this value.
      * 
      */
-    public Output<Integer> getScaleUnits() {
+    public Output<Integer> scaleUnits() {
         return this.scaleUnits;
     }
     /**
@@ -301,7 +301,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * @return The system metadata relating to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -315,7 +315,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -329,7 +329,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

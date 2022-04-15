@@ -48,28 +48,28 @@ public final class X12SecuritySettingsResponse {
      * The authorization qualifier.
      * 
     */
-    public String getAuthorizationQualifier() {
+    public String authorizationQualifier() {
         return this.authorizationQualifier;
     }
     /**
      * The authorization value.
      * 
     */
-    public Optional<String> getAuthorizationValue() {
+    public Optional<String> authorizationValue() {
         return Optional.ofNullable(this.authorizationValue);
     }
     /**
      * The password value.
      * 
     */
-    public Optional<String> getPasswordValue() {
+    public Optional<String> passwordValue() {
         return Optional.ofNullable(this.passwordValue);
     }
     /**
      * The security qualifier.
      * 
     */
-    public String getSecurityQualifier() {
+    public String securityQualifier() {
         return this.securityQualifier;
     }
 

@@ -26,7 +26,7 @@ public final class GuestOSCustomizationResponse extends io.pulumi.resources.Invo
     @Import(name="dnsServers")
       private final @Nullable List<String> dnsServers;
 
-    public List<String> getDnsServers() {
+    public List<String> dnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
 
@@ -37,7 +37,7 @@ public final class GuestOSCustomizationResponse extends io.pulumi.resources.Invo
     @Import(name="hostName")
       private final @Nullable String hostName;
 
-    public Optional<String> getHostName() {
+    public Optional<String> hostName() {
         return this.hostName == null ? Optional.empty() : Optional.ofNullable(this.hostName);
     }
 
@@ -48,7 +48,7 @@ public final class GuestOSCustomizationResponse extends io.pulumi.resources.Invo
     @Import(name="password")
       private final @Nullable String password;
 
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
@@ -59,7 +59,7 @@ public final class GuestOSCustomizationResponse extends io.pulumi.resources.Invo
     @Import(name="policyId")
       private final @Nullable String policyId;
 
-    public Optional<String> getPolicyId() {
+    public Optional<String> policyId() {
         return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
     }
 
@@ -70,7 +70,7 @@ public final class GuestOSCustomizationResponse extends io.pulumi.resources.Invo
     @Import(name="username")
       private final @Nullable String username;
 
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
     }
 

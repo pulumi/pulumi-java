@@ -24,7 +24,7 @@ public final class WorkspaceCustomObjectParameterResponse extends io.pulumi.reso
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -35,7 +35,7 @@ public final class WorkspaceCustomObjectParameterResponse extends io.pulumi.reso
     @Import(name="value", required=true)
       private final Object value;
 
-    public Object getValue() {
+    public Object value() {
         return this.value;
     }
 

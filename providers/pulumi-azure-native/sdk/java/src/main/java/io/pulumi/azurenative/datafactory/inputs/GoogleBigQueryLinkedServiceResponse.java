@@ -33,7 +33,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
     @Import(name="additionalProjects")
       private final @Nullable Object additionalProjects;
 
-    public Optional<Object> getAdditionalProjects() {
+    public Optional<Object> additionalProjects() {
         return this.additionalProjects == null ? Optional.empty() : Optional.ofNullable(this.additionalProjects);
     }
 
@@ -44,7 +44,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -55,7 +55,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
     @Import(name="authenticationType", required=true)
       private final String authenticationType;
 
-    public String getAuthenticationType() {
+    public String authenticationType() {
         return this.authenticationType;
     }
 
@@ -66,7 +66,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
     @Import(name="clientId")
       private final @Nullable Object clientId;
 
-    public Optional<Object> getClientId() {
+    public Optional<Object> clientId() {
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
     }
 
@@ -77,7 +77,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
     @Import(name="clientSecret")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getClientSecret() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret() {
         return this.clientSecret == null ? null : this.clientSecret;
     }
 
@@ -88,7 +88,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
@@ -99,7 +99,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -110,7 +110,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
     @Import(name="email")
       private final @Nullable Object email;
 
-    public Optional<Object> getEmail() {
+    public Optional<Object> email() {
         return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
     }
 
@@ -121,7 +121,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
@@ -132,7 +132,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
     @Import(name="keyFilePath")
       private final @Nullable Object keyFilePath;
 
-    public Optional<Object> getKeyFilePath() {
+    public Optional<Object> keyFilePath() {
         return this.keyFilePath == null ? Optional.empty() : Optional.ofNullable(this.keyFilePath);
     }
 
@@ -143,7 +143,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -154,7 +154,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
     @Import(name="project", required=true)
       private final Object project;
 
-    public Object getProject() {
+    public Object project() {
         return this.project;
     }
 
@@ -165,7 +165,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
     @Import(name="refreshToken")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getRefreshToken() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken() {
         return this.refreshToken == null ? null : this.refreshToken;
     }
 
@@ -176,7 +176,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
     @Import(name="requestGoogleDriveScope")
       private final @Nullable Object requestGoogleDriveScope;
 
-    public Optional<Object> getRequestGoogleDriveScope() {
+    public Optional<Object> requestGoogleDriveScope() {
         return this.requestGoogleDriveScope == null ? Optional.empty() : Optional.ofNullable(this.requestGoogleDriveScope);
     }
 
@@ -187,7 +187,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
     @Import(name="trustedCertPath")
       private final @Nullable Object trustedCertPath;
 
-    public Optional<Object> getTrustedCertPath() {
+    public Optional<Object> trustedCertPath() {
         return this.trustedCertPath == null ? Optional.empty() : Optional.ofNullable(this.trustedCertPath);
     }
 
@@ -199,7 +199,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -210,7 +210,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends io.pulumi.resourc
     @Import(name="useSystemTrustStore")
       private final @Nullable Object useSystemTrustStore;
 
-    public Optional<Object> getUseSystemTrustStore() {
+    public Optional<Object> useSystemTrustStore() {
         return this.useSystemTrustStore == null ? Optional.empty() : Optional.ofNullable(this.useSystemTrustStore);
     }
 

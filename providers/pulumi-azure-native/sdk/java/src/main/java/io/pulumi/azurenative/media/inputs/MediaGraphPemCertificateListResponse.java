@@ -24,7 +24,7 @@ public final class MediaGraphPemCertificateListResponse extends io.pulumi.resour
     @Import(name="certificates", required=true)
       private final List<String> certificates;
 
-    public List<String> getCertificates() {
+    public List<String> certificates() {
         return this.certificates;
     }
 
@@ -36,7 +36,7 @@ public final class MediaGraphPemCertificateListResponse extends io.pulumi.resour
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

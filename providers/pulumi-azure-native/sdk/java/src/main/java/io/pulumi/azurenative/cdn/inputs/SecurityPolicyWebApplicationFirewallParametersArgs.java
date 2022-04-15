@@ -29,7 +29,7 @@ public final class SecurityPolicyWebApplicationFirewallParametersArgs extends io
     @Import(name="associations")
       private final @Nullable Output<List<SecurityPolicyWebApplicationFirewallAssociationArgs>> associations;
 
-    public Output<List<SecurityPolicyWebApplicationFirewallAssociationArgs>> getAssociations() {
+    public Output<List<SecurityPolicyWebApplicationFirewallAssociationArgs>> associations() {
         return this.associations == null ? Codegen.empty() : this.associations;
     }
 
@@ -41,7 +41,7 @@ public final class SecurityPolicyWebApplicationFirewallParametersArgs extends io
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -52,7 +52,7 @@ public final class SecurityPolicyWebApplicationFirewallParametersArgs extends io
     @Import(name="wafPolicy")
       private final @Nullable Output<ResourceReferenceArgs> wafPolicy;
 
-    public Output<ResourceReferenceArgs> getWafPolicy() {
+    public Output<ResourceReferenceArgs> wafPolicy() {
         return this.wafPolicy == null ? Codegen.empty() : this.wafPolicy;
     }
 

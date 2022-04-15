@@ -18,7 +18,7 @@ public final class FrontEndConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="kind")
       private final @Nullable Output<FrontEndServiceType> kind;
 
-    public Output<FrontEndServiceType> getKind() {
+    public Output<FrontEndServiceType> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 

@@ -27,7 +27,7 @@ public final class ParameterValueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reference")
       private final @Nullable Output<SecretValueReferenceArgs> reference;
 
-    public Output<SecretValueReferenceArgs> getReference() {
+    public Output<SecretValueReferenceArgs> reference() {
         return this.reference == null ? Codegen.empty() : this.reference;
     }
 
@@ -38,7 +38,7 @@ public final class ParameterValueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<Object> value;
 
-    public Output<Object> getValue() {
+    public Output<Object> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

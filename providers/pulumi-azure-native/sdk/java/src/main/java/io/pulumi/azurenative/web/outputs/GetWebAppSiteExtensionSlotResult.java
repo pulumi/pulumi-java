@@ -187,164 +187,164 @@ public final class GetWebAppSiteExtensionSlotResult {
      * List of authors.
      * 
     */
-    public List<String> getAuthors() {
+    public List<String> authors() {
         return this.authors == null ? List.of() : this.authors;
     }
     /**
      * Site Extension comment.
      * 
     */
-    public Optional<String> getComment() {
+    public Optional<String> comment() {
         return Optional.ofNullable(this.comment);
     }
     /**
      * Detailed description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Count of downloads.
      * 
     */
-    public Optional<Integer> getDownloadCount() {
+    public Optional<Integer> downloadCount() {
         return Optional.ofNullable(this.downloadCount);
     }
     /**
      * Site extension ID.
      * 
     */
-    public Optional<String> getExtensionId() {
+    public Optional<String> extensionId() {
         return Optional.ofNullable(this.extensionId);
     }
     /**
      * Site extension type.
      * 
     */
-    public Optional<String> getExtensionType() {
+    public Optional<String> extensionType() {
         return Optional.ofNullable(this.extensionType);
     }
     /**
      * Extension URL.
      * 
     */
-    public Optional<String> getExtensionUrl() {
+    public Optional<String> extensionUrl() {
         return Optional.ofNullable(this.extensionUrl);
     }
     /**
      * Feed URL.
      * 
     */
-    public Optional<String> getFeedUrl() {
+    public Optional<String> feedUrl() {
         return Optional.ofNullable(this.feedUrl);
     }
     /**
      * Icon URL.
      * 
     */
-    public Optional<String> getIconUrl() {
+    public Optional<String> iconUrl() {
         return Optional.ofNullable(this.iconUrl);
     }
     /**
      * Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Installed timestamp.
      * 
     */
-    public Optional<String> getInstalledDateTime() {
+    public Optional<String> installedDateTime() {
         return Optional.ofNullable(this.installedDateTime);
     }
     /**
      * Installer command line parameters.
      * 
     */
-    public Optional<String> getInstallerCommandLineParams() {
+    public Optional<String> installerCommandLineParams() {
         return Optional.ofNullable(this.installerCommandLineParams);
     }
     /**
      * Kind of resource.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * License URL.
      * 
     */
-    public Optional<String> getLicenseUrl() {
+    public Optional<String> licenseUrl() {
         return Optional.ofNullable(this.licenseUrl);
     }
     /**
      * <code>true</code> if the local version is the latest version; <code>false</code> otherwise.
      * 
     */
-    public Optional<Boolean> getLocalIsLatestVersion() {
+    public Optional<Boolean> localIsLatestVersion() {
         return Optional.ofNullable(this.localIsLatestVersion);
     }
     /**
      * Local path.
      * 
     */
-    public Optional<String> getLocalPath() {
+    public Optional<String> localPath() {
         return Optional.ofNullable(this.localPath);
     }
     /**
      * Resource Name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Project URL.
      * 
     */
-    public Optional<String> getProjectUrl() {
+    public Optional<String> projectUrl() {
         return Optional.ofNullable(this.projectUrl);
     }
     /**
      * Provisioning state.
      * 
     */
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Published timestamp.
      * 
     */
-    public Optional<String> getPublishedDateTime() {
+    public Optional<String> publishedDateTime() {
         return Optional.ofNullable(this.publishedDateTime);
     }
     /**
      * Summary description.
      * 
     */
-    public Optional<String> getSummary() {
+    public Optional<String> summary() {
         return Optional.ofNullable(this.summary);
     }
-    public Optional<String> getTitle() {
+    public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Version information.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

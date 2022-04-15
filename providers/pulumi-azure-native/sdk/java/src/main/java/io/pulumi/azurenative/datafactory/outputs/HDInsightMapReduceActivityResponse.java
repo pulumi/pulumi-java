@@ -133,91 +133,91 @@ public final class HDInsightMapReduceActivityResponse {
      * User specified arguments to HDInsightActivity.
      * 
     */
-    public List<Object> getArguments() {
+    public List<Object> arguments() {
         return this.arguments == null ? List.of() : this.arguments;
     }
     /**
      * Class name. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getClassName() {
+    public Object className() {
         return this.className;
     }
     /**
      * Allows user to specify defines for the MapReduce job request.
      * 
     */
-    public Map<String,Object> getDefines() {
+    public Map<String,Object> defines() {
         return this.defines == null ? Map.of() : this.defines;
     }
     /**
      * Activity depends on condition.
      * 
     */
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Debug info option.
      * 
     */
-    public Optional<String> getGetDebugInfo() {
+    public Optional<String> getDebugInfo() {
         return Optional.ofNullable(this.getDebugInfo);
     }
     /**
      * Jar path. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getJarFilePath() {
+    public Object jarFilePath() {
         return this.jarFilePath;
     }
     /**
      * Jar libs.
      * 
     */
-    public List<Object> getJarLibs() {
+    public List<Object> jarLibs() {
         return this.jarLibs == null ? List.of() : this.jarLibs;
     }
     /**
      * Jar linked service reference.
      * 
     */
-    public Optional<LinkedServiceReferenceResponse> getJarLinkedService() {
+    public Optional<LinkedServiceReferenceResponse> jarLinkedService() {
         return Optional.ofNullable(this.jarLinkedService);
     }
     /**
      * Linked service reference.
      * 
     */
-    public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
+    public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
      * Activity name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Activity policy.
      * 
     */
-    public Optional<ActivityPolicyResponse> getPolicy() {
+    public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
     /**
      * Storage linked service references.
      * 
     */
-    public List<LinkedServiceReferenceResponse> getStorageLinkedServices() {
+    public List<LinkedServiceReferenceResponse> storageLinkedServices() {
         return this.storageLinkedServices == null ? List.of() : this.storageLinkedServices;
     }
     /**
@@ -225,14 +225,14 @@ public final class HDInsightMapReduceActivityResponse {
      * Expected value is 'HDInsightMapReduce'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
     */
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 

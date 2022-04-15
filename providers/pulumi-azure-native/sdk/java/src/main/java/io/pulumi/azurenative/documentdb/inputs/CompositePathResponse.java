@@ -21,7 +21,7 @@ public final class CompositePathResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="order")
       private final @Nullable String order;
 
-    public Optional<String> getOrder() {
+    public Optional<String> order() {
         return this.order == null ? Optional.empty() : Optional.ofNullable(this.order);
     }
 
@@ -32,7 +32,7 @@ public final class CompositePathResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="path")
       private final @Nullable String path;
 
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 

@@ -19,7 +19,7 @@ public final class GetManagedPrivateEndpointArgs extends io.pulumi.resources.Inv
     @Import(name="clusterName", required=true)
       private final String clusterName;
 
-    public String getClusterName() {
+    public String clusterName() {
         return this.clusterName;
     }
 
@@ -30,7 +30,7 @@ public final class GetManagedPrivateEndpointArgs extends io.pulumi.resources.Inv
     @Import(name="managedPrivateEndpointName", required=true)
       private final String managedPrivateEndpointName;
 
-    public String getManagedPrivateEndpointName() {
+    public String managedPrivateEndpointName() {
         return this.managedPrivateEndpointName;
     }
 
@@ -41,7 +41,7 @@ public final class GetManagedPrivateEndpointArgs extends io.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

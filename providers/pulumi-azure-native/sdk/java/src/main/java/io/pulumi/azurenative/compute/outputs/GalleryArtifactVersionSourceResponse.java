@@ -34,14 +34,14 @@ public final class GalleryArtifactVersionSourceResponse {
      * The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The uri of the gallery artifact version source. Currently used to specify vhd/blob source.
      * 
     */
-    public Optional<String> getUri() {
+    public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }
 

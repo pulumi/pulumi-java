@@ -41,21 +41,21 @@ public final class UserAssignedIdentityAuthInfoResponse {
      * Expected value is 'userAssignedIdentity'.
      * 
     */
-    public String getAuthType() {
+    public String authType() {
         return this.authType;
     }
     /**
      * Client Id for userAssignedIdentity.
      * 
     */
-    public String getClientId() {
+    public String clientId() {
         return this.clientId;
     }
     /**
      * Subscription id for userAssignedIdentity.
      * 
     */
-    public String getSubscriptionId() {
+    public String subscriptionId() {
         return this.subscriptionId;
     }
 

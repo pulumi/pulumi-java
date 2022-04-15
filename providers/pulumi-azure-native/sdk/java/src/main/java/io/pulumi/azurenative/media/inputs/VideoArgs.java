@@ -29,7 +29,7 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyFrameInterval")
       private final @Nullable Output<String> keyFrameInterval;
 
-    public Output<String> getKeyFrameInterval() {
+    public Output<String> keyFrameInterval() {
         return this.keyFrameInterval == null ? Codegen.empty() : this.keyFrameInterval;
     }
 
@@ -40,7 +40,7 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
+    public Output<String> label() {
         return this.label == null ? Codegen.empty() : this.label;
     }
 
@@ -52,7 +52,7 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -63,7 +63,7 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stretchMode")
       private final @Nullable Output<Either<String,StretchMode>> stretchMode;
 
-    public Output<Either<String,StretchMode>> getStretchMode() {
+    public Output<Either<String,StretchMode>> stretchMode() {
         return this.stretchMode == null ? Codegen.empty() : this.stretchMode;
     }
 
@@ -74,7 +74,7 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="syncMode")
       private final @Nullable Output<Either<String,VideoSyncMode>> syncMode;
 
-    public Output<Either<String,VideoSyncMode>> getSyncMode() {
+    public Output<Either<String,VideoSyncMode>> syncMode() {
         return this.syncMode == null ? Codegen.empty() : this.syncMode;
     }
 

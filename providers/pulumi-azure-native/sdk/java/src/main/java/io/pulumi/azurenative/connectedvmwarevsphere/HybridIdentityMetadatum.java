@@ -44,7 +44,7 @@ public class HybridIdentityMetadatum extends io.pulumi.resources.CustomResource 
      * @return The identity of the resource.
      * 
      */
-    public Output<IdentityResponse> getIdentity() {
+    public Output<IdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -58,7 +58,7 @@ public class HybridIdentityMetadatum extends io.pulumi.resources.CustomResource 
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +72,7 @@ public class HybridIdentityMetadatum extends io.pulumi.resources.CustomResource 
      * @return Gets or sets the provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -86,7 +86,7 @@ public class HybridIdentityMetadatum extends io.pulumi.resources.CustomResource 
      * @return Gets or sets the Public Key.
      * 
      */
-    public Output</* @Nullable */ String> getPublicKey() {
+    public Output</* @Nullable */ String> publicKey() {
         return this.publicKey;
     }
     /**
@@ -100,7 +100,7 @@ public class HybridIdentityMetadatum extends io.pulumi.resources.CustomResource 
      * @return The system data.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -114,7 +114,7 @@ public class HybridIdentityMetadatum extends io.pulumi.resources.CustomResource 
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -128,7 +128,7 @@ public class HybridIdentityMetadatum extends io.pulumi.resources.CustomResource 
      * @return Gets or sets the Vm Id.
      * 
      */
-    public Output</* @Nullable */ String> getVmId() {
+    public Output</* @Nullable */ String> vmId() {
         return this.vmId;
     }
 

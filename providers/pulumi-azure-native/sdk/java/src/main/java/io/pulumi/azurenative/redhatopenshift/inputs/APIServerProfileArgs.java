@@ -26,7 +26,7 @@ public final class APIServerProfileArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ip")
       private final @Nullable Output<String> ip;
 
-    public Output<String> getIp() {
+    public Output<String> ip() {
         return this.ip == null ? Codegen.empty() : this.ip;
     }
 
@@ -37,7 +37,7 @@ public final class APIServerProfileArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 
@@ -48,7 +48,7 @@ public final class APIServerProfileArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="visibility")
       private final @Nullable Output<String> visibility;
 
-    public Output<String> getVisibility() {
+    public Output<String> visibility() {
         return this.visibility == null ? Codegen.empty() : this.visibility;
     }
 

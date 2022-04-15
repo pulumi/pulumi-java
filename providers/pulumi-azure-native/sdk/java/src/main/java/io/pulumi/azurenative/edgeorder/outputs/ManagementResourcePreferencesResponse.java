@@ -26,7 +26,7 @@ public final class ManagementResourcePreferencesResponse {
      * Customer preferred Management resource ARM ID
      * 
     */
-    public Optional<String> getPreferredManagementResourceId() {
+    public Optional<String> preferredManagementResourceId() {
         return Optional.ofNullable(this.preferredManagementResourceId);
     }
 

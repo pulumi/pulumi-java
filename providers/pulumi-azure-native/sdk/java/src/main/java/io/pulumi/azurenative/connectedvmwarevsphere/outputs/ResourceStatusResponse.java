@@ -60,42 +60,42 @@ public final class ResourceStatusResponse {
      * The last update time for this condition.
      * 
     */
-    public String getLastUpdatedAt() {
+    public String lastUpdatedAt() {
         return this.lastUpdatedAt;
     }
     /**
      * A human readable message indicating details about the status.
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
     /**
      * The reason for the condition's status.
      * 
     */
-    public String getReason() {
+    public String reason() {
         return this.reason;
     }
     /**
      * Severity with which to treat failures of this type of condition.
      * 
     */
-    public String getSeverity() {
+    public String severity() {
         return this.severity;
     }
     /**
      * Status of the condition.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * The type of the condition.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

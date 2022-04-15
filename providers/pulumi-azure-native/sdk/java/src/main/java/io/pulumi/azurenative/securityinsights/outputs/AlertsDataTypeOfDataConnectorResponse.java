@@ -26,7 +26,7 @@ public final class AlertsDataTypeOfDataConnectorResponse {
      * Alerts data type connection.
      * 
     */
-    public Optional<DataConnectorDataTypeCommonResponse> getAlerts() {
+    public Optional<DataConnectorDataTypeCommonResponse> alerts() {
         return Optional.ofNullable(this.alerts);
     }
 

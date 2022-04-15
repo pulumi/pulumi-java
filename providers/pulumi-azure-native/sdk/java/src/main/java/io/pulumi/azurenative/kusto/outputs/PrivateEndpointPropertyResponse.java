@@ -24,7 +24,7 @@ public final class PrivateEndpointPropertyResponse {
      * Resource id of the private endpoint.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

@@ -27,7 +27,7 @@ public final class PushSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dynamicTagsJson")
       private final @Nullable Output<String> dynamicTagsJson;
 
-    public Output<String> getDynamicTagsJson() {
+    public Output<String> dynamicTagsJson() {
         return this.dynamicTagsJson == null ? Codegen.empty() : this.dynamicTagsJson;
     }
 
@@ -38,7 +38,7 @@ public final class PushSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isPushEnabled", required=true)
       private final Output<Boolean> isPushEnabled;
 
-    public Output<Boolean> getIsPushEnabled() {
+    public Output<Boolean> isPushEnabled() {
         return this.isPushEnabled;
     }
 
@@ -49,7 +49,7 @@ public final class PushSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -60,7 +60,7 @@ public final class PushSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagWhitelistJson")
       private final @Nullable Output<String> tagWhitelistJson;
 
-    public Output<String> getTagWhitelistJson() {
+    public Output<String> tagWhitelistJson() {
         return this.tagWhitelistJson == null ? Codegen.empty() : this.tagWhitelistJson;
     }
 
@@ -74,7 +74,7 @@ public final class PushSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsRequiringAuth")
       private final @Nullable Output<String> tagsRequiringAuth;
 
-    public Output<String> getTagsRequiringAuth() {
+    public Output<String> tagsRequiringAuth() {
         return this.tagsRequiringAuth == null ? Codegen.empty() : this.tagsRequiringAuth;
     }
 

@@ -54,14 +54,14 @@ public final class EccTokenKeyResponse {
      * Elliptical curve algorithm to be used: ES256, ES384 or ES512.
      * 
     */
-    public String getAlg() {
+    public String alg() {
         return this.alg;
     }
     /**
      * JWT token key id. Validation keys are looked up based on the key id present on the JWT token header.
      * 
     */
-    public String getKid() {
+    public String kid() {
         return this.kid;
     }
     /**
@@ -69,21 +69,21 @@ public final class EccTokenKeyResponse {
      * Expected value is '#Microsoft.VideoAnalyzer.EccTokenKey'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * X coordinate.
      * 
     */
-    public String getX() {
+    public String x() {
         return this.x;
     }
     /**
      * Y coordinate.
      * 
     */
-    public String getY() {
+    public String y() {
         return this.y;
     }
 

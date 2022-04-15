@@ -63,42 +63,42 @@ public final class GetAccountResult {
      * The ID of the resource
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The location of the resource
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The SKU of the resource
      * 
     */
-    public SKUResponse getSku() {
+    public SKUResponse sku() {
         return this.sku;
     }
     /**
      * The tags of the resource
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The fully qualified type of the resource
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

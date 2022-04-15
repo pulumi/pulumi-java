@@ -44,7 +44,7 @@ public class WebPubSubHub extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -58,7 +58,7 @@ public class WebPubSubHub extends io.pulumi.resources.CustomResource {
      * @return Properties of a hub.
      * 
      */
-    public Output<WebPubSubHubPropertiesResponse> getProperties() {
+    public Output<WebPubSubHubPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -72,7 +72,7 @@ public class WebPubSubHub extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -86,7 +86,7 @@ public class WebPubSubHub extends io.pulumi.resources.CustomResource {
      * @return The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -28,7 +28,7 @@ public final class TimelineResultsMetadataResponse extends io.pulumi.resources.I
     @Import(name="aggregations", required=true)
       private final List<TimelineAggregationResponse> aggregations;
 
-    public List<TimelineAggregationResponse> getAggregations() {
+    public List<TimelineAggregationResponse> aggregations() {
         return this.aggregations;
     }
 
@@ -39,7 +39,7 @@ public final class TimelineResultsMetadataResponse extends io.pulumi.resources.I
     @Import(name="errors")
       private final @Nullable List<TimelineErrorResponse> errors;
 
-    public List<TimelineErrorResponse> getErrors() {
+    public List<TimelineErrorResponse> errors() {
         return this.errors == null ? List.of() : this.errors;
     }
 
@@ -50,7 +50,7 @@ public final class TimelineResultsMetadataResponse extends io.pulumi.resources.I
     @Import(name="totalCount", required=true)
       private final Integer totalCount;
 
-    public Integer getTotalCount() {
+    public Integer totalCount() {
         return this.totalCount;
     }
 

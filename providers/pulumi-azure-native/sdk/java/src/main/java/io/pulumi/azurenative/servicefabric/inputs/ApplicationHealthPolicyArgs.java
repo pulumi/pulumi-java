@@ -28,7 +28,7 @@ public final class ApplicationHealthPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="defaultServiceTypeHealthPolicy")
       private final @Nullable Output<ServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy;
 
-    public Output<ServiceTypeHealthPolicyArgs> getDefaultServiceTypeHealthPolicy() {
+    public Output<ServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy() {
         return this.defaultServiceTypeHealthPolicy == null ? Codegen.empty() : this.defaultServiceTypeHealthPolicy;
     }
 
@@ -39,7 +39,7 @@ public final class ApplicationHealthPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="serviceTypeHealthPolicies")
       private final @Nullable Output<Map<String,ServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicies;
 
-    public Output<Map<String,ServiceTypeHealthPolicyArgs>> getServiceTypeHealthPolicies() {
+    public Output<Map<String,ServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicies() {
         return this.serviceTypeHealthPolicies == null ? Codegen.empty() : this.serviceTypeHealthPolicies;
     }
 

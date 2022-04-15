@@ -19,7 +19,7 @@ public final class GetRegisteredServerArgs extends io.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetRegisteredServerArgs extends io.pulumi.resources.InvokeArg
     @Import(name="serverId", required=true)
       private final String serverId;
 
-    public String getServerId() {
+    public String serverId() {
         return this.serverId;
     }
 
@@ -41,7 +41,7 @@ public final class GetRegisteredServerArgs extends io.pulumi.resources.InvokeArg
     @Import(name="storageSyncServiceName", required=true)
       private final String storageSyncServiceName;
 
-    public String getStorageSyncServiceName() {
+    public String storageSyncServiceName() {
         return this.storageSyncServiceName;
     }
 

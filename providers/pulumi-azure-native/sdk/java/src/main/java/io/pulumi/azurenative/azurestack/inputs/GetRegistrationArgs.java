@@ -19,7 +19,7 @@ public final class GetRegistrationArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="registrationName", required=true)
       private final String registrationName;
 
-    public String getRegistrationName() {
+    public String registrationName() {
         return this.registrationName;
     }
 
@@ -30,7 +30,7 @@ public final class GetRegistrationArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroup", required=true)
       private final String resourceGroup;
 
-    public String getResourceGroup() {
+    public String resourceGroup() {
         return this.resourceGroup;
     }
 

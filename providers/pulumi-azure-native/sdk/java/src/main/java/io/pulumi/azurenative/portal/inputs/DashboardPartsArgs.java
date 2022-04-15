@@ -27,7 +27,7 @@ public final class DashboardPartsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<MarkdownPartMetadataArgs> metadata;
 
-    public Output<MarkdownPartMetadataArgs> getMetadata() {
+    public Output<MarkdownPartMetadataArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -38,7 +38,7 @@ public final class DashboardPartsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="position", required=true)
       private final Output<DashboardPartsPositionArgs> position;
 
-    public Output<DashboardPartsPositionArgs> getPosition() {
+    public Output<DashboardPartsPositionArgs> position() {
         return this.position;
     }
 

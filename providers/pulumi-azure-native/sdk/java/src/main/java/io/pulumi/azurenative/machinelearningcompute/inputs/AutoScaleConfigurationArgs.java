@@ -30,7 +30,7 @@ public final class AutoScaleConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="maxReplicas")
       private final @Nullable Output<Integer> maxReplicas;
 
-    public Output<Integer> getMaxReplicas() {
+    public Output<Integer> maxReplicas() {
         return this.maxReplicas == null ? Codegen.empty() : this.maxReplicas;
     }
 
@@ -41,7 +41,7 @@ public final class AutoScaleConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="minReplicas")
       private final @Nullable Output<Integer> minReplicas;
 
-    public Output<Integer> getMinReplicas() {
+    public Output<Integer> minReplicas() {
         return this.minReplicas == null ? Codegen.empty() : this.minReplicas;
     }
 
@@ -52,7 +52,7 @@ public final class AutoScaleConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="refreshPeriodInSeconds")
       private final @Nullable Output<Integer> refreshPeriodInSeconds;
 
-    public Output<Integer> getRefreshPeriodInSeconds() {
+    public Output<Integer> refreshPeriodInSeconds() {
         return this.refreshPeriodInSeconds == null ? Codegen.empty() : this.refreshPeriodInSeconds;
     }
 
@@ -63,7 +63,7 @@ public final class AutoScaleConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="status")
       private final @Nullable Output<Either<String,Status>> status;
 
-    public Output<Either<String,Status>> getStatus() {
+    public Output<Either<String,Status>> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -74,7 +74,7 @@ public final class AutoScaleConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="targetUtilization")
       private final @Nullable Output<Double> targetUtilization;
 
-    public Output<Double> getTargetUtilization() {
+    public Output<Double> targetUtilization() {
         return this.targetUtilization == null ? Codegen.empty() : this.targetUtilization;
     }
 

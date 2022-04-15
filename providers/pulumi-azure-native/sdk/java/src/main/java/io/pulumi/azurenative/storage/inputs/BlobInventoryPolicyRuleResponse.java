@@ -25,7 +25,7 @@ public final class BlobInventoryPolicyRuleResponse extends io.pulumi.resources.I
     @Import(name="definition", required=true)
       private final BlobInventoryPolicyDefinitionResponse definition;
 
-    public BlobInventoryPolicyDefinitionResponse getDefinition() {
+    public BlobInventoryPolicyDefinitionResponse definition() {
         return this.definition;
     }
 
@@ -36,7 +36,7 @@ public final class BlobInventoryPolicyRuleResponse extends io.pulumi.resources.I
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
@@ -47,7 +47,7 @@ public final class BlobInventoryPolicyRuleResponse extends io.pulumi.resources.I
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

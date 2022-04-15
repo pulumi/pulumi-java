@@ -90,70 +90,70 @@ public final class EdifactValidationSettingsResponse {
      * The value indicating whether to allow leading and trailing spaces and zeroes.
      * 
     */
-    public Boolean getAllowLeadingAndTrailingSpacesAndZeroes() {
+    public Boolean allowLeadingAndTrailingSpacesAndZeroes() {
         return this.allowLeadingAndTrailingSpacesAndZeroes;
     }
     /**
      * The value indicating whether to check for duplicate group control number.
      * 
     */
-    public Boolean getCheckDuplicateGroupControlNumber() {
+    public Boolean checkDuplicateGroupControlNumber() {
         return this.checkDuplicateGroupControlNumber;
     }
     /**
      * The value indicating whether to check for duplicate interchange control number.
      * 
     */
-    public Boolean getCheckDuplicateInterchangeControlNumber() {
+    public Boolean checkDuplicateInterchangeControlNumber() {
         return this.checkDuplicateInterchangeControlNumber;
     }
     /**
      * The value indicating whether to check for duplicate transaction set control number.
      * 
     */
-    public Boolean getCheckDuplicateTransactionSetControlNumber() {
+    public Boolean checkDuplicateTransactionSetControlNumber() {
         return this.checkDuplicateTransactionSetControlNumber;
     }
     /**
      * The validity period of interchange control number.
      * 
     */
-    public Integer getInterchangeControlNumberValidityDays() {
+    public Integer interchangeControlNumberValidityDays() {
         return this.interchangeControlNumberValidityDays;
     }
     /**
      * The trailing separator policy.
      * 
     */
-    public String getTrailingSeparatorPolicy() {
+    public String trailingSeparatorPolicy() {
         return this.trailingSeparatorPolicy;
     }
     /**
      * The value indicating whether to trim leading and trailing spaces and zeroes.
      * 
     */
-    public Boolean getTrimLeadingAndTrailingSpacesAndZeroes() {
+    public Boolean trimLeadingAndTrailingSpacesAndZeroes() {
         return this.trimLeadingAndTrailingSpacesAndZeroes;
     }
     /**
      * The value indicating whether to validate character set in the message.
      * 
     */
-    public Boolean getValidateCharacterSet() {
+    public Boolean validateCharacterSet() {
         return this.validateCharacterSet;
     }
     /**
      * The value indicating whether to Whether to validate EDI types.
      * 
     */
-    public Boolean getValidateEDITypes() {
+    public Boolean validateEDITypes() {
         return this.validateEDITypes;
     }
     /**
      * The value indicating whether to Whether to validate XSD types.
      * 
     */
-    public Boolean getValidateXSDTypes() {
+    public Boolean validateXSDTypes() {
         return this.validateXSDTypes;
     }
 

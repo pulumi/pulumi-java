@@ -27,7 +27,7 @@ public final class OpenIdConnectClientCredentialArgs extends io.pulumi.resources
     @Import(name="clientSecretSettingName")
       private final @Nullable Output<String> clientSecretSettingName;
 
-    public Output<String> getClientSecretSettingName() {
+    public Output<String> clientSecretSettingName() {
         return this.clientSecretSettingName == null ? Codegen.empty() : this.clientSecretSettingName;
     }
 
@@ -38,7 +38,7 @@ public final class OpenIdConnectClientCredentialArgs extends io.pulumi.resources
     @Import(name="method")
       private final @Nullable Output<ClientCredentialMethod> method;
 
-    public Output<ClientCredentialMethod> getMethod() {
+    public Output<ClientCredentialMethod> method() {
         return this.method == null ? Codegen.empty() : this.method;
     }
 

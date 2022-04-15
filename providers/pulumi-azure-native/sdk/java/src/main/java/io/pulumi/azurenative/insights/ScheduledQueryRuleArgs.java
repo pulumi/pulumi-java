@@ -30,7 +30,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="action", required=true)
       private final Output<Either<AlertingActionArgs,LogToMetricActionArgs>> action;
 
-    public Output<Either<AlertingActionArgs,LogToMetricActionArgs>> getAction() {
+    public Output<Either<AlertingActionArgs,LogToMetricActionArgs>> action() {
         return this.action;
     }
 
@@ -41,7 +41,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="autoMitigate")
       private final @Nullable Output<Boolean> autoMitigate;
 
-    public Output<Boolean> getAutoMitigate() {
+    public Output<Boolean> autoMitigate() {
         return this.autoMitigate == null ? Codegen.empty() : this.autoMitigate;
     }
 
@@ -52,7 +52,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -63,7 +63,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -74,7 +74,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="enabled")
       private final @Nullable Output<Either<String,Enabled>> enabled;
 
-    public Output<Either<String,Enabled>> getEnabled() {
+    public Output<Either<String,Enabled>> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -85,7 +85,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -96,7 +96,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -107,7 +107,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
-    public Output<String> getRuleName() {
+    public Output<String> ruleName() {
         return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 
@@ -118,7 +118,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="schedule")
       private final @Nullable Output<ScheduleArgs> schedule;
 
-    public Output<ScheduleArgs> getSchedule() {
+    public Output<ScheduleArgs> schedule() {
         return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
@@ -129,7 +129,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="source", required=true)
       private final Output<SourceArgs> source;
 
-    public Output<SourceArgs> getSource() {
+    public Output<SourceArgs> source() {
         return this.source;
     }
 
@@ -140,7 +140,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

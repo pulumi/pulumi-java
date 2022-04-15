@@ -45,7 +45,7 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * @return Collation mode
      * 
      */
-    public Output</* @Nullable */ String> getCollation() {
+    public Output</* @Nullable */ String> collation() {
         return this.collation;
     }
     /**
@@ -75,7 +75,7 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. SourceDatabaseId should be the sql pool's original resource ID. SourceDatabaseId and sourceDatabaseDeletionDate must be specified.
      * 
      */
-    public Output</* @Nullable */ String> getCreateMode() {
+    public Output</* @Nullable */ String> createMode() {
         return this.createMode;
     }
     /**
@@ -89,7 +89,7 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * @return Date the SQL pool was created
      * 
      */
-    public Output</* @Nullable */ String> getCreationDate() {
+    public Output</* @Nullable */ String> creationDate() {
         return this.creationDate;
     }
     /**
@@ -103,7 +103,7 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -117,7 +117,7 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * @return Maximum size in bytes
      * 
      */
-    public Output</* @Nullable */ Double> getMaxSizeBytes() {
+    public Output</* @Nullable */ Double> maxSizeBytes() {
         return this.maxSizeBytes;
     }
     /**
@@ -131,7 +131,7 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -145,7 +145,7 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * @return Resource state
      * 
      */
-    public Output</* @Nullable */ String> getProvisioningState() {
+    public Output</* @Nullable */ String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -159,7 +159,7 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * @return Backup database to restore from
      * 
      */
-    public Output</* @Nullable */ String> getRecoverableDatabaseId() {
+    public Output</* @Nullable */ String> recoverableDatabaseId() {
         return this.recoverableDatabaseId;
     }
     /**
@@ -173,7 +173,7 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * @return Snapshot time to restore
      * 
      */
-    public Output</* @Nullable */ String> getRestorePointInTime() {
+    public Output</* @Nullable */ String> restorePointInTime() {
         return this.restorePointInTime;
     }
     /**
@@ -187,7 +187,7 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * @return SQL pool SKU
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -201,7 +201,7 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * @return Source database to create from
      * 
      */
-    public Output</* @Nullable */ String> getSourceDatabaseId() {
+    public Output</* @Nullable */ String> sourceDatabaseId() {
         return this.sourceDatabaseId;
     }
     /**
@@ -215,7 +215,7 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * @return Resource status
      * 
      */
-    public Output</* @Nullable */ String> getStatus() {
+    public Output</* @Nullable */ String> status() {
         return this.status;
     }
     /**
@@ -229,7 +229,7 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * @return The storage account type used to store backups for this sql pool.
      * 
      */
-    public Output</* @Nullable */ String> getStorageAccountType() {
+    public Output</* @Nullable */ String> storageAccountType() {
         return this.storageAccountType;
     }
     /**
@@ -243,7 +243,7 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -257,7 +257,7 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

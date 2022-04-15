@@ -23,7 +23,7 @@ public final class AdvancedThreatProtectionArgs extends io.pulumi.resources.Reso
     @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled == null ? Codegen.empty() : this.isEnabled;
     }
 
@@ -34,7 +34,7 @@ public final class AdvancedThreatProtectionArgs extends io.pulumi.resources.Reso
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 
@@ -45,7 +45,7 @@ public final class AdvancedThreatProtectionArgs extends io.pulumi.resources.Reso
     @Import(name="settingName")
       private final @Nullable Output<String> settingName;
 
-    public Output<String> getSettingName() {
+    public Output<String> settingName() {
         return this.settingName == null ? Codegen.empty() : this.settingName;
     }
 

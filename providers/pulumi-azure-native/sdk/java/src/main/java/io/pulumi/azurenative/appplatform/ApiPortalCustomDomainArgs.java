@@ -23,7 +23,7 @@ public final class ApiPortalCustomDomainArgs extends io.pulumi.resources.Resourc
     @Import(name="apiPortalName", required=true)
       private final Output<String> apiPortalName;
 
-    public Output<String> getApiPortalName() {
+    public Output<String> apiPortalName() {
         return this.apiPortalName;
     }
 
@@ -34,7 +34,7 @@ public final class ApiPortalCustomDomainArgs extends io.pulumi.resources.Resourc
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
@@ -45,7 +45,7 @@ public final class ApiPortalCustomDomainArgs extends io.pulumi.resources.Resourc
     @Import(name="properties")
       private final @Nullable Output<ApiPortalCustomDomainPropertiesArgs> properties;
 
-    public Output<ApiPortalCustomDomainPropertiesArgs> getProperties() {
+    public Output<ApiPortalCustomDomainPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -56,7 +56,7 @@ public final class ApiPortalCustomDomainArgs extends io.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +67,7 @@ public final class ApiPortalCustomDomainArgs extends io.pulumi.resources.Resourc
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 

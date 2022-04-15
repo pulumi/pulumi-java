@@ -21,7 +21,7 @@ public final class CloudServiceConfigurationResponse extends io.pulumi.resources
     @Import(name="osFamily", required=true)
       private final String osFamily;
 
-    public String getOsFamily() {
+    public String osFamily() {
         return this.osFamily;
     }
 
@@ -32,7 +32,7 @@ public final class CloudServiceConfigurationResponse extends io.pulumi.resources
     @Import(name="osVersion")
       private final @Nullable String osVersion;
 
-    public Optional<String> getOsVersion() {
+    public Optional<String> osVersion() {
         return this.osVersion == null ? Optional.empty() : Optional.ofNullable(this.osVersion);
     }
 

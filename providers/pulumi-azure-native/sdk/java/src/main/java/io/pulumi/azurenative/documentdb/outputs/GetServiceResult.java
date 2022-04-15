@@ -49,28 +49,28 @@ public final class GetServiceResult {
      * The unique resource identifier of the database account.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the database account.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Services response resource.
      * 
     */
-    public Either<DataTransferServiceResourcePropertiesResponse,SqlDedicatedGatewayServiceResourcePropertiesResponse> getProperties() {
+    public Either<DataTransferServiceResourcePropertiesResponse,SqlDedicatedGatewayServiceResourcePropertiesResponse> properties() {
         return this.properties;
     }
     /**
      * The type of Azure resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

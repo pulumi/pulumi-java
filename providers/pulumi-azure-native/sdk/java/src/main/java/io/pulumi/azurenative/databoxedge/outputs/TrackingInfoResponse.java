@@ -48,28 +48,28 @@ public final class TrackingInfoResponse {
      * Name of the carrier used in the delivery.
      * 
     */
-    public Optional<String> getCarrierName() {
+    public Optional<String> carrierName() {
         return Optional.ofNullable(this.carrierName);
     }
     /**
      * Serial number of the device being tracked.
      * 
     */
-    public Optional<String> getSerialNumber() {
+    public Optional<String> serialNumber() {
         return Optional.ofNullable(this.serialNumber);
     }
     /**
      * Tracking ID of the shipment.
      * 
     */
-    public Optional<String> getTrackingId() {
+    public Optional<String> trackingId() {
         return Optional.ofNullable(this.trackingId);
     }
     /**
      * Tracking URL of the shipment.
      * 
     */
-    public Optional<String> getTrackingUrl() {
+    public Optional<String> trackingUrl() {
         return Optional.ofNullable(this.trackingUrl);
     }
 

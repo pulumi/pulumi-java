@@ -93,70 +93,70 @@ public final class GetVendorSkusResult {
      * The sku deployment mode.
      * 
     */
-    public Optional<String> getDeploymentMode() {
+    public Optional<String> deploymentMode() {
         return Optional.ofNullable(this.deploymentMode);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The parameters for the managed application to be supplied by the vendor.
      * 
     */
-    public Optional<Object> getManagedApplicationParameters() {
+    public Optional<Object> managedApplicationParameters() {
         return Optional.ofNullable(this.managedApplicationParameters);
     }
     /**
      * The template for the managed application deployment.
      * 
     */
-    public Optional<Object> getManagedApplicationTemplate() {
+    public Optional<Object> managedApplicationTemplate() {
         return Optional.ofNullable(this.managedApplicationTemplate);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The template definition of the network function.
      * 
     */
-    public Optional<NetworkFunctionTemplateResponse> getNetworkFunctionTemplate() {
+    public Optional<NetworkFunctionTemplateResponse> networkFunctionTemplate() {
         return Optional.ofNullable(this.networkFunctionTemplate);
     }
     /**
      * Indicates if the vendor sku is in preview mode.
      * 
     */
-    public Optional<Boolean> getPreview() {
+    public Optional<Boolean> preview() {
         return Optional.ofNullable(this.preview);
     }
     /**
      * The provisioning state of the vendor sku sub resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The sku type.
      * 
     */
-    public Optional<String> getSkuType() {
+    public Optional<String> skuType() {
         return Optional.ofNullable(this.skuType);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -70,42 +70,42 @@ public final class IntegrationRuntimeSsisPropertiesResponse {
      * Catalog information for managed dedicated integration runtime.
      * 
     */
-    public Optional<IntegrationRuntimeSsisCatalogInfoResponse> getCatalogInfo() {
+    public Optional<IntegrationRuntimeSsisCatalogInfoResponse> catalogInfo() {
         return Optional.ofNullable(this.catalogInfo);
     }
     /**
      * Custom setup script properties for a managed dedicated integration runtime.
      * 
     */
-    public Optional<IntegrationRuntimeCustomSetupScriptPropertiesResponse> getCustomSetupScriptProperties() {
+    public Optional<IntegrationRuntimeCustomSetupScriptPropertiesResponse> customSetupScriptProperties() {
         return Optional.ofNullable(this.customSetupScriptProperties);
     }
     /**
      * Data proxy properties for a managed dedicated integration runtime.
      * 
     */
-    public Optional<IntegrationRuntimeDataProxyPropertiesResponse> getDataProxyProperties() {
+    public Optional<IntegrationRuntimeDataProxyPropertiesResponse> dataProxyProperties() {
         return Optional.ofNullable(this.dataProxyProperties);
     }
     /**
      * The edition for the SSIS Integration Runtime
      * 
     */
-    public Optional<String> getEdition() {
+    public Optional<String> edition() {
         return Optional.ofNullable(this.edition);
     }
     /**
      * Custom setup without script properties for a SSIS integration runtime.
      * 
     */
-    public List<Object> getExpressCustomSetupProperties() {
+    public List<Object> expressCustomSetupProperties() {
         return this.expressCustomSetupProperties == null ? List.of() : this.expressCustomSetupProperties;
     }
     /**
      * License type for bringing your own license scenario.
      * 
     */
-    public Optional<String> getLicenseType() {
+    public Optional<String> licenseType() {
         return Optional.ofNullable(this.licenseType);
     }
 

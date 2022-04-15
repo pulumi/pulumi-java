@@ -28,7 +28,7 @@ public final class RecoveryPlanActionResponse extends io.pulumi.resources.Invoke
     @Import(name="actionName", required=true)
       private final String actionName;
 
-    public String getActionName() {
+    public String actionName() {
         return this.actionName;
     }
 
@@ -39,7 +39,7 @@ public final class RecoveryPlanActionResponse extends io.pulumi.resources.Invoke
     @Import(name="customDetails", required=true)
       private final Object customDetails;
 
-    public Object getCustomDetails() {
+    public Object customDetails() {
         return this.customDetails;
     }
 
@@ -50,7 +50,7 @@ public final class RecoveryPlanActionResponse extends io.pulumi.resources.Invoke
     @Import(name="failoverDirections", required=true)
       private final List<String> failoverDirections;
 
-    public List<String> getFailoverDirections() {
+    public List<String> failoverDirections() {
         return this.failoverDirections;
     }
 
@@ -61,7 +61,7 @@ public final class RecoveryPlanActionResponse extends io.pulumi.resources.Invoke
     @Import(name="failoverTypes", required=true)
       private final List<String> failoverTypes;
 
-    public List<String> getFailoverTypes() {
+    public List<String> failoverTypes() {
         return this.failoverTypes;
     }
 

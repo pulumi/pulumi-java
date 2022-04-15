@@ -34,14 +34,14 @@ public final class CacheUsernameDownloadSettingsResponseCredentials {
      * The Bind Distinguished Name identity to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
      * 
     */
-    public Optional<String> getBindDn() {
+    public Optional<String> bindDn() {
         return Optional.ofNullable(this.bindDn);
     }
     /**
      * The Bind password to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
      * 
     */
-    public Optional<String> getBindPassword() {
+    public Optional<String> bindPassword() {
         return Optional.ofNullable(this.bindPassword);
     }
 

@@ -72,42 +72,42 @@ public final class HdfsSourceResponse {
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getDisableMetricsCollection() {
+    public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * Specifies Distcp-related settings.
      * 
     */
-    public Optional<DistcpSettingsResponse> getDistcpSettings() {
+    public Optional<DistcpSettingsResponse> distcpSettings() {
         return Optional.ofNullable(this.distcpSettings);
     }
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
     */
-    public Optional<Object> getMaxConcurrentConnections() {
+    public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getRecursive() {
+    public Optional<Object> recursive() {
         return Optional.ofNullable(this.recursive);
     }
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
      * 
     */
-    public Optional<Object> getSourceRetryCount() {
+    public Optional<Object> sourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
     */
-    public Optional<Object> getSourceRetryWait() {
+    public Optional<Object> sourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
     /**
@@ -115,7 +115,7 @@ public final class HdfsSourceResponse {
      * Expected value is 'HdfsSource'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

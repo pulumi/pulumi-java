@@ -26,7 +26,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
     @Import(name="capabilities", required=true)
       private final Map<String,String> capabilities;
 
-    public Map<String,String> getCapabilities() {
+    public Map<String,String> capabilities() {
         return this.capabilities;
     }
 
@@ -37,7 +37,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
     @Import(name="concurrentJobsLimit", required=true)
       private final Integer concurrentJobsLimit;
 
-    public Integer getConcurrentJobsLimit() {
+    public Integer concurrentJobsLimit() {
         return this.concurrentJobsLimit;
     }
 
@@ -48,7 +48,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
     @Import(name="expiryTime", required=true)
       private final String expiryTime;
 
-    public String getExpiryTime() {
+    public String expiryTime() {
         return this.expiryTime;
     }
 
@@ -59,7 +59,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
     @Import(name="hostServiceUri", required=true)
       private final String hostServiceUri;
 
-    public String getHostServiceUri() {
+    public String hostServiceUri() {
         return this.hostServiceUri;
     }
 
@@ -70,7 +70,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
     @Import(name="isActiveDispatcher", required=true)
       private final Boolean isActiveDispatcher;
 
-    public Boolean getIsActiveDispatcher() {
+    public Boolean isActiveDispatcher() {
         return this.isActiveDispatcher;
     }
 
@@ -81,7 +81,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
     @Import(name="lastConnectTime", required=true)
       private final String lastConnectTime;
 
-    public String getLastConnectTime() {
+    public String lastConnectTime() {
         return this.lastConnectTime;
     }
 
@@ -92,7 +92,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
     @Import(name="lastEndUpdateTime", required=true)
       private final String lastEndUpdateTime;
 
-    public String getLastEndUpdateTime() {
+    public String lastEndUpdateTime() {
         return this.lastEndUpdateTime;
     }
 
@@ -103,7 +103,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
     @Import(name="lastStartTime", required=true)
       private final String lastStartTime;
 
-    public String getLastStartTime() {
+    public String lastStartTime() {
         return this.lastStartTime;
     }
 
@@ -114,7 +114,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
     @Import(name="lastStartUpdateTime", required=true)
       private final String lastStartUpdateTime;
 
-    public String getLastStartUpdateTime() {
+    public String lastStartUpdateTime() {
         return this.lastStartUpdateTime;
     }
 
@@ -125,7 +125,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
     @Import(name="lastStopTime", required=true)
       private final String lastStopTime;
 
-    public String getLastStopTime() {
+    public String lastStopTime() {
         return this.lastStopTime;
     }
 
@@ -136,7 +136,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
     @Import(name="lastUpdateResult", required=true)
       private final String lastUpdateResult;
 
-    public String getLastUpdateResult() {
+    public String lastUpdateResult() {
         return this.lastUpdateResult;
     }
 
@@ -147,7 +147,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
     @Import(name="machineName", required=true)
       private final String machineName;
 
-    public String getMachineName() {
+    public String machineName() {
         return this.machineName;
     }
 
@@ -158,7 +158,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
     @Import(name="maxConcurrentJobs", required=true)
       private final Integer maxConcurrentJobs;
 
-    public Integer getMaxConcurrentJobs() {
+    public Integer maxConcurrentJobs() {
         return this.maxConcurrentJobs;
     }
 
@@ -169,7 +169,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
     @Import(name="nodeName", required=true)
       private final String nodeName;
 
-    public String getNodeName() {
+    public String nodeName() {
         return this.nodeName;
     }
 
@@ -180,7 +180,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
     @Import(name="registerTime", required=true)
       private final String registerTime;
 
-    public String getRegisterTime() {
+    public String registerTime() {
         return this.registerTime;
     }
 
@@ -191,7 +191,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
@@ -202,7 +202,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 
@@ -213,7 +213,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
     @Import(name="versionStatus", required=true)
       private final String versionStatus;
 
-    public String getVersionStatus() {
+    public String versionStatus() {
         return this.versionStatus;
     }
 

@@ -24,7 +24,7 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
-    public Output<String> getETag() {
+    public Output<String> eTag() {
         return this.eTag == null ? Codegen.empty() : this.eTag;
     }
 
@@ -35,7 +35,7 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -46,7 +46,7 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="migrateProjectName")
       private final @Nullable Output<String> migrateProjectName;
 
-    public Output<String> getMigrateProjectName() {
+    public Output<String> migrateProjectName() {
         return this.migrateProjectName == null ? Codegen.empty() : this.migrateProjectName;
     }
 
@@ -57,7 +57,7 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<MigrateProjectPropertiesArgs> properties;
 
-    public Output<MigrateProjectPropertiesArgs> getProperties() {
+    public Output<MigrateProjectPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -68,7 +68,7 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -79,7 +79,7 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<MigrateProjectTagsArgs> tags;
 
-    public Output<MigrateProjectTagsArgs> getTags() {
+    public Output<MigrateProjectTagsArgs> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

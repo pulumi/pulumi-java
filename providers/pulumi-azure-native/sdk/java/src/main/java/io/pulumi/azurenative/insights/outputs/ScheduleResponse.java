@@ -32,14 +32,14 @@ public final class ScheduleResponse {
      * frequency (in minutes) at which rule condition should be evaluated.
      * 
     */
-    public Integer getFrequencyInMinutes() {
+    public Integer frequencyInMinutes() {
         return this.frequencyInMinutes;
     }
     /**
      * Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).
      * 
     */
-    public Integer getTimeWindowInMinutes() {
+    public Integer timeWindowInMinutes() {
         return this.timeWindowInMinutes;
     }
 

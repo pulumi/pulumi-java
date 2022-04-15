@@ -44,21 +44,21 @@ public final class HttpMessageDiagnosticResponse {
      * Body logging settings.
      * 
     */
-    public Optional<BodyDiagnosticSettingsResponse> getBody() {
+    public Optional<BodyDiagnosticSettingsResponse> body() {
         return Optional.ofNullable(this.body);
     }
     /**
      * Data masking settings.
      * 
     */
-    public Optional<DataMaskingResponse> getDataMasking() {
+    public Optional<DataMaskingResponse> dataMasking() {
         return Optional.ofNullable(this.dataMasking);
     }
     /**
      * Array of HTTP Headers to log.
      * 
     */
-    public List<String> getHeaders() {
+    public List<String> headers() {
         return this.headers == null ? List.of() : this.headers;
     }
 

@@ -25,7 +25,7 @@ public final class IPv4FirewallRuleResponse extends io.pulumi.resources.InvokeAr
     @Import(name="firewallRuleName")
       private final @Nullable String firewallRuleName;
 
-    public Optional<String> getFirewallRuleName() {
+    public Optional<String> firewallRuleName() {
         return this.firewallRuleName == null ? Optional.empty() : Optional.ofNullable(this.firewallRuleName);
     }
 
@@ -36,7 +36,7 @@ public final class IPv4FirewallRuleResponse extends io.pulumi.resources.InvokeAr
     @Import(name="rangeEnd")
       private final @Nullable String rangeEnd;
 
-    public Optional<String> getRangeEnd() {
+    public Optional<String> rangeEnd() {
         return this.rangeEnd == null ? Optional.empty() : Optional.ofNullable(this.rangeEnd);
     }
 
@@ -47,7 +47,7 @@ public final class IPv4FirewallRuleResponse extends io.pulumi.resources.InvokeAr
     @Import(name="rangeStart")
       private final @Nullable String rangeStart;
 
-    public Optional<String> getRangeStart() {
+    public Optional<String> rangeStart() {
         return this.rangeStart == null ? Optional.empty() : Optional.ofNullable(this.rangeStart);
     }
 

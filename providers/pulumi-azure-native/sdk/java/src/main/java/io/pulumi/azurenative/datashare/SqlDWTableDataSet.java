@@ -43,7 +43,7 @@ public class SqlDWTableDataSet extends io.pulumi.resources.CustomResource {
      * @return Unique id for identifying a data set resource
      * 
      */
-    public Output<String> getDataSetId() {
+    public Output<String> dataSetId() {
         return this.dataSetId;
     }
     /**
@@ -57,7 +57,7 @@ public class SqlDWTableDataSet extends io.pulumi.resources.CustomResource {
      * @return DataWarehouse name of the source data set
      * 
      */
-    public Output<String> getDataWarehouseName() {
+    public Output<String> dataWarehouseName() {
         return this.dataWarehouseName;
     }
     /**
@@ -73,7 +73,7 @@ public class SqlDWTableDataSet extends io.pulumi.resources.CustomResource {
      * Expected value is 'SqlDWTable'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -87,7 +87,7 @@ public class SqlDWTableDataSet extends io.pulumi.resources.CustomResource {
      * @return Name of the azure resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +101,7 @@ public class SqlDWTableDataSet extends io.pulumi.resources.CustomResource {
      * @return Schema of the table. Default value is dbo.
      * 
      */
-    public Output<String> getSchemaName() {
+    public Output<String> schemaName() {
         return this.schemaName;
     }
     /**
@@ -115,7 +115,7 @@ public class SqlDWTableDataSet extends io.pulumi.resources.CustomResource {
      * @return Resource id of SQL server
      * 
      */
-    public Output<String> getSqlServerResourceId() {
+    public Output<String> sqlServerResourceId() {
         return this.sqlServerResourceId;
     }
     /**
@@ -129,7 +129,7 @@ public class SqlDWTableDataSet extends io.pulumi.resources.CustomResource {
      * @return System Data of the Azure resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -143,7 +143,7 @@ public class SqlDWTableDataSet extends io.pulumi.resources.CustomResource {
      * @return SQL DW table name.
      * 
      */
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
     /**
@@ -157,7 +157,7 @@ public class SqlDWTableDataSet extends io.pulumi.resources.CustomResource {
      * @return Type of the azure resource
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

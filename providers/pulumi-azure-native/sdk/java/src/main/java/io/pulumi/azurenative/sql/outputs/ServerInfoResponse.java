@@ -24,7 +24,7 @@ public final class ServerInfoResponse {
      * Server Id.
      * 
     */
-    public String getServerId() {
+    public String serverId() {
         return this.serverId;
     }
 

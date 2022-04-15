@@ -42,21 +42,21 @@ public final class ServiceEndpointPropertiesFormatResponse {
      * A list of locations.
      * 
     */
-    public List<String> getLocations() {
+    public List<String> locations() {
         return this.locations == null ? List.of() : this.locations;
     }
     /**
      * The provisioning state of the service endpoint resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The type of the endpoint service.
      * 
     */
-    public Optional<String> getService() {
+    public Optional<String> service() {
         return Optional.ofNullable(this.service);
     }
 

@@ -32,14 +32,14 @@ public final class CredentialResultResponse {
      * The name of the credential.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Base64-encoded Kubernetes configuration file.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

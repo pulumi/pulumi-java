@@ -39,21 +39,21 @@ public final class StorageAccountCredentialsResponse {
      * The primary key of the storage account.
      * 
     */
-    public String getPrimaryKey() {
+    public String primaryKey() {
         return this.primaryKey;
     }
     /**
      * The ARM resource ID of the storage account.
      * 
     */
-    public String getResourceId() {
+    public String resourceId() {
         return this.resourceId;
     }
     /**
      * The secondary key of the storage account.
      * 
     */
-    public String getSecondaryKey() {
+    public String secondaryKey() {
         return this.secondaryKey;
     }
 

@@ -25,7 +25,7 @@ public final class PartnerRegionInfoResponse extends io.pulumi.resources.InvokeA
     @Import(name="location")
       private final @Nullable String location;
 
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
@@ -36,7 +36,7 @@ public final class PartnerRegionInfoResponse extends io.pulumi.resources.InvokeA
     @Import(name="replicationRole", required=true)
       private final String replicationRole;
 
-    public String getReplicationRole() {
+    public String replicationRole() {
         return this.replicationRole;
     }
 

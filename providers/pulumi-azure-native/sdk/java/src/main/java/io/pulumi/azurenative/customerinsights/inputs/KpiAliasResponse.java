@@ -23,7 +23,7 @@ public final class KpiAliasResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="aliasName", required=true)
       private final String aliasName;
 
-    public String getAliasName() {
+    public String aliasName() {
         return this.aliasName;
     }
 
@@ -34,7 +34,7 @@ public final class KpiAliasResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="expression", required=true)
       private final String expression;
 
-    public String getExpression() {
+    public String expression() {
         return this.expression;
     }
 

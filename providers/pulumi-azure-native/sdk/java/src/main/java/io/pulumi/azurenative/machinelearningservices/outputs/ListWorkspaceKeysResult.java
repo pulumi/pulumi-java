@@ -31,19 +31,19 @@ public final class ListWorkspaceKeysResult {
         this.userStorageResourceId = userStorageResourceId;
     }
 
-    public String getAppInsightsInstrumentationKey() {
+    public String appInsightsInstrumentationKey() {
         return this.appInsightsInstrumentationKey;
     }
-    public RegistryListCredentialsResultResponse getContainerRegistryCredentials() {
+    public RegistryListCredentialsResultResponse containerRegistryCredentials() {
         return this.containerRegistryCredentials;
     }
-    public ListNotebookKeysResultResponse getNotebookAccessKeys() {
+    public ListNotebookKeysResultResponse notebookAccessKeys() {
         return this.notebookAccessKeys;
     }
-    public String getUserStorageKey() {
+    public String userStorageKey() {
         return this.userStorageKey;
     }
-    public String getUserStorageResourceId() {
+    public String userStorageResourceId() {
         return this.userStorageResourceId;
     }
 

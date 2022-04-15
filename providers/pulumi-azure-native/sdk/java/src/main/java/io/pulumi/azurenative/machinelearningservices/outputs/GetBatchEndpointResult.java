@@ -87,63 +87,63 @@ public final class GetBatchEndpointResult {
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Service identity associated with a resource.
      * 
     */
-    public Optional<ResourceIdentityResponse> getIdentity() {
+    public Optional<ResourceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The geo-location where the resource lives
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Additional attributes of the entity.
      * 
     */
-    public BatchEndpointResponse getProperties() {
+    public BatchEndpointResponse properties() {
         return this.properties;
     }
     /**
      * System data associated with resource provider
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -24,7 +24,7 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="action")
       private final @Nullable Output<Either<String,IPAction>> action;
 
-    public Output<Either<String,IPAction>> getAction() {
+    public Output<Either<String,IPAction>> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -35,7 +35,7 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="filterName")
       private final @Nullable Output<String> filterName;
 
-    public Output<String> getFilterName() {
+    public Output<String> filterName() {
         return this.filterName == null ? Codegen.empty() : this.filterName;
     }
 
@@ -46,7 +46,7 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="ipFilterRuleName")
       private final @Nullable Output<String> ipFilterRuleName;
 
-    public Output<String> getIpFilterRuleName() {
+    public Output<String> ipFilterRuleName() {
         return this.ipFilterRuleName == null ? Codegen.empty() : this.ipFilterRuleName;
     }
 
@@ -57,7 +57,7 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="ipMask")
       private final @Nullable Output<String> ipMask;
 
-    public Output<String> getIpMask() {
+    public Output<String> ipMask() {
         return this.ipMask == null ? Codegen.empty() : this.ipMask;
     }
 
@@ -68,7 +68,7 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
-    public Output<String> getNamespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -79,7 +79,7 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

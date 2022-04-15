@@ -27,7 +27,7 @@ public final class IpAddressResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="dnsNameLabel")
       private final @Nullable String dnsNameLabel;
 
-    public Optional<String> getDnsNameLabel() {
+    public Optional<String> dnsNameLabel() {
         return this.dnsNameLabel == null ? Optional.empty() : Optional.ofNullable(this.dnsNameLabel);
     }
 
@@ -38,7 +38,7 @@ public final class IpAddressResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="fqdn", required=true)
       private final String fqdn;
 
-    public String getFqdn() {
+    public String fqdn() {
         return this.fqdn;
     }
 
@@ -49,7 +49,7 @@ public final class IpAddressResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="ip")
       private final @Nullable String ip;
 
-    public Optional<String> getIp() {
+    public Optional<String> ip() {
         return this.ip == null ? Optional.empty() : Optional.ofNullable(this.ip);
     }
 
@@ -60,7 +60,7 @@ public final class IpAddressResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="ports", required=true)
       private final List<PortResponse> ports;
 
-    public List<PortResponse> getPorts() {
+    public List<PortResponse> ports() {
         return this.ports;
     }
 
@@ -71,7 +71,7 @@ public final class IpAddressResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

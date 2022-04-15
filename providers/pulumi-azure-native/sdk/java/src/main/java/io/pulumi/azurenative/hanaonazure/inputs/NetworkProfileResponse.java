@@ -27,7 +27,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="circuitId", required=true)
       private final String circuitId;
 
-    public String getCircuitId() {
+    public String circuitId() {
         return this.circuitId;
     }
 
@@ -38,7 +38,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="networkInterfaces")
       private final @Nullable List<IpAddressResponse> networkInterfaces;
 
-    public List<IpAddressResponse> getNetworkInterfaces() {
+    public List<IpAddressResponse> networkInterfaces() {
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
     }
 

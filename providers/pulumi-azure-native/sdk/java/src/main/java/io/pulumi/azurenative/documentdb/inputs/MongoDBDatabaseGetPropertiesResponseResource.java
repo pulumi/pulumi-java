@@ -20,7 +20,7 @@ public final class MongoDBDatabaseGetPropertiesResponseResource extends io.pulum
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -31,7 +31,7 @@ public final class MongoDBDatabaseGetPropertiesResponseResource extends io.pulum
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -42,7 +42,7 @@ public final class MongoDBDatabaseGetPropertiesResponseResource extends io.pulum
     @Import(name="rid", required=true)
       private final String rid;
 
-    public String getRid() {
+    public String rid() {
         return this.rid;
     }
 
@@ -53,7 +53,7 @@ public final class MongoDBDatabaseGetPropertiesResponseResource extends io.pulum
     @Import(name="ts", required=true)
       private final Double ts;
 
-    public Double getTs() {
+    public Double ts() {
         return this.ts;
     }
 

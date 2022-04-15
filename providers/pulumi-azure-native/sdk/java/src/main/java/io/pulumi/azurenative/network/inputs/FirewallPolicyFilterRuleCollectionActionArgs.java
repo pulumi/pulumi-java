@@ -28,7 +28,7 @@ public final class FirewallPolicyFilterRuleCollectionActionArgs extends io.pulum
     @Import(name="type")
       private final @Nullable Output<Either<String,FirewallPolicyFilterRuleCollectionActionType>> type;
 
-    public Output<Either<String,FirewallPolicyFilterRuleCollectionActionType>> getType() {
+    public Output<Either<String,FirewallPolicyFilterRuleCollectionActionType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

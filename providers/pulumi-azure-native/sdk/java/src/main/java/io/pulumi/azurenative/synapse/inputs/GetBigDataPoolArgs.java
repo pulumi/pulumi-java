@@ -19,7 +19,7 @@ public final class GetBigDataPoolArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="bigDataPoolName", required=true)
       private final String bigDataPoolName;
 
-    public String getBigDataPoolName() {
+    public String bigDataPoolName() {
         return this.bigDataPoolName;
     }
 
@@ -30,7 +30,7 @@ public final class GetBigDataPoolArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetBigDataPoolArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
-    public String getWorkspaceName() {
+    public String workspaceName() {
         return this.workspaceName;
     }
 

@@ -43,7 +43,7 @@ public class Solution extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the ETAG for optimistic concurrency control.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -57,7 +57,7 @@ public class Solution extends io.pulumi.resources.CustomResource {
      * @return Gets the name of this REST resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class Solution extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the properties of the solution.
      * 
      */
-    public Output<SolutionPropertiesResponse> getProperties() {
+    public Output<SolutionPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -85,7 +85,7 @@ public class Solution extends io.pulumi.resources.CustomResource {
      * @return Gets the type of this REST resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

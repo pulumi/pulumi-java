@@ -56,35 +56,35 @@ public final class WorkspaceFeaturesResponse {
      * Dedicated LA cluster resourceId that is linked to the workspaces.
      * 
     */
-    public Optional<String> getClusterResourceId() {
+    public Optional<String> clusterResourceId() {
         return Optional.ofNullable(this.clusterResourceId);
     }
     /**
      * Disable Non-AAD based Auth.
      * 
     */
-    public Optional<Boolean> getDisableLocalAuth() {
+    public Optional<Boolean> disableLocalAuth() {
         return Optional.ofNullable(this.disableLocalAuth);
     }
     /**
      * Flag that indicate if data should be exported.
      * 
     */
-    public Optional<Boolean> getEnableDataExport() {
+    public Optional<Boolean> enableDataExport() {
         return Optional.ofNullable(this.enableDataExport);
     }
     /**
      * Flag that indicate which permission to use - resource or workspace or both.
      * 
     */
-    public Optional<Boolean> getEnableLogAccessUsingOnlyResourcePermissions() {
+    public Optional<Boolean> enableLogAccessUsingOnlyResourcePermissions() {
         return Optional.ofNullable(this.enableLogAccessUsingOnlyResourcePermissions);
     }
     /**
      * Flag that describes if we want to remove the data after 30 days.
      * 
     */
-    public Optional<Boolean> getImmediatePurgeDataOn30Days() {
+    public Optional<Boolean> immediatePurgeDataOn30Days() {
         return Optional.ofNullable(this.immediatePurgeDataOn30Days);
     }
 

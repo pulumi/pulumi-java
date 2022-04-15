@@ -110,87 +110,87 @@ public final class GetMultipleActivationKeyResult {
      * Agreement number under which the key is requested.
      * 
     */
-    public Optional<String> getAgreementNumber() {
+    public Optional<String> agreementNumber() {
         return Optional.ofNullable(this.agreementNumber);
     }
     /**
      * End of support of security updates activated by the MAK key.
      * 
     */
-    public String getExpirationDate() {
+    public String expirationDate() {
         return this.expirationDate;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Number of activations/servers using the MAK key.
      * 
     */
-    public Optional<Integer> getInstalledServerNumber() {
+    public Optional<Integer> installedServerNumber() {
         return Optional.ofNullable(this.installedServerNumber);
     }
     /**
      * <code> true </code> if user has eligible on-premises Windows physical or virtual machines, and that the requested key will only be used in their organization; <code> false </code> otherwise.
      * 
     */
-    public Optional<Boolean> getIsEligible() {
+    public Optional<Boolean> isEligible() {
         return Optional.ofNullable(this.isEligible);
     }
     /**
      * The geo-location where the resource lives
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * MAK 5x5 key.
      * 
     */
-    public String getMultipleActivationKey() {
+    public String multipleActivationKey() {
         return this.multipleActivationKey;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Type of OS for which the key is requested.
      * 
     */
-    public Optional<String> getOsType() {
+    public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Type of support
      * 
     */
-    public Optional<String> getSupportType() {
+    public Optional<String> supportType() {
         return Optional.ofNullable(this.supportType);
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

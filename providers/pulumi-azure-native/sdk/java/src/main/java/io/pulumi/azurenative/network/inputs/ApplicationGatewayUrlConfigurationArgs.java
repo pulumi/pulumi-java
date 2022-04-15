@@ -27,7 +27,7 @@ public final class ApplicationGatewayUrlConfigurationArgs extends io.pulumi.reso
     @Import(name="modifiedPath")
       private final @Nullable Output<String> modifiedPath;
 
-    public Output<String> getModifiedPath() {
+    public Output<String> modifiedPath() {
         return this.modifiedPath == null ? Codegen.empty() : this.modifiedPath;
     }
 
@@ -38,7 +38,7 @@ public final class ApplicationGatewayUrlConfigurationArgs extends io.pulumi.reso
     @Import(name="modifiedQueryString")
       private final @Nullable Output<String> modifiedQueryString;
 
-    public Output<String> getModifiedQueryString() {
+    public Output<String> modifiedQueryString() {
         return this.modifiedQueryString == null ? Codegen.empty() : this.modifiedQueryString;
     }
 
@@ -49,7 +49,7 @@ public final class ApplicationGatewayUrlConfigurationArgs extends io.pulumi.reso
     @Import(name="reroute")
       private final @Nullable Output<Boolean> reroute;
 
-    public Output<Boolean> getReroute() {
+    public Output<Boolean> reroute() {
         return this.reroute == null ? Codegen.empty() : this.reroute;
     }
 

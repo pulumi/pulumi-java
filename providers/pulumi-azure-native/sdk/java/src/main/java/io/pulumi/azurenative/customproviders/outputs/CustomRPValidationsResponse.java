@@ -34,14 +34,14 @@ public final class CustomRPValidationsResponse {
      * A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.
      * 
     */
-    public String getSpecification() {
+    public String specification() {
         return this.specification;
     }
     /**
      * The type of validation to run against a matching request.
      * 
     */
-    public Optional<String> getValidationType() {
+    public Optional<String> validationType() {
         return Optional.ofNullable(this.validationType);
     }
 

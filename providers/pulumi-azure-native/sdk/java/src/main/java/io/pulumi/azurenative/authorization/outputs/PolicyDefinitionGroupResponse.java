@@ -55,35 +55,35 @@ public final class PolicyDefinitionGroupResponse {
      * A resource ID of a resource that contains additional metadata about the group.
      * 
     */
-    public Optional<String> getAdditionalMetadataId() {
+    public Optional<String> additionalMetadataId() {
         return Optional.ofNullable(this.additionalMetadataId);
     }
     /**
      * The group's category.
      * 
     */
-    public Optional<String> getCategory() {
+    public Optional<String> category() {
         return Optional.ofNullable(this.category);
     }
     /**
      * The group's description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The group's display name.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The name of the group.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

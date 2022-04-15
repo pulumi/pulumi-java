@@ -25,7 +25,7 @@ public final class ExtendedPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="diskExclusionProperties")
       private final @Nullable DiskExclusionPropertiesResponse diskExclusionProperties;
 
-    public Optional<DiskExclusionPropertiesResponse> getDiskExclusionProperties() {
+    public Optional<DiskExclusionPropertiesResponse> diskExclusionProperties() {
         return this.diskExclusionProperties == null ? Optional.empty() : Optional.ofNullable(this.diskExclusionProperties);
     }
 

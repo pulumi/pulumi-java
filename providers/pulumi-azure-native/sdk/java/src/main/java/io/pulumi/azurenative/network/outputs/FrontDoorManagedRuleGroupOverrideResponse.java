@@ -43,21 +43,21 @@ public final class FrontDoorManagedRuleGroupOverrideResponse {
      * Describes the exclusions that are applied to all rules in the group.
      * 
     */
-    public List<ManagedRuleExclusionResponse> getExclusions() {
+    public List<ManagedRuleExclusionResponse> exclusions() {
         return this.exclusions == null ? List.of() : this.exclusions;
     }
     /**
      * Describes the managed rule group to override.
      * 
     */
-    public String getRuleGroupName() {
+    public String ruleGroupName() {
         return this.ruleGroupName;
     }
     /**
      * List of rules that will be disabled. If none specified, all rules in the group will be disabled.
      * 
     */
-    public List<FrontDoorManagedRuleOverrideResponse> getRules() {
+    public List<FrontDoorManagedRuleOverrideResponse> rules() {
         return this.rules == null ? List.of() : this.rules;
     }
 

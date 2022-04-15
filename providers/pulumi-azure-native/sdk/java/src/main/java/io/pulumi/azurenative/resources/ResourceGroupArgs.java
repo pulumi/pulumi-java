@@ -23,7 +23,7 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -34,7 +34,7 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="managedBy")
       private final @Nullable Output<String> managedBy;
 
-    public Output<String> getManagedBy() {
+    public Output<String> managedBy() {
         return this.managedBy == null ? Codegen.empty() : this.managedBy;
     }
 
@@ -45,7 +45,7 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName")
       private final @Nullable Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName == null ? Codegen.empty() : this.resourceGroupName;
     }
 
@@ -56,7 +56,7 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

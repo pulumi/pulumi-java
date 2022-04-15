@@ -22,7 +22,7 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
     @Import(name="policyId")
       private final @Nullable Output<String> policyId;
 
-    public Output<String> getPolicyId() {
+    public Output<String> policyId() {
         return this.policyId == null ? Codegen.empty() : this.policyId;
     }
 
@@ -33,7 +33,7 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
     @Import(name="roleDefinitionId")
       private final @Nullable Output<String> roleDefinitionId;
 
-    public Output<String> getRoleDefinitionId() {
+    public Output<String> roleDefinitionId() {
         return this.roleDefinitionId == null ? Codegen.empty() : this.roleDefinitionId;
     }
 
@@ -44,7 +44,7 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
     @Import(name="roleManagementPolicyAssignmentName")
       private final @Nullable Output<String> roleManagementPolicyAssignmentName;
 
-    public Output<String> getRoleManagementPolicyAssignmentName() {
+    public Output<String> roleManagementPolicyAssignmentName() {
         return this.roleManagementPolicyAssignmentName == null ? Codegen.empty() : this.roleManagementPolicyAssignmentName;
     }
 
@@ -55,7 +55,7 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 

@@ -70,49 +70,49 @@ public final class WebhookReceiverResponse {
      * Indicates the identifier uri for aad auth.
      * 
     */
-    public Optional<String> getIdentifierUri() {
+    public Optional<String> identifierUri() {
         return Optional.ofNullable(this.identifierUri);
     }
     /**
      * The name of the webhook receiver. Names must be unique across all receivers within an action group.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Indicates the webhook app object Id for aad auth.
      * 
     */
-    public Optional<String> getObjectId() {
+    public Optional<String> objectId() {
         return Optional.ofNullable(this.objectId);
     }
     /**
      * The URI where webhooks should be sent.
      * 
     */
-    public String getServiceUri() {
+    public String serviceUri() {
         return this.serviceUri;
     }
     /**
      * Indicates the tenant id for aad auth.
      * 
     */
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * Indicates whether or not use AAD authentication.
      * 
     */
-    public Optional<Boolean> getUseAadAuth() {
+    public Optional<Boolean> useAadAuth() {
         return Optional.ofNullable(this.useAadAuth);
     }
     /**
      * Indicates whether to use common alert schema.
      * 
     */
-    public Optional<Boolean> getUseCommonAlertSchema() {
+    public Optional<Boolean> useCommonAlertSchema() {
         return Optional.ofNullable(this.useCommonAlertSchema);
     }
 

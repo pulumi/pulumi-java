@@ -19,7 +19,7 @@ public final class ListWorkflowTriggerCallbackUrlArgs extends io.pulumi.resource
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class ListWorkflowTriggerCallbackUrlArgs extends io.pulumi.resource
     @Import(name="triggerName", required=true)
       private final String triggerName;
 
-    public String getTriggerName() {
+    public String triggerName() {
         return this.triggerName;
     }
 
@@ -41,7 +41,7 @@ public final class ListWorkflowTriggerCallbackUrlArgs extends io.pulumi.resource
     @Import(name="workflowName", required=true)
       private final String workflowName;
 
-    public String getWorkflowName() {
+    public String workflowName() {
         return this.workflowName;
     }
 

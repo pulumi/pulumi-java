@@ -24,7 +24,7 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="administration")
       private final @Nullable Output<DFPInstanceAdministratorsArgs> administration;
 
-    public Output<DFPInstanceAdministratorsArgs> getAdministration() {
+    public Output<DFPInstanceAdministratorsArgs> administration() {
         return this.administration == null ? Codegen.empty() : this.administration;
     }
 
@@ -35,7 +35,7 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="instanceName")
       private final @Nullable Output<String> instanceName;
 
-    public Output<String> getInstanceName() {
+    public Output<String> instanceName() {
         return this.instanceName == null ? Codegen.empty() : this.instanceName;
     }
 
@@ -46,7 +46,7 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -57,7 +57,7 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,7 +68,7 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

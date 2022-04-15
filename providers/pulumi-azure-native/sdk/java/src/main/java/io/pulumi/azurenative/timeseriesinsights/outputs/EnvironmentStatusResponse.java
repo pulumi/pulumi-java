@@ -33,14 +33,14 @@ public final class EnvironmentStatusResponse {
      * An object that represents the status of ingress on an environment.
      * 
     */
-    public IngressEnvironmentStatusResponse getIngress() {
+    public IngressEnvironmentStatusResponse ingress() {
         return this.ingress;
     }
     /**
      * An object that represents the status of warm storage on an environment.
      * 
     */
-    public WarmStorageEnvironmentStatusResponse getWarmStorage() {
+    public WarmStorageEnvironmentStatusResponse warmStorage() {
         return this.warmStorage;
     }
 

@@ -34,14 +34,14 @@ public final class BlobRestoreParametersResponse {
      * Blob ranges to restore.
      * 
     */
-    public List<BlobRestoreRangeResponse> getBlobRanges() {
+    public List<BlobRestoreRangeResponse> blobRanges() {
         return this.blobRanges;
     }
     /**
      * Restore blob to the specified time.
      * 
     */
-    public String getTimeToRestore() {
+    public String timeToRestore() {
         return this.timeToRestore;
     }
 

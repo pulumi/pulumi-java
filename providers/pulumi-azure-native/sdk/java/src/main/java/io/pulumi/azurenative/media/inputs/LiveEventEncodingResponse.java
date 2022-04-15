@@ -25,7 +25,7 @@ public final class LiveEventEncodingResponse extends io.pulumi.resources.InvokeA
     @Import(name="encodingType")
       private final @Nullable String encodingType;
 
-    public Optional<String> getEncodingType() {
+    public Optional<String> encodingType() {
         return this.encodingType == null ? Optional.empty() : Optional.ofNullable(this.encodingType);
     }
 
@@ -36,7 +36,7 @@ public final class LiveEventEncodingResponse extends io.pulumi.resources.InvokeA
     @Import(name="keyFrameInterval")
       private final @Nullable String keyFrameInterval;
 
-    public Optional<String> getKeyFrameInterval() {
+    public Optional<String> keyFrameInterval() {
         return this.keyFrameInterval == null ? Optional.empty() : Optional.ofNullable(this.keyFrameInterval);
     }
 
@@ -47,7 +47,7 @@ public final class LiveEventEncodingResponse extends io.pulumi.resources.InvokeA
     @Import(name="presetName")
       private final @Nullable String presetName;
 
-    public Optional<String> getPresetName() {
+    public Optional<String> presetName() {
         return this.presetName == null ? Optional.empty() : Optional.ofNullable(this.presetName);
     }
 
@@ -58,7 +58,7 @@ public final class LiveEventEncodingResponse extends io.pulumi.resources.InvokeA
     @Import(name="stretchMode")
       private final @Nullable String stretchMode;
 
-    public Optional<String> getStretchMode() {
+    public Optional<String> stretchMode() {
         return this.stretchMode == null ? Optional.empty() : Optional.ofNullable(this.stretchMode);
     }
 

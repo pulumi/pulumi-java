@@ -18,7 +18,7 @@ public final class DataPartitionNamesResponse {
         this.name = name;
     }
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

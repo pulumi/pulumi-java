@@ -24,7 +24,7 @@ public final class ClusterPropertiesResponse extends io.pulumi.resources.InvokeA
     @Import(name="capacityAllocated", required=true)
       private final Integer capacityAllocated;
 
-    public Integer getCapacityAllocated() {
+    public Integer capacityAllocated() {
         return this.capacityAllocated;
     }
 
@@ -35,7 +35,7 @@ public final class ClusterPropertiesResponse extends io.pulumi.resources.InvokeA
     @Import(name="capacityAssigned", required=true)
       private final Integer capacityAssigned;
 
-    public Integer getCapacityAssigned() {
+    public Integer capacityAssigned() {
         return this.capacityAssigned;
     }
 
@@ -46,7 +46,7 @@ public final class ClusterPropertiesResponse extends io.pulumi.resources.InvokeA
     @Import(name="clusterId", required=true)
       private final String clusterId;
 
-    public String getClusterId() {
+    public String clusterId() {
         return this.clusterId;
     }
 
@@ -57,7 +57,7 @@ public final class ClusterPropertiesResponse extends io.pulumi.resources.InvokeA
     @Import(name="createdDate", required=true)
       private final String createdDate;
 
-    public String getCreatedDate() {
+    public String createdDate() {
         return this.createdDate;
     }
 
@@ -68,7 +68,7 @@ public final class ClusterPropertiesResponse extends io.pulumi.resources.InvokeA
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

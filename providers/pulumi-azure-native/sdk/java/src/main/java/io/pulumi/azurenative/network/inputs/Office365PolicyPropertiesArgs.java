@@ -26,7 +26,7 @@ public final class Office365PolicyPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="breakOutCategories")
       private final @Nullable Output<BreakOutCategoryPoliciesArgs> breakOutCategories;
 
-    public Output<BreakOutCategoryPoliciesArgs> getBreakOutCategories() {
+    public Output<BreakOutCategoryPoliciesArgs> breakOutCategories() {
         return this.breakOutCategories == null ? Codegen.empty() : this.breakOutCategories;
     }
 

@@ -70,49 +70,49 @@ public final class LabAnnouncementPropertiesResponse {
      * Is the lab announcement active/enabled at this time?
      * 
     */
-    public Optional<String> getEnabled() {
+    public Optional<String> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The time at which the announcement expires (null for never)
      * 
     */
-    public Optional<String> getExpirationDate() {
+    public Optional<String> expirationDate() {
         return Optional.ofNullable(this.expirationDate);
     }
     /**
      * Has this announcement expired?
      * 
     */
-    public Optional<Boolean> getExpired() {
+    public Optional<Boolean> expired() {
         return Optional.ofNullable(this.expired);
     }
     /**
      * The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
      * 
     */
-    public Optional<String> getMarkdown() {
+    public Optional<String> markdown() {
         return Optional.ofNullable(this.markdown);
     }
     /**
      * The provisioning status of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The plain text title for the lab announcement
      * 
     */
-    public Optional<String> getTitle() {
+    public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
     /**
      * The unique immutable identifier of a resource (Guid).
      * 
     */
-    public String getUniqueIdentifier() {
+    public String uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
 

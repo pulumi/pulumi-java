@@ -27,7 +27,7 @@ public final class TaskRunRequestResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="agentPoolName")
       private final @Nullable String agentPoolName;
 
-    public Optional<String> getAgentPoolName() {
+    public Optional<String> agentPoolName() {
         return this.agentPoolName == null ? Optional.empty() : Optional.ofNullable(this.agentPoolName);
     }
 
@@ -38,7 +38,7 @@ public final class TaskRunRequestResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="isArchiveEnabled")
       private final @Nullable Boolean isArchiveEnabled;
 
-    public Optional<Boolean> getIsArchiveEnabled() {
+    public Optional<Boolean> isArchiveEnabled() {
         return this.isArchiveEnabled == null ? Optional.empty() : Optional.ofNullable(this.isArchiveEnabled);
     }
 
@@ -49,7 +49,7 @@ public final class TaskRunRequestResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="logTemplate")
       private final @Nullable String logTemplate;
 
-    public Optional<String> getLogTemplate() {
+    public Optional<String> logTemplate() {
         return this.logTemplate == null ? Optional.empty() : Optional.ofNullable(this.logTemplate);
     }
 
@@ -60,7 +60,7 @@ public final class TaskRunRequestResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="overrideTaskStepProperties")
       private final @Nullable OverrideTaskStepPropertiesResponse overrideTaskStepProperties;
 
-    public Optional<OverrideTaskStepPropertiesResponse> getOverrideTaskStepProperties() {
+    public Optional<OverrideTaskStepPropertiesResponse> overrideTaskStepProperties() {
         return this.overrideTaskStepProperties == null ? Optional.empty() : Optional.ofNullable(this.overrideTaskStepProperties);
     }
 
@@ -71,7 +71,7 @@ public final class TaskRunRequestResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="taskId", required=true)
       private final String taskId;
 
-    public String getTaskId() {
+    public String taskId() {
         return this.taskId;
     }
 
@@ -83,7 +83,7 @@ public final class TaskRunRequestResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

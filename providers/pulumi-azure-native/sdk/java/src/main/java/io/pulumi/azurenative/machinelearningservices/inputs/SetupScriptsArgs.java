@@ -26,7 +26,7 @@ public final class SetupScriptsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scripts")
       private final @Nullable Output<ScriptsToExecuteArgs> scripts;
 
-    public Output<ScriptsToExecuteArgs> getScripts() {
+    public Output<ScriptsToExecuteArgs> scripts() {
         return this.scripts == null ? Codegen.empty() : this.scripts;
     }
 

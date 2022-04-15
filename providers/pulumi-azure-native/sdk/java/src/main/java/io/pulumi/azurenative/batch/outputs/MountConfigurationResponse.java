@@ -51,28 +51,28 @@ public final class MountConfigurationResponse {
      * This property is mutually exclusive with all other properties.
      * 
     */
-    public Optional<AzureBlobFileSystemConfigurationResponse> getAzureBlobFileSystemConfiguration() {
+    public Optional<AzureBlobFileSystemConfigurationResponse> azureBlobFileSystemConfiguration() {
         return Optional.ofNullable(this.azureBlobFileSystemConfiguration);
     }
     /**
      * This property is mutually exclusive with all other properties.
      * 
     */
-    public Optional<AzureFileShareConfigurationResponse> getAzureFileShareConfiguration() {
+    public Optional<AzureFileShareConfigurationResponse> azureFileShareConfiguration() {
         return Optional.ofNullable(this.azureFileShareConfiguration);
     }
     /**
      * This property is mutually exclusive with all other properties.
      * 
     */
-    public Optional<CIFSMountConfigurationResponse> getCifsMountConfiguration() {
+    public Optional<CIFSMountConfigurationResponse> cifsMountConfiguration() {
         return Optional.ofNullable(this.cifsMountConfiguration);
     }
     /**
      * This property is mutually exclusive with all other properties.
      * 
     */
-    public Optional<NFSMountConfigurationResponse> getNfsMountConfiguration() {
+    public Optional<NFSMountConfigurationResponse> nfsMountConfiguration() {
         return Optional.ofNullable(this.nfsMountConfiguration);
     }
 

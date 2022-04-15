@@ -26,7 +26,7 @@ public final class RolloutIdentityAuthenticationResponse {
      * Expected value is 'RolloutIdentity'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
