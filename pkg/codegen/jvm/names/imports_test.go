@@ -17,7 +17,7 @@ func TestFQN(t *testing.T) {
 }
 
 func TestImports(t *testing.T) {
-	pkg := Ident("io").FQN().Dot(Ident("pulumi")).Dot(Ident("random"))
+	pkg := Ident("com").FQN().Dot(Ident("pulumi")).Dot(Ident("random"))
 	cls := Ident("RandomString")
 	i := NewImports(pkg, cls)
 	assert.True(t, i.Resolve(cls).Equal(pkg.Dot(cls)))
@@ -27,5 +27,5 @@ func TestImports(t *testing.T) {
 
 	assert.Equal(t, `import java.util.Map;`, i.ImportCode())
 
-	assert.Equal(t, `package io.pulumi.random;`, i.PackageCode())
+	assert.Equal(t, `package com.pulumi.random;`, i.PackageCode())
 }
