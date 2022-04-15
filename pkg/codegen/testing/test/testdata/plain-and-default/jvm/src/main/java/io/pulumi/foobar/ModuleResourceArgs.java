@@ -22,119 +22,119 @@ public final class ModuleResourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="optional_bool")
       private final @Nullable Output<Boolean> optional_bool;
 
-    public Output<Boolean> getOptional_bool() {
+    public Output<Boolean> optional_bool() {
         return this.optional_bool == null ? Codegen.empty() : this.optional_bool;
     }
 
     @Import(name="optional_const")
       private final @Nullable Output<String> optional_const;
 
-    public Output<String> getOptional_const() {
+    public Output<String> optional_const() {
         return this.optional_const == null ? Codegen.empty() : this.optional_const;
     }
 
     @Import(name="optional_enum")
       private final @Nullable Output<EnumThing> optional_enum;
 
-    public Output<EnumThing> getOptional_enum() {
+    public Output<EnumThing> optional_enum() {
         return this.optional_enum == null ? Codegen.empty() : this.optional_enum;
     }
 
     @Import(name="optional_number")
       private final @Nullable Output<Double> optional_number;
 
-    public Output<Double> getOptional_number() {
+    public Output<Double> optional_number() {
         return this.optional_number == null ? Codegen.empty() : this.optional_number;
     }
 
     @Import(name="optional_string")
       private final @Nullable Output<String> optional_string;
 
-    public Output<String> getOptional_string() {
+    public Output<String> optional_string() {
         return this.optional_string == null ? Codegen.empty() : this.optional_string;
     }
 
     @Import(name="plain_optional_bool")
       private final @Nullable Boolean plain_optional_bool;
 
-    public Optional<Boolean> getPlain_optional_bool() {
+    public Optional<Boolean> plain_optional_bool() {
         return this.plain_optional_bool == null ? Optional.empty() : Optional.ofNullable(this.plain_optional_bool);
     }
 
     @Import(name="plain_optional_const")
       private final @Nullable String plain_optional_const;
 
-    public Optional<String> getPlain_optional_const() {
+    public Optional<String> plain_optional_const() {
         return this.plain_optional_const == null ? Optional.empty() : Optional.ofNullable(this.plain_optional_const);
     }
 
     @Import(name="plain_optional_number")
       private final @Nullable Double plain_optional_number;
 
-    public Optional<Double> getPlain_optional_number() {
+    public Optional<Double> plain_optional_number() {
         return this.plain_optional_number == null ? Optional.empty() : Optional.ofNullable(this.plain_optional_number);
     }
 
     @Import(name="plain_optional_string")
       private final @Nullable String plain_optional_string;
 
-    public Optional<String> getPlain_optional_string() {
+    public Optional<String> plain_optional_string() {
         return this.plain_optional_string == null ? Optional.empty() : Optional.ofNullable(this.plain_optional_string);
     }
 
     @Import(name="plain_required_bool", required=true)
       private final Boolean plain_required_bool;
 
-    public Boolean getPlain_required_bool() {
+    public Boolean plain_required_bool() {
         return this.plain_required_bool;
     }
 
     @Import(name="plain_required_const", required=true)
       private final String plain_required_const;
 
-    public String getPlain_required_const() {
+    public String plain_required_const() {
         return this.plain_required_const;
     }
 
     @Import(name="plain_required_number", required=true)
       private final Double plain_required_number;
 
-    public Double getPlain_required_number() {
+    public Double plain_required_number() {
         return this.plain_required_number;
     }
 
     @Import(name="plain_required_string", required=true)
       private final String plain_required_string;
 
-    public String getPlain_required_string() {
+    public String plain_required_string() {
         return this.plain_required_string;
     }
 
     @Import(name="required_bool", required=true)
       private final Output<Boolean> required_bool;
 
-    public Output<Boolean> getRequired_bool() {
+    public Output<Boolean> required_bool() {
         return this.required_bool;
     }
 
     @Import(name="required_enum", required=true)
       private final Output<EnumThing> required_enum;
 
-    public Output<EnumThing> getRequired_enum() {
+    public Output<EnumThing> required_enum() {
         return this.required_enum;
     }
 
     @Import(name="required_number", required=true)
       private final Output<Double> required_number;
 
-    public Output<Double> getRequired_number() {
+    public Output<Double> required_number() {
         return this.required_number;
     }
 
     @Import(name="required_string", required=true)
       private final Output<String> required_string;
 
-    public Output<String> getRequired_string() {
+    public Output<String> required_string() {
         return this.required_string;
     }
 

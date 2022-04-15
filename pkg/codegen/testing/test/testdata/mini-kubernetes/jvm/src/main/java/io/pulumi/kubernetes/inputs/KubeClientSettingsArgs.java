@@ -28,7 +28,7 @@ public final class KubeClientSettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="burst")
       private final @Nullable Output<Integer> burst;
 
-    public Output<Integer> getBurst() {
+    public Output<Integer> burst() {
         return this.burst == null ? Codegen.empty() : this.burst;
     }
 
@@ -39,7 +39,7 @@ public final class KubeClientSettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="qps")
       private final @Nullable Output<Double> qps;
 
-    public Output<Double> getQps() {
+    public Output<Double> qps() {
         return this.qps == null ? Codegen.empty() : this.qps;
     }
 

@@ -23,7 +23,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="deploymentName")
       private final @Nullable Output<String> deploymentName;
 
-    public Output<String> getDeploymentName() {
+    public Output<String> deploymentName() {
         return this.deploymentName == null ? Codegen.empty() : this.deploymentName;
     }
 
@@ -34,7 +34,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="endpointName", required=true)
       private final Output<String> endpointName;
 
-    public Output<String> getEndpointName() {
+    public Output<String> endpointName() {
         return this.endpointName;
     }
 
@@ -45,7 +45,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -56,7 +56,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -67,7 +67,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="properties", required=true)
       private final Output<io.pulumi.azurenative.machinelearningservices.inputs.BatchDeploymentArgs> properties;
 
-    public Output<io.pulumi.azurenative.machinelearningservices.inputs.BatchDeploymentArgs> getProperties() {
+    public Output<io.pulumi.azurenative.machinelearningservices.inputs.BatchDeploymentArgs> properties() {
         return this.properties;
     }
 
@@ -78,7 +78,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,7 +89,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -100,7 +100,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

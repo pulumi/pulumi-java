@@ -18,13 +18,13 @@ public class NoRecursive extends io.pulumi.resources.CustomResource {
     @Export(name="rec", type=Rec.class, parameters={})
     private Output</* @Nullable */ Rec> rec;
 
-    public Output</* @Nullable */ Rec> getRec() {
+    public Output</* @Nullable */ Rec> rec() {
         return this.rec;
     }
     @Export(name="replace", type=String.class, parameters={})
     private Output</* @Nullable */ String> replace;
 
-    public Output</* @Nullable */ String> getReplace() {
+    public Output</* @Nullable */ String> replace() {
         return this.replace;
     }
 

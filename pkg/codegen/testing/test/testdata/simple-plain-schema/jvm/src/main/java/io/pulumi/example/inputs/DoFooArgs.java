@@ -15,7 +15,7 @@ public final class DoFooArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="foo", required=true)
       private final Foo foo;
 
-    public Foo getFoo() {
+    public Foo foo() {
         return this.foo;
     }
 

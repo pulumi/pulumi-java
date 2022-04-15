@@ -30,16 +30,16 @@ public final class Container {
         this.size = size;
     }
 
-    public Optional<ContainerBrightness> getBrightness() {
+    public Optional<ContainerBrightness> brightness() {
         return Optional.ofNullable(this.brightness);
     }
-    public Optional<String> getColor() {
+    public Optional<String> color() {
         return Optional.ofNullable(this.color);
     }
-    public Optional<String> getMaterial() {
+    public Optional<String> material() {
         return Optional.ofNullable(this.material);
     }
-    public ContainerSize getSize() {
+    public ContainerSize size() {
         return this.size;
     }
 
