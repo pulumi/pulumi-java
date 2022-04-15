@@ -19,42 +19,42 @@ public final class ServiceTaskSpecContainerSpecConfigGetArgs extends io.pulumi.r
     @Import(name="configId", required=true)
       private final Output<String> configId;
 
-    public Output<String> getConfigId() {
+    public Output<String> configId() {
         return this.configId;
     }
 
     @Import(name="configName")
       private final @Nullable Output<String> configName;
 
-    public Output<String> getConfigName() {
+    public Output<String> configName() {
         return this.configName == null ? Codegen.empty() : this.configName;
     }
 
     @Import(name="fileGid")
       private final @Nullable Output<String> fileGid;
 
-    public Output<String> getFileGid() {
+    public Output<String> fileGid() {
         return this.fileGid == null ? Codegen.empty() : this.fileGid;
     }
 
     @Import(name="fileMode")
       private final @Nullable Output<Integer> fileMode;
 
-    public Output<Integer> getFileMode() {
+    public Output<Integer> fileMode() {
         return this.fileMode == null ? Codegen.empty() : this.fileMode;
     }
 
     @Import(name="fileName", required=true)
       private final Output<String> fileName;
 
-    public Output<String> getFileName() {
+    public Output<String> fileName() {
         return this.fileName;
     }
 
     @Import(name="fileUid")
       private final @Nullable Output<String> fileUid;
 
-    public Output<String> getFileUid() {
+    public Output<String> fileUid() {
         return this.fileUid == null ? Codegen.empty() : this.fileUid;
     }
 

@@ -25,13 +25,13 @@ public final class ServiceTaskSpecContainerSpecDnsConfig {
         this.searches = searches;
     }
 
-    public List<String> getNameservers() {
+    public List<String> nameservers() {
         return this.nameservers;
     }
-    public List<String> getOptions() {
+    public List<String> options() {
         return this.options == null ? List.of() : this.options;
     }
-    public List<String> getSearches() {
+    public List<String> searches() {
         return this.searches == null ? List.of() : this.searches;
     }
 

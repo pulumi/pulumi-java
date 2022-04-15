@@ -32,16 +32,16 @@ public final class ServiceTaskSpecContainerSpecMountVolumeOptions {
         this.noCopy = noCopy;
     }
 
-    public Optional<String> getDriverName() {
+    public Optional<String> driverName() {
         return Optional.ofNullable(this.driverName);
     }
-    public Map<String,String> getDriverOptions() {
+    public Map<String,String> driverOptions() {
         return this.driverOptions == null ? Map.of() : this.driverOptions;
     }
-    public List<ServiceTaskSpecContainerSpecMountVolumeOptionsLabel> getLabels() {
+    public List<ServiceTaskSpecContainerSpecMountVolumeOptionsLabel> labels() {
         return this.labels == null ? List.of() : this.labels;
     }
-    public Optional<Boolean> getNoCopy() {
+    public Optional<Boolean> noCopy() {
         return Optional.ofNullable(this.noCopy);
     }
 

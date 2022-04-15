@@ -41,25 +41,25 @@ public final class ServiceTaskSpecContainerSpecMount {
         this.volumeOptions = volumeOptions;
     }
 
-    public Optional<ServiceTaskSpecContainerSpecMountBindOptions> getBindOptions() {
+    public Optional<ServiceTaskSpecContainerSpecMountBindOptions> bindOptions() {
         return Optional.ofNullable(this.bindOptions);
     }
-    public Optional<Boolean> getReadOnly() {
+    public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
-    public Optional<String> getSource() {
+    public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
-    public String getTarget() {
+    public String target() {
         return this.target;
     }
-    public Optional<ServiceTaskSpecContainerSpecMountTmpfsOptions> getTmpfsOptions() {
+    public Optional<ServiceTaskSpecContainerSpecMountTmpfsOptions> tmpfsOptions() {
         return Optional.ofNullable(this.tmpfsOptions);
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
-    public Optional<ServiceTaskSpecContainerSpecMountVolumeOptions> getVolumeOptions() {
+    public Optional<ServiceTaskSpecContainerSpecMountVolumeOptions> volumeOptions() {
         return Optional.ofNullable(this.volumeOptions);
     }
 

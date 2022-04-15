@@ -18,7 +18,7 @@ public final class ContainerMountBindOptionsArgs extends io.pulumi.resources.Res
     @Import(name="propagation")
       private final @Nullable Output<String> propagation;
 
-    public Output<String> getPropagation() {
+    public Output<String> propagation() {
         return this.propagation == null ? Codegen.empty() : this.propagation;
     }
 

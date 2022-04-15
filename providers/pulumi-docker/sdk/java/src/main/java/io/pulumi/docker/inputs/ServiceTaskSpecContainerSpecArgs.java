@@ -29,140 +29,140 @@ public final class ServiceTaskSpecContainerSpecArgs extends io.pulumi.resources.
     @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
-    public Output<List<String>> getArgs() {
+    public Output<List<String>> args() {
         return this.args == null ? Codegen.empty() : this.args;
     }
 
     @Import(name="commands")
       private final @Nullable Output<List<String>> commands;
 
-    public Output<List<String>> getCommands() {
+    public Output<List<String>> commands() {
         return this.commands == null ? Codegen.empty() : this.commands;
     }
 
     @Import(name="configs")
       private final @Nullable Output<List<ServiceTaskSpecContainerSpecConfigArgs>> configs;
 
-    public Output<List<ServiceTaskSpecContainerSpecConfigArgs>> getConfigs() {
+    public Output<List<ServiceTaskSpecContainerSpecConfigArgs>> configs() {
         return this.configs == null ? Codegen.empty() : this.configs;
     }
 
     @Import(name="dir")
       private final @Nullable Output<String> dir;
 
-    public Output<String> getDir() {
+    public Output<String> dir() {
         return this.dir == null ? Codegen.empty() : this.dir;
     }
 
     @Import(name="dnsConfig")
       private final @Nullable Output<ServiceTaskSpecContainerSpecDnsConfigArgs> dnsConfig;
 
-    public Output<ServiceTaskSpecContainerSpecDnsConfigArgs> getDnsConfig() {
+    public Output<ServiceTaskSpecContainerSpecDnsConfigArgs> dnsConfig() {
         return this.dnsConfig == null ? Codegen.empty() : this.dnsConfig;
     }
 
     @Import(name="env")
       private final @Nullable Output<Map<String,String>> env;
 
-    public Output<Map<String,String>> getEnv() {
+    public Output<Map<String,String>> env() {
         return this.env == null ? Codegen.empty() : this.env;
     }
 
     @Import(name="groups")
       private final @Nullable Output<List<String>> groups;
 
-    public Output<List<String>> getGroups() {
+    public Output<List<String>> groups() {
         return this.groups == null ? Codegen.empty() : this.groups;
     }
 
     @Import(name="healthcheck")
       private final @Nullable Output<ServiceTaskSpecContainerSpecHealthcheckArgs> healthcheck;
 
-    public Output<ServiceTaskSpecContainerSpecHealthcheckArgs> getHealthcheck() {
+    public Output<ServiceTaskSpecContainerSpecHealthcheckArgs> healthcheck() {
         return this.healthcheck == null ? Codegen.empty() : this.healthcheck;
     }
 
     @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
-    public Output<String> getHostname() {
+    public Output<String> hostname() {
         return this.hostname == null ? Codegen.empty() : this.hostname;
     }
 
     @Import(name="hosts")
       private final @Nullable Output<List<ServiceTaskSpecContainerSpecHostArgs>> hosts;
 
-    public Output<List<ServiceTaskSpecContainerSpecHostArgs>> getHosts() {
+    public Output<List<ServiceTaskSpecContainerSpecHostArgs>> hosts() {
         return this.hosts == null ? Codegen.empty() : this.hosts;
     }
 
     @Import(name="image", required=true)
       private final Output<String> image;
 
-    public Output<String> getImage() {
+    public Output<String> image() {
         return this.image;
     }
 
     @Import(name="isolation")
       private final @Nullable Output<String> isolation;
 
-    public Output<String> getIsolation() {
+    public Output<String> isolation() {
         return this.isolation == null ? Codegen.empty() : this.isolation;
     }
 
     @Import(name="labels")
       private final @Nullable Output<List<ServiceTaskSpecContainerSpecLabelArgs>> labels;
 
-    public Output<List<ServiceTaskSpecContainerSpecLabelArgs>> getLabels() {
+    public Output<List<ServiceTaskSpecContainerSpecLabelArgs>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="mounts")
       private final @Nullable Output<List<ServiceTaskSpecContainerSpecMountArgs>> mounts;
 
-    public Output<List<ServiceTaskSpecContainerSpecMountArgs>> getMounts() {
+    public Output<List<ServiceTaskSpecContainerSpecMountArgs>> mounts() {
         return this.mounts == null ? Codegen.empty() : this.mounts;
     }
 
     @Import(name="privileges")
       private final @Nullable Output<ServiceTaskSpecContainerSpecPrivilegesArgs> privileges;
 
-    public Output<ServiceTaskSpecContainerSpecPrivilegesArgs> getPrivileges() {
+    public Output<ServiceTaskSpecContainerSpecPrivilegesArgs> privileges() {
         return this.privileges == null ? Codegen.empty() : this.privileges;
     }
 
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
+    public Output<Boolean> readOnly() {
         return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     @Import(name="secrets")
       private final @Nullable Output<List<ServiceTaskSpecContainerSpecSecretArgs>> secrets;
 
-    public Output<List<ServiceTaskSpecContainerSpecSecretArgs>> getSecrets() {
+    public Output<List<ServiceTaskSpecContainerSpecSecretArgs>> secrets() {
         return this.secrets == null ? Codegen.empty() : this.secrets;
     }
 
     @Import(name="stopGracePeriod")
       private final @Nullable Output<String> stopGracePeriod;
 
-    public Output<String> getStopGracePeriod() {
+    public Output<String> stopGracePeriod() {
         return this.stopGracePeriod == null ? Codegen.empty() : this.stopGracePeriod;
     }
 
     @Import(name="stopSignal")
       private final @Nullable Output<String> stopSignal;
 
-    public Output<String> getStopSignal() {
+    public Output<String> stopSignal() {
         return this.stopSignal == null ? Codegen.empty() : this.stopSignal;
     }
 
     @Import(name="user")
       private final @Nullable Output<String> user;
 
-    public Output<String> getUser() {
+    public Output<String> user() {
         return this.user == null ? Codegen.empty() : this.user;
     }
 

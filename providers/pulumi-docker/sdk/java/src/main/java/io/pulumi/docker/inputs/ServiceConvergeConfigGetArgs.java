@@ -18,14 +18,14 @@ public final class ServiceConvergeConfigGetArgs extends io.pulumi.resources.Reso
     @Import(name="delay")
       private final @Nullable Output<String> delay;
 
-    public Output<String> getDelay() {
+    public Output<String> delay() {
         return this.delay == null ? Codegen.empty() : this.delay;
     }
 
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
+    public Output<String> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 

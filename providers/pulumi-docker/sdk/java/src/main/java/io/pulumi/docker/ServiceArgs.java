@@ -31,7 +31,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="auth")
       private final @Nullable Output<ServiceAuthArgs> auth;
 
-    public Output<ServiceAuthArgs> getAuth() {
+    public Output<ServiceAuthArgs> auth() {
         return this.auth == null ? Codegen.empty() : this.auth;
     }
 
@@ -42,7 +42,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="convergeConfig")
       private final @Nullable Output<ServiceConvergeConfigArgs> convergeConfig;
 
-    public Output<ServiceConvergeConfigArgs> getConvergeConfig() {
+    public Output<ServiceConvergeConfigArgs> convergeConfig() {
         return this.convergeConfig == null ? Codegen.empty() : this.convergeConfig;
     }
 
@@ -53,7 +53,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointSpec")
       private final @Nullable Output<ServiceEndpointSpecArgs> endpointSpec;
 
-    public Output<ServiceEndpointSpecArgs> getEndpointSpec() {
+    public Output<ServiceEndpointSpecArgs> endpointSpec() {
         return this.endpointSpec == null ? Codegen.empty() : this.endpointSpec;
     }
 
@@ -64,7 +64,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<List<ServiceLabelArgs>> labels;
 
-    public Output<List<ServiceLabelArgs>> getLabels() {
+    public Output<List<ServiceLabelArgs>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -75,7 +75,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mode")
       private final @Nullable Output<ServiceModeArgs> mode;
 
-    public Output<ServiceModeArgs> getMode() {
+    public Output<ServiceModeArgs> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -86,7 +86,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -97,7 +97,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rollbackConfig")
       private final @Nullable Output<ServiceRollbackConfigArgs> rollbackConfig;
 
-    public Output<ServiceRollbackConfigArgs> getRollbackConfig() {
+    public Output<ServiceRollbackConfigArgs> rollbackConfig() {
         return this.rollbackConfig == null ? Codegen.empty() : this.rollbackConfig;
     }
 
@@ -108,7 +108,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="taskSpec", required=true)
       private final Output<ServiceTaskSpecArgs> taskSpec;
 
-    public Output<ServiceTaskSpecArgs> getTaskSpec() {
+    public Output<ServiceTaskSpecArgs> taskSpec() {
         return this.taskSpec;
     }
 
@@ -119,7 +119,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="updateConfig")
       private final @Nullable Output<ServiceUpdateConfigArgs> updateConfig;
 
-    public Output<ServiceUpdateConfigArgs> getUpdateConfig() {
+    public Output<ServiceUpdateConfigArgs> updateConfig() {
         return this.updateConfig == null ? Codegen.empty() : this.updateConfig;
     }
 

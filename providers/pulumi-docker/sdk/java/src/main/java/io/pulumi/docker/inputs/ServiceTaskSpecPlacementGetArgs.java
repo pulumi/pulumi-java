@@ -21,28 +21,28 @@ public final class ServiceTaskSpecPlacementGetArgs extends io.pulumi.resources.R
     @Import(name="constraints")
       private final @Nullable Output<List<String>> constraints;
 
-    public Output<List<String>> getConstraints() {
+    public Output<List<String>> constraints() {
         return this.constraints == null ? Codegen.empty() : this.constraints;
     }
 
     @Import(name="maxReplicas")
       private final @Nullable Output<Integer> maxReplicas;
 
-    public Output<Integer> getMaxReplicas() {
+    public Output<Integer> maxReplicas() {
         return this.maxReplicas == null ? Codegen.empty() : this.maxReplicas;
     }
 
     @Import(name="platforms")
       private final @Nullable Output<List<ServiceTaskSpecPlacementPlatformGetArgs>> platforms;
 
-    public Output<List<ServiceTaskSpecPlacementPlatformGetArgs>> getPlatforms() {
+    public Output<List<ServiceTaskSpecPlacementPlatformGetArgs>> platforms() {
         return this.platforms == null ? Codegen.empty() : this.platforms;
     }
 
     @Import(name="prefs")
       private final @Nullable Output<List<String>> prefs;
 
-    public Output<List<String>> getPrefs() {
+    public Output<List<String>> prefs() {
         return this.prefs == null ? Codegen.empty() : this.prefs;
     }
 

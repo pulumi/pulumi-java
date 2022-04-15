@@ -31,19 +31,19 @@ public final class ProviderRegistryAuthArgs {
         this.username = username;
     }
 
-    public Output<String> getAddress() {
+    public Output<String> address() {
         return this.address;
     }
-    public @Nullable Output<String> getConfigFile() {
+    public @Nullable Output<String> configFile() {
         return this.configFile;
     }
-    public @Nullable Output<String> getConfigFileContent() {
+    public @Nullable Output<String> configFileContent() {
         return this.configFileContent;
     }
-    public @Nullable Output<String> getPassword() {
+    public @Nullable Output<String> password() {
         return this.password;
     }
-    public @Nullable Output<String> getUsername() {
+    public @Nullable Output<String> username() {
         return this.username;
     }
 

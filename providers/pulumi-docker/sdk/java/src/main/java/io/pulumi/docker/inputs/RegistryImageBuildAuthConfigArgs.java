@@ -18,56 +18,56 @@ public final class RegistryImageBuildAuthConfigArgs extends io.pulumi.resources.
     @Import(name="auth")
       private final @Nullable Output<String> auth;
 
-    public Output<String> getAuth() {
+    public Output<String> auth() {
         return this.auth == null ? Codegen.empty() : this.auth;
     }
 
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email == null ? Codegen.empty() : this.email;
     }
 
     @Import(name="hostName", required=true)
       private final Output<String> hostName;
 
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName;
     }
 
     @Import(name="identityToken")
       private final @Nullable Output<String> identityToken;
 
-    public Output<String> getIdentityToken() {
+    public Output<String> identityToken() {
         return this.identityToken == null ? Codegen.empty() : this.identityToken;
     }
 
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
     @Import(name="registryToken")
       private final @Nullable Output<String> registryToken;
 
-    public Output<String> getRegistryToken() {
+    public Output<String> registryToken() {
         return this.registryToken == null ? Codegen.empty() : this.registryToken;
     }
 
     @Import(name="serverAddress")
       private final @Nullable Output<String> serverAddress;
 
-    public Output<String> getServerAddress() {
+    public Output<String> serverAddress() {
         return this.serverAddress == null ? Codegen.empty() : this.serverAddress;
     }
 
     @Import(name="userName")
       private final @Nullable Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName == null ? Codegen.empty() : this.userName;
     }
 

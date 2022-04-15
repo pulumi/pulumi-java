@@ -18,21 +18,21 @@ public final class ServiceAuthGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
     @Import(name="serverAddress", required=true)
       private final Output<String> serverAddress;
 
-    public Output<String> getServerAddress() {
+    public Output<String> serverAddress() {
         return this.serverAddress;
     }
 
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 
