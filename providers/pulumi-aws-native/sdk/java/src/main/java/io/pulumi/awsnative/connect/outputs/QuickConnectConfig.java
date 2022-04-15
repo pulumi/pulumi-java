@@ -31,16 +31,16 @@ public final class QuickConnectConfig {
         this.userConfig = userConfig;
     }
 
-    public Optional<QuickConnectPhoneNumberQuickConnectConfig> getPhoneConfig() {
+    public Optional<QuickConnectPhoneNumberQuickConnectConfig> phoneConfig() {
         return Optional.ofNullable(this.phoneConfig);
     }
-    public Optional<QuickConnectQueueQuickConnectConfig> getQueueConfig() {
+    public Optional<QuickConnectQueueQuickConnectConfig> queueConfig() {
         return Optional.ofNullable(this.queueConfig);
     }
-    public QuickConnectType getQuickConnectType() {
+    public QuickConnectType quickConnectType() {
         return this.quickConnectType;
     }
-    public Optional<QuickConnectUserQuickConnectConfig> getUserConfig() {
+    public Optional<QuickConnectUserQuickConnectConfig> userConfig() {
         return Optional.ofNullable(this.userConfig);
     }
 

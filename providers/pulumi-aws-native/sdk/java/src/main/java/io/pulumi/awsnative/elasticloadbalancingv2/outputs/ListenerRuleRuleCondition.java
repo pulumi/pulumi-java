@@ -47,28 +47,28 @@ public final class ListenerRuleRuleCondition {
         this.values = values;
     }
 
-    public Optional<String> getField() {
+    public Optional<String> field() {
         return Optional.ofNullable(this.field);
     }
-    public Optional<ListenerRuleHostHeaderConfig> getHostHeaderConfig() {
+    public Optional<ListenerRuleHostHeaderConfig> hostHeaderConfig() {
         return Optional.ofNullable(this.hostHeaderConfig);
     }
-    public Optional<ListenerRuleHttpHeaderConfig> getHttpHeaderConfig() {
+    public Optional<ListenerRuleHttpHeaderConfig> httpHeaderConfig() {
         return Optional.ofNullable(this.httpHeaderConfig);
     }
-    public Optional<ListenerRuleHttpRequestMethodConfig> getHttpRequestMethodConfig() {
+    public Optional<ListenerRuleHttpRequestMethodConfig> httpRequestMethodConfig() {
         return Optional.ofNullable(this.httpRequestMethodConfig);
     }
-    public Optional<ListenerRulePathPatternConfig> getPathPatternConfig() {
+    public Optional<ListenerRulePathPatternConfig> pathPatternConfig() {
         return Optional.ofNullable(this.pathPatternConfig);
     }
-    public Optional<ListenerRuleQueryStringConfig> getQueryStringConfig() {
+    public Optional<ListenerRuleQueryStringConfig> queryStringConfig() {
         return Optional.ofNullable(this.queryStringConfig);
     }
-    public Optional<ListenerRuleSourceIpConfig> getSourceIpConfig() {
+    public Optional<ListenerRuleSourceIpConfig> sourceIpConfig() {
         return Optional.ofNullable(this.sourceIpConfig);
     }
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }
 

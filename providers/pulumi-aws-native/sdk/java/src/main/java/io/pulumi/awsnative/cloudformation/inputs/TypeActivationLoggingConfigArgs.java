@@ -22,7 +22,7 @@ public final class TypeActivationLoggingConfigArgs extends io.pulumi.resources.R
     @Import(name="logGroupName")
       private final @Nullable Output<String> logGroupName;
 
-    public Output<String> getLogGroupName() {
+    public Output<String> logGroupName() {
         return this.logGroupName == null ? Codegen.empty() : this.logGroupName;
     }
 
@@ -33,7 +33,7 @@ public final class TypeActivationLoggingConfigArgs extends io.pulumi.resources.R
     @Import(name="logRoleArn")
       private final @Nullable Output<String> logRoleArn;
 
-    public Output<String> getLogRoleArn() {
+    public Output<String> logRoleArn() {
         return this.logRoleArn == null ? Codegen.empty() : this.logRoleArn;
     }
 

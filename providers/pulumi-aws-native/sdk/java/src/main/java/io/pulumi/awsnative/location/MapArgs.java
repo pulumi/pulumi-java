@@ -20,28 +20,28 @@ public final class MapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configuration", required=true)
       private final Output<MapConfigurationArgs> configuration;
 
-    public Output<MapConfigurationArgs> getConfiguration() {
+    public Output<MapConfigurationArgs> configuration() {
         return this.configuration;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="mapName")
       private final @Nullable Output<String> mapName;
 
-    public Output<String> getMapName() {
+    public Output<String> mapName() {
         return this.mapName == null ? Codegen.empty() : this.mapName;
     }
 
     @Import(name="pricingPlan")
       private final @Nullable Output<MapPricingPlan> pricingPlan;
 
-    public Output<MapPricingPlan> getPricingPlan() {
+    public Output<MapPricingPlan> pricingPlan() {
         return this.pricingPlan == null ? Codegen.empty() : this.pricingPlan;
     }
 

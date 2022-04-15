@@ -21,13 +21,13 @@ public class WebACLAssociation extends io.pulumi.resources.CustomResource {
     @Export(name="resourceArn", type=String.class, parameters={})
     private Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
     @Export(name="webACLArn", type=String.class, parameters={})
     private Output<String> webACLArn;
 
-    public Output<String> getWebACLArn() {
+    public Output<String> webACLArn() {
         return this.webACLArn;
     }
 

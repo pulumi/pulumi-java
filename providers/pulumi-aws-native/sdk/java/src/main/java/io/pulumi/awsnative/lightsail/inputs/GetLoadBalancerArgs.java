@@ -19,7 +19,7 @@ public final class GetLoadBalancerArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="loadBalancerName", required=true)
       private final String loadBalancerName;
 
-    public String getLoadBalancerName() {
+    public String loadBalancerName() {
         return this.loadBalancerName;
     }
 

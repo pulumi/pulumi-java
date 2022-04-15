@@ -22,14 +22,14 @@ public final class RepositoryLifecyclePolicyArgs extends io.pulumi.resources.Res
     @Import(name="lifecyclePolicyText")
       private final @Nullable Output<String> lifecyclePolicyText;
 
-    public Output<String> getLifecyclePolicyText() {
+    public Output<String> lifecyclePolicyText() {
         return this.lifecyclePolicyText == null ? Codegen.empty() : this.lifecyclePolicyText;
     }
 
     @Import(name="registryId")
       private final @Nullable Output<String> registryId;
 
-    public Output<String> getRegistryId() {
+    public Output<String> registryId() {
         return this.registryId == null ? Codegen.empty() : this.registryId;
     }
 

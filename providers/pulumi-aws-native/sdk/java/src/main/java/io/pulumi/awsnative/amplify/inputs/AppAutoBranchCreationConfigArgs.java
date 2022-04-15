@@ -23,70 +23,70 @@ public final class AppAutoBranchCreationConfigArgs extends io.pulumi.resources.R
     @Import(name="autoBranchCreationPatterns")
       private final @Nullable Output<List<String>> autoBranchCreationPatterns;
 
-    public Output<List<String>> getAutoBranchCreationPatterns() {
+    public Output<List<String>> autoBranchCreationPatterns() {
         return this.autoBranchCreationPatterns == null ? Codegen.empty() : this.autoBranchCreationPatterns;
     }
 
     @Import(name="basicAuthConfig")
       private final @Nullable Output<AppBasicAuthConfigArgs> basicAuthConfig;
 
-    public Output<AppBasicAuthConfigArgs> getBasicAuthConfig() {
+    public Output<AppBasicAuthConfigArgs> basicAuthConfig() {
         return this.basicAuthConfig == null ? Codegen.empty() : this.basicAuthConfig;
     }
 
     @Import(name="buildSpec")
       private final @Nullable Output<String> buildSpec;
 
-    public Output<String> getBuildSpec() {
+    public Output<String> buildSpec() {
         return this.buildSpec == null ? Codegen.empty() : this.buildSpec;
     }
 
     @Import(name="enableAutoBranchCreation")
       private final @Nullable Output<Boolean> enableAutoBranchCreation;
 
-    public Output<Boolean> getEnableAutoBranchCreation() {
+    public Output<Boolean> enableAutoBranchCreation() {
         return this.enableAutoBranchCreation == null ? Codegen.empty() : this.enableAutoBranchCreation;
     }
 
     @Import(name="enableAutoBuild")
       private final @Nullable Output<Boolean> enableAutoBuild;
 
-    public Output<Boolean> getEnableAutoBuild() {
+    public Output<Boolean> enableAutoBuild() {
         return this.enableAutoBuild == null ? Codegen.empty() : this.enableAutoBuild;
     }
 
     @Import(name="enablePerformanceMode")
       private final @Nullable Output<Boolean> enablePerformanceMode;
 
-    public Output<Boolean> getEnablePerformanceMode() {
+    public Output<Boolean> enablePerformanceMode() {
         return this.enablePerformanceMode == null ? Codegen.empty() : this.enablePerformanceMode;
     }
 
     @Import(name="enablePullRequestPreview")
       private final @Nullable Output<Boolean> enablePullRequestPreview;
 
-    public Output<Boolean> getEnablePullRequestPreview() {
+    public Output<Boolean> enablePullRequestPreview() {
         return this.enablePullRequestPreview == null ? Codegen.empty() : this.enablePullRequestPreview;
     }
 
     @Import(name="environmentVariables")
       private final @Nullable Output<List<AppEnvironmentVariableArgs>> environmentVariables;
 
-    public Output<List<AppEnvironmentVariableArgs>> getEnvironmentVariables() {
+    public Output<List<AppEnvironmentVariableArgs>> environmentVariables() {
         return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
     @Import(name="pullRequestEnvironmentName")
       private final @Nullable Output<String> pullRequestEnvironmentName;
 
-    public Output<String> getPullRequestEnvironmentName() {
+    public Output<String> pullRequestEnvironmentName() {
         return this.pullRequestEnvironmentName == null ? Codegen.empty() : this.pullRequestEnvironmentName;
     }
 
     @Import(name="stage")
       private final @Nullable Output<AppAutoBranchCreationConfigStage> stage;
 
-    public Output<AppAutoBranchCreationConfigStage> getStage() {
+    public Output<AppAutoBranchCreationConfigStage> stage() {
         return this.stage == null ? Codegen.empty() : this.stage;
     }
 

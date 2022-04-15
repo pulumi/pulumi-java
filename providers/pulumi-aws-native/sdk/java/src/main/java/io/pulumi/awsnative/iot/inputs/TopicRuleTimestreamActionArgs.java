@@ -22,42 +22,42 @@ public final class TopicRuleTimestreamActionArgs extends io.pulumi.resources.Res
     @Import(name="batchMode")
       private final @Nullable Output<Boolean> batchMode;
 
-    public Output<Boolean> getBatchMode() {
+    public Output<Boolean> batchMode() {
         return this.batchMode == null ? Codegen.empty() : this.batchMode;
     }
 
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
     @Import(name="dimensions", required=true)
       private final Output<List<TopicRuleTimestreamDimensionArgs>> dimensions;
 
-    public Output<List<TopicRuleTimestreamDimensionArgs>> getDimensions() {
+    public Output<List<TopicRuleTimestreamDimensionArgs>> dimensions() {
         return this.dimensions;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 
     @Import(name="timestamp")
       private final @Nullable Output<TopicRuleTimestreamTimestampArgs> timestamp;
 
-    public Output<TopicRuleTimestreamTimestampArgs> getTimestamp() {
+    public Output<TopicRuleTimestreamTimestampArgs> timestamp() {
         return this.timestamp == null ? Codegen.empty() : this.timestamp;
     }
 

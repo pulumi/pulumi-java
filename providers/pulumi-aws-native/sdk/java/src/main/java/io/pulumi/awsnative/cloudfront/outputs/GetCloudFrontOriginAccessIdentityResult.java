@@ -26,13 +26,13 @@ public final class GetCloudFrontOriginAccessIdentityResult {
         this.s3CanonicalUserId = s3CanonicalUserId;
     }
 
-    public Optional<CloudFrontOriginAccessIdentityConfig> getCloudFrontOriginAccessIdentityConfig() {
+    public Optional<CloudFrontOriginAccessIdentityConfig> cloudFrontOriginAccessIdentityConfig() {
         return Optional.ofNullable(this.cloudFrontOriginAccessIdentityConfig);
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<String> getS3CanonicalUserId() {
+    public Optional<String> s3CanonicalUserId() {
         return Optional.ofNullable(this.s3CanonicalUserId);
     }
 

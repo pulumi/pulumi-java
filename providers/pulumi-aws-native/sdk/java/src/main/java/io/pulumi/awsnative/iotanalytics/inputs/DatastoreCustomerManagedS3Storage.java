@@ -17,14 +17,14 @@ public final class DatastoreCustomerManagedS3Storage extends io.pulumi.resources
     @Import(name="bucket", required=true)
       private final String bucket;
 
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
 
     @Import(name="keyPrefix")
       private final @Nullable String keyPrefix;
 
-    public Optional<String> getKeyPrefix() {
+    public Optional<String> keyPrefix() {
         return this.keyPrefix == null ? Optional.empty() : Optional.ofNullable(this.keyPrefix);
     }
 

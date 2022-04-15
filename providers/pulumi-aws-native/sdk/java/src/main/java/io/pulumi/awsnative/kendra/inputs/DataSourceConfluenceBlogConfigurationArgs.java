@@ -19,7 +19,7 @@ public final class DataSourceConfluenceBlogConfigurationArgs extends io.pulumi.r
     @Import(name="blogFieldMappings")
       private final @Nullable Output<List<DataSourceConfluenceBlogToIndexFieldMappingArgs>> blogFieldMappings;
 
-    public Output<List<DataSourceConfluenceBlogToIndexFieldMappingArgs>> getBlogFieldMappings() {
+    public Output<List<DataSourceConfluenceBlogToIndexFieldMappingArgs>> blogFieldMappings() {
         return this.blogFieldMappings == null ? Codegen.empty() : this.blogFieldMappings;
     }
 

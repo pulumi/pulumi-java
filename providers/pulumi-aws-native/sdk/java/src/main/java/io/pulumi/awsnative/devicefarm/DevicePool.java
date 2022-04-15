@@ -25,43 +25,43 @@ public class DevicePool extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="maxDevices", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxDevices;
 
-    public Output</* @Nullable */ Integer> getMaxDevices() {
+    public Output</* @Nullable */ Integer> maxDevices() {
         return this.maxDevices;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="projectArn", type=String.class, parameters={})
     private Output<String> projectArn;
 
-    public Output<String> getProjectArn() {
+    public Output<String> projectArn() {
         return this.projectArn;
     }
     @Export(name="rules", type=List.class, parameters={DevicePoolRule.class})
     private Output<List<DevicePoolRule>> rules;
 
-    public Output<List<DevicePoolRule>> getRules() {
+    public Output<List<DevicePoolRule>> rules() {
         return this.rules;
     }
     @Export(name="tags", type=List.class, parameters={DevicePoolTag.class})
     private Output</* @Nullable */ List<DevicePoolTag>> tags;
 
-    public Output</* @Nullable */ List<DevicePoolTag>> getTags() {
+    public Output</* @Nullable */ List<DevicePoolTag>> tags() {
         return this.tags;
     }
 

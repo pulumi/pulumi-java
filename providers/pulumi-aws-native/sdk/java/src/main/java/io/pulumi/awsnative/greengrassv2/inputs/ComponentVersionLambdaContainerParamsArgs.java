@@ -22,28 +22,28 @@ public final class ComponentVersionLambdaContainerParamsArgs extends io.pulumi.r
     @Import(name="devices")
       private final @Nullable Output<List<ComponentVersionLambdaDeviceMountArgs>> devices;
 
-    public Output<List<ComponentVersionLambdaDeviceMountArgs>> getDevices() {
+    public Output<List<ComponentVersionLambdaDeviceMountArgs>> devices() {
         return this.devices == null ? Codegen.empty() : this.devices;
     }
 
     @Import(name="memorySizeInKB")
       private final @Nullable Output<Integer> memorySizeInKB;
 
-    public Output<Integer> getMemorySizeInKB() {
+    public Output<Integer> memorySizeInKB() {
         return this.memorySizeInKB == null ? Codegen.empty() : this.memorySizeInKB;
     }
 
     @Import(name="mountROSysfs")
       private final @Nullable Output<Boolean> mountROSysfs;
 
-    public Output<Boolean> getMountROSysfs() {
+    public Output<Boolean> mountROSysfs() {
         return this.mountROSysfs == null ? Codegen.empty() : this.mountROSysfs;
     }
 
     @Import(name="volumes")
       private final @Nullable Output<List<ComponentVersionLambdaVolumeMountArgs>> volumes;
 
-    public Output<List<ComponentVersionLambdaVolumeMountArgs>> getVolumes() {
+    public Output<List<ComponentVersionLambdaVolumeMountArgs>> volumes() {
         return this.volumes == null ? Codegen.empty() : this.volumes;
     }
 

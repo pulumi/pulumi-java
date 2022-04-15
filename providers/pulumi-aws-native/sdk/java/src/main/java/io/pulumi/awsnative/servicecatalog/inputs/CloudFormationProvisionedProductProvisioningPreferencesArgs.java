@@ -21,49 +21,49 @@ public final class CloudFormationProvisionedProductProvisioningPreferencesArgs e
     @Import(name="stackSetAccounts")
       private final @Nullable Output<List<String>> stackSetAccounts;
 
-    public Output<List<String>> getStackSetAccounts() {
+    public Output<List<String>> stackSetAccounts() {
         return this.stackSetAccounts == null ? Codegen.empty() : this.stackSetAccounts;
     }
 
     @Import(name="stackSetFailureToleranceCount")
       private final @Nullable Output<Integer> stackSetFailureToleranceCount;
 
-    public Output<Integer> getStackSetFailureToleranceCount() {
+    public Output<Integer> stackSetFailureToleranceCount() {
         return this.stackSetFailureToleranceCount == null ? Codegen.empty() : this.stackSetFailureToleranceCount;
     }
 
     @Import(name="stackSetFailureTolerancePercentage")
       private final @Nullable Output<Integer> stackSetFailureTolerancePercentage;
 
-    public Output<Integer> getStackSetFailureTolerancePercentage() {
+    public Output<Integer> stackSetFailureTolerancePercentage() {
         return this.stackSetFailureTolerancePercentage == null ? Codegen.empty() : this.stackSetFailureTolerancePercentage;
     }
 
     @Import(name="stackSetMaxConcurrencyCount")
       private final @Nullable Output<Integer> stackSetMaxConcurrencyCount;
 
-    public Output<Integer> getStackSetMaxConcurrencyCount() {
+    public Output<Integer> stackSetMaxConcurrencyCount() {
         return this.stackSetMaxConcurrencyCount == null ? Codegen.empty() : this.stackSetMaxConcurrencyCount;
     }
 
     @Import(name="stackSetMaxConcurrencyPercentage")
       private final @Nullable Output<Integer> stackSetMaxConcurrencyPercentage;
 
-    public Output<Integer> getStackSetMaxConcurrencyPercentage() {
+    public Output<Integer> stackSetMaxConcurrencyPercentage() {
         return this.stackSetMaxConcurrencyPercentage == null ? Codegen.empty() : this.stackSetMaxConcurrencyPercentage;
     }
 
     @Import(name="stackSetOperationType")
       private final @Nullable Output<CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType> stackSetOperationType;
 
-    public Output<CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType> getStackSetOperationType() {
+    public Output<CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType> stackSetOperationType() {
         return this.stackSetOperationType == null ? Codegen.empty() : this.stackSetOperationType;
     }
 
     @Import(name="stackSetRegions")
       private final @Nullable Output<List<String>> stackSetRegions;
 
-    public Output<List<String>> getStackSetRegions() {
+    public Output<List<String>> stackSetRegions() {
         return this.stackSetRegions == null ? Codegen.empty() : this.stackSetRegions;
     }
 

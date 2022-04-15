@@ -28,7 +28,7 @@ public final class DataQualityJobDefinitionMonitoringOutputConfigArgs extends io
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -39,7 +39,7 @@ public final class DataQualityJobDefinitionMonitoringOutputConfigArgs extends io
     @Import(name="monitoringOutputs", required=true)
       private final Output<List<DataQualityJobDefinitionMonitoringOutputArgs>> monitoringOutputs;
 
-    public Output<List<DataQualityJobDefinitionMonitoringOutputArgs>> getMonitoringOutputs() {
+    public Output<List<DataQualityJobDefinitionMonitoringOutputArgs>> monitoringOutputs() {
         return this.monitoringOutputs;
     }
 

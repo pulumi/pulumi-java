@@ -25,7 +25,7 @@ public final class WebACLOverrideAction extends io.pulumi.resources.InvokeArgs {
     @Import(name="count")
       private final @Nullable Object count;
 
-    public Optional<Object> getCount() {
+    public Optional<Object> count() {
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
     }
 
@@ -36,7 +36,7 @@ public final class WebACLOverrideAction extends io.pulumi.resources.InvokeArgs {
     @Import(name="none")
       private final @Nullable Object none;
 
-    public Optional<Object> getNone() {
+    public Optional<Object> none() {
         return this.none == null ? Optional.empty() : Optional.ofNullable(this.none);
     }
 

@@ -22,14 +22,14 @@ public final class JobTemplateRetryCriteria extends io.pulumi.resources.InvokeAr
     @Import(name="failureType")
       private final @Nullable JobTemplateJobRetryFailureType failureType;
 
-    public Optional<JobTemplateJobRetryFailureType> getFailureType() {
+    public Optional<JobTemplateJobRetryFailureType> failureType() {
         return this.failureType == null ? Optional.empty() : Optional.ofNullable(this.failureType);
     }
 
     @Import(name="numberOfRetries")
       private final @Nullable Integer numberOfRetries;
 
-    public Optional<Integer> getNumberOfRetries() {
+    public Optional<Integer> numberOfRetries() {
         return this.numberOfRetries == null ? Optional.empty() : Optional.ofNullable(this.numberOfRetries);
     }
 

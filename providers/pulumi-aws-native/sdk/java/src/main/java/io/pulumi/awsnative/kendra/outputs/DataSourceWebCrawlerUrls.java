@@ -23,10 +23,10 @@ public final class DataSourceWebCrawlerUrls {
         this.siteMapsConfiguration = siteMapsConfiguration;
     }
 
-    public Optional<DataSourceWebCrawlerSeedUrlConfiguration> getSeedUrlConfiguration() {
+    public Optional<DataSourceWebCrawlerSeedUrlConfiguration> seedUrlConfiguration() {
         return Optional.ofNullable(this.seedUrlConfiguration);
     }
-    public Optional<DataSourceWebCrawlerSiteMapsConfiguration> getSiteMapsConfiguration() {
+    public Optional<DataSourceWebCrawlerSiteMapsConfiguration> siteMapsConfiguration() {
         return Optional.ofNullable(this.siteMapsConfiguration);
     }
 

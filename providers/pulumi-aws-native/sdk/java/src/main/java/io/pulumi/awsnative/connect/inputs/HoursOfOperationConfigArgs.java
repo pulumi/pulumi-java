@@ -26,7 +26,7 @@ public final class HoursOfOperationConfigArgs extends io.pulumi.resources.Resour
     @Import(name="day", required=true)
       private final Output<HoursOfOperationConfigDay> day;
 
-    public Output<HoursOfOperationConfigDay> getDay() {
+    public Output<HoursOfOperationConfigDay> day() {
         return this.day;
     }
 
@@ -37,7 +37,7 @@ public final class HoursOfOperationConfigArgs extends io.pulumi.resources.Resour
     @Import(name="endTime", required=true)
       private final Output<HoursOfOperationTimeSliceArgs> endTime;
 
-    public Output<HoursOfOperationTimeSliceArgs> getEndTime() {
+    public Output<HoursOfOperationTimeSliceArgs> endTime() {
         return this.endTime;
     }
 
@@ -48,7 +48,7 @@ public final class HoursOfOperationConfigArgs extends io.pulumi.resources.Resour
     @Import(name="startTime", required=true)
       private final Output<HoursOfOperationTimeSliceArgs> startTime;
 
-    public Output<HoursOfOperationTimeSliceArgs> getStartTime() {
+    public Output<HoursOfOperationTimeSliceArgs> startTime() {
         return this.startTime;
     }
 

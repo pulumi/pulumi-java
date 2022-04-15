@@ -36,139 +36,139 @@ public class Service extends io.pulumi.resources.CustomResource {
     @Export(name="capacityProviderStrategy", type=List.class, parameters={ServiceCapacityProviderStrategyItem.class})
     private Output</* @Nullable */ List<ServiceCapacityProviderStrategyItem>> capacityProviderStrategy;
 
-    public Output</* @Nullable */ List<ServiceCapacityProviderStrategyItem>> getCapacityProviderStrategy() {
+    public Output</* @Nullable */ List<ServiceCapacityProviderStrategyItem>> capacityProviderStrategy() {
         return this.capacityProviderStrategy;
     }
     @Export(name="cluster", type=String.class, parameters={})
     private Output</* @Nullable */ String> cluster;
 
-    public Output</* @Nullable */ String> getCluster() {
+    public Output</* @Nullable */ String> cluster() {
         return this.cluster;
     }
     @Export(name="deploymentConfiguration", type=ServiceDeploymentConfiguration.class, parameters={})
     private Output</* @Nullable */ ServiceDeploymentConfiguration> deploymentConfiguration;
 
-    public Output</* @Nullable */ ServiceDeploymentConfiguration> getDeploymentConfiguration() {
+    public Output</* @Nullable */ ServiceDeploymentConfiguration> deploymentConfiguration() {
         return this.deploymentConfiguration;
     }
     @Export(name="deploymentController", type=ServiceDeploymentController.class, parameters={})
     private Output</* @Nullable */ ServiceDeploymentController> deploymentController;
 
-    public Output</* @Nullable */ ServiceDeploymentController> getDeploymentController() {
+    public Output</* @Nullable */ ServiceDeploymentController> deploymentController() {
         return this.deploymentController;
     }
     @Export(name="desiredCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> desiredCount;
 
-    public Output</* @Nullable */ Integer> getDesiredCount() {
+    public Output</* @Nullable */ Integer> desiredCount() {
         return this.desiredCount;
     }
     @Export(name="enableECSManagedTags", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableECSManagedTags;
 
-    public Output</* @Nullable */ Boolean> getEnableECSManagedTags() {
+    public Output</* @Nullable */ Boolean> enableECSManagedTags() {
         return this.enableECSManagedTags;
     }
     @Export(name="enableExecuteCommand", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableExecuteCommand;
 
-    public Output</* @Nullable */ Boolean> getEnableExecuteCommand() {
+    public Output</* @Nullable */ Boolean> enableExecuteCommand() {
         return this.enableExecuteCommand;
     }
     @Export(name="healthCheckGracePeriodSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> healthCheckGracePeriodSeconds;
 
-    public Output</* @Nullable */ Integer> getHealthCheckGracePeriodSeconds() {
+    public Output</* @Nullable */ Integer> healthCheckGracePeriodSeconds() {
         return this.healthCheckGracePeriodSeconds;
     }
     @Export(name="launchType", type=ServiceLaunchType.class, parameters={})
     private Output</* @Nullable */ ServiceLaunchType> launchType;
 
-    public Output</* @Nullable */ ServiceLaunchType> getLaunchType() {
+    public Output</* @Nullable */ ServiceLaunchType> launchType() {
         return this.launchType;
     }
     @Export(name="loadBalancers", type=List.class, parameters={ServiceLoadBalancer.class})
     private Output</* @Nullable */ List<ServiceLoadBalancer>> loadBalancers;
 
-    public Output</* @Nullable */ List<ServiceLoadBalancer>> getLoadBalancers() {
+    public Output</* @Nullable */ List<ServiceLoadBalancer>> loadBalancers() {
         return this.loadBalancers;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="networkConfiguration", type=ServiceNetworkConfiguration.class, parameters={})
     private Output</* @Nullable */ ServiceNetworkConfiguration> networkConfiguration;
 
-    public Output</* @Nullable */ ServiceNetworkConfiguration> getNetworkConfiguration() {
+    public Output</* @Nullable */ ServiceNetworkConfiguration> networkConfiguration() {
         return this.networkConfiguration;
     }
     @Export(name="placementConstraints", type=List.class, parameters={ServicePlacementConstraint.class})
     private Output</* @Nullable */ List<ServicePlacementConstraint>> placementConstraints;
 
-    public Output</* @Nullable */ List<ServicePlacementConstraint>> getPlacementConstraints() {
+    public Output</* @Nullable */ List<ServicePlacementConstraint>> placementConstraints() {
         return this.placementConstraints;
     }
     @Export(name="placementStrategies", type=List.class, parameters={ServicePlacementStrategy.class})
     private Output</* @Nullable */ List<ServicePlacementStrategy>> placementStrategies;
 
-    public Output</* @Nullable */ List<ServicePlacementStrategy>> getPlacementStrategies() {
+    public Output</* @Nullable */ List<ServicePlacementStrategy>> placementStrategies() {
         return this.placementStrategies;
     }
     @Export(name="platformVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> platformVersion;
 
-    public Output</* @Nullable */ String> getPlatformVersion() {
+    public Output</* @Nullable */ String> platformVersion() {
         return this.platformVersion;
     }
     @Export(name="propagateTags", type=ServicePropagateTags.class, parameters={})
     private Output</* @Nullable */ ServicePropagateTags> propagateTags;
 
-    public Output</* @Nullable */ ServicePropagateTags> getPropagateTags() {
+    public Output</* @Nullable */ ServicePropagateTags> propagateTags() {
         return this.propagateTags;
     }
     @Export(name="role", type=String.class, parameters={})
     private Output</* @Nullable */ String> role;
 
-    public Output</* @Nullable */ String> getRole() {
+    public Output</* @Nullable */ String> role() {
         return this.role;
     }
     @Export(name="schedulingStrategy", type=ServiceSchedulingStrategy.class, parameters={})
     private Output</* @Nullable */ ServiceSchedulingStrategy> schedulingStrategy;
 
-    public Output</* @Nullable */ ServiceSchedulingStrategy> getSchedulingStrategy() {
+    public Output</* @Nullable */ ServiceSchedulingStrategy> schedulingStrategy() {
         return this.schedulingStrategy;
     }
     @Export(name="serviceArn", type=String.class, parameters={})
     private Output<String> serviceArn;
 
-    public Output<String> getServiceArn() {
+    public Output<String> serviceArn() {
         return this.serviceArn;
     }
     @Export(name="serviceName", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceName;
 
-    public Output</* @Nullable */ String> getServiceName() {
+    public Output</* @Nullable */ String> serviceName() {
         return this.serviceName;
     }
     @Export(name="serviceRegistries", type=List.class, parameters={ServiceRegistry.class})
     private Output</* @Nullable */ List<ServiceRegistry>> serviceRegistries;
 
-    public Output</* @Nullable */ List<ServiceRegistry>> getServiceRegistries() {
+    public Output</* @Nullable */ List<ServiceRegistry>> serviceRegistries() {
         return this.serviceRegistries;
     }
     @Export(name="tags", type=List.class, parameters={ServiceTag.class})
     private Output</* @Nullable */ List<ServiceTag>> tags;
 
-    public Output</* @Nullable */ List<ServiceTag>> getTags() {
+    public Output</* @Nullable */ List<ServiceTag>> tags() {
         return this.tags;
     }
     @Export(name="taskDefinition", type=String.class, parameters={})
     private Output</* @Nullable */ String> taskDefinition;
 
-    public Output</* @Nullable */ String> getTaskDefinition() {
+    public Output</* @Nullable */ String> taskDefinition() {
         return this.taskDefinition;
     }
 

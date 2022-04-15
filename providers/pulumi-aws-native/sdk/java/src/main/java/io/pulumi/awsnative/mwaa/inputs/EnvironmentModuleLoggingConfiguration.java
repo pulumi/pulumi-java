@@ -23,21 +23,21 @@ public final class EnvironmentModuleLoggingConfiguration extends io.pulumi.resou
     @Import(name="cloudWatchLogGroupArn")
       private final @Nullable String cloudWatchLogGroupArn;
 
-    public Optional<String> getCloudWatchLogGroupArn() {
+    public Optional<String> cloudWatchLogGroupArn() {
         return this.cloudWatchLogGroupArn == null ? Optional.empty() : Optional.ofNullable(this.cloudWatchLogGroupArn);
     }
 
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
     @Import(name="logLevel")
       private final @Nullable EnvironmentLoggingLevel logLevel;
 
-    public Optional<EnvironmentLoggingLevel> getLogLevel() {
+    public Optional<EnvironmentLoggingLevel> logLevel() {
         return this.logLevel == null ? Optional.empty() : Optional.ofNullable(this.logLevel);
     }
 

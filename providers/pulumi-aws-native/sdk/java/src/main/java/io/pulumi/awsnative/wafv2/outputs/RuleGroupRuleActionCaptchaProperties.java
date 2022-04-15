@@ -18,7 +18,7 @@ public final class RuleGroupRuleActionCaptchaProperties {
         this.customRequestHandling = customRequestHandling;
     }
 
-    public Optional<RuleGroupCustomRequestHandling> getCustomRequestHandling() {
+    public Optional<RuleGroupCustomRequestHandling> customRequestHandling() {
         return Optional.ofNullable(this.customRequestHandling);
     }
 

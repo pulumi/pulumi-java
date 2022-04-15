@@ -22,7 +22,7 @@ public final class NotificationChannelConfigArgs extends io.pulumi.resources.Res
     @Import(name="sns")
       private final @Nullable Output<NotificationChannelSnsChannelConfigArgs> sns;
 
-    public Output<NotificationChannelSnsChannelConfigArgs> getSns() {
+    public Output<NotificationChannelSnsChannelConfigArgs> sns() {
         return this.sns == null ? Codegen.empty() : this.sns;
     }
 

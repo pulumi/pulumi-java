@@ -26,7 +26,7 @@ public final class SecurityProfileStatisticalThresholdArgs extends io.pulumi.res
     @Import(name="statistic")
       private final @Nullable Output<SecurityProfileStatisticalThresholdStatistic> statistic;
 
-    public Output<SecurityProfileStatisticalThresholdStatistic> getStatistic() {
+    public Output<SecurityProfileStatisticalThresholdStatistic> statistic() {
         return this.statistic == null ? Codegen.empty() : this.statistic;
     }
 

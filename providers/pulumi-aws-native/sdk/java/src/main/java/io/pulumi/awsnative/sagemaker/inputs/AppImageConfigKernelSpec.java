@@ -21,7 +21,7 @@ public final class AppImageConfigKernelSpec extends io.pulumi.resources.InvokeAr
     @Import(name="displayName")
       private final @Nullable String displayName;
 
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
@@ -32,7 +32,7 @@ public final class AppImageConfigKernelSpec extends io.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

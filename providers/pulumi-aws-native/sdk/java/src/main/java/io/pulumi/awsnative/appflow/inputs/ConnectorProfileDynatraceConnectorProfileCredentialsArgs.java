@@ -21,7 +21,7 @@ public final class ConnectorProfileDynatraceConnectorProfileCredentialsArgs exte
     @Import(name="apiToken", required=true)
       private final Output<String> apiToken;
 
-    public Output<String> getApiToken() {
+    public Output<String> apiToken() {
         return this.apiToken;
     }
 

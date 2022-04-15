@@ -17,28 +17,28 @@ public final class TopicRuleAssetPropertyVariant extends io.pulumi.resources.Inv
     @Import(name="booleanValue")
       private final @Nullable String booleanValue;
 
-    public Optional<String> getBooleanValue() {
+    public Optional<String> booleanValue() {
         return this.booleanValue == null ? Optional.empty() : Optional.ofNullable(this.booleanValue);
     }
 
     @Import(name="doubleValue")
       private final @Nullable String doubleValue;
 
-    public Optional<String> getDoubleValue() {
+    public Optional<String> doubleValue() {
         return this.doubleValue == null ? Optional.empty() : Optional.ofNullable(this.doubleValue);
     }
 
     @Import(name="integerValue")
       private final @Nullable String integerValue;
 
-    public Optional<String> getIntegerValue() {
+    public Optional<String> integerValue() {
         return this.integerValue == null ? Optional.empty() : Optional.ofNullable(this.integerValue);
     }
 
     @Import(name="stringValue")
       private final @Nullable String stringValue;
 
-    public Optional<String> getStringValue() {
+    public Optional<String> stringValue() {
         return this.stringValue == null ? Optional.empty() : Optional.ofNullable(this.stringValue);
     }
 

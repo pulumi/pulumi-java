@@ -27,13 +27,13 @@ public final class ConfigAntennaUplinkConfig {
         this.transmitDisabled = transmitDisabled;
     }
 
-    public Optional<ConfigUplinkSpectrumConfig> getSpectrumConfig() {
+    public Optional<ConfigUplinkSpectrumConfig> spectrumConfig() {
         return Optional.ofNullable(this.spectrumConfig);
     }
-    public Optional<ConfigEirp> getTargetEirp() {
+    public Optional<ConfigEirp> targetEirp() {
         return Optional.ofNullable(this.targetEirp);
     }
-    public Optional<Boolean> getTransmitDisabled() {
+    public Optional<Boolean> transmitDisabled() {
         return Optional.ofNullable(this.transmitDisabled);
     }
 

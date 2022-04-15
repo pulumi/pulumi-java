@@ -20,35 +20,35 @@ public final class DataSourceColumnConfigurationArgs extends io.pulumi.resources
     @Import(name="changeDetectingColumns", required=true)
       private final Output<List<String>> changeDetectingColumns;
 
-    public Output<List<String>> getChangeDetectingColumns() {
+    public Output<List<String>> changeDetectingColumns() {
         return this.changeDetectingColumns;
     }
 
     @Import(name="documentDataColumnName", required=true)
       private final Output<String> documentDataColumnName;
 
-    public Output<String> getDocumentDataColumnName() {
+    public Output<String> documentDataColumnName() {
         return this.documentDataColumnName;
     }
 
     @Import(name="documentIdColumnName", required=true)
       private final Output<String> documentIdColumnName;
 
-    public Output<String> getDocumentIdColumnName() {
+    public Output<String> documentIdColumnName() {
         return this.documentIdColumnName;
     }
 
     @Import(name="documentTitleColumnName")
       private final @Nullable Output<String> documentTitleColumnName;
 
-    public Output<String> getDocumentTitleColumnName() {
+    public Output<String> documentTitleColumnName() {
         return this.documentTitleColumnName == null ? Codegen.empty() : this.documentTitleColumnName;
     }
 
     @Import(name="fieldMappings")
       private final @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
-    public Output<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
+    public Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings() {
         return this.fieldMappings == null ? Codegen.empty() : this.fieldMappings;
     }
 

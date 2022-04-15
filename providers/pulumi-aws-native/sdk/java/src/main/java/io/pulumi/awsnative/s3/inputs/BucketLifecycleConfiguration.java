@@ -20,7 +20,7 @@ public final class BucketLifecycleConfiguration extends io.pulumi.resources.Invo
     @Import(name="rules", required=true)
       private final List<BucketRule> rules;
 
-    public List<BucketRule> getRules() {
+    public List<BucketRule> rules() {
         return this.rules;
     }
 

@@ -23,10 +23,10 @@ public final class SpotFleetLoadBalancersConfig {
         this.targetGroupsConfig = targetGroupsConfig;
     }
 
-    public Optional<SpotFleetClassicLoadBalancersConfig> getClassicLoadBalancersConfig() {
+    public Optional<SpotFleetClassicLoadBalancersConfig> classicLoadBalancersConfig() {
         return Optional.ofNullable(this.classicLoadBalancersConfig);
     }
-    public Optional<SpotFleetTargetGroupsConfig> getTargetGroupsConfig() {
+    public Optional<SpotFleetTargetGroupsConfig> targetGroupsConfig() {
         return Optional.ofNullable(this.targetGroupsConfig);
     }
 

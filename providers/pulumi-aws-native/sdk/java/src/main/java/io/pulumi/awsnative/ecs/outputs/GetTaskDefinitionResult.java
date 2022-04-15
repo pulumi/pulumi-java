@@ -28,14 +28,14 @@ public final class GetTaskDefinitionResult {
         this.taskDefinitionArn = taskDefinitionArn;
     }
 
-    public List<TaskDefinitionTag> getTags() {
+    public List<TaskDefinitionTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The Amazon Resource Name (ARN) of the Amazon ECS task definition
      * 
     */
-    public Optional<String> getTaskDefinitionArn() {
+    public Optional<String> taskDefinitionArn() {
         return Optional.ofNullable(this.taskDefinitionArn);
     }
 

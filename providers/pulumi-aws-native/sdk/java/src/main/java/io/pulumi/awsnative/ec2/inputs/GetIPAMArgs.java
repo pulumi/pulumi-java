@@ -19,7 +19,7 @@ public final class GetIPAMArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="ipamId", required=true)
       private final String ipamId;
 
-    public String getIpamId() {
+    public String ipamId() {
         return this.ipamId;
     }
 

@@ -22,7 +22,7 @@ public final class ResponsePlanActionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="ssmAutomation")
       private final @Nullable Output<ResponsePlanSsmAutomationArgs> ssmAutomation;
 
-    public Output<ResponsePlanSsmAutomationArgs> getSsmAutomation() {
+    public Output<ResponsePlanSsmAutomationArgs> ssmAutomation() {
         return this.ssmAutomation == null ? Codegen.empty() : this.ssmAutomation;
     }
 

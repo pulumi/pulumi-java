@@ -21,10 +21,10 @@ public final class FirewallPolicyStatelessRuleGroupReference {
         this.resourceArn = resourceArn;
     }
 
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
-    public String getResourceArn() {
+    public String resourceArn() {
         return this.resourceArn;
     }
 

@@ -32,7 +32,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the parameter group.
      * 
      */
-    public Output<String> getARN() {
+    public Output<String> aRN() {
         return this.aRN;
     }
     /**
@@ -46,7 +46,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * @return A description of the parameter group.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -60,7 +60,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * @return The name of the parameter group family that this parameter group is compatible with.
      * 
      */
-    public Output<String> getFamily() {
+    public Output<String> family() {
         return this.family;
     }
     /**
@@ -74,7 +74,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * @return The name of the parameter group.
      * 
      */
-    public Output<String> getParameterGroupName() {
+    public Output<String> parameterGroupName() {
         return this.parameterGroupName;
     }
     /**
@@ -88,7 +88,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * @return An map of parameter names and values for the parameter update. You must supply at least one parameter name and value; subsequent arguments are optional.
      * 
      */
-    public Output</* @Nullable */ Object> getParameters() {
+    public Output</* @Nullable */ Object> parameters() {
         return this.parameters;
     }
     /**
@@ -102,7 +102,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this parameter group.
      * 
      */
-    public Output</* @Nullable */ List<ParameterGroupTag>> getTags() {
+    public Output</* @Nullable */ List<ParameterGroupTag>> tags() {
         return this.tags;
     }
 

@@ -19,14 +19,14 @@ public final class BucketReplicationRuleAndOperator extends io.pulumi.resources.
     @Import(name="prefix")
       private final @Nullable String prefix;
 
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
     }
 
     @Import(name="tagFilters")
       private final @Nullable List<BucketTagFilter> tagFilters;
 
-    public List<BucketTagFilter> getTagFilters() {
+    public List<BucketTagFilter> tagFilters() {
         return this.tagFilters == null ? List.of() : this.tagFilters;
     }
 

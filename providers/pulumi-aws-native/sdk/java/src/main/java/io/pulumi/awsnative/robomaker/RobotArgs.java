@@ -24,7 +24,7 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="architecture", required=true)
       private final Output<RobotArchitecture> architecture;
 
-    public Output<RobotArchitecture> getArchitecture() {
+    public Output<RobotArchitecture> architecture() {
         return this.architecture;
     }
 
@@ -35,7 +35,7 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fleet")
       private final @Nullable Output<String> fleet;
 
-    public Output<String> getFleet() {
+    public Output<String> fleet() {
         return this.fleet == null ? Codegen.empty() : this.fleet;
     }
 
@@ -46,7 +46,7 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="greengrassGroupId", required=true)
       private final Output<String> greengrassGroupId;
 
-    public Output<String> getGreengrassGroupId() {
+    public Output<String> greengrassGroupId() {
         return this.greengrassGroupId;
     }
 
@@ -57,14 +57,14 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="tags")
       private final @Nullable Output<RobotTagsArgs> tags;
 
-    public Output<RobotTagsArgs> getTags() {
+    public Output<RobotTagsArgs> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

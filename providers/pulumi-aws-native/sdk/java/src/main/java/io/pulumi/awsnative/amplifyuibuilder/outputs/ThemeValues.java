@@ -23,10 +23,10 @@ public final class ThemeValues {
         this.value = value;
     }
 
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
-    public Optional<ThemeValue> getValue() {
+    public Optional<ThemeValue> value() {
         return Optional.ofNullable(this.value);
     }
 

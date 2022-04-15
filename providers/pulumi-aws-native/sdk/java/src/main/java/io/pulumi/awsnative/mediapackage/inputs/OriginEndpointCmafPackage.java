@@ -26,7 +26,7 @@ public final class OriginEndpointCmafPackage extends io.pulumi.resources.InvokeA
     @Import(name="encryption")
       private final @Nullable OriginEndpointCmafEncryption encryption;
 
-    public Optional<OriginEndpointCmafEncryption> getEncryption() {
+    public Optional<OriginEndpointCmafEncryption> encryption() {
         return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
     }
 
@@ -37,7 +37,7 @@ public final class OriginEndpointCmafPackage extends io.pulumi.resources.InvokeA
     @Import(name="hlsManifests")
       private final @Nullable List<OriginEndpointHlsManifest> hlsManifests;
 
-    public List<OriginEndpointHlsManifest> getHlsManifests() {
+    public List<OriginEndpointHlsManifest> hlsManifests() {
         return this.hlsManifests == null ? List.of() : this.hlsManifests;
     }
 
@@ -48,7 +48,7 @@ public final class OriginEndpointCmafPackage extends io.pulumi.resources.InvokeA
     @Import(name="segmentDurationSeconds")
       private final @Nullable Integer segmentDurationSeconds;
 
-    public Optional<Integer> getSegmentDurationSeconds() {
+    public Optional<Integer> segmentDurationSeconds() {
         return this.segmentDurationSeconds == null ? Optional.empty() : Optional.ofNullable(this.segmentDurationSeconds);
     }
 
@@ -59,14 +59,14 @@ public final class OriginEndpointCmafPackage extends io.pulumi.resources.InvokeA
     @Import(name="segmentPrefix")
       private final @Nullable String segmentPrefix;
 
-    public Optional<String> getSegmentPrefix() {
+    public Optional<String> segmentPrefix() {
         return this.segmentPrefix == null ? Optional.empty() : Optional.ofNullable(this.segmentPrefix);
     }
 
     @Import(name="streamSelection")
       private final @Nullable OriginEndpointStreamSelection streamSelection;
 
-    public Optional<OriginEndpointStreamSelection> getStreamSelection() {
+    public Optional<OriginEndpointStreamSelection> streamSelection() {
         return this.streamSelection == null ? Optional.empty() : Optional.ofNullable(this.streamSelection);
     }
 

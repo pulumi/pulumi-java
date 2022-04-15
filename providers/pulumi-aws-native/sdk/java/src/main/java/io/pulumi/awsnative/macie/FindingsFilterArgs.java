@@ -25,7 +25,7 @@ public final class FindingsFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action")
       private final @Nullable Output<FindingsFilterFindingFilterAction> action;
 
-    public Output<FindingsFilterFindingFilterAction> getAction() {
+    public Output<FindingsFilterFindingFilterAction> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -36,7 +36,7 @@ public final class FindingsFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -47,7 +47,7 @@ public final class FindingsFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="findingCriteria", required=true)
       private final Output<FindingsFilterFindingCriteriaArgs> findingCriteria;
 
-    public Output<FindingsFilterFindingCriteriaArgs> getFindingCriteria() {
+    public Output<FindingsFilterFindingCriteriaArgs> findingCriteria() {
         return this.findingCriteria;
     }
 
@@ -58,7 +58,7 @@ public final class FindingsFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -69,7 +69,7 @@ public final class FindingsFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="position")
       private final @Nullable Output<Integer> position;
 
-    public Output<Integer> getPosition() {
+    public Output<Integer> position() {
         return this.position == null ? Codegen.empty() : this.position;
     }
 

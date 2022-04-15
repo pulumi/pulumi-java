@@ -22,10 +22,10 @@ public final class TaskDefinitionSystemControl {
         this.value = value;
     }
 
-    public Optional<String> getNamespace() {
+    public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

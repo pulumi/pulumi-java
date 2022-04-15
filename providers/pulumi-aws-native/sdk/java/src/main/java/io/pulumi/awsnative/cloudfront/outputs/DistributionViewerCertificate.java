@@ -32,19 +32,19 @@ public final class DistributionViewerCertificate {
         this.sslSupportMethod = sslSupportMethod;
     }
 
-    public Optional<String> getAcmCertificateArn() {
+    public Optional<String> acmCertificateArn() {
         return Optional.ofNullable(this.acmCertificateArn);
     }
-    public Optional<Boolean> getCloudFrontDefaultCertificate() {
+    public Optional<Boolean> cloudFrontDefaultCertificate() {
         return Optional.ofNullable(this.cloudFrontDefaultCertificate);
     }
-    public Optional<String> getIamCertificateId() {
+    public Optional<String> iamCertificateId() {
         return Optional.ofNullable(this.iamCertificateId);
     }
-    public Optional<String> getMinimumProtocolVersion() {
+    public Optional<String> minimumProtocolVersion() {
         return Optional.ofNullable(this.minimumProtocolVersion);
     }
-    public Optional<String> getSslSupportMethod() {
+    public Optional<String> sslSupportMethod() {
         return Optional.ofNullable(this.sslSupportMethod);
     }
 

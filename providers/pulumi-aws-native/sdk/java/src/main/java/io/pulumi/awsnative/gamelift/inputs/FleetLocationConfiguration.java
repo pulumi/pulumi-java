@@ -22,14 +22,14 @@ public final class FleetLocationConfiguration extends io.pulumi.resources.Invoke
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
     @Import(name="locationCapacity")
       private final @Nullable FleetLocationCapacity locationCapacity;
 
-    public Optional<FleetLocationCapacity> getLocationCapacity() {
+    public Optional<FleetLocationCapacity> locationCapacity() {
         return this.locationCapacity == null ? Optional.empty() : Optional.ofNullable(this.locationCapacity);
     }
 

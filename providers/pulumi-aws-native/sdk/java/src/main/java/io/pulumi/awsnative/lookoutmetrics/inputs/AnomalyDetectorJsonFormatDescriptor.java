@@ -18,14 +18,14 @@ public final class AnomalyDetectorJsonFormatDescriptor extends io.pulumi.resourc
     @Import(name="charset")
       private final @Nullable String charset;
 
-    public Optional<String> getCharset() {
+    public Optional<String> charset() {
         return this.charset == null ? Optional.empty() : Optional.ofNullable(this.charset);
     }
 
     @Import(name="fileCompression")
       private final @Nullable AnomalyDetectorJsonFormatDescriptorFileCompression fileCompression;
 
-    public Optional<AnomalyDetectorJsonFormatDescriptorFileCompression> getFileCompression() {
+    public Optional<AnomalyDetectorJsonFormatDescriptorFileCompression> fileCompression() {
         return this.fileCompression == null ? Optional.empty() : Optional.ofNullable(this.fileCompression);
     }
 

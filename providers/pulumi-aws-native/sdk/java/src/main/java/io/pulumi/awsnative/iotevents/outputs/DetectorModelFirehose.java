@@ -38,17 +38,17 @@ public final class DetectorModelFirehose {
      * The name of the Kinesis Data Firehose delivery stream where the data is written.
      * 
     */
-    public String getDeliveryStreamName() {
+    public String deliveryStreamName() {
         return this.deliveryStreamName;
     }
-    public Optional<DetectorModelPayload> getPayload() {
+    public Optional<DetectorModelPayload> payload() {
         return Optional.ofNullable(this.payload);
     }
     /**
      * A character separator that is used to separate records written to the Kinesis Data Firehose delivery stream. Valid values are: '\n' (newline), '\t' (tab), '\r\n' (Windows newline), ',' (comma).
      * 
     */
-    public Optional<String> getSeparator() {
+    public Optional<String> separator() {
         return Optional.ofNullable(this.separator);
     }
 

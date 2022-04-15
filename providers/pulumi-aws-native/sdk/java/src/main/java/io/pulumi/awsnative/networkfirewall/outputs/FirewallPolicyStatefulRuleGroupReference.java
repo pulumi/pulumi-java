@@ -23,10 +23,10 @@ public final class FirewallPolicyStatefulRuleGroupReference {
         this.resourceArn = resourceArn;
     }
 
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
-    public String getResourceArn() {
+    public String resourceArn() {
         return this.resourceArn;
     }
 

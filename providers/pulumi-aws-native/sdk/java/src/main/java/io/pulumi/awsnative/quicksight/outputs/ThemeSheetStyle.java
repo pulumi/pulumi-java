@@ -23,10 +23,10 @@ public final class ThemeSheetStyle {
         this.tileLayout = tileLayout;
     }
 
-    public Optional<ThemeTileStyle> getTile() {
+    public Optional<ThemeTileStyle> tile() {
         return Optional.ofNullable(this.tile);
     }
-    public Optional<ThemeTileLayoutStyle> getTileLayout() {
+    public Optional<ThemeTileLayoutStyle> tileLayout() {
         return Optional.ofNullable(this.tileLayout);
     }
 

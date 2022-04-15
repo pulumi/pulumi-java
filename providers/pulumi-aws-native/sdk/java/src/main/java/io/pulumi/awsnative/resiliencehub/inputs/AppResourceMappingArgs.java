@@ -23,28 +23,28 @@ public final class AppResourceMappingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="logicalStackName")
       private final @Nullable Output<String> logicalStackName;
 
-    public Output<String> getLogicalStackName() {
+    public Output<String> logicalStackName() {
         return this.logicalStackName == null ? Codegen.empty() : this.logicalStackName;
     }
 
     @Import(name="mappingType", required=true)
       private final Output<String> mappingType;
 
-    public Output<String> getMappingType() {
+    public Output<String> mappingType() {
         return this.mappingType;
     }
 
     @Import(name="physicalResourceId", required=true)
       private final Output<AppPhysicalResourceIdArgs> physicalResourceId;
 
-    public Output<AppPhysicalResourceIdArgs> getPhysicalResourceId() {
+    public Output<AppPhysicalResourceIdArgs> physicalResourceId() {
         return this.physicalResourceId;
     }
 
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 

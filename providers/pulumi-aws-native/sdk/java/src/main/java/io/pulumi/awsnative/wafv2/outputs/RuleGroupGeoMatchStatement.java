@@ -24,10 +24,10 @@ public final class RuleGroupGeoMatchStatement {
         this.forwardedIPConfig = forwardedIPConfig;
     }
 
-    public List<String> getCountryCodes() {
+    public List<String> countryCodes() {
         return this.countryCodes == null ? List.of() : this.countryCodes;
     }
-    public Optional<RuleGroupForwardedIPConfiguration> getForwardedIPConfig() {
+    public Optional<RuleGroupForwardedIPConfiguration> forwardedIPConfig() {
         return Optional.ofNullable(this.forwardedIPConfig);
     }
 

@@ -99,67 +99,67 @@ public final class SpotFleetInstanceRequirementsRequest {
         this.vCpuCount = vCpuCount;
     }
 
-    public Optional<SpotFleetAcceleratorCountRequest> getAcceleratorCount() {
+    public Optional<SpotFleetAcceleratorCountRequest> acceleratorCount() {
         return Optional.ofNullable(this.acceleratorCount);
     }
-    public List<SpotFleetInstanceRequirementsRequestAcceleratorManufacturersItem> getAcceleratorManufacturers() {
+    public List<SpotFleetInstanceRequirementsRequestAcceleratorManufacturersItem> acceleratorManufacturers() {
         return this.acceleratorManufacturers == null ? List.of() : this.acceleratorManufacturers;
     }
-    public List<SpotFleetInstanceRequirementsRequestAcceleratorNamesItem> getAcceleratorNames() {
+    public List<SpotFleetInstanceRequirementsRequestAcceleratorNamesItem> acceleratorNames() {
         return this.acceleratorNames == null ? List.of() : this.acceleratorNames;
     }
-    public Optional<SpotFleetAcceleratorTotalMemoryMiBRequest> getAcceleratorTotalMemoryMiB() {
+    public Optional<SpotFleetAcceleratorTotalMemoryMiBRequest> acceleratorTotalMemoryMiB() {
         return Optional.ofNullable(this.acceleratorTotalMemoryMiB);
     }
-    public List<SpotFleetInstanceRequirementsRequestAcceleratorTypesItem> getAcceleratorTypes() {
+    public List<SpotFleetInstanceRequirementsRequestAcceleratorTypesItem> acceleratorTypes() {
         return this.acceleratorTypes == null ? List.of() : this.acceleratorTypes;
     }
-    public Optional<SpotFleetInstanceRequirementsRequestBareMetal> getBareMetal() {
+    public Optional<SpotFleetInstanceRequirementsRequestBareMetal> bareMetal() {
         return Optional.ofNullable(this.bareMetal);
     }
-    public Optional<SpotFleetBaselineEbsBandwidthMbpsRequest> getBaselineEbsBandwidthMbps() {
+    public Optional<SpotFleetBaselineEbsBandwidthMbpsRequest> baselineEbsBandwidthMbps() {
         return Optional.ofNullable(this.baselineEbsBandwidthMbps);
     }
-    public Optional<SpotFleetInstanceRequirementsRequestBurstablePerformance> getBurstablePerformance() {
+    public Optional<SpotFleetInstanceRequirementsRequestBurstablePerformance> burstablePerformance() {
         return Optional.ofNullable(this.burstablePerformance);
     }
-    public List<SpotFleetInstanceRequirementsRequestCpuManufacturersItem> getCpuManufacturers() {
+    public List<SpotFleetInstanceRequirementsRequestCpuManufacturersItem> cpuManufacturers() {
         return this.cpuManufacturers == null ? List.of() : this.cpuManufacturers;
     }
-    public List<String> getExcludedInstanceTypes() {
+    public List<String> excludedInstanceTypes() {
         return this.excludedInstanceTypes == null ? List.of() : this.excludedInstanceTypes;
     }
-    public List<SpotFleetInstanceRequirementsRequestInstanceGenerationsItem> getInstanceGenerations() {
+    public List<SpotFleetInstanceRequirementsRequestInstanceGenerationsItem> instanceGenerations() {
         return this.instanceGenerations == null ? List.of() : this.instanceGenerations;
     }
-    public Optional<SpotFleetInstanceRequirementsRequestLocalStorage> getLocalStorage() {
+    public Optional<SpotFleetInstanceRequirementsRequestLocalStorage> localStorage() {
         return Optional.ofNullable(this.localStorage);
     }
-    public List<SpotFleetInstanceRequirementsRequestLocalStorageTypesItem> getLocalStorageTypes() {
+    public List<SpotFleetInstanceRequirementsRequestLocalStorageTypesItem> localStorageTypes() {
         return this.localStorageTypes == null ? List.of() : this.localStorageTypes;
     }
-    public Optional<SpotFleetMemoryGiBPerVCpuRequest> getMemoryGiBPerVCpu() {
+    public Optional<SpotFleetMemoryGiBPerVCpuRequest> memoryGiBPerVCpu() {
         return Optional.ofNullable(this.memoryGiBPerVCpu);
     }
-    public Optional<SpotFleetMemoryMiBRequest> getMemoryMiB() {
+    public Optional<SpotFleetMemoryMiBRequest> memoryMiB() {
         return Optional.ofNullable(this.memoryMiB);
     }
-    public Optional<SpotFleetNetworkInterfaceCountRequest> getNetworkInterfaceCount() {
+    public Optional<SpotFleetNetworkInterfaceCountRequest> networkInterfaceCount() {
         return Optional.ofNullable(this.networkInterfaceCount);
     }
-    public Optional<Integer> getOnDemandMaxPricePercentageOverLowestPrice() {
+    public Optional<Integer> onDemandMaxPricePercentageOverLowestPrice() {
         return Optional.ofNullable(this.onDemandMaxPricePercentageOverLowestPrice);
     }
-    public Optional<Boolean> getRequireHibernateSupport() {
+    public Optional<Boolean> requireHibernateSupport() {
         return Optional.ofNullable(this.requireHibernateSupport);
     }
-    public Optional<Integer> getSpotMaxPricePercentageOverLowestPrice() {
+    public Optional<Integer> spotMaxPricePercentageOverLowestPrice() {
         return Optional.ofNullable(this.spotMaxPricePercentageOverLowestPrice);
     }
-    public Optional<SpotFleetTotalLocalStorageGBRequest> getTotalLocalStorageGB() {
+    public Optional<SpotFleetTotalLocalStorageGBRequest> totalLocalStorageGB() {
         return Optional.ofNullable(this.totalLocalStorageGB);
     }
-    public Optional<SpotFleetVCpuCountRangeRequest> getVCpuCount() {
+    public Optional<SpotFleetVCpuCountRangeRequest> vCpuCount() {
         return Optional.ofNullable(this.vCpuCount);
     }
 

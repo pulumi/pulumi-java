@@ -22,7 +22,7 @@ public final class TransitGatewayPeeringAttachmentOptionsArgs extends io.pulumi.
     @Import(name="dynamicRouting")
       private final @Nullable Output<String> dynamicRouting;
 
-    public Output<String> getDynamicRouting() {
+    public Output<String> dynamicRouting() {
         return this.dynamicRouting == null ? Codegen.empty() : this.dynamicRouting;
     }
 

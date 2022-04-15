@@ -19,35 +19,35 @@ public final class GeofenceCollectionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="collectionName", required=true)
       private final Output<String> collectionName;
 
-    public Output<String> getCollectionName() {
+    public Output<String> collectionName() {
         return this.collectionName;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     @Import(name="pricingPlan")
       private final @Nullable Output<GeofenceCollectionPricingPlan> pricingPlan;
 
-    public Output<GeofenceCollectionPricingPlan> getPricingPlan() {
+    public Output<GeofenceCollectionPricingPlan> pricingPlan() {
         return this.pricingPlan == null ? Codegen.empty() : this.pricingPlan;
     }
 
     @Import(name="pricingPlanDataSource")
       private final @Nullable Output<String> pricingPlanDataSource;
 
-    public Output<String> getPricingPlanDataSource() {
+    public Output<String> pricingPlanDataSource() {
         return this.pricingPlanDataSource == null ? Codegen.empty() : this.pricingPlanDataSource;
     }
 

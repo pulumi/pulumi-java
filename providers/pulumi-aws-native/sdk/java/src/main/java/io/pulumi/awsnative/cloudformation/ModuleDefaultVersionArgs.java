@@ -22,7 +22,7 @@ public final class ModuleDefaultVersionArgs extends io.pulumi.resources.Resource
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -33,7 +33,7 @@ public final class ModuleDefaultVersionArgs extends io.pulumi.resources.Resource
     @Import(name="moduleName")
       private final @Nullable Output<String> moduleName;
 
-    public Output<String> getModuleName() {
+    public Output<String> moduleName() {
         return this.moduleName == null ? Codegen.empty() : this.moduleName;
     }
 
@@ -44,7 +44,7 @@ public final class ModuleDefaultVersionArgs extends io.pulumi.resources.Resource
     @Import(name="versionId")
       private final @Nullable Output<String> versionId;
 
-    public Output<String> getVersionId() {
+    public Output<String> versionId() {
         return this.versionId == null ? Codegen.empty() : this.versionId;
     }
 

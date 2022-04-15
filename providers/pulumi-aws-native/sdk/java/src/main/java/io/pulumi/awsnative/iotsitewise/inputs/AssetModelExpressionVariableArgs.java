@@ -22,7 +22,7 @@ public final class AssetModelExpressionVariableArgs extends io.pulumi.resources.
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -33,7 +33,7 @@ public final class AssetModelExpressionVariableArgs extends io.pulumi.resources.
     @Import(name="value", required=true)
       private final Output<AssetModelVariableValueArgs> value;
 
-    public Output<AssetModelVariableValueArgs> getValue() {
+    public Output<AssetModelVariableValueArgs> value() {
         return this.value;
     }
 

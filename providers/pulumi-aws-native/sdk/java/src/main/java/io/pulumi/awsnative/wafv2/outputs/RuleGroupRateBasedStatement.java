@@ -31,16 +31,16 @@ public final class RuleGroupRateBasedStatement {
         this.scopeDownStatement = scopeDownStatement;
     }
 
-    public RuleGroupRateBasedStatementAggregateKeyType getAggregateKeyType() {
+    public RuleGroupRateBasedStatementAggregateKeyType aggregateKeyType() {
         return this.aggregateKeyType;
     }
-    public Optional<RuleGroupForwardedIPConfiguration> getForwardedIPConfig() {
+    public Optional<RuleGroupForwardedIPConfiguration> forwardedIPConfig() {
         return Optional.ofNullable(this.forwardedIPConfig);
     }
-    public Integer getLimit() {
+    public Integer limit() {
         return this.limit;
     }
-    public Optional<RuleGroupStatement> getScopeDownStatement() {
+    public Optional<RuleGroupStatement> scopeDownStatement() {
         return Optional.ofNullable(this.scopeDownStatement);
     }
 

@@ -30,7 +30,7 @@ public final class PackagingConfigurationHlsManifestArgs extends io.pulumi.resou
     @Import(name="adMarkers")
       private final @Nullable Output<PackagingConfigurationHlsManifestAdMarkers> adMarkers;
 
-    public Output<PackagingConfigurationHlsManifestAdMarkers> getAdMarkers() {
+    public Output<PackagingConfigurationHlsManifestAdMarkers> adMarkers() {
         return this.adMarkers == null ? Codegen.empty() : this.adMarkers;
     }
 
@@ -41,14 +41,14 @@ public final class PackagingConfigurationHlsManifestArgs extends io.pulumi.resou
     @Import(name="includeIframeOnlyStream")
       private final @Nullable Output<Boolean> includeIframeOnlyStream;
 
-    public Output<Boolean> getIncludeIframeOnlyStream() {
+    public Output<Boolean> includeIframeOnlyStream() {
         return this.includeIframeOnlyStream == null ? Codegen.empty() : this.includeIframeOnlyStream;
     }
 
     @Import(name="manifestName")
       private final @Nullable Output<String> manifestName;
 
-    public Output<String> getManifestName() {
+    public Output<String> manifestName() {
         return this.manifestName == null ? Codegen.empty() : this.manifestName;
     }
 
@@ -59,7 +59,7 @@ public final class PackagingConfigurationHlsManifestArgs extends io.pulumi.resou
     @Import(name="programDateTimeIntervalSeconds")
       private final @Nullable Output<Integer> programDateTimeIntervalSeconds;
 
-    public Output<Integer> getProgramDateTimeIntervalSeconds() {
+    public Output<Integer> programDateTimeIntervalSeconds() {
         return this.programDateTimeIntervalSeconds == null ? Codegen.empty() : this.programDateTimeIntervalSeconds;
     }
 
@@ -70,14 +70,14 @@ public final class PackagingConfigurationHlsManifestArgs extends io.pulumi.resou
     @Import(name="repeatExtXKey")
       private final @Nullable Output<Boolean> repeatExtXKey;
 
-    public Output<Boolean> getRepeatExtXKey() {
+    public Output<Boolean> repeatExtXKey() {
         return this.repeatExtXKey == null ? Codegen.empty() : this.repeatExtXKey;
     }
 
     @Import(name="streamSelection")
       private final @Nullable Output<PackagingConfigurationStreamSelectionArgs> streamSelection;
 
-    public Output<PackagingConfigurationStreamSelectionArgs> getStreamSelection() {
+    public Output<PackagingConfigurationStreamSelectionArgs> streamSelection() {
         return this.streamSelection == null ? Codegen.empty() : this.streamSelection;
     }
 

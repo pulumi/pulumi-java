@@ -44,28 +44,28 @@ public final class GetServerResult {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<Integer> getBackupRetentionCount() {
+    public Optional<Integer> backupRetentionCount() {
         return Optional.ofNullable(this.backupRetentionCount);
     }
-    public Optional<Boolean> getDisableAutomatedBackup() {
+    public Optional<Boolean> disableAutomatedBackup() {
         return Optional.ofNullable(this.disableAutomatedBackup);
     }
-    public Optional<String> getEndpoint() {
+    public Optional<String> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<String> getPreferredBackupWindow() {
+    public Optional<String> preferredBackupWindow() {
         return Optional.ofNullable(this.preferredBackupWindow);
     }
-    public Optional<String> getPreferredMaintenanceWindow() {
+    public Optional<String> preferredMaintenanceWindow() {
         return Optional.ofNullable(this.preferredMaintenanceWindow);
     }
-    public List<ServerTag> getTags() {
+    public List<ServerTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

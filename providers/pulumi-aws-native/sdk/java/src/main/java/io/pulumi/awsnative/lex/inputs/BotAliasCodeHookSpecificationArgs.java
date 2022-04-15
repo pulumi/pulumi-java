@@ -21,7 +21,7 @@ public final class BotAliasCodeHookSpecificationArgs extends io.pulumi.resources
     @Import(name="lambdaCodeHook", required=true)
       private final Output<BotAliasLambdaCodeHookArgs> lambdaCodeHook;
 
-    public Output<BotAliasLambdaCodeHookArgs> getLambdaCodeHook() {
+    public Output<BotAliasLambdaCodeHookArgs> lambdaCodeHook() {
         return this.lambdaCodeHook;
     }
 

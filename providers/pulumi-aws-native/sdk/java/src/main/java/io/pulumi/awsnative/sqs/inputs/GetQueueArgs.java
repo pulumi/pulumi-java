@@ -19,7 +19,7 @@ public final class GetQueueArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="queueUrl", required=true)
       private final String queueUrl;
 
-    public String getQueueUrl() {
+    public String queueUrl() {
         return this.queueUrl;
     }
 

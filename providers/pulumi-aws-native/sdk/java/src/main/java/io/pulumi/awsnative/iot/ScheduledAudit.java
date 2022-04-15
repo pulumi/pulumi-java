@@ -35,7 +35,7 @@ public class ScheduledAudit extends io.pulumi.resources.CustomResource {
      * @return The day of the month on which the scheduled audit takes place. Can be 1 through 31 or LAST. This field is required if the frequency parameter is set to MONTHLY.
      * 
      */
-    public Output</* @Nullable */ String> getDayOfMonth() {
+    public Output</* @Nullable */ String> dayOfMonth() {
         return this.dayOfMonth;
     }
     /**
@@ -49,7 +49,7 @@ public class ScheduledAudit extends io.pulumi.resources.CustomResource {
      * @return The day of the week on which the scheduled audit takes place. Can be one of SUN, MON, TUE,WED, THU, FRI, or SAT. This field is required if the frequency parameter is set to WEEKLY or BIWEEKLY.
      * 
      */
-    public Output</* @Nullable */ ScheduledAuditDayOfWeek> getDayOfWeek() {
+    public Output</* @Nullable */ ScheduledAuditDayOfWeek> dayOfWeek() {
         return this.dayOfWeek;
     }
     /**
@@ -63,7 +63,7 @@ public class ScheduledAudit extends io.pulumi.resources.CustomResource {
      * @return How often the scheduled audit takes place. Can be one of DAILY, WEEKLY, BIWEEKLY, or MONTHLY.
      * 
      */
-    public Output<ScheduledAuditFrequency> getFrequency() {
+    public Output<ScheduledAuditFrequency> frequency() {
         return this.frequency;
     }
     /**
@@ -77,7 +77,7 @@ public class ScheduledAudit extends io.pulumi.resources.CustomResource {
      * @return The ARN (Amazon resource name) of the scheduled audit.
      * 
      */
-    public Output<String> getScheduledAuditArn() {
+    public Output<String> scheduledAuditArn() {
         return this.scheduledAuditArn;
     }
     /**
@@ -91,7 +91,7 @@ public class ScheduledAudit extends io.pulumi.resources.CustomResource {
      * @return The name you want to give to the scheduled audit.
      * 
      */
-    public Output</* @Nullable */ String> getScheduledAuditName() {
+    public Output</* @Nullable */ String> scheduledAuditName() {
         return this.scheduledAuditName;
     }
     /**
@@ -105,7 +105,7 @@ public class ScheduledAudit extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<ScheduledAuditTag>> getTags() {
+    public Output</* @Nullable */ List<ScheduledAuditTag>> tags() {
         return this.tags;
     }
     /**
@@ -119,7 +119,7 @@ public class ScheduledAudit extends io.pulumi.resources.CustomResource {
      * @return Which checks are performed during the scheduled audit. Checks must be enabled for your account.
      * 
      */
-    public Output<List<String>> getTargetCheckNames() {
+    public Output<List<String>> targetCheckNames() {
         return this.targetCheckNames;
     }
 

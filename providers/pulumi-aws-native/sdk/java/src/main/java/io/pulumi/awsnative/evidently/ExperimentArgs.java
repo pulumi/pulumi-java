@@ -24,49 +24,49 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="metricGoals", required=true)
       private final Output<List<ExperimentMetricGoalObjectArgs>> metricGoals;
 
-    public Output<List<ExperimentMetricGoalObjectArgs>> getMetricGoals() {
+    public Output<List<ExperimentMetricGoalObjectArgs>> metricGoals() {
         return this.metricGoals;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="onlineAbConfig", required=true)
       private final Output<ExperimentOnlineAbConfigObjectArgs> onlineAbConfig;
 
-    public Output<ExperimentOnlineAbConfigObjectArgs> getOnlineAbConfig() {
+    public Output<ExperimentOnlineAbConfigObjectArgs> onlineAbConfig() {
         return this.onlineAbConfig;
     }
 
     @Import(name="project", required=true)
       private final Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
     @Import(name="randomizationSalt")
       private final @Nullable Output<String> randomizationSalt;
 
-    public Output<String> getRandomizationSalt() {
+    public Output<String> randomizationSalt() {
         return this.randomizationSalt == null ? Codegen.empty() : this.randomizationSalt;
     }
 
     @Import(name="samplingRate")
       private final @Nullable Output<Integer> samplingRate;
 
-    public Output<Integer> getSamplingRate() {
+    public Output<Integer> samplingRate() {
         return this.samplingRate == null ? Codegen.empty() : this.samplingRate;
     }
 
@@ -77,14 +77,14 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<ExperimentTagArgs>> tags;
 
-    public Output<List<ExperimentTagArgs>> getTags() {
+    public Output<List<ExperimentTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="treatments", required=true)
       private final Output<List<ExperimentTreatmentObjectArgs>> treatments;
 
-    public Output<List<ExperimentTreatmentObjectArgs>> getTreatments() {
+    public Output<List<ExperimentTreatmentObjectArgs>> treatments() {
         return this.treatments;
     }
 

@@ -27,13 +27,13 @@ public final class DataflowEndpointGroupDataflowEndpoint {
         this.name = name;
     }
 
-    public Optional<DataflowEndpointGroupSocketAddress> getAddress() {
+    public Optional<DataflowEndpointGroupSocketAddress> address() {
         return Optional.ofNullable(this.address);
     }
-    public Optional<Integer> getMtu() {
+    public Optional<Integer> mtu() {
         return Optional.ofNullable(this.mtu);
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

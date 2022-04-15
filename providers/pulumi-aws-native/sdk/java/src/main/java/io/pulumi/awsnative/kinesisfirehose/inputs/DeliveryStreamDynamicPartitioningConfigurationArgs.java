@@ -19,14 +19,14 @@ public final class DeliveryStreamDynamicPartitioningConfigurationArgs extends io
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="retryOptions")
       private final @Nullable Output<DeliveryStreamRetryOptionsArgs> retryOptions;
 
-    public Output<DeliveryStreamRetryOptionsArgs> getRetryOptions() {
+    public Output<DeliveryStreamRetryOptionsArgs> retryOptions() {
         return this.retryOptions == null ? Codegen.empty() : this.retryOptions;
     }
 

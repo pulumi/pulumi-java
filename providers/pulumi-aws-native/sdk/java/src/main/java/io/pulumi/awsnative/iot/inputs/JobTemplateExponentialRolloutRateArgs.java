@@ -27,7 +27,7 @@ public final class JobTemplateExponentialRolloutRateArgs extends io.pulumi.resou
     @Import(name="baseRatePerMinute", required=true)
       private final Output<Integer> baseRatePerMinute;
 
-    public Output<Integer> getBaseRatePerMinute() {
+    public Output<Integer> baseRatePerMinute() {
         return this.baseRatePerMinute;
     }
 
@@ -38,7 +38,7 @@ public final class JobTemplateExponentialRolloutRateArgs extends io.pulumi.resou
     @Import(name="incrementFactor", required=true)
       private final Output<Double> incrementFactor;
 
-    public Output<Double> getIncrementFactor() {
+    public Output<Double> incrementFactor() {
         return this.incrementFactor;
     }
 
@@ -49,7 +49,7 @@ public final class JobTemplateExponentialRolloutRateArgs extends io.pulumi.resou
     @Import(name="rateIncreaseCriteria", required=true)
       private final Output<JobTemplateRateIncreaseCriteriaArgs> rateIncreaseCriteria;
 
-    public Output<JobTemplateRateIncreaseCriteriaArgs> getRateIncreaseCriteria() {
+    public Output<JobTemplateRateIncreaseCriteriaArgs> rateIncreaseCriteria() {
         return this.rateIncreaseCriteria;
     }
 

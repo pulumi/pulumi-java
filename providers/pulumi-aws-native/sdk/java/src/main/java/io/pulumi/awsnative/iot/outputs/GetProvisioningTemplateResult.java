@@ -41,25 +41,25 @@ public final class GetProvisioningTemplateResult {
         this.templateBody = templateBody;
     }
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
-    public Optional<ProvisioningTemplateProvisioningHook> getPreProvisioningHook() {
+    public Optional<ProvisioningTemplateProvisioningHook> preProvisioningHook() {
         return Optional.ofNullable(this.preProvisioningHook);
     }
-    public Optional<String> getProvisioningRoleArn() {
+    public Optional<String> provisioningRoleArn() {
         return Optional.ofNullable(this.provisioningRoleArn);
     }
-    public List<ProvisioningTemplateTag> getTags() {
+    public List<ProvisioningTemplateTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
-    public Optional<String> getTemplateArn() {
+    public Optional<String> templateArn() {
         return Optional.ofNullable(this.templateArn);
     }
-    public Optional<String> getTemplateBody() {
+    public Optional<String> templateBody() {
         return Optional.ofNullable(this.templateBody);
     }
 

@@ -26,7 +26,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="htmlPart")
       private final @Nullable Output<String> htmlPart;
 
-    public Output<String> getHtmlPart() {
+    public Output<String> htmlPart() {
         return this.htmlPart == null ? Codegen.empty() : this.htmlPart;
     }
 
@@ -37,7 +37,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subjectPart", required=true)
       private final Output<String> subjectPart;
 
-    public Output<String> getSubjectPart() {
+    public Output<String> subjectPart() {
         return this.subjectPart;
     }
 
@@ -48,7 +48,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="templateName")
       private final @Nullable Output<String> templateName;
 
-    public Output<String> getTemplateName() {
+    public Output<String> templateName() {
         return this.templateName == null ? Codegen.empty() : this.templateName;
     }
 
@@ -59,7 +59,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="textPart")
       private final @Nullable Output<String> textPart;
 
-    public Output<String> getTextPart() {
+    public Output<String> textPart() {
         return this.textPart == null ? Codegen.empty() : this.textPart;
     }
 

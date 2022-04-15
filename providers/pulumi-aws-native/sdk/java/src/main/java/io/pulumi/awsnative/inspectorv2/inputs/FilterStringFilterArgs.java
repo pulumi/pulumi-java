@@ -18,14 +18,14 @@ public final class FilterStringFilterArgs extends io.pulumi.resources.ResourceAr
     @Import(name="comparison", required=true)
       private final Output<FilterStringComparison> comparison;
 
-    public Output<FilterStringComparison> getComparison() {
+    public Output<FilterStringComparison> comparison() {
         return this.comparison;
     }
 
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

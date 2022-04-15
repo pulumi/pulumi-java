@@ -26,7 +26,7 @@ public final class GetPrimaryTaskSetResult {
      * The ID or full Amazon Resource Name (ARN) of the task set.
      * 
     */
-    public Optional<String> getTaskSetId() {
+    public Optional<String> taskSetId() {
         return Optional.ofNullable(this.taskSetId);
     }
 

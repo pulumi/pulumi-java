@@ -24,21 +24,21 @@ public final class DataQualityJobDefinitionDataQualityBaselineConfigArgs extends
     @Import(name="baseliningJobName")
       private final @Nullable Output<String> baseliningJobName;
 
-    public Output<String> getBaseliningJobName() {
+    public Output<String> baseliningJobName() {
         return this.baseliningJobName == null ? Codegen.empty() : this.baseliningJobName;
     }
 
     @Import(name="constraintsResource")
       private final @Nullable Output<DataQualityJobDefinitionConstraintsResourceArgs> constraintsResource;
 
-    public Output<DataQualityJobDefinitionConstraintsResourceArgs> getConstraintsResource() {
+    public Output<DataQualityJobDefinitionConstraintsResourceArgs> constraintsResource() {
         return this.constraintsResource == null ? Codegen.empty() : this.constraintsResource;
     }
 
     @Import(name="statisticsResource")
       private final @Nullable Output<DataQualityJobDefinitionStatisticsResourceArgs> statisticsResource;
 
-    public Output<DataQualityJobDefinitionStatisticsResourceArgs> getStatisticsResource() {
+    public Output<DataQualityJobDefinitionStatisticsResourceArgs> statisticsResource() {
         return this.statisticsResource == null ? Codegen.empty() : this.statisticsResource;
     }
 

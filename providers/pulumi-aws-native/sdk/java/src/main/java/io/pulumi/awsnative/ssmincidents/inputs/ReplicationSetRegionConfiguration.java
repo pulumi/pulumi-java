@@ -19,7 +19,7 @@ public final class ReplicationSetRegionConfiguration extends io.pulumi.resources
     @Import(name="sseKmsKeyId", required=true)
       private final String sseKmsKeyId;
 
-    public String getSseKmsKeyId() {
+    public String sseKmsKeyId() {
         return this.sseKmsKeyId;
     }
 

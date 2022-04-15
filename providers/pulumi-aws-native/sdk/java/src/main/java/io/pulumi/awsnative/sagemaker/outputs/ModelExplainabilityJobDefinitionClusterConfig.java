@@ -49,28 +49,28 @@ public final class ModelExplainabilityJobDefinitionClusterConfig {
      * The number of ML compute instances to use in the model monitoring job. For distributed processing jobs, specify a value greater than 1. The default value is 1.
      * 
     */
-    public Integer getInstanceCount() {
+    public Integer instanceCount() {
         return this.instanceCount;
     }
     /**
      * The ML compute instance type for the processing job.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
     /**
      * The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance(s) that run the model monitoring job.
      * 
     */
-    public Optional<String> getVolumeKmsKeyId() {
+    public Optional<String> volumeKmsKeyId() {
         return Optional.ofNullable(this.volumeKmsKeyId);
     }
     /**
      * The size of the ML storage volume, in gigabytes, that you want to provision. You must specify sufficient ML storage for your scenario.
      * 
     */
-    public Integer getVolumeSizeInGB() {
+    public Integer volumeSizeInGB() {
         return this.volumeSizeInGB;
     }
 

@@ -35,14 +35,14 @@ public final class GetVpcConnectorResult {
      * The Amazon Resource Name (ARN) of this VPC connector.
      * 
     */
-    public Optional<String> getVpcConnectorArn() {
+    public Optional<String> vpcConnectorArn() {
         return Optional.ofNullable(this.vpcConnectorArn);
     }
     /**
      * The revision of this VPC connector. It's unique among all the active connectors ("Status": "ACTIVE") that share the same Name.
      * 
     */
-    public Optional<Integer> getVpcConnectorRevision() {
+    public Optional<Integer> vpcConnectorRevision() {
         return Optional.ofNullable(this.vpcConnectorRevision);
     }
 

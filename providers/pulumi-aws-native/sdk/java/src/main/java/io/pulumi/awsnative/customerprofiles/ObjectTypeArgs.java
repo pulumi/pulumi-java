@@ -28,7 +28,7 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowProfileCreation")
       private final @Nullable Output<Boolean> allowProfileCreation;
 
-    public Output<Boolean> getAllowProfileCreation() {
+    public Output<Boolean> allowProfileCreation() {
         return this.allowProfileCreation == null ? Codegen.empty() : this.allowProfileCreation;
     }
 
@@ -39,7 +39,7 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -50,7 +50,7 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -61,7 +61,7 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptionKey")
       private final @Nullable Output<String> encryptionKey;
 
-    public Output<String> getEncryptionKey() {
+    public Output<String> encryptionKey() {
         return this.encryptionKey == null ? Codegen.empty() : this.encryptionKey;
     }
 
@@ -72,7 +72,7 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expirationDays")
       private final @Nullable Output<Integer> expirationDays;
 
-    public Output<Integer> getExpirationDays() {
+    public Output<Integer> expirationDays() {
         return this.expirationDays == null ? Codegen.empty() : this.expirationDays;
     }
 
@@ -83,7 +83,7 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fields")
       private final @Nullable Output<List<ObjectTypeFieldMapArgs>> fields;
 
-    public Output<List<ObjectTypeFieldMapArgs>> getFields() {
+    public Output<List<ObjectTypeFieldMapArgs>> fields() {
         return this.fields == null ? Codegen.empty() : this.fields;
     }
 
@@ -94,7 +94,7 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keys")
       private final @Nullable Output<List<ObjectTypeKeyMapArgs>> keys;
 
-    public Output<List<ObjectTypeKeyMapArgs>> getKeys() {
+    public Output<List<ObjectTypeKeyMapArgs>> keys() {
         return this.keys == null ? Codegen.empty() : this.keys;
     }
 
@@ -105,7 +105,7 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="objectTypeName")
       private final @Nullable Output<String> objectTypeName;
 
-    public Output<String> getObjectTypeName() {
+    public Output<String> objectTypeName() {
         return this.objectTypeName == null ? Codegen.empty() : this.objectTypeName;
     }
 
@@ -116,7 +116,7 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<ObjectTypeTagArgs>> tags;
 
-    public Output<List<ObjectTypeTagArgs>> getTags() {
+    public Output<List<ObjectTypeTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -127,7 +127,7 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="templateId")
       private final @Nullable Output<String> templateId;
 
-    public Output<String> getTemplateId() {
+    public Output<String> templateId() {
         return this.templateId == null ? Codegen.empty() : this.templateId;
     }
 

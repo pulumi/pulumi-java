@@ -42,25 +42,25 @@ public final class ResponseHeadersPolicyCorsConfig {
         this.originOverride = originOverride;
     }
 
-    public Boolean getAccessControlAllowCredentials() {
+    public Boolean accessControlAllowCredentials() {
         return this.accessControlAllowCredentials;
     }
-    public ResponseHeadersPolicyAccessControlAllowHeaders getAccessControlAllowHeaders() {
+    public ResponseHeadersPolicyAccessControlAllowHeaders accessControlAllowHeaders() {
         return this.accessControlAllowHeaders;
     }
-    public ResponseHeadersPolicyAccessControlAllowMethods getAccessControlAllowMethods() {
+    public ResponseHeadersPolicyAccessControlAllowMethods accessControlAllowMethods() {
         return this.accessControlAllowMethods;
     }
-    public ResponseHeadersPolicyAccessControlAllowOrigins getAccessControlAllowOrigins() {
+    public ResponseHeadersPolicyAccessControlAllowOrigins accessControlAllowOrigins() {
         return this.accessControlAllowOrigins;
     }
-    public Optional<ResponseHeadersPolicyAccessControlExposeHeaders> getAccessControlExposeHeaders() {
+    public Optional<ResponseHeadersPolicyAccessControlExposeHeaders> accessControlExposeHeaders() {
         return Optional.ofNullable(this.accessControlExposeHeaders);
     }
-    public Optional<Integer> getAccessControlMaxAgeSec() {
+    public Optional<Integer> accessControlMaxAgeSec() {
         return Optional.ofNullable(this.accessControlMaxAgeSec);
     }
-    public Boolean getOriginOverride() {
+    public Boolean originOverride() {
         return this.originOverride;
     }
 

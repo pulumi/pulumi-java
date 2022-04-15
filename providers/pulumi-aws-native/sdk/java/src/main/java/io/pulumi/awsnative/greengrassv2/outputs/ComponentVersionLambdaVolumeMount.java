@@ -30,16 +30,16 @@ public final class ComponentVersionLambdaVolumeMount {
         this.sourcePath = sourcePath;
     }
 
-    public Optional<Boolean> getAddGroupOwner() {
+    public Optional<Boolean> addGroupOwner() {
         return Optional.ofNullable(this.addGroupOwner);
     }
-    public Optional<String> getDestinationPath() {
+    public Optional<String> destinationPath() {
         return Optional.ofNullable(this.destinationPath);
     }
-    public Optional<ComponentVersionLambdaFilesystemPermission> getPermission() {
+    public Optional<ComponentVersionLambdaFilesystemPermission> permission() {
         return Optional.ofNullable(this.permission);
     }
-    public Optional<String> getSourcePath() {
+    public Optional<String> sourcePath() {
         return Optional.ofNullable(this.sourcePath);
     }
 

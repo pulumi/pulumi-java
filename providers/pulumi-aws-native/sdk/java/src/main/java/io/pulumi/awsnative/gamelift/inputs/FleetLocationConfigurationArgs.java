@@ -23,14 +23,14 @@ public final class FleetLocationConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="locationCapacity")
       private final @Nullable Output<FleetLocationCapacityArgs> locationCapacity;
 
-    public Output<FleetLocationCapacityArgs> getLocationCapacity() {
+    public Output<FleetLocationCapacityArgs> locationCapacity() {
         return this.locationCapacity == null ? Codegen.empty() : this.locationCapacity;
     }
 

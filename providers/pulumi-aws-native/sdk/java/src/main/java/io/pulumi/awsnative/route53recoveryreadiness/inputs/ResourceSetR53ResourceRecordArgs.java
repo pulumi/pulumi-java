@@ -26,7 +26,7 @@ public final class ResourceSetR53ResourceRecordArgs extends io.pulumi.resources.
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
@@ -37,7 +37,7 @@ public final class ResourceSetR53ResourceRecordArgs extends io.pulumi.resources.
     @Import(name="recordSetId")
       private final @Nullable Output<String> recordSetId;
 
-    public Output<String> getRecordSetId() {
+    public Output<String> recordSetId() {
         return this.recordSetId == null ? Codegen.empty() : this.recordSetId;
     }
 

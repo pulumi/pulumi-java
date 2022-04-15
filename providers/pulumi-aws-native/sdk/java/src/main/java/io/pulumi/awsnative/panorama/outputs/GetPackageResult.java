@@ -35,19 +35,19 @@ public final class GetPackageResult {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<Integer> getCreatedTime() {
+    public Optional<Integer> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
-    public Optional<String> getPackageId() {
+    public Optional<String> packageId() {
         return Optional.ofNullable(this.packageId);
     }
-    public Optional<PackageStorageLocation> getStorageLocation() {
+    public Optional<PackageStorageLocation> storageLocation() {
         return Optional.ofNullable(this.storageLocation);
     }
-    public List<PackageTag> getTags() {
+    public List<PackageTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

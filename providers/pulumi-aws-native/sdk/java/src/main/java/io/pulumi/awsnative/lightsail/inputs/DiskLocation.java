@@ -25,7 +25,7 @@ public final class DiskLocation extends io.pulumi.resources.InvokeArgs {
     @Import(name="availabilityZone")
       private final @Nullable String availabilityZone;
 
-    public Optional<String> getAvailabilityZone() {
+    public Optional<String> availabilityZone() {
         return this.availabilityZone == null ? Optional.empty() : Optional.ofNullable(this.availabilityZone);
     }
 
@@ -36,7 +36,7 @@ public final class DiskLocation extends io.pulumi.resources.InvokeArgs {
     @Import(name="regionName")
       private final @Nullable String regionName;
 
-    public Optional<String> getRegionName() {
+    public Optional<String> regionName() {
         return this.regionName == null ? Optional.empty() : Optional.ofNullable(this.regionName);
     }
 

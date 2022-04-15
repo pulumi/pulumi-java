@@ -17,42 +17,42 @@ public final class DeliveryStreamSchemaConfiguration extends io.pulumi.resources
     @Import(name="catalogId")
       private final @Nullable String catalogId;
 
-    public Optional<String> getCatalogId() {
+    public Optional<String> catalogId() {
         return this.catalogId == null ? Optional.empty() : Optional.ofNullable(this.catalogId);
     }
 
     @Import(name="databaseName")
       private final @Nullable String databaseName;
 
-    public Optional<String> getDatabaseName() {
+    public Optional<String> databaseName() {
         return this.databaseName == null ? Optional.empty() : Optional.ofNullable(this.databaseName);
     }
 
     @Import(name="region")
       private final @Nullable String region;
 
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
     }
 
     @Import(name="roleARN")
       private final @Nullable String roleARN;
 
-    public Optional<String> getRoleARN() {
+    public Optional<String> roleARN() {
         return this.roleARN == null ? Optional.empty() : Optional.ofNullable(this.roleARN);
     }
 
     @Import(name="tableName")
       private final @Nullable String tableName;
 
-    public Optional<String> getTableName() {
+    public Optional<String> tableName() {
         return this.tableName == null ? Optional.empty() : Optional.ofNullable(this.tableName);
     }
 
     @Import(name="versionId")
       private final @Nullable String versionId;
 
-    public Optional<String> getVersionId() {
+    public Optional<String> versionId() {
         return this.versionId == null ? Optional.empty() : Optional.ofNullable(this.versionId);
     }
 

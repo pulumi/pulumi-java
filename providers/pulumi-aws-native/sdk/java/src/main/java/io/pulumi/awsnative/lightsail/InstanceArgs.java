@@ -29,7 +29,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="addOns")
       private final @Nullable Output<List<InstanceAddOnArgs>> addOns;
 
-    public Output<List<InstanceAddOnArgs>> getAddOns() {
+    public Output<List<InstanceAddOnArgs>> addOns() {
         return this.addOns == null ? Codegen.empty() : this.addOns;
     }
 
@@ -40,7 +40,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
@@ -51,7 +51,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="blueprintId", required=true)
       private final Output<String> blueprintId;
 
-    public Output<String> getBlueprintId() {
+    public Output<String> blueprintId() {
         return this.blueprintId;
     }
 
@@ -62,14 +62,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bundleId", required=true)
       private final Output<String> bundleId;
 
-    public Output<String> getBundleId() {
+    public Output<String> bundleId() {
         return this.bundleId;
     }
 
     @Import(name="hardware")
       private final @Nullable Output<InstanceHardwareArgs> hardware;
 
-    public Output<InstanceHardwareArgs> getHardware() {
+    public Output<InstanceHardwareArgs> hardware() {
         return this.hardware == null ? Codegen.empty() : this.hardware;
     }
 
@@ -80,7 +80,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceName")
       private final @Nullable Output<String> instanceName;
 
-    public Output<String> getInstanceName() {
+    public Output<String> instanceName() {
         return this.instanceName == null ? Codegen.empty() : this.instanceName;
     }
 
@@ -91,28 +91,28 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyPairName")
       private final @Nullable Output<String> keyPairName;
 
-    public Output<String> getKeyPairName() {
+    public Output<String> keyPairName() {
         return this.keyPairName == null ? Codegen.empty() : this.keyPairName;
     }
 
     @Import(name="location")
       private final @Nullable Output<InstanceLocationArgs> location;
 
-    public Output<InstanceLocationArgs> getLocation() {
+    public Output<InstanceLocationArgs> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="networking")
       private final @Nullable Output<InstanceNetworkingArgs> networking;
 
-    public Output<InstanceNetworkingArgs> getNetworking() {
+    public Output<InstanceNetworkingArgs> networking() {
         return this.networking == null ? Codegen.empty() : this.networking;
     }
 
     @Import(name="state")
       private final @Nullable Output<InstanceStateArgs> state;
 
-    public Output<InstanceStateArgs> getState() {
+    public Output<InstanceStateArgs> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -123,7 +123,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<InstanceTagArgs>> tags;
 
-    public Output<List<InstanceTagArgs>> getTags() {
+    public Output<List<InstanceTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -134,7 +134,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userData")
       private final @Nullable Output<String> userData;
 
-    public Output<String> getUserData() {
+    public Output<String> userData() {
         return this.userData == null ? Codegen.empty() : this.userData;
     }
 

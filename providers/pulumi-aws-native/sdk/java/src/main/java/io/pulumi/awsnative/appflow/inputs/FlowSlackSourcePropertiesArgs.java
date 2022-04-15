@@ -17,7 +17,7 @@ public final class FlowSlackSourcePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="object", required=true)
       private final Output<String> object;
 
-    public Output<String> getObject() {
+    public Output<String> object() {
         return this.object;
     }
 

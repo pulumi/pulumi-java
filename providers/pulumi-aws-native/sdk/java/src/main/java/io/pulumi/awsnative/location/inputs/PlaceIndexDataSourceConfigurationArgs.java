@@ -18,7 +18,7 @@ public final class PlaceIndexDataSourceConfigurationArgs extends io.pulumi.resou
     @Import(name="intendedUse")
       private final @Nullable Output<PlaceIndexIntendedUse> intendedUse;
 
-    public Output<PlaceIndexIntendedUse> getIntendedUse() {
+    public Output<PlaceIndexIntendedUse> intendedUse() {
         return this.intendedUse == null ? Codegen.empty() : this.intendedUse;
     }
 

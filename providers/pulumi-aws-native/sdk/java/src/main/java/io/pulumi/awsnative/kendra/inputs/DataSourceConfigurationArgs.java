@@ -27,70 +27,70 @@ public final class DataSourceConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="confluenceConfiguration")
       private final @Nullable Output<DataSourceConfluenceConfigurationArgs> confluenceConfiguration;
 
-    public Output<DataSourceConfluenceConfigurationArgs> getConfluenceConfiguration() {
+    public Output<DataSourceConfluenceConfigurationArgs> confluenceConfiguration() {
         return this.confluenceConfiguration == null ? Codegen.empty() : this.confluenceConfiguration;
     }
 
     @Import(name="databaseConfiguration")
       private final @Nullable Output<DataSourceDatabaseConfigurationArgs> databaseConfiguration;
 
-    public Output<DataSourceDatabaseConfigurationArgs> getDatabaseConfiguration() {
+    public Output<DataSourceDatabaseConfigurationArgs> databaseConfiguration() {
         return this.databaseConfiguration == null ? Codegen.empty() : this.databaseConfiguration;
     }
 
     @Import(name="googleDriveConfiguration")
       private final @Nullable Output<DataSourceGoogleDriveConfigurationArgs> googleDriveConfiguration;
 
-    public Output<DataSourceGoogleDriveConfigurationArgs> getGoogleDriveConfiguration() {
+    public Output<DataSourceGoogleDriveConfigurationArgs> googleDriveConfiguration() {
         return this.googleDriveConfiguration == null ? Codegen.empty() : this.googleDriveConfiguration;
     }
 
     @Import(name="oneDriveConfiguration")
       private final @Nullable Output<DataSourceOneDriveConfigurationArgs> oneDriveConfiguration;
 
-    public Output<DataSourceOneDriveConfigurationArgs> getOneDriveConfiguration() {
+    public Output<DataSourceOneDriveConfigurationArgs> oneDriveConfiguration() {
         return this.oneDriveConfiguration == null ? Codegen.empty() : this.oneDriveConfiguration;
     }
 
     @Import(name="s3Configuration")
       private final @Nullable Output<DataSourceS3DataSourceConfigurationArgs> s3Configuration;
 
-    public Output<DataSourceS3DataSourceConfigurationArgs> getS3Configuration() {
+    public Output<DataSourceS3DataSourceConfigurationArgs> s3Configuration() {
         return this.s3Configuration == null ? Codegen.empty() : this.s3Configuration;
     }
 
     @Import(name="salesforceConfiguration")
       private final @Nullable Output<DataSourceSalesforceConfigurationArgs> salesforceConfiguration;
 
-    public Output<DataSourceSalesforceConfigurationArgs> getSalesforceConfiguration() {
+    public Output<DataSourceSalesforceConfigurationArgs> salesforceConfiguration() {
         return this.salesforceConfiguration == null ? Codegen.empty() : this.salesforceConfiguration;
     }
 
     @Import(name="serviceNowConfiguration")
       private final @Nullable Output<DataSourceServiceNowConfigurationArgs> serviceNowConfiguration;
 
-    public Output<DataSourceServiceNowConfigurationArgs> getServiceNowConfiguration() {
+    public Output<DataSourceServiceNowConfigurationArgs> serviceNowConfiguration() {
         return this.serviceNowConfiguration == null ? Codegen.empty() : this.serviceNowConfiguration;
     }
 
     @Import(name="sharePointConfiguration")
       private final @Nullable Output<DataSourceSharePointConfigurationArgs> sharePointConfiguration;
 
-    public Output<DataSourceSharePointConfigurationArgs> getSharePointConfiguration() {
+    public Output<DataSourceSharePointConfigurationArgs> sharePointConfiguration() {
         return this.sharePointConfiguration == null ? Codegen.empty() : this.sharePointConfiguration;
     }
 
     @Import(name="webCrawlerConfiguration")
       private final @Nullable Output<DataSourceWebCrawlerConfigurationArgs> webCrawlerConfiguration;
 
-    public Output<DataSourceWebCrawlerConfigurationArgs> getWebCrawlerConfiguration() {
+    public Output<DataSourceWebCrawlerConfigurationArgs> webCrawlerConfiguration() {
         return this.webCrawlerConfiguration == null ? Codegen.empty() : this.webCrawlerConfiguration;
     }
 
     @Import(name="workDocsConfiguration")
       private final @Nullable Output<DataSourceWorkDocsConfigurationArgs> workDocsConfiguration;
 
-    public Output<DataSourceWorkDocsConfigurationArgs> getWorkDocsConfiguration() {
+    public Output<DataSourceWorkDocsConfigurationArgs> workDocsConfiguration() {
         return this.workDocsConfiguration == null ? Codegen.empty() : this.workDocsConfiguration;
     }
 

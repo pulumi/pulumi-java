@@ -19,35 +19,35 @@ public final class DistributionViewerCertificateArgs extends io.pulumi.resources
     @Import(name="acmCertificateArn")
       private final @Nullable Output<String> acmCertificateArn;
 
-    public Output<String> getAcmCertificateArn() {
+    public Output<String> acmCertificateArn() {
         return this.acmCertificateArn == null ? Codegen.empty() : this.acmCertificateArn;
     }
 
     @Import(name="cloudFrontDefaultCertificate")
       private final @Nullable Output<Boolean> cloudFrontDefaultCertificate;
 
-    public Output<Boolean> getCloudFrontDefaultCertificate() {
+    public Output<Boolean> cloudFrontDefaultCertificate() {
         return this.cloudFrontDefaultCertificate == null ? Codegen.empty() : this.cloudFrontDefaultCertificate;
     }
 
     @Import(name="iamCertificateId")
       private final @Nullable Output<String> iamCertificateId;
 
-    public Output<String> getIamCertificateId() {
+    public Output<String> iamCertificateId() {
         return this.iamCertificateId == null ? Codegen.empty() : this.iamCertificateId;
     }
 
     @Import(name="minimumProtocolVersion")
       private final @Nullable Output<String> minimumProtocolVersion;
 
-    public Output<String> getMinimumProtocolVersion() {
+    public Output<String> minimumProtocolVersion() {
         return this.minimumProtocolVersion == null ? Codegen.empty() : this.minimumProtocolVersion;
     }
 
     @Import(name="sslSupportMethod")
       private final @Nullable Output<String> sslSupportMethod;
 
-    public Output<String> getSslSupportMethod() {
+    public Output<String> sslSupportMethod() {
         return this.sslSupportMethod == null ? Codegen.empty() : this.sslSupportMethod;
     }
 

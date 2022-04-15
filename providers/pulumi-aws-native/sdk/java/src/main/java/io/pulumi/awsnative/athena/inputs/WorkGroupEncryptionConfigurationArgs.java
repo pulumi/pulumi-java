@@ -23,14 +23,14 @@ public final class WorkGroupEncryptionConfigurationArgs extends io.pulumi.resour
     @Import(name="encryptionOption", required=true)
       private final Output<WorkGroupEncryptionOption> encryptionOption;
 
-    public Output<WorkGroupEncryptionOption> getEncryptionOption() {
+    public Output<WorkGroupEncryptionOption> encryptionOption() {
         return this.encryptionOption;
     }
 
     @Import(name="kmsKey")
       private final @Nullable Output<String> kmsKey;
 
-    public Output<String> getKmsKey() {
+    public Output<String> kmsKey() {
         return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
     }
 

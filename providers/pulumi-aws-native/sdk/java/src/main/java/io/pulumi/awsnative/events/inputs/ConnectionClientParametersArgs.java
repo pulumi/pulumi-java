@@ -17,14 +17,14 @@ public final class ConnectionClientParametersArgs extends io.pulumi.resources.Re
     @Import(name="clientID", required=true)
       private final Output<String> clientID;
 
-    public Output<String> getClientID() {
+    public Output<String> clientID() {
         return this.clientID;
     }
 
     @Import(name="clientSecret", required=true)
       private final Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
+    public Output<String> clientSecret() {
         return this.clientSecret;
     }
 

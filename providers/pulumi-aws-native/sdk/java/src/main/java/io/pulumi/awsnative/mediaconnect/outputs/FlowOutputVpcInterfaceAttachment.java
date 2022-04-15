@@ -26,7 +26,7 @@ public final class FlowOutputVpcInterfaceAttachment {
      * The name of the VPC interface to use for this output.
      * 
     */
-    public Optional<String> getVpcInterfaceName() {
+    public Optional<String> vpcInterfaceName() {
         return Optional.ofNullable(this.vpcInterfaceName);
     }
 

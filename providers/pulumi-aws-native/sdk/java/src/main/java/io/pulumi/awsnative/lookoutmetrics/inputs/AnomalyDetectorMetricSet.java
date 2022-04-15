@@ -27,7 +27,7 @@ public final class AnomalyDetectorMetricSet extends io.pulumi.resources.InvokeAr
     @Import(name="dimensionList")
       private final @Nullable List<String> dimensionList;
 
-    public List<String> getDimensionList() {
+    public List<String> dimensionList() {
         return this.dimensionList == null ? List.of() : this.dimensionList;
     }
 
@@ -38,7 +38,7 @@ public final class AnomalyDetectorMetricSet extends io.pulumi.resources.InvokeAr
     @Import(name="metricList", required=true)
       private final List<AnomalyDetectorMetric> metricList;
 
-    public List<AnomalyDetectorMetric> getMetricList() {
+    public List<AnomalyDetectorMetric> metricList() {
         return this.metricList;
     }
 
@@ -49,7 +49,7 @@ public final class AnomalyDetectorMetricSet extends io.pulumi.resources.InvokeAr
     @Import(name="metricSetDescription")
       private final @Nullable String metricSetDescription;
 
-    public Optional<String> getMetricSetDescription() {
+    public Optional<String> metricSetDescription() {
         return this.metricSetDescription == null ? Optional.empty() : Optional.ofNullable(this.metricSetDescription);
     }
 
@@ -60,7 +60,7 @@ public final class AnomalyDetectorMetricSet extends io.pulumi.resources.InvokeAr
     @Import(name="metricSetFrequency")
       private final @Nullable AnomalyDetectorMetricSetMetricSetFrequency metricSetFrequency;
 
-    public Optional<AnomalyDetectorMetricSetMetricSetFrequency> getMetricSetFrequency() {
+    public Optional<AnomalyDetectorMetricSetMetricSetFrequency> metricSetFrequency() {
         return this.metricSetFrequency == null ? Optional.empty() : Optional.ofNullable(this.metricSetFrequency);
     }
 
@@ -71,14 +71,14 @@ public final class AnomalyDetectorMetricSet extends io.pulumi.resources.InvokeAr
     @Import(name="metricSetName", required=true)
       private final String metricSetName;
 
-    public String getMetricSetName() {
+    public String metricSetName() {
         return this.metricSetName;
     }
 
     @Import(name="metricSource", required=true)
       private final AnomalyDetectorMetricSource metricSource;
 
-    public AnomalyDetectorMetricSource getMetricSource() {
+    public AnomalyDetectorMetricSource metricSource() {
         return this.metricSource;
     }
 
@@ -89,21 +89,21 @@ public final class AnomalyDetectorMetricSet extends io.pulumi.resources.InvokeAr
     @Import(name="offset")
       private final @Nullable Integer offset;
 
-    public Optional<Integer> getOffset() {
+    public Optional<Integer> offset() {
         return this.offset == null ? Optional.empty() : Optional.ofNullable(this.offset);
     }
 
     @Import(name="timestampColumn")
       private final @Nullable AnomalyDetectorTimestampColumn timestampColumn;
 
-    public Optional<AnomalyDetectorTimestampColumn> getTimestampColumn() {
+    public Optional<AnomalyDetectorTimestampColumn> timestampColumn() {
         return this.timestampColumn == null ? Optional.empty() : Optional.ofNullable(this.timestampColumn);
     }
 
     @Import(name="timezone")
       private final @Nullable String timezone;
 
-    public Optional<String> getTimezone() {
+    public Optional<String> timezone() {
         return this.timezone == null ? Optional.empty() : Optional.ofNullable(this.timezone);
     }
 

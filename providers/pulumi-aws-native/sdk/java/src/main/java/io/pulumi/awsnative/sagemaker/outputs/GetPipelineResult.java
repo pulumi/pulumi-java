@@ -50,34 +50,34 @@ public final class GetPipelineResult {
         this.tags = tags;
     }
 
-    public Optional<ParallelismConfigurationProperties> getParallelismConfiguration() {
+    public Optional<ParallelismConfigurationProperties> parallelismConfiguration() {
         return Optional.ofNullable(this.parallelismConfiguration);
     }
-    public Optional<Object> getPipelineDefinition() {
+    public Optional<Object> pipelineDefinition() {
         return Optional.ofNullable(this.pipelineDefinition);
     }
     /**
      * The description of the Pipeline.
      * 
     */
-    public Optional<String> getPipelineDescription() {
+    public Optional<String> pipelineDescription() {
         return Optional.ofNullable(this.pipelineDescription);
     }
     /**
      * The display name of the Pipeline.
      * 
     */
-    public Optional<String> getPipelineDisplayName() {
+    public Optional<String> pipelineDisplayName() {
         return Optional.ofNullable(this.pipelineDisplayName);
     }
     /**
      * Role Arn
      * 
     */
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
-    public List<PipelineTag> getTags() {
+    public List<PipelineTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

@@ -23,42 +23,42 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationIdentifier", required=true)
       private final Output<String> applicationIdentifier;
 
-    public Output<String> getApplicationIdentifier() {
+    public Output<String> applicationIdentifier() {
         return this.applicationIdentifier;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="endpointType")
       private final @Nullable Output<ServiceEndpointType> endpointType;
 
-    public Output<ServiceEndpointType> getEndpointType() {
+    public Output<ServiceEndpointType> endpointType() {
         return this.endpointType == null ? Codegen.empty() : this.endpointType;
     }
 
     @Import(name="environmentIdentifier", required=true)
       private final Output<String> environmentIdentifier;
 
-    public Output<String> getEnvironmentIdentifier() {
+    public Output<String> environmentIdentifier() {
         return this.environmentIdentifier;
     }
 
     @Import(name="lambdaEndpoint")
       private final @Nullable Output<ServiceLambdaEndpointInputArgs> lambdaEndpoint;
 
-    public Output<ServiceLambdaEndpointInputArgs> getLambdaEndpoint() {
+    public Output<ServiceLambdaEndpointInputArgs> lambdaEndpoint() {
         return this.lambdaEndpoint == null ? Codegen.empty() : this.lambdaEndpoint;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -69,21 +69,21 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<ServiceTagArgs>> tags;
 
-    public Output<List<ServiceTagArgs>> getTags() {
+    public Output<List<ServiceTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="urlEndpoint")
       private final @Nullable Output<ServiceUrlEndpointInputArgs> urlEndpoint;
 
-    public Output<ServiceUrlEndpointInputArgs> getUrlEndpoint() {
+    public Output<ServiceUrlEndpointInputArgs> urlEndpoint() {
         return this.urlEndpoint == null ? Codegen.empty() : this.urlEndpoint;
     }
 
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 

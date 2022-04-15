@@ -31,7 +31,7 @@ public final class MonitoringScheduleMonitoringJobDefinitionArgs extends io.pulu
     @Import(name="baselineConfig")
       private final @Nullable Output<MonitoringScheduleBaselineConfigArgs> baselineConfig;
 
-    public Output<MonitoringScheduleBaselineConfigArgs> getBaselineConfig() {
+    public Output<MonitoringScheduleBaselineConfigArgs> baselineConfig() {
         return this.baselineConfig == null ? Codegen.empty() : this.baselineConfig;
     }
 
@@ -42,42 +42,42 @@ public final class MonitoringScheduleMonitoringJobDefinitionArgs extends io.pulu
     @Import(name="environment")
       private final @Nullable Output<Object> environment;
 
-    public Output<Object> getEnvironment() {
+    public Output<Object> environment() {
         return this.environment == null ? Codegen.empty() : this.environment;
     }
 
     @Import(name="monitoringAppSpecification", required=true)
       private final Output<MonitoringScheduleMonitoringAppSpecificationArgs> monitoringAppSpecification;
 
-    public Output<MonitoringScheduleMonitoringAppSpecificationArgs> getMonitoringAppSpecification() {
+    public Output<MonitoringScheduleMonitoringAppSpecificationArgs> monitoringAppSpecification() {
         return this.monitoringAppSpecification;
     }
 
     @Import(name="monitoringInputs", required=true)
       private final Output<List<MonitoringScheduleMonitoringInputArgs>> monitoringInputs;
 
-    public Output<List<MonitoringScheduleMonitoringInputArgs>> getMonitoringInputs() {
+    public Output<List<MonitoringScheduleMonitoringInputArgs>> monitoringInputs() {
         return this.monitoringInputs;
     }
 
     @Import(name="monitoringOutputConfig", required=true)
       private final Output<MonitoringScheduleMonitoringOutputConfigArgs> monitoringOutputConfig;
 
-    public Output<MonitoringScheduleMonitoringOutputConfigArgs> getMonitoringOutputConfig() {
+    public Output<MonitoringScheduleMonitoringOutputConfigArgs> monitoringOutputConfig() {
         return this.monitoringOutputConfig;
     }
 
     @Import(name="monitoringResources", required=true)
       private final Output<MonitoringScheduleMonitoringResourcesArgs> monitoringResources;
 
-    public Output<MonitoringScheduleMonitoringResourcesArgs> getMonitoringResources() {
+    public Output<MonitoringScheduleMonitoringResourcesArgs> monitoringResources() {
         return this.monitoringResources;
     }
 
     @Import(name="networkConfig")
       private final @Nullable Output<MonitoringScheduleNetworkConfigArgs> networkConfig;
 
-    public Output<MonitoringScheduleNetworkConfigArgs> getNetworkConfig() {
+    public Output<MonitoringScheduleNetworkConfigArgs> networkConfig() {
         return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
     }
 
@@ -88,14 +88,14 @@ public final class MonitoringScheduleMonitoringJobDefinitionArgs extends io.pulu
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="stoppingCondition")
       private final @Nullable Output<MonitoringScheduleStoppingConditionArgs> stoppingCondition;
 
-    public Output<MonitoringScheduleStoppingConditionArgs> getStoppingCondition() {
+    public Output<MonitoringScheduleStoppingConditionArgs> stoppingCondition() {
         return this.stoppingCondition == null ? Codegen.empty() : this.stoppingCondition;
     }
 

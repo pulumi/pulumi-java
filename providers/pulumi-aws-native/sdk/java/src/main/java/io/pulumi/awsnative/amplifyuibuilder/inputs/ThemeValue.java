@@ -19,14 +19,14 @@ public final class ThemeValue extends io.pulumi.resources.InvokeArgs {
     @Import(name="children")
       private final @Nullable List<ThemeValues> children;
 
-    public List<ThemeValues> getChildren() {
+    public List<ThemeValues> children() {
         return this.children == null ? List.of() : this.children;
     }
 
     @Import(name="value")
       private final @Nullable String value;
 
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

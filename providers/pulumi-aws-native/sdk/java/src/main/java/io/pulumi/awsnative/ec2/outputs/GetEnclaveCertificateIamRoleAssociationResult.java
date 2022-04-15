@@ -41,21 +41,21 @@ public final class GetEnclaveCertificateIamRoleAssociationResult {
      * The name of the Amazon S3 bucket to which the certificate was uploaded.
      * 
     */
-    public Optional<String> getCertificateS3BucketName() {
+    public Optional<String> certificateS3BucketName() {
         return Optional.ofNullable(this.certificateS3BucketName);
     }
     /**
      * The Amazon S3 object key where the certificate, certificate chain, and encrypted private key bundle are stored.
      * 
     */
-    public Optional<String> getCertificateS3ObjectKey() {
+    public Optional<String> certificateS3ObjectKey() {
         return Optional.ofNullable(this.certificateS3ObjectKey);
     }
     /**
      * The ID of the AWS KMS CMK used to encrypt the private key of the certificate.
      * 
     */
-    public Optional<String> getEncryptionKmsKeyId() {
+    public Optional<String> encryptionKmsKeyId() {
         return Optional.ofNullable(this.encryptionKmsKeyId);
     }
 

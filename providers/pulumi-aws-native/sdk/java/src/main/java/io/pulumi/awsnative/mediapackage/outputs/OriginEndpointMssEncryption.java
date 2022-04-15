@@ -16,7 +16,7 @@ public final class OriginEndpointMssEncryption {
         this.spekeKeyProvider = spekeKeyProvider;
     }
 
-    public OriginEndpointSpekeKeyProvider getSpekeKeyProvider() {
+    public OriginEndpointSpekeKeyProvider spekeKeyProvider() {
         return this.spekeKeyProvider;
     }
 

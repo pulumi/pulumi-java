@@ -30,91 +30,91 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessPolicies")
       private final @Nullable Output<Object> accessPolicies;
 
-    public Output<Object> getAccessPolicies() {
+    public Output<Object> accessPolicies() {
         return this.accessPolicies == null ? Codegen.empty() : this.accessPolicies;
     }
 
     @Import(name="advancedOptions")
       private final @Nullable Output<Object> advancedOptions;
 
-    public Output<Object> getAdvancedOptions() {
+    public Output<Object> advancedOptions() {
         return this.advancedOptions == null ? Codegen.empty() : this.advancedOptions;
     }
 
     @Import(name="advancedSecurityOptions")
       private final @Nullable Output<DomainAdvancedSecurityOptionsInputArgs> advancedSecurityOptions;
 
-    public Output<DomainAdvancedSecurityOptionsInputArgs> getAdvancedSecurityOptions() {
+    public Output<DomainAdvancedSecurityOptionsInputArgs> advancedSecurityOptions() {
         return this.advancedSecurityOptions == null ? Codegen.empty() : this.advancedSecurityOptions;
     }
 
     @Import(name="clusterConfig")
       private final @Nullable Output<DomainClusterConfigArgs> clusterConfig;
 
-    public Output<DomainClusterConfigArgs> getClusterConfig() {
+    public Output<DomainClusterConfigArgs> clusterConfig() {
         return this.clusterConfig == null ? Codegen.empty() : this.clusterConfig;
     }
 
     @Import(name="cognitoOptions")
       private final @Nullable Output<DomainCognitoOptionsArgs> cognitoOptions;
 
-    public Output<DomainCognitoOptionsArgs> getCognitoOptions() {
+    public Output<DomainCognitoOptionsArgs> cognitoOptions() {
         return this.cognitoOptions == null ? Codegen.empty() : this.cognitoOptions;
     }
 
     @Import(name="domainEndpointOptions")
       private final @Nullable Output<DomainEndpointOptionsArgs> domainEndpointOptions;
 
-    public Output<DomainEndpointOptionsArgs> getDomainEndpointOptions() {
+    public Output<DomainEndpointOptionsArgs> domainEndpointOptions() {
         return this.domainEndpointOptions == null ? Codegen.empty() : this.domainEndpointOptions;
     }
 
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
     @Import(name="eBSOptions")
       private final @Nullable Output<DomainEBSOptionsArgs> eBSOptions;
 
-    public Output<DomainEBSOptionsArgs> getEBSOptions() {
+    public Output<DomainEBSOptionsArgs> eBSOptions() {
         return this.eBSOptions == null ? Codegen.empty() : this.eBSOptions;
     }
 
     @Import(name="encryptionAtRestOptions")
       private final @Nullable Output<DomainEncryptionAtRestOptionsArgs> encryptionAtRestOptions;
 
-    public Output<DomainEncryptionAtRestOptionsArgs> getEncryptionAtRestOptions() {
+    public Output<DomainEncryptionAtRestOptionsArgs> encryptionAtRestOptions() {
         return this.encryptionAtRestOptions == null ? Codegen.empty() : this.encryptionAtRestOptions;
     }
 
     @Import(name="engineVersion")
       private final @Nullable Output<String> engineVersion;
 
-    public Output<String> getEngineVersion() {
+    public Output<String> engineVersion() {
         return this.engineVersion == null ? Codegen.empty() : this.engineVersion;
     }
 
     @Import(name="logPublishingOptions")
       private final @Nullable Output<Object> logPublishingOptions;
 
-    public Output<Object> getLogPublishingOptions() {
+    public Output<Object> logPublishingOptions() {
         return this.logPublishingOptions == null ? Codegen.empty() : this.logPublishingOptions;
     }
 
     @Import(name="nodeToNodeEncryptionOptions")
       private final @Nullable Output<DomainNodeToNodeEncryptionOptionsArgs> nodeToNodeEncryptionOptions;
 
-    public Output<DomainNodeToNodeEncryptionOptionsArgs> getNodeToNodeEncryptionOptions() {
+    public Output<DomainNodeToNodeEncryptionOptionsArgs> nodeToNodeEncryptionOptions() {
         return this.nodeToNodeEncryptionOptions == null ? Codegen.empty() : this.nodeToNodeEncryptionOptions;
     }
 
     @Import(name="snapshotOptions")
       private final @Nullable Output<DomainSnapshotOptionsArgs> snapshotOptions;
 
-    public Output<DomainSnapshotOptionsArgs> getSnapshotOptions() {
+    public Output<DomainSnapshotOptionsArgs> snapshotOptions() {
         return this.snapshotOptions == null ? Codegen.empty() : this.snapshotOptions;
     }
 
@@ -125,14 +125,14 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DomainTagArgs>> tags;
 
-    public Output<List<DomainTagArgs>> getTags() {
+    public Output<List<DomainTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="vPCOptions")
       private final @Nullable Output<DomainVPCOptionsArgs> vPCOptions;
 
-    public Output<DomainVPCOptionsArgs> getVPCOptions() {
+    public Output<DomainVPCOptionsArgs> vPCOptions() {
         return this.vPCOptions == null ? Codegen.empty() : this.vPCOptions;
     }
 

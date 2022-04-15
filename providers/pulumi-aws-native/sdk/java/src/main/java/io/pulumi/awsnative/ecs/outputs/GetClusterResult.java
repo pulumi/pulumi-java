@@ -47,22 +47,22 @@ public final class GetClusterResult {
      * The Amazon Resource Name (ARN) of the Amazon ECS cluster, such as arn:aws:ecs:us-east-2:123456789012:cluster/MyECSCluster.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public List<String> getCapacityProviders() {
+    public List<String> capacityProviders() {
         return this.capacityProviders == null ? List.of() : this.capacityProviders;
     }
-    public List<ClusterSettings> getClusterSettings() {
+    public List<ClusterSettings> clusterSettings() {
         return this.clusterSettings == null ? List.of() : this.clusterSettings;
     }
-    public Optional<ClusterConfiguration> getConfiguration() {
+    public Optional<ClusterConfiguration> configuration() {
         return Optional.ofNullable(this.configuration);
     }
-    public List<ClusterCapacityProviderStrategyItem> getDefaultCapacityProviderStrategy() {
+    public List<ClusterCapacityProviderStrategyItem> defaultCapacityProviderStrategy() {
         return this.defaultCapacityProviderStrategy == null ? List.of() : this.defaultCapacityProviderStrategy;
     }
-    public List<ClusterTag> getTags() {
+    public List<ClusterTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

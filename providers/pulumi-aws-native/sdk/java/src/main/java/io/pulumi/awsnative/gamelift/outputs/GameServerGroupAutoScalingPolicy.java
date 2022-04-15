@@ -23,10 +23,10 @@ public final class GameServerGroupAutoScalingPolicy {
         this.targetTrackingConfiguration = targetTrackingConfiguration;
     }
 
-    public Optional<Double> getEstimatedInstanceWarmup() {
+    public Optional<Double> estimatedInstanceWarmup() {
         return Optional.ofNullable(this.estimatedInstanceWarmup);
     }
-    public GameServerGroupTargetTrackingConfiguration getTargetTrackingConfiguration() {
+    public GameServerGroupTargetTrackingConfiguration targetTrackingConfiguration() {
         return this.targetTrackingConfiguration;
     }
 

@@ -19,21 +19,21 @@ public final class ServiceDeploymentConfigurationArgs extends io.pulumi.resource
     @Import(name="deploymentCircuitBreaker")
       private final @Nullable Output<ServiceDeploymentCircuitBreakerArgs> deploymentCircuitBreaker;
 
-    public Output<ServiceDeploymentCircuitBreakerArgs> getDeploymentCircuitBreaker() {
+    public Output<ServiceDeploymentCircuitBreakerArgs> deploymentCircuitBreaker() {
         return this.deploymentCircuitBreaker == null ? Codegen.empty() : this.deploymentCircuitBreaker;
     }
 
     @Import(name="maximumPercent")
       private final @Nullable Output<Integer> maximumPercent;
 
-    public Output<Integer> getMaximumPercent() {
+    public Output<Integer> maximumPercent() {
         return this.maximumPercent == null ? Codegen.empty() : this.maximumPercent;
     }
 
     @Import(name="minimumHealthyPercent")
       private final @Nullable Output<Integer> minimumHealthyPercent;
 
-    public Output<Integer> getMinimumHealthyPercent() {
+    public Output<Integer> minimumHealthyPercent() {
         return this.minimumHealthyPercent == null ? Codegen.empty() : this.minimumHealthyPercent;
     }
 

@@ -26,13 +26,13 @@ public final class ScheduledQueryS3Configuration {
         this.objectKeyPrefix = objectKeyPrefix;
     }
 
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
-    public Optional<ScheduledQueryEncryptionOption> getEncryptionOption() {
+    public Optional<ScheduledQueryEncryptionOption> encryptionOption() {
         return Optional.ofNullable(this.encryptionOption);
     }
-    public Optional<String> getObjectKeyPrefix() {
+    public Optional<String> objectKeyPrefix() {
         return Optional.ofNullable(this.objectKeyPrefix);
     }
 

@@ -20,28 +20,28 @@ public final class BucketMetricsConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="accessPointArn")
       private final @Nullable Output<String> accessPointArn;
 
-    public Output<String> getAccessPointArn() {
+    public Output<String> accessPointArn() {
         return this.accessPointArn == null ? Codegen.empty() : this.accessPointArn;
     }
 
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     @Import(name="tagFilters")
       private final @Nullable Output<List<BucketTagFilterArgs>> tagFilters;
 
-    public Output<List<BucketTagFilterArgs>> getTagFilters() {
+    public Output<List<BucketTagFilterArgs>> tagFilters() {
         return this.tagFilters == null ? Codegen.empty() : this.tagFilters;
     }
 

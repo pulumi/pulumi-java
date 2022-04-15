@@ -36,14 +36,14 @@ public final class AuthenticationModeProperties {
      * Passwords used for this user account. You can create up to two passwords for each user.
      * 
     */
-    public List<String> getPasswords() {
+    public List<String> passwords() {
         return this.passwords == null ? List.of() : this.passwords;
     }
     /**
      * Type of authentication strategy for this user.
      * 
     */
-    public Optional<UserAuthenticationModePropertiesType> getType() {
+    public Optional<UserAuthenticationModePropertiesType> type() {
         return Optional.ofNullable(this.type);
     }
 

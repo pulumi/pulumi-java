@@ -25,7 +25,7 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="frameworkControls", required=true)
       private final Output<List<FrameworkControlArgs>> frameworkControls;
 
-    public Output<List<FrameworkControlArgs>> getFrameworkControls() {
+    public Output<List<FrameworkControlArgs>> frameworkControls() {
         return this.frameworkControls;
     }
 
@@ -36,7 +36,7 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="frameworkDescription")
       private final @Nullable Output<String> frameworkDescription;
 
-    public Output<String> getFrameworkDescription() {
+    public Output<String> frameworkDescription() {
         return this.frameworkDescription == null ? Codegen.empty() : this.frameworkDescription;
     }
 
@@ -47,7 +47,7 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="frameworkName")
       private final @Nullable Output<String> frameworkName;
 
-    public Output<String> getFrameworkName() {
+    public Output<String> frameworkName() {
         return this.frameworkName == null ? Codegen.empty() : this.frameworkName;
     }
 
@@ -58,7 +58,7 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="frameworkTags")
       private final @Nullable Output<List<FrameworkTagArgs>> frameworkTags;
 
-    public Output<List<FrameworkTagArgs>> getFrameworkTags() {
+    public Output<List<FrameworkTagArgs>> frameworkTags() {
         return this.frameworkTags == null ? Codegen.empty() : this.frameworkTags;
     }
 

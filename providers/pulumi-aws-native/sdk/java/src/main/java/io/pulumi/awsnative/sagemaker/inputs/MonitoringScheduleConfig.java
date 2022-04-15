@@ -24,7 +24,7 @@ public final class MonitoringScheduleConfig extends io.pulumi.resources.InvokeAr
     @Import(name="monitoringJobDefinition")
       private final @Nullable MonitoringScheduleMonitoringJobDefinition monitoringJobDefinition;
 
-    public Optional<MonitoringScheduleMonitoringJobDefinition> getMonitoringJobDefinition() {
+    public Optional<MonitoringScheduleMonitoringJobDefinition> monitoringJobDefinition() {
         return this.monitoringJobDefinition == null ? Optional.empty() : Optional.ofNullable(this.monitoringJobDefinition);
     }
 
@@ -35,21 +35,21 @@ public final class MonitoringScheduleConfig extends io.pulumi.resources.InvokeAr
     @Import(name="monitoringJobDefinitionName")
       private final @Nullable String monitoringJobDefinitionName;
 
-    public Optional<String> getMonitoringJobDefinitionName() {
+    public Optional<String> monitoringJobDefinitionName() {
         return this.monitoringJobDefinitionName == null ? Optional.empty() : Optional.ofNullable(this.monitoringJobDefinitionName);
     }
 
     @Import(name="monitoringType")
       private final @Nullable MonitoringScheduleMonitoringType monitoringType;
 
-    public Optional<MonitoringScheduleMonitoringType> getMonitoringType() {
+    public Optional<MonitoringScheduleMonitoringType> monitoringType() {
         return this.monitoringType == null ? Optional.empty() : Optional.ofNullable(this.monitoringType);
     }
 
     @Import(name="scheduleConfig")
       private final @Nullable MonitoringScheduleScheduleConfig scheduleConfig;
 
-    public Optional<MonitoringScheduleScheduleConfig> getScheduleConfig() {
+    public Optional<MonitoringScheduleScheduleConfig> scheduleConfig() {
         return this.scheduleConfig == null ? Optional.empty() : Optional.ofNullable(this.scheduleConfig);
     }
 

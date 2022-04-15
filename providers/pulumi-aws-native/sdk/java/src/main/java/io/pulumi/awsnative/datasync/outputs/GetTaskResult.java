@@ -93,67 +93,67 @@ public final class GetTaskResult {
      * The ARN of the Amazon CloudWatch log group that is used to monitor and log events in the task.
      * 
     */
-    public Optional<String> getCloudWatchLogGroupArn() {
+    public Optional<String> cloudWatchLogGroupArn() {
         return Optional.ofNullable(this.cloudWatchLogGroupArn);
     }
-    public List<String> getDestinationNetworkInterfaceArns() {
+    public List<String> destinationNetworkInterfaceArns() {
         return this.destinationNetworkInterfaceArns == null ? List.of() : this.destinationNetworkInterfaceArns;
     }
     /**
      * Errors that AWS DataSync encountered during execution of the task. You can use this error code to help troubleshoot issues.
      * 
     */
-    public Optional<String> getErrorCode() {
+    public Optional<String> errorCode() {
         return Optional.ofNullable(this.errorCode);
     }
     /**
      * Detailed description of an error that was encountered during the task execution.
      * 
     */
-    public Optional<String> getErrorDetail() {
+    public Optional<String> errorDetail() {
         return Optional.ofNullable(this.errorDetail);
     }
-    public List<TaskFilterRule> getExcludes() {
+    public List<TaskFilterRule> excludes() {
         return this.excludes == null ? List.of() : this.excludes;
     }
-    public List<TaskFilterRule> getIncludes() {
+    public List<TaskFilterRule> includes() {
         return this.includes == null ? List.of() : this.includes;
     }
     /**
      * The name of a task. This value is a text reference that is used to identify the task in the console.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public Optional<TaskOptions> getOptions() {
+    public Optional<TaskOptions> options() {
         return Optional.ofNullable(this.options);
     }
-    public Optional<TaskSchedule> getSchedule() {
+    public Optional<TaskSchedule> schedule() {
         return Optional.ofNullable(this.schedule);
     }
-    public List<String> getSourceNetworkInterfaceArns() {
+    public List<String> sourceNetworkInterfaceArns() {
         return this.sourceNetworkInterfaceArns == null ? List.of() : this.sourceNetworkInterfaceArns;
     }
     /**
      * The status of the task that was described.
      * 
     */
-    public Optional<TaskStatus> getStatus() {
+    public Optional<TaskStatus> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
     */
-    public List<TaskTag> getTags() {
+    public List<TaskTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The ARN of the task.
      * 
     */
-    public Optional<String> getTaskArn() {
+    public Optional<String> taskArn() {
         return Optional.ofNullable(this.taskArn);
     }
 

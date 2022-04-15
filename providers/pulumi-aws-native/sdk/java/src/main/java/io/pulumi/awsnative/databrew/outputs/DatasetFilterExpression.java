@@ -30,10 +30,10 @@ public final class DatasetFilterExpression {
      * Filtering expression for a parameter
      * 
     */
-    public String getExpression() {
+    public String expression() {
         return this.expression;
     }
-    public List<DatasetFilterValue> getValuesMap() {
+    public List<DatasetFilterValue> valuesMap() {
         return this.valuesMap;
     }
 

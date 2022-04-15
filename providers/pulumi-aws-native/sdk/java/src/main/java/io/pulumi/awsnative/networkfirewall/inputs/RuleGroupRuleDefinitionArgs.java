@@ -19,14 +19,14 @@ public final class RuleGroupRuleDefinitionArgs extends io.pulumi.resources.Resou
     @Import(name="actions", required=true)
       private final Output<List<String>> actions;
 
-    public Output<List<String>> getActions() {
+    public Output<List<String>> actions() {
         return this.actions;
     }
 
     @Import(name="matchAttributes", required=true)
       private final Output<RuleGroupMatchAttributesArgs> matchAttributes;
 
-    public Output<RuleGroupMatchAttributesArgs> getMatchAttributes() {
+    public Output<RuleGroupMatchAttributesArgs> matchAttributes() {
         return this.matchAttributes;
     }
 

@@ -19,21 +19,21 @@ public final class DistributionLambdaFunctionAssociationArgs extends io.pulumi.r
     @Import(name="eventType")
       private final @Nullable Output<String> eventType;
 
-    public Output<String> getEventType() {
+    public Output<String> eventType() {
         return this.eventType == null ? Codegen.empty() : this.eventType;
     }
 
     @Import(name="includeBody")
       private final @Nullable Output<Boolean> includeBody;
 
-    public Output<Boolean> getIncludeBody() {
+    public Output<Boolean> includeBody() {
         return this.includeBody == null ? Codegen.empty() : this.includeBody;
     }
 
     @Import(name="lambdaFunctionARN")
       private final @Nullable Output<String> lambdaFunctionARN;
 
-    public Output<String> getLambdaFunctionARN() {
+    public Output<String> lambdaFunctionARN() {
         return this.lambdaFunctionARN == null ? Codegen.empty() : this.lambdaFunctionARN;
     }
 

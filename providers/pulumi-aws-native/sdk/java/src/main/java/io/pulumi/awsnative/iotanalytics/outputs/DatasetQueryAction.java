@@ -23,10 +23,10 @@ public final class DatasetQueryAction {
         this.sqlQuery = sqlQuery;
     }
 
-    public List<DatasetFilter> getFilters() {
+    public List<DatasetFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
-    public String getSqlQuery() {
+    public String sqlQuery() {
         return this.sqlQuery;
     }
 

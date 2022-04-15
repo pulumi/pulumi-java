@@ -36,22 +36,22 @@ public final class DeliveryStreamParquetSerDe {
         this.writerVersion = writerVersion;
     }
 
-    public Optional<Integer> getBlockSizeBytes() {
+    public Optional<Integer> blockSizeBytes() {
         return Optional.ofNullable(this.blockSizeBytes);
     }
-    public Optional<String> getCompression() {
+    public Optional<String> compression() {
         return Optional.ofNullable(this.compression);
     }
-    public Optional<Boolean> getEnableDictionaryCompression() {
+    public Optional<Boolean> enableDictionaryCompression() {
         return Optional.ofNullable(this.enableDictionaryCompression);
     }
-    public Optional<Integer> getMaxPaddingBytes() {
+    public Optional<Integer> maxPaddingBytes() {
         return Optional.ofNullable(this.maxPaddingBytes);
     }
-    public Optional<Integer> getPageSizeBytes() {
+    public Optional<Integer> pageSizeBytes() {
         return Optional.ofNullable(this.pageSizeBytes);
     }
-    public Optional<String> getWriterVersion() {
+    public Optional<String> writerVersion() {
         return Optional.ofNullable(this.writerVersion);
     }
 

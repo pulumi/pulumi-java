@@ -28,7 +28,7 @@ public final class ThemeGutterStyle {
      *         </p>
      * 
     */
-    public Optional<Boolean> getShow() {
+    public Optional<Boolean> show() {
         return Optional.ofNullable(this.show);
     }
 

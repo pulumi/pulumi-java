@@ -34,13 +34,13 @@ public class Template extends io.pulumi.resources.CustomResource {
      * @return <p>The Amazon Resource Name (ARN) of the template.</p>
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="awsAccountId", type=String.class, parameters={})
     private Output<String> awsAccountId;
 
-    public Output<String> getAwsAccountId() {
+    public Output<String> awsAccountId() {
         return this.awsAccountId;
     }
     /**
@@ -54,7 +54,7 @@ public class Template extends io.pulumi.resources.CustomResource {
      * @return <p>Time when this was created.</p>
      * 
      */
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     /**
@@ -68,7 +68,7 @@ public class Template extends io.pulumi.resources.CustomResource {
      * @return <p>Time when this was last updated.</p>
      * 
      */
-    public Output<String> getLastUpdatedTime() {
+    public Output<String> lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
@@ -82,7 +82,7 @@ public class Template extends io.pulumi.resources.CustomResource {
      * @return <p>A display name for the template.</p>
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -96,13 +96,13 @@ public class Template extends io.pulumi.resources.CustomResource {
      * @return <p>A list of resource permissions to be set on the template. </p>
      * 
      */
-    public Output</* @Nullable */ List<TemplateResourcePermission>> getPermissions() {
+    public Output</* @Nullable */ List<TemplateResourcePermission>> permissions() {
         return this.permissions;
     }
     @Export(name="sourceEntity", type=TemplateSourceEntity.class, parameters={})
     private Output<TemplateSourceEntity> sourceEntity;
 
-    public Output<TemplateSourceEntity> getSourceEntity() {
+    public Output<TemplateSourceEntity> sourceEntity() {
         return this.sourceEntity;
     }
     /**
@@ -116,19 +116,19 @@ public class Template extends io.pulumi.resources.CustomResource {
      * @return <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the resource.</p>
      * 
      */
-    public Output</* @Nullable */ List<TemplateTag>> getTags() {
+    public Output</* @Nullable */ List<TemplateTag>> tags() {
         return this.tags;
     }
     @Export(name="templateId", type=String.class, parameters={})
     private Output<String> templateId;
 
-    public Output<String> getTemplateId() {
+    public Output<String> templateId() {
         return this.templateId;
     }
     @Export(name="version", type=TemplateVersion.class, parameters={})
     private Output<TemplateVersion> version;
 
-    public Output<TemplateVersion> getVersion() {
+    public Output<TemplateVersion> version() {
         return this.version;
     }
     /**
@@ -148,7 +148,7 @@ public class Template extends io.pulumi.resources.CustomResource {
      * 			in the <code>VersionDescription</code> field.</p>
      * 
      */
-    public Output</* @Nullable */ String> getVersionDescription() {
+    public Output</* @Nullable */ String> versionDescription() {
         return this.versionDescription;
     }
 

@@ -25,7 +25,7 @@ public final class DetectorModelDynamoDBv2Args extends io.pulumi.resources.Resou
     @Import(name="payload")
       private final @Nullable Output<DetectorModelPayloadArgs> payload;
 
-    public Output<DetectorModelPayloadArgs> getPayload() {
+    public Output<DetectorModelPayloadArgs> payload() {
         return this.payload == null ? Codegen.empty() : this.payload;
     }
 
@@ -36,7 +36,7 @@ public final class DetectorModelDynamoDBv2Args extends io.pulumi.resources.Resou
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 

@@ -25,7 +25,7 @@ public final class BotAliasS3BucketLogDestination extends io.pulumi.resources.In
     @Import(name="kmsKeyArn")
       private final @Nullable String kmsKeyArn;
 
-    public Optional<String> getKmsKeyArn() {
+    public Optional<String> kmsKeyArn() {
         return this.kmsKeyArn == null ? Optional.empty() : Optional.ofNullable(this.kmsKeyArn);
     }
 
@@ -36,7 +36,7 @@ public final class BotAliasS3BucketLogDestination extends io.pulumi.resources.In
     @Import(name="logPrefix", required=true)
       private final String logPrefix;
 
-    public String getLogPrefix() {
+    public String logPrefix() {
         return this.logPrefix;
     }
 
@@ -47,7 +47,7 @@ public final class BotAliasS3BucketLogDestination extends io.pulumi.resources.In
     @Import(name="s3BucketArn", required=true)
       private final String s3BucketArn;
 
-    public String getS3BucketArn() {
+    public String s3BucketArn() {
         return this.s3BucketArn;
     }
 

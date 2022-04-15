@@ -25,42 +25,42 @@ public final class BotSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="multipleValuesSetting")
       private final @Nullable Output<BotMultipleValuesSettingArgs> multipleValuesSetting;
 
-    public Output<BotMultipleValuesSettingArgs> getMultipleValuesSetting() {
+    public Output<BotMultipleValuesSettingArgs> multipleValuesSetting() {
         return this.multipleValuesSetting == null ? Codegen.empty() : this.multipleValuesSetting;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="obfuscationSetting")
       private final @Nullable Output<BotObfuscationSettingArgs> obfuscationSetting;
 
-    public Output<BotObfuscationSettingArgs> getObfuscationSetting() {
+    public Output<BotObfuscationSettingArgs> obfuscationSetting() {
         return this.obfuscationSetting == null ? Codegen.empty() : this.obfuscationSetting;
     }
 
     @Import(name="slotTypeName", required=true)
       private final Output<String> slotTypeName;
 
-    public Output<String> getSlotTypeName() {
+    public Output<String> slotTypeName() {
         return this.slotTypeName;
     }
 
     @Import(name="valueElicitationSetting", required=true)
       private final Output<BotSlotValueElicitationSettingArgs> valueElicitationSetting;
 
-    public Output<BotSlotValueElicitationSettingArgs> getValueElicitationSetting() {
+    public Output<BotSlotValueElicitationSettingArgs> valueElicitationSetting() {
         return this.valueElicitationSetting;
     }
 

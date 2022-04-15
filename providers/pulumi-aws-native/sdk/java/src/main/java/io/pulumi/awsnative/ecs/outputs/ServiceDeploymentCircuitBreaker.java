@@ -20,10 +20,10 @@ public final class ServiceDeploymentCircuitBreaker {
         this.rollback = rollback;
     }
 
-    public Boolean getEnable() {
+    public Boolean enable() {
         return this.enable;
     }
-    public Boolean getRollback() {
+    public Boolean rollback() {
         return this.rollback;
     }
 

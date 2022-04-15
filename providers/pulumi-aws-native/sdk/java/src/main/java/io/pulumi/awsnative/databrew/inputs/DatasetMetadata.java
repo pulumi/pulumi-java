@@ -21,7 +21,7 @@ public final class DatasetMetadata extends io.pulumi.resources.InvokeArgs {
     @Import(name="sourceArn")
       private final @Nullable String sourceArn;
 
-    public Optional<String> getSourceArn() {
+    public Optional<String> sourceArn() {
         return this.sourceArn == null ? Optional.empty() : Optional.ofNullable(this.sourceArn);
     }
 

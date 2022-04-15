@@ -27,7 +27,7 @@ public final class ModelQualityJobDefinitionNetworkConfigArgs extends io.pulumi.
     @Import(name="enableInterContainerTrafficEncryption")
       private final @Nullable Output<Boolean> enableInterContainerTrafficEncryption;
 
-    public Output<Boolean> getEnableInterContainerTrafficEncryption() {
+    public Output<Boolean> enableInterContainerTrafficEncryption() {
         return this.enableInterContainerTrafficEncryption == null ? Codegen.empty() : this.enableInterContainerTrafficEncryption;
     }
 
@@ -38,14 +38,14 @@ public final class ModelQualityJobDefinitionNetworkConfigArgs extends io.pulumi.
     @Import(name="enableNetworkIsolation")
       private final @Nullable Output<Boolean> enableNetworkIsolation;
 
-    public Output<Boolean> getEnableNetworkIsolation() {
+    public Output<Boolean> enableNetworkIsolation() {
         return this.enableNetworkIsolation == null ? Codegen.empty() : this.enableNetworkIsolation;
     }
 
     @Import(name="vpcConfig")
       private final @Nullable Output<ModelQualityJobDefinitionVpcConfigArgs> vpcConfig;
 
-    public Output<ModelQualityJobDefinitionVpcConfigArgs> getVpcConfig() {
+    public Output<ModelQualityJobDefinitionVpcConfigArgs> vpcConfig() {
         return this.vpcConfig == null ? Codegen.empty() : this.vpcConfig;
     }
 

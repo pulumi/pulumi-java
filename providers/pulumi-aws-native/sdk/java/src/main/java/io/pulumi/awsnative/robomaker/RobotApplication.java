@@ -27,7 +27,7 @@ public class RobotApplication extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -41,7 +41,7 @@ public class RobotApplication extends io.pulumi.resources.CustomResource {
      * @return The revision ID of robot application.
      * 
      */
-    public Output</* @Nullable */ String> getCurrentRevisionId() {
+    public Output</* @Nullable */ String> currentRevisionId() {
         return this.currentRevisionId;
     }
     /**
@@ -55,7 +55,7 @@ public class RobotApplication extends io.pulumi.resources.CustomResource {
      * @return The URI of the Docker image for the robot application.
      * 
      */
-    public Output</* @Nullable */ String> getEnvironment() {
+    public Output</* @Nullable */ String> environment() {
         return this.environment;
     }
     /**
@@ -69,13 +69,13 @@ public class RobotApplication extends io.pulumi.resources.CustomResource {
      * @return The name of the robot application.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     @Export(name="robotSoftwareSuite", type=RobotApplicationRobotSoftwareSuite.class, parameters={})
     private Output<RobotApplicationRobotSoftwareSuite> robotSoftwareSuite;
 
-    public Output<RobotApplicationRobotSoftwareSuite> getRobotSoftwareSuite() {
+    public Output<RobotApplicationRobotSoftwareSuite> robotSoftwareSuite() {
         return this.robotSoftwareSuite;
     }
     /**
@@ -89,13 +89,13 @@ public class RobotApplication extends io.pulumi.resources.CustomResource {
      * @return The sources of the robot application.
      * 
      */
-    public Output</* @Nullable */ List<RobotApplicationSourceConfig>> getSources() {
+    public Output</* @Nullable */ List<RobotApplicationSourceConfig>> sources() {
         return this.sources;
     }
     @Export(name="tags", type=RobotApplicationTags.class, parameters={})
     private Output</* @Nullable */ RobotApplicationTags> tags;
 
-    public Output</* @Nullable */ RobotApplicationTags> getTags() {
+    public Output</* @Nullable */ RobotApplicationTags> tags() {
         return this.tags;
     }
 

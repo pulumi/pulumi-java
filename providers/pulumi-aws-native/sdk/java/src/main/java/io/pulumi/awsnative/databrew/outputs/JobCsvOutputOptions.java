@@ -18,7 +18,7 @@ public final class JobCsvOutputOptions {
         this.delimiter = delimiter;
     }
 
-    public Optional<String> getDelimiter() {
+    public Optional<String> delimiter() {
         return Optional.ofNullable(this.delimiter);
     }
 

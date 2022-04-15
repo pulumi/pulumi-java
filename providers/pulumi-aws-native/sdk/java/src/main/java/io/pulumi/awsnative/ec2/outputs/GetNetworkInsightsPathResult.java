@@ -30,16 +30,16 @@ public final class GetNetworkInsightsPathResult {
         this.tags = tags;
     }
 
-    public Optional<String> getCreatedDate() {
+    public Optional<String> createdDate() {
         return Optional.ofNullable(this.createdDate);
     }
-    public Optional<String> getNetworkInsightsPathArn() {
+    public Optional<String> networkInsightsPathArn() {
         return Optional.ofNullable(this.networkInsightsPathArn);
     }
-    public Optional<String> getNetworkInsightsPathId() {
+    public Optional<String> networkInsightsPathId() {
         return Optional.ofNullable(this.networkInsightsPathId);
     }
-    public List<NetworkInsightsPathTag> getTags() {
+    public List<NetworkInsightsPathTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

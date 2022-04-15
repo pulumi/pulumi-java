@@ -26,19 +26,19 @@ public class DataflowEndpointGroup extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="endpointDetails", type=List.class, parameters={DataflowEndpointGroupEndpointDetails.class})
     private Output<List<DataflowEndpointGroupEndpointDetails>> endpointDetails;
 
-    public Output<List<DataflowEndpointGroupEndpointDetails>> getEndpointDetails() {
+    public Output<List<DataflowEndpointGroupEndpointDetails>> endpointDetails() {
         return this.endpointDetails;
     }
     @Export(name="tags", type=List.class, parameters={DataflowEndpointGroupTag.class})
     private Output</* @Nullable */ List<DataflowEndpointGroupTag>> tags;
 
-    public Output</* @Nullable */ List<DataflowEndpointGroupTag>> getTags() {
+    public Output</* @Nullable */ List<DataflowEndpointGroupTag>> tags() {
         return this.tags;
     }
 

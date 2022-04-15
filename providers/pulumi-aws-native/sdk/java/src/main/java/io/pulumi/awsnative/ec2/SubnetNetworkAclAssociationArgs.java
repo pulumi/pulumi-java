@@ -21,7 +21,7 @@ public final class SubnetNetworkAclAssociationArgs extends io.pulumi.resources.R
     @Import(name="networkAclId", required=true)
       private final Output<String> networkAclId;
 
-    public Output<String> getNetworkAclId() {
+    public Output<String> networkAclId() {
         return this.networkAclId;
     }
 
@@ -32,7 +32,7 @@ public final class SubnetNetworkAclAssociationArgs extends io.pulumi.resources.R
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 

@@ -24,7 +24,7 @@ public final class SamplingRule extends io.pulumi.resources.InvokeArgs {
     @Import(name="attributes")
       private final @Nullable Object attributes;
 
-    public Optional<Object> getAttributes() {
+    public Optional<Object> attributes() {
         return this.attributes == null ? Optional.empty() : Optional.ofNullable(this.attributes);
     }
 
@@ -35,7 +35,7 @@ public final class SamplingRule extends io.pulumi.resources.InvokeArgs {
     @Import(name="fixedRate")
       private final @Nullable Double fixedRate;
 
-    public Optional<Double> getFixedRate() {
+    public Optional<Double> fixedRate() {
         return this.fixedRate == null ? Optional.empty() : Optional.ofNullable(this.fixedRate);
     }
 
@@ -46,7 +46,7 @@ public final class SamplingRule extends io.pulumi.resources.InvokeArgs {
     @Import(name="hTTPMethod")
       private final @Nullable String hTTPMethod;
 
-    public Optional<String> getHTTPMethod() {
+    public Optional<String> hTTPMethod() {
         return this.hTTPMethod == null ? Optional.empty() : Optional.ofNullable(this.hTTPMethod);
     }
 
@@ -57,7 +57,7 @@ public final class SamplingRule extends io.pulumi.resources.InvokeArgs {
     @Import(name="host")
       private final @Nullable String host;
 
-    public Optional<String> getHost() {
+    public Optional<String> host() {
         return this.host == null ? Optional.empty() : Optional.ofNullable(this.host);
     }
 
@@ -68,7 +68,7 @@ public final class SamplingRule extends io.pulumi.resources.InvokeArgs {
     @Import(name="priority")
       private final @Nullable Integer priority;
 
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
     }
 
@@ -79,7 +79,7 @@ public final class SamplingRule extends io.pulumi.resources.InvokeArgs {
     @Import(name="reservoirSize")
       private final @Nullable Integer reservoirSize;
 
-    public Optional<Integer> getReservoirSize() {
+    public Optional<Integer> reservoirSize() {
         return this.reservoirSize == null ? Optional.empty() : Optional.ofNullable(this.reservoirSize);
     }
 
@@ -90,21 +90,21 @@ public final class SamplingRule extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceARN")
       private final @Nullable String resourceARN;
 
-    public Optional<String> getResourceARN() {
+    public Optional<String> resourceARN() {
         return this.resourceARN == null ? Optional.empty() : Optional.ofNullable(this.resourceARN);
     }
 
     @Import(name="ruleARN")
       private final @Nullable String ruleARN;
 
-    public Optional<String> getRuleARN() {
+    public Optional<String> ruleARN() {
         return this.ruleARN == null ? Optional.empty() : Optional.ofNullable(this.ruleARN);
     }
 
     @Import(name="ruleName")
       private final @Nullable String ruleName;
 
-    public Optional<String> getRuleName() {
+    public Optional<String> ruleName() {
         return this.ruleName == null ? Optional.empty() : Optional.ofNullable(this.ruleName);
     }
 
@@ -115,7 +115,7 @@ public final class SamplingRule extends io.pulumi.resources.InvokeArgs {
     @Import(name="serviceName")
       private final @Nullable String serviceName;
 
-    public Optional<String> getServiceName() {
+    public Optional<String> serviceName() {
         return this.serviceName == null ? Optional.empty() : Optional.ofNullable(this.serviceName);
     }
 
@@ -126,7 +126,7 @@ public final class SamplingRule extends io.pulumi.resources.InvokeArgs {
     @Import(name="serviceType")
       private final @Nullable String serviceType;
 
-    public Optional<String> getServiceType() {
+    public Optional<String> serviceType() {
         return this.serviceType == null ? Optional.empty() : Optional.ofNullable(this.serviceType);
     }
 
@@ -137,7 +137,7 @@ public final class SamplingRule extends io.pulumi.resources.InvokeArgs {
     @Import(name="uRLPath")
       private final @Nullable String uRLPath;
 
-    public Optional<String> getURLPath() {
+    public Optional<String> uRLPath() {
         return this.uRLPath == null ? Optional.empty() : Optional.ofNullable(this.uRLPath);
     }
 
@@ -148,7 +148,7 @@ public final class SamplingRule extends io.pulumi.resources.InvokeArgs {
     @Import(name="version")
       private final @Nullable Integer version;
 
-    public Optional<Integer> getVersion() {
+    public Optional<Integer> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

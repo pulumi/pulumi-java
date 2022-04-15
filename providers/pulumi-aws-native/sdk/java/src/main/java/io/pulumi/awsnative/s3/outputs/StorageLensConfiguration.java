@@ -53,36 +53,36 @@ public final class StorageLensConfiguration {
         this.storageLensArn = storageLensArn;
     }
 
-    public StorageLensAccountLevel getAccountLevel() {
+    public StorageLensAccountLevel accountLevel() {
         return this.accountLevel;
     }
-    public Optional<StorageLensAwsOrg> getAwsOrg() {
+    public Optional<StorageLensAwsOrg> awsOrg() {
         return Optional.ofNullable(this.awsOrg);
     }
-    public Optional<StorageLensDataExport> getDataExport() {
+    public Optional<StorageLensDataExport> dataExport() {
         return Optional.ofNullable(this.dataExport);
     }
-    public Optional<StorageLensBucketsAndRegions> getExclude() {
+    public Optional<StorageLensBucketsAndRegions> exclude() {
         return Optional.ofNullable(this.exclude);
     }
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Optional<StorageLensBucketsAndRegions> getInclude() {
+    public Optional<StorageLensBucketsAndRegions> include() {
         return Optional.ofNullable(this.include);
     }
     /**
      * Specifies whether the Amazon S3 Storage Lens configuration is enabled or disabled.
      * 
     */
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
      * The ARN for the Amazon S3 Storage Lens configuration.
      * 
     */
-    public Optional<String> getStorageLensArn() {
+    public Optional<String> storageLensArn() {
         return Optional.ofNullable(this.storageLensArn);
     }
 

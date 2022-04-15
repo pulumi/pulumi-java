@@ -22,10 +22,10 @@ public final class ProvisioningTemplateProvisioningHook {
         this.targetArn = targetArn;
     }
 
-    public Optional<String> getPayloadVersion() {
+    public Optional<String> payloadVersion() {
         return Optional.ofNullable(this.payloadVersion);
     }
-    public Optional<String> getTargetArn() {
+    public Optional<String> targetArn() {
         return Optional.ofNullable(this.targetArn);
     }
 

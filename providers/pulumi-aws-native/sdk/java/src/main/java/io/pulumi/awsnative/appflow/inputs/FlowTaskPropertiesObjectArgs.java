@@ -22,14 +22,14 @@ public final class FlowTaskPropertiesObjectArgs extends io.pulumi.resources.Reso
     @Import(name="key", required=true)
       private final Output<FlowOperatorPropertiesKeys> key;
 
-    public Output<FlowOperatorPropertiesKeys> getKey() {
+    public Output<FlowOperatorPropertiesKeys> key() {
         return this.key;
     }
 
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

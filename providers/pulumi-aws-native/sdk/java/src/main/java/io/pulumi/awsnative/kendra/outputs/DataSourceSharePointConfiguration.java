@@ -58,40 +58,40 @@ public final class DataSourceSharePointConfiguration {
         this.vpcConfiguration = vpcConfiguration;
     }
 
-    public Optional<Boolean> getCrawlAttachments() {
+    public Optional<Boolean> crawlAttachments() {
         return Optional.ofNullable(this.crawlAttachments);
     }
-    public Optional<Boolean> getDisableLocalGroups() {
+    public Optional<Boolean> disableLocalGroups() {
         return Optional.ofNullable(this.disableLocalGroups);
     }
-    public Optional<String> getDocumentTitleFieldName() {
+    public Optional<String> documentTitleFieldName() {
         return Optional.ofNullable(this.documentTitleFieldName);
     }
-    public List<String> getExclusionPatterns() {
+    public List<String> exclusionPatterns() {
         return this.exclusionPatterns == null ? List.of() : this.exclusionPatterns;
     }
-    public List<DataSourceToIndexFieldMapping> getFieldMappings() {
+    public List<DataSourceToIndexFieldMapping> fieldMappings() {
         return this.fieldMappings == null ? List.of() : this.fieldMappings;
     }
-    public List<String> getInclusionPatterns() {
+    public List<String> inclusionPatterns() {
         return this.inclusionPatterns == null ? List.of() : this.inclusionPatterns;
     }
-    public String getSecretArn() {
+    public String secretArn() {
         return this.secretArn;
     }
-    public DataSourceSharePointConfigurationSharePointVersion getSharePointVersion() {
+    public DataSourceSharePointConfigurationSharePointVersion sharePointVersion() {
         return this.sharePointVersion;
     }
-    public Optional<DataSourceS3Path> getSslCertificateS3Path() {
+    public Optional<DataSourceS3Path> sslCertificateS3Path() {
         return Optional.ofNullable(this.sslCertificateS3Path);
     }
-    public List<String> getUrls() {
+    public List<String> urls() {
         return this.urls;
     }
-    public Optional<Boolean> getUseChangeLog() {
+    public Optional<Boolean> useChangeLog() {
         return Optional.ofNullable(this.useChangeLog);
     }
-    public Optional<DataSourceVpcConfiguration> getVpcConfiguration() {
+    public Optional<DataSourceVpcConfiguration> vpcConfiguration() {
         return Optional.ofNullable(this.vpcConfiguration);
     }
 

@@ -23,10 +23,10 @@ public final class DatasetContentDeliveryRuleDestination {
         this.s3DestinationConfiguration = s3DestinationConfiguration;
     }
 
-    public Optional<DatasetIotEventsDestinationConfiguration> getIotEventsDestinationConfiguration() {
+    public Optional<DatasetIotEventsDestinationConfiguration> iotEventsDestinationConfiguration() {
         return Optional.ofNullable(this.iotEventsDestinationConfiguration);
     }
-    public Optional<DatasetS3DestinationConfiguration> getS3DestinationConfiguration() {
+    public Optional<DatasetS3DestinationConfiguration> s3DestinationConfiguration() {
         return Optional.ofNullable(this.s3DestinationConfiguration);
     }
 

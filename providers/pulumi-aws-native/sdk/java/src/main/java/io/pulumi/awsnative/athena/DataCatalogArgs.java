@@ -26,7 +26,7 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -48,7 +48,7 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Object> parameters;
 
-    public Output<Object> getParameters() {
+    public Output<Object> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -59,7 +59,7 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DataCatalogTagArgs>> tags;
 
-    public Output<List<DataCatalogTagArgs>> getTags() {
+    public Output<List<DataCatalogTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -70,7 +70,7 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<DataCatalogType> type;
 
-    public Output<DataCatalogType> getType() {
+    public Output<DataCatalogType> type() {
         return this.type;
     }
 

@@ -26,7 +26,7 @@ public final class MonitoringScheduleMonitoringAppSpecification extends io.pulum
     @Import(name="containerArguments")
       private final @Nullable List<String> containerArguments;
 
-    public List<String> getContainerArguments() {
+    public List<String> containerArguments() {
         return this.containerArguments == null ? List.of() : this.containerArguments;
     }
 
@@ -37,7 +37,7 @@ public final class MonitoringScheduleMonitoringAppSpecification extends io.pulum
     @Import(name="containerEntrypoint")
       private final @Nullable List<String> containerEntrypoint;
 
-    public List<String> getContainerEntrypoint() {
+    public List<String> containerEntrypoint() {
         return this.containerEntrypoint == null ? List.of() : this.containerEntrypoint;
     }
 
@@ -48,7 +48,7 @@ public final class MonitoringScheduleMonitoringAppSpecification extends io.pulum
     @Import(name="imageUri", required=true)
       private final String imageUri;
 
-    public String getImageUri() {
+    public String imageUri() {
         return this.imageUri;
     }
 
@@ -59,7 +59,7 @@ public final class MonitoringScheduleMonitoringAppSpecification extends io.pulum
     @Import(name="postAnalyticsProcessorSourceUri")
       private final @Nullable String postAnalyticsProcessorSourceUri;
 
-    public Optional<String> getPostAnalyticsProcessorSourceUri() {
+    public Optional<String> postAnalyticsProcessorSourceUri() {
         return this.postAnalyticsProcessorSourceUri == null ? Optional.empty() : Optional.ofNullable(this.postAnalyticsProcessorSourceUri);
     }
 
@@ -70,7 +70,7 @@ public final class MonitoringScheduleMonitoringAppSpecification extends io.pulum
     @Import(name="recordPreprocessorSourceUri")
       private final @Nullable String recordPreprocessorSourceUri;
 
-    public Optional<String> getRecordPreprocessorSourceUri() {
+    public Optional<String> recordPreprocessorSourceUri() {
         return this.recordPreprocessorSourceUri == null ? Optional.empty() : Optional.ofNullable(this.recordPreprocessorSourceUri);
     }
 

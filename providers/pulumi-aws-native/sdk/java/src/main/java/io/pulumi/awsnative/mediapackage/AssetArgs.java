@@ -24,7 +24,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="packagingGroupId", required=true)
       private final Output<String> packagingGroupId;
 
-    public Output<String> getPackagingGroupId() {
+    public Output<String> packagingGroupId() {
         return this.packagingGroupId;
     }
 
@@ -35,7 +35,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
@@ -46,7 +46,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceArn", required=true)
       private final Output<String> sourceArn;
 
-    public Output<String> getSourceArn() {
+    public Output<String> sourceArn() {
         return this.sourceArn;
     }
 
@@ -57,7 +57,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceRoleArn", required=true)
       private final Output<String> sourceRoleArn;
 
-    public Output<String> getSourceRoleArn() {
+    public Output<String> sourceRoleArn() {
         return this.sourceRoleArn;
     }
 
@@ -68,7 +68,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<AssetTagArgs>> tags;
 
-    public Output<List<AssetTagArgs>> getTags() {
+    public Output<List<AssetTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

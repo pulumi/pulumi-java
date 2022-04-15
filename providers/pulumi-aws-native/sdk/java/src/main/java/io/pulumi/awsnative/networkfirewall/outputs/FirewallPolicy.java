@@ -42,25 +42,25 @@ public final class FirewallPolicy {
         this.statelessRuleGroupReferences = statelessRuleGroupReferences;
     }
 
-    public List<String> getStatefulDefaultActions() {
+    public List<String> statefulDefaultActions() {
         return this.statefulDefaultActions == null ? List.of() : this.statefulDefaultActions;
     }
-    public Optional<FirewallPolicyStatefulEngineOptions> getStatefulEngineOptions() {
+    public Optional<FirewallPolicyStatefulEngineOptions> statefulEngineOptions() {
         return Optional.ofNullable(this.statefulEngineOptions);
     }
-    public List<FirewallPolicyStatefulRuleGroupReference> getStatefulRuleGroupReferences() {
+    public List<FirewallPolicyStatefulRuleGroupReference> statefulRuleGroupReferences() {
         return this.statefulRuleGroupReferences == null ? List.of() : this.statefulRuleGroupReferences;
     }
-    public List<FirewallPolicyCustomAction> getStatelessCustomActions() {
+    public List<FirewallPolicyCustomAction> statelessCustomActions() {
         return this.statelessCustomActions == null ? List.of() : this.statelessCustomActions;
     }
-    public List<String> getStatelessDefaultActions() {
+    public List<String> statelessDefaultActions() {
         return this.statelessDefaultActions;
     }
-    public List<String> getStatelessFragmentDefaultActions() {
+    public List<String> statelessFragmentDefaultActions() {
         return this.statelessFragmentDefaultActions;
     }
-    public List<FirewallPolicyStatelessRuleGroupReference> getStatelessRuleGroupReferences() {
+    public List<FirewallPolicyStatelessRuleGroupReference> statelessRuleGroupReferences() {
         return this.statelessRuleGroupReferences == null ? List.of() : this.statelessRuleGroupReferences;
     }
 

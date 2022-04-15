@@ -17,7 +17,7 @@ public final class WebACLNotStatementArgs extends io.pulumi.resources.ResourceAr
     @Import(name="statement", required=true)
       private final Output<WebACLStatementArgs> statement;
 
-    public Output<WebACLStatementArgs> getStatement() {
+    public Output<WebACLStatementArgs> statement() {
         return this.statement;
     }
 

@@ -16,7 +16,7 @@ public final class FlowSAPODataSourceProperties {
         this.objectPath = objectPath;
     }
 
-    public String getObjectPath() {
+    public String objectPath() {
         return this.objectPath;
     }
 

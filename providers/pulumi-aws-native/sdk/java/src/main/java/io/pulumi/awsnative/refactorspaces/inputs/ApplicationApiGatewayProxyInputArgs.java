@@ -19,14 +19,14 @@ public final class ApplicationApiGatewayProxyInputArgs extends io.pulumi.resourc
     @Import(name="endpointType")
       private final @Nullable Output<ApplicationApiGatewayEndpointType> endpointType;
 
-    public Output<ApplicationApiGatewayEndpointType> getEndpointType() {
+    public Output<ApplicationApiGatewayEndpointType> endpointType() {
         return this.endpointType == null ? Codegen.empty() : this.endpointType;
     }
 
     @Import(name="stageName")
       private final @Nullable Output<String> stageName;
 
-    public Output<String> getStageName() {
+    public Output<String> stageName() {
         return this.stageName == null ? Codegen.empty() : this.stageName;
     }
 

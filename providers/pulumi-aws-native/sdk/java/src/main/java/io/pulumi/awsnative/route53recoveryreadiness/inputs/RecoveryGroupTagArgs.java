@@ -18,14 +18,14 @@ public final class RecoveryGroupTagArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
     @Import(name="value", required=true)
       private final Output<List<String>> value;
 
-    public Output<List<String>> getValue() {
+    public Output<List<String>> value() {
         return this.value;
     }
 

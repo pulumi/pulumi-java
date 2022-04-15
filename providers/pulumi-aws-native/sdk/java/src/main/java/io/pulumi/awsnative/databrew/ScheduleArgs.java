@@ -24,14 +24,14 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cronExpression", required=true)
       private final Output<String> cronExpression;
 
-    public Output<String> getCronExpression() {
+    public Output<String> cronExpression() {
         return this.cronExpression;
     }
 
     @Import(name="jobNames")
       private final @Nullable Output<List<String>> jobNames;
 
-    public Output<List<String>> getJobNames() {
+    public Output<List<String>> jobNames() {
         return this.jobNames == null ? Codegen.empty() : this.jobNames;
     }
 
@@ -42,14 +42,14 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<ScheduleTagArgs>> tags;
 
-    public Output<List<ScheduleTagArgs>> getTags() {
+    public Output<List<ScheduleTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

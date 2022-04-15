@@ -33,7 +33,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the cluster.
      * 
      */
-    public Output<String> getClusterArn() {
+    public Output<String> clusterArn() {
         return this.clusterArn;
     }
     /**
@@ -47,7 +47,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Endpoints for the cluster.
      * 
      */
-    public Output<List<ClusterEndpoint>> getClusterEndpoints() {
+    public Output<List<ClusterEndpoint>> clusterEndpoints() {
         return this.clusterEndpoints;
     }
     /**
@@ -61,7 +61,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Name of a Cluster. You can use any non-white space character in the name
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -75,7 +75,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Deployment status of a resource. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
      * 
      */
-    public Output<ClusterStatus> getStatus() {
+    public Output<ClusterStatus> status() {
         return this.status;
     }
     /**
@@ -89,7 +89,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return A collection of tags associated with a resource
      * 
      */
-    public Output</* @Nullable */ List<ClusterTag>> getTags() {
+    public Output</* @Nullable */ List<ClusterTag>> tags() {
         return this.tags;
     }
 

@@ -52,37 +52,37 @@ public final class AssessmentDelegation {
         this.status = status;
     }
 
-    public Optional<String> getAssessmentId() {
+    public Optional<String> assessmentId() {
         return Optional.ofNullable(this.assessmentId);
     }
-    public Optional<String> getAssessmentName() {
+    public Optional<String> assessmentName() {
         return Optional.ofNullable(this.assessmentName);
     }
-    public Optional<String> getComment() {
+    public Optional<String> comment() {
         return Optional.ofNullable(this.comment);
     }
-    public Optional<String> getControlSetId() {
+    public Optional<String> controlSetId() {
         return Optional.ofNullable(this.controlSetId);
     }
-    public Optional<String> getCreatedBy() {
+    public Optional<String> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
-    public Optional<Double> getCreationTime() {
+    public Optional<Double> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<Double> getLastUpdated() {
+    public Optional<Double> lastUpdated() {
         return Optional.ofNullable(this.lastUpdated);
     }
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
-    public Optional<AssessmentRoleType> getRoleType() {
+    public Optional<AssessmentRoleType> roleType() {
         return Optional.ofNullable(this.roleType);
     }
-    public Optional<AssessmentDelegationStatus> getStatus() {
+    public Optional<AssessmentDelegationStatus> status() {
         return Optional.ofNullable(this.status);
     }
 

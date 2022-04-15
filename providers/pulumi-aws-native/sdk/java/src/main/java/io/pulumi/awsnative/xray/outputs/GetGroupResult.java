@@ -50,27 +50,27 @@ public final class GetGroupResult {
      * The filter expression defining criteria by which to group traces.
      * 
     */
-    public Optional<String> getFilterExpression() {
+    public Optional<String> filterExpression() {
         return Optional.ofNullable(this.filterExpression);
     }
     /**
      * The ARN of the group that was generated on creation.
      * 
     */
-    public Optional<String> getGroupARN() {
+    public Optional<String> groupARN() {
         return Optional.ofNullable(this.groupARN);
     }
     /**
      * The case-sensitive name of the new group. Names must be unique.
      * 
     */
-    public Optional<String> getGroupName() {
+    public Optional<String> groupName() {
         return Optional.ofNullable(this.groupName);
     }
-    public Optional<GroupInsightsConfiguration> getInsightsConfiguration() {
+    public Optional<GroupInsightsConfiguration> insightsConfiguration() {
         return Optional.ofNullable(this.insightsConfiguration);
     }
-    public List<TagsItemProperties> getTags() {
+    public List<TagsItemProperties> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

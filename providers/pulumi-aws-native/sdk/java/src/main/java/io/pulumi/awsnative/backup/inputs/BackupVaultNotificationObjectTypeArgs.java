@@ -18,14 +18,14 @@ public final class BackupVaultNotificationObjectTypeArgs extends io.pulumi.resou
     @Import(name="backupVaultEvents", required=true)
       private final Output<List<String>> backupVaultEvents;
 
-    public Output<List<String>> getBackupVaultEvents() {
+    public Output<List<String>> backupVaultEvents() {
         return this.backupVaultEvents;
     }
 
     @Import(name="sNSTopicArn", required=true)
       private final Output<String> sNSTopicArn;
 
-    public Output<String> getSNSTopicArn() {
+    public Output<String> sNSTopicArn() {
         return this.sNSTopicArn;
     }
 

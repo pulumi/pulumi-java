@@ -21,31 +21,31 @@ public class DomainName extends io.pulumi.resources.CustomResource {
     @Export(name="appSyncDomainName", type=String.class, parameters={})
     private Output<String> appSyncDomainName;
 
-    public Output<String> getAppSyncDomainName() {
+    public Output<String> appSyncDomainName() {
         return this.appSyncDomainName;
     }
     @Export(name="certificateArn", type=String.class, parameters={})
     private Output<String> certificateArn;
 
-    public Output<String> getCertificateArn() {
+    public Output<String> certificateArn() {
         return this.certificateArn;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     @Export(name="hostedZoneId", type=String.class, parameters={})
     private Output<String> hostedZoneId;
 
-    public Output<String> getHostedZoneId() {
+    public Output<String> hostedZoneId() {
         return this.hostedZoneId;
     }
 

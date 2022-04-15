@@ -20,14 +20,14 @@ public final class DataflowEndpointGroupArgs extends io.pulumi.resources.Resourc
     @Import(name="endpointDetails", required=true)
       private final Output<List<DataflowEndpointGroupEndpointDetailsArgs>> endpointDetails;
 
-    public Output<List<DataflowEndpointGroupEndpointDetailsArgs>> getEndpointDetails() {
+    public Output<List<DataflowEndpointGroupEndpointDetailsArgs>> endpointDetails() {
         return this.endpointDetails;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<DataflowEndpointGroupTagArgs>> tags;
 
-    public Output<List<DataflowEndpointGroupTagArgs>> getTags() {
+    public Output<List<DataflowEndpointGroupTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -22,49 +22,49 @@ public final class DataSourceOneDriveConfigurationArgs extends io.pulumi.resourc
     @Import(name="disableLocalGroups")
       private final @Nullable Output<Boolean> disableLocalGroups;
 
-    public Output<Boolean> getDisableLocalGroups() {
+    public Output<Boolean> disableLocalGroups() {
         return this.disableLocalGroups == null ? Codegen.empty() : this.disableLocalGroups;
     }
 
     @Import(name="exclusionPatterns")
       private final @Nullable Output<List<String>> exclusionPatterns;
 
-    public Output<List<String>> getExclusionPatterns() {
+    public Output<List<String>> exclusionPatterns() {
         return this.exclusionPatterns == null ? Codegen.empty() : this.exclusionPatterns;
     }
 
     @Import(name="fieldMappings")
       private final @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
-    public Output<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
+    public Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings() {
         return this.fieldMappings == null ? Codegen.empty() : this.fieldMappings;
     }
 
     @Import(name="inclusionPatterns")
       private final @Nullable Output<List<String>> inclusionPatterns;
 
-    public Output<List<String>> getInclusionPatterns() {
+    public Output<List<String>> inclusionPatterns() {
         return this.inclusionPatterns == null ? Codegen.empty() : this.inclusionPatterns;
     }
 
     @Import(name="oneDriveUsers", required=true)
       private final Output<DataSourceOneDriveUsersArgs> oneDriveUsers;
 
-    public Output<DataSourceOneDriveUsersArgs> getOneDriveUsers() {
+    public Output<DataSourceOneDriveUsersArgs> oneDriveUsers() {
         return this.oneDriveUsers;
     }
 
     @Import(name="secretArn", required=true)
       private final Output<String> secretArn;
 
-    public Output<String> getSecretArn() {
+    public Output<String> secretArn() {
         return this.secretArn;
     }
 
     @Import(name="tenantDomain", required=true)
       private final Output<String> tenantDomain;
 
-    public Output<String> getTenantDomain() {
+    public Output<String> tenantDomain() {
         return this.tenantDomain;
     }
 

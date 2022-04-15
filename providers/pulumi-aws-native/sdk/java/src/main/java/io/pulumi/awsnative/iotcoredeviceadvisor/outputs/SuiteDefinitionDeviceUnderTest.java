@@ -22,10 +22,10 @@ public final class SuiteDefinitionDeviceUnderTest {
         this.thingArn = thingArn;
     }
 
-    public Optional<String> getCertificateArn() {
+    public Optional<String> certificateArn() {
         return Optional.ofNullable(this.certificateArn);
     }
-    public Optional<String> getThingArn() {
+    public Optional<String> thingArn() {
         return Optional.ofNullable(this.thingArn);
     }
 

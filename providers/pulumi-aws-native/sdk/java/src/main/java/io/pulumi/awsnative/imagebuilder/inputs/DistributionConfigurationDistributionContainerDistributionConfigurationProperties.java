@@ -27,7 +27,7 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     @Import(name="containerTags")
       private final @Nullable List<String> containerTags;
 
-    public List<String> getContainerTags() {
+    public List<String> containerTags() {
         return this.containerTags == null ? List.of() : this.containerTags;
     }
 
@@ -38,7 +38,7 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -49,7 +49,7 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     @Import(name="targetRepository")
       private final @Nullable DistributionConfigurationTargetContainerRepository targetRepository;
 
-    public Optional<DistributionConfigurationTargetContainerRepository> getTargetRepository() {
+    public Optional<DistributionConfigurationTargetContainerRepository> targetRepository() {
         return this.targetRepository == null ? Optional.empty() : Optional.ofNullable(this.targetRepository);
     }
 

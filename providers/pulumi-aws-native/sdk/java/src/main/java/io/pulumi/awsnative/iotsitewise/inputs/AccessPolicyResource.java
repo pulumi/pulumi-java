@@ -22,14 +22,14 @@ public final class AccessPolicyResource extends io.pulumi.resources.InvokeArgs {
     @Import(name="portal")
       private final @Nullable AccessPolicyPortal portal;
 
-    public Optional<AccessPolicyPortal> getPortal() {
+    public Optional<AccessPolicyPortal> portal() {
         return this.portal == null ? Optional.empty() : Optional.ofNullable(this.portal);
     }
 
     @Import(name="project")
       private final @Nullable AccessPolicyProject project;
 
-    public Optional<AccessPolicyProject> getProject() {
+    public Optional<AccessPolicyProject> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

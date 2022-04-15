@@ -74,7 +74,7 @@ public final class ThemeVersion {
      * <p>The Amazon Resource Name (ARN) of the resource.</p>
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
@@ -82,41 +82,41 @@ public final class ThemeVersion {
      *             themes initially inherit from a default QuickSight theme.</p>
      * 
     */
-    public Optional<String> getBaseThemeId() {
+    public Optional<String> baseThemeId() {
         return Optional.ofNullable(this.baseThemeId);
     }
-    public Optional<ThemeConfiguration> getConfiguration() {
+    public Optional<ThemeConfiguration> configuration() {
         return Optional.ofNullable(this.configuration);
     }
     /**
      * <p>The date and time that this theme version was created.</p>
      * 
     */
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * <p>The description of the theme.</p>
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * <p>Errors associated with the theme.</p>
      * 
     */
-    public List<ThemeError> getErrors() {
+    public List<ThemeError> errors() {
         return this.errors == null ? List.of() : this.errors;
     }
-    public Optional<ThemeResourceStatus> getStatus() {
+    public Optional<ThemeResourceStatus> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * <p>The version number of the theme.</p>
      * 
     */
-    public Optional<Double> getVersionNumber() {
+    public Optional<Double> versionNumber() {
         return Optional.ofNullable(this.versionNumber);
     }
 

@@ -19,21 +19,21 @@ public final class ConnectorProfileOAuthPropertiesArgs extends io.pulumi.resourc
     @Import(name="authCodeUrl")
       private final @Nullable Output<String> authCodeUrl;
 
-    public Output<String> getAuthCodeUrl() {
+    public Output<String> authCodeUrl() {
         return this.authCodeUrl == null ? Codegen.empty() : this.authCodeUrl;
     }
 
     @Import(name="oAuthScopes")
       private final @Nullable Output<List<String>> oAuthScopes;
 
-    public Output<List<String>> getOAuthScopes() {
+    public Output<List<String>> oAuthScopes() {
         return this.oAuthScopes == null ? Codegen.empty() : this.oAuthScopes;
     }
 
     @Import(name="tokenUrl")
       private final @Nullable Output<String> tokenUrl;
 
-    public Output<String> getTokenUrl() {
+    public Output<String> tokenUrl() {
         return this.tokenUrl == null ? Codegen.empty() : this.tokenUrl;
     }
 

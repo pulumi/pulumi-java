@@ -23,14 +23,14 @@ public final class StorageLensBucketLevelArgs extends io.pulumi.resources.Resour
     @Import(name="activityMetrics")
       private final @Nullable Output<StorageLensActivityMetricsArgs> activityMetrics;
 
-    public Output<StorageLensActivityMetricsArgs> getActivityMetrics() {
+    public Output<StorageLensActivityMetricsArgs> activityMetrics() {
         return this.activityMetrics == null ? Codegen.empty() : this.activityMetrics;
     }
 
     @Import(name="prefixLevel")
       private final @Nullable Output<StorageLensPrefixLevelArgs> prefixLevel;
 
-    public Output<StorageLensPrefixLevelArgs> getPrefixLevel() {
+    public Output<StorageLensPrefixLevelArgs> prefixLevel() {
         return this.prefixLevel == null ? Codegen.empty() : this.prefixLevel;
     }
 

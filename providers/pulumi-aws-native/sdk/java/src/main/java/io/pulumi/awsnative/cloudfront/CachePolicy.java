@@ -22,13 +22,13 @@ public class CachePolicy extends io.pulumi.resources.CustomResource {
     @Export(name="cachePolicyConfig", type=CachePolicyConfig.class, parameters={})
     private Output<CachePolicyConfig> cachePolicyConfig;
 
-    public Output<CachePolicyConfig> getCachePolicyConfig() {
+    public Output<CachePolicyConfig> cachePolicyConfig() {
         return this.cachePolicyConfig;
     }
     @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
-    public Output<String> getLastModifiedTime() {
+    public Output<String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
 

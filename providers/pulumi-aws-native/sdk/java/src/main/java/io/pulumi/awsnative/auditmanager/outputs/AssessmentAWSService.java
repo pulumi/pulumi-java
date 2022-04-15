@@ -18,7 +18,7 @@ public final class AssessmentAWSService {
         this.serviceName = serviceName;
     }
 
-    public Optional<String> getServiceName() {
+    public Optional<String> serviceName() {
         return Optional.ofNullable(this.serviceName);
     }
 

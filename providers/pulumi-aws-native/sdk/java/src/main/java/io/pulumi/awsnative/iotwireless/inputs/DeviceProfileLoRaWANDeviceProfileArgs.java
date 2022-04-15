@@ -20,98 +20,98 @@ public final class DeviceProfileLoRaWANDeviceProfileArgs extends io.pulumi.resou
     @Import(name="classBTimeout")
       private final @Nullable Output<Integer> classBTimeout;
 
-    public Output<Integer> getClassBTimeout() {
+    public Output<Integer> classBTimeout() {
         return this.classBTimeout == null ? Codegen.empty() : this.classBTimeout;
     }
 
     @Import(name="classCTimeout")
       private final @Nullable Output<Integer> classCTimeout;
 
-    public Output<Integer> getClassCTimeout() {
+    public Output<Integer> classCTimeout() {
         return this.classCTimeout == null ? Codegen.empty() : this.classCTimeout;
     }
 
     @Import(name="macVersion")
       private final @Nullable Output<String> macVersion;
 
-    public Output<String> getMacVersion() {
+    public Output<String> macVersion() {
         return this.macVersion == null ? Codegen.empty() : this.macVersion;
     }
 
     @Import(name="maxDutyCycle")
       private final @Nullable Output<Integer> maxDutyCycle;
 
-    public Output<Integer> getMaxDutyCycle() {
+    public Output<Integer> maxDutyCycle() {
         return this.maxDutyCycle == null ? Codegen.empty() : this.maxDutyCycle;
     }
 
     @Import(name="maxEirp")
       private final @Nullable Output<Integer> maxEirp;
 
-    public Output<Integer> getMaxEirp() {
+    public Output<Integer> maxEirp() {
         return this.maxEirp == null ? Codegen.empty() : this.maxEirp;
     }
 
     @Import(name="pingSlotDr")
       private final @Nullable Output<Integer> pingSlotDr;
 
-    public Output<Integer> getPingSlotDr() {
+    public Output<Integer> pingSlotDr() {
         return this.pingSlotDr == null ? Codegen.empty() : this.pingSlotDr;
     }
 
     @Import(name="pingSlotFreq")
       private final @Nullable Output<Integer> pingSlotFreq;
 
-    public Output<Integer> getPingSlotFreq() {
+    public Output<Integer> pingSlotFreq() {
         return this.pingSlotFreq == null ? Codegen.empty() : this.pingSlotFreq;
     }
 
     @Import(name="pingSlotPeriod")
       private final @Nullable Output<Integer> pingSlotPeriod;
 
-    public Output<Integer> getPingSlotPeriod() {
+    public Output<Integer> pingSlotPeriod() {
         return this.pingSlotPeriod == null ? Codegen.empty() : this.pingSlotPeriod;
     }
 
     @Import(name="regParamsRevision")
       private final @Nullable Output<String> regParamsRevision;
 
-    public Output<String> getRegParamsRevision() {
+    public Output<String> regParamsRevision() {
         return this.regParamsRevision == null ? Codegen.empty() : this.regParamsRevision;
     }
 
     @Import(name="rfRegion")
       private final @Nullable Output<String> rfRegion;
 
-    public Output<String> getRfRegion() {
+    public Output<String> rfRegion() {
         return this.rfRegion == null ? Codegen.empty() : this.rfRegion;
     }
 
     @Import(name="supports32BitFCnt")
       private final @Nullable Output<Boolean> supports32BitFCnt;
 
-    public Output<Boolean> getSupports32BitFCnt() {
+    public Output<Boolean> supports32BitFCnt() {
         return this.supports32BitFCnt == null ? Codegen.empty() : this.supports32BitFCnt;
     }
 
     @Import(name="supportsClassB")
       private final @Nullable Output<Boolean> supportsClassB;
 
-    public Output<Boolean> getSupportsClassB() {
+    public Output<Boolean> supportsClassB() {
         return this.supportsClassB == null ? Codegen.empty() : this.supportsClassB;
     }
 
     @Import(name="supportsClassC")
       private final @Nullable Output<Boolean> supportsClassC;
 
-    public Output<Boolean> getSupportsClassC() {
+    public Output<Boolean> supportsClassC() {
         return this.supportsClassC == null ? Codegen.empty() : this.supportsClassC;
     }
 
     @Import(name="supportsJoin")
       private final @Nullable Output<Boolean> supportsJoin;
 
-    public Output<Boolean> getSupportsJoin() {
+    public Output<Boolean> supportsJoin() {
         return this.supportsJoin == null ? Codegen.empty() : this.supportsJoin;
     }
 

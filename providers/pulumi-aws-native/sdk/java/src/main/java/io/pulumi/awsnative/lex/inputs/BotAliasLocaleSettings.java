@@ -22,7 +22,7 @@ public final class BotAliasLocaleSettings extends io.pulumi.resources.InvokeArgs
     @Import(name="codeHookSpecification")
       private final @Nullable BotAliasCodeHookSpecification codeHookSpecification;
 
-    public Optional<BotAliasCodeHookSpecification> getCodeHookSpecification() {
+    public Optional<BotAliasCodeHookSpecification> codeHookSpecification() {
         return this.codeHookSpecification == null ? Optional.empty() : Optional.ofNullable(this.codeHookSpecification);
     }
 
@@ -33,7 +33,7 @@ public final class BotAliasLocaleSettings extends io.pulumi.resources.InvokeArgs
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

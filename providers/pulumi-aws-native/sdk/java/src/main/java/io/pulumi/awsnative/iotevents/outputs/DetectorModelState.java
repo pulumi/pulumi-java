@@ -35,20 +35,20 @@ public final class DetectorModelState {
         this.stateName = stateName;
     }
 
-    public Optional<DetectorModelOnEnter> getOnEnter() {
+    public Optional<DetectorModelOnEnter> onEnter() {
         return Optional.ofNullable(this.onEnter);
     }
-    public Optional<DetectorModelOnExit> getOnExit() {
+    public Optional<DetectorModelOnExit> onExit() {
         return Optional.ofNullable(this.onExit);
     }
-    public Optional<DetectorModelOnInput> getOnInput() {
+    public Optional<DetectorModelOnInput> onInput() {
         return Optional.ofNullable(this.onInput);
     }
     /**
      * The name of the state.
      * 
     */
-    public String getStateName() {
+    public String stateName() {
         return this.stateName;
     }
 

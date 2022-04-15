@@ -29,7 +29,7 @@ public final class UserProfileUserSettings extends io.pulumi.resources.InvokeArg
     @Import(name="executionRole")
       private final @Nullable String executionRole;
 
-    public Optional<String> getExecutionRole() {
+    public Optional<String> executionRole() {
         return this.executionRole == null ? Optional.empty() : Optional.ofNullable(this.executionRole);
     }
 
@@ -40,7 +40,7 @@ public final class UserProfileUserSettings extends io.pulumi.resources.InvokeArg
     @Import(name="jupyterServerAppSettings")
       private final @Nullable UserProfileJupyterServerAppSettings jupyterServerAppSettings;
 
-    public Optional<UserProfileJupyterServerAppSettings> getJupyterServerAppSettings() {
+    public Optional<UserProfileJupyterServerAppSettings> jupyterServerAppSettings() {
         return this.jupyterServerAppSettings == null ? Optional.empty() : Optional.ofNullable(this.jupyterServerAppSettings);
     }
 
@@ -51,7 +51,7 @@ public final class UserProfileUserSettings extends io.pulumi.resources.InvokeArg
     @Import(name="kernelGatewayAppSettings")
       private final @Nullable UserProfileKernelGatewayAppSettings kernelGatewayAppSettings;
 
-    public Optional<UserProfileKernelGatewayAppSettings> getKernelGatewayAppSettings() {
+    public Optional<UserProfileKernelGatewayAppSettings> kernelGatewayAppSettings() {
         return this.kernelGatewayAppSettings == null ? Optional.empty() : Optional.ofNullable(this.kernelGatewayAppSettings);
     }
 
@@ -62,7 +62,7 @@ public final class UserProfileUserSettings extends io.pulumi.resources.InvokeArg
     @Import(name="securityGroups")
       private final @Nullable List<String> securityGroups;
 
-    public List<String> getSecurityGroups() {
+    public List<String> securityGroups() {
         return this.securityGroups == null ? List.of() : this.securityGroups;
     }
 
@@ -73,7 +73,7 @@ public final class UserProfileUserSettings extends io.pulumi.resources.InvokeArg
     @Import(name="sharingSettings")
       private final @Nullable UserProfileSharingSettings sharingSettings;
 
-    public Optional<UserProfileSharingSettings> getSharingSettings() {
+    public Optional<UserProfileSharingSettings> sharingSettings() {
         return this.sharingSettings == null ? Optional.empty() : Optional.ofNullable(this.sharingSettings);
     }
 

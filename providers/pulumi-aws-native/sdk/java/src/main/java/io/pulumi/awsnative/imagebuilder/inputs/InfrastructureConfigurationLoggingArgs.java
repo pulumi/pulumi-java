@@ -22,7 +22,7 @@ public final class InfrastructureConfigurationLoggingArgs extends io.pulumi.reso
     @Import(name="s3Logs")
       private final @Nullable Output<InfrastructureConfigurationS3LogsArgs> s3Logs;
 
-    public Output<InfrastructureConfigurationS3LogsArgs> getS3Logs() {
+    public Output<InfrastructureConfigurationS3LogsArgs> s3Logs() {
         return this.s3Logs == null ? Codegen.empty() : this.s3Logs;
     }
 

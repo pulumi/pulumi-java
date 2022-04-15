@@ -40,25 +40,25 @@ public final class GetInstanceProfileResult {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public List<String> getExcludeAppPackagesFromCleanup() {
+    public List<String> excludeAppPackagesFromCleanup() {
         return this.excludeAppPackagesFromCleanup == null ? List.of() : this.excludeAppPackagesFromCleanup;
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public Optional<Boolean> getPackageCleanup() {
+    public Optional<Boolean> packageCleanup() {
         return Optional.ofNullable(this.packageCleanup);
     }
-    public Optional<Boolean> getRebootAfterUse() {
+    public Optional<Boolean> rebootAfterUse() {
         return Optional.ofNullable(this.rebootAfterUse);
     }
-    public List<InstanceProfileTag> getTags() {
+    public List<InstanceProfileTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

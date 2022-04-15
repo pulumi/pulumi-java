@@ -28,14 +28,14 @@ public final class InstanceNetworking {
         this.ports = ports;
     }
 
-    public Optional<InstanceMonthlyTransfer> getMonthlyTransfer() {
+    public Optional<InstanceMonthlyTransfer> monthlyTransfer() {
         return Optional.ofNullable(this.monthlyTransfer);
     }
     /**
      * Ports to the Instance.
      * 
     */
-    public List<InstancePort> getPorts() {
+    public List<InstancePort> ports() {
         return this.ports;
     }
 

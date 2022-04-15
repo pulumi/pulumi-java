@@ -19,7 +19,7 @@ public final class GetCustomMetricArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="metricName", required=true)
       private final String metricName;
 
-    public String getMetricName() {
+    public String metricName() {
         return this.metricName;
     }
 

@@ -27,7 +27,7 @@ public final class MonitoringScheduleMonitoringAppSpecificationArgs extends io.p
     @Import(name="containerArguments")
       private final @Nullable Output<List<String>> containerArguments;
 
-    public Output<List<String>> getContainerArguments() {
+    public Output<List<String>> containerArguments() {
         return this.containerArguments == null ? Codegen.empty() : this.containerArguments;
     }
 
@@ -38,7 +38,7 @@ public final class MonitoringScheduleMonitoringAppSpecificationArgs extends io.p
     @Import(name="containerEntrypoint")
       private final @Nullable Output<List<String>> containerEntrypoint;
 
-    public Output<List<String>> getContainerEntrypoint() {
+    public Output<List<String>> containerEntrypoint() {
         return this.containerEntrypoint == null ? Codegen.empty() : this.containerEntrypoint;
     }
 
@@ -49,7 +49,7 @@ public final class MonitoringScheduleMonitoringAppSpecificationArgs extends io.p
     @Import(name="imageUri", required=true)
       private final Output<String> imageUri;
 
-    public Output<String> getImageUri() {
+    public Output<String> imageUri() {
         return this.imageUri;
     }
 
@@ -60,7 +60,7 @@ public final class MonitoringScheduleMonitoringAppSpecificationArgs extends io.p
     @Import(name="postAnalyticsProcessorSourceUri")
       private final @Nullable Output<String> postAnalyticsProcessorSourceUri;
 
-    public Output<String> getPostAnalyticsProcessorSourceUri() {
+    public Output<String> postAnalyticsProcessorSourceUri() {
         return this.postAnalyticsProcessorSourceUri == null ? Codegen.empty() : this.postAnalyticsProcessorSourceUri;
     }
 
@@ -71,7 +71,7 @@ public final class MonitoringScheduleMonitoringAppSpecificationArgs extends io.p
     @Import(name="recordPreprocessorSourceUri")
       private final @Nullable Output<String> recordPreprocessorSourceUri;
 
-    public Output<String> getRecordPreprocessorSourceUri() {
+    public Output<String> recordPreprocessorSourceUri() {
         return this.recordPreprocessorSourceUri == null ? Codegen.empty() : this.recordPreprocessorSourceUri;
     }
 

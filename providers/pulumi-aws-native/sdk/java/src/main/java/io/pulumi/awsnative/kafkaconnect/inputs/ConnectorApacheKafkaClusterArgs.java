@@ -26,14 +26,14 @@ public final class ConnectorApacheKafkaClusterArgs extends io.pulumi.resources.R
     @Import(name="bootstrapServers", required=true)
       private final Output<String> bootstrapServers;
 
-    public Output<String> getBootstrapServers() {
+    public Output<String> bootstrapServers() {
         return this.bootstrapServers;
     }
 
     @Import(name="vpc", required=true)
       private final Output<ConnectorVpcArgs> vpc;
 
-    public Output<ConnectorVpcArgs> getVpc() {
+    public Output<ConnectorVpcArgs> vpc() {
         return this.vpc;
     }
 

@@ -22,13 +22,13 @@ public class ResponseHeadersPolicy extends io.pulumi.resources.CustomResource {
     @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
-    public Output<String> getLastModifiedTime() {
+    public Output<String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     @Export(name="responseHeadersPolicyConfig", type=ResponseHeadersPolicyConfig.class, parameters={})
     private Output<ResponseHeadersPolicyConfig> responseHeadersPolicyConfig;
 
-    public Output<ResponseHeadersPolicyConfig> getResponseHeadersPolicyConfig() {
+    public Output<ResponseHeadersPolicyConfig> responseHeadersPolicyConfig() {
         return this.responseHeadersPolicyConfig;
     }
 

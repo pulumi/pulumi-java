@@ -15,14 +15,14 @@ public final class GetThemeArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="awsAccountId", required=true)
       private final String awsAccountId;
 
-    public String getAwsAccountId() {
+    public String awsAccountId() {
         return this.awsAccountId;
     }
 
     @Import(name="themeId", required=true)
       private final String themeId;
 
-    public String getThemeId() {
+    public String themeId() {
         return this.themeId;
     }
 

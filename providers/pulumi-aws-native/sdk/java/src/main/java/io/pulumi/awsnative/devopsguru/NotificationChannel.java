@@ -23,7 +23,7 @@ public class NotificationChannel extends io.pulumi.resources.CustomResource {
     @Export(name="config", type=NotificationChannelConfig.class, parameters={})
     private Output<NotificationChannelConfig> config;
 
-    public Output<NotificationChannelConfig> getConfig() {
+    public Output<NotificationChannelConfig> config() {
         return this.config;
     }
 

@@ -28,7 +28,7 @@ public final class StorageLensSelectionCriteriaArgs extends io.pulumi.resources.
     @Import(name="delimiter")
       private final @Nullable Output<String> delimiter;
 
-    public Output<String> getDelimiter() {
+    public Output<String> delimiter() {
         return this.delimiter == null ? Codegen.empty() : this.delimiter;
     }
 
@@ -39,7 +39,7 @@ public final class StorageLensSelectionCriteriaArgs extends io.pulumi.resources.
     @Import(name="maxDepth")
       private final @Nullable Output<Integer> maxDepth;
 
-    public Output<Integer> getMaxDepth() {
+    public Output<Integer> maxDepth() {
         return this.maxDepth == null ? Codegen.empty() : this.maxDepth;
     }
 
@@ -50,7 +50,7 @@ public final class StorageLensSelectionCriteriaArgs extends io.pulumi.resources.
     @Import(name="minStorageBytesPercentage")
       private final @Nullable Output<Double> minStorageBytesPercentage;
 
-    public Output<Double> getMinStorageBytesPercentage() {
+    public Output<Double> minStorageBytesPercentage() {
         return this.minStorageBytesPercentage == null ? Codegen.empty() : this.minStorageBytesPercentage;
     }
 

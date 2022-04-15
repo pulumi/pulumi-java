@@ -28,14 +28,14 @@ public final class DataSetGeoSpatialColumnGroupArgs extends io.pulumi.resources.
     @Import(name="columns", required=true)
       private final Output<List<String>> columns;
 
-    public Output<List<String>> getColumns() {
+    public Output<List<String>> columns() {
         return this.columns;
     }
 
     @Import(name="countryCode")
       private final @Nullable Output<DataSetGeoSpatialCountryCode> countryCode;
 
-    public Output<DataSetGeoSpatialCountryCode> getCountryCode() {
+    public Output<DataSetGeoSpatialCountryCode> countryCode() {
         return this.countryCode == null ? Codegen.empty() : this.countryCode;
     }
 
@@ -46,7 +46,7 @@ public final class DataSetGeoSpatialColumnGroupArgs extends io.pulumi.resources.
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

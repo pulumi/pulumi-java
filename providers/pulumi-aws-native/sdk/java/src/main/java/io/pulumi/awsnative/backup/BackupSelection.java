@@ -22,19 +22,19 @@ public class BackupSelection extends io.pulumi.resources.CustomResource {
     @Export(name="backupPlanId", type=String.class, parameters={})
     private Output<String> backupPlanId;
 
-    public Output<String> getBackupPlanId() {
+    public Output<String> backupPlanId() {
         return this.backupPlanId;
     }
     @Export(name="backupSelection", type=BackupSelectionResourceType.class, parameters={})
     private Output<BackupSelectionResourceType> backupSelection;
 
-    public Output<BackupSelectionResourceType> getBackupSelection() {
+    public Output<BackupSelectionResourceType> backupSelection() {
         return this.backupSelection;
     }
     @Export(name="selectionId", type=String.class, parameters={})
     private Output<String> selectionId;
 
-    public Output<String> getSelectionId() {
+    public Output<String> selectionId() {
         return this.selectionId;
     }
 

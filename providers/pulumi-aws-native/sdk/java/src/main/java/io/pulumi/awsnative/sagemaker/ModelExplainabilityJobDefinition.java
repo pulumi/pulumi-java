@@ -38,7 +38,7 @@ public class ModelExplainabilityJobDefinition extends io.pulumi.resources.Custom
      * @return The time at which the job definition was created.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -52,49 +52,49 @@ public class ModelExplainabilityJobDefinition extends io.pulumi.resources.Custom
      * @return The Amazon Resource Name (ARN) of job definition.
      * 
      */
-    public Output<String> getJobDefinitionArn() {
+    public Output<String> jobDefinitionArn() {
         return this.jobDefinitionArn;
     }
     @Export(name="jobDefinitionName", type=String.class, parameters={})
     private Output</* @Nullable */ String> jobDefinitionName;
 
-    public Output</* @Nullable */ String> getJobDefinitionName() {
+    public Output</* @Nullable */ String> jobDefinitionName() {
         return this.jobDefinitionName;
     }
     @Export(name="jobResources", type=ModelExplainabilityJobDefinitionMonitoringResources.class, parameters={})
     private Output<ModelExplainabilityJobDefinitionMonitoringResources> jobResources;
 
-    public Output<ModelExplainabilityJobDefinitionMonitoringResources> getJobResources() {
+    public Output<ModelExplainabilityJobDefinitionMonitoringResources> jobResources() {
         return this.jobResources;
     }
     @Export(name="modelExplainabilityAppSpecification", type=ModelExplainabilityJobDefinitionModelExplainabilityAppSpecification.class, parameters={})
     private Output<ModelExplainabilityJobDefinitionModelExplainabilityAppSpecification> modelExplainabilityAppSpecification;
 
-    public Output<ModelExplainabilityJobDefinitionModelExplainabilityAppSpecification> getModelExplainabilityAppSpecification() {
+    public Output<ModelExplainabilityJobDefinitionModelExplainabilityAppSpecification> modelExplainabilityAppSpecification() {
         return this.modelExplainabilityAppSpecification;
     }
     @Export(name="modelExplainabilityBaselineConfig", type=ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfig.class, parameters={})
     private Output</* @Nullable */ ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfig> modelExplainabilityBaselineConfig;
 
-    public Output</* @Nullable */ ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfig> getModelExplainabilityBaselineConfig() {
+    public Output</* @Nullable */ ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfig> modelExplainabilityBaselineConfig() {
         return this.modelExplainabilityBaselineConfig;
     }
     @Export(name="modelExplainabilityJobInput", type=ModelExplainabilityJobDefinitionModelExplainabilityJobInput.class, parameters={})
     private Output<ModelExplainabilityJobDefinitionModelExplainabilityJobInput> modelExplainabilityJobInput;
 
-    public Output<ModelExplainabilityJobDefinitionModelExplainabilityJobInput> getModelExplainabilityJobInput() {
+    public Output<ModelExplainabilityJobDefinitionModelExplainabilityJobInput> modelExplainabilityJobInput() {
         return this.modelExplainabilityJobInput;
     }
     @Export(name="modelExplainabilityJobOutputConfig", type=ModelExplainabilityJobDefinitionMonitoringOutputConfig.class, parameters={})
     private Output<ModelExplainabilityJobDefinitionMonitoringOutputConfig> modelExplainabilityJobOutputConfig;
 
-    public Output<ModelExplainabilityJobDefinitionMonitoringOutputConfig> getModelExplainabilityJobOutputConfig() {
+    public Output<ModelExplainabilityJobDefinitionMonitoringOutputConfig> modelExplainabilityJobOutputConfig() {
         return this.modelExplainabilityJobOutputConfig;
     }
     @Export(name="networkConfig", type=ModelExplainabilityJobDefinitionNetworkConfig.class, parameters={})
     private Output</* @Nullable */ ModelExplainabilityJobDefinitionNetworkConfig> networkConfig;
 
-    public Output</* @Nullable */ ModelExplainabilityJobDefinitionNetworkConfig> getNetworkConfig() {
+    public Output</* @Nullable */ ModelExplainabilityJobDefinitionNetworkConfig> networkConfig() {
         return this.networkConfig;
     }
     /**
@@ -108,13 +108,13 @@ public class ModelExplainabilityJobDefinition extends io.pulumi.resources.Custom
      * @return The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     @Export(name="stoppingCondition", type=ModelExplainabilityJobDefinitionStoppingCondition.class, parameters={})
     private Output</* @Nullable */ ModelExplainabilityJobDefinitionStoppingCondition> stoppingCondition;
 
-    public Output</* @Nullable */ ModelExplainabilityJobDefinitionStoppingCondition> getStoppingCondition() {
+    public Output</* @Nullable */ ModelExplainabilityJobDefinitionStoppingCondition> stoppingCondition() {
         return this.stoppingCondition;
     }
     /**
@@ -128,7 +128,7 @@ public class ModelExplainabilityJobDefinition extends io.pulumi.resources.Custom
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<ModelExplainabilityJobDefinitionTag>> getTags() {
+    public Output</* @Nullable */ List<ModelExplainabilityJobDefinitionTag>> tags() {
         return this.tags;
     }
 

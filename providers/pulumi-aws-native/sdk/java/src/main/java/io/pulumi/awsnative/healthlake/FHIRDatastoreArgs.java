@@ -23,35 +23,35 @@ public final class FHIRDatastoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datastoreName")
       private final @Nullable Output<String> datastoreName;
 
-    public Output<String> getDatastoreName() {
+    public Output<String> datastoreName() {
         return this.datastoreName == null ? Codegen.empty() : this.datastoreName;
     }
 
     @Import(name="datastoreTypeVersion", required=true)
       private final Output<FHIRDatastoreDatastoreTypeVersion> datastoreTypeVersion;
 
-    public Output<FHIRDatastoreDatastoreTypeVersion> getDatastoreTypeVersion() {
+    public Output<FHIRDatastoreDatastoreTypeVersion> datastoreTypeVersion() {
         return this.datastoreTypeVersion;
     }
 
     @Import(name="preloadDataConfig")
       private final @Nullable Output<FHIRDatastorePreloadDataConfigArgs> preloadDataConfig;
 
-    public Output<FHIRDatastorePreloadDataConfigArgs> getPreloadDataConfig() {
+    public Output<FHIRDatastorePreloadDataConfigArgs> preloadDataConfig() {
         return this.preloadDataConfig == null ? Codegen.empty() : this.preloadDataConfig;
     }
 
     @Import(name="sseConfiguration")
       private final @Nullable Output<FHIRDatastoreSseConfigurationArgs> sseConfiguration;
 
-    public Output<FHIRDatastoreSseConfigurationArgs> getSseConfiguration() {
+    public Output<FHIRDatastoreSseConfigurationArgs> sseConfiguration() {
         return this.sseConfiguration == null ? Codegen.empty() : this.sseConfiguration;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<FHIRDatastoreTagArgs>> tags;
 
-    public Output<List<FHIRDatastoreTagArgs>> getTags() {
+    public Output<List<FHIRDatastoreTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

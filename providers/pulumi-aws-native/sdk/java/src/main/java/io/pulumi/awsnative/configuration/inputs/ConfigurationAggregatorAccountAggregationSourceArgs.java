@@ -20,21 +20,21 @@ public final class ConfigurationAggregatorAccountAggregationSourceArgs extends i
     @Import(name="accountIds", required=true)
       private final Output<List<String>> accountIds;
 
-    public Output<List<String>> getAccountIds() {
+    public Output<List<String>> accountIds() {
         return this.accountIds;
     }
 
     @Import(name="allAwsRegions")
       private final @Nullable Output<Boolean> allAwsRegions;
 
-    public Output<Boolean> getAllAwsRegions() {
+    public Output<Boolean> allAwsRegions() {
         return this.allAwsRegions == null ? Codegen.empty() : this.allAwsRegions;
     }
 
     @Import(name="awsRegions")
       private final @Nullable Output<List<String>> awsRegions;
 
-    public Output<List<String>> getAwsRegions() {
+    public Output<List<String>> awsRegions() {
         return this.awsRegions == null ? Codegen.empty() : this.awsRegions;
     }
 

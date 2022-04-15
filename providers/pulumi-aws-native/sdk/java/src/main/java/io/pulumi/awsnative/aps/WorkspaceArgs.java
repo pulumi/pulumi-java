@@ -24,7 +24,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alertManagerDefinition")
       private final @Nullable Output<String> alertManagerDefinition;
 
-    public Output<String> getAlertManagerDefinition() {
+    public Output<String> alertManagerDefinition() {
         return this.alertManagerDefinition == null ? Codegen.empty() : this.alertManagerDefinition;
     }
 
@@ -35,7 +35,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alias")
       private final @Nullable Output<String> alias;
 
-    public Output<String> getAlias() {
+    public Output<String> alias() {
         return this.alias == null ? Codegen.empty() : this.alias;
     }
 
@@ -46,7 +46,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<WorkspaceTagArgs>> tags;
 
-    public Output<List<WorkspaceTagArgs>> getTags() {
+    public Output<List<WorkspaceTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

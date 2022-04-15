@@ -51,7 +51,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return Configuration for the transfer acceleration state.
      * 
      */
-    public Output</* @Nullable */ BucketAccelerateConfiguration> getAccelerateConfiguration() {
+    public Output</* @Nullable */ BucketAccelerateConfiguration> accelerateConfiguration() {
         return this.accelerateConfiguration;
     }
     /**
@@ -65,7 +65,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return A canned access control list (ACL) that grants predefined permissions to the bucket.
      * 
      */
-    public Output</* @Nullable */ BucketAccessControl> getAccessControl() {
+    public Output</* @Nullable */ BucketAccessControl> accessControl() {
         return this.accessControl;
     }
     /**
@@ -79,7 +79,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The configuration and any analyses for the analytics filter of an Amazon S3 bucket.
      * 
      */
-    public Output</* @Nullable */ List<BucketAnalyticsConfiguration>> getAnalyticsConfigurations() {
+    public Output</* @Nullable */ List<BucketAnalyticsConfiguration>> analyticsConfigurations() {
         return this.analyticsConfigurations;
     }
     /**
@@ -93,13 +93,13 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the specified bucket.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="bucketEncryption", type=BucketEncryption.class, parameters={})
     private Output</* @Nullable */ BucketEncryption> bucketEncryption;
 
-    public Output</* @Nullable */ BucketEncryption> getBucketEncryption() {
+    public Output</* @Nullable */ BucketEncryption> bucketEncryption() {
         return this.bucketEncryption;
     }
     /**
@@ -113,7 +113,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return A name for the bucket. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the bucket name.
      * 
      */
-    public Output</* @Nullable */ String> getBucketName() {
+    public Output</* @Nullable */ String> bucketName() {
         return this.bucketName;
     }
     /**
@@ -127,7 +127,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return Rules that define cross-origin resource sharing of objects in this bucket.
      * 
      */
-    public Output</* @Nullable */ BucketCorsConfiguration> getCorsConfiguration() {
+    public Output</* @Nullable */ BucketCorsConfiguration> corsConfiguration() {
         return this.corsConfiguration;
     }
     /**
@@ -141,7 +141,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The IPv4 DNS name of the specified bucket.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -155,7 +155,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The IPv6 DNS name of the specified bucket. For more information about dual-stack endpoints, see [Using Amazon S3 Dual-Stack Endpoints](https://docs.aws.amazon.com/AmazonS3/latest/dev/dual-stack-endpoints.html).
      * 
      */
-    public Output<String> getDualStackDomainName() {
+    public Output<String> dualStackDomainName() {
         return this.dualStackDomainName;
     }
     /**
@@ -169,7 +169,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return Specifies the S3 Intelligent-Tiering configuration for an Amazon S3 bucket.
      * 
      */
-    public Output</* @Nullable */ List<BucketIntelligentTieringConfiguration>> getIntelligentTieringConfigurations() {
+    public Output</* @Nullable */ List<BucketIntelligentTieringConfiguration>> intelligentTieringConfigurations() {
         return this.intelligentTieringConfigurations;
     }
     /**
@@ -183,7 +183,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The inventory configuration for an Amazon S3 bucket.
      * 
      */
-    public Output</* @Nullable */ List<BucketInventoryConfiguration>> getInventoryConfigurations() {
+    public Output</* @Nullable */ List<BucketInventoryConfiguration>> inventoryConfigurations() {
         return this.inventoryConfigurations;
     }
     /**
@@ -197,7 +197,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return Rules that define how Amazon S3 manages objects during their lifetime.
      * 
      */
-    public Output</* @Nullable */ BucketLifecycleConfiguration> getLifecycleConfiguration() {
+    public Output</* @Nullable */ BucketLifecycleConfiguration> lifecycleConfiguration() {
         return this.lifecycleConfiguration;
     }
     /**
@@ -211,7 +211,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return Settings that define where logs are stored.
      * 
      */
-    public Output</* @Nullable */ BucketLoggingConfiguration> getLoggingConfiguration() {
+    public Output</* @Nullable */ BucketLoggingConfiguration> loggingConfiguration() {
         return this.loggingConfiguration;
     }
     /**
@@ -225,7 +225,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return Settings that define a metrics configuration for the CloudWatch request metrics from the bucket.
      * 
      */
-    public Output</* @Nullable */ List<BucketMetricsConfiguration>> getMetricsConfigurations() {
+    public Output</* @Nullable */ List<BucketMetricsConfiguration>> metricsConfigurations() {
         return this.metricsConfigurations;
     }
     /**
@@ -239,7 +239,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return Configuration that defines how Amazon S3 handles bucket notifications.
      * 
      */
-    public Output</* @Nullable */ BucketNotificationConfiguration> getNotificationConfiguration() {
+    public Output</* @Nullable */ BucketNotificationConfiguration> notificationConfiguration() {
         return this.notificationConfiguration;
     }
     /**
@@ -253,7 +253,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return Places an Object Lock configuration on the specified bucket.
      * 
      */
-    public Output</* @Nullable */ BucketObjectLockConfiguration> getObjectLockConfiguration() {
+    public Output</* @Nullable */ BucketObjectLockConfiguration> objectLockConfiguration() {
         return this.objectLockConfiguration;
     }
     /**
@@ -267,7 +267,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return Indicates whether this bucket has an Object Lock configuration enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getObjectLockEnabled() {
+    public Output</* @Nullable */ Boolean> objectLockEnabled() {
         return this.objectLockEnabled;
     }
     /**
@@ -281,13 +281,13 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return Specifies the container element for object ownership rules.
      * 
      */
-    public Output</* @Nullable */ BucketOwnershipControls> getOwnershipControls() {
+    public Output</* @Nullable */ BucketOwnershipControls> ownershipControls() {
         return this.ownershipControls;
     }
     @Export(name="publicAccessBlockConfiguration", type=BucketPublicAccessBlockConfiguration.class, parameters={})
     private Output</* @Nullable */ BucketPublicAccessBlockConfiguration> publicAccessBlockConfiguration;
 
-    public Output</* @Nullable */ BucketPublicAccessBlockConfiguration> getPublicAccessBlockConfiguration() {
+    public Output</* @Nullable */ BucketPublicAccessBlockConfiguration> publicAccessBlockConfiguration() {
         return this.publicAccessBlockConfiguration;
     }
     /**
@@ -301,7 +301,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return Returns the regional domain name of the specified bucket.
      * 
      */
-    public Output<String> getRegionalDomainName() {
+    public Output<String> regionalDomainName() {
         return this.regionalDomainName;
     }
     /**
@@ -315,7 +315,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return Configuration for replicating objects in an S3 bucket.
      * 
      */
-    public Output</* @Nullable */ BucketReplicationConfiguration> getReplicationConfiguration() {
+    public Output</* @Nullable */ BucketReplicationConfiguration> replicationConfiguration() {
         return this.replicationConfiguration;
     }
     /**
@@ -329,19 +329,19 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return An arbitrary set of tags (key-value pairs) for this S3 bucket.
      * 
      */
-    public Output</* @Nullable */ List<BucketTag>> getTags() {
+    public Output</* @Nullable */ List<BucketTag>> tags() {
         return this.tags;
     }
     @Export(name="versioningConfiguration", type=BucketVersioningConfiguration.class, parameters={})
     private Output</* @Nullable */ BucketVersioningConfiguration> versioningConfiguration;
 
-    public Output</* @Nullable */ BucketVersioningConfiguration> getVersioningConfiguration() {
+    public Output</* @Nullable */ BucketVersioningConfiguration> versioningConfiguration() {
         return this.versioningConfiguration;
     }
     @Export(name="websiteConfiguration", type=BucketWebsiteConfiguration.class, parameters={})
     private Output</* @Nullable */ BucketWebsiteConfiguration> websiteConfiguration;
 
-    public Output</* @Nullable */ BucketWebsiteConfiguration> getWebsiteConfiguration() {
+    public Output</* @Nullable */ BucketWebsiteConfiguration> websiteConfiguration() {
         return this.websiteConfiguration;
     }
     /**
@@ -355,7 +355,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The Amazon S3 website endpoint for the specified bucket.
      * 
      */
-    public Output<String> getWebsiteURL() {
+    public Output<String> websiteURL() {
         return this.websiteURL;
     }
 

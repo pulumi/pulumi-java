@@ -18,14 +18,14 @@ public final class ConfigDataflowEndpointConfigArgs extends io.pulumi.resources.
     @Import(name="dataflowEndpointName")
       private final @Nullable Output<String> dataflowEndpointName;
 
-    public Output<String> getDataflowEndpointName() {
+    public Output<String> dataflowEndpointName() {
         return this.dataflowEndpointName == null ? Codegen.empty() : this.dataflowEndpointName;
     }
 
     @Import(name="dataflowEndpointRegion")
       private final @Nullable Output<String> dataflowEndpointRegion;
 
-    public Output<String> getDataflowEndpointRegion() {
+    public Output<String> dataflowEndpointRegion() {
         return this.dataflowEndpointRegion == null ? Codegen.empty() : this.dataflowEndpointRegion;
     }
 

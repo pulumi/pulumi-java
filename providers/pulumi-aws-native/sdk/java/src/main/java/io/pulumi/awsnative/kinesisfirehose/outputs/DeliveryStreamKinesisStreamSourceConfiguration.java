@@ -20,10 +20,10 @@ public final class DeliveryStreamKinesisStreamSourceConfiguration {
         this.roleARN = roleARN;
     }
 
-    public String getKinesisStreamARN() {
+    public String kinesisStreamARN() {
         return this.kinesisStreamARN;
     }
-    public String getRoleARN() {
+    public String roleARN() {
         return this.roleARN;
     }
 

@@ -22,14 +22,14 @@ public final class BucketLoggingConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="destinationBucketName")
       private final @Nullable Output<String> destinationBucketName;
 
-    public Output<String> getDestinationBucketName() {
+    public Output<String> destinationBucketName() {
         return this.destinationBucketName == null ? Codegen.empty() : this.destinationBucketName;
     }
 
     @Import(name="logFilePrefix")
       private final @Nullable Output<String> logFilePrefix;
 
-    public Output<String> getLogFilePrefix() {
+    public Output<String> logFilePrefix() {
         return this.logFilePrefix == null ? Codegen.empty() : this.logFilePrefix;
     }
 

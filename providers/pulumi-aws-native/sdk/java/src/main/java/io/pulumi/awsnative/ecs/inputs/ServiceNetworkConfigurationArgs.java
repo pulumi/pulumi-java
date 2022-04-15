@@ -18,7 +18,7 @@ public final class ServiceNetworkConfigurationArgs extends io.pulumi.resources.R
     @Import(name="awsvpcConfiguration")
       private final @Nullable Output<ServiceAwsVpcConfigurationArgs> awsvpcConfiguration;
 
-    public Output<ServiceAwsVpcConfigurationArgs> getAwsvpcConfiguration() {
+    public Output<ServiceAwsVpcConfigurationArgs> awsvpcConfiguration() {
         return this.awsvpcConfiguration == null ? Codegen.empty() : this.awsvpcConfiguration;
     }
 

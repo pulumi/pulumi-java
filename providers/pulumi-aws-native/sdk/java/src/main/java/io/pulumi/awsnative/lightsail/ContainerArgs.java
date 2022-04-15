@@ -28,7 +28,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containerServiceDeployment")
       private final @Nullable Output<ContainerServiceDeploymentArgs> containerServiceDeployment;
 
-    public Output<ContainerServiceDeploymentArgs> getContainerServiceDeployment() {
+    public Output<ContainerServiceDeploymentArgs> containerServiceDeployment() {
         return this.containerServiceDeployment == null ? Codegen.empty() : this.containerServiceDeployment;
     }
 
@@ -39,7 +39,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isDisabled")
       private final @Nullable Output<Boolean> isDisabled;
 
-    public Output<Boolean> getIsDisabled() {
+    public Output<Boolean> isDisabled() {
         return this.isDisabled == null ? Codegen.empty() : this.isDisabled;
     }
 
@@ -50,7 +50,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="power", required=true)
       private final Output<String> power;
 
-    public Output<String> getPower() {
+    public Output<String> power() {
         return this.power;
     }
 
@@ -61,7 +61,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicDomainNames")
       private final @Nullable Output<List<ContainerPublicDomainNameArgs>> publicDomainNames;
 
-    public Output<List<ContainerPublicDomainNameArgs>> getPublicDomainNames() {
+    public Output<List<ContainerPublicDomainNameArgs>> publicDomainNames() {
         return this.publicDomainNames == null ? Codegen.empty() : this.publicDomainNames;
     }
 
@@ -72,7 +72,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scale", required=true)
       private final Output<Integer> scale;
 
-    public Output<Integer> getScale() {
+    public Output<Integer> scale() {
         return this.scale;
     }
 
@@ -83,7 +83,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -94,7 +94,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<ContainerTagArgs>> tags;
 
-    public Output<List<ContainerTagArgs>> getTags() {
+    public Output<List<ContainerTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

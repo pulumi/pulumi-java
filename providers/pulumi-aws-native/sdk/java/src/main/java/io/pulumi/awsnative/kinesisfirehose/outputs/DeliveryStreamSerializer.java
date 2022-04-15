@@ -23,10 +23,10 @@ public final class DeliveryStreamSerializer {
         this.parquetSerDe = parquetSerDe;
     }
 
-    public Optional<DeliveryStreamOrcSerDe> getOrcSerDe() {
+    public Optional<DeliveryStreamOrcSerDe> orcSerDe() {
         return Optional.ofNullable(this.orcSerDe);
     }
-    public Optional<DeliveryStreamParquetSerDe> getParquetSerDe() {
+    public Optional<DeliveryStreamParquetSerDe> parquetSerDe() {
         return Optional.ofNullable(this.parquetSerDe);
     }
 

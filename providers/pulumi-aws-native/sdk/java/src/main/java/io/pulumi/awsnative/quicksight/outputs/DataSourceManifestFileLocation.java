@@ -32,14 +32,14 @@ public final class DataSourceManifestFileLocation {
      * <p>Amazon S3 bucket.</p>
      * 
     */
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
     /**
      * <p>Amazon S3 key that identifies an object.</p>
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 

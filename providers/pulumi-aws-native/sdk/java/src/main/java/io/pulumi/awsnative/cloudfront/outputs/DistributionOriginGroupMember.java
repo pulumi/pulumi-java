@@ -16,7 +16,7 @@ public final class DistributionOriginGroupMember {
         this.originId = originId;
     }
 
-    public String getOriginId() {
+    public String originId() {
         return this.originId;
     }
 

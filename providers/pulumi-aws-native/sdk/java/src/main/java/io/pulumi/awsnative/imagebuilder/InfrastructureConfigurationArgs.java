@@ -27,7 +27,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -38,7 +38,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
     @Import(name="instanceMetadataOptions")
       private final @Nullable Output<InfrastructureConfigurationInstanceMetadataOptionsArgs> instanceMetadataOptions;
 
-    public Output<InfrastructureConfigurationInstanceMetadataOptionsArgs> getInstanceMetadataOptions() {
+    public Output<InfrastructureConfigurationInstanceMetadataOptionsArgs> instanceMetadataOptions() {
         return this.instanceMetadataOptions == null ? Codegen.empty() : this.instanceMetadataOptions;
     }
 
@@ -49,7 +49,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
     @Import(name="instanceProfileName", required=true)
       private final Output<String> instanceProfileName;
 
-    public Output<String> getInstanceProfileName() {
+    public Output<String> instanceProfileName() {
         return this.instanceProfileName;
     }
 
@@ -60,7 +60,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
     @Import(name="instanceTypes")
       private final @Nullable Output<List<String>> instanceTypes;
 
-    public Output<List<String>> getInstanceTypes() {
+    public Output<List<String>> instanceTypes() {
         return this.instanceTypes == null ? Codegen.empty() : this.instanceTypes;
     }
 
@@ -71,7 +71,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
     @Import(name="keyPair")
       private final @Nullable Output<String> keyPair;
 
-    public Output<String> getKeyPair() {
+    public Output<String> keyPair() {
         return this.keyPair == null ? Codegen.empty() : this.keyPair;
     }
 
@@ -82,7 +82,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
     @Import(name="logging")
       private final @Nullable Output<InfrastructureConfigurationLoggingArgs> logging;
 
-    public Output<InfrastructureConfigurationLoggingArgs> getLogging() {
+    public Output<InfrastructureConfigurationLoggingArgs> logging() {
         return this.logging == null ? Codegen.empty() : this.logging;
     }
 
@@ -93,7 +93,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -104,7 +104,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
     @Import(name="resourceTags")
       private final @Nullable Output<Object> resourceTags;
 
-    public Output<Object> getResourceTags() {
+    public Output<Object> resourceTags() {
         return this.resourceTags == null ? Codegen.empty() : this.resourceTags;
     }
 
@@ -115,7 +115,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
     @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
     }
 
@@ -126,7 +126,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
     @Import(name="snsTopicArn")
       private final @Nullable Output<String> snsTopicArn;
 
-    public Output<String> getSnsTopicArn() {
+    public Output<String> snsTopicArn() {
         return this.snsTopicArn == null ? Codegen.empty() : this.snsTopicArn;
     }
 
@@ -137,7 +137,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
@@ -148,7 +148,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
     @Import(name="tags")
       private final @Nullable Output<Object> tags;
 
-    public Output<Object> getTags() {
+    public Output<Object> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -159,7 +159,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
     @Import(name="terminateInstanceOnFailure")
       private final @Nullable Output<Boolean> terminateInstanceOnFailure;
 
-    public Output<Boolean> getTerminateInstanceOnFailure() {
+    public Output<Boolean> terminateInstanceOnFailure() {
         return this.terminateInstanceOnFailure == null ? Codegen.empty() : this.terminateInstanceOnFailure;
     }
 

@@ -30,61 +30,61 @@ public class CapacityReservationFleet extends io.pulumi.resources.CustomResource
     @Export(name="allocationStrategy", type=String.class, parameters={})
     private Output</* @Nullable */ String> allocationStrategy;
 
-    public Output</* @Nullable */ String> getAllocationStrategy() {
+    public Output</* @Nullable */ String> allocationStrategy() {
         return this.allocationStrategy;
     }
     @Export(name="capacityReservationFleetId", type=String.class, parameters={})
     private Output<String> capacityReservationFleetId;
 
-    public Output<String> getCapacityReservationFleetId() {
+    public Output<String> capacityReservationFleetId() {
         return this.capacityReservationFleetId;
     }
     @Export(name="endDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> endDate;
 
-    public Output</* @Nullable */ String> getEndDate() {
+    public Output</* @Nullable */ String> endDate() {
         return this.endDate;
     }
     @Export(name="instanceMatchCriteria", type=CapacityReservationFleetInstanceMatchCriteria.class, parameters={})
     private Output</* @Nullable */ CapacityReservationFleetInstanceMatchCriteria> instanceMatchCriteria;
 
-    public Output</* @Nullable */ CapacityReservationFleetInstanceMatchCriteria> getInstanceMatchCriteria() {
+    public Output</* @Nullable */ CapacityReservationFleetInstanceMatchCriteria> instanceMatchCriteria() {
         return this.instanceMatchCriteria;
     }
     @Export(name="instanceTypeSpecifications", type=List.class, parameters={CapacityReservationFleetInstanceTypeSpecification.class})
     private Output</* @Nullable */ List<CapacityReservationFleetInstanceTypeSpecification>> instanceTypeSpecifications;
 
-    public Output</* @Nullable */ List<CapacityReservationFleetInstanceTypeSpecification>> getInstanceTypeSpecifications() {
+    public Output</* @Nullable */ List<CapacityReservationFleetInstanceTypeSpecification>> instanceTypeSpecifications() {
         return this.instanceTypeSpecifications;
     }
     @Export(name="noRemoveEndDate", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> noRemoveEndDate;
 
-    public Output</* @Nullable */ Boolean> getNoRemoveEndDate() {
+    public Output</* @Nullable */ Boolean> noRemoveEndDate() {
         return this.noRemoveEndDate;
     }
     @Export(name="removeEndDate", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> removeEndDate;
 
-    public Output</* @Nullable */ Boolean> getRemoveEndDate() {
+    public Output</* @Nullable */ Boolean> removeEndDate() {
         return this.removeEndDate;
     }
     @Export(name="tagSpecifications", type=List.class, parameters={CapacityReservationFleetTagSpecification.class})
     private Output</* @Nullable */ List<CapacityReservationFleetTagSpecification>> tagSpecifications;
 
-    public Output</* @Nullable */ List<CapacityReservationFleetTagSpecification>> getTagSpecifications() {
+    public Output</* @Nullable */ List<CapacityReservationFleetTagSpecification>> tagSpecifications() {
         return this.tagSpecifications;
     }
     @Export(name="tenancy", type=CapacityReservationFleetTenancy.class, parameters={})
     private Output</* @Nullable */ CapacityReservationFleetTenancy> tenancy;
 
-    public Output</* @Nullable */ CapacityReservationFleetTenancy> getTenancy() {
+    public Output</* @Nullable */ CapacityReservationFleetTenancy> tenancy() {
         return this.tenancy;
     }
     @Export(name="totalTargetCapacity", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> totalTargetCapacity;
 
-    public Output</* @Nullable */ Integer> getTotalTargetCapacity() {
+    public Output</* @Nullable */ Integer> totalTargetCapacity() {
         return this.totalTargetCapacity;
     }
 

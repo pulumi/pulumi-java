@@ -31,19 +31,19 @@ public final class PipelineDeviceShadowEnrich {
         this.thingName = thingName;
     }
 
-    public String getAttribute() {
+    public String attribute() {
         return this.attribute;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getNext() {
+    public Optional<String> next() {
         return Optional.ofNullable(this.next);
     }
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
-    public String getThingName() {
+    public String thingName() {
         return this.thingName;
     }
 

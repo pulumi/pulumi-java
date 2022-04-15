@@ -19,7 +19,7 @@ public final class GetConnectionArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="connectionArn", required=true)
       private final String connectionArn;
 
-    public String getConnectionArn() {
+    public String connectionArn() {
         return this.connectionArn;
     }
 

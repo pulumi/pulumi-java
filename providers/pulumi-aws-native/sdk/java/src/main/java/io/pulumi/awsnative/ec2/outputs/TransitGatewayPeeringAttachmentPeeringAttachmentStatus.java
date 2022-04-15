@@ -34,14 +34,14 @@ public final class TransitGatewayPeeringAttachmentPeeringAttachmentStatus {
      * The status code.
      * 
     */
-    public Optional<String> getCode() {
+    public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
     /**
      * The status message, if applicable.
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
 

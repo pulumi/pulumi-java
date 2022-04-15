@@ -23,37 +23,37 @@ public class Archive extends io.pulumi.resources.CustomResource {
     @Export(name="archiveName", type=String.class, parameters={})
     private Output<String> archiveName;
 
-    public Output<String> getArchiveName() {
+    public Output<String> archiveName() {
         return this.archiveName;
     }
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="eventPattern", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> eventPattern;
 
-    public Output</* @Nullable */ Object> getEventPattern() {
+    public Output</* @Nullable */ Object> eventPattern() {
         return this.eventPattern;
     }
     @Export(name="retentionDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> retentionDays;
 
-    public Output</* @Nullable */ Integer> getRetentionDays() {
+    public Output</* @Nullable */ Integer> retentionDays() {
         return this.retentionDays;
     }
     @Export(name="sourceArn", type=String.class, parameters={})
     private Output<String> sourceArn;
 
-    public Output<String> getSourceArn() {
+    public Output<String> sourceArn() {
         return this.sourceArn;
     }
 

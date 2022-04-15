@@ -28,7 +28,7 @@ public final class ContactStageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="durationInMinutes", required=true)
       private final Output<Integer> durationInMinutes;
 
-    public Output<Integer> getDurationInMinutes() {
+    public Output<Integer> durationInMinutes() {
         return this.durationInMinutes;
     }
 
@@ -39,7 +39,7 @@ public final class ContactStageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targets")
       private final @Nullable Output<List<ContactTargetsArgs>> targets;
 
-    public Output<List<ContactTargetsArgs>> getTargets() {
+    public Output<List<ContactTargetsArgs>> targets() {
         return this.targets == null ? Codegen.empty() : this.targets;
     }
 

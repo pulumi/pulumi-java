@@ -30,16 +30,16 @@ public final class DatasetContainerAction {
         this.variables = variables;
     }
 
-    public String getExecutionRoleArn() {
+    public String executionRoleArn() {
         return this.executionRoleArn;
     }
-    public String getImage() {
+    public String image() {
         return this.image;
     }
-    public DatasetResourceConfiguration getResourceConfiguration() {
+    public DatasetResourceConfiguration resourceConfiguration() {
         return this.resourceConfiguration;
     }
-    public List<DatasetVariable> getVariables() {
+    public List<DatasetVariable> variables() {
         return this.variables == null ? List.of() : this.variables;
     }
 

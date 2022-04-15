@@ -81,56 +81,56 @@ public final class GetAssetModelResult {
      * The ARN of the asset model, which has the following format.
      * 
     */
-    public Optional<String> getAssetModelArn() {
+    public Optional<String> assetModelArn() {
         return Optional.ofNullable(this.assetModelArn);
     }
     /**
      * The composite asset models that are part of this asset model. Composite asset models are asset models that contain specific properties.
      * 
     */
-    public List<AssetModelCompositeModel> getAssetModelCompositeModels() {
+    public List<AssetModelCompositeModel> assetModelCompositeModels() {
         return this.assetModelCompositeModels == null ? List.of() : this.assetModelCompositeModels;
     }
     /**
      * A description for the asset model.
      * 
     */
-    public Optional<String> getAssetModelDescription() {
+    public Optional<String> assetModelDescription() {
         return Optional.ofNullable(this.assetModelDescription);
     }
     /**
      * The hierarchy definitions of the asset model. Each hierarchy specifies an asset model whose assets can be children of any other assets created from this asset model. You can specify up to 10 hierarchies per asset model.
      * 
     */
-    public List<AssetModelHierarchy> getAssetModelHierarchies() {
+    public List<AssetModelHierarchy> assetModelHierarchies() {
         return this.assetModelHierarchies == null ? List.of() : this.assetModelHierarchies;
     }
     /**
      * The ID of the asset model.
      * 
     */
-    public Optional<String> getAssetModelId() {
+    public Optional<String> assetModelId() {
         return Optional.ofNullable(this.assetModelId);
     }
     /**
      * A unique, friendly name for the asset model.
      * 
     */
-    public Optional<String> getAssetModelName() {
+    public Optional<String> assetModelName() {
         return Optional.ofNullable(this.assetModelName);
     }
     /**
      * The property definitions of the asset model. You can specify up to 200 properties per asset model.
      * 
     */
-    public List<AssetModelProperty> getAssetModelProperties() {
+    public List<AssetModelProperty> assetModelProperties() {
         return this.assetModelProperties == null ? List.of() : this.assetModelProperties;
     }
     /**
      * A list of key-value pairs that contain metadata for the asset model.
      * 
     */
-    public List<AssetModelTag> getTags() {
+    public List<AssetModelTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

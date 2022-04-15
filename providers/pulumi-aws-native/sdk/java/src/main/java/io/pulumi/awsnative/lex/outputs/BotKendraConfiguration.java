@@ -30,17 +30,17 @@ public final class BotKendraConfiguration {
         this.queryFilterStringEnabled = queryFilterStringEnabled;
     }
 
-    public String getKendraIndex() {
+    public String kendraIndex() {
         return this.kendraIndex;
     }
-    public Optional<String> getQueryFilterString() {
+    public Optional<String> queryFilterString() {
         return Optional.ofNullable(this.queryFilterString);
     }
     /**
      * Determines whether the AMAZON.KendraSearchIntent intent uses a custom query string to query the Amazon Kendra index.
      * 
     */
-    public Optional<Boolean> getQueryFilterStringEnabled() {
+    public Optional<Boolean> queryFilterStringEnabled() {
         return Optional.ofNullable(this.queryFilterStringEnabled);
     }
 

@@ -23,14 +23,14 @@ public final class BotKendraConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="kendraIndex", required=true)
       private final Output<String> kendraIndex;
 
-    public Output<String> getKendraIndex() {
+    public Output<String> kendraIndex() {
         return this.kendraIndex;
     }
 
     @Import(name="queryFilterString")
       private final @Nullable Output<String> queryFilterString;
 
-    public Output<String> getQueryFilterString() {
+    public Output<String> queryFilterString() {
         return this.queryFilterString == null ? Codegen.empty() : this.queryFilterString;
     }
 
@@ -41,7 +41,7 @@ public final class BotKendraConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="queryFilterStringEnabled")
       private final @Nullable Output<Boolean> queryFilterStringEnabled;
 
-    public Output<Boolean> getQueryFilterStringEnabled() {
+    public Output<Boolean> queryFilterStringEnabled() {
         return this.queryFilterStringEnabled == null ? Codegen.empty() : this.queryFilterStringEnabled;
     }
 

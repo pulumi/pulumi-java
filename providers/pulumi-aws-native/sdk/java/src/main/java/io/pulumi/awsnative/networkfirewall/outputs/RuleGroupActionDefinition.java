@@ -18,7 +18,7 @@ public final class RuleGroupActionDefinition {
         this.publishMetricAction = publishMetricAction;
     }
 
-    public Optional<RuleGroupPublishMetricAction> getPublishMetricAction() {
+    public Optional<RuleGroupPublishMetricAction> publishMetricAction() {
         return Optional.ofNullable(this.publishMetricAction);
     }
 

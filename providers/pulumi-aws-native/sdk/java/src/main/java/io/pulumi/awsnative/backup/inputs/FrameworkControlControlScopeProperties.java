@@ -27,7 +27,7 @@ public final class FrameworkControlControlScopeProperties extends io.pulumi.reso
     @Import(name="complianceResourceIds")
       private final @Nullable List<String> complianceResourceIds;
 
-    public List<String> getComplianceResourceIds() {
+    public List<String> complianceResourceIds() {
         return this.complianceResourceIds == null ? List.of() : this.complianceResourceIds;
     }
 
@@ -38,7 +38,7 @@ public final class FrameworkControlControlScopeProperties extends io.pulumi.reso
     @Import(name="complianceResourceTypes")
       private final @Nullable List<String> complianceResourceTypes;
 
-    public List<String> getComplianceResourceTypes() {
+    public List<String> complianceResourceTypes() {
         return this.complianceResourceTypes == null ? List.of() : this.complianceResourceTypes;
     }
 
@@ -49,7 +49,7 @@ public final class FrameworkControlControlScopeProperties extends io.pulumi.reso
     @Import(name="tags")
       private final @Nullable List<FrameworkTag> tags;
 
-    public List<FrameworkTag> getTags() {
+    public List<FrameworkTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

@@ -28,7 +28,7 @@ public final class PackagingConfigurationHlsEncryptionArgs extends io.pulumi.res
     @Import(name="constantInitializationVector")
       private final @Nullable Output<String> constantInitializationVector;
 
-    public Output<String> getConstantInitializationVector() {
+    public Output<String> constantInitializationVector() {
         return this.constantInitializationVector == null ? Codegen.empty() : this.constantInitializationVector;
     }
 
@@ -39,14 +39,14 @@ public final class PackagingConfigurationHlsEncryptionArgs extends io.pulumi.res
     @Import(name="encryptionMethod")
       private final @Nullable Output<PackagingConfigurationHlsEncryptionEncryptionMethod> encryptionMethod;
 
-    public Output<PackagingConfigurationHlsEncryptionEncryptionMethod> getEncryptionMethod() {
+    public Output<PackagingConfigurationHlsEncryptionEncryptionMethod> encryptionMethod() {
         return this.encryptionMethod == null ? Codegen.empty() : this.encryptionMethod;
     }
 
     @Import(name="spekeKeyProvider", required=true)
       private final Output<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider;
 
-    public Output<PackagingConfigurationSpekeKeyProviderArgs> getSpekeKeyProvider() {
+    public Output<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider() {
         return this.spekeKeyProvider;
     }
 

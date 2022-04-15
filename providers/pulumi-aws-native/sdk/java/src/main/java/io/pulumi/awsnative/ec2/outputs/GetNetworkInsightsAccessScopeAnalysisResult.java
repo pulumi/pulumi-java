@@ -48,31 +48,31 @@ public final class GetNetworkInsightsAccessScopeAnalysisResult {
         this.tags = tags;
     }
 
-    public Optional<Integer> getAnalyzedEniCount() {
+    public Optional<Integer> analyzedEniCount() {
         return Optional.ofNullable(this.analyzedEniCount);
     }
-    public Optional<String> getEndDate() {
+    public Optional<String> endDate() {
         return Optional.ofNullable(this.endDate);
     }
-    public Optional<NetworkInsightsAccessScopeAnalysisFindingsFound> getFindingsFound() {
+    public Optional<NetworkInsightsAccessScopeAnalysisFindingsFound> findingsFound() {
         return Optional.ofNullable(this.findingsFound);
     }
-    public Optional<String> getNetworkInsightsAccessScopeAnalysisArn() {
+    public Optional<String> networkInsightsAccessScopeAnalysisArn() {
         return Optional.ofNullable(this.networkInsightsAccessScopeAnalysisArn);
     }
-    public Optional<String> getNetworkInsightsAccessScopeAnalysisId() {
+    public Optional<String> networkInsightsAccessScopeAnalysisId() {
         return Optional.ofNullable(this.networkInsightsAccessScopeAnalysisId);
     }
-    public Optional<String> getStartDate() {
+    public Optional<String> startDate() {
         return Optional.ofNullable(this.startDate);
     }
-    public Optional<NetworkInsightsAccessScopeAnalysisStatus> getStatus() {
+    public Optional<NetworkInsightsAccessScopeAnalysisStatus> status() {
         return Optional.ofNullable(this.status);
     }
-    public Optional<String> getStatusMessage() {
+    public Optional<String> statusMessage() {
         return Optional.ofNullable(this.statusMessage);
     }
-    public List<NetworkInsightsAccessScopeAnalysisTag> getTags() {
+    public List<NetworkInsightsAccessScopeAnalysisTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

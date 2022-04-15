@@ -29,7 +29,7 @@ public class Host extends io.pulumi.resources.CustomResource {
      * @return Indicates whether the host accepts any untargeted instance launches that match its instance type configuration, or if it only accepts Host tenancy instance launches that specify its unique host ID.
      * 
      */
-    public Output</* @Nullable */ String> getAutoPlacement() {
+    public Output</* @Nullable */ String> autoPlacement() {
         return this.autoPlacement;
     }
     /**
@@ -43,7 +43,7 @@ public class Host extends io.pulumi.resources.CustomResource {
      * @return The Availability Zone in which to allocate the Dedicated Host.
      * 
      */
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone;
     }
     /**
@@ -57,7 +57,7 @@ public class Host extends io.pulumi.resources.CustomResource {
      * @return Id of the host created.
      * 
      */
-    public Output<String> getHostId() {
+    public Output<String> hostId() {
         return this.hostId;
     }
     /**
@@ -71,7 +71,7 @@ public class Host extends io.pulumi.resources.CustomResource {
      * @return Indicates whether to enable or disable host recovery for the Dedicated Host. Host recovery is disabled by default.
      * 
      */
-    public Output</* @Nullable */ String> getHostRecovery() {
+    public Output</* @Nullable */ String> hostRecovery() {
         return this.hostRecovery;
     }
     /**
@@ -85,7 +85,7 @@ public class Host extends io.pulumi.resources.CustomResource {
      * @return Specifies the instance type to be supported by the Dedicated Hosts. If you specify an instance type, the Dedicated Hosts support instances of the specified instance type only.
      * 
      */
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
 

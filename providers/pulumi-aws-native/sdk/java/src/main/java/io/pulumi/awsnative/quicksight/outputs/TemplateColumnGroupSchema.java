@@ -36,14 +36,14 @@ public final class TemplateColumnGroupSchema {
      * <p>A structure containing the list of schemas for column group columns.</p>
      * 
     */
-    public List<TemplateColumnGroupColumnSchema> getColumnGroupColumnSchemaList() {
+    public List<TemplateColumnGroupColumnSchema> columnGroupColumnSchemaList() {
         return this.columnGroupColumnSchemaList == null ? List.of() : this.columnGroupColumnSchemaList;
     }
     /**
      * <p>The name of the column group schema.</p>
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

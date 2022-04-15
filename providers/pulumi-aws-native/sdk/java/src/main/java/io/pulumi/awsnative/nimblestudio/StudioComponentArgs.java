@@ -25,7 +25,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="configuration")
       private final @Nullable Output<StudioComponentConfigurationArgs> configuration;
 
-    public Output<StudioComponentConfigurationArgs> getConfiguration() {
+    public Output<StudioComponentConfigurationArgs> configuration() {
         return this.configuration == null ? Codegen.empty() : this.configuration;
     }
 
@@ -36,7 +36,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -47,7 +47,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="ec2SecurityGroupIds")
       private final @Nullable Output<List<String>> ec2SecurityGroupIds;
 
-    public Output<List<String>> getEc2SecurityGroupIds() {
+    public Output<List<String>> ec2SecurityGroupIds() {
         return this.ec2SecurityGroupIds == null ? Codegen.empty() : this.ec2SecurityGroupIds;
     }
 
@@ -58,7 +58,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="initializationScripts")
       private final @Nullable Output<List<StudioComponentInitializationScriptArgs>> initializationScripts;
 
-    public Output<List<StudioComponentInitializationScriptArgs>> getInitializationScripts() {
+    public Output<List<StudioComponentInitializationScriptArgs>> initializationScripts() {
         return this.initializationScripts == null ? Codegen.empty() : this.initializationScripts;
     }
 
@@ -69,7 +69,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -80,7 +80,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="scriptParameters")
       private final @Nullable Output<List<StudioComponentScriptParameterKeyValueArgs>> scriptParameters;
 
-    public Output<List<StudioComponentScriptParameterKeyValueArgs>> getScriptParameters() {
+    public Output<List<StudioComponentScriptParameterKeyValueArgs>> scriptParameters() {
         return this.scriptParameters == null ? Codegen.empty() : this.scriptParameters;
     }
 
@@ -91,28 +91,28 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="studioId", required=true)
       private final Output<String> studioId;
 
-    public Output<String> getStudioId() {
+    public Output<String> studioId() {
         return this.studioId;
     }
 
     @Import(name="subtype")
       private final @Nullable Output<StudioComponentSubtype> subtype;
 
-    public Output<StudioComponentSubtype> getSubtype() {
+    public Output<StudioComponentSubtype> subtype() {
         return this.subtype == null ? Codegen.empty() : this.subtype;
     }
 
     @Import(name="tags")
       private final @Nullable Output<StudioComponentTagsArgs> tags;
 
-    public Output<StudioComponentTagsArgs> getTags() {
+    public Output<StudioComponentTagsArgs> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="type", required=true)
       private final Output<StudioComponentType> type;
 
-    public Output<StudioComponentType> getType() {
+    public Output<StudioComponentType> type() {
         return this.type;
     }
 

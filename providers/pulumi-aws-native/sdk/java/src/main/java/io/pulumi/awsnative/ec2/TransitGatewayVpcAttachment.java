@@ -24,7 +24,7 @@ public class TransitGatewayVpcAttachment extends io.pulumi.resources.CustomResou
     @Export(name="addSubnetIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> addSubnetIds;
 
-    public Output</* @Nullable */ List<String>> getAddSubnetIds() {
+    public Output</* @Nullable */ List<String>> addSubnetIds() {
         return this.addSubnetIds;
     }
     /**
@@ -38,37 +38,37 @@ public class TransitGatewayVpcAttachment extends io.pulumi.resources.CustomResou
      * @return The options for the transit gateway vpc attachment.
      * 
      */
-    public Output</* @Nullable */ OptionsProperties> getOptions() {
+    public Output</* @Nullable */ OptionsProperties> options() {
         return this.options;
     }
     @Export(name="removeSubnetIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> removeSubnetIds;
 
-    public Output</* @Nullable */ List<String>> getRemoveSubnetIds() {
+    public Output</* @Nullable */ List<String>> removeSubnetIds() {
         return this.removeSubnetIds;
     }
     @Export(name="subnetIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> subnetIds;
 
-    public Output</* @Nullable */ List<String>> getSubnetIds() {
+    public Output</* @Nullable */ List<String>> subnetIds() {
         return this.subnetIds;
     }
     @Export(name="tags", type=List.class, parameters={TransitGatewayVpcAttachmentTag.class})
     private Output</* @Nullable */ List<TransitGatewayVpcAttachmentTag>> tags;
 
-    public Output</* @Nullable */ List<TransitGatewayVpcAttachmentTag>> getTags() {
+    public Output</* @Nullable */ List<TransitGatewayVpcAttachmentTag>> tags() {
         return this.tags;
     }
     @Export(name="transitGatewayId", type=String.class, parameters={})
     private Output</* @Nullable */ String> transitGatewayId;
 
-    public Output</* @Nullable */ String> getTransitGatewayId() {
+    public Output</* @Nullable */ String> transitGatewayId() {
         return this.transitGatewayId;
     }
     @Export(name="vpcId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpcId;
 
-    public Output</* @Nullable */ String> getVpcId() {
+    public Output</* @Nullable */ String> vpcId() {
         return this.vpcId;
     }
 

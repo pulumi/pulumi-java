@@ -23,14 +23,14 @@ public final class CertificateApiPassthroughArgs extends io.pulumi.resources.Res
     @Import(name="extensions")
       private final @Nullable Output<CertificateExtensionsArgs> extensions;
 
-    public Output<CertificateExtensionsArgs> getExtensions() {
+    public Output<CertificateExtensionsArgs> extensions() {
         return this.extensions == null ? Codegen.empty() : this.extensions;
     }
 
     @Import(name="subject")
       private final @Nullable Output<CertificateSubjectArgs> subject;
 
-    public Output<CertificateSubjectArgs> getSubject() {
+    public Output<CertificateSubjectArgs> subject() {
         return this.subject == null ? Codegen.empty() : this.subject;
     }
 

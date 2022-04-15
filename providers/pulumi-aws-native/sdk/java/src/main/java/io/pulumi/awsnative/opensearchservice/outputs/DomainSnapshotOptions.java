@@ -18,7 +18,7 @@ public final class DomainSnapshotOptions {
         this.automatedSnapshotStartHour = automatedSnapshotStartHour;
     }
 
-    public Optional<Integer> getAutomatedSnapshotStartHour() {
+    public Optional<Integer> automatedSnapshotStartHour() {
         return Optional.ofNullable(this.automatedSnapshotStartHour);
     }
 

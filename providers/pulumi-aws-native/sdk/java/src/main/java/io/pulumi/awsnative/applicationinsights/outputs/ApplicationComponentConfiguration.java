@@ -36,14 +36,14 @@ public final class ApplicationComponentConfiguration {
      * The configuration settings
      * 
     */
-    public Optional<ApplicationConfigurationDetails> getConfigurationDetails() {
+    public Optional<ApplicationConfigurationDetails> configurationDetails() {
         return Optional.ofNullable(this.configurationDetails);
     }
     /**
      * Sub component configurations of the component.
      * 
     */
-    public List<ApplicationSubComponentTypeConfiguration> getSubComponentTypeConfigurations() {
+    public List<ApplicationSubComponentTypeConfiguration> subComponentTypeConfigurations() {
         return this.subComponentTypeConfigurations == null ? List.of() : this.subComponentTypeConfigurations;
     }
 

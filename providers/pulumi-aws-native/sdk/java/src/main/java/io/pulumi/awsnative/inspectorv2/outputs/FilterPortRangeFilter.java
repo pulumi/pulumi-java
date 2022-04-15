@@ -22,10 +22,10 @@ public final class FilterPortRangeFilter {
         this.endInclusive = endInclusive;
     }
 
-    public Optional<Integer> getBeginInclusive() {
+    public Optional<Integer> beginInclusive() {
         return Optional.ofNullable(this.beginInclusive);
     }
-    public Optional<Integer> getEndInclusive() {
+    public Optional<Integer> endInclusive() {
         return Optional.ofNullable(this.endInclusive);
     }
 

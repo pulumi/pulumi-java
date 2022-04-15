@@ -15,14 +15,14 @@ public final class ServiceDeploymentCircuitBreaker extends io.pulumi.resources.I
     @Import(name="enable", required=true)
       private final Boolean enable;
 
-    public Boolean getEnable() {
+    public Boolean enable() {
         return this.enable;
     }
 
     @Import(name="rollback", required=true)
       private final Boolean rollback;
 
-    public Boolean getRollback() {
+    public Boolean rollback() {
         return this.rollback;
     }
 

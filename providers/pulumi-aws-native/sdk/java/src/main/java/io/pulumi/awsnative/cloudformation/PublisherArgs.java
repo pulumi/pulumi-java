@@ -23,7 +23,7 @@ public final class PublisherArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="acceptTermsAndConditions", required=true)
       private final Output<Boolean> acceptTermsAndConditions;
 
-    public Output<Boolean> getAcceptTermsAndConditions() {
+    public Output<Boolean> acceptTermsAndConditions() {
         return this.acceptTermsAndConditions;
     }
 
@@ -34,7 +34,7 @@ public final class PublisherArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectionArn")
       private final @Nullable Output<String> connectionArn;
 
-    public Output<String> getConnectionArn() {
+    public Output<String> connectionArn() {
         return this.connectionArn == null ? Codegen.empty() : this.connectionArn;
     }
 

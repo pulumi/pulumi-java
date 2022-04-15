@@ -18,7 +18,7 @@ public final class DeliveryStreamHiveJsonSerDe {
         this.timestampFormats = timestampFormats;
     }
 
-    public List<String> getTimestampFormats() {
+    public List<String> timestampFormats() {
         return this.timestampFormats == null ? List.of() : this.timestampFormats;
     }
 

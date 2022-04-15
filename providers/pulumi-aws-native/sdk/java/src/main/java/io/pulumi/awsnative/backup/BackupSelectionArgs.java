@@ -18,14 +18,14 @@ public final class BackupSelectionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="backupPlanId", required=true)
       private final Output<String> backupPlanId;
 
-    public Output<String> getBackupPlanId() {
+    public Output<String> backupPlanId() {
         return this.backupPlanId;
     }
 
     @Import(name="backupSelection", required=true)
       private final Output<BackupSelectionResourceTypeArgs> backupSelection;
 
-    public Output<BackupSelectionResourceTypeArgs> getBackupSelection() {
+    public Output<BackupSelectionResourceTypeArgs> backupSelection() {
         return this.backupSelection;
     }
 

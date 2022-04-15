@@ -18,14 +18,14 @@ public final class BudgetsActionSubscriberArgs extends io.pulumi.resources.Resou
     @Import(name="address", required=true)
       private final Output<String> address;
 
-    public Output<String> getAddress() {
+    public Output<String> address() {
         return this.address;
     }
 
     @Import(name="type", required=true)
       private final Output<BudgetsActionSubscriberType> type;
 
-    public Output<BudgetsActionSubscriberType> getType() {
+    public Output<BudgetsActionSubscriberType> type() {
         return this.type;
     }
 

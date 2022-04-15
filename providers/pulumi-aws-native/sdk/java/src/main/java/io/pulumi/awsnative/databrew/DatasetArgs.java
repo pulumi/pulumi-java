@@ -28,7 +28,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="format")
       private final @Nullable Output<DatasetFormat> format;
 
-    public Output<DatasetFormat> getFormat() {
+    public Output<DatasetFormat> format() {
         return this.format == null ? Codegen.empty() : this.format;
     }
 
@@ -39,7 +39,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="formatOptions")
       private final @Nullable Output<DatasetFormatOptionsArgs> formatOptions;
 
-    public Output<DatasetFormatOptionsArgs> getFormatOptions() {
+    public Output<DatasetFormatOptionsArgs> formatOptions() {
         return this.formatOptions == null ? Codegen.empty() : this.formatOptions;
     }
 
@@ -50,7 +50,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="input", required=true)
       private final Output<DatasetInputArgs> input;
 
-    public Output<DatasetInputArgs> getInput() {
+    public Output<DatasetInputArgs> input() {
         return this.input;
     }
 
@@ -61,7 +61,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -72,14 +72,14 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pathOptions")
       private final @Nullable Output<DatasetPathOptionsArgs> pathOptions;
 
-    public Output<DatasetPathOptionsArgs> getPathOptions() {
+    public Output<DatasetPathOptionsArgs> pathOptions() {
         return this.pathOptions == null ? Codegen.empty() : this.pathOptions;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<DatasetTagArgs>> tags;
 
-    public Output<List<DatasetTagArgs>> getTags() {
+    public Output<List<DatasetTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

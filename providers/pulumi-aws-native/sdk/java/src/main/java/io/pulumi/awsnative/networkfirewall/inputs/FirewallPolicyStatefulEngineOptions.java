@@ -17,7 +17,7 @@ public final class FirewallPolicyStatefulEngineOptions extends io.pulumi.resourc
     @Import(name="ruleOrder")
       private final @Nullable FirewallPolicyRuleOrder ruleOrder;
 
-    public Optional<FirewallPolicyRuleOrder> getRuleOrder() {
+    public Optional<FirewallPolicyRuleOrder> ruleOrder() {
         return this.ruleOrder == null ? Optional.empty() : Optional.ofNullable(this.ruleOrder);
     }
 

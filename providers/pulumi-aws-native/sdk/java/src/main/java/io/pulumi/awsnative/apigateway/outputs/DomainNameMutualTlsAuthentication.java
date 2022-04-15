@@ -22,10 +22,10 @@ public final class DomainNameMutualTlsAuthentication {
         this.truststoreVersion = truststoreVersion;
     }
 
-    public Optional<String> getTruststoreUri() {
+    public Optional<String> truststoreUri() {
         return Optional.ofNullable(this.truststoreUri);
     }
-    public Optional<String> getTruststoreVersion() {
+    public Optional<String> truststoreVersion() {
         return Optional.ofNullable(this.truststoreVersion);
     }
 

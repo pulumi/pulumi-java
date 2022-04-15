@@ -31,7 +31,7 @@ public class ReadinessCheck extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the readiness check.
      * 
      */
-    public Output<String> getReadinessCheckArn() {
+    public Output<String> readinessCheckArn() {
         return this.readinessCheckArn;
     }
     /**
@@ -45,7 +45,7 @@ public class ReadinessCheck extends io.pulumi.resources.CustomResource {
      * @return Name of the ReadinessCheck to create.
      * 
      */
-    public Output<String> getReadinessCheckName() {
+    public Output<String> readinessCheckName() {
         return this.readinessCheckName;
     }
     /**
@@ -59,7 +59,7 @@ public class ReadinessCheck extends io.pulumi.resources.CustomResource {
      * @return The name of the resource set to check.
      * 
      */
-    public Output</* @Nullable */ String> getResourceSetName() {
+    public Output</* @Nullable */ String> resourceSetName() {
         return this.resourceSetName;
     }
     /**
@@ -73,7 +73,7 @@ public class ReadinessCheck extends io.pulumi.resources.CustomResource {
      * @return A collection of tags associated with a resource.
      * 
      */
-    public Output</* @Nullable */ List<ReadinessCheckTag>> getTags() {
+    public Output</* @Nullable */ List<ReadinessCheckTag>> tags() {
         return this.tags;
     }
 

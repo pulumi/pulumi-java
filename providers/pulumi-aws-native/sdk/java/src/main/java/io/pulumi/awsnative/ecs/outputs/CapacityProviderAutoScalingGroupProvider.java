@@ -27,13 +27,13 @@ public final class CapacityProviderAutoScalingGroupProvider {
         this.managedTerminationProtection = managedTerminationProtection;
     }
 
-    public String getAutoScalingGroupArn() {
+    public String autoScalingGroupArn() {
         return this.autoScalingGroupArn;
     }
-    public Optional<CapacityProviderManagedScaling> getManagedScaling() {
+    public Optional<CapacityProviderManagedScaling> managedScaling() {
         return Optional.ofNullable(this.managedScaling);
     }
-    public Optional<CapacityProviderAutoScalingGroupProviderManagedTerminationProtection> getManagedTerminationProtection() {
+    public Optional<CapacityProviderAutoScalingGroupProviderManagedTerminationProtection> managedTerminationProtection() {
         return Optional.ofNullable(this.managedTerminationProtection);
     }
 

@@ -19,14 +19,14 @@ public final class GlobalTableProjectionArgs extends io.pulumi.resources.Resourc
     @Import(name="nonKeyAttributes")
       private final @Nullable Output<List<String>> nonKeyAttributes;
 
-    public Output<List<String>> getNonKeyAttributes() {
+    public Output<List<String>> nonKeyAttributes() {
         return this.nonKeyAttributes == null ? Codegen.empty() : this.nonKeyAttributes;
     }
 
     @Import(name="projectionType")
       private final @Nullable Output<String> projectionType;
 
-    public Output<String> getProjectionType() {
+    public Output<String> projectionType() {
         return this.projectionType == null ? Codegen.empty() : this.projectionType;
     }
 

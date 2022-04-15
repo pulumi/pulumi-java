@@ -17,14 +17,14 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
     @Import(name="snsRoleName", required=true)
       private final Output<String> snsRoleName;
 
-    public Output<String> getSnsRoleName() {
+    public Output<String> snsRoleName() {
         return this.snsRoleName;
     }
 
     @Import(name="snsTopicArn", required=true)
       private final Output<String> snsTopicArn;
 
-    public Output<String> getSnsTopicArn() {
+    public Output<String> snsTopicArn() {
         return this.snsTopicArn;
     }
 

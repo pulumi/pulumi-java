@@ -22,10 +22,10 @@ public final class AccessPointTransformationConfiguration {
         this.contentTransformation = contentTransformation;
     }
 
-    public List<String> getActions() {
+    public List<String> actions() {
         return this.actions;
     }
-    public Object getContentTransformation() {
+    public Object contentTransformation() {
         return this.contentTransformation;
     }
 

@@ -17,7 +17,7 @@ public final class RuleGroupOrStatement {
         this.statements = statements;
     }
 
-    public List<RuleGroupStatement> getStatements() {
+    public List<RuleGroupStatement> statements() {
         return this.statements;
     }
 

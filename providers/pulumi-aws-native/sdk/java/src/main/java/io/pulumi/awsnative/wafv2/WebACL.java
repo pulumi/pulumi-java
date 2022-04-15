@@ -30,49 +30,49 @@ public class WebACL extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="capacity", type=Integer.class, parameters={})
     private Output<Integer> capacity;
 
-    public Output<Integer> getCapacity() {
+    public Output<Integer> capacity() {
         return this.capacity;
     }
     @Export(name="captchaConfig", type=WebACLCaptchaConfig.class, parameters={})
     private Output</* @Nullable */ WebACLCaptchaConfig> captchaConfig;
 
-    public Output</* @Nullable */ WebACLCaptchaConfig> getCaptchaConfig() {
+    public Output</* @Nullable */ WebACLCaptchaConfig> captchaConfig() {
         return this.captchaConfig;
     }
     @Export(name="customResponseBodies", type=WebACLCustomResponseBodies.class, parameters={})
     private Output</* @Nullable */ WebACLCustomResponseBodies> customResponseBodies;
 
-    public Output</* @Nullable */ WebACLCustomResponseBodies> getCustomResponseBodies() {
+    public Output</* @Nullable */ WebACLCustomResponseBodies> customResponseBodies() {
         return this.customResponseBodies;
     }
     @Export(name="defaultAction", type=WebACLDefaultAction.class, parameters={})
     private Output<WebACLDefaultAction> defaultAction;
 
-    public Output<WebACLDefaultAction> getDefaultAction() {
+    public Output<WebACLDefaultAction> defaultAction() {
         return this.defaultAction;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="labelNamespace", type=String.class, parameters={})
     private Output<String> labelNamespace;
 
-    public Output<String> getLabelNamespace() {
+    public Output<String> labelNamespace() {
         return this.labelNamespace;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -86,25 +86,25 @@ public class WebACL extends io.pulumi.resources.CustomResource {
      * @return Collection of Rules.
      * 
      */
-    public Output</* @Nullable */ List<WebACLRule>> getRules() {
+    public Output</* @Nullable */ List<WebACLRule>> rules() {
         return this.rules;
     }
     @Export(name="scope", type=WebACLScope.class, parameters={})
     private Output<WebACLScope> scope;
 
-    public Output<WebACLScope> getScope() {
+    public Output<WebACLScope> scope() {
         return this.scope;
     }
     @Export(name="tags", type=List.class, parameters={WebACLTag.class})
     private Output</* @Nullable */ List<WebACLTag>> tags;
 
-    public Output</* @Nullable */ List<WebACLTag>> getTags() {
+    public Output</* @Nullable */ List<WebACLTag>> tags() {
         return this.tags;
     }
     @Export(name="visibilityConfig", type=WebACLVisibilityConfig.class, parameters={})
     private Output<WebACLVisibilityConfig> visibilityConfig;
 
-    public Output<WebACLVisibilityConfig> getVisibilityConfig() {
+    public Output<WebACLVisibilityConfig> visibilityConfig() {
         return this.visibilityConfig;
     }
 

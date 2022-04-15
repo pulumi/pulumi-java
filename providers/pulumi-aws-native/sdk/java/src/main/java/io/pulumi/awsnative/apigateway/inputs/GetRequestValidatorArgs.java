@@ -19,7 +19,7 @@ public final class GetRequestValidatorArgs extends io.pulumi.resources.InvokeArg
     @Import(name="requestValidatorId", required=true)
       private final String requestValidatorId;
 
-    public String getRequestValidatorId() {
+    public String requestValidatorId() {
         return this.requestValidatorId;
     }
 
@@ -30,7 +30,7 @@ public final class GetRequestValidatorArgs extends io.pulumi.resources.InvokeArg
     @Import(name="restApiId", required=true)
       private final String restApiId;
 
-    public String getRestApiId() {
+    public String restApiId() {
         return this.restApiId;
     }
 

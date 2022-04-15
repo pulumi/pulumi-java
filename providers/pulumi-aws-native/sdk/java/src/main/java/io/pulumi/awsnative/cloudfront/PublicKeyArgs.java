@@ -17,7 +17,7 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicKeyConfig", required=true)
       private final Output<PublicKeyConfigArgs> publicKeyConfig;
 
-    public Output<PublicKeyConfigArgs> getPublicKeyConfig() {
+    public Output<PublicKeyConfigArgs> publicKeyConfig() {
         return this.publicKeyConfig;
     }
 

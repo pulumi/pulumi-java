@@ -36,7 +36,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * @return The address family of the address space in this pool. Either IPv4 or IPv6.
      * 
      */
-    public Output<String> getAddressFamily() {
+    public Output<String> addressFamily() {
         return this.addressFamily;
     }
     /**
@@ -50,7 +50,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * @return The default netmask length for allocations made from this pool. This value is used when the netmask length of an allocation isn't specified.
      * 
      */
-    public Output</* @Nullable */ Integer> getAllocationDefaultNetmaskLength() {
+    public Output</* @Nullable */ Integer> allocationDefaultNetmaskLength() {
         return this.allocationDefaultNetmaskLength;
     }
     /**
@@ -64,7 +64,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * @return The maximum allowed netmask length for allocations made from this pool.
      * 
      */
-    public Output</* @Nullable */ Integer> getAllocationMaxNetmaskLength() {
+    public Output</* @Nullable */ Integer> allocationMaxNetmaskLength() {
         return this.allocationMaxNetmaskLength;
     }
     /**
@@ -78,7 +78,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * @return The minimum allowed netmask length for allocations made from this pool.
      * 
      */
-    public Output</* @Nullable */ Integer> getAllocationMinNetmaskLength() {
+    public Output</* @Nullable */ Integer> allocationMinNetmaskLength() {
         return this.allocationMinNetmaskLength;
     }
     /**
@@ -92,7 +92,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * @return When specified, an allocation will not be allowed unless a resource has a matching set of tags.
      * 
      */
-    public Output</* @Nullable */ List<IPAMPoolTag>> getAllocationResourceTags() {
+    public Output</* @Nullable */ List<IPAMPoolTag>> allocationResourceTags() {
         return this.allocationResourceTags;
     }
     /**
@@ -106,7 +106,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the IPAM Pool.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -120,13 +120,13 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * @return Determines what to do if IPAM discovers resources that haven't been assigned an allocation. If set to true, an allocation will be made automatically.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoImport() {
+    public Output</* @Nullable */ Boolean> autoImport() {
         return this.autoImport;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -140,7 +140,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the IPAM this pool is a part of.
      * 
      */
-    public Output<String> getIpamArn() {
+    public Output<String> ipamArn() {
         return this.ipamArn;
     }
     /**
@@ -154,7 +154,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * @return Id of the IPAM Pool.
      * 
      */
-    public Output<String> getIpamPoolId() {
+    public Output<String> ipamPoolId() {
         return this.ipamPoolId;
     }
     /**
@@ -168,7 +168,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the scope this pool is a part of.
      * 
      */
-    public Output<String> getIpamScopeArn() {
+    public Output<String> ipamScopeArn() {
         return this.ipamScopeArn;
     }
     /**
@@ -182,7 +182,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * @return The Id of the scope this pool is a part of.
      * 
      */
-    public Output<String> getIpamScopeId() {
+    public Output<String> ipamScopeId() {
         return this.ipamScopeId;
     }
     /**
@@ -196,7 +196,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * @return Determines whether this scope contains publicly routable space or space for a private network
      * 
      */
-    public Output<IPAMPoolIpamScopeType> getIpamScopeType() {
+    public Output<IPAMPoolIpamScopeType> ipamScopeType() {
         return this.ipamScopeType;
     }
     /**
@@ -210,7 +210,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * @return The region of this pool. If not set, this will default to "None" which will disable non-custom allocations. If the locale has been specified for the source pool, this value must match.
      * 
      */
-    public Output</* @Nullable */ String> getLocale() {
+    public Output</* @Nullable */ String> locale() {
         return this.locale;
     }
     /**
@@ -224,7 +224,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * @return The depth of this pool in the source pool hierarchy.
      * 
      */
-    public Output<Integer> getPoolDepth() {
+    public Output<Integer> poolDepth() {
         return this.poolDepth;
     }
     /**
@@ -238,7 +238,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * @return A list of cidrs representing the address space available for allocation in this pool.
      * 
      */
-    public Output</* @Nullable */ List<IPAMPoolProvisionedCidr>> getProvisionedCidrs() {
+    public Output</* @Nullable */ List<IPAMPoolProvisionedCidr>> provisionedCidrs() {
         return this.provisionedCidrs;
     }
     /**
@@ -252,7 +252,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * @return Determines whether or not address space from this pool is publicly advertised. Must be set if and only if the pool is IPv6.
      * 
      */
-    public Output</* @Nullable */ Boolean> getPubliclyAdvertisable() {
+    public Output</* @Nullable */ Boolean> publiclyAdvertisable() {
         return this.publiclyAdvertisable;
     }
     /**
@@ -266,7 +266,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * @return The Id of this pool's source. If set, all space provisioned in this pool must be free space provisioned in the parent pool.
      * 
      */
-    public Output</* @Nullable */ String> getSourceIpamPoolId() {
+    public Output</* @Nullable */ String> sourceIpamPoolId() {
         return this.sourceIpamPoolId;
     }
     /**
@@ -280,7 +280,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * @return The state of this pool. This can be one of the following values: "create-in-progress", "create-complete", "modify-in-progress", "modify-complete", "delete-in-progress", or "delete-complete"
      * 
      */
-    public Output<IPAMPoolState> getState() {
+    public Output<IPAMPoolState> state() {
         return this.state;
     }
     /**
@@ -294,7 +294,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * @return An explanation of how the pool arrived at it current state.
      * 
      */
-    public Output<String> getStateMessage() {
+    public Output<String> stateMessage() {
         return this.stateMessage;
     }
     /**
@@ -308,7 +308,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<IPAMPoolTag>> getTags() {
+    public Output</* @Nullable */ List<IPAMPoolTag>> tags() {
         return this.tags;
     }
 

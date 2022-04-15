@@ -32,14 +32,14 @@ public final class FaqTag {
      * A string used to identify this tag
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * A string containing the value for the tag
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

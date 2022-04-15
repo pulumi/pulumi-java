@@ -32,7 +32,7 @@ public class Site extends io.pulumi.resources.CustomResource {
      * @return The description of the site.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -46,7 +46,7 @@ public class Site extends io.pulumi.resources.CustomResource {
      * @return The ID of the global network.
      * 
      */
-    public Output<String> getGlobalNetworkId() {
+    public Output<String> globalNetworkId() {
         return this.globalNetworkId;
     }
     /**
@@ -60,7 +60,7 @@ public class Site extends io.pulumi.resources.CustomResource {
      * @return The location of the site.
      * 
      */
-    public Output</* @Nullable */ SiteLocation> getLocation() {
+    public Output</* @Nullable */ SiteLocation> location() {
         return this.location;
     }
     /**
@@ -74,7 +74,7 @@ public class Site extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the site.
      * 
      */
-    public Output<String> getSiteArn() {
+    public Output<String> siteArn() {
         return this.siteArn;
     }
     /**
@@ -88,7 +88,7 @@ public class Site extends io.pulumi.resources.CustomResource {
      * @return The ID of the site.
      * 
      */
-    public Output<String> getSiteId() {
+    public Output<String> siteId() {
         return this.siteId;
     }
     /**
@@ -102,7 +102,7 @@ public class Site extends io.pulumi.resources.CustomResource {
      * @return The tags for the site.
      * 
      */
-    public Output</* @Nullable */ List<SiteTag>> getTags() {
+    public Output</* @Nullable */ List<SiteTag>> tags() {
         return this.tags;
     }
 

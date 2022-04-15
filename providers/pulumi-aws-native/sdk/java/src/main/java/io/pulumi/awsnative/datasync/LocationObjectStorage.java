@@ -35,7 +35,7 @@ public class LocationObjectStorage extends io.pulumi.resources.CustomResource {
      * @return Optional. The access key is used if credentials are required to access the self-managed object storage server.
      * 
      */
-    public Output</* @Nullable */ String> getAccessKey() {
+    public Output</* @Nullable */ String> accessKey() {
         return this.accessKey;
     }
     /**
@@ -49,7 +49,7 @@ public class LocationObjectStorage extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server location.
      * 
      */
-    public Output<List<String>> getAgentArns() {
+    public Output<List<String>> agentArns() {
         return this.agentArns;
     }
     /**
@@ -63,7 +63,7 @@ public class LocationObjectStorage extends io.pulumi.resources.CustomResource {
      * @return The name of the bucket on the self-managed object storage server.
      * 
      */
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
     /**
@@ -77,7 +77,7 @@ public class LocationObjectStorage extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the location that is created.
      * 
      */
-    public Output<String> getLocationArn() {
+    public Output<String> locationArn() {
         return this.locationArn;
     }
     /**
@@ -91,7 +91,7 @@ public class LocationObjectStorage extends io.pulumi.resources.CustomResource {
      * @return The URL of the object storage location that was described.
      * 
      */
-    public Output<String> getLocationUri() {
+    public Output<String> locationUri() {
         return this.locationUri;
     }
     /**
@@ -105,7 +105,7 @@ public class LocationObjectStorage extends io.pulumi.resources.CustomResource {
      * @return Optional. The secret key is used if credentials are required to access the self-managed object storage server.
      * 
      */
-    public Output</* @Nullable */ String> getSecretKey() {
+    public Output</* @Nullable */ String> secretKey() {
         return this.secretKey;
     }
     /**
@@ -119,7 +119,7 @@ public class LocationObjectStorage extends io.pulumi.resources.CustomResource {
      * @return The name of the self-managed object storage server. This value is the IP address or Domain Name Service (DNS) name of the object storage server.
      * 
      */
-    public Output<String> getServerHostname() {
+    public Output<String> serverHostname() {
         return this.serverHostname;
     }
     /**
@@ -133,7 +133,7 @@ public class LocationObjectStorage extends io.pulumi.resources.CustomResource {
      * @return The port that your self-managed server accepts inbound network traffic on.
      * 
      */
-    public Output</* @Nullable */ Integer> getServerPort() {
+    public Output</* @Nullable */ Integer> serverPort() {
         return this.serverPort;
     }
     /**
@@ -147,7 +147,7 @@ public class LocationObjectStorage extends io.pulumi.resources.CustomResource {
      * @return The protocol that the object storage server uses to communicate.
      * 
      */
-    public Output</* @Nullable */ LocationObjectStorageServerProtocol> getServerProtocol() {
+    public Output</* @Nullable */ LocationObjectStorageServerProtocol> serverProtocol() {
         return this.serverProtocol;
     }
     /**
@@ -161,7 +161,7 @@ public class LocationObjectStorage extends io.pulumi.resources.CustomResource {
      * @return The subdirectory in the self-managed object storage server that is used to read data from.
      * 
      */
-    public Output</* @Nullable */ String> getSubdirectory() {
+    public Output</* @Nullable */ String> subdirectory() {
         return this.subdirectory;
     }
     /**
@@ -175,7 +175,7 @@ public class LocationObjectStorage extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<LocationObjectStorageTag>> getTags() {
+    public Output</* @Nullable */ List<LocationObjectStorageTag>> tags() {
         return this.tags;
     }
 

@@ -19,7 +19,7 @@ public final class GetBasePathMappingArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="basePath", required=true)
       private final String basePath;
 
-    public String getBasePath() {
+    public String basePath() {
         return this.basePath;
     }
 
@@ -30,7 +30,7 @@ public final class GetBasePathMappingArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="domainName", required=true)
       private final String domainName;
 
-    public String getDomainName() {
+    public String domainName() {
         return this.domainName;
     }
 

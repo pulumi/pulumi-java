@@ -15,7 +15,7 @@ public final class GetRegistryPolicyArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="registryId", required=true)
       private final String registryId;
 
-    public String getRegistryId() {
+    public String registryId() {
         return this.registryId;
     }
 

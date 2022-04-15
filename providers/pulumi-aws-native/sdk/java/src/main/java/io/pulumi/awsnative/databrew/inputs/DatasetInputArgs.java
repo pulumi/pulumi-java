@@ -25,28 +25,28 @@ public final class DatasetInputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataCatalogInputDefinition")
       private final @Nullable Output<DatasetDataCatalogInputDefinitionArgs> dataCatalogInputDefinition;
 
-    public Output<DatasetDataCatalogInputDefinitionArgs> getDataCatalogInputDefinition() {
+    public Output<DatasetDataCatalogInputDefinitionArgs> dataCatalogInputDefinition() {
         return this.dataCatalogInputDefinition == null ? Codegen.empty() : this.dataCatalogInputDefinition;
     }
 
     @Import(name="databaseInputDefinition")
       private final @Nullable Output<DatasetDatabaseInputDefinitionArgs> databaseInputDefinition;
 
-    public Output<DatasetDatabaseInputDefinitionArgs> getDatabaseInputDefinition() {
+    public Output<DatasetDatabaseInputDefinitionArgs> databaseInputDefinition() {
         return this.databaseInputDefinition == null ? Codegen.empty() : this.databaseInputDefinition;
     }
 
     @Import(name="metadata")
       private final @Nullable Output<DatasetMetadataArgs> metadata;
 
-    public Output<DatasetMetadataArgs> getMetadata() {
+    public Output<DatasetMetadataArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     @Import(name="s3InputDefinition")
       private final @Nullable Output<DatasetS3LocationArgs> s3InputDefinition;
 
-    public Output<DatasetS3LocationArgs> getS3InputDefinition() {
+    public Output<DatasetS3LocationArgs> s3InputDefinition() {
         return this.s3InputDefinition == null ? Codegen.empty() : this.s3InputDefinition;
     }
 

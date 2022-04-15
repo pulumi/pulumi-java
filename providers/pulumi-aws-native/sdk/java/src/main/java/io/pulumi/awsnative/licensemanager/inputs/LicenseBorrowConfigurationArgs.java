@@ -18,14 +18,14 @@ public final class LicenseBorrowConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="allowEarlyCheckIn", required=true)
       private final Output<Boolean> allowEarlyCheckIn;
 
-    public Output<Boolean> getAllowEarlyCheckIn() {
+    public Output<Boolean> allowEarlyCheckIn() {
         return this.allowEarlyCheckIn;
     }
 
     @Import(name="maxTimeToLiveInMinutes", required=true)
       private final Output<Integer> maxTimeToLiveInMinutes;
 
-    public Output<Integer> getMaxTimeToLiveInMinutes() {
+    public Output<Integer> maxTimeToLiveInMinutes() {
         return this.maxTimeToLiveInMinutes;
     }
 

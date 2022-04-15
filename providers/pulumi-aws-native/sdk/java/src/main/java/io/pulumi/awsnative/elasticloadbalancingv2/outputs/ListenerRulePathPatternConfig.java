@@ -18,7 +18,7 @@ public final class ListenerRulePathPatternConfig {
         this.values = values;
     }
 
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }
 

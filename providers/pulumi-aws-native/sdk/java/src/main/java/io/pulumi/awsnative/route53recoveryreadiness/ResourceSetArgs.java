@@ -25,7 +25,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceSetName")
       private final @Nullable Output<String> resourceSetName;
 
-    public Output<String> getResourceSetName() {
+    public Output<String> resourceSetName() {
         return this.resourceSetName == null ? Codegen.empty() : this.resourceSetName;
     }
 
@@ -38,7 +38,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceSetType", required=true)
       private final Output<String> resourceSetType;
 
-    public Output<String> getResourceSetType() {
+    public Output<String> resourceSetType() {
         return this.resourceSetType;
     }
 
@@ -49,7 +49,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resources", required=true)
       private final Output<List<ResourceSetResourceArgs>> resources;
 
-    public Output<List<ResourceSetResourceArgs>> getResources() {
+    public Output<List<ResourceSetResourceArgs>> resources() {
         return this.resources;
     }
 
@@ -60,7 +60,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<ResourceSetTagArgs>> tags;
 
-    public Output<List<ResourceSetTagArgs>> getTags() {
+    public Output<List<ResourceSetTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

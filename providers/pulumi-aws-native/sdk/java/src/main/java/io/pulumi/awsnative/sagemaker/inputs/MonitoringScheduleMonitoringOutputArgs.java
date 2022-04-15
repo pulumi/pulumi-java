@@ -21,7 +21,7 @@ public final class MonitoringScheduleMonitoringOutputArgs extends io.pulumi.reso
     @Import(name="s3Output", required=true)
       private final Output<MonitoringScheduleS3OutputArgs> s3Output;
 
-    public Output<MonitoringScheduleS3OutputArgs> getS3Output() {
+    public Output<MonitoringScheduleS3OutputArgs> s3Output() {
         return this.s3Output;
     }
 

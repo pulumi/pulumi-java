@@ -28,14 +28,14 @@ public final class GetNetworkAclResult {
         this.tags = tags;
     }
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The tags to assign to the network ACL.
      * 
     */
-    public List<NetworkAclTag> getTags() {
+    public List<NetworkAclTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

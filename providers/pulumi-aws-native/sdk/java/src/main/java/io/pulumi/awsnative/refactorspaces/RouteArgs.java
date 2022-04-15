@@ -22,28 +22,28 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationIdentifier", required=true)
       private final Output<String> applicationIdentifier;
 
-    public Output<String> getApplicationIdentifier() {
+    public Output<String> applicationIdentifier() {
         return this.applicationIdentifier;
     }
 
     @Import(name="environmentIdentifier", required=true)
       private final Output<String> environmentIdentifier;
 
-    public Output<String> getEnvironmentIdentifier() {
+    public Output<String> environmentIdentifier() {
         return this.environmentIdentifier;
     }
 
     @Import(name="routeType")
       private final @Nullable Output<RouteType> routeType;
 
-    public Output<RouteType> getRouteType() {
+    public Output<RouteType> routeType() {
         return this.routeType == null ? Codegen.empty() : this.routeType;
     }
 
     @Import(name="serviceIdentifier", required=true)
       private final Output<String> serviceIdentifier;
 
-    public Output<String> getServiceIdentifier() {
+    public Output<String> serviceIdentifier() {
         return this.serviceIdentifier;
     }
 
@@ -54,14 +54,14 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<RouteTagArgs>> tags;
 
-    public Output<List<RouteTagArgs>> getTags() {
+    public Output<List<RouteTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="uriPathRoute")
       private final @Nullable Output<RouteUriPathRouteInputArgs> uriPathRoute;
 
-    public Output<RouteUriPathRouteInputArgs> getUriPathRoute() {
+    public Output<RouteUriPathRouteInputArgs> uriPathRoute() {
         return this.uriPathRoute == null ? Codegen.empty() : this.uriPathRoute;
     }
 

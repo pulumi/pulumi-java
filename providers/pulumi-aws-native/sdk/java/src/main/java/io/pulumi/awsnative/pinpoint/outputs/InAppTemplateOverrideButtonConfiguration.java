@@ -23,10 +23,10 @@ public final class InAppTemplateOverrideButtonConfiguration {
         this.link = link;
     }
 
-    public Optional<InAppTemplateButtonAction> getButtonAction() {
+    public Optional<InAppTemplateButtonAction> buttonAction() {
         return Optional.ofNullable(this.buttonAction);
     }
-    public Optional<String> getLink() {
+    public Optional<String> link() {
         return Optional.ofNullable(this.link);
     }
 

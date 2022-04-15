@@ -27,7 +27,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudWatchLogGroupArn")
       private final @Nullable Output<String> cloudWatchLogGroupArn;
 
-    public Output<String> getCloudWatchLogGroupArn() {
+    public Output<String> cloudWatchLogGroupArn() {
         return this.cloudWatchLogGroupArn == null ? Codegen.empty() : this.cloudWatchLogGroupArn;
     }
 
@@ -38,21 +38,21 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinationLocationArn", required=true)
       private final Output<String> destinationLocationArn;
 
-    public Output<String> getDestinationLocationArn() {
+    public Output<String> destinationLocationArn() {
         return this.destinationLocationArn;
     }
 
     @Import(name="excludes")
       private final @Nullable Output<List<TaskFilterRuleArgs>> excludes;
 
-    public Output<List<TaskFilterRuleArgs>> getExcludes() {
+    public Output<List<TaskFilterRuleArgs>> excludes() {
         return this.excludes == null ? Codegen.empty() : this.excludes;
     }
 
     @Import(name="includes")
       private final @Nullable Output<List<TaskFilterRuleArgs>> includes;
 
-    public Output<List<TaskFilterRuleArgs>> getIncludes() {
+    public Output<List<TaskFilterRuleArgs>> includes() {
         return this.includes == null ? Codegen.empty() : this.includes;
     }
 
@@ -63,21 +63,21 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="options")
       private final @Nullable Output<TaskOptionsArgs> options;
 
-    public Output<TaskOptionsArgs> getOptions() {
+    public Output<TaskOptionsArgs> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 
     @Import(name="schedule")
       private final @Nullable Output<TaskScheduleArgs> schedule;
 
-    public Output<TaskScheduleArgs> getSchedule() {
+    public Output<TaskScheduleArgs> schedule() {
         return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
@@ -88,7 +88,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceLocationArn", required=true)
       private final Output<String> sourceLocationArn;
 
-    public Output<String> getSourceLocationArn() {
+    public Output<String> sourceLocationArn() {
         return this.sourceLocationArn;
     }
 
@@ -99,7 +99,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<TaskTagArgs>> tags;
 
-    public Output<List<TaskTagArgs>> getTags() {
+    public Output<List<TaskTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

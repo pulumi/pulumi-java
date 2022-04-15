@@ -21,7 +21,7 @@ public final class MitigationActionUpdateCACertificateParamsArgs extends io.pulu
     @Import(name="action", required=true)
       private final Output<MitigationActionUpdateCACertificateParamsAction> action;
 
-    public Output<MitigationActionUpdateCACertificateParamsAction> getAction() {
+    public Output<MitigationActionUpdateCACertificateParamsAction> action() {
         return this.action;
     }
 

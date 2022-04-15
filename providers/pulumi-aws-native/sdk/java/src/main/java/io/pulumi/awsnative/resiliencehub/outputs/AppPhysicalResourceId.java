@@ -28,16 +28,16 @@ public final class AppPhysicalResourceId {
         this.type = type;
     }
 
-    public Optional<String> getAwsAccountId() {
+    public Optional<String> awsAccountId() {
         return Optional.ofNullable(this.awsAccountId);
     }
-    public Optional<String> getAwsRegion() {
+    public Optional<String> awsRegion() {
         return Optional.ofNullable(this.awsRegion);
     }
-    public String getIdentifier() {
+    public String identifier() {
         return this.identifier;
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

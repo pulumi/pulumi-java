@@ -43,28 +43,28 @@ public final class GetDomainResult {
         this.subDomainSettings = subDomainSettings;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public List<String> getAutoSubDomainCreationPatterns() {
+    public List<String> autoSubDomainCreationPatterns() {
         return this.autoSubDomainCreationPatterns == null ? List.of() : this.autoSubDomainCreationPatterns;
     }
-    public Optional<String> getAutoSubDomainIAMRole() {
+    public Optional<String> autoSubDomainIAMRole() {
         return Optional.ofNullable(this.autoSubDomainIAMRole);
     }
-    public Optional<String> getCertificateRecord() {
+    public Optional<String> certificateRecord() {
         return Optional.ofNullable(this.certificateRecord);
     }
-    public Optional<String> getDomainStatus() {
+    public Optional<String> domainStatus() {
         return Optional.ofNullable(this.domainStatus);
     }
-    public Optional<Boolean> getEnableAutoSubDomain() {
+    public Optional<Boolean> enableAutoSubDomain() {
         return Optional.ofNullable(this.enableAutoSubDomain);
     }
-    public Optional<String> getStatusReason() {
+    public Optional<String> statusReason() {
         return Optional.ofNullable(this.statusReason);
     }
-    public List<DomainSubDomainSetting> getSubDomainSettings() {
+    public List<DomainSubDomainSetting> subDomainSettings() {
         return this.subDomainSettings == null ? List.of() : this.subDomainSettings;
     }
 

@@ -29,7 +29,7 @@ public class EgressOnlyInternetGateway extends io.pulumi.resources.CustomResourc
      * @return The ID of the VPC for which to create the egress-only internet gateway.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

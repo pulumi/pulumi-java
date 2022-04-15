@@ -15,7 +15,7 @@ public final class FlowSAPODataSourceProperties extends io.pulumi.resources.Invo
     @Import(name="objectPath", required=true)
       private final String objectPath;
 
-    public String getObjectPath() {
+    public String objectPath() {
         return this.objectPath;
     }
 

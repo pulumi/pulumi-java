@@ -32,14 +32,14 @@ public final class JobTemplateTag {
      * The tag's key.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * The tag's value.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

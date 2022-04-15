@@ -23,7 +23,7 @@ public final class DataSourceVpcConnectionProperties extends io.pulumi.resources
     @Import(name="vpcConnectionArn", required=true)
       private final String vpcConnectionArn;
 
-    public String getVpcConnectionArn() {
+    public String vpcConnectionArn() {
         return this.vpcConnectionArn;
     }
 

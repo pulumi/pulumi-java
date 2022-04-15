@@ -18,7 +18,7 @@ public final class DataSourceWebCrawlerAuthenticationConfiguration extends io.pu
     @Import(name="basicAuthentication")
       private final @Nullable List<DataSourceWebCrawlerBasicAuthentication> basicAuthentication;
 
-    public List<DataSourceWebCrawlerBasicAuthentication> getBasicAuthentication() {
+    public List<DataSourceWebCrawlerBasicAuthentication> basicAuthentication() {
         return this.basicAuthentication == null ? List.of() : this.basicAuthentication;
     }
 

@@ -28,77 +28,77 @@ public final class GlobalTableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attributeDefinitions", required=true)
       private final Output<List<GlobalTableAttributeDefinitionArgs>> attributeDefinitions;
 
-    public Output<List<GlobalTableAttributeDefinitionArgs>> getAttributeDefinitions() {
+    public Output<List<GlobalTableAttributeDefinitionArgs>> attributeDefinitions() {
         return this.attributeDefinitions;
     }
 
     @Import(name="billingMode")
       private final @Nullable Output<String> billingMode;
 
-    public Output<String> getBillingMode() {
+    public Output<String> billingMode() {
         return this.billingMode == null ? Codegen.empty() : this.billingMode;
     }
 
     @Import(name="globalSecondaryIndexes")
       private final @Nullable Output<List<GlobalTableGlobalSecondaryIndexArgs>> globalSecondaryIndexes;
 
-    public Output<List<GlobalTableGlobalSecondaryIndexArgs>> getGlobalSecondaryIndexes() {
+    public Output<List<GlobalTableGlobalSecondaryIndexArgs>> globalSecondaryIndexes() {
         return this.globalSecondaryIndexes == null ? Codegen.empty() : this.globalSecondaryIndexes;
     }
 
     @Import(name="keySchema", required=true)
       private final Output<List<GlobalTableKeySchemaArgs>> keySchema;
 
-    public Output<List<GlobalTableKeySchemaArgs>> getKeySchema() {
+    public Output<List<GlobalTableKeySchemaArgs>> keySchema() {
         return this.keySchema;
     }
 
     @Import(name="localSecondaryIndexes")
       private final @Nullable Output<List<GlobalTableLocalSecondaryIndexArgs>> localSecondaryIndexes;
 
-    public Output<List<GlobalTableLocalSecondaryIndexArgs>> getLocalSecondaryIndexes() {
+    public Output<List<GlobalTableLocalSecondaryIndexArgs>> localSecondaryIndexes() {
         return this.localSecondaryIndexes == null ? Codegen.empty() : this.localSecondaryIndexes;
     }
 
     @Import(name="replicas", required=true)
       private final Output<List<GlobalTableReplicaSpecificationArgs>> replicas;
 
-    public Output<List<GlobalTableReplicaSpecificationArgs>> getReplicas() {
+    public Output<List<GlobalTableReplicaSpecificationArgs>> replicas() {
         return this.replicas;
     }
 
     @Import(name="sSESpecification")
       private final @Nullable Output<GlobalTableSSESpecificationArgs> sSESpecification;
 
-    public Output<GlobalTableSSESpecificationArgs> getSSESpecification() {
+    public Output<GlobalTableSSESpecificationArgs> sSESpecification() {
         return this.sSESpecification == null ? Codegen.empty() : this.sSESpecification;
     }
 
     @Import(name="streamSpecification")
       private final @Nullable Output<GlobalTableStreamSpecificationArgs> streamSpecification;
 
-    public Output<GlobalTableStreamSpecificationArgs> getStreamSpecification() {
+    public Output<GlobalTableStreamSpecificationArgs> streamSpecification() {
         return this.streamSpecification == null ? Codegen.empty() : this.streamSpecification;
     }
 
     @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName == null ? Codegen.empty() : this.tableName;
     }
 
     @Import(name="timeToLiveSpecification")
       private final @Nullable Output<GlobalTableTimeToLiveSpecificationArgs> timeToLiveSpecification;
 
-    public Output<GlobalTableTimeToLiveSpecificationArgs> getTimeToLiveSpecification() {
+    public Output<GlobalTableTimeToLiveSpecificationArgs> timeToLiveSpecification() {
         return this.timeToLiveSpecification == null ? Codegen.empty() : this.timeToLiveSpecification;
     }
 
     @Import(name="writeProvisionedThroughputSettings")
       private final @Nullable Output<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings;
 
-    public Output<GlobalTableWriteProvisionedThroughputSettingsArgs> getWriteProvisionedThroughputSettings() {
+    public Output<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings() {
         return this.writeProvisionedThroughputSettings == null ? Codegen.empty() : this.writeProvisionedThroughputSettings;
     }
 

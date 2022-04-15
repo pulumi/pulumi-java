@@ -28,7 +28,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -39,7 +39,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinationFlowConfigList", required=true)
       private final Output<List<FlowDestinationFlowConfigArgs>> destinationFlowConfigList;
 
-    public Output<List<FlowDestinationFlowConfigArgs>> getDestinationFlowConfigList() {
+    public Output<List<FlowDestinationFlowConfigArgs>> destinationFlowConfigList() {
         return this.destinationFlowConfigList;
     }
 
@@ -50,7 +50,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="flowName")
       private final @Nullable Output<String> flowName;
 
-    public Output<String> getFlowName() {
+    public Output<String> flowName() {
         return this.flowName == null ? Codegen.empty() : this.flowName;
     }
 
@@ -61,7 +61,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kMSArn")
       private final @Nullable Output<String> kMSArn;
 
-    public Output<String> getKMSArn() {
+    public Output<String> kMSArn() {
         return this.kMSArn == null ? Codegen.empty() : this.kMSArn;
     }
 
@@ -72,7 +72,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceFlowConfig", required=true)
       private final Output<FlowSourceFlowConfigArgs> sourceFlowConfig;
 
-    public Output<FlowSourceFlowConfigArgs> getSourceFlowConfig() {
+    public Output<FlowSourceFlowConfigArgs> sourceFlowConfig() {
         return this.sourceFlowConfig;
     }
 
@@ -83,7 +83,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<FlowTagArgs>> tags;
 
-    public Output<List<FlowTagArgs>> getTags() {
+    public Output<List<FlowTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -94,7 +94,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tasks", required=true)
       private final Output<List<FlowTaskArgs>> tasks;
 
-    public Output<List<FlowTaskArgs>> getTasks() {
+    public Output<List<FlowTaskArgs>> tasks() {
         return this.tasks;
     }
 
@@ -105,7 +105,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="triggerConfig", required=true)
       private final Output<FlowTriggerConfigArgs> triggerConfig;
 
-    public Output<FlowTriggerConfigArgs> getTriggerConfig() {
+    public Output<FlowTriggerConfigArgs> triggerConfig() {
         return this.triggerConfig;
     }
 

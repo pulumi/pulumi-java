@@ -25,77 +25,77 @@ public final class ComponentVersionLambdaExecutionParametersArgs extends io.pulu
     @Import(name="environmentVariables")
       private final @Nullable Output<Object> environmentVariables;
 
-    public Output<Object> getEnvironmentVariables() {
+    public Output<Object> environmentVariables() {
         return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
     @Import(name="eventSources")
       private final @Nullable Output<List<ComponentVersionLambdaEventSourceArgs>> eventSources;
 
-    public Output<List<ComponentVersionLambdaEventSourceArgs>> getEventSources() {
+    public Output<List<ComponentVersionLambdaEventSourceArgs>> eventSources() {
         return this.eventSources == null ? Codegen.empty() : this.eventSources;
     }
 
     @Import(name="execArgs")
       private final @Nullable Output<List<String>> execArgs;
 
-    public Output<List<String>> getExecArgs() {
+    public Output<List<String>> execArgs() {
         return this.execArgs == null ? Codegen.empty() : this.execArgs;
     }
 
     @Import(name="inputPayloadEncodingType")
       private final @Nullable Output<ComponentVersionLambdaExecutionParametersInputPayloadEncodingType> inputPayloadEncodingType;
 
-    public Output<ComponentVersionLambdaExecutionParametersInputPayloadEncodingType> getInputPayloadEncodingType() {
+    public Output<ComponentVersionLambdaExecutionParametersInputPayloadEncodingType> inputPayloadEncodingType() {
         return this.inputPayloadEncodingType == null ? Codegen.empty() : this.inputPayloadEncodingType;
     }
 
     @Import(name="linuxProcessParams")
       private final @Nullable Output<ComponentVersionLambdaLinuxProcessParamsArgs> linuxProcessParams;
 
-    public Output<ComponentVersionLambdaLinuxProcessParamsArgs> getLinuxProcessParams() {
+    public Output<ComponentVersionLambdaLinuxProcessParamsArgs> linuxProcessParams() {
         return this.linuxProcessParams == null ? Codegen.empty() : this.linuxProcessParams;
     }
 
     @Import(name="maxIdleTimeInSeconds")
       private final @Nullable Output<Integer> maxIdleTimeInSeconds;
 
-    public Output<Integer> getMaxIdleTimeInSeconds() {
+    public Output<Integer> maxIdleTimeInSeconds() {
         return this.maxIdleTimeInSeconds == null ? Codegen.empty() : this.maxIdleTimeInSeconds;
     }
 
     @Import(name="maxInstancesCount")
       private final @Nullable Output<Integer> maxInstancesCount;
 
-    public Output<Integer> getMaxInstancesCount() {
+    public Output<Integer> maxInstancesCount() {
         return this.maxInstancesCount == null ? Codegen.empty() : this.maxInstancesCount;
     }
 
     @Import(name="maxQueueSize")
       private final @Nullable Output<Integer> maxQueueSize;
 
-    public Output<Integer> getMaxQueueSize() {
+    public Output<Integer> maxQueueSize() {
         return this.maxQueueSize == null ? Codegen.empty() : this.maxQueueSize;
     }
 
     @Import(name="pinned")
       private final @Nullable Output<Boolean> pinned;
 
-    public Output<Boolean> getPinned() {
+    public Output<Boolean> pinned() {
         return this.pinned == null ? Codegen.empty() : this.pinned;
     }
 
     @Import(name="statusTimeoutInSeconds")
       private final @Nullable Output<Integer> statusTimeoutInSeconds;
 
-    public Output<Integer> getStatusTimeoutInSeconds() {
+    public Output<Integer> statusTimeoutInSeconds() {
         return this.statusTimeoutInSeconds == null ? Codegen.empty() : this.statusTimeoutInSeconds;
     }
 
     @Import(name="timeoutInSeconds")
       private final @Nullable Output<Integer> timeoutInSeconds;
 
-    public Output<Integer> getTimeoutInSeconds() {
+    public Output<Integer> timeoutInSeconds() {
         return this.timeoutInSeconds == null ? Codegen.empty() : this.timeoutInSeconds;
     }
 

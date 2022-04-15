@@ -35,20 +35,20 @@ public final class GetProjectResult {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<ProjectDataDeliveryObject> getDataDelivery() {
+    public Optional<ProjectDataDeliveryObject> dataDelivery() {
         return Optional.ofNullable(this.dataDelivery);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
     */
-    public List<ProjectTag> getTags() {
+    public List<ProjectTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

@@ -18,7 +18,7 @@ public final class SchemaVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schema", required=true)
       private final Output<SchemaVersionSchemaArgs> schema;
 
-    public Output<SchemaVersionSchemaArgs> getSchema() {
+    public Output<SchemaVersionSchemaArgs> schema() {
         return this.schema;
     }
 
@@ -29,7 +29,7 @@ public final class SchemaVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schemaDefinition", required=true)
       private final Output<String> schemaDefinition;
 
-    public Output<String> getSchemaDefinition() {
+    public Output<String> schemaDefinition() {
         return this.schemaDefinition;
     }
 

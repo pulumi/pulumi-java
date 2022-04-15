@@ -32,14 +32,14 @@ public final class RegistryTag {
      * A key to identify the tag.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * Corresponding tag value for the key.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

@@ -25,70 +25,70 @@ public final class DataSourceConfluenceConfigurationArgs extends io.pulumi.resou
     @Import(name="attachmentConfiguration")
       private final @Nullable Output<DataSourceConfluenceAttachmentConfigurationArgs> attachmentConfiguration;
 
-    public Output<DataSourceConfluenceAttachmentConfigurationArgs> getAttachmentConfiguration() {
+    public Output<DataSourceConfluenceAttachmentConfigurationArgs> attachmentConfiguration() {
         return this.attachmentConfiguration == null ? Codegen.empty() : this.attachmentConfiguration;
     }
 
     @Import(name="blogConfiguration")
       private final @Nullable Output<DataSourceConfluenceBlogConfigurationArgs> blogConfiguration;
 
-    public Output<DataSourceConfluenceBlogConfigurationArgs> getBlogConfiguration() {
+    public Output<DataSourceConfluenceBlogConfigurationArgs> blogConfiguration() {
         return this.blogConfiguration == null ? Codegen.empty() : this.blogConfiguration;
     }
 
     @Import(name="exclusionPatterns")
       private final @Nullable Output<List<String>> exclusionPatterns;
 
-    public Output<List<String>> getExclusionPatterns() {
+    public Output<List<String>> exclusionPatterns() {
         return this.exclusionPatterns == null ? Codegen.empty() : this.exclusionPatterns;
     }
 
     @Import(name="inclusionPatterns")
       private final @Nullable Output<List<String>> inclusionPatterns;
 
-    public Output<List<String>> getInclusionPatterns() {
+    public Output<List<String>> inclusionPatterns() {
         return this.inclusionPatterns == null ? Codegen.empty() : this.inclusionPatterns;
     }
 
     @Import(name="pageConfiguration")
       private final @Nullable Output<DataSourceConfluencePageConfigurationArgs> pageConfiguration;
 
-    public Output<DataSourceConfluencePageConfigurationArgs> getPageConfiguration() {
+    public Output<DataSourceConfluencePageConfigurationArgs> pageConfiguration() {
         return this.pageConfiguration == null ? Codegen.empty() : this.pageConfiguration;
     }
 
     @Import(name="secretArn", required=true)
       private final Output<String> secretArn;
 
-    public Output<String> getSecretArn() {
+    public Output<String> secretArn() {
         return this.secretArn;
     }
 
     @Import(name="serverUrl", required=true)
       private final Output<String> serverUrl;
 
-    public Output<String> getServerUrl() {
+    public Output<String> serverUrl() {
         return this.serverUrl;
     }
 
     @Import(name="spaceConfiguration")
       private final @Nullable Output<DataSourceConfluenceSpaceConfigurationArgs> spaceConfiguration;
 
-    public Output<DataSourceConfluenceSpaceConfigurationArgs> getSpaceConfiguration() {
+    public Output<DataSourceConfluenceSpaceConfigurationArgs> spaceConfiguration() {
         return this.spaceConfiguration == null ? Codegen.empty() : this.spaceConfiguration;
     }
 
     @Import(name="version", required=true)
       private final Output<DataSourceConfluenceVersion> version;
 
-    public Output<DataSourceConfluenceVersion> getVersion() {
+    public Output<DataSourceConfluenceVersion> version() {
         return this.version;
     }
 
     @Import(name="vpcConfiguration")
       private final @Nullable Output<DataSourceVpcConfigurationArgs> vpcConfiguration;
 
-    public Output<DataSourceVpcConfigurationArgs> getVpcConfiguration() {
+    public Output<DataSourceVpcConfigurationArgs> vpcConfiguration() {
         return this.vpcConfiguration == null ? Codegen.empty() : this.vpcConfiguration;
     }
 

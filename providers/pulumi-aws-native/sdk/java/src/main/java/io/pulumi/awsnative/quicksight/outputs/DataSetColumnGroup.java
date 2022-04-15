@@ -18,7 +18,7 @@ public final class DataSetColumnGroup {
         this.geoSpatialColumnGroup = geoSpatialColumnGroup;
     }
 
-    public Optional<DataSetGeoSpatialColumnGroup> getGeoSpatialColumnGroup() {
+    public Optional<DataSetGeoSpatialColumnGroup> geoSpatialColumnGroup() {
         return Optional.ofNullable(this.geoSpatialColumnGroup);
     }
 

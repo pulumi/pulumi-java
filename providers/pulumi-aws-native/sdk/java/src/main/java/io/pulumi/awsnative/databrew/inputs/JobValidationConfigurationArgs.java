@@ -27,14 +27,14 @@ public final class JobValidationConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="rulesetArn", required=true)
       private final Output<String> rulesetArn;
 
-    public Output<String> getRulesetArn() {
+    public Output<String> rulesetArn() {
         return this.rulesetArn;
     }
 
     @Import(name="validationMode")
       private final @Nullable Output<JobValidationMode> validationMode;
 
-    public Output<JobValidationMode> getValidationMode() {
+    public Output<JobValidationMode> validationMode() {
         return this.validationMode == null ? Codegen.empty() : this.validationMode;
     }
 

@@ -19,7 +19,7 @@ public final class GetCellArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="cellName", required=true)
       private final String cellName;
 
-    public String getCellName() {
+    public String cellName() {
         return this.cellName;
     }
 

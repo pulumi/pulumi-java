@@ -25,37 +25,37 @@ public class Package extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="createdTime", type=Integer.class, parameters={})
     private Output<Integer> createdTime;
 
-    public Output<Integer> getCreatedTime() {
+    public Output<Integer> createdTime() {
         return this.createdTime;
     }
     @Export(name="packageId", type=String.class, parameters={})
     private Output<String> packageId;
 
-    public Output<String> getPackageId() {
+    public Output<String> packageId() {
         return this.packageId;
     }
     @Export(name="packageName", type=String.class, parameters={})
     private Output<String> packageName;
 
-    public Output<String> getPackageName() {
+    public Output<String> packageName() {
         return this.packageName;
     }
     @Export(name="storageLocation", type=PackageStorageLocation.class, parameters={})
     private Output<PackageStorageLocation> storageLocation;
 
-    public Output<PackageStorageLocation> getStorageLocation() {
+    public Output<PackageStorageLocation> storageLocation() {
         return this.storageLocation;
     }
     @Export(name="tags", type=List.class, parameters={PackageTag.class})
     private Output</* @Nullable */ List<PackageTag>> tags;
 
-    public Output</* @Nullable */ List<PackageTag>> getTags() {
+    public Output</* @Nullable */ List<PackageTag>> tags() {
         return this.tags;
     }
 

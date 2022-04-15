@@ -22,14 +22,14 @@ public final class AssetModelTumblingWindowArgs extends io.pulumi.resources.Reso
     @Import(name="interval", required=true)
       private final Output<String> interval;
 
-    public Output<String> getInterval() {
+    public Output<String> interval() {
         return this.interval;
     }
 
     @Import(name="offset")
       private final @Nullable Output<String> offset;
 
-    public Output<String> getOffset() {
+    public Output<String> offset() {
         return this.offset == null ? Codegen.empty() : this.offset;
     }
 

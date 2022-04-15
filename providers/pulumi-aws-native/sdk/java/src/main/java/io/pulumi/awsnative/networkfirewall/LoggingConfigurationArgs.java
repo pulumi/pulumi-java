@@ -18,21 +18,21 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
     @Import(name="firewallArn", required=true)
       private final Output<String> firewallArn;
 
-    public Output<String> getFirewallArn() {
+    public Output<String> firewallArn() {
         return this.firewallArn;
     }
 
     @Import(name="firewallName")
       private final @Nullable Output<String> firewallName;
 
-    public Output<String> getFirewallName() {
+    public Output<String> firewallName() {
         return this.firewallName == null ? Codegen.empty() : this.firewallName;
     }
 
     @Import(name="loggingConfiguration", required=true)
       private final Output<io.pulumi.awsnative.networkfirewall.inputs.LoggingConfigurationArgs> loggingConfiguration;
 
-    public Output<io.pulumi.awsnative.networkfirewall.inputs.LoggingConfigurationArgs> getLoggingConfiguration() {
+    public Output<io.pulumi.awsnative.networkfirewall.inputs.LoggingConfigurationArgs> loggingConfiguration() {
         return this.loggingConfiguration;
     }
 

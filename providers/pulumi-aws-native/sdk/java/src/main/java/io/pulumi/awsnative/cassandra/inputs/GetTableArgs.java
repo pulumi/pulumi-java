@@ -19,7 +19,7 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="keyspaceName", required=true)
       private final String keyspaceName;
 
-    public String getKeyspaceName() {
+    public String keyspaceName() {
         return this.keyspaceName;
     }
 
@@ -30,7 +30,7 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="tableName", required=true)
       private final String tableName;
 
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
 

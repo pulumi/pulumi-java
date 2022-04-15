@@ -18,14 +18,14 @@ public final class ConfigFrequencyBandwidth extends io.pulumi.resources.InvokeAr
     @Import(name="units")
       private final @Nullable ConfigBandwidthUnits units;
 
-    public Optional<ConfigBandwidthUnits> getUnits() {
+    public Optional<ConfigBandwidthUnits> units() {
         return this.units == null ? Optional.empty() : Optional.ofNullable(this.units);
     }
 
     @Import(name="value")
       private final @Nullable Double value;
 
-    public Optional<Double> getValue() {
+    public Optional<Double> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

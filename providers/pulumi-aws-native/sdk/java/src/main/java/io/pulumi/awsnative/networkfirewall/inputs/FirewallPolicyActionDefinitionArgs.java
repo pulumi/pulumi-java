@@ -18,7 +18,7 @@ public final class FirewallPolicyActionDefinitionArgs extends io.pulumi.resource
     @Import(name="publishMetricAction")
       private final @Nullable Output<FirewallPolicyPublishMetricActionArgs> publishMetricAction;
 
-    public Output<FirewallPolicyPublishMetricActionArgs> getPublishMetricAction() {
+    public Output<FirewallPolicyPublishMetricActionArgs> publishMetricAction() {
         return this.publishMetricAction == null ? Codegen.empty() : this.publishMetricAction;
     }
 

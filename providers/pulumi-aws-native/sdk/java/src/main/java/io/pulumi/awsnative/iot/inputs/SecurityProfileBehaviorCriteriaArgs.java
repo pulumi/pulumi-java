@@ -30,7 +30,7 @@ public final class SecurityProfileBehaviorCriteriaArgs extends io.pulumi.resourc
     @Import(name="comparisonOperator")
       private final @Nullable Output<SecurityProfileBehaviorCriteriaComparisonOperator> comparisonOperator;
 
-    public Output<SecurityProfileBehaviorCriteriaComparisonOperator> getComparisonOperator() {
+    public Output<SecurityProfileBehaviorCriteriaComparisonOperator> comparisonOperator() {
         return this.comparisonOperator == null ? Codegen.empty() : this.comparisonOperator;
     }
 
@@ -41,7 +41,7 @@ public final class SecurityProfileBehaviorCriteriaArgs extends io.pulumi.resourc
     @Import(name="consecutiveDatapointsToAlarm")
       private final @Nullable Output<Integer> consecutiveDatapointsToAlarm;
 
-    public Output<Integer> getConsecutiveDatapointsToAlarm() {
+    public Output<Integer> consecutiveDatapointsToAlarm() {
         return this.consecutiveDatapointsToAlarm == null ? Codegen.empty() : this.consecutiveDatapointsToAlarm;
     }
 
@@ -52,7 +52,7 @@ public final class SecurityProfileBehaviorCriteriaArgs extends io.pulumi.resourc
     @Import(name="consecutiveDatapointsToClear")
       private final @Nullable Output<Integer> consecutiveDatapointsToClear;
 
-    public Output<Integer> getConsecutiveDatapointsToClear() {
+    public Output<Integer> consecutiveDatapointsToClear() {
         return this.consecutiveDatapointsToClear == null ? Codegen.empty() : this.consecutiveDatapointsToClear;
     }
 
@@ -63,28 +63,28 @@ public final class SecurityProfileBehaviorCriteriaArgs extends io.pulumi.resourc
     @Import(name="durationSeconds")
       private final @Nullable Output<Integer> durationSeconds;
 
-    public Output<Integer> getDurationSeconds() {
+    public Output<Integer> durationSeconds() {
         return this.durationSeconds == null ? Codegen.empty() : this.durationSeconds;
     }
 
     @Import(name="mlDetectionConfig")
       private final @Nullable Output<SecurityProfileMachineLearningDetectionConfigArgs> mlDetectionConfig;
 
-    public Output<SecurityProfileMachineLearningDetectionConfigArgs> getMlDetectionConfig() {
+    public Output<SecurityProfileMachineLearningDetectionConfigArgs> mlDetectionConfig() {
         return this.mlDetectionConfig == null ? Codegen.empty() : this.mlDetectionConfig;
     }
 
     @Import(name="statisticalThreshold")
       private final @Nullable Output<SecurityProfileStatisticalThresholdArgs> statisticalThreshold;
 
-    public Output<SecurityProfileStatisticalThresholdArgs> getStatisticalThreshold() {
+    public Output<SecurityProfileStatisticalThresholdArgs> statisticalThreshold() {
         return this.statisticalThreshold == null ? Codegen.empty() : this.statisticalThreshold;
     }
 
     @Import(name="value")
       private final @Nullable Output<SecurityProfileMetricValueArgs> value;
 
-    public Output<SecurityProfileMetricValueArgs> getValue() {
+    public Output<SecurityProfileMetricValueArgs> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

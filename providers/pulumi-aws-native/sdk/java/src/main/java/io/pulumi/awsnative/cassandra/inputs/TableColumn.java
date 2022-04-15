@@ -15,14 +15,14 @@ public final class TableColumn extends io.pulumi.resources.InvokeArgs {
     @Import(name="columnName", required=true)
       private final String columnName;
 
-    public String getColumnName() {
+    public String columnName() {
         return this.columnName;
     }
 
     @Import(name="columnType", required=true)
       private final String columnType;
 
-    public String getColumnType() {
+    public String columnType() {
         return this.columnType;
     }
 

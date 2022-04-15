@@ -38,22 +38,22 @@ public final class BotSlotType {
         this.valueSelectionSetting = valueSelectionSetting;
     }
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<BotExternalSourceSetting> getExternalSourceSetting() {
+    public Optional<BotExternalSourceSetting> externalSourceSetting() {
         return Optional.ofNullable(this.externalSourceSetting);
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getParentSlotTypeSignature() {
+    public Optional<String> parentSlotTypeSignature() {
         return Optional.ofNullable(this.parentSlotTypeSignature);
     }
-    public List<BotSlotTypeValue> getSlotTypeValues() {
+    public List<BotSlotTypeValue> slotTypeValues() {
         return this.slotTypeValues == null ? List.of() : this.slotTypeValues;
     }
-    public Optional<BotSlotValueSelectionSetting> getValueSelectionSetting() {
+    public Optional<BotSlotValueSelectionSetting> valueSelectionSetting() {
         return Optional.ofNullable(this.valueSelectionSetting);
     }
 

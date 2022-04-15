@@ -26,7 +26,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="addOns")
       private final @Nullable Output<List<DiskAddOnArgs>> addOns;
 
-    public Output<List<DiskAddOnArgs>> getAddOns() {
+    public Output<List<DiskAddOnArgs>> addOns() {
         return this.addOns == null ? Codegen.empty() : this.addOns;
     }
 
@@ -37,7 +37,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
@@ -48,7 +48,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskName")
       private final @Nullable Output<String> diskName;
 
-    public Output<String> getDiskName() {
+    public Output<String> diskName() {
         return this.diskName == null ? Codegen.empty() : this.diskName;
     }
 
@@ -59,7 +59,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sizeInGb", required=true)
       private final Output<Integer> sizeInGb;
 
-    public Output<Integer> getSizeInGb() {
+    public Output<Integer> sizeInGb() {
         return this.sizeInGb;
     }
 
@@ -70,7 +70,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DiskTagArgs>> tags;
 
-    public Output<List<DiskTagArgs>> getTags() {
+    public Output<List<DiskTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

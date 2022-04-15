@@ -17,14 +17,14 @@ public final class CanarySchedule extends io.pulumi.resources.InvokeArgs {
     @Import(name="durationInSeconds")
       private final @Nullable String durationInSeconds;
 
-    public Optional<String> getDurationInSeconds() {
+    public Optional<String> durationInSeconds() {
         return this.durationInSeconds == null ? Optional.empty() : Optional.ofNullable(this.durationInSeconds);
     }
 
     @Import(name="expression", required=true)
       private final String expression;
 
-    public String getExpression() {
+    public String expression() {
         return this.expression;
     }
 

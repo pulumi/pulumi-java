@@ -18,7 +18,7 @@ public final class DeliveryStreamOutputFormatConfiguration {
         this.serializer = serializer;
     }
 
-    public Optional<DeliveryStreamSerializer> getSerializer() {
+    public Optional<DeliveryStreamSerializer> serializer() {
         return Optional.ofNullable(this.serializer);
     }
 

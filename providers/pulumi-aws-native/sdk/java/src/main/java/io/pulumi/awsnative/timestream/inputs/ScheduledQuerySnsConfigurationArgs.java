@@ -21,7 +21,7 @@ public final class ScheduledQuerySnsConfigurationArgs extends io.pulumi.resource
     @Import(name="topicArn", required=true)
       private final Output<String> topicArn;
 
-    public Output<String> getTopicArn() {
+    public Output<String> topicArn() {
         return this.topicArn;
     }
 
