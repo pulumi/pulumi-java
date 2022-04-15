@@ -25,13 +25,13 @@ public final class TopicRuleSnsAction {
         this.targetArn = targetArn;
     }
 
-    public Optional<String> getMessageFormat() {
+    public Optional<String> messageFormat() {
         return Optional.ofNullable(this.messageFormat);
     }
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
-    public String getTargetArn() {
+    public String targetArn() {
         return this.targetArn;
     }
 

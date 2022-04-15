@@ -19,7 +19,7 @@ public final class BucketAccessControlTranslation extends io.pulumi.resources.In
     @Import(name="owner", required=true)
       private final String owner;
 
-    public String getOwner() {
+    public String owner() {
         return this.owner;
     }
 

@@ -20,10 +20,10 @@ public final class EndpointGroupPortOverride {
         this.listenerPort = listenerPort;
     }
 
-    public Integer getEndpointPort() {
+    public Integer endpointPort() {
         return this.endpointPort;
     }
-    public Integer getListenerPort() {
+    public Integer listenerPort() {
         return this.listenerPort;
     }
 

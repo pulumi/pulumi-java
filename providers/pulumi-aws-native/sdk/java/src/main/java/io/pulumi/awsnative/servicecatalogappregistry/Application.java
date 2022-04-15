@@ -22,7 +22,7 @@ public class Application extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -36,7 +36,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The description of the application.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -50,13 +50,13 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The name of the application.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="tags", type=ApplicationTags.class, parameters={})
     private Output</* @Nullable */ ApplicationTags> tags;
 
-    public Output</* @Nullable */ ApplicationTags> getTags() {
+    public Output</* @Nullable */ ApplicationTags> tags() {
         return this.tags;
     }
 

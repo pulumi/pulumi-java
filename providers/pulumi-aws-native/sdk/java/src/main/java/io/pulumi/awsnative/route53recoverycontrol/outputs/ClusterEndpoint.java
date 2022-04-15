@@ -22,10 +22,10 @@ public final class ClusterEndpoint {
         this.region = region;
     }
 
-    public Optional<String> getEndpoint() {
+    public Optional<String> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
 

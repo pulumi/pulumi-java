@@ -19,7 +19,7 @@ public final class GetConformancePackArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="conformancePackName", required=true)
       private final String conformancePackName;
 
-    public String getConformancePackName() {
+    public String conformancePackName() {
         return this.conformancePackName;
     }
 

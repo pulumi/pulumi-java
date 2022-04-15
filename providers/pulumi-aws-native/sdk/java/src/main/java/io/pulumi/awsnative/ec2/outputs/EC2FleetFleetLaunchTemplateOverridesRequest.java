@@ -43,28 +43,28 @@ public final class EC2FleetFleetLaunchTemplateOverridesRequest {
         this.weightedCapacity = weightedCapacity;
     }
 
-    public Optional<String> getAvailabilityZone() {
+    public Optional<String> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
-    public Optional<EC2FleetInstanceRequirementsRequest> getInstanceRequirements() {
+    public Optional<EC2FleetInstanceRequirementsRequest> instanceRequirements() {
         return Optional.ofNullable(this.instanceRequirements);
     }
-    public Optional<String> getInstanceType() {
+    public Optional<String> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
-    public Optional<String> getMaxPrice() {
+    public Optional<String> maxPrice() {
         return Optional.ofNullable(this.maxPrice);
     }
-    public Optional<EC2FleetPlacement> getPlacement() {
+    public Optional<EC2FleetPlacement> placement() {
         return Optional.ofNullable(this.placement);
     }
-    public Optional<Double> getPriority() {
+    public Optional<Double> priority() {
         return Optional.ofNullable(this.priority);
     }
-    public Optional<String> getSubnetId() {
+    public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
-    public Optional<Double> getWeightedCapacity() {
+    public Optional<Double> weightedCapacity() {
         return Optional.ofNullable(this.weightedCapacity);
     }
 

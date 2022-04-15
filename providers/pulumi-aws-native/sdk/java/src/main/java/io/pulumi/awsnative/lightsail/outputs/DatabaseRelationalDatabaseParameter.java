@@ -77,56 +77,56 @@ public final class DatabaseRelationalDatabaseParameter {
      * Specifies the valid range of values for the parameter.
      * 
     */
-    public Optional<String> getAllowedValues() {
+    public Optional<String> allowedValues() {
         return Optional.ofNullable(this.allowedValues);
     }
     /**
      * Indicates when parameter updates are applied. Can be immediate or pending-reboot.
      * 
     */
-    public Optional<String> getApplyMethod() {
+    public Optional<String> applyMethod() {
         return Optional.ofNullable(this.applyMethod);
     }
     /**
      * Specifies the engine-specific parameter type.
      * 
     */
-    public Optional<String> getApplyType() {
+    public Optional<String> applyType() {
         return Optional.ofNullable(this.applyType);
     }
     /**
      * Specifies the valid data type for the parameter.
      * 
     */
-    public Optional<String> getDataType() {
+    public Optional<String> dataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
      * Provides a description of the parameter.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A Boolean value indicating whether the parameter can be modified.
      * 
     */
-    public Optional<Boolean> getIsModifiable() {
+    public Optional<Boolean> isModifiable() {
         return Optional.ofNullable(this.isModifiable);
     }
     /**
      * Specifies the name of the parameter.
      * 
     */
-    public Optional<String> getParameterName() {
+    public Optional<String> parameterName() {
         return Optional.ofNullable(this.parameterName);
     }
     /**
      * Specifies the value of the parameter.
      * 
     */
-    public Optional<String> getParameterValue() {
+    public Optional<String> parameterValue() {
         return Optional.ofNullable(this.parameterValue);
     }
 

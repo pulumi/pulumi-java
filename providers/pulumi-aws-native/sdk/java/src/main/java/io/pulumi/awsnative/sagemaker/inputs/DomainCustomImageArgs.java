@@ -27,7 +27,7 @@ public final class DomainCustomImageArgs extends io.pulumi.resources.ResourceArg
     @Import(name="appImageConfigName", required=true)
       private final Output<String> appImageConfigName;
 
-    public Output<String> getAppImageConfigName() {
+    public Output<String> appImageConfigName() {
         return this.appImageConfigName;
     }
 
@@ -38,7 +38,7 @@ public final class DomainCustomImageArgs extends io.pulumi.resources.ResourceArg
     @Import(name="imageName", required=true)
       private final Output<String> imageName;
 
-    public Output<String> getImageName() {
+    public Output<String> imageName() {
         return this.imageName;
     }
 
@@ -49,7 +49,7 @@ public final class DomainCustomImageArgs extends io.pulumi.resources.ResourceArg
     @Import(name="imageVersionNumber")
       private final @Nullable Output<Integer> imageVersionNumber;
 
-    public Output<Integer> getImageVersionNumber() {
+    public Output<Integer> imageVersionNumber() {
         return this.imageVersionNumber == null ? Codegen.empty() : this.imageVersionNumber;
     }
 

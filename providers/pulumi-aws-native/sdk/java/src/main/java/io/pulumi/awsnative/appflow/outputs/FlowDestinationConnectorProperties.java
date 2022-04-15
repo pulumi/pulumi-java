@@ -47,28 +47,28 @@ public final class FlowDestinationConnectorProperties {
         this.zendesk = zendesk;
     }
 
-    public Optional<FlowEventBridgeDestinationProperties> getEventBridge() {
+    public Optional<FlowEventBridgeDestinationProperties> eventBridge() {
         return Optional.ofNullable(this.eventBridge);
     }
-    public Optional<FlowLookoutMetricsDestinationProperties> getLookoutMetrics() {
+    public Optional<FlowLookoutMetricsDestinationProperties> lookoutMetrics() {
         return Optional.ofNullable(this.lookoutMetrics);
     }
-    public Optional<FlowRedshiftDestinationProperties> getRedshift() {
+    public Optional<FlowRedshiftDestinationProperties> redshift() {
         return Optional.ofNullable(this.redshift);
     }
-    public Optional<FlowS3DestinationProperties> getS3() {
+    public Optional<FlowS3DestinationProperties> s3() {
         return Optional.ofNullable(this.s3);
     }
-    public Optional<FlowSalesforceDestinationProperties> getSalesforce() {
+    public Optional<FlowSalesforceDestinationProperties> salesforce() {
         return Optional.ofNullable(this.salesforce);
     }
-    public Optional<FlowSnowflakeDestinationProperties> getSnowflake() {
+    public Optional<FlowSnowflakeDestinationProperties> snowflake() {
         return Optional.ofNullable(this.snowflake);
     }
-    public Optional<FlowUpsolverDestinationProperties> getUpsolver() {
+    public Optional<FlowUpsolverDestinationProperties> upsolver() {
         return Optional.ofNullable(this.upsolver);
     }
-    public Optional<FlowZendeskDestinationProperties> getZendesk() {
+    public Optional<FlowZendeskDestinationProperties> zendesk() {
         return Optional.ofNullable(this.zendesk);
     }
 

@@ -32,14 +32,14 @@ public final class PackagingConfigurationDashPackageArgs extends io.pulumi.resou
     @Import(name="dashManifests", required=true)
       private final Output<List<PackagingConfigurationDashManifestArgs>> dashManifests;
 
-    public Output<List<PackagingConfigurationDashManifestArgs>> getDashManifests() {
+    public Output<List<PackagingConfigurationDashManifestArgs>> dashManifests() {
         return this.dashManifests;
     }
 
     @Import(name="encryption")
       private final @Nullable Output<PackagingConfigurationDashEncryptionArgs> encryption;
 
-    public Output<PackagingConfigurationDashEncryptionArgs> getEncryption() {
+    public Output<PackagingConfigurationDashEncryptionArgs> encryption() {
         return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
@@ -50,7 +50,7 @@ public final class PackagingConfigurationDashPackageArgs extends io.pulumi.resou
     @Import(name="includeEncoderConfigurationInSegments")
       private final @Nullable Output<Boolean> includeEncoderConfigurationInSegments;
 
-    public Output<Boolean> getIncludeEncoderConfigurationInSegments() {
+    public Output<Boolean> includeEncoderConfigurationInSegments() {
         return this.includeEncoderConfigurationInSegments == null ? Codegen.empty() : this.includeEncoderConfigurationInSegments;
     }
 
@@ -61,14 +61,14 @@ public final class PackagingConfigurationDashPackageArgs extends io.pulumi.resou
     @Import(name="periodTriggers")
       private final @Nullable Output<List<PackagingConfigurationDashPackagePeriodTriggersItem>> periodTriggers;
 
-    public Output<List<PackagingConfigurationDashPackagePeriodTriggersItem>> getPeriodTriggers() {
+    public Output<List<PackagingConfigurationDashPackagePeriodTriggersItem>> periodTriggers() {
         return this.periodTriggers == null ? Codegen.empty() : this.periodTriggers;
     }
 
     @Import(name="segmentDurationSeconds")
       private final @Nullable Output<Integer> segmentDurationSeconds;
 
-    public Output<Integer> getSegmentDurationSeconds() {
+    public Output<Integer> segmentDurationSeconds() {
         return this.segmentDurationSeconds == null ? Codegen.empty() : this.segmentDurationSeconds;
     }
 
@@ -79,7 +79,7 @@ public final class PackagingConfigurationDashPackageArgs extends io.pulumi.resou
     @Import(name="segmentTemplateFormat")
       private final @Nullable Output<PackagingConfigurationDashPackageSegmentTemplateFormat> segmentTemplateFormat;
 
-    public Output<PackagingConfigurationDashPackageSegmentTemplateFormat> getSegmentTemplateFormat() {
+    public Output<PackagingConfigurationDashPackageSegmentTemplateFormat> segmentTemplateFormat() {
         return this.segmentTemplateFormat == null ? Codegen.empty() : this.segmentTemplateFormat;
     }
 

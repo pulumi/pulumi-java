@@ -32,91 +32,91 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
     @Export(name="containerDefinitions", type=List.class, parameters={TaskDefinitionContainerDefinition.class})
     private Output</* @Nullable */ List<TaskDefinitionContainerDefinition>> containerDefinitions;
 
-    public Output</* @Nullable */ List<TaskDefinitionContainerDefinition>> getContainerDefinitions() {
+    public Output</* @Nullable */ List<TaskDefinitionContainerDefinition>> containerDefinitions() {
         return this.containerDefinitions;
     }
     @Export(name="cpu", type=String.class, parameters={})
     private Output</* @Nullable */ String> cpu;
 
-    public Output</* @Nullable */ String> getCpu() {
+    public Output</* @Nullable */ String> cpu() {
         return this.cpu;
     }
     @Export(name="ephemeralStorage", type=TaskDefinitionEphemeralStorage.class, parameters={})
     private Output</* @Nullable */ TaskDefinitionEphemeralStorage> ephemeralStorage;
 
-    public Output</* @Nullable */ TaskDefinitionEphemeralStorage> getEphemeralStorage() {
+    public Output</* @Nullable */ TaskDefinitionEphemeralStorage> ephemeralStorage() {
         return this.ephemeralStorage;
     }
     @Export(name="executionRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> executionRoleArn;
 
-    public Output</* @Nullable */ String> getExecutionRoleArn() {
+    public Output</* @Nullable */ String> executionRoleArn() {
         return this.executionRoleArn;
     }
     @Export(name="family", type=String.class, parameters={})
     private Output</* @Nullable */ String> family;
 
-    public Output</* @Nullable */ String> getFamily() {
+    public Output</* @Nullable */ String> family() {
         return this.family;
     }
     @Export(name="inferenceAccelerators", type=List.class, parameters={TaskDefinitionInferenceAccelerator.class})
     private Output</* @Nullable */ List<TaskDefinitionInferenceAccelerator>> inferenceAccelerators;
 
-    public Output</* @Nullable */ List<TaskDefinitionInferenceAccelerator>> getInferenceAccelerators() {
+    public Output</* @Nullable */ List<TaskDefinitionInferenceAccelerator>> inferenceAccelerators() {
         return this.inferenceAccelerators;
     }
     @Export(name="ipcMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipcMode;
 
-    public Output</* @Nullable */ String> getIpcMode() {
+    public Output</* @Nullable */ String> ipcMode() {
         return this.ipcMode;
     }
     @Export(name="memory", type=String.class, parameters={})
     private Output</* @Nullable */ String> memory;
 
-    public Output</* @Nullable */ String> getMemory() {
+    public Output</* @Nullable */ String> memory() {
         return this.memory;
     }
     @Export(name="networkMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> networkMode;
 
-    public Output</* @Nullable */ String> getNetworkMode() {
+    public Output</* @Nullable */ String> networkMode() {
         return this.networkMode;
     }
     @Export(name="pidMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> pidMode;
 
-    public Output</* @Nullable */ String> getPidMode() {
+    public Output</* @Nullable */ String> pidMode() {
         return this.pidMode;
     }
     @Export(name="placementConstraints", type=List.class, parameters={TaskDefinitionPlacementConstraint.class})
     private Output</* @Nullable */ List<TaskDefinitionPlacementConstraint>> placementConstraints;
 
-    public Output</* @Nullable */ List<TaskDefinitionPlacementConstraint>> getPlacementConstraints() {
+    public Output</* @Nullable */ List<TaskDefinitionPlacementConstraint>> placementConstraints() {
         return this.placementConstraints;
     }
     @Export(name="proxyConfiguration", type=TaskDefinitionProxyConfiguration.class, parameters={})
     private Output</* @Nullable */ TaskDefinitionProxyConfiguration> proxyConfiguration;
 
-    public Output</* @Nullable */ TaskDefinitionProxyConfiguration> getProxyConfiguration() {
+    public Output</* @Nullable */ TaskDefinitionProxyConfiguration> proxyConfiguration() {
         return this.proxyConfiguration;
     }
     @Export(name="requiresCompatibilities", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> requiresCompatibilities;
 
-    public Output</* @Nullable */ List<String>> getRequiresCompatibilities() {
+    public Output</* @Nullable */ List<String>> requiresCompatibilities() {
         return this.requiresCompatibilities;
     }
     @Export(name="runtimePlatform", type=TaskDefinitionRuntimePlatform.class, parameters={})
     private Output</* @Nullable */ TaskDefinitionRuntimePlatform> runtimePlatform;
 
-    public Output</* @Nullable */ TaskDefinitionRuntimePlatform> getRuntimePlatform() {
+    public Output</* @Nullable */ TaskDefinitionRuntimePlatform> runtimePlatform() {
         return this.runtimePlatform;
     }
     @Export(name="tags", type=List.class, parameters={TaskDefinitionTag.class})
     private Output</* @Nullable */ List<TaskDefinitionTag>> tags;
 
-    public Output</* @Nullable */ List<TaskDefinitionTag>> getTags() {
+    public Output</* @Nullable */ List<TaskDefinitionTag>> tags() {
         return this.tags;
     }
     /**
@@ -130,19 +130,19 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Amazon ECS task definition
      * 
      */
-    public Output<String> getTaskDefinitionArn() {
+    public Output<String> taskDefinitionArn() {
         return this.taskDefinitionArn;
     }
     @Export(name="taskRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> taskRoleArn;
 
-    public Output</* @Nullable */ String> getTaskRoleArn() {
+    public Output</* @Nullable */ String> taskRoleArn() {
         return this.taskRoleArn;
     }
     @Export(name="volumes", type=List.class, parameters={TaskDefinitionVolume.class})
     private Output</* @Nullable */ List<TaskDefinitionVolume>> volumes;
 
-    public Output</* @Nullable */ List<TaskDefinitionVolume>> getVolumes() {
+    public Output</* @Nullable */ List<TaskDefinitionVolume>> volumes() {
         return this.volumes;
     }
 

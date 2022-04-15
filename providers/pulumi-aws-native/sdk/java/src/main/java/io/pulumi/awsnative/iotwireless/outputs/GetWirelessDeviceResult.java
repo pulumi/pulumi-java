@@ -101,77 +101,77 @@ public final class GetWirelessDeviceResult {
      * Wireless device arn. Returned after successful create.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Wireless device description
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Wireless device destination name
      * 
     */
-    public Optional<String> getDestinationName() {
+    public Optional<String> destinationName() {
         return Optional.ofNullable(this.destinationName);
     }
     /**
      * Wireless device Id. Returned after successful create.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The date and time when the most recent uplink was received.
      * 
     */
-    public Optional<String> getLastUplinkReceivedAt() {
+    public Optional<String> lastUplinkReceivedAt() {
         return Optional.ofNullable(this.lastUplinkReceivedAt);
     }
     /**
      * The combination of Package, Station and Model which represents the version of the LoRaWAN Wireless Device.
      * 
     */
-    public Optional<WirelessDeviceLoRaWANDevice> getLoRaWAN() {
+    public Optional<WirelessDeviceLoRaWANDevice> loRaWAN() {
         return Optional.ofNullable(this.loRaWAN);
     }
     /**
      * Wireless device name
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * A list of key-value pairs that contain metadata for the device. Currently not supported, will not create if tags are passed.
      * 
     */
-    public List<WirelessDeviceTag> getTags() {
+    public List<WirelessDeviceTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * Thing arn. Passed into update to associate Thing with Wireless device.
      * 
     */
-    public Optional<String> getThingArn() {
+    public Optional<String> thingArn() {
         return Optional.ofNullable(this.thingArn);
     }
     /**
      * Thing Arn. If there is a Thing created, this can be returned with a Get call.
      * 
     */
-    public Optional<String> getThingName() {
+    public Optional<String> thingName() {
         return Optional.ofNullable(this.thingName);
     }
     /**
      * Wireless device type, currently only Sidewalk and LoRa
      * 
     */
-    public Optional<WirelessDeviceType> getType() {
+    public Optional<WirelessDeviceType> type() {
         return Optional.ofNullable(this.type);
     }
 

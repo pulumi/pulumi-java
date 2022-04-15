@@ -32,19 +32,19 @@ public final class ClusterExecuteCommandLogConfiguration {
         this.s3KeyPrefix = s3KeyPrefix;
     }
 
-    public Optional<Boolean> getCloudWatchEncryptionEnabled() {
+    public Optional<Boolean> cloudWatchEncryptionEnabled() {
         return Optional.ofNullable(this.cloudWatchEncryptionEnabled);
     }
-    public Optional<String> getCloudWatchLogGroupName() {
+    public Optional<String> cloudWatchLogGroupName() {
         return Optional.ofNullable(this.cloudWatchLogGroupName);
     }
-    public Optional<String> getS3BucketName() {
+    public Optional<String> s3BucketName() {
         return Optional.ofNullable(this.s3BucketName);
     }
-    public Optional<Boolean> getS3EncryptionEnabled() {
+    public Optional<Boolean> s3EncryptionEnabled() {
         return Optional.ofNullable(this.s3EncryptionEnabled);
     }
-    public Optional<String> getS3KeyPrefix() {
+    public Optional<String> s3KeyPrefix() {
         return Optional.ofNullable(this.s3KeyPrefix);
     }
 

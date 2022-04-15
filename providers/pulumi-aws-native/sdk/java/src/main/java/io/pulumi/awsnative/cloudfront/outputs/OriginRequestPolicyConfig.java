@@ -34,19 +34,19 @@ public final class OriginRequestPolicyConfig {
         this.queryStringsConfig = queryStringsConfig;
     }
 
-    public Optional<String> getComment() {
+    public Optional<String> comment() {
         return Optional.ofNullable(this.comment);
     }
-    public OriginRequestPolicyCookiesConfig getCookiesConfig() {
+    public OriginRequestPolicyCookiesConfig cookiesConfig() {
         return this.cookiesConfig;
     }
-    public OriginRequestPolicyHeadersConfig getHeadersConfig() {
+    public OriginRequestPolicyHeadersConfig headersConfig() {
         return this.headersConfig;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public OriginRequestPolicyQueryStringsConfig getQueryStringsConfig() {
+    public OriginRequestPolicyQueryStringsConfig queryStringsConfig() {
         return this.queryStringsConfig;
     }
 

@@ -19,7 +19,7 @@ public final class GetLocationFSxWindowsArgs extends io.pulumi.resources.InvokeA
     @Import(name="locationArn", required=true)
       private final String locationArn;
 
-    public String getLocationArn() {
+    public String locationArn() {
         return this.locationArn;
     }
 

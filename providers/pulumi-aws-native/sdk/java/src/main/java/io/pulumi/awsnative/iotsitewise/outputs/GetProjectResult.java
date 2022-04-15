@@ -64,42 +64,42 @@ public final class GetProjectResult {
      * The IDs of the assets to be associated to the project.
      * 
     */
-    public List<String> getAssetIds() {
+    public List<String> assetIds() {
         return this.assetIds == null ? List.of() : this.assetIds;
     }
     /**
      * The ARN of the project.
      * 
     */
-    public Optional<String> getProjectArn() {
+    public Optional<String> projectArn() {
         return Optional.ofNullable(this.projectArn);
     }
     /**
      * A description for the project.
      * 
     */
-    public Optional<String> getProjectDescription() {
+    public Optional<String> projectDescription() {
         return Optional.ofNullable(this.projectDescription);
     }
     /**
      * The ID of the project.
      * 
     */
-    public Optional<String> getProjectId() {
+    public Optional<String> projectId() {
         return Optional.ofNullable(this.projectId);
     }
     /**
      * A friendly name for the project.
      * 
     */
-    public Optional<String> getProjectName() {
+    public Optional<String> projectName() {
         return Optional.ofNullable(this.projectName);
     }
     /**
      * A list of key-value pairs that contain metadata for the project.
      * 
     */
-    public List<ProjectTag> getTags() {
+    public List<ProjectTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

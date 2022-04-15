@@ -19,7 +19,7 @@ public final class GetFlowVpcInterfaceArgs extends io.pulumi.resources.InvokeArg
     @Import(name="flowArn", required=true)
       private final String flowArn;
 
-    public String getFlowArn() {
+    public String flowArn() {
         return this.flowArn;
     }
 
@@ -30,7 +30,7 @@ public final class GetFlowVpcInterfaceArgs extends io.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

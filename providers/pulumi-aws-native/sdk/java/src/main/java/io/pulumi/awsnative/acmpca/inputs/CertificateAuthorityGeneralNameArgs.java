@@ -25,56 +25,56 @@ public final class CertificateAuthorityGeneralNameArgs extends io.pulumi.resourc
     @Import(name="directoryName")
       private final @Nullable Output<CertificateAuthoritySubjectArgs> directoryName;
 
-    public Output<CertificateAuthoritySubjectArgs> getDirectoryName() {
+    public Output<CertificateAuthoritySubjectArgs> directoryName() {
         return this.directoryName == null ? Codegen.empty() : this.directoryName;
     }
 
     @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
 
-    public Output<String> getDnsName() {
+    public Output<String> dnsName() {
         return this.dnsName == null ? Codegen.empty() : this.dnsName;
     }
 
     @Import(name="ediPartyName")
       private final @Nullable Output<CertificateAuthorityEdiPartyNameArgs> ediPartyName;
 
-    public Output<CertificateAuthorityEdiPartyNameArgs> getEdiPartyName() {
+    public Output<CertificateAuthorityEdiPartyNameArgs> ediPartyName() {
         return this.ediPartyName == null ? Codegen.empty() : this.ediPartyName;
     }
 
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     @Import(name="otherName")
       private final @Nullable Output<CertificateAuthorityOtherNameArgs> otherName;
 
-    public Output<CertificateAuthorityOtherNameArgs> getOtherName() {
+    public Output<CertificateAuthorityOtherNameArgs> otherName() {
         return this.otherName == null ? Codegen.empty() : this.otherName;
     }
 
     @Import(name="registeredId")
       private final @Nullable Output<String> registeredId;
 
-    public Output<String> getRegisteredId() {
+    public Output<String> registeredId() {
         return this.registeredId == null ? Codegen.empty() : this.registeredId;
     }
 
     @Import(name="rfc822Name")
       private final @Nullable Output<String> rfc822Name;
 
-    public Output<String> getRfc822Name() {
+    public Output<String> rfc822Name() {
         return this.rfc822Name == null ? Codegen.empty() : this.rfc822Name;
     }
 
     @Import(name="uniformResourceIdentifier")
       private final @Nullable Output<String> uniformResourceIdentifier;
 
-    public Output<String> getUniformResourceIdentifier() {
+    public Output<String> uniformResourceIdentifier() {
         return this.uniformResourceIdentifier == null ? Codegen.empty() : this.uniformResourceIdentifier;
     }
 

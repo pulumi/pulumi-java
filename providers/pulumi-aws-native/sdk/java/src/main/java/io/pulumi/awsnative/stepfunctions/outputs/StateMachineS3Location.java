@@ -25,13 +25,13 @@ public final class StateMachineS3Location {
         this.version = version;
     }
 
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
-    public String getKey() {
+    public String key() {
         return this.key;
     }
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

@@ -27,7 +27,7 @@ public final class DashboardIntegerParameterArgs extends io.pulumi.resources.Res
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -38,7 +38,7 @@ public final class DashboardIntegerParameterArgs extends io.pulumi.resources.Res
     @Import(name="values", required=true)
       private final Output<List<Double>> values;
 
-    public Output<List<Double>> getValues() {
+    public Output<List<Double>> values() {
         return this.values;
     }
 

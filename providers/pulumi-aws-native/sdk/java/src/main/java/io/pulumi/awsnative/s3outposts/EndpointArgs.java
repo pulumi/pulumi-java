@@ -23,7 +23,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessType")
       private final @Nullable Output<EndpointAccessType> accessType;
 
-    public Output<EndpointAccessType> getAccessType() {
+    public Output<EndpointAccessType> accessType() {
         return this.accessType == null ? Codegen.empty() : this.accessType;
     }
 
@@ -34,7 +34,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customerOwnedIpv4Pool")
       private final @Nullable Output<String> customerOwnedIpv4Pool;
 
-    public Output<String> getCustomerOwnedIpv4Pool() {
+    public Output<String> customerOwnedIpv4Pool() {
         return this.customerOwnedIpv4Pool == null ? Codegen.empty() : this.customerOwnedIpv4Pool;
     }
 
@@ -45,7 +45,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outpostId", required=true)
       private final Output<String> outpostId;
 
-    public Output<String> getOutpostId() {
+    public Output<String> outpostId() {
         return this.outpostId;
     }
 
@@ -56,7 +56,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="securityGroupId", required=true)
       private final Output<String> securityGroupId;
 
-    public Output<String> getSecurityGroupId() {
+    public Output<String> securityGroupId() {
         return this.securityGroupId;
     }
 
@@ -67,7 +67,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 

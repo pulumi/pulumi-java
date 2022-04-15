@@ -28,7 +28,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataFrequency")
       private final @Nullable Output<String> dataFrequency;
 
-    public Output<String> getDataFrequency() {
+    public Output<String> dataFrequency() {
         return this.dataFrequency == null ? Codegen.empty() : this.dataFrequency;
     }
 
@@ -39,7 +39,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datasetName")
       private final @Nullable Output<String> datasetName;
 
-    public Output<String> getDatasetName() {
+    public Output<String> datasetName() {
         return this.datasetName == null ? Codegen.empty() : this.datasetName;
     }
 
@@ -50,7 +50,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datasetType", required=true)
       private final Output<DatasetType> datasetType;
 
-    public Output<DatasetType> getDatasetType() {
+    public Output<DatasetType> datasetType() {
         return this.datasetType;
     }
 
@@ -61,28 +61,28 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domain", required=true)
       private final Output<DatasetDomain> domain;
 
-    public Output<DatasetDomain> getDomain() {
+    public Output<DatasetDomain> domain() {
         return this.domain;
     }
 
     @Import(name="encryptionConfig")
       private final @Nullable Output<EncryptionConfigPropertiesArgs> encryptionConfig;
 
-    public Output<EncryptionConfigPropertiesArgs> getEncryptionConfig() {
+    public Output<EncryptionConfigPropertiesArgs> encryptionConfig() {
         return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
     }
 
     @Import(name="schema", required=true)
       private final Output<SchemaPropertiesArgs> schema;
 
-    public Output<SchemaPropertiesArgs> getSchema() {
+    public Output<SchemaPropertiesArgs> schema() {
         return this.schema;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<TagsItemPropertiesArgs>> tags;
 
-    public Output<List<TagsItemPropertiesArgs>> getTags() {
+    public Output<List<TagsItemPropertiesArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

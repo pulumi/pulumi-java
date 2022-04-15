@@ -18,28 +18,28 @@ public final class ResponseHeadersPolicyXSSProtection extends io.pulumi.resource
     @Import(name="modeBlock")
       private final @Nullable Boolean modeBlock;
 
-    public Optional<Boolean> getModeBlock() {
+    public Optional<Boolean> modeBlock() {
         return this.modeBlock == null ? Optional.empty() : Optional.ofNullable(this.modeBlock);
     }
 
     @Import(name="override", required=true)
       private final Boolean override;
 
-    public Boolean getOverride() {
+    public Boolean override() {
         return this.override;
     }
 
     @Import(name="protection", required=true)
       private final Boolean protection;
 
-    public Boolean getProtection() {
+    public Boolean protection() {
         return this.protection;
     }
 
     @Import(name="reportUri")
       private final @Nullable String reportUri;
 
-    public Optional<String> getReportUri() {
+    public Optional<String> reportUri() {
         return this.reportUri == null ? Optional.empty() : Optional.ofNullable(this.reportUri);
     }
 

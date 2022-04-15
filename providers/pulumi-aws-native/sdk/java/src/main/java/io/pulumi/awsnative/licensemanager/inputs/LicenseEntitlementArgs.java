@@ -20,42 +20,42 @@ public final class LicenseEntitlementArgs extends io.pulumi.resources.ResourceAr
     @Import(name="allowCheckIn")
       private final @Nullable Output<Boolean> allowCheckIn;
 
-    public Output<Boolean> getAllowCheckIn() {
+    public Output<Boolean> allowCheckIn() {
         return this.allowCheckIn == null ? Codegen.empty() : this.allowCheckIn;
     }
 
     @Import(name="maxCount")
       private final @Nullable Output<Integer> maxCount;
 
-    public Output<Integer> getMaxCount() {
+    public Output<Integer> maxCount() {
         return this.maxCount == null ? Codegen.empty() : this.maxCount;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="overage")
       private final @Nullable Output<Boolean> overage;
 
-    public Output<Boolean> getOverage() {
+    public Output<Boolean> overage() {
         return this.overage == null ? Codegen.empty() : this.overage;
     }
 
     @Import(name="unit", required=true)
       private final Output<String> unit;
 
-    public Output<String> getUnit() {
+    public Output<String> unit() {
         return this.unit;
     }
 
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

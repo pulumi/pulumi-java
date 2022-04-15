@@ -23,10 +23,10 @@ public final class DeliveryStreamEncryptionConfiguration {
         this.noEncryptionConfig = noEncryptionConfig;
     }
 
-    public Optional<DeliveryStreamKMSEncryptionConfig> getKMSEncryptionConfig() {
+    public Optional<DeliveryStreamKMSEncryptionConfig> kMSEncryptionConfig() {
         return Optional.ofNullable(this.kMSEncryptionConfig);
     }
-    public Optional<DeliveryStreamEncryptionConfigurationNoEncryptionConfig> getNoEncryptionConfig() {
+    public Optional<DeliveryStreamEncryptionConfigurationNoEncryptionConfig> noEncryptionConfig() {
         return Optional.ofNullable(this.noEncryptionConfig);
     }
 

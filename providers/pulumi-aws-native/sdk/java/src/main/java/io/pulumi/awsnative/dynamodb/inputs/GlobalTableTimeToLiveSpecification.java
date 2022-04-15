@@ -18,14 +18,14 @@ public final class GlobalTableTimeToLiveSpecification extends io.pulumi.resource
     @Import(name="attributeName")
       private final @Nullable String attributeName;
 
-    public Optional<String> getAttributeName() {
+    public Optional<String> attributeName() {
         return this.attributeName == null ? Optional.empty() : Optional.ofNullable(this.attributeName);
     }
 
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

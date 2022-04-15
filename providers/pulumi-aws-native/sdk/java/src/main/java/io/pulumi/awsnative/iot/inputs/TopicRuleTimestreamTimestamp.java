@@ -15,14 +15,14 @@ public final class TopicRuleTimestreamTimestamp extends io.pulumi.resources.Invo
     @Import(name="unit", required=true)
       private final String unit;
 
-    public String getUnit() {
+    public String unit() {
         return this.unit;
     }
 
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

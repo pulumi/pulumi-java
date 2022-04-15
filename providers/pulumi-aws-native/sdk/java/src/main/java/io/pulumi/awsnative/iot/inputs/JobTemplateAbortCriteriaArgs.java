@@ -28,7 +28,7 @@ public final class JobTemplateAbortCriteriaArgs extends io.pulumi.resources.Reso
     @Import(name="action", required=true)
       private final Output<JobTemplateAction> action;
 
-    public Output<JobTemplateAction> getAction() {
+    public Output<JobTemplateAction> action() {
         return this.action;
     }
 
@@ -39,7 +39,7 @@ public final class JobTemplateAbortCriteriaArgs extends io.pulumi.resources.Reso
     @Import(name="failureType", required=true)
       private final Output<JobTemplateFailureType> failureType;
 
-    public Output<JobTemplateFailureType> getFailureType() {
+    public Output<JobTemplateFailureType> failureType() {
         return this.failureType;
     }
 
@@ -50,7 +50,7 @@ public final class JobTemplateAbortCriteriaArgs extends io.pulumi.resources.Reso
     @Import(name="minNumberOfExecutedThings", required=true)
       private final Output<Integer> minNumberOfExecutedThings;
 
-    public Output<Integer> getMinNumberOfExecutedThings() {
+    public Output<Integer> minNumberOfExecutedThings() {
         return this.minNumberOfExecutedThings;
     }
 
@@ -61,7 +61,7 @@ public final class JobTemplateAbortCriteriaArgs extends io.pulumi.resources.Reso
     @Import(name="thresholdPercentage", required=true)
       private final Output<Double> thresholdPercentage;
 
-    public Output<Double> getThresholdPercentage() {
+    public Output<Double> thresholdPercentage() {
         return this.thresholdPercentage;
     }
 

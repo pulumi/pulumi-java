@@ -17,7 +17,7 @@ public final class SpotFleetIamInstanceProfileSpecification extends io.pulumi.re
     @Import(name="arn")
       private final @Nullable String arn;
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
     }
 

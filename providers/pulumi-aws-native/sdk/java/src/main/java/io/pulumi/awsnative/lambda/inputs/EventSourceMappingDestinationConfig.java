@@ -25,7 +25,7 @@ public final class EventSourceMappingDestinationConfig extends io.pulumi.resourc
     @Import(name="onFailure")
       private final @Nullable EventSourceMappingOnFailure onFailure;
 
-    public Optional<EventSourceMappingOnFailure> getOnFailure() {
+    public Optional<EventSourceMappingOnFailure> onFailure() {
         return this.onFailure == null ? Optional.empty() : Optional.ofNullable(this.onFailure);
     }
 

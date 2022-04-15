@@ -26,14 +26,14 @@ public final class BucketServerSideEncryptionByDefault extends io.pulumi.resourc
     @Import(name="kMSMasterKeyID")
       private final @Nullable String kMSMasterKeyID;
 
-    public Optional<String> getKMSMasterKeyID() {
+    public Optional<String> kMSMasterKeyID() {
         return this.kMSMasterKeyID == null ? Optional.empty() : Optional.ofNullable(this.kMSMasterKeyID);
     }
 
     @Import(name="sSEAlgorithm", required=true)
       private final BucketServerSideEncryptionByDefaultSSEAlgorithm sSEAlgorithm;
 
-    public BucketServerSideEncryptionByDefaultSSEAlgorithm getSSEAlgorithm() {
+    public BucketServerSideEncryptionByDefaultSSEAlgorithm sSEAlgorithm() {
         return this.sSEAlgorithm;
     }
 

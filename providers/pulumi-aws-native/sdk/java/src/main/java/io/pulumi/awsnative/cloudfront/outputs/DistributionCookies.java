@@ -22,10 +22,10 @@ public final class DistributionCookies {
         this.whitelistedNames = whitelistedNames;
     }
 
-    public String getForward() {
+    public String forward() {
         return this.forward;
     }
-    public List<String> getWhitelistedNames() {
+    public List<String> whitelistedNames() {
         return this.whitelistedNames == null ? List.of() : this.whitelistedNames;
     }
 

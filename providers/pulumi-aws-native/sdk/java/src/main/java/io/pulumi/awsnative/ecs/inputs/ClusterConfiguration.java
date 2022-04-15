@@ -21,7 +21,7 @@ public final class ClusterConfiguration extends io.pulumi.resources.InvokeArgs {
     @Import(name="executeCommandConfiguration")
       private final @Nullable ClusterExecuteCommandConfiguration executeCommandConfiguration;
 
-    public Optional<ClusterExecuteCommandConfiguration> getExecuteCommandConfiguration() {
+    public Optional<ClusterExecuteCommandConfiguration> executeCommandConfiguration() {
         return this.executeCommandConfiguration == null ? Optional.empty() : Optional.ofNullable(this.executeCommandConfiguration);
     }
 

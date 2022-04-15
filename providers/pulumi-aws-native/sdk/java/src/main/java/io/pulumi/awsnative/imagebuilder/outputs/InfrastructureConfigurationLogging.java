@@ -18,7 +18,7 @@ public final class InfrastructureConfigurationLogging {
         this.s3Logs = s3Logs;
     }
 
-    public Optional<InfrastructureConfigurationS3Logs> getS3Logs() {
+    public Optional<InfrastructureConfigurationS3Logs> s3Logs() {
         return Optional.ofNullable(this.s3Logs);
     }
 

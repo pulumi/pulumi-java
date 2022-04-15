@@ -19,21 +19,21 @@ public final class TaskDefinitionUpdateWirelessGatewayTaskCreateArgs extends io.
     @Import(name="loRaWAN")
       private final @Nullable Output<TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs> loRaWAN;
 
-    public Output<TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs> getLoRaWAN() {
+    public Output<TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs> loRaWAN() {
         return this.loRaWAN == null ? Codegen.empty() : this.loRaWAN;
     }
 
     @Import(name="updateDataRole")
       private final @Nullable Output<String> updateDataRole;
 
-    public Output<String> getUpdateDataRole() {
+    public Output<String> updateDataRole() {
         return this.updateDataRole == null ? Codegen.empty() : this.updateDataRole;
     }
 
     @Import(name="updateDataSource")
       private final @Nullable Output<String> updateDataSource;
 
-    public Output<String> getUpdateDataSource() {
+    public Output<String> updateDataSource() {
         return this.updateDataSource == null ? Codegen.empty() : this.updateDataSource;
     }
 

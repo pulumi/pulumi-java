@@ -21,42 +21,42 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="exclusiveEndTime")
       private final @Nullable Output<String> exclusiveEndTime;
 
-    public Output<String> getExclusiveEndTime() {
+    public Output<String> exclusiveEndTime() {
         return this.exclusiveEndTime == null ? Codegen.empty() : this.exclusiveEndTime;
     }
 
     @Import(name="inclusiveStartTime", required=true)
       private final Output<String> inclusiveStartTime;
 
-    public Output<String> getInclusiveStartTime() {
+    public Output<String> inclusiveStartTime() {
         return this.inclusiveStartTime;
     }
 
     @Import(name="kinesisConfiguration", required=true)
       private final Output<StreamKinesisConfigurationArgs> kinesisConfiguration;
 
-    public Output<StreamKinesisConfigurationArgs> getKinesisConfiguration() {
+    public Output<StreamKinesisConfigurationArgs> kinesisConfiguration() {
         return this.kinesisConfiguration;
     }
 
     @Import(name="ledgerName", required=true)
       private final Output<String> ledgerName;
 
-    public Output<String> getLedgerName() {
+    public Output<String> ledgerName() {
         return this.ledgerName;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="streamName")
       private final @Nullable Output<String> streamName;
 
-    public Output<String> getStreamName() {
+    public Output<String> streamName() {
         return this.streamName == null ? Codegen.empty() : this.streamName;
     }
 
@@ -67,7 +67,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<StreamTagArgs>> tags;
 
-    public Output<List<StreamTagArgs>> getTags() {
+    public Output<List<StreamTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

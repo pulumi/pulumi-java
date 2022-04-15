@@ -43,21 +43,21 @@ public final class StudioComponentActiveDirectoryConfiguration {
      * <p>A collection of custom attributes for an Active Directory computer.</p>
      * 
     */
-    public List<StudioComponentActiveDirectoryComputerAttribute> getComputerAttributes() {
+    public List<StudioComponentActiveDirectoryComputerAttribute> computerAttributes() {
         return this.computerAttributes == null ? List.of() : this.computerAttributes;
     }
     /**
      * <p>The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.</p>
      * 
     */
-    public Optional<String> getDirectoryId() {
+    public Optional<String> directoryId() {
         return Optional.ofNullable(this.directoryId);
     }
     /**
      * <p>The distinguished name (DN) and organizational unit (OU) of an Active Directory computer.</p>
      * 
     */
-    public Optional<String> getOrganizationalUnitDistinguishedName() {
+    public Optional<String> organizationalUnitDistinguishedName() {
         return Optional.ofNullable(this.organizationalUnitDistinguishedName);
     }
 

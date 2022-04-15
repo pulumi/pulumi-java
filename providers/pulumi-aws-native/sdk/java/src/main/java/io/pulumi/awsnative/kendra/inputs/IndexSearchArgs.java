@@ -18,28 +18,28 @@ public final class IndexSearchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayable")
       private final @Nullable Output<Boolean> displayable;
 
-    public Output<Boolean> getDisplayable() {
+    public Output<Boolean> displayable() {
         return this.displayable == null ? Codegen.empty() : this.displayable;
     }
 
     @Import(name="facetable")
       private final @Nullable Output<Boolean> facetable;
 
-    public Output<Boolean> getFacetable() {
+    public Output<Boolean> facetable() {
         return this.facetable == null ? Codegen.empty() : this.facetable;
     }
 
     @Import(name="searchable")
       private final @Nullable Output<Boolean> searchable;
 
-    public Output<Boolean> getSearchable() {
+    public Output<Boolean> searchable() {
         return this.searchable == null ? Codegen.empty() : this.searchable;
     }
 
     @Import(name="sortable")
       private final @Nullable Output<Boolean> sortable;
 
-    public Output<Boolean> getSortable() {
+    public Output<Boolean> sortable() {
         return this.sortable == null ? Codegen.empty() : this.sortable;
     }
 

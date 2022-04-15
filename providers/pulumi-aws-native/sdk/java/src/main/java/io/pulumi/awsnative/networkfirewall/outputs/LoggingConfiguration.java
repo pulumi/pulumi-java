@@ -17,7 +17,7 @@ public final class LoggingConfiguration {
         this.logDestinationConfigs = logDestinationConfigs;
     }
 
-    public List<LoggingConfigurationLogDestinationConfig> getLogDestinationConfigs() {
+    public List<LoggingConfigurationLogDestinationConfig> logDestinationConfigs() {
         return this.logDestinationConfigs;
     }
 

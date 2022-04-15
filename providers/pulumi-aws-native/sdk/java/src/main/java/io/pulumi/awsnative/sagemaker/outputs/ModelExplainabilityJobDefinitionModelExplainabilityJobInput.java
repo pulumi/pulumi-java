@@ -16,7 +16,7 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityJobInput {
         this.endpointInput = endpointInput;
     }
 
-    public ModelExplainabilityJobDefinitionEndpointInput getEndpointInput() {
+    public ModelExplainabilityJobDefinitionEndpointInput endpointInput() {
         return this.endpointInput;
     }
 

@@ -33,7 +33,7 @@ public class PackagingGroup extends io.pulumi.resources.CustomResource {
      * @return The ARN of the PackagingGroup.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -47,7 +47,7 @@ public class PackagingGroup extends io.pulumi.resources.CustomResource {
      * @return CDN Authorization
      * 
      */
-    public Output</* @Nullable */ PackagingGroupAuthorization> getAuthorization() {
+    public Output</* @Nullable */ PackagingGroupAuthorization> authorization() {
         return this.authorization;
     }
     /**
@@ -61,7 +61,7 @@ public class PackagingGroup extends io.pulumi.resources.CustomResource {
      * @return The fully qualified domain name for Assets in the PackagingGroup.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -75,7 +75,7 @@ public class PackagingGroup extends io.pulumi.resources.CustomResource {
      * @return The configuration parameters for egress access logging.
      * 
      */
-    public Output</* @Nullable */ PackagingGroupLogConfiguration> getEgressAccessLogs() {
+    public Output</* @Nullable */ PackagingGroupLogConfiguration> egressAccessLogs() {
         return this.egressAccessLogs;
     }
     /**
@@ -89,7 +89,7 @@ public class PackagingGroup extends io.pulumi.resources.CustomResource {
      * @return A collection of tags associated with a resource
      * 
      */
-    public Output</* @Nullable */ List<PackagingGroupTag>> getTags() {
+    public Output</* @Nullable */ List<PackagingGroupTag>> tags() {
         return this.tags;
     }
 

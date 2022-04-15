@@ -19,14 +19,14 @@ public final class TaskDefinitionAuthorizationConfigArgs extends io.pulumi.resou
     @Import(name="accessPointId")
       private final @Nullable Output<String> accessPointId;
 
-    public Output<String> getAccessPointId() {
+    public Output<String> accessPointId() {
         return this.accessPointId == null ? Codegen.empty() : this.accessPointId;
     }
 
     @Import(name="iAM")
       private final @Nullable Output<TaskDefinitionAuthorizationConfigIAM> iAM;
 
-    public Output<TaskDefinitionAuthorizationConfigIAM> getIAM() {
+    public Output<TaskDefinitionAuthorizationConfigIAM> iAM() {
         return this.iAM == null ? Codegen.empty() : this.iAM;
     }
 

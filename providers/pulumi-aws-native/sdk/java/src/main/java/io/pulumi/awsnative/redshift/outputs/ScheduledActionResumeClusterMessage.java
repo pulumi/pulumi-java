@@ -16,7 +16,7 @@ public final class ScheduledActionResumeClusterMessage {
         this.clusterIdentifier = clusterIdentifier;
     }
 
-    public String getClusterIdentifier() {
+    public String clusterIdentifier() {
         return this.clusterIdentifier;
     }
 

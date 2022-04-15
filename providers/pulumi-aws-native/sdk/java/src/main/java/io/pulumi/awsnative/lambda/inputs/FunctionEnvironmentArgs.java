@@ -26,7 +26,7 @@ public final class FunctionEnvironmentArgs extends io.pulumi.resources.ResourceA
     @Import(name="variables")
       private final @Nullable Output<Object> variables;
 
-    public Output<Object> getVariables() {
+    public Output<Object> variables() {
         return this.variables == null ? Codegen.empty() : this.variables;
     }
 

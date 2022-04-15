@@ -15,7 +15,7 @@ public final class RuleGroupFieldToMatchSingleHeaderProperties extends io.pulumi
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

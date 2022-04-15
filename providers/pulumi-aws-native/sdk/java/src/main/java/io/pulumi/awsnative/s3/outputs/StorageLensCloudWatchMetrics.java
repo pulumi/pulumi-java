@@ -24,7 +24,7 @@ public final class StorageLensCloudWatchMetrics {
      * Specifies whether CloudWatch metrics are enabled or disabled.
      * 
     */
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
 

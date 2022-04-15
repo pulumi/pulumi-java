@@ -28,7 +28,7 @@ public final class BucketPublicAccessBlockConfiguration extends io.pulumi.resour
     @Import(name="blockPublicAcls")
       private final @Nullable Boolean blockPublicAcls;
 
-    public Optional<Boolean> getBlockPublicAcls() {
+    public Optional<Boolean> blockPublicAcls() {
         return this.blockPublicAcls == null ? Optional.empty() : Optional.ofNullable(this.blockPublicAcls);
     }
 
@@ -40,7 +40,7 @@ public final class BucketPublicAccessBlockConfiguration extends io.pulumi.resour
     @Import(name="blockPublicPolicy")
       private final @Nullable Boolean blockPublicPolicy;
 
-    public Optional<Boolean> getBlockPublicPolicy() {
+    public Optional<Boolean> blockPublicPolicy() {
         return this.blockPublicPolicy == null ? Optional.empty() : Optional.ofNullable(this.blockPublicPolicy);
     }
 
@@ -52,7 +52,7 @@ public final class BucketPublicAccessBlockConfiguration extends io.pulumi.resour
     @Import(name="ignorePublicAcls")
       private final @Nullable Boolean ignorePublicAcls;
 
-    public Optional<Boolean> getIgnorePublicAcls() {
+    public Optional<Boolean> ignorePublicAcls() {
         return this.ignorePublicAcls == null ? Optional.empty() : Optional.ofNullable(this.ignorePublicAcls);
     }
 
@@ -64,7 +64,7 @@ public final class BucketPublicAccessBlockConfiguration extends io.pulumi.resour
     @Import(name="restrictPublicBuckets")
       private final @Nullable Boolean restrictPublicBuckets;
 
-    public Optional<Boolean> getRestrictPublicBuckets() {
+    public Optional<Boolean> restrictPublicBuckets() {
         return this.restrictPublicBuckets == null ? Optional.empty() : Optional.ofNullable(this.restrictPublicBuckets);
     }
 

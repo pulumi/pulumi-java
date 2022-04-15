@@ -23,7 +23,7 @@ public final class DetectorModelSnsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="payload")
       private final @Nullable Output<DetectorModelPayloadArgs> payload;
 
-    public Output<DetectorModelPayloadArgs> getPayload() {
+    public Output<DetectorModelPayloadArgs> payload() {
         return this.payload == null ? Codegen.empty() : this.payload;
     }
 
@@ -34,7 +34,7 @@ public final class DetectorModelSnsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="targetArn", required=true)
       private final Output<String> targetArn;
 
-    public Output<String> getTargetArn() {
+    public Output<String> targetArn() {
         return this.targetArn;
     }
 

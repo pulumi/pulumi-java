@@ -22,7 +22,7 @@ public final class DashboardAdHocFilteringOptionArgs extends io.pulumi.resources
     @Import(name="availabilityStatus")
       private final @Nullable Output<DashboardBehavior> availabilityStatus;
 
-    public Output<DashboardBehavior> getAvailabilityStatus() {
+    public Output<DashboardBehavior> availabilityStatus() {
         return this.availabilityStatus == null ? Codegen.empty() : this.availabilityStatus;
     }
 

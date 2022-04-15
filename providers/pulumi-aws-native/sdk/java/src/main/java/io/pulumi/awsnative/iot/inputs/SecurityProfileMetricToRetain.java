@@ -26,14 +26,14 @@ public final class SecurityProfileMetricToRetain extends io.pulumi.resources.Inv
     @Import(name="metric", required=true)
       private final String metric;
 
-    public String getMetric() {
+    public String metric() {
         return this.metric;
     }
 
     @Import(name="metricDimension")
       private final @Nullable SecurityProfileMetricDimension metricDimension;
 
-    public Optional<SecurityProfileMetricDimension> getMetricDimension() {
+    public Optional<SecurityProfileMetricDimension> metricDimension() {
         return this.metricDimension == null ? Optional.empty() : Optional.ofNullable(this.metricDimension);
     }
 

@@ -29,16 +29,16 @@ public final class SpotFleetBlockDeviceMapping {
         this.virtualName = virtualName;
     }
 
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
-    public Optional<SpotFleetEbsBlockDevice> getEbs() {
+    public Optional<SpotFleetEbsBlockDevice> ebs() {
         return Optional.ofNullable(this.ebs);
     }
-    public Optional<String> getNoDevice() {
+    public Optional<String> noDevice() {
         return Optional.ofNullable(this.noDevice);
     }
-    public Optional<String> getVirtualName() {
+    public Optional<String> virtualName() {
         return Optional.ofNullable(this.virtualName);
     }
 

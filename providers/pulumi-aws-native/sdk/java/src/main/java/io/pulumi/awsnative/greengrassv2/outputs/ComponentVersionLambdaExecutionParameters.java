@@ -56,37 +56,37 @@ public final class ComponentVersionLambdaExecutionParameters {
         this.timeoutInSeconds = timeoutInSeconds;
     }
 
-    public Optional<Object> getEnvironmentVariables() {
+    public Optional<Object> environmentVariables() {
         return Optional.ofNullable(this.environmentVariables);
     }
-    public List<ComponentVersionLambdaEventSource> getEventSources() {
+    public List<ComponentVersionLambdaEventSource> eventSources() {
         return this.eventSources == null ? List.of() : this.eventSources;
     }
-    public List<String> getExecArgs() {
+    public List<String> execArgs() {
         return this.execArgs == null ? List.of() : this.execArgs;
     }
-    public Optional<ComponentVersionLambdaExecutionParametersInputPayloadEncodingType> getInputPayloadEncodingType() {
+    public Optional<ComponentVersionLambdaExecutionParametersInputPayloadEncodingType> inputPayloadEncodingType() {
         return Optional.ofNullable(this.inputPayloadEncodingType);
     }
-    public Optional<ComponentVersionLambdaLinuxProcessParams> getLinuxProcessParams() {
+    public Optional<ComponentVersionLambdaLinuxProcessParams> linuxProcessParams() {
         return Optional.ofNullable(this.linuxProcessParams);
     }
-    public Optional<Integer> getMaxIdleTimeInSeconds() {
+    public Optional<Integer> maxIdleTimeInSeconds() {
         return Optional.ofNullable(this.maxIdleTimeInSeconds);
     }
-    public Optional<Integer> getMaxInstancesCount() {
+    public Optional<Integer> maxInstancesCount() {
         return Optional.ofNullable(this.maxInstancesCount);
     }
-    public Optional<Integer> getMaxQueueSize() {
+    public Optional<Integer> maxQueueSize() {
         return Optional.ofNullable(this.maxQueueSize);
     }
-    public Optional<Boolean> getPinned() {
+    public Optional<Boolean> pinned() {
         return Optional.ofNullable(this.pinned);
     }
-    public Optional<Integer> getStatusTimeoutInSeconds() {
+    public Optional<Integer> statusTimeoutInSeconds() {
         return Optional.ofNullable(this.statusTimeoutInSeconds);
     }
-    public Optional<Integer> getTimeoutInSeconds() {
+    public Optional<Integer> timeoutInSeconds() {
         return Optional.ofNullable(this.timeoutInSeconds);
     }
 

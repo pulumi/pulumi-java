@@ -20,21 +20,21 @@ public final class NetworkInsightsAccessScopeAccessScopePathRequestArgs extends 
     @Import(name="destination")
       private final @Nullable Output<NetworkInsightsAccessScopePathStatementRequestArgs> destination;
 
-    public Output<NetworkInsightsAccessScopePathStatementRequestArgs> getDestination() {
+    public Output<NetworkInsightsAccessScopePathStatementRequestArgs> destination() {
         return this.destination == null ? Codegen.empty() : this.destination;
     }
 
     @Import(name="source")
       private final @Nullable Output<NetworkInsightsAccessScopePathStatementRequestArgs> source;
 
-    public Output<NetworkInsightsAccessScopePathStatementRequestArgs> getSource() {
+    public Output<NetworkInsightsAccessScopePathStatementRequestArgs> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 
     @Import(name="throughResources")
       private final @Nullable Output<List<NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs>> throughResources;
 
-    public Output<List<NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs>> getThroughResources() {
+    public Output<List<NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs>> throughResources() {
         return this.throughResources == null ? Codegen.empty() : this.throughResources;
     }
 

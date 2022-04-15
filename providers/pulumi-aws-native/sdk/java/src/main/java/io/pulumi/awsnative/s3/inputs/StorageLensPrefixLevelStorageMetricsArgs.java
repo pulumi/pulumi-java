@@ -23,14 +23,14 @@ public final class StorageLensPrefixLevelStorageMetricsArgs extends io.pulumi.re
     @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled == null ? Codegen.empty() : this.isEnabled;
     }
 
     @Import(name="selectionCriteria")
       private final @Nullable Output<StorageLensSelectionCriteriaArgs> selectionCriteria;
 
-    public Output<StorageLensSelectionCriteriaArgs> getSelectionCriteria() {
+    public Output<StorageLensSelectionCriteriaArgs> selectionCriteria() {
         return this.selectionCriteria == null ? Codegen.empty() : this.selectionCriteria;
     }
 

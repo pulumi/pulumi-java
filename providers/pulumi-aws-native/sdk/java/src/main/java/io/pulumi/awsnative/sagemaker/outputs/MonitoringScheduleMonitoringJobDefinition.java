@@ -60,39 +60,39 @@ public final class MonitoringScheduleMonitoringJobDefinition {
         this.stoppingCondition = stoppingCondition;
     }
 
-    public Optional<MonitoringScheduleBaselineConfig> getBaselineConfig() {
+    public Optional<MonitoringScheduleBaselineConfig> baselineConfig() {
         return Optional.ofNullable(this.baselineConfig);
     }
     /**
      * Sets the environment variables in the Docker container
      * 
     */
-    public Optional<Object> getEnvironment() {
+    public Optional<Object> environment() {
         return Optional.ofNullable(this.environment);
     }
-    public MonitoringScheduleMonitoringAppSpecification getMonitoringAppSpecification() {
+    public MonitoringScheduleMonitoringAppSpecification monitoringAppSpecification() {
         return this.monitoringAppSpecification;
     }
-    public List<MonitoringScheduleMonitoringInput> getMonitoringInputs() {
+    public List<MonitoringScheduleMonitoringInput> monitoringInputs() {
         return this.monitoringInputs;
     }
-    public MonitoringScheduleMonitoringOutputConfig getMonitoringOutputConfig() {
+    public MonitoringScheduleMonitoringOutputConfig monitoringOutputConfig() {
         return this.monitoringOutputConfig;
     }
-    public MonitoringScheduleMonitoringResources getMonitoringResources() {
+    public MonitoringScheduleMonitoringResources monitoringResources() {
         return this.monitoringResources;
     }
-    public Optional<MonitoringScheduleNetworkConfig> getNetworkConfig() {
+    public Optional<MonitoringScheduleNetworkConfig> networkConfig() {
         return Optional.ofNullable(this.networkConfig);
     }
     /**
      * The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
      * 
     */
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
-    public Optional<MonitoringScheduleStoppingCondition> getStoppingCondition() {
+    public Optional<MonitoringScheduleStoppingCondition> stoppingCondition() {
         return Optional.ofNullable(this.stoppingCondition);
     }
 

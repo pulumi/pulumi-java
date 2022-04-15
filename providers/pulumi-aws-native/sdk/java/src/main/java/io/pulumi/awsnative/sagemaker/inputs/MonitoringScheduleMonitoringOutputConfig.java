@@ -27,7 +27,7 @@ public final class MonitoringScheduleMonitoringOutputConfig extends io.pulumi.re
     @Import(name="kmsKeyId")
       private final @Nullable String kmsKeyId;
 
-    public Optional<String> getKmsKeyId() {
+    public Optional<String> kmsKeyId() {
         return this.kmsKeyId == null ? Optional.empty() : Optional.ofNullable(this.kmsKeyId);
     }
 
@@ -38,7 +38,7 @@ public final class MonitoringScheduleMonitoringOutputConfig extends io.pulumi.re
     @Import(name="monitoringOutputs", required=true)
       private final List<MonitoringScheduleMonitoringOutput> monitoringOutputs;
 
-    public List<MonitoringScheduleMonitoringOutput> getMonitoringOutputs() {
+    public List<MonitoringScheduleMonitoringOutput> monitoringOutputs() {
         return this.monitoringOutputs;
     }
 

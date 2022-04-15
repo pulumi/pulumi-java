@@ -16,7 +16,7 @@ public final class MapConfiguration {
         this.style = style;
     }
 
-    public String getStyle() {
+    public String style() {
         return this.style;
     }
 

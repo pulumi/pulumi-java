@@ -32,14 +32,14 @@ public final class OriginEndpointAuthorization {
      * The Amazon Resource Name (ARN) for the secret in Secrets Manager that your Content Distribution Network (CDN) uses for authorization to access your endpoint.
      * 
     */
-    public String getCdnIdentifierSecret() {
+    public String cdnIdentifierSecret() {
         return this.cdnIdentifierSecret;
     }
     /**
      * The Amazon Resource Name (ARN) for the IAM role that allows MediaPackage to communicate with AWS Secrets Manager.
      * 
     */
-    public String getSecretsRoleArn() {
+    public String secretsRoleArn() {
         return this.secretsRoleArn;
     }
 

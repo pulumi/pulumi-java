@@ -21,14 +21,14 @@ public final class DatasetFilterExpression extends io.pulumi.resources.InvokeArg
     @Import(name="expression", required=true)
       private final String expression;
 
-    public String getExpression() {
+    public String expression() {
         return this.expression;
     }
 
     @Import(name="valuesMap", required=true)
       private final List<DatasetFilterValue> valuesMap;
 
-    public List<DatasetFilterValue> getValuesMap() {
+    public List<DatasetFilterValue> valuesMap() {
         return this.valuesMap;
     }
 

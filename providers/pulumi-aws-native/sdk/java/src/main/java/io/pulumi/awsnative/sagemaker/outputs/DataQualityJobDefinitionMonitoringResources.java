@@ -16,7 +16,7 @@ public final class DataQualityJobDefinitionMonitoringResources {
         this.clusterConfig = clusterConfig;
     }
 
-    public DataQualityJobDefinitionClusterConfig getClusterConfig() {
+    public DataQualityJobDefinitionClusterConfig clusterConfig() {
         return this.clusterConfig;
     }
 

@@ -18,7 +18,7 @@ public final class TopicRuleHttpAuthorizationArgs extends io.pulumi.resources.Re
     @Import(name="sigv4")
       private final @Nullable Output<TopicRuleSigV4AuthorizationArgs> sigv4;
 
-    public Output<TopicRuleSigV4AuthorizationArgs> getSigv4() {
+    public Output<TopicRuleSigV4AuthorizationArgs> sigv4() {
         return this.sigv4 == null ? Codegen.empty() : this.sigv4;
     }
 

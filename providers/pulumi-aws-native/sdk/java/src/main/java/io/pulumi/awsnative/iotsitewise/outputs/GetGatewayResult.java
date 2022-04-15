@@ -51,28 +51,28 @@ public final class GetGatewayResult {
      * A list of gateway capability summaries that each contain a namespace and status.
      * 
     */
-    public List<GatewayCapabilitySummary> getGatewayCapabilitySummaries() {
+    public List<GatewayCapabilitySummary> gatewayCapabilitySummaries() {
         return this.gatewayCapabilitySummaries == null ? List.of() : this.gatewayCapabilitySummaries;
     }
     /**
      * The ID of the gateway device.
      * 
     */
-    public Optional<String> getGatewayId() {
+    public Optional<String> gatewayId() {
         return Optional.ofNullable(this.gatewayId);
     }
     /**
      * A unique, friendly name for the gateway.
      * 
     */
-    public Optional<String> getGatewayName() {
+    public Optional<String> gatewayName() {
         return Optional.ofNullable(this.gatewayName);
     }
     /**
      * A list of key-value pairs that contain metadata for the gateway.
      * 
     */
-    public List<GatewayTag> getTags() {
+    public List<GatewayTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

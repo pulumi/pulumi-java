@@ -15,7 +15,7 @@ public final class GetCapacityReservationFleetArgs extends io.pulumi.resources.I
     @Import(name="capacityReservationFleetId", required=true)
       private final String capacityReservationFleetId;
 
-    public String getCapacityReservationFleetId() {
+    public String capacityReservationFleetId() {
         return this.capacityReservationFleetId;
     }
 

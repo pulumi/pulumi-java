@@ -23,10 +23,10 @@ public final class WebACLDefaultAction {
         this.block = block;
     }
 
-    public Optional<WebACLAllowAction> getAllow() {
+    public Optional<WebACLAllowAction> allow() {
         return Optional.ofNullable(this.allow);
     }
-    public Optional<WebACLBlockAction> getBlock() {
+    public Optional<WebACLBlockAction> block() {
         return Optional.ofNullable(this.block);
     }
 

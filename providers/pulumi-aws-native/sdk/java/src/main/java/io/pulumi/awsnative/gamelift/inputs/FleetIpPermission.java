@@ -25,7 +25,7 @@ public final class FleetIpPermission extends io.pulumi.resources.InvokeArgs {
     @Import(name="fromPort", required=true)
       private final Integer fromPort;
 
-    public Integer getFromPort() {
+    public Integer fromPort() {
         return this.fromPort;
     }
 
@@ -36,7 +36,7 @@ public final class FleetIpPermission extends io.pulumi.resources.InvokeArgs {
     @Import(name="ipRange", required=true)
       private final String ipRange;
 
-    public String getIpRange() {
+    public String ipRange() {
         return this.ipRange;
     }
 
@@ -47,7 +47,7 @@ public final class FleetIpPermission extends io.pulumi.resources.InvokeArgs {
     @Import(name="protocol", required=true)
       private final FleetIpPermissionProtocol protocol;
 
-    public FleetIpPermissionProtocol getProtocol() {
+    public FleetIpPermissionProtocol protocol() {
         return this.protocol;
     }
 
@@ -58,7 +58,7 @@ public final class FleetIpPermission extends io.pulumi.resources.InvokeArgs {
     @Import(name="toPort", required=true)
       private final Integer toPort;
 
-    public Integer getToPort() {
+    public Integer toPort() {
         return this.toPort;
     }
 

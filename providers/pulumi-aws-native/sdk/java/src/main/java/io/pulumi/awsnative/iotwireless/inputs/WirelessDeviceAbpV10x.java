@@ -16,14 +16,14 @@ public final class WirelessDeviceAbpV10x extends io.pulumi.resources.InvokeArgs 
     @Import(name="devAddr", required=true)
       private final String devAddr;
 
-    public String getDevAddr() {
+    public String devAddr() {
         return this.devAddr;
     }
 
     @Import(name="sessionKeys", required=true)
       private final WirelessDeviceSessionKeysAbpV10x sessionKeys;
 
-    public WirelessDeviceSessionKeysAbpV10x getSessionKeys() {
+    public WirelessDeviceSessionKeysAbpV10x sessionKeys() {
         return this.sessionKeys;
     }
 

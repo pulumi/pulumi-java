@@ -23,7 +23,7 @@ public final class ExtensionResourceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="properties", required=true)
       private final Output<Map<String,Object>> properties;
 
-    public Output<Map<String,Object>> getProperties() {
+    public Output<Map<String,Object>> properties() {
         return this.properties;
     }
 
@@ -34,7 +34,7 @@ public final class ExtensionResourceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

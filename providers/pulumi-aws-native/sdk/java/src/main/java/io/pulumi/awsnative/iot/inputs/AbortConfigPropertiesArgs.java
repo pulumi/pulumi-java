@@ -22,7 +22,7 @@ public final class AbortConfigPropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="criteriaList", required=true)
       private final Output<List<JobTemplateAbortCriteriaArgs>> criteriaList;
 
-    public Output<List<JobTemplateAbortCriteriaArgs>> getCriteriaList() {
+    public Output<List<JobTemplateAbortCriteriaArgs>> criteriaList() {
         return this.criteriaList;
     }
 

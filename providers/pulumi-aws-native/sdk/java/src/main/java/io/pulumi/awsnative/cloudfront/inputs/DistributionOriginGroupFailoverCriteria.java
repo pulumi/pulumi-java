@@ -15,7 +15,7 @@ public final class DistributionOriginGroupFailoverCriteria extends io.pulumi.res
     @Import(name="statusCodes", required=true)
       private final DistributionStatusCodes statusCodes;
 
-    public DistributionStatusCodes getStatusCodes() {
+    public DistributionStatusCodes statusCodes() {
         return this.statusCodes;
     }
 

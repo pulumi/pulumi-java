@@ -23,7 +23,7 @@ public final class AccountAuditConfigurationAuditNotificationTargetArgs extends 
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -34,7 +34,7 @@ public final class AccountAuditConfigurationAuditNotificationTargetArgs extends 
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
@@ -45,7 +45,7 @@ public final class AccountAuditConfigurationAuditNotificationTargetArgs extends 
     @Import(name="targetArn")
       private final @Nullable Output<String> targetArn;
 
-    public Output<String> getTargetArn() {
+    public Output<String> targetArn() {
         return this.targetArn == null ? Codegen.empty() : this.targetArn;
     }
 

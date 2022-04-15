@@ -18,14 +18,14 @@ public final class TopicRuleDynamoDBv2Action extends io.pulumi.resources.InvokeA
     @Import(name="putItem")
       private final @Nullable TopicRulePutItemInput putItem;
 
-    public Optional<TopicRulePutItemInput> getPutItem() {
+    public Optional<TopicRulePutItemInput> putItem() {
         return this.putItem == null ? Optional.empty() : Optional.ofNullable(this.putItem);
     }
 
     @Import(name="roleArn")
       private final @Nullable String roleArn;
 
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return this.roleArn == null ? Optional.empty() : Optional.ofNullable(this.roleArn);
     }
 

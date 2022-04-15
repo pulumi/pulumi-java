@@ -20,28 +20,28 @@ public final class OIDCProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientIdList")
       private final @Nullable Output<List<String>> clientIdList;
 
-    public Output<List<String>> getClientIdList() {
+    public Output<List<String>> clientIdList() {
         return this.clientIdList == null ? Codegen.empty() : this.clientIdList;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<OIDCProviderTagArgs>> tags;
 
-    public Output<List<OIDCProviderTagArgs>> getTags() {
+    public Output<List<OIDCProviderTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="thumbprintList", required=true)
       private final Output<List<String>> thumbprintList;
 
-    public Output<List<String>> getThumbprintList() {
+    public Output<List<String>> thumbprintList() {
         return this.thumbprintList;
     }
 
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 

@@ -17,7 +17,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
     @Import(name="config", required=true)
       private final Output<NotificationChannelConfigArgs> config;
 
-    public Output<NotificationChannelConfigArgs> getConfig() {
+    public Output<NotificationChannelConfigArgs> config() {
         return this.config;
     }
 

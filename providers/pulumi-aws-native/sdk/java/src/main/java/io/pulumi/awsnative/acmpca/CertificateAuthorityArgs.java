@@ -27,7 +27,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
     @Import(name="csrExtensions")
       private final @Nullable Output<CertificateAuthorityCsrExtensionsArgs> csrExtensions;
 
-    public Output<CertificateAuthorityCsrExtensionsArgs> getCsrExtensions() {
+    public Output<CertificateAuthorityCsrExtensionsArgs> csrExtensions() {
         return this.csrExtensions == null ? Codegen.empty() : this.csrExtensions;
     }
 
@@ -38,7 +38,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
     @Import(name="keyAlgorithm", required=true)
       private final Output<String> keyAlgorithm;
 
-    public Output<String> getKeyAlgorithm() {
+    public Output<String> keyAlgorithm() {
         return this.keyAlgorithm;
     }
 
@@ -49,7 +49,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
     @Import(name="keyStorageSecurityStandard")
       private final @Nullable Output<String> keyStorageSecurityStandard;
 
-    public Output<String> getKeyStorageSecurityStandard() {
+    public Output<String> keyStorageSecurityStandard() {
         return this.keyStorageSecurityStandard == null ? Codegen.empty() : this.keyStorageSecurityStandard;
     }
 
@@ -60,7 +60,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
     @Import(name="revocationConfiguration")
       private final @Nullable Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration;
 
-    public Output<CertificateAuthorityRevocationConfigurationArgs> getRevocationConfiguration() {
+    public Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration() {
         return this.revocationConfiguration == null ? Codegen.empty() : this.revocationConfiguration;
     }
 
@@ -71,7 +71,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
     @Import(name="signingAlgorithm", required=true)
       private final Output<String> signingAlgorithm;
 
-    public Output<String> getSigningAlgorithm() {
+    public Output<String> signingAlgorithm() {
         return this.signingAlgorithm;
     }
 
@@ -82,14 +82,14 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
     @Import(name="subject", required=true)
       private final Output<CertificateAuthoritySubjectArgs> subject;
 
-    public Output<CertificateAuthoritySubjectArgs> getSubject() {
+    public Output<CertificateAuthoritySubjectArgs> subject() {
         return this.subject;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<CertificateAuthorityTagArgs>> tags;
 
-    public Output<List<CertificateAuthorityTagArgs>> getTags() {
+    public Output<List<CertificateAuthorityTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -100,7 +100,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -18,21 +18,21 @@ public final class DeliveryStreamHttpEndpointConfigurationArgs extends io.pulumi
     @Import(name="accessKey")
       private final @Nullable Output<String> accessKey;
 
-    public Output<String> getAccessKey() {
+    public Output<String> accessKey() {
         return this.accessKey == null ? Codegen.empty() : this.accessKey;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="url", required=true)
       private final Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 

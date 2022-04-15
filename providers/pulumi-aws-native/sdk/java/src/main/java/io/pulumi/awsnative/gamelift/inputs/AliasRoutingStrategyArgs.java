@@ -23,7 +23,7 @@ public final class AliasRoutingStrategyArgs extends io.pulumi.resources.Resource
     @Import(name="fleetId")
       private final @Nullable Output<String> fleetId;
 
-    public Output<String> getFleetId() {
+    public Output<String> fleetId() {
         return this.fleetId == null ? Codegen.empty() : this.fleetId;
     }
 
@@ -34,7 +34,7 @@ public final class AliasRoutingStrategyArgs extends io.pulumi.resources.Resource
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message == null ? Codegen.empty() : this.message;
     }
 
@@ -45,7 +45,7 @@ public final class AliasRoutingStrategyArgs extends io.pulumi.resources.Resource
     @Import(name="type", required=true)
       private final Output<AliasRoutingStrategyType> type;
 
-    public Output<AliasRoutingStrategyType> getType() {
+    public Output<AliasRoutingStrategyType> type() {
         return this.type;
     }
 

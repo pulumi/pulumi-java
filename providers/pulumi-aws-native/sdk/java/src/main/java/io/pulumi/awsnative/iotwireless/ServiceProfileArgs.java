@@ -25,7 +25,7 @@ public final class ServiceProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="loRaWAN")
       private final @Nullable Output<ServiceProfileLoRaWANServiceProfileArgs> loRaWAN;
 
-    public Output<ServiceProfileLoRaWANServiceProfileArgs> getLoRaWAN() {
+    public Output<ServiceProfileLoRaWANServiceProfileArgs> loRaWAN() {
         return this.loRaWAN == null ? Codegen.empty() : this.loRaWAN;
     }
 
@@ -36,7 +36,7 @@ public final class ServiceProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -47,7 +47,7 @@ public final class ServiceProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<ServiceProfileTagArgs>> tags;
 
-    public Output<List<ServiceProfileTagArgs>> getTags() {
+    public Output<List<ServiceProfileTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -21,28 +21,28 @@ public final class TopicRuleHttpActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="auth")
       private final @Nullable Output<TopicRuleHttpAuthorizationArgs> auth;
 
-    public Output<TopicRuleHttpAuthorizationArgs> getAuth() {
+    public Output<TopicRuleHttpAuthorizationArgs> auth() {
         return this.auth == null ? Codegen.empty() : this.auth;
     }
 
     @Import(name="confirmationUrl")
       private final @Nullable Output<String> confirmationUrl;
 
-    public Output<String> getConfirmationUrl() {
+    public Output<String> confirmationUrl() {
         return this.confirmationUrl == null ? Codegen.empty() : this.confirmationUrl;
     }
 
     @Import(name="headers")
       private final @Nullable Output<List<TopicRuleHttpActionHeaderArgs>> headers;
 
-    public Output<List<TopicRuleHttpActionHeaderArgs>> getHeaders() {
+    public Output<List<TopicRuleHttpActionHeaderArgs>> headers() {
         return this.headers == null ? Codegen.empty() : this.headers;
     }
 
     @Import(name="url", required=true)
       private final Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 

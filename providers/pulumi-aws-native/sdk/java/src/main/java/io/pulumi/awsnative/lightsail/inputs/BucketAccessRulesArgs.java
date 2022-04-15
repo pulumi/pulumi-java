@@ -27,7 +27,7 @@ public final class BucketAccessRulesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="allowPublicOverrides")
       private final @Nullable Output<Boolean> allowPublicOverrides;
 
-    public Output<Boolean> getAllowPublicOverrides() {
+    public Output<Boolean> allowPublicOverrides() {
         return this.allowPublicOverrides == null ? Codegen.empty() : this.allowPublicOverrides;
     }
 
@@ -38,7 +38,7 @@ public final class BucketAccessRulesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="getObject")
       private final @Nullable Output<String> getObject;
 
-    public Output<String> getGetObject() {
+    public Output<String> getObject() {
         return this.getObject == null ? Codegen.empty() : this.getObject;
     }
 

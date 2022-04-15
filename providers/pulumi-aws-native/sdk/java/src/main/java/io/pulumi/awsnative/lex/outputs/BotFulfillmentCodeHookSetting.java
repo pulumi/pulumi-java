@@ -27,13 +27,13 @@ public final class BotFulfillmentCodeHookSetting {
         this.postFulfillmentStatusSpecification = postFulfillmentStatusSpecification;
     }
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
-    public Optional<BotFulfillmentUpdatesSpecification> getFulfillmentUpdatesSpecification() {
+    public Optional<BotFulfillmentUpdatesSpecification> fulfillmentUpdatesSpecification() {
         return Optional.ofNullable(this.fulfillmentUpdatesSpecification);
     }
-    public Optional<BotPostFulfillmentStatusSpecification> getPostFulfillmentStatusSpecification() {
+    public Optional<BotPostFulfillmentStatusSpecification> postFulfillmentStatusSpecification() {
         return Optional.ofNullable(this.postFulfillmentStatusSpecification);
     }
 

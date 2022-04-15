@@ -30,79 +30,79 @@ public class EC2Fleet extends io.pulumi.resources.CustomResource {
     @Export(name="context", type=String.class, parameters={})
     private Output</* @Nullable */ String> context;
 
-    public Output</* @Nullable */ String> getContext() {
+    public Output</* @Nullable */ String> context() {
         return this.context;
     }
     @Export(name="excessCapacityTerminationPolicy", type=EC2FleetExcessCapacityTerminationPolicy.class, parameters={})
     private Output</* @Nullable */ EC2FleetExcessCapacityTerminationPolicy> excessCapacityTerminationPolicy;
 
-    public Output</* @Nullable */ EC2FleetExcessCapacityTerminationPolicy> getExcessCapacityTerminationPolicy() {
+    public Output</* @Nullable */ EC2FleetExcessCapacityTerminationPolicy> excessCapacityTerminationPolicy() {
         return this.excessCapacityTerminationPolicy;
     }
     @Export(name="fleetId", type=String.class, parameters={})
     private Output<String> fleetId;
 
-    public Output<String> getFleetId() {
+    public Output<String> fleetId() {
         return this.fleetId;
     }
     @Export(name="launchTemplateConfigs", type=List.class, parameters={EC2FleetFleetLaunchTemplateConfigRequest.class})
     private Output<List<EC2FleetFleetLaunchTemplateConfigRequest>> launchTemplateConfigs;
 
-    public Output<List<EC2FleetFleetLaunchTemplateConfigRequest>> getLaunchTemplateConfigs() {
+    public Output<List<EC2FleetFleetLaunchTemplateConfigRequest>> launchTemplateConfigs() {
         return this.launchTemplateConfigs;
     }
     @Export(name="onDemandOptions", type=EC2FleetOnDemandOptionsRequest.class, parameters={})
     private Output</* @Nullable */ EC2FleetOnDemandOptionsRequest> onDemandOptions;
 
-    public Output</* @Nullable */ EC2FleetOnDemandOptionsRequest> getOnDemandOptions() {
+    public Output</* @Nullable */ EC2FleetOnDemandOptionsRequest> onDemandOptions() {
         return this.onDemandOptions;
     }
     @Export(name="replaceUnhealthyInstances", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> replaceUnhealthyInstances;
 
-    public Output</* @Nullable */ Boolean> getReplaceUnhealthyInstances() {
+    public Output</* @Nullable */ Boolean> replaceUnhealthyInstances() {
         return this.replaceUnhealthyInstances;
     }
     @Export(name="spotOptions", type=EC2FleetSpotOptionsRequest.class, parameters={})
     private Output</* @Nullable */ EC2FleetSpotOptionsRequest> spotOptions;
 
-    public Output</* @Nullable */ EC2FleetSpotOptionsRequest> getSpotOptions() {
+    public Output</* @Nullable */ EC2FleetSpotOptionsRequest> spotOptions() {
         return this.spotOptions;
     }
     @Export(name="tagSpecifications", type=List.class, parameters={EC2FleetTagSpecification.class})
     private Output</* @Nullable */ List<EC2FleetTagSpecification>> tagSpecifications;
 
-    public Output</* @Nullable */ List<EC2FleetTagSpecification>> getTagSpecifications() {
+    public Output</* @Nullable */ List<EC2FleetTagSpecification>> tagSpecifications() {
         return this.tagSpecifications;
     }
     @Export(name="targetCapacitySpecification", type=EC2FleetTargetCapacitySpecificationRequest.class, parameters={})
     private Output<EC2FleetTargetCapacitySpecificationRequest> targetCapacitySpecification;
 
-    public Output<EC2FleetTargetCapacitySpecificationRequest> getTargetCapacitySpecification() {
+    public Output<EC2FleetTargetCapacitySpecificationRequest> targetCapacitySpecification() {
         return this.targetCapacitySpecification;
     }
     @Export(name="terminateInstancesWithExpiration", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> terminateInstancesWithExpiration;
 
-    public Output</* @Nullable */ Boolean> getTerminateInstancesWithExpiration() {
+    public Output</* @Nullable */ Boolean> terminateInstancesWithExpiration() {
         return this.terminateInstancesWithExpiration;
     }
     @Export(name="type", type=EC2FleetType.class, parameters={})
     private Output</* @Nullable */ EC2FleetType> type;
 
-    public Output</* @Nullable */ EC2FleetType> getType() {
+    public Output</* @Nullable */ EC2FleetType> type() {
         return this.type;
     }
     @Export(name="validFrom", type=String.class, parameters={})
     private Output</* @Nullable */ String> validFrom;
 
-    public Output</* @Nullable */ String> getValidFrom() {
+    public Output</* @Nullable */ String> validFrom() {
         return this.validFrom;
     }
     @Export(name="validUntil", type=String.class, parameters={})
     private Output</* @Nullable */ String> validUntil;
 
-    public Output</* @Nullable */ String> getValidUntil() {
+    public Output</* @Nullable */ String> validUntil() {
         return this.validUntil;
     }
 

@@ -37,10 +37,10 @@ public final class DataSourceCredentials {
      *             <code>DataSourceCredentials</code> structure.</p>
      * 
     */
-    public Optional<String> getCopySourceArn() {
+    public Optional<String> copySourceArn() {
         return Optional.ofNullable(this.copySourceArn);
     }
-    public Optional<DataSourceCredentialPair> getCredentialPair() {
+    public Optional<DataSourceCredentialPair> credentialPair() {
         return Optional.ofNullable(this.credentialPair);
     }
 

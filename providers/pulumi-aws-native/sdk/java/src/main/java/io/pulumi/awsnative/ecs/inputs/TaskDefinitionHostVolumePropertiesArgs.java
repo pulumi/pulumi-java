@@ -18,7 +18,7 @@ public final class TaskDefinitionHostVolumePropertiesArgs extends io.pulumi.reso
     @Import(name="sourcePath")
       private final @Nullable Output<String> sourcePath;
 
-    public Output<String> getSourcePath() {
+    public Output<String> sourcePath() {
         return this.sourcePath == null ? Codegen.empty() : this.sourcePath;
     }
 

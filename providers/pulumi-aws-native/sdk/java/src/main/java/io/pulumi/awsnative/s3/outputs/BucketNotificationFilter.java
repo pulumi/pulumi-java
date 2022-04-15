@@ -16,7 +16,7 @@ public final class BucketNotificationFilter {
         this.s3Key = s3Key;
     }
 
-    public BucketS3KeyFilter getS3Key() {
+    public BucketS3KeyFilter s3Key() {
         return this.s3Key;
     }
 

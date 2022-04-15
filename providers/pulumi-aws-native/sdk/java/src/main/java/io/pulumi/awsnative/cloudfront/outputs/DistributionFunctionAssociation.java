@@ -22,10 +22,10 @@ public final class DistributionFunctionAssociation {
         this.functionARN = functionARN;
     }
 
-    public Optional<String> getEventType() {
+    public Optional<String> eventType() {
         return Optional.ofNullable(this.eventType);
     }
-    public Optional<String> getFunctionARN() {
+    public Optional<String> functionARN() {
         return Optional.ofNullable(this.functionARN);
     }
 

@@ -17,7 +17,7 @@ public final class GlobalTableStreamSpecificationArgs extends io.pulumi.resource
     @Import(name="streamViewType", required=true)
       private final Output<String> streamViewType;
 
-    public Output<String> getStreamViewType() {
+    public Output<String> streamViewType() {
         return this.streamViewType;
     }
 

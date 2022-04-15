@@ -23,10 +23,10 @@ public final class DatasetCsvOptions {
         this.headerRow = headerRow;
     }
 
-    public Optional<String> getDelimiter() {
+    public Optional<String> delimiter() {
         return Optional.ofNullable(this.delimiter);
     }
-    public Optional<Boolean> getHeaderRow() {
+    public Optional<Boolean> headerRow() {
         return Optional.ofNullable(this.headerRow);
     }
 

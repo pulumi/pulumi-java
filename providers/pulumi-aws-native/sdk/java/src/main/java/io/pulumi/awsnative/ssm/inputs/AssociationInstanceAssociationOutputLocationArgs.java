@@ -18,7 +18,7 @@ public final class AssociationInstanceAssociationOutputLocationArgs extends io.p
     @Import(name="s3Location")
       private final @Nullable Output<AssociationS3OutputLocationArgs> s3Location;
 
-    public Output<AssociationS3OutputLocationArgs> getS3Location() {
+    public Output<AssociationS3OutputLocationArgs> s3Location() {
         return this.s3Location == null ? Codegen.empty() : this.s3Location;
     }
 

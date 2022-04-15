@@ -29,7 +29,7 @@ public final class BucketWebsiteConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="errorDocument")
       private final @Nullable Output<String> errorDocument;
 
-    public Output<String> getErrorDocument() {
+    public Output<String> errorDocument() {
         return this.errorDocument == null ? Codegen.empty() : this.errorDocument;
     }
 
@@ -40,21 +40,21 @@ public final class BucketWebsiteConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="indexDocument")
       private final @Nullable Output<String> indexDocument;
 
-    public Output<String> getIndexDocument() {
+    public Output<String> indexDocument() {
         return this.indexDocument == null ? Codegen.empty() : this.indexDocument;
     }
 
     @Import(name="redirectAllRequestsTo")
       private final @Nullable Output<BucketRedirectAllRequestsToArgs> redirectAllRequestsTo;
 
-    public Output<BucketRedirectAllRequestsToArgs> getRedirectAllRequestsTo() {
+    public Output<BucketRedirectAllRequestsToArgs> redirectAllRequestsTo() {
         return this.redirectAllRequestsTo == null ? Codegen.empty() : this.redirectAllRequestsTo;
     }
 
     @Import(name="routingRules")
       private final @Nullable Output<List<BucketRoutingRuleArgs>> routingRules;
 
-    public Output<List<BucketRoutingRuleArgs>> getRoutingRules() {
+    public Output<List<BucketRoutingRuleArgs>> routingRules() {
         return this.routingRules == null ? Codegen.empty() : this.routingRules;
     }
 

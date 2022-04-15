@@ -18,21 +18,21 @@ public final class DataSourceWebCrawlerBasicAuthenticationArgs extends io.pulumi
     @Import(name="credentials", required=true)
       private final Output<String> credentials;
 
-    public Output<String> getCredentials() {
+    public Output<String> credentials() {
         return this.credentials;
     }
 
     @Import(name="host", required=true)
       private final Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host;
     }
 
     @Import(name="port", required=true)
       private final Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
 

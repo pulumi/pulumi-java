@@ -21,28 +21,28 @@ public final class RealtimeLogConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="endPoints", required=true)
       private final Output<List<RealtimeLogConfigEndPointArgs>> endPoints;
 
-    public Output<List<RealtimeLogConfigEndPointArgs>> getEndPoints() {
+    public Output<List<RealtimeLogConfigEndPointArgs>> endPoints() {
         return this.endPoints;
     }
 
     @Import(name="fields", required=true)
       private final Output<List<String>> fields;
 
-    public Output<List<String>> getFields() {
+    public Output<List<String>> fields() {
         return this.fields;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="samplingRate", required=true)
       private final Output<Double> samplingRate;
 
-    public Output<Double> getSamplingRate() {
+    public Output<Double> samplingRate() {
         return this.samplingRate;
     }
 

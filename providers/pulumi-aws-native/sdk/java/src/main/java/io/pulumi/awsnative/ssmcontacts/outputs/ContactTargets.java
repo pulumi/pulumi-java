@@ -23,10 +23,10 @@ public final class ContactTargets {
         this.contactTargetInfo = contactTargetInfo;
     }
 
-    public Optional<ContactChannelTargetInfo> getChannelTargetInfo() {
+    public Optional<ContactChannelTargetInfo> channelTargetInfo() {
         return Optional.ofNullable(this.channelTargetInfo);
     }
-    public Optional<ContactTargetInfo> getContactTargetInfo() {
+    public Optional<ContactTargetInfo> contactTargetInfo() {
         return Optional.ofNullable(this.contactTargetInfo);
     }
 

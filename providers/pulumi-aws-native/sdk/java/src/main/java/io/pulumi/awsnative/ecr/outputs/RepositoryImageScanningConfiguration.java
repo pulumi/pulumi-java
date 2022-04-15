@@ -18,7 +18,7 @@ public final class RepositoryImageScanningConfiguration {
         this.scanOnPush = scanOnPush;
     }
 
-    public Optional<Boolean> getScanOnPush() {
+    public Optional<Boolean> scanOnPush() {
         return Optional.ofNullable(this.scanOnPush);
     }
 

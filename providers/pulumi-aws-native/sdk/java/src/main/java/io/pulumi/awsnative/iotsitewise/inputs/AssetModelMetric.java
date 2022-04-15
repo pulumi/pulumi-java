@@ -22,7 +22,7 @@ public final class AssetModelMetric extends io.pulumi.resources.InvokeArgs {
     @Import(name="expression", required=true)
       private final String expression;
 
-    public String getExpression() {
+    public String expression() {
         return this.expression;
     }
 
@@ -33,7 +33,7 @@ public final class AssetModelMetric extends io.pulumi.resources.InvokeArgs {
     @Import(name="variables", required=true)
       private final List<AssetModelExpressionVariable> variables;
 
-    public List<AssetModelExpressionVariable> getVariables() {
+    public List<AssetModelExpressionVariable> variables() {
         return this.variables;
     }
 
@@ -44,7 +44,7 @@ public final class AssetModelMetric extends io.pulumi.resources.InvokeArgs {
     @Import(name="window", required=true)
       private final AssetModelMetricWindow window;
 
-    public AssetModelMetricWindow getWindow() {
+    public AssetModelMetricWindow window() {
         return this.window;
     }
 

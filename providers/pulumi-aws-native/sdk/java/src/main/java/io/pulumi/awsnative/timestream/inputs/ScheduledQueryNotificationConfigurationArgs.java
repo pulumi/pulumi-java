@@ -21,7 +21,7 @@ public final class ScheduledQueryNotificationConfigurationArgs extends io.pulumi
     @Import(name="snsConfiguration", required=true)
       private final Output<ScheduledQuerySnsConfigurationArgs> snsConfiguration;
 
-    public Output<ScheduledQuerySnsConfigurationArgs> getSnsConfiguration() {
+    public Output<ScheduledQuerySnsConfigurationArgs> snsConfiguration() {
         return this.snsConfiguration;
     }
 

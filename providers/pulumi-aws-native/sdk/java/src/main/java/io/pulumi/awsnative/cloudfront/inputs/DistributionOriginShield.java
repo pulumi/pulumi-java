@@ -18,14 +18,14 @@ public final class DistributionOriginShield extends io.pulumi.resources.InvokeAr
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
     @Import(name="originShieldRegion")
       private final @Nullable String originShieldRegion;
 
-    public Optional<String> getOriginShieldRegion() {
+    public Optional<String> originShieldRegion() {
         return this.originShieldRegion == null ? Optional.empty() : Optional.ofNullable(this.originShieldRegion);
     }
 

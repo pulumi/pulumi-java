@@ -22,10 +22,10 @@ public final class TaskDefinitionEnvironmentFile {
         this.value = value;
     }
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

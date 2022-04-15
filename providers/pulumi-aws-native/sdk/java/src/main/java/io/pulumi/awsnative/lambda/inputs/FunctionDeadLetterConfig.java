@@ -25,7 +25,7 @@ public final class FunctionDeadLetterConfig extends io.pulumi.resources.InvokeAr
     @Import(name="targetArn")
       private final @Nullable String targetArn;
 
-    public Optional<String> getTargetArn() {
+    public Optional<String> targetArn() {
         return this.targetArn == null ? Optional.empty() : Optional.ofNullable(this.targetArn);
     }
 

@@ -20,21 +20,21 @@ public final class ComponentVersionLambdaDeviceMountArgs extends io.pulumi.resou
     @Import(name="addGroupOwner")
       private final @Nullable Output<Boolean> addGroupOwner;
 
-    public Output<Boolean> getAddGroupOwner() {
+    public Output<Boolean> addGroupOwner() {
         return this.addGroupOwner == null ? Codegen.empty() : this.addGroupOwner;
     }
 
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
     @Import(name="permission")
       private final @Nullable Output<ComponentVersionLambdaFilesystemPermission> permission;
 
-    public Output<ComponentVersionLambdaFilesystemPermission> getPermission() {
+    public Output<ComponentVersionLambdaFilesystemPermission> permission() {
         return this.permission == null ? Codegen.empty() : this.permission;
     }
 

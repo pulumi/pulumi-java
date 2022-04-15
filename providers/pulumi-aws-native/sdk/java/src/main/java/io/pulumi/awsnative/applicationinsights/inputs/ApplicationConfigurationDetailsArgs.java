@@ -33,7 +33,7 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
     @Import(name="alarmMetrics")
       private final @Nullable Output<List<ApplicationAlarmMetricArgs>> alarmMetrics;
 
-    public Output<List<ApplicationAlarmMetricArgs>> getAlarmMetrics() {
+    public Output<List<ApplicationAlarmMetricArgs>> alarmMetrics() {
         return this.alarmMetrics == null ? Codegen.empty() : this.alarmMetrics;
     }
 
@@ -44,7 +44,7 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
     @Import(name="alarms")
       private final @Nullable Output<List<ApplicationAlarmArgs>> alarms;
 
-    public Output<List<ApplicationAlarmArgs>> getAlarms() {
+    public Output<List<ApplicationAlarmArgs>> alarms() {
         return this.alarms == null ? Codegen.empty() : this.alarms;
     }
 
@@ -55,7 +55,7 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
     @Import(name="hAClusterPrometheusExporter")
       private final @Nullable Output<ApplicationHAClusterPrometheusExporterArgs> hAClusterPrometheusExporter;
 
-    public Output<ApplicationHAClusterPrometheusExporterArgs> getHAClusterPrometheusExporter() {
+    public Output<ApplicationHAClusterPrometheusExporterArgs> hAClusterPrometheusExporter() {
         return this.hAClusterPrometheusExporter == null ? Codegen.empty() : this.hAClusterPrometheusExporter;
     }
 
@@ -66,7 +66,7 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
     @Import(name="hANAPrometheusExporter")
       private final @Nullable Output<ApplicationHANAPrometheusExporterArgs> hANAPrometheusExporter;
 
-    public Output<ApplicationHANAPrometheusExporterArgs> getHANAPrometheusExporter() {
+    public Output<ApplicationHANAPrometheusExporterArgs> hANAPrometheusExporter() {
         return this.hANAPrometheusExporter == null ? Codegen.empty() : this.hANAPrometheusExporter;
     }
 
@@ -77,7 +77,7 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
     @Import(name="jMXPrometheusExporter")
       private final @Nullable Output<ApplicationJMXPrometheusExporterArgs> jMXPrometheusExporter;
 
-    public Output<ApplicationJMXPrometheusExporterArgs> getJMXPrometheusExporter() {
+    public Output<ApplicationJMXPrometheusExporterArgs> jMXPrometheusExporter() {
         return this.jMXPrometheusExporter == null ? Codegen.empty() : this.jMXPrometheusExporter;
     }
 
@@ -88,7 +88,7 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
     @Import(name="logs")
       private final @Nullable Output<List<ApplicationLogArgs>> logs;
 
-    public Output<List<ApplicationLogArgs>> getLogs() {
+    public Output<List<ApplicationLogArgs>> logs() {
         return this.logs == null ? Codegen.empty() : this.logs;
     }
 
@@ -99,7 +99,7 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
     @Import(name="windowsEvents")
       private final @Nullable Output<List<ApplicationWindowsEventArgs>> windowsEvents;
 
-    public Output<List<ApplicationWindowsEventArgs>> getWindowsEvents() {
+    public Output<List<ApplicationWindowsEventArgs>> windowsEvents() {
         return this.windowsEvents == null ? Codegen.empty() : this.windowsEvents;
     }
 

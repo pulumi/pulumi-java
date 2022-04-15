@@ -23,21 +23,21 @@ public final class ClusterExecuteCommandConfigurationArgs extends io.pulumi.reso
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     @Import(name="logConfiguration")
       private final @Nullable Output<ClusterExecuteCommandLogConfigurationArgs> logConfiguration;
 
-    public Output<ClusterExecuteCommandLogConfigurationArgs> getLogConfiguration() {
+    public Output<ClusterExecuteCommandLogConfigurationArgs> logConfiguration() {
         return this.logConfiguration == null ? Codegen.empty() : this.logConfiguration;
     }
 
     @Import(name="logging")
       private final @Nullable Output<String> logging;
 
-    public Output<String> getLogging() {
+    public Output<String> logging() {
         return this.logging == null ? Codegen.empty() : this.logging;
     }
 

@@ -35,7 +35,7 @@ public class FirewallRuleGroup extends io.pulumi.resources.CustomResource {
      * @return Arn
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -49,7 +49,7 @@ public class FirewallRuleGroup extends io.pulumi.resources.CustomResource {
      * @return Rfc3339TimeString
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -63,7 +63,7 @@ public class FirewallRuleGroup extends io.pulumi.resources.CustomResource {
      * @return The id of the creator request.
      * 
      */
-    public Output<String> getCreatorRequestId() {
+    public Output<String> creatorRequestId() {
         return this.creatorRequestId;
     }
     /**
@@ -77,7 +77,7 @@ public class FirewallRuleGroup extends io.pulumi.resources.CustomResource {
      * @return FirewallRules
      * 
      */
-    public Output</* @Nullable */ List<FirewallRuleGroupFirewallRule>> getFirewallRules() {
+    public Output</* @Nullable */ List<FirewallRuleGroupFirewallRule>> firewallRules() {
         return this.firewallRules;
     }
     /**
@@ -91,7 +91,7 @@ public class FirewallRuleGroup extends io.pulumi.resources.CustomResource {
      * @return Rfc3339TimeString
      * 
      */
-    public Output<String> getModificationTime() {
+    public Output<String> modificationTime() {
         return this.modificationTime;
     }
     /**
@@ -105,7 +105,7 @@ public class FirewallRuleGroup extends io.pulumi.resources.CustomResource {
      * @return FirewallRuleGroupName
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -119,7 +119,7 @@ public class FirewallRuleGroup extends io.pulumi.resources.CustomResource {
      * @return AccountId
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -133,7 +133,7 @@ public class FirewallRuleGroup extends io.pulumi.resources.CustomResource {
      * @return Count
      * 
      */
-    public Output<Integer> getRuleCount() {
+    public Output<Integer> ruleCount() {
         return this.ruleCount;
     }
     /**
@@ -147,7 +147,7 @@ public class FirewallRuleGroup extends io.pulumi.resources.CustomResource {
      * @return ShareStatus, possible values are NOT_SHARED, SHARED_WITH_ME, SHARED_BY_ME.
      * 
      */
-    public Output<FirewallRuleGroupShareStatus> getShareStatus() {
+    public Output<FirewallRuleGroupShareStatus> shareStatus() {
         return this.shareStatus;
     }
     /**
@@ -161,7 +161,7 @@ public class FirewallRuleGroup extends io.pulumi.resources.CustomResource {
      * @return ResolverFirewallRuleGroupAssociation, possible values are COMPLETE, DELETING, UPDATING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
      * 
      */
-    public Output<FirewallRuleGroupStatus> getStatus() {
+    public Output<FirewallRuleGroupStatus> status() {
         return this.status;
     }
     /**
@@ -175,7 +175,7 @@ public class FirewallRuleGroup extends io.pulumi.resources.CustomResource {
      * @return FirewallRuleGroupStatus
      * 
      */
-    public Output<String> getStatusMessage() {
+    public Output<String> statusMessage() {
         return this.statusMessage;
     }
     /**
@@ -189,7 +189,7 @@ public class FirewallRuleGroup extends io.pulumi.resources.CustomResource {
      * @return Tags
      * 
      */
-    public Output</* @Nullable */ List<FirewallRuleGroupTag>> getTags() {
+    public Output</* @Nullable */ List<FirewallRuleGroupTag>> tags() {
         return this.tags;
     }
 

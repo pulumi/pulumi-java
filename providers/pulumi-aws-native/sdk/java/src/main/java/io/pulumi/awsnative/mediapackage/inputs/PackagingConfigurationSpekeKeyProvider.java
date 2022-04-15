@@ -20,7 +20,7 @@ public final class PackagingConfigurationSpekeKeyProvider extends io.pulumi.reso
     @Import(name="roleArn", required=true)
       private final String roleArn;
 
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 
@@ -31,7 +31,7 @@ public final class PackagingConfigurationSpekeKeyProvider extends io.pulumi.reso
     @Import(name="systemIds", required=true)
       private final List<String> systemIds;
 
-    public List<String> getSystemIds() {
+    public List<String> systemIds() {
         return this.systemIds;
     }
 
@@ -42,7 +42,7 @@ public final class PackagingConfigurationSpekeKeyProvider extends io.pulumi.reso
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

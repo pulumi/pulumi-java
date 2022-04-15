@@ -19,7 +19,7 @@ public final class GetSchemaVersionMetadataArgs extends io.pulumi.resources.Invo
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 
@@ -30,7 +30,7 @@ public final class GetSchemaVersionMetadataArgs extends io.pulumi.resources.Invo
     @Import(name="schemaVersionId", required=true)
       private final String schemaVersionId;
 
-    public String getSchemaVersionId() {
+    public String schemaVersionId() {
         return this.schemaVersionId;
     }
 
@@ -41,7 +41,7 @@ public final class GetSchemaVersionMetadataArgs extends io.pulumi.resources.Invo
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

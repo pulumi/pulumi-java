@@ -17,14 +17,14 @@ public final class WirelessDeviceOtaaV10xArgs extends io.pulumi.resources.Resour
     @Import(name="appEui", required=true)
       private final Output<String> appEui;
 
-    public Output<String> getAppEui() {
+    public Output<String> appEui() {
         return this.appEui;
     }
 
     @Import(name="appKey", required=true)
       private final Output<String> appKey;
 
-    public Output<String> getAppKey() {
+    public Output<String> appKey() {
         return this.appKey;
     }
 

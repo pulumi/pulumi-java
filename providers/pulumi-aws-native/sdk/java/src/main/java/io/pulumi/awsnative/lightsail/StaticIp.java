@@ -30,7 +30,7 @@ public class StaticIp extends io.pulumi.resources.CustomResource {
      * @return The instance where the static IP is attached.
      * 
      */
-    public Output</* @Nullable */ String> getAttachedTo() {
+    public Output</* @Nullable */ String> attachedTo() {
         return this.attachedTo;
     }
     /**
@@ -44,7 +44,7 @@ public class StaticIp extends io.pulumi.resources.CustomResource {
      * @return The static IP address.
      * 
      */
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress;
     }
     /**
@@ -58,13 +58,13 @@ public class StaticIp extends io.pulumi.resources.CustomResource {
      * @return A Boolean value indicating whether the static IP is attached.
      * 
      */
-    public Output<Boolean> getIsAttached() {
+    public Output<Boolean> isAttached() {
         return this.isAttached;
     }
     @Export(name="staticIpArn", type=String.class, parameters={})
     private Output<String> staticIpArn;
 
-    public Output<String> getStaticIpArn() {
+    public Output<String> staticIpArn() {
         return this.staticIpArn;
     }
     /**
@@ -78,7 +78,7 @@ public class StaticIp extends io.pulumi.resources.CustomResource {
      * @return The name of the static IP address.
      * 
      */
-    public Output<String> getStaticIpName() {
+    public Output<String> staticIpName() {
         return this.staticIpName;
     }
 

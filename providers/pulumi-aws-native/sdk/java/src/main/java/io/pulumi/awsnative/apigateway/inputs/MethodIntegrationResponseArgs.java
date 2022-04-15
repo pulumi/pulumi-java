@@ -24,7 +24,7 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
     @Import(name="contentHandling")
       private final @Nullable Output<MethodIntegrationResponseContentHandling> contentHandling;
 
-    public Output<MethodIntegrationResponseContentHandling> getContentHandling() {
+    public Output<MethodIntegrationResponseContentHandling> contentHandling() {
         return this.contentHandling == null ? Codegen.empty() : this.contentHandling;
     }
 
@@ -35,7 +35,7 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
     @Import(name="responseParameters")
       private final @Nullable Output<Object> responseParameters;
 
-    public Output<Object> getResponseParameters() {
+    public Output<Object> responseParameters() {
         return this.responseParameters == null ? Codegen.empty() : this.responseParameters;
     }
 
@@ -46,7 +46,7 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
     @Import(name="responseTemplates")
       private final @Nullable Output<Object> responseTemplates;
 
-    public Output<Object> getResponseTemplates() {
+    public Output<Object> responseTemplates() {
         return this.responseTemplates == null ? Codegen.empty() : this.responseTemplates;
     }
 
@@ -57,7 +57,7 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
     @Import(name="selectionPattern")
       private final @Nullable Output<String> selectionPattern;
 
-    public Output<String> getSelectionPattern() {
+    public Output<String> selectionPattern() {
         return this.selectionPattern == null ? Codegen.empty() : this.selectionPattern;
     }
 
@@ -68,7 +68,7 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
     @Import(name="statusCode", required=true)
       private final Output<String> statusCode;
 
-    public Output<String> getStatusCode() {
+    public Output<String> statusCode() {
         return this.statusCode;
     }
 

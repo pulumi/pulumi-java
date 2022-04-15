@@ -24,7 +24,7 @@ public final class MonitoringScheduleVpcConfig extends io.pulumi.resources.Invok
     @Import(name="securityGroupIds", required=true)
       private final List<String> securityGroupIds;
 
-    public List<String> getSecurityGroupIds() {
+    public List<String> securityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -35,7 +35,7 @@ public final class MonitoringScheduleVpcConfig extends io.pulumi.resources.Invok
     @Import(name="subnets", required=true)
       private final List<String> subnets;
 
-    public List<String> getSubnets() {
+    public List<String> subnets() {
         return this.subnets;
     }
 

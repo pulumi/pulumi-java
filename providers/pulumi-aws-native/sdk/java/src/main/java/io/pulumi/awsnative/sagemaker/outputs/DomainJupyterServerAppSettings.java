@@ -18,7 +18,7 @@ public final class DomainJupyterServerAppSettings {
         this.defaultResourceSpec = defaultResourceSpec;
     }
 
-    public Optional<DomainResourceSpec> getDefaultResourceSpec() {
+    public Optional<DomainResourceSpec> defaultResourceSpec() {
         return Optional.ofNullable(this.defaultResourceSpec);
     }
 

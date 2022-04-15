@@ -17,7 +17,7 @@ public final class FileSystemBackupPolicyArgs extends io.pulumi.resources.Resour
     @Import(name="status", required=true)
       private final Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 

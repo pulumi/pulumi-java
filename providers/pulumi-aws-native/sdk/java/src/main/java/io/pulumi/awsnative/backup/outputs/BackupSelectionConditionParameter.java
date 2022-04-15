@@ -22,10 +22,10 @@ public final class BackupSelectionConditionParameter {
         this.conditionValue = conditionValue;
     }
 
-    public Optional<String> getConditionKey() {
+    public Optional<String> conditionKey() {
         return Optional.ofNullable(this.conditionKey);
     }
-    public Optional<String> getConditionValue() {
+    public Optional<String> conditionValue() {
         return Optional.ofNullable(this.conditionValue);
     }
 

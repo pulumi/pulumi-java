@@ -20,42 +20,42 @@ public final class NetworkInsightsAnalysisAnalysisAclRule extends io.pulumi.reso
     @Import(name="cidr")
       private final @Nullable String cidr;
 
-    public Optional<String> getCidr() {
+    public Optional<String> cidr() {
         return this.cidr == null ? Optional.empty() : Optional.ofNullable(this.cidr);
     }
 
     @Import(name="egress")
       private final @Nullable Boolean egress;
 
-    public Optional<Boolean> getEgress() {
+    public Optional<Boolean> egress() {
         return this.egress == null ? Optional.empty() : Optional.ofNullable(this.egress);
     }
 
     @Import(name="portRange")
       private final @Nullable NetworkInsightsAnalysisPortRange portRange;
 
-    public Optional<NetworkInsightsAnalysisPortRange> getPortRange() {
+    public Optional<NetworkInsightsAnalysisPortRange> portRange() {
         return this.portRange == null ? Optional.empty() : Optional.ofNullable(this.portRange);
     }
 
     @Import(name="protocol")
       private final @Nullable String protocol;
 
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
     @Import(name="ruleAction")
       private final @Nullable String ruleAction;
 
-    public Optional<String> getRuleAction() {
+    public Optional<String> ruleAction() {
         return this.ruleAction == null ? Optional.empty() : Optional.ofNullable(this.ruleAction);
     }
 
     @Import(name="ruleNumber")
       private final @Nullable Integer ruleNumber;
 
-    public Optional<Integer> getRuleNumber() {
+    public Optional<Integer> ruleNumber() {
         return this.ruleNumber == null ? Optional.empty() : Optional.ofNullable(this.ruleNumber);
     }
 

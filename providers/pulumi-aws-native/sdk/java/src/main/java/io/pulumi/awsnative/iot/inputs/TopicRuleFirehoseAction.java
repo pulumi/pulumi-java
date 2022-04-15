@@ -18,28 +18,28 @@ public final class TopicRuleFirehoseAction extends io.pulumi.resources.InvokeArg
     @Import(name="batchMode")
       private final @Nullable Boolean batchMode;
 
-    public Optional<Boolean> getBatchMode() {
+    public Optional<Boolean> batchMode() {
         return this.batchMode == null ? Optional.empty() : Optional.ofNullable(this.batchMode);
     }
 
     @Import(name="deliveryStreamName", required=true)
       private final String deliveryStreamName;
 
-    public String getDeliveryStreamName() {
+    public String deliveryStreamName() {
         return this.deliveryStreamName;
     }
 
     @Import(name="roleArn", required=true)
       private final String roleArn;
 
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 
     @Import(name="separator")
       private final @Nullable String separator;
 
-    public Optional<String> getSeparator() {
+    public Optional<String> separator() {
         return this.separator == null ? Optional.empty() : Optional.ofNullable(this.separator);
     }
 

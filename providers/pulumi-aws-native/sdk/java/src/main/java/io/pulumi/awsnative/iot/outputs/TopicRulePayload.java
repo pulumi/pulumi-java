@@ -37,22 +37,22 @@ public final class TopicRulePayload {
         this.sql = sql;
     }
 
-    public List<TopicRuleAction> getActions() {
+    public List<TopicRuleAction> actions() {
         return this.actions;
     }
-    public Optional<String> getAwsIotSqlVersion() {
+    public Optional<String> awsIotSqlVersion() {
         return Optional.ofNullable(this.awsIotSqlVersion);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<TopicRuleAction> getErrorAction() {
+    public Optional<TopicRuleAction> errorAction() {
         return Optional.ofNullable(this.errorAction);
     }
-    public Optional<Boolean> getRuleDisabled() {
+    public Optional<Boolean> ruleDisabled() {
         return Optional.ofNullable(this.ruleDisabled);
     }
-    public String getSql() {
+    public String sql() {
         return this.sql;
     }
 

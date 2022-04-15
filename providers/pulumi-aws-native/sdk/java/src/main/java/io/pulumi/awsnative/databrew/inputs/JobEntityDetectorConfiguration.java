@@ -19,14 +19,14 @@ public final class JobEntityDetectorConfiguration extends io.pulumi.resources.In
     @Import(name="allowedStatistics")
       private final @Nullable JobAllowedStatistics allowedStatistics;
 
-    public Optional<JobAllowedStatistics> getAllowedStatistics() {
+    public Optional<JobAllowedStatistics> allowedStatistics() {
         return this.allowedStatistics == null ? Optional.empty() : Optional.ofNullable(this.allowedStatistics);
     }
 
     @Import(name="entityTypes", required=true)
       private final List<String> entityTypes;
 
-    public List<String> getEntityTypes() {
+    public List<String> entityTypes() {
         return this.entityTypes;
     }
 

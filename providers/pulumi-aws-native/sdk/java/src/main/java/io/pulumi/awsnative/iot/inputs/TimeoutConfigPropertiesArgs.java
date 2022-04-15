@@ -21,7 +21,7 @@ public final class TimeoutConfigPropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="inProgressTimeoutInMinutes", required=true)
       private final Output<Integer> inProgressTimeoutInMinutes;
 
-    public Output<Integer> getInProgressTimeoutInMinutes() {
+    public Output<Integer> inProgressTimeoutInMinutes() {
         return this.inProgressTimeoutInMinutes;
     }
 

@@ -19,14 +19,14 @@ public final class SigningProfileSignatureValidityPeriodArgs extends io.pulumi.r
     @Import(name="type")
       private final @Nullable Output<SigningProfileSignatureValidityPeriodType> type;
 
-    public Output<SigningProfileSignatureValidityPeriodType> getType() {
+    public Output<SigningProfileSignatureValidityPeriodType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
     @Import(name="value")
       private final @Nullable Output<Integer> value;
 
-    public Output<Integer> getValue() {
+    public Output<Integer> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

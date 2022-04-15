@@ -16,7 +16,7 @@ public final class ConnectorKafkaClusterClientAuthentication {
         this.authenticationType = authenticationType;
     }
 
-    public ConnectorKafkaClusterClientAuthenticationType getAuthenticationType() {
+    public ConnectorKafkaClusterClientAuthenticationType authenticationType() {
         return this.authenticationType;
     }
 

@@ -21,10 +21,10 @@ public final class AnomalyDetectorVpcConfiguration {
         this.subnetIdList = subnetIdList;
     }
 
-    public List<String> getSecurityGroupIdList() {
+    public List<String> securityGroupIdList() {
         return this.securityGroupIdList;
     }
-    public List<String> getSubnetIdList() {
+    public List<String> subnetIdList() {
         return this.subnetIdList;
     }
 

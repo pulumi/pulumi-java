@@ -49,34 +49,34 @@ public final class DomainClusterConfig {
         this.zoneAwarenessEnabled = zoneAwarenessEnabled;
     }
 
-    public Optional<Integer> getDedicatedMasterCount() {
+    public Optional<Integer> dedicatedMasterCount() {
         return Optional.ofNullable(this.dedicatedMasterCount);
     }
-    public Optional<Boolean> getDedicatedMasterEnabled() {
+    public Optional<Boolean> dedicatedMasterEnabled() {
         return Optional.ofNullable(this.dedicatedMasterEnabled);
     }
-    public Optional<String> getDedicatedMasterType() {
+    public Optional<String> dedicatedMasterType() {
         return Optional.ofNullable(this.dedicatedMasterType);
     }
-    public Optional<Integer> getInstanceCount() {
+    public Optional<Integer> instanceCount() {
         return Optional.ofNullable(this.instanceCount);
     }
-    public Optional<String> getInstanceType() {
+    public Optional<String> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
-    public Optional<Integer> getWarmCount() {
+    public Optional<Integer> warmCount() {
         return Optional.ofNullable(this.warmCount);
     }
-    public Optional<Boolean> getWarmEnabled() {
+    public Optional<Boolean> warmEnabled() {
         return Optional.ofNullable(this.warmEnabled);
     }
-    public Optional<String> getWarmType() {
+    public Optional<String> warmType() {
         return Optional.ofNullable(this.warmType);
     }
-    public Optional<DomainZoneAwarenessConfig> getZoneAwarenessConfig() {
+    public Optional<DomainZoneAwarenessConfig> zoneAwarenessConfig() {
         return Optional.ofNullable(this.zoneAwarenessConfig);
     }
-    public Optional<Boolean> getZoneAwarenessEnabled() {
+    public Optional<Boolean> zoneAwarenessEnabled() {
         return Optional.ofNullable(this.zoneAwarenessEnabled);
     }
 

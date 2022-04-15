@@ -25,7 +25,7 @@ public final class ServiceInstanceConfiguration extends io.pulumi.resources.Invo
     @Import(name="cpu")
       private final @Nullable String cpu;
 
-    public Optional<String> getCpu() {
+    public Optional<String> cpu() {
         return this.cpu == null ? Optional.empty() : Optional.ofNullable(this.cpu);
     }
 
@@ -36,7 +36,7 @@ public final class ServiceInstanceConfiguration extends io.pulumi.resources.Invo
     @Import(name="instanceRoleArn")
       private final @Nullable String instanceRoleArn;
 
-    public Optional<String> getInstanceRoleArn() {
+    public Optional<String> instanceRoleArn() {
         return this.instanceRoleArn == null ? Optional.empty() : Optional.ofNullable(this.instanceRoleArn);
     }
 
@@ -47,7 +47,7 @@ public final class ServiceInstanceConfiguration extends io.pulumi.resources.Invo
     @Import(name="memory")
       private final @Nullable String memory;
 
-    public Optional<String> getMemory() {
+    public Optional<String> memory() {
         return this.memory == null ? Optional.empty() : Optional.ofNullable(this.memory);
     }
 

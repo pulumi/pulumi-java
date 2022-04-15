@@ -33,14 +33,14 @@ public final class ContactTargetInfo {
      * The Amazon Resource Name (ARN) of the contact.
      * 
     */
-    public String getContactId() {
+    public String contactId() {
         return this.contactId;
     }
     /**
      * A Boolean value determining if the contact's acknowledgement stops the progress of stages in the plan.
      * 
     */
-    public Boolean getIsEssential() {
+    public Boolean isEssential() {
         return this.isEssential;
     }
 

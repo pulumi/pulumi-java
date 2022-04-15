@@ -24,10 +24,10 @@ public final class ExperimentOnlineAbConfigObject {
         this.treatmentWeights = treatmentWeights;
     }
 
-    public Optional<String> getControlTreatmentName() {
+    public Optional<String> controlTreatmentName() {
         return Optional.ofNullable(this.controlTreatmentName);
     }
-    public List<ExperimentTreatmentToWeight> getTreatmentWeights() {
+    public List<ExperimentTreatmentToWeight> treatmentWeights() {
         return this.treatmentWeights == null ? List.of() : this.treatmentWeights;
     }
 

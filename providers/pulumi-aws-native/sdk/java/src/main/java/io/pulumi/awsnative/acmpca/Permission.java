@@ -30,7 +30,7 @@ public class Permission extends io.pulumi.resources.CustomResource {
      * @return The actions that the specified AWS service principal can use. Actions IssueCertificate, GetCertificate and ListPermissions must be provided.
      * 
      */
-    public Output<List<String>> getActions() {
+    public Output<List<String>> actions() {
         return this.actions;
     }
     /**
@@ -44,7 +44,7 @@ public class Permission extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Private Certificate Authority that grants the permission.
      * 
      */
-    public Output<String> getCertificateAuthorityArn() {
+    public Output<String> certificateAuthorityArn() {
         return this.certificateAuthorityArn;
     }
     /**
@@ -58,7 +58,7 @@ public class Permission extends io.pulumi.resources.CustomResource {
      * @return The AWS service or identity that receives the permission. At this time, the only valid principal is acm.amazonaws.com.
      * 
      */
-    public Output<String> getPrincipal() {
+    public Output<String> principal() {
         return this.principal;
     }
     /**
@@ -72,7 +72,7 @@ public class Permission extends io.pulumi.resources.CustomResource {
      * @return The ID of the calling account.
      * 
      */
-    public Output</* @Nullable */ String> getSourceAccount() {
+    public Output</* @Nullable */ String> sourceAccount() {
         return this.sourceAccount;
     }
 

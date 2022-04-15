@@ -20,28 +20,28 @@ public final class DistributionForwardedValues extends io.pulumi.resources.Invok
     @Import(name="cookies")
       private final @Nullable DistributionCookies cookies;
 
-    public Optional<DistributionCookies> getCookies() {
+    public Optional<DistributionCookies> cookies() {
         return this.cookies == null ? Optional.empty() : Optional.ofNullable(this.cookies);
     }
 
     @Import(name="headers")
       private final @Nullable List<String> headers;
 
-    public List<String> getHeaders() {
+    public List<String> headers() {
         return this.headers == null ? List.of() : this.headers;
     }
 
     @Import(name="queryString", required=true)
       private final Boolean queryString;
 
-    public Boolean getQueryString() {
+    public Boolean queryString() {
         return this.queryString;
     }
 
     @Import(name="queryStringCacheKeys")
       private final @Nullable List<String> queryStringCacheKeys;
 
-    public List<String> getQueryStringCacheKeys() {
+    public List<String> queryStringCacheKeys() {
         return this.queryStringCacheKeys == null ? List.of() : this.queryStringCacheKeys;
     }
 

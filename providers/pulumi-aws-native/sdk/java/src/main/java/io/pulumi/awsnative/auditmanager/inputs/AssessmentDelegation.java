@@ -24,77 +24,77 @@ public final class AssessmentDelegation extends io.pulumi.resources.InvokeArgs {
     @Import(name="assessmentId")
       private final @Nullable String assessmentId;
 
-    public Optional<String> getAssessmentId() {
+    public Optional<String> assessmentId() {
         return this.assessmentId == null ? Optional.empty() : Optional.ofNullable(this.assessmentId);
     }
 
     @Import(name="assessmentName")
       private final @Nullable String assessmentName;
 
-    public Optional<String> getAssessmentName() {
+    public Optional<String> assessmentName() {
         return this.assessmentName == null ? Optional.empty() : Optional.ofNullable(this.assessmentName);
     }
 
     @Import(name="comment")
       private final @Nullable String comment;
 
-    public Optional<String> getComment() {
+    public Optional<String> comment() {
         return this.comment == null ? Optional.empty() : Optional.ofNullable(this.comment);
     }
 
     @Import(name="controlSetId")
       private final @Nullable String controlSetId;
 
-    public Optional<String> getControlSetId() {
+    public Optional<String> controlSetId() {
         return this.controlSetId == null ? Optional.empty() : Optional.ofNullable(this.controlSetId);
     }
 
     @Import(name="createdBy")
       private final @Nullable String createdBy;
 
-    public Optional<String> getCreatedBy() {
+    public Optional<String> createdBy() {
         return this.createdBy == null ? Optional.empty() : Optional.ofNullable(this.createdBy);
     }
 
     @Import(name="creationTime")
       private final @Nullable Double creationTime;
 
-    public Optional<Double> getCreationTime() {
+    public Optional<Double> creationTime() {
         return this.creationTime == null ? Optional.empty() : Optional.ofNullable(this.creationTime);
     }
 
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
     @Import(name="lastUpdated")
       private final @Nullable Double lastUpdated;
 
-    public Optional<Double> getLastUpdated() {
+    public Optional<Double> lastUpdated() {
         return this.lastUpdated == null ? Optional.empty() : Optional.ofNullable(this.lastUpdated);
     }
 
     @Import(name="roleArn")
       private final @Nullable String roleArn;
 
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return this.roleArn == null ? Optional.empty() : Optional.ofNullable(this.roleArn);
     }
 
     @Import(name="roleType")
       private final @Nullable AssessmentRoleType roleType;
 
-    public Optional<AssessmentRoleType> getRoleType() {
+    public Optional<AssessmentRoleType> roleType() {
         return this.roleType == null ? Optional.empty() : Optional.ofNullable(this.roleType);
     }
 
     @Import(name="status")
       private final @Nullable AssessmentDelegationStatus status;
 
-    public Optional<AssessmentDelegationStatus> getStatus() {
+    public Optional<AssessmentDelegationStatus> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 

@@ -24,13 +24,13 @@ public final class BotOutputContext {
         this.turnsToLive = turnsToLive;
     }
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Integer getTimeToLiveInSeconds() {
+    public Integer timeToLiveInSeconds() {
         return this.timeToLiveInSeconds;
     }
-    public Integer getTurnsToLive() {
+    public Integer turnsToLive() {
         return this.turnsToLive;
     }
 

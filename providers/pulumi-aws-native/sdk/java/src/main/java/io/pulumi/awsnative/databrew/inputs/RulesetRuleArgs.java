@@ -27,21 +27,21 @@ public final class RulesetRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="checkExpression", required=true)
       private final Output<String> checkExpression;
 
-    public Output<String> getCheckExpression() {
+    public Output<String> checkExpression() {
         return this.checkExpression;
     }
 
     @Import(name="columnSelectors")
       private final @Nullable Output<List<RulesetColumnSelectorArgs>> columnSelectors;
 
-    public Output<List<RulesetColumnSelectorArgs>> getColumnSelectors() {
+    public Output<List<RulesetColumnSelectorArgs>> columnSelectors() {
         return this.columnSelectors == null ? Codegen.empty() : this.columnSelectors;
     }
 
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
@@ -52,21 +52,21 @@ public final class RulesetRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="substitutionMap")
       private final @Nullable Output<List<RulesetSubstitutionValueArgs>> substitutionMap;
 
-    public Output<List<RulesetSubstitutionValueArgs>> getSubstitutionMap() {
+    public Output<List<RulesetSubstitutionValueArgs>> substitutionMap() {
         return this.substitutionMap == null ? Codegen.empty() : this.substitutionMap;
     }
 
     @Import(name="threshold")
       private final @Nullable Output<RulesetThresholdArgs> threshold;
 
-    public Output<RulesetThresholdArgs> getThreshold() {
+    public Output<RulesetThresholdArgs> threshold() {
         return this.threshold == null ? Codegen.empty() : this.threshold;
     }
 

@@ -19,14 +19,14 @@ public final class BackupPlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backupPlan", required=true)
       private final Output<BackupPlanResourceTypeArgs> backupPlan;
 
-    public Output<BackupPlanResourceTypeArgs> getBackupPlan() {
+    public Output<BackupPlanResourceTypeArgs> backupPlan() {
         return this.backupPlan;
     }
 
     @Import(name="backupPlanTags")
       private final @Nullable Output<Object> backupPlanTags;
 
-    public Output<Object> getBackupPlanTags() {
+    public Output<Object> backupPlanTags() {
         return this.backupPlanTags == null ? Codegen.empty() : this.backupPlanTags;
     }
 

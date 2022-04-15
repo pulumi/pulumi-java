@@ -27,13 +27,13 @@ public final class BucketReplicationRuleFilter {
         this.tagFilter = tagFilter;
     }
 
-    public Optional<BucketReplicationRuleAndOperator> getAnd() {
+    public Optional<BucketReplicationRuleAndOperator> and() {
         return Optional.ofNullable(this.and);
     }
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
-    public Optional<BucketTagFilter> getTagFilter() {
+    public Optional<BucketTagFilter> tagFilter() {
         return Optional.ofNullable(this.tagFilter);
     }
 

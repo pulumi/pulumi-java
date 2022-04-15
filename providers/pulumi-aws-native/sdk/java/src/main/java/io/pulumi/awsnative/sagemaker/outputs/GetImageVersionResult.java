@@ -29,16 +29,16 @@ public final class GetImageVersionResult {
         this.version = version;
     }
 
-    public Optional<String> getContainerImage() {
+    public Optional<String> containerImage() {
         return Optional.ofNullable(this.containerImage);
     }
-    public Optional<String> getImageArn() {
+    public Optional<String> imageArn() {
         return Optional.ofNullable(this.imageArn);
     }
-    public Optional<String> getImageVersionArn() {
+    public Optional<String> imageVersionArn() {
         return Optional.ofNullable(this.imageVersionArn);
     }
-    public Optional<Integer> getVersion() {
+    public Optional<Integer> version() {
         return Optional.ofNullable(this.version);
     }
 

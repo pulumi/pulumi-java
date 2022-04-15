@@ -22,14 +22,14 @@ public final class AssessmentRole extends io.pulumi.resources.InvokeArgs {
     @Import(name="roleArn")
       private final @Nullable String roleArn;
 
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return this.roleArn == null ? Optional.empty() : Optional.ofNullable(this.roleArn);
     }
 
     @Import(name="roleType")
       private final @Nullable AssessmentRoleType roleType;
 
-    public Optional<AssessmentRoleType> getRoleType() {
+    public Optional<AssessmentRoleType> roleType() {
         return this.roleType == null ? Optional.empty() : Optional.ofNullable(this.roleType);
     }
 

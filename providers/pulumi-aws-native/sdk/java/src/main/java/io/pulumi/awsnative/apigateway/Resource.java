@@ -29,7 +29,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @return The parent resource's identifier.
      * 
      */
-    public Output<String> getParentId() {
+    public Output<String> parentId() {
         return this.parentId;
     }
     /**
@@ -43,7 +43,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @return The last path segment for this resource.
      * 
      */
-    public Output<String> getPathPart() {
+    public Output<String> pathPart() {
         return this.pathPart;
     }
     /**
@@ -57,7 +57,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @return A unique primary identifier for a Resource
      * 
      */
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -71,7 +71,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @return The ID of the RestApi resource in which you want to create this resource..
      * 
      */
-    public Output<String> getRestApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
 

@@ -33,147 +33,147 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="capacityProviderStrategy")
       private final @Nullable Output<List<ServiceCapacityProviderStrategyItemArgs>> capacityProviderStrategy;
 
-    public Output<List<ServiceCapacityProviderStrategyItemArgs>> getCapacityProviderStrategy() {
+    public Output<List<ServiceCapacityProviderStrategyItemArgs>> capacityProviderStrategy() {
         return this.capacityProviderStrategy == null ? Codegen.empty() : this.capacityProviderStrategy;
     }
 
     @Import(name="cluster")
       private final @Nullable Output<String> cluster;
 
-    public Output<String> getCluster() {
+    public Output<String> cluster() {
         return this.cluster == null ? Codegen.empty() : this.cluster;
     }
 
     @Import(name="deploymentConfiguration")
       private final @Nullable Output<ServiceDeploymentConfigurationArgs> deploymentConfiguration;
 
-    public Output<ServiceDeploymentConfigurationArgs> getDeploymentConfiguration() {
+    public Output<ServiceDeploymentConfigurationArgs> deploymentConfiguration() {
         return this.deploymentConfiguration == null ? Codegen.empty() : this.deploymentConfiguration;
     }
 
     @Import(name="deploymentController")
       private final @Nullable Output<ServiceDeploymentControllerArgs> deploymentController;
 
-    public Output<ServiceDeploymentControllerArgs> getDeploymentController() {
+    public Output<ServiceDeploymentControllerArgs> deploymentController() {
         return this.deploymentController == null ? Codegen.empty() : this.deploymentController;
     }
 
     @Import(name="desiredCount")
       private final @Nullable Output<Integer> desiredCount;
 
-    public Output<Integer> getDesiredCount() {
+    public Output<Integer> desiredCount() {
         return this.desiredCount == null ? Codegen.empty() : this.desiredCount;
     }
 
     @Import(name="enableECSManagedTags")
       private final @Nullable Output<Boolean> enableECSManagedTags;
 
-    public Output<Boolean> getEnableECSManagedTags() {
+    public Output<Boolean> enableECSManagedTags() {
         return this.enableECSManagedTags == null ? Codegen.empty() : this.enableECSManagedTags;
     }
 
     @Import(name="enableExecuteCommand")
       private final @Nullable Output<Boolean> enableExecuteCommand;
 
-    public Output<Boolean> getEnableExecuteCommand() {
+    public Output<Boolean> enableExecuteCommand() {
         return this.enableExecuteCommand == null ? Codegen.empty() : this.enableExecuteCommand;
     }
 
     @Import(name="healthCheckGracePeriodSeconds")
       private final @Nullable Output<Integer> healthCheckGracePeriodSeconds;
 
-    public Output<Integer> getHealthCheckGracePeriodSeconds() {
+    public Output<Integer> healthCheckGracePeriodSeconds() {
         return this.healthCheckGracePeriodSeconds == null ? Codegen.empty() : this.healthCheckGracePeriodSeconds;
     }
 
     @Import(name="launchType")
       private final @Nullable Output<ServiceLaunchType> launchType;
 
-    public Output<ServiceLaunchType> getLaunchType() {
+    public Output<ServiceLaunchType> launchType() {
         return this.launchType == null ? Codegen.empty() : this.launchType;
     }
 
     @Import(name="loadBalancers")
       private final @Nullable Output<List<ServiceLoadBalancerArgs>> loadBalancers;
 
-    public Output<List<ServiceLoadBalancerArgs>> getLoadBalancers() {
+    public Output<List<ServiceLoadBalancerArgs>> loadBalancers() {
         return this.loadBalancers == null ? Codegen.empty() : this.loadBalancers;
     }
 
     @Import(name="networkConfiguration")
       private final @Nullable Output<ServiceNetworkConfigurationArgs> networkConfiguration;
 
-    public Output<ServiceNetworkConfigurationArgs> getNetworkConfiguration() {
+    public Output<ServiceNetworkConfigurationArgs> networkConfiguration() {
         return this.networkConfiguration == null ? Codegen.empty() : this.networkConfiguration;
     }
 
     @Import(name="placementConstraints")
       private final @Nullable Output<List<ServicePlacementConstraintArgs>> placementConstraints;
 
-    public Output<List<ServicePlacementConstraintArgs>> getPlacementConstraints() {
+    public Output<List<ServicePlacementConstraintArgs>> placementConstraints() {
         return this.placementConstraints == null ? Codegen.empty() : this.placementConstraints;
     }
 
     @Import(name="placementStrategies")
       private final @Nullable Output<List<ServicePlacementStrategyArgs>> placementStrategies;
 
-    public Output<List<ServicePlacementStrategyArgs>> getPlacementStrategies() {
+    public Output<List<ServicePlacementStrategyArgs>> placementStrategies() {
         return this.placementStrategies == null ? Codegen.empty() : this.placementStrategies;
     }
 
     @Import(name="platformVersion")
       private final @Nullable Output<String> platformVersion;
 
-    public Output<String> getPlatformVersion() {
+    public Output<String> platformVersion() {
         return this.platformVersion == null ? Codegen.empty() : this.platformVersion;
     }
 
     @Import(name="propagateTags")
       private final @Nullable Output<ServicePropagateTags> propagateTags;
 
-    public Output<ServicePropagateTags> getPropagateTags() {
+    public Output<ServicePropagateTags> propagateTags() {
         return this.propagateTags == null ? Codegen.empty() : this.propagateTags;
     }
 
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 
     @Import(name="schedulingStrategy")
       private final @Nullable Output<ServiceSchedulingStrategy> schedulingStrategy;
 
-    public Output<ServiceSchedulingStrategy> getSchedulingStrategy() {
+    public Output<ServiceSchedulingStrategy> schedulingStrategy() {
         return this.schedulingStrategy == null ? Codegen.empty() : this.schedulingStrategy;
     }
 
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
     @Import(name="serviceRegistries")
       private final @Nullable Output<List<ServiceRegistryArgs>> serviceRegistries;
 
-    public Output<List<ServiceRegistryArgs>> getServiceRegistries() {
+    public Output<List<ServiceRegistryArgs>> serviceRegistries() {
         return this.serviceRegistries == null ? Codegen.empty() : this.serviceRegistries;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<ServiceTagArgs>> tags;
 
-    public Output<List<ServiceTagArgs>> getTags() {
+    public Output<List<ServiceTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="taskDefinition")
       private final @Nullable Output<String> taskDefinition;
 
-    public Output<String> getTaskDefinition() {
+    public Output<String> taskDefinition() {
         return this.taskDefinition == null ? Codegen.empty() : this.taskDefinition;
     }
 

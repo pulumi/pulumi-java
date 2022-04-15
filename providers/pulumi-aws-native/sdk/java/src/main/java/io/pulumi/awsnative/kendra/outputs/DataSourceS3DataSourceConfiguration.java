@@ -37,22 +37,22 @@ public final class DataSourceS3DataSourceConfiguration {
         this.inclusionPrefixes = inclusionPrefixes;
     }
 
-    public Optional<DataSourceAccessControlListConfiguration> getAccessControlListConfiguration() {
+    public Optional<DataSourceAccessControlListConfiguration> accessControlListConfiguration() {
         return Optional.ofNullable(this.accessControlListConfiguration);
     }
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
-    public Optional<DataSourceDocumentsMetadataConfiguration> getDocumentsMetadataConfiguration() {
+    public Optional<DataSourceDocumentsMetadataConfiguration> documentsMetadataConfiguration() {
         return Optional.ofNullable(this.documentsMetadataConfiguration);
     }
-    public List<String> getExclusionPatterns() {
+    public List<String> exclusionPatterns() {
         return this.exclusionPatterns == null ? List.of() : this.exclusionPatterns;
     }
-    public List<String> getInclusionPatterns() {
+    public List<String> inclusionPatterns() {
         return this.inclusionPatterns == null ? List.of() : this.inclusionPatterns;
     }
-    public List<String> getInclusionPrefixes() {
+    public List<String> inclusionPrefixes() {
         return this.inclusionPrefixes == null ? List.of() : this.inclusionPrefixes;
     }
 

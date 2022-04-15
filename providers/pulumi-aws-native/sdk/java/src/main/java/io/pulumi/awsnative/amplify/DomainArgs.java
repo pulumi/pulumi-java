@@ -21,42 +21,42 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appId", required=true)
       private final Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
 
     @Import(name="autoSubDomainCreationPatterns")
       private final @Nullable Output<List<String>> autoSubDomainCreationPatterns;
 
-    public Output<List<String>> getAutoSubDomainCreationPatterns() {
+    public Output<List<String>> autoSubDomainCreationPatterns() {
         return this.autoSubDomainCreationPatterns == null ? Codegen.empty() : this.autoSubDomainCreationPatterns;
     }
 
     @Import(name="autoSubDomainIAMRole")
       private final @Nullable Output<String> autoSubDomainIAMRole;
 
-    public Output<String> getAutoSubDomainIAMRole() {
+    public Output<String> autoSubDomainIAMRole() {
         return this.autoSubDomainIAMRole == null ? Codegen.empty() : this.autoSubDomainIAMRole;
     }
 
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
     @Import(name="enableAutoSubDomain")
       private final @Nullable Output<Boolean> enableAutoSubDomain;
 
-    public Output<Boolean> getEnableAutoSubDomain() {
+    public Output<Boolean> enableAutoSubDomain() {
         return this.enableAutoSubDomain == null ? Codegen.empty() : this.enableAutoSubDomain;
     }
 
     @Import(name="subDomainSettings", required=true)
       private final Output<List<DomainSubDomainSettingArgs>> subDomainSettings;
 
-    public Output<List<DomainSubDomainSettingArgs>> getSubDomainSettings() {
+    public Output<List<DomainSubDomainSettingArgs>> subDomainSettings() {
         return this.subDomainSettings;
     }
 

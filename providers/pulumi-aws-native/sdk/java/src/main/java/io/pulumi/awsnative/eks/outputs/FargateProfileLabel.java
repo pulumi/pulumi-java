@@ -32,14 +32,14 @@ public final class FargateProfileLabel {
      * The key name of the label.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * The value for the label.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

@@ -19,14 +19,14 @@ public final class DistributionOriginGroupMembersArgs extends io.pulumi.resource
     @Import(name="items", required=true)
       private final Output<List<DistributionOriginGroupMemberArgs>> items;
 
-    public Output<List<DistributionOriginGroupMemberArgs>> getItems() {
+    public Output<List<DistributionOriginGroupMemberArgs>> items() {
         return this.items;
     }
 
     @Import(name="quantity", required=true)
       private final Output<Integer> quantity;
 
-    public Output<Integer> getQuantity() {
+    public Output<Integer> quantity() {
         return this.quantity;
     }
 

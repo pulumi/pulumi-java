@@ -18,7 +18,7 @@ public final class SpotFleetMonitoringArgs extends io.pulumi.resources.ResourceA
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 

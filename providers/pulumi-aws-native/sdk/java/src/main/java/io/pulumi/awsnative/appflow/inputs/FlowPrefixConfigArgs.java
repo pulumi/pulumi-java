@@ -19,14 +19,14 @@ public final class FlowPrefixConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="prefixFormat")
       private final @Nullable Output<FlowPrefixFormat> prefixFormat;
 
-    public Output<FlowPrefixFormat> getPrefixFormat() {
+    public Output<FlowPrefixFormat> prefixFormat() {
         return this.prefixFormat == null ? Codegen.empty() : this.prefixFormat;
     }
 
     @Import(name="prefixType")
       private final @Nullable Output<FlowPrefixType> prefixType;
 
-    public Output<FlowPrefixType> getPrefixType() {
+    public Output<FlowPrefixType> prefixType() {
         return this.prefixType == null ? Codegen.empty() : this.prefixType;
     }
 

@@ -22,56 +22,56 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateArn")
       private final @Nullable Output<String> certificateArn;
 
-    public Output<String> getCertificateArn() {
+    public Output<String> certificateArn() {
         return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
     }
 
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
     @Import(name="endpointConfiguration")
       private final @Nullable Output<DomainNameEndpointConfigurationArgs> endpointConfiguration;
 
-    public Output<DomainNameEndpointConfigurationArgs> getEndpointConfiguration() {
+    public Output<DomainNameEndpointConfigurationArgs> endpointConfiguration() {
         return this.endpointConfiguration == null ? Codegen.empty() : this.endpointConfiguration;
     }
 
     @Import(name="mutualTlsAuthentication")
       private final @Nullable Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication;
 
-    public Output<DomainNameMutualTlsAuthenticationArgs> getMutualTlsAuthentication() {
+    public Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication() {
         return this.mutualTlsAuthentication == null ? Codegen.empty() : this.mutualTlsAuthentication;
     }
 
     @Import(name="ownershipVerificationCertificateArn")
       private final @Nullable Output<String> ownershipVerificationCertificateArn;
 
-    public Output<String> getOwnershipVerificationCertificateArn() {
+    public Output<String> ownershipVerificationCertificateArn() {
         return this.ownershipVerificationCertificateArn == null ? Codegen.empty() : this.ownershipVerificationCertificateArn;
     }
 
     @Import(name="regionalCertificateArn")
       private final @Nullable Output<String> regionalCertificateArn;
 
-    public Output<String> getRegionalCertificateArn() {
+    public Output<String> regionalCertificateArn() {
         return this.regionalCertificateArn == null ? Codegen.empty() : this.regionalCertificateArn;
     }
 
     @Import(name="securityPolicy")
       private final @Nullable Output<String> securityPolicy;
 
-    public Output<String> getSecurityPolicy() {
+    public Output<String> securityPolicy() {
         return this.securityPolicy == null ? Codegen.empty() : this.securityPolicy;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<DomainNameTagArgs>> tags;
 
-    public Output<List<DomainNameTagArgs>> getTags() {
+    public Output<List<DomainNameTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

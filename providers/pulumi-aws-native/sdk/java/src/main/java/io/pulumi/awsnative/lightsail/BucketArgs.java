@@ -22,7 +22,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessRules")
       private final @Nullable Output<BucketAccessRulesArgs> accessRules;
 
-    public Output<BucketAccessRulesArgs> getAccessRules() {
+    public Output<BucketAccessRulesArgs> accessRules() {
         return this.accessRules == null ? Codegen.empty() : this.accessRules;
     }
 
@@ -33,7 +33,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bucketName")
       private final @Nullable Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName == null ? Codegen.empty() : this.bucketName;
     }
 
@@ -44,7 +44,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bundleId", required=true)
       private final Output<String> bundleId;
 
-    public Output<String> getBundleId() {
+    public Output<String> bundleId() {
         return this.bundleId;
     }
 
@@ -55,7 +55,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="objectVersioning")
       private final @Nullable Output<Boolean> objectVersioning;
 
-    public Output<Boolean> getObjectVersioning() {
+    public Output<Boolean> objectVersioning() {
         return this.objectVersioning == null ? Codegen.empty() : this.objectVersioning;
     }
 
@@ -66,7 +66,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="readOnlyAccessAccounts")
       private final @Nullable Output<List<String>> readOnlyAccessAccounts;
 
-    public Output<List<String>> getReadOnlyAccessAccounts() {
+    public Output<List<String>> readOnlyAccessAccounts() {
         return this.readOnlyAccessAccounts == null ? Codegen.empty() : this.readOnlyAccessAccounts;
     }
 
@@ -77,7 +77,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourcesReceivingAccess")
       private final @Nullable Output<List<String>> resourcesReceivingAccess;
 
-    public Output<List<String>> getResourcesReceivingAccess() {
+    public Output<List<String>> resourcesReceivingAccess() {
         return this.resourcesReceivingAccess == null ? Codegen.empty() : this.resourcesReceivingAccess;
     }
 
@@ -88,7 +88,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<BucketTagArgs>> tags;
 
-    public Output<List<BucketTagArgs>> getTags() {
+    public Output<List<BucketTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

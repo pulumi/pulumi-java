@@ -25,19 +25,19 @@ public class ClusterCapacityProviderAssociations extends io.pulumi.resources.Cus
     @Export(name="capacityProviders", type=List.class, parameters={String.class})
     private Output<List<String>> capacityProviders;
 
-    public Output<List<String>> getCapacityProviders() {
+    public Output<List<String>> capacityProviders() {
         return this.capacityProviders;
     }
     @Export(name="cluster", type=String.class, parameters={})
     private Output<String> cluster;
 
-    public Output<String> getCluster() {
+    public Output<String> cluster() {
         return this.cluster;
     }
     @Export(name="defaultCapacityProviderStrategy", type=List.class, parameters={ClusterCapacityProviderAssociationsCapacityProviderStrategy.class})
     private Output<List<ClusterCapacityProviderAssociationsCapacityProviderStrategy>> defaultCapacityProviderStrategy;
 
-    public Output<List<ClusterCapacityProviderAssociationsCapacityProviderStrategy>> getDefaultCapacityProviderStrategy() {
+    public Output<List<ClusterCapacityProviderAssociationsCapacityProviderStrategy>> defaultCapacityProviderStrategy() {
         return this.defaultCapacityProviderStrategy;
     }
 

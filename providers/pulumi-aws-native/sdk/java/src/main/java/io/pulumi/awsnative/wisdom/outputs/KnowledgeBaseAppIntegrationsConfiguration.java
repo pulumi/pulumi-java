@@ -21,10 +21,10 @@ public final class KnowledgeBaseAppIntegrationsConfiguration {
         this.objectFields = objectFields;
     }
 
-    public String getAppIntegrationArn() {
+    public String appIntegrationArn() {
         return this.appIntegrationArn;
     }
-    public List<String> getObjectFields() {
+    public List<String> objectFields() {
         return this.objectFields;
     }
 

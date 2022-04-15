@@ -50,32 +50,32 @@ public final class GetExperimentResult {
         this.treatments = treatments;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public List<ExperimentMetricGoalObject> getMetricGoals() {
+    public List<ExperimentMetricGoalObject> metricGoals() {
         return this.metricGoals == null ? List.of() : this.metricGoals;
     }
-    public Optional<ExperimentOnlineAbConfigObject> getOnlineAbConfig() {
+    public Optional<ExperimentOnlineAbConfigObject> onlineAbConfig() {
         return Optional.ofNullable(this.onlineAbConfig);
     }
-    public Optional<String> getRandomizationSalt() {
+    public Optional<String> randomizationSalt() {
         return Optional.ofNullable(this.randomizationSalt);
     }
-    public Optional<Integer> getSamplingRate() {
+    public Optional<Integer> samplingRate() {
         return Optional.ofNullable(this.samplingRate);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
     */
-    public List<ExperimentTag> getTags() {
+    public List<ExperimentTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
-    public List<ExperimentTreatmentObject> getTreatments() {
+    public List<ExperimentTreatmentObject> treatments() {
         return this.treatments == null ? List.of() : this.treatments;
     }
 

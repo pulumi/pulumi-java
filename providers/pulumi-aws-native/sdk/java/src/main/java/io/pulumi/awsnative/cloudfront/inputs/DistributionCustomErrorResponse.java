@@ -19,28 +19,28 @@ public final class DistributionCustomErrorResponse extends io.pulumi.resources.I
     @Import(name="errorCachingMinTTL")
       private final @Nullable Double errorCachingMinTTL;
 
-    public Optional<Double> getErrorCachingMinTTL() {
+    public Optional<Double> errorCachingMinTTL() {
         return this.errorCachingMinTTL == null ? Optional.empty() : Optional.ofNullable(this.errorCachingMinTTL);
     }
 
     @Import(name="errorCode", required=true)
       private final Integer errorCode;
 
-    public Integer getErrorCode() {
+    public Integer errorCode() {
         return this.errorCode;
     }
 
     @Import(name="responseCode")
       private final @Nullable Integer responseCode;
 
-    public Optional<Integer> getResponseCode() {
+    public Optional<Integer> responseCode() {
         return this.responseCode == null ? Optional.empty() : Optional.ofNullable(this.responseCode);
     }
 
     @Import(name="responsePagePath")
       private final @Nullable String responsePagePath;
 
-    public Optional<String> getResponsePagePath() {
+    public Optional<String> responsePagePath() {
         return this.responsePagePath == null ? Optional.empty() : Optional.ofNullable(this.responsePagePath);
     }
 

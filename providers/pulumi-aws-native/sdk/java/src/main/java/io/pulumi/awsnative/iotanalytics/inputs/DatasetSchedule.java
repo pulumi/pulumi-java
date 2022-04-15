@@ -15,7 +15,7 @@ public final class DatasetSchedule extends io.pulumi.resources.InvokeArgs {
     @Import(name="scheduleExpression", required=true)
       private final String scheduleExpression;
 
-    public String getScheduleExpression() {
+    public String scheduleExpression() {
         return this.scheduleExpression;
     }
 

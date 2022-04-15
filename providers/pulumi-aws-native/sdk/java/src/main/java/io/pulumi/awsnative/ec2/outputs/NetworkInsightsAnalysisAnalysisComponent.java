@@ -22,10 +22,10 @@ public final class NetworkInsightsAnalysisAnalysisComponent {
         this.id = id;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 

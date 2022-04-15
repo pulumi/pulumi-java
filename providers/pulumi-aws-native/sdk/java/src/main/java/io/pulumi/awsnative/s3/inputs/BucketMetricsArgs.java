@@ -19,14 +19,14 @@ public final class BucketMetricsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventThreshold")
       private final @Nullable Output<BucketReplicationTimeValueArgs> eventThreshold;
 
-    public Output<BucketReplicationTimeValueArgs> getEventThreshold() {
+    public Output<BucketReplicationTimeValueArgs> eventThreshold() {
         return this.eventThreshold == null ? Codegen.empty() : this.eventThreshold;
     }
 
     @Import(name="status", required=true)
       private final Output<BucketMetricsStatus> status;
 
-    public Output<BucketMetricsStatus> getStatus() {
+    public Output<BucketMetricsStatus> status() {
         return this.status;
     }
 

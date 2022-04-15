@@ -18,21 +18,21 @@ public final class PipelineAddAttributes extends io.pulumi.resources.InvokeArgs 
     @Import(name="attributes", required=true)
       private final Object attributes;
 
-    public Object getAttributes() {
+    public Object attributes() {
         return this.attributes;
     }
 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
     @Import(name="next")
       private final @Nullable String next;
 
-    public Optional<String> getNext() {
+    public Optional<String> next() {
         return this.next == null ? Optional.empty() : Optional.ofNullable(this.next);
     }
 

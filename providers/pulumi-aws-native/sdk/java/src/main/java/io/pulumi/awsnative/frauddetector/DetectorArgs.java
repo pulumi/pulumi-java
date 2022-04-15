@@ -29,7 +29,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="associatedModels")
       private final @Nullable Output<List<DetectorModelArgs>> associatedModels;
 
-    public Output<List<DetectorModelArgs>> getAssociatedModels() {
+    public Output<List<DetectorModelArgs>> associatedModels() {
         return this.associatedModels == null ? Codegen.empty() : this.associatedModels;
     }
 
@@ -40,7 +40,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -51,7 +51,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="detectorId", required=true)
       private final Output<String> detectorId;
 
-    public Output<String> getDetectorId() {
+    public Output<String> detectorId() {
         return this.detectorId;
     }
 
@@ -62,7 +62,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="detectorVersionStatus")
       private final @Nullable Output<DetectorVersionStatus> detectorVersionStatus;
 
-    public Output<DetectorVersionStatus> getDetectorVersionStatus() {
+    public Output<DetectorVersionStatus> detectorVersionStatus() {
         return this.detectorVersionStatus == null ? Codegen.empty() : this.detectorVersionStatus;
     }
 
@@ -73,21 +73,21 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventType", required=true)
       private final Output<DetectorEventTypeArgs> eventType;
 
-    public Output<DetectorEventTypeArgs> getEventType() {
+    public Output<DetectorEventTypeArgs> eventType() {
         return this.eventType;
     }
 
     @Import(name="ruleExecutionMode")
       private final @Nullable Output<DetectorRuleExecutionMode> ruleExecutionMode;
 
-    public Output<DetectorRuleExecutionMode> getRuleExecutionMode() {
+    public Output<DetectorRuleExecutionMode> ruleExecutionMode() {
         return this.ruleExecutionMode == null ? Codegen.empty() : this.ruleExecutionMode;
     }
 
     @Import(name="rules", required=true)
       private final Output<List<DetectorRuleArgs>> rules;
 
-    public Output<List<DetectorRuleArgs>> getRules() {
+    public Output<List<DetectorRuleArgs>> rules() {
         return this.rules;
     }
 
@@ -98,7 +98,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DetectorTagArgs>> tags;
 
-    public Output<List<DetectorTagArgs>> getTags() {
+    public Output<List<DetectorTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

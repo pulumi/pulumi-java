@@ -36,105 +36,105 @@ public final class FlowSourceConnectorPropertiesArgs extends io.pulumi.resources
     @Import(name="amplitude")
       private final @Nullable Output<FlowAmplitudeSourcePropertiesArgs> amplitude;
 
-    public Output<FlowAmplitudeSourcePropertiesArgs> getAmplitude() {
+    public Output<FlowAmplitudeSourcePropertiesArgs> amplitude() {
         return this.amplitude == null ? Codegen.empty() : this.amplitude;
     }
 
     @Import(name="datadog")
       private final @Nullable Output<FlowDatadogSourcePropertiesArgs> datadog;
 
-    public Output<FlowDatadogSourcePropertiesArgs> getDatadog() {
+    public Output<FlowDatadogSourcePropertiesArgs> datadog() {
         return this.datadog == null ? Codegen.empty() : this.datadog;
     }
 
     @Import(name="dynatrace")
       private final @Nullable Output<FlowDynatraceSourcePropertiesArgs> dynatrace;
 
-    public Output<FlowDynatraceSourcePropertiesArgs> getDynatrace() {
+    public Output<FlowDynatraceSourcePropertiesArgs> dynatrace() {
         return this.dynatrace == null ? Codegen.empty() : this.dynatrace;
     }
 
     @Import(name="googleAnalytics")
       private final @Nullable Output<FlowGoogleAnalyticsSourcePropertiesArgs> googleAnalytics;
 
-    public Output<FlowGoogleAnalyticsSourcePropertiesArgs> getGoogleAnalytics() {
+    public Output<FlowGoogleAnalyticsSourcePropertiesArgs> googleAnalytics() {
         return this.googleAnalytics == null ? Codegen.empty() : this.googleAnalytics;
     }
 
     @Import(name="inforNexus")
       private final @Nullable Output<FlowInforNexusSourcePropertiesArgs> inforNexus;
 
-    public Output<FlowInforNexusSourcePropertiesArgs> getInforNexus() {
+    public Output<FlowInforNexusSourcePropertiesArgs> inforNexus() {
         return this.inforNexus == null ? Codegen.empty() : this.inforNexus;
     }
 
     @Import(name="marketo")
       private final @Nullable Output<FlowMarketoSourcePropertiesArgs> marketo;
 
-    public Output<FlowMarketoSourcePropertiesArgs> getMarketo() {
+    public Output<FlowMarketoSourcePropertiesArgs> marketo() {
         return this.marketo == null ? Codegen.empty() : this.marketo;
     }
 
     @Import(name="s3")
       private final @Nullable Output<FlowS3SourcePropertiesArgs> s3;
 
-    public Output<FlowS3SourcePropertiesArgs> getS3() {
+    public Output<FlowS3SourcePropertiesArgs> s3() {
         return this.s3 == null ? Codegen.empty() : this.s3;
     }
 
     @Import(name="sAPOData")
       private final @Nullable Output<FlowSAPODataSourcePropertiesArgs> sAPOData;
 
-    public Output<FlowSAPODataSourcePropertiesArgs> getSAPOData() {
+    public Output<FlowSAPODataSourcePropertiesArgs> sAPOData() {
         return this.sAPOData == null ? Codegen.empty() : this.sAPOData;
     }
 
     @Import(name="salesforce")
       private final @Nullable Output<FlowSalesforceSourcePropertiesArgs> salesforce;
 
-    public Output<FlowSalesforceSourcePropertiesArgs> getSalesforce() {
+    public Output<FlowSalesforceSourcePropertiesArgs> salesforce() {
         return this.salesforce == null ? Codegen.empty() : this.salesforce;
     }
 
     @Import(name="serviceNow")
       private final @Nullable Output<FlowServiceNowSourcePropertiesArgs> serviceNow;
 
-    public Output<FlowServiceNowSourcePropertiesArgs> getServiceNow() {
+    public Output<FlowServiceNowSourcePropertiesArgs> serviceNow() {
         return this.serviceNow == null ? Codegen.empty() : this.serviceNow;
     }
 
     @Import(name="singular")
       private final @Nullable Output<FlowSingularSourcePropertiesArgs> singular;
 
-    public Output<FlowSingularSourcePropertiesArgs> getSingular() {
+    public Output<FlowSingularSourcePropertiesArgs> singular() {
         return this.singular == null ? Codegen.empty() : this.singular;
     }
 
     @Import(name="slack")
       private final @Nullable Output<FlowSlackSourcePropertiesArgs> slack;
 
-    public Output<FlowSlackSourcePropertiesArgs> getSlack() {
+    public Output<FlowSlackSourcePropertiesArgs> slack() {
         return this.slack == null ? Codegen.empty() : this.slack;
     }
 
     @Import(name="trendmicro")
       private final @Nullable Output<FlowTrendmicroSourcePropertiesArgs> trendmicro;
 
-    public Output<FlowTrendmicroSourcePropertiesArgs> getTrendmicro() {
+    public Output<FlowTrendmicroSourcePropertiesArgs> trendmicro() {
         return this.trendmicro == null ? Codegen.empty() : this.trendmicro;
     }
 
     @Import(name="veeva")
       private final @Nullable Output<FlowVeevaSourcePropertiesArgs> veeva;
 
-    public Output<FlowVeevaSourcePropertiesArgs> getVeeva() {
+    public Output<FlowVeevaSourcePropertiesArgs> veeva() {
         return this.veeva == null ? Codegen.empty() : this.veeva;
     }
 
     @Import(name="zendesk")
       private final @Nullable Output<FlowZendeskSourcePropertiesArgs> zendesk;
 
-    public Output<FlowZendeskSourcePropertiesArgs> getZendesk() {
+    public Output<FlowZendeskSourcePropertiesArgs> zendesk() {
         return this.zendesk == null ? Codegen.empty() : this.zendesk;
     }
 

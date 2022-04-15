@@ -19,7 +19,7 @@ public final class MitigationActionUpdateCACertificateParams extends io.pulumi.r
     @Import(name="action", required=true)
       private final MitigationActionUpdateCACertificateParamsAction action;
 
-    public MitigationActionUpdateCACertificateParamsAction getAction() {
+    public MitigationActionUpdateCACertificateParamsAction action() {
         return this.action;
     }
 

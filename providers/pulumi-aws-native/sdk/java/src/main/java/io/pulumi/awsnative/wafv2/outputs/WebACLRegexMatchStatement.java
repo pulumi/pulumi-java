@@ -26,13 +26,13 @@ public final class WebACLRegexMatchStatement {
         this.textTransformations = textTransformations;
     }
 
-    public WebACLFieldToMatch getFieldToMatch() {
+    public WebACLFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
-    public String getRegexString() {
+    public String regexString() {
         return this.regexString;
     }
-    public List<WebACLTextTransformation> getTextTransformations() {
+    public List<WebACLTextTransformation> textTransformations() {
         return this.textTransformations;
     }
 

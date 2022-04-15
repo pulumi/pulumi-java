@@ -23,7 +23,7 @@ public final class CanaryRunConfig extends io.pulumi.resources.InvokeArgs {
     @Import(name="activeTracing")
       private final @Nullable Boolean activeTracing;
 
-    public Optional<Boolean> getActiveTracing() {
+    public Optional<Boolean> activeTracing() {
         return this.activeTracing == null ? Optional.empty() : Optional.ofNullable(this.activeTracing);
     }
 
@@ -34,7 +34,7 @@ public final class CanaryRunConfig extends io.pulumi.resources.InvokeArgs {
     @Import(name="environmentVariables")
       private final @Nullable Object environmentVariables;
 
-    public Optional<Object> getEnvironmentVariables() {
+    public Optional<Object> environmentVariables() {
         return this.environmentVariables == null ? Optional.empty() : Optional.ofNullable(this.environmentVariables);
     }
 
@@ -45,7 +45,7 @@ public final class CanaryRunConfig extends io.pulumi.resources.InvokeArgs {
     @Import(name="memoryInMB")
       private final @Nullable Integer memoryInMB;
 
-    public Optional<Integer> getMemoryInMB() {
+    public Optional<Integer> memoryInMB() {
         return this.memoryInMB == null ? Optional.empty() : Optional.ofNullable(this.memoryInMB);
     }
 
@@ -56,7 +56,7 @@ public final class CanaryRunConfig extends io.pulumi.resources.InvokeArgs {
     @Import(name="timeoutInSeconds")
       private final @Nullable Integer timeoutInSeconds;
 
-    public Optional<Integer> getTimeoutInSeconds() {
+    public Optional<Integer> timeoutInSeconds() {
         return this.timeoutInSeconds == null ? Optional.empty() : Optional.ofNullable(this.timeoutInSeconds);
     }
 

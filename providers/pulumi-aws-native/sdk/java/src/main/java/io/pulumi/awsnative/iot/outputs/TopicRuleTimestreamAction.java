@@ -38,22 +38,22 @@ public final class TopicRuleTimestreamAction {
         this.timestamp = timestamp;
     }
 
-    public Optional<Boolean> getBatchMode() {
+    public Optional<Boolean> batchMode() {
         return Optional.ofNullable(this.batchMode);
     }
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
-    public List<TopicRuleTimestreamDimension> getDimensions() {
+    public List<TopicRuleTimestreamDimension> dimensions() {
         return this.dimensions;
     }
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
-    public Optional<TopicRuleTimestreamTimestamp> getTimestamp() {
+    public Optional<TopicRuleTimestreamTimestamp> timestamp() {
         return Optional.ofNullable(this.timestamp);
     }
 

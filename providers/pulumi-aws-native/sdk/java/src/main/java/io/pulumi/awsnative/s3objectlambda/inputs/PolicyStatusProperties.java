@@ -21,7 +21,7 @@ public final class PolicyStatusProperties extends io.pulumi.resources.InvokeArgs
     @Import(name="isPublic")
       private final @Nullable Boolean isPublic;
 
-    public Optional<Boolean> getIsPublic() {
+    public Optional<Boolean> isPublic() {
         return this.isPublic == null ? Optional.empty() : Optional.ofNullable(this.isPublic);
     }
 

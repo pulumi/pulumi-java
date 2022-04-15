@@ -20,14 +20,14 @@ public final class RuleGroupStatelessRulesAndCustomActionsArgs extends io.pulumi
     @Import(name="customActions")
       private final @Nullable Output<List<RuleGroupCustomActionArgs>> customActions;
 
-    public Output<List<RuleGroupCustomActionArgs>> getCustomActions() {
+    public Output<List<RuleGroupCustomActionArgs>> customActions() {
         return this.customActions == null ? Codegen.empty() : this.customActions;
     }
 
     @Import(name="statelessRules", required=true)
       private final Output<List<RuleGroupStatelessRuleArgs>> statelessRules;
 
-    public Output<List<RuleGroupStatelessRuleArgs>> getStatelessRules() {
+    public Output<List<RuleGroupStatelessRuleArgs>> statelessRules() {
         return this.statelessRules;
     }
 

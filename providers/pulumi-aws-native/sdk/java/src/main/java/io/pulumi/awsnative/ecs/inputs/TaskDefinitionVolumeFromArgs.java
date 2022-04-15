@@ -19,14 +19,14 @@ public final class TaskDefinitionVolumeFromArgs extends io.pulumi.resources.Reso
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
+    public Output<Boolean> readOnly() {
         return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     @Import(name="sourceContainer")
       private final @Nullable Output<String> sourceContainer;
 
-    public Output<String> getSourceContainer() {
+    public Output<String> sourceContainer() {
         return this.sourceContainer == null ? Codegen.empty() : this.sourceContainer;
     }
 

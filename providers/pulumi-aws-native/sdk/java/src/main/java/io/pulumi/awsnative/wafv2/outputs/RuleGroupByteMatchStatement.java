@@ -35,19 +35,19 @@ public final class RuleGroupByteMatchStatement {
         this.textTransformations = textTransformations;
     }
 
-    public RuleGroupFieldToMatch getFieldToMatch() {
+    public RuleGroupFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
-    public RuleGroupPositionalConstraint getPositionalConstraint() {
+    public RuleGroupPositionalConstraint positionalConstraint() {
         return this.positionalConstraint;
     }
-    public Optional<String> getSearchString() {
+    public Optional<String> searchString() {
         return Optional.ofNullable(this.searchString);
     }
-    public Optional<String> getSearchStringBase64() {
+    public Optional<String> searchStringBase64() {
         return Optional.ofNullable(this.searchStringBase64);
     }
-    public List<RuleGroupTextTransformation> getTextTransformations() {
+    public List<RuleGroupTextTransformation> textTransformations() {
         return this.textTransformations;
     }
 

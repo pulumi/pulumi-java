@@ -34,14 +34,14 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthC
      * The password that corresponds to the username.
      * 
     */
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The name of the user.
      * 
     */
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
 

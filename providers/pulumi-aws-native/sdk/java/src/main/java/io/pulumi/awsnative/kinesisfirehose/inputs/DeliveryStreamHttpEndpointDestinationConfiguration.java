@@ -24,63 +24,63 @@ public final class DeliveryStreamHttpEndpointDestinationConfiguration extends io
     @Import(name="bufferingHints")
       private final @Nullable DeliveryStreamBufferingHints bufferingHints;
 
-    public Optional<DeliveryStreamBufferingHints> getBufferingHints() {
+    public Optional<DeliveryStreamBufferingHints> bufferingHints() {
         return this.bufferingHints == null ? Optional.empty() : Optional.ofNullable(this.bufferingHints);
     }
 
     @Import(name="cloudWatchLoggingOptions")
       private final @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions;
 
-    public Optional<DeliveryStreamCloudWatchLoggingOptions> getCloudWatchLoggingOptions() {
+    public Optional<DeliveryStreamCloudWatchLoggingOptions> cloudWatchLoggingOptions() {
         return this.cloudWatchLoggingOptions == null ? Optional.empty() : Optional.ofNullable(this.cloudWatchLoggingOptions);
     }
 
     @Import(name="endpointConfiguration", required=true)
       private final DeliveryStreamHttpEndpointConfiguration endpointConfiguration;
 
-    public DeliveryStreamHttpEndpointConfiguration getEndpointConfiguration() {
+    public DeliveryStreamHttpEndpointConfiguration endpointConfiguration() {
         return this.endpointConfiguration;
     }
 
     @Import(name="processingConfiguration")
       private final @Nullable DeliveryStreamProcessingConfiguration processingConfiguration;
 
-    public Optional<DeliveryStreamProcessingConfiguration> getProcessingConfiguration() {
+    public Optional<DeliveryStreamProcessingConfiguration> processingConfiguration() {
         return this.processingConfiguration == null ? Optional.empty() : Optional.ofNullable(this.processingConfiguration);
     }
 
     @Import(name="requestConfiguration")
       private final @Nullable DeliveryStreamHttpEndpointRequestConfiguration requestConfiguration;
 
-    public Optional<DeliveryStreamHttpEndpointRequestConfiguration> getRequestConfiguration() {
+    public Optional<DeliveryStreamHttpEndpointRequestConfiguration> requestConfiguration() {
         return this.requestConfiguration == null ? Optional.empty() : Optional.ofNullable(this.requestConfiguration);
     }
 
     @Import(name="retryOptions")
       private final @Nullable DeliveryStreamRetryOptions retryOptions;
 
-    public Optional<DeliveryStreamRetryOptions> getRetryOptions() {
+    public Optional<DeliveryStreamRetryOptions> retryOptions() {
         return this.retryOptions == null ? Optional.empty() : Optional.ofNullable(this.retryOptions);
     }
 
     @Import(name="roleARN")
       private final @Nullable String roleARN;
 
-    public Optional<String> getRoleARN() {
+    public Optional<String> roleARN() {
         return this.roleARN == null ? Optional.empty() : Optional.ofNullable(this.roleARN);
     }
 
     @Import(name="s3BackupMode")
       private final @Nullable String s3BackupMode;
 
-    public Optional<String> getS3BackupMode() {
+    public Optional<String> s3BackupMode() {
         return this.s3BackupMode == null ? Optional.empty() : Optional.ofNullable(this.s3BackupMode);
     }
 
     @Import(name="s3Configuration", required=true)
       private final DeliveryStreamS3DestinationConfiguration s3Configuration;
 
-    public DeliveryStreamS3DestinationConfiguration getS3Configuration() {
+    public DeliveryStreamS3DestinationConfiguration s3Configuration() {
         return this.s3Configuration;
     }
 

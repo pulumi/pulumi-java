@@ -26,7 +26,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customerId")
       private final @Nullable Output<String> customerId;
 
-    public Output<String> getCustomerId() {
+    public Output<String> customerId() {
         return this.customerId == null ? Codegen.empty() : this.customerId;
     }
 
@@ -37,7 +37,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -48,7 +48,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -59,7 +59,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="generateDistinctId")
       private final @Nullable Output<Boolean> generateDistinctId;
 
-    public Output<Boolean> getGenerateDistinctId() {
+    public Output<Boolean> generateDistinctId() {
         return this.generateDistinctId == null ? Codegen.empty() : this.generateDistinctId;
     }
 
@@ -70,7 +70,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -81,7 +81,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stageKeys")
       private final @Nullable Output<List<ApiKeyStageKeyArgs>> stageKeys;
 
-    public Output<List<ApiKeyStageKeyArgs>> getStageKeys() {
+    public Output<List<ApiKeyStageKeyArgs>> stageKeys() {
         return this.stageKeys == null ? Codegen.empty() : this.stageKeys;
     }
 
@@ -92,7 +92,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<ApiKeyTagArgs>> tags;
 
-    public Output<List<ApiKeyTagArgs>> getTags() {
+    public Output<List<ApiKeyTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -103,7 +103,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

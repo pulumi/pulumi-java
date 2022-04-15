@@ -22,10 +22,10 @@ public final class NetworkInsightsAccessScopeResourceStatementRequest {
         this.resources = resources;
     }
 
-    public List<String> getResourceTypes() {
+    public List<String> resourceTypes() {
         return this.resourceTypes == null ? List.of() : this.resourceTypes;
     }
-    public List<String> getResources() {
+    public List<String> resources() {
         return this.resources == null ? List.of() : this.resources;
     }
 

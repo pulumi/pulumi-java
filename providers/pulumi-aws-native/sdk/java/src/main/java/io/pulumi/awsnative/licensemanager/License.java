@@ -35,19 +35,19 @@ public class License extends io.pulumi.resources.CustomResource {
      * @return Beneficiary of the license.
      * 
      */
-    public Output</* @Nullable */ String> getBeneficiary() {
+    public Output</* @Nullable */ String> beneficiary() {
         return this.beneficiary;
     }
     @Export(name="consumptionConfiguration", type=LicenseConsumptionConfiguration.class, parameters={})
     private Output<LicenseConsumptionConfiguration> consumptionConfiguration;
 
-    public Output<LicenseConsumptionConfiguration> getConsumptionConfiguration() {
+    public Output<LicenseConsumptionConfiguration> consumptionConfiguration() {
         return this.consumptionConfiguration;
     }
     @Export(name="entitlements", type=List.class, parameters={LicenseEntitlement.class})
     private Output<List<LicenseEntitlement>> entitlements;
 
-    public Output<List<LicenseEntitlement>> getEntitlements() {
+    public Output<List<LicenseEntitlement>> entitlements() {
         return this.entitlements;
     }
     /**
@@ -61,13 +61,13 @@ public class License extends io.pulumi.resources.CustomResource {
      * @return Home region for the created license.
      * 
      */
-    public Output<String> getHomeRegion() {
+    public Output<String> homeRegion() {
         return this.homeRegion;
     }
     @Export(name="issuer", type=LicenseIssuerData.class, parameters={})
     private Output<LicenseIssuerData> issuer;
 
-    public Output<LicenseIssuerData> getIssuer() {
+    public Output<LicenseIssuerData> issuer() {
         return this.issuer;
     }
     /**
@@ -81,13 +81,13 @@ public class License extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name is a unique name for each resource.
      * 
      */
-    public Output<String> getLicenseArn() {
+    public Output<String> licenseArn() {
         return this.licenseArn;
     }
     @Export(name="licenseMetadata", type=List.class, parameters={LicenseMetadata.class})
     private Output</* @Nullable */ List<LicenseMetadata>> licenseMetadata;
 
-    public Output</* @Nullable */ List<LicenseMetadata>> getLicenseMetadata() {
+    public Output</* @Nullable */ List<LicenseMetadata>> licenseMetadata() {
         return this.licenseMetadata;
     }
     /**
@@ -101,7 +101,7 @@ public class License extends io.pulumi.resources.CustomResource {
      * @return Name for the created license.
      * 
      */
-    public Output<String> getLicenseName() {
+    public Output<String> licenseName() {
         return this.licenseName;
     }
     /**
@@ -115,7 +115,7 @@ public class License extends io.pulumi.resources.CustomResource {
      * @return Product name for the created license.
      * 
      */
-    public Output<String> getProductName() {
+    public Output<String> productName() {
         return this.productName;
     }
     /**
@@ -129,19 +129,19 @@ public class License extends io.pulumi.resources.CustomResource {
      * @return ProductSKU of the license.
      * 
      */
-    public Output</* @Nullable */ String> getProductSKU() {
+    public Output</* @Nullable */ String> productSKU() {
         return this.productSKU;
     }
     @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
-    public Output</* @Nullable */ String> getStatus() {
+    public Output</* @Nullable */ String> status() {
         return this.status;
     }
     @Export(name="validity", type=LicenseValidityDateFormat.class, parameters={})
     private Output<LicenseValidityDateFormat> validity;
 
-    public Output<LicenseValidityDateFormat> getValidity() {
+    public Output<LicenseValidityDateFormat> validity() {
         return this.validity;
     }
     /**
@@ -155,7 +155,7 @@ public class License extends io.pulumi.resources.CustomResource {
      * @return The version of the license.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

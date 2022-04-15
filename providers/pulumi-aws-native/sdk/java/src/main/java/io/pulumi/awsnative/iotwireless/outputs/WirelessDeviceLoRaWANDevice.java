@@ -41,25 +41,25 @@ public final class WirelessDeviceLoRaWANDevice {
         this.serviceProfileId = serviceProfileId;
     }
 
-    public Optional<WirelessDeviceAbpV10x> getAbpV10x() {
+    public Optional<WirelessDeviceAbpV10x> abpV10x() {
         return Optional.ofNullable(this.abpV10x);
     }
-    public Optional<WirelessDeviceAbpV11> getAbpV11() {
+    public Optional<WirelessDeviceAbpV11> abpV11() {
         return Optional.ofNullable(this.abpV11);
     }
-    public Optional<String> getDevEui() {
+    public Optional<String> devEui() {
         return Optional.ofNullable(this.devEui);
     }
-    public Optional<String> getDeviceProfileId() {
+    public Optional<String> deviceProfileId() {
         return Optional.ofNullable(this.deviceProfileId);
     }
-    public Optional<WirelessDeviceOtaaV10x> getOtaaV10x() {
+    public Optional<WirelessDeviceOtaaV10x> otaaV10x() {
         return Optional.ofNullable(this.otaaV10x);
     }
-    public Optional<WirelessDeviceOtaaV11> getOtaaV11() {
+    public Optional<WirelessDeviceOtaaV11> otaaV11() {
         return Optional.ofNullable(this.otaaV11);
     }
-    public Optional<String> getServiceProfileId() {
+    public Optional<String> serviceProfileId() {
         return Optional.ofNullable(this.serviceProfileId);
     }
 

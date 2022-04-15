@@ -21,21 +21,21 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configData", required=true)
       private final Output<ConfigDataArgs> configData;
 
-    public Output<ConfigDataArgs> getConfigData() {
+    public Output<ConfigDataArgs> configData() {
         return this.configData;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<ConfigTagArgs>> tags;
 
-    public Output<List<ConfigTagArgs>> getTags() {
+    public Output<List<ConfigTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

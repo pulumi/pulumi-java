@@ -25,7 +25,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataRetentionInHours")
       private final @Nullable Output<Integer> dataRetentionInHours;
 
-    public Output<Integer> getDataRetentionInHours() {
+    public Output<Integer> dataRetentionInHours() {
         return this.dataRetentionInHours == null ? Codegen.empty() : this.dataRetentionInHours;
     }
 
@@ -36,7 +36,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
@@ -47,7 +47,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -58,7 +58,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mediaType")
       private final @Nullable Output<String> mediaType;
 
-    public Output<String> getMediaType() {
+    public Output<String> mediaType() {
         return this.mediaType == null ? Codegen.empty() : this.mediaType;
     }
 
@@ -69,7 +69,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -80,7 +80,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<StreamTagArgs>> tags;
 
-    public Output<List<StreamTagArgs>> getTags() {
+    public Output<List<StreamTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -25,7 +25,7 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -36,7 +36,7 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inlinePolicy")
       private final @Nullable Output<Object> inlinePolicy;
 
-    public Output<Object> getInlinePolicy() {
+    public Output<Object> inlinePolicy() {
         return this.inlinePolicy == null ? Codegen.empty() : this.inlinePolicy;
     }
 
@@ -47,14 +47,14 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceArn", required=true)
       private final Output<String> instanceArn;
 
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
 
     @Import(name="managedPolicies")
       private final @Nullable Output<List<String>> managedPolicies;
 
-    public Output<List<String>> getManagedPolicies() {
+    public Output<List<String>> managedPolicies() {
         return this.managedPolicies == null ? Codegen.empty() : this.managedPolicies;
     }
 
@@ -65,7 +65,7 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -76,7 +76,7 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="relayStateType")
       private final @Nullable Output<String> relayStateType;
 
-    public Output<String> getRelayStateType() {
+    public Output<String> relayStateType() {
         return this.relayStateType == null ? Codegen.empty() : this.relayStateType;
     }
 
@@ -87,14 +87,14 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sessionDuration")
       private final @Nullable Output<String> sessionDuration;
 
-    public Output<String> getSessionDuration() {
+    public Output<String> sessionDuration() {
         return this.sessionDuration == null ? Codegen.empty() : this.sessionDuration;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<PermissionSetTagArgs>> tags;
 
-    public Output<List<PermissionSetTagArgs>> getTags() {
+    public Output<List<PermissionSetTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

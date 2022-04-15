@@ -17,7 +17,7 @@ public final class FirewallPolicyPublishMetricAction {
         this.dimensions = dimensions;
     }
 
-    public List<FirewallPolicyDimension> getDimensions() {
+    public List<FirewallPolicyDimension> dimensions() {
         return this.dimensions;
     }
 

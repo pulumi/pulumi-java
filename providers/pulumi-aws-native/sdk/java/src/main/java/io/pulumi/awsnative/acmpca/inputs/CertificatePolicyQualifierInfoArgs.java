@@ -22,14 +22,14 @@ public final class CertificatePolicyQualifierInfoArgs extends io.pulumi.resource
     @Import(name="policyQualifierId", required=true)
       private final Output<String> policyQualifierId;
 
-    public Output<String> getPolicyQualifierId() {
+    public Output<String> policyQualifierId() {
         return this.policyQualifierId;
     }
 
     @Import(name="qualifier", required=true)
       private final Output<CertificateQualifierArgs> qualifier;
 
-    public Output<CertificateQualifierArgs> getQualifier() {
+    public Output<CertificateQualifierArgs> qualifier() {
         return this.qualifier;
     }
 

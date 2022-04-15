@@ -29,16 +29,16 @@ public final class AppResourceMapping {
         this.resourceName = resourceName;
     }
 
-    public Optional<String> getLogicalStackName() {
+    public Optional<String> logicalStackName() {
         return Optional.ofNullable(this.logicalStackName);
     }
-    public String getMappingType() {
+    public String mappingType() {
         return this.mappingType;
     }
-    public AppPhysicalResourceId getPhysicalResourceId() {
+    public AppPhysicalResourceId physicalResourceId() {
         return this.physicalResourceId;
     }
-    public Optional<String> getPropResourceName() {
+    public Optional<String> resourceName() {
         return Optional.ofNullable(this.resourceName);
     }
 

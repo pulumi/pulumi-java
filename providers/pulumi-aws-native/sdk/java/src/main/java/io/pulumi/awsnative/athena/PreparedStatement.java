@@ -29,7 +29,7 @@ public class PreparedStatement extends io.pulumi.resources.CustomResource {
      * @return The description of the prepared statement.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -43,7 +43,7 @@ public class PreparedStatement extends io.pulumi.resources.CustomResource {
      * @return The query string for the prepared statement.
      * 
      */
-    public Output<String> getQueryStatement() {
+    public Output<String> queryStatement() {
         return this.queryStatement;
     }
     /**
@@ -57,7 +57,7 @@ public class PreparedStatement extends io.pulumi.resources.CustomResource {
      * @return The name of the prepared statement.
      * 
      */
-    public Output<String> getStatementName() {
+    public Output<String> statementName() {
         return this.statementName;
     }
     /**
@@ -71,7 +71,7 @@ public class PreparedStatement extends io.pulumi.resources.CustomResource {
      * @return The name of the workgroup to which the prepared statement belongs.
      * 
      */
-    public Output<String> getWorkGroup() {
+    public Output<String> workGroup() {
         return this.workGroup;
     }
 

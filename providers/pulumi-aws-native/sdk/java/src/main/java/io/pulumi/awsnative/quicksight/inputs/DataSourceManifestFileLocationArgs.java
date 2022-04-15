@@ -25,7 +25,7 @@ public final class DataSourceManifestFileLocationArgs extends io.pulumi.resource
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -36,7 +36,7 @@ public final class DataSourceManifestFileLocationArgs extends io.pulumi.resource
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 

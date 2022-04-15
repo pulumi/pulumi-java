@@ -18,7 +18,7 @@ public final class PlaceIndexDataSourceConfiguration {
         this.intendedUse = intendedUse;
     }
 
-    public Optional<PlaceIndexIntendedUse> getIntendedUse() {
+    public Optional<PlaceIndexIntendedUse> intendedUse() {
         return Optional.ofNullable(this.intendedUse);
     }
 

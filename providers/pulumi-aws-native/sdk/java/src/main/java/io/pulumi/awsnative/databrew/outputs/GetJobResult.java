@@ -131,107 +131,107 @@ public final class GetJobResult {
         this.validationConfigurations = validationConfigurations;
     }
 
-    public List<JobDataCatalogOutput> getDataCatalogOutputs() {
+    public List<JobDataCatalogOutput> dataCatalogOutputs() {
         return this.dataCatalogOutputs == null ? List.of() : this.dataCatalogOutputs;
     }
-    public List<JobDatabaseOutput> getDatabaseOutputs() {
+    public List<JobDatabaseOutput> databaseOutputs() {
         return this.databaseOutputs == null ? List.of() : this.databaseOutputs;
     }
     /**
      * Dataset name
      * 
     */
-    public Optional<String> getDatasetName() {
+    public Optional<String> datasetName() {
         return Optional.ofNullable(this.datasetName);
     }
     /**
      * Encryption Key Arn
      * 
     */
-    public Optional<String> getEncryptionKeyArn() {
+    public Optional<String> encryptionKeyArn() {
         return Optional.ofNullable(this.encryptionKeyArn);
     }
     /**
      * Encryption mode
      * 
     */
-    public Optional<JobEncryptionMode> getEncryptionMode() {
+    public Optional<JobEncryptionMode> encryptionMode() {
         return Optional.ofNullable(this.encryptionMode);
     }
     /**
      * Job Sample
      * 
     */
-    public Optional<JobSample> getJobSample() {
+    public Optional<JobSample> jobSample() {
         return Optional.ofNullable(this.jobSample);
     }
     /**
      * Log subscription
      * 
     */
-    public Optional<JobLogSubscription> getLogSubscription() {
+    public Optional<JobLogSubscription> logSubscription() {
         return Optional.ofNullable(this.logSubscription);
     }
     /**
      * Max capacity
      * 
     */
-    public Optional<Integer> getMaxCapacity() {
+    public Optional<Integer> maxCapacity() {
         return Optional.ofNullable(this.maxCapacity);
     }
     /**
      * Max retries
      * 
     */
-    public Optional<Integer> getMaxRetries() {
+    public Optional<Integer> maxRetries() {
         return Optional.ofNullable(this.maxRetries);
     }
     /**
      * Output location
      * 
     */
-    public Optional<JobOutputLocation> getOutputLocation() {
+    public Optional<JobOutputLocation> outputLocation() {
         return Optional.ofNullable(this.outputLocation);
     }
-    public List<JobOutput> getOutputs() {
+    public List<JobOutput> outputs() {
         return this.outputs == null ? List.of() : this.outputs;
     }
     /**
      * Profile Job configuration
      * 
     */
-    public Optional<JobProfileConfiguration> getProfileConfiguration() {
+    public Optional<JobProfileConfiguration> profileConfiguration() {
         return Optional.ofNullable(this.profileConfiguration);
     }
     /**
      * Project name
      * 
     */
-    public Optional<String> getProjectName() {
+    public Optional<String> projectName() {
         return Optional.ofNullable(this.projectName);
     }
-    public Optional<JobRecipe> getRecipe() {
+    public Optional<JobRecipe> recipe() {
         return Optional.ofNullable(this.recipe);
     }
     /**
      * Role arn
      * 
     */
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
     /**
      * Timeout
      * 
     */
-    public Optional<Integer> getTimeout() {
+    public Optional<Integer> timeout() {
         return Optional.ofNullable(this.timeout);
     }
     /**
      * Data quality rules configuration
      * 
     */
-    public List<JobValidationConfiguration> getValidationConfigurations() {
+    public List<JobValidationConfiguration> validationConfigurations() {
         return this.validationConfigurations == null ? List.of() : this.validationConfigurations;
     }
 

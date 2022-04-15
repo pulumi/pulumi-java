@@ -53,37 +53,37 @@ public final class GetDomainNameResult {
         this.tags = tags;
     }
 
-    public Optional<String> getCertificateArn() {
+    public Optional<String> certificateArn() {
         return Optional.ofNullable(this.certificateArn);
     }
-    public Optional<String> getDistributionDomainName() {
+    public Optional<String> distributionDomainName() {
         return Optional.ofNullable(this.distributionDomainName);
     }
-    public Optional<String> getDistributionHostedZoneId() {
+    public Optional<String> distributionHostedZoneId() {
         return Optional.ofNullable(this.distributionHostedZoneId);
     }
-    public Optional<DomainNameEndpointConfiguration> getEndpointConfiguration() {
+    public Optional<DomainNameEndpointConfiguration> endpointConfiguration() {
         return Optional.ofNullable(this.endpointConfiguration);
     }
-    public Optional<DomainNameMutualTlsAuthentication> getMutualTlsAuthentication() {
+    public Optional<DomainNameMutualTlsAuthentication> mutualTlsAuthentication() {
         return Optional.ofNullable(this.mutualTlsAuthentication);
     }
-    public Optional<String> getOwnershipVerificationCertificateArn() {
+    public Optional<String> ownershipVerificationCertificateArn() {
         return Optional.ofNullable(this.ownershipVerificationCertificateArn);
     }
-    public Optional<String> getRegionalCertificateArn() {
+    public Optional<String> regionalCertificateArn() {
         return Optional.ofNullable(this.regionalCertificateArn);
     }
-    public Optional<String> getRegionalDomainName() {
+    public Optional<String> regionalDomainName() {
         return Optional.ofNullable(this.regionalDomainName);
     }
-    public Optional<String> getRegionalHostedZoneId() {
+    public Optional<String> regionalHostedZoneId() {
         return Optional.ofNullable(this.regionalHostedZoneId);
     }
-    public Optional<String> getSecurityPolicy() {
+    public Optional<String> securityPolicy() {
         return Optional.ofNullable(this.securityPolicy);
     }
-    public List<DomainNameTag> getTags() {
+    public List<DomainNameTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

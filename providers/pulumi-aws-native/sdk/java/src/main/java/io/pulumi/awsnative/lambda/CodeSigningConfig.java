@@ -31,7 +31,7 @@ public class CodeSigningConfig extends io.pulumi.resources.CustomResource {
      * @return When the CodeSigningConfig is later on attached to a function, the function code will be expected to be signed by profiles from this list
      * 
      */
-    public Output<CodeSigningConfigAllowedPublishers> getAllowedPublishers() {
+    public Output<CodeSigningConfigAllowedPublishers> allowedPublishers() {
         return this.allowedPublishers;
     }
     /**
@@ -45,7 +45,7 @@ public class CodeSigningConfig extends io.pulumi.resources.CustomResource {
      * @return A unique Arn for CodeSigningConfig resource
      * 
      */
-    public Output<String> getCodeSigningConfigArn() {
+    public Output<String> codeSigningConfigArn() {
         return this.codeSigningConfigArn;
     }
     /**
@@ -59,7 +59,7 @@ public class CodeSigningConfig extends io.pulumi.resources.CustomResource {
      * @return A unique identifier for CodeSigningConfig resource
      * 
      */
-    public Output<String> getCodeSigningConfigId() {
+    public Output<String> codeSigningConfigId() {
         return this.codeSigningConfigId;
     }
     /**
@@ -73,7 +73,7 @@ public class CodeSigningConfig extends io.pulumi.resources.CustomResource {
      * @return Policies to control how to act if a signature is invalid
      * 
      */
-    public Output</* @Nullable */ CodeSigningConfigCodeSigningPolicies> getCodeSigningPolicies() {
+    public Output</* @Nullable */ CodeSigningConfigCodeSigningPolicies> codeSigningPolicies() {
         return this.codeSigningPolicies;
     }
     /**
@@ -87,7 +87,7 @@ public class CodeSigningConfig extends io.pulumi.resources.CustomResource {
      * @return A description of the CodeSigningConfig
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
 

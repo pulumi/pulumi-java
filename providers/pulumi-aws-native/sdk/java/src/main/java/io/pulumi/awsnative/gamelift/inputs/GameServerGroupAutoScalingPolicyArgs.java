@@ -23,14 +23,14 @@ public final class GameServerGroupAutoScalingPolicyArgs extends io.pulumi.resour
     @Import(name="estimatedInstanceWarmup")
       private final @Nullable Output<Double> estimatedInstanceWarmup;
 
-    public Output<Double> getEstimatedInstanceWarmup() {
+    public Output<Double> estimatedInstanceWarmup() {
         return this.estimatedInstanceWarmup == null ? Codegen.empty() : this.estimatedInstanceWarmup;
     }
 
     @Import(name="targetTrackingConfiguration", required=true)
       private final Output<GameServerGroupTargetTrackingConfigurationArgs> targetTrackingConfiguration;
 
-    public Output<GameServerGroupTargetTrackingConfigurationArgs> getTargetTrackingConfiguration() {
+    public Output<GameServerGroupTargetTrackingConfigurationArgs> targetTrackingConfiguration() {
         return this.targetTrackingConfiguration;
     }
 

@@ -33,13 +33,13 @@ public class IPAM extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the IPAM.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -53,7 +53,7 @@ public class IPAM extends io.pulumi.resources.CustomResource {
      * @return Id of the IPAM.
      * 
      */
-    public Output<String> getIpamId() {
+    public Output<String> ipamId() {
         return this.ipamId;
     }
     /**
@@ -67,7 +67,7 @@ public class IPAM extends io.pulumi.resources.CustomResource {
      * @return The regions IPAM is enabled for. Allows pools to be created in these regions, as well as enabling monitoring
      * 
      */
-    public Output</* @Nullable */ List<IPAMIpamOperatingRegion>> getOperatingRegions() {
+    public Output</* @Nullable */ List<IPAMIpamOperatingRegion>> operatingRegions() {
         return this.operatingRegions;
     }
     /**
@@ -81,7 +81,7 @@ public class IPAM extends io.pulumi.resources.CustomResource {
      * @return The Id of the default scope for publicly routable IP space, created with this IPAM.
      * 
      */
-    public Output<String> getPrivateDefaultScopeId() {
+    public Output<String> privateDefaultScopeId() {
         return this.privateDefaultScopeId;
     }
     /**
@@ -95,7 +95,7 @@ public class IPAM extends io.pulumi.resources.CustomResource {
      * @return The Id of the default scope for publicly routable IP space, created with this IPAM.
      * 
      */
-    public Output<String> getPublicDefaultScopeId() {
+    public Output<String> publicDefaultScopeId() {
         return this.publicDefaultScopeId;
     }
     /**
@@ -109,7 +109,7 @@ public class IPAM extends io.pulumi.resources.CustomResource {
      * @return The number of scopes that currently exist in this IPAM.
      * 
      */
-    public Output<Integer> getScopeCount() {
+    public Output<Integer> scopeCount() {
         return this.scopeCount;
     }
     /**
@@ -123,7 +123,7 @@ public class IPAM extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<IPAMTag>> getTags() {
+    public Output</* @Nullable */ List<IPAMTag>> tags() {
         return this.tags;
     }
 

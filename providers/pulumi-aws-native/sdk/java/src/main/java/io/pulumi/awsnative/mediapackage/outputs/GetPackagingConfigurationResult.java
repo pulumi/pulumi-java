@@ -75,49 +75,49 @@ public final class GetPackagingConfigurationResult {
      * The ARN of the PackagingConfiguration.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * A CMAF packaging configuration.
      * 
     */
-    public Optional<PackagingConfigurationCmafPackage> getCmafPackage() {
+    public Optional<PackagingConfigurationCmafPackage> cmafPackage() {
         return Optional.ofNullable(this.cmafPackage);
     }
     /**
      * A Dynamic Adaptive Streaming over HTTP (DASH) packaging configuration.
      * 
     */
-    public Optional<PackagingConfigurationDashPackage> getDashPackage() {
+    public Optional<PackagingConfigurationDashPackage> dashPackage() {
         return Optional.ofNullable(this.dashPackage);
     }
     /**
      * An HTTP Live Streaming (HLS) packaging configuration.
      * 
     */
-    public Optional<PackagingConfigurationHlsPackage> getHlsPackage() {
+    public Optional<PackagingConfigurationHlsPackage> hlsPackage() {
         return Optional.ofNullable(this.hlsPackage);
     }
     /**
      * A Microsoft Smooth Streaming (MSS) PackagingConfiguration.
      * 
     */
-    public Optional<PackagingConfigurationMssPackage> getMssPackage() {
+    public Optional<PackagingConfigurationMssPackage> mssPackage() {
         return Optional.ofNullable(this.mssPackage);
     }
     /**
      * The ID of a PackagingGroup.
      * 
     */
-    public Optional<String> getPackagingGroupId() {
+    public Optional<String> packagingGroupId() {
         return Optional.ofNullable(this.packagingGroupId);
     }
     /**
      * A collection of tags associated with a resource
      * 
     */
-    public List<PackagingConfigurationTag> getTags() {
+    public List<PackagingConfigurationTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

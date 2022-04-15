@@ -20,7 +20,7 @@ public final class DetectorLabel extends io.pulumi.resources.InvokeArgs {
     @Import(name="arn")
       private final @Nullable String arn;
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
     }
 
@@ -31,7 +31,7 @@ public final class DetectorLabel extends io.pulumi.resources.InvokeArgs {
     @Import(name="createdTime")
       private final @Nullable String createdTime;
 
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return this.createdTime == null ? Optional.empty() : Optional.ofNullable(this.createdTime);
     }
 
@@ -42,14 +42,14 @@ public final class DetectorLabel extends io.pulumi.resources.InvokeArgs {
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
     @Import(name="inline")
       private final @Nullable Boolean inline;
 
-    public Optional<Boolean> getInline() {
+    public Optional<Boolean> inline() {
         return this.inline == null ? Optional.empty() : Optional.ofNullable(this.inline);
     }
 
@@ -60,14 +60,14 @@ public final class DetectorLabel extends io.pulumi.resources.InvokeArgs {
     @Import(name="lastUpdatedTime")
       private final @Nullable String lastUpdatedTime;
 
-    public Optional<String> getLastUpdatedTime() {
+    public Optional<String> lastUpdatedTime() {
         return this.lastUpdatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastUpdatedTime);
     }
 
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -78,7 +78,7 @@ public final class DetectorLabel extends io.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable List<DetectorTag> tags;
 
-    public List<DetectorTag> getTags() {
+    public List<DetectorTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

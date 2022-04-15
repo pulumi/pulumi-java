@@ -23,63 +23,63 @@ public final class DistributionOrigin extends io.pulumi.resources.InvokeArgs {
     @Import(name="connectionAttempts")
       private final @Nullable Integer connectionAttempts;
 
-    public Optional<Integer> getConnectionAttempts() {
+    public Optional<Integer> connectionAttempts() {
         return this.connectionAttempts == null ? Optional.empty() : Optional.ofNullable(this.connectionAttempts);
     }
 
     @Import(name="connectionTimeout")
       private final @Nullable Integer connectionTimeout;
 
-    public Optional<Integer> getConnectionTimeout() {
+    public Optional<Integer> connectionTimeout() {
         return this.connectionTimeout == null ? Optional.empty() : Optional.ofNullable(this.connectionTimeout);
     }
 
     @Import(name="customOriginConfig")
       private final @Nullable DistributionCustomOriginConfig customOriginConfig;
 
-    public Optional<DistributionCustomOriginConfig> getCustomOriginConfig() {
+    public Optional<DistributionCustomOriginConfig> customOriginConfig() {
         return this.customOriginConfig == null ? Optional.empty() : Optional.ofNullable(this.customOriginConfig);
     }
 
     @Import(name="domainName", required=true)
       private final String domainName;
 
-    public String getDomainName() {
+    public String domainName() {
         return this.domainName;
     }
 
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
     @Import(name="originCustomHeaders")
       private final @Nullable List<DistributionOriginCustomHeader> originCustomHeaders;
 
-    public List<DistributionOriginCustomHeader> getOriginCustomHeaders() {
+    public List<DistributionOriginCustomHeader> originCustomHeaders() {
         return this.originCustomHeaders == null ? List.of() : this.originCustomHeaders;
     }
 
     @Import(name="originPath")
       private final @Nullable String originPath;
 
-    public Optional<String> getOriginPath() {
+    public Optional<String> originPath() {
         return this.originPath == null ? Optional.empty() : Optional.ofNullable(this.originPath);
     }
 
     @Import(name="originShield")
       private final @Nullable DistributionOriginShield originShield;
 
-    public Optional<DistributionOriginShield> getOriginShield() {
+    public Optional<DistributionOriginShield> originShield() {
         return this.originShield == null ? Optional.empty() : Optional.ofNullable(this.originShield);
     }
 
     @Import(name="s3OriginConfig")
       private final @Nullable DistributionS3OriginConfig s3OriginConfig;
 
-    public Optional<DistributionS3OriginConfig> getS3OriginConfig() {
+    public Optional<DistributionS3OriginConfig> s3OriginConfig() {
         return this.s3OriginConfig == null ? Optional.empty() : Optional.ofNullable(this.s3OriginConfig);
     }
 

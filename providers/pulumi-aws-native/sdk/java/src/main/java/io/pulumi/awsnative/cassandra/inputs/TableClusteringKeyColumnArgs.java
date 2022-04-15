@@ -19,14 +19,14 @@ public final class TableClusteringKeyColumnArgs extends io.pulumi.resources.Reso
     @Import(name="column", required=true)
       private final Output<TableColumnArgs> column;
 
-    public Output<TableColumnArgs> getColumn() {
+    public Output<TableColumnArgs> column() {
         return this.column;
     }
 
     @Import(name="orderBy")
       private final @Nullable Output<TableClusteringKeyColumnOrderBy> orderBy;
 
-    public Output<TableClusteringKeyColumnOrderBy> getOrderBy() {
+    public Output<TableClusteringKeyColumnOrderBy> orderBy() {
         return this.orderBy == null ? Codegen.empty() : this.orderBy;
     }
 

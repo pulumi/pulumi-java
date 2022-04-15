@@ -31,7 +31,7 @@ public class ApiDestination extends io.pulumi.resources.CustomResource {
      * @return The arn of the api destination.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -45,19 +45,19 @@ public class ApiDestination extends io.pulumi.resources.CustomResource {
      * @return The arn of the connection.
      * 
      */
-    public Output<String> getConnectionArn() {
+    public Output<String> connectionArn() {
         return this.connectionArn;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="httpMethod", type=ApiDestinationHttpMethod.class, parameters={})
     private Output<ApiDestinationHttpMethod> httpMethod;
 
-    public Output<ApiDestinationHttpMethod> getHttpMethod() {
+    public Output<ApiDestinationHttpMethod> httpMethod() {
         return this.httpMethod;
     }
     /**
@@ -71,13 +71,13 @@ public class ApiDestination extends io.pulumi.resources.CustomResource {
      * @return Url endpoint to invoke.
      * 
      */
-    public Output<String> getInvocationEndpoint() {
+    public Output<String> invocationEndpoint() {
         return this.invocationEndpoint;
     }
     @Export(name="invocationRateLimitPerSecond", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> invocationRateLimitPerSecond;
 
-    public Output</* @Nullable */ Integer> getInvocationRateLimitPerSecond() {
+    public Output</* @Nullable */ Integer> invocationRateLimitPerSecond() {
         return this.invocationRateLimitPerSecond;
     }
     /**
@@ -91,7 +91,7 @@ public class ApiDestination extends io.pulumi.resources.CustomResource {
      * @return Name of the apiDestination.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
 

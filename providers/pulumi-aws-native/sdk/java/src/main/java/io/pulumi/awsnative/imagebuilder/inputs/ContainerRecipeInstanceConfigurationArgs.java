@@ -28,7 +28,7 @@ public final class ContainerRecipeInstanceConfigurationArgs extends io.pulumi.re
     @Import(name="blockDeviceMappings")
       private final @Nullable Output<List<ContainerRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings;
 
-    public Output<List<ContainerRecipeInstanceBlockDeviceMappingArgs>> getBlockDeviceMappings() {
+    public Output<List<ContainerRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings() {
         return this.blockDeviceMappings == null ? Codegen.empty() : this.blockDeviceMappings;
     }
 
@@ -39,7 +39,7 @@ public final class ContainerRecipeInstanceConfigurationArgs extends io.pulumi.re
     @Import(name="image")
       private final @Nullable Output<String> image;
 
-    public Output<String> getImage() {
+    public Output<String> image() {
         return this.image == null ? Codegen.empty() : this.image;
     }
 

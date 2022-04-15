@@ -35,21 +35,21 @@ public final class GetDatabaseResult {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The KMS key for the database. If the KMS key is not specified, the database will be encrypted with a Timestream managed KMS key located in your account.
      * 
     */
-    public Optional<String> getKmsKeyId() {
+    public Optional<String> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
     */
-    public List<DatabaseTag> getTags() {
+    public List<DatabaseTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

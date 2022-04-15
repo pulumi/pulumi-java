@@ -43,21 +43,21 @@ public final class GetReadinessCheckResult {
      * The Amazon Resource Name (ARN) of the readiness check.
      * 
     */
-    public Optional<String> getReadinessCheckArn() {
+    public Optional<String> readinessCheckArn() {
         return Optional.ofNullable(this.readinessCheckArn);
     }
     /**
      * The name of the resource set to check.
      * 
     */
-    public Optional<String> getResourceSetName() {
+    public Optional<String> resourceSetName() {
         return Optional.ofNullable(this.resourceSetName);
     }
     /**
      * A collection of tags associated with a resource.
      * 
     */
-    public List<ReadinessCheckTag> getTags() {
+    public List<ReadinessCheckTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

@@ -26,7 +26,7 @@ public final class BucketOwnershipControlsRule {
      * Specifies an object ownership rule.
      * 
     */
-    public Optional<BucketOwnershipControlsRuleObjectOwnership> getObjectOwnership() {
+    public Optional<BucketOwnershipControlsRuleObjectOwnership> objectOwnership() {
         return Optional.ofNullable(this.objectOwnership);
     }
 

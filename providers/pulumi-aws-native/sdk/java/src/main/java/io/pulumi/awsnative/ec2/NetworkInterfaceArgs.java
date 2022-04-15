@@ -28,7 +28,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -39,7 +39,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="groupSet")
       private final @Nullable Output<List<String>> groupSet;
 
-    public Output<List<String>> getGroupSet() {
+    public Output<List<String>> groupSet() {
         return this.groupSet == null ? Codegen.empty() : this.groupSet;
     }
 
@@ -50,7 +50,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="interfaceType")
       private final @Nullable Output<String> interfaceType;
 
-    public Output<String> getInterfaceType() {
+    public Output<String> interfaceType() {
         return this.interfaceType == null ? Codegen.empty() : this.interfaceType;
     }
 
@@ -61,7 +61,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ipv6AddressCount")
       private final @Nullable Output<Integer> ipv6AddressCount;
 
-    public Output<Integer> getIpv6AddressCount() {
+    public Output<Integer> ipv6AddressCount() {
         return this.ipv6AddressCount == null ? Codegen.empty() : this.ipv6AddressCount;
     }
 
@@ -72,7 +72,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ipv6Addresses")
       private final @Nullable Output<List<NetworkInterfaceInstanceIpv6AddressArgs>> ipv6Addresses;
 
-    public Output<List<NetworkInterfaceInstanceIpv6AddressArgs>> getIpv6Addresses() {
+    public Output<List<NetworkInterfaceInstanceIpv6AddressArgs>> ipv6Addresses() {
         return this.ipv6Addresses == null ? Codegen.empty() : this.ipv6Addresses;
     }
 
@@ -83,7 +83,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="privateIpAddress")
       private final @Nullable Output<String> privateIpAddress;
 
-    public Output<String> getPrivateIpAddress() {
+    public Output<String> privateIpAddress() {
         return this.privateIpAddress == null ? Codegen.empty() : this.privateIpAddress;
     }
 
@@ -94,7 +94,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="privateIpAddresses")
       private final @Nullable Output<List<NetworkInterfacePrivateIpAddressSpecificationArgs>> privateIpAddresses;
 
-    public Output<List<NetworkInterfacePrivateIpAddressSpecificationArgs>> getPrivateIpAddresses() {
+    public Output<List<NetworkInterfacePrivateIpAddressSpecificationArgs>> privateIpAddresses() {
         return this.privateIpAddresses == null ? Codegen.empty() : this.privateIpAddresses;
     }
 
@@ -105,7 +105,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="secondaryPrivateIpAddressCount")
       private final @Nullable Output<Integer> secondaryPrivateIpAddressCount;
 
-    public Output<Integer> getSecondaryPrivateIpAddressCount() {
+    public Output<Integer> secondaryPrivateIpAddressCount() {
         return this.secondaryPrivateIpAddressCount == null ? Codegen.empty() : this.secondaryPrivateIpAddressCount;
     }
 
@@ -116,7 +116,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="sourceDestCheck")
       private final @Nullable Output<Boolean> sourceDestCheck;
 
-    public Output<Boolean> getSourceDestCheck() {
+    public Output<Boolean> sourceDestCheck() {
         return this.sourceDestCheck == null ? Codegen.empty() : this.sourceDestCheck;
     }
 
@@ -127,7 +127,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 
@@ -138,7 +138,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<List<NetworkInterfaceTagArgs>> tags;
 
-    public Output<List<NetworkInterfaceTagArgs>> getTags() {
+    public Output<List<NetworkInterfaceTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

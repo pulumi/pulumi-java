@@ -30,7 +30,7 @@ public final class MethodIntegrationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="cacheKeyParameters")
       private final @Nullable Output<List<String>> cacheKeyParameters;
 
-    public Output<List<String>> getCacheKeyParameters() {
+    public Output<List<String>> cacheKeyParameters() {
         return this.cacheKeyParameters == null ? Codegen.empty() : this.cacheKeyParameters;
     }
 
@@ -41,7 +41,7 @@ public final class MethodIntegrationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="cacheNamespace")
       private final @Nullable Output<String> cacheNamespace;
 
-    public Output<String> getCacheNamespace() {
+    public Output<String> cacheNamespace() {
         return this.cacheNamespace == null ? Codegen.empty() : this.cacheNamespace;
     }
 
@@ -52,7 +52,7 @@ public final class MethodIntegrationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="connectionId")
       private final @Nullable Output<String> connectionId;
 
-    public Output<String> getConnectionId() {
+    public Output<String> connectionId() {
         return this.connectionId == null ? Codegen.empty() : this.connectionId;
     }
 
@@ -63,7 +63,7 @@ public final class MethodIntegrationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="connectionType")
       private final @Nullable Output<MethodIntegrationConnectionType> connectionType;
 
-    public Output<MethodIntegrationConnectionType> getConnectionType() {
+    public Output<MethodIntegrationConnectionType> connectionType() {
         return this.connectionType == null ? Codegen.empty() : this.connectionType;
     }
 
@@ -74,7 +74,7 @@ public final class MethodIntegrationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="contentHandling")
       private final @Nullable Output<MethodIntegrationContentHandling> contentHandling;
 
-    public Output<MethodIntegrationContentHandling> getContentHandling() {
+    public Output<MethodIntegrationContentHandling> contentHandling() {
         return this.contentHandling == null ? Codegen.empty() : this.contentHandling;
     }
 
@@ -85,7 +85,7 @@ public final class MethodIntegrationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="credentials")
       private final @Nullable Output<String> credentials;
 
-    public Output<String> getCredentials() {
+    public Output<String> credentials() {
         return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
@@ -96,7 +96,7 @@ public final class MethodIntegrationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="integrationHttpMethod")
       private final @Nullable Output<String> integrationHttpMethod;
 
-    public Output<String> getIntegrationHttpMethod() {
+    public Output<String> integrationHttpMethod() {
         return this.integrationHttpMethod == null ? Codegen.empty() : this.integrationHttpMethod;
     }
 
@@ -107,7 +107,7 @@ public final class MethodIntegrationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="integrationResponses")
       private final @Nullable Output<List<MethodIntegrationResponseArgs>> integrationResponses;
 
-    public Output<List<MethodIntegrationResponseArgs>> getIntegrationResponses() {
+    public Output<List<MethodIntegrationResponseArgs>> integrationResponses() {
         return this.integrationResponses == null ? Codegen.empty() : this.integrationResponses;
     }
 
@@ -118,7 +118,7 @@ public final class MethodIntegrationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="passthroughBehavior")
       private final @Nullable Output<MethodIntegrationPassthroughBehavior> passthroughBehavior;
 
-    public Output<MethodIntegrationPassthroughBehavior> getPassthroughBehavior() {
+    public Output<MethodIntegrationPassthroughBehavior> passthroughBehavior() {
         return this.passthroughBehavior == null ? Codegen.empty() : this.passthroughBehavior;
     }
 
@@ -129,7 +129,7 @@ public final class MethodIntegrationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="requestParameters")
       private final @Nullable Output<Object> requestParameters;
 
-    public Output<Object> getRequestParameters() {
+    public Output<Object> requestParameters() {
         return this.requestParameters == null ? Codegen.empty() : this.requestParameters;
     }
 
@@ -140,7 +140,7 @@ public final class MethodIntegrationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="requestTemplates")
       private final @Nullable Output<Object> requestTemplates;
 
-    public Output<Object> getRequestTemplates() {
+    public Output<Object> requestTemplates() {
         return this.requestTemplates == null ? Codegen.empty() : this.requestTemplates;
     }
 
@@ -151,7 +151,7 @@ public final class MethodIntegrationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="timeoutInMillis")
       private final @Nullable Output<Integer> timeoutInMillis;
 
-    public Output<Integer> getTimeoutInMillis() {
+    public Output<Integer> timeoutInMillis() {
         return this.timeoutInMillis == null ? Codegen.empty() : this.timeoutInMillis;
     }
 
@@ -162,7 +162,7 @@ public final class MethodIntegrationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
       private final Output<MethodIntegrationType> type;
 
-    public Output<MethodIntegrationType> getType() {
+    public Output<MethodIntegrationType> type() {
         return this.type;
     }
 
@@ -173,7 +173,7 @@ public final class MethodIntegrationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri == null ? Codegen.empty() : this.uri;
     }
 

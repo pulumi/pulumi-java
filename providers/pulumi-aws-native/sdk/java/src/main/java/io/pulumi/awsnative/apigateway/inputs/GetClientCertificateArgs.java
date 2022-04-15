@@ -19,7 +19,7 @@ public final class GetClientCertificateArgs extends io.pulumi.resources.InvokeAr
     @Import(name="clientCertificateId", required=true)
       private final String clientCertificateId;
 
-    public String getClientCertificateId() {
+    public String clientCertificateId() {
         return this.clientCertificateId;
     }
 

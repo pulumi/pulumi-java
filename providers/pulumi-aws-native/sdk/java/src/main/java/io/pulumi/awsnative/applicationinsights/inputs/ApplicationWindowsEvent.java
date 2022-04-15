@@ -27,7 +27,7 @@ public final class ApplicationWindowsEvent extends io.pulumi.resources.InvokeArg
     @Import(name="eventLevels", required=true)
       private final List<ApplicationEventLevel> eventLevels;
 
-    public List<ApplicationEventLevel> getEventLevels() {
+    public List<ApplicationEventLevel> eventLevels() {
         return this.eventLevels;
     }
 
@@ -38,7 +38,7 @@ public final class ApplicationWindowsEvent extends io.pulumi.resources.InvokeArg
     @Import(name="eventName", required=true)
       private final String eventName;
 
-    public String getEventName() {
+    public String eventName() {
         return this.eventName;
     }
 
@@ -49,7 +49,7 @@ public final class ApplicationWindowsEvent extends io.pulumi.resources.InvokeArg
     @Import(name="logGroupName", required=true)
       private final String logGroupName;
 
-    public String getLogGroupName() {
+    public String logGroupName() {
         return this.logGroupName;
     }
 
@@ -60,7 +60,7 @@ public final class ApplicationWindowsEvent extends io.pulumi.resources.InvokeArg
     @Import(name="patternSet")
       private final @Nullable String patternSet;
 
-    public Optional<String> getPatternSet() {
+    public Optional<String> patternSet() {
         return this.patternSet == null ? Optional.empty() : Optional.ofNullable(this.patternSet);
     }
 

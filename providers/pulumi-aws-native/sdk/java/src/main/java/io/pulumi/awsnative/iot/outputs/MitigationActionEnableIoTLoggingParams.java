@@ -33,14 +33,14 @@ public final class MitigationActionEnableIoTLoggingParams {
      *  Specifies which types of information are logged.
      * 
     */
-    public MitigationActionEnableIoTLoggingParamsLogLevel getLogLevel() {
+    public MitigationActionEnableIoTLoggingParamsLogLevel logLevel() {
         return this.logLevel;
     }
     /**
      *  The ARN of the IAM role used for logging.
      * 
     */
-    public String getRoleArnForLogging() {
+    public String roleArnForLogging() {
         return this.roleArnForLogging;
     }
 

@@ -21,7 +21,7 @@ public final class AssetModelTransform extends io.pulumi.resources.InvokeArgs {
     @Import(name="expression", required=true)
       private final String expression;
 
-    public String getExpression() {
+    public String expression() {
         return this.expression;
     }
 
@@ -32,7 +32,7 @@ public final class AssetModelTransform extends io.pulumi.resources.InvokeArgs {
     @Import(name="variables", required=true)
       private final List<AssetModelExpressionVariable> variables;
 
-    public List<AssetModelExpressionVariable> getVariables() {
+    public List<AssetModelExpressionVariable> variables() {
         return this.variables;
     }
 

@@ -22,10 +22,10 @@ public final class DistributionGeoRestriction {
         this.restrictionType = restrictionType;
     }
 
-    public List<String> getLocations() {
+    public List<String> locations() {
         return this.locations == null ? List.of() : this.locations;
     }
-    public String getRestrictionType() {
+    public String restrictionType() {
         return this.restrictionType;
     }
 

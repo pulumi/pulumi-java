@@ -33,19 +33,19 @@ public final class AnalyzerFilter {
         this.property = property;
     }
 
-    public List<String> getContains() {
+    public List<String> contains() {
         return this.contains == null ? List.of() : this.contains;
     }
-    public List<String> getEq() {
+    public List<String> eq() {
         return this.eq == null ? List.of() : this.eq;
     }
-    public Optional<Boolean> getExists() {
+    public Optional<Boolean> exists() {
         return Optional.ofNullable(this.exists);
     }
-    public List<String> getNeq() {
+    public List<String> neq() {
         return this.neq == null ? List.of() : this.neq;
     }
-    public String getProperty() {
+    public String property() {
         return this.property;
     }
 

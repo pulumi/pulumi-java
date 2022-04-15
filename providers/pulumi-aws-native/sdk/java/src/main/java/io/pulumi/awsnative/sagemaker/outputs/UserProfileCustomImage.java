@@ -42,21 +42,21 @@ public final class UserProfileCustomImage {
      * The Name of the AppImageConfig.
      * 
     */
-    public String getAppImageConfigName() {
+    public String appImageConfigName() {
         return this.appImageConfigName;
     }
     /**
      * The name of the CustomImage. Must be unique to your account.
      * 
     */
-    public String getImageName() {
+    public String imageName() {
         return this.imageName;
     }
     /**
      * The version number of the CustomImage.
      * 
     */
-    public Optional<Integer> getImageVersionNumber() {
+    public Optional<Integer> imageVersionNumber() {
         return Optional.ofNullable(this.imageVersionNumber);
     }
 

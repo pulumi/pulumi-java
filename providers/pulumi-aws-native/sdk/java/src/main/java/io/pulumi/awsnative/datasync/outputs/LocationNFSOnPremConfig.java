@@ -25,7 +25,7 @@ public final class LocationNFSOnPremConfig {
      * ARN(s) of the agent(s) to use for an NFS location.
      * 
     */
-    public List<String> getAgentArns() {
+    public List<String> agentArns() {
         return this.agentArns;
     }
 

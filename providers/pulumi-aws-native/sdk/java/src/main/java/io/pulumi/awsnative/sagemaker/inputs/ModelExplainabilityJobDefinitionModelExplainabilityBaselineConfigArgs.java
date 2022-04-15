@@ -23,14 +23,14 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityBaselineCo
     @Import(name="baseliningJobName")
       private final @Nullable Output<String> baseliningJobName;
 
-    public Output<String> getBaseliningJobName() {
+    public Output<String> baseliningJobName() {
         return this.baseliningJobName == null ? Codegen.empty() : this.baseliningJobName;
     }
 
     @Import(name="constraintsResource")
       private final @Nullable Output<ModelExplainabilityJobDefinitionConstraintsResourceArgs> constraintsResource;
 
-    public Output<ModelExplainabilityJobDefinitionConstraintsResourceArgs> getConstraintsResource() {
+    public Output<ModelExplainabilityJobDefinitionConstraintsResourceArgs> constraintsResource() {
         return this.constraintsResource == null ? Codegen.empty() : this.constraintsResource;
     }
 

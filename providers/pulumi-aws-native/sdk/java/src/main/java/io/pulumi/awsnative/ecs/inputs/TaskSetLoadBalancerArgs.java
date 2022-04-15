@@ -27,7 +27,7 @@ public final class TaskSetLoadBalancerArgs extends io.pulumi.resources.ResourceA
     @Import(name="containerName")
       private final @Nullable Output<String> containerName;
 
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName == null ? Codegen.empty() : this.containerName;
     }
 
@@ -38,7 +38,7 @@ public final class TaskSetLoadBalancerArgs extends io.pulumi.resources.ResourceA
     @Import(name="containerPort")
       private final @Nullable Output<Integer> containerPort;
 
-    public Output<Integer> getContainerPort() {
+    public Output<Integer> containerPort() {
         return this.containerPort == null ? Codegen.empty() : this.containerPort;
     }
 
@@ -49,7 +49,7 @@ public final class TaskSetLoadBalancerArgs extends io.pulumi.resources.ResourceA
     @Import(name="loadBalancerName")
       private final @Nullable Output<String> loadBalancerName;
 
-    public Output<String> getLoadBalancerName() {
+    public Output<String> loadBalancerName() {
         return this.loadBalancerName == null ? Codegen.empty() : this.loadBalancerName;
     }
 
@@ -60,7 +60,7 @@ public final class TaskSetLoadBalancerArgs extends io.pulumi.resources.ResourceA
     @Import(name="targetGroupArn")
       private final @Nullable Output<String> targetGroupArn;
 
-    public Output<String> getTargetGroupArn() {
+    public Output<String> targetGroupArn() {
         return this.targetGroupArn == null ? Codegen.empty() : this.targetGroupArn;
     }
 

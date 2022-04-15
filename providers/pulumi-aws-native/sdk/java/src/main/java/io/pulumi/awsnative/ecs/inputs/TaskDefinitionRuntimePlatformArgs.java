@@ -18,14 +18,14 @@ public final class TaskDefinitionRuntimePlatformArgs extends io.pulumi.resources
     @Import(name="cpuArchitecture")
       private final @Nullable Output<String> cpuArchitecture;
 
-    public Output<String> getCpuArchitecture() {
+    public Output<String> cpuArchitecture() {
         return this.cpuArchitecture == null ? Codegen.empty() : this.cpuArchitecture;
     }
 
     @Import(name="operatingSystemFamily")
       private final @Nullable Output<String> operatingSystemFamily;
 
-    public Output<String> getOperatingSystemFamily() {
+    public Output<String> operatingSystemFamily() {
         return this.operatingSystemFamily == null ? Codegen.empty() : this.operatingSystemFamily;
     }
 

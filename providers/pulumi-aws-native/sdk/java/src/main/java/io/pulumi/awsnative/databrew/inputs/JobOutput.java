@@ -23,42 +23,42 @@ public final class JobOutput extends io.pulumi.resources.InvokeArgs {
     @Import(name="compressionFormat")
       private final @Nullable JobOutputCompressionFormat compressionFormat;
 
-    public Optional<JobOutputCompressionFormat> getCompressionFormat() {
+    public Optional<JobOutputCompressionFormat> compressionFormat() {
         return this.compressionFormat == null ? Optional.empty() : Optional.ofNullable(this.compressionFormat);
     }
 
     @Import(name="format")
       private final @Nullable JobOutputFormat format;
 
-    public Optional<JobOutputFormat> getFormat() {
+    public Optional<JobOutputFormat> format() {
         return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
     }
 
     @Import(name="formatOptions")
       private final @Nullable JobOutputFormatOptions formatOptions;
 
-    public Optional<JobOutputFormatOptions> getFormatOptions() {
+    public Optional<JobOutputFormatOptions> formatOptions() {
         return this.formatOptions == null ? Optional.empty() : Optional.ofNullable(this.formatOptions);
     }
 
     @Import(name="location", required=true)
       private final JobS3Location location;
 
-    public JobS3Location getLocation() {
+    public JobS3Location location() {
         return this.location;
     }
 
     @Import(name="overwrite")
       private final @Nullable Boolean overwrite;
 
-    public Optional<Boolean> getOverwrite() {
+    public Optional<Boolean> overwrite() {
         return this.overwrite == null ? Optional.empty() : Optional.ofNullable(this.overwrite);
     }
 
     @Import(name="partitionColumns")
       private final @Nullable List<String> partitionColumns;
 
-    public List<String> getPartitionColumns() {
+    public List<String> partitionColumns() {
         return this.partitionColumns == null ? List.of() : this.partitionColumns;
     }
 

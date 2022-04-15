@@ -39,119 +39,119 @@ public final class DataSourceParameters extends io.pulumi.resources.InvokeArgs {
     @Import(name="amazonElasticsearchParameters")
       private final @Nullable DataSourceAmazonElasticsearchParameters amazonElasticsearchParameters;
 
-    public Optional<DataSourceAmazonElasticsearchParameters> getAmazonElasticsearchParameters() {
+    public Optional<DataSourceAmazonElasticsearchParameters> amazonElasticsearchParameters() {
         return this.amazonElasticsearchParameters == null ? Optional.empty() : Optional.ofNullable(this.amazonElasticsearchParameters);
     }
 
     @Import(name="amazonOpenSearchParameters")
       private final @Nullable DataSourceAmazonOpenSearchParameters amazonOpenSearchParameters;
 
-    public Optional<DataSourceAmazonOpenSearchParameters> getAmazonOpenSearchParameters() {
+    public Optional<DataSourceAmazonOpenSearchParameters> amazonOpenSearchParameters() {
         return this.amazonOpenSearchParameters == null ? Optional.empty() : Optional.ofNullable(this.amazonOpenSearchParameters);
     }
 
     @Import(name="athenaParameters")
       private final @Nullable DataSourceAthenaParameters athenaParameters;
 
-    public Optional<DataSourceAthenaParameters> getAthenaParameters() {
+    public Optional<DataSourceAthenaParameters> athenaParameters() {
         return this.athenaParameters == null ? Optional.empty() : Optional.ofNullable(this.athenaParameters);
     }
 
     @Import(name="auroraParameters")
       private final @Nullable DataSourceAuroraParameters auroraParameters;
 
-    public Optional<DataSourceAuroraParameters> getAuroraParameters() {
+    public Optional<DataSourceAuroraParameters> auroraParameters() {
         return this.auroraParameters == null ? Optional.empty() : Optional.ofNullable(this.auroraParameters);
     }
 
     @Import(name="auroraPostgreSqlParameters")
       private final @Nullable DataSourceAuroraPostgreSqlParameters auroraPostgreSqlParameters;
 
-    public Optional<DataSourceAuroraPostgreSqlParameters> getAuroraPostgreSqlParameters() {
+    public Optional<DataSourceAuroraPostgreSqlParameters> auroraPostgreSqlParameters() {
         return this.auroraPostgreSqlParameters == null ? Optional.empty() : Optional.ofNullable(this.auroraPostgreSqlParameters);
     }
 
     @Import(name="mariaDbParameters")
       private final @Nullable DataSourceMariaDbParameters mariaDbParameters;
 
-    public Optional<DataSourceMariaDbParameters> getMariaDbParameters() {
+    public Optional<DataSourceMariaDbParameters> mariaDbParameters() {
         return this.mariaDbParameters == null ? Optional.empty() : Optional.ofNullable(this.mariaDbParameters);
     }
 
     @Import(name="mySqlParameters")
       private final @Nullable DataSourceMySqlParameters mySqlParameters;
 
-    public Optional<DataSourceMySqlParameters> getMySqlParameters() {
+    public Optional<DataSourceMySqlParameters> mySqlParameters() {
         return this.mySqlParameters == null ? Optional.empty() : Optional.ofNullable(this.mySqlParameters);
     }
 
     @Import(name="oracleParameters")
       private final @Nullable DataSourceOracleParameters oracleParameters;
 
-    public Optional<DataSourceOracleParameters> getOracleParameters() {
+    public Optional<DataSourceOracleParameters> oracleParameters() {
         return this.oracleParameters == null ? Optional.empty() : Optional.ofNullable(this.oracleParameters);
     }
 
     @Import(name="postgreSqlParameters")
       private final @Nullable DataSourcePostgreSqlParameters postgreSqlParameters;
 
-    public Optional<DataSourcePostgreSqlParameters> getPostgreSqlParameters() {
+    public Optional<DataSourcePostgreSqlParameters> postgreSqlParameters() {
         return this.postgreSqlParameters == null ? Optional.empty() : Optional.ofNullable(this.postgreSqlParameters);
     }
 
     @Import(name="prestoParameters")
       private final @Nullable DataSourcePrestoParameters prestoParameters;
 
-    public Optional<DataSourcePrestoParameters> getPrestoParameters() {
+    public Optional<DataSourcePrestoParameters> prestoParameters() {
         return this.prestoParameters == null ? Optional.empty() : Optional.ofNullable(this.prestoParameters);
     }
 
     @Import(name="rdsParameters")
       private final @Nullable DataSourceRdsParameters rdsParameters;
 
-    public Optional<DataSourceRdsParameters> getRdsParameters() {
+    public Optional<DataSourceRdsParameters> rdsParameters() {
         return this.rdsParameters == null ? Optional.empty() : Optional.ofNullable(this.rdsParameters);
     }
 
     @Import(name="redshiftParameters")
       private final @Nullable DataSourceRedshiftParameters redshiftParameters;
 
-    public Optional<DataSourceRedshiftParameters> getRedshiftParameters() {
+    public Optional<DataSourceRedshiftParameters> redshiftParameters() {
         return this.redshiftParameters == null ? Optional.empty() : Optional.ofNullable(this.redshiftParameters);
     }
 
     @Import(name="s3Parameters")
       private final @Nullable DataSourceS3Parameters s3Parameters;
 
-    public Optional<DataSourceS3Parameters> getS3Parameters() {
+    public Optional<DataSourceS3Parameters> s3Parameters() {
         return this.s3Parameters == null ? Optional.empty() : Optional.ofNullable(this.s3Parameters);
     }
 
     @Import(name="snowflakeParameters")
       private final @Nullable DataSourceSnowflakeParameters snowflakeParameters;
 
-    public Optional<DataSourceSnowflakeParameters> getSnowflakeParameters() {
+    public Optional<DataSourceSnowflakeParameters> snowflakeParameters() {
         return this.snowflakeParameters == null ? Optional.empty() : Optional.ofNullable(this.snowflakeParameters);
     }
 
     @Import(name="sparkParameters")
       private final @Nullable DataSourceSparkParameters sparkParameters;
 
-    public Optional<DataSourceSparkParameters> getSparkParameters() {
+    public Optional<DataSourceSparkParameters> sparkParameters() {
         return this.sparkParameters == null ? Optional.empty() : Optional.ofNullable(this.sparkParameters);
     }
 
     @Import(name="sqlServerParameters")
       private final @Nullable DataSourceSqlServerParameters sqlServerParameters;
 
-    public Optional<DataSourceSqlServerParameters> getSqlServerParameters() {
+    public Optional<DataSourceSqlServerParameters> sqlServerParameters() {
         return this.sqlServerParameters == null ? Optional.empty() : Optional.ofNullable(this.sqlServerParameters);
     }
 
     @Import(name="teradataParameters")
       private final @Nullable DataSourceTeradataParameters teradataParameters;
 
-    public Optional<DataSourceTeradataParameters> getTeradataParameters() {
+    public Optional<DataSourceTeradataParameters> teradataParameters() {
         return this.teradataParameters == null ? Optional.empty() : Optional.ofNullable(this.teradataParameters);
     }
 

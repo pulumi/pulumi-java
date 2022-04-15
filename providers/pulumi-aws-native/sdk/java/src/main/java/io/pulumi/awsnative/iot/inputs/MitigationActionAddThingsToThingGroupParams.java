@@ -27,7 +27,7 @@ public final class MitigationActionAddThingsToThingGroupParams extends io.pulumi
     @Import(name="overrideDynamicGroups")
       private final @Nullable Boolean overrideDynamicGroups;
 
-    public Optional<Boolean> getOverrideDynamicGroups() {
+    public Optional<Boolean> overrideDynamicGroups() {
         return this.overrideDynamicGroups == null ? Optional.empty() : Optional.ofNullable(this.overrideDynamicGroups);
     }
 
@@ -38,7 +38,7 @@ public final class MitigationActionAddThingsToThingGroupParams extends io.pulumi
     @Import(name="thingGroupNames", required=true)
       private final List<String> thingGroupNames;
 
-    public List<String> getThingGroupNames() {
+    public List<String> thingGroupNames() {
         return this.thingGroupNames;
     }
 

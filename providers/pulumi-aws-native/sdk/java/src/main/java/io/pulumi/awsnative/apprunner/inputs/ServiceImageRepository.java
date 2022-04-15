@@ -23,7 +23,7 @@ public final class ServiceImageRepository extends io.pulumi.resources.InvokeArgs
     @Import(name="imageConfiguration")
       private final @Nullable ServiceImageConfiguration imageConfiguration;
 
-    public Optional<ServiceImageConfiguration> getImageConfiguration() {
+    public Optional<ServiceImageConfiguration> imageConfiguration() {
         return this.imageConfiguration == null ? Optional.empty() : Optional.ofNullable(this.imageConfiguration);
     }
 
@@ -34,7 +34,7 @@ public final class ServiceImageRepository extends io.pulumi.resources.InvokeArgs
     @Import(name="imageIdentifier", required=true)
       private final String imageIdentifier;
 
-    public String getImageIdentifier() {
+    public String imageIdentifier() {
         return this.imageIdentifier;
     }
 
@@ -45,7 +45,7 @@ public final class ServiceImageRepository extends io.pulumi.resources.InvokeArgs
     @Import(name="imageRepositoryType", required=true)
       private final ServiceImageRepositoryImageRepositoryType imageRepositoryType;
 
-    public ServiceImageRepositoryImageRepositoryType getImageRepositoryType() {
+    public ServiceImageRepositoryImageRepositoryType imageRepositoryType() {
         return this.imageRepositoryType;
     }
 

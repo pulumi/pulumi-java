@@ -18,14 +18,14 @@ public final class WirelessDeviceAbpV11Args extends io.pulumi.resources.Resource
     @Import(name="devAddr", required=true)
       private final Output<String> devAddr;
 
-    public Output<String> getDevAddr() {
+    public Output<String> devAddr() {
         return this.devAddr;
     }
 
     @Import(name="sessionKeys", required=true)
       private final Output<WirelessDeviceSessionKeysAbpV11Args> sessionKeys;
 
-    public Output<WirelessDeviceSessionKeysAbpV11Args> getSessionKeys() {
+    public Output<WirelessDeviceSessionKeysAbpV11Args> sessionKeys() {
         return this.sessionKeys;
     }
 

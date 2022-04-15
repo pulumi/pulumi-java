@@ -18,7 +18,7 @@ public final class BotAliasTextLogDestination {
         this.cloudWatch = cloudWatch;
     }
 
-    public Optional<BotAliasCloudWatchLogGroupLogDestination> getCloudWatch() {
+    public Optional<BotAliasCloudWatchLogGroupLogDestination> cloudWatch() {
         return Optional.ofNullable(this.cloudWatch);
     }
 

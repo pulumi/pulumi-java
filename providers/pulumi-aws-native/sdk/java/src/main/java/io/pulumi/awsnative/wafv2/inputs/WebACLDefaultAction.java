@@ -22,14 +22,14 @@ public final class WebACLDefaultAction extends io.pulumi.resources.InvokeArgs {
     @Import(name="allow")
       private final @Nullable WebACLAllowAction allow;
 
-    public Optional<WebACLAllowAction> getAllow() {
+    public Optional<WebACLAllowAction> allow() {
         return this.allow == null ? Optional.empty() : Optional.ofNullable(this.allow);
     }
 
     @Import(name="block")
       private final @Nullable WebACLBlockAction block;
 
-    public Optional<WebACLBlockAction> getBlock() {
+    public Optional<WebACLBlockAction> block() {
         return this.block == null ? Optional.empty() : Optional.ofNullable(this.block);
     }
 

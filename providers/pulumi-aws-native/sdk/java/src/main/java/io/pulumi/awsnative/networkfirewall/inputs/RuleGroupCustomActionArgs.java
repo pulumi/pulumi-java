@@ -18,14 +18,14 @@ public final class RuleGroupCustomActionArgs extends io.pulumi.resources.Resourc
     @Import(name="actionDefinition", required=true)
       private final Output<RuleGroupActionDefinitionArgs> actionDefinition;
 
-    public Output<RuleGroupActionDefinitionArgs> getActionDefinition() {
+    public Output<RuleGroupActionDefinitionArgs> actionDefinition() {
         return this.actionDefinition;
     }
 
     @Import(name="actionName", required=true)
       private final Output<String> actionName;
 
-    public Output<String> getActionName() {
+    public Output<String> actionName() {
         return this.actionName;
     }
 

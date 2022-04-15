@@ -19,21 +19,21 @@ public final class DataSourceProxyConfigurationArgs extends io.pulumi.resources.
     @Import(name="credentials")
       private final @Nullable Output<String> credentials;
 
-    public Output<String> getCredentials() {
+    public Output<String> credentials() {
         return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
     @Import(name="host", required=true)
       private final Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host;
     }
 
     @Import(name="port", required=true)
       private final Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
 

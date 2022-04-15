@@ -27,7 +27,7 @@ public final class ImageRecipeInstanceBlockDeviceMappingArgs extends io.pulumi.r
     @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
@@ -38,7 +38,7 @@ public final class ImageRecipeInstanceBlockDeviceMappingArgs extends io.pulumi.r
     @Import(name="ebs")
       private final @Nullable Output<ImageRecipeEbsInstanceBlockDeviceSpecificationArgs> ebs;
 
-    public Output<ImageRecipeEbsInstanceBlockDeviceSpecificationArgs> getEbs() {
+    public Output<ImageRecipeEbsInstanceBlockDeviceSpecificationArgs> ebs() {
         return this.ebs == null ? Codegen.empty() : this.ebs;
     }
 
@@ -49,7 +49,7 @@ public final class ImageRecipeInstanceBlockDeviceMappingArgs extends io.pulumi.r
     @Import(name="noDevice")
       private final @Nullable Output<String> noDevice;
 
-    public Output<String> getNoDevice() {
+    public Output<String> noDevice() {
         return this.noDevice == null ? Codegen.empty() : this.noDevice;
     }
 
@@ -60,7 +60,7 @@ public final class ImageRecipeInstanceBlockDeviceMappingArgs extends io.pulumi.r
     @Import(name="virtualName")
       private final @Nullable Output<String> virtualName;
 
-    public Output<String> getVirtualName() {
+    public Output<String> virtualName() {
         return this.virtualName == null ? Codegen.empty() : this.virtualName;
     }
 

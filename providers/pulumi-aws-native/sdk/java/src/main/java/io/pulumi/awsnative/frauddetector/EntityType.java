@@ -31,7 +31,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @return The entity type ARN.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -45,7 +45,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @return The timestamp when the entity type was created.
      * 
      */
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     /**
@@ -59,7 +59,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @return The entity type description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -73,7 +73,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @return The timestamp when the entity type was last updated.
      * 
      */
-    public Output<String> getLastUpdatedTime() {
+    public Output<String> lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
@@ -87,7 +87,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @return The name of the entity type.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +101,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @return Tags associated with this entity type.
      * 
      */
-    public Output</* @Nullable */ List<EntityTypeTag>> getTags() {
+    public Output</* @Nullable */ List<EntityTypeTag>> tags() {
         return this.tags;
     }
 

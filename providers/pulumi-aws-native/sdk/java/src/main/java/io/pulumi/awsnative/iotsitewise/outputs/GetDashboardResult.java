@@ -64,42 +64,42 @@ public final class GetDashboardResult {
      * The ARN of the dashboard.
      * 
     */
-    public Optional<String> getDashboardArn() {
+    public Optional<String> dashboardArn() {
         return Optional.ofNullable(this.dashboardArn);
     }
     /**
      * The dashboard definition specified in a JSON literal.
      * 
     */
-    public Optional<String> getDashboardDefinition() {
+    public Optional<String> dashboardDefinition() {
         return Optional.ofNullable(this.dashboardDefinition);
     }
     /**
      * A description for the dashboard.
      * 
     */
-    public Optional<String> getDashboardDescription() {
+    public Optional<String> dashboardDescription() {
         return Optional.ofNullable(this.dashboardDescription);
     }
     /**
      * The ID of the dashboard.
      * 
     */
-    public Optional<String> getDashboardId() {
+    public Optional<String> dashboardId() {
         return Optional.ofNullable(this.dashboardId);
     }
     /**
      * A friendly name for the dashboard.
      * 
     */
-    public Optional<String> getDashboardName() {
+    public Optional<String> dashboardName() {
         return Optional.ofNullable(this.dashboardName);
     }
     /**
      * A list of key-value pairs that contain metadata for the dashboard.
      * 
     */
-    public List<DashboardTag> getTags() {
+    public List<DashboardTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

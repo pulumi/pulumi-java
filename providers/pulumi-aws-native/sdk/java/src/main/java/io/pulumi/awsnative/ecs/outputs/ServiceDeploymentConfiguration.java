@@ -26,13 +26,13 @@ public final class ServiceDeploymentConfiguration {
         this.minimumHealthyPercent = minimumHealthyPercent;
     }
 
-    public Optional<ServiceDeploymentCircuitBreaker> getDeploymentCircuitBreaker() {
+    public Optional<ServiceDeploymentCircuitBreaker> deploymentCircuitBreaker() {
         return Optional.ofNullable(this.deploymentCircuitBreaker);
     }
-    public Optional<Integer> getMaximumPercent() {
+    public Optional<Integer> maximumPercent() {
         return Optional.ofNullable(this.maximumPercent);
     }
-    public Optional<Integer> getMinimumHealthyPercent() {
+    public Optional<Integer> minimumHealthyPercent() {
         return Optional.ofNullable(this.minimumHealthyPercent);
     }
 

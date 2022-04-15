@@ -17,7 +17,7 @@ public final class DistributionS3OriginConfig extends io.pulumi.resources.Invoke
     @Import(name="originAccessIdentity")
       private final @Nullable String originAccessIdentity;
 
-    public Optional<String> getOriginAccessIdentity() {
+    public Optional<String> originAccessIdentity() {
         return this.originAccessIdentity == null ? Optional.empty() : Optional.ofNullable(this.originAccessIdentity);
     }
 

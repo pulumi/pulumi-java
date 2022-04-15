@@ -34,19 +34,19 @@ public final class DataSourceConfluenceSpaceConfiguration {
         this.spaceFieldMappings = spaceFieldMappings;
     }
 
-    public Optional<Boolean> getCrawlArchivedSpaces() {
+    public Optional<Boolean> crawlArchivedSpaces() {
         return Optional.ofNullable(this.crawlArchivedSpaces);
     }
-    public Optional<Boolean> getCrawlPersonalSpaces() {
+    public Optional<Boolean> crawlPersonalSpaces() {
         return Optional.ofNullable(this.crawlPersonalSpaces);
     }
-    public List<String> getExcludeSpaces() {
+    public List<String> excludeSpaces() {
         return this.excludeSpaces == null ? List.of() : this.excludeSpaces;
     }
-    public List<String> getIncludeSpaces() {
+    public List<String> includeSpaces() {
         return this.includeSpaces == null ? List.of() : this.includeSpaces;
     }
-    public List<DataSourceConfluenceSpaceToIndexFieldMapping> getSpaceFieldMappings() {
+    public List<DataSourceConfluenceSpaceToIndexFieldMapping> spaceFieldMappings() {
         return this.spaceFieldMappings == null ? List.of() : this.spaceFieldMappings;
     }
 

@@ -34,7 +34,7 @@ public class AssetModel extends io.pulumi.resources.CustomResource {
      * @return The ARN of the asset model, which has the following format.
      * 
      */
-    public Output<String> getAssetModelArn() {
+    public Output<String> assetModelArn() {
         return this.assetModelArn;
     }
     /**
@@ -48,7 +48,7 @@ public class AssetModel extends io.pulumi.resources.CustomResource {
      * @return The composite asset models that are part of this asset model. Composite asset models are asset models that contain specific properties.
      * 
      */
-    public Output</* @Nullable */ List<AssetModelCompositeModel>> getAssetModelCompositeModels() {
+    public Output</* @Nullable */ List<AssetModelCompositeModel>> assetModelCompositeModels() {
         return this.assetModelCompositeModels;
     }
     /**
@@ -62,7 +62,7 @@ public class AssetModel extends io.pulumi.resources.CustomResource {
      * @return A description for the asset model.
      * 
      */
-    public Output</* @Nullable */ String> getAssetModelDescription() {
+    public Output</* @Nullable */ String> assetModelDescription() {
         return this.assetModelDescription;
     }
     /**
@@ -76,7 +76,7 @@ public class AssetModel extends io.pulumi.resources.CustomResource {
      * @return The hierarchy definitions of the asset model. Each hierarchy specifies an asset model whose assets can be children of any other assets created from this asset model. You can specify up to 10 hierarchies per asset model.
      * 
      */
-    public Output</* @Nullable */ List<AssetModelHierarchy>> getAssetModelHierarchies() {
+    public Output</* @Nullable */ List<AssetModelHierarchy>> assetModelHierarchies() {
         return this.assetModelHierarchies;
     }
     /**
@@ -90,7 +90,7 @@ public class AssetModel extends io.pulumi.resources.CustomResource {
      * @return The ID of the asset model.
      * 
      */
-    public Output<String> getAssetModelId() {
+    public Output<String> assetModelId() {
         return this.assetModelId;
     }
     /**
@@ -104,7 +104,7 @@ public class AssetModel extends io.pulumi.resources.CustomResource {
      * @return A unique, friendly name for the asset model.
      * 
      */
-    public Output<String> getAssetModelName() {
+    public Output<String> assetModelName() {
         return this.assetModelName;
     }
     /**
@@ -118,7 +118,7 @@ public class AssetModel extends io.pulumi.resources.CustomResource {
      * @return The property definitions of the asset model. You can specify up to 200 properties per asset model.
      * 
      */
-    public Output</* @Nullable */ List<AssetModelProperty>> getAssetModelProperties() {
+    public Output</* @Nullable */ List<AssetModelProperty>> assetModelProperties() {
         return this.assetModelProperties;
     }
     /**
@@ -132,7 +132,7 @@ public class AssetModel extends io.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the asset model.
      * 
      */
-    public Output</* @Nullable */ List<AssetModelTag>> getTags() {
+    public Output</* @Nullable */ List<AssetModelTag>> tags() {
         return this.tags;
     }
 

@@ -30,14 +30,14 @@ public final class PackagingConfigurationDashManifestArgs extends io.pulumi.reso
     @Import(name="manifestLayout")
       private final @Nullable Output<PackagingConfigurationDashManifestManifestLayout> manifestLayout;
 
-    public Output<PackagingConfigurationDashManifestManifestLayout> getManifestLayout() {
+    public Output<PackagingConfigurationDashManifestManifestLayout> manifestLayout() {
         return this.manifestLayout == null ? Codegen.empty() : this.manifestLayout;
     }
 
     @Import(name="manifestName")
       private final @Nullable Output<String> manifestName;
 
-    public Output<String> getManifestName() {
+    public Output<String> manifestName() {
         return this.manifestName == null ? Codegen.empty() : this.manifestName;
     }
 
@@ -48,7 +48,7 @@ public final class PackagingConfigurationDashManifestArgs extends io.pulumi.reso
     @Import(name="minBufferTimeSeconds")
       private final @Nullable Output<Integer> minBufferTimeSeconds;
 
-    public Output<Integer> getMinBufferTimeSeconds() {
+    public Output<Integer> minBufferTimeSeconds() {
         return this.minBufferTimeSeconds == null ? Codegen.empty() : this.minBufferTimeSeconds;
     }
 
@@ -59,14 +59,14 @@ public final class PackagingConfigurationDashManifestArgs extends io.pulumi.reso
     @Import(name="profile")
       private final @Nullable Output<PackagingConfigurationDashManifestProfile> profile;
 
-    public Output<PackagingConfigurationDashManifestProfile> getProfile() {
+    public Output<PackagingConfigurationDashManifestProfile> profile() {
         return this.profile == null ? Codegen.empty() : this.profile;
     }
 
     @Import(name="streamSelection")
       private final @Nullable Output<PackagingConfigurationStreamSelectionArgs> streamSelection;
 
-    public Output<PackagingConfigurationStreamSelectionArgs> getStreamSelection() {
+    public Output<PackagingConfigurationStreamSelectionArgs> streamSelection() {
         return this.streamSelection == null ? Codegen.empty() : this.streamSelection;
     }
 

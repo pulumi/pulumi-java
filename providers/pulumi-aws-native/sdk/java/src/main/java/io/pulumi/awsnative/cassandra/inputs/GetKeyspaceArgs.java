@@ -19,7 +19,7 @@ public final class GetKeyspaceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="keyspaceName", required=true)
       private final String keyspaceName;
 
-    public String getKeyspaceName() {
+    public String keyspaceName() {
         return this.keyspaceName;
     }
 

@@ -59,35 +59,35 @@ public final class FlowTask {
      * Operation to be performed on provided source fields
      * 
     */
-    public Optional<FlowConnectorOperator> getConnectorOperator() {
+    public Optional<FlowConnectorOperator> connectorOperator() {
         return Optional.ofNullable(this.connectorOperator);
     }
     /**
      * A field value on which source field should be validated
      * 
     */
-    public Optional<String> getDestinationField() {
+    public Optional<String> destinationField() {
         return Optional.ofNullable(this.destinationField);
     }
     /**
      * Source fields on which particular task will be applied
      * 
     */
-    public List<String> getSourceFields() {
+    public List<String> sourceFields() {
         return this.sourceFields;
     }
     /**
      * A Map used to store task related info
      * 
     */
-    public List<FlowTaskPropertiesObject> getTaskProperties() {
+    public List<FlowTaskPropertiesObject> taskProperties() {
         return this.taskProperties == null ? List.of() : this.taskProperties;
     }
     /**
      * Type of task
      * 
     */
-    public FlowTaskType getTaskType() {
+    public FlowTaskType taskType() {
         return this.taskType;
     }
 

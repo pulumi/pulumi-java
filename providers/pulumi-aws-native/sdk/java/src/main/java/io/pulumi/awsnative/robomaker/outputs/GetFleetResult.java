@@ -23,10 +23,10 @@ public final class GetFleetResult {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<FleetTags> getTags() {
+    public Optional<FleetTags> tags() {
         return Optional.ofNullable(this.tags);
     }
 

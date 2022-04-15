@@ -18,7 +18,7 @@ public final class EC2FleetCapacityReservationOptionsRequestArgs extends io.pulu
     @Import(name="usageStrategy")
       private final @Nullable Output<EC2FleetCapacityReservationOptionsRequestUsageStrategy> usageStrategy;
 
-    public Output<EC2FleetCapacityReservationOptionsRequestUsageStrategy> getUsageStrategy() {
+    public Output<EC2FleetCapacityReservationOptionsRequestUsageStrategy> usageStrategy() {
         return this.usageStrategy == null ? Codegen.empty() : this.usageStrategy;
     }
 

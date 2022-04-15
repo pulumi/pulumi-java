@@ -18,21 +18,21 @@ public final class BackupVaultLockConfigurationTypeArgs extends io.pulumi.resour
     @Import(name="changeableForDays")
       private final @Nullable Output<Double> changeableForDays;
 
-    public Output<Double> getChangeableForDays() {
+    public Output<Double> changeableForDays() {
         return this.changeableForDays == null ? Codegen.empty() : this.changeableForDays;
     }
 
     @Import(name="maxRetentionDays")
       private final @Nullable Output<Double> maxRetentionDays;
 
-    public Output<Double> getMaxRetentionDays() {
+    public Output<Double> maxRetentionDays() {
         return this.maxRetentionDays == null ? Codegen.empty() : this.maxRetentionDays;
     }
 
     @Import(name="minRetentionDays", required=true)
       private final Output<Double> minRetentionDays;
 
-    public Output<Double> getMinRetentionDays() {
+    public Output<Double> minRetentionDays() {
         return this.minRetentionDays;
     }
 

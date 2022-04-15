@@ -35,7 +35,7 @@ public class LocationHDFS extends io.pulumi.resources.CustomResource {
      * @return ARN(s) of the agent(s) to use for an HDFS location.
      * 
      */
-    public Output<List<String>> getAgentArns() {
+    public Output<List<String>> agentArns() {
         return this.agentArns;
     }
     /**
@@ -49,7 +49,7 @@ public class LocationHDFS extends io.pulumi.resources.CustomResource {
      * @return The authentication mode used to determine identity of user.
      * 
      */
-    public Output<LocationHDFSAuthenticationType> getAuthenticationType() {
+    public Output<LocationHDFSAuthenticationType> authenticationType() {
         return this.authenticationType;
     }
     /**
@@ -63,7 +63,7 @@ public class LocationHDFS extends io.pulumi.resources.CustomResource {
      * @return Size of chunks (blocks) in bytes that the data is divided into when stored in the HDFS cluster.
      * 
      */
-    public Output</* @Nullable */ Integer> getBlockSize() {
+    public Output</* @Nullable */ Integer> blockSize() {
         return this.blockSize;
     }
     /**
@@ -77,7 +77,7 @@ public class LocationHDFS extends io.pulumi.resources.CustomResource {
      * @return The Base64 string representation of the Keytab file.
      * 
      */
-    public Output</* @Nullable */ String> getKerberosKeytab() {
+    public Output</* @Nullable */ String> kerberosKeytab() {
         return this.kerberosKeytab;
     }
     /**
@@ -91,7 +91,7 @@ public class LocationHDFS extends io.pulumi.resources.CustomResource {
      * @return The string representation of the Krb5Conf file, or the presigned URL to access the Krb5.conf file within an S3 bucket.
      * 
      */
-    public Output</* @Nullable */ String> getKerberosKrb5Conf() {
+    public Output</* @Nullable */ String> kerberosKrb5Conf() {
         return this.kerberosKrb5Conf;
     }
     /**
@@ -105,7 +105,7 @@ public class LocationHDFS extends io.pulumi.resources.CustomResource {
      * @return The unique identity, or principal, to which Kerberos can assign tickets.
      * 
      */
-    public Output</* @Nullable */ String> getKerberosPrincipal() {
+    public Output</* @Nullable */ String> kerberosPrincipal() {
         return this.kerberosPrincipal;
     }
     /**
@@ -119,7 +119,7 @@ public class LocationHDFS extends io.pulumi.resources.CustomResource {
      * @return The identifier for the Key Management Server where the encryption keys that encrypt data inside HDFS clusters are stored.
      * 
      */
-    public Output</* @Nullable */ String> getKmsKeyProviderUri() {
+    public Output</* @Nullable */ String> kmsKeyProviderUri() {
         return this.kmsKeyProviderUri;
     }
     /**
@@ -133,7 +133,7 @@ public class LocationHDFS extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the HDFS location.
      * 
      */
-    public Output<String> getLocationArn() {
+    public Output<String> locationArn() {
         return this.locationArn;
     }
     /**
@@ -147,7 +147,7 @@ public class LocationHDFS extends io.pulumi.resources.CustomResource {
      * @return The URL of the HDFS location that was described.
      * 
      */
-    public Output<String> getLocationUri() {
+    public Output<String> locationUri() {
         return this.locationUri;
     }
     /**
@@ -161,13 +161,13 @@ public class LocationHDFS extends io.pulumi.resources.CustomResource {
      * @return An array of Name Node(s) of the HDFS location.
      * 
      */
-    public Output<List<LocationHDFSNameNode>> getNameNodes() {
+    public Output<List<LocationHDFSNameNode>> nameNodes() {
         return this.nameNodes;
     }
     @Export(name="qopConfiguration", type=LocationHDFSQopConfiguration.class, parameters={})
     private Output</* @Nullable */ LocationHDFSQopConfiguration> qopConfiguration;
 
-    public Output</* @Nullable */ LocationHDFSQopConfiguration> getQopConfiguration() {
+    public Output</* @Nullable */ LocationHDFSQopConfiguration> qopConfiguration() {
         return this.qopConfiguration;
     }
     /**
@@ -181,7 +181,7 @@ public class LocationHDFS extends io.pulumi.resources.CustomResource {
      * @return Number of copies of each block that exists inside the HDFS cluster.
      * 
      */
-    public Output</* @Nullable */ Integer> getReplicationFactor() {
+    public Output</* @Nullable */ Integer> replicationFactor() {
         return this.replicationFactor;
     }
     /**
@@ -195,7 +195,7 @@ public class LocationHDFS extends io.pulumi.resources.CustomResource {
      * @return The user name that has read and write permissions on the specified HDFS cluster.
      * 
      */
-    public Output</* @Nullable */ String> getSimpleUser() {
+    public Output</* @Nullable */ String> simpleUser() {
         return this.simpleUser;
     }
     /**
@@ -209,7 +209,7 @@ public class LocationHDFS extends io.pulumi.resources.CustomResource {
      * @return The subdirectory in HDFS that is used to read data from the HDFS source location or write data to the HDFS destination.
      * 
      */
-    public Output</* @Nullable */ String> getSubdirectory() {
+    public Output</* @Nullable */ String> subdirectory() {
         return this.subdirectory;
     }
     /**
@@ -223,7 +223,7 @@ public class LocationHDFS extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<LocationHDFSTag>> getTags() {
+    public Output</* @Nullable */ List<LocationHDFSTag>> tags() {
         return this.tags;
     }
 

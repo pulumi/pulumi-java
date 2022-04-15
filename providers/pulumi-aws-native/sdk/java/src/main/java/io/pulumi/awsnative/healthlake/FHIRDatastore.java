@@ -28,61 +28,61 @@ public class FHIRDatastore extends io.pulumi.resources.CustomResource {
     @Export(name="createdAt", type=FHIRDatastoreCreatedAt.class, parameters={})
     private Output<FHIRDatastoreCreatedAt> createdAt;
 
-    public Output<FHIRDatastoreCreatedAt> getCreatedAt() {
+    public Output<FHIRDatastoreCreatedAt> createdAt() {
         return this.createdAt;
     }
     @Export(name="datastoreArn", type=String.class, parameters={})
     private Output<String> datastoreArn;
 
-    public Output<String> getDatastoreArn() {
+    public Output<String> datastoreArn() {
         return this.datastoreArn;
     }
     @Export(name="datastoreEndpoint", type=String.class, parameters={})
     private Output<String> datastoreEndpoint;
 
-    public Output<String> getDatastoreEndpoint() {
+    public Output<String> datastoreEndpoint() {
         return this.datastoreEndpoint;
     }
     @Export(name="datastoreId", type=String.class, parameters={})
     private Output<String> datastoreId;
 
-    public Output<String> getDatastoreId() {
+    public Output<String> datastoreId() {
         return this.datastoreId;
     }
     @Export(name="datastoreName", type=String.class, parameters={})
     private Output</* @Nullable */ String> datastoreName;
 
-    public Output</* @Nullable */ String> getDatastoreName() {
+    public Output</* @Nullable */ String> datastoreName() {
         return this.datastoreName;
     }
     @Export(name="datastoreStatus", type=FHIRDatastoreDatastoreStatus.class, parameters={})
     private Output<FHIRDatastoreDatastoreStatus> datastoreStatus;
 
-    public Output<FHIRDatastoreDatastoreStatus> getDatastoreStatus() {
+    public Output<FHIRDatastoreDatastoreStatus> datastoreStatus() {
         return this.datastoreStatus;
     }
     @Export(name="datastoreTypeVersion", type=FHIRDatastoreDatastoreTypeVersion.class, parameters={})
     private Output<FHIRDatastoreDatastoreTypeVersion> datastoreTypeVersion;
 
-    public Output<FHIRDatastoreDatastoreTypeVersion> getDatastoreTypeVersion() {
+    public Output<FHIRDatastoreDatastoreTypeVersion> datastoreTypeVersion() {
         return this.datastoreTypeVersion;
     }
     @Export(name="preloadDataConfig", type=FHIRDatastorePreloadDataConfig.class, parameters={})
     private Output</* @Nullable */ FHIRDatastorePreloadDataConfig> preloadDataConfig;
 
-    public Output</* @Nullable */ FHIRDatastorePreloadDataConfig> getPreloadDataConfig() {
+    public Output</* @Nullable */ FHIRDatastorePreloadDataConfig> preloadDataConfig() {
         return this.preloadDataConfig;
     }
     @Export(name="sseConfiguration", type=FHIRDatastoreSseConfiguration.class, parameters={})
     private Output</* @Nullable */ FHIRDatastoreSseConfiguration> sseConfiguration;
 
-    public Output</* @Nullable */ FHIRDatastoreSseConfiguration> getSseConfiguration() {
+    public Output</* @Nullable */ FHIRDatastoreSseConfiguration> sseConfiguration() {
         return this.sseConfiguration;
     }
     @Export(name="tags", type=List.class, parameters={FHIRDatastoreTag.class})
     private Output</* @Nullable */ List<FHIRDatastoreTag>> tags;
 
-    public Output</* @Nullable */ List<FHIRDatastoreTag>> getTags() {
+    public Output</* @Nullable */ List<FHIRDatastoreTag>> tags() {
         return this.tags;
     }
 

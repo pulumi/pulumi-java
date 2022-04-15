@@ -20,7 +20,7 @@ public final class FlowSalesforceDestinationProperties extends io.pulumi.resourc
     @Import(name="errorHandlingConfig")
       private final @Nullable FlowErrorHandlingConfig errorHandlingConfig;
 
-    public Optional<FlowErrorHandlingConfig> getErrorHandlingConfig() {
+    public Optional<FlowErrorHandlingConfig> errorHandlingConfig() {
         return this.errorHandlingConfig == null ? Optional.empty() : Optional.ofNullable(this.errorHandlingConfig);
     }
 
@@ -31,21 +31,21 @@ public final class FlowSalesforceDestinationProperties extends io.pulumi.resourc
     @Import(name="idFieldNames")
       private final @Nullable List<String> idFieldNames;
 
-    public List<String> getIdFieldNames() {
+    public List<String> idFieldNames() {
         return this.idFieldNames == null ? List.of() : this.idFieldNames;
     }
 
     @Import(name="object", required=true)
       private final String object;
 
-    public String getObject() {
+    public String object() {
         return this.object;
     }
 
     @Import(name="writeOperationType")
       private final @Nullable FlowWriteOperationType writeOperationType;
 
-    public Optional<FlowWriteOperationType> getWriteOperationType() {
+    public Optional<FlowWriteOperationType> writeOperationType() {
         return this.writeOperationType == null ? Optional.empty() : Optional.ofNullable(this.writeOperationType);
     }
 

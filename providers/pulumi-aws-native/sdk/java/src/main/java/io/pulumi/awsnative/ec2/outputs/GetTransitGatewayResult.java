@@ -51,37 +51,37 @@ public final class GetTransitGatewayResult {
         this.vpnEcmpSupport = vpnEcmpSupport;
     }
 
-    public Optional<String> getAssociationDefaultRouteTableId() {
+    public Optional<String> associationDefaultRouteTableId() {
         return Optional.ofNullable(this.associationDefaultRouteTableId);
     }
-    public Optional<String> getAutoAcceptSharedAttachments() {
+    public Optional<String> autoAcceptSharedAttachments() {
         return Optional.ofNullable(this.autoAcceptSharedAttachments);
     }
-    public Optional<String> getDefaultRouteTableAssociation() {
+    public Optional<String> defaultRouteTableAssociation() {
         return Optional.ofNullable(this.defaultRouteTableAssociation);
     }
-    public Optional<String> getDefaultRouteTablePropagation() {
+    public Optional<String> defaultRouteTablePropagation() {
         return Optional.ofNullable(this.defaultRouteTablePropagation);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<String> getDnsSupport() {
+    public Optional<String> dnsSupport() {
         return Optional.ofNullable(this.dnsSupport);
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<String> getPropagationDefaultRouteTableId() {
+    public Optional<String> propagationDefaultRouteTableId() {
         return Optional.ofNullable(this.propagationDefaultRouteTableId);
     }
-    public List<TransitGatewayTag> getTags() {
+    public List<TransitGatewayTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
-    public List<String> getTransitGatewayCidrBlocks() {
+    public List<String> transitGatewayCidrBlocks() {
         return this.transitGatewayCidrBlocks == null ? List.of() : this.transitGatewayCidrBlocks;
     }
-    public Optional<String> getVpnEcmpSupport() {
+    public Optional<String> vpnEcmpSupport() {
         return Optional.ofNullable(this.vpnEcmpSupport);
     }
 

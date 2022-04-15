@@ -26,7 +26,7 @@ public final class SimulationApplicationSimulationSoftwareSuite extends io.pulum
     @Import(name="name", required=true)
       private final SimulationApplicationSimulationSoftwareSuiteName name;
 
-    public SimulationApplicationSimulationSoftwareSuiteName getName() {
+    public SimulationApplicationSimulationSoftwareSuiteName name() {
         return this.name;
     }
 
@@ -37,7 +37,7 @@ public final class SimulationApplicationSimulationSoftwareSuite extends io.pulum
     @Import(name="version")
       private final @Nullable SimulationApplicationSimulationSoftwareSuiteVersion version;
 
-    public Optional<SimulationApplicationSimulationSoftwareSuiteVersion> getVersion() {
+    public Optional<SimulationApplicationSimulationSoftwareSuiteVersion> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

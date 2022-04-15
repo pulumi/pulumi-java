@@ -24,7 +24,7 @@ public final class LocationNFSOnPremConfig extends io.pulumi.resources.InvokeArg
     @Import(name="agentArns", required=true)
       private final List<String> agentArns;
 
-    public List<String> getAgentArns() {
+    public List<String> agentArns() {
         return this.agentArns;
     }
 

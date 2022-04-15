@@ -22,63 +22,63 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deleteProtection")
       private final @Nullable Output<Boolean> deleteProtection;
 
-    public Output<Boolean> getDeleteProtection() {
+    public Output<Boolean> deleteProtection() {
         return this.deleteProtection == null ? Codegen.empty() : this.deleteProtection;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="firewallName")
       private final @Nullable Output<String> firewallName;
 
-    public Output<String> getFirewallName() {
+    public Output<String> firewallName() {
         return this.firewallName == null ? Codegen.empty() : this.firewallName;
     }
 
     @Import(name="firewallPolicyArn", required=true)
       private final Output<String> firewallPolicyArn;
 
-    public Output<String> getFirewallPolicyArn() {
+    public Output<String> firewallPolicyArn() {
         return this.firewallPolicyArn;
     }
 
     @Import(name="firewallPolicyChangeProtection")
       private final @Nullable Output<Boolean> firewallPolicyChangeProtection;
 
-    public Output<Boolean> getFirewallPolicyChangeProtection() {
+    public Output<Boolean> firewallPolicyChangeProtection() {
         return this.firewallPolicyChangeProtection == null ? Codegen.empty() : this.firewallPolicyChangeProtection;
     }
 
     @Import(name="subnetChangeProtection")
       private final @Nullable Output<Boolean> subnetChangeProtection;
 
-    public Output<Boolean> getSubnetChangeProtection() {
+    public Output<Boolean> subnetChangeProtection() {
         return this.subnetChangeProtection == null ? Codegen.empty() : this.subnetChangeProtection;
     }
 
     @Import(name="subnetMappings", required=true)
       private final Output<List<FirewallSubnetMappingArgs>> subnetMappings;
 
-    public Output<List<FirewallSubnetMappingArgs>> getSubnetMappings() {
+    public Output<List<FirewallSubnetMappingArgs>> subnetMappings() {
         return this.subnetMappings;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<FirewallTagArgs>> tags;
 
-    public Output<List<FirewallTagArgs>> getTags() {
+    public Output<List<FirewallTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

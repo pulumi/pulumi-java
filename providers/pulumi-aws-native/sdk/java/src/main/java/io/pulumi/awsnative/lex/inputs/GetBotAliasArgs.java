@@ -15,14 +15,14 @@ public final class GetBotAliasArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="botAliasId", required=true)
       private final String botAliasId;
 
-    public String getBotAliasId() {
+    public String botAliasId() {
         return this.botAliasId;
     }
 
     @Import(name="botId", required=true)
       private final String botId;
 
-    public String getBotId() {
+    public String botId() {
         return this.botId;
     }
 

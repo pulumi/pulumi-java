@@ -26,7 +26,7 @@ public final class TaskFilterRule extends io.pulumi.resources.InvokeArgs {
     @Import(name="filterType")
       private final @Nullable TaskFilterRuleFilterType filterType;
 
-    public Optional<TaskFilterRuleFilterType> getFilterType() {
+    public Optional<TaskFilterRuleFilterType> filterType() {
         return this.filterType == null ? Optional.empty() : Optional.ofNullable(this.filterType);
     }
 
@@ -37,7 +37,7 @@ public final class TaskFilterRule extends io.pulumi.resources.InvokeArgs {
     @Import(name="value")
       private final @Nullable String value;
 
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

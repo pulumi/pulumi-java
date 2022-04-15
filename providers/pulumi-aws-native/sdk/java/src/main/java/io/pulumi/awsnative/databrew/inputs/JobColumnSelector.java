@@ -17,14 +17,14 @@ public final class JobColumnSelector extends io.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
     @Import(name="regex")
       private final @Nullable String regex;
 
-    public Optional<String> getRegex() {
+    public Optional<String> regex() {
         return this.regex == null ? Optional.empty() : Optional.ofNullable(this.regex);
     }
 

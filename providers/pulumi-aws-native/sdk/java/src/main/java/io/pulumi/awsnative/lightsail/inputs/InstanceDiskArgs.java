@@ -28,7 +28,7 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attachedTo")
       private final @Nullable Output<String> attachedTo;
 
-    public Output<String> getAttachedTo() {
+    public Output<String> attachedTo() {
         return this.attachedTo == null ? Codegen.empty() : this.attachedTo;
     }
 
@@ -39,7 +39,7 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attachmentState")
       private final @Nullable Output<String> attachmentState;
 
-    public Output<String> getAttachmentState() {
+    public Output<String> attachmentState() {
         return this.attachmentState == null ? Codegen.empty() : this.attachmentState;
     }
 
@@ -50,7 +50,7 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskName", required=true)
       private final Output<String> diskName;
 
-    public Output<String> getDiskName() {
+    public Output<String> diskName() {
         return this.diskName;
     }
 
@@ -61,7 +61,7 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iOPS")
       private final @Nullable Output<Integer> iOPS;
 
-    public Output<Integer> getIOPS() {
+    public Output<Integer> iOPS() {
         return this.iOPS == null ? Codegen.empty() : this.iOPS;
     }
 
@@ -72,7 +72,7 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isSystemDisk")
       private final @Nullable Output<Boolean> isSystemDisk;
 
-    public Output<Boolean> getIsSystemDisk() {
+    public Output<Boolean> isSystemDisk() {
         return this.isSystemDisk == null ? Codegen.empty() : this.isSystemDisk;
     }
 
@@ -83,7 +83,7 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="path", required=true)
       private final Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
 
@@ -94,7 +94,7 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sizeInGb")
       private final @Nullable Output<String> sizeInGb;
 
-    public Output<String> getSizeInGb() {
+    public Output<String> sizeInGb() {
         return this.sizeInGb == null ? Codegen.empty() : this.sizeInGb;
     }
 

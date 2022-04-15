@@ -26,14 +26,14 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="aggregationField")
       private final @Nullable Output<String> aggregationField;
 
-    public Output<String> getAggregationField() {
+    public Output<String> aggregationField() {
         return this.aggregationField == null ? Codegen.empty() : this.aggregationField;
     }
 
     @Import(name="aggregationType")
       private final @Nullable Output<FleetMetricAggregationTypeArgs> aggregationType;
 
-    public Output<FleetMetricAggregationTypeArgs> getAggregationType() {
+    public Output<FleetMetricAggregationTypeArgs> aggregationType() {
         return this.aggregationType == null ? Codegen.empty() : this.aggregationType;
     }
 
@@ -44,7 +44,7 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -55,7 +55,7 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="indexName")
       private final @Nullable Output<String> indexName;
 
-    public Output<String> getIndexName() {
+    public Output<String> indexName() {
         return this.indexName == null ? Codegen.empty() : this.indexName;
     }
 
@@ -66,7 +66,7 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
@@ -77,7 +77,7 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="period")
       private final @Nullable Output<Integer> period;
 
-    public Output<Integer> getPeriod() {
+    public Output<Integer> period() {
         return this.period == null ? Codegen.empty() : this.period;
     }
 
@@ -88,7 +88,7 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="queryString")
       private final @Nullable Output<String> queryString;
 
-    public Output<String> getQueryString() {
+    public Output<String> queryString() {
         return this.queryString == null ? Codegen.empty() : this.queryString;
     }
 
@@ -99,7 +99,7 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="queryVersion")
       private final @Nullable Output<String> queryVersion;
 
-    public Output<String> getQueryVersion() {
+    public Output<String> queryVersion() {
         return this.queryVersion == null ? Codegen.empty() : this.queryVersion;
     }
 
@@ -110,7 +110,7 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<FleetMetricTagArgs>> tags;
 
-    public Output<List<FleetMetricTagArgs>> getTags() {
+    public Output<List<FleetMetricTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -121,7 +121,7 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="unit")
       private final @Nullable Output<String> unit;
 
-    public Output<String> getUnit() {
+    public Output<String> unit() {
         return this.unit == null ? Codegen.empty() : this.unit;
     }
 

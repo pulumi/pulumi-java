@@ -27,7 +27,7 @@ public final class ObjectTypeFieldArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="contentType")
       private final @Nullable Output<ObjectTypeFieldContentType> contentType;
 
-    public Output<ObjectTypeFieldContentType> getContentType() {
+    public Output<ObjectTypeFieldContentType> contentType() {
         return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
@@ -38,7 +38,7 @@ public final class ObjectTypeFieldArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="source")
       private final @Nullable Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 
@@ -49,7 +49,7 @@ public final class ObjectTypeFieldArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target == null ? Codegen.empty() : this.target;
     }
 

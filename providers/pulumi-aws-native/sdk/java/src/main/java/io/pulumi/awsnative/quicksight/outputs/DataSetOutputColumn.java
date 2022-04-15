@@ -38,17 +38,17 @@ public final class DataSetOutputColumn {
      * <p>A description for a column.</p>
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * <p>A display name for the dataset.</p>
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public Optional<DataSetColumnDataType> getType() {
+    public Optional<DataSetColumnDataType> type() {
         return Optional.ofNullable(this.type);
     }
 

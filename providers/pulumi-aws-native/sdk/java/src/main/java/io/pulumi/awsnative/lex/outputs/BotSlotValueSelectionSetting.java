@@ -23,10 +23,10 @@ public final class BotSlotValueSelectionSetting {
         this.resolutionStrategy = resolutionStrategy;
     }
 
-    public Optional<BotSlotValueRegexFilter> getRegexFilter() {
+    public Optional<BotSlotValueRegexFilter> regexFilter() {
         return Optional.ofNullable(this.regexFilter);
     }
-    public BotSlotValueResolutionStrategy getResolutionStrategy() {
+    public BotSlotValueResolutionStrategy resolutionStrategy() {
         return this.resolutionStrategy;
     }
 

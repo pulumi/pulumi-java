@@ -16,7 +16,7 @@ public final class MitigationActionUpdateDeviceCertificateParams {
         this.action = action;
     }
 
-    public MitigationActionUpdateDeviceCertificateParamsAction getAction() {
+    public MitigationActionUpdateDeviceCertificateParamsAction action() {
         return this.action;
     }
 

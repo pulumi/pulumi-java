@@ -26,7 +26,7 @@ public final class RecipeConditionExpressionArgs extends io.pulumi.resources.Res
     @Import(name="condition", required=true)
       private final Output<String> condition;
 
-    public Output<String> getCondition() {
+    public Output<String> condition() {
         return this.condition;
     }
 
@@ -37,7 +37,7 @@ public final class RecipeConditionExpressionArgs extends io.pulumi.resources.Res
     @Import(name="targetColumn", required=true)
       private final Output<String> targetColumn;
 
-    public Output<String> getTargetColumn() {
+    public Output<String> targetColumn() {
         return this.targetColumn;
     }
 
@@ -48,7 +48,7 @@ public final class RecipeConditionExpressionArgs extends io.pulumi.resources.Res
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

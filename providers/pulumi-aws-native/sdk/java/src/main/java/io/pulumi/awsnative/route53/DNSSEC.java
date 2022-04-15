@@ -29,7 +29,7 @@ public class DNSSEC extends io.pulumi.resources.CustomResource {
      * @return The unique string (ID) used to identify a hosted zone.
      * 
      */
-    public Output<String> getHostedZoneId() {
+    public Output<String> hostedZoneId() {
         return this.hostedZoneId;
     }
 

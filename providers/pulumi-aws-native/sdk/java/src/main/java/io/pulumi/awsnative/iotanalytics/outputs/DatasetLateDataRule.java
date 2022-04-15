@@ -23,10 +23,10 @@ public final class DatasetLateDataRule {
         this.ruleName = ruleName;
     }
 
-    public DatasetLateDataRuleConfiguration getRuleConfiguration() {
+    public DatasetLateDataRuleConfiguration ruleConfiguration() {
         return this.ruleConfiguration;
     }
-    public Optional<String> getRuleName() {
+    public Optional<String> ruleName() {
         return Optional.ofNullable(this.ruleName);
     }
 

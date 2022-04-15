@@ -15,7 +15,7 @@ public final class GetSamplingRuleArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="ruleARN", required=true)
       private final String ruleARN;
 
-    public String getRuleARN() {
+    public String ruleARN() {
         return this.ruleARN;
     }
 

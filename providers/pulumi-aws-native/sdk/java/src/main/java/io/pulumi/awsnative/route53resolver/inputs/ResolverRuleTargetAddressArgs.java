@@ -22,7 +22,7 @@ public final class ResolverRuleTargetAddressArgs extends io.pulumi.resources.Res
     @Import(name="ip", required=true)
       private final Output<String> ip;
 
-    public Output<String> getIp() {
+    public Output<String> ip() {
         return this.ip;
     }
 
@@ -33,7 +33,7 @@ public final class ResolverRuleTargetAddressArgs extends io.pulumi.resources.Res
     @Import(name="port")
       private final @Nullable Output<String> port;
 
-    public Output<String> getPort() {
+    public Output<String> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 

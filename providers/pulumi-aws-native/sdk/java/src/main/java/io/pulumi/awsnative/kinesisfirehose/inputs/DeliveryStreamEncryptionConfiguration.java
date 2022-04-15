@@ -18,14 +18,14 @@ public final class DeliveryStreamEncryptionConfiguration extends io.pulumi.resou
     @Import(name="kMSEncryptionConfig")
       private final @Nullable DeliveryStreamKMSEncryptionConfig kMSEncryptionConfig;
 
-    public Optional<DeliveryStreamKMSEncryptionConfig> getKMSEncryptionConfig() {
+    public Optional<DeliveryStreamKMSEncryptionConfig> kMSEncryptionConfig() {
         return this.kMSEncryptionConfig == null ? Optional.empty() : Optional.ofNullable(this.kMSEncryptionConfig);
     }
 
     @Import(name="noEncryptionConfig")
       private final @Nullable DeliveryStreamEncryptionConfigurationNoEncryptionConfig noEncryptionConfig;
 
-    public Optional<DeliveryStreamEncryptionConfigurationNoEncryptionConfig> getNoEncryptionConfig() {
+    public Optional<DeliveryStreamEncryptionConfigurationNoEncryptionConfig> noEncryptionConfig() {
         return this.noEncryptionConfig == null ? Optional.empty() : Optional.ofNullable(this.noEncryptionConfig);
     }
 

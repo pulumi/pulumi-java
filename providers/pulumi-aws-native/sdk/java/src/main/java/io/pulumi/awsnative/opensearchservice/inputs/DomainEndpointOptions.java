@@ -18,35 +18,35 @@ public final class DomainEndpointOptions extends io.pulumi.resources.InvokeArgs 
     @Import(name="customEndpoint")
       private final @Nullable String customEndpoint;
 
-    public Optional<String> getCustomEndpoint() {
+    public Optional<String> customEndpoint() {
         return this.customEndpoint == null ? Optional.empty() : Optional.ofNullable(this.customEndpoint);
     }
 
     @Import(name="customEndpointCertificateArn")
       private final @Nullable String customEndpointCertificateArn;
 
-    public Optional<String> getCustomEndpointCertificateArn() {
+    public Optional<String> customEndpointCertificateArn() {
         return this.customEndpointCertificateArn == null ? Optional.empty() : Optional.ofNullable(this.customEndpointCertificateArn);
     }
 
     @Import(name="customEndpointEnabled")
       private final @Nullable Boolean customEndpointEnabled;
 
-    public Optional<Boolean> getCustomEndpointEnabled() {
+    public Optional<Boolean> customEndpointEnabled() {
         return this.customEndpointEnabled == null ? Optional.empty() : Optional.ofNullable(this.customEndpointEnabled);
     }
 
     @Import(name="enforceHTTPS")
       private final @Nullable Boolean enforceHTTPS;
 
-    public Optional<Boolean> getEnforceHTTPS() {
+    public Optional<Boolean> enforceHTTPS() {
         return this.enforceHTTPS == null ? Optional.empty() : Optional.ofNullable(this.enforceHTTPS);
     }
 
     @Import(name="tLSSecurityPolicy")
       private final @Nullable String tLSSecurityPolicy;
 
-    public Optional<String> getTLSSecurityPolicy() {
+    public Optional<String> tLSSecurityPolicy() {
         return this.tLSSecurityPolicy == null ? Optional.empty() : Optional.ofNullable(this.tLSSecurityPolicy);
     }
 

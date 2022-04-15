@@ -24,21 +24,21 @@ public final class BotIntentConfirmationSettingArgs extends io.pulumi.resources.
     @Import(name="declinationResponse", required=true)
       private final Output<BotResponseSpecificationArgs> declinationResponse;
 
-    public Output<BotResponseSpecificationArgs> getDeclinationResponse() {
+    public Output<BotResponseSpecificationArgs> declinationResponse() {
         return this.declinationResponse;
     }
 
     @Import(name="isActive")
       private final @Nullable Output<Boolean> isActive;
 
-    public Output<Boolean> getIsActive() {
+    public Output<Boolean> isActive() {
         return this.isActive == null ? Codegen.empty() : this.isActive;
     }
 
     @Import(name="promptSpecification", required=true)
       private final Output<BotPromptSpecificationArgs> promptSpecification;
 
-    public Output<BotPromptSpecificationArgs> getPromptSpecification() {
+    public Output<BotPromptSpecificationArgs> promptSpecification() {
         return this.promptSpecification;
     }
 

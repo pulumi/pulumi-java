@@ -21,10 +21,10 @@ public final class RuleGroupStatelessRule {
         this.ruleDefinition = ruleDefinition;
     }
 
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
-    public RuleGroupRuleDefinition getRuleDefinition() {
+    public RuleGroupRuleDefinition ruleDefinition() {
         return this.ruleDefinition;
     }
 

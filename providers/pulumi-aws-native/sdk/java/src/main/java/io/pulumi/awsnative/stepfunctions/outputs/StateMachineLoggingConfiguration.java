@@ -28,13 +28,13 @@ public final class StateMachineLoggingConfiguration {
         this.level = level;
     }
 
-    public List<StateMachineLogDestination> getDestinations() {
+    public List<StateMachineLogDestination> destinations() {
         return this.destinations == null ? List.of() : this.destinations;
     }
-    public Optional<Boolean> getIncludeExecutionData() {
+    public Optional<Boolean> includeExecutionData() {
         return Optional.ofNullable(this.includeExecutionData);
     }
-    public Optional<StateMachineLoggingConfigurationLevel> getLevel() {
+    public Optional<StateMachineLoggingConfigurationLevel> level() {
         return Optional.ofNullable(this.level);
     }
 

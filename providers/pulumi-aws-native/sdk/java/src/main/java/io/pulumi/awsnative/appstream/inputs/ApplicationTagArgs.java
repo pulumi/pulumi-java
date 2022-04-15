@@ -17,14 +17,14 @@ public final class ApplicationTagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagKey", required=true)
       private final Output<String> tagKey;
 
-    public Output<String> getTagKey() {
+    public Output<String> tagKey() {
         return this.tagKey;
     }
 
     @Import(name="tagValue", required=true)
       private final Output<String> tagValue;
 
-    public Output<String> getTagValue() {
+    public Output<String> tagValue() {
         return this.tagValue;
     }
 

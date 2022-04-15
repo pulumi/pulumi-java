@@ -27,14 +27,14 @@ public final class AnalysisErrorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message == null ? Codegen.empty() : this.message;
     }
 
     @Import(name="type")
       private final @Nullable Output<AnalysisErrorType> type;
 
-    public Output<AnalysisErrorType> getType() {
+    public Output<AnalysisErrorType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -27,7 +27,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -38,7 +38,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retentionPeriodHours")
       private final @Nullable Output<Integer> retentionPeriodHours;
 
-    public Output<Integer> getRetentionPeriodHours() {
+    public Output<Integer> retentionPeriodHours() {
         return this.retentionPeriodHours == null ? Codegen.empty() : this.retentionPeriodHours;
     }
 
@@ -49,7 +49,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shardCount")
       private final @Nullable Output<Integer> shardCount;
 
-    public Output<Integer> getShardCount() {
+    public Output<Integer> shardCount() {
         return this.shardCount == null ? Codegen.empty() : this.shardCount;
     }
 
@@ -60,7 +60,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="streamEncryption")
       private final @Nullable Output<StreamEncryptionArgs> streamEncryption;
 
-    public Output<StreamEncryptionArgs> getStreamEncryption() {
+    public Output<StreamEncryptionArgs> streamEncryption() {
         return this.streamEncryption == null ? Codegen.empty() : this.streamEncryption;
     }
 
@@ -71,7 +71,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="streamModeDetails")
       private final @Nullable Output<StreamModeDetailsArgs> streamModeDetails;
 
-    public Output<StreamModeDetailsArgs> getStreamModeDetails() {
+    public Output<StreamModeDetailsArgs> streamModeDetails() {
         return this.streamModeDetails == null ? Codegen.empty() : this.streamModeDetails;
     }
 
@@ -82,7 +82,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<StreamTagArgs>> tags;
 
-    public Output<List<StreamTagArgs>> getTags() {
+    public Output<List<StreamTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

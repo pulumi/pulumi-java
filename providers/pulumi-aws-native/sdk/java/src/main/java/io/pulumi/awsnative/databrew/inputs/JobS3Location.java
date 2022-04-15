@@ -21,21 +21,21 @@ public final class JobS3Location extends io.pulumi.resources.InvokeArgs {
     @Import(name="bucket", required=true)
       private final String bucket;
 
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
 
     @Import(name="bucketOwner")
       private final @Nullable String bucketOwner;
 
-    public Optional<String> getBucketOwner() {
+    public Optional<String> bucketOwner() {
         return this.bucketOwner == null ? Optional.empty() : Optional.ofNullable(this.bucketOwner);
     }
 
     @Import(name="key")
       private final @Nullable String key;
 
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 

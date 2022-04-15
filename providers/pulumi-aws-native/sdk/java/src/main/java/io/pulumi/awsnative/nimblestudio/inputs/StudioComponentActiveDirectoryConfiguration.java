@@ -27,7 +27,7 @@ public final class StudioComponentActiveDirectoryConfiguration extends io.pulumi
     @Import(name="computerAttributes")
       private final @Nullable List<StudioComponentActiveDirectoryComputerAttribute> computerAttributes;
 
-    public List<StudioComponentActiveDirectoryComputerAttribute> getComputerAttributes() {
+    public List<StudioComponentActiveDirectoryComputerAttribute> computerAttributes() {
         return this.computerAttributes == null ? List.of() : this.computerAttributes;
     }
 
@@ -38,7 +38,7 @@ public final class StudioComponentActiveDirectoryConfiguration extends io.pulumi
     @Import(name="directoryId")
       private final @Nullable String directoryId;
 
-    public Optional<String> getDirectoryId() {
+    public Optional<String> directoryId() {
         return this.directoryId == null ? Optional.empty() : Optional.ofNullable(this.directoryId);
     }
 
@@ -49,7 +49,7 @@ public final class StudioComponentActiveDirectoryConfiguration extends io.pulumi
     @Import(name="organizationalUnitDistinguishedName")
       private final @Nullable String organizationalUnitDistinguishedName;
 
-    public Optional<String> getOrganizationalUnitDistinguishedName() {
+    public Optional<String> organizationalUnitDistinguishedName() {
         return this.organizationalUnitDistinguishedName == null ? Optional.empty() : Optional.ofNullable(this.organizationalUnitDistinguishedName);
     }
 

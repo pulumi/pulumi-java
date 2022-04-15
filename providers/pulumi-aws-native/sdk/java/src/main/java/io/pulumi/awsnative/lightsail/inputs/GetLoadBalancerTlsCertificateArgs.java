@@ -19,7 +19,7 @@ public final class GetLoadBalancerTlsCertificateArgs extends io.pulumi.resources
     @Import(name="certificateName", required=true)
       private final String certificateName;
 
-    public String getCertificateName() {
+    public String certificateName() {
         return this.certificateName;
     }
 
@@ -30,7 +30,7 @@ public final class GetLoadBalancerTlsCertificateArgs extends io.pulumi.resources
     @Import(name="loadBalancerName", required=true)
       private final String loadBalancerName;
 
-    public String getLoadBalancerName() {
+    public String loadBalancerName() {
         return this.loadBalancerName;
     }
 

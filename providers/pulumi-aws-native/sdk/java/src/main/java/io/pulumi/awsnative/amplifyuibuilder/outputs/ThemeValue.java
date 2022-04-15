@@ -24,10 +24,10 @@ public final class ThemeValue {
         this.value = value;
     }
 
-    public List<ThemeValues> getChildren() {
+    public List<ThemeValues> children() {
         return this.children == null ? List.of() : this.children;
     }
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

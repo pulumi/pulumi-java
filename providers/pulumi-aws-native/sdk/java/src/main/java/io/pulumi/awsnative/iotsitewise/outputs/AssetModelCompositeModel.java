@@ -50,28 +50,28 @@ public final class AssetModelCompositeModel {
      * The property definitions of the asset model. You can specify up to 200 properties per asset model.
      * 
     */
-    public List<AssetModelProperty> getCompositeModelProperties() {
+    public List<AssetModelProperty> compositeModelProperties() {
         return this.compositeModelProperties == null ? List.of() : this.compositeModelProperties;
     }
     /**
      * A description for the asset composite model.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A unique, friendly name for the asset composite model.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The type of the composite model. For alarm composite models, this type is AWS/ALARM
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

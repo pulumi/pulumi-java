@@ -28,119 +28,119 @@ public final class HealthCheckConfigPropertiesArgs extends io.pulumi.resources.R
     @Import(name="alarmIdentifier")
       private final @Nullable Output<HealthCheckAlarmIdentifierArgs> alarmIdentifier;
 
-    public Output<HealthCheckAlarmIdentifierArgs> getAlarmIdentifier() {
+    public Output<HealthCheckAlarmIdentifierArgs> alarmIdentifier() {
         return this.alarmIdentifier == null ? Codegen.empty() : this.alarmIdentifier;
     }
 
     @Import(name="childHealthChecks")
       private final @Nullable Output<List<String>> childHealthChecks;
 
-    public Output<List<String>> getChildHealthChecks() {
+    public Output<List<String>> childHealthChecks() {
         return this.childHealthChecks == null ? Codegen.empty() : this.childHealthChecks;
     }
 
     @Import(name="enableSNI")
       private final @Nullable Output<Boolean> enableSNI;
 
-    public Output<Boolean> getEnableSNI() {
+    public Output<Boolean> enableSNI() {
         return this.enableSNI == null ? Codegen.empty() : this.enableSNI;
     }
 
     @Import(name="failureThreshold")
       private final @Nullable Output<Integer> failureThreshold;
 
-    public Output<Integer> getFailureThreshold() {
+    public Output<Integer> failureThreshold() {
         return this.failureThreshold == null ? Codegen.empty() : this.failureThreshold;
     }
 
     @Import(name="fullyQualifiedDomainName")
       private final @Nullable Output<String> fullyQualifiedDomainName;
 
-    public Output<String> getFullyQualifiedDomainName() {
+    public Output<String> fullyQualifiedDomainName() {
         return this.fullyQualifiedDomainName == null ? Codegen.empty() : this.fullyQualifiedDomainName;
     }
 
     @Import(name="healthThreshold")
       private final @Nullable Output<Integer> healthThreshold;
 
-    public Output<Integer> getHealthThreshold() {
+    public Output<Integer> healthThreshold() {
         return this.healthThreshold == null ? Codegen.empty() : this.healthThreshold;
     }
 
     @Import(name="iPAddress")
       private final @Nullable Output<String> iPAddress;
 
-    public Output<String> getIPAddress() {
+    public Output<String> iPAddress() {
         return this.iPAddress == null ? Codegen.empty() : this.iPAddress;
     }
 
     @Import(name="insufficientDataHealthStatus")
       private final @Nullable Output<HealthCheckConfigPropertiesInsufficientDataHealthStatus> insufficientDataHealthStatus;
 
-    public Output<HealthCheckConfigPropertiesInsufficientDataHealthStatus> getInsufficientDataHealthStatus() {
+    public Output<HealthCheckConfigPropertiesInsufficientDataHealthStatus> insufficientDataHealthStatus() {
         return this.insufficientDataHealthStatus == null ? Codegen.empty() : this.insufficientDataHealthStatus;
     }
 
     @Import(name="inverted")
       private final @Nullable Output<Boolean> inverted;
 
-    public Output<Boolean> getInverted() {
+    public Output<Boolean> inverted() {
         return this.inverted == null ? Codegen.empty() : this.inverted;
     }
 
     @Import(name="measureLatency")
       private final @Nullable Output<Boolean> measureLatency;
 
-    public Output<Boolean> getMeasureLatency() {
+    public Output<Boolean> measureLatency() {
         return this.measureLatency == null ? Codegen.empty() : this.measureLatency;
     }
 
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
     @Import(name="regions")
       private final @Nullable Output<List<String>> regions;
 
-    public Output<List<String>> getRegions() {
+    public Output<List<String>> regions() {
         return this.regions == null ? Codegen.empty() : this.regions;
     }
 
     @Import(name="requestInterval")
       private final @Nullable Output<Integer> requestInterval;
 
-    public Output<Integer> getRequestInterval() {
+    public Output<Integer> requestInterval() {
         return this.requestInterval == null ? Codegen.empty() : this.requestInterval;
     }
 
     @Import(name="resourcePath")
       private final @Nullable Output<String> resourcePath;
 
-    public Output<String> getResourcePath() {
+    public Output<String> resourcePath() {
         return this.resourcePath == null ? Codegen.empty() : this.resourcePath;
     }
 
     @Import(name="routingControlArn")
       private final @Nullable Output<String> routingControlArn;
 
-    public Output<String> getRoutingControlArn() {
+    public Output<String> routingControlArn() {
         return this.routingControlArn == null ? Codegen.empty() : this.routingControlArn;
     }
 
     @Import(name="searchString")
       private final @Nullable Output<String> searchString;
 
-    public Output<String> getSearchString() {
+    public Output<String> searchString() {
         return this.searchString == null ? Codegen.empty() : this.searchString;
     }
 
     @Import(name="type", required=true)
       private final Output<HealthCheckConfigPropertiesType> type;
 
-    public Output<HealthCheckConfigPropertiesType> getType() {
+    public Output<HealthCheckConfigPropertiesType> type() {
         return this.type;
     }
 

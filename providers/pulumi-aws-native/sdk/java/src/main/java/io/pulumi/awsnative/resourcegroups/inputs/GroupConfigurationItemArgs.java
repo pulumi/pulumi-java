@@ -20,14 +20,14 @@ public final class GroupConfigurationItemArgs extends io.pulumi.resources.Resour
     @Import(name="parameters")
       private final @Nullable Output<List<GroupConfigurationParameterArgs>> parameters;
 
-    public Output<List<GroupConfigurationParameterArgs>> getParameters() {
+    public Output<List<GroupConfigurationParameterArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

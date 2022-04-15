@@ -26,7 +26,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alarmName")
       private final @Nullable Output<String> alarmName;
 
-    public Output<String> getAlarmName() {
+    public Output<String> alarmName() {
         return this.alarmName == null ? Codegen.empty() : this.alarmName;
     }
 
@@ -37,7 +37,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="comparisonOperator", required=true)
       private final Output<String> comparisonOperator;
 
-    public Output<String> getComparisonOperator() {
+    public Output<String> comparisonOperator() {
         return this.comparisonOperator;
     }
 
@@ -48,7 +48,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contactProtocols")
       private final @Nullable Output<List<String>> contactProtocols;
 
-    public Output<List<String>> getContactProtocols() {
+    public Output<List<String>> contactProtocols() {
         return this.contactProtocols == null ? Codegen.empty() : this.contactProtocols;
     }
 
@@ -59,7 +59,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datapointsToAlarm")
       private final @Nullable Output<Integer> datapointsToAlarm;
 
-    public Output<Integer> getDatapointsToAlarm() {
+    public Output<Integer> datapointsToAlarm() {
         return this.datapointsToAlarm == null ? Codegen.empty() : this.datapointsToAlarm;
     }
 
@@ -70,7 +70,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="evaluationPeriods", required=true)
       private final Output<Integer> evaluationPeriods;
 
-    public Output<Integer> getEvaluationPeriods() {
+    public Output<Integer> evaluationPeriods() {
         return this.evaluationPeriods;
     }
 
@@ -81,7 +81,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
@@ -92,7 +92,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="monitoredResourceName", required=true)
       private final Output<String> monitoredResourceName;
 
-    public Output<String> getMonitoredResourceName() {
+    public Output<String> monitoredResourceName() {
         return this.monitoredResourceName;
     }
 
@@ -103,7 +103,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationEnabled")
       private final @Nullable Output<Boolean> notificationEnabled;
 
-    public Output<Boolean> getNotificationEnabled() {
+    public Output<Boolean> notificationEnabled() {
         return this.notificationEnabled == null ? Codegen.empty() : this.notificationEnabled;
     }
 
@@ -114,7 +114,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationTriggers")
       private final @Nullable Output<List<String>> notificationTriggers;
 
-    public Output<List<String>> getNotificationTriggers() {
+    public Output<List<String>> notificationTriggers() {
         return this.notificationTriggers == null ? Codegen.empty() : this.notificationTriggers;
     }
 
@@ -125,7 +125,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="threshold", required=true)
       private final Output<Double> threshold;
 
-    public Output<Double> getThreshold() {
+    public Output<Double> threshold() {
         return this.threshold;
     }
 
@@ -136,7 +136,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="treatMissingData")
       private final @Nullable Output<String> treatMissingData;
 
-    public Output<String> getTreatMissingData() {
+    public Output<String> treatMissingData() {
         return this.treatMissingData == null ? Codegen.empty() : this.treatMissingData;
     }
 

@@ -51,28 +51,28 @@ public final class GetTemplateResult {
      * <p>The Amazon Resource Name (ARN) of the template.</p>
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * <p>A display name for the template.</p>
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * <p>A list of resource permissions to be set on the template. </p>
      * 
     */
-    public List<TemplateResourcePermission> getPermissions() {
+    public List<TemplateResourcePermission> permissions() {
         return this.permissions == null ? List.of() : this.permissions;
     }
     /**
      * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the resource.</p>
      * 
     */
-    public List<TemplateTag> getTags() {
+    public List<TemplateTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

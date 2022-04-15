@@ -24,7 +24,7 @@ public final class ConnectorProfileMarketoConnectorProfileProperties {
      * The location of the Marketo resource
      * 
     */
-    public String getInstanceUrl() {
+    public String instanceUrl() {
         return this.instanceUrl;
     }
 

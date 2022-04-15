@@ -22,7 +22,7 @@ public final class ThemeTileStyleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="border")
       private final @Nullable Output<ThemeBorderStyleArgs> border;
 
-    public Output<ThemeBorderStyleArgs> getBorder() {
+    public Output<ThemeBorderStyleArgs> border() {
         return this.border == null ? Codegen.empty() : this.border;
     }
 

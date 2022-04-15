@@ -19,21 +19,21 @@ public final class TopicRuleRepublishActionArgs extends io.pulumi.resources.Reso
     @Import(name="qos")
       private final @Nullable Output<Integer> qos;
 
-    public Output<Integer> getQos() {
+    public Output<Integer> qos() {
         return this.qos == null ? Codegen.empty() : this.qos;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="topic", required=true)
       private final Output<String> topic;
 
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic;
     }
 

@@ -23,14 +23,14 @@ public final class DetectorModelLambdaArgs extends io.pulumi.resources.ResourceA
     @Import(name="functionArn", required=true)
       private final Output<String> functionArn;
 
-    public Output<String> getFunctionArn() {
+    public Output<String> functionArn() {
         return this.functionArn;
     }
 
     @Import(name="payload")
       private final @Nullable Output<DetectorModelPayloadArgs> payload;
 
-    public Output<DetectorModelPayloadArgs> getPayload() {
+    public Output<DetectorModelPayloadArgs> payload() {
         return this.payload == null ? Codegen.empty() : this.payload;
     }
 

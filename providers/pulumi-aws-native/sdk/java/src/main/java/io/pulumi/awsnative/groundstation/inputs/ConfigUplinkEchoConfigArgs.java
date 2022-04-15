@@ -19,14 +19,14 @@ public final class ConfigUplinkEchoConfigArgs extends io.pulumi.resources.Resour
     @Import(name="antennaUplinkConfigArn")
       private final @Nullable Output<String> antennaUplinkConfigArn;
 
-    public Output<String> getAntennaUplinkConfigArn() {
+    public Output<String> antennaUplinkConfigArn() {
         return this.antennaUplinkConfigArn == null ? Codegen.empty() : this.antennaUplinkConfigArn;
     }
 
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 

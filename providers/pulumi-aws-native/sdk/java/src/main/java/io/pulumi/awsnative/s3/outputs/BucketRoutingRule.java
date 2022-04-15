@@ -31,10 +31,10 @@ public final class BucketRoutingRule {
      * Container for redirect information. You can redirect requests to another host, to another page, or with another protocol. In the event of an error, you can specify a different error code to return.
      * 
     */
-    public BucketRedirectRule getRedirectRule() {
+    public BucketRedirectRule redirectRule() {
         return this.redirectRule;
     }
-    public Optional<BucketRoutingRuleCondition> getRoutingRuleCondition() {
+    public Optional<BucketRoutingRuleCondition> routingRuleCondition() {
         return Optional.ofNullable(this.routingRuleCondition);
     }
 

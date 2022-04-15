@@ -22,10 +22,10 @@ public final class JobColumnSelector {
         this.regex = regex;
     }
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public Optional<String> getRegex() {
+    public Optional<String> regex() {
         return Optional.ofNullable(this.regex);
     }
 

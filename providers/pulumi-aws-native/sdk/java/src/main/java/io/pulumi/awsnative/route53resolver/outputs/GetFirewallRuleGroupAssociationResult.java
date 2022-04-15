@@ -109,84 +109,84 @@ public final class GetFirewallRuleGroupAssociationResult {
      * Arn
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Rfc3339TimeString
      * 
     */
-    public Optional<String> getCreationTime() {
+    public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * The id of the creator request.
      * 
     */
-    public Optional<String> getCreatorRequestId() {
+    public Optional<String> creatorRequestId() {
         return Optional.ofNullable(this.creatorRequestId);
     }
     /**
      * Id
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * ServicePrincipal
      * 
     */
-    public Optional<String> getManagedOwnerName() {
+    public Optional<String> managedOwnerName() {
         return Optional.ofNullable(this.managedOwnerName);
     }
     /**
      * Rfc3339TimeString
      * 
     */
-    public Optional<String> getModificationTime() {
+    public Optional<String> modificationTime() {
         return Optional.ofNullable(this.modificationTime);
     }
     /**
      * MutationProtectionStatus
      * 
     */
-    public Optional<FirewallRuleGroupAssociationMutationProtection> getMutationProtection() {
+    public Optional<FirewallRuleGroupAssociationMutationProtection> mutationProtection() {
         return Optional.ofNullable(this.mutationProtection);
     }
     /**
      * FirewallRuleGroupAssociationName
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Priority
      * 
     */
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * ResolverFirewallRuleGroupAssociation, possible values are COMPLETE, DELETING, UPDATING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
      * 
     */
-    public Optional<FirewallRuleGroupAssociationStatus> getStatus() {
+    public Optional<FirewallRuleGroupAssociationStatus> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * FirewallDomainListAssociationStatus
      * 
     */
-    public Optional<String> getStatusMessage() {
+    public Optional<String> statusMessage() {
         return Optional.ofNullable(this.statusMessage);
     }
     /**
      * Tags
      * 
     */
-    public List<FirewallRuleGroupAssociationTag> getTags() {
+    public List<FirewallRuleGroupAssociationTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

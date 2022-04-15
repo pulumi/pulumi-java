@@ -23,10 +23,10 @@ public final class WebACLRuleGroupReferenceStatement {
         this.excludedRules = excludedRules;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public List<WebACLExcludedRule> getExcludedRules() {
+    public List<WebACLExcludedRule> excludedRules() {
         return this.excludedRules == null ? List.of() : this.excludedRules;
     }
 

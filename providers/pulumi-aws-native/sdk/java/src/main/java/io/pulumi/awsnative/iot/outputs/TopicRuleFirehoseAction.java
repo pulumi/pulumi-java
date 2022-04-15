@@ -29,16 +29,16 @@ public final class TopicRuleFirehoseAction {
         this.separator = separator;
     }
 
-    public Optional<Boolean> getBatchMode() {
+    public Optional<Boolean> batchMode() {
         return Optional.ofNullable(this.batchMode);
     }
-    public String getDeliveryStreamName() {
+    public String deliveryStreamName() {
         return this.deliveryStreamName;
     }
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
-    public Optional<String> getSeparator() {
+    public Optional<String> separator() {
         return Optional.ofNullable(this.separator);
     }
 

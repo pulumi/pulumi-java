@@ -67,42 +67,42 @@ public final class GetStreamResult {
      * The Amazon resource name (ARN) of the Kinesis stream
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The number of hours for the data records that are stored in shards to remain accessible.
      * 
     */
-    public Optional<Integer> getRetentionPeriodHours() {
+    public Optional<Integer> retentionPeriodHours() {
         return Optional.ofNullable(this.retentionPeriodHours);
     }
     /**
      * The number of shards that the stream uses. Required when StreamMode = PROVISIONED is passed.
      * 
     */
-    public Optional<Integer> getShardCount() {
+    public Optional<Integer> shardCount() {
         return Optional.ofNullable(this.shardCount);
     }
     /**
      * When specified, enables or updates server-side encryption using an AWS KMS key for a specified stream.
      * 
     */
-    public Optional<StreamEncryption> getStreamEncryption() {
+    public Optional<StreamEncryption> streamEncryption() {
         return Optional.ofNullable(this.streamEncryption);
     }
     /**
      * The mode in which the stream is running.
      * 
     */
-    public Optional<StreamModeDetails> getStreamModeDetails() {
+    public Optional<StreamModeDetails> streamModeDetails() {
         return Optional.ofNullable(this.streamModeDetails);
     }
     /**
      * An arbitrary set of tags (key–value pairs) to associate with the Kinesis stream.
      * 
     */
-    public List<StreamTag> getTags() {
+    public List<StreamTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

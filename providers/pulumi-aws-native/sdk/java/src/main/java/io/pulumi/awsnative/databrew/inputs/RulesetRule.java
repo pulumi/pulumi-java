@@ -26,21 +26,21 @@ public final class RulesetRule extends io.pulumi.resources.InvokeArgs {
     @Import(name="checkExpression", required=true)
       private final String checkExpression;
 
-    public String getCheckExpression() {
+    public String checkExpression() {
         return this.checkExpression;
     }
 
     @Import(name="columnSelectors")
       private final @Nullable List<RulesetColumnSelector> columnSelectors;
 
-    public List<RulesetColumnSelector> getColumnSelectors() {
+    public List<RulesetColumnSelector> columnSelectors() {
         return this.columnSelectors == null ? List.of() : this.columnSelectors;
     }
 
     @Import(name="disabled")
       private final @Nullable Boolean disabled;
 
-    public Optional<Boolean> getDisabled() {
+    public Optional<Boolean> disabled() {
         return this.disabled == null ? Optional.empty() : Optional.ofNullable(this.disabled);
     }
 
@@ -51,21 +51,21 @@ public final class RulesetRule extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
     @Import(name="substitutionMap")
       private final @Nullable List<RulesetSubstitutionValue> substitutionMap;
 
-    public List<RulesetSubstitutionValue> getSubstitutionMap() {
+    public List<RulesetSubstitutionValue> substitutionMap() {
         return this.substitutionMap == null ? List.of() : this.substitutionMap;
     }
 
     @Import(name="threshold")
       private final @Nullable RulesetThreshold threshold;
 
-    public Optional<RulesetThreshold> getThreshold() {
+    public Optional<RulesetThreshold> threshold() {
         return this.threshold == null ? Optional.empty() : Optional.ofNullable(this.threshold);
     }
 

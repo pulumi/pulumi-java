@@ -68,50 +68,50 @@ public final class GetCloudFormationProvisionedProductResult {
         this.tags = tags;
     }
 
-    public Optional<CloudFormationProvisionedProductAcceptLanguage> getAcceptLanguage() {
+    public Optional<CloudFormationProvisionedProductAcceptLanguage> acceptLanguage() {
         return Optional.ofNullable(this.acceptLanguage);
     }
-    public Optional<String> getCloudformationStackArn() {
+    public Optional<String> cloudformationStackArn() {
         return Optional.ofNullable(this.cloudformationStackArn);
     }
     /**
      * List of key-value pair outputs.
      * 
     */
-    public Optional<Object> getOutputs() {
+    public Optional<Object> outputs() {
         return Optional.ofNullable(this.outputs);
     }
-    public Optional<String> getPathId() {
+    public Optional<String> pathId() {
         return Optional.ofNullable(this.pathId);
     }
-    public Optional<String> getPathName() {
+    public Optional<String> pathName() {
         return Optional.ofNullable(this.pathName);
     }
-    public Optional<String> getProductId() {
+    public Optional<String> productId() {
         return Optional.ofNullable(this.productId);
     }
-    public Optional<String> getProductName() {
+    public Optional<String> productName() {
         return Optional.ofNullable(this.productName);
     }
-    public Optional<String> getProvisionedProductId() {
+    public Optional<String> provisionedProductId() {
         return Optional.ofNullable(this.provisionedProductId);
     }
-    public Optional<String> getProvisioningArtifactId() {
+    public Optional<String> provisioningArtifactId() {
         return Optional.ofNullable(this.provisioningArtifactId);
     }
-    public Optional<String> getProvisioningArtifactName() {
+    public Optional<String> provisioningArtifactName() {
         return Optional.ofNullable(this.provisioningArtifactName);
     }
-    public List<CloudFormationProvisionedProductProvisioningParameter> getProvisioningParameters() {
+    public List<CloudFormationProvisionedProductProvisioningParameter> provisioningParameters() {
         return this.provisioningParameters == null ? List.of() : this.provisioningParameters;
     }
-    public Optional<CloudFormationProvisionedProductProvisioningPreferences> getProvisioningPreferences() {
+    public Optional<CloudFormationProvisionedProductProvisioningPreferences> provisioningPreferences() {
         return Optional.ofNullable(this.provisioningPreferences);
     }
-    public Optional<String> getRecordId() {
+    public Optional<String> recordId() {
         return Optional.ofNullable(this.recordId);
     }
-    public List<CloudFormationProvisionedProductTag> getTags() {
+    public List<CloudFormationProvisionedProductTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

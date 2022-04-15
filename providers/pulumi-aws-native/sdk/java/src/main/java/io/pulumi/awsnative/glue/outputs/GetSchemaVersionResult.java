@@ -26,7 +26,7 @@ public final class GetSchemaVersionResult {
      * Represents the version ID associated with the schema version.
      * 
     */
-    public Optional<String> getVersionId() {
+    public Optional<String> versionId() {
         return Optional.ofNullable(this.versionId);
     }
 

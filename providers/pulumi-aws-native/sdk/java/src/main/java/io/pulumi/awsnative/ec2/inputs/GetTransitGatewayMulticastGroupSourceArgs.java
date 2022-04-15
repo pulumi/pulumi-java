@@ -19,7 +19,7 @@ public final class GetTransitGatewayMulticastGroupSourceArgs extends io.pulumi.r
     @Import(name="groupIpAddress", required=true)
       private final String groupIpAddress;
 
-    public String getGroupIpAddress() {
+    public String groupIpAddress() {
         return this.groupIpAddress;
     }
 
@@ -30,7 +30,7 @@ public final class GetTransitGatewayMulticastGroupSourceArgs extends io.pulumi.r
     @Import(name="networkInterfaceId", required=true)
       private final String networkInterfaceId;
 
-    public String getNetworkInterfaceId() {
+    public String networkInterfaceId() {
         return this.networkInterfaceId;
     }
 
@@ -41,7 +41,7 @@ public final class GetTransitGatewayMulticastGroupSourceArgs extends io.pulumi.r
     @Import(name="transitGatewayMulticastDomainId", required=true)
       private final String transitGatewayMulticastDomainId;
 
-    public String getTransitGatewayMulticastDomainId() {
+    public String transitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;
     }
 

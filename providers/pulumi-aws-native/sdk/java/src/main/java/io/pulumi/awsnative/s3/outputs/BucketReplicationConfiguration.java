@@ -34,14 +34,14 @@ public final class BucketReplicationConfiguration {
      * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that Amazon S3 assumes when replicating objects.
      * 
     */
-    public String getRole() {
+    public String role() {
         return this.role;
     }
     /**
      * A container for one or more replication rules.
      * 
     */
-    public List<BucketReplicationRule> getRules() {
+    public List<BucketReplicationRule> rules() {
         return this.rules;
     }
 
