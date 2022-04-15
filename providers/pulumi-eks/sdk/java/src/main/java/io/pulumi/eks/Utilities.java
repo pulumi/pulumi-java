@@ -75,7 +75,7 @@ public class Utilities {
     }
 
     static {
-        var resourceName = "com/pulumi/eks/version.txt";
+        var resourceName = "io/pulumi/eks/version.txt";
         var versionFile = Utilities.class.getClassLoader().getResourceAsStream(resourceName);
         if (versionFile == null) {
             throw new IllegalStateException(

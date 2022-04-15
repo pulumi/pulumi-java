@@ -75,7 +75,7 @@ public class Utilities {
     }
 
     static {
-        var resourceName = "com/pulumi/aws-native/version.txt";
+        var resourceName = "io/pulumi/aws-native/version.txt";
         var versionFile = Utilities.class.getClassLoader().getResourceAsStream(resourceName);
         if (versionFile == null) {
             throw new IllegalStateException(
