@@ -3,10 +3,10 @@
 
 package io.pulumi.random;
 
-import com.pulumi.core.Output;
-import com.pulumi.core.annotations.Export;
-import com.pulumi.core.annotations.ResourceType;
-import com.pulumi.core.internal.Codegen;
+import io.pulumi.core.Output;
+import io.pulumi.core.annotations.Export;
+import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.random.RandomPasswordArgs;
 import io.pulumi.random.Utilities;
 import io.pulumi.random.inputs.RandomPasswordState;
