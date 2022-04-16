@@ -19,28 +19,28 @@ public final class ServiceTaskSpecRestartPolicyGetArgs extends com.pulumi.resour
     @Import(name="condition")
       private final @Nullable Output<String> condition;
 
-    public Output<String> getCondition() {
+    public Output<String> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="delay")
       private final @Nullable Output<String> delay;
 
-    public Output<String> getDelay() {
+    public Output<String> delay() {
         return this.delay == null ? Codegen.empty() : this.delay;
     }
 
     @Import(name="maxAttempts")
       private final @Nullable Output<Integer> maxAttempts;
 
-    public Output<Integer> getMaxAttempts() {
+    public Output<Integer> maxAttempts() {
         return this.maxAttempts == null ? Codegen.empty() : this.maxAttempts;
     }
 
     @Import(name="window")
       private final @Nullable Output<String> window;
 
-    public Output<String> getWindow() {
+    public Output<String> window() {
         return this.window == null ? Codegen.empty() : this.window;
     }
 

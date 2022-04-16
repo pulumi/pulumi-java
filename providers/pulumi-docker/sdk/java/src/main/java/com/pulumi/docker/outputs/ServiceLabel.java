@@ -20,10 +20,10 @@ public final class ServiceLabel {
         this.value = value;
     }
 
-    public String getLabel() {
+    public String label() {
         return this.label;
     }
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

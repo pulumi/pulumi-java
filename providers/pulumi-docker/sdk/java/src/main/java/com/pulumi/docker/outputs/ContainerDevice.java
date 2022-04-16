@@ -25,13 +25,13 @@ public final class ContainerDevice {
         this.permissions = permissions;
     }
 
-    public Optional<String> getContainerPath() {
+    public Optional<String> containerPath() {
         return Optional.ofNullable(this.containerPath);
     }
-    public String getHostPath() {
+    public String hostPath() {
         return this.hostPath;
     }
-    public Optional<String> getPermissions() {
+    public Optional<String> permissions() {
         return Optional.ofNullable(this.permissions);
     }
 

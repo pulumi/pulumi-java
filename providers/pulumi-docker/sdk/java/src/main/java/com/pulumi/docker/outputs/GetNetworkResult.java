@@ -40,25 +40,25 @@ public final class GetNetworkResult {
         this.scope = scope;
     }
 
-    public String getDriver() {
+    public String driver() {
         return this.driver;
     }
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Boolean getInternal() {
+    public Boolean internal() {
         return this.internal;
     }
-    public List<GetNetworkIpamConfig> getIpamConfigs() {
+    public List<GetNetworkIpamConfig> ipamConfigs() {
         return this.ipamConfigs;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Map<String,Object> getOptions() {
+    public Map<String,Object> options() {
         return this.options;
     }
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
 

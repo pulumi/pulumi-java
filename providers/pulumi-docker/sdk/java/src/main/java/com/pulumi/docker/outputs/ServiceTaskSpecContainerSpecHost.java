@@ -20,10 +20,10 @@ public final class ServiceTaskSpecContainerSpecHost {
         this.ip = ip;
     }
 
-    public String getHost() {
+    public String host() {
         return this.host;
     }
-    public String getIp() {
+    public String ip() {
         return this.ip;
     }
 

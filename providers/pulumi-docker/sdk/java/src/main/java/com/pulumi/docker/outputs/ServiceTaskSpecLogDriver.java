@@ -22,10 +22,10 @@ public final class ServiceTaskSpecLogDriver {
         this.options = options;
     }
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Map<String,String> getOptions() {
+    public Map<String,String> options() {
         return this.options == null ? Map.of() : this.options;
     }
 

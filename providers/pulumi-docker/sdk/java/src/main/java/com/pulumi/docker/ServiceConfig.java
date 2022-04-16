@@ -42,7 +42,7 @@ public class ServiceConfig extends com.pulumi.resources.CustomResource {
      * @return Base64-url-safe-encoded config data
      * 
      */
-    public Output<String> getData() {
+    public Output<String> data() {
         return this.data;
     }
     /**
@@ -56,7 +56,7 @@ public class ServiceConfig extends com.pulumi.resources.CustomResource {
      * @return User-defined name of the config
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

@@ -19,42 +19,42 @@ public final class ContainerUploadGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="content")
       private final @Nullable Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content == null ? Codegen.empty() : this.content;
     }
 
     @Import(name="contentBase64")
       private final @Nullable Output<String> contentBase64;
 
-    public Output<String> getContentBase64() {
+    public Output<String> contentBase64() {
         return this.contentBase64 == null ? Codegen.empty() : this.contentBase64;
     }
 
     @Import(name="executable")
       private final @Nullable Output<Boolean> executable;
 
-    public Output<Boolean> getExecutable() {
+    public Output<Boolean> executable() {
         return this.executable == null ? Codegen.empty() : this.executable;
     }
 
     @Import(name="file", required=true)
       private final Output<String> file;
 
-    public Output<String> getFile() {
+    public Output<String> file() {
         return this.file;
     }
 
     @Import(name="source")
       private final @Nullable Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 
     @Import(name="sourceHash")
       private final @Nullable Output<String> sourceHash;
 
-    public Output<String> getSourceHash() {
+    public Output<String> sourceHash() {
         return this.sourceHash == null ? Codegen.empty() : this.sourceHash;
     }
 

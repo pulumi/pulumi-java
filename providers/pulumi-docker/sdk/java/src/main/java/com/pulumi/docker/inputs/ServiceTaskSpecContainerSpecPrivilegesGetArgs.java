@@ -19,14 +19,14 @@ public final class ServiceTaskSpecContainerSpecPrivilegesGetArgs extends com.pul
     @Import(name="credentialSpec")
       private final @Nullable Output<ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs> credentialSpec;
 
-    public Output<ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs> getCredentialSpec() {
+    public Output<ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs> credentialSpec() {
         return this.credentialSpec == null ? Codegen.empty() : this.credentialSpec;
     }
 
     @Import(name="seLinuxContext")
       private final @Nullable Output<ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextGetArgs> seLinuxContext;
 
-    public Output<ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextGetArgs> getSeLinuxContext() {
+    public Output<ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextGetArgs> seLinuxContext() {
         return this.seLinuxContext == null ? Codegen.empty() : this.seLinuxContext;
     }
 

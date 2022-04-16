@@ -19,28 +19,28 @@ public final class GetNetworkIpamConfig extends com.pulumi.resources.InvokeArgs 
     @Import(name="auxAddress")
       private final @Nullable Map<String,Object> auxAddress;
 
-    public Map<String,Object> getAuxAddress() {
+    public Map<String,Object> auxAddress() {
         return this.auxAddress == null ? Map.of() : this.auxAddress;
     }
 
     @Import(name="gateway")
       private final @Nullable String gateway;
 
-    public Optional<String> getGateway() {
+    public Optional<String> gateway() {
         return this.gateway == null ? Optional.empty() : Optional.ofNullable(this.gateway);
     }
 
     @Import(name="ipRange")
       private final @Nullable String ipRange;
 
-    public Optional<String> getIpRange() {
+    public Optional<String> ipRange() {
         return this.ipRange == null ? Optional.empty() : Optional.ofNullable(this.ipRange);
     }
 
     @Import(name="subnet")
       private final @Nullable String subnet;
 
-    public Optional<String> getSubnet() {
+    public Optional<String> subnet() {
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
     }
 

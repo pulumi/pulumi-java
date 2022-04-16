@@ -19,14 +19,14 @@ public final class ServiceTaskSpecResourcesGetArgs extends com.pulumi.resources.
     @Import(name="limits")
       private final @Nullable Output<ServiceTaskSpecResourcesLimitsGetArgs> limits;
 
-    public Output<ServiceTaskSpecResourcesLimitsGetArgs> getLimits() {
+    public Output<ServiceTaskSpecResourcesLimitsGetArgs> limits() {
         return this.limits == null ? Codegen.empty() : this.limits;
     }
 
     @Import(name="reservation")
       private final @Nullable Output<ServiceTaskSpecResourcesReservationGetArgs> reservation;
 
-    public Output<ServiceTaskSpecResourcesReservationGetArgs> getReservation() {
+    public Output<ServiceTaskSpecResourcesReservationGetArgs> reservation() {
         return this.reservation == null ? Codegen.empty() : this.reservation;
     }
 

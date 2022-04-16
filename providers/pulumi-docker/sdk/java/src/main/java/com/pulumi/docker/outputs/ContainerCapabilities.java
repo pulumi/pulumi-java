@@ -22,10 +22,10 @@ public final class ContainerCapabilities {
         this.drops = drops;
     }
 
-    public List<String> getAdds() {
+    public List<String> adds() {
         return this.adds == null ? List.of() : this.adds;
     }
-    public List<String> getDrops() {
+    public List<String> drops() {
         return this.drops == null ? List.of() : this.drops;
     }
 

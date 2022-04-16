@@ -19,14 +19,14 @@ public final class ContainerCapabilitiesArgs extends com.pulumi.resources.Resour
     @Import(name="adds")
       private final @Nullable Output<List<String>> adds;
 
-    public Output<List<String>> getAdds() {
+    public Output<List<String>> adds() {
         return this.adds == null ? Codegen.empty() : this.adds;
     }
 
     @Import(name="drops")
       private final @Nullable Output<List<String>> drops;
 
-    public Output<List<String>> getDrops() {
+    public Output<List<String>> drops() {
         return this.drops == null ? Codegen.empty() : this.drops;
     }
 

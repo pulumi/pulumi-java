@@ -35,22 +35,22 @@ public final class ServiceTaskSpecContainerSpecSecret {
         this.secretName = secretName;
     }
 
-    public Optional<String> getFileGid() {
+    public Optional<String> fileGid() {
         return Optional.ofNullable(this.fileGid);
     }
-    public Optional<Integer> getFileMode() {
+    public Optional<Integer> fileMode() {
         return Optional.ofNullable(this.fileMode);
     }
-    public String getFileName() {
+    public String fileName() {
         return this.fileName;
     }
-    public Optional<String> getFileUid() {
+    public Optional<String> fileUid() {
         return Optional.ofNullable(this.fileUid);
     }
-    public String getSecretId() {
+    public String secretId() {
         return this.secretId;
     }
-    public Optional<String> getSecretName() {
+    public Optional<String> secretName() {
         return Optional.ofNullable(this.secretName);
     }
 

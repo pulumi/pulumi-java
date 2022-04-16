@@ -22,10 +22,10 @@ public final class ServiceTaskSpecResourcesLimits {
         this.nanoCpus = nanoCpus;
     }
 
-    public Optional<Integer> getMemoryBytes() {
+    public Optional<Integer> memoryBytes() {
         return Optional.ofNullable(this.memoryBytes);
     }
-    public Optional<Integer> getNanoCpus() {
+    public Optional<Integer> nanoCpus() {
         return Optional.ofNullable(this.nanoCpus);
     }
 

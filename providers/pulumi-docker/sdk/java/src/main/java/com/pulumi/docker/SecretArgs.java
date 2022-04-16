@@ -24,7 +24,7 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="data", required=true)
       private final Output<String> data;
 
-    public Output<String> getData() {
+    public Output<String> data() {
         return this.data;
     }
 
@@ -35,7 +35,7 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<List<SecretLabelArgs>> labels;
 
-    public Output<List<SecretLabelArgs>> getLabels() {
+    public Output<List<SecretLabelArgs>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -46,7 +46,7 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

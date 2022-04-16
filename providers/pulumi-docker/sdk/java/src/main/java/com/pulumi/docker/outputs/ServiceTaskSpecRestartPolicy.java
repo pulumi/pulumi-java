@@ -29,16 +29,16 @@ public final class ServiceTaskSpecRestartPolicy {
         this.window = window;
     }
 
-    public Optional<String> getCondition() {
+    public Optional<String> condition() {
         return Optional.ofNullable(this.condition);
     }
-    public Optional<String> getDelay() {
+    public Optional<String> delay() {
         return Optional.ofNullable(this.delay);
     }
-    public Optional<Integer> getMaxAttempts() {
+    public Optional<Integer> maxAttempts() {
         return Optional.ofNullable(this.maxAttempts);
     }
-    public Optional<String> getWindow() {
+    public Optional<String> window() {
         return Optional.ofNullable(this.window);
     }
 

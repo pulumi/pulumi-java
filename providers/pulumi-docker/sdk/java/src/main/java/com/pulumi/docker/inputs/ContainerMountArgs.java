@@ -22,49 +22,49 @@ public final class ContainerMountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="bindOptions")
       private final @Nullable Output<ContainerMountBindOptionsArgs> bindOptions;
 
-    public Output<ContainerMountBindOptionsArgs> getBindOptions() {
+    public Output<ContainerMountBindOptionsArgs> bindOptions() {
         return this.bindOptions == null ? Codegen.empty() : this.bindOptions;
     }
 
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
+    public Output<Boolean> readOnly() {
         return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     @Import(name="source")
       private final @Nullable Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 
     @Import(name="target", required=true)
       private final Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target;
     }
 
     @Import(name="tmpfsOptions")
       private final @Nullable Output<ContainerMountTmpfsOptionsArgs> tmpfsOptions;
 
-    public Output<ContainerMountTmpfsOptionsArgs> getTmpfsOptions() {
+    public Output<ContainerMountTmpfsOptionsArgs> tmpfsOptions() {
         return this.tmpfsOptions == null ? Codegen.empty() : this.tmpfsOptions;
     }
 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
     @Import(name="volumeOptions")
       private final @Nullable Output<ContainerMountVolumeOptionsArgs> volumeOptions;
 
-    public Output<ContainerMountVolumeOptionsArgs> getVolumeOptions() {
+    public Output<ContainerMountVolumeOptionsArgs> volumeOptions() {
         return this.volumeOptions == null ? Codegen.empty() : this.volumeOptions;
     }
 

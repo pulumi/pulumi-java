@@ -24,13 +24,13 @@ public final class RegistryImageBuildUlimit {
         this.soft = soft;
     }
 
-    public Integer getHard() {
+    public Integer hard() {
         return this.hard;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Integer getSoft() {
+    public Integer soft() {
         return this.soft;
     }
 

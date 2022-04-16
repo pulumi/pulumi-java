@@ -30,16 +30,16 @@ public final class GetNetworkIpamConfig {
         this.subnet = subnet;
     }
 
-    public Map<String,Object> getAuxAddress() {
+    public Map<String,Object> auxAddress() {
         return this.auxAddress == null ? Map.of() : this.auxAddress;
     }
-    public Optional<String> getGateway() {
+    public Optional<String> gateway() {
         return Optional.ofNullable(this.gateway);
     }
-    public Optional<String> getIpRange() {
+    public Optional<String> ipRange() {
         return Optional.ofNullable(this.ipRange);
     }
-    public Optional<String> getSubnet() {
+    public Optional<String> subnet() {
         return Optional.ofNullable(this.subnet);
     }
 

@@ -46,31 +46,31 @@ public final class RemoteImageBuild {
         this.target = target;
     }
 
-    public Map<String,String> getBuildArg() {
+    public Map<String,String> buildArg() {
         return this.buildArg == null ? Map.of() : this.buildArg;
     }
-    public Optional<String> getDockerfile() {
+    public Optional<String> dockerfile() {
         return Optional.ofNullable(this.dockerfile);
     }
-    public Optional<Boolean> getForceRemove() {
+    public Optional<Boolean> forceRemove() {
         return Optional.ofNullable(this.forceRemove);
     }
-    public Map<String,String> getLabel() {
+    public Map<String,String> label() {
         return this.label == null ? Map.of() : this.label;
     }
-    public Optional<Boolean> getNoCache() {
+    public Optional<Boolean> noCache() {
         return Optional.ofNullable(this.noCache);
     }
-    public String getPath() {
+    public String path() {
         return this.path;
     }
-    public Optional<Boolean> getRemove() {
+    public Optional<Boolean> remove() {
         return Optional.ofNullable(this.remove);
     }
-    public List<String> getTags() {
+    public List<String> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
-    public Optional<String> getTarget() {
+    public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
 

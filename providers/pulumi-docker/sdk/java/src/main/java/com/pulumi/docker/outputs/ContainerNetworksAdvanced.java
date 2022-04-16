@@ -29,16 +29,16 @@ public final class ContainerNetworksAdvanced {
         this.name = name;
     }
 
-    public List<String> getAliases() {
+    public List<String> aliases() {
         return this.aliases == null ? List.of() : this.aliases;
     }
-    public Optional<String> getIpv4Address() {
+    public Optional<String> ipv4Address() {
         return Optional.ofNullable(this.ipv4Address);
     }
-    public Optional<String> getIpv6Address() {
+    public Optional<String> ipv6Address() {
         return Optional.ofNullable(this.ipv6Address);
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

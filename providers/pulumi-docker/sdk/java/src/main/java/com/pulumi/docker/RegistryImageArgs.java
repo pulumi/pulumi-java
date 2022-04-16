@@ -24,7 +24,7 @@ public final class RegistryImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="build")
       private final @Nullable Output<RegistryImageBuildArgs> build;
 
-    public Output<RegistryImageBuildArgs> getBuild() {
+    public Output<RegistryImageBuildArgs> build() {
         return this.build == null ? Codegen.empty() : this.build;
     }
 
@@ -35,7 +35,7 @@ public final class RegistryImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="insecureSkipVerify")
       private final @Nullable Output<Boolean> insecureSkipVerify;
 
-    public Output<Boolean> getInsecureSkipVerify() {
+    public Output<Boolean> insecureSkipVerify() {
         return this.insecureSkipVerify == null ? Codegen.empty() : this.insecureSkipVerify;
     }
 
@@ -47,7 +47,7 @@ public final class RegistryImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keepRemotely")
       private final @Nullable Output<Boolean> keepRemotely;
 
-    public Output<Boolean> getKeepRemotely() {
+    public Output<Boolean> keepRemotely() {
         return this.keepRemotely == null ? Codegen.empty() : this.keepRemotely;
     }
 
@@ -58,7 +58,7 @@ public final class RegistryImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

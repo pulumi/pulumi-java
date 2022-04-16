@@ -62,13 +62,13 @@ public final class ContainerNetworkData {
      * 
     */
     @Deprecated /* Use `network_data` instead. The network gateway of the container as read from its NetworkSettings. */
-    public Optional<String> getGateway() {
+    public Optional<String> gateway() {
         return Optional.ofNullable(this.gateway);
     }
-    public Optional<String> getGlobalIpv6Address() {
+    public Optional<String> globalIpv6Address() {
         return Optional.ofNullable(this.globalIpv6Address);
     }
-    public Optional<Integer> getGlobalIpv6PrefixLength() {
+    public Optional<Integer> globalIpv6PrefixLength() {
         return Optional.ofNullable(this.globalIpv6PrefixLength);
     }
     /**
@@ -77,7 +77,7 @@ public final class ContainerNetworkData {
      * 
     */
     @Deprecated /* Use `network_data` instead. The IP address of the container's first network it. */
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
@@ -86,13 +86,13 @@ public final class ContainerNetworkData {
      * 
     */
     @Deprecated /* Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings. */
-    public Optional<Integer> getIpPrefixLength() {
+    public Optional<Integer> ipPrefixLength() {
         return Optional.ofNullable(this.ipPrefixLength);
     }
-    public Optional<String> getIpv6Gateway() {
+    public Optional<String> ipv6Gateway() {
         return Optional.ofNullable(this.ipv6Gateway);
     }
-    public Optional<String> getNetworkName() {
+    public Optional<String> networkName() {
         return Optional.ofNullable(this.networkName);
     }
 

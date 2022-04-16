@@ -19,35 +19,35 @@ public final class ContainerVolumeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="containerPath")
       private final @Nullable Output<String> containerPath;
 
-    public Output<String> getContainerPath() {
+    public Output<String> containerPath() {
         return this.containerPath == null ? Codegen.empty() : this.containerPath;
     }
 
     @Import(name="fromContainer")
       private final @Nullable Output<String> fromContainer;
 
-    public Output<String> getFromContainer() {
+    public Output<String> fromContainer() {
         return this.fromContainer == null ? Codegen.empty() : this.fromContainer;
     }
 
     @Import(name="hostPath")
       private final @Nullable Output<String> hostPath;
 
-    public Output<String> getHostPath() {
+    public Output<String> hostPath() {
         return this.hostPath == null ? Codegen.empty() : this.hostPath;
     }
 
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
+    public Output<Boolean> readOnly() {
         return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     @Import(name="volumeName")
       private final @Nullable Output<String> volumeName;
 
-    public Output<String> getVolumeName() {
+    public Output<String> volumeName() {
         return this.volumeName == null ? Codegen.empty() : this.volumeName;
     }
 

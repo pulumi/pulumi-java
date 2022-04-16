@@ -21,10 +21,10 @@ public final class PluginGrantPermission {
         this.values = values;
     }
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 
