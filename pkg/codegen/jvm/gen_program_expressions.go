@@ -16,121 +16,23 @@ import (
 	"github.com/pulumi/pulumi/pkg/v3/codegen/pcl"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
+
+	"github.com/pulumi/pulumi-java/pkg/codegen/jvm/names"
 )
 
 type nameInfo int
 
 func (nameInfo) Format(name string) string {
-	return makeValidIdentifier(name)
+	return names.MakeValidIdentifier(name)
 }
 
-// newAwaitCall creates a new call to the await intrinsic.
-func newAwaitCall(promise model.Expression) model.Expression {
-	// TODO(pdg): unions
-	promiseType, ok := promise.Type().(*model.PromiseType)
-	if !ok {
-		return promise
-	}
-
-	return &model.FunctionCallExpression{
-		Name: intrinsicAwait,
-		Signature: model.StaticFunctionSignature{
-			Parameters: []model.Parameter{{
-				Name: "promise",
-				Type: promiseType,
-			}},
-			ReturnType: promiseType.ElementType,
-		},
-		Args: []model.Expression{promise},
-	}
-}
-
-// lowerExpression amends the expression with intrinsics for C# generation.
+// lowerExpression amends the expression with intrinsics for Java generation.
 func (g *generator) lowerExpression(expr model.Expression, typ model.Type) model.Expression {
 	expr = pcl.RewritePropertyReferences(expr)
-	expr, diags := pcl.RewriteApplies(expr, nameInfo(0), !g.asyncInit)
+	applyPromises := false
+	expr, diags := pcl.RewriteApplies(expr, nameInfo(0), applyPromises)
 	contract.Assert(len(diags) == 0)
-	expr = pcl.RewriteConversions(expr, typ)
-	if g.asyncInit {
-		expr = g.awaitInvokes(expr)
-	} else {
-		expr = g.outputInvokes(expr)
-	}
-	return expr
-}
-
-// awaitInvokes wraps each call to `invoke` with a call to the `await` intrinsic. This rewrite should only be used
-// if we are generating an async Initialize, in which case the apply rewriter should also be configured not to treat
-// promises as eventuals. Note that this depends on the fact that invokes are the only way to introduce promises
-// in to a Pulumi program; if this changes in the future, this transform will need to be applied in a more general way
-// (e.g. by the apply rewriter).
-func (g *generator) awaitInvokes(x model.Expression) model.Expression {
-	contract.Assert(g.asyncInit)
-
-	rewriter := func(x model.Expression) (model.Expression, hcl.Diagnostics) {
-		// Ignore the node if it is not a call to invoke.
-		call, ok := x.(*model.FunctionCallExpression)
-		if !ok || call.Name != pcl.Invoke {
-			return x, nil
-		}
-
-		_, isPromise := call.Type().(*model.PromiseType)
-		contract.Assert(isPromise)
-
-		return newAwaitCall(call), nil
-	}
-	x, diags := model.VisitExpression(x, model.IdentityVisitor, rewriter)
-	contract.Assert(len(diags) == 0)
-	return x
-}
-
-// newOutputCall creates a new call to the output intrinsic.
-func newOutputCall(promise model.Expression) model.Expression {
-	promiseType, ok := promise.Type().(*model.PromiseType)
-	if !ok {
-		return promise
-	}
-
-	return &model.FunctionCallExpression{
-		Name: intrinsicOutput,
-		Signature: model.StaticFunctionSignature{
-			Parameters: []model.Parameter{{
-				Name: "promise",
-				Type: promiseType,
-			}},
-			ReturnType: model.NewOutputType(promiseType.ElementType),
-		},
-		Args: []model.Expression{promise},
-	}
-}
-
-// outputInvokes wraps each call to `invoke` with a call to the `output` intrinsic. This rewrite should only be used if
-// resources are instantiated within a stack constructor, where `await` operator is not available. We want to avoid the
-// nastiness of working with raw `Task` and wrap it into Pulumi's Output immediately to be able to `Apply` on it.
-// Note that this depends on the fact that invokes are the only way to introduce promises
-// in to a Pulumi program; if this changes in the future, this transform will need to be applied in a more general way
-// (e.g. by the apply rewriter).
-func (g *generator) outputInvokes(x model.Expression) model.Expression {
-	rewriter := func(x model.Expression) (model.Expression, hcl.Diagnostics) {
-		// Ignore the node if it is not a call to invoke.
-		call, ok := x.(*model.FunctionCallExpression)
-		if !ok || call.Name != pcl.Invoke {
-			return x, nil
-		}
-
-		_, isOutput := call.Type().(*model.OutputType)
-		if isOutput {
-			return x, nil
-		}
-
-		_, isPromise := call.Type().(*model.PromiseType)
-		contract.Assert(isPromise)
-
-		return newOutputCall(call), nil
-	}
-	x, diags := model.VisitExpression(x, model.IdentityVisitor, rewriter)
-	contract.Assert(len(diags) == 0)
-	return x
+	return pcl.RewriteConversions(expr, typ)
 }
 
 func (g *generator) GetPrecedence(expr model.Expression) int {
@@ -187,11 +89,10 @@ func (g *generator) GenAnonymousFunctionExpression(w io.Writer, expr *model.Anon
 		g.Fgenf(w, "%s", expr.Signature.Parameters[0].Name)
 		g.Fgenf(w, " -> %v", expr.Body)
 	default:
-		g.Fgen(w, "values ->\n")
-		g.Fgenf(w, "%s{\n", g.Indent)
+		g.Fgen(w, "values -> {\n")
 		g.Indented(func() {
 			for i, p := range expr.Signature.Parameters {
-				g.Fgenf(w, "%svar %s = values.Item%d;\n", g.Indent, p.Name, i+1)
+				g.Fgenf(w, "%svar %s = values.t%d;\n", g.Indent, p.Name, i+1)
 			}
 			g.Fgenf(w, "%sreturn %v;\n", g.Indent, expr.Body)
 		})
@@ -248,11 +149,11 @@ func (g *generator) genApply(w io.Writer, expr *model.FunctionCallExpression) {
 	applyArgs, then := pcl.ParseApplyCall(expr)
 
 	if len(applyArgs) == 1 {
-		// If we only have a single output, just generate a normal `.Apply`
-		g.Fgenf(w, "%.v.Apply(%.v)", applyArgs[0], then)
+		// If we only have a single output, just generate a normal `.apply`
+		g.Fgenf(w, "%.v.apply(%.v)", applyArgs[0], then)
 	} else {
-		// Otherwise, generate a call to `Output.Tuple().Apply()`.
-		g.Fgen(w, "Output.Tuple(")
+		// Otherwise, generate a call to `Output.tuple(...)`.
+		g.Fgen(w, "Output.tuple(")
 		for i, o := range applyArgs {
 			if i > 0 {
 				g.Fgen(w, ", ")
@@ -260,7 +161,7 @@ func (g *generator) genApply(w io.Writer, expr *model.FunctionCallExpression) {
 			g.Fgenf(w, "%.v", o)
 		}
 
-		g.Fgenf(w, ").Apply(%.v)", then)
+		g.Fgenf(w, ").apply(%.v)", then)
 	}
 }
 
@@ -294,14 +195,37 @@ func isTemplatePathString(expr model.Expression) (bool, []model.Expression) {
 	}
 }
 
-// functionName computes the C# namespace and class name for the given function token.
-func (g *generator) functionName(tokenArg model.Expression) string {
+func (g *generator) functionName(tokenArg model.Expression) (string, string) {
 	token := tokenArg.(*model.TemplateExpression).Parts[0].(*model.LiteralValueExpression).Value.AsString()
 	tokenRange := tokenArg.SyntaxNode().Range()
 
 	// Compute the resource type from the Pulumi type token.
-	_, _, member, _ := pcl.DecomposeToken(token, tokenRange)
-	return toUpperCase(member)
+	pkg, module, member, _ := pcl.DecomposeToken(token, tokenRange)
+	if module == "index" || module == "" {
+		return names.Title(pkg) + "Functions" + "." + member, names.Title(member)
+	}
+
+	return names.Title(module) + "Functions" + "." + member, names.Title(member)
+}
+
+// outputOf creates a new call to the output intrinsic.
+func outputOf(promise model.Expression) model.Expression {
+	promiseType, ok := promise.Type().(*model.PromiseType)
+	if !ok {
+		return promise
+	}
+
+	return &model.FunctionCallExpression{
+		Name: intrinsicOutput,
+		Signature: model.StaticFunctionSignature{
+			Parameters: []model.Parameter{{
+				Name: "promise",
+				Type: promiseType,
+			}},
+			ReturnType: model.NewOutputType(promiseType.ElementType),
+		},
+		Args: []model.Expression{promise},
+	}
 }
 
 func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionCallExpression) {
@@ -315,13 +239,12 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		}
 	case pcl.IntrinsicApply:
 		g.genApply(w, expr)
-	case intrinsicAwait:
-		g.Fgenf(w, "await %.17v", expr.Args[0])
 	case intrinsicOutput:
 		g.Fgenf(w, "Output.of(%.v)", expr.Args[0])
 	case "element":
 		g.Fgenf(w, "%.20v[%.v]", expr.Args[0], expr.Args[1])
 	case "entries":
+		// TODO: does not work with java yet
 		switch model.ResolveOutputs(expr.Args[0].Type()).(type) {
 		case *model.ListType, *model.TupleType:
 			if call, ok := expr.Args[0].(*model.FunctionCallExpression); ok && call.Name == "range" {
@@ -374,10 +297,10 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		// Assuming the existence of the following helper method located earlier in the preamble
 		g.Fgenf(w, "ComputeFileBase64Sha256(%v)", expr.Args[0])
 	case pcl.Invoke:
-		name := g.functionName(expr.Args[0])
-		foundFunction, functionSchema := g.findFunctionSchema(w, name)
+		fullyQualifiedName, schemaName := g.functionName(expr.Args[0])
+		foundFunction, functionSchema := g.findFunctionSchema(w, schemaName)
 		if foundFunction {
-			g.Fprintf(w, "%s.invokeAsync(", name)
+			g.Fprintf(w, "%s(", fullyQualifiedName)
 			invokeArgumentsExpr := expr.Args[1]
 			switch invokeArgumentsExpr.(type) {
 			case *model.ObjectConsExpression:
@@ -388,7 +311,7 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 			return
 
 		}
-		g.Fprintf(w, "%s.invokeAsync(", name)
+		g.Fprintf(w, "%s(", fullyQualifiedName)
 		isOutput, outArgs, _ := pcl.RecognizeOutputVersionedInvoke(expr)
 		if isOutput {
 			//typeName := g.argumentTypeNameWithSuffix(expr, outArgsTy, "Args")
@@ -404,9 +327,9 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 
 		g.Fprint(w, ")")
 	case "join":
-		g.Fgenf(w, "string.Join(%v, %v)", expr.Args[0], expr.Args[1])
+		g.Fgenf(w, "String.join(%v, %v)", expr.Args[0], expr.Args[1])
 	case "length":
-		g.Fgenf(w, "%.20v.Length", expr.Args[0])
+		g.Fgenf(w, "%.20v.length()", expr.Args[0])
 	case "lookup":
 		g.Fgenf(w, "%v[%v]", expr.Args[0], expr.Args[1])
 		if len(expr.Args) == 3 {
@@ -415,19 +338,19 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 	case "range":
 		g.genRange(w, expr, false)
 	case "readFile":
-		g.Fgenf(w, "File.ReadAllText(%v)", expr.Args[0])
+		g.Fgenf(w, "Files.readString(%v)", expr.Args[0])
 	case "readDir":
 		g.Fgenf(w, "ReadDir(%.v)", expr.Args[0])
 	case "secret":
-		g.Fgenf(w, "Output.CreateSecret(%v)", expr.Args[0])
+		g.Fgenf(w, "Output.ofSecret(%v)", expr.Args[0])
 	case "split":
-		g.Fgenf(w, "%.20v.Split(%v)", expr.Args[1], expr.Args[0])
+		g.Fgenf(w, "%.20v.split(%v)", expr.Args[1], expr.Args[0])
 	case "mimeType":
 		g.Fgenf(w, "Files.probeContentType(%v)", expr.Args[0])
 	case "toBase64":
 		g.Fgenf(w, "Convert.ToBase64String(System.Text.UTF8.GetBytes(%v))", expr.Args[0])
 	case "toJSON":
-		g.Fgen(w, "ToJson(")
+		g.Fgen(w, "SerializeJson(")
 		g.newline(w)
 		g.Indented(func() {
 			g.makeIndent(w)
@@ -451,13 +374,13 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 func (g *generator) genJson(w io.Writer, expr model.Expression) {
 	switch expr := expr.(type) {
 	case *model.ObjectConsExpression:
-		g.Fgen(w, "JObject(")
+		g.Fgen(w, "JsonObject(")
 		g.newline(w)
 		g.Indented(func() {
 			for index, item := range expr.Items {
 
 				g.makeIndent(w)
-				g.Fgenf(w, "JProperty(%s, ", item.Key)
+				g.Fgenf(w, "JsonProperty(%s, ", item.Key)
 				g.genJson(w, item.Value)
 				g.Fgen(w, ")")
 				if index < len(expr.Items)-1 {
@@ -471,12 +394,12 @@ func (g *generator) genJson(w io.Writer, expr model.Expression) {
 		g.Fgenf(w, "%s)", g.Indent)
 	case *model.TupleConsExpression:
 		if len(expr.Expressions) == 1 {
-			g.Fgen(w, "JArray(")
+			g.Fgen(w, "JsonArray(")
 			g.genJson(w, expr.Expressions[0])
 			g.Fgen(w, ")")
 			return
 		}
-		g.Fgen(w, "JArray(")
+		g.Fgen(w, "JsonArray(")
 		g.newline(w)
 		g.Indented(func() {
 			for index, value := range expr.Expressions {
@@ -603,7 +526,7 @@ func (g *generator) argumentTypeNameWithSuffix(expr model.Expression, destType m
 	_, _, member, _ := pcl.DecomposeToken(token, tokenRange)
 	member = member + suffix
 
-	return toUpperCase(member)
+	return names.Title(member)
 }
 
 func (g *generator) genObjectConsExpression(w io.Writer, expr *model.ObjectConsExpression, destType schema.Type) {
@@ -614,12 +537,14 @@ func (g *generator) genObjectConsExpression(w io.Writer, expr *model.ObjectConsE
 	g.genObjectConsExpressionWithTypeName(w, expr, destType)
 }
 
+// Returns the name of the type
 func typeName(schemaType schema.Type) string {
 	fullyQualifiedTypeName := schemaType.String()
 	nameParts := strings.Split(fullyQualifiedTypeName, ":")
-	return toUpperCase(nameParts[len(nameParts)-1])
+	return names.Title(nameParts[len(nameParts)-1])
 }
 
+// Checks whether the type is an object type
 func isObjectType(schemaType schema.Type) bool {
 	switch schemaType.(type) {
 	case *schema.ObjectType:
@@ -629,15 +554,7 @@ func isObjectType(schemaType schema.Type) bool {
 	}
 }
 
-func isArrayType(schemaType schema.Type) bool {
-	switch schemaType.(type) {
-	case *schema.ArrayType:
-		return true
-	default:
-		return false
-	}
-}
-
+// Changes currentResourcePropertyType during the execution scope of the exec function
 func (g *generator) typedObjectExprScope(innerType schema.Type, exec func()) {
 	reservedType := g.currentResourcePropertyType
 	g.currentResourcePropertyType = innerType
@@ -645,7 +562,10 @@ func (g *generator) typedObjectExprScope(innerType schema.Type, exec func()) {
 	g.currentResourcePropertyType = reservedType
 }
 
-func (g *generator) readStringAttribute(w io.Writer, key string, expr *model.ObjectConsExpression) (bool, string) {
+// Reads the value of an object expression by its key.
+// For example, if you had an object expression { "name": "john" },
+// then readStringAttribute("name", expr) would return (true, "john")
+func readStringAttribute(key string, expr *model.ObjectConsExpression) (bool, string) {
 	for _, item := range expr.Items {
 		if key == item.Key.(*model.LiteralValueExpression).Value.AsString() {
 			switch item.Value.(type) {
@@ -667,8 +587,8 @@ func (g *generator) readStringAttribute(w io.Writer, key string, expr *model.Obj
 	return false, ""
 }
 
-func (g *generator) pickTypeFromUnion(w io.Writer, union *schema.UnionType, expr *model.ObjectConsExpression) schema.Type {
-	foundDiscriminator, discriminator := g.readStringAttribute(w, union.Discriminator, expr)
+func pickTypeFromUnion(union *schema.UnionType, expr *model.ObjectConsExpression) schema.Type {
+	foundDiscriminator, discriminator := readStringAttribute(union.Discriminator, expr)
 	if foundDiscriminator {
 		for _, unionType := range union.ElementTypes {
 			if strings.Contains(typeName(unionType), discriminator) {
@@ -699,11 +619,11 @@ func (g *generator) genObjectConsExpressionWithTypeName(
 		g.Indented(func() {
 			for _, item := range expr.Items {
 				lit := item.Key.(*model.LiteralValueExpression)
-				key := toLowerCase(lit.Value.AsString())
+				key := names.MakeValidIdentifier(names.Camel(lit.Value.AsString()))
 				attributeType := objectProperties[key]
 				g.makeIndent(w)
 				g.typedObjectExprScope(attributeType, func() {
-					g.Fgenf(w, ".%s(%.v)", key, item.Value)
+					g.Fgenf(w, ".%s(%.v)", key, g.lowerExpression(item.Value, item.Value.Type()))
 				})
 				g.newline(w)
 			}
@@ -716,22 +636,28 @@ func (g *generator) genObjectConsExpressionWithTypeName(
 		g.genObjectConsExpressionWithTypeName(w, expr, innerType)
 	case *schema.UnionType:
 		union := destType.(*schema.UnionType)
-		innerType := g.pickTypeFromUnion(w, union, expr)
+		innerType := pickTypeFromUnion(union, expr)
 		g.genObjectConsExpressionWithTypeName(w, expr, innerType)
 	default:
-		// generate map
-		g.Fgen(w, "Map.ofEntries(\n")
-		g.Indented(func() {
-			for index, item := range expr.Items {
-				if index == len(expr.Items)-1 {
-					// Last item, no trailing comma
-					g.Fgenf(w, "%sMap.entry(%.v, %.v)\n", g.Indent, item.Key, item.Value)
-				} else {
-					g.Fgenf(w, "%sMap.entry(%.v, %.v),\n", g.Indent, item.Key, item.Value)
+		// generate map, usually for tags of type Map<String, String>
+		if len(expr.Items) == 1 {
+			firstItem := expr.Items[0]
+			// a map of one entry, generate a one-liner:
+			g.Fgenf(w, "Map.of(%.v, %.v)", firstItem.Key, firstItem.Value)
+		} else {
+			g.Fgen(w, "Map.ofEntries(\n")
+			g.Indented(func() {
+				for index, item := range expr.Items {
+					if index == len(expr.Items)-1 {
+						// Last item, no trailing comma
+						g.Fgenf(w, "%sMap.entry(%.v, %.v)\n", g.Indent, item.Key, item.Value)
+					} else {
+						g.Fgenf(w, "%sMap.entry(%.v, %.v),\n", g.Indent, item.Key, item.Value)
+					}
 				}
-			}
-		})
-		g.Fgenf(w, "%s)", g.Indent)
+			})
+			g.Fgenf(w, "%s)", g.Indent)
+		}
 	}
 }
 
@@ -756,7 +682,7 @@ func (g *generator) genRelativeTraversal(w io.Writer,
 
 		switch key.Type() {
 		case cty.String:
-			g.Fgenf(w, ".get%s()", toUpperCase(key.AsString()))
+			g.Fgenf(w, ".get%s()", names.Title(key.AsString()))
 		case cty.Number:
 			idx, _ := key.AsBigFloat().Int64()
 			g.Fgenf(w, "[%d]", idx)
@@ -772,14 +698,14 @@ func (g *generator) GenRelativeTraversalExpression(w io.Writer, expr *model.Rela
 }
 
 func (g *generator) GenScopeTraversalExpression(w io.Writer, expr *model.ScopeTraversalExpression) {
-	rootName := makeValidIdentifier(expr.RootName)
+	rootName := names.MakeValidIdentifier(expr.RootName)
 
 	g.Fgen(w, rootName)
 
 	invokedFunctionSchema, isFunctionInvoke := g.functionInvokes[rootName]
 
 	if isFunctionInvoke {
-		lambdaArg := toLowerCase(typeName(invokedFunctionSchema.Outputs))
+		lambdaArg := names.Camel(typeName(invokedFunctionSchema.Outputs))
 		// Assume invokes are returning Output<T> instead of CompletableFuture<T>
 		g.Fgenf(w, ".apply(%s -> %s", lambdaArg, lambdaArg)
 	}
@@ -798,7 +724,7 @@ func (g *generator) GenScopeTraversalExpression(w io.Writer, expr *model.ScopeTr
 }
 
 func (g *generator) GenSplatExpression(w io.Writer, expr *model.SplatExpression) {
-	g.genNYI(w, "GenSplatExpression") // TODO
+	g.Fgenf(w, "%.20v.stream().map(element -> element%.v).collect(toList())", expr.Source, expr.Each)
 }
 
 func (g *generator) GenTemplateJoinExpression(w io.Writer, expr *model.TemplateJoinExpression) {
@@ -810,7 +736,7 @@ func (g *generator) genArrayOfUnion(w io.Writer, union *schema.UnionType, exprs 
 	if len(exprs) > 0 {
 		if len(exprs) == 1 {
 			// simple case, just write the first element
-			objectType := g.pickTypeFromUnion(w, union, exprs[0])
+			objectType := pickTypeFromUnion(union, exprs[0])
 			g.genObjectConsExpression(w, exprs[0], objectType)
 			return
 		}
@@ -819,7 +745,7 @@ func (g *generator) genArrayOfUnion(w io.Writer, union *schema.UnionType, exprs 
 		g.Fgenf(w, "%s\n", g.Indent)
 		g.Indented(func() {
 			for index, expr := range exprs {
-				objectType := g.pickTypeFromUnion(w, union, expr)
+				objectType := pickTypeFromUnion(union, expr)
 				if index == 0 {
 					// first expression, no need for a new line
 					g.makeIndent(w)
