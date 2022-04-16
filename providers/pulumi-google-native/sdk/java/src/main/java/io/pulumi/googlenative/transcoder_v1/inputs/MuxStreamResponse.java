@@ -25,7 +25,7 @@ public final class MuxStreamResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="container", required=true)
       private final String container;
 
-    public String getContainer() {
+    public String container() {
         return this.container;
     }
 
@@ -36,7 +36,7 @@ public final class MuxStreamResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="elementaryStreams", required=true)
       private final List<String> elementaryStreams;
 
-    public List<String> getElementaryStreams() {
+    public List<String> elementaryStreams() {
         return this.elementaryStreams;
     }
 
@@ -47,7 +47,7 @@ public final class MuxStreamResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="fileName", required=true)
       private final String fileName;
 
-    public String getFileName() {
+    public String fileName() {
         return this.fileName;
     }
 
@@ -58,7 +58,7 @@ public final class MuxStreamResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 
@@ -69,7 +69,7 @@ public final class MuxStreamResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="segmentSettings", required=true)
       private final SegmentSettingsResponse segmentSettings;
 
-    public SegmentSettingsResponse getSegmentSettings() {
+    public SegmentSettingsResponse segmentSettings() {
         return this.segmentSettings;
     }
 

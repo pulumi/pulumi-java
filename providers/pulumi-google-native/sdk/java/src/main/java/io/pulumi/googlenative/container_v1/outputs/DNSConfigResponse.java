@@ -39,21 +39,21 @@ public final class DNSConfigResponse {
      * cluster_dns indicates which in-cluster DNS provider should be used.
      * 
     */
-    public String getClusterDns() {
+    public String clusterDns() {
         return this.clusterDns;
     }
     /**
      * cluster_dns_domain is the suffix used for all cluster service records.
      * 
     */
-    public String getClusterDnsDomain() {
+    public String clusterDnsDomain() {
         return this.clusterDnsDomain;
     }
     /**
      * cluster_dns_scope indicates the scope of access to cluster DNS records.
      * 
     */
-    public String getClusterDnsScope() {
+    public String clusterDnsScope() {
         return this.clusterDnsScope;
     }
 

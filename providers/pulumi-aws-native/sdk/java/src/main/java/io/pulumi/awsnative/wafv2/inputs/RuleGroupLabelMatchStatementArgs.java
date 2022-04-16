@@ -18,14 +18,14 @@ public final class RuleGroupLabelMatchStatementArgs extends io.pulumi.resources.
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
     @Import(name="scope", required=true)
       private final Output<RuleGroupLabelMatchScope> scope;
 
-    public Output<RuleGroupLabelMatchScope> getScope() {
+    public Output<RuleGroupLabelMatchScope> scope() {
         return this.scope;
     }
 

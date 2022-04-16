@@ -31,7 +31,7 @@ public final class NetworkFunctionRoleConfigurationResponse extends io.pulumi.re
     @Import(name="customProfile")
       private final @Nullable CustomProfileResponse customProfile;
 
-    public Optional<CustomProfileResponse> getCustomProfile() {
+    public Optional<CustomProfileResponse> customProfile() {
         return this.customProfile == null ? Optional.empty() : Optional.ofNullable(this.customProfile);
     }
 
@@ -42,7 +42,7 @@ public final class NetworkFunctionRoleConfigurationResponse extends io.pulumi.re
     @Import(name="networkInterfaces")
       private final @Nullable List<NetworkInterfaceResponse> networkInterfaces;
 
-    public List<NetworkInterfaceResponse> getNetworkInterfaces() {
+    public List<NetworkInterfaceResponse> networkInterfaces() {
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
     }
 
@@ -53,7 +53,7 @@ public final class NetworkFunctionRoleConfigurationResponse extends io.pulumi.re
     @Import(name="osProfile")
       private final @Nullable OsProfileResponse osProfile;
 
-    public Optional<OsProfileResponse> getOsProfile() {
+    public Optional<OsProfileResponse> osProfile() {
         return this.osProfile == null ? Optional.empty() : Optional.ofNullable(this.osProfile);
     }
 
@@ -64,7 +64,7 @@ public final class NetworkFunctionRoleConfigurationResponse extends io.pulumi.re
     @Import(name="roleName")
       private final @Nullable String roleName;
 
-    public Optional<String> getRoleName() {
+    public Optional<String> roleName() {
         return this.roleName == null ? Optional.empty() : Optional.ofNullable(this.roleName);
     }
 
@@ -75,7 +75,7 @@ public final class NetworkFunctionRoleConfigurationResponse extends io.pulumi.re
     @Import(name="roleType")
       private final @Nullable String roleType;
 
-    public Optional<String> getRoleType() {
+    public Optional<String> roleType() {
         return this.roleType == null ? Optional.empty() : Optional.ofNullable(this.roleType);
     }
 
@@ -86,7 +86,7 @@ public final class NetworkFunctionRoleConfigurationResponse extends io.pulumi.re
     @Import(name="storageProfile")
       private final @Nullable StorageProfileResponse storageProfile;
 
-    public Optional<StorageProfileResponse> getStorageProfile() {
+    public Optional<StorageProfileResponse> storageProfile() {
         return this.storageProfile == null ? Optional.empty() : Optional.ofNullable(this.storageProfile);
     }
 
@@ -97,7 +97,7 @@ public final class NetworkFunctionRoleConfigurationResponse extends io.pulumi.re
     @Import(name="userDataParameters")
       private final @Nullable Object userDataParameters;
 
-    public Optional<Object> getUserDataParameters() {
+    public Optional<Object> userDataParameters() {
         return this.userDataParameters == null ? Optional.empty() : Optional.ofNullable(this.userDataParameters);
     }
 
@@ -108,7 +108,7 @@ public final class NetworkFunctionRoleConfigurationResponse extends io.pulumi.re
     @Import(name="userDataTemplate")
       private final @Nullable Object userDataTemplate;
 
-    public Optional<Object> getUserDataTemplate() {
+    public Optional<Object> userDataTemplate() {
         return this.userDataTemplate == null ? Optional.empty() : Optional.ofNullable(this.userDataTemplate);
     }
 
@@ -119,7 +119,7 @@ public final class NetworkFunctionRoleConfigurationResponse extends io.pulumi.re
     @Import(name="virtualMachineSize")
       private final @Nullable String virtualMachineSize;
 
-    public Optional<String> getVirtualMachineSize() {
+    public Optional<String> virtualMachineSize() {
         return this.virtualMachineSize == null ? Optional.empty() : Optional.ofNullable(this.virtualMachineSize);
     }
 

@@ -26,7 +26,7 @@ public final class ScriptHandlerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scriptPath")
       private final @Nullable Output<String> scriptPath;
 
-    public Output<String> getScriptPath() {
+    public Output<String> scriptPath() {
         return this.scriptPath == null ? Codegen.empty() : this.scriptPath;
     }
 

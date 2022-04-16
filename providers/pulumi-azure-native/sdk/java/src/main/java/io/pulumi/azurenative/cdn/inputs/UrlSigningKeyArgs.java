@@ -26,7 +26,7 @@ public final class UrlSigningKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyId", required=true)
       private final Output<String> keyId;
 
-    public Output<String> getKeyId() {
+    public Output<String> keyId() {
         return this.keyId;
     }
 
@@ -37,7 +37,7 @@ public final class UrlSigningKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keySourceParameters", required=true)
       private final Output<KeyVaultSigningKeyParametersArgs> keySourceParameters;
 
-    public Output<KeyVaultSigningKeyParametersArgs> getKeySourceParameters() {
+    public Output<KeyVaultSigningKeyParametersArgs> keySourceParameters() {
         return this.keySourceParameters;
     }
 

@@ -47,7 +47,7 @@ public class PolicyTag extends io.pulumi.resources.CustomResource {
      * @return Resource names of child policy tags of this policy tag.
      * 
      */
-    public Output<List<String>> getChildPolicyTags() {
+    public Output<List<String>> childPolicyTags() {
         return this.childPolicyTags;
     }
     /**
@@ -67,7 +67,7 @@ public class PolicyTag extends io.pulumi.resources.CustomResource {
      * If not set, defaults to an empty description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -85,7 +85,7 @@ public class PolicyTag extends io.pulumi.resources.CustomResource {
      * not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -101,7 +101,7 @@ public class PolicyTag extends io.pulumi.resources.CustomResource {
      * "projects/{project}/locations/{region}/taxonomies/{taxonomy}/policyTags/{policytag}"
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -119,7 +119,7 @@ public class PolicyTag extends io.pulumi.resources.CustomResource {
      * If not set, defaults to an empty string.
      * 
      */
-    public Output</* @Nullable */ String> getParentPolicyTag() {
+    public Output</* @Nullable */ String> parentPolicyTag() {
         return this.parentPolicyTag;
     }
     /**
@@ -133,7 +133,7 @@ public class PolicyTag extends io.pulumi.resources.CustomResource {
      * @return Taxonomy the policy tag is associated with
      * 
      */
-    public Output<String> getTaxonomy() {
+    public Output<String> taxonomy() {
         return this.taxonomy;
     }
 

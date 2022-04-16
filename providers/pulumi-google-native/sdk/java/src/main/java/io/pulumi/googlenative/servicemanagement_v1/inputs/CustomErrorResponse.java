@@ -25,7 +25,7 @@ public final class CustomErrorResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="rules", required=true)
       private final List<CustomErrorRuleResponse> rules;
 
-    public List<CustomErrorRuleResponse> getRules() {
+    public List<CustomErrorRuleResponse> rules() {
         return this.rules;
     }
 
@@ -36,7 +36,7 @@ public final class CustomErrorResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="types", required=true)
       private final List<String> types;
 
-    public List<String> getTypes() {
+    public List<String> types() {
         return this.types;
     }
 

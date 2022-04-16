@@ -31,7 +31,7 @@ public final class LastAccessTimeTrackingPolicyArgs extends io.pulumi.resources.
     @Import(name="blobType")
       private final @Nullable Output<List<String>> blobType;
 
-    public Output<List<String>> getBlobType() {
+    public Output<List<String>> blobType() {
         return this.blobType == null ? Codegen.empty() : this.blobType;
     }
 
@@ -42,7 +42,7 @@ public final class LastAccessTimeTrackingPolicyArgs extends io.pulumi.resources.
     @Import(name="enable", required=true)
       private final Output<Boolean> enable;
 
-    public Output<Boolean> getEnable() {
+    public Output<Boolean> enable() {
         return this.enable;
     }
 
@@ -53,7 +53,7 @@ public final class LastAccessTimeTrackingPolicyArgs extends io.pulumi.resources.
     @Import(name="name")
       private final @Nullable Output<Either<String,Name>> name;
 
-    public Output<Either<String,Name>> getName() {
+    public Output<Either<String,Name>> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -64,7 +64,7 @@ public final class LastAccessTimeTrackingPolicyArgs extends io.pulumi.resources.
     @Import(name="trackingGranularityInDays")
       private final @Nullable Output<Integer> trackingGranularityInDays;
 
-    public Output<Integer> getTrackingGranularityInDays() {
+    public Output<Integer> trackingGranularityInDays() {
         return this.trackingGranularityInDays == null ? Codegen.empty() : this.trackingGranularityInDays;
     }
 

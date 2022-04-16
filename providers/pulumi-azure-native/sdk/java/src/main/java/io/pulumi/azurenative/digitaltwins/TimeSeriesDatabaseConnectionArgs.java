@@ -23,7 +23,7 @@ public final class TimeSeriesDatabaseConnectionArgs extends io.pulumi.resources.
     @Import(name="properties")
       private final @Nullable Output<AzureDataExplorerConnectionPropertiesArgs> properties;
 
-    public Output<AzureDataExplorerConnectionPropertiesArgs> getProperties() {
+    public Output<AzureDataExplorerConnectionPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -34,7 +34,7 @@ public final class TimeSeriesDatabaseConnectionArgs extends io.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -45,7 +45,7 @@ public final class TimeSeriesDatabaseConnectionArgs extends io.pulumi.resources.
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -56,7 +56,7 @@ public final class TimeSeriesDatabaseConnectionArgs extends io.pulumi.resources.
     @Import(name="timeSeriesDatabaseConnectionName")
       private final @Nullable Output<String> timeSeriesDatabaseConnectionName;
 
-    public Output<String> getTimeSeriesDatabaseConnectionName() {
+    public Output<String> timeSeriesDatabaseConnectionName() {
         return this.timeSeriesDatabaseConnectionName == null ? Codegen.empty() : this.timeSeriesDatabaseConnectionName;
     }
 

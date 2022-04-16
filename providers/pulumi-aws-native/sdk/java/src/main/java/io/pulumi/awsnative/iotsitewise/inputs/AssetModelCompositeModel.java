@@ -27,7 +27,7 @@ public final class AssetModelCompositeModel extends io.pulumi.resources.InvokeAr
     @Import(name="compositeModelProperties")
       private final @Nullable List<AssetModelProperty> compositeModelProperties;
 
-    public List<AssetModelProperty> getCompositeModelProperties() {
+    public List<AssetModelProperty> compositeModelProperties() {
         return this.compositeModelProperties == null ? List.of() : this.compositeModelProperties;
     }
 
@@ -38,7 +38,7 @@ public final class AssetModelCompositeModel extends io.pulumi.resources.InvokeAr
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -49,7 +49,7 @@ public final class AssetModelCompositeModel extends io.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -60,7 +60,7 @@ public final class AssetModelCompositeModel extends io.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

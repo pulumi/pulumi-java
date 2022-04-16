@@ -41,21 +41,21 @@ public final class KubeEnvironmentProfileResponse {
      * Resource ID of the Kubernetes Environment.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the Kubernetes Environment.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource type of the Kubernetes Environment.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

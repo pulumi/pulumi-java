@@ -27,13 +27,13 @@ public final class TopicRuleAssetPropertyValue {
         this.value = value;
     }
 
-    public Optional<String> getQuality() {
+    public Optional<String> quality() {
         return Optional.ofNullable(this.quality);
     }
-    public TopicRuleAssetPropertyTimestamp getTimestamp() {
+    public TopicRuleAssetPropertyTimestamp timestamp() {
         return this.timestamp;
     }
-    public TopicRuleAssetPropertyVariant getValue() {
+    public TopicRuleAssetPropertyVariant value() {
         return this.value;
     }
 

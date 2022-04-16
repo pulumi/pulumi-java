@@ -69,7 +69,7 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cases")
       private final @Nullable Output<List<SwitchCaseArgs>> cases;
 
-    public Output<List<SwitchCaseArgs>> getCases() {
+    public Output<List<SwitchCaseArgs>> cases() {
         return this.cases == null ? Codegen.empty() : this.cases;
     }
 
@@ -80,7 +80,7 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultActivities")
       private final @Nullable Output<List<Object>> defaultActivities;
 
-    public Output<List<Object>> getDefaultActivities() {
+    public Output<List<Object>> defaultActivities() {
         return this.defaultActivities == null ? Codegen.empty() : this.defaultActivities;
     }
 
@@ -91,7 +91,7 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+    public Output<List<ActivityDependencyArgs>> dependsOn() {
         return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
@@ -102,7 +102,7 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -113,7 +113,7 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -124,7 +124,7 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="on", required=true)
       private final Output<ExpressionArgs> on;
 
-    public Output<ExpressionArgs> getOn() {
+    public Output<ExpressionArgs> on() {
         return this.on;
     }
 
@@ -136,7 +136,7 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -147,7 +147,7 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> getUserProperties() {
+    public Output<List<UserPropertyArgs>> userProperties() {
         return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 

@@ -15,14 +15,14 @@ public final class GetDataSourceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
     @Import(name="indexId", required=true)
       private final String indexId;
 
-    public String getIndexId() {
+    public String indexId() {
         return this.indexId;
     }
 

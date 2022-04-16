@@ -20,10 +20,10 @@ public final class DistributionOriginCustomHeader {
         this.headerValue = headerValue;
     }
 
-    public String getHeaderName() {
+    public String headerName() {
         return this.headerName;
     }
-    public String getHeaderValue() {
+    public String headerValue() {
         return this.headerValue;
     }
 

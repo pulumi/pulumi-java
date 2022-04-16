@@ -23,49 +23,49 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
     @Import(name="accessControlAllowCredentials", required=true)
       private final Output<Boolean> accessControlAllowCredentials;
 
-    public Output<Boolean> getAccessControlAllowCredentials() {
+    public Output<Boolean> accessControlAllowCredentials() {
         return this.accessControlAllowCredentials;
     }
 
     @Import(name="accessControlAllowHeaders", required=true)
       private final Output<ResponseHeadersPolicyAccessControlAllowHeadersArgs> accessControlAllowHeaders;
 
-    public Output<ResponseHeadersPolicyAccessControlAllowHeadersArgs> getAccessControlAllowHeaders() {
+    public Output<ResponseHeadersPolicyAccessControlAllowHeadersArgs> accessControlAllowHeaders() {
         return this.accessControlAllowHeaders;
     }
 
     @Import(name="accessControlAllowMethods", required=true)
       private final Output<ResponseHeadersPolicyAccessControlAllowMethodsArgs> accessControlAllowMethods;
 
-    public Output<ResponseHeadersPolicyAccessControlAllowMethodsArgs> getAccessControlAllowMethods() {
+    public Output<ResponseHeadersPolicyAccessControlAllowMethodsArgs> accessControlAllowMethods() {
         return this.accessControlAllowMethods;
     }
 
     @Import(name="accessControlAllowOrigins", required=true)
       private final Output<ResponseHeadersPolicyAccessControlAllowOriginsArgs> accessControlAllowOrigins;
 
-    public Output<ResponseHeadersPolicyAccessControlAllowOriginsArgs> getAccessControlAllowOrigins() {
+    public Output<ResponseHeadersPolicyAccessControlAllowOriginsArgs> accessControlAllowOrigins() {
         return this.accessControlAllowOrigins;
     }
 
     @Import(name="accessControlExposeHeaders")
       private final @Nullable Output<ResponseHeadersPolicyAccessControlExposeHeadersArgs> accessControlExposeHeaders;
 
-    public Output<ResponseHeadersPolicyAccessControlExposeHeadersArgs> getAccessControlExposeHeaders() {
+    public Output<ResponseHeadersPolicyAccessControlExposeHeadersArgs> accessControlExposeHeaders() {
         return this.accessControlExposeHeaders == null ? Codegen.empty() : this.accessControlExposeHeaders;
     }
 
     @Import(name="accessControlMaxAgeSec")
       private final @Nullable Output<Integer> accessControlMaxAgeSec;
 
-    public Output<Integer> getAccessControlMaxAgeSec() {
+    public Output<Integer> accessControlMaxAgeSec() {
         return this.accessControlMaxAgeSec == null ? Codegen.empty() : this.accessControlMaxAgeSec;
     }
 
     @Import(name="originOverride", required=true)
       private final Output<Boolean> originOverride;
 
-    public Output<Boolean> getOriginOverride() {
+    public Output<Boolean> originOverride() {
         return this.originOverride;
     }
 

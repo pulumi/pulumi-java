@@ -32,14 +32,14 @@ public final class UserAssignedResourceIdentityResponse {
      * The principal id of user assigned identity.
      * 
     */
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
     /**
      * The tenant id of user assigned identity.
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
 

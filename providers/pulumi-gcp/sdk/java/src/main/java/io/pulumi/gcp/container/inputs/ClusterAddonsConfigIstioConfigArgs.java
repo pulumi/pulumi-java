@@ -23,7 +23,7 @@ public final class ClusterAddonsConfigIstioConfigArgs extends io.pulumi.resource
     @Import(name="auth")
       private final @Nullable Output<String> auth;
 
-    public Output<String> getAuth() {
+    public Output<String> auth() {
         return this.auth == null ? Codegen.empty() : this.auth;
     }
 
@@ -35,7 +35,7 @@ public final class ClusterAddonsConfigIstioConfigArgs extends io.pulumi.resource
     @Import(name="disabled", required=true)
       private final Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled;
     }
 

@@ -30,7 +30,7 @@ public final class VaultPropertiesEncryptionArgs extends io.pulumi.resources.Res
     @Import(name="infrastructureEncryption")
       private final @Nullable Output<Either<String,InfrastructureEncryptionState>> infrastructureEncryption;
 
-    public Output<Either<String,InfrastructureEncryptionState>> getInfrastructureEncryption() {
+    public Output<Either<String,InfrastructureEncryptionState>> infrastructureEncryption() {
         return this.infrastructureEncryption == null ? Codegen.empty() : this.infrastructureEncryption;
     }
 
@@ -41,7 +41,7 @@ public final class VaultPropertiesEncryptionArgs extends io.pulumi.resources.Res
     @Import(name="kekIdentity")
       private final @Nullable Output<CmkKekIdentityArgs> kekIdentity;
 
-    public Output<CmkKekIdentityArgs> getKekIdentity() {
+    public Output<CmkKekIdentityArgs> kekIdentity() {
         return this.kekIdentity == null ? Codegen.empty() : this.kekIdentity;
     }
 
@@ -52,7 +52,7 @@ public final class VaultPropertiesEncryptionArgs extends io.pulumi.resources.Res
     @Import(name="keyVaultProperties")
       private final @Nullable Output<CmkKeyVaultPropertiesArgs> keyVaultProperties;
 
-    public Output<CmkKeyVaultPropertiesArgs> getKeyVaultProperties() {
+    public Output<CmkKeyVaultPropertiesArgs> keyVaultProperties() {
         return this.keyVaultProperties == null ? Codegen.empty() : this.keyVaultProperties;
     }
 

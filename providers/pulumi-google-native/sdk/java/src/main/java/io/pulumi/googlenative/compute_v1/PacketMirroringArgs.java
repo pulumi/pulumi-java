@@ -28,7 +28,7 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="collectorIlb")
       private final @Nullable Output<PacketMirroringForwardingRuleInfoArgs> collectorIlb;
 
-    public Output<PacketMirroringForwardingRuleInfoArgs> getCollectorIlb() {
+    public Output<PacketMirroringForwardingRuleInfoArgs> collectorIlb() {
         return this.collectorIlb == null ? Codegen.empty() : this.collectorIlb;
     }
 
@@ -39,7 +39,7 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -50,7 +50,7 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="enable")
       private final @Nullable Output<PacketMirroringEnable> enable;
 
-    public Output<PacketMirroringEnable> getEnable() {
+    public Output<PacketMirroringEnable> enable() {
         return this.enable == null ? Codegen.empty() : this.enable;
     }
 
@@ -61,7 +61,7 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="filter")
       private final @Nullable Output<PacketMirroringFilterArgs> filter;
 
-    public Output<PacketMirroringFilterArgs> getFilter() {
+    public Output<PacketMirroringFilterArgs> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -72,7 +72,7 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="mirroredResources")
       private final @Nullable Output<PacketMirroringMirroredResourceInfoArgs> mirroredResources;
 
-    public Output<PacketMirroringMirroredResourceInfoArgs> getMirroredResources() {
+    public Output<PacketMirroringMirroredResourceInfoArgs> mirroredResources() {
         return this.mirroredResources == null ? Codegen.empty() : this.mirroredResources;
     }
 
@@ -83,7 +83,7 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -94,7 +94,7 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="network")
       private final @Nullable Output<PacketMirroringNetworkInfoArgs> network;
 
-    public Output<PacketMirroringNetworkInfoArgs> getNetwork() {
+    public Output<PacketMirroringNetworkInfoArgs> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
@@ -105,28 +105,28 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 

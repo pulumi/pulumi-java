@@ -23,7 +23,7 @@ public final class SdkVersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sdkSupportStatus", required=true)
       private final String sdkSupportStatus;
 
-    public String getSdkSupportStatus() {
+    public String sdkSupportStatus() {
         return this.sdkSupportStatus;
     }
 
@@ -34,7 +34,7 @@ public final class SdkVersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 
@@ -45,7 +45,7 @@ public final class SdkVersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="versionDisplayName", required=true)
       private final String versionDisplayName;
 
-    public String getVersionDisplayName() {
+    public String versionDisplayName() {
         return this.versionDisplayName;
     }
 

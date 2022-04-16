@@ -42,7 +42,7 @@ public class HcxEnterpriseSite extends io.pulumi.resources.CustomResource {
      * @return The activation key
      * 
      */
-    public Output<String> getActivationKey() {
+    public Output<String> activationKey() {
         return this.activationKey;
     }
     /**
@@ -56,7 +56,7 @@ public class HcxEnterpriseSite extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +70,7 @@ public class HcxEnterpriseSite extends io.pulumi.resources.CustomResource {
      * @return The status of the HCX Enterprise Site
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -84,7 +84,7 @@ public class HcxEnterpriseSite extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

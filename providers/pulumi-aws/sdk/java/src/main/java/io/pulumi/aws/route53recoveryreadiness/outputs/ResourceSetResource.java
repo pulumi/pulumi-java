@@ -42,28 +42,28 @@ public final class ResourceSetResource {
         this.resourceArn = resourceArn;
     }
 
-    public Optional<String> getComponentId() {
+    public Optional<String> componentId() {
         return Optional.ofNullable(this.componentId);
     }
     /**
      * Component for DNS/Routing Control Readiness Checks.
      * 
     */
-    public Optional<ResourceSetResourceDnsTargetResource> getDnsTargetResource() {
+    public Optional<ResourceSetResourceDnsTargetResource> dnsTargetResource() {
         return Optional.ofNullable(this.dnsTargetResource);
     }
     /**
      * Recovery group ARN or cell ARN that contains this resource set.
      * 
     */
-    public List<String> getReadinessScopes() {
+    public List<String> readinessScopes() {
         return this.readinessScopes == null ? List.of() : this.readinessScopes;
     }
     /**
      * ARN of the resource.
      * 
     */
-    public Optional<String> getResourceArn() {
+    public Optional<String> resourceArn() {
         return Optional.ofNullable(this.resourceArn);
     }
 

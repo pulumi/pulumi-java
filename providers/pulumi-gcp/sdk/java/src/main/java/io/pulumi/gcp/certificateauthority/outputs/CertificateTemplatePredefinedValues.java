@@ -60,35 +60,35 @@ public final class CertificateTemplatePredefinedValues {
      * Optional. Describes custom X.509 extensions.
      * 
     */
-    public List<CertificateTemplatePredefinedValuesAdditionalExtension> getAdditionalExtensions() {
+    public List<CertificateTemplatePredefinedValuesAdditionalExtension> additionalExtensions() {
         return this.additionalExtensions == null ? List.of() : this.additionalExtensions;
     }
     /**
      * Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the "Authority Information Access" extension in the certificate.
      * 
     */
-    public List<String> getAiaOcspServers() {
+    public List<String> aiaOcspServers() {
         return this.aiaOcspServers == null ? List.of() : this.aiaOcspServers;
     }
     /**
      * Optional. Describes options in this X509Parameters that are relevant in a CA certificate.
      * 
     */
-    public Optional<CertificateTemplatePredefinedValuesCaOptions> getCaOptions() {
+    public Optional<CertificateTemplatePredefinedValuesCaOptions> caOptions() {
         return Optional.ofNullable(this.caOptions);
     }
     /**
      * Optional. Indicates the intended use for keys that correspond to a certificate.
      * 
     */
-    public Optional<CertificateTemplatePredefinedValuesKeyUsage> getKeyUsage() {
+    public Optional<CertificateTemplatePredefinedValuesKeyUsage> keyUsage() {
         return Optional.ofNullable(this.keyUsage);
     }
     /**
      * Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
      * 
     */
-    public List<CertificateTemplatePredefinedValuesPolicyId> getPolicyIds() {
+    public List<CertificateTemplatePredefinedValuesPolicyId> policyIds() {
         return this.policyIds == null ? List.of() : this.policyIds;
     }
 

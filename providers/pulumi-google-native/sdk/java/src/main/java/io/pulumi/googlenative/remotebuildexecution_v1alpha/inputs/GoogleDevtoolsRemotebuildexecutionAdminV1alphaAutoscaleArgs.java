@@ -26,7 +26,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs e
     @Import(name="maxSize")
       private final @Nullable Output<String> maxSize;
 
-    public Output<String> getMaxSize() {
+    public Output<String> maxSize() {
         return this.maxSize == null ? Codegen.empty() : this.maxSize;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs e
     @Import(name="minSize")
       private final @Nullable Output<String> minSize;
 
-    public Output<String> getMinSize() {
+    public Output<String> minSize() {
         return this.minSize == null ? Codegen.empty() : this.minSize;
     }
 

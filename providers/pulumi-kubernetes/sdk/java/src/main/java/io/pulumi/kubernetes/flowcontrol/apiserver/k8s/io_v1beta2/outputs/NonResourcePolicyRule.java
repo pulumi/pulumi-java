@@ -45,14 +45,14 @@ public final class NonResourcePolicyRule {
      *     "*" matches all non-resource urls. if it is present, it must be the only entry. Required.
      * 
     */
-    public List<String> getNonResourceURLs() {
+    public List<String> nonResourceURLs() {
         return this.nonResourceURLs;
     }
     /**
      * `verbs` is a list of matching verbs and may not be empty. "*" matches all verbs. If it is present, it must be the only entry. Required.
      * 
     */
-    public List<String> getVerbs() {
+    public List<String> verbs() {
         return this.verbs;
     }
 

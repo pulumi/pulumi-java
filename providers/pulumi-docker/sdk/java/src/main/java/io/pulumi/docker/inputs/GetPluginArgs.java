@@ -17,14 +17,14 @@ public final class GetPluginArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="alias")
       private final @Nullable String alias;
 
-    public Optional<String> getAlias() {
+    public Optional<String> alias() {
         return this.alias == null ? Optional.empty() : Optional.ofNullable(this.alias);
     }
 
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 

@@ -24,7 +24,7 @@ public final class AutoscalingPolicyScaleInControlResponse extends io.pulumi.res
     @Import(name="maxScaledInReplicas", required=true)
       private final FixedOrPercentResponse maxScaledInReplicas;
 
-    public FixedOrPercentResponse getMaxScaledInReplicas() {
+    public FixedOrPercentResponse maxScaledInReplicas() {
         return this.maxScaledInReplicas;
     }
 
@@ -35,7 +35,7 @@ public final class AutoscalingPolicyScaleInControlResponse extends io.pulumi.res
     @Import(name="timeWindowSec", required=true)
       private final Integer timeWindowSec;
 
-    public Integer getTimeWindowSec() {
+    public Integer timeWindowSec() {
         return this.timeWindowSec;
     }
 

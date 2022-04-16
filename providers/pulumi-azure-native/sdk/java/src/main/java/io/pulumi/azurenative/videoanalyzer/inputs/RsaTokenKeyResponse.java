@@ -23,7 +23,7 @@ public final class RsaTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="alg", required=true)
       private final String alg;
 
-    public String getAlg() {
+    public String alg() {
         return this.alg;
     }
 
@@ -34,7 +34,7 @@ public final class RsaTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="e", required=true)
       private final String e;
 
-    public String getE() {
+    public String e() {
         return this.e;
     }
 
@@ -45,7 +45,7 @@ public final class RsaTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="kid", required=true)
       private final String kid;
 
-    public String getKid() {
+    public String kid() {
         return this.kid;
     }
 
@@ -56,7 +56,7 @@ public final class RsaTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="n", required=true)
       private final String n;
 
-    public String getN() {
+    public String n() {
         return this.n;
     }
 
@@ -68,7 +68,7 @@ public final class RsaTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

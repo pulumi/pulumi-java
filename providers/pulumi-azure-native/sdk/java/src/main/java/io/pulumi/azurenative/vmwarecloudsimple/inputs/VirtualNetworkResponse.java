@@ -24,7 +24,7 @@ public final class VirtualNetworkResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="assignable", required=true)
       private final Boolean assignable;
 
-    public Boolean getAssignable() {
+    public Boolean assignable() {
         return this.assignable;
     }
 
@@ -35,7 +35,7 @@ public final class VirtualNetworkResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -46,7 +46,7 @@ public final class VirtualNetworkResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
@@ -57,7 +57,7 @@ public final class VirtualNetworkResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -68,7 +68,7 @@ public final class VirtualNetworkResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="privateCloudId", required=true)
       private final String privateCloudId;
 
-    public String getPrivateCloudId() {
+    public String privateCloudId() {
         return this.privateCloudId;
     }
 
@@ -79,7 +79,7 @@ public final class VirtualNetworkResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

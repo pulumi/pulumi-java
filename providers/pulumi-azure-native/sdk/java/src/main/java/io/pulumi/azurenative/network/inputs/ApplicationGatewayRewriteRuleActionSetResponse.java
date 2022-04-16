@@ -27,7 +27,7 @@ public final class ApplicationGatewayRewriteRuleActionSetResponse extends io.pul
     @Import(name="requestHeaderConfigurations")
       private final @Nullable List<ApplicationGatewayHeaderConfigurationResponse> requestHeaderConfigurations;
 
-    public List<ApplicationGatewayHeaderConfigurationResponse> getRequestHeaderConfigurations() {
+    public List<ApplicationGatewayHeaderConfigurationResponse> requestHeaderConfigurations() {
         return this.requestHeaderConfigurations == null ? List.of() : this.requestHeaderConfigurations;
     }
 
@@ -38,7 +38,7 @@ public final class ApplicationGatewayRewriteRuleActionSetResponse extends io.pul
     @Import(name="responseHeaderConfigurations")
       private final @Nullable List<ApplicationGatewayHeaderConfigurationResponse> responseHeaderConfigurations;
 
-    public List<ApplicationGatewayHeaderConfigurationResponse> getResponseHeaderConfigurations() {
+    public List<ApplicationGatewayHeaderConfigurationResponse> responseHeaderConfigurations() {
         return this.responseHeaderConfigurations == null ? List.of() : this.responseHeaderConfigurations;
     }
 
@@ -49,7 +49,7 @@ public final class ApplicationGatewayRewriteRuleActionSetResponse extends io.pul
     @Import(name="urlConfiguration")
       private final @Nullable ApplicationGatewayUrlConfigurationResponse urlConfiguration;
 
-    public Optional<ApplicationGatewayUrlConfigurationResponse> getUrlConfiguration() {
+    public Optional<ApplicationGatewayUrlConfigurationResponse> urlConfiguration() {
         return this.urlConfiguration == null ? Optional.empty() : Optional.ofNullable(this.urlConfiguration);
     }
 

@@ -33,14 +33,14 @@ public final class ProcessingOptionsResponse {
      * Optional. If set to `true`, the service does not attempt to resolve a more precise address for the job.
      * 
     */
-    public Boolean getDisableStreetAddressResolution() {
+    public Boolean disableStreetAddressResolution() {
         return this.disableStreetAddressResolution;
     }
     /**
      * Optional. Option for job HTML content sanitization. Applied fields are: * description * applicationInfo.instruction * incentives * qualifications * responsibilities HTML tags in these fields may be stripped if sanitiazation is not disabled. Defaults to HtmlSanitization.SIMPLE_FORMATTING_ONLY.
      * 
     */
-    public String getHtmlSanitization() {
+    public String htmlSanitization() {
         return this.htmlSanitization;
     }
 

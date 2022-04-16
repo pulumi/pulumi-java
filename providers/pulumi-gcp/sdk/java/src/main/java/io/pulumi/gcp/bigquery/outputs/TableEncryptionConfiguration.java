@@ -42,14 +42,14 @@ public final class TableEncryptionConfiguration {
      * `gcp.kms.CryptoKeyIAMBinding` resource.
      * 
     */
-    public String getKmsKeyName() {
+    public String kmsKeyName() {
         return this.kmsKeyName;
     }
     /**
      * The self link or full name of the kms key version used to encrypt this table.
      * 
     */
-    public Optional<String> getKmsKeyVersion() {
+    public Optional<String> kmsKeyVersion() {
         return Optional.ofNullable(this.kmsKeyVersion);
     }
 

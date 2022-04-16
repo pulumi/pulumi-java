@@ -18,21 +18,21 @@ public final class PipelineChannelArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="channelName", required=true)
       private final Output<String> channelName;
 
-    public Output<String> getChannelName() {
+    public Output<String> channelName() {
         return this.channelName;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="next")
       private final @Nullable Output<String> next;
 
-    public Output<String> getNext() {
+    public Output<String> next() {
         return this.next == null ? Codegen.empty() : this.next;
     }
 

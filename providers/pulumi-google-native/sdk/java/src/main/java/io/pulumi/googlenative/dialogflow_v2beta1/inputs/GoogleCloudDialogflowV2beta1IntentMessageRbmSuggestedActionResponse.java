@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRe
     @Import(name="dial", required=true)
       private final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialResponse dial;
 
-    public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialResponse getDial() {
+    public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialResponse dial() {
         return this.dial;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRe
     @Import(name="openUrl", required=true)
       private final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse openUrl;
 
-    public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse getOpenUrl() {
+    public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse openUrl() {
         return this.openUrl;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRe
     @Import(name="postbackData", required=true)
       private final String postbackData;
 
-    public String getPostbackData() {
+    public String postbackData() {
         return this.postbackData;
     }
 
@@ -59,7 +59,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRe
     @Import(name="shareLocation", required=true)
       private final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse shareLocation;
 
-    public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse getShareLocation() {
+    public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse shareLocation() {
         return this.shareLocation;
     }
 
@@ -70,7 +70,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRe
     @Import(name="text", required=true)
       private final String text;
 
-    public String getText() {
+    public String text() {
         return this.text;
     }
 

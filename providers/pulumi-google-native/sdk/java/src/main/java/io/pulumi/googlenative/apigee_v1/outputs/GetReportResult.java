@@ -175,154 +175,154 @@ public final class GetReportResult {
      * This field contains the chart type for the report
      * 
     */
-    public String getChartType() {
+    public String chartType() {
         return this.chartType;
     }
     /**
      * Legacy field: not used. This field contains a list of comments associated with custom report
      * 
     */
-    public List<String> getComments() {
+    public List<String> comments() {
         return this.comments;
     }
     /**
      * Unix time when the app was created json key: createdAt
      * 
     */
-    public String getCreatedAt() {
+    public String createdAt() {
         return this.createdAt;
     }
     /**
      * This contains the list of dimensions for the report
      * 
     */
-    public List<String> getDimensions() {
+    public List<String> dimensions() {
         return this.dimensions;
     }
     /**
      * This is the display name for the report
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Environment name
      * 
     */
-    public String getEnvironment() {
+    public String environment() {
         return this.environment;
     }
     /**
      * This field contains the filter expression
      * 
     */
-    public String getFilter() {
+    public String filter() {
         return this.filter;
     }
     /**
      * Legacy field: not used. Contains the from time for the report
      * 
     */
-    public String getFromTime() {
+    public String fromTime() {
         return this.fromTime;
     }
     /**
      * Modified time of this entity as milliseconds since epoch. json key: lastModifiedAt
      * 
     */
-    public String getLastModifiedAt() {
+    public String lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
      * Last viewed time of this entity as milliseconds since epoch
      * 
     */
-    public String getLastViewedAt() {
+    public String lastViewedAt() {
         return this.lastViewedAt;
     }
     /**
      * Legacy field: not used This field contains the limit for the result retrieved
      * 
     */
-    public String getLimit() {
+    public String limit() {
         return this.limit;
     }
     /**
      * This contains the list of metrics
      * 
     */
-    public List<GoogleCloudApigeeV1CustomReportMetricResponse> getMetrics() {
+    public List<GoogleCloudApigeeV1CustomReportMetricResponse> metrics() {
         return this.metrics;
     }
     /**
      * Unique identifier for the report T his is a legacy field used to encode custom report unique id
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Legacy field: not used. This field contains the offset for the data
      * 
     */
-    public String getOffset() {
+    public String offset() {
         return this.offset;
     }
     /**
      * Organization name
      * 
     */
-    public String getOrganization() {
+    public String organization() {
         return this.organization;
     }
     /**
      * This field contains report properties such as ui metadata etc.
      * 
     */
-    public List<GoogleCloudApigeeV1ReportPropertyResponse> getProperties() {
+    public List<GoogleCloudApigeeV1ReportPropertyResponse> properties() {
         return this.properties;
     }
     /**
      * Legacy field: not used much. Contains the list of sort by columns
      * 
     */
-    public List<String> getSortByCols() {
+    public List<String> sortByCols() {
         return this.sortByCols;
     }
     /**
      * Legacy field: not used much. Contains the sort order for the sort columns
      * 
     */
-    public String getSortOrder() {
+    public String sortOrder() {
         return this.sortOrder;
     }
     /**
      * Legacy field: not used. This field contains a list of tags associated with custom report
      * 
     */
-    public List<String> getTags() {
+    public List<String> tags() {
         return this.tags;
     }
     /**
      * This field contains the time unit of aggregation for the report
      * 
     */
-    public String getTimeUnit() {
+    public String timeUnit() {
         return this.timeUnit;
     }
     /**
      * Legacy field: not used. Contains the end time for the report
      * 
     */
-    public String getToTime() {
+    public String toTime() {
         return this.toTime;
     }
     /**
      * Legacy field: not used. This field contains the top k parameter value for restricting the result
      * 
     */
-    public String getTopk() {
+    public String topk() {
         return this.topk;
     }
 

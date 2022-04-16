@@ -29,7 +29,7 @@ public final class FirewallPolicyRuleApplicationProtocolArgs extends io.pulumi.r
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -40,7 +40,7 @@ public final class FirewallPolicyRuleApplicationProtocolArgs extends io.pulumi.r
     @Import(name="protocolType")
       private final @Nullable Output<Either<String,FirewallPolicyRuleApplicationProtocolType>> protocolType;
 
-    public Output<Either<String,FirewallPolicyRuleApplicationProtocolType>> getProtocolType() {
+    public Output<Either<String,FirewallPolicyRuleApplicationProtocolType>> protocolType() {
         return this.protocolType == null ? Codegen.empty() : this.protocolType;
     }
 

@@ -22,7 +22,7 @@ public final class VirtualGatewaySpecBackendDefaultsGetArgs extends io.pulumi.re
     @Import(name="clientPolicy")
       private final @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyGetArgs> clientPolicy;
 
-    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyGetArgs> getClientPolicy() {
+    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyGetArgs> clientPolicy() {
         return this.clientPolicy == null ? Codegen.empty() : this.clientPolicy;
     }
 

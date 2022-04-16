@@ -25,7 +25,7 @@ public final class EndpointMatcherMetadataLabelMatcherResponse extends io.pulumi
     @Import(name="metadataLabelMatchCriteria", required=true)
       private final String metadataLabelMatchCriteria;
 
-    public String getMetadataLabelMatchCriteria() {
+    public String metadataLabelMatchCriteria() {
         return this.metadataLabelMatchCriteria;
     }
 
@@ -36,7 +36,7 @@ public final class EndpointMatcherMetadataLabelMatcherResponse extends io.pulumi
     @Import(name="metadataLabels", required=true)
       private final List<EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse> metadataLabels;
 
-    public List<EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse> getMetadataLabels() {
+    public List<EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse> metadataLabels() {
         return this.metadataLabels;
     }
 

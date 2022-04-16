@@ -30,7 +30,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="addonFeatures")
       private final @Nullable Output<List<String>> addonFeatures;
 
-    public Output<List<String>> getAddonFeatures() {
+    public Output<List<String>> addonFeatures() {
         return this.addonFeatures == null ? Codegen.empty() : this.addonFeatures;
     }
 
@@ -41,7 +41,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="adminPassword")
       private final @Nullable Output<String> adminPassword;
 
-    public Output<String> getAdminPassword() {
+    public Output<String> adminPassword() {
         return this.adminPassword == null ? Codegen.empty() : this.adminPassword;
     }
 
@@ -52,7 +52,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="adminUserName", required=true)
       private final Output<String> adminUserName;
 
-    public Output<String> getAdminUserName() {
+    public Output<String> adminUserName() {
         return this.adminUserName;
     }
 
@@ -63,7 +63,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="azureActiveDirectory")
       private final @Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory;
 
-    public Output<AzureActiveDirectoryArgs> getAzureActiveDirectory() {
+    public Output<AzureActiveDirectoryArgs> azureActiveDirectory() {
         return this.azureActiveDirectory == null ? Codegen.empty() : this.azureActiveDirectory;
     }
 
@@ -74,7 +74,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientConnectionPort")
       private final @Nullable Output<Integer> clientConnectionPort;
 
-    public Output<Integer> getClientConnectionPort() {
+    public Output<Integer> clientConnectionPort() {
         return this.clientConnectionPort == null ? Codegen.empty() : this.clientConnectionPort;
     }
 
@@ -85,7 +85,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clients")
       private final @Nullable Output<List<ClientCertificateArgs>> clients;
 
-    public Output<List<ClientCertificateArgs>> getClients() {
+    public Output<List<ClientCertificateArgs>> clients() {
         return this.clients == null ? Codegen.empty() : this.clients;
     }
 
@@ -96,7 +96,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterCodeVersion")
       private final @Nullable Output<String> clusterCodeVersion;
 
-    public Output<String> getClusterCodeVersion() {
+    public Output<String> clusterCodeVersion() {
         return this.clusterCodeVersion == null ? Codegen.empty() : this.clusterCodeVersion;
     }
 
@@ -107,7 +107,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName == null ? Codegen.empty() : this.clusterName;
     }
 
@@ -118,7 +118,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dnsName", required=true)
       private final Output<String> dnsName;
 
-    public Output<String> getDnsName() {
+    public Output<String> dnsName() {
         return this.dnsName;
     }
 
@@ -129,7 +129,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fabricSettings")
       private final @Nullable Output<List<SettingsSectionDescriptionArgs>> fabricSettings;
 
-    public Output<List<SettingsSectionDescriptionArgs>> getFabricSettings() {
+    public Output<List<SettingsSectionDescriptionArgs>> fabricSettings() {
         return this.fabricSettings == null ? Codegen.empty() : this.fabricSettings;
     }
 
@@ -140,7 +140,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpGatewayConnectionPort")
       private final @Nullable Output<Integer> httpGatewayConnectionPort;
 
-    public Output<Integer> getHttpGatewayConnectionPort() {
+    public Output<Integer> httpGatewayConnectionPort() {
         return this.httpGatewayConnectionPort == null ? Codegen.empty() : this.httpGatewayConnectionPort;
     }
 
@@ -151,7 +151,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancingRules")
       private final @Nullable Output<List<LoadBalancingRuleArgs>> loadBalancingRules;
 
-    public Output<List<LoadBalancingRuleArgs>> getLoadBalancingRules() {
+    public Output<List<LoadBalancingRuleArgs>> loadBalancingRules() {
         return this.loadBalancingRules == null ? Codegen.empty() : this.loadBalancingRules;
     }
 
@@ -162,7 +162,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -173,7 +173,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -184,7 +184,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -195,7 +195,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -43,21 +43,21 @@ public final class VolumeBackupsResponse {
      * Total count of backups for volume
      * 
     */
-    public Optional<Integer> getBackupsCount() {
+    public Optional<Integer> backupsCount() {
         return Optional.ofNullable(this.backupsCount);
     }
     /**
      * Policy enabled
      * 
     */
-    public Optional<Boolean> getPolicyEnabled() {
+    public Optional<Boolean> policyEnabled() {
         return Optional.ofNullable(this.policyEnabled);
     }
     /**
      * Volume name
      * 
     */
-    public Optional<String> getVolumeName() {
+    public Optional<String> volumeName() {
         return Optional.ofNullable(this.volumeName);
     }
 

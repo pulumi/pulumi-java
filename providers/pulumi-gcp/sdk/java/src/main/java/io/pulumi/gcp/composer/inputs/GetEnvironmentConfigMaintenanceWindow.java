@@ -15,21 +15,21 @@ public final class GetEnvironmentConfigMaintenanceWindow extends io.pulumi.resou
     @Import(name="endTime", required=true)
       private final String endTime;
 
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
 
     @Import(name="recurrence", required=true)
       private final String recurrence;
 
-    public String getRecurrence() {
+    public String recurrence() {
         return this.recurrence;
     }
 
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

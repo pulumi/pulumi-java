@@ -26,7 +26,7 @@ public final class MediaGraphAssetSinkArgs extends io.pulumi.resources.ResourceA
     @Import(name="assetName", required=true)
       private final Output<String> assetName;
 
-    public Output<String> getAssetName() {
+    public Output<String> assetName() {
         return this.assetName;
     }
 
@@ -37,7 +37,7 @@ public final class MediaGraphAssetSinkArgs extends io.pulumi.resources.ResourceA
     @Import(name="inputs", required=true)
       private final Output<List<String>> inputs;
 
-    public Output<List<String>> getInputs() {
+    public Output<List<String>> inputs() {
         return this.inputs;
     }
 
@@ -48,7 +48,7 @@ public final class MediaGraphAssetSinkArgs extends io.pulumi.resources.ResourceA
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -60,7 +60,7 @@ public final class MediaGraphAssetSinkArgs extends io.pulumi.resources.ResourceA
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 

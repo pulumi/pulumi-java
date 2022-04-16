@@ -23,13 +23,13 @@ public final class FeatureGroupDataCatalogConfig {
         this.tableName = tableName;
     }
 
-    public String getCatalog() {
+    public String catalog() {
         return this.catalog;
     }
-    public String getDatabase() {
+    public String database() {
         return this.database;
     }
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
 

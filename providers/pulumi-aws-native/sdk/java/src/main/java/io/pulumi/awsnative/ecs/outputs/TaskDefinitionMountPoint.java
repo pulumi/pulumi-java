@@ -26,13 +26,13 @@ public final class TaskDefinitionMountPoint {
         this.sourceVolume = sourceVolume;
     }
 
-    public Optional<String> getContainerPath() {
+    public Optional<String> containerPath() {
         return Optional.ofNullable(this.containerPath);
     }
-    public Optional<Boolean> getReadOnly() {
+    public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
-    public Optional<String> getSourceVolume() {
+    public Optional<String> sourceVolume() {
         return Optional.ofNullable(this.sourceVolume);
     }
 

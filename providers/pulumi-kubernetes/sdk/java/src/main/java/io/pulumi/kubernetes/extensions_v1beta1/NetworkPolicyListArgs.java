@@ -25,7 +25,7 @@ public final class NetworkPolicyListArgs extends io.pulumi.resources.ResourceArg
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
+    public Output<String> apiVersion() {
         return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
@@ -36,7 +36,7 @@ public final class NetworkPolicyListArgs extends io.pulumi.resources.ResourceArg
     @Import(name="items", required=true)
       private final Output<List<NetworkPolicyArgs>> items;
 
-    public Output<List<NetworkPolicyArgs>> getItems() {
+    public Output<List<NetworkPolicyArgs>> items() {
         return this.items;
     }
 
@@ -47,7 +47,7 @@ public final class NetworkPolicyListArgs extends io.pulumi.resources.ResourceArg
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -58,7 +58,7 @@ public final class NetworkPolicyListArgs extends io.pulumi.resources.ResourceArg
     @Import(name="metadata")
       private final @Nullable Output<ListMetaArgs> metadata;
 
-    public Output<ListMetaArgs> getMetadata() {
+    public Output<ListMetaArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 

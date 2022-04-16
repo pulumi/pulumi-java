@@ -83,63 +83,63 @@ public final class EnvironmentDetailsResponse {
      * Description of the Environment
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Publishing state of the environment setting Possible values are Creating, Created, Failed
      * 
     */
-    public String getEnvironmentState() {
+    public String environmentState() {
         return this.environmentState;
     }
     /**
      * Resource Id of the environment
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The details of the latest operation. ex: status, error
      * 
     */
-    public LatestOperationResultResponse getLatestOperationResult() {
+    public LatestOperationResultResponse latestOperationResult() {
         return this.latestOperationResult;
     }
     /**
      * Name of the Environment
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * When the password was last reset on the environment.
      * 
     */
-    public String getPasswordLastReset() {
+    public String passwordLastReset() {
         return this.passwordLastReset;
     }
     /**
      * The provisioning state of the environment. This also includes LabIsFull and NotYetProvisioned status.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * How long the environment has been used by a lab user
      * 
     */
-    public String getTotalUsage() {
+    public String totalUsage() {
         return this.totalUsage;
     }
     /**
      * Details of backing DTL virtual machine with compute and network details.
      * 
     */
-    public VirtualMachineDetailsResponse getVirtualMachineDetails() {
+    public VirtualMachineDetailsResponse virtualMachineDetails() {
         return this.virtualMachineDetails;
     }
 

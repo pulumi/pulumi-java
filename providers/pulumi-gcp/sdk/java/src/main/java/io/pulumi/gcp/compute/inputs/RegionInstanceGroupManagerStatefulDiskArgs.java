@@ -22,7 +22,7 @@ public final class RegionInstanceGroupManagerStatefulDiskArgs extends io.pulumi.
     @Import(name="deleteRule")
       private final @Nullable Output<String> deleteRule;
 
-    public Output<String> getDeleteRule() {
+    public Output<String> deleteRule() {
         return this.deleteRule == null ? Codegen.empty() : this.deleteRule;
     }
 
@@ -33,7 +33,7 @@ public final class RegionInstanceGroupManagerStatefulDiskArgs extends io.pulumi.
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 

@@ -20,10 +20,10 @@ public final class DatasetGlueConfiguration {
         this.tableName = tableName;
     }
 
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
 

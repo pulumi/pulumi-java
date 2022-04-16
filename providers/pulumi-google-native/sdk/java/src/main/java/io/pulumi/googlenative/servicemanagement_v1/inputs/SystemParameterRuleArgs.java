@@ -28,7 +28,7 @@ public final class SystemParameterRuleArgs extends io.pulumi.resources.ResourceA
     @Import(name="parameters")
       private final @Nullable Output<List<SystemParameterArgs>> parameters;
 
-    public Output<List<SystemParameterArgs>> getParameters() {
+    public Output<List<SystemParameterArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -39,7 +39,7 @@ public final class SystemParameterRuleArgs extends io.pulumi.resources.ResourceA
     @Import(name="selector")
       private final @Nullable Output<String> selector;
 
-    public Output<String> getSelector() {
+    public Output<String> selector() {
         return this.selector == null ? Codegen.empty() : this.selector;
     }
 

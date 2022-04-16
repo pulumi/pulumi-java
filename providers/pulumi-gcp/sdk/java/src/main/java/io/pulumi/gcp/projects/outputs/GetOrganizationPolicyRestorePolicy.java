@@ -16,7 +16,7 @@ public final class GetOrganizationPolicyRestorePolicy {
         this.default_ = default_;
     }
 
-    public Boolean getDefault_() {
+    public Boolean default_() {
         return this.default_;
     }
 

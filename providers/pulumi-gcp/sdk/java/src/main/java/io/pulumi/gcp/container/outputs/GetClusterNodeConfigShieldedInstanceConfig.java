@@ -20,10 +20,10 @@ public final class GetClusterNodeConfigShieldedInstanceConfig {
         this.enableSecureBoot = enableSecureBoot;
     }
 
-    public Boolean getEnableIntegrityMonitoring() {
+    public Boolean enableIntegrityMonitoring() {
         return this.enableIntegrityMonitoring;
     }
-    public Boolean getEnableSecureBoot() {
+    public Boolean enableSecureBoot() {
         return this.enableSecureBoot;
     }
 

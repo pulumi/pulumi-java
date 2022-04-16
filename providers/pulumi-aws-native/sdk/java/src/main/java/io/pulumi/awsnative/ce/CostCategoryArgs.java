@@ -23,21 +23,21 @@ public final class CostCategoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultValue")
       private final @Nullable Output<String> defaultValue;
 
-    public Output<String> getDefaultValue() {
+    public Output<String> defaultValue() {
         return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="ruleVersion", required=true)
       private final Output<CostCategoryRuleVersion> ruleVersion;
 
-    public Output<CostCategoryRuleVersion> getRuleVersion() {
+    public Output<CostCategoryRuleVersion> ruleVersion() {
         return this.ruleVersion;
     }
 
@@ -48,7 +48,7 @@ public final class CostCategoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rules", required=true)
       private final Output<String> rules;
 
-    public Output<String> getRules() {
+    public Output<String> rules() {
         return this.rules;
     }
 
@@ -59,7 +59,7 @@ public final class CostCategoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="splitChargeRules")
       private final @Nullable Output<String> splitChargeRules;
 
-    public Output<String> getSplitChargeRules() {
+    public Output<String> splitChargeRules() {
         return this.splitChargeRules == null ? Codegen.empty() : this.splitChargeRules;
     }
 

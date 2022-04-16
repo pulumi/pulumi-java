@@ -23,7 +23,7 @@ public final class WorkerConfigurationState extends io.pulumi.resources.Resource
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class WorkerConfigurationState extends io.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -45,7 +45,7 @@ public final class WorkerConfigurationState extends io.pulumi.resources.Resource
     @Import(name="latestRevision")
       private final @Nullable Output<Integer> latestRevision;
 
-    public Output<Integer> getLatestRevision() {
+    public Output<Integer> latestRevision() {
         return this.latestRevision == null ? Codegen.empty() : this.latestRevision;
     }
 
@@ -56,7 +56,7 @@ public final class WorkerConfigurationState extends io.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -67,7 +67,7 @@ public final class WorkerConfigurationState extends io.pulumi.resources.Resource
     @Import(name="propertiesFileContent")
       private final @Nullable Output<String> propertiesFileContent;
 
-    public Output<String> getPropertiesFileContent() {
+    public Output<String> propertiesFileContent() {
         return this.propertiesFileContent == null ? Codegen.empty() : this.propertiesFileContent;
     }
 

@@ -20,10 +20,10 @@ public final class GetKMSCryptoKeyVersionTemplate {
         this.protectionLevel = protectionLevel;
     }
 
-    public String getAlgorithm() {
+    public String algorithm() {
         return this.algorithm;
     }
-    public String getProtectionLevel() {
+    public String protectionLevel() {
         return this.protectionLevel;
     }
 

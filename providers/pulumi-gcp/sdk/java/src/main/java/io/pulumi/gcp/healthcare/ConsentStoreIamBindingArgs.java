@@ -20,7 +20,7 @@ public final class ConsentStoreIamBindingArgs extends io.pulumi.resources.Resour
     @Import(name="condition")
       private final @Nullable Output<ConsentStoreIamBindingConditionArgs> condition;
 
-    public Output<ConsentStoreIamBindingConditionArgs> getCondition() {
+    public Output<ConsentStoreIamBindingConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -31,7 +31,7 @@ public final class ConsentStoreIamBindingArgs extends io.pulumi.resources.Resour
     @Import(name="consentStoreId", required=true)
       private final Output<String> consentStoreId;
 
-    public Output<String> getConsentStoreId() {
+    public Output<String> consentStoreId() {
         return this.consentStoreId;
     }
 
@@ -44,14 +44,14 @@ public final class ConsentStoreIamBindingArgs extends io.pulumi.resources.Resour
     @Import(name="dataset", required=true)
       private final Output<String> dataset;
 
-    public Output<String> getDataset() {
+    public Output<String> dataset() {
         return this.dataset;
     }
 
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
@@ -64,7 +64,7 @@ public final class ConsentStoreIamBindingArgs extends io.pulumi.resources.Resour
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

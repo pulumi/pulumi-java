@@ -28,7 +28,7 @@ public final class MysqlDatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="database")
       private final @Nullable Output<String> database;
 
-    public Output<String> getDatabase() {
+    public Output<String> database() {
         return this.database == null ? Codegen.empty() : this.database;
     }
 
@@ -39,7 +39,7 @@ public final class MysqlDatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mysqlTables")
       private final @Nullable Output<List<MysqlTableArgs>> mysqlTables;
 
-    public Output<List<MysqlTableArgs>> getMysqlTables() {
+    public Output<List<MysqlTableArgs>> mysqlTables() {
         return this.mysqlTables == null ? Codegen.empty() : this.mysqlTables;
     }
 

@@ -37,7 +37,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return An array of objects representing the add-ons to enable for the new instance.
      * 
      */
-    public Output</* @Nullable */ List<InstanceAddOn>> getAddOns() {
+    public Output</* @Nullable */ List<InstanceAddOn>> addOns() {
         return this.addOns;
     }
     /**
@@ -51,7 +51,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The Availability Zone in which to create your instance. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.
      * 
      */
-    public Output</* @Nullable */ String> getAvailabilityZone() {
+    public Output</* @Nullable */ String> availabilityZone() {
         return this.availabilityZone;
     }
     /**
@@ -65,7 +65,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The ID for a virtual private server image (e.g., app_wordpress_4_4 or app_lamp_7_0 ). Use the get blueprints operation to return a list of available images (or blueprints ).
      * 
      */
-    public Output<String> getBlueprintId() {
+    public Output<String> blueprintId() {
         return this.blueprintId;
     }
     /**
@@ -79,19 +79,19 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The bundle of specification information for your virtual private server (or instance ), including the pricing plan (e.g., micro_1_0 ).
      * 
      */
-    public Output<String> getBundleId() {
+    public Output<String> bundleId() {
         return this.bundleId;
     }
     @Export(name="hardware", type=InstanceHardware.class, parameters={})
     private Output</* @Nullable */ InstanceHardware> hardware;
 
-    public Output</* @Nullable */ InstanceHardware> getHardware() {
+    public Output</* @Nullable */ InstanceHardware> hardware() {
         return this.hardware;
     }
     @Export(name="instanceArn", type=String.class, parameters={})
     private Output<String> instanceArn;
 
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
     /**
@@ -105,7 +105,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The names to use for your new Lightsail instance.
      * 
      */
-    public Output<String> getInstanceName() {
+    public Output<String> instanceName() {
         return this.instanceName;
     }
     /**
@@ -119,7 +119,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Is the IP Address of the Instance is the static IP
      * 
      */
-    public Output<Boolean> getIsStaticIp() {
+    public Output<Boolean> isStaticIp() {
         return this.isStaticIp;
     }
     /**
@@ -133,19 +133,19 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The name of your key pair.
      * 
      */
-    public Output</* @Nullable */ String> getKeyPairName() {
+    public Output</* @Nullable */ String> keyPairName() {
         return this.keyPairName;
     }
     @Export(name="location", type=InstanceLocation.class, parameters={})
     private Output</* @Nullable */ InstanceLocation> location;
 
-    public Output</* @Nullable */ InstanceLocation> getLocation() {
+    public Output</* @Nullable */ InstanceLocation> location() {
         return this.location;
     }
     @Export(name="networking", type=InstanceNetworking.class, parameters={})
     private Output</* @Nullable */ InstanceNetworking> networking;
 
-    public Output</* @Nullable */ InstanceNetworking> getNetworking() {
+    public Output</* @Nullable */ InstanceNetworking> networking() {
         return this.networking;
     }
     /**
@@ -159,7 +159,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Private IP Address of the Instance
      * 
      */
-    public Output<String> getPrivateIpAddress() {
+    public Output<String> privateIpAddress() {
         return this.privateIpAddress;
     }
     /**
@@ -173,7 +173,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Public IP Address of the Instance
      * 
      */
-    public Output<String> getPublicIpAddress() {
+    public Output<String> publicIpAddress() {
         return this.publicIpAddress;
     }
     /**
@@ -187,7 +187,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Resource type of Lightsail instance.
      * 
      */
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
     /**
@@ -201,13 +201,13 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return SSH Key Name of the  Lightsail instance.
      * 
      */
-    public Output<String> getSshKeyName() {
+    public Output<String> sshKeyName() {
         return this.sshKeyName;
     }
     @Export(name="state", type=InstanceState.class, parameters={})
     private Output</* @Nullable */ InstanceState> state;
 
-    public Output</* @Nullable */ InstanceState> getState() {
+    public Output</* @Nullable */ InstanceState> state() {
         return this.state;
     }
     /**
@@ -221,7 +221,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Support code to help identify any issues
      * 
      */
-    public Output<String> getSupportCode() {
+    public Output<String> supportCode() {
         return this.supportCode;
     }
     /**
@@ -235,7 +235,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<InstanceTag>> getTags() {
+    public Output</* @Nullable */ List<InstanceTag>> tags() {
         return this.tags;
     }
     /**
@@ -249,7 +249,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return A launch script you can create that configures a server with additional user data. For example, you might want to run apt-get -y update.
      * 
      */
-    public Output</* @Nullable */ String> getUserData() {
+    public Output</* @Nullable */ String> userData() {
         return this.userData;
     }
     /**
@@ -263,7 +263,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Username of the  Lightsail instance.
      * 
      */
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 

@@ -26,7 +26,7 @@ public final class LicenseResourceCommitmentArgs extends io.pulumi.resources.Res
     @Import(name="amount")
       private final @Nullable Output<String> amount;
 
-    public Output<String> getAmount() {
+    public Output<String> amount() {
         return this.amount == null ? Codegen.empty() : this.amount;
     }
 
@@ -37,7 +37,7 @@ public final class LicenseResourceCommitmentArgs extends io.pulumi.resources.Res
     @Import(name="coresPerLicense")
       private final @Nullable Output<String> coresPerLicense;
 
-    public Output<String> getCoresPerLicense() {
+    public Output<String> coresPerLicense() {
         return this.coresPerLicense == null ? Codegen.empty() : this.coresPerLicense;
     }
 
@@ -48,7 +48,7 @@ public final class LicenseResourceCommitmentArgs extends io.pulumi.resources.Res
     @Import(name="license")
       private final @Nullable Output<String> license;
 
-    public Output<String> getLicense() {
+    public Output<String> license() {
         return this.license == null ? Codegen.empty() : this.license;
     }
 

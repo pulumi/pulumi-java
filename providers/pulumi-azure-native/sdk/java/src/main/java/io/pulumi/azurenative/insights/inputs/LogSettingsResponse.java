@@ -27,7 +27,7 @@ public final class LogSettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="category")
       private final @Nullable String category;
 
-    public Optional<String> getCategory() {
+    public Optional<String> category() {
         return this.category == null ? Optional.empty() : Optional.ofNullable(this.category);
     }
 
@@ -38,7 +38,7 @@ public final class LogSettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
@@ -49,7 +49,7 @@ public final class LogSettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="retentionPolicy")
       private final @Nullable RetentionPolicyResponse retentionPolicy;
 
-    public Optional<RetentionPolicyResponse> getRetentionPolicy() {
+    public Optional<RetentionPolicyResponse> retentionPolicy() {
         return this.retentionPolicy == null ? Optional.empty() : Optional.ofNullable(this.retentionPolicy);
     }
 

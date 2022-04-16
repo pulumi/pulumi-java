@@ -36,13 +36,13 @@ public final class DatabaseInstanceServerCaCert {
         this.sha1Fingerprint = sha1Fingerprint;
     }
 
-    public Optional<String> getCert() {
+    public Optional<String> cert() {
         return Optional.ofNullable(this.cert);
     }
-    public Optional<String> getCommonName() {
+    public Optional<String> commonName() {
         return Optional.ofNullable(this.commonName);
     }
-    public Optional<String> getCreateTime() {
+    public Optional<String> createTime() {
         return Optional.ofNullable(this.createTime);
     }
     /**
@@ -50,10 +50,10 @@ public final class DatabaseInstanceServerCaCert {
      * formatted date time string indicating when this whitelist expires.
      * 
     */
-    public Optional<String> getExpirationTime() {
+    public Optional<String> expirationTime() {
         return Optional.ofNullable(this.expirationTime);
     }
-    public Optional<String> getSha1Fingerprint() {
+    public Optional<String> sha1Fingerprint() {
         return Optional.ofNullable(this.sha1Fingerprint);
     }
 

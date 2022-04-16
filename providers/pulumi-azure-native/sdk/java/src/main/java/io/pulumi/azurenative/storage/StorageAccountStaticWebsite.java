@@ -36,7 +36,7 @@ public class StorageAccountStaticWebsite extends io.pulumi.resources.CustomResou
      * @return The name of the container to upload blobs to.
      * 
      */
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName;
     }
     /**
@@ -50,7 +50,7 @@ public class StorageAccountStaticWebsite extends io.pulumi.resources.CustomResou
      * @return The absolute path to a custom webpage that should be used when a request is made which does not correspond to an existing file.
      * 
      */
-    public Output</* @Nullable */ String> getError404Document() {
+    public Output</* @Nullable */ String> error404Document() {
         return this.error404Document;
     }
     /**
@@ -64,7 +64,7 @@ public class StorageAccountStaticWebsite extends io.pulumi.resources.CustomResou
      * @return The webpage that Azure Storage serves for requests to the root of a website or any sub-folder. For example, 'index.html'. The value is case-sensitive.
      * 
      */
-    public Output</* @Nullable */ String> getIndexDocument() {
+    public Output</* @Nullable */ String> indexDocument() {
         return this.indexDocument;
     }
 

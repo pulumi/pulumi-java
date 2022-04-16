@@ -28,7 +28,7 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appProtocol")
       private final @Nullable Output<String> appProtocol;
 
-    public Output<String> getAppProtocol() {
+    public Output<String> appProtocol() {
         return this.appProtocol == null ? Codegen.empty() : this.appProtocol;
     }
 
@@ -39,7 +39,7 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -50,7 +50,7 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodePort")
       private final @Nullable Output<Integer> nodePort;
 
-    public Output<Integer> getNodePort() {
+    public Output<Integer> nodePort() {
         return this.nodePort == null ? Codegen.empty() : this.nodePort;
     }
 
@@ -61,7 +61,7 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="port", required=true)
       private final Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
 
@@ -77,7 +77,7 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
@@ -88,7 +88,7 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetPort")
       private final @Nullable Output<Either<Integer,String>> targetPort;
 
-    public Output<Either<Integer,String>> getTargetPort() {
+    public Output<Either<Integer,String>> targetPort() {
         return this.targetPort == null ? Codegen.empty() : this.targetPort;
     }
 

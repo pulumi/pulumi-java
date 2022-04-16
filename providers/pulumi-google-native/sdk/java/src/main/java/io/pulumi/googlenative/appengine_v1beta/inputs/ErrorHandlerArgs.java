@@ -27,7 +27,7 @@ public final class ErrorHandlerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="errorCode")
       private final @Nullable Output<ErrorHandlerErrorCode> errorCode;
 
-    public Output<ErrorHandlerErrorCode> getErrorCode() {
+    public Output<ErrorHandlerErrorCode> errorCode() {
         return this.errorCode == null ? Codegen.empty() : this.errorCode;
     }
 
@@ -38,7 +38,7 @@ public final class ErrorHandlerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mimeType")
       private final @Nullable Output<String> mimeType;
 
-    public Output<String> getMimeType() {
+    public Output<String> mimeType() {
         return this.mimeType == null ? Codegen.empty() : this.mimeType;
     }
 
@@ -49,7 +49,7 @@ public final class ErrorHandlerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="staticFile")
       private final @Nullable Output<String> staticFile;
 
-    public Output<String> getStaticFile() {
+    public Output<String> staticFile() {
         return this.staticFile == null ? Codegen.empty() : this.staticFile;
     }
 

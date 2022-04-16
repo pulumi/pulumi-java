@@ -20,14 +20,14 @@ public final class CisBenchmarkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="profileLevel", required=true)
       private final Integer profileLevel;
 
-    public Integer getProfileLevel() {
+    public Integer profileLevel() {
         return this.profileLevel;
     }
 
     @Import(name="severity", required=true)
       private final String severity;
 
-    public String getSeverity() {
+    public String severity() {
         return this.severity;
     }
 

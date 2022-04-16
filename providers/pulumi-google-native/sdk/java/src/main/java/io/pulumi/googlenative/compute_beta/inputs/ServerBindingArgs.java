@@ -18,7 +18,7 @@ public final class ServerBindingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<ServerBindingType> type;
 
-    public Output<ServerBindingType> getType() {
+    public Output<ServerBindingType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

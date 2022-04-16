@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2alphaRuleRedirectActionResponse extends io
     @Import(name="redirectUri", required=true)
       private final String redirectUri;
 
-    public String getRedirectUri() {
+    public String redirectUri() {
         return this.redirectUri;
     }
 

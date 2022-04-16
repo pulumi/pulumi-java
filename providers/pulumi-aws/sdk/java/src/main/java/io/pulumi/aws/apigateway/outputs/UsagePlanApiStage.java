@@ -42,21 +42,21 @@ public final class UsagePlanApiStage {
      * API Id of the associated API stage in a usage plan.
      * 
     */
-    public String getApiId() {
+    public String apiId() {
         return this.apiId;
     }
     /**
      * API stage name of the associated API stage in a usage plan.
      * 
     */
-    public String getStage() {
+    public String stage() {
         return this.stage;
     }
     /**
      * The throttling limits of the usage plan.
      * 
     */
-    public List<UsagePlanApiStageThrottle> getThrottles() {
+    public List<UsagePlanApiStageThrottle> throttles() {
         return this.throttles == null ? List.of() : this.throttles;
     }
 

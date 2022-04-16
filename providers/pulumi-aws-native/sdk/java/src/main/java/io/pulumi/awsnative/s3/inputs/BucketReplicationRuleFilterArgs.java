@@ -20,21 +20,21 @@ public final class BucketReplicationRuleFilterArgs extends io.pulumi.resources.R
     @Import(name="and")
       private final @Nullable Output<BucketReplicationRuleAndOperatorArgs> and;
 
-    public Output<BucketReplicationRuleAndOperatorArgs> getAnd() {
+    public Output<BucketReplicationRuleAndOperatorArgs> and() {
         return this.and == null ? Codegen.empty() : this.and;
     }
 
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     @Import(name="tagFilter")
       private final @Nullable Output<BucketTagFilterArgs> tagFilter;
 
-    public Output<BucketTagFilterArgs> getTagFilter() {
+    public Output<BucketTagFilterArgs> tagFilter() {
         return this.tagFilter == null ? Codegen.empty() : this.tagFilter;
     }
 

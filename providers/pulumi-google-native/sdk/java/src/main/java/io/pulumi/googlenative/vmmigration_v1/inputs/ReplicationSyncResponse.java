@@ -23,7 +23,7 @@ public final class ReplicationSyncResponse extends io.pulumi.resources.InvokeArg
     @Import(name="lastSyncTime", required=true)
       private final String lastSyncTime;
 
-    public String getLastSyncTime() {
+    public String lastSyncTime() {
         return this.lastSyncTime;
     }
 

@@ -19,14 +19,14 @@ public final class ListenerRuleTargetGroupStickinessConfigArgs extends io.pulumi
     @Import(name="durationSeconds")
       private final @Nullable Output<Integer> durationSeconds;
 
-    public Output<Integer> getDurationSeconds() {
+    public Output<Integer> durationSeconds() {
         return this.durationSeconds == null ? Codegen.empty() : this.durationSeconds;
     }
 
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 

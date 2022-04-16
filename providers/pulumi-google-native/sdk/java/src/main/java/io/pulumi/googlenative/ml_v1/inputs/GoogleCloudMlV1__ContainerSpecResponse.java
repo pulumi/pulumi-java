@@ -26,7 +26,7 @@ public final class GoogleCloudMlV1__ContainerSpecResponse extends io.pulumi.reso
     @Import(name="args", required=true)
       private final List<String> args;
 
-    public List<String> getArgs() {
+    public List<String> args() {
         return this.args;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudMlV1__ContainerSpecResponse extends io.pulumi.reso
     @Import(name="command", required=true)
       private final List<String> command;
 
-    public List<String> getCommand() {
+    public List<String> command() {
         return this.command;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudMlV1__ContainerSpecResponse extends io.pulumi.reso
     @Import(name="env", required=true)
       private final List<GoogleCloudMlV1__EnvVarResponse> env;
 
-    public List<GoogleCloudMlV1__EnvVarResponse> getEnv() {
+    public List<GoogleCloudMlV1__EnvVarResponse> env() {
         return this.env;
     }
 
@@ -59,7 +59,7 @@ public final class GoogleCloudMlV1__ContainerSpecResponse extends io.pulumi.reso
     @Import(name="image", required=true)
       private final String image;
 
-    public String getImage() {
+    public String image() {
         return this.image;
     }
 
@@ -70,7 +70,7 @@ public final class GoogleCloudMlV1__ContainerSpecResponse extends io.pulumi.reso
     @Import(name="ports", required=true)
       private final List<GoogleCloudMlV1__ContainerPortResponse> ports;
 
-    public List<GoogleCloudMlV1__ContainerPortResponse> getPorts() {
+    public List<GoogleCloudMlV1__ContainerPortResponse> ports() {
         return this.ports;
     }
 

@@ -55,7 +55,7 @@ public class EdgeCacheService extends io.pulumi.resources.CustomResource {
      * @return A human-readable description of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -69,7 +69,7 @@ public class EdgeCacheService extends io.pulumi.resources.CustomResource {
      * @return HTTP/3 (IETF QUIC) and Google QUIC are enabled by default.
      * 
      */
-    public Output<Boolean> getDisableQuic() {
+    public Output<Boolean> disableQuic() {
         return this.disableQuic;
     }
     /**
@@ -83,7 +83,7 @@ public class EdgeCacheService extends io.pulumi.resources.CustomResource {
      * @return Resource URL that points at the Cloud Armor edge security policy that is applied on each request against the EdgeCacheService.
      * 
      */
-    public Output</* @Nullable */ String> getEdgeSecurityPolicy() {
+    public Output</* @Nullable */ String> edgeSecurityPolicy() {
         return this.edgeSecurityPolicy;
     }
     /**
@@ -99,7 +99,7 @@ public class EdgeCacheService extends io.pulumi.resources.CustomResource {
      * Note that only "global" certificates with a "scope" of "EDGE_CACHE" can be attached to an EdgeCacheService.
      * 
      */
-    public Output</* @Nullable */ List<String>> getEdgeSslCertificates() {
+    public Output</* @Nullable */ List<String>> edgeSslCertificates() {
         return this.edgeSslCertificates;
     }
     /**
@@ -113,7 +113,7 @@ public class EdgeCacheService extends io.pulumi.resources.CustomResource {
      * @return The IPv4 addresses associated with this service. Addresses are static for the lifetime of the service.
      * 
      */
-    public Output<List<String>> getIpv4Addresses() {
+    public Output<List<String>> ipv4Addresses() {
         return this.ipv4Addresses;
     }
     /**
@@ -127,7 +127,7 @@ public class EdgeCacheService extends io.pulumi.resources.CustomResource {
      * @return The IPv6 addresses associated with this service. Addresses are static for the lifetime of the service.
      * 
      */
-    public Output<List<String>> getIpv6Addresses() {
+    public Output<List<String>> ipv6Addresses() {
         return this.ipv6Addresses;
     }
     /**
@@ -141,7 +141,7 @@ public class EdgeCacheService extends io.pulumi.resources.CustomResource {
      * @return Set of label tags associated with the EdgeCache resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -157,7 +157,7 @@ public class EdgeCacheService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ EdgeCacheServiceLogConfig> getLogConfig() {
+    public Output</* @Nullable */ EdgeCacheServiceLogConfig> logConfig() {
         return this.logConfig;
     }
     /**
@@ -171,7 +171,7 @@ public class EdgeCacheService extends io.pulumi.resources.CustomResource {
      * @return The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -187,7 +187,7 @@ public class EdgeCacheService extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -205,7 +205,7 @@ public class EdgeCacheService extends io.pulumi.resources.CustomResource {
      * You must have at least one (1) edgeSslCertificate specified to enable this.
      * 
      */
-    public Output<Boolean> getRequireTls() {
+    public Output<Boolean> requireTls() {
         return this.requireTls;
     }
     /**
@@ -221,7 +221,7 @@ public class EdgeCacheService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<EdgeCacheServiceRouting> getRouting() {
+    public Output<EdgeCacheServiceRouting> routing() {
         return this.routing;
     }
     /**
@@ -237,7 +237,7 @@ public class EdgeCacheService extends io.pulumi.resources.CustomResource {
      * If not set, the EdgeCacheService has no SSL policy configured, and will default to the "COMPATIBLE" policy.
      * 
      */
-    public Output</* @Nullable */ String> getSslPolicy() {
+    public Output</* @Nullable */ String> sslPolicy() {
         return this.sslPolicy;
     }
 

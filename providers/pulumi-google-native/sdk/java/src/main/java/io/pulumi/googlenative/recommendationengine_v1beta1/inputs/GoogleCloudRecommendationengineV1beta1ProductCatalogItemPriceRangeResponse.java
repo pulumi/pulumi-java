@@ -23,7 +23,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
     @Import(name="max", required=true)
       private final Double max;
 
-    public Double getMax() {
+    public Double max() {
         return this.max;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
     @Import(name="min", required=true)
       private final Double min;
 
-    public Double getMin() {
+    public Double min() {
         return this.min;
     }
 

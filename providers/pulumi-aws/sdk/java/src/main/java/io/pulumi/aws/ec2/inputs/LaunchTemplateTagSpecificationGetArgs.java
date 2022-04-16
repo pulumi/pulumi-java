@@ -23,7 +23,7 @@ public final class LaunchTemplateTagSpecificationGetArgs extends io.pulumi.resou
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
@@ -34,7 +34,7 @@ public final class LaunchTemplateTagSpecificationGetArgs extends io.pulumi.resou
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

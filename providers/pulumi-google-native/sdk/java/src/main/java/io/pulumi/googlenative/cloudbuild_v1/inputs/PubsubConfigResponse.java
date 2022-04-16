@@ -23,7 +23,7 @@ public final class PubsubConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="serviceAccountEmail", required=true)
       private final String serviceAccountEmail;
 
-    public String getServiceAccountEmail() {
+    public String serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
 
@@ -34,7 +34,7 @@ public final class PubsubConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 
@@ -45,7 +45,7 @@ public final class PubsubConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="subscription", required=true)
       private final String subscription;
 
-    public String getSubscription() {
+    public String subscription() {
         return this.subscription;
     }
 
@@ -56,7 +56,7 @@ public final class PubsubConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="topic", required=true)
       private final String topic;
 
-    public String getTopic() {
+    public String topic() {
         return this.topic;
     }
 

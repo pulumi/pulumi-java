@@ -116,94 +116,94 @@ public final class GetAppResult {
      * Google Apps authentication domain that controls which users can access this application.Defaults to open access for any Google Account.
      * 
     */
-    public String getAuthDomain() {
+    public String authDomain() {
         return this.authDomain;
     }
     /**
      * Google Cloud Storage bucket that can be used for storing files associated with this application. This bucket is associated with the application and can be used by the gcloud deployment commands.
      * 
     */
-    public String getCodeBucket() {
+    public String codeBucket() {
         return this.codeBucket;
     }
     /**
      * The type of the Cloud Firestore or Cloud Datastore database associated with this application.
      * 
     */
-    public String getDatabaseType() {
+    public String databaseType() {
         return this.databaseType;
     }
     /**
      * Google Cloud Storage bucket that can be used by this application to store content.
      * 
     */
-    public String getDefaultBucket() {
+    public String defaultBucket() {
         return this.defaultBucket;
     }
     /**
      * Cookie expiration policy for this application.
      * 
     */
-    public String getDefaultCookieExpiration() {
+    public String defaultCookieExpiration() {
         return this.defaultCookieExpiration;
     }
     /**
      * Hostname used to reach this application, as resolved by App Engine.
      * 
     */
-    public String getDefaultHostname() {
+    public String defaultHostname() {
         return this.defaultHostname;
     }
     /**
      * HTTP path dispatch rules for requests to the application that do not explicitly target a service or version. Rules are order-dependent. Up to 20 dispatch rules can be supported.
      * 
     */
-    public List<UrlDispatchRuleResponse> getDispatchRules() {
+    public List<UrlDispatchRuleResponse> dispatchRules() {
         return this.dispatchRules;
     }
     /**
      * The feature specific settings to be used in the application.
      * 
     */
-    public FeatureSettingsResponse getFeatureSettings() {
+    public FeatureSettingsResponse featureSettings() {
         return this.featureSettings;
     }
     /**
      * The Google Container Registry domain used for storing managed build docker images for this application.
      * 
     */
-    public String getGcrDomain() {
+    public String gcrDomain() {
         return this.gcrDomain;
     }
-    public IdentityAwareProxyResponse getIap() {
+    public IdentityAwareProxyResponse iap() {
         return this.iap;
     }
     /**
      * Location from which this application runs. Application instances run out of the data centers in the specified location, which is also where all of the application's end user content is stored.Defaults to us-central.View the list of supported locations (https://cloud.google.com/appengine/docs/locations).
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Full path to the Application resource in the API. Example: apps/myapp.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The service account associated with the application. This is the app-level default identity. If no identity provided during create version, Admin API will fallback to this one.
      * 
     */
-    public String getServiceAccount() {
+    public String serviceAccount() {
         return this.serviceAccount;
     }
     /**
      * Serving status of this application.
      * 
     */
-    public String getServingStatus() {
+    public String servingStatus() {
         return this.servingStatus;
     }
 

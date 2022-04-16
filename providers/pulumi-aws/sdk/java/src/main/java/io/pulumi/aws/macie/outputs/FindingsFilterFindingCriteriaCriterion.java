@@ -77,56 +77,56 @@ public final class FindingsFilterFindingCriteriaCriterion {
      * The value for the property exclusively matches (equals an exact match for) all the specified values. If you specify multiple values, Amazon Macie uses AND logic to join the values.
      * 
     */
-    public List<String> getEqExactMatches() {
+    public List<String> eqExactMatches() {
         return this.eqExactMatches == null ? List.of() : this.eqExactMatches;
     }
     /**
      * The value for the property matches (equals) the specified value. If you specify multiple values, Amazon Macie uses OR logic to join the values.
      * 
     */
-    public List<String> getEqs() {
+    public List<String> eqs() {
         return this.eqs == null ? List.of() : this.eqs;
     }
     /**
      * The name of the field to be evaluated.
      * 
     */
-    public String getField() {
+    public String field() {
         return this.field;
     }
     /**
      * The value for the property is greater than the specified value.
      * 
     */
-    public Optional<String> getGt() {
+    public Optional<String> gt() {
         return Optional.ofNullable(this.gt);
     }
     /**
      * The value for the property is greater than or equal to the specified value.
      * 
     */
-    public Optional<String> getGte() {
+    public Optional<String> gte() {
         return Optional.ofNullable(this.gte);
     }
     /**
      * The value for the property is less than the specified value.
      * 
     */
-    public Optional<String> getLt() {
+    public Optional<String> lt() {
         return Optional.ofNullable(this.lt);
     }
     /**
      * The value for the property is less than or equal to the specified value.
      * 
     */
-    public Optional<String> getLte() {
+    public Optional<String> lte() {
         return Optional.ofNullable(this.lte);
     }
     /**
      * The value for the property doesn't match (doesn't equal) the specified value. If you specify multiple values, Amazon Macie uses OR logic to join the values.
      * 
     */
-    public List<String> getNeqs() {
+    public List<String> neqs() {
         return this.neqs == null ? List.of() : this.neqs;
     }
 

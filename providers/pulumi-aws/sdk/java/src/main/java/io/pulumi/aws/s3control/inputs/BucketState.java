@@ -24,7 +24,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
@@ -46,7 +46,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
     @Import(name="creationDate")
       private final @Nullable Output<String> creationDate;
 
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate == null ? Codegen.empty() : this.creationDate;
     }
 
@@ -57,7 +57,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
     @Import(name="outpostId")
       private final @Nullable Output<String> outpostId;
 
-    public Output<String> getOutpostId() {
+    public Output<String> outpostId() {
         return this.outpostId == null ? Codegen.empty() : this.outpostId;
     }
 
@@ -68,7 +68,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicAccessBlockEnabled")
       private final @Nullable Output<Boolean> publicAccessBlockEnabled;
 
-    public Output<Boolean> getPublicAccessBlockEnabled() {
+    public Output<Boolean> publicAccessBlockEnabled() {
         return this.publicAccessBlockEnabled == null ? Codegen.empty() : this.publicAccessBlockEnabled;
     }
 
@@ -79,7 +79,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -90,7 +90,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

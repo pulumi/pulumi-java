@@ -26,7 +26,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesArgs extends io.pu
     @Import(name="authenticationType", required=true)
       private final Output<String> authenticationType;
 
-    public Output<String> getAuthenticationType() {
+    public Output<String> authenticationType() {
         return this.authenticationType;
     }
 
@@ -37,7 +37,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesArgs extends io.pu
     @Import(name="awsAssumeRoleArn", required=true)
       private final Output<String> awsAssumeRoleArn;
 
-    public Output<String> getAwsAssumeRoleArn() {
+    public Output<String> awsAssumeRoleArn() {
         return this.awsAssumeRoleArn;
     }
 
@@ -48,7 +48,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesArgs extends io.pu
     @Import(name="awsExternalId", required=true)
       private final Output<String> awsExternalId;
 
-    public Output<String> getAwsExternalId() {
+    public Output<String> awsExternalId() {
         return this.awsExternalId;
     }
 

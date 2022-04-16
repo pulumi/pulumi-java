@@ -24,7 +24,7 @@ public final class InstanceFailoverReplicaResponse extends io.pulumi.resources.I
     @Import(name="available", required=true)
       private final Boolean available;
 
-    public Boolean getAvailable() {
+    public Boolean available() {
         return this.available;
     }
 
@@ -35,7 +35,7 @@ public final class InstanceFailoverReplicaResponse extends io.pulumi.resources.I
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

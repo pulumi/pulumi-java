@@ -35,7 +35,7 @@ public class ConversationProfile extends io.pulumi.resources.CustomResource {
      * @return Configuration for an automated agent to use with this profile.
      * 
      */
-    public Output<GoogleCloudDialogflowV2beta1AutomatedAgentConfigResponse> getAutomatedAgentConfig() {
+    public Output<GoogleCloudDialogflowV2beta1AutomatedAgentConfigResponse> automatedAgentConfig() {
         return this.automatedAgentConfig;
     }
     /**
@@ -49,7 +49,7 @@ public class ConversationProfile extends io.pulumi.resources.CustomResource {
      * @return Create time of the conversation profile.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -63,7 +63,7 @@ public class ConversationProfile extends io.pulumi.resources.CustomResource {
      * @return Human readable name for this profile. Max length 1024 bytes.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -77,7 +77,7 @@ public class ConversationProfile extends io.pulumi.resources.CustomResource {
      * @return Configuration for agent assistance to use with this profile.
      * 
      */
-    public Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse> getHumanAgentAssistantConfig() {
+    public Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse> humanAgentAssistantConfig() {
         return this.humanAgentAssistantConfig;
     }
     /**
@@ -91,7 +91,7 @@ public class ConversationProfile extends io.pulumi.resources.CustomResource {
      * @return Configuration for connecting to a live agent. Currently, this feature is not general available, please contact Google to get access.
      * 
      */
-    public Output<GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse> getHumanAgentHandoffConfig() {
+    public Output<GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse> humanAgentHandoffConfig() {
         return this.humanAgentHandoffConfig;
     }
     /**
@@ -105,7 +105,7 @@ public class ConversationProfile extends io.pulumi.resources.CustomResource {
      * @return Language code for the conversation profile. If not specified, the language is en-US. Language at ConversationProfile should be set for all non en-us languages. This should be a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".
      * 
      */
-    public Output<String> getLanguageCode() {
+    public Output<String> languageCode() {
         return this.languageCode;
     }
     /**
@@ -119,7 +119,7 @@ public class ConversationProfile extends io.pulumi.resources.CustomResource {
      * @return Configuration for logging conversation lifecycle events.
      * 
      */
-    public Output<GoogleCloudDialogflowV2beta1LoggingConfigResponse> getLoggingConfig() {
+    public Output<GoogleCloudDialogflowV2beta1LoggingConfigResponse> loggingConfig() {
         return this.loggingConfig;
     }
     /**
@@ -133,7 +133,7 @@ public class ConversationProfile extends io.pulumi.resources.CustomResource {
      * @return The unique identifier of this conversation profile. Format: `projects//locations//conversationProfiles/`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -147,7 +147,7 @@ public class ConversationProfile extends io.pulumi.resources.CustomResource {
      * @return Configuration for publishing new message events. Event will be sent in format of ConversationEvent
      * 
      */
-    public Output<GoogleCloudDialogflowV2beta1NotificationConfigResponse> getNewMessageEventNotificationConfig() {
+    public Output<GoogleCloudDialogflowV2beta1NotificationConfigResponse> newMessageEventNotificationConfig() {
         return this.newMessageEventNotificationConfig;
     }
     /**
@@ -161,7 +161,7 @@ public class ConversationProfile extends io.pulumi.resources.CustomResource {
      * @return Configuration for publishing conversation lifecycle events.
      * 
      */
-    public Output<GoogleCloudDialogflowV2beta1NotificationConfigResponse> getNotificationConfig() {
+    public Output<GoogleCloudDialogflowV2beta1NotificationConfigResponse> notificationConfig() {
         return this.notificationConfig;
     }
     /**
@@ -175,7 +175,7 @@ public class ConversationProfile extends io.pulumi.resources.CustomResource {
      * @return Name of the CX SecuritySettings reference for the agent. Format: `projects//locations//securitySettings/`.
      * 
      */
-    public Output<String> getSecuritySettings() {
+    public Output<String> securitySettings() {
         return this.securitySettings;
     }
     /**
@@ -189,7 +189,7 @@ public class ConversationProfile extends io.pulumi.resources.CustomResource {
      * @return Settings for speech transcription.
      * 
      */
-    public Output<GoogleCloudDialogflowV2beta1SpeechToTextConfigResponse> getSttConfig() {
+    public Output<GoogleCloudDialogflowV2beta1SpeechToTextConfigResponse> sttConfig() {
         return this.sttConfig;
     }
     /**
@@ -203,7 +203,7 @@ public class ConversationProfile extends io.pulumi.resources.CustomResource {
      * @return The time zone of this conversational profile from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. Defaults to America/New_York.
      * 
      */
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone;
     }
     /**
@@ -217,7 +217,7 @@ public class ConversationProfile extends io.pulumi.resources.CustomResource {
      * @return Update time of the conversation profile.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

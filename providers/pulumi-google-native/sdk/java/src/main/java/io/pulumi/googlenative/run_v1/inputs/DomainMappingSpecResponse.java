@@ -24,7 +24,7 @@ public final class DomainMappingSpecResponse extends io.pulumi.resources.InvokeA
     @Import(name="certificateMode", required=true)
       private final String certificateMode;
 
-    public String getCertificateMode() {
+    public String certificateMode() {
         return this.certificateMode;
     }
 
@@ -35,7 +35,7 @@ public final class DomainMappingSpecResponse extends io.pulumi.resources.InvokeA
     @Import(name="forceOverride", required=true)
       private final Boolean forceOverride;
 
-    public Boolean getForceOverride() {
+    public Boolean forceOverride() {
         return this.forceOverride;
     }
 
@@ -46,7 +46,7 @@ public final class DomainMappingSpecResponse extends io.pulumi.resources.InvokeA
     @Import(name="routeName", required=true)
       private final String routeName;
 
-    public String getRouteName() {
+    public String routeName() {
         return this.routeName;
     }
 

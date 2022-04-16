@@ -29,7 +29,7 @@ public final class InstanceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="activeDeadlineSeconds")
       private final @Nullable Output<String> activeDeadlineSeconds;
 
-    public Output<String> getActiveDeadlineSeconds() {
+    public Output<String> activeDeadlineSeconds() {
         return this.activeDeadlineSeconds == null ? Codegen.empty() : this.activeDeadlineSeconds;
     }
 
@@ -40,7 +40,7 @@ public final class InstanceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containers")
       private final @Nullable Output<List<ContainerArgs>> containers;
 
-    public Output<List<ContainerArgs>> getContainers() {
+    public Output<List<ContainerArgs>> containers() {
         return this.containers == null ? Codegen.empty() : this.containers;
     }
 
@@ -51,7 +51,7 @@ public final class InstanceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="restartPolicy")
       private final @Nullable Output<String> restartPolicy;
 
-    public Output<String> getRestartPolicy() {
+    public Output<String> restartPolicy() {
         return this.restartPolicy == null ? Codegen.empty() : this.restartPolicy;
     }
 
@@ -62,7 +62,7 @@ public final class InstanceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccountName")
       private final @Nullable Output<String> serviceAccountName;
 
-    public Output<String> getServiceAccountName() {
+    public Output<String> serviceAccountName() {
         return this.serviceAccountName == null ? Codegen.empty() : this.serviceAccountName;
     }
 
@@ -73,7 +73,7 @@ public final class InstanceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="terminationGracePeriodSeconds")
       private final @Nullable Output<String> terminationGracePeriodSeconds;
 
-    public Output<String> getTerminationGracePeriodSeconds() {
+    public Output<String> terminationGracePeriodSeconds() {
         return this.terminationGracePeriodSeconds == null ? Codegen.empty() : this.terminationGracePeriodSeconds;
     }
 
@@ -84,7 +84,7 @@ public final class InstanceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumes")
       private final @Nullable Output<List<VolumeArgs>> volumes;
 
-    public Output<List<VolumeArgs>> getVolumes() {
+    public Output<List<VolumeArgs>> volumes() {
         return this.volumes == null ? Codegen.empty() : this.volumes;
     }
 

@@ -25,7 +25,7 @@ public final class CertBasedSecurityPrincipalResponse extends io.pulumi.resource
     @Import(name="cert")
       private final @Nullable String cert;
 
-    public Optional<String> getCert() {
+    public Optional<String> cert() {
         return this.cert == null ? Optional.empty() : Optional.ofNullable(this.cert);
     }
 
@@ -36,7 +36,7 @@ public final class CertBasedSecurityPrincipalResponse extends io.pulumi.resource
     @Import(name="ledgerRoleName")
       private final @Nullable String ledgerRoleName;
 
-    public Optional<String> getLedgerRoleName() {
+    public Optional<String> ledgerRoleName() {
         return this.ledgerRoleName == null ? Optional.empty() : Optional.ofNullable(this.ledgerRoleName);
     }
 

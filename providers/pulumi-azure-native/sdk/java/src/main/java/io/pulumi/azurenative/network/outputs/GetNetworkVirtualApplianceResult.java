@@ -153,126 +153,126 @@ public final class GetNetworkVirtualApplianceResult {
      * Address Prefix.
      * 
     */
-    public String getAddressPrefix() {
+    public String addressPrefix() {
         return this.addressPrefix;
     }
     /**
      * BootStrapConfigurationBlobs storage URLs.
      * 
     */
-    public List<String> getBootStrapConfigurationBlobs() {
+    public List<String> bootStrapConfigurationBlobs() {
         return this.bootStrapConfigurationBlobs == null ? List.of() : this.bootStrapConfigurationBlobs;
     }
     /**
      * CloudInitConfiguration string in plain text.
      * 
     */
-    public Optional<String> getCloudInitConfiguration() {
+    public Optional<String> cloudInitConfiguration() {
         return Optional.ofNullable(this.cloudInitConfiguration);
     }
     /**
      * CloudInitConfigurationBlob storage URLs.
      * 
     */
-    public List<String> getCloudInitConfigurationBlobs() {
+    public List<String> cloudInitConfigurationBlobs() {
         return this.cloudInitConfigurationBlobs == null ? List.of() : this.cloudInitConfigurationBlobs;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The service principal that has read access to cloud-init and config blob.
      * 
     */
-    public Optional<ManagedServiceIdentityResponse> getIdentity() {
+    public Optional<ManagedServiceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * List of references to InboundSecurityRules.
      * 
     */
-    public List<SubResourceResponse> getInboundSecurityRules() {
+    public List<SubResourceResponse> inboundSecurityRules() {
         return this.inboundSecurityRules;
     }
     /**
      * Resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Network Virtual Appliance SKU.
      * 
     */
-    public Optional<VirtualApplianceSkuPropertiesResponse> getNvaSku() {
+    public Optional<VirtualApplianceSkuPropertiesResponse> nvaSku() {
         return Optional.ofNullable(this.nvaSku);
     }
     /**
      * The provisioning state of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * VirtualAppliance ASN.
      * 
     */
-    public Optional<Double> getVirtualApplianceAsn() {
+    public Optional<Double> virtualApplianceAsn() {
         return Optional.ofNullable(this.virtualApplianceAsn);
     }
     /**
      * List of Virtual Appliance Network Interfaces.
      * 
     */
-    public List<VirtualApplianceNicPropertiesResponse> getVirtualApplianceNics() {
+    public List<VirtualApplianceNicPropertiesResponse> virtualApplianceNics() {
         return this.virtualApplianceNics;
     }
     /**
      * List of references to VirtualApplianceSite.
      * 
     */
-    public List<SubResourceResponse> getVirtualApplianceSites() {
+    public List<SubResourceResponse> virtualApplianceSites() {
         return this.virtualApplianceSites;
     }
     /**
      * The Virtual Hub where Network Virtual Appliance is being deployed.
      * 
     */
-    public Optional<SubResourceResponse> getVirtualHub() {
+    public Optional<SubResourceResponse> virtualHub() {
         return Optional.ofNullable(this.virtualHub);
     }
 

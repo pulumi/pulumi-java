@@ -20,28 +20,28 @@ public final class IndexDocumentMetadataConfiguration extends io.pulumi.resource
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
     @Import(name="relevance")
       private final @Nullable IndexRelevance relevance;
 
-    public Optional<IndexRelevance> getRelevance() {
+    public Optional<IndexRelevance> relevance() {
         return this.relevance == null ? Optional.empty() : Optional.ofNullable(this.relevance);
     }
 
     @Import(name="search")
       private final @Nullable IndexSearch search;
 
-    public Optional<IndexSearch> getSearch() {
+    public Optional<IndexSearch> search() {
         return this.search == null ? Optional.empty() : Optional.ofNullable(this.search);
     }
 
     @Import(name="type", required=true)
       private final IndexDocumentAttributeValueType type;
 
-    public IndexDocumentAttributeValueType getType() {
+    public IndexDocumentAttributeValueType type() {
         return this.type;
     }
 

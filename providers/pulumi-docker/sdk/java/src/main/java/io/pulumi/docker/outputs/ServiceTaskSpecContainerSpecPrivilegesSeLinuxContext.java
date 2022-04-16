@@ -32,19 +32,19 @@ public final class ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext {
         this.user = user;
     }
 
-    public Optional<Boolean> getDisable() {
+    public Optional<Boolean> disable() {
         return Optional.ofNullable(this.disable);
     }
-    public Optional<String> getLevel() {
+    public Optional<String> level() {
         return Optional.ofNullable(this.level);
     }
-    public Optional<String> getRole() {
+    public Optional<String> role() {
         return Optional.ofNullable(this.role);
     }
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
-    public Optional<String> getUser() {
+    public Optional<String> user() {
         return Optional.ofNullable(this.user);
     }
 

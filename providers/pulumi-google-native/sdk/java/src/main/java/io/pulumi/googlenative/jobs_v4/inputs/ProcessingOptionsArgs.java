@@ -27,7 +27,7 @@ public final class ProcessingOptionsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="disableStreetAddressResolution")
       private final @Nullable Output<Boolean> disableStreetAddressResolution;
 
-    public Output<Boolean> getDisableStreetAddressResolution() {
+    public Output<Boolean> disableStreetAddressResolution() {
         return this.disableStreetAddressResolution == null ? Codegen.empty() : this.disableStreetAddressResolution;
     }
 
@@ -38,7 +38,7 @@ public final class ProcessingOptionsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="htmlSanitization")
       private final @Nullable Output<ProcessingOptionsHtmlSanitization> htmlSanitization;
 
-    public Output<ProcessingOptionsHtmlSanitization> getHtmlSanitization() {
+    public Output<ProcessingOptionsHtmlSanitization> htmlSanitization() {
         return this.htmlSanitization == null ? Codegen.empty() : this.htmlSanitization;
     }
 

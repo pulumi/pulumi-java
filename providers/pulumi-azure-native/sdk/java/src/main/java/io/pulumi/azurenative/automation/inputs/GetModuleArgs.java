@@ -19,7 +19,7 @@ public final class GetModuleArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="automationAccountName", required=true)
       private final String automationAccountName;
 
-    public String getAutomationAccountName() {
+    public String automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetModuleArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="moduleName", required=true)
       private final String moduleName;
 
-    public String getModuleName() {
+    public String moduleName() {
         return this.moduleName;
     }
 
@@ -41,7 +41,7 @@ public final class GetModuleArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -26,7 +26,7 @@ public final class SymmetricKeyResponse {
      * Connection string based on the symmetric key.
      * 
     */
-    public Optional<AsymmetricEncryptedSecretResponse> getConnectionString() {
+    public Optional<AsymmetricEncryptedSecretResponse> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
 

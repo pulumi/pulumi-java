@@ -25,7 +25,7 @@ public final class NotificationEndpointGrpcSettingsResponse extends io.pulumi.re
     @Import(name="authority", required=true)
       private final String authority;
 
-    public String getAuthority() {
+    public String authority() {
         return this.authority;
     }
 
@@ -36,7 +36,7 @@ public final class NotificationEndpointGrpcSettingsResponse extends io.pulumi.re
     @Import(name="endpoint", required=true)
       private final String endpoint;
 
-    public String getEndpoint() {
+    public String endpoint() {
         return this.endpoint;
     }
 
@@ -47,7 +47,7 @@ public final class NotificationEndpointGrpcSettingsResponse extends io.pulumi.re
     @Import(name="payloadName", required=true)
       private final String payloadName;
 
-    public String getPayloadName() {
+    public String payloadName() {
         return this.payloadName;
     }
 
@@ -58,7 +58,7 @@ public final class NotificationEndpointGrpcSettingsResponse extends io.pulumi.re
     @Import(name="resendInterval", required=true)
       private final DurationResponse resendInterval;
 
-    public DurationResponse getResendInterval() {
+    public DurationResponse resendInterval() {
         return this.resendInterval;
     }
 
@@ -69,7 +69,7 @@ public final class NotificationEndpointGrpcSettingsResponse extends io.pulumi.re
     @Import(name="retryDurationSec", required=true)
       private final Integer retryDurationSec;
 
-    public Integer getRetryDurationSec() {
+    public Integer retryDurationSec() {
         return this.retryDurationSec;
     }
 

@@ -27,7 +27,7 @@ public final class RowLayoutArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rows")
       private final @Nullable Output<List<RowArgs>> rows;
 
-    public Output<List<RowArgs>> getRows() {
+    public Output<List<RowArgs>> rows() {
         return this.rows == null ? Codegen.empty() : this.rows;
     }
 

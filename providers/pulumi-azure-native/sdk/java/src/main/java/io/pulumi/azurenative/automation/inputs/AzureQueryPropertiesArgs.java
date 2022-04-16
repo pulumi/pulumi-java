@@ -28,7 +28,7 @@ public final class AzureQueryPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="locations")
       private final @Nullable Output<List<String>> locations;
 
-    public Output<List<String>> getLocations() {
+    public Output<List<String>> locations() {
         return this.locations == null ? Codegen.empty() : this.locations;
     }
 
@@ -39,7 +39,7 @@ public final class AzureQueryPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="scope")
       private final @Nullable Output<List<String>> scope;
 
-    public Output<List<String>> getScope() {
+    public Output<List<String>> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 
@@ -50,7 +50,7 @@ public final class AzureQueryPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="tagSettings")
       private final @Nullable Output<TagSettingsPropertiesArgs> tagSettings;
 
-    public Output<TagSettingsPropertiesArgs> getTagSettings() {
+    public Output<TagSettingsPropertiesArgs> tagSettings() {
         return this.tagSettings == null ? Codegen.empty() : this.tagSettings;
     }
 

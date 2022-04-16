@@ -33,7 +33,7 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
     @Import(name="allowSelfSignedServerCert")
       private final @Nullable Object allowSelfSignedServerCert;
 
-    public Optional<Object> getAllowSelfSignedServerCert() {
+    public Optional<Object> allowSelfSignedServerCert() {
         return this.allowSelfSignedServerCert == null ? Optional.empty() : Optional.ofNullable(this.allowSelfSignedServerCert);
     }
 
@@ -44,7 +44,7 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -55,7 +55,7 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
     @Import(name="authSource")
       private final @Nullable Object authSource;
 
-    public Optional<Object> getAuthSource() {
+    public Optional<Object> authSource() {
         return this.authSource == null ? Optional.empty() : Optional.ofNullable(this.authSource);
     }
 
@@ -66,7 +66,7 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
     @Import(name="authenticationType")
       private final @Nullable String authenticationType;
 
-    public Optional<String> getAuthenticationType() {
+    public Optional<String> authenticationType() {
         return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
     }
 
@@ -77,7 +77,7 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
@@ -88,7 +88,7 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
     @Import(name="databaseName", required=true)
       private final Object databaseName;
 
-    public Object getDatabaseName() {
+    public Object databaseName() {
         return this.databaseName;
     }
 
@@ -99,7 +99,7 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -110,7 +110,7 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
     @Import(name="enableSsl")
       private final @Nullable Object enableSsl;
 
-    public Optional<Object> getEnableSsl() {
+    public Optional<Object> enableSsl() {
         return this.enableSsl == null ? Optional.empty() : Optional.ofNullable(this.enableSsl);
     }
 
@@ -121,7 +121,7 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
@@ -132,7 +132,7 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -143,7 +143,7 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
     @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
         return this.password == null ? null : this.password;
     }
 
@@ -154,7 +154,7 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
     @Import(name="port")
       private final @Nullable Object port;
 
-    public Optional<Object> getPort() {
+    public Optional<Object> port() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
@@ -165,7 +165,7 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
     @Import(name="server", required=true)
       private final Object server;
 
-    public Object getServer() {
+    public Object server() {
         return this.server;
     }
 
@@ -177,7 +177,7 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -188,7 +188,7 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
     @Import(name="username")
       private final @Nullable Object username;
 
-    public Optional<Object> getUsername() {
+    public Optional<Object> username() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
     }
 

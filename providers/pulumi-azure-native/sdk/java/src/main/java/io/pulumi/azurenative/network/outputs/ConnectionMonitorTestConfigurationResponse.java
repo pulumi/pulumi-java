@@ -81,56 +81,56 @@ public final class ConnectionMonitorTestConfigurationResponse {
      * The parameters used to perform test evaluation over HTTP.
      * 
     */
-    public Optional<ConnectionMonitorHttpConfigurationResponse> getHttpConfiguration() {
+    public Optional<ConnectionMonitorHttpConfigurationResponse> httpConfiguration() {
         return Optional.ofNullable(this.httpConfiguration);
     }
     /**
      * The parameters used to perform test evaluation over ICMP.
      * 
     */
-    public Optional<ConnectionMonitorIcmpConfigurationResponse> getIcmpConfiguration() {
+    public Optional<ConnectionMonitorIcmpConfigurationResponse> icmpConfiguration() {
         return Optional.ofNullable(this.icmpConfiguration);
     }
     /**
      * The name of the connection monitor test configuration.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The preferred IP version to use in test evaluation. The connection monitor may choose to use a different version depending on other parameters.
      * 
     */
-    public Optional<String> getPreferredIPVersion() {
+    public Optional<String> preferredIPVersion() {
         return Optional.ofNullable(this.preferredIPVersion);
     }
     /**
      * The protocol to use in test evaluation.
      * 
     */
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
     /**
      * The threshold for declaring a test successful.
      * 
     */
-    public Optional<ConnectionMonitorSuccessThresholdResponse> getSuccessThreshold() {
+    public Optional<ConnectionMonitorSuccessThresholdResponse> successThreshold() {
         return Optional.ofNullable(this.successThreshold);
     }
     /**
      * The parameters used to perform test evaluation over TCP.
      * 
     */
-    public Optional<ConnectionMonitorTcpConfigurationResponse> getTcpConfiguration() {
+    public Optional<ConnectionMonitorTcpConfigurationResponse> tcpConfiguration() {
         return Optional.ofNullable(this.tcpConfiguration);
     }
     /**
      * The frequency of test evaluation, in seconds.
      * 
     */
-    public Optional<Integer> getTestFrequencySec() {
+    public Optional<Integer> testFrequencySec() {
         return Optional.ofNullable(this.testFrequencySec);
     }
 

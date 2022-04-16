@@ -20,7 +20,7 @@ public final class CollectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="collectionId", required=true)
       private final Output<String> collectionId;
 
-    public Output<String> getCollectionId() {
+    public Output<String> collectionId() {
         return this.collectionId;
     }
 
@@ -31,7 +31,7 @@ public final class CollectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<CollectionTagArgs>> tags;
 
-    public Output<List<CollectionTagArgs>> getTags() {
+    public Output<List<CollectionTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

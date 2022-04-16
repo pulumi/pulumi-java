@@ -33,7 +33,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * @return A CloudSQL database connection profile.
      * 
      */
-    public Output<CloudSqlConnectionProfileResponse> getCloudsql() {
+    public Output<CloudSqlConnectionProfileResponse> cloudsql() {
         return this.cloudsql;
     }
     /**
@@ -47,7 +47,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * @return The timestamp when the resource was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -61,7 +61,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * @return The connection profile display name.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -75,7 +75,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * @return The error details in case of state FAILED.
      * 
      */
-    public Output<StatusResponse> getError() {
+    public Output<StatusResponse> error() {
         return this.error;
     }
     /**
@@ -89,7 +89,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * @return The resource labels for connection profile to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of "key": "value" pairs. Example: `{ "name": "wrench", "mass": "1.3kg", "count": "3" }`.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -103,7 +103,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * @return A MySQL database connection profile.
      * 
      */
-    public Output<MySqlConnectionProfileResponse> getMysql() {
+    public Output<MySqlConnectionProfileResponse> mysql() {
         return this.mysql;
     }
     /**
@@ -117,7 +117,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * @return The name of this connection profile resource in the form of projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -131,7 +131,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * @return The database provider.
      * 
      */
-    public Output<String> getProvider() {
+    public Output<String> provider() {
         return this.provider;
     }
     /**
@@ -145,7 +145,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * @return The current connection profile state (e.g. DRAFT, READY, or FAILED).
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -159,7 +159,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * @return The timestamp when the resource was last updated. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

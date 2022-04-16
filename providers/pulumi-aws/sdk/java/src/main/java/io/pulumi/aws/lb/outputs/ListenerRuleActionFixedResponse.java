@@ -41,21 +41,21 @@ public final class ListenerRuleActionFixedResponse {
      * The content type. Valid values are `text/plain`, `text/css`, `text/html`, `application/javascript` and `application/json`.
      * 
     */
-    public String getContentType() {
+    public String contentType() {
         return this.contentType;
     }
     /**
      * The message body.
      * 
     */
-    public Optional<String> getMessageBody() {
+    public Optional<String> messageBody() {
         return Optional.ofNullable(this.messageBody);
     }
     /**
      * The HTTP response code. Valid values are `2XX`, `4XX`, or `5XX`.
      * 
     */
-    public Optional<String> getStatusCode() {
+    public Optional<String> statusCode() {
         return Optional.ofNullable(this.statusCode);
     }
 

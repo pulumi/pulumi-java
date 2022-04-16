@@ -25,7 +25,7 @@ public final class AzureDataLakeStoreOutputDataSourceResponse extends io.pulumi.
     @Import(name="accountName")
       private final @Nullable String accountName;
 
-    public Optional<String> getAccountName() {
+    public Optional<String> accountName() {
         return this.accountName == null ? Optional.empty() : Optional.ofNullable(this.accountName);
     }
 
@@ -36,7 +36,7 @@ public final class AzureDataLakeStoreOutputDataSourceResponse extends io.pulumi.
     @Import(name="dateFormat")
       private final @Nullable String dateFormat;
 
-    public Optional<String> getDateFormat() {
+    public Optional<String> dateFormat() {
         return this.dateFormat == null ? Optional.empty() : Optional.ofNullable(this.dateFormat);
     }
 
@@ -47,7 +47,7 @@ public final class AzureDataLakeStoreOutputDataSourceResponse extends io.pulumi.
     @Import(name="filePathPrefix")
       private final @Nullable String filePathPrefix;
 
-    public Optional<String> getFilePathPrefix() {
+    public Optional<String> filePathPrefix() {
         return this.filePathPrefix == null ? Optional.empty() : Optional.ofNullable(this.filePathPrefix);
     }
 
@@ -58,7 +58,7 @@ public final class AzureDataLakeStoreOutputDataSourceResponse extends io.pulumi.
     @Import(name="refreshToken")
       private final @Nullable String refreshToken;
 
-    public Optional<String> getRefreshToken() {
+    public Optional<String> refreshToken() {
         return this.refreshToken == null ? Optional.empty() : Optional.ofNullable(this.refreshToken);
     }
 
@@ -69,7 +69,7 @@ public final class AzureDataLakeStoreOutputDataSourceResponse extends io.pulumi.
     @Import(name="tenantId")
       private final @Nullable String tenantId;
 
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
     }
 
@@ -80,7 +80,7 @@ public final class AzureDataLakeStoreOutputDataSourceResponse extends io.pulumi.
     @Import(name="timeFormat")
       private final @Nullable String timeFormat;
 
-    public Optional<String> getTimeFormat() {
+    public Optional<String> timeFormat() {
         return this.timeFormat == null ? Optional.empty() : Optional.ofNullable(this.timeFormat);
     }
 
@@ -91,7 +91,7 @@ public final class AzureDataLakeStoreOutputDataSourceResponse extends io.pulumi.
     @Import(name="tokenUserDisplayName")
       private final @Nullable String tokenUserDisplayName;
 
-    public Optional<String> getTokenUserDisplayName() {
+    public Optional<String> tokenUserDisplayName() {
         return this.tokenUserDisplayName == null ? Optional.empty() : Optional.ofNullable(this.tokenUserDisplayName);
     }
 
@@ -102,7 +102,7 @@ public final class AzureDataLakeStoreOutputDataSourceResponse extends io.pulumi.
     @Import(name="tokenUserPrincipalName")
       private final @Nullable String tokenUserPrincipalName;
 
-    public Optional<String> getTokenUserPrincipalName() {
+    public Optional<String> tokenUserPrincipalName() {
         return this.tokenUserPrincipalName == null ? Optional.empty() : Optional.ofNullable(this.tokenUserPrincipalName);
     }
 
@@ -114,7 +114,7 @@ public final class AzureDataLakeStoreOutputDataSourceResponse extends io.pulumi.
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

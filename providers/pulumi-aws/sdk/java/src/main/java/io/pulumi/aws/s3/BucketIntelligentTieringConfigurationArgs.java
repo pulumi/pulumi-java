@@ -25,7 +25,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -36,7 +36,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
     @Import(name="filter")
       private final @Nullable Output<BucketIntelligentTieringConfigurationFilterArgs> filter;
 
-    public Output<BucketIntelligentTieringConfigurationFilterArgs> getFilter() {
+    public Output<BucketIntelligentTieringConfigurationFilterArgs> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -47,7 +47,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -58,7 +58,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -69,7 +69,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
     @Import(name="tierings", required=true)
       private final Output<List<BucketIntelligentTieringConfigurationTieringArgs>> tierings;
 
-    public Output<List<BucketIntelligentTieringConfigurationTieringArgs>> getTierings() {
+    public Output<List<BucketIntelligentTieringConfigurationTieringArgs>> tierings() {
         return this.tierings;
     }
 

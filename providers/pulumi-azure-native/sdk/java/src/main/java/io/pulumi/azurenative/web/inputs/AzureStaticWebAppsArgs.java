@@ -27,7 +27,7 @@ public final class AzureStaticWebAppsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -38,7 +38,7 @@ public final class AzureStaticWebAppsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="registration")
       private final @Nullable Output<AzureStaticWebAppsRegistrationArgs> registration;
 
-    public Output<AzureStaticWebAppsRegistrationArgs> getRegistration() {
+    public Output<AzureStaticWebAppsRegistrationArgs> registration() {
         return this.registration == null ? Codegen.empty() : this.registration;
     }
 

@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowCxV3FormResponse {
      * Parameters to collect from the user.
      * 
     */
-    public List<GoogleCloudDialogflowCxV3FormParameterResponse> getParameters() {
+    public List<GoogleCloudDialogflowCxV3FormParameterResponse> parameters() {
         return this.parameters;
     }
 

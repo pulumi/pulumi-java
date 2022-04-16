@@ -16,14 +16,14 @@ public final class LaunchGroupToWeight extends io.pulumi.resources.InvokeArgs {
     @Import(name="groupName", required=true)
       private final String groupName;
 
-    public String getGroupName() {
+    public String groupName() {
         return this.groupName;
     }
 
     @Import(name="splitWeight", required=true)
       private final Integer splitWeight;
 
-    public Integer getSplitWeight() {
+    public Integer splitWeight() {
         return this.splitWeight;
     }
 

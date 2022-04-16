@@ -23,7 +23,7 @@ public final class ProvisioningArtifactArgs extends io.pulumi.resources.Resource
     @Import(name="acceptLanguage")
       private final @Nullable Output<String> acceptLanguage;
 
-    public Output<String> getAcceptLanguage() {
+    public Output<String> acceptLanguage() {
         return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
     }
 
@@ -34,7 +34,7 @@ public final class ProvisioningArtifactArgs extends io.pulumi.resources.Resource
     @Import(name="active")
       private final @Nullable Output<Boolean> active;
 
-    public Output<Boolean> getActive() {
+    public Output<Boolean> active() {
         return this.active == null ? Codegen.empty() : this.active;
     }
 
@@ -45,7 +45,7 @@ public final class ProvisioningArtifactArgs extends io.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -56,7 +56,7 @@ public final class ProvisioningArtifactArgs extends io.pulumi.resources.Resource
     @Import(name="disableTemplateValidation")
       private final @Nullable Output<Boolean> disableTemplateValidation;
 
-    public Output<Boolean> getDisableTemplateValidation() {
+    public Output<Boolean> disableTemplateValidation() {
         return this.disableTemplateValidation == null ? Codegen.empty() : this.disableTemplateValidation;
     }
 
@@ -67,7 +67,7 @@ public final class ProvisioningArtifactArgs extends io.pulumi.resources.Resource
     @Import(name="guidance")
       private final @Nullable Output<String> guidance;
 
-    public Output<String> getGuidance() {
+    public Output<String> guidance() {
         return this.guidance == null ? Codegen.empty() : this.guidance;
     }
 
@@ -78,7 +78,7 @@ public final class ProvisioningArtifactArgs extends io.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -89,7 +89,7 @@ public final class ProvisioningArtifactArgs extends io.pulumi.resources.Resource
     @Import(name="productId", required=true)
       private final Output<String> productId;
 
-    public Output<String> getProductId() {
+    public Output<String> productId() {
         return this.productId;
     }
 
@@ -100,7 +100,7 @@ public final class ProvisioningArtifactArgs extends io.pulumi.resources.Resource
     @Import(name="templatePhysicalId")
       private final @Nullable Output<String> templatePhysicalId;
 
-    public Output<String> getTemplatePhysicalId() {
+    public Output<String> templatePhysicalId() {
         return this.templatePhysicalId == null ? Codegen.empty() : this.templatePhysicalId;
     }
 
@@ -111,7 +111,7 @@ public final class ProvisioningArtifactArgs extends io.pulumi.resources.Resource
     @Import(name="templateUrl")
       private final @Nullable Output<String> templateUrl;
 
-    public Output<String> getTemplateUrl() {
+    public Output<String> templateUrl() {
         return this.templateUrl == null ? Codegen.empty() : this.templateUrl;
     }
 
@@ -122,7 +122,7 @@ public final class ProvisioningArtifactArgs extends io.pulumi.resources.Resource
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

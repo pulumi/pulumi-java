@@ -51,7 +51,7 @@ public final class DeliveryRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="actions", required=true)
       private final Output<List<Object>> actions;
 
-    public Output<List<Object>> getActions() {
+    public Output<List<Object>> actions() {
         return this.actions;
     }
 
@@ -62,7 +62,7 @@ public final class DeliveryRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conditions")
       private final @Nullable Output<List<Object>> conditions;
 
-    public Output<List<Object>> getConditions() {
+    public Output<List<Object>> conditions() {
         return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
@@ -73,7 +73,7 @@ public final class DeliveryRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -84,7 +84,7 @@ public final class DeliveryRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="order", required=true)
       private final Output<Integer> order;
 
-    public Output<Integer> getOrder() {
+    public Output<Integer> order() {
         return this.order;
     }
 

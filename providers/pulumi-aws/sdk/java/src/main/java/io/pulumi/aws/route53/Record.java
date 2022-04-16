@@ -56,7 +56,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * Alias record documented below.
      * 
      */
-    public Output</* @Nullable */ List<RecordAlias>> getAliases() {
+    public Output</* @Nullable */ List<RecordAlias>> aliases() {
         return this.aliases;
     }
     /**
@@ -70,7 +70,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * @return Allow creation of this record to overwrite an existing record, if any. This does not affect the ability to update the record using this provider and does not prevent other resources within this provider or manual Route 53 changes outside this provider from overwriting this record. `false` by default. This configuration is not recommended for most environments.
      * 
      */
-    public Output<Boolean> getAllowOverwrite() {
+    public Output<Boolean> allowOverwrite() {
         return this.allowOverwrite;
     }
     /**
@@ -84,7 +84,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * @return A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
      * 
      */
-    public Output</* @Nullable */ List<RecordFailoverRoutingPolicy>> getFailoverRoutingPolicies() {
+    public Output</* @Nullable */ List<RecordFailoverRoutingPolicy>> failoverRoutingPolicies() {
         return this.failoverRoutingPolicies;
     }
     /**
@@ -98,7 +98,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * @return [FQDN](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) built using the zone domain and `name`.
      * 
      */
-    public Output<String> getFqdn() {
+    public Output<String> fqdn() {
         return this.fqdn;
     }
     /**
@@ -112,7 +112,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * @return A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
      * 
      */
-    public Output</* @Nullable */ List<RecordGeolocationRoutingPolicy>> getGeolocationRoutingPolicies() {
+    public Output</* @Nullable */ List<RecordGeolocationRoutingPolicy>> geolocationRoutingPolicies() {
         return this.geolocationRoutingPolicies;
     }
     /**
@@ -126,7 +126,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * @return The health check the record should be associated with.
      * 
      */
-    public Output</* @Nullable */ String> getHealthCheckId() {
+    public Output</* @Nullable */ String> healthCheckId() {
         return this.healthCheckId;
     }
     /**
@@ -140,7 +140,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * @return A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
      * 
      */
-    public Output</* @Nullable */ List<RecordLatencyRoutingPolicy>> getLatencyRoutingPolicies() {
+    public Output</* @Nullable */ List<RecordLatencyRoutingPolicy>> latencyRoutingPolicies() {
         return this.latencyRoutingPolicies;
     }
     /**
@@ -154,7 +154,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * @return Set to `true` to indicate a multivalue answer routing policy. Conflicts with any other routing policy.
      * 
      */
-    public Output</* @Nullable */ Boolean> getMultivalueAnswerRoutingPolicy() {
+    public Output</* @Nullable */ Boolean> multivalueAnswerRoutingPolicy() {
         return this.multivalueAnswerRoutingPolicy;
     }
     /**
@@ -168,7 +168,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * @return DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -182,7 +182,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * @return A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the configuration string (e.g. `"first255characters\"\"morecharacters"`).
      * 
      */
-    public Output</* @Nullable */ List<String>> getRecords() {
+    public Output</* @Nullable */ List<String>> records() {
         return this.records;
     }
     /**
@@ -196,7 +196,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * @return Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, or `weighted` routing policies documented below.
      * 
      */
-    public Output</* @Nullable */ String> getSetIdentifier() {
+    public Output</* @Nullable */ String> setIdentifier() {
         return this.setIdentifier;
     }
     /**
@@ -210,7 +210,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * @return The TTL of the record.
      * 
      */
-    public Output</* @Nullable */ Integer> getTtl() {
+    public Output</* @Nullable */ Integer> ttl() {
         return this.ttl;
     }
     /**
@@ -224,7 +224,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * @return `PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -238,7 +238,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * @return A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
      * 
      */
-    public Output</* @Nullable */ List<RecordWeightedRoutingPolicy>> getWeightedRoutingPolicies() {
+    public Output</* @Nullable */ List<RecordWeightedRoutingPolicy>> weightedRoutingPolicies() {
         return this.weightedRoutingPolicies;
     }
     /**
@@ -252,7 +252,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * @return Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
      * 
      */
-    public Output<String> getZoneId() {
+    public Output<String> zoneId() {
         return this.zoneId;
     }
 

@@ -32,7 +32,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return The create time of the resource.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -46,7 +46,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return Destination address for connection
      * 
      */
-    public Output<String> getDestinationAddress() {
+    public Output<String> destinationAddress() {
         return this.destinationAddress;
     }
     /**
@@ -60,7 +60,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return Destination port for connection
      * 
      */
-    public Output<Integer> getDestinationPort() {
+    public Output<Integer> destinationPort() {
         return this.destinationPort;
     }
     /**
@@ -74,7 +74,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return Display name.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -88,7 +88,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return Labels.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -102,7 +102,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return The resource's name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -116,7 +116,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return The update time of the resource.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

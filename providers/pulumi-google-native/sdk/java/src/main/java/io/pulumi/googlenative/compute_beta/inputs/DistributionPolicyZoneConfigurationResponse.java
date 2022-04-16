@@ -19,7 +19,7 @@ public final class DistributionPolicyZoneConfigurationResponse extends io.pulumi
     @Import(name="zone", required=true)
       private final String zone;
 
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

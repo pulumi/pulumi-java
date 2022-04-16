@@ -41,7 +41,7 @@ public class Attachment extends io.pulumi.resources.CustomResource {
      * @return The ARN of an ALB Target Group.
      * 
      */
-    public Output</* @Nullable */ String> getAlbTargetGroupArn() {
+    public Output</* @Nullable */ String> albTargetGroupArn() {
         return this.albTargetGroupArn;
     }
     /**
@@ -55,7 +55,7 @@ public class Attachment extends io.pulumi.resources.CustomResource {
      * @return Name of ASG to associate with the ELB.
      * 
      */
-    public Output<String> getAutoscalingGroupName() {
+    public Output<String> autoscalingGroupName() {
         return this.autoscalingGroupName;
     }
     /**
@@ -69,7 +69,7 @@ public class Attachment extends io.pulumi.resources.CustomResource {
      * @return The name of the ELB.
      * 
      */
-    public Output</* @Nullable */ String> getElb() {
+    public Output</* @Nullable */ String> elb() {
         return this.elb;
     }
 

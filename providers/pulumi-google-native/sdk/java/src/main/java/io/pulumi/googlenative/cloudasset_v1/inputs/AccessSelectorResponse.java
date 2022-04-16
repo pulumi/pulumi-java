@@ -24,7 +24,7 @@ public final class AccessSelectorResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="permissions", required=true)
       private final List<String> permissions;
 
-    public List<String> getPermissions() {
+    public List<String> permissions() {
         return this.permissions;
     }
 
@@ -35,7 +35,7 @@ public final class AccessSelectorResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="roles", required=true)
       private final List<String> roles;
 
-    public List<String> getRoles() {
+    public List<String> roles() {
         return this.roles;
     }
 

@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2NumericalStatsConfigResponse {
      * Field to compute numerical stats on. Supported types are integer, float, date, datetime, timestamp, time.
      * 
     */
-    public GooglePrivacyDlpV2FieldIdResponse getField() {
+    public GooglePrivacyDlpV2FieldIdResponse field() {
         return this.field;
     }
 

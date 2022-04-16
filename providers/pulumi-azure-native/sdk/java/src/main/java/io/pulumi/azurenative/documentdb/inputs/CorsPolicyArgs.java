@@ -27,7 +27,7 @@ public final class CorsPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowedHeaders")
       private final @Nullable Output<String> allowedHeaders;
 
-    public Output<String> getAllowedHeaders() {
+    public Output<String> allowedHeaders() {
         return this.allowedHeaders == null ? Codegen.empty() : this.allowedHeaders;
     }
 
@@ -38,7 +38,7 @@ public final class CorsPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowedMethods")
       private final @Nullable Output<String> allowedMethods;
 
-    public Output<String> getAllowedMethods() {
+    public Output<String> allowedMethods() {
         return this.allowedMethods == null ? Codegen.empty() : this.allowedMethods;
     }
 
@@ -49,7 +49,7 @@ public final class CorsPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowedOrigins", required=true)
       private final Output<String> allowedOrigins;
 
-    public Output<String> getAllowedOrigins() {
+    public Output<String> allowedOrigins() {
         return this.allowedOrigins;
     }
 
@@ -60,7 +60,7 @@ public final class CorsPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="exposedHeaders")
       private final @Nullable Output<String> exposedHeaders;
 
-    public Output<String> getExposedHeaders() {
+    public Output<String> exposedHeaders() {
         return this.exposedHeaders == null ? Codegen.empty() : this.exposedHeaders;
     }
 
@@ -71,7 +71,7 @@ public final class CorsPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxAgeInSeconds")
       private final @Nullable Output<Double> maxAgeInSeconds;
 
-    public Output<Double> getMaxAgeInSeconds() {
+    public Output<Double> maxAgeInSeconds() {
         return this.maxAgeInSeconds == null ? Codegen.empty() : this.maxAgeInSeconds;
     }
 

@@ -94,78 +94,78 @@ public final class GetBucketObjectContentResult {
         this.temporaryHold = temporaryHold;
     }
 
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
-    public String getCacheControl() {
+    public String cacheControl() {
         return this.cacheControl;
     }
     /**
      * (Computed) [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object content.
      * 
     */
-    public Optional<String> getContent() {
+    public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
-    public String getContentDisposition() {
+    public String contentDisposition() {
         return this.contentDisposition;
     }
-    public String getContentEncoding() {
+    public String contentEncoding() {
         return this.contentEncoding;
     }
-    public String getContentLanguage() {
+    public String contentLanguage() {
         return this.contentLanguage;
     }
-    public String getContentType() {
+    public String contentType() {
         return this.contentType;
     }
-    public String getCrc32c() {
+    public String crc32c() {
         return this.crc32c;
     }
-    public List<GetBucketObjectContentCustomerEncryption> getCustomerEncryptions() {
+    public List<GetBucketObjectContentCustomerEncryption> customerEncryptions() {
         return this.customerEncryptions;
     }
-    public String getDetectMd5hash() {
+    public String detectMd5hash() {
         return this.detectMd5hash;
     }
-    public Boolean getEventBasedHold() {
+    public Boolean eventBasedHold() {
         return this.eventBasedHold;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getKmsKeyName() {
+    public String kmsKeyName() {
         return this.kmsKeyName;
     }
-    public String getMd5hash() {
+    public String md5hash() {
         return this.md5hash;
     }
-    public String getMediaLink() {
+    public String mediaLink() {
         return this.mediaLink;
     }
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getOutputName() {
+    public String outputName() {
         return this.outputName;
     }
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
-    public String getSource() {
+    public String source() {
         return this.source;
     }
-    public String getStorageClass() {
+    public String storageClass() {
         return this.storageClass;
     }
-    public Boolean getTemporaryHold() {
+    public Boolean temporaryHold() {
         return this.temporaryHold;
     }
 

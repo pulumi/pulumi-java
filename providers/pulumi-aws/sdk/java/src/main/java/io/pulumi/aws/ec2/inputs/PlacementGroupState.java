@@ -26,7 +26,7 @@ public final class PlacementGroupState extends io.pulumi.resources.ResourceArgs 
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -37,7 +37,7 @@ public final class PlacementGroupState extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -50,7 +50,7 @@ public final class PlacementGroupState extends io.pulumi.resources.ResourceArgs 
     @Import(name="partitionCount")
       private final @Nullable Output<Integer> partitionCount;
 
-    public Output<Integer> getPartitionCount() {
+    public Output<Integer> partitionCount() {
         return this.partitionCount == null ? Codegen.empty() : this.partitionCount;
     }
 
@@ -61,7 +61,7 @@ public final class PlacementGroupState extends io.pulumi.resources.ResourceArgs 
     @Import(name="placementGroupId")
       private final @Nullable Output<String> placementGroupId;
 
-    public Output<String> getPlacementGroupId() {
+    public Output<String> placementGroupId() {
         return this.placementGroupId == null ? Codegen.empty() : this.placementGroupId;
     }
 
@@ -72,7 +72,7 @@ public final class PlacementGroupState extends io.pulumi.resources.ResourceArgs 
     @Import(name="strategy")
       private final @Nullable Output<Either<String,PlacementStrategy>> strategy;
 
-    public Output<Either<String,PlacementStrategy>> getStrategy() {
+    public Output<Either<String,PlacementStrategy>> strategy() {
         return this.strategy == null ? Codegen.empty() : this.strategy;
     }
 
@@ -83,7 +83,7 @@ public final class PlacementGroupState extends io.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -94,7 +94,7 @@ public final class PlacementGroupState extends io.pulumi.resources.ResourceArgs 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

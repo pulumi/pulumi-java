@@ -19,7 +19,7 @@ public final class GetBrokerNodesArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="clusterArn", required=true)
       private final String clusterArn;
 
-    public String getClusterArn() {
+    public String clusterArn() {
         return this.clusterArn;
     }
 

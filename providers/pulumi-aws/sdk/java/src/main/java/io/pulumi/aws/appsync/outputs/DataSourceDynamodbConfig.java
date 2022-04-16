@@ -45,31 +45,31 @@ public final class DataSourceDynamodbConfig {
         this.versioned = versioned;
     }
 
-    public Optional<DataSourceDynamodbConfigDeltaSyncConfig> getDeltaSyncConfig() {
+    public Optional<DataSourceDynamodbConfigDeltaSyncConfig> deltaSyncConfig() {
         return Optional.ofNullable(this.deltaSyncConfig);
     }
     /**
      * AWS Region for RDS HTTP endpoint. Defaults to current region.
      * 
     */
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
     /**
      * Name of the DynamoDB table.
      * 
     */
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
     /**
      * Set to `true` to use Amazon Cognito credentials with this data source.
      * 
     */
-    public Optional<Boolean> getUseCallerCredentials() {
+    public Optional<Boolean> useCallerCredentials() {
         return Optional.ofNullable(this.useCallerCredentials);
     }
-    public Optional<Boolean> getVersioned() {
+    public Optional<Boolean> versioned() {
         return Optional.ofNullable(this.versioned);
     }
 

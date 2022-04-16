@@ -16,14 +16,14 @@ public final class RuleGroupLabelMatchStatement extends io.pulumi.resources.Invo
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 
     @Import(name="scope", required=true)
       private final RuleGroupLabelMatchScope scope;
 
-    public RuleGroupLabelMatchScope getScope() {
+    public RuleGroupLabelMatchScope scope() {
         return this.scope;
     }
 

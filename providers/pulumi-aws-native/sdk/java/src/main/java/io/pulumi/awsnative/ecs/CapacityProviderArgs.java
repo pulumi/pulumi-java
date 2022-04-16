@@ -21,21 +21,21 @@ public final class CapacityProviderArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="autoScalingGroupProvider", required=true)
       private final Output<CapacityProviderAutoScalingGroupProviderArgs> autoScalingGroupProvider;
 
-    public Output<CapacityProviderAutoScalingGroupProviderArgs> getAutoScalingGroupProvider() {
+    public Output<CapacityProviderAutoScalingGroupProviderArgs> autoScalingGroupProvider() {
         return this.autoScalingGroupProvider;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<CapacityProviderTagArgs>> tags;
 
-    public Output<List<CapacityProviderTagArgs>> getTags() {
+    public Output<List<CapacityProviderTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -27,7 +27,7 @@ public final class PrivatePoolV1ConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="networkConfig")
       private final @Nullable Output<NetworkConfigArgs> networkConfig;
 
-    public Output<NetworkConfigArgs> getNetworkConfig() {
+    public Output<NetworkConfigArgs> networkConfig() {
         return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
     }
 
@@ -38,7 +38,7 @@ public final class PrivatePoolV1ConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="workerConfig")
       private final @Nullable Output<WorkerConfigArgs> workerConfig;
 
-    public Output<WorkerConfigArgs> getWorkerConfig() {
+    public Output<WorkerConfigArgs> workerConfig() {
         return this.workerConfig == null ? Codegen.empty() : this.workerConfig;
     }
 

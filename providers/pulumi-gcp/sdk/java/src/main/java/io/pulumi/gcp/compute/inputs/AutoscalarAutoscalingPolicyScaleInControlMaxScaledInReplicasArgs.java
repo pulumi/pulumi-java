@@ -23,7 +23,7 @@ public final class AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasA
     @Import(name="fixed")
       private final @Nullable Output<Integer> fixed;
 
-    public Output<Integer> getFixed() {
+    public Output<Integer> fixed() {
         return this.fixed == null ? Codegen.empty() : this.fixed;
     }
 
@@ -35,7 +35,7 @@ public final class AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasA
     @Import(name="percent")
       private final @Nullable Output<Integer> percent;
 
-    public Output<Integer> getPercent() {
+    public Output<Integer> percent() {
         return this.percent == null ? Codegen.empty() : this.percent;
     }
 

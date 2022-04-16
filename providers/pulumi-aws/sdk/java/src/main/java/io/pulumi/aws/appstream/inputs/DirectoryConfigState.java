@@ -24,7 +24,7 @@ public final class DirectoryConfigState extends io.pulumi.resources.ResourceArgs
     @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime == null ? Codegen.empty() : this.createdTime;
     }
 
@@ -35,7 +35,7 @@ public final class DirectoryConfigState extends io.pulumi.resources.ResourceArgs
     @Import(name="directoryName")
       private final @Nullable Output<String> directoryName;
 
-    public Output<String> getDirectoryName() {
+    public Output<String> directoryName() {
         return this.directoryName == null ? Codegen.empty() : this.directoryName;
     }
 
@@ -46,7 +46,7 @@ public final class DirectoryConfigState extends io.pulumi.resources.ResourceArgs
     @Import(name="organizationalUnitDistinguishedNames")
       private final @Nullable Output<List<String>> organizationalUnitDistinguishedNames;
 
-    public Output<List<String>> getOrganizationalUnitDistinguishedNames() {
+    public Output<List<String>> organizationalUnitDistinguishedNames() {
         return this.organizationalUnitDistinguishedNames == null ? Codegen.empty() : this.organizationalUnitDistinguishedNames;
     }
 
@@ -57,7 +57,7 @@ public final class DirectoryConfigState extends io.pulumi.resources.ResourceArgs
     @Import(name="serviceAccountCredentials")
       private final @Nullable Output<DirectoryConfigServiceAccountCredentialsGetArgs> serviceAccountCredentials;
 
-    public Output<DirectoryConfigServiceAccountCredentialsGetArgs> getServiceAccountCredentials() {
+    public Output<DirectoryConfigServiceAccountCredentialsGetArgs> serviceAccountCredentials() {
         return this.serviceAccountCredentials == null ? Codegen.empty() : this.serviceAccountCredentials;
     }
 

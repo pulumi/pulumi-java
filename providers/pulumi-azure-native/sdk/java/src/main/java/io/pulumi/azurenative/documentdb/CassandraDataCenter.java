@@ -43,7 +43,7 @@ public class CassandraDataCenter extends io.pulumi.resources.CustomResource {
      * @return The name of the database account.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +57,7 @@ public class CassandraDataCenter extends io.pulumi.resources.CustomResource {
      * @return Properties of a managed Cassandra data center.
      * 
      */
-    public Output<DataCenterResourceResponseProperties> getProperties() {
+    public Output<DataCenterResourceResponseProperties> properties() {
         return this.properties;
     }
     /**
@@ -71,7 +71,7 @@ public class CassandraDataCenter extends io.pulumi.resources.CustomResource {
      * @return The type of Azure resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

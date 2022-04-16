@@ -23,13 +23,13 @@ public final class GetRepositoryPubsubConfig {
         this.topic = topic;
     }
 
-    public String getMessageFormat() {
+    public String messageFormat() {
         return this.messageFormat;
     }
-    public String getServiceAccountEmail() {
+    public String serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
-    public String getTopic() {
+    public String topic() {
         return this.topic;
     }
 

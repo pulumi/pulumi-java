@@ -39,21 +39,21 @@ public final class DataSourceSnowflakeParameters {
      * <p>Database.</p>
      * 
     */
-    public String getDatabase() {
+    public String database() {
         return this.database;
     }
     /**
      * <p>Host.</p>
      * 
     */
-    public String getHost() {
+    public String host() {
         return this.host;
     }
     /**
      * <p>Warehouse.</p>
      * 
     */
-    public String getWarehouse() {
+    public String warehouse() {
         return this.warehouse;
     }
 

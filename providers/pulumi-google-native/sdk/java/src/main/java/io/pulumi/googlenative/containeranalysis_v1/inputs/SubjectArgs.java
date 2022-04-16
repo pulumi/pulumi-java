@@ -23,14 +23,14 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="digest")
       private final @Nullable Output<Map<String,String>> digest;
 
-    public Output<Map<String,String>> getDigest() {
+    public Output<Map<String,String>> digest() {
         return this.digest == null ? Codegen.empty() : this.digest;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

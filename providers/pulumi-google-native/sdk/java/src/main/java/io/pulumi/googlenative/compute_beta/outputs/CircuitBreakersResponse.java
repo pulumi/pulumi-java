@@ -61,42 +61,42 @@ public final class CircuitBreakersResponse {
      * The timeout for new network connections to hosts.
      * 
     */
-    public DurationResponse getConnectTimeout() {
+    public DurationResponse connectTimeout() {
         return this.connectTimeout;
     }
     /**
      * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
      * 
     */
-    public Integer getMaxConnections() {
+    public Integer maxConnections() {
         return this.maxConnections;
     }
     /**
      * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
      * 
     */
-    public Integer getMaxPendingRequests() {
+    public Integer maxPendingRequests() {
         return this.maxPendingRequests;
     }
     /**
      * The maximum number of parallel requests that allowed to the backend service. If not specified, there is no limit.
      * 
     */
-    public Integer getMaxRequests() {
+    public Integer maxRequests() {
         return this.maxRequests;
     }
     /**
      * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
      * 
     */
-    public Integer getMaxRequestsPerConnection() {
+    public Integer maxRequestsPerConnection() {
         return this.maxRequestsPerConnection;
     }
     /**
      * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
      * 
     */
-    public Integer getMaxRetries() {
+    public Integer maxRetries() {
         return this.maxRetries;
     }
 

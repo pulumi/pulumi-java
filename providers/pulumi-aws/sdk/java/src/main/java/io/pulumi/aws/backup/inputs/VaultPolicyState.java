@@ -22,7 +22,7 @@ public final class VaultPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="backupVaultArn")
       private final @Nullable Output<String> backupVaultArn;
 
-    public Output<String> getBackupVaultArn() {
+    public Output<String> backupVaultArn() {
         return this.backupVaultArn == null ? Codegen.empty() : this.backupVaultArn;
     }
 
@@ -33,7 +33,7 @@ public final class VaultPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="backupVaultName")
       private final @Nullable Output<String> backupVaultName;
 
-    public Output<String> getBackupVaultName() {
+    public Output<String> backupVaultName() {
         return this.backupVaultName == null ? Codegen.empty() : this.backupVaultName;
     }
 
@@ -44,7 +44,7 @@ public final class VaultPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 

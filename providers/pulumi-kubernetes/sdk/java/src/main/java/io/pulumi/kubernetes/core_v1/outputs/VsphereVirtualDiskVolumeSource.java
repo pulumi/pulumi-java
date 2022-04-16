@@ -48,28 +48,28 @@ public final class VsphereVirtualDiskVolumeSource {
      * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
      * 
     */
-    public Optional<String> getFsType() {
+    public Optional<String> fsType() {
         return Optional.ofNullable(this.fsType);
     }
     /**
      * Storage Policy Based Management (SPBM) profile ID associated with the StoragePolicyName.
      * 
     */
-    public Optional<String> getStoragePolicyID() {
+    public Optional<String> storagePolicyID() {
         return Optional.ofNullable(this.storagePolicyID);
     }
     /**
      * Storage Policy Based Management (SPBM) profile name.
      * 
     */
-    public Optional<String> getStoragePolicyName() {
+    public Optional<String> storagePolicyName() {
         return Optional.ofNullable(this.storagePolicyName);
     }
     /**
      * Path that identifies vSphere volume vmdk
      * 
     */
-    public String getVolumePath() {
+    public String volumePath() {
         return this.volumePath;
     }
 

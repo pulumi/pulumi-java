@@ -25,7 +25,7 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="columnFamily")
       private final @Nullable Output<String> columnFamily;
 
-    public Output<String> getColumnFamily() {
+    public Output<String> columnFamily() {
         return this.columnFamily == null ? Codegen.empty() : this.columnFamily;
     }
 
@@ -36,7 +36,7 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceName")
       private final @Nullable Output<String> instanceName;
 
-    public Output<String> getInstanceName() {
+    public Output<String> instanceName() {
         return this.instanceName == null ? Codegen.empty() : this.instanceName;
     }
 
@@ -47,7 +47,7 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxAge")
       private final @Nullable Output<GCPolicyMaxAgeGetArgs> maxAge;
 
-    public Output<GCPolicyMaxAgeGetArgs> getMaxAge() {
+    public Output<GCPolicyMaxAgeGetArgs> maxAge() {
         return this.maxAge == null ? Codegen.empty() : this.maxAge;
     }
 
@@ -58,7 +58,7 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxVersions")
       private final @Nullable Output<List<GCPolicyMaxVersionGetArgs>> maxVersions;
 
-    public Output<List<GCPolicyMaxVersionGetArgs>> getMaxVersions() {
+    public Output<List<GCPolicyMaxVersionGetArgs>> maxVersions() {
         return this.maxVersions == null ? Codegen.empty() : this.maxVersions;
     }
 
@@ -69,7 +69,7 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="mode")
       private final @Nullable Output<String> mode;
 
-    public Output<String> getMode() {
+    public Output<String> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -80,7 +80,7 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -91,7 +91,7 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="table")
       private final @Nullable Output<String> table;
 
-    public Output<String> getTable() {
+    public Output<String> table() {
         return this.table == null ? Codegen.empty() : this.table;
     }
 

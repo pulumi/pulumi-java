@@ -41,21 +41,21 @@ public final class ManagedDiskDetailsResponse {
      * Expected value is 'ManagedDisk'.
      * 
     */
-    public String getDataAccountType() {
+    public String dataAccountType() {
         return this.dataAccountType;
     }
     /**
      * Resource Group Id of the compute disks.
      * 
     */
-    public String getResourceGroupId() {
+    public String resourceGroupId() {
         return this.resourceGroupId;
     }
     /**
      * Resource Id of the storage account that can be used to copy the vhd for staging.
      * 
     */
-    public String getStagingStorageAccountId() {
+    public String stagingStorageAccountId() {
         return this.stagingStorageAccountId;
     }
 

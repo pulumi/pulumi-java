@@ -23,7 +23,7 @@ public final class ClusterStatusResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="detail", required=true)
       private final String detail;
 
-    public String getDetail() {
+    public String detail() {
         return this.detail;
     }
 
@@ -34,7 +34,7 @@ public final class ClusterStatusResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 
@@ -45,7 +45,7 @@ public final class ClusterStatusResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="stateStartTime", required=true)
       private final String stateStartTime;
 
-    public String getStateStartTime() {
+    public String stateStartTime() {
         return this.stateStartTime;
     }
 
@@ -56,7 +56,7 @@ public final class ClusterStatusResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="substate", required=true)
       private final String substate;
 
-    public String getSubstate() {
+    public String substate() {
         return this.substate;
     }
 

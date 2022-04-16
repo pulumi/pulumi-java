@@ -33,14 +33,14 @@ public final class ModelBiasJobDefinitionVpcConfig {
      * The VPC security group IDs, in the form sg-xxxxxxxx. Specify the security groups for the VPC that is specified in the Subnets field.
      * 
     */
-    public List<String> getSecurityGroupIds() {
+    public List<String> securityGroupIds() {
         return this.securityGroupIds;
     }
     /**
      * The ID of the subnets in the VPC to which you want to connect to your monitoring jobs.
      * 
     */
-    public List<String> getSubnets() {
+    public List<String> subnets() {
         return this.subnets;
     }
 

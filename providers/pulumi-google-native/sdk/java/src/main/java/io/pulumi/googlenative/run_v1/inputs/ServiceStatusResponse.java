@@ -28,7 +28,7 @@ public final class ServiceStatusResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="address", required=true)
       private final AddressableResponse address;
 
-    public AddressableResponse getAddress() {
+    public AddressableResponse address() {
         return this.address;
     }
 
@@ -39,7 +39,7 @@ public final class ServiceStatusResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="conditions", required=true)
       private final List<GoogleCloudRunV1ConditionResponse> conditions;
 
-    public List<GoogleCloudRunV1ConditionResponse> getConditions() {
+    public List<GoogleCloudRunV1ConditionResponse> conditions() {
         return this.conditions;
     }
 
@@ -50,7 +50,7 @@ public final class ServiceStatusResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="latestCreatedRevisionName", required=true)
       private final String latestCreatedRevisionName;
 
-    public String getLatestCreatedRevisionName() {
+    public String latestCreatedRevisionName() {
         return this.latestCreatedRevisionName;
     }
 
@@ -61,7 +61,7 @@ public final class ServiceStatusResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="latestReadyRevisionName", required=true)
       private final String latestReadyRevisionName;
 
-    public String getLatestReadyRevisionName() {
+    public String latestReadyRevisionName() {
         return this.latestReadyRevisionName;
     }
 
@@ -72,7 +72,7 @@ public final class ServiceStatusResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="observedGeneration", required=true)
       private final Integer observedGeneration;
 
-    public Integer getObservedGeneration() {
+    public Integer observedGeneration() {
         return this.observedGeneration;
     }
 
@@ -83,7 +83,7 @@ public final class ServiceStatusResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="traffic", required=true)
       private final List<TrafficTargetResponse> traffic;
 
-    public List<TrafficTargetResponse> getTraffic() {
+    public List<TrafficTargetResponse> traffic() {
         return this.traffic;
     }
 
@@ -94,7 +94,7 @@ public final class ServiceStatusResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

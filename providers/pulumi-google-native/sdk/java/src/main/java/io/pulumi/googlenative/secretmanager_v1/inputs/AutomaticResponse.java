@@ -23,7 +23,7 @@ public final class AutomaticResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="customerManagedEncryption", required=true)
       private final CustomerManagedEncryptionResponse customerManagedEncryption;
 
-    public CustomerManagedEncryptionResponse getCustomerManagedEncryption() {
+    public CustomerManagedEncryptionResponse customerManagedEncryption() {
         return this.customerManagedEncryption;
     }
 

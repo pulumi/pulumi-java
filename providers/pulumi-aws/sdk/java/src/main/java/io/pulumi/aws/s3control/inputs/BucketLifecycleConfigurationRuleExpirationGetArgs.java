@@ -24,7 +24,7 @@ public final class BucketLifecycleConfigurationRuleExpirationGetArgs extends io.
     @Import(name="date")
       private final @Nullable Output<String> date;
 
-    public Output<String> getDate() {
+    public Output<String> date() {
         return this.date == null ? Codegen.empty() : this.date;
     }
 
@@ -35,7 +35,7 @@ public final class BucketLifecycleConfigurationRuleExpirationGetArgs extends io.
     @Import(name="days")
       private final @Nullable Output<Integer> days;
 
-    public Output<Integer> getDays() {
+    public Output<Integer> days() {
         return this.days == null ? Codegen.empty() : this.days;
     }
 
@@ -46,7 +46,7 @@ public final class BucketLifecycleConfigurationRuleExpirationGetArgs extends io.
     @Import(name="expiredObjectDeleteMarker")
       private final @Nullable Output<Boolean> expiredObjectDeleteMarker;
 
-    public Output<Boolean> getExpiredObjectDeleteMarker() {
+    public Output<Boolean> expiredObjectDeleteMarker() {
         return this.expiredObjectDeleteMarker == null ? Codegen.empty() : this.expiredObjectDeleteMarker;
     }
 

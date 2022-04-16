@@ -46,7 +46,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Last time there was a receive request to this subscription.
      * 
      */
-    public Output<String> getAccessedAt() {
+    public Output<String> accessedAt() {
         return this.accessedAt;
     }
     /**
@@ -60,7 +60,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return ISO 8061 timeSpan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
      * 
      */
-    public Output</* @Nullable */ String> getAutoDeleteOnIdle() {
+    public Output</* @Nullable */ String> autoDeleteOnIdle() {
         return this.autoDeleteOnIdle;
     }
     /**
@@ -74,7 +74,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Message count details
      * 
      */
-    public Output<MessageCountDetailsResponse> getCountDetails() {
+    public Output<MessageCountDetailsResponse> countDetails() {
         return this.countDetails;
     }
     /**
@@ -88,7 +88,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Exact time the message was created.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -102,7 +102,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Value that indicates whether a subscription has dead letter support on filter evaluation exceptions.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDeadLetteringOnFilterEvaluationExceptions() {
+    public Output</* @Nullable */ Boolean> deadLetteringOnFilterEvaluationExceptions() {
         return this.deadLetteringOnFilterEvaluationExceptions;
     }
     /**
@@ -116,7 +116,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Value that indicates whether a subscription has dead letter support when a message expires.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDeadLetteringOnMessageExpiration() {
+    public Output</* @Nullable */ Boolean> deadLetteringOnMessageExpiration() {
         return this.deadLetteringOnMessageExpiration;
     }
     /**
@@ -130,7 +130,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return ISO 8061 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
      * 
      */
-    public Output</* @Nullable */ String> getDefaultMessageTimeToLive() {
+    public Output</* @Nullable */ String> defaultMessageTimeToLive() {
         return this.defaultMessageTimeToLive;
     }
     /**
@@ -144,7 +144,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
      * 
      */
-    public Output</* @Nullable */ String> getDuplicateDetectionHistoryTimeWindow() {
+    public Output</* @Nullable */ String> duplicateDetectionHistoryTimeWindow() {
         return this.duplicateDetectionHistoryTimeWindow;
     }
     /**
@@ -158,7 +158,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Value that indicates whether server-side batched operations are enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableBatchedOperations() {
+    public Output</* @Nullable */ Boolean> enableBatchedOperations() {
         return this.enableBatchedOperations;
     }
     /**
@@ -172,7 +172,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Queue/Topic name to forward the Dead Letter message
      * 
      */
-    public Output</* @Nullable */ String> getForwardDeadLetteredMessagesTo() {
+    public Output</* @Nullable */ String> forwardDeadLetteredMessagesTo() {
         return this.forwardDeadLetteredMessagesTo;
     }
     /**
@@ -186,7 +186,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Queue/Topic name to forward the messages
      * 
      */
-    public Output</* @Nullable */ String> getForwardTo() {
+    public Output</* @Nullable */ String> forwardTo() {
         return this.forwardTo;
     }
     /**
@@ -200,7 +200,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return ISO 8061 lock duration timespan for the subscription. The default value is 1 minute.
      * 
      */
-    public Output</* @Nullable */ String> getLockDuration() {
+    public Output</* @Nullable */ String> lockDuration() {
         return this.lockDuration;
     }
     /**
@@ -214,7 +214,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Number of maximum deliveries.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxDeliveryCount() {
+    public Output</* @Nullable */ Integer> maxDeliveryCount() {
         return this.maxDeliveryCount;
     }
     /**
@@ -228,7 +228,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Number of messages.
      * 
      */
-    public Output<Double> getMessageCount() {
+    public Output<Double> messageCount() {
         return this.messageCount;
     }
     /**
@@ -242,7 +242,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -256,7 +256,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Value indicating if a subscription supports the concept of sessions.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRequiresSession() {
+    public Output</* @Nullable */ Boolean> requiresSession() {
         return this.requiresSession;
     }
     /**
@@ -270,7 +270,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Enumerates the possible values for the status of a messaging entity.
      * 
      */
-    public Output</* @Nullable */ String> getStatus() {
+    public Output</* @Nullable */ String> status() {
         return this.status;
     }
     /**
@@ -284,7 +284,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -298,7 +298,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return The exact time the message was updated.
      * 
      */
-    public Output<String> getUpdatedAt() {
+    public Output<String> updatedAt() {
         return this.updatedAt;
     }
 

@@ -35,7 +35,7 @@ public final class FtpServerLinkedServiceArgs extends io.pulumi.resources.Resour
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -46,7 +46,7 @@ public final class FtpServerLinkedServiceArgs extends io.pulumi.resources.Resour
     @Import(name="authenticationType")
       private final @Nullable Output<Either<String,FtpAuthenticationType>> authenticationType;
 
-    public Output<Either<String,FtpAuthenticationType>> getAuthenticationType() {
+    public Output<Either<String,FtpAuthenticationType>> authenticationType() {
         return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
     }
 
@@ -57,7 +57,7 @@ public final class FtpServerLinkedServiceArgs extends io.pulumi.resources.Resour
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
         return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
@@ -68,7 +68,7 @@ public final class FtpServerLinkedServiceArgs extends io.pulumi.resources.Resour
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -79,7 +79,7 @@ public final class FtpServerLinkedServiceArgs extends io.pulumi.resources.Resour
     @Import(name="enableServerCertificateValidation")
       private final @Nullable Output<Object> enableServerCertificateValidation;
 
-    public Output<Object> getEnableServerCertificateValidation() {
+    public Output<Object> enableServerCertificateValidation() {
         return this.enableServerCertificateValidation == null ? Codegen.empty() : this.enableServerCertificateValidation;
     }
 
@@ -90,7 +90,7 @@ public final class FtpServerLinkedServiceArgs extends io.pulumi.resources.Resour
     @Import(name="enableSsl")
       private final @Nullable Output<Object> enableSsl;
 
-    public Output<Object> getEnableSsl() {
+    public Output<Object> enableSsl() {
         return this.enableSsl == null ? Codegen.empty() : this.enableSsl;
     }
 
@@ -101,7 +101,7 @@ public final class FtpServerLinkedServiceArgs extends io.pulumi.resources.Resour
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
+    public Output<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
@@ -112,7 +112,7 @@ public final class FtpServerLinkedServiceArgs extends io.pulumi.resources.Resour
     @Import(name="host", required=true)
       private final Output<Object> host;
 
-    public Output<Object> getHost() {
+    public Output<Object> host() {
         return this.host;
     }
 
@@ -123,7 +123,7 @@ public final class FtpServerLinkedServiceArgs extends io.pulumi.resources.Resour
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -134,7 +134,7 @@ public final class FtpServerLinkedServiceArgs extends io.pulumi.resources.Resour
     @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -145,7 +145,7 @@ public final class FtpServerLinkedServiceArgs extends io.pulumi.resources.Resour
     @Import(name="port")
       private final @Nullable Output<Object> port;
 
-    public Output<Object> getPort() {
+    public Output<Object> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -157,7 +157,7 @@ public final class FtpServerLinkedServiceArgs extends io.pulumi.resources.Resour
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -168,7 +168,7 @@ public final class FtpServerLinkedServiceArgs extends io.pulumi.resources.Resour
     @Import(name="userName")
       private final @Nullable Output<Object> userName;
 
-    public Output<Object> getUserName() {
+    public Output<Object> userName() {
         return this.userName == null ? Codegen.empty() : this.userName;
     }
 

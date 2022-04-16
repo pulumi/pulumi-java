@@ -21,7 +21,7 @@ public final class GatewayRouteSpecHttp2RouteActionArgs extends io.pulumi.resour
     @Import(name="target", required=true)
       private final Output<GatewayRouteSpecHttp2RouteActionTargetArgs> target;
 
-    public Output<GatewayRouteSpecHttp2RouteActionTargetArgs> getTarget() {
+    public Output<GatewayRouteSpecHttp2RouteActionTargetArgs> target() {
         return this.target;
     }
 

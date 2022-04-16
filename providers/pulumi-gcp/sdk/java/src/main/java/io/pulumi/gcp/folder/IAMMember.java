@@ -19,31 +19,31 @@ public class IAMMember extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=IAMMemberCondition.class, parameters={})
     private Output</* @Nullable */ IAMMemberCondition> condition;
 
-    public Output</* @Nullable */ IAMMemberCondition> getCondition() {
+    public Output</* @Nullable */ IAMMemberCondition> condition() {
         return this.condition;
     }
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="folder", type=String.class, parameters={})
     private Output<String> folder;
 
-    public Output<String> getFolder() {
+    public Output<String> folder() {
         return this.folder;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

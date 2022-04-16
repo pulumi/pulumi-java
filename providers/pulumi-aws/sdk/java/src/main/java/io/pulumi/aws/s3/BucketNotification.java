@@ -47,7 +47,7 @@ public class BucketNotification extends io.pulumi.resources.CustomResource {
      * @return Name of the bucket for notification configuration.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -61,7 +61,7 @@ public class BucketNotification extends io.pulumi.resources.CustomResource {
      * @return Whether to enable Amazon EventBridge notifications.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEventbridge() {
+    public Output</* @Nullable */ Boolean> eventbridge() {
         return this.eventbridge;
     }
     /**
@@ -75,7 +75,7 @@ public class BucketNotification extends io.pulumi.resources.CustomResource {
      * @return Used to configure notifications to a Lambda Function. See below.
      * 
      */
-    public Output</* @Nullable */ List<BucketNotificationLambdaFunction>> getLambdaFunctions() {
+    public Output</* @Nullable */ List<BucketNotificationLambdaFunction>> lambdaFunctions() {
         return this.lambdaFunctions;
     }
     /**
@@ -89,7 +89,7 @@ public class BucketNotification extends io.pulumi.resources.CustomResource {
      * @return Notification configuration to SQS Queue. See below.
      * 
      */
-    public Output</* @Nullable */ List<BucketNotificationQueue>> getQueues() {
+    public Output</* @Nullable */ List<BucketNotificationQueue>> queues() {
         return this.queues;
     }
     /**
@@ -103,7 +103,7 @@ public class BucketNotification extends io.pulumi.resources.CustomResource {
      * @return Notification configuration to SNS Topic. See below.
      * 
      */
-    public Output</* @Nullable */ List<BucketNotificationTopic>> getTopics() {
+    public Output</* @Nullable */ List<BucketNotificationTopic>> topics() {
         return this.topics;
     }
 

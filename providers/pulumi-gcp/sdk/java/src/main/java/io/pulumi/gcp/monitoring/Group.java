@@ -52,7 +52,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * purposes.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -68,7 +68,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * belong to this group.
      * 
      */
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter;
     }
     /**
@@ -86,7 +86,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * groups that are clusters.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsCluster() {
+    public Output</* @Nullable */ Boolean> isCluster() {
         return this.isCluster;
     }
     /**
@@ -100,7 +100,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return A unique identifier for this group. The format is "projects/{project_id_or_number}/groups/{group_id}".
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -118,7 +118,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * groups with no parent, parentName is the empty string, "".
      * 
      */
-    public Output</* @Nullable */ String> getParentName() {
+    public Output</* @Nullable */ String> parentName() {
         return this.parentName;
     }
     /**
@@ -134,7 +134,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 

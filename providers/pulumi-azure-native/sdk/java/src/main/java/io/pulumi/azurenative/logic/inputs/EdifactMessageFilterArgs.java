@@ -27,7 +27,7 @@ public final class EdifactMessageFilterArgs extends io.pulumi.resources.Resource
     @Import(name="messageFilterType", required=true)
       private final Output<Either<String,MessageFilterType>> messageFilterType;
 
-    public Output<Either<String,MessageFilterType>> getMessageFilterType() {
+    public Output<Either<String,MessageFilterType>> messageFilterType() {
         return this.messageFilterType;
     }
 

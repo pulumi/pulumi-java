@@ -19,7 +19,7 @@ public final class GetDefaultRolloutArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="providerNamespace", required=true)
       private final String providerNamespace;
 
-    public String getProviderNamespace() {
+    public String providerNamespace() {
         return this.providerNamespace;
     }
 
@@ -30,7 +30,7 @@ public final class GetDefaultRolloutArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="rolloutName", required=true)
       private final String rolloutName;
 
-    public String getRolloutName() {
+    public String rolloutName() {
         return this.rolloutName;
     }
 

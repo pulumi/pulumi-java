@@ -22,7 +22,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetAr
     @Import(name="override", required=true)
       private final Output<Boolean> override;
 
-    public Output<Boolean> getOverride() {
+    public Output<Boolean> override() {
         return this.override;
     }
 
@@ -33,7 +33,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetAr
     @Import(name="referrerPolicy", required=true)
       private final Output<String> referrerPolicy;
 
-    public Output<String> getReferrerPolicy() {
+    public Output<String> referrerPolicy() {
         return this.referrerPolicy;
     }
 

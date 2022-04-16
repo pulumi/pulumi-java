@@ -69,49 +69,49 @@ public final class ResourceAttributes {
      * Group is the API Group of the Resource.  "*" means all.
      * 
     */
-    public Optional<String> getGroup() {
+    public Optional<String> group() {
         return Optional.ofNullable(this.group);
     }
     /**
      * Name is the name of the resource being requested for a "get" or deleted for a "delete". "" (empty) means all.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Namespace is the namespace of the action being requested.  Currently, there is no distinction between no namespace and all namespaces "" (empty) is defaulted for LocalSubjectAccessReviews "" (empty) is empty for cluster-scoped resources "" (empty) means "all" for namespace scoped resources from a SubjectAccessReview or SelfSubjectAccessReview
      * 
     */
-    public Optional<String> getNamespace() {
+    public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
     /**
      * Resource is one of the existing resource types.  "*" means all.
      * 
     */
-    public Optional<String> getResource() {
+    public Optional<String> resource() {
         return Optional.ofNullable(this.resource);
     }
     /**
      * Subresource is one of the existing resource types.  "" means none.
      * 
     */
-    public Optional<String> getSubresource() {
+    public Optional<String> subresource() {
         return Optional.ofNullable(this.subresource);
     }
     /**
      * Verb is a kubernetes resource API verb, like: get, list, watch, create, update, delete, proxy.  "*" means all.
      * 
     */
-    public Optional<String> getVerb() {
+    public Optional<String> verb() {
         return Optional.ofNullable(this.verb);
     }
     /**
      * Version is the API Version of the Resource.  "*" means all.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

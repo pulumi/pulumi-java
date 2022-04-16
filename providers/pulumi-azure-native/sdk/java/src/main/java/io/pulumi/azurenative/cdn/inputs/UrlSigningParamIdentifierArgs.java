@@ -27,7 +27,7 @@ public final class UrlSigningParamIdentifierArgs extends io.pulumi.resources.Res
     @Import(name="paramIndicator", required=true)
       private final Output<Either<String,ParamIndicator>> paramIndicator;
 
-    public Output<Either<String,ParamIndicator>> getParamIndicator() {
+    public Output<Either<String,ParamIndicator>> paramIndicator() {
         return this.paramIndicator;
     }
 
@@ -38,7 +38,7 @@ public final class UrlSigningParamIdentifierArgs extends io.pulumi.resources.Res
     @Import(name="paramName", required=true)
       private final Output<String> paramName;
 
-    public Output<String> getParamName() {
+    public Output<String> paramName() {
         return this.paramName;
     }
 

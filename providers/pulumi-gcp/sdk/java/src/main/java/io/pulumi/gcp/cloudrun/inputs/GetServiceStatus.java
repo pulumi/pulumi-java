@@ -18,35 +18,35 @@ public final class GetServiceStatus extends io.pulumi.resources.InvokeArgs {
     @Import(name="conditions", required=true)
       private final List<GetServiceStatusCondition> conditions;
 
-    public List<GetServiceStatusCondition> getConditions() {
+    public List<GetServiceStatusCondition> conditions() {
         return this.conditions;
     }
 
     @Import(name="latestCreatedRevisionName", required=true)
       private final String latestCreatedRevisionName;
 
-    public String getLatestCreatedRevisionName() {
+    public String latestCreatedRevisionName() {
         return this.latestCreatedRevisionName;
     }
 
     @Import(name="latestReadyRevisionName", required=true)
       private final String latestReadyRevisionName;
 
-    public String getLatestReadyRevisionName() {
+    public String latestReadyRevisionName() {
         return this.latestReadyRevisionName;
     }
 
     @Import(name="observedGeneration", required=true)
       private final Integer observedGeneration;
 
-    public Integer getObservedGeneration() {
+    public Integer observedGeneration() {
         return this.observedGeneration;
     }
 
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

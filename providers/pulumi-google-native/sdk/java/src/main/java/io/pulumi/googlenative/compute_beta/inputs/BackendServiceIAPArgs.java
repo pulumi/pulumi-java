@@ -27,7 +27,7 @@ public final class BackendServiceIAPArgs extends io.pulumi.resources.ResourceArg
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -38,7 +38,7 @@ public final class BackendServiceIAPArgs extends io.pulumi.resources.ResourceArg
     @Import(name="oauth2ClientId")
       private final @Nullable Output<String> oauth2ClientId;
 
-    public Output<String> getOauth2ClientId() {
+    public Output<String> oauth2ClientId() {
         return this.oauth2ClientId == null ? Codegen.empty() : this.oauth2ClientId;
     }
 
@@ -49,7 +49,7 @@ public final class BackendServiceIAPArgs extends io.pulumi.resources.ResourceArg
     @Import(name="oauth2ClientSecret")
       private final @Nullable Output<String> oauth2ClientSecret;
 
-    public Output<String> getOauth2ClientSecret() {
+    public Output<String> oauth2ClientSecret() {
         return this.oauth2ClientSecret == null ? Codegen.empty() : this.oauth2ClientSecret;
     }
 

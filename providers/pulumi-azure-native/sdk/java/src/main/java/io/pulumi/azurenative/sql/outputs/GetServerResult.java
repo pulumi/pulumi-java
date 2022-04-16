@@ -151,126 +151,126 @@ public final class GetServerResult {
      * Administrator username for the server. Once created it cannot be changed.
      * 
     */
-    public Optional<String> getAdministratorLogin() {
+    public Optional<String> administratorLogin() {
         return Optional.ofNullable(this.administratorLogin);
     }
     /**
      * The Azure Active Directory identity of the server.
      * 
     */
-    public Optional<ServerExternalAdministratorResponse> getAdministrators() {
+    public Optional<ServerExternalAdministratorResponse> administrators() {
         return Optional.ofNullable(this.administrators);
     }
     /**
      * The fully qualified domain name of the server.
      * 
     */
-    public String getFullyQualifiedDomainName() {
+    public String fullyQualifiedDomainName() {
         return this.fullyQualifiedDomainName;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The Azure Active Directory identity of the server.
      * 
     */
-    public Optional<ResourceIdentityResponse> getIdentity() {
+    public Optional<ResourceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * A CMK URI of the key to use for encryption.
      * 
     */
-    public Optional<String> getKeyId() {
+    public Optional<String> keyId() {
         return Optional.ofNullable(this.keyId);
     }
     /**
      * Kind of sql server. This is metadata used for the Azure portal experience.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Resource location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Minimal TLS version. Allowed values: '1.0', '1.1', '1.2'
      * 
     */
-    public Optional<String> getMinimalTlsVersion() {
+    public Optional<String> minimalTlsVersion() {
         return Optional.ofNullable(this.minimalTlsVersion);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The resource id of a user assigned identity to be used by default.
      * 
     */
-    public Optional<String> getPrimaryUserAssignedIdentityId() {
+    public Optional<String> primaryUserAssignedIdentityId() {
         return Optional.ofNullable(this.primaryUserAssignedIdentityId);
     }
     /**
      * List of private endpoint connections on a server
      * 
     */
-    public List<ServerPrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
+    public List<ServerPrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'
      * 
     */
-    public Optional<String> getPublicNetworkAccess() {
+    public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
      * The state of the server.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The version of the server.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
     /**
      * Whether or not existing server has a workspace created and if it allows connection from workspace
      * 
     */
-    public String getWorkspaceFeature() {
+    public String workspaceFeature() {
         return this.workspaceFeature;
     }
 

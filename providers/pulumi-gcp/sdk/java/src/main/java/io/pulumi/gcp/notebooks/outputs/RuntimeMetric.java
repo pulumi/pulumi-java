@@ -18,7 +18,7 @@ public final class RuntimeMetric {
         this.systemMetrics = systemMetrics;
     }
 
-    public Map<String,String> getSystemMetrics() {
+    public Map<String,String> systemMetrics() {
         return this.systemMetrics == null ? Map.of() : this.systemMetrics;
     }
 

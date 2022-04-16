@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs exten
     @Import(name="enableContinuousRun")
       private final @Nullable Output<Boolean> enableContinuousRun;
 
-    public Output<Boolean> getEnableContinuousRun() {
+    public Output<Boolean> enableContinuousRun() {
         return this.enableContinuousRun == null ? Codegen.empty() : this.enableContinuousRun;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs exten
     @Import(name="enablePredeploymentRun")
       private final @Nullable Output<Boolean> enablePredeploymentRun;
 
-    public Output<Boolean> getEnablePredeploymentRun() {
+    public Output<Boolean> enablePredeploymentRun() {
         return this.enablePredeploymentRun == null ? Codegen.empty() : this.enablePredeploymentRun;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs exten
     @Import(name="testCases")
       private final @Nullable Output<List<String>> testCases;
 
-    public Output<List<String>> getTestCases() {
+    public Output<List<String>> testCases() {
         return this.testCases == null ? Codegen.empty() : this.testCases;
     }
 

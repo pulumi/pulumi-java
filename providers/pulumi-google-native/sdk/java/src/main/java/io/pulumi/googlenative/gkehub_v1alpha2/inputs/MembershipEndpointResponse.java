@@ -28,7 +28,7 @@ public final class MembershipEndpointResponse extends io.pulumi.resources.Invoke
     @Import(name="edgeCluster", required=true)
       private final EdgeClusterResponse edgeCluster;
 
-    public EdgeClusterResponse getEdgeCluster() {
+    public EdgeClusterResponse edgeCluster() {
         return this.edgeCluster;
     }
 
@@ -39,7 +39,7 @@ public final class MembershipEndpointResponse extends io.pulumi.resources.Invoke
     @Import(name="gkeCluster", required=true)
       private final GkeClusterResponse gkeCluster;
 
-    public GkeClusterResponse getGkeCluster() {
+    public GkeClusterResponse gkeCluster() {
         return this.gkeCluster;
     }
 
@@ -50,7 +50,7 @@ public final class MembershipEndpointResponse extends io.pulumi.resources.Invoke
     @Import(name="kubernetesMetadata", required=true)
       private final KubernetesMetadataResponse kubernetesMetadata;
 
-    public KubernetesMetadataResponse getKubernetesMetadata() {
+    public KubernetesMetadataResponse kubernetesMetadata() {
         return this.kubernetesMetadata;
     }
 
@@ -61,7 +61,7 @@ public final class MembershipEndpointResponse extends io.pulumi.resources.Invoke
     @Import(name="kubernetesResource", required=true)
       private final KubernetesResourceResponse kubernetesResource;
 
-    public KubernetesResourceResponse getKubernetesResource() {
+    public KubernetesResourceResponse kubernetesResource() {
         return this.kubernetesResource;
     }
 
@@ -72,7 +72,7 @@ public final class MembershipEndpointResponse extends io.pulumi.resources.Invoke
     @Import(name="multiCloudCluster", required=true)
       private final MultiCloudClusterResponse multiCloudCluster;
 
-    public MultiCloudClusterResponse getMultiCloudCluster() {
+    public MultiCloudClusterResponse multiCloudCluster() {
         return this.multiCloudCluster;
     }
 
@@ -83,7 +83,7 @@ public final class MembershipEndpointResponse extends io.pulumi.resources.Invoke
     @Import(name="onPremCluster", required=true)
       private final OnPremClusterResponse onPremCluster;
 
-    public OnPremClusterResponse getOnPremCluster() {
+    public OnPremClusterResponse onPremCluster() {
         return this.onPremCluster;
     }
 

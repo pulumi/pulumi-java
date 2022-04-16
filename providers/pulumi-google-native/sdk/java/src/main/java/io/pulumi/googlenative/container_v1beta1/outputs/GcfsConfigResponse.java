@@ -24,7 +24,7 @@ public final class GcfsConfigResponse {
      * Whether to use GCFS.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

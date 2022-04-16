@@ -29,7 +29,7 @@ public final class VirtualMachineScaleSetStorageProfileArgs extends io.pulumi.re
     @Import(name="dataDisks")
       private final @Nullable Output<List<VirtualMachineScaleSetDataDiskArgs>> dataDisks;
 
-    public Output<List<VirtualMachineScaleSetDataDiskArgs>> getDataDisks() {
+    public Output<List<VirtualMachineScaleSetDataDiskArgs>> dataDisks() {
         return this.dataDisks == null ? Codegen.empty() : this.dataDisks;
     }
 
@@ -40,7 +40,7 @@ public final class VirtualMachineScaleSetStorageProfileArgs extends io.pulumi.re
     @Import(name="imageReference")
       private final @Nullable Output<ImageReferenceArgs> imageReference;
 
-    public Output<ImageReferenceArgs> getImageReference() {
+    public Output<ImageReferenceArgs> imageReference() {
         return this.imageReference == null ? Codegen.empty() : this.imageReference;
     }
 
@@ -51,7 +51,7 @@ public final class VirtualMachineScaleSetStorageProfileArgs extends io.pulumi.re
     @Import(name="osDisk")
       private final @Nullable Output<VirtualMachineScaleSetOSDiskArgs> osDisk;
 
-    public Output<VirtualMachineScaleSetOSDiskArgs> getOsDisk() {
+    public Output<VirtualMachineScaleSetOSDiskArgs> osDisk() {
         return this.osDisk == null ? Codegen.empty() : this.osDisk;
     }
 

@@ -24,7 +24,7 @@ public final class FleetSpotOptionsGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="allocationStrategy")
       private final @Nullable Output<String> allocationStrategy;
 
-    public Output<String> getAllocationStrategy() {
+    public Output<String> allocationStrategy() {
         return this.allocationStrategy == null ? Codegen.empty() : this.allocationStrategy;
     }
 
@@ -35,7 +35,7 @@ public final class FleetSpotOptionsGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="instanceInterruptionBehavior")
       private final @Nullable Output<String> instanceInterruptionBehavior;
 
-    public Output<String> getInstanceInterruptionBehavior() {
+    public Output<String> instanceInterruptionBehavior() {
         return this.instanceInterruptionBehavior == null ? Codegen.empty() : this.instanceInterruptionBehavior;
     }
 
@@ -46,7 +46,7 @@ public final class FleetSpotOptionsGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="instancePoolsToUseCount")
       private final @Nullable Output<Integer> instancePoolsToUseCount;
 
-    public Output<Integer> getInstancePoolsToUseCount() {
+    public Output<Integer> instancePoolsToUseCount() {
         return this.instancePoolsToUseCount == null ? Codegen.empty() : this.instancePoolsToUseCount;
     }
 
@@ -57,7 +57,7 @@ public final class FleetSpotOptionsGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="maintenanceStrategies")
       private final @Nullable Output<FleetSpotOptionsMaintenanceStrategiesGetArgs> maintenanceStrategies;
 
-    public Output<FleetSpotOptionsMaintenanceStrategiesGetArgs> getMaintenanceStrategies() {
+    public Output<FleetSpotOptionsMaintenanceStrategiesGetArgs> maintenanceStrategies() {
         return this.maintenanceStrategies == null ? Codegen.empty() : this.maintenanceStrategies;
     }
 

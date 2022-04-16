@@ -31,7 +31,7 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="chartOptions")
       private final @Nullable Output<ChartOptionsArgs> chartOptions;
 
-    public Output<ChartOptionsArgs> getChartOptions() {
+    public Output<ChartOptionsArgs> chartOptions() {
         return this.chartOptions == null ? Codegen.empty() : this.chartOptions;
     }
 
@@ -42,7 +42,7 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataSets", required=true)
       private final Output<List<DataSetArgs>> dataSets;
 
-    public Output<List<DataSetArgs>> getDataSets() {
+    public Output<List<DataSetArgs>> dataSets() {
         return this.dataSets;
     }
 
@@ -53,7 +53,7 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="thresholds")
       private final @Nullable Output<List<ThresholdArgs>> thresholds;
 
-    public Output<List<ThresholdArgs>> getThresholds() {
+    public Output<List<ThresholdArgs>> thresholds() {
         return this.thresholds == null ? Codegen.empty() : this.thresholds;
     }
 
@@ -64,7 +64,7 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeshiftDuration")
       private final @Nullable Output<String> timeshiftDuration;
 
-    public Output<String> getTimeshiftDuration() {
+    public Output<String> timeshiftDuration() {
         return this.timeshiftDuration == null ? Codegen.empty() : this.timeshiftDuration;
     }
 
@@ -75,7 +75,7 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="xAxis")
       private final @Nullable Output<AxisArgs> xAxis;
 
-    public Output<AxisArgs> getXAxis() {
+    public Output<AxisArgs> xAxis() {
         return this.xAxis == null ? Codegen.empty() : this.xAxis;
     }
 
@@ -86,7 +86,7 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="y2Axis")
       private final @Nullable Output<AxisArgs> y2Axis;
 
-    public Output<AxisArgs> getY2Axis() {
+    public Output<AxisArgs> y2Axis() {
         return this.y2Axis == null ? Codegen.empty() : this.y2Axis;
     }
 
@@ -97,7 +97,7 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="yAxis")
       private final @Nullable Output<AxisArgs> yAxis;
 
-    public Output<AxisArgs> getYAxis() {
+    public Output<AxisArgs> yAxis() {
         return this.yAxis == null ? Codegen.empty() : this.yAxis;
     }
 

@@ -24,7 +24,7 @@ public final class MetricStreamFilter {
      * Only metrics with Namespace matching this value will be streamed.
      * 
     */
-    public String getNamespace() {
+    public String namespace() {
         return this.namespace;
     }
 

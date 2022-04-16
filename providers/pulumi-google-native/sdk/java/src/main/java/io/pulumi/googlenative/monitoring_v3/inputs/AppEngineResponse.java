@@ -23,7 +23,7 @@ public final class AppEngineResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="moduleId", required=true)
       private final String moduleId;
 
-    public String getModuleId() {
+    public String moduleId() {
         return this.moduleId;
     }
 

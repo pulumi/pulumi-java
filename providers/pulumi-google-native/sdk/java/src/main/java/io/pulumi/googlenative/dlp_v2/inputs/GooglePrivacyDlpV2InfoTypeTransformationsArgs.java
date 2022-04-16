@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationsArgs extends io.pulu
     @Import(name="transformations", required=true)
       private final Output<List<GooglePrivacyDlpV2InfoTypeTransformationArgs>> transformations;
 
-    public Output<List<GooglePrivacyDlpV2InfoTypeTransformationArgs>> getTransformations() {
+    public Output<List<GooglePrivacyDlpV2InfoTypeTransformationArgs>> transformations() {
         return this.transformations;
     }
 

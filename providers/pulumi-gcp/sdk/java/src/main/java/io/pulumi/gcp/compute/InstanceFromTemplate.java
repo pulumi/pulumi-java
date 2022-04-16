@@ -58,7 +58,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * @return Controls for advanced machine-related behavior features.
      * 
      */
-    public Output<InstanceFromTemplateAdvancedMachineFeatures> getAdvancedMachineFeatures() {
+    public Output<InstanceFromTemplateAdvancedMachineFeatures> advancedMachineFeatures() {
         return this.advancedMachineFeatures;
     }
     /**
@@ -74,7 +74,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * stopping the instance without setting this field, the update will fail.
      * 
      */
-    public Output<Boolean> getAllowStoppingForUpdate() {
+    public Output<Boolean> allowStoppingForUpdate() {
         return this.allowStoppingForUpdate;
     }
     /**
@@ -88,7 +88,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * @return List of disks attached to the instance
      * 
      */
-    public Output<List<InstanceFromTemplateAttachedDisk>> getAttachedDisks() {
+    public Output<List<InstanceFromTemplateAttachedDisk>> attachedDisks() {
         return this.attachedDisks;
     }
     /**
@@ -102,7 +102,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * @return The boot disk for the instance.
      * 
      */
-    public Output<InstanceFromTemplateBootDisk> getBootDisk() {
+    public Output<InstanceFromTemplateBootDisk> bootDisk() {
         return this.bootDisk;
     }
     /**
@@ -116,7 +116,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * @return Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
      * 
      */
-    public Output<Boolean> getCanIpForward() {
+    public Output<Boolean> canIpForward() {
         return this.canIpForward;
     }
     /**
@@ -132,7 +132,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * to create.
      * 
      */
-    public Output<InstanceFromTemplateConfidentialInstanceConfig> getConfidentialInstanceConfig() {
+    public Output<InstanceFromTemplateConfidentialInstanceConfig> confidentialInstanceConfig() {
         return this.confidentialInstanceConfig;
     }
     /**
@@ -146,7 +146,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * @return The CPU platform used by this instance.
      * 
      */
-    public Output<String> getCpuPlatform() {
+    public Output<String> cpuPlatform() {
         return this.cpuPlatform;
     }
     /**
@@ -160,7 +160,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * @return Current status of the instance.
      * 
      */
-    public Output<String> getCurrentStatus() {
+    public Output<String> currentStatus() {
         return this.currentStatus;
     }
     /**
@@ -174,7 +174,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * @return Whether deletion protection is enabled on this instance.
      * 
      */
-    public Output<Boolean> getDeletionProtection() {
+    public Output<Boolean> deletionProtection() {
         return this.deletionProtection;
     }
     /**
@@ -188,7 +188,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * @return A brief description of the resource.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -202,7 +202,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * @return Desired status of the instance. Either "RUNNING" or "TERMINATED".
      * 
      */
-    public Output<String> getDesiredStatus() {
+    public Output<String> desiredStatus() {
         return this.desiredStatus;
     }
     /**
@@ -216,7 +216,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * @return Whether the instance has virtual displays enabled.
      * 
      */
-    public Output<Boolean> getEnableDisplay() {
+    public Output<Boolean> enableDisplay() {
         return this.enableDisplay;
     }
     /**
@@ -230,7 +230,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * @return List of the type and count of accelerator cards attached to the instance.
      * 
      */
-    public Output<List<InstanceFromTemplateGuestAccelerator>> getGuestAccelerators() {
+    public Output<List<InstanceFromTemplateGuestAccelerator>> guestAccelerators() {
         return this.guestAccelerators;
     }
     /**
@@ -248,7 +248,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.
      * 
      */
-    public Output<String> getHostname() {
+    public Output<String> hostname() {
         return this.hostname;
     }
     /**
@@ -262,7 +262,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * @return The server-assigned unique identifier of this instance.
      * 
      */
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
     /**
@@ -276,7 +276,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * @return The unique fingerprint of the labels.
      * 
      */
-    public Output<String> getLabelFingerprint() {
+    public Output<String> labelFingerprint() {
         return this.labelFingerprint;
     }
     /**
@@ -290,7 +290,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * @return A set of key/value label pairs assigned to the instance.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -304,7 +304,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * @return The machine type to create.
      * 
      */
-    public Output<String> getMachineType() {
+    public Output<String> machineType() {
         return this.machineType;
     }
     /**
@@ -318,7 +318,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * @return Metadata key/value pairs made available within the instance.
      * 
      */
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata;
     }
     /**
@@ -332,7 +332,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * @return The unique fingerprint of the metadata.
      * 
      */
-    public Output<String> getMetadataFingerprint() {
+    public Output<String> metadataFingerprint() {
         return this.metadataFingerprint;
     }
     /**
@@ -346,7 +346,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * @return Metadata startup scripts made available within the instance.
      * 
      */
-    public Output<String> getMetadataStartupScript() {
+    public Output<String> metadataStartupScript() {
         return this.metadataStartupScript;
     }
     /**
@@ -360,7 +360,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * @return The minimum CPU platform specified for the VM instance.
      * 
      */
-    public Output<String> getMinCpuPlatform() {
+    public Output<String> minCpuPlatform() {
         return this.minCpuPlatform;
     }
     /**
@@ -376,7 +376,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * Changing this forces a new resource to be created.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -390,7 +390,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * @return The networks attached to the instance.
      * 
      */
-    public Output<List<InstanceFromTemplateNetworkInterface>> getNetworkInterfaces() {
+    public Output<List<InstanceFromTemplateNetworkInterface>> networkInterfaces() {
         return this.networkInterfaces;
     }
     /**
@@ -406,7 +406,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * default network performance configuration.
      * 
      */
-    public Output<InstanceFromTemplateNetworkPerformanceConfig> getNetworkPerformanceConfig() {
+    public Output<InstanceFromTemplateNetworkPerformanceConfig> networkPerformanceConfig() {
         return this.networkPerformanceConfig;
     }
     /**
@@ -422,7 +422,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * self_link nor project are provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -436,7 +436,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * @return Specifies the reservations that this instance can consume from.
      * 
      */
-    public Output<InstanceFromTemplateReservationAffinity> getReservationAffinity() {
+    public Output<InstanceFromTemplateReservationAffinity> reservationAffinity() {
         return this.reservationAffinity;
     }
     /**
@@ -452,7 +452,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * is supported.
      * 
      */
-    public Output<String> getResourcePolicies() {
+    public Output<String> resourcePolicies() {
         return this.resourcePolicies;
     }
     /**
@@ -466,7 +466,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * @return The scheduling strategy being used by the instance.
      * 
      */
-    public Output<InstanceFromTemplateScheduling> getScheduling() {
+    public Output<InstanceFromTemplateScheduling> scheduling() {
         return this.scheduling;
     }
     /**
@@ -480,7 +480,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * @return The scratch disks attached to the instance.
      * 
      */
-    public Output<List<InstanceFromTemplateScratchDisk>> getScratchDisks() {
+    public Output<List<InstanceFromTemplateScratchDisk>> scratchDisks() {
         return this.scratchDisks;
     }
     /**
@@ -494,7 +494,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -508,7 +508,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * @return The service account to attach to the instance.
      * 
      */
-    public Output<InstanceFromTemplateServiceAccount> getServiceAccount() {
+    public Output<InstanceFromTemplateServiceAccount> serviceAccount() {
         return this.serviceAccount;
     }
     /**
@@ -522,7 +522,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * @return The shielded vm config being used by the instance.
      * 
      */
-    public Output<InstanceFromTemplateShieldedInstanceConfig> getShieldedInstanceConfig() {
+    public Output<InstanceFromTemplateShieldedInstanceConfig> shieldedInstanceConfig() {
         return this.shieldedInstanceConfig;
     }
     /**
@@ -538,7 +538,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * template to create the instance based on.
      * 
      */
-    public Output<String> getSourceInstanceTemplate() {
+    public Output<String> sourceInstanceTemplate() {
         return this.sourceInstanceTemplate;
     }
     /**
@@ -552,7 +552,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * @return The list of tags attached to the instance.
      * 
      */
-    public Output<List<String>> getTags() {
+    public Output<List<String>> tags() {
         return this.tags;
     }
     /**
@@ -566,7 +566,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * @return The unique fingerprint of the tags.
      * 
      */
-    public Output<String> getTagsFingerprint() {
+    public Output<String> tagsFingerprint() {
         return this.tagsFingerprint;
     }
     /**
@@ -582,7 +582,7 @@ public class InstanceFromTemplate extends io.pulumi.resources.CustomResource {
      * set, the provider zone is used.
      * 
      */
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone;
     }
 

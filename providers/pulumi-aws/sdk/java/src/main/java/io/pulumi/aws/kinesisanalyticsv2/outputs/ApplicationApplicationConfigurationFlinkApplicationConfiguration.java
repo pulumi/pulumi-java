@@ -43,21 +43,21 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * Describes an application's checkpointing configuration.
      * 
     */
-    public Optional<ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfiguration> getCheckpointConfiguration() {
+    public Optional<ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfiguration> checkpointConfiguration() {
         return Optional.ofNullable(this.checkpointConfiguration);
     }
     /**
      * Describes configuration parameters for CloudWatch logging for an application.
      * 
     */
-    public Optional<ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfiguration> getMonitoringConfiguration() {
+    public Optional<ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfiguration> monitoringConfiguration() {
         return Optional.ofNullable(this.monitoringConfiguration);
     }
     /**
      * Describes parameters for how an application executes multiple tasks simultaneously.
      * 
     */
-    public Optional<ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfiguration> getParallelismConfiguration() {
+    public Optional<ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfiguration> parallelismConfiguration() {
         return Optional.ofNullable(this.parallelismConfiguration);
     }
 

@@ -27,7 +27,7 @@ public final class LivenessCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="checkInterval")
       private final @Nullable Output<String> checkInterval;
 
-    public Output<String> getCheckInterval() {
+    public Output<String> checkInterval() {
         return this.checkInterval == null ? Codegen.empty() : this.checkInterval;
     }
 
@@ -38,7 +38,7 @@ public final class LivenessCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="failureThreshold")
       private final @Nullable Output<Integer> failureThreshold;
 
-    public Output<Integer> getFailureThreshold() {
+    public Output<Integer> failureThreshold() {
         return this.failureThreshold == null ? Codegen.empty() : this.failureThreshold;
     }
 
@@ -49,7 +49,7 @@ public final class LivenessCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="host")
       private final @Nullable Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host == null ? Codegen.empty() : this.host;
     }
 
@@ -60,7 +60,7 @@ public final class LivenessCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="initialDelay")
       private final @Nullable Output<String> initialDelay;
 
-    public Output<String> getInitialDelay() {
+    public Output<String> initialDelay() {
         return this.initialDelay == null ? Codegen.empty() : this.initialDelay;
     }
 
@@ -71,7 +71,7 @@ public final class LivenessCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -82,7 +82,7 @@ public final class LivenessCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="successThreshold")
       private final @Nullable Output<Integer> successThreshold;
 
-    public Output<Integer> getSuccessThreshold() {
+    public Output<Integer> successThreshold() {
         return this.successThreshold == null ? Codegen.empty() : this.successThreshold;
     }
 
@@ -93,7 +93,7 @@ public final class LivenessCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
+    public Output<String> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 

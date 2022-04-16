@@ -24,7 +24,7 @@ public final class GoogleCloudMlV1__ContainerPortResponse {
      * Number of the port to expose on the container. This must be a valid port number: 0 < PORT_NUMBER < 65536.
      * 
     */
-    public Integer getContainerPort() {
+    public Integer containerPort() {
         return this.containerPort;
     }
 

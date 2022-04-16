@@ -27,7 +27,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -38,7 +38,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diagnosticStorageProperties")
       private final @Nullable Output<DiagnosticStoragePropertiesArgs> diagnosticStorageProperties;
 
-    public Output<DiagnosticStoragePropertiesArgs> getDiagnosticStorageProperties() {
+    public Output<DiagnosticStoragePropertiesArgs> diagnosticStorageProperties() {
         return this.diagnosticStorageProperties == null ? Codegen.empty() : this.diagnosticStorageProperties;
     }
 
@@ -49,7 +49,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableDiagnostics")
       private final @Nullable Output<Boolean> enableDiagnostics;
 
-    public Output<Boolean> getEnableDiagnostics() {
+    public Output<Boolean> enableDiagnostics() {
         return this.enableDiagnostics == null ? Codegen.empty() : this.enableDiagnostics;
     }
 
@@ -60,7 +60,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceName")
       private final @Nullable Output<String> instanceName;
 
-    public Output<String> getInstanceName() {
+    public Output<String> instanceName() {
         return this.instanceName == null ? Codegen.empty() : this.instanceName;
     }
 
@@ -71,7 +71,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iotHubs")
       private final @Nullable Output<List<IotHubSettingsArgs>> iotHubs;
 
-    public Output<List<IotHubSettingsArgs>> getIotHubs() {
+    public Output<List<IotHubSettingsArgs>> iotHubs() {
         return this.iotHubs == null ? Codegen.empty() : this.iotHubs;
     }
 
@@ -82,7 +82,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -93,7 +93,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -104,7 +104,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

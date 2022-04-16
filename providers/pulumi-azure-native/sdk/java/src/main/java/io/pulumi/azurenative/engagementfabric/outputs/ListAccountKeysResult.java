@@ -25,7 +25,7 @@ public final class ListAccountKeysResult {
      * Account keys
      * 
     */
-    public List<KeyDescriptionResponse> getValue() {
+    public List<KeyDescriptionResponse> value() {
         return this.value;
     }
 

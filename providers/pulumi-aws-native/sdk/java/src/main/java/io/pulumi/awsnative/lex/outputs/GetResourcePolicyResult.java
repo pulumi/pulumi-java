@@ -29,16 +29,16 @@ public final class GetResourcePolicyResult {
         this.revisionId = revisionId;
     }
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<ResourcePolicyPolicy> getPolicy() {
+    public Optional<ResourcePolicyPolicy> policy() {
         return Optional.ofNullable(this.policy);
     }
-    public Optional<String> getResourceArn() {
+    public Optional<String> resourceArn() {
         return Optional.ofNullable(this.resourceArn);
     }
-    public Optional<String> getRevisionId() {
+    public Optional<String> revisionId() {
         return Optional.ofNullable(this.revisionId);
     }
 

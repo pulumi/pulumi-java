@@ -25,7 +25,7 @@ public class Alarm extends io.pulumi.resources.CustomResource {
     @Export(name="alarmArn", type=String.class, parameters={})
     private Output<String> alarmArn;
 
-    public Output<String> getAlarmArn() {
+    public Output<String> alarmArn() {
         return this.alarmArn;
     }
     /**
@@ -39,7 +39,7 @@ public class Alarm extends io.pulumi.resources.CustomResource {
      * @return The name for the alarm. Specify the name of an existing alarm to update, and overwrite the previous configuration of the alarm.
      * 
      */
-    public Output<String> getAlarmName() {
+    public Output<String> alarmName() {
         return this.alarmName;
     }
     /**
@@ -53,7 +53,7 @@ public class Alarm extends io.pulumi.resources.CustomResource {
      * @return The arithmetic operation to use when comparing the specified statistic to the threshold. The specified statistic value is used as the first operand.
      * 
      */
-    public Output<String> getComparisonOperator() {
+    public Output<String> comparisonOperator() {
         return this.comparisonOperator;
     }
     /**
@@ -67,7 +67,7 @@ public class Alarm extends io.pulumi.resources.CustomResource {
      * @return The contact protocols to use for the alarm, such as Email, SMS (text messaging), or both.
      * 
      */
-    public Output</* @Nullable */ List<String>> getContactProtocols() {
+    public Output</* @Nullable */ List<String>> contactProtocols() {
         return this.contactProtocols;
     }
     /**
@@ -81,7 +81,7 @@ public class Alarm extends io.pulumi.resources.CustomResource {
      * @return The number of data points that must be not within the specified threshold to trigger the alarm. If you are setting an "M out of N" alarm, this value (datapointsToAlarm) is the M.
      * 
      */
-    public Output</* @Nullable */ Integer> getDatapointsToAlarm() {
+    public Output</* @Nullable */ Integer> datapointsToAlarm() {
         return this.datapointsToAlarm;
     }
     /**
@@ -95,7 +95,7 @@ public class Alarm extends io.pulumi.resources.CustomResource {
      * @return The number of most recent periods over which data is compared to the specified threshold. If you are setting an "M out of N" alarm, this value (evaluationPeriods) is the N.
      * 
      */
-    public Output<Integer> getEvaluationPeriods() {
+    public Output<Integer> evaluationPeriods() {
         return this.evaluationPeriods;
     }
     /**
@@ -109,7 +109,7 @@ public class Alarm extends io.pulumi.resources.CustomResource {
      * @return The name of the metric to associate with the alarm.
      * 
      */
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
     /**
@@ -123,7 +123,7 @@ public class Alarm extends io.pulumi.resources.CustomResource {
      * @return The validation status of the SSL/TLS certificate.
      * 
      */
-    public Output<String> getMonitoredResourceName() {
+    public Output<String> monitoredResourceName() {
         return this.monitoredResourceName;
     }
     /**
@@ -137,7 +137,7 @@ public class Alarm extends io.pulumi.resources.CustomResource {
      * @return Indicates whether the alarm is enabled. Notifications are enabled by default if you don't specify this parameter.
      * 
      */
-    public Output</* @Nullable */ Boolean> getNotificationEnabled() {
+    public Output</* @Nullable */ Boolean> notificationEnabled() {
         return this.notificationEnabled;
     }
     /**
@@ -151,7 +151,7 @@ public class Alarm extends io.pulumi.resources.CustomResource {
      * @return The alarm states that trigger a notification.
      * 
      */
-    public Output</* @Nullable */ List<String>> getNotificationTriggers() {
+    public Output</* @Nullable */ List<String>> notificationTriggers() {
         return this.notificationTriggers;
     }
     /**
@@ -165,7 +165,7 @@ public class Alarm extends io.pulumi.resources.CustomResource {
      * @return The current state of the alarm.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -179,7 +179,7 @@ public class Alarm extends io.pulumi.resources.CustomResource {
      * @return The value against which the specified statistic is compared.
      * 
      */
-    public Output<Double> getThreshold() {
+    public Output<Double> threshold() {
         return this.threshold;
     }
     /**
@@ -193,7 +193,7 @@ public class Alarm extends io.pulumi.resources.CustomResource {
      * @return Sets how this alarm will handle missing data points.
      * 
      */
-    public Output</* @Nullable */ String> getTreatMissingData() {
+    public Output</* @Nullable */ String> treatMissingData() {
         return this.treatMissingData;
     }
 

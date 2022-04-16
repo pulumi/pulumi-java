@@ -50,35 +50,35 @@ public final class GetOrganizationPolicyResult {
         this.version = version;
     }
 
-    public List<GetOrganizationPolicyBooleanPolicy> getBooleanPolicies() {
+    public List<GetOrganizationPolicyBooleanPolicy> booleanPolicies() {
         return this.booleanPolicies;
     }
-    public String getConstraint() {
+    public String constraint() {
         return this.constraint;
     }
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public List<GetOrganizationPolicyListPolicy> getListPolicies() {
+    public List<GetOrganizationPolicyListPolicy> listPolicies() {
         return this.listPolicies;
     }
-    public String getProject() {
+    public String project() {
         return this.project;
     }
-    public List<GetOrganizationPolicyRestorePolicy> getRestorePolicies() {
+    public List<GetOrganizationPolicyRestorePolicy> restorePolicies() {
         return this.restorePolicies;
     }
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
-    public Integer getVersion() {
+    public Integer version() {
         return this.version;
     }
 

@@ -45,7 +45,7 @@ public class LivePipeline extends io.pulumi.resources.CustomResource {
      * @return Maximum bitrate capacity in Kbps reserved for the live pipeline. The allowed range is from 500 to 3000 Kbps in increments of 100 Kbps. If the RTSP camera exceeds this capacity, then the service will disconnect temporarily from the camera. It will retry to re-establish connection (with exponential backoff), checking to see if the camera bitrate is now below the reserved capacity. Doing so will ensure that one 'noisy neighbor' does not affect other live pipelines in your account.
      * 
      */
-    public Output<Integer> getBitrateKbps() {
+    public Output<Integer> bitrateKbps() {
         return this.bitrateKbps;
     }
     /**
@@ -59,7 +59,7 @@ public class LivePipeline extends io.pulumi.resources.CustomResource {
      * @return An optional description for the pipeline.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -73,7 +73,7 @@ public class LivePipeline extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +87,7 @@ public class LivePipeline extends io.pulumi.resources.CustomResource {
      * @return List of the instance level parameter values for the user-defined topology parameters. A pipeline can only define or override parameters values for parameters which have been declared in the referenced topology. Topology parameters without a default value must be defined. Topology parameters with a default value can be optionally be overridden.
      * 
      */
-    public Output</* @Nullable */ List<ParameterDefinitionResponse>> getParameters() {
+    public Output</* @Nullable */ List<ParameterDefinitionResponse>> parameters() {
         return this.parameters;
     }
     /**
@@ -101,7 +101,7 @@ public class LivePipeline extends io.pulumi.resources.CustomResource {
      * @return Current state of the pipeline (read-only).
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -115,7 +115,7 @@ public class LivePipeline extends io.pulumi.resources.CustomResource {
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -129,7 +129,7 @@ public class LivePipeline extends io.pulumi.resources.CustomResource {
      * @return The reference to an existing pipeline topology defined for real-time content processing. When activated, this live pipeline will process content according to the pipeline topology definition.
      * 
      */
-    public Output<String> getTopologyName() {
+    public Output<String> topologyName() {
         return this.topologyName;
     }
     /**
@@ -143,7 +143,7 @@ public class LivePipeline extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -18,7 +18,7 @@ public final class ManagedZonePrivateVisibilityConfigGetArgs extends io.pulumi.r
     @Import(name="networks", required=true)
       private final Output<List<ManagedZonePrivateVisibilityConfigNetworkGetArgs>> networks;
 
-    public Output<List<ManagedZonePrivateVisibilityConfigNetworkGetArgs>> getNetworks() {
+    public Output<List<ManagedZonePrivateVisibilityConfigNetworkGetArgs>> networks() {
         return this.networks;
     }
 

@@ -23,7 +23,7 @@ public final class SoftwareRecipeArtifactRemoteResponse extends io.pulumi.resour
     @Import(name="checksum", required=true)
       private final String checksum;
 
-    public String getChecksum() {
+    public String checksum() {
         return this.checksum;
     }
 
@@ -34,7 +34,7 @@ public final class SoftwareRecipeArtifactRemoteResponse extends io.pulumi.resour
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

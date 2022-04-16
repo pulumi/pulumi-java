@@ -30,7 +30,7 @@ public final class ExecStepConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowedSuccessCodes")
       private final @Nullable Output<List<Integer>> allowedSuccessCodes;
 
-    public Output<List<Integer>> getAllowedSuccessCodes() {
+    public Output<List<Integer>> allowedSuccessCodes() {
         return this.allowedSuccessCodes == null ? Codegen.empty() : this.allowedSuccessCodes;
     }
 
@@ -41,7 +41,7 @@ public final class ExecStepConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gcsObject")
       private final @Nullable Output<GcsObjectArgs> gcsObject;
 
-    public Output<GcsObjectArgs> getGcsObject() {
+    public Output<GcsObjectArgs> gcsObject() {
         return this.gcsObject == null ? Codegen.empty() : this.gcsObject;
     }
 
@@ -52,7 +52,7 @@ public final class ExecStepConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="interpreter")
       private final @Nullable Output<ExecStepConfigInterpreter> interpreter;
 
-    public Output<ExecStepConfigInterpreter> getInterpreter() {
+    public Output<ExecStepConfigInterpreter> interpreter() {
         return this.interpreter == null ? Codegen.empty() : this.interpreter;
     }
 
@@ -63,7 +63,7 @@ public final class ExecStepConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="localPath")
       private final @Nullable Output<String> localPath;
 
-    public Output<String> getLocalPath() {
+    public Output<String> localPath() {
         return this.localPath == null ? Codegen.empty() : this.localPath;
     }
 

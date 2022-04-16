@@ -49,27 +49,27 @@ public final class GetTestablePermissionsResult {
      * The the support level of this permission for custom roles.
      * 
     */
-    public Optional<String> getCustomSupportLevel() {
+    public Optional<String> customSupportLevel() {
         return Optional.ofNullable(this.customSupportLevel);
     }
-    public String getFullResourceName() {
+    public String fullResourceName() {
         return this.fullResourceName;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * A list of permissions matching the provided input. Structure is defined below.
      * 
     */
-    public List<GetTestablePermissionsPermission> getPermissions() {
+    public List<GetTestablePermissionsPermission> permissions() {
         return this.permissions;
     }
-    public List<String> getStages() {
+    public List<String> stages() {
         return this.stages == null ? List.of() : this.stages;
     }
 

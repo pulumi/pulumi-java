@@ -81,56 +81,56 @@ public final class OSPolicyResourcePackageResourceResponse {
      * A package managed by Apt.
      * 
     */
-    public OSPolicyResourcePackageResourceAPTResponse getApt() {
+    public OSPolicyResourcePackageResourceAPTResponse apt() {
         return this.apt;
     }
     /**
      * A deb package file.
      * 
     */
-    public OSPolicyResourcePackageResourceDebResponse getDeb() {
+    public OSPolicyResourcePackageResourceDebResponse deb() {
         return this.deb;
     }
     /**
      * The desired state the agent should maintain for this package.
      * 
     */
-    public String getDesiredState() {
+    public String desiredState() {
         return this.desiredState;
     }
     /**
      * A package managed by GooGet.
      * 
     */
-    public OSPolicyResourcePackageResourceGooGetResponse getGooget() {
+    public OSPolicyResourcePackageResourceGooGetResponse googet() {
         return this.googet;
     }
     /**
      * An MSI package.
      * 
     */
-    public OSPolicyResourcePackageResourceMSIResponse getMsi() {
+    public OSPolicyResourcePackageResourceMSIResponse msi() {
         return this.msi;
     }
     /**
      * An rpm package file.
      * 
     */
-    public OSPolicyResourcePackageResourceRPMResponse getRpm() {
+    public OSPolicyResourcePackageResourceRPMResponse rpm() {
         return this.rpm;
     }
     /**
      * A package managed by YUM.
      * 
     */
-    public OSPolicyResourcePackageResourceYUMResponse getYum() {
+    public OSPolicyResourcePackageResourceYUMResponse yum() {
         return this.yum;
     }
     /**
      * A package managed by Zypper.
      * 
     */
-    public OSPolicyResourcePackageResourceZypperResponse getZypper() {
+    public OSPolicyResourcePackageResourceZypperResponse zypper() {
         return this.zypper;
     }
 

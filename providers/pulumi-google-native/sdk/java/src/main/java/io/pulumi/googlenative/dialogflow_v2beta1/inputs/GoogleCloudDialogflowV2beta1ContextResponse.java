@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2beta1ContextResponse extends io.pulumi
     @Import(name="lifespanCount", required=true)
       private final Integer lifespanCount;
 
-    public Integer getLifespanCount() {
+    public Integer lifespanCount() {
         return this.lifespanCount;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2beta1ContextResponse extends io.pulumi
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowV2beta1ContextResponse extends io.pulumi
     @Import(name="parameters", required=true)
       private final Map<String,String> parameters;
 
-    public Map<String,String> getParameters() {
+    public Map<String,String> parameters() {
         return this.parameters;
     }
 

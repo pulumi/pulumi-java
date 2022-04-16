@@ -21,7 +21,7 @@ public final class AwsNodePoolConfigConfigEncryptionGetArgs extends io.pulumi.re
     @Import(name="kmsKeyArn", required=true)
       private final Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
+    public Output<String> kmsKeyArn() {
         return this.kmsKeyArn;
     }
 

@@ -21,7 +21,7 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfil
     @Import(name="profileId", required=true)
       private final Output<String> profileId;
 
-    public Output<String> getProfileId() {
+    public Output<String> profileId() {
         return this.profileId;
     }
 
@@ -32,7 +32,7 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfil
     @Import(name="queryArg", required=true)
       private final Output<String> queryArg;
 
-    public Output<String> getQueryArg() {
+    public Output<String> queryArg() {
         return this.queryArg;
     }
 

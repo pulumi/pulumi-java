@@ -25,13 +25,13 @@ public final class WebACLIPSetForwardedIPConfiguration {
         this.position = position;
     }
 
-    public WebACLIPSetForwardedIPConfigurationFallbackBehavior getFallbackBehavior() {
+    public WebACLIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior() {
         return this.fallbackBehavior;
     }
-    public String getHeaderName() {
+    public String headerName() {
         return this.headerName;
     }
-    public WebACLIPSetForwardedIPConfigurationPosition getPosition() {
+    public WebACLIPSetForwardedIPConfigurationPosition position() {
         return this.position;
     }
 

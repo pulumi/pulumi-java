@@ -48,27 +48,27 @@ public final class GetAzureVersionsResult {
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
     /**
      * A list of Azure regions that are available for use with this project and GCP location.
      * 
     */
-    public List<String> getSupportedRegions() {
+    public List<String> supportedRegions() {
         return this.supportedRegions;
     }
     /**
      * A list of versions available for use with this project and location.
      * 
     */
-    public List<String> getValidVersions() {
+    public List<String> validVersions() {
         return this.validVersions;
     }
 

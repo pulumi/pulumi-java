@@ -25,7 +25,7 @@ public final class OptionGroupOptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="dbSecurityGroupMemberships")
       private final @Nullable Output<List<String>> dbSecurityGroupMemberships;
 
-    public Output<List<String>> getDbSecurityGroupMemberships() {
+    public Output<List<String>> dbSecurityGroupMemberships() {
         return this.dbSecurityGroupMemberships == null ? Codegen.empty() : this.dbSecurityGroupMemberships;
     }
 
@@ -36,7 +36,7 @@ public final class OptionGroupOptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="optionName", required=true)
       private final Output<String> optionName;
 
-    public Output<String> getOptionName() {
+    public Output<String> optionName() {
         return this.optionName;
     }
 
@@ -47,7 +47,7 @@ public final class OptionGroupOptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="optionSettings")
       private final @Nullable Output<List<OptionGroupOptionOptionSettingArgs>> optionSettings;
 
-    public Output<List<OptionGroupOptionOptionSettingArgs>> getOptionSettings() {
+    public Output<List<OptionGroupOptionOptionSettingArgs>> optionSettings() {
         return this.optionSettings == null ? Codegen.empty() : this.optionSettings;
     }
 
@@ -58,7 +58,7 @@ public final class OptionGroupOptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -69,7 +69,7 @@ public final class OptionGroupOptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 
@@ -80,7 +80,7 @@ public final class OptionGroupOptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="vpcSecurityGroupMemberships")
       private final @Nullable Output<List<String>> vpcSecurityGroupMemberships;
 
-    public Output<List<String>> getVpcSecurityGroupMemberships() {
+    public Output<List<String>> vpcSecurityGroupMemberships() {
         return this.vpcSecurityGroupMemberships == null ? Codegen.empty() : this.vpcSecurityGroupMemberships;
     }
 

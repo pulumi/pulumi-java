@@ -22,10 +22,10 @@ public final class GetDomainNameApiAssociationResult {
         this.apiId = apiId;
     }
 
-    public Optional<String> getApiAssociationIdentifier() {
+    public Optional<String> apiAssociationIdentifier() {
         return Optional.ofNullable(this.apiAssociationIdentifier);
     }
-    public Optional<String> getApiId() {
+    public Optional<String> apiId() {
         return Optional.ofNullable(this.apiId);
     }
 

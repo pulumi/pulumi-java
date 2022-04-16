@@ -27,7 +27,7 @@ public final class ManagedRulesDefinitionResponse extends io.pulumi.resources.In
     @Import(name="exclusions")
       private final @Nullable List<OwaspCrsExclusionEntryResponse> exclusions;
 
-    public List<OwaspCrsExclusionEntryResponse> getExclusions() {
+    public List<OwaspCrsExclusionEntryResponse> exclusions() {
         return this.exclusions == null ? List.of() : this.exclusions;
     }
 
@@ -38,7 +38,7 @@ public final class ManagedRulesDefinitionResponse extends io.pulumi.resources.In
     @Import(name="managedRuleSets", required=true)
       private final List<ManagedRuleSetResponse> managedRuleSets;
 
-    public List<ManagedRuleSetResponse> getManagedRuleSets() {
+    public List<ManagedRuleSetResponse> managedRuleSets() {
         return this.managedRuleSets;
     }
 

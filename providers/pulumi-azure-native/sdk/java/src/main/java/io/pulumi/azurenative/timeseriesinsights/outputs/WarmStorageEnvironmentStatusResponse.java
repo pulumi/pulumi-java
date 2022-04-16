@@ -42,21 +42,21 @@ public final class WarmStorageEnvironmentStatusResponse {
      * A value that represents the number of properties used by the environment for S1/S2 SKU and number of properties used by Warm Store for PAYG SKU
      * 
     */
-    public Optional<Integer> getCurrentCount() {
+    public Optional<Integer> currentCount() {
         return Optional.ofNullable(this.currentCount);
     }
     /**
      * A value that represents the maximum number of properties used allowed by the environment for S1/S2 SKU and maximum number of properties allowed by Warm Store for PAYG SKU.
      * 
     */
-    public Optional<Integer> getMaxCount() {
+    public Optional<Integer> maxCount() {
         return Optional.ofNullable(this.maxCount);
     }
     /**
      * This string represents the state of warm storage properties usage. It can be "Ok", "Error", "Unknown".
      * 
     */
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
 

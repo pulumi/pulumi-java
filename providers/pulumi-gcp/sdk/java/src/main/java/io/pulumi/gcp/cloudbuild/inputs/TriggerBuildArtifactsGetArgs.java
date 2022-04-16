@@ -27,7 +27,7 @@ public final class TriggerBuildArtifactsGetArgs extends io.pulumi.resources.Reso
     @Import(name="images")
       private final @Nullable Output<List<String>> images;
 
-    public Output<List<String>> getImages() {
+    public Output<List<String>> images() {
         return this.images == null ? Codegen.empty() : this.images;
     }
 
@@ -43,7 +43,7 @@ public final class TriggerBuildArtifactsGetArgs extends io.pulumi.resources.Reso
     @Import(name="objects")
       private final @Nullable Output<TriggerBuildArtifactsObjectsGetArgs> objects;
 
-    public Output<TriggerBuildArtifactsObjectsGetArgs> getObjects() {
+    public Output<TriggerBuildArtifactsObjectsGetArgs> objects() {
         return this.objects == null ? Codegen.empty() : this.objects;
     }
 

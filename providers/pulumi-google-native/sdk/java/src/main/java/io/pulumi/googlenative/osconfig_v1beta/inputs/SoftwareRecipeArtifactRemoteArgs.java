@@ -26,7 +26,7 @@ public final class SoftwareRecipeArtifactRemoteArgs extends io.pulumi.resources.
     @Import(name="checksum")
       private final @Nullable Output<String> checksum;
 
-    public Output<String> getChecksum() {
+    public Output<String> checksum() {
         return this.checksum == null ? Codegen.empty() : this.checksum;
     }
 
@@ -37,7 +37,7 @@ public final class SoftwareRecipeArtifactRemoteArgs extends io.pulumi.resources.
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri == null ? Codegen.empty() : this.uri;
     }
 

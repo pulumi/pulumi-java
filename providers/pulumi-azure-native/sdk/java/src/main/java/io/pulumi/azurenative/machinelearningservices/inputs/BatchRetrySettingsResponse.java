@@ -26,7 +26,7 @@ public final class BatchRetrySettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="maxRetries")
       private final @Nullable Integer maxRetries;
 
-    public Optional<Integer> getMaxRetries() {
+    public Optional<Integer> maxRetries() {
         return this.maxRetries == null ? Optional.empty() : Optional.ofNullable(this.maxRetries);
     }
 
@@ -37,7 +37,7 @@ public final class BatchRetrySettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="timeout")
       private final @Nullable String timeout;
 
-    public Optional<String> getTimeout() {
+    public Optional<String> timeout() {
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
     }
 

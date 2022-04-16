@@ -22,7 +22,7 @@ public final class StaticIpAttachmentState extends io.pulumi.resources.ResourceA
     @Import(name="instanceName")
       private final @Nullable Output<String> instanceName;
 
-    public Output<String> getInstanceName() {
+    public Output<String> instanceName() {
         return this.instanceName == null ? Codegen.empty() : this.instanceName;
     }
 
@@ -33,7 +33,7 @@ public final class StaticIpAttachmentState extends io.pulumi.resources.ResourceA
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
@@ -44,7 +44,7 @@ public final class StaticIpAttachmentState extends io.pulumi.resources.ResourceA
     @Import(name="staticIpName")
       private final @Nullable Output<String> staticIpName;
 
-    public Output<String> getStaticIpName() {
+    public Output<String> staticIpName() {
         return this.staticIpName == null ? Codegen.empty() : this.staticIpName;
     }
 

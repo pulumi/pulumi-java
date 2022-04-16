@@ -30,7 +30,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs extends io
     @Import(name="allowAllDomains")
       private final @Nullable Output<Boolean> allowAllDomains;
 
-    public Output<Boolean> getAllowAllDomains() {
+    public Output<Boolean> allowAllDomains() {
         return this.allowAllDomains == null ? Codegen.empty() : this.allowAllDomains;
     }
 
@@ -41,7 +41,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs extends io
     @Import(name="allowAmpTraffic")
       private final @Nullable Output<Boolean> allowAmpTraffic;
 
-    public Output<Boolean> getAllowAmpTraffic() {
+    public Output<Boolean> allowAmpTraffic() {
         return this.allowAmpTraffic == null ? Codegen.empty() : this.allowAmpTraffic;
     }
 
@@ -52,7 +52,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs extends io
     @Import(name="allowedDomains")
       private final @Nullable Output<List<String>> allowedDomains;
 
-    public Output<List<String>> getAllowedDomains() {
+    public Output<List<String>> allowedDomains() {
         return this.allowedDomains == null ? Codegen.empty() : this.allowedDomains;
     }
 
@@ -63,7 +63,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs extends io
     @Import(name="challengeSecurityPreference")
       private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreference> challengeSecurityPreference;
 
-    public Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreference> getChallengeSecurityPreference() {
+    public Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreference> challengeSecurityPreference() {
         return this.challengeSecurityPreference == null ? Codegen.empty() : this.challengeSecurityPreference;
     }
 
@@ -74,7 +74,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs extends io
     @Import(name="integrationType", required=true)
       private final Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationType> integrationType;
 
-    public Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationType> getIntegrationType() {
+    public Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationType> integrationType() {
         return this.integrationType;
     }
 

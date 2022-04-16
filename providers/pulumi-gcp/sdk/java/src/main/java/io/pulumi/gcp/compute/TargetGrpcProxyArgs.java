@@ -23,7 +23,7 @@ public final class TargetGrpcProxyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -40,7 +40,7 @@ public final class TargetGrpcProxyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -52,7 +52,7 @@ public final class TargetGrpcProxyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -65,7 +65,7 @@ public final class TargetGrpcProxyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="urlMap")
       private final @Nullable Output<String> urlMap;
 
-    public Output<String> getUrlMap() {
+    public Output<String> urlMap() {
         return this.urlMap == null ? Codegen.empty() : this.urlMap;
     }
 
@@ -85,7 +85,7 @@ public final class TargetGrpcProxyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="validateForProxyless")
       private final @Nullable Output<Boolean> validateForProxyless;
 
-    public Output<Boolean> getValidateForProxyless() {
+    public Output<Boolean> validateForProxyless() {
         return this.validateForProxyless == null ? Codegen.empty() : this.validateForProxyless;
     }
 

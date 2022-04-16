@@ -88,63 +88,63 @@ public final class DatasetResponseDataPath {
      * Additional Properties.
      * 
     */
-    public Map<String,Object> getAdditionalProperties() {
+    public Map<String,Object> additionalProperties() {
         return this.additionalProperties == null ? Map.of() : this.additionalProperties;
     }
     /**
      * Azure path for Azure Blob or File
      * 
     */
-    public String getAzureFilePath() {
+    public String azureFilePath() {
         return this.azureFilePath;
     }
     /**
      * Data store Name
      * 
     */
-    public String getDatastoreName() {
+    public String datastoreName() {
         return this.datastoreName;
     }
     /**
      * HTTP URL.
      * 
     */
-    public String getHttpUrl() {
+    public String httpUrl() {
         return this.httpUrl;
     }
     /**
      * Specify the partition format of path. Defaults to None.
      * 
     */
-    public String getPartitionFormat() {
+    public String partitionFormat() {
         return this.partitionFormat;
     }
     /**
      * Whether or not to ignore unmatched path.
      * 
     */
-    public Boolean getPartitionFormatIgnoreError() {
+    public Boolean partitionFormatIgnoreError() {
         return this.partitionFormatIgnoreError;
     }
     /**
      * List of files expanded from a file GLOB specified
      * 
     */
-    public List<String> getPaths() {
+    public List<String> paths() {
         return this.paths;
     }
     /**
      * Relative path in the data store
      * 
     */
-    public String getRelativePath() {
+    public String relativePath() {
         return this.relativePath;
     }
     /**
      * Sql Query/Table/Stored Procedure details.
      * 
     */
-    public Optional<DatasetResponseSqlDataPath> getSqlDataPath() {
+    public Optional<DatasetResponseSqlDataPath> sqlDataPath() {
         return Optional.ofNullable(this.sqlDataPath);
     }
 

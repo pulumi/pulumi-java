@@ -22,7 +22,7 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends io
     @Import(name="gatewayName", required=true)
       private final String gatewayName;
 
-    public String getGatewayName() {
+    public String gatewayName() {
         return this.gatewayName;
     }
 
@@ -33,7 +33,7 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends io
     @Import(name="outputBlobSasUrl")
       private final @Nullable String outputBlobSasUrl;
 
-    public Optional<String> getOutputBlobSasUrl() {
+    public Optional<String> outputBlobSasUrl() {
         return this.outputBlobSasUrl == null ? Optional.empty() : Optional.ofNullable(this.outputBlobSasUrl);
     }
 
@@ -44,7 +44,7 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends io
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,7 +55,7 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends io
     @Import(name="vpnUserNamesFilter")
       private final @Nullable List<String> vpnUserNamesFilter;
 
-    public List<String> getVpnUserNamesFilter() {
+    public List<String> vpnUserNamesFilter() {
         return this.vpnUserNamesFilter == null ? List.of() : this.vpnUserNamesFilter;
     }
 

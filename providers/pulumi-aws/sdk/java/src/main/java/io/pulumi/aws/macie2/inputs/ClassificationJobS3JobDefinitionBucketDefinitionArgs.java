@@ -22,7 +22,7 @@ public final class ClassificationJobS3JobDefinitionBucketDefinitionArgs extends 
     @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
 
@@ -33,7 +33,7 @@ public final class ClassificationJobS3JobDefinitionBucketDefinitionArgs extends 
     @Import(name="buckets", required=true)
       private final Output<List<String>> buckets;
 
-    public Output<List<String>> getBuckets() {
+    public Output<List<String>> buckets() {
         return this.buckets;
     }
 

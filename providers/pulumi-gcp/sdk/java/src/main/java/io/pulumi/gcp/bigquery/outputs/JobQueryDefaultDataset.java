@@ -34,14 +34,14 @@ public final class JobQueryDefaultDataset {
      * The ID of the dataset containing this model.
      * 
     */
-    public String getDatasetId() {
+    public String datasetId() {
         return this.datasetId;
     }
     /**
      * The ID of the project containing this model.
      * 
     */
-    public Optional<String> getProjectId() {
+    public Optional<String> projectId() {
         return Optional.ofNullable(this.projectId);
     }
 

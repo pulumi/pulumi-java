@@ -20,21 +20,21 @@ public final class TaskDefinitionTmpfsArgs extends io.pulumi.resources.ResourceA
     @Import(name="containerPath")
       private final @Nullable Output<String> containerPath;
 
-    public Output<String> getContainerPath() {
+    public Output<String> containerPath() {
         return this.containerPath == null ? Codegen.empty() : this.containerPath;
     }
 
     @Import(name="mountOptions")
       private final @Nullable Output<List<String>> mountOptions;
 
-    public Output<List<String>> getMountOptions() {
+    public Output<List<String>> mountOptions() {
         return this.mountOptions == null ? Codegen.empty() : this.mountOptions;
     }
 
     @Import(name="size", required=true)
       private final Output<Integer> size;
 
-    public Output<Integer> getSize() {
+    public Output<Integer> size() {
         return this.size;
     }
 

@@ -20,7 +20,7 @@ public final class QueryParameterTypeStructTypesItemResponse extends io.pulumi.r
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -31,7 +31,7 @@ public final class QueryParameterTypeStructTypesItemResponse extends io.pulumi.r
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -42,7 +42,7 @@ public final class QueryParameterTypeStructTypesItemResponse extends io.pulumi.r
     @Import(name="type", required=true)
       private final QueryParameterTypeResponse type;
 
-    public QueryParameterTypeResponse getType() {
+    public QueryParameterTypeResponse type() {
         return this.type;
     }
 

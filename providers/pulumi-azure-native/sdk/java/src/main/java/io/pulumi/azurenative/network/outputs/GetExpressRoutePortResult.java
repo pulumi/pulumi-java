@@ -153,126 +153,126 @@ public final class GetExpressRoutePortResult {
      * Date of the physical port allocation to be used in Letter of Authorization.
      * 
     */
-    public String getAllocationDate() {
+    public String allocationDate() {
         return this.allocationDate;
     }
     /**
      * Bandwidth of procured ports in Gbps.
      * 
     */
-    public Optional<Integer> getBandwidthInGbps() {
+    public Optional<Integer> bandwidthInGbps() {
         return Optional.ofNullable(this.bandwidthInGbps);
     }
     /**
      * Reference the ExpressRoute circuit(s) that are provisioned on this ExpressRoutePort resource.
      * 
     */
-    public List<SubResourceResponse> getCircuits() {
+    public List<SubResourceResponse> circuits() {
         return this.circuits;
     }
     /**
      * Encapsulation method on physical ports.
      * 
     */
-    public Optional<String> getEncapsulation() {
+    public Optional<String> encapsulation() {
         return Optional.ofNullable(this.encapsulation);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Ether type of the physical port.
      * 
     */
-    public String getEtherType() {
+    public String etherType() {
         return this.etherType;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The identity of ExpressRoutePort, if configured.
      * 
     */
-    public Optional<ManagedServiceIdentityResponse> getIdentity() {
+    public Optional<ManagedServiceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The set of physical links of the ExpressRoutePort resource.
      * 
     */
-    public List<ExpressRouteLinkResponse> getLinks() {
+    public List<ExpressRouteLinkResponse> links() {
         return this.links == null ? List.of() : this.links;
     }
     /**
      * Resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Maximum transmission unit of the physical port pair(s).
      * 
     */
-    public String getMtu() {
+    public String mtu() {
         return this.mtu;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The name of the peering location that the ExpressRoutePort is mapped to physically.
      * 
     */
-    public Optional<String> getPeeringLocation() {
+    public Optional<String> peeringLocation() {
         return Optional.ofNullable(this.peeringLocation);
     }
     /**
      * Aggregate Gbps of associated circuit bandwidths.
      * 
     */
-    public Double getProvisionedBandwidthInGbps() {
+    public Double provisionedBandwidthInGbps() {
         return this.provisionedBandwidthInGbps;
     }
     /**
      * The provisioning state of the express route port resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource GUID property of the express route port resource.
      * 
     */
-    public String getResourceGuid() {
+    public String resourceGuid() {
         return this.resourceGuid;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -19,7 +19,7 @@ public final class AutoscalerStatusDetailsResponse extends io.pulumi.resources.I
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 
@@ -30,7 +30,7 @@ public final class AutoscalerStatusDetailsResponse extends io.pulumi.resources.I
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

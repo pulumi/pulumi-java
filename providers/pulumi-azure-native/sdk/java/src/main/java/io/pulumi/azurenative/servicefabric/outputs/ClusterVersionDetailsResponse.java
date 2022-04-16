@@ -41,21 +41,21 @@ public final class ClusterVersionDetailsResponse {
      * The Service Fabric runtime version of the cluster.
      * 
     */
-    public Optional<String> getCodeVersion() {
+    public Optional<String> codeVersion() {
         return Optional.ofNullable(this.codeVersion);
     }
     /**
      * Indicates if this version is for Windows or Linux operating system.
      * 
     */
-    public Optional<String> getEnvironment() {
+    public Optional<String> environment() {
         return Optional.ofNullable(this.environment);
     }
     /**
      * The date of expiry of support of the version.
      * 
     */
-    public Optional<String> getSupportExpiryUtc() {
+    public Optional<String> supportExpiryUtc() {
         return Optional.ofNullable(this.supportExpiryUtc);
     }
 

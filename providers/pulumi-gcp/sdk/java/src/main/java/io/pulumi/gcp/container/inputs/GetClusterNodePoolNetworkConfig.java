@@ -16,21 +16,21 @@ public final class GetClusterNodePoolNetworkConfig extends io.pulumi.resources.I
     @Import(name="createPodRange", required=true)
       private final Boolean createPodRange;
 
-    public Boolean getCreatePodRange() {
+    public Boolean createPodRange() {
         return this.createPodRange;
     }
 
     @Import(name="podIpv4CidrBlock", required=true)
       private final String podIpv4CidrBlock;
 
-    public String getPodIpv4CidrBlock() {
+    public String podIpv4CidrBlock() {
         return this.podIpv4CidrBlock;
     }
 
     @Import(name="podRange", required=true)
       private final String podRange;
 
-    public String getPodRange() {
+    public String podRange() {
         return this.podRange;
     }
 

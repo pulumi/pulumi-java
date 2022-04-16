@@ -85,63 +85,63 @@ public final class NetworkConfigResponse {
      * The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
      * 
     */
-    public String getDatapathProvider() {
+    public String datapathProvider() {
         return this.datapathProvider;
     }
     /**
      * Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled when default_snat_status is disabled. When disabled is set to false, default IP masquerade rules will be applied to the nodes to prevent sNAT on cluster internal traffic.
      * 
     */
-    public DefaultSnatStatusResponse getDefaultSnatStatus() {
+    public DefaultSnatStatusResponse defaultSnatStatus() {
         return this.defaultSnatStatus;
     }
     /**
      * DNSConfig contains clusterDNS config for this cluster.
      * 
     */
-    public DNSConfigResponse getDnsConfig() {
+    public DNSConfigResponse dnsConfig() {
         return this.dnsConfig;
     }
     /**
      * Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
      * 
     */
-    public Boolean getEnableIntraNodeVisibility() {
+    public Boolean enableIntraNodeVisibility() {
         return this.enableIntraNodeVisibility;
     }
     /**
      * Whether L4ILB Subsetting is enabled for this cluster.
      * 
     */
-    public Boolean getEnableL4ilbSubsetting() {
+    public Boolean enableL4ilbSubsetting() {
         return this.enableL4ilbSubsetting;
     }
     /**
      * The relative name of the Google Compute Engine network(https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the cluster is connected. Example: projects/my-project/global/networks/my-network
      * 
     */
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
     /**
      * The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4)
      * 
     */
-    public String getPrivateIpv6GoogleAccess() {
+    public String privateIpv6GoogleAccess() {
         return this.privateIpv6GoogleAccess;
     }
     /**
      * ServiceExternalIPsConfig specifies if services with externalIPs field are blocked or not.
      * 
     */
-    public ServiceExternalIPsConfigResponse getServiceExternalIpsConfig() {
+    public ServiceExternalIPsConfigResponse serviceExternalIpsConfig() {
         return this.serviceExternalIpsConfig;
     }
     /**
      * The relative name of the Google Compute Engine [subnetwork](https://cloud.google.com/compute/docs/vpc) to which the cluster is connected. Example: projects/my-project/regions/us-central1/subnetworks/my-subnet
      * 
     */
-    public String getSubnetwork() {
+    public String subnetwork() {
         return this.subnetwork;
     }
 

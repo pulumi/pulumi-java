@@ -27,7 +27,7 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="appInitialActivity")
       private final @Nullable Output<String> appInitialActivity;
 
-    public Output<String> getAppInitialActivity() {
+    public Output<String> appInitialActivity() {
         return this.appInitialActivity == null ? Codegen.empty() : this.appInitialActivity;
     }
 
@@ -38,7 +38,7 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="bootstrapPackageId")
       private final @Nullable Output<String> bootstrapPackageId;
 
-    public Output<String> getBootstrapPackageId() {
+    public Output<String> bootstrapPackageId() {
         return this.bootstrapPackageId == null ? Codegen.empty() : this.bootstrapPackageId;
     }
 
@@ -49,7 +49,7 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="bootstrapRunnerClass")
       private final @Nullable Output<String> bootstrapRunnerClass;
 
-    public Output<String> getBootstrapRunnerClass() {
+    public Output<String> bootstrapRunnerClass() {
         return this.bootstrapRunnerClass == null ? Codegen.empty() : this.bootstrapRunnerClass;
     }
 
@@ -60,7 +60,7 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="maxDepth")
       private final @Nullable Output<Integer> maxDepth;
 
-    public Output<Integer> getMaxDepth() {
+    public Output<Integer> maxDepth() {
         return this.maxDepth == null ? Codegen.empty() : this.maxDepth;
     }
 
@@ -71,7 +71,7 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="maxSteps")
       private final @Nullable Output<Integer> maxSteps;
 
-    public Output<Integer> getMaxSteps() {
+    public Output<Integer> maxSteps() {
         return this.maxSteps == null ? Codegen.empty() : this.maxSteps;
     }
 

@@ -26,7 +26,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionArgs extends io.pu
     @Import(name="count", required=true)
       private final Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count;
     }
 
@@ -38,7 +38,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionArgs extends io.pu
     @Import(name="highKey", required=true)
       private final Output<String> highKey;
 
-    public Output<String> getHighKey() {
+    public Output<String> highKey() {
         return this.highKey;
     }
 
@@ -50,7 +50,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionArgs extends io.pu
     @Import(name="lowKey", required=true)
       private final Output<String> lowKey;
 
-    public Output<String> getLowKey() {
+    public Output<String> lowKey() {
         return this.lowKey;
     }
 
@@ -62,7 +62,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionArgs extends io.pu
     @Import(name="partitionScheme", required=true)
       private final Output<String> partitionScheme;
 
-    public Output<String> getPartitionScheme() {
+    public Output<String> partitionScheme() {
         return this.partitionScheme;
     }
 

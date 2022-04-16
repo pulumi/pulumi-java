@@ -76,56 +76,56 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse {
      * URI of Customer's Admin console dashboard.
      * 
     */
-    public String getAdminConsoleUri() {
+    public String adminConsoleUri() {
         return this.adminConsoleUri;
     }
     /**
      * The alternate email.
      * 
     */
-    public String getAlternateEmail() {
+    public String alternateEmail() {
         return this.alternateEmail;
     }
     /**
      * CustomerType indicates verification type needed for using services.
      * 
     */
-    public String getCustomerType() {
+    public String customerType() {
         return this.customerType;
     }
     /**
      * Edu information about the customer.
      * 
     */
-    public GoogleCloudChannelV1EduDataResponse getEduData() {
+    public GoogleCloudChannelV1EduDataResponse eduData() {
         return this.eduData;
     }
     /**
      * Whether the domain is verified. This field is not returned for a Customer's cloud_identity_info resource. Partners can use the domains.get() method of the Workspace SDK's Directory API, or listen to the PRIMARY_DOMAIN_VERIFIED Pub/Sub event in to track domain verification of their resolve Workspace customers.
      * 
     */
-    public Boolean getIsDomainVerified() {
+    public Boolean isDomainVerified() {
         return this.isDomainVerified;
     }
     /**
      * Language code.
      * 
     */
-    public String getLanguageCode() {
+    public String languageCode() {
         return this.languageCode;
     }
     /**
      * Phone number associated with the Cloud Identity.
      * 
     */
-    public String getPhoneNumber() {
+    public String phoneNumber() {
         return this.phoneNumber;
     }
     /**
      * The primary domain name.
      * 
     */
-    public String getPrimaryDomain() {
+    public String primaryDomain() {
         return this.primaryDomain;
     }
 

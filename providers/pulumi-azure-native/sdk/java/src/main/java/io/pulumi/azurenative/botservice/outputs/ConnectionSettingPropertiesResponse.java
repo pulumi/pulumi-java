@@ -92,70 +92,70 @@ public final class ConnectionSettingPropertiesResponse {
      * Client Id associated with the Connection Setting.
      * 
     */
-    public Optional<String> getClientId() {
+    public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
      * Client Secret associated with the Connection Setting
      * 
     */
-    public Optional<String> getClientSecret() {
+    public Optional<String> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
     /**
      * Id associated with the Connection Setting.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name associated with the Connection Setting.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Service Provider Parameters associated with the Connection Setting
      * 
     */
-    public List<ConnectionSettingParameterResponse> getParameters() {
+    public List<ConnectionSettingParameterResponse> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
      * Provisioning state of the resource
      * 
     */
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Scopes associated with the Connection Setting
      * 
     */
-    public Optional<String> getScopes() {
+    public Optional<String> scopes() {
         return Optional.ofNullable(this.scopes);
     }
     /**
      * Service Provider Display Name associated with the Connection Setting
      * 
     */
-    public Optional<String> getServiceProviderDisplayName() {
+    public Optional<String> serviceProviderDisplayName() {
         return Optional.ofNullable(this.serviceProviderDisplayName);
     }
     /**
      * Service Provider Id associated with the Connection Setting
      * 
     */
-    public Optional<String> getServiceProviderId() {
+    public Optional<String> serviceProviderId() {
         return Optional.ofNullable(this.serviceProviderId);
     }
     /**
      * Setting Id set by the service for the Connection Setting.
      * 
     */
-    public String getSettingId() {
+    public String settingId() {
         return this.settingId;
     }
 

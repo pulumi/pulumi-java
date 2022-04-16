@@ -63,42 +63,42 @@ public final class LoadBalancerBackendAddressResponse {
      * IP Address belonging to the referenced virtual network.
      * 
     */
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * Reference to the frontend ip address configuration defined in regional loadbalancer.
      * 
     */
-    public Optional<SubResourceResponse> getLoadBalancerFrontendIPConfiguration() {
+    public Optional<SubResourceResponse> loadBalancerFrontendIPConfiguration() {
         return Optional.ofNullable(this.loadBalancerFrontendIPConfiguration);
     }
     /**
      * Name of the backend address.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Reference to IP address defined in network interfaces.
      * 
     */
-    public SubResourceResponse getNetworkInterfaceIPConfiguration() {
+    public SubResourceResponse networkInterfaceIPConfiguration() {
         return this.networkInterfaceIPConfiguration;
     }
     /**
      * Reference to an existing subnet.
      * 
     */
-    public Optional<SubResourceResponse> getSubnet() {
+    public Optional<SubResourceResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
      * Reference to an existing virtual network.
      * 
     */
-    public Optional<SubResourceResponse> getVirtualNetwork() {
+    public Optional<SubResourceResponse> virtualNetwork() {
         return Optional.ofNullable(this.virtualNetwork);
     }
 

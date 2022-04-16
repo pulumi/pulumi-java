@@ -26,7 +26,7 @@ public final class SapHanaPartitionSettingsResponse {
      * The name of the column that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getPartitionColumnName() {
+    public Optional<Object> partitionColumnName() {
         return Optional.ofNullable(this.partitionColumnName);
     }
 

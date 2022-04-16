@@ -26,14 +26,14 @@ public final class DataSourceErrorInfo extends io.pulumi.resources.InvokeArgs {
     @Import(name="message")
       private final @Nullable String message;
 
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
     @Import(name="type")
       private final @Nullable DataSourceErrorInfoType type;
 
-    public Optional<DataSourceErrorInfoType> getType() {
+    public Optional<DataSourceErrorInfoType> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

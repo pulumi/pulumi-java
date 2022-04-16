@@ -27,7 +27,7 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends io.pulumi.resources.
     @Import(name="end")
       private final @Nullable Output<String> end;
 
-    public Output<String> getEnd() {
+    public Output<String> end() {
         return this.end == null ? Codegen.empty() : this.end;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends io.pulumi.resources.
     @Import(name="fee")
       private final @Nullable Output<GoogleTypeMoneyArgs> fee;
 
-    public Output<GoogleTypeMoneyArgs> getFee() {
+    public Output<GoogleTypeMoneyArgs> fee() {
         return this.fee == null ? Codegen.empty() : this.fee;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends io.pulumi.resources.
     @Import(name="start")
       private final @Nullable Output<String> start;
 
-    public Output<String> getStart() {
+    public Output<String> start() {
         return this.start == null ? Codegen.empty() : this.start;
     }
 

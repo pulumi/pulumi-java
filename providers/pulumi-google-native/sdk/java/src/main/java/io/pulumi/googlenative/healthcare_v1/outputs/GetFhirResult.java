@@ -41,21 +41,21 @@ public final class GetFhirResult {
      * The HTTP Content-Type header value specifying the content type of the body.
      * 
     */
-    public String getContentType() {
+    public String contentType() {
         return this.contentType;
     }
     /**
      * The HTTP request/response body as raw binary.
      * 
     */
-    public String getData() {
+    public String data() {
         return this.data;
     }
     /**
      * Application specific response metadata. Must be set in the first response for streaming APIs.
      * 
     */
-    public List<Map<String,String>> getExtensions() {
+    public List<Map<String,String>> extensions() {
         return this.extensions;
     }
 

@@ -22,7 +22,7 @@ public final class AzureClusterAuthorizationArgs extends io.pulumi.resources.Res
     @Import(name="adminUsers", required=true)
       private final Output<List<AzureClusterAuthorizationAdminUserArgs>> adminUsers;
 
-    public Output<List<AzureClusterAuthorizationAdminUserArgs>> getAdminUsers() {
+    public Output<List<AzureClusterAuthorizationAdminUserArgs>> adminUsers() {
         return this.adminUsers;
     }
 

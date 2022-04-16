@@ -26,7 +26,7 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="certVersion")
       private final @Nullable Output<String> certVersion;
 
-    public Output<String> getCertVersion() {
+    public Output<String> certVersion() {
         return this.certVersion == null ? Codegen.empty() : this.certVersion;
     }
 
@@ -37,7 +37,7 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="keyVaultCertName", required=true)
       private final Output<String> keyVaultCertName;
 
-    public Output<String> getKeyVaultCertName() {
+    public Output<String> keyVaultCertName() {
         return this.keyVaultCertName;
     }
 
@@ -48,7 +48,7 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="vaultUri", required=true)
       private final Output<String> vaultUri;
 
-    public Output<String> getVaultUri() {
+    public Output<String> vaultUri() {
         return this.vaultUri;
     }
 

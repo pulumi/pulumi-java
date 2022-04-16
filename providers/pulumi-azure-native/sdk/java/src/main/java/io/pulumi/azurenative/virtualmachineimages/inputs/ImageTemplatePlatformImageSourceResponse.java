@@ -26,7 +26,7 @@ public final class ImageTemplatePlatformImageSourceResponse extends io.pulumi.re
     @Import(name="offer")
       private final @Nullable String offer;
 
-    public Optional<String> getOffer() {
+    public Optional<String> offer() {
         return this.offer == null ? Optional.empty() : Optional.ofNullable(this.offer);
     }
 
@@ -37,7 +37,7 @@ public final class ImageTemplatePlatformImageSourceResponse extends io.pulumi.re
     @Import(name="planInfo")
       private final @Nullable PlatformImagePurchasePlanResponse planInfo;
 
-    public Optional<PlatformImagePurchasePlanResponse> getPlanInfo() {
+    public Optional<PlatformImagePurchasePlanResponse> planInfo() {
         return this.planInfo == null ? Optional.empty() : Optional.ofNullable(this.planInfo);
     }
 
@@ -48,7 +48,7 @@ public final class ImageTemplatePlatformImageSourceResponse extends io.pulumi.re
     @Import(name="publisher")
       private final @Nullable String publisher;
 
-    public Optional<String> getPublisher() {
+    public Optional<String> publisher() {
         return this.publisher == null ? Optional.empty() : Optional.ofNullable(this.publisher);
     }
 
@@ -59,7 +59,7 @@ public final class ImageTemplatePlatformImageSourceResponse extends io.pulumi.re
     @Import(name="sku")
       private final @Nullable String sku;
 
-    public Optional<String> getSku() {
+    public Optional<String> sku() {
         return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
     }
 
@@ -71,7 +71,7 @@ public final class ImageTemplatePlatformImageSourceResponse extends io.pulumi.re
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -82,7 +82,7 @@ public final class ImageTemplatePlatformImageSourceResponse extends io.pulumi.re
     @Import(name="version")
       private final @Nullable String version;
 
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

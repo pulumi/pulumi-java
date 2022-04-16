@@ -33,7 +33,7 @@ public class PlaybackKeyPair extends io.pulumi.resources.CustomResource {
      * @return Key-pair identifier.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -47,7 +47,7 @@ public class PlaybackKeyPair extends io.pulumi.resources.CustomResource {
      * @return Key-pair identifier.
      * 
      */
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint;
     }
     /**
@@ -61,7 +61,7 @@ public class PlaybackKeyPair extends io.pulumi.resources.CustomResource {
      * @return An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that resource. The value does not need to be unique.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -75,7 +75,7 @@ public class PlaybackKeyPair extends io.pulumi.resources.CustomResource {
      * @return The public portion of a customer-generated key pair.
      * 
      */
-    public Output<String> getPublicKeyMaterial() {
+    public Output<String> publicKeyMaterial() {
         return this.publicKeyMaterial;
     }
     /**
@@ -89,7 +89,7 @@ public class PlaybackKeyPair extends io.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the asset model.
      * 
      */
-    public Output</* @Nullable */ List<PlaybackKeyPairTag>> getTags() {
+    public Output</* @Nullable */ List<PlaybackKeyPairTag>> tags() {
         return this.tags;
     }
 

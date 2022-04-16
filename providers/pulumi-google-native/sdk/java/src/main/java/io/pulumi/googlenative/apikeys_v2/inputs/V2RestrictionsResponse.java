@@ -28,7 +28,7 @@ public final class V2RestrictionsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="androidKeyRestrictions", required=true)
       private final V2AndroidKeyRestrictionsResponse androidKeyRestrictions;
 
-    public V2AndroidKeyRestrictionsResponse getAndroidKeyRestrictions() {
+    public V2AndroidKeyRestrictionsResponse androidKeyRestrictions() {
         return this.androidKeyRestrictions;
     }
 
@@ -39,7 +39,7 @@ public final class V2RestrictionsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="apiTargets", required=true)
       private final List<V2ApiTargetResponse> apiTargets;
 
-    public List<V2ApiTargetResponse> getApiTargets() {
+    public List<V2ApiTargetResponse> apiTargets() {
         return this.apiTargets;
     }
 
@@ -50,7 +50,7 @@ public final class V2RestrictionsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="browserKeyRestrictions", required=true)
       private final V2BrowserKeyRestrictionsResponse browserKeyRestrictions;
 
-    public V2BrowserKeyRestrictionsResponse getBrowserKeyRestrictions() {
+    public V2BrowserKeyRestrictionsResponse browserKeyRestrictions() {
         return this.browserKeyRestrictions;
     }
 
@@ -61,7 +61,7 @@ public final class V2RestrictionsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="iosKeyRestrictions", required=true)
       private final V2IosKeyRestrictionsResponse iosKeyRestrictions;
 
-    public V2IosKeyRestrictionsResponse getIosKeyRestrictions() {
+    public V2IosKeyRestrictionsResponse iosKeyRestrictions() {
         return this.iosKeyRestrictions;
     }
 
@@ -72,7 +72,7 @@ public final class V2RestrictionsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="serverKeyRestrictions", required=true)
       private final V2ServerKeyRestrictionsResponse serverKeyRestrictions;
 
-    public V2ServerKeyRestrictionsResponse getServerKeyRestrictions() {
+    public V2ServerKeyRestrictionsResponse serverKeyRestrictions() {
         return this.serverKeyRestrictions;
     }
 

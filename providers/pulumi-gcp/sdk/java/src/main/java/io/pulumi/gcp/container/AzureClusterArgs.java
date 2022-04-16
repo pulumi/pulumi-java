@@ -27,7 +27,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> getAnnotations() {
+    public Output<Map<String,String>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -38,7 +38,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorization", required=true)
       private final Output<AzureClusterAuthorizationArgs> authorization;
 
-    public Output<AzureClusterAuthorizationArgs> getAuthorization() {
+    public Output<AzureClusterAuthorizationArgs> authorization() {
         return this.authorization;
     }
 
@@ -49,7 +49,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="azureRegion", required=true)
       private final Output<String> azureRegion;
 
-    public Output<String> getAzureRegion() {
+    public Output<String> azureRegion() {
         return this.azureRegion;
     }
 
@@ -60,7 +60,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="client", required=true)
       private final Output<String> client;
 
-    public Output<String> getClient() {
+    public Output<String> client() {
         return this.client;
     }
 
@@ -71,7 +71,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="controlPlane", required=true)
       private final Output<AzureClusterControlPlaneArgs> controlPlane;
 
-    public Output<AzureClusterControlPlaneArgs> getControlPlane() {
+    public Output<AzureClusterControlPlaneArgs> controlPlane() {
         return this.controlPlane;
     }
 
@@ -82,7 +82,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -93,7 +93,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fleet", required=true)
       private final Output<AzureClusterFleetArgs> fleet;
 
-    public Output<AzureClusterFleetArgs> getFleet() {
+    public Output<AzureClusterFleetArgs> fleet() {
         return this.fleet;
     }
 
@@ -104,7 +104,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -115,7 +115,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -126,7 +126,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networking", required=true)
       private final Output<AzureClusterNetworkingArgs> networking;
 
-    public Output<AzureClusterNetworkingArgs> getNetworking() {
+    public Output<AzureClusterNetworkingArgs> networking() {
         return this.networking;
     }
 
@@ -137,7 +137,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -148,7 +148,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupId", required=true)
       private final Output<String> resourceGroupId;
 
-    public Output<String> getResourceGroupId() {
+    public Output<String> resourceGroupId() {
         return this.resourceGroupId;
     }
 

@@ -45,7 +45,7 @@ public class CapacityReservationGroup extends io.pulumi.resources.CustomResource
      * @return A list of all capacity reservation resource ids that belong to capacity reservation group.
      * 
      */
-    public Output<List<SubResourceReadOnlyResponse>> getCapacityReservations() {
+    public Output<List<SubResourceReadOnlyResponse>> capacityReservations() {
         return this.capacityReservations;
     }
     /**
@@ -59,7 +59,7 @@ public class CapacityReservationGroup extends io.pulumi.resources.CustomResource
      * @return The capacity reservation group instance view which has the list of instance views for all the capacity reservations that belong to the capacity reservation group.
      * 
      */
-    public Output<CapacityReservationGroupInstanceViewResponse> getInstanceView() {
+    public Output<CapacityReservationGroupInstanceViewResponse> instanceView() {
         return this.instanceView;
     }
     /**
@@ -73,7 +73,7 @@ public class CapacityReservationGroup extends io.pulumi.resources.CustomResource
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -87,7 +87,7 @@ public class CapacityReservationGroup extends io.pulumi.resources.CustomResource
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +101,7 @@ public class CapacityReservationGroup extends io.pulumi.resources.CustomResource
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -115,7 +115,7 @@ public class CapacityReservationGroup extends io.pulumi.resources.CustomResource
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -129,7 +129,7 @@ public class CapacityReservationGroup extends io.pulumi.resources.CustomResource
      * @return A list of references to all virtual machines associated to the capacity reservation group.
      * 
      */
-    public Output<List<SubResourceReadOnlyResponse>> getVirtualMachinesAssociated() {
+    public Output<List<SubResourceReadOnlyResponse>> virtualMachinesAssociated() {
         return this.virtualMachinesAssociated;
     }
     /**
@@ -143,7 +143,7 @@ public class CapacityReservationGroup extends io.pulumi.resources.CustomResource
      * @return Availability Zones to use for this capacity reservation group. The zones can be assigned only during creation. If not provided, the group supports only regional resources in the region. If provided, enforces each capacity reservation in the group to be in one of the zones.
      * 
      */
-    public Output</* @Nullable */ List<String>> getZones() {
+    public Output</* @Nullable */ List<String>> zones() {
         return this.zones;
     }
 

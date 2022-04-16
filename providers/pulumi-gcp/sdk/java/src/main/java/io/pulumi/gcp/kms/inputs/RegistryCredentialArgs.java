@@ -19,7 +19,7 @@ public final class RegistryCredentialArgs extends io.pulumi.resources.ResourceAr
     @Import(name="publicKeyCertificate", required=true)
       private final Output<Map<String,Object>> publicKeyCertificate;
 
-    public Output<Map<String,Object>> getPublicKeyCertificate() {
+    public Output<Map<String,Object>> publicKeyCertificate() {
         return this.publicKeyCertificate;
     }
 

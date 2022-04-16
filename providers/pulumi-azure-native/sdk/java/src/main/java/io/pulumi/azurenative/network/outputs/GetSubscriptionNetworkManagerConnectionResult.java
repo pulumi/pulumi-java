@@ -70,49 +70,49 @@ public final class GetSubscriptionNetworkManagerConnectionResult {
      * A description of the scope connection.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Network Manager Id.
      * 
     */
-    public Optional<String> getNetworkManagerId() {
+    public Optional<String> networkManagerId() {
         return Optional.ofNullable(this.networkManagerId);
     }
     /**
      * The system metadata related to this resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

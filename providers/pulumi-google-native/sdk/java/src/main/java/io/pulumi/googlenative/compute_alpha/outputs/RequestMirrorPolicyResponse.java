@@ -24,7 +24,7 @@ public final class RequestMirrorPolicyResponse {
      * The full or partial URL to the BackendService resource being mirrored to.
      * 
     */
-    public String getBackendService() {
+    public String backendService() {
         return this.backendService;
     }
 

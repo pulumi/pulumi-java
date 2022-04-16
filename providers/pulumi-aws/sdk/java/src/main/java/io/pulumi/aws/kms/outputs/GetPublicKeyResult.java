@@ -75,55 +75,55 @@ public final class GetPublicKeyResult {
      * Key ARN of the asymmetric CMK from which the public key was downloaded.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * Type of the public key that was downloaded.
      * 
     */
-    public String getCustomerMasterKeySpec() {
+    public String customerMasterKeySpec() {
         return this.customerMasterKeySpec;
     }
     /**
      * Encryption algorithms that AWS KMS supports for this key. Only set when the `key_usage` of the public key is `ENCRYPT_DECRYPT`.
      * 
     */
-    public List<String> getEncryptionAlgorithms() {
+    public List<String> encryptionAlgorithms() {
         return this.encryptionAlgorithms;
     }
-    public List<String> getGrantTokens() {
+    public List<String> grantTokens() {
         return this.grantTokens == null ? List.of() : this.grantTokens;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getKeyId() {
+    public String keyId() {
         return this.keyId;
     }
     /**
      * Permitted use of the public key. Valid values are `ENCRYPT_DECRYPT` or `SIGN_VERIFY`
      * 
     */
-    public String getKeyUsage() {
+    public String keyUsage() {
         return this.keyUsage;
     }
     /**
      * Exported public key. The value is a DER-encoded X.509 public key, also known as SubjectPublicKeyInfo (SPKI), as defined in [RFC 5280](https://tools.ietf.org/html/rfc5280). The value is Base64-encoded.
      * 
     */
-    public String getPublicKey() {
+    public String publicKey() {
         return this.publicKey;
     }
     /**
      * Signing algorithms that AWS KMS supports for this key. Only set when the `key_usage` of the public key is `SIGN_VERIFY`.
      * 
     */
-    public List<String> getSigningAlgorithms() {
+    public List<String> signingAlgorithms() {
         return this.signingAlgorithms;
     }
 

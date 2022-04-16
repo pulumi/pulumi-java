@@ -26,7 +26,7 @@ public final class SecurityContactPropertiesResponseNotificationsByRole extends 
     @Import(name="roles")
       private final @Nullable List<String> roles;
 
-    public List<String> getRoles() {
+    public List<String> roles() {
         return this.roles == null ? List.of() : this.roles;
     }
 
@@ -37,7 +37,7 @@ public final class SecurityContactPropertiesResponseNotificationsByRole extends 
     @Import(name="state")
       private final @Nullable String state;
 
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 

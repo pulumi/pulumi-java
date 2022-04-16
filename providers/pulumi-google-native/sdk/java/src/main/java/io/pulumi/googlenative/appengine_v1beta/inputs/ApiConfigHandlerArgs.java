@@ -29,7 +29,7 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="authFailAction")
       private final @Nullable Output<ApiConfigHandlerAuthFailAction> authFailAction;
 
-    public Output<ApiConfigHandlerAuthFailAction> getAuthFailAction() {
+    public Output<ApiConfigHandlerAuthFailAction> authFailAction() {
         return this.authFailAction == null ? Codegen.empty() : this.authFailAction;
     }
 
@@ -40,7 +40,7 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="login")
       private final @Nullable Output<ApiConfigHandlerLogin> login;
 
-    public Output<ApiConfigHandlerLogin> getLogin() {
+    public Output<ApiConfigHandlerLogin> login() {
         return this.login == null ? Codegen.empty() : this.login;
     }
 
@@ -51,7 +51,7 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="script")
       private final @Nullable Output<String> script;
 
-    public Output<String> getScript() {
+    public Output<String> script() {
         return this.script == null ? Codegen.empty() : this.script;
     }
 
@@ -62,7 +62,7 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="securityLevel")
       private final @Nullable Output<ApiConfigHandlerSecurityLevel> securityLevel;
 
-    public Output<ApiConfigHandlerSecurityLevel> getSecurityLevel() {
+    public Output<ApiConfigHandlerSecurityLevel> securityLevel() {
         return this.securityLevel == null ? Codegen.empty() : this.securityLevel;
     }
 
@@ -73,7 +73,7 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 

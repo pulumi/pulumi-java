@@ -23,7 +23,7 @@ public final class AutoscalingPolicyLoadBalancingUtilizationResponse extends io.
     @Import(name="utilizationTarget", required=true)
       private final Double utilizationTarget;
 
-    public Double getUtilizationTarget() {
+    public Double utilizationTarget() {
         return this.utilizationTarget;
     }
 

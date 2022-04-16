@@ -31,7 +31,7 @@ public final class FirehoseDeliveryStreamArgs extends io.pulumi.resources.Resour
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -42,14 +42,14 @@ public final class FirehoseDeliveryStreamArgs extends io.pulumi.resources.Resour
     @Import(name="destination", required=true)
       private final Output<String> destination;
 
-    public Output<String> getDestination() {
+    public Output<String> destination() {
         return this.destination;
     }
 
     @Import(name="destinationId")
       private final @Nullable Output<String> destinationId;
 
-    public Output<String> getDestinationId() {
+    public Output<String> destinationId() {
         return this.destinationId == null ? Codegen.empty() : this.destinationId;
     }
 
@@ -60,7 +60,7 @@ public final class FirehoseDeliveryStreamArgs extends io.pulumi.resources.Resour
     @Import(name="elasticsearchConfiguration")
       private final @Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationArgs> elasticsearchConfiguration;
 
-    public Output<FirehoseDeliveryStreamElasticsearchConfigurationArgs> getElasticsearchConfiguration() {
+    public Output<FirehoseDeliveryStreamElasticsearchConfigurationArgs> elasticsearchConfiguration() {
         return this.elasticsearchConfiguration == null ? Codegen.empty() : this.elasticsearchConfiguration;
     }
 
@@ -71,7 +71,7 @@ public final class FirehoseDeliveryStreamArgs extends io.pulumi.resources.Resour
     @Import(name="extendedS3Configuration")
       private final @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationArgs> extendedS3Configuration;
 
-    public Output<FirehoseDeliveryStreamExtendedS3ConfigurationArgs> getExtendedS3Configuration() {
+    public Output<FirehoseDeliveryStreamExtendedS3ConfigurationArgs> extendedS3Configuration() {
         return this.extendedS3Configuration == null ? Codegen.empty() : this.extendedS3Configuration;
     }
 
@@ -82,7 +82,7 @@ public final class FirehoseDeliveryStreamArgs extends io.pulumi.resources.Resour
     @Import(name="httpEndpointConfiguration")
       private final @Nullable Output<FirehoseDeliveryStreamHttpEndpointConfigurationArgs> httpEndpointConfiguration;
 
-    public Output<FirehoseDeliveryStreamHttpEndpointConfigurationArgs> getHttpEndpointConfiguration() {
+    public Output<FirehoseDeliveryStreamHttpEndpointConfigurationArgs> httpEndpointConfiguration() {
         return this.httpEndpointConfiguration == null ? Codegen.empty() : this.httpEndpointConfiguration;
     }
 
@@ -93,7 +93,7 @@ public final class FirehoseDeliveryStreamArgs extends io.pulumi.resources.Resour
     @Import(name="kinesisSourceConfiguration")
       private final @Nullable Output<FirehoseDeliveryStreamKinesisSourceConfigurationArgs> kinesisSourceConfiguration;
 
-    public Output<FirehoseDeliveryStreamKinesisSourceConfigurationArgs> getKinesisSourceConfiguration() {
+    public Output<FirehoseDeliveryStreamKinesisSourceConfigurationArgs> kinesisSourceConfiguration() {
         return this.kinesisSourceConfiguration == null ? Codegen.empty() : this.kinesisSourceConfiguration;
     }
 
@@ -105,7 +105,7 @@ public final class FirehoseDeliveryStreamArgs extends io.pulumi.resources.Resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -118,7 +118,7 @@ public final class FirehoseDeliveryStreamArgs extends io.pulumi.resources.Resour
     @Import(name="redshiftConfiguration")
       private final @Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationArgs> redshiftConfiguration;
 
-    public Output<FirehoseDeliveryStreamRedshiftConfigurationArgs> getRedshiftConfiguration() {
+    public Output<FirehoseDeliveryStreamRedshiftConfigurationArgs> redshiftConfiguration() {
         return this.redshiftConfiguration == null ? Codegen.empty() : this.redshiftConfiguration;
     }
 
@@ -130,7 +130,7 @@ public final class FirehoseDeliveryStreamArgs extends io.pulumi.resources.Resour
     @Import(name="s3Configuration")
       private final @Nullable Output<FirehoseDeliveryStreamS3ConfigurationArgs> s3Configuration;
 
-    public Output<FirehoseDeliveryStreamS3ConfigurationArgs> getS3Configuration() {
+    public Output<FirehoseDeliveryStreamS3ConfigurationArgs> s3Configuration() {
         return this.s3Configuration == null ? Codegen.empty() : this.s3Configuration;
     }
 
@@ -142,7 +142,7 @@ public final class FirehoseDeliveryStreamArgs extends io.pulumi.resources.Resour
     @Import(name="serverSideEncryption")
       private final @Nullable Output<FirehoseDeliveryStreamServerSideEncryptionArgs> serverSideEncryption;
 
-    public Output<FirehoseDeliveryStreamServerSideEncryptionArgs> getServerSideEncryption() {
+    public Output<FirehoseDeliveryStreamServerSideEncryptionArgs> serverSideEncryption() {
         return this.serverSideEncryption == null ? Codegen.empty() : this.serverSideEncryption;
     }
 
@@ -153,7 +153,7 @@ public final class FirehoseDeliveryStreamArgs extends io.pulumi.resources.Resour
     @Import(name="splunkConfiguration")
       private final @Nullable Output<FirehoseDeliveryStreamSplunkConfigurationArgs> splunkConfiguration;
 
-    public Output<FirehoseDeliveryStreamSplunkConfigurationArgs> getSplunkConfiguration() {
+    public Output<FirehoseDeliveryStreamSplunkConfigurationArgs> splunkConfiguration() {
         return this.splunkConfiguration == null ? Codegen.empty() : this.splunkConfiguration;
     }
 
@@ -164,7 +164,7 @@ public final class FirehoseDeliveryStreamArgs extends io.pulumi.resources.Resour
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -175,7 +175,7 @@ public final class FirehoseDeliveryStreamArgs extends io.pulumi.resources.Resour
     @Import(name="versionId")
       private final @Nullable Output<String> versionId;
 
-    public Output<String> getVersionId() {
+    public Output<String> versionId() {
         return this.versionId == null ? Codegen.empty() : this.versionId;
     }
 

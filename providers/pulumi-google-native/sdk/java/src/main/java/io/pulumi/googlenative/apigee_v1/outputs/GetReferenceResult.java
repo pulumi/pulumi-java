@@ -46,28 +46,28 @@ public final class GetReferenceResult {
      * Optional. A human-readable description of this reference.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The resource id of this reference. Values must match the regular expression [\w\s\-.]+.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The id of the resource to which this reference refers. Must be the id of a resource that exists in the parent environment and is of the given resource_type.
      * 
     */
-    public String getRefers() {
+    public String refers() {
         return this.refers;
     }
     /**
      * The type of resource referred to by this reference. Valid values are 'KeyStore' or 'TrustStore'.
      * 
     */
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
 

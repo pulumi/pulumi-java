@@ -46,7 +46,7 @@ public class App {
 
         final var masterVersion = ctx.config().get("masterVersion").orElse(
                 ContainerFunctions.getEngineVersions()
-                .thenApply(GetEngineVersionsResult::getLatestMasterVersion).join()
+                .thenApply(GetEngineVersionsResult::latestMasterVersion).join()
         );
 
         ctx.export("masterVersion", Output.of(masterVersion));
@@ -64,8 +64,8 @@ public class App {
 
         final var nodePool = new NodePool("primary-node-pool",
                 NodePoolArgs.builder()
-                        .cluster(cluster.getName())
-                        .location(cluster.getLocation())
+                        .cluster(cluster.name())
+                        .location(cluster.location())
                         .version(masterVersion)
                         .initialNodeCount(2)
                         .nodeConfig(NodePoolNodeConfigArgs.builder()
@@ -87,7 +87,7 @@ public class App {
                 CustomResourceOptions.builder()
                         .dependsOn(cluster)
                         .build());
-        ctx.export("clusterName", cluster.getName());
+        ctx.export("clusterName", cluster.name());
 
         // Manufacture a GKE-style kubeconfig. Note that this is slightly "different"
         // because of the way GKE requires gcloud to be in the picture for cluster
@@ -99,10 +99,10 @@ public class App {
                 name
         );
 
-        var masterAuthClusterCaCertificate = cluster.getMasterAuth()
-                .applyValue(a -> a.getClusterCaCertificate().orElseThrow());
+        var masterAuthClusterCaCertificate = cluster.masterAuth()
+                .applyValue(a -> a.clusterCaCertificate().orElseThrow());
 
-        var kubeconfig = cluster.getEndpoint()
+        var kubeconfig = cluster.endpoint()
                 .apply(endpoint -> masterAuthClusterCaCertificate.applyValue(
                         caCert -> MessageFormat.format(String.join("\n",
                                 "apiVersion: v1",
@@ -153,7 +153,7 @@ public class App {
         );
 
         // Export the Namespace name
-        var namespaceName = ns.getMetadata().apply(m -> Output.of(m.getName().orElseThrow()));
+        var namespaceName = ns.metadata().apply(m -> Output.of(m.name().orElseThrow()));
         ctx.export("namespaceName", namespaceName);
 
         final var appLabels = Map.of("appClass", name);
@@ -188,7 +188,7 @@ public class App {
                 .build(), clusterResourceOptions);
 
         // Export the Deployment name
-        ctx.export("deploymentName", deployment.getMetadata().apply(m -> Output.of(m.getName().orElseThrow())));
+        ctx.export("deploymentName", deployment.metadata().apply(m -> Output.of(m.name().orElseThrow())));
 
         // Create a LoadBalancer Service for the NGINX Deployment
         final var service = new Service(name, ServiceArgs.builder()
@@ -204,10 +204,10 @@ public class App {
                 .build(), clusterResourceOptions);
 
         // Export the Service name and public LoadBalancer endpoint
-        ctx.export("serviceName", service.getMetadata().applyValue(m -> m.getName().orElseThrow()));
-        ctx.export("servicePublicIP", service.getStatus()
-                .applyValue(s -> s.getLoadBalancer().orElseThrow())
-                .applyValue(status -> status.getIngress().get(0).getIp().orElseThrow()));
+        ctx.export("serviceName", service.metadata().applyValue(m -> m.name().orElseThrow()));
+        ctx.export("servicePublicIP", service.status()
+                .applyValue(s -> s.loadBalancer().orElseThrow())
+                .applyValue(status -> status.ingress().get(0).ip().orElseThrow()));
         return ctx.exports();
     }
 }

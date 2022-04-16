@@ -22,7 +22,7 @@ public final class ClusterWorkloadIdentityConfigGetArgs extends io.pulumi.resour
     @Import(name="workloadPool")
       private final @Nullable Output<String> workloadPool;
 
-    public Output<String> getWorkloadPool() {
+    public Output<String> workloadPool() {
         return this.workloadPool == null ? Codegen.empty() : this.workloadPool;
     }
 

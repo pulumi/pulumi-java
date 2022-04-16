@@ -20,7 +20,7 @@ public final class SchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="fairSharePolicy")
       private final @Nullable Output<SchedulingPolicyFairSharePolicyArgs> fairSharePolicy;
 
-    public Output<SchedulingPolicyFairSharePolicyArgs> getFairSharePolicy() {
+    public Output<SchedulingPolicyFairSharePolicyArgs> fairSharePolicy() {
         return this.fairSharePolicy == null ? Codegen.empty() : this.fairSharePolicy;
     }
 
@@ -31,7 +31,7 @@ public final class SchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -42,7 +42,7 @@ public final class SchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -53,7 +53,7 @@ public final class SchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

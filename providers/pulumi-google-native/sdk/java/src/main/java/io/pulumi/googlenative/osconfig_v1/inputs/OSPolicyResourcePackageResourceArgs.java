@@ -33,7 +33,7 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
     @Import(name="apt")
       private final @Nullable Output<OSPolicyResourcePackageResourceAPTArgs> apt;
 
-    public Output<OSPolicyResourcePackageResourceAPTArgs> getApt() {
+    public Output<OSPolicyResourcePackageResourceAPTArgs> apt() {
         return this.apt == null ? Codegen.empty() : this.apt;
     }
 
@@ -44,7 +44,7 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
     @Import(name="deb")
       private final @Nullable Output<OSPolicyResourcePackageResourceDebArgs> deb;
 
-    public Output<OSPolicyResourcePackageResourceDebArgs> getDeb() {
+    public Output<OSPolicyResourcePackageResourceDebArgs> deb() {
         return this.deb == null ? Codegen.empty() : this.deb;
     }
 
@@ -55,7 +55,7 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
     @Import(name="desiredState", required=true)
       private final Output<OSPolicyResourcePackageResourceDesiredState> desiredState;
 
-    public Output<OSPolicyResourcePackageResourceDesiredState> getDesiredState() {
+    public Output<OSPolicyResourcePackageResourceDesiredState> desiredState() {
         return this.desiredState;
     }
 
@@ -66,7 +66,7 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
     @Import(name="googet")
       private final @Nullable Output<OSPolicyResourcePackageResourceGooGetArgs> googet;
 
-    public Output<OSPolicyResourcePackageResourceGooGetArgs> getGooget() {
+    public Output<OSPolicyResourcePackageResourceGooGetArgs> googet() {
         return this.googet == null ? Codegen.empty() : this.googet;
     }
 
@@ -77,7 +77,7 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
     @Import(name="msi")
       private final @Nullable Output<OSPolicyResourcePackageResourceMSIArgs> msi;
 
-    public Output<OSPolicyResourcePackageResourceMSIArgs> getMsi() {
+    public Output<OSPolicyResourcePackageResourceMSIArgs> msi() {
         return this.msi == null ? Codegen.empty() : this.msi;
     }
 
@@ -88,7 +88,7 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
     @Import(name="rpm")
       private final @Nullable Output<OSPolicyResourcePackageResourceRPMArgs> rpm;
 
-    public Output<OSPolicyResourcePackageResourceRPMArgs> getRpm() {
+    public Output<OSPolicyResourcePackageResourceRPMArgs> rpm() {
         return this.rpm == null ? Codegen.empty() : this.rpm;
     }
 
@@ -99,7 +99,7 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
     @Import(name="yum")
       private final @Nullable Output<OSPolicyResourcePackageResourceYUMArgs> yum;
 
-    public Output<OSPolicyResourcePackageResourceYUMArgs> getYum() {
+    public Output<OSPolicyResourcePackageResourceYUMArgs> yum() {
         return this.yum == null ? Codegen.empty() : this.yum;
     }
 
@@ -110,7 +110,7 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
     @Import(name="zypper")
       private final @Nullable Output<OSPolicyResourcePackageResourceZypperArgs> zypper;
 
-    public Output<OSPolicyResourcePackageResourceZypperArgs> getZypper() {
+    public Output<OSPolicyResourcePackageResourceZypperArgs> zypper() {
         return this.zypper == null ? Codegen.empty() : this.zypper;
     }
 

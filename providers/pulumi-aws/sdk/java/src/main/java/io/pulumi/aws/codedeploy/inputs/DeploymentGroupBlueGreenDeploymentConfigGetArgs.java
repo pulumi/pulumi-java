@@ -24,7 +24,7 @@ public final class DeploymentGroupBlueGreenDeploymentConfigGetArgs extends io.pu
     @Import(name="deploymentReadyOption")
       private final @Nullable Output<DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionGetArgs> deploymentReadyOption;
 
-    public Output<DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionGetArgs> getDeploymentReadyOption() {
+    public Output<DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionGetArgs> deploymentReadyOption() {
         return this.deploymentReadyOption == null ? Codegen.empty() : this.deploymentReadyOption;
     }
 
@@ -35,7 +35,7 @@ public final class DeploymentGroupBlueGreenDeploymentConfigGetArgs extends io.pu
     @Import(name="greenFleetProvisioningOption")
       private final @Nullable Output<DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionGetArgs> greenFleetProvisioningOption;
 
-    public Output<DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionGetArgs> getGreenFleetProvisioningOption() {
+    public Output<DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionGetArgs> greenFleetProvisioningOption() {
         return this.greenFleetProvisioningOption == null ? Codegen.empty() : this.greenFleetProvisioningOption;
     }
 
@@ -46,7 +46,7 @@ public final class DeploymentGroupBlueGreenDeploymentConfigGetArgs extends io.pu
     @Import(name="terminateBlueInstancesOnDeploymentSuccess")
       private final @Nullable Output<DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessGetArgs> terminateBlueInstancesOnDeploymentSuccess;
 
-    public Output<DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessGetArgs> getTerminateBlueInstancesOnDeploymentSuccess() {
+    public Output<DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessGetArgs> terminateBlueInstancesOnDeploymentSuccess() {
         return this.terminateBlueInstancesOnDeploymentSuccess == null ? Codegen.empty() : this.terminateBlueInstancesOnDeploymentSuccess;
     }
 

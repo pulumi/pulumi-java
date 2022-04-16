@@ -18,7 +18,7 @@ public final class GetKeyspaceResult {
         this.tags = tags;
     }
 
-    public List<KeyspaceTag> getTags() {
+    public List<KeyspaceTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

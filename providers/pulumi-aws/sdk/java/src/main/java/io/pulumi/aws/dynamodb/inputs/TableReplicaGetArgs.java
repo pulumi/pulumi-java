@@ -23,7 +23,7 @@ public final class TableReplicaGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
+    public Output<String> kmsKeyArn() {
         return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
@@ -34,7 +34,7 @@ public final class TableReplicaGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="regionName", required=true)
       private final Output<String> regionName;
 
-    public Output<String> getRegionName() {
+    public Output<String> regionName() {
         return this.regionName;
     }
 

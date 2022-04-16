@@ -87,7 +87,7 @@ public final class JobExtract {
      * The default value is NONE. DEFLATE and SNAPPY are only supported for Avro.
      * 
     */
-    public Optional<String> getCompression() {
+    public Optional<String> compression() {
         return Optional.ofNullable(this.compression);
     }
     /**
@@ -96,14 +96,14 @@ public final class JobExtract {
      * The default value for models is SAVED_MODEL.
      * 
     */
-    public Optional<String> getDestinationFormat() {
+    public Optional<String> destinationFormat() {
         return Optional.ofNullable(this.destinationFormat);
     }
     /**
      * A list of fully-qualified Google Cloud Storage URIs where the extracted table should be written.
      * 
     */
-    public List<String> getDestinationUris() {
+    public List<String> destinationUris() {
         return this.destinationUris;
     }
     /**
@@ -111,14 +111,14 @@ public final class JobExtract {
      * Default is ','
      * 
     */
-    public Optional<String> getFieldDelimiter() {
+    public Optional<String> fieldDelimiter() {
         return Optional.ofNullable(this.fieldDelimiter);
     }
     /**
      * Whether to print out a header row in the results. Default is true.
      * 
     */
-    public Optional<Boolean> getPrintHeader() {
+    public Optional<Boolean> printHeader() {
         return Optional.ofNullable(this.printHeader);
     }
     /**
@@ -126,7 +126,7 @@ public final class JobExtract {
      * Structure is documented below.
      * 
     */
-    public Optional<JobExtractSourceModel> getSourceModel() {
+    public Optional<JobExtractSourceModel> sourceModel() {
         return Optional.ofNullable(this.sourceModel);
     }
     /**
@@ -134,14 +134,14 @@ public final class JobExtract {
      * Structure is documented below.
      * 
     */
-    public Optional<JobExtractSourceTable> getSourceTable() {
+    public Optional<JobExtractSourceTable> sourceTable() {
         return Optional.ofNullable(this.sourceTable);
     }
     /**
      * Whether to use logical types when extracting to AVRO format.
      * 
     */
-    public Optional<Boolean> getUseAvroLogicalTypes() {
+    public Optional<Boolean> useAvroLogicalTypes() {
         return Optional.ofNullable(this.useAvroLogicalTypes);
     }
 

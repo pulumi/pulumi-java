@@ -26,7 +26,7 @@ public final class DisplayDeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableDisplay")
       private final @Nullable Output<Boolean> enableDisplay;
 
-    public Output<Boolean> getEnableDisplay() {
+    public Output<Boolean> enableDisplay() {
         return this.enableDisplay == null ? Codegen.empty() : this.enableDisplay;
     }
 

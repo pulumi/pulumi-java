@@ -23,7 +23,7 @@ public final class OutputConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="destination", required=true)
       private final String destination;
 
-    public String getDestination() {
+    public String destination() {
         return this.destination;
     }
 

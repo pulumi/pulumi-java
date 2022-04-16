@@ -23,7 +23,7 @@ public final class GKEResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="cluster", required=true)
       private final String cluster;
 
-    public String getCluster() {
+    public String cluster() {
         return this.cluster;
     }
 
@@ -34,7 +34,7 @@ public final class GKEResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
@@ -45,7 +45,7 @@ public final class GKEResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="namespace", required=true)
       private final String namespace;
 
-    public String getNamespace() {
+    public String namespace() {
         return this.namespace;
     }
 
@@ -56,7 +56,7 @@ public final class GKEResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 
@@ -67,7 +67,7 @@ public final class GKEResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="service", required=true)
       private final String service;
 
-    public String getService() {
+    public String service() {
         return this.service;
     }
 

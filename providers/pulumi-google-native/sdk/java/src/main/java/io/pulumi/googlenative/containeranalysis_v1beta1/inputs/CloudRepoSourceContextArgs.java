@@ -28,7 +28,7 @@ public final class CloudRepoSourceContextArgs extends io.pulumi.resources.Resour
     @Import(name="aliasContext")
       private final @Nullable Output<AliasContextArgs> aliasContext;
 
-    public Output<AliasContextArgs> getAliasContext() {
+    public Output<AliasContextArgs> aliasContext() {
         return this.aliasContext == null ? Codegen.empty() : this.aliasContext;
     }
 
@@ -39,7 +39,7 @@ public final class CloudRepoSourceContextArgs extends io.pulumi.resources.Resour
     @Import(name="repoId")
       private final @Nullable Output<RepoIdArgs> repoId;
 
-    public Output<RepoIdArgs> getRepoId() {
+    public Output<RepoIdArgs> repoId() {
         return this.repoId == null ? Codegen.empty() : this.repoId;
     }
 
@@ -50,7 +50,7 @@ public final class CloudRepoSourceContextArgs extends io.pulumi.resources.Resour
     @Import(name="revisionId")
       private final @Nullable Output<String> revisionId;
 
-    public Output<String> getRevisionId() {
+    public Output<String> revisionId() {
         return this.revisionId == null ? Codegen.empty() : this.revisionId;
     }
 

@@ -24,7 +24,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="crontabSpec", required=true)
       private final String crontabSpec;
 
-    public String getCrontabSpec() {
+    public String crontabSpec() {
         return this.crontabSpec;
     }
 
@@ -35,7 +35,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="prefix", required=true)
       private final String prefix;
 
-    public String getPrefix() {
+    public String prefix() {
         return this.prefix;
     }
 
@@ -46,7 +46,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="retentionCount", required=true)
       private final Integer retentionCount;
 
-    public Integer getRetentionCount() {
+    public Integer retentionCount() {
         return this.retentionCount;
     }
 

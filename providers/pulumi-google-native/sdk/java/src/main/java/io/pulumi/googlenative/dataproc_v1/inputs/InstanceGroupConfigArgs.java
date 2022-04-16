@@ -31,7 +31,7 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="accelerators")
       private final @Nullable Output<List<AcceleratorConfigArgs>> accelerators;
 
-    public Output<List<AcceleratorConfigArgs>> getAccelerators() {
+    public Output<List<AcceleratorConfigArgs>> accelerators() {
         return this.accelerators == null ? Codegen.empty() : this.accelerators;
     }
 
@@ -42,7 +42,7 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="diskConfig")
       private final @Nullable Output<DiskConfigArgs> diskConfig;
 
-    public Output<DiskConfigArgs> getDiskConfig() {
+    public Output<DiskConfigArgs> diskConfig() {
         return this.diskConfig == null ? Codegen.empty() : this.diskConfig;
     }
 
@@ -53,7 +53,7 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="imageUri")
       private final @Nullable Output<String> imageUri;
 
-    public Output<String> getImageUri() {
+    public Output<String> imageUri() {
         return this.imageUri == null ? Codegen.empty() : this.imageUri;
     }
 
@@ -64,7 +64,7 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="machineTypeUri")
       private final @Nullable Output<String> machineTypeUri;
 
-    public Output<String> getMachineTypeUri() {
+    public Output<String> machineTypeUri() {
         return this.machineTypeUri == null ? Codegen.empty() : this.machineTypeUri;
     }
 
@@ -75,7 +75,7 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="minCpuPlatform")
       private final @Nullable Output<String> minCpuPlatform;
 
-    public Output<String> getMinCpuPlatform() {
+    public Output<String> minCpuPlatform() {
         return this.minCpuPlatform == null ? Codegen.empty() : this.minCpuPlatform;
     }
 
@@ -86,7 +86,7 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="numInstances")
       private final @Nullable Output<Integer> numInstances;
 
-    public Output<Integer> getNumInstances() {
+    public Output<Integer> numInstances() {
         return this.numInstances == null ? Codegen.empty() : this.numInstances;
     }
 
@@ -97,7 +97,7 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="preemptibility")
       private final @Nullable Output<InstanceGroupConfigPreemptibility> preemptibility;
 
-    public Output<InstanceGroupConfigPreemptibility> getPreemptibility() {
+    public Output<InstanceGroupConfigPreemptibility> preemptibility() {
         return this.preemptibility == null ? Codegen.empty() : this.preemptibility;
     }
 

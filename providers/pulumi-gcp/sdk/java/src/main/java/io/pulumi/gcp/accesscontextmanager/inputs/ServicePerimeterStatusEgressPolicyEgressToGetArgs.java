@@ -26,7 +26,7 @@ public final class ServicePerimeterStatusEgressPolicyEgressToGetArgs extends io.
     @Import(name="operations")
       private final @Nullable Output<List<ServicePerimeterStatusEgressPolicyEgressToOperationGetArgs>> operations;
 
-    public Output<List<ServicePerimeterStatusEgressPolicyEgressToOperationGetArgs>> getOperations() {
+    public Output<List<ServicePerimeterStatusEgressPolicyEgressToOperationGetArgs>> operations() {
         return this.operations == null ? Codegen.empty() : this.operations;
     }
 
@@ -41,7 +41,7 @@ public final class ServicePerimeterStatusEgressPolicyEgressToGetArgs extends io.
     @Import(name="resources")
       private final @Nullable Output<List<String>> resources;
 
-    public Output<List<String>> getResources() {
+    public Output<List<String>> resources() {
         return this.resources == null ? Codegen.empty() : this.resources;
     }
 

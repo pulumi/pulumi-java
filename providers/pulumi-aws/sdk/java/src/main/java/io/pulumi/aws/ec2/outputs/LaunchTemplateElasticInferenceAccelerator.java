@@ -24,7 +24,7 @@ public final class LaunchTemplateElasticInferenceAccelerator {
      * Accelerator type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

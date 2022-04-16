@@ -26,7 +26,7 @@ public final class CertificateRawDataArgs extends io.pulumi.resources.ResourceAr
     @Import(name="privateKey")
       private final @Nullable Output<String> privateKey;
 
-    public Output<String> getPrivateKey() {
+    public Output<String> privateKey() {
         return this.privateKey == null ? Codegen.empty() : this.privateKey;
     }
 
@@ -37,7 +37,7 @@ public final class CertificateRawDataArgs extends io.pulumi.resources.ResourceAr
     @Import(name="publicCertificate")
       private final @Nullable Output<String> publicCertificate;
 
-    public Output<String> getPublicCertificate() {
+    public Output<String> publicCertificate() {
         return this.publicCertificate == null ? Codegen.empty() : this.publicCertificate;
     }
 

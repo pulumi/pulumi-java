@@ -22,42 +22,42 @@ public final class DataSourceServiceNowConfigurationArgs extends io.pulumi.resou
     @Import(name="authenticationType")
       private final @Nullable Output<DataSourceServiceNowAuthenticationType> authenticationType;
 
-    public Output<DataSourceServiceNowAuthenticationType> getAuthenticationType() {
+    public Output<DataSourceServiceNowAuthenticationType> authenticationType() {
         return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
     }
 
     @Import(name="hostUrl", required=true)
       private final Output<String> hostUrl;
 
-    public Output<String> getHostUrl() {
+    public Output<String> hostUrl() {
         return this.hostUrl;
     }
 
     @Import(name="knowledgeArticleConfiguration")
       private final @Nullable Output<DataSourceServiceNowKnowledgeArticleConfigurationArgs> knowledgeArticleConfiguration;
 
-    public Output<DataSourceServiceNowKnowledgeArticleConfigurationArgs> getKnowledgeArticleConfiguration() {
+    public Output<DataSourceServiceNowKnowledgeArticleConfigurationArgs> knowledgeArticleConfiguration() {
         return this.knowledgeArticleConfiguration == null ? Codegen.empty() : this.knowledgeArticleConfiguration;
     }
 
     @Import(name="secretArn", required=true)
       private final Output<String> secretArn;
 
-    public Output<String> getSecretArn() {
+    public Output<String> secretArn() {
         return this.secretArn;
     }
 
     @Import(name="serviceCatalogConfiguration")
       private final @Nullable Output<DataSourceServiceNowServiceCatalogConfigurationArgs> serviceCatalogConfiguration;
 
-    public Output<DataSourceServiceNowServiceCatalogConfigurationArgs> getServiceCatalogConfiguration() {
+    public Output<DataSourceServiceNowServiceCatalogConfigurationArgs> serviceCatalogConfiguration() {
         return this.serviceCatalogConfiguration == null ? Codegen.empty() : this.serviceCatalogConfiguration;
     }
 
     @Import(name="serviceNowBuildVersion", required=true)
       private final Output<DataSourceServiceNowBuildVersionType> serviceNowBuildVersion;
 
-    public Output<DataSourceServiceNowBuildVersionType> getServiceNowBuildVersion() {
+    public Output<DataSourceServiceNowBuildVersionType> serviceNowBuildVersion() {
         return this.serviceNowBuildVersion;
     }
 

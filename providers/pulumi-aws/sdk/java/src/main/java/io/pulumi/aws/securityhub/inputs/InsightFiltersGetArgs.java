@@ -110,7 +110,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="awsAccountIds")
       private final @Nullable Output<List<InsightFiltersAwsAccountIdGetArgs>> awsAccountIds;
 
-    public Output<List<InsightFiltersAwsAccountIdGetArgs>> getAwsAccountIds() {
+    public Output<List<InsightFiltersAwsAccountIdGetArgs>> awsAccountIds() {
         return this.awsAccountIds == null ? Codegen.empty() : this.awsAccountIds;
     }
 
@@ -121,7 +121,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="companyNames")
       private final @Nullable Output<List<InsightFiltersCompanyNameGetArgs>> companyNames;
 
-    public Output<List<InsightFiltersCompanyNameGetArgs>> getCompanyNames() {
+    public Output<List<InsightFiltersCompanyNameGetArgs>> companyNames() {
         return this.companyNames == null ? Codegen.empty() : this.companyNames;
     }
 
@@ -132,7 +132,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="complianceStatuses")
       private final @Nullable Output<List<InsightFiltersComplianceStatusGetArgs>> complianceStatuses;
 
-    public Output<List<InsightFiltersComplianceStatusGetArgs>> getComplianceStatuses() {
+    public Output<List<InsightFiltersComplianceStatusGetArgs>> complianceStatuses() {
         return this.complianceStatuses == null ? Codegen.empty() : this.complianceStatuses;
     }
 
@@ -143,7 +143,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="confidences")
       private final @Nullable Output<List<InsightFiltersConfidenceGetArgs>> confidences;
 
-    public Output<List<InsightFiltersConfidenceGetArgs>> getConfidences() {
+    public Output<List<InsightFiltersConfidenceGetArgs>> confidences() {
         return this.confidences == null ? Codegen.empty() : this.confidences;
     }
 
@@ -154,7 +154,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="createdAts")
       private final @Nullable Output<List<InsightFiltersCreatedAtGetArgs>> createdAts;
 
-    public Output<List<InsightFiltersCreatedAtGetArgs>> getCreatedAts() {
+    public Output<List<InsightFiltersCreatedAtGetArgs>> createdAts() {
         return this.createdAts == null ? Codegen.empty() : this.createdAts;
     }
 
@@ -165,7 +165,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="criticalities")
       private final @Nullable Output<List<InsightFiltersCriticalityGetArgs>> criticalities;
 
-    public Output<List<InsightFiltersCriticalityGetArgs>> getCriticalities() {
+    public Output<List<InsightFiltersCriticalityGetArgs>> criticalities() {
         return this.criticalities == null ? Codegen.empty() : this.criticalities;
     }
 
@@ -176,7 +176,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="descriptions")
       private final @Nullable Output<List<InsightFiltersDescriptionGetArgs>> descriptions;
 
-    public Output<List<InsightFiltersDescriptionGetArgs>> getDescriptions() {
+    public Output<List<InsightFiltersDescriptionGetArgs>> descriptions() {
         return this.descriptions == null ? Codegen.empty() : this.descriptions;
     }
 
@@ -187,7 +187,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="findingProviderFieldsConfidences")
       private final @Nullable Output<List<InsightFiltersFindingProviderFieldsConfidenceGetArgs>> findingProviderFieldsConfidences;
 
-    public Output<List<InsightFiltersFindingProviderFieldsConfidenceGetArgs>> getFindingProviderFieldsConfidences() {
+    public Output<List<InsightFiltersFindingProviderFieldsConfidenceGetArgs>> findingProviderFieldsConfidences() {
         return this.findingProviderFieldsConfidences == null ? Codegen.empty() : this.findingProviderFieldsConfidences;
     }
 
@@ -198,7 +198,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="findingProviderFieldsCriticalities")
       private final @Nullable Output<List<InsightFiltersFindingProviderFieldsCriticalityGetArgs>> findingProviderFieldsCriticalities;
 
-    public Output<List<InsightFiltersFindingProviderFieldsCriticalityGetArgs>> getFindingProviderFieldsCriticalities() {
+    public Output<List<InsightFiltersFindingProviderFieldsCriticalityGetArgs>> findingProviderFieldsCriticalities() {
         return this.findingProviderFieldsCriticalities == null ? Codegen.empty() : this.findingProviderFieldsCriticalities;
     }
 
@@ -209,7 +209,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="findingProviderFieldsRelatedFindingsIds")
       private final @Nullable Output<List<InsightFiltersFindingProviderFieldsRelatedFindingsIdGetArgs>> findingProviderFieldsRelatedFindingsIds;
 
-    public Output<List<InsightFiltersFindingProviderFieldsRelatedFindingsIdGetArgs>> getFindingProviderFieldsRelatedFindingsIds() {
+    public Output<List<InsightFiltersFindingProviderFieldsRelatedFindingsIdGetArgs>> findingProviderFieldsRelatedFindingsIds() {
         return this.findingProviderFieldsRelatedFindingsIds == null ? Codegen.empty() : this.findingProviderFieldsRelatedFindingsIds;
     }
 
@@ -220,7 +220,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="findingProviderFieldsRelatedFindingsProductArns")
       private final @Nullable Output<List<InsightFiltersFindingProviderFieldsRelatedFindingsProductArnGetArgs>> findingProviderFieldsRelatedFindingsProductArns;
 
-    public Output<List<InsightFiltersFindingProviderFieldsRelatedFindingsProductArnGetArgs>> getFindingProviderFieldsRelatedFindingsProductArns() {
+    public Output<List<InsightFiltersFindingProviderFieldsRelatedFindingsProductArnGetArgs>> findingProviderFieldsRelatedFindingsProductArns() {
         return this.findingProviderFieldsRelatedFindingsProductArns == null ? Codegen.empty() : this.findingProviderFieldsRelatedFindingsProductArns;
     }
 
@@ -231,7 +231,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="findingProviderFieldsSeverityLabels")
       private final @Nullable Output<List<InsightFiltersFindingProviderFieldsSeverityLabelGetArgs>> findingProviderFieldsSeverityLabels;
 
-    public Output<List<InsightFiltersFindingProviderFieldsSeverityLabelGetArgs>> getFindingProviderFieldsSeverityLabels() {
+    public Output<List<InsightFiltersFindingProviderFieldsSeverityLabelGetArgs>> findingProviderFieldsSeverityLabels() {
         return this.findingProviderFieldsSeverityLabels == null ? Codegen.empty() : this.findingProviderFieldsSeverityLabels;
     }
 
@@ -242,7 +242,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="findingProviderFieldsSeverityOriginals")
       private final @Nullable Output<List<InsightFiltersFindingProviderFieldsSeverityOriginalGetArgs>> findingProviderFieldsSeverityOriginals;
 
-    public Output<List<InsightFiltersFindingProviderFieldsSeverityOriginalGetArgs>> getFindingProviderFieldsSeverityOriginals() {
+    public Output<List<InsightFiltersFindingProviderFieldsSeverityOriginalGetArgs>> findingProviderFieldsSeverityOriginals() {
         return this.findingProviderFieldsSeverityOriginals == null ? Codegen.empty() : this.findingProviderFieldsSeverityOriginals;
     }
 
@@ -253,7 +253,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="findingProviderFieldsTypes")
       private final @Nullable Output<List<InsightFiltersFindingProviderFieldsTypeGetArgs>> findingProviderFieldsTypes;
 
-    public Output<List<InsightFiltersFindingProviderFieldsTypeGetArgs>> getFindingProviderFieldsTypes() {
+    public Output<List<InsightFiltersFindingProviderFieldsTypeGetArgs>> findingProviderFieldsTypes() {
         return this.findingProviderFieldsTypes == null ? Codegen.empty() : this.findingProviderFieldsTypes;
     }
 
@@ -264,7 +264,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="firstObservedAts")
       private final @Nullable Output<List<InsightFiltersFirstObservedAtGetArgs>> firstObservedAts;
 
-    public Output<List<InsightFiltersFirstObservedAtGetArgs>> getFirstObservedAts() {
+    public Output<List<InsightFiltersFirstObservedAtGetArgs>> firstObservedAts() {
         return this.firstObservedAts == null ? Codegen.empty() : this.firstObservedAts;
     }
 
@@ -275,7 +275,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="generatorIds")
       private final @Nullable Output<List<InsightFiltersGeneratorIdGetArgs>> generatorIds;
 
-    public Output<List<InsightFiltersGeneratorIdGetArgs>> getGeneratorIds() {
+    public Output<List<InsightFiltersGeneratorIdGetArgs>> generatorIds() {
         return this.generatorIds == null ? Codegen.empty() : this.generatorIds;
     }
 
@@ -286,7 +286,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="ids")
       private final @Nullable Output<List<InsightFiltersIdGetArgs>> ids;
 
-    public Output<List<InsightFiltersIdGetArgs>> getIds() {
+    public Output<List<InsightFiltersIdGetArgs>> ids() {
         return this.ids == null ? Codegen.empty() : this.ids;
     }
 
@@ -297,7 +297,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="keywords")
       private final @Nullable Output<List<InsightFiltersKeywordGetArgs>> keywords;
 
-    public Output<List<InsightFiltersKeywordGetArgs>> getKeywords() {
+    public Output<List<InsightFiltersKeywordGetArgs>> keywords() {
         return this.keywords == null ? Codegen.empty() : this.keywords;
     }
 
@@ -308,7 +308,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="lastObservedAts")
       private final @Nullable Output<List<InsightFiltersLastObservedAtGetArgs>> lastObservedAts;
 
-    public Output<List<InsightFiltersLastObservedAtGetArgs>> getLastObservedAts() {
+    public Output<List<InsightFiltersLastObservedAtGetArgs>> lastObservedAts() {
         return this.lastObservedAts == null ? Codegen.empty() : this.lastObservedAts;
     }
 
@@ -319,7 +319,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="malwareNames")
       private final @Nullable Output<List<InsightFiltersMalwareNameGetArgs>> malwareNames;
 
-    public Output<List<InsightFiltersMalwareNameGetArgs>> getMalwareNames() {
+    public Output<List<InsightFiltersMalwareNameGetArgs>> malwareNames() {
         return this.malwareNames == null ? Codegen.empty() : this.malwareNames;
     }
 
@@ -330,7 +330,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="malwarePaths")
       private final @Nullable Output<List<InsightFiltersMalwarePathGetArgs>> malwarePaths;
 
-    public Output<List<InsightFiltersMalwarePathGetArgs>> getMalwarePaths() {
+    public Output<List<InsightFiltersMalwarePathGetArgs>> malwarePaths() {
         return this.malwarePaths == null ? Codegen.empty() : this.malwarePaths;
     }
 
@@ -341,7 +341,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="malwareStates")
       private final @Nullable Output<List<InsightFiltersMalwareStateGetArgs>> malwareStates;
 
-    public Output<List<InsightFiltersMalwareStateGetArgs>> getMalwareStates() {
+    public Output<List<InsightFiltersMalwareStateGetArgs>> malwareStates() {
         return this.malwareStates == null ? Codegen.empty() : this.malwareStates;
     }
 
@@ -352,7 +352,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="malwareTypes")
       private final @Nullable Output<List<InsightFiltersMalwareTypeGetArgs>> malwareTypes;
 
-    public Output<List<InsightFiltersMalwareTypeGetArgs>> getMalwareTypes() {
+    public Output<List<InsightFiltersMalwareTypeGetArgs>> malwareTypes() {
         return this.malwareTypes == null ? Codegen.empty() : this.malwareTypes;
     }
 
@@ -363,7 +363,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="networkDestinationDomains")
       private final @Nullable Output<List<InsightFiltersNetworkDestinationDomainGetArgs>> networkDestinationDomains;
 
-    public Output<List<InsightFiltersNetworkDestinationDomainGetArgs>> getNetworkDestinationDomains() {
+    public Output<List<InsightFiltersNetworkDestinationDomainGetArgs>> networkDestinationDomains() {
         return this.networkDestinationDomains == null ? Codegen.empty() : this.networkDestinationDomains;
     }
 
@@ -374,7 +374,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="networkDestinationIpv4s")
       private final @Nullable Output<List<InsightFiltersNetworkDestinationIpv4GetArgs>> networkDestinationIpv4s;
 
-    public Output<List<InsightFiltersNetworkDestinationIpv4GetArgs>> getNetworkDestinationIpv4s() {
+    public Output<List<InsightFiltersNetworkDestinationIpv4GetArgs>> networkDestinationIpv4s() {
         return this.networkDestinationIpv4s == null ? Codegen.empty() : this.networkDestinationIpv4s;
     }
 
@@ -385,7 +385,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="networkDestinationIpv6s")
       private final @Nullable Output<List<InsightFiltersNetworkDestinationIpv6GetArgs>> networkDestinationIpv6s;
 
-    public Output<List<InsightFiltersNetworkDestinationIpv6GetArgs>> getNetworkDestinationIpv6s() {
+    public Output<List<InsightFiltersNetworkDestinationIpv6GetArgs>> networkDestinationIpv6s() {
         return this.networkDestinationIpv6s == null ? Codegen.empty() : this.networkDestinationIpv6s;
     }
 
@@ -396,7 +396,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="networkDestinationPorts")
       private final @Nullable Output<List<InsightFiltersNetworkDestinationPortGetArgs>> networkDestinationPorts;
 
-    public Output<List<InsightFiltersNetworkDestinationPortGetArgs>> getNetworkDestinationPorts() {
+    public Output<List<InsightFiltersNetworkDestinationPortGetArgs>> networkDestinationPorts() {
         return this.networkDestinationPorts == null ? Codegen.empty() : this.networkDestinationPorts;
     }
 
@@ -407,7 +407,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="networkDirections")
       private final @Nullable Output<List<InsightFiltersNetworkDirectionGetArgs>> networkDirections;
 
-    public Output<List<InsightFiltersNetworkDirectionGetArgs>> getNetworkDirections() {
+    public Output<List<InsightFiltersNetworkDirectionGetArgs>> networkDirections() {
         return this.networkDirections == null ? Codegen.empty() : this.networkDirections;
     }
 
@@ -418,7 +418,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="networkProtocols")
       private final @Nullable Output<List<InsightFiltersNetworkProtocolGetArgs>> networkProtocols;
 
-    public Output<List<InsightFiltersNetworkProtocolGetArgs>> getNetworkProtocols() {
+    public Output<List<InsightFiltersNetworkProtocolGetArgs>> networkProtocols() {
         return this.networkProtocols == null ? Codegen.empty() : this.networkProtocols;
     }
 
@@ -429,7 +429,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="networkSourceDomains")
       private final @Nullable Output<List<InsightFiltersNetworkSourceDomainGetArgs>> networkSourceDomains;
 
-    public Output<List<InsightFiltersNetworkSourceDomainGetArgs>> getNetworkSourceDomains() {
+    public Output<List<InsightFiltersNetworkSourceDomainGetArgs>> networkSourceDomains() {
         return this.networkSourceDomains == null ? Codegen.empty() : this.networkSourceDomains;
     }
 
@@ -440,7 +440,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="networkSourceIpv4s")
       private final @Nullable Output<List<InsightFiltersNetworkSourceIpv4GetArgs>> networkSourceIpv4s;
 
-    public Output<List<InsightFiltersNetworkSourceIpv4GetArgs>> getNetworkSourceIpv4s() {
+    public Output<List<InsightFiltersNetworkSourceIpv4GetArgs>> networkSourceIpv4s() {
         return this.networkSourceIpv4s == null ? Codegen.empty() : this.networkSourceIpv4s;
     }
 
@@ -451,7 +451,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="networkSourceIpv6s")
       private final @Nullable Output<List<InsightFiltersNetworkSourceIpv6GetArgs>> networkSourceIpv6s;
 
-    public Output<List<InsightFiltersNetworkSourceIpv6GetArgs>> getNetworkSourceIpv6s() {
+    public Output<List<InsightFiltersNetworkSourceIpv6GetArgs>> networkSourceIpv6s() {
         return this.networkSourceIpv6s == null ? Codegen.empty() : this.networkSourceIpv6s;
     }
 
@@ -462,7 +462,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="networkSourceMacs")
       private final @Nullable Output<List<InsightFiltersNetworkSourceMacGetArgs>> networkSourceMacs;
 
-    public Output<List<InsightFiltersNetworkSourceMacGetArgs>> getNetworkSourceMacs() {
+    public Output<List<InsightFiltersNetworkSourceMacGetArgs>> networkSourceMacs() {
         return this.networkSourceMacs == null ? Codegen.empty() : this.networkSourceMacs;
     }
 
@@ -473,7 +473,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="networkSourcePorts")
       private final @Nullable Output<List<InsightFiltersNetworkSourcePortGetArgs>> networkSourcePorts;
 
-    public Output<List<InsightFiltersNetworkSourcePortGetArgs>> getNetworkSourcePorts() {
+    public Output<List<InsightFiltersNetworkSourcePortGetArgs>> networkSourcePorts() {
         return this.networkSourcePorts == null ? Codegen.empty() : this.networkSourcePorts;
     }
 
@@ -484,7 +484,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="noteTexts")
       private final @Nullable Output<List<InsightFiltersNoteTextGetArgs>> noteTexts;
 
-    public Output<List<InsightFiltersNoteTextGetArgs>> getNoteTexts() {
+    public Output<List<InsightFiltersNoteTextGetArgs>> noteTexts() {
         return this.noteTexts == null ? Codegen.empty() : this.noteTexts;
     }
 
@@ -495,7 +495,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="noteUpdatedAts")
       private final @Nullable Output<List<InsightFiltersNoteUpdatedAtGetArgs>> noteUpdatedAts;
 
-    public Output<List<InsightFiltersNoteUpdatedAtGetArgs>> getNoteUpdatedAts() {
+    public Output<List<InsightFiltersNoteUpdatedAtGetArgs>> noteUpdatedAts() {
         return this.noteUpdatedAts == null ? Codegen.empty() : this.noteUpdatedAts;
     }
 
@@ -506,7 +506,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="noteUpdatedBies")
       private final @Nullable Output<List<InsightFiltersNoteUpdatedByGetArgs>> noteUpdatedBies;
 
-    public Output<List<InsightFiltersNoteUpdatedByGetArgs>> getNoteUpdatedBies() {
+    public Output<List<InsightFiltersNoteUpdatedByGetArgs>> noteUpdatedBies() {
         return this.noteUpdatedBies == null ? Codegen.empty() : this.noteUpdatedBies;
     }
 
@@ -517,7 +517,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="processLaunchedAts")
       private final @Nullable Output<List<InsightFiltersProcessLaunchedAtGetArgs>> processLaunchedAts;
 
-    public Output<List<InsightFiltersProcessLaunchedAtGetArgs>> getProcessLaunchedAts() {
+    public Output<List<InsightFiltersProcessLaunchedAtGetArgs>> processLaunchedAts() {
         return this.processLaunchedAts == null ? Codegen.empty() : this.processLaunchedAts;
     }
 
@@ -528,7 +528,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="processNames")
       private final @Nullable Output<List<InsightFiltersProcessNameGetArgs>> processNames;
 
-    public Output<List<InsightFiltersProcessNameGetArgs>> getProcessNames() {
+    public Output<List<InsightFiltersProcessNameGetArgs>> processNames() {
         return this.processNames == null ? Codegen.empty() : this.processNames;
     }
 
@@ -539,7 +539,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="processParentPids")
       private final @Nullable Output<List<InsightFiltersProcessParentPidGetArgs>> processParentPids;
 
-    public Output<List<InsightFiltersProcessParentPidGetArgs>> getProcessParentPids() {
+    public Output<List<InsightFiltersProcessParentPidGetArgs>> processParentPids() {
         return this.processParentPids == null ? Codegen.empty() : this.processParentPids;
     }
 
@@ -550,7 +550,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="processPaths")
       private final @Nullable Output<List<InsightFiltersProcessPathGetArgs>> processPaths;
 
-    public Output<List<InsightFiltersProcessPathGetArgs>> getProcessPaths() {
+    public Output<List<InsightFiltersProcessPathGetArgs>> processPaths() {
         return this.processPaths == null ? Codegen.empty() : this.processPaths;
     }
 
@@ -561,7 +561,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="processPids")
       private final @Nullable Output<List<InsightFiltersProcessPidGetArgs>> processPids;
 
-    public Output<List<InsightFiltersProcessPidGetArgs>> getProcessPids() {
+    public Output<List<InsightFiltersProcessPidGetArgs>> processPids() {
         return this.processPids == null ? Codegen.empty() : this.processPids;
     }
 
@@ -572,7 +572,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="processTerminatedAts")
       private final @Nullable Output<List<InsightFiltersProcessTerminatedAtGetArgs>> processTerminatedAts;
 
-    public Output<List<InsightFiltersProcessTerminatedAtGetArgs>> getProcessTerminatedAts() {
+    public Output<List<InsightFiltersProcessTerminatedAtGetArgs>> processTerminatedAts() {
         return this.processTerminatedAts == null ? Codegen.empty() : this.processTerminatedAts;
     }
 
@@ -583,7 +583,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="productArns")
       private final @Nullable Output<List<InsightFiltersProductArnGetArgs>> productArns;
 
-    public Output<List<InsightFiltersProductArnGetArgs>> getProductArns() {
+    public Output<List<InsightFiltersProductArnGetArgs>> productArns() {
         return this.productArns == null ? Codegen.empty() : this.productArns;
     }
 
@@ -594,7 +594,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="productFields")
       private final @Nullable Output<List<InsightFiltersProductFieldGetArgs>> productFields;
 
-    public Output<List<InsightFiltersProductFieldGetArgs>> getProductFields() {
+    public Output<List<InsightFiltersProductFieldGetArgs>> productFields() {
         return this.productFields == null ? Codegen.empty() : this.productFields;
     }
 
@@ -605,7 +605,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="productNames")
       private final @Nullable Output<List<InsightFiltersProductNameGetArgs>> productNames;
 
-    public Output<List<InsightFiltersProductNameGetArgs>> getProductNames() {
+    public Output<List<InsightFiltersProductNameGetArgs>> productNames() {
         return this.productNames == null ? Codegen.empty() : this.productNames;
     }
 
@@ -616,7 +616,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="recommendationTexts")
       private final @Nullable Output<List<InsightFiltersRecommendationTextGetArgs>> recommendationTexts;
 
-    public Output<List<InsightFiltersRecommendationTextGetArgs>> getRecommendationTexts() {
+    public Output<List<InsightFiltersRecommendationTextGetArgs>> recommendationTexts() {
         return this.recommendationTexts == null ? Codegen.empty() : this.recommendationTexts;
     }
 
@@ -627,7 +627,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="recordStates")
       private final @Nullable Output<List<InsightFiltersRecordStateGetArgs>> recordStates;
 
-    public Output<List<InsightFiltersRecordStateGetArgs>> getRecordStates() {
+    public Output<List<InsightFiltersRecordStateGetArgs>> recordStates() {
         return this.recordStates == null ? Codegen.empty() : this.recordStates;
     }
 
@@ -638,7 +638,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="relatedFindingsIds")
       private final @Nullable Output<List<InsightFiltersRelatedFindingsIdGetArgs>> relatedFindingsIds;
 
-    public Output<List<InsightFiltersRelatedFindingsIdGetArgs>> getRelatedFindingsIds() {
+    public Output<List<InsightFiltersRelatedFindingsIdGetArgs>> relatedFindingsIds() {
         return this.relatedFindingsIds == null ? Codegen.empty() : this.relatedFindingsIds;
     }
 
@@ -649,7 +649,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="relatedFindingsProductArns")
       private final @Nullable Output<List<InsightFiltersRelatedFindingsProductArnGetArgs>> relatedFindingsProductArns;
 
-    public Output<List<InsightFiltersRelatedFindingsProductArnGetArgs>> getRelatedFindingsProductArns() {
+    public Output<List<InsightFiltersRelatedFindingsProductArnGetArgs>> relatedFindingsProductArns() {
         return this.relatedFindingsProductArns == null ? Codegen.empty() : this.relatedFindingsProductArns;
     }
 
@@ -660,7 +660,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceAwsEc2InstanceIamInstanceProfileArns")
       private final @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceIamInstanceProfileArnGetArgs>> resourceAwsEc2InstanceIamInstanceProfileArns;
 
-    public Output<List<InsightFiltersResourceAwsEc2InstanceIamInstanceProfileArnGetArgs>> getResourceAwsEc2InstanceIamInstanceProfileArns() {
+    public Output<List<InsightFiltersResourceAwsEc2InstanceIamInstanceProfileArnGetArgs>> resourceAwsEc2InstanceIamInstanceProfileArns() {
         return this.resourceAwsEc2InstanceIamInstanceProfileArns == null ? Codegen.empty() : this.resourceAwsEc2InstanceIamInstanceProfileArns;
     }
 
@@ -671,7 +671,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceAwsEc2InstanceImageIds")
       private final @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceImageIdGetArgs>> resourceAwsEc2InstanceImageIds;
 
-    public Output<List<InsightFiltersResourceAwsEc2InstanceImageIdGetArgs>> getResourceAwsEc2InstanceImageIds() {
+    public Output<List<InsightFiltersResourceAwsEc2InstanceImageIdGetArgs>> resourceAwsEc2InstanceImageIds() {
         return this.resourceAwsEc2InstanceImageIds == null ? Codegen.empty() : this.resourceAwsEc2InstanceImageIds;
     }
 
@@ -682,7 +682,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceAwsEc2InstanceIpv4Addresses")
       private final @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceIpv4AddressGetArgs>> resourceAwsEc2InstanceIpv4Addresses;
 
-    public Output<List<InsightFiltersResourceAwsEc2InstanceIpv4AddressGetArgs>> getResourceAwsEc2InstanceIpv4Addresses() {
+    public Output<List<InsightFiltersResourceAwsEc2InstanceIpv4AddressGetArgs>> resourceAwsEc2InstanceIpv4Addresses() {
         return this.resourceAwsEc2InstanceIpv4Addresses == null ? Codegen.empty() : this.resourceAwsEc2InstanceIpv4Addresses;
     }
 
@@ -693,7 +693,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceAwsEc2InstanceIpv6Addresses")
       private final @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceIpv6AddressGetArgs>> resourceAwsEc2InstanceIpv6Addresses;
 
-    public Output<List<InsightFiltersResourceAwsEc2InstanceIpv6AddressGetArgs>> getResourceAwsEc2InstanceIpv6Addresses() {
+    public Output<List<InsightFiltersResourceAwsEc2InstanceIpv6AddressGetArgs>> resourceAwsEc2InstanceIpv6Addresses() {
         return this.resourceAwsEc2InstanceIpv6Addresses == null ? Codegen.empty() : this.resourceAwsEc2InstanceIpv6Addresses;
     }
 
@@ -704,7 +704,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceAwsEc2InstanceKeyNames")
       private final @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceKeyNameGetArgs>> resourceAwsEc2InstanceKeyNames;
 
-    public Output<List<InsightFiltersResourceAwsEc2InstanceKeyNameGetArgs>> getResourceAwsEc2InstanceKeyNames() {
+    public Output<List<InsightFiltersResourceAwsEc2InstanceKeyNameGetArgs>> resourceAwsEc2InstanceKeyNames() {
         return this.resourceAwsEc2InstanceKeyNames == null ? Codegen.empty() : this.resourceAwsEc2InstanceKeyNames;
     }
 
@@ -715,7 +715,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceAwsEc2InstanceLaunchedAts")
       private final @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceLaunchedAtGetArgs>> resourceAwsEc2InstanceLaunchedAts;
 
-    public Output<List<InsightFiltersResourceAwsEc2InstanceLaunchedAtGetArgs>> getResourceAwsEc2InstanceLaunchedAts() {
+    public Output<List<InsightFiltersResourceAwsEc2InstanceLaunchedAtGetArgs>> resourceAwsEc2InstanceLaunchedAts() {
         return this.resourceAwsEc2InstanceLaunchedAts == null ? Codegen.empty() : this.resourceAwsEc2InstanceLaunchedAts;
     }
 
@@ -726,7 +726,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceAwsEc2InstanceSubnetIds")
       private final @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceSubnetIdGetArgs>> resourceAwsEc2InstanceSubnetIds;
 
-    public Output<List<InsightFiltersResourceAwsEc2InstanceSubnetIdGetArgs>> getResourceAwsEc2InstanceSubnetIds() {
+    public Output<List<InsightFiltersResourceAwsEc2InstanceSubnetIdGetArgs>> resourceAwsEc2InstanceSubnetIds() {
         return this.resourceAwsEc2InstanceSubnetIds == null ? Codegen.empty() : this.resourceAwsEc2InstanceSubnetIds;
     }
 
@@ -737,7 +737,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceAwsEc2InstanceTypes")
       private final @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceTypeGetArgs>> resourceAwsEc2InstanceTypes;
 
-    public Output<List<InsightFiltersResourceAwsEc2InstanceTypeGetArgs>> getResourceAwsEc2InstanceTypes() {
+    public Output<List<InsightFiltersResourceAwsEc2InstanceTypeGetArgs>> resourceAwsEc2InstanceTypes() {
         return this.resourceAwsEc2InstanceTypes == null ? Codegen.empty() : this.resourceAwsEc2InstanceTypes;
     }
 
@@ -748,7 +748,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceAwsEc2InstanceVpcIds")
       private final @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceVpcIdGetArgs>> resourceAwsEc2InstanceVpcIds;
 
-    public Output<List<InsightFiltersResourceAwsEc2InstanceVpcIdGetArgs>> getResourceAwsEc2InstanceVpcIds() {
+    public Output<List<InsightFiltersResourceAwsEc2InstanceVpcIdGetArgs>> resourceAwsEc2InstanceVpcIds() {
         return this.resourceAwsEc2InstanceVpcIds == null ? Codegen.empty() : this.resourceAwsEc2InstanceVpcIds;
     }
 
@@ -759,7 +759,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceAwsIamAccessKeyCreatedAts")
       private final @Nullable Output<List<InsightFiltersResourceAwsIamAccessKeyCreatedAtGetArgs>> resourceAwsIamAccessKeyCreatedAts;
 
-    public Output<List<InsightFiltersResourceAwsIamAccessKeyCreatedAtGetArgs>> getResourceAwsIamAccessKeyCreatedAts() {
+    public Output<List<InsightFiltersResourceAwsIamAccessKeyCreatedAtGetArgs>> resourceAwsIamAccessKeyCreatedAts() {
         return this.resourceAwsIamAccessKeyCreatedAts == null ? Codegen.empty() : this.resourceAwsIamAccessKeyCreatedAts;
     }
 
@@ -770,7 +770,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceAwsIamAccessKeyStatuses")
       private final @Nullable Output<List<InsightFiltersResourceAwsIamAccessKeyStatusGetArgs>> resourceAwsIamAccessKeyStatuses;
 
-    public Output<List<InsightFiltersResourceAwsIamAccessKeyStatusGetArgs>> getResourceAwsIamAccessKeyStatuses() {
+    public Output<List<InsightFiltersResourceAwsIamAccessKeyStatusGetArgs>> resourceAwsIamAccessKeyStatuses() {
         return this.resourceAwsIamAccessKeyStatuses == null ? Codegen.empty() : this.resourceAwsIamAccessKeyStatuses;
     }
 
@@ -781,7 +781,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceAwsIamAccessKeyUserNames")
       private final @Nullable Output<List<InsightFiltersResourceAwsIamAccessKeyUserNameGetArgs>> resourceAwsIamAccessKeyUserNames;
 
-    public Output<List<InsightFiltersResourceAwsIamAccessKeyUserNameGetArgs>> getResourceAwsIamAccessKeyUserNames() {
+    public Output<List<InsightFiltersResourceAwsIamAccessKeyUserNameGetArgs>> resourceAwsIamAccessKeyUserNames() {
         return this.resourceAwsIamAccessKeyUserNames == null ? Codegen.empty() : this.resourceAwsIamAccessKeyUserNames;
     }
 
@@ -792,7 +792,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceAwsS3BucketOwnerIds")
       private final @Nullable Output<List<InsightFiltersResourceAwsS3BucketOwnerIdGetArgs>> resourceAwsS3BucketOwnerIds;
 
-    public Output<List<InsightFiltersResourceAwsS3BucketOwnerIdGetArgs>> getResourceAwsS3BucketOwnerIds() {
+    public Output<List<InsightFiltersResourceAwsS3BucketOwnerIdGetArgs>> resourceAwsS3BucketOwnerIds() {
         return this.resourceAwsS3BucketOwnerIds == null ? Codegen.empty() : this.resourceAwsS3BucketOwnerIds;
     }
 
@@ -803,7 +803,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceAwsS3BucketOwnerNames")
       private final @Nullable Output<List<InsightFiltersResourceAwsS3BucketOwnerNameGetArgs>> resourceAwsS3BucketOwnerNames;
 
-    public Output<List<InsightFiltersResourceAwsS3BucketOwnerNameGetArgs>> getResourceAwsS3BucketOwnerNames() {
+    public Output<List<InsightFiltersResourceAwsS3BucketOwnerNameGetArgs>> resourceAwsS3BucketOwnerNames() {
         return this.resourceAwsS3BucketOwnerNames == null ? Codegen.empty() : this.resourceAwsS3BucketOwnerNames;
     }
 
@@ -814,7 +814,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceContainerImageIds")
       private final @Nullable Output<List<InsightFiltersResourceContainerImageIdGetArgs>> resourceContainerImageIds;
 
-    public Output<List<InsightFiltersResourceContainerImageIdGetArgs>> getResourceContainerImageIds() {
+    public Output<List<InsightFiltersResourceContainerImageIdGetArgs>> resourceContainerImageIds() {
         return this.resourceContainerImageIds == null ? Codegen.empty() : this.resourceContainerImageIds;
     }
 
@@ -825,7 +825,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceContainerImageNames")
       private final @Nullable Output<List<InsightFiltersResourceContainerImageNameGetArgs>> resourceContainerImageNames;
 
-    public Output<List<InsightFiltersResourceContainerImageNameGetArgs>> getResourceContainerImageNames() {
+    public Output<List<InsightFiltersResourceContainerImageNameGetArgs>> resourceContainerImageNames() {
         return this.resourceContainerImageNames == null ? Codegen.empty() : this.resourceContainerImageNames;
     }
 
@@ -836,7 +836,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceContainerLaunchedAts")
       private final @Nullable Output<List<InsightFiltersResourceContainerLaunchedAtGetArgs>> resourceContainerLaunchedAts;
 
-    public Output<List<InsightFiltersResourceContainerLaunchedAtGetArgs>> getResourceContainerLaunchedAts() {
+    public Output<List<InsightFiltersResourceContainerLaunchedAtGetArgs>> resourceContainerLaunchedAts() {
         return this.resourceContainerLaunchedAts == null ? Codegen.empty() : this.resourceContainerLaunchedAts;
     }
 
@@ -847,7 +847,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceContainerNames")
       private final @Nullable Output<List<InsightFiltersResourceContainerNameGetArgs>> resourceContainerNames;
 
-    public Output<List<InsightFiltersResourceContainerNameGetArgs>> getResourceContainerNames() {
+    public Output<List<InsightFiltersResourceContainerNameGetArgs>> resourceContainerNames() {
         return this.resourceContainerNames == null ? Codegen.empty() : this.resourceContainerNames;
     }
 
@@ -858,7 +858,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceDetailsOthers")
       private final @Nullable Output<List<InsightFiltersResourceDetailsOtherGetArgs>> resourceDetailsOthers;
 
-    public Output<List<InsightFiltersResourceDetailsOtherGetArgs>> getResourceDetailsOthers() {
+    public Output<List<InsightFiltersResourceDetailsOtherGetArgs>> resourceDetailsOthers() {
         return this.resourceDetailsOthers == null ? Codegen.empty() : this.resourceDetailsOthers;
     }
 
@@ -869,7 +869,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceIds")
       private final @Nullable Output<List<InsightFiltersResourceIdGetArgs>> resourceIds;
 
-    public Output<List<InsightFiltersResourceIdGetArgs>> getResourceIds() {
+    public Output<List<InsightFiltersResourceIdGetArgs>> resourceIds() {
         return this.resourceIds == null ? Codegen.empty() : this.resourceIds;
     }
 
@@ -880,7 +880,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourcePartitions")
       private final @Nullable Output<List<InsightFiltersResourcePartitionGetArgs>> resourcePartitions;
 
-    public Output<List<InsightFiltersResourcePartitionGetArgs>> getResourcePartitions() {
+    public Output<List<InsightFiltersResourcePartitionGetArgs>> resourcePartitions() {
         return this.resourcePartitions == null ? Codegen.empty() : this.resourcePartitions;
     }
 
@@ -891,7 +891,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceRegions")
       private final @Nullable Output<List<InsightFiltersResourceRegionGetArgs>> resourceRegions;
 
-    public Output<List<InsightFiltersResourceRegionGetArgs>> getResourceRegions() {
+    public Output<List<InsightFiltersResourceRegionGetArgs>> resourceRegions() {
         return this.resourceRegions == null ? Codegen.empty() : this.resourceRegions;
     }
 
@@ -902,7 +902,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceTags")
       private final @Nullable Output<List<InsightFiltersResourceTagGetArgs>> resourceTags;
 
-    public Output<List<InsightFiltersResourceTagGetArgs>> getResourceTags() {
+    public Output<List<InsightFiltersResourceTagGetArgs>> resourceTags() {
         return this.resourceTags == null ? Codegen.empty() : this.resourceTags;
     }
 
@@ -913,7 +913,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceTypes")
       private final @Nullable Output<List<InsightFiltersResourceTypeGetArgs>> resourceTypes;
 
-    public Output<List<InsightFiltersResourceTypeGetArgs>> getResourceTypes() {
+    public Output<List<InsightFiltersResourceTypeGetArgs>> resourceTypes() {
         return this.resourceTypes == null ? Codegen.empty() : this.resourceTypes;
     }
 
@@ -924,7 +924,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="severityLabels")
       private final @Nullable Output<List<InsightFiltersSeverityLabelGetArgs>> severityLabels;
 
-    public Output<List<InsightFiltersSeverityLabelGetArgs>> getSeverityLabels() {
+    public Output<List<InsightFiltersSeverityLabelGetArgs>> severityLabels() {
         return this.severityLabels == null ? Codegen.empty() : this.severityLabels;
     }
 
@@ -935,7 +935,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="sourceUrls")
       private final @Nullable Output<List<InsightFiltersSourceUrlGetArgs>> sourceUrls;
 
-    public Output<List<InsightFiltersSourceUrlGetArgs>> getSourceUrls() {
+    public Output<List<InsightFiltersSourceUrlGetArgs>> sourceUrls() {
         return this.sourceUrls == null ? Codegen.empty() : this.sourceUrls;
     }
 
@@ -946,7 +946,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="threatIntelIndicatorCategories")
       private final @Nullable Output<List<InsightFiltersThreatIntelIndicatorCategoryGetArgs>> threatIntelIndicatorCategories;
 
-    public Output<List<InsightFiltersThreatIntelIndicatorCategoryGetArgs>> getThreatIntelIndicatorCategories() {
+    public Output<List<InsightFiltersThreatIntelIndicatorCategoryGetArgs>> threatIntelIndicatorCategories() {
         return this.threatIntelIndicatorCategories == null ? Codegen.empty() : this.threatIntelIndicatorCategories;
     }
 
@@ -957,7 +957,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="threatIntelIndicatorLastObservedAts")
       private final @Nullable Output<List<InsightFiltersThreatIntelIndicatorLastObservedAtGetArgs>> threatIntelIndicatorLastObservedAts;
 
-    public Output<List<InsightFiltersThreatIntelIndicatorLastObservedAtGetArgs>> getThreatIntelIndicatorLastObservedAts() {
+    public Output<List<InsightFiltersThreatIntelIndicatorLastObservedAtGetArgs>> threatIntelIndicatorLastObservedAts() {
         return this.threatIntelIndicatorLastObservedAts == null ? Codegen.empty() : this.threatIntelIndicatorLastObservedAts;
     }
 
@@ -968,7 +968,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="threatIntelIndicatorSourceUrls")
       private final @Nullable Output<List<InsightFiltersThreatIntelIndicatorSourceUrlGetArgs>> threatIntelIndicatorSourceUrls;
 
-    public Output<List<InsightFiltersThreatIntelIndicatorSourceUrlGetArgs>> getThreatIntelIndicatorSourceUrls() {
+    public Output<List<InsightFiltersThreatIntelIndicatorSourceUrlGetArgs>> threatIntelIndicatorSourceUrls() {
         return this.threatIntelIndicatorSourceUrls == null ? Codegen.empty() : this.threatIntelIndicatorSourceUrls;
     }
 
@@ -979,7 +979,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="threatIntelIndicatorSources")
       private final @Nullable Output<List<InsightFiltersThreatIntelIndicatorSourceGetArgs>> threatIntelIndicatorSources;
 
-    public Output<List<InsightFiltersThreatIntelIndicatorSourceGetArgs>> getThreatIntelIndicatorSources() {
+    public Output<List<InsightFiltersThreatIntelIndicatorSourceGetArgs>> threatIntelIndicatorSources() {
         return this.threatIntelIndicatorSources == null ? Codegen.empty() : this.threatIntelIndicatorSources;
     }
 
@@ -990,7 +990,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="threatIntelIndicatorTypes")
       private final @Nullable Output<List<InsightFiltersThreatIntelIndicatorTypeGetArgs>> threatIntelIndicatorTypes;
 
-    public Output<List<InsightFiltersThreatIntelIndicatorTypeGetArgs>> getThreatIntelIndicatorTypes() {
+    public Output<List<InsightFiltersThreatIntelIndicatorTypeGetArgs>> threatIntelIndicatorTypes() {
         return this.threatIntelIndicatorTypes == null ? Codegen.empty() : this.threatIntelIndicatorTypes;
     }
 
@@ -1001,7 +1001,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="threatIntelIndicatorValues")
       private final @Nullable Output<List<InsightFiltersThreatIntelIndicatorValueGetArgs>> threatIntelIndicatorValues;
 
-    public Output<List<InsightFiltersThreatIntelIndicatorValueGetArgs>> getThreatIntelIndicatorValues() {
+    public Output<List<InsightFiltersThreatIntelIndicatorValueGetArgs>> threatIntelIndicatorValues() {
         return this.threatIntelIndicatorValues == null ? Codegen.empty() : this.threatIntelIndicatorValues;
     }
 
@@ -1012,7 +1012,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="titles")
       private final @Nullable Output<List<InsightFiltersTitleGetArgs>> titles;
 
-    public Output<List<InsightFiltersTitleGetArgs>> getTitles() {
+    public Output<List<InsightFiltersTitleGetArgs>> titles() {
         return this.titles == null ? Codegen.empty() : this.titles;
     }
 
@@ -1023,7 +1023,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="types")
       private final @Nullable Output<List<InsightFiltersTypeGetArgs>> types;
 
-    public Output<List<InsightFiltersTypeGetArgs>> getTypes() {
+    public Output<List<InsightFiltersTypeGetArgs>> types() {
         return this.types == null ? Codegen.empty() : this.types;
     }
 
@@ -1034,7 +1034,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="updatedAts")
       private final @Nullable Output<List<InsightFiltersUpdatedAtGetArgs>> updatedAts;
 
-    public Output<List<InsightFiltersUpdatedAtGetArgs>> getUpdatedAts() {
+    public Output<List<InsightFiltersUpdatedAtGetArgs>> updatedAts() {
         return this.updatedAts == null ? Codegen.empty() : this.updatedAts;
     }
 
@@ -1045,7 +1045,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="userDefinedValues")
       private final @Nullable Output<List<InsightFiltersUserDefinedValueGetArgs>> userDefinedValues;
 
-    public Output<List<InsightFiltersUserDefinedValueGetArgs>> getUserDefinedValues() {
+    public Output<List<InsightFiltersUserDefinedValueGetArgs>> userDefinedValues() {
         return this.userDefinedValues == null ? Codegen.empty() : this.userDefinedValues;
     }
 
@@ -1056,7 +1056,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="verificationStates")
       private final @Nullable Output<List<InsightFiltersVerificationStateGetArgs>> verificationStates;
 
-    public Output<List<InsightFiltersVerificationStateGetArgs>> getVerificationStates() {
+    public Output<List<InsightFiltersVerificationStateGetArgs>> verificationStates() {
         return this.verificationStates == null ? Codegen.empty() : this.verificationStates;
     }
 
@@ -1067,7 +1067,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="workflowStatuses")
       private final @Nullable Output<List<InsightFiltersWorkflowStatusGetArgs>> workflowStatuses;
 
-    public Output<List<InsightFiltersWorkflowStatusGetArgs>> getWorkflowStatuses() {
+    public Output<List<InsightFiltersWorkflowStatusGetArgs>> workflowStatuses() {
         return this.workflowStatuses == null ? Codegen.empty() : this.workflowStatuses;
     }
 

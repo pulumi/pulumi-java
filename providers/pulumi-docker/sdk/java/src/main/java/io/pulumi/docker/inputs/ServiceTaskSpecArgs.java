@@ -25,56 +25,56 @@ public final class ServiceTaskSpecArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="containerSpec", required=true)
       private final Output<ServiceTaskSpecContainerSpecArgs> containerSpec;
 
-    public Output<ServiceTaskSpecContainerSpecArgs> getContainerSpec() {
+    public Output<ServiceTaskSpecContainerSpecArgs> containerSpec() {
         return this.containerSpec;
     }
 
     @Import(name="forceUpdate")
       private final @Nullable Output<Integer> forceUpdate;
 
-    public Output<Integer> getForceUpdate() {
+    public Output<Integer> forceUpdate() {
         return this.forceUpdate == null ? Codegen.empty() : this.forceUpdate;
     }
 
     @Import(name="logDriver")
       private final @Nullable Output<ServiceTaskSpecLogDriverArgs> logDriver;
 
-    public Output<ServiceTaskSpecLogDriverArgs> getLogDriver() {
+    public Output<ServiceTaskSpecLogDriverArgs> logDriver() {
         return this.logDriver == null ? Codegen.empty() : this.logDriver;
     }
 
     @Import(name="networks")
       private final @Nullable Output<List<String>> networks;
 
-    public Output<List<String>> getNetworks() {
+    public Output<List<String>> networks() {
         return this.networks == null ? Codegen.empty() : this.networks;
     }
 
     @Import(name="placement")
       private final @Nullable Output<ServiceTaskSpecPlacementArgs> placement;
 
-    public Output<ServiceTaskSpecPlacementArgs> getPlacement() {
+    public Output<ServiceTaskSpecPlacementArgs> placement() {
         return this.placement == null ? Codegen.empty() : this.placement;
     }
 
     @Import(name="resources")
       private final @Nullable Output<ServiceTaskSpecResourcesArgs> resources;
 
-    public Output<ServiceTaskSpecResourcesArgs> getResources() {
+    public Output<ServiceTaskSpecResourcesArgs> resources() {
         return this.resources == null ? Codegen.empty() : this.resources;
     }
 
     @Import(name="restartPolicy")
       private final @Nullable Output<ServiceTaskSpecRestartPolicyArgs> restartPolicy;
 
-    public Output<ServiceTaskSpecRestartPolicyArgs> getRestartPolicy() {
+    public Output<ServiceTaskSpecRestartPolicyArgs> restartPolicy() {
         return this.restartPolicy == null ? Codegen.empty() : this.restartPolicy;
     }
 
     @Import(name="runtime")
       private final @Nullable Output<String> runtime;
 
-    public Output<String> getRuntime() {
+    public Output<String> runtime() {
         return this.runtime == null ? Codegen.empty() : this.runtime;
     }
 

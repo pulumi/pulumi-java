@@ -19,7 +19,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageUnknownEx
     @Import(name="obectIds")
       private final @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdGetArgs>> obectIds;
 
-    public Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdGetArgs>> getObectIds() {
+    public Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdGetArgs>> obectIds() {
         return this.obectIds == null ? Codegen.empty() : this.obectIds;
     }
 

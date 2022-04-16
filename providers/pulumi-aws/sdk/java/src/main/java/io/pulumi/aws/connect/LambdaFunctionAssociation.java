@@ -41,7 +41,7 @@ public class LambdaFunctionAssociation extends io.pulumi.resources.CustomResourc
      * @return Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
      * 
      */
-    public Output<String> getFunctionArn() {
+    public Output<String> functionArn() {
         return this.functionArn;
     }
     /**
@@ -55,7 +55,7 @@ public class LambdaFunctionAssociation extends io.pulumi.resources.CustomResourc
      * @return The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of the instance.
      * 
      */
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 

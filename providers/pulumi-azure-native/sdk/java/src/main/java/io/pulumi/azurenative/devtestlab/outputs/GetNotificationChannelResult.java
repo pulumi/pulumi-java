@@ -114,91 +114,91 @@ public final class GetNotificationChannelResult {
      * The creation date of the notification channel.
      * 
     */
-    public String getCreatedDate() {
+    public String createdDate() {
         return this.createdDate;
     }
     /**
      * Description of notification.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
      * 
     */
-    public Optional<String> getEmailRecipient() {
+    public Optional<String> emailRecipient() {
         return Optional.ofNullable(this.emailRecipient);
     }
     /**
      * The list of event for which this notification is enabled.
      * 
     */
-    public List<EventResponse> getEvents() {
+    public List<EventResponse> events() {
         return this.events == null ? List.of() : this.events;
     }
     /**
      * The identifier of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The location of the resource.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The locale to use when sending a notification (fallback for unsupported languages is EN).
      * 
     */
-    public Optional<String> getNotificationLocale() {
+    public Optional<String> notificationLocale() {
         return Optional.ofNullable(this.notificationLocale);
     }
     /**
      * The provisioning status of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The tags of the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
      * 
     */
-    public String getUniqueIdentifier() {
+    public String uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
     /**
      * The webhook URL to send notifications to.
      * 
     */
-    public Optional<String> getWebHookUrl() {
+    public Optional<String> webHookUrl() {
         return Optional.ofNullable(this.webHookUrl);
     }
 

@@ -24,7 +24,7 @@ public final class GetLocalGatewayRouteTablesArgs extends io.pulumi.resources.In
     @Import(name="filters")
       private final @Nullable List<GetLocalGatewayRouteTablesFilter> filters;
 
-    public List<GetLocalGatewayRouteTablesFilter> getFilters() {
+    public List<GetLocalGatewayRouteTablesFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -36,7 +36,7 @@ public final class GetLocalGatewayRouteTablesArgs extends io.pulumi.resources.In
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

@@ -28,7 +28,7 @@ public final class GoogleFirestoreAdminV1IndexFieldArgs extends io.pulumi.resour
     @Import(name="arrayConfig")
       private final @Nullable Output<GoogleFirestoreAdminV1IndexFieldArrayConfig> arrayConfig;
 
-    public Output<GoogleFirestoreAdminV1IndexFieldArrayConfig> getArrayConfig() {
+    public Output<GoogleFirestoreAdminV1IndexFieldArrayConfig> arrayConfig() {
         return this.arrayConfig == null ? Codegen.empty() : this.arrayConfig;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleFirestoreAdminV1IndexFieldArgs extends io.pulumi.resour
     @Import(name="fieldPath")
       private final @Nullable Output<String> fieldPath;
 
-    public Output<String> getFieldPath() {
+    public Output<String> fieldPath() {
         return this.fieldPath == null ? Codegen.empty() : this.fieldPath;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleFirestoreAdminV1IndexFieldArgs extends io.pulumi.resour
     @Import(name="order")
       private final @Nullable Output<GoogleFirestoreAdminV1IndexFieldOrder> order;
 
-    public Output<GoogleFirestoreAdminV1IndexFieldOrder> getOrder() {
+    public Output<GoogleFirestoreAdminV1IndexFieldOrder> order() {
         return this.order == null ? Codegen.empty() : this.order;
     }
 

@@ -37,7 +37,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
      * Structure is documented below.
      * 
     */
-    public RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay getFixedDelay() {
+    public RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay fixedDelay() {
         return this.fixedDelay;
     }
     /**
@@ -46,7 +46,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
      * 100.0 inclusive.
      * 
     */
-    public Double getPercentage() {
+    public Double percentage() {
         return this.percentage;
     }
 

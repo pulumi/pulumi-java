@@ -19,7 +19,7 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="namespaceName", required=true)
       private final String namespaceName;
 
-    public String getNamespaceName() {
+    public String namespaceName() {
         return this.namespaceName;
     }
 
@@ -30,7 +30,7 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="ruleName", required=true)
       private final String ruleName;
 
-    public String getRuleName() {
+    public String ruleName() {
         return this.ruleName;
     }
 
@@ -52,7 +52,7 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="subscriptionName", required=true)
       private final String subscriptionName;
 
-    public String getSubscriptionName() {
+    public String subscriptionName() {
         return this.subscriptionName;
     }
 
@@ -63,7 +63,7 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="topicName", required=true)
       private final String topicName;
 
-    public String getTopicName() {
+    public String topicName() {
         return this.topicName;
     }
 

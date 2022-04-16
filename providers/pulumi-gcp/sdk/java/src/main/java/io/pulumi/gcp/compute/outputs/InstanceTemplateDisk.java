@@ -144,14 +144,14 @@ public final class InstanceTemplateDisk {
      * This defaults to true.
      * 
     */
-    public Optional<Boolean> getAutoDelete() {
+    public Optional<Boolean> autoDelete() {
         return Optional.ofNullable(this.autoDelete);
     }
     /**
      * Indicates that this is a boot disk.
      * 
     */
-    public Optional<Boolean> getBoot() {
+    public Optional<Boolean> boot() {
         return Optional.ofNullable(this.boot);
     }
     /**
@@ -160,14 +160,14 @@ public final class InstanceTemplateDisk {
      * specified, the server chooses a default device name to apply to this disk.
      * 
     */
-    public Optional<String> getDeviceName() {
+    public Optional<String> deviceName() {
         return Optional.ofNullable(this.deviceName);
     }
     /**
      * Encrypts or decrypts a disk using a customer-supplied encryption key.
      * 
     */
-    public Optional<InstanceTemplateDiskDiskEncryptionKey> getDiskEncryptionKey() {
+    public Optional<InstanceTemplateDiskDiskEncryptionKey> diskEncryptionKey() {
         return Optional.ofNullable(this.diskEncryptionKey);
     }
     /**
@@ -175,7 +175,7 @@ public final class InstanceTemplateDisk {
      * to the name of the instance.
      * 
     */
-    public Optional<String> getDiskName() {
+    public Optional<String> diskName() {
         return Optional.ofNullable(this.diskName);
     }
     /**
@@ -184,7 +184,7 @@ public final class InstanceTemplateDisk {
      * the size must be exactly 375GB.
      * 
     */
-    public Optional<Integer> getDiskSizeGb() {
+    public Optional<Integer> diskSizeGb() {
         return Optional.ofNullable(this.diskSizeGb);
     }
     /**
@@ -192,7 +192,7 @@ public final class InstanceTemplateDisk {
      * `"local-ssd"`, `"pd-balanced"` or `"pd-standard"`.
      * 
     */
-    public Optional<String> getDiskType() {
+    public Optional<String> diskType() {
         return Optional.ofNullable(this.diskType);
     }
     /**
@@ -202,7 +202,7 @@ public final class InstanceTemplateDisk {
      * than SCSI. Local SSDs can use either NVME or SCSI.
      * 
     */
-    public Optional<String> getInterface_() {
+    public Optional<String> interface_() {
         return Optional.ofNullable(this.interface_);
     }
     /**
@@ -210,7 +210,7 @@ public final class InstanceTemplateDisk {
      * this template
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels == null ? Map.of() : this.labels;
     }
     /**
@@ -219,14 +219,14 @@ public final class InstanceTemplateDisk {
      * read-write mode.
      * 
     */
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
     /**
      * -- A list (short name or id) of resource policies to attach to this disk for automatic snapshot creations. Currently a max of 1 resource policy is supported.
      * 
     */
-    public Optional<String> getResourcePolicies() {
+    public Optional<String> resourcePolicies() {
         return Optional.ofNullable(this.resourcePolicies);
     }
     /**
@@ -235,7 +235,7 @@ public final class InstanceTemplateDisk {
      * > **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
      * 
     */
-    public Optional<String> getSource() {
+    public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
     /**
@@ -248,14 +248,14 @@ public final class InstanceTemplateDisk {
      * > **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
      * 
     */
-    public Optional<String> getSourceImage() {
+    public Optional<String> sourceImage() {
         return Optional.ofNullable(this.sourceImage);
     }
     /**
      * The type of reservation from which this instance can consume resources.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

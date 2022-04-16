@@ -15,14 +15,14 @@ public final class GlobalTableKeySchema extends io.pulumi.resources.InvokeArgs {
     @Import(name="attributeName", required=true)
       private final String attributeName;
 
-    public String getAttributeName() {
+    public String attributeName() {
         return this.attributeName;
     }
 
     @Import(name="keyType", required=true)
       private final String keyType;
 
-    public String getKeyType() {
+    public String keyType() {
         return this.keyType;
     }
 

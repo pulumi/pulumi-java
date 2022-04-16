@@ -24,7 +24,7 @@ public final class CodeSigningConfigCodeSigningPolicies {
      * Indicates how Lambda operations involve updating the code artifact will operate. Default to Warn if not provided
      * 
     */
-    public CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment getUntrustedArtifactOnDeployment() {
+    public CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment untrustedArtifactOnDeployment() {
         return this.untrustedArtifactOnDeployment;
     }
 

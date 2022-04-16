@@ -18,14 +18,14 @@ public final class ResponseHeadersPolicyContentSecurityPolicyArgs extends io.pul
     @Import(name="contentSecurityPolicy", required=true)
       private final Output<String> contentSecurityPolicy;
 
-    public Output<String> getContentSecurityPolicy() {
+    public Output<String> contentSecurityPolicy() {
         return this.contentSecurityPolicy;
     }
 
     @Import(name="override", required=true)
       private final Output<Boolean> override;
 
-    public Output<Boolean> getOverride() {
+    public Output<Boolean> override() {
         return this.override;
     }
 

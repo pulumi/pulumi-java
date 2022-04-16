@@ -35,14 +35,14 @@ public final class AcceleratorIpSet {
      * A list of IP addresses in the IP address set.
      * 
     */
-    public List<String> getIpAddresses() {
+    public List<String> ipAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }
     /**
      * The type of IP addresses included in this IP set.
      * 
     */
-    public Optional<String> getIpFamily() {
+    public Optional<String> ipFamily() {
         return Optional.ofNullable(this.ipFamily);
     }
 

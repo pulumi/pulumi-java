@@ -34,14 +34,14 @@ public final class VpcEndpointDnsEntry {
      * The DNS name.
      * 
     */
-    public Optional<String> getDnsName() {
+    public Optional<String> dnsName() {
         return Optional.ofNullable(this.dnsName);
     }
     /**
      * The ID of the private hosted zone.
      * 
     */
-    public Optional<String> getHostedZoneId() {
+    public Optional<String> hostedZoneId() {
         return Optional.ofNullable(this.hostedZoneId);
     }
 

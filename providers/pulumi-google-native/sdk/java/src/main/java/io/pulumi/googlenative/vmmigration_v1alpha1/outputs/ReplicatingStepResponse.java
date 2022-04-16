@@ -46,28 +46,28 @@ public final class ReplicatingStepResponse {
      * The source disks replication rate for the last 30 minutes in bytes per second.
      * 
     */
-    public String getLastThirtyMinutesAverageBytesPerSecond() {
+    public String lastThirtyMinutesAverageBytesPerSecond() {
         return this.lastThirtyMinutesAverageBytesPerSecond;
     }
     /**
      * The source disks replication rate for the last 2 minutes in bytes per second.
      * 
     */
-    public String getLastTwoMinutesAverageBytesPerSecond() {
+    public String lastTwoMinutesAverageBytesPerSecond() {
         return this.lastTwoMinutesAverageBytesPerSecond;
     }
     /**
      * Replicated bytes in the step.
      * 
     */
-    public String getReplicatedBytes() {
+    public String replicatedBytes() {
         return this.replicatedBytes;
     }
     /**
      * Total bytes to be handled in the step.
      * 
     */
-    public String getTotalBytes() {
+    public String totalBytes() {
         return this.totalBytes;
     }
 

@@ -29,7 +29,7 @@ public final class PathRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="paths")
       private final @Nullable Output<List<String>> paths;
 
-    public Output<List<String>> getPaths() {
+    public Output<List<String>> paths() {
         return this.paths == null ? Codegen.empty() : this.paths;
     }
 
@@ -40,7 +40,7 @@ public final class PathRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="routeAction")
       private final @Nullable Output<HttpRouteActionArgs> routeAction;
 
-    public Output<HttpRouteActionArgs> getRouteAction() {
+    public Output<HttpRouteActionArgs> routeAction() {
         return this.routeAction == null ? Codegen.empty() : this.routeAction;
     }
 
@@ -51,7 +51,7 @@ public final class PathRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service == null ? Codegen.empty() : this.service;
     }
 
@@ -62,7 +62,7 @@ public final class PathRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="urlRedirect")
       private final @Nullable Output<HttpRedirectActionArgs> urlRedirect;
 
-    public Output<HttpRedirectActionArgs> getUrlRedirect() {
+    public Output<HttpRedirectActionArgs> urlRedirect() {
         return this.urlRedirect == null ? Codegen.empty() : this.urlRedirect;
     }
 

@@ -15,7 +15,9 @@ import com.pulumi.awsnative.s3.inputs.BucketWebsiteConfigurationArgs;
 
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.function.BiConsumer;
 
 public class App {
     public static void main(String[] args) {
@@ -24,29 +26,23 @@ public class App {
     }
 
     private static Exports stack(Context ctx) {
-
         final var siteBucket = new Bucket("s3-website-bucket",
                 BucketArgs.builder().websiteConfiguration(BucketWebsiteConfigurationArgs.builder()
                         .indexDocument("index.html")
                         .build()).build());
 
         final String siteDir = "www/";
-        try {
-            for (var path : Files.walk(Paths.get(siteDir)).filter(Files::isRegularFile).toList()) {
-                var contentType = Files.probeContentType(path);
-                new BucketObject(path.toString().replace(siteDir, ""),
-                        BucketObjectArgs.builder().bucket(siteBucket.getId())
-                                .source(new FileAsset(path.toAbsolutePath().toString()))
-                                .contentType(contentType).build()
-                );
-            }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        forEachFileInTree(siteDir, (path, contentType) -> {
+            new BucketObject(path.toString().replace(siteDir, ""),
+                    BucketObjectArgs.builder().bucket(siteBucket.getId())
+                            .source(new FileAsset(path.toAbsolutePath().toString()))
+                            .contentType(contentType).build()
+            );
+        });
 
         final var bucketPolicy = new BucketPolicy("bucketPolicy",
                 BucketPolicyArgs.builder().bucket(siteBucket.getId())
-                        .policy(siteBucket.getArn()
+                        .policy(siteBucket.arn()
                                 .applyValue(bucketArn -> """
                                             {
                                                 "Version":"2012-10-17",
@@ -60,9 +56,25 @@ public class App {
                                         """.formatted(bucketArn))
                         ).build());
 
-        ctx.export("bucketName", siteBucket.getBucketName());
-        ctx.export("websiteUrl", siteBucket.getWebsiteURL());
+        ctx.export("bucketName", siteBucket.bucketName());
+        ctx.export("websiteUrl", siteBucket.websiteURL());
 
         return ctx.exports();
+    }
+
+    private static void forEachFileInTree(String siteDir, BiConsumer<Path, String> consumer) {
+        try (var paths = Files.walk(Paths.get(siteDir)).filter(Files::isRegularFile)) {
+            paths.forEach(path -> {
+                final String contentType;
+                try {
+                    contentType = Files.probeContentType(path);
+                } catch (IOException e) {
+                    throw new RuntimeException(String.format("Failed to probeContentType for path: '%s'", path), e);
+                }
+                consumer.accept(path, contentType);
+            });
+        } catch (IOException e) {
+            throw new RuntimeException(String.format("Failed to walk a path: '%s'", siteDir), e);
+        }
     }
 }

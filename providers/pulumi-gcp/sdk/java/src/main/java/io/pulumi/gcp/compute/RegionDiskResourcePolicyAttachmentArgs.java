@@ -22,7 +22,7 @@ public final class RegionDiskResourcePolicyAttachmentArgs extends io.pulumi.reso
     @Import(name="disk", required=true)
       private final Output<String> disk;
 
-    public Output<String> getDisk() {
+    public Output<String> disk() {
         return this.disk;
     }
 
@@ -34,7 +34,7 @@ public final class RegionDiskResourcePolicyAttachmentArgs extends io.pulumi.reso
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -46,7 +46,7 @@ public final class RegionDiskResourcePolicyAttachmentArgs extends io.pulumi.reso
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -57,7 +57,7 @@ public final class RegionDiskResourcePolicyAttachmentArgs extends io.pulumi.reso
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 

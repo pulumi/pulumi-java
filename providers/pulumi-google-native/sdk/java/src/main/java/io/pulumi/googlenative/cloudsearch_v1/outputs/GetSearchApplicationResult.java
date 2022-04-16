@@ -103,77 +103,77 @@ public final class GetSearchApplicationResult {
      * Retrictions applied to the configurations. The maximum number of elements is 10.
      * 
     */
-    public List<DataSourceRestrictionResponse> getDataSourceRestrictions() {
+    public List<DataSourceRestrictionResponse> dataSourceRestrictions() {
         return this.dataSourceRestrictions;
     }
     /**
      * The default fields for returning facet results. The sources specified here also have been included in data_source_restrictions above.
      * 
     */
-    public List<FacetOptionsResponse> getDefaultFacetOptions() {
+    public List<FacetOptionsResponse> defaultFacetOptions() {
         return this.defaultFacetOptions;
     }
     /**
      * The default options for sorting the search results
      * 
     */
-    public SortOptionsResponse getDefaultSortOptions() {
+    public SortOptionsResponse defaultSortOptions() {
         return this.defaultSortOptions;
     }
     /**
      * Display name of the Search Application. The maximum length is 300 characters.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Indicates whether audit logging is on/off for requests made for the search application in query APIs.
      * 
     */
-    public Boolean getEnableAuditLog() {
+    public Boolean enableAuditLog() {
         return this.enableAuditLog;
     }
     /**
      * Name of the Search Application. Format: searchapplications/{application_id}.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * IDs of the Long Running Operations (LROs) currently running for this schema. Output only field.
      * 
     */
-    public List<String> getOperationIds() {
+    public List<String> operationIds() {
         return this.operationIds;
     }
     /**
      * The default options for query interpretation
      * 
     */
-    public QueryInterpretationConfigResponse getQueryInterpretationConfig() {
+    public QueryInterpretationConfigResponse queryInterpretationConfig() {
         return this.queryInterpretationConfig;
     }
     /**
      * With each result we should return the URI for its thumbnail (when applicable)
      * 
     */
-    public Boolean getReturnResultThumbnailUrls() {
+    public Boolean returnResultThumbnailUrls() {
         return this.returnResultThumbnailUrls;
     }
     /**
      * Configuration for ranking results.
      * 
     */
-    public ScoringConfigResponse getScoringConfig() {
+    public ScoringConfigResponse scoringConfig() {
         return this.scoringConfig;
     }
     /**
      * Configuration for a sources specified in data_source_restrictions.
      * 
     */
-    public List<SourceConfigResponse> getSourceConfig() {
+    public List<SourceConfigResponse> sourceConfig() {
         return this.sourceConfig;
     }
 

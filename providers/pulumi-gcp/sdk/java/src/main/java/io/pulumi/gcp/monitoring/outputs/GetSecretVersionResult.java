@@ -46,35 +46,35 @@ public final class GetSecretVersionResult {
         this.version = version;
     }
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
-    public String getDestroyTime() {
+    public String destroyTime() {
         return this.destroyTime;
     }
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getProject() {
+    public String project() {
         return this.project;
     }
-    public String getSecret() {
+    public String secret() {
         return this.secret;
     }
-    public String getSecretData() {
+    public String secretData() {
         return this.secretData;
     }
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

@@ -23,7 +23,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
@@ -35,7 +35,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
     @Import(name="excludeRegexes")
       private final @Nullable Output<List<String>> excludeRegexes;
 
-    public Output<List<String>> getExcludeRegexes() {
+    public Output<List<String>> excludeRegexes() {
         return this.excludeRegexes == null ? Codegen.empty() : this.excludeRegexes;
     }
 
@@ -49,7 +49,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
     @Import(name="includeRegexes")
       private final @Nullable Output<List<String>> includeRegexes;
 
-    public Output<List<String>> getIncludeRegexes() {
+    public Output<List<String>> includeRegexes() {
         return this.includeRegexes == null ? Codegen.empty() : this.includeRegexes;
     }
 

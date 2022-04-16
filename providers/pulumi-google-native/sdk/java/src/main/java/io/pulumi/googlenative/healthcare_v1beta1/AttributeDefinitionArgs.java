@@ -24,14 +24,14 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
     @Import(name="allowedValues", required=true)
       private final Output<List<String>> allowedValues;
 
-    public Output<List<String>> getAllowedValues() {
+    public Output<List<String>> allowedValues() {
         return this.allowedValues;
     }
 
     @Import(name="attributeDefinitionId", required=true)
       private final Output<String> attributeDefinitionId;
 
-    public Output<String> getAttributeDefinitionId() {
+    public Output<String> attributeDefinitionId() {
         return this.attributeDefinitionId;
     }
 
@@ -42,7 +42,7 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
     @Import(name="category", required=true)
       private final Output<AttributeDefinitionCategory> category;
 
-    public Output<AttributeDefinitionCategory> getCategory() {
+    public Output<AttributeDefinitionCategory> category() {
         return this.category;
     }
 
@@ -53,14 +53,14 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
     @Import(name="consentDefaultValues")
       private final @Nullable Output<List<String>> consentDefaultValues;
 
-    public Output<List<String>> getConsentDefaultValues() {
+    public Output<List<String>> consentDefaultValues() {
         return this.consentDefaultValues == null ? Codegen.empty() : this.consentDefaultValues;
     }
 
     @Import(name="consentStoreId", required=true)
       private final Output<String> consentStoreId;
 
-    public Output<String> getConsentStoreId() {
+    public Output<String> consentStoreId() {
         return this.consentStoreId;
     }
 
@@ -71,14 +71,14 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
     @Import(name="dataMappingDefaultValue")
       private final @Nullable Output<String> dataMappingDefaultValue;
 
-    public Output<String> getDataMappingDefaultValue() {
+    public Output<String> dataMappingDefaultValue() {
         return this.dataMappingDefaultValue == null ? Codegen.empty() : this.dataMappingDefaultValue;
     }
 
     @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
@@ -89,14 +89,14 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -107,14 +107,14 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

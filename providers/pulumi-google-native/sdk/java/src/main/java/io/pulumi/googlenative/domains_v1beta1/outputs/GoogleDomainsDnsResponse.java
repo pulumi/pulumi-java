@@ -41,21 +41,21 @@ public final class GoogleDomainsDnsResponse {
      * The list of DS records published for this domain. The list is automatically populated when `ds_state` is `DS_RECORDS_PUBLISHED`, otherwise it remains empty.
      * 
     */
-    public List<DsRecordResponse> getDsRecords() {
+    public List<DsRecordResponse> dsRecords() {
         return this.dsRecords;
     }
     /**
      * The state of DS records for this domain. Used to enable or disable automatic DNSSEC.
      * 
     */
-    public String getDsState() {
+    public String dsState() {
         return this.dsState;
     }
     /**
      * A list of name servers that store the DNS zone for this domain. Each name server is a domain name, with Unicode domain names expressed in Punycode format. This field is automatically populated with the name servers assigned to the Google Domains DNS zone.
      * 
     */
-    public List<String> getNameServers() {
+    public List<String> nameServers() {
         return this.nameServers;
     }
 

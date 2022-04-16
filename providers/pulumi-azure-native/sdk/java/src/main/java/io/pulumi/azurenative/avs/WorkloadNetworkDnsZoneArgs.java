@@ -24,7 +24,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -35,7 +35,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
     @Import(name="dnsServerIps")
       private final @Nullable Output<List<String>> dnsServerIps;
 
-    public Output<List<String>> getDnsServerIps() {
+    public Output<List<String>> dnsServerIps() {
         return this.dnsServerIps == null ? Codegen.empty() : this.dnsServerIps;
     }
 
@@ -46,7 +46,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
     @Import(name="dnsServices")
       private final @Nullable Output<Double> dnsServices;
 
-    public Output<Double> getDnsServices() {
+    public Output<Double> dnsServices() {
         return this.dnsServices == null ? Codegen.empty() : this.dnsServices;
     }
 
@@ -57,7 +57,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
     @Import(name="dnsZoneId")
       private final @Nullable Output<String> dnsZoneId;
 
-    public Output<String> getDnsZoneId() {
+    public Output<String> dnsZoneId() {
         return this.dnsZoneId == null ? Codegen.empty() : this.dnsZoneId;
     }
 
@@ -68,7 +68,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
     @Import(name="domain")
       private final @Nullable Output<List<String>> domain;
 
-    public Output<List<String>> getDomain() {
+    public Output<List<String>> domain() {
         return this.domain == null ? Codegen.empty() : this.domain;
     }
 
@@ -79,7 +79,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
-    public Output<String> getPrivateCloudName() {
+    public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -90,7 +90,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -101,7 +101,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
     @Import(name="revision")
       private final @Nullable Output<Double> revision;
 
-    public Output<Double> getRevision() {
+    public Output<Double> revision() {
         return this.revision == null ? Codegen.empty() : this.revision;
     }
 
@@ -112,7 +112,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
     @Import(name="sourceIp")
       private final @Nullable Output<String> sourceIp;
 
-    public Output<String> getSourceIp() {
+    public Output<String> sourceIp() {
         return this.sourceIp == null ? Codegen.empty() : this.sourceIp;
     }
 

@@ -21,7 +21,7 @@ public final class VirtualGatewaySpecLoggingAccessLogFileArgs extends io.pulumi.
     @Import(name="path", required=true)
       private final Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
 

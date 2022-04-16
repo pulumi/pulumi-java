@@ -23,7 +23,7 @@ public final class ConfidentialInstanceConfigResponse extends io.pulumi.resource
     @Import(name="enableConfidentialCompute", required=true)
       private final Boolean enableConfidentialCompute;
 
-    public Boolean getEnableConfidentialCompute() {
+    public Boolean enableConfidentialCompute() {
         return this.enableConfidentialCompute;
     }
 

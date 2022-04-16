@@ -18,7 +18,7 @@ public final class ConfigDemodulationConfigArgs extends io.pulumi.resources.Reso
     @Import(name="unvalidatedJSON")
       private final @Nullable Output<String> unvalidatedJSON;
 
-    public Output<String> getUnvalidatedJSON() {
+    public Output<String> unvalidatedJSON() {
         return this.unvalidatedJSON == null ? Codegen.empty() : this.unvalidatedJSON;
     }
 

@@ -23,7 +23,7 @@ public final class EdgeCacheServiceRoutingHostRuleGetArgs extends io.pulumi.reso
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class EdgeCacheServiceRoutingHostRuleGetArgs extends io.pulumi.reso
     @Import(name="hosts", required=true)
       private final Output<List<String>> hosts;
 
-    public Output<List<String>> getHosts() {
+    public Output<List<String>> hosts() {
         return this.hosts;
     }
 
@@ -48,7 +48,7 @@ public final class EdgeCacheServiceRoutingHostRuleGetArgs extends io.pulumi.reso
     @Import(name="pathMatcher", required=true)
       private final Output<String> pathMatcher;
 
-    public Output<String> getPathMatcher() {
+    public Output<String> pathMatcher() {
         return this.pathMatcher;
     }
 

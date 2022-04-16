@@ -27,7 +27,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="clusterIpv4CidrBlock")
       private final @Nullable Output<String> clusterIpv4CidrBlock;
 
-    public Output<String> getClusterIpv4CidrBlock() {
+    public Output<String> clusterIpv4CidrBlock() {
         return this.clusterIpv4CidrBlock == null ? Codegen.empty() : this.clusterIpv4CidrBlock;
     }
 
@@ -38,7 +38,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="clusterSecondaryRangeName")
       private final @Nullable Output<String> clusterSecondaryRangeName;
 
-    public Output<String> getClusterSecondaryRangeName() {
+    public Output<String> clusterSecondaryRangeName() {
         return this.clusterSecondaryRangeName == null ? Codegen.empty() : this.clusterSecondaryRangeName;
     }
 
@@ -49,7 +49,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="createSubnetwork")
       private final @Nullable Output<Boolean> createSubnetwork;
 
-    public Output<Boolean> getCreateSubnetwork() {
+    public Output<Boolean> createSubnetwork() {
         return this.createSubnetwork == null ? Codegen.empty() : this.createSubnetwork;
     }
 
@@ -60,7 +60,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="nodeIpv4CidrBlock")
       private final @Nullable Output<String> nodeIpv4CidrBlock;
 
-    public Output<String> getNodeIpv4CidrBlock() {
+    public Output<String> nodeIpv4CidrBlock() {
         return this.nodeIpv4CidrBlock == null ? Codegen.empty() : this.nodeIpv4CidrBlock;
     }
 
@@ -71,7 +71,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="servicesIpv4CidrBlock")
       private final @Nullable Output<String> servicesIpv4CidrBlock;
 
-    public Output<String> getServicesIpv4CidrBlock() {
+    public Output<String> servicesIpv4CidrBlock() {
         return this.servicesIpv4CidrBlock == null ? Codegen.empty() : this.servicesIpv4CidrBlock;
     }
 
@@ -82,7 +82,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="servicesSecondaryRangeName")
       private final @Nullable Output<String> servicesSecondaryRangeName;
 
-    public Output<String> getServicesSecondaryRangeName() {
+    public Output<String> servicesSecondaryRangeName() {
         return this.servicesSecondaryRangeName == null ? Codegen.empty() : this.servicesSecondaryRangeName;
     }
 
@@ -93,7 +93,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="subnetworkName")
       private final @Nullable Output<String> subnetworkName;
 
-    public Output<String> getSubnetworkName() {
+    public Output<String> subnetworkName() {
         return this.subnetworkName == null ? Codegen.empty() : this.subnetworkName;
     }
 
@@ -104,7 +104,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="tpuIpv4CidrBlock")
       private final @Nullable Output<String> tpuIpv4CidrBlock;
 
-    public Output<String> getTpuIpv4CidrBlock() {
+    public Output<String> tpuIpv4CidrBlock() {
         return this.tpuIpv4CidrBlock == null ? Codegen.empty() : this.tpuIpv4CidrBlock;
     }
 
@@ -115,7 +115,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="useIpAliases")
       private final @Nullable Output<Boolean> useIpAliases;
 
-    public Output<Boolean> getUseIpAliases() {
+    public Output<Boolean> useIpAliases() {
         return this.useIpAliases == null ? Codegen.empty() : this.useIpAliases;
     }
 
@@ -126,7 +126,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="useRoutes")
       private final @Nullable Output<Boolean> useRoutes;
 
-    public Output<Boolean> getUseRoutes() {
+    public Output<Boolean> useRoutes() {
         return this.useRoutes == null ? Codegen.empty() : this.useRoutes;
     }
 

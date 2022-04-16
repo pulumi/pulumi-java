@@ -38,7 +38,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attestation")
       private final @Nullable Output<AttestationArgs> attestation;
 
-    public Output<AttestationArgs> getAttestation() {
+    public Output<AttestationArgs> attestation() {
         return this.attestation == null ? Codegen.empty() : this.attestation;
     }
 
@@ -49,7 +49,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="buildDetails")
       private final @Nullable Output<BuildDetailsArgs> buildDetails;
 
-    public Output<BuildDetailsArgs> getBuildDetails() {
+    public Output<BuildDetailsArgs> buildDetails() {
         return this.buildDetails == null ? Codegen.empty() : this.buildDetails;
     }
 
@@ -60,7 +60,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="compliance")
       private final @Nullable Output<ComplianceOccurrenceArgs> compliance;
 
-    public Output<ComplianceOccurrenceArgs> getCompliance() {
+    public Output<ComplianceOccurrenceArgs> compliance() {
         return this.compliance == null ? Codegen.empty() : this.compliance;
     }
 
@@ -71,7 +71,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deployment")
       private final @Nullable Output<DeploymentArgs> deployment;
 
-    public Output<DeploymentArgs> getDeployment() {
+    public Output<DeploymentArgs> deployment() {
         return this.deployment == null ? Codegen.empty() : this.deployment;
     }
 
@@ -82,7 +82,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="derivedImage")
       private final @Nullable Output<DerivedArgs> derivedImage;
 
-    public Output<DerivedArgs> getDerivedImage() {
+    public Output<DerivedArgs> derivedImage() {
         return this.derivedImage == null ? Codegen.empty() : this.derivedImage;
     }
 
@@ -93,7 +93,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="discovered")
       private final @Nullable Output<DiscoveredArgs> discovered;
 
-    public Output<DiscoveredArgs> getDiscovered() {
+    public Output<DiscoveredArgs> discovered() {
         return this.discovered == null ? Codegen.empty() : this.discovered;
     }
 
@@ -104,7 +104,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dsseAttestation")
       private final @Nullable Output<DSSEAttestationOccurrenceArgs> dsseAttestation;
 
-    public Output<DSSEAttestationOccurrenceArgs> getDsseAttestation() {
+    public Output<DSSEAttestationOccurrenceArgs> dsseAttestation() {
         return this.dsseAttestation == null ? Codegen.empty() : this.dsseAttestation;
     }
 
@@ -115,7 +115,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="envelope")
       private final @Nullable Output<EnvelopeArgs> envelope;
 
-    public Output<EnvelopeArgs> getEnvelope() {
+    public Output<EnvelopeArgs> envelope() {
         return this.envelope == null ? Codegen.empty() : this.envelope;
     }
 
@@ -126,7 +126,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="installation")
       private final @Nullable Output<InstallationArgs> installation;
 
-    public Output<InstallationArgs> getInstallation() {
+    public Output<InstallationArgs> installation() {
         return this.installation == null ? Codegen.empty() : this.installation;
     }
 
@@ -137,14 +137,14 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="noteName")
       private final @Nullable Output<String> noteName;
 
-    public Output<String> getNoteName() {
+    public Output<String> noteName() {
         return this.noteName == null ? Codegen.empty() : this.noteName;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -155,7 +155,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="remediation")
       private final @Nullable Output<String> remediation;
 
-    public Output<String> getRemediation() {
+    public Output<String> remediation() {
         return this.remediation == null ? Codegen.empty() : this.remediation;
     }
 
@@ -166,7 +166,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resource")
       private final @Nullable Output<ResourceArgs> resource;
 
-    public Output<ResourceArgs> getResource() {
+    public Output<ResourceArgs> resource() {
         return this.resource == null ? Codegen.empty() : this.resource;
     }
 
@@ -177,7 +177,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceUrl")
       private final @Nullable Output<String> resourceUrl;
 
-    public Output<String> getResourceUrl() {
+    public Output<String> resourceUrl() {
         return this.resourceUrl == null ? Codegen.empty() : this.resourceUrl;
     }
 
@@ -188,7 +188,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sbom")
       private final @Nullable Output<DocumentOccurrenceArgs> sbom;
 
-    public Output<DocumentOccurrenceArgs> getSbom() {
+    public Output<DocumentOccurrenceArgs> sbom() {
         return this.sbom == null ? Codegen.empty() : this.sbom;
     }
 
@@ -199,7 +199,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="spdxFile")
       private final @Nullable Output<FileOccurrenceArgs> spdxFile;
 
-    public Output<FileOccurrenceArgs> getSpdxFile() {
+    public Output<FileOccurrenceArgs> spdxFile() {
         return this.spdxFile == null ? Codegen.empty() : this.spdxFile;
     }
 
@@ -210,7 +210,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="spdxPackage")
       private final @Nullable Output<PackageInfoOccurrenceArgs> spdxPackage;
 
-    public Output<PackageInfoOccurrenceArgs> getSpdxPackage() {
+    public Output<PackageInfoOccurrenceArgs> spdxPackage() {
         return this.spdxPackage == null ? Codegen.empty() : this.spdxPackage;
     }
 
@@ -221,7 +221,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="spdxRelationship")
       private final @Nullable Output<RelationshipOccurrenceArgs> spdxRelationship;
 
-    public Output<RelationshipOccurrenceArgs> getSpdxRelationship() {
+    public Output<RelationshipOccurrenceArgs> spdxRelationship() {
         return this.spdxRelationship == null ? Codegen.empty() : this.spdxRelationship;
     }
 
@@ -232,7 +232,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="upgrade")
       private final @Nullable Output<UpgradeOccurrenceArgs> upgrade;
 
-    public Output<UpgradeOccurrenceArgs> getUpgrade() {
+    public Output<UpgradeOccurrenceArgs> upgrade() {
         return this.upgrade == null ? Codegen.empty() : this.upgrade;
     }
 
@@ -243,7 +243,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vulnerabilityDetails")
       private final @Nullable Output<VulnerabilityDetailsArgs> vulnerabilityDetails;
 
-    public Output<VulnerabilityDetailsArgs> getVulnerabilityDetails() {
+    public Output<VulnerabilityDetailsArgs> vulnerabilityDetails() {
         return this.vulnerabilityDetails == null ? Codegen.empty() : this.vulnerabilityDetails;
     }
 

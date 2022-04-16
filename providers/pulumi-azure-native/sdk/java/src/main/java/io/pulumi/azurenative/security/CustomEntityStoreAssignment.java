@@ -43,7 +43,7 @@ public class CustomEntityStoreAssignment extends io.pulumi.resources.CustomResou
      * @return The link to entity store database.
      * 
      */
-    public Output</* @Nullable */ String> getEntityStoreDatabaseLink() {
+    public Output</* @Nullable */ String> entityStoreDatabaseLink() {
         return this.entityStoreDatabaseLink;
     }
     /**
@@ -57,7 +57,7 @@ public class CustomEntityStoreAssignment extends io.pulumi.resources.CustomResou
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class CustomEntityStoreAssignment extends io.pulumi.resources.CustomResou
      * @return The principal assigned with entity store. Format of principal is: [AAD type]=[PrincipalObjectId];[TenantId]
      * 
      */
-    public Output</* @Nullable */ String> getPrincipal() {
+    public Output</* @Nullable */ String> principal() {
         return this.principal;
     }
     /**
@@ -85,7 +85,7 @@ public class CustomEntityStoreAssignment extends io.pulumi.resources.CustomResou
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -99,7 +99,7 @@ public class CustomEntityStoreAssignment extends io.pulumi.resources.CustomResou
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

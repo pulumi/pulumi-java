@@ -25,7 +25,7 @@ public final class CertificateProviderInstanceArgs extends io.pulumi.resources.R
     @Import(name="pluginInstance", required=true)
       private final Output<String> pluginInstance;
 
-    public Output<String> getPluginInstance() {
+    public Output<String> pluginInstance() {
         return this.pluginInstance;
     }
 

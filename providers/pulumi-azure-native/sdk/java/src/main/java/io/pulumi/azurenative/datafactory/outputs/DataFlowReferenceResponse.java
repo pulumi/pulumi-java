@@ -50,28 +50,28 @@ public final class DataFlowReferenceResponse {
      * Reference data flow parameters from dataset.
      * 
     */
-    public Optional<Object> getDatasetParameters() {
+    public Optional<Object> datasetParameters() {
         return Optional.ofNullable(this.datasetParameters);
     }
     /**
      * Data flow parameters
      * 
     */
-    public Map<String,Object> getParameters() {
+    public Map<String,Object> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Reference data flow name.
      * 
     */
-    public String getReferenceName() {
+    public String referenceName() {
         return this.referenceName;
     }
     /**
      * Data flow reference type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

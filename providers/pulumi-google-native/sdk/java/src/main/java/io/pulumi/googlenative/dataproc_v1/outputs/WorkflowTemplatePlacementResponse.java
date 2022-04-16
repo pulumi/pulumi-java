@@ -33,14 +33,14 @@ public final class WorkflowTemplatePlacementResponse {
      * Optional. A selector that chooses target cluster for jobs based on metadata.The selector is evaluated at the time each job is submitted.
      * 
     */
-    public ClusterSelectorResponse getClusterSelector() {
+    public ClusterSelectorResponse clusterSelector() {
         return this.clusterSelector;
     }
     /**
      * A cluster that is managed by the workflow.
      * 
     */
-    public ManagedClusterResponse getManagedCluster() {
+    public ManagedClusterResponse managedCluster() {
         return this.managedCluster;
     }
 

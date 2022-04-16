@@ -27,7 +27,7 @@ public final class GoogleCloudDatacatalogV1ContactsArgs extends io.pulumi.resour
     @Import(name="people")
       private final @Nullable Output<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> people;
 
-    public Output<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> getPeople() {
+    public Output<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> people() {
         return this.people == null ? Codegen.empty() : this.people;
     }
 

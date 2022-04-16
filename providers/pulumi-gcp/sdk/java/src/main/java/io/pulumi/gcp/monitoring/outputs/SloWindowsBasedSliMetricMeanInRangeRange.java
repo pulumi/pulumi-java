@@ -40,7 +40,7 @@ public final class SloWindowsBasedSliMetricMeanInRangeRange {
      * ">= range.min"
      * 
     */
-    public Optional<Double> getMax() {
+    public Optional<Double> max() {
         return Optional.ofNullable(this.max);
     }
     /**
@@ -49,7 +49,7 @@ public final class SloWindowsBasedSliMetricMeanInRangeRange {
      * "< range.max"
      * 
     */
-    public Optional<Double> getMin() {
+    public Optional<Double> min() {
         return Optional.ofNullable(this.min);
     }
 

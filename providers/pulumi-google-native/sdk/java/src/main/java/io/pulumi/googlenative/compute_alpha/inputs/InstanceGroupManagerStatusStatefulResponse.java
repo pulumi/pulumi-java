@@ -20,7 +20,7 @@ public final class InstanceGroupManagerStatusStatefulResponse extends io.pulumi.
     @Import(name="hasStatefulConfig", required=true)
       private final Boolean hasStatefulConfig;
 
-    public Boolean getHasStatefulConfig() {
+    public Boolean hasStatefulConfig() {
         return this.hasStatefulConfig;
     }
 
@@ -31,7 +31,7 @@ public final class InstanceGroupManagerStatusStatefulResponse extends io.pulumi.
     @Import(name="perInstanceConfigs", required=true)
       private final InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse perInstanceConfigs;
 
-    public InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse getPerInstanceConfigs() {
+    public InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse perInstanceConfigs() {
         return this.perInstanceConfigs;
     }
 

@@ -23,7 +23,7 @@ public final class FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs exten
     @Import(name="aggregationWindowLength")
       private final @Nullable Output<String> aggregationWindowLength;
 
-    public Output<String> getAggregationWindowLength() {
+    public Output<String> aggregationWindowLength() {
         return this.aggregationWindowLength == null ? Codegen.empty() : this.aggregationWindowLength;
     }
 
@@ -34,7 +34,7 @@ public final class FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs exten
     @Import(name="targetUtilization", required=true)
       private final Output<Double> targetUtilization;
 
-    public Output<Double> getTargetUtilization() {
+    public Output<Double> targetUtilization() {
         return this.targetUtilization;
     }
 

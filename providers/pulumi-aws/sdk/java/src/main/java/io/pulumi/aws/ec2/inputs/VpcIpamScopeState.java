@@ -21,7 +21,7 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -32,7 +32,7 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -43,7 +43,7 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipamArn")
       private final @Nullable Output<String> ipamArn;
 
-    public Output<String> getIpamArn() {
+    public Output<String> ipamArn() {
         return this.ipamArn == null ? Codegen.empty() : this.ipamArn;
     }
 
@@ -54,14 +54,14 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipamId")
       private final @Nullable Output<String> ipamId;
 
-    public Output<String> getIpamId() {
+    public Output<String> ipamId() {
         return this.ipamId == null ? Codegen.empty() : this.ipamId;
     }
 
     @Import(name="ipamScopeType")
       private final @Nullable Output<String> ipamScopeType;
 
-    public Output<String> getIpamScopeType() {
+    public Output<String> ipamScopeType() {
         return this.ipamScopeType == null ? Codegen.empty() : this.ipamScopeType;
     }
 
@@ -72,7 +72,7 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="isDefault")
       private final @Nullable Output<Boolean> isDefault;
 
-    public Output<Boolean> getIsDefault() {
+    public Output<Boolean> isDefault() {
         return this.isDefault == null ? Codegen.empty() : this.isDefault;
     }
 
@@ -83,21 +83,21 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="poolCount")
       private final @Nullable Output<Integer> poolCount;
 
-    public Output<Integer> getPoolCount() {
+    public Output<Integer> poolCount() {
         return this.poolCount == null ? Codegen.empty() : this.poolCount;
     }
 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

@@ -61,7 +61,7 @@ public final class ClusterClusterAutoscaling {
      * Structure is documented below.
      * 
     */
-    public Optional<ClusterClusterAutoscalingAutoProvisioningDefaults> getAutoProvisioningDefaults() {
+    public Optional<ClusterClusterAutoscalingAutoProvisioningDefaults> autoProvisioningDefaults() {
         return Optional.ofNullable(this.autoProvisioningDefaults);
     }
     /**
@@ -71,7 +71,7 @@ public final class ClusterClusterAutoscaling {
      * when deciding to remove nodes from a cluster. Can be `BALANCED` or `OPTIMIZE_UTILIZATION`. Defaults to `BALANCED`.
      * 
     */
-    public Optional<String> getAutoscalingProfile() {
+    public Optional<String> autoscalingProfile() {
         return Optional.ofNullable(this.autoscalingProfile);
     }
     /**
@@ -79,7 +79,7 @@ public final class ClusterClusterAutoscaling {
      * If enabled, pods must be valid under a PodSecurityPolicy to be created.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
     /**
@@ -89,7 +89,7 @@ public final class ClusterClusterAutoscaling {
      * in addition to node auto-provisioning. Structure is documented below.
      * 
     */
-    public List<ClusterClusterAutoscalingResourceLimit> getResourceLimits() {
+    public List<ClusterClusterAutoscalingResourceLimit> resourceLimits() {
         return this.resourceLimits == null ? List.of() : this.resourceLimits;
     }
 

@@ -26,13 +26,13 @@ public final class Toy {
         this.wear = wear;
     }
 
-    public Optional<Toy> getAssociated() {
+    public Optional<Toy> associated() {
         return Optional.ofNullable(this.associated);
     }
-    public Optional<String> getColor() {
+    public Optional<String> color() {
         return Optional.ofNullable(this.color);
     }
-    public Optional<Double> getWear() {
+    public Optional<Double> wear() {
         return Optional.ofNullable(this.wear);
     }
 

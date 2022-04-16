@@ -31,10 +31,10 @@ public final class JobValidationConfiguration {
      * Arn of the Ruleset
      * 
     */
-    public String getRulesetArn() {
+    public String rulesetArn() {
         return this.rulesetArn;
     }
-    public Optional<JobValidationMode> getValidationMode() {
+    public Optional<JobValidationMode> validationMode() {
         return Optional.ofNullable(this.validationMode);
     }
 

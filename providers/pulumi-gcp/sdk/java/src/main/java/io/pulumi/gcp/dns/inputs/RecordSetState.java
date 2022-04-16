@@ -25,7 +25,7 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="managedZone")
       private final @Nullable Output<String> managedZone;
 
-    public Output<String> getManagedZone() {
+    public Output<String> managedZone() {
         return this.managedZone == null ? Codegen.empty() : this.managedZone;
     }
 
@@ -36,7 +36,7 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -48,7 +48,7 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -62,7 +62,7 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="rrdatas")
       private final @Nullable Output<List<String>> rrdatas;
 
-    public Output<List<String>> getRrdatas() {
+    public Output<List<String>> rrdatas() {
         return this.rrdatas == null ? Codegen.empty() : this.rrdatas;
     }
 
@@ -73,7 +73,7 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ttl")
       private final @Nullable Output<Integer> ttl;
 
-    public Output<Integer> getTtl() {
+    public Output<Integer> ttl() {
         return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 
@@ -84,7 +84,7 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

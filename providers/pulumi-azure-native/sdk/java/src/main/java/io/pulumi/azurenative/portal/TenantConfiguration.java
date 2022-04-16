@@ -43,7 +43,7 @@ public class TenantConfiguration extends io.pulumi.resources.CustomResource {
      * @return When flag is set to true Markdown tile will require external storage configuration (URI). The inline content configuration will be prohibited.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnforcePrivateMarkdownStorage() {
+    public Output</* @Nullable */ Boolean> enforcePrivateMarkdownStorage() {
         return this.enforcePrivateMarkdownStorage;
     }
     /**
@@ -57,7 +57,7 @@ public class TenantConfiguration extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class TenantConfiguration extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

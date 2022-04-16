@@ -27,7 +27,7 @@ public final class UrlRewriteActionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -38,7 +38,7 @@ public final class UrlRewriteActionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="parameters", required=true)
       private final Output<UrlRewriteActionParametersArgs> parameters;
 
-    public Output<UrlRewriteActionParametersArgs> getParameters() {
+    public Output<UrlRewriteActionParametersArgs> parameters() {
         return this.parameters;
     }
 

@@ -26,7 +26,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressFr
     @Import(name="identities")
       private final @Nullable Output<List<String>> identities;
 
-    public Output<List<String>> getIdentities() {
+    public Output<List<String>> identities() {
         return this.identities == null ? Codegen.empty() : this.identities;
     }
 
@@ -40,7 +40,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressFr
     @Import(name="identityType")
       private final @Nullable Output<String> identityType;
 
-    public Output<String> getIdentityType() {
+    public Output<String> identityType() {
         return this.identityType == null ? Codegen.empty() : this.identityType;
     }
 
@@ -52,7 +52,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressFr
     @Import(name="sources")
       private final @Nullable Output<List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceArgs>> sources;
 
-    public Output<List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceArgs>> getSources() {
+    public Output<List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceArgs>> sources() {
         return this.sources == null ? Codegen.empty() : this.sources;
     }
 

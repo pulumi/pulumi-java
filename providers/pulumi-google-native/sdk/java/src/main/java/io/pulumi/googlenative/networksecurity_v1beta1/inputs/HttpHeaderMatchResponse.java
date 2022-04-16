@@ -23,7 +23,7 @@ public final class HttpHeaderMatchResponse extends io.pulumi.resources.InvokeArg
     @Import(name="headerName", required=true)
       private final String headerName;
 
-    public String getHeaderName() {
+    public String headerName() {
         return this.headerName;
     }
 
@@ -34,7 +34,7 @@ public final class HttpHeaderMatchResponse extends io.pulumi.resources.InvokeArg
     @Import(name="regexMatch", required=true)
       private final String regexMatch;
 
-    public String getRegexMatch() {
+    public String regexMatch() {
         return this.regexMatch;
     }
 

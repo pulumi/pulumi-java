@@ -42,7 +42,7 @@ public class NetworkAssociation extends io.pulumi.resources.CustomResource {
      * @return The unique ID of the target network association.
      * 
      */
-    public Output<String> getAssociationId() {
+    public Output<String> associationId() {
         return this.associationId;
     }
     /**
@@ -56,7 +56,7 @@ public class NetworkAssociation extends io.pulumi.resources.CustomResource {
      * @return The ID of the Client VPN endpoint.
      * 
      */
-    public Output<String> getClientVpnEndpointId() {
+    public Output<String> clientVpnEndpointId() {
         return this.clientVpnEndpointId;
     }
     /**
@@ -70,7 +70,7 @@ public class NetworkAssociation extends io.pulumi.resources.CustomResource {
      * @return A list of up to five custom security groups to apply to the target network. If not specified, the VPC's default security group is assigned.
      * 
      */
-    public Output<List<String>> getSecurityGroups() {
+    public Output<List<String>> securityGroups() {
         return this.securityGroups;
     }
     /**
@@ -84,7 +84,7 @@ public class NetworkAssociation extends io.pulumi.resources.CustomResource {
      * @return The current state of the target network association.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -98,7 +98,7 @@ public class NetworkAssociation extends io.pulumi.resources.CustomResource {
      * @return The ID of the subnet to associate with the Client VPN endpoint.
      * 
      */
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
     /**
@@ -112,7 +112,7 @@ public class NetworkAssociation extends io.pulumi.resources.CustomResource {
      * @return The ID of the VPC in which the target subnet is located.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

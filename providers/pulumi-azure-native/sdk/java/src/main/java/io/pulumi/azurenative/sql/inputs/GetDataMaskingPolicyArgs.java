@@ -19,7 +19,7 @@ public final class GetDataMaskingPolicyArgs extends io.pulumi.resources.InvokeAr
     @Import(name="dataMaskingPolicyName", required=true)
       private final String dataMaskingPolicyName;
 
-    public String getDataMaskingPolicyName() {
+    public String dataMaskingPolicyName() {
         return this.dataMaskingPolicyName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDataMaskingPolicyArgs extends io.pulumi.resources.InvokeAr
     @Import(name="databaseName", required=true)
       private final String databaseName;
 
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
 
@@ -41,7 +41,7 @@ public final class GetDataMaskingPolicyArgs extends io.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,7 +52,7 @@ public final class GetDataMaskingPolicyArgs extends io.pulumi.resources.InvokeAr
     @Import(name="serverName", required=true)
       private final String serverName;
 
-    public String getServerName() {
+    public String serverName() {
         return this.serverName;
     }
 

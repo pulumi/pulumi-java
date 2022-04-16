@@ -22,7 +22,7 @@ public final class SubscriptionNetworkManagerConnectionArgs extends io.pulumi.re
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -33,7 +33,7 @@ public final class SubscriptionNetworkManagerConnectionArgs extends io.pulumi.re
     @Import(name="networkManagerConnectionName")
       private final @Nullable Output<String> networkManagerConnectionName;
 
-    public Output<String> getNetworkManagerConnectionName() {
+    public Output<String> networkManagerConnectionName() {
         return this.networkManagerConnectionName == null ? Codegen.empty() : this.networkManagerConnectionName;
     }
 
@@ -44,7 +44,7 @@ public final class SubscriptionNetworkManagerConnectionArgs extends io.pulumi.re
     @Import(name="networkManagerId")
       private final @Nullable Output<String> networkManagerId;
 
-    public Output<String> getNetworkManagerId() {
+    public Output<String> networkManagerId() {
         return this.networkManagerId == null ? Codegen.empty() : this.networkManagerId;
     }
 

@@ -25,7 +25,7 @@ public final class AddressDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="forwardAddress", required=true)
       private final Output<AddressPropertiesArgs> forwardAddress;
 
-    public Output<AddressPropertiesArgs> getForwardAddress() {
+    public Output<AddressPropertiesArgs> forwardAddress() {
         return this.forwardAddress;
     }
 

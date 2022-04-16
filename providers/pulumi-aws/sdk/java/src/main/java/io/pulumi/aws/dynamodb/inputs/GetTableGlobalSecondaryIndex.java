@@ -17,7 +17,7 @@ public final class GetTableGlobalSecondaryIndex extends io.pulumi.resources.Invo
     @Import(name="hashKey", required=true)
       private final String hashKey;
 
-    public String getHashKey() {
+    public String hashKey() {
         return this.hashKey;
     }
 
@@ -28,42 +28,42 @@ public final class GetTableGlobalSecondaryIndex extends io.pulumi.resources.Invo
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
     @Import(name="nonKeyAttributes", required=true)
       private final List<String> nonKeyAttributes;
 
-    public List<String> getNonKeyAttributes() {
+    public List<String> nonKeyAttributes() {
         return this.nonKeyAttributes;
     }
 
     @Import(name="projectionType", required=true)
       private final String projectionType;
 
-    public String getProjectionType() {
+    public String projectionType() {
         return this.projectionType;
     }
 
     @Import(name="rangeKey", required=true)
       private final String rangeKey;
 
-    public String getRangeKey() {
+    public String rangeKey() {
         return this.rangeKey;
     }
 
     @Import(name="readCapacity", required=true)
       private final Integer readCapacity;
 
-    public Integer getReadCapacity() {
+    public Integer readCapacity() {
         return this.readCapacity;
     }
 
     @Import(name="writeCapacity", required=true)
       private final Integer writeCapacity;
 
-    public Integer getWriteCapacity() {
+    public Integer writeCapacity() {
         return this.writeCapacity;
     }
 

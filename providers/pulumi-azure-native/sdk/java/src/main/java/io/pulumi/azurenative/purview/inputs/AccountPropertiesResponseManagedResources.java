@@ -23,7 +23,7 @@ public final class AccountPropertiesResponseManagedResources extends io.pulumi.r
     @Import(name="eventHubNamespace", required=true)
       private final String eventHubNamespace;
 
-    public String getEventHubNamespace() {
+    public String eventHubNamespace() {
         return this.eventHubNamespace;
     }
 
@@ -34,7 +34,7 @@ public final class AccountPropertiesResponseManagedResources extends io.pulumi.r
     @Import(name="resourceGroup", required=true)
       private final String resourceGroup;
 
-    public String getResourceGroup() {
+    public String resourceGroup() {
         return this.resourceGroup;
     }
 
@@ -45,7 +45,7 @@ public final class AccountPropertiesResponseManagedResources extends io.pulumi.r
     @Import(name="storageAccount", required=true)
       private final String storageAccount;
 
-    public String getStorageAccount() {
+    public String storageAccount() {
         return this.storageAccount;
     }
 

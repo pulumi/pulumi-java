@@ -17,7 +17,7 @@ public final class FindingsFilterFindingCriteria extends io.pulumi.resources.Inv
     @Import(name="criterion")
       private final @Nullable FindingsFilterCriterion criterion;
 
-    public Optional<FindingsFilterCriterion> getCriterion() {
+    public Optional<FindingsFilterCriterion> criterion() {
         return this.criterion == null ? Optional.empty() : Optional.ofNullable(this.criterion);
     }
 

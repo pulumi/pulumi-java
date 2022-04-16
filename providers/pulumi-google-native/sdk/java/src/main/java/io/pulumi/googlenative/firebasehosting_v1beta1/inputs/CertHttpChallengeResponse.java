@@ -23,7 +23,7 @@ public final class CertHttpChallengeResponse extends io.pulumi.resources.InvokeA
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 
@@ -34,7 +34,7 @@ public final class CertHttpChallengeResponse extends io.pulumi.resources.InvokeA
     @Import(name="token", required=true)
       private final String token;
 
-    public String getToken() {
+    public String token() {
         return this.token;
     }
 

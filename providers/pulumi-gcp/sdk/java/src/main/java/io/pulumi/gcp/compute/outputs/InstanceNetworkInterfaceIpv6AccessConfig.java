@@ -38,10 +38,10 @@ public final class InstanceNetworkInterfaceIpv6AccessConfig {
         this.publicPtrDomainName = publicPtrDomainName;
     }
 
-    public Optional<String> getExternalIpv6() {
+    public Optional<String> externalIpv6() {
         return Optional.ofNullable(this.externalIpv6);
     }
-    public Optional<String> getExternalIpv6PrefixLength() {
+    public Optional<String> externalIpv6PrefixLength() {
         return Optional.ofNullable(this.externalIpv6PrefixLength);
     }
     /**
@@ -49,7 +49,7 @@ public final class InstanceNetworkInterfaceIpv6AccessConfig {
      * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
      * 
     */
-    public String getNetworkTier() {
+    public String networkTier() {
         return this.networkTier;
     }
     /**
@@ -57,7 +57,7 @@ public final class InstanceNetworkInterfaceIpv6AccessConfig {
      * records for the external IPv6 ranges..
      * 
     */
-    public Optional<String> getPublicPtrDomainName() {
+    public Optional<String> publicPtrDomainName() {
         return Optional.ofNullable(this.publicPtrDomainName);
     }
 

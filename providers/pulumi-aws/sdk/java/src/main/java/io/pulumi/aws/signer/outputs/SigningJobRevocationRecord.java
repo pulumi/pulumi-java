@@ -25,13 +25,13 @@ public final class SigningJobRevocationRecord {
         this.revokedBy = revokedBy;
     }
 
-    public Optional<String> getReason() {
+    public Optional<String> reason() {
         return Optional.ofNullable(this.reason);
     }
-    public Optional<String> getRevokedAt() {
+    public Optional<String> revokedAt() {
         return Optional.ofNullable(this.revokedAt);
     }
-    public Optional<String> getRevokedBy() {
+    public Optional<String> revokedBy() {
         return Optional.ofNullable(this.revokedBy);
     }
 

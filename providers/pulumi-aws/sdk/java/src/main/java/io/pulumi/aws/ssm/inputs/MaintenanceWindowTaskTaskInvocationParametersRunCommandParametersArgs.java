@@ -27,7 +27,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="cloudwatchConfig")
       private final @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigArgs> cloudwatchConfig;
 
-    public Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigArgs> getCloudwatchConfig() {
+    public Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigArgs> cloudwatchConfig() {
         return this.cloudwatchConfig == null ? Codegen.empty() : this.cloudwatchConfig;
     }
 
@@ -38,7 +38,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 
@@ -49,7 +49,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="documentHash")
       private final @Nullable Output<String> documentHash;
 
-    public Output<String> getDocumentHash() {
+    public Output<String> documentHash() {
         return this.documentHash == null ? Codegen.empty() : this.documentHash;
     }
 
@@ -60,7 +60,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="documentHashType")
       private final @Nullable Output<String> documentHashType;
 
-    public Output<String> getDocumentHashType() {
+    public Output<String> documentHashType() {
         return this.documentHashType == null ? Codegen.empty() : this.documentHashType;
     }
 
@@ -71,7 +71,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="documentVersion")
       private final @Nullable Output<String> documentVersion;
 
-    public Output<String> getDocumentVersion() {
+    public Output<String> documentVersion() {
         return this.documentVersion == null ? Codegen.empty() : this.documentVersion;
     }
 
@@ -82,7 +82,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="notificationConfig")
       private final @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs> notificationConfig;
 
-    public Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs> getNotificationConfig() {
+    public Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs> notificationConfig() {
         return this.notificationConfig == null ? Codegen.empty() : this.notificationConfig;
     }
 
@@ -93,7 +93,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="outputS3Bucket")
       private final @Nullable Output<String> outputS3Bucket;
 
-    public Output<String> getOutputS3Bucket() {
+    public Output<String> outputS3Bucket() {
         return this.outputS3Bucket == null ? Codegen.empty() : this.outputS3Bucket;
     }
 
@@ -104,7 +104,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="outputS3KeyPrefix")
       private final @Nullable Output<String> outputS3KeyPrefix;
 
-    public Output<String> getOutputS3KeyPrefix() {
+    public Output<String> outputS3KeyPrefix() {
         return this.outputS3KeyPrefix == null ? Codegen.empty() : this.outputS3KeyPrefix;
     }
 
@@ -115,7 +115,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="parameters")
       private final @Nullable Output<List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs>> parameters;
 
-    public Output<List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs>> getParameters() {
+    public Output<List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -126,7 +126,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="serviceRoleArn")
       private final @Nullable Output<String> serviceRoleArn;
 
-    public Output<String> getServiceRoleArn() {
+    public Output<String> serviceRoleArn() {
         return this.serviceRoleArn == null ? Codegen.empty() : this.serviceRoleArn;
     }
 
@@ -137,7 +137,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="timeoutSeconds")
       private final @Nullable Output<Integer> timeoutSeconds;
 
-    public Output<Integer> getTimeoutSeconds() {
+    public Output<Integer> timeoutSeconds() {
         return this.timeoutSeconds == null ? Codegen.empty() : this.timeoutSeconds;
     }
 

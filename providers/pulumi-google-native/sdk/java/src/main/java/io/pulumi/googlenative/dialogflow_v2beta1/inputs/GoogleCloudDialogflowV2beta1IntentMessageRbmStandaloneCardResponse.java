@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardRes
     @Import(name="cardContent", required=true)
       private final GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse cardContent;
 
-    public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse getCardContent() {
+    public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse cardContent() {
         return this.cardContent;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardRes
     @Import(name="cardOrientation", required=true)
       private final String cardOrientation;
 
-    public String getCardOrientation() {
+    public String cardOrientation() {
         return this.cardOrientation;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardRes
     @Import(name="thumbnailImageAlignment", required=true)
       private final String thumbnailImageAlignment;
 
-    public String getThumbnailImageAlignment() {
+    public String thumbnailImageAlignment() {
         return this.thumbnailImageAlignment;
     }
 

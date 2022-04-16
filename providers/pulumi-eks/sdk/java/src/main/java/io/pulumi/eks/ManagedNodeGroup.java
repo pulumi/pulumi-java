@@ -32,7 +32,7 @@ public class ManagedNodeGroup extends io.pulumi.resources.ComponentResource {
      * @return The AWS managed node group.
      * 
      */
-    public Output<NodeGroup> getNodeGroup() {
+    public Output<NodeGroup> nodeGroup() {
         return this.nodeGroup;
     }
 

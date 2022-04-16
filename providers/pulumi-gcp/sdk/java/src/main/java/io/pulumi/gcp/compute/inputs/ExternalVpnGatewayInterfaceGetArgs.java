@@ -27,7 +27,7 @@ public final class ExternalVpnGatewayInterfaceGetArgs extends io.pulumi.resource
     @Import(name="id")
       private final @Nullable Output<Integer> id;
 
-    public Output<Integer> getId() {
+    public Output<Integer> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -41,7 +41,7 @@ public final class ExternalVpnGatewayInterfaceGetArgs extends io.pulumi.resource
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 

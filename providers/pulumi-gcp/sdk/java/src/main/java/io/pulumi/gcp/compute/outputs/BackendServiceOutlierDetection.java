@@ -130,7 +130,7 @@ public final class BackendServiceOutlierDetection {
      * Structure is documented below.
      * 
     */
-    public Optional<BackendServiceOutlierDetectionBaseEjectionTime> getBaseEjectionTime() {
+    public Optional<BackendServiceOutlierDetectionBaseEjectionTime> baseEjectionTime() {
         return Optional.ofNullable(this.baseEjectionTime);
     }
     /**
@@ -139,7 +139,7 @@ public final class BackendServiceOutlierDetection {
      * Defaults to 5.
      * 
     */
-    public Optional<Integer> getConsecutiveErrors() {
+    public Optional<Integer> consecutiveErrors() {
         return Optional.ofNullable(this.consecutiveErrors);
     }
     /**
@@ -148,7 +148,7 @@ public final class BackendServiceOutlierDetection {
      * gateway failure ejection occurs. Defaults to 5.
      * 
     */
-    public Optional<Integer> getConsecutiveGatewayFailure() {
+    public Optional<Integer> consecutiveGatewayFailure() {
         return Optional.ofNullable(this.consecutiveGatewayFailure);
     }
     /**
@@ -157,7 +157,7 @@ public final class BackendServiceOutlierDetection {
      * ejection or to ramp it up slowly. Defaults to 100.
      * 
     */
-    public Optional<Integer> getEnforcingConsecutiveErrors() {
+    public Optional<Integer> enforcingConsecutiveErrors() {
         return Optional.ofNullable(this.enforcingConsecutiveErrors);
     }
     /**
@@ -166,7 +166,7 @@ public final class BackendServiceOutlierDetection {
      * used to disable ejection or to ramp it up slowly. Defaults to 0.
      * 
     */
-    public Optional<Integer> getEnforcingConsecutiveGatewayFailure() {
+    public Optional<Integer> enforcingConsecutiveGatewayFailure() {
         return Optional.ofNullable(this.enforcingConsecutiveGatewayFailure);
     }
     /**
@@ -175,7 +175,7 @@ public final class BackendServiceOutlierDetection {
      * disable ejection or to ramp it up slowly. Defaults to 100.
      * 
     */
-    public Optional<Integer> getEnforcingSuccessRate() {
+    public Optional<Integer> enforcingSuccessRate() {
         return Optional.ofNullable(this.enforcingSuccessRate);
     }
     /**
@@ -184,7 +184,7 @@ public final class BackendServiceOutlierDetection {
      * Structure is documented below.
      * 
     */
-    public Optional<BackendServiceOutlierDetectionInterval> getInterval() {
+    public Optional<BackendServiceOutlierDetectionInterval> interval() {
         return Optional.ofNullable(this.interval);
     }
     /**
@@ -192,7 +192,7 @@ public final class BackendServiceOutlierDetection {
      * that can be ejected. Defaults to 10%.
      * 
     */
-    public Optional<Integer> getMaxEjectionPercent() {
+    public Optional<Integer> maxEjectionPercent() {
         return Optional.ofNullable(this.maxEjectionPercent);
     }
     /**
@@ -202,7 +202,7 @@ public final class BackendServiceOutlierDetection {
      * cluster. Defaults to 5.
      * 
     */
-    public Optional<Integer> getSuccessRateMinimumHosts() {
+    public Optional<Integer> successRateMinimumHosts() {
         return Optional.ofNullable(this.successRateMinimumHosts);
     }
     /**
@@ -213,7 +213,7 @@ public final class BackendServiceOutlierDetection {
      * to 100.
      * 
     */
-    public Optional<Integer> getSuccessRateRequestVolume() {
+    public Optional<Integer> successRateRequestVolume() {
         return Optional.ofNullable(this.successRateRequestVolume);
     }
     /**
@@ -225,7 +225,7 @@ public final class BackendServiceOutlierDetection {
      * runtime value should be 1900. Defaults to 1900.
      * 
     */
-    public Optional<Integer> getSuccessRateStdevFactor() {
+    public Optional<Integer> successRateStdevFactor() {
         return Optional.ofNullable(this.successRateStdevFactor);
     }
 

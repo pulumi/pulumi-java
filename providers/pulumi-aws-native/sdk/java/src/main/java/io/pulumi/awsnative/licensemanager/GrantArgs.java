@@ -19,7 +19,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowedOperations")
       private final @Nullable Output<List<String>> allowedOperations;
 
-    public Output<List<String>> getAllowedOperations() {
+    public Output<List<String>> allowedOperations() {
         return this.allowedOperations == null ? Codegen.empty() : this.allowedOperations;
     }
 
@@ -30,7 +30,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="grantName")
       private final @Nullable Output<String> grantName;
 
-    public Output<String> getGrantName() {
+    public Output<String> grantName() {
         return this.grantName == null ? Codegen.empty() : this.grantName;
     }
 
@@ -41,7 +41,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="homeRegion")
       private final @Nullable Output<String> homeRegion;
 
-    public Output<String> getHomeRegion() {
+    public Output<String> homeRegion() {
         return this.homeRegion == null ? Codegen.empty() : this.homeRegion;
     }
 
@@ -52,21 +52,21 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="licenseArn")
       private final @Nullable Output<String> licenseArn;
 
-    public Output<String> getLicenseArn() {
+    public Output<String> licenseArn() {
         return this.licenseArn == null ? Codegen.empty() : this.licenseArn;
     }
 
     @Import(name="principals")
       private final @Nullable Output<List<String>> principals;
 
-    public Output<List<String>> getPrincipals() {
+    public Output<List<String>> principals() {
         return this.principals == null ? Codegen.empty() : this.principals;
     }
 
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

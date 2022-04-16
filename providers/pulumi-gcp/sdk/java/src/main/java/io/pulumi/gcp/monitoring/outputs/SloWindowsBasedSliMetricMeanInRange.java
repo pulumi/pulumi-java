@@ -51,7 +51,7 @@ public final class SloWindowsBasedSliMetricMeanInRange {
      * Structure is documented below.
      * 
     */
-    public SloWindowsBasedSliMetricMeanInRangeRange getRange() {
+    public SloWindowsBasedSliMetricMeanInRangeRange range() {
         return this.range;
     }
     /**
@@ -64,7 +64,7 @@ public final class SloWindowsBasedSliMetricMeanInRange {
      * `range.min <= X <= range.max` for a good window.
      * 
     */
-    public String getTimeSeries() {
+    public String timeSeries() {
         return this.timeSeries;
     }
 

@@ -25,7 +25,7 @@ public final class MetadataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="fingerprint", required=true)
       private final String fingerprint;
 
-    public String getFingerprint() {
+    public String fingerprint() {
         return this.fingerprint;
     }
 
@@ -36,7 +36,7 @@ public final class MetadataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="items", required=true)
       private final List<MetadataItemsItemResponse> items;
 
-    public List<MetadataItemsItemResponse> getItems() {
+    public List<MetadataItemsItemResponse> items() {
         return this.items;
     }
 
@@ -47,7 +47,7 @@ public final class MetadataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 

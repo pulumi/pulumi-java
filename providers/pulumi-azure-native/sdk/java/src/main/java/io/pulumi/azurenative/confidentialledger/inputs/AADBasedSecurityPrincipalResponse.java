@@ -25,7 +25,7 @@ public final class AADBasedSecurityPrincipalResponse extends io.pulumi.resources
     @Import(name="ledgerRoleName")
       private final @Nullable String ledgerRoleName;
 
-    public Optional<String> getLedgerRoleName() {
+    public Optional<String> ledgerRoleName() {
         return this.ledgerRoleName == null ? Optional.empty() : Optional.ofNullable(this.ledgerRoleName);
     }
 
@@ -36,7 +36,7 @@ public final class AADBasedSecurityPrincipalResponse extends io.pulumi.resources
     @Import(name="principalId")
       private final @Nullable String principalId;
 
-    public Optional<String> getPrincipalId() {
+    public Optional<String> principalId() {
         return this.principalId == null ? Optional.empty() : Optional.ofNullable(this.principalId);
     }
 
@@ -47,7 +47,7 @@ public final class AADBasedSecurityPrincipalResponse extends io.pulumi.resources
     @Import(name="tenantId")
       private final @Nullable String tenantId;
 
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
     }
 

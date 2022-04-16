@@ -33,7 +33,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="administratorLogin")
       private final @Nullable Output<String> administratorLogin;
 
-    public Output<String> getAdministratorLogin() {
+    public Output<String> administratorLogin() {
         return this.administratorLogin == null ? Codegen.empty() : this.administratorLogin;
     }
 
@@ -44,7 +44,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="administratorLoginPassword")
       private final @Nullable Output<String> administratorLoginPassword;
 
-    public Output<String> getAdministratorLoginPassword() {
+    public Output<String> administratorLoginPassword() {
         return this.administratorLoginPassword == null ? Codegen.empty() : this.administratorLoginPassword;
     }
 
@@ -55,7 +55,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="administrators")
       private final @Nullable Output<ManagedInstanceExternalAdministratorArgs> administrators;
 
-    public Output<ManagedInstanceExternalAdministratorArgs> getAdministrators() {
+    public Output<ManagedInstanceExternalAdministratorArgs> administrators() {
         return this.administrators == null ? Codegen.empty() : this.administrators;
     }
 
@@ -66,7 +66,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="collation")
       private final @Nullable Output<String> collation;
 
-    public Output<String> getCollation() {
+    public Output<String> collation() {
         return this.collation == null ? Codegen.empty() : this.collation;
     }
 
@@ -77,7 +77,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="dnsZonePartner")
       private final @Nullable Output<String> dnsZonePartner;
 
-    public Output<String> getDnsZonePartner() {
+    public Output<String> dnsZonePartner() {
         return this.dnsZonePartner == null ? Codegen.empty() : this.dnsZonePartner;
     }
 
@@ -88,7 +88,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="identity")
       private final @Nullable Output<ResourceIdentityArgs> identity;
 
-    public Output<ResourceIdentityArgs> getIdentity() {
+    public Output<ResourceIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -99,7 +99,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="instancePoolId")
       private final @Nullable Output<String> instancePoolId;
 
-    public Output<String> getInstancePoolId() {
+    public Output<String> instancePoolId() {
         return this.instancePoolId == null ? Codegen.empty() : this.instancePoolId;
     }
 
@@ -110,7 +110,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="keyId")
       private final @Nullable Output<String> keyId;
 
-    public Output<String> getKeyId() {
+    public Output<String> keyId() {
         return this.keyId == null ? Codegen.empty() : this.keyId;
     }
 
@@ -121,7 +121,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="licenseType")
       private final @Nullable Output<Either<String,ManagedInstanceLicenseType>> licenseType;
 
-    public Output<Either<String,ManagedInstanceLicenseType>> getLicenseType() {
+    public Output<Either<String,ManagedInstanceLicenseType>> licenseType() {
         return this.licenseType == null ? Codegen.empty() : this.licenseType;
     }
 
@@ -132,7 +132,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -143,7 +143,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="maintenanceConfigurationId")
       private final @Nullable Output<String> maintenanceConfigurationId;
 
-    public Output<String> getMaintenanceConfigurationId() {
+    public Output<String> maintenanceConfigurationId() {
         return this.maintenanceConfigurationId == null ? Codegen.empty() : this.maintenanceConfigurationId;
     }
 
@@ -158,7 +158,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="managedInstanceCreateMode")
       private final @Nullable Output<Either<String,ManagedServerCreateMode>> managedInstanceCreateMode;
 
-    public Output<Either<String,ManagedServerCreateMode>> getManagedInstanceCreateMode() {
+    public Output<Either<String,ManagedServerCreateMode>> managedInstanceCreateMode() {
         return this.managedInstanceCreateMode == null ? Codegen.empty() : this.managedInstanceCreateMode;
     }
 
@@ -169,7 +169,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="managedInstanceName")
       private final @Nullable Output<String> managedInstanceName;
 
-    public Output<String> getManagedInstanceName() {
+    public Output<String> managedInstanceName() {
         return this.managedInstanceName == null ? Codegen.empty() : this.managedInstanceName;
     }
 
@@ -180,7 +180,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="minimalTlsVersion")
       private final @Nullable Output<String> minimalTlsVersion;
 
-    public Output<String> getMinimalTlsVersion() {
+    public Output<String> minimalTlsVersion() {
         return this.minimalTlsVersion == null ? Codegen.empty() : this.minimalTlsVersion;
     }
 
@@ -191,7 +191,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="primaryUserAssignedIdentityId")
       private final @Nullable Output<String> primaryUserAssignedIdentityId;
 
-    public Output<String> getPrimaryUserAssignedIdentityId() {
+    public Output<String> primaryUserAssignedIdentityId() {
         return this.primaryUserAssignedIdentityId == null ? Codegen.empty() : this.primaryUserAssignedIdentityId;
     }
 
@@ -202,7 +202,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="proxyOverride")
       private final @Nullable Output<Either<String,ManagedInstanceProxyOverride>> proxyOverride;
 
-    public Output<Either<String,ManagedInstanceProxyOverride>> getProxyOverride() {
+    public Output<Either<String,ManagedInstanceProxyOverride>> proxyOverride() {
         return this.proxyOverride == null ? Codegen.empty() : this.proxyOverride;
     }
 
@@ -213,7 +213,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="publicDataEndpointEnabled")
       private final @Nullable Output<Boolean> publicDataEndpointEnabled;
 
-    public Output<Boolean> getPublicDataEndpointEnabled() {
+    public Output<Boolean> publicDataEndpointEnabled() {
         return this.publicDataEndpointEnabled == null ? Codegen.empty() : this.publicDataEndpointEnabled;
     }
 
@@ -224,7 +224,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -235,7 +235,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="restorePointInTime")
       private final @Nullable Output<String> restorePointInTime;
 
-    public Output<String> getRestorePointInTime() {
+    public Output<String> restorePointInTime() {
         return this.restorePointInTime == null ? Codegen.empty() : this.restorePointInTime;
     }
 
@@ -246,7 +246,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -257,7 +257,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="sourceManagedInstanceId")
       private final @Nullable Output<String> sourceManagedInstanceId;
 
-    public Output<String> getSourceManagedInstanceId() {
+    public Output<String> sourceManagedInstanceId() {
         return this.sourceManagedInstanceId == null ? Codegen.empty() : this.sourceManagedInstanceId;
     }
 
@@ -268,7 +268,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="storageAccountType")
       private final @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
 
-    public Output<Either<String,StorageAccountType>> getStorageAccountType() {
+    public Output<Either<String,StorageAccountType>> storageAccountType() {
         return this.storageAccountType == null ? Codegen.empty() : this.storageAccountType;
     }
 
@@ -279,7 +279,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="storageSizeInGB")
       private final @Nullable Output<Integer> storageSizeInGB;
 
-    public Output<Integer> getStorageSizeInGB() {
+    public Output<Integer> storageSizeInGB() {
         return this.storageSizeInGB == null ? Codegen.empty() : this.storageSizeInGB;
     }
 
@@ -290,7 +290,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
@@ -301,7 +301,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -317,7 +317,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="timezoneId")
       private final @Nullable Output<String> timezoneId;
 
-    public Output<String> getTimezoneId() {
+    public Output<String> timezoneId() {
         return this.timezoneId == null ? Codegen.empty() : this.timezoneId;
     }
 
@@ -328,7 +328,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="vCores")
       private final @Nullable Output<Integer> vCores;
 
-    public Output<Integer> getVCores() {
+    public Output<Integer> vCores() {
         return this.vCores == null ? Codegen.empty() : this.vCores;
     }
 
@@ -339,7 +339,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="zoneRedundant")
       private final @Nullable Output<Boolean> zoneRedundant;
 
-    public Output<Boolean> getZoneRedundant() {
+    public Output<Boolean> zoneRedundant() {
         return this.zoneRedundant == null ? Codegen.empty() : this.zoneRedundant;
     }
 

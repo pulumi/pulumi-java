@@ -17,21 +17,21 @@ public final class GetChannelPartnerLinkArgs extends io.pulumi.resources.InvokeA
     @Import(name="accountId", required=true)
       private final String accountId;
 
-    public String getAccountId() {
+    public String accountId() {
         return this.accountId;
     }
 
     @Import(name="channelPartnerLinkId", required=true)
       private final String channelPartnerLinkId;
 
-    public String getChannelPartnerLinkId() {
+    public String channelPartnerLinkId() {
         return this.channelPartnerLinkId;
     }
 
     @Import(name="view")
       private final @Nullable String view;
 
-    public Optional<String> getView() {
+    public Optional<String> view() {
         return this.view == null ? Optional.empty() : Optional.ofNullable(this.view);
     }
 

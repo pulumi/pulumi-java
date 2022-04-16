@@ -32,14 +32,14 @@ public final class GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse 
      * Column heading.
      * 
     */
-    public String getHeader() {
+    public String header() {
         return this.header;
     }
     /**
      * Optional. Defines text alignment for all cells in this column.
      * 
     */
-    public String getHorizontalAlignment() {
+    public String horizontalAlignment() {
         return this.horizontalAlignment;
     }
 

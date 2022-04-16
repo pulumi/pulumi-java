@@ -28,7 +28,7 @@ public final class IntegrationServiceEnvironmentAccessEndpointArgs extends io.pu
     @Import(name="type")
       private final @Nullable Output<Either<String,IntegrationServiceEnvironmentAccessEndpointType>> type;
 
-    public Output<Either<String,IntegrationServiceEnvironmentAccessEndpointType>> getType() {
+    public Output<Either<String,IntegrationServiceEnvironmentAccessEndpointType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

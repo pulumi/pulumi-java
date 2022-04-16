@@ -39,21 +39,21 @@ public final class BrokerMaintenanceWindowStartTime {
      * Day of the week, e.g., `MONDAY`, `TUESDAY`, or `WEDNESDAY`.
      * 
     */
-    public String getDayOfWeek() {
+    public String dayOfWeek() {
         return this.dayOfWeek;
     }
     /**
      * Time, in 24-hour format, e.g., `02:00`.
      * 
     */
-    public String getTimeOfDay() {
+    public String timeOfDay() {
         return this.timeOfDay;
     }
     /**
      * Time zone in either the Country/City format or the UTC offset format, e.g., `CET`.
      * 
     */
-    public String getTimeZone() {
+    public String timeZone() {
         return this.timeZone;
     }
 

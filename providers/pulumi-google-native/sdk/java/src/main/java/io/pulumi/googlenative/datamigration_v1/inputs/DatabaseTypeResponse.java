@@ -23,7 +23,7 @@ public final class DatabaseTypeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="engine", required=true)
       private final String engine;
 
-    public String getEngine() {
+    public String engine() {
         return this.engine;
     }
 
@@ -34,7 +34,7 @@ public final class DatabaseTypeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="provider", required=true)
       private final String provider;
 
-    public String getProvider() {
+    public String provider() {
         return this.provider;
     }
 

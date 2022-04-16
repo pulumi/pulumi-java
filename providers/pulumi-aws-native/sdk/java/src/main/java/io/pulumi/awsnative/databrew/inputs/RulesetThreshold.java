@@ -19,21 +19,21 @@ public final class RulesetThreshold extends io.pulumi.resources.InvokeArgs {
     @Import(name="type")
       private final @Nullable RulesetThresholdType type;
 
-    public Optional<RulesetThresholdType> getType() {
+    public Optional<RulesetThresholdType> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
     @Import(name="unit")
       private final @Nullable RulesetThresholdUnit unit;
 
-    public Optional<RulesetThresholdUnit> getUnit() {
+    public Optional<RulesetThresholdUnit> unit() {
         return this.unit == null ? Optional.empty() : Optional.ofNullable(this.unit);
     }
 
     @Import(name="value", required=true)
       private final Double value;
 
-    public Double getValue() {
+    public Double value() {
         return this.value;
     }
 

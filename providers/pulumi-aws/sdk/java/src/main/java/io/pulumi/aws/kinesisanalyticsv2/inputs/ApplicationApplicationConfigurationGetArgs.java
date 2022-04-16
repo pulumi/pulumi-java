@@ -28,7 +28,7 @@ public final class ApplicationApplicationConfigurationGetArgs extends io.pulumi.
     @Import(name="applicationCodeConfiguration", required=true)
       private final Output<ApplicationApplicationConfigurationApplicationCodeConfigurationGetArgs> applicationCodeConfiguration;
 
-    public Output<ApplicationApplicationConfigurationApplicationCodeConfigurationGetArgs> getApplicationCodeConfiguration() {
+    public Output<ApplicationApplicationConfigurationApplicationCodeConfigurationGetArgs> applicationCodeConfiguration() {
         return this.applicationCodeConfiguration;
     }
 
@@ -39,7 +39,7 @@ public final class ApplicationApplicationConfigurationGetArgs extends io.pulumi.
     @Import(name="applicationSnapshotConfiguration")
       private final @Nullable Output<ApplicationApplicationConfigurationApplicationSnapshotConfigurationGetArgs> applicationSnapshotConfiguration;
 
-    public Output<ApplicationApplicationConfigurationApplicationSnapshotConfigurationGetArgs> getApplicationSnapshotConfiguration() {
+    public Output<ApplicationApplicationConfigurationApplicationSnapshotConfigurationGetArgs> applicationSnapshotConfiguration() {
         return this.applicationSnapshotConfiguration == null ? Codegen.empty() : this.applicationSnapshotConfiguration;
     }
 
@@ -50,7 +50,7 @@ public final class ApplicationApplicationConfigurationGetArgs extends io.pulumi.
     @Import(name="environmentProperties")
       private final @Nullable Output<ApplicationApplicationConfigurationEnvironmentPropertiesGetArgs> environmentProperties;
 
-    public Output<ApplicationApplicationConfigurationEnvironmentPropertiesGetArgs> getEnvironmentProperties() {
+    public Output<ApplicationApplicationConfigurationEnvironmentPropertiesGetArgs> environmentProperties() {
         return this.environmentProperties == null ? Codegen.empty() : this.environmentProperties;
     }
 
@@ -61,7 +61,7 @@ public final class ApplicationApplicationConfigurationGetArgs extends io.pulumi.
     @Import(name="flinkApplicationConfiguration")
       private final @Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationGetArgs> flinkApplicationConfiguration;
 
-    public Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationGetArgs> getFlinkApplicationConfiguration() {
+    public Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationGetArgs> flinkApplicationConfiguration() {
         return this.flinkApplicationConfiguration == null ? Codegen.empty() : this.flinkApplicationConfiguration;
     }
 
@@ -72,7 +72,7 @@ public final class ApplicationApplicationConfigurationGetArgs extends io.pulumi.
     @Import(name="runConfiguration")
       private final @Nullable Output<ApplicationApplicationConfigurationRunConfigurationGetArgs> runConfiguration;
 
-    public Output<ApplicationApplicationConfigurationRunConfigurationGetArgs> getRunConfiguration() {
+    public Output<ApplicationApplicationConfigurationRunConfigurationGetArgs> runConfiguration() {
         return this.runConfiguration == null ? Codegen.empty() : this.runConfiguration;
     }
 
@@ -83,7 +83,7 @@ public final class ApplicationApplicationConfigurationGetArgs extends io.pulumi.
     @Import(name="sqlApplicationConfiguration")
       private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs> sqlApplicationConfiguration;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs> getSqlApplicationConfiguration() {
+    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs> sqlApplicationConfiguration() {
         return this.sqlApplicationConfiguration == null ? Codegen.empty() : this.sqlApplicationConfiguration;
     }
 
@@ -94,7 +94,7 @@ public final class ApplicationApplicationConfigurationGetArgs extends io.pulumi.
     @Import(name="vpcConfiguration")
       private final @Nullable Output<ApplicationApplicationConfigurationVpcConfigurationGetArgs> vpcConfiguration;
 
-    public Output<ApplicationApplicationConfigurationVpcConfigurationGetArgs> getVpcConfiguration() {
+    public Output<ApplicationApplicationConfigurationVpcConfigurationGetArgs> vpcConfiguration() {
         return this.vpcConfiguration == null ? Codegen.empty() : this.vpcConfiguration;
     }
 

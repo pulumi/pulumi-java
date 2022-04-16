@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2RequestedOptionsResponse extends io.pulumi.
     @Import(name="jobConfig", required=true)
       private final GooglePrivacyDlpV2InspectJobConfigResponse jobConfig;
 
-    public GooglePrivacyDlpV2InspectJobConfigResponse getJobConfig() {
+    public GooglePrivacyDlpV2InspectJobConfigResponse jobConfig() {
         return this.jobConfig;
     }
 
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2RequestedOptionsResponse extends io.pulumi.
     @Import(name="snapshotInspectTemplate", required=true)
       private final GooglePrivacyDlpV2InspectTemplateResponse snapshotInspectTemplate;
 
-    public GooglePrivacyDlpV2InspectTemplateResponse getSnapshotInspectTemplate() {
+    public GooglePrivacyDlpV2InspectTemplateResponse snapshotInspectTemplate() {
         return this.snapshotInspectTemplate;
     }
 

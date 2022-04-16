@@ -22,7 +22,7 @@ public final class ReservationShareSettingsProjectMapGetArgs extends io.pulumi.r
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -33,7 +33,7 @@ public final class ReservationShareSettingsProjectMapGetArgs extends io.pulumi.r
     @Import(name="projectId")
       private final @Nullable Output<String> projectId;
 
-    public Output<String> getProjectId() {
+    public Output<String> projectId() {
         return this.projectId == null ? Codegen.empty() : this.projectId;
     }
 

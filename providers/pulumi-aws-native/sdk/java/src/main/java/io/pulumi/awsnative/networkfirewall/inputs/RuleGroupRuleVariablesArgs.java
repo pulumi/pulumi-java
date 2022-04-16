@@ -18,14 +18,14 @@ public final class RuleGroupRuleVariablesArgs extends io.pulumi.resources.Resour
     @Import(name="iPSets")
       private final @Nullable Output<Object> iPSets;
 
-    public Output<Object> getIPSets() {
+    public Output<Object> iPSets() {
         return this.iPSets == null ? Codegen.empty() : this.iPSets;
     }
 
     @Import(name="portSets")
       private final @Nullable Output<Object> portSets;
 
-    public Output<Object> getPortSets() {
+    public Output<Object> portSets() {
         return this.portSets == null ? Codegen.empty() : this.portSets;
     }
 

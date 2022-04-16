@@ -31,7 +31,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
     @Import(name="componentSource")
       private final @Nullable Output<List<ComponentSourceArgs>> componentSource;
 
-    public Output<List<ComponentSourceArgs>> getComponentSource() {
+    public Output<List<ComponentSourceArgs>> componentSource() {
         return this.componentSource == null ? Codegen.empty() : this.componentSource;
     }
 
@@ -42,7 +42,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
     @Import(name="componentTransform")
       private final @Nullable Output<List<ComponentTransformArgs>> componentTransform;
 
-    public Output<List<ComponentTransformArgs>> getComponentTransform() {
+    public Output<List<ComponentTransformArgs>> componentTransform() {
         return this.componentTransform == null ? Codegen.empty() : this.componentTransform;
     }
 
@@ -53,7 +53,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -64,7 +64,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
     @Import(name="inputSource")
       private final @Nullable Output<List<StageSourceArgs>> inputSource;
 
-    public Output<List<StageSourceArgs>> getInputSource() {
+    public Output<List<StageSourceArgs>> inputSource() {
         return this.inputSource == null ? Codegen.empty() : this.inputSource;
     }
 
@@ -75,7 +75,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
     @Import(name="kind")
       private final @Nullable Output<ExecutionStageSummaryKind> kind;
 
-    public Output<ExecutionStageSummaryKind> getKind() {
+    public Output<ExecutionStageSummaryKind> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -86,7 +86,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -97,7 +97,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
     @Import(name="outputSource")
       private final @Nullable Output<List<StageSourceArgs>> outputSource;
 
-    public Output<List<StageSourceArgs>> getOutputSource() {
+    public Output<List<StageSourceArgs>> outputSource() {
         return this.outputSource == null ? Codegen.empty() : this.outputSource;
     }
 
@@ -108,7 +108,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
     @Import(name="prerequisiteStage")
       private final @Nullable Output<List<String>> prerequisiteStage;
 
-    public Output<List<String>> getPrerequisiteStage() {
+    public Output<List<String>> prerequisiteStage() {
         return this.prerequisiteStage == null ? Codegen.empty() : this.prerequisiteStage;
     }
 

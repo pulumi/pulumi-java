@@ -26,7 +26,7 @@ public final class ModelStateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="published")
       private final @Nullable Output<Boolean> published;
 
-    public Output<Boolean> getPublished() {
+    public Output<Boolean> published() {
         return this.published == null ? Codegen.empty() : this.published;
     }
 

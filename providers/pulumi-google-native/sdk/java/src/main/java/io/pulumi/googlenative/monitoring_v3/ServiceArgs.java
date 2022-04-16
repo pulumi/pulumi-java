@@ -30,7 +30,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appEngine")
       private final @Nullable Output<AppEngineArgs> appEngine;
 
-    public Output<AppEngineArgs> getAppEngine() {
+    public Output<AppEngineArgs> appEngine() {
         return this.appEngine == null ? Codegen.empty() : this.appEngine;
     }
 
@@ -41,7 +41,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudEndpoints")
       private final @Nullable Output<CloudEndpointsArgs> cloudEndpoints;
 
-    public Output<CloudEndpointsArgs> getCloudEndpoints() {
+    public Output<CloudEndpointsArgs> cloudEndpoints() {
         return this.cloudEndpoints == null ? Codegen.empty() : this.cloudEndpoints;
     }
 
@@ -52,7 +52,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterIstio")
       private final @Nullable Output<ClusterIstioArgs> clusterIstio;
 
-    public Output<ClusterIstioArgs> getClusterIstio() {
+    public Output<ClusterIstioArgs> clusterIstio() {
         return this.clusterIstio == null ? Codegen.empty() : this.clusterIstio;
     }
 
@@ -63,7 +63,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="custom")
       private final @Nullable Output<CustomArgs> custom;
 
-    public Output<CustomArgs> getCustom() {
+    public Output<CustomArgs> custom() {
         return this.custom == null ? Codegen.empty() : this.custom;
     }
 
@@ -74,7 +74,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -85,7 +85,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="istioCanonicalService")
       private final @Nullable Output<IstioCanonicalServiceArgs> istioCanonicalService;
 
-    public Output<IstioCanonicalServiceArgs> getIstioCanonicalService() {
+    public Output<IstioCanonicalServiceArgs> istioCanonicalService() {
         return this.istioCanonicalService == null ? Codegen.empty() : this.istioCanonicalService;
     }
 
@@ -96,7 +96,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="meshIstio")
       private final @Nullable Output<MeshIstioArgs> meshIstio;
 
-    public Output<MeshIstioArgs> getMeshIstio() {
+    public Output<MeshIstioArgs> meshIstio() {
         return this.meshIstio == null ? Codegen.empty() : this.meshIstio;
     }
 
@@ -107,14 +107,14 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="serviceId")
       private final @Nullable Output<String> serviceId;
 
-    public Output<String> getServiceId() {
+    public Output<String> serviceId() {
         return this.serviceId == null ? Codegen.empty() : this.serviceId;
     }
 
@@ -125,7 +125,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="telemetry")
       private final @Nullable Output<TelemetryArgs> telemetry;
 
-    public Output<TelemetryArgs> getTelemetry() {
+    public Output<TelemetryArgs> telemetry() {
         return this.telemetry == null ? Codegen.empty() : this.telemetry;
     }
 
@@ -136,21 +136,21 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userLabels")
       private final @Nullable Output<Map<String,String>> userLabels;
 
-    public Output<Map<String,String>> getUserLabels() {
+    public Output<Map<String,String>> userLabels() {
         return this.userLabels == null ? Codegen.empty() : this.userLabels;
     }
 
     @Import(name="v3Id", required=true)
       private final Output<String> v3Id;
 
-    public Output<String> getV3Id() {
+    public Output<String> v3Id() {
         return this.v3Id;
     }
 
     @Import(name="v3Id1", required=true)
       private final Output<String> v3Id1;
 
-    public Output<String> getV3Id1() {
+    public Output<String> v3Id1() {
         return this.v3Id1;
     }
 

@@ -28,7 +28,7 @@ public final class LinkedRouterApplianceInstancesArgs extends io.pulumi.resource
     @Import(name="instances")
       private final @Nullable Output<List<RouterApplianceInstanceArgs>> instances;
 
-    public Output<List<RouterApplianceInstanceArgs>> getInstances() {
+    public Output<List<RouterApplianceInstanceArgs>> instances() {
         return this.instances == null ? Codegen.empty() : this.instances;
     }
 
@@ -39,7 +39,7 @@ public final class LinkedRouterApplianceInstancesArgs extends io.pulumi.resource
     @Import(name="siteToSiteDataTransfer")
       private final @Nullable Output<Boolean> siteToSiteDataTransfer;
 
-    public Output<Boolean> getSiteToSiteDataTransfer() {
+    public Output<Boolean> siteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer == null ? Codegen.empty() : this.siteToSiteDataTransfer;
     }
 

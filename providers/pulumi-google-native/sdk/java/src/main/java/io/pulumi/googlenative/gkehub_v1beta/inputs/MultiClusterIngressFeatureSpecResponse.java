@@ -23,7 +23,7 @@ public final class MultiClusterIngressFeatureSpecResponse extends io.pulumi.reso
     @Import(name="configMembership", required=true)
       private final String configMembership;
 
-    public String getConfigMembership() {
+    public String configMembership() {
         return this.configMembership;
     }
 

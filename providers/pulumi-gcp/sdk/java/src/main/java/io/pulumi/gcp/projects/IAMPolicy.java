@@ -100,7 +100,7 @@ public class IAMPolicy extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the project's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -118,7 +118,7 @@ public class IAMPolicy extends io.pulumi.resources.CustomResource {
      * merged with any existing policy applied to the project.
      * 
      */
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
     /**
@@ -134,7 +134,7 @@ public class IAMPolicy extends io.pulumi.resources.CustomResource {
      * inferred from the provider.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 

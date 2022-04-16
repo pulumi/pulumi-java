@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2PromotionResponse extends io.pulumi.resour
     @Import(name="promotionId", required=true)
       private final String promotionId;
 
-    public String getPromotionId() {
+    public String promotionId() {
         return this.promotionId;
     }
 

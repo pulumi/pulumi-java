@@ -28,7 +28,7 @@ public final class ClientInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientInfoDetails")
       private final @Nullable Output<List<ClientInfoDetailArgs>> clientInfoDetails;
 
-    public Output<List<ClientInfoDetailArgs>> getClientInfoDetails() {
+    public Output<List<ClientInfoDetailArgs>> clientInfoDetails() {
         return this.clientInfoDetails == null ? Codegen.empty() : this.clientInfoDetails;
     }
 
@@ -39,7 +39,7 @@ public final class ClientInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

@@ -21,7 +21,7 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="bucket")
       private final @Nullable String bucket;
 
-    public Optional<String> getBucket() {
+    public Optional<String> bucket() {
         return this.bucket == null ? Optional.empty() : Optional.ofNullable(this.bucket);
     }
 
@@ -32,7 +32,7 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 

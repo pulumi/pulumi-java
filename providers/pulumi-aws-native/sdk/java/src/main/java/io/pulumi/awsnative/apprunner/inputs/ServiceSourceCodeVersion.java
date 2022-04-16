@@ -24,7 +24,7 @@ public final class ServiceSourceCodeVersion extends io.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
       private final ServiceSourceCodeVersionType type;
 
-    public ServiceSourceCodeVersionType getType() {
+    public ServiceSourceCodeVersionType type() {
         return this.type;
     }
 
@@ -35,7 +35,7 @@ public final class ServiceSourceCodeVersion extends io.pulumi.resources.InvokeAr
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

@@ -22,7 +22,7 @@ public final class DomainOwnershipIdentifierArgs extends io.pulumi.resources.Res
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -33,7 +33,7 @@ public final class DomainOwnershipIdentifierArgs extends io.pulumi.resources.Res
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -44,7 +44,7 @@ public final class DomainOwnershipIdentifierArgs extends io.pulumi.resources.Res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -55,7 +55,7 @@ public final class DomainOwnershipIdentifierArgs extends io.pulumi.resources.Res
     @Import(name="ownershipId")
       private final @Nullable Output<String> ownershipId;
 
-    public Output<String> getOwnershipId() {
+    public Output<String> ownershipId() {
         return this.ownershipId == null ? Codegen.empty() : this.ownershipId;
     }
 
@@ -66,7 +66,7 @@ public final class DomainOwnershipIdentifierArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

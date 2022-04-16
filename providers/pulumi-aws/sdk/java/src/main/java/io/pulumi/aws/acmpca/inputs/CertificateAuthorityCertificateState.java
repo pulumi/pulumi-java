@@ -22,7 +22,7 @@ public final class CertificateAuthorityCertificateState extends io.pulumi.resour
     @Import(name="certificate")
       private final @Nullable Output<String> certificate;
 
-    public Output<String> getCertificate() {
+    public Output<String> certificate() {
         return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
@@ -33,7 +33,7 @@ public final class CertificateAuthorityCertificateState extends io.pulumi.resour
     @Import(name="certificateAuthorityArn")
       private final @Nullable Output<String> certificateAuthorityArn;
 
-    public Output<String> getCertificateAuthorityArn() {
+    public Output<String> certificateAuthorityArn() {
         return this.certificateAuthorityArn == null ? Codegen.empty() : this.certificateAuthorityArn;
     }
 
@@ -44,7 +44,7 @@ public final class CertificateAuthorityCertificateState extends io.pulumi.resour
     @Import(name="certificateChain")
       private final @Nullable Output<String> certificateChain;
 
-    public Output<String> getCertificateChain() {
+    public Output<String> certificateChain() {
         return this.certificateChain == null ? Codegen.empty() : this.certificateChain;
     }
 

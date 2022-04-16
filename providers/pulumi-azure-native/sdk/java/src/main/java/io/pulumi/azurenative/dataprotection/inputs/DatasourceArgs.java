@@ -26,7 +26,7 @@ public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datasourceType")
       private final @Nullable Output<String> datasourceType;
 
-    public Output<String> getDatasourceType() {
+    public Output<String> datasourceType() {
         return this.datasourceType == null ? Codegen.empty() : this.datasourceType;
     }
 
@@ -37,7 +37,7 @@ public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="objectType")
       private final @Nullable Output<String> objectType;
 
-    public Output<String> getObjectType() {
+    public Output<String> objectType() {
         return this.objectType == null ? Codegen.empty() : this.objectType;
     }
 
@@ -48,7 +48,7 @@ public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceID", required=true)
       private final Output<String> resourceID;
 
-    public Output<String> getResourceID() {
+    public Output<String> resourceID() {
         return this.resourceID;
     }
 
@@ -59,7 +59,7 @@ public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceLocation")
       private final @Nullable Output<String> resourceLocation;
 
-    public Output<String> getResourceLocation() {
+    public Output<String> resourceLocation() {
         return this.resourceLocation == null ? Codegen.empty() : this.resourceLocation;
     }
 
@@ -70,7 +70,7 @@ public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
@@ -81,7 +81,7 @@ public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
@@ -92,7 +92,7 @@ public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceUri")
       private final @Nullable Output<String> resourceUri;
 
-    public Output<String> getResourceUri() {
+    public Output<String> resourceUri() {
         return this.resourceUri == null ? Codegen.empty() : this.resourceUri;
     }
 

@@ -19,7 +19,7 @@ public final class ClusterMasterAuthArgs extends io.pulumi.resources.ResourceArg
     @Import(name="clientCertificate")
       private final @Nullable Output<String> clientCertificate;
 
-    public Output<String> getClientCertificate() {
+    public Output<String> clientCertificate() {
         return this.clientCertificate == null ? Codegen.empty() : this.clientCertificate;
     }
 
@@ -30,21 +30,21 @@ public final class ClusterMasterAuthArgs extends io.pulumi.resources.ResourceArg
     @Import(name="clientCertificateConfig", required=true)
       private final Output<ClusterMasterAuthClientCertificateConfigArgs> clientCertificateConfig;
 
-    public Output<ClusterMasterAuthClientCertificateConfigArgs> getClientCertificateConfig() {
+    public Output<ClusterMasterAuthClientCertificateConfigArgs> clientCertificateConfig() {
         return this.clientCertificateConfig;
     }
 
     @Import(name="clientKey")
       private final @Nullable Output<String> clientKey;
 
-    public Output<String> getClientKey() {
+    public Output<String> clientKey() {
         return this.clientKey == null ? Codegen.empty() : this.clientKey;
     }
 
     @Import(name="clusterCaCertificate")
       private final @Nullable Output<String> clusterCaCertificate;
 
-    public Output<String> getClusterCaCertificate() {
+    public Output<String> clusterCaCertificate() {
         return this.clusterCaCertificate == null ? Codegen.empty() : this.clusterCaCertificate;
     }
 

@@ -46,28 +46,28 @@ public final class ApigatewayExprResponse {
      * Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Textual representation of an expression in Common Expression Language syntax.
      * 
     */
-    public String getExpression() {
+    public String expression() {
         return this.expression;
     }
     /**
      * Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.
      * 
     */
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

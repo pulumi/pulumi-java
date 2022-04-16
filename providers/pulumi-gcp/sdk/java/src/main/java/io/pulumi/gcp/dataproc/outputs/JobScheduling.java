@@ -20,10 +20,10 @@ public final class JobScheduling {
         this.maxFailuresTotal = maxFailuresTotal;
     }
 
-    public Integer getMaxFailuresPerHour() {
+    public Integer maxFailuresPerHour() {
         return this.maxFailuresPerHour;
     }
-    public Integer getMaxFailuresTotal() {
+    public Integer maxFailuresTotal() {
         return this.maxFailuresTotal;
     }
 

@@ -26,7 +26,7 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
     @Import(name="groupId", required=true)
       private final String groupId;
 
-    public String getGroupId() {
+    public String groupId() {
         return this.groupId;
     }
 
@@ -37,7 +37,7 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -48,7 +48,7 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -59,7 +59,7 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
     @Import(name="privateLinkResourceId", required=true)
       private final String privateLinkResourceId;
 
-    public String getPrivateLinkResourceId() {
+    public String privateLinkResourceId() {
         return this.privateLinkResourceId;
     }
 
@@ -70,7 +70,7 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -81,7 +81,7 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
     @Import(name="requestMessage")
       private final @Nullable String requestMessage;
 
-    public Optional<String> getRequestMessage() {
+    public Optional<String> requestMessage() {
         return this.requestMessage == null ? Optional.empty() : Optional.ofNullable(this.requestMessage);
     }
 
@@ -92,7 +92,7 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
@@ -103,7 +103,7 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
     @Import(name="systemData", required=true)
       private final SystemDataResponse systemData;
 
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
 
@@ -114,7 +114,7 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

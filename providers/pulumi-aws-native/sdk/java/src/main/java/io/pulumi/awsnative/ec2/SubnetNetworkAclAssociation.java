@@ -21,7 +21,7 @@ public class SubnetNetworkAclAssociation extends io.pulumi.resources.CustomResou
     @Export(name="associationId", type=String.class, parameters={})
     private Output<String> associationId;
 
-    public Output<String> getAssociationId() {
+    public Output<String> associationId() {
         return this.associationId;
     }
     /**
@@ -35,7 +35,7 @@ public class SubnetNetworkAclAssociation extends io.pulumi.resources.CustomResou
      * @return The ID of the network ACL
      * 
      */
-    public Output<String> getNetworkAclId() {
+    public Output<String> networkAclId() {
         return this.networkAclId;
     }
     /**
@@ -49,7 +49,7 @@ public class SubnetNetworkAclAssociation extends io.pulumi.resources.CustomResou
      * @return The ID of the subnet
      * 
      */
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 

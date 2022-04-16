@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2KMapEstimationResultResponse extends io.pul
     @Import(name="kMapEstimationHistogram", required=true)
       private final List<GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse> kMapEstimationHistogram;
 
-    public List<GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse> getKMapEstimationHistogram() {
+    public List<GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse> kMapEstimationHistogram() {
         return this.kMapEstimationHistogram;
     }
 

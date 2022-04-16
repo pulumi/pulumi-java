@@ -26,7 +26,7 @@ public final class ThreatIntelligenceParsedPatternTypeValueArgs extends io.pulum
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 
@@ -37,7 +37,7 @@ public final class ThreatIntelligenceParsedPatternTypeValueArgs extends io.pulum
     @Import(name="valueType")
       private final @Nullable Output<String> valueType;
 
-    public Output<String> getValueType() {
+    public Output<String> valueType() {
         return this.valueType == null ? Codegen.empty() : this.valueType;
     }
 

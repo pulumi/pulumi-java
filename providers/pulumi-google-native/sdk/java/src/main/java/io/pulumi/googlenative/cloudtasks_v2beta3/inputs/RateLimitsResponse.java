@@ -24,7 +24,7 @@ public final class RateLimitsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="maxBurstSize", required=true)
       private final Integer maxBurstSize;
 
-    public Integer getMaxBurstSize() {
+    public Integer maxBurstSize() {
         return this.maxBurstSize;
     }
 
@@ -35,7 +35,7 @@ public final class RateLimitsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="maxConcurrentDispatches", required=true)
       private final Integer maxConcurrentDispatches;
 
-    public Integer getMaxConcurrentDispatches() {
+    public Integer maxConcurrentDispatches() {
         return this.maxConcurrentDispatches;
     }
 
@@ -46,7 +46,7 @@ public final class RateLimitsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="maxDispatchesPerSecond", required=true)
       private final Double maxDispatchesPerSecond;
 
-    public Double getMaxDispatchesPerSecond() {
+    public Double maxDispatchesPerSecond() {
         return this.maxDispatchesPerSecond;
     }
 

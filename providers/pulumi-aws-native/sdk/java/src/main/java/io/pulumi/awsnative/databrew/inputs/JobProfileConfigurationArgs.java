@@ -22,28 +22,28 @@ public final class JobProfileConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="columnStatisticsConfigurations")
       private final @Nullable Output<List<JobColumnStatisticsConfigurationArgs>> columnStatisticsConfigurations;
 
-    public Output<List<JobColumnStatisticsConfigurationArgs>> getColumnStatisticsConfigurations() {
+    public Output<List<JobColumnStatisticsConfigurationArgs>> columnStatisticsConfigurations() {
         return this.columnStatisticsConfigurations == null ? Codegen.empty() : this.columnStatisticsConfigurations;
     }
 
     @Import(name="datasetStatisticsConfiguration")
       private final @Nullable Output<JobStatisticsConfigurationArgs> datasetStatisticsConfiguration;
 
-    public Output<JobStatisticsConfigurationArgs> getDatasetStatisticsConfiguration() {
+    public Output<JobStatisticsConfigurationArgs> datasetStatisticsConfiguration() {
         return this.datasetStatisticsConfiguration == null ? Codegen.empty() : this.datasetStatisticsConfiguration;
     }
 
     @Import(name="entityDetectorConfiguration")
       private final @Nullable Output<JobEntityDetectorConfigurationArgs> entityDetectorConfiguration;
 
-    public Output<JobEntityDetectorConfigurationArgs> getEntityDetectorConfiguration() {
+    public Output<JobEntityDetectorConfigurationArgs> entityDetectorConfiguration() {
         return this.entityDetectorConfiguration == null ? Codegen.empty() : this.entityDetectorConfiguration;
     }
 
     @Import(name="profileColumns")
       private final @Nullable Output<List<JobColumnSelectorArgs>> profileColumns;
 
-    public Output<List<JobColumnSelectorArgs>> getProfileColumns() {
+    public Output<List<JobColumnSelectorArgs>> profileColumns() {
         return this.profileColumns == null ? Codegen.empty() : this.profileColumns;
     }
 

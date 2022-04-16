@@ -43,7 +43,7 @@ public class Setting extends io.pulumi.resources.CustomResource {
      * @return Array of scopes with additional details used by Cost Management in the Azure portal.
      * 
      */
-    public Output</* @Nullable */ List<SettingsPropertiesResponseCache>> getCache() {
+    public Output</* @Nullable */ List<SettingsPropertiesResponseCache>> cache() {
         return this.cache;
     }
     /**
@@ -57,7 +57,7 @@ public class Setting extends io.pulumi.resources.CustomResource {
      * @return Resource kind.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -71,7 +71,7 @@ public class Setting extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +85,7 @@ public class Setting extends io.pulumi.resources.CustomResource {
      * @return Sets the default scope the current user will see when they sign into Azure Cost Management in the Azure portal.
      * 
      */
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
     /**
@@ -99,7 +99,7 @@ public class Setting extends io.pulumi.resources.CustomResource {
      * @return Indicates what scope Cost Management in the Azure portal should default to. Allowed values: LastUsed.
      * 
      */
-    public Output</* @Nullable */ String> getStartOn() {
+    public Output</* @Nullable */ String> startOn() {
         return this.startOn;
     }
     /**
@@ -113,7 +113,7 @@ public class Setting extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

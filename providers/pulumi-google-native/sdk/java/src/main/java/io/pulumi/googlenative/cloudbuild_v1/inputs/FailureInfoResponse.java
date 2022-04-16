@@ -23,7 +23,7 @@ public final class FailureInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="detail", required=true)
       private final String detail;
 
-    public String getDetail() {
+    public String detail() {
         return this.detail;
     }
 
@@ -34,7 +34,7 @@ public final class FailureInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

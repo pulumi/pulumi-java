@@ -26,7 +26,7 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicKeyId")
       private final @Nullable Output<String> publicKeyId;
 
-    public Output<String> getPublicKeyId() {
+    public Output<String> publicKeyId() {
         return this.publicKeyId == null ? Codegen.empty() : this.publicKeyId;
     }
 
@@ -37,7 +37,7 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="signature")
       private final @Nullable Output<String> signature;
 
-    public Output<String> getSignature() {
+    public Output<String> signature() {
         return this.signature == null ? Codegen.empty() : this.signature;
     }
 

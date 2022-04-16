@@ -25,7 +25,7 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="alertType", required=true)
       private final Output<String> alertType;
 
-    public Output<String> getAlertType() {
+    public Output<String> alertType() {
         return this.alertType;
     }
 
@@ -36,7 +36,7 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="alertsSuppressionRuleName")
       private final @Nullable Output<String> alertsSuppressionRuleName;
 
-    public Output<String> getAlertsSuppressionRuleName() {
+    public Output<String> alertsSuppressionRuleName() {
         return this.alertsSuppressionRuleName == null ? Codegen.empty() : this.alertsSuppressionRuleName;
     }
 
@@ -47,7 +47,7 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 
@@ -58,7 +58,7 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="expirationDateUtc")
       private final @Nullable Output<String> expirationDateUtc;
 
-    public Output<String> getExpirationDateUtc() {
+    public Output<String> expirationDateUtc() {
         return this.expirationDateUtc == null ? Codegen.empty() : this.expirationDateUtc;
     }
 
@@ -69,7 +69,7 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="reason", required=true)
       private final Output<String> reason;
 
-    public Output<String> getReason() {
+    public Output<String> reason() {
         return this.reason;
     }
 
@@ -80,7 +80,7 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="state", required=true)
       private final Output<Either<String,RuleState>> state;
 
-    public Output<Either<String,RuleState>> getState() {
+    public Output<Either<String,RuleState>> state() {
         return this.state;
     }
 
@@ -91,7 +91,7 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="suppressionAlertsScope")
       private final @Nullable Output<SuppressionAlertsScopeArgs> suppressionAlertsScope;
 
-    public Output<SuppressionAlertsScopeArgs> getSuppressionAlertsScope() {
+    public Output<SuppressionAlertsScopeArgs> suppressionAlertsScope() {
         return this.suppressionAlertsScope == null ? Codegen.empty() : this.suppressionAlertsScope;
     }
 

@@ -54,31 +54,31 @@ public final class GetAccessPointResult {
      * The alias of this Access Point. This alias can be used for compatibility purposes with other AWS services and third-party applications.
      * 
     */
-    public Optional<String> getAlias() {
+    public Optional<String> alias() {
         return Optional.ofNullable(this.alias);
     }
     /**
      * The Amazon Resource Name (ARN) of the specified accesspoint.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Indicates whether this Access Point allows access from the public Internet. If VpcConfiguration is specified for this Access Point, then NetworkOrigin is VPC, and the Access Point doesn't allow access from the public Internet. Otherwise, NetworkOrigin is Internet, and the Access Point allows access from the public Internet, subject to the Access Point and bucket access policies.
      * 
     */
-    public Optional<AccessPointNetworkOrigin> getNetworkOrigin() {
+    public Optional<AccessPointNetworkOrigin> networkOrigin() {
         return Optional.ofNullable(this.networkOrigin);
     }
     /**
      * The Access Point Policy you want to apply to this access point.
      * 
     */
-    public Optional<Object> getPolicy() {
+    public Optional<Object> policy() {
         return Optional.ofNullable(this.policy);
     }
-    public Optional<PolicyStatusProperties> getPolicyStatus() {
+    public Optional<PolicyStatusProperties> policyStatus() {
         return Optional.ofNullable(this.policyStatus);
     }
 

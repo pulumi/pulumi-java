@@ -74,49 +74,49 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
      * The Page on which the utterance was spoken. Only name and displayName will be set.
      * 
     */
-    public GoogleCloudDialogflowCxV3beta1PageResponse getCurrentPage() {
+    public GoogleCloudDialogflowCxV3beta1PageResponse currentPage() {
         return this.currentPage;
     }
     /**
      * Input only. The diagnostic info output for the turn. Required to calculate the testing coverage.
      * 
     */
-    public Map<String,String> getDiagnosticInfo() {
+    public Map<String,String> diagnosticInfo() {
         return this.diagnosticInfo;
     }
     /**
      * If this is part of a result conversation turn, the list of differences between the original run and the replay for this output, if any.
      * 
     */
-    public List<GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse> getDifferences() {
+    public List<GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse> differences() {
         return this.differences;
     }
     /**
      * The session parameters available to the bot at this point.
      * 
     */
-    public Map<String,String> getSessionParameters() {
+    public Map<String,String> sessionParameters() {
         return this.sessionParameters;
     }
     /**
      * Response error from the agent in the test result. If set, other output is empty.
      * 
     */
-    public GoogleRpcStatusResponse getStatus() {
+    public GoogleRpcStatusResponse status() {
         return this.status;
     }
     /**
      * The text responses from the agent for the turn.
      * 
     */
-    public List<GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse> getTextResponses() {
+    public List<GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse> textResponses() {
         return this.textResponses;
     }
     /**
      * The Intent that triggered the response. Only name and displayName will be set.
      * 
     */
-    public GoogleCloudDialogflowCxV3beta1IntentResponse getTriggeredIntent() {
+    public GoogleCloudDialogflowCxV3beta1IntentResponse triggeredIntent() {
         return this.triggeredIntent;
     }
 

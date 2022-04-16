@@ -26,7 +26,7 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="groupProperties")
       private final @Nullable Output<Map<String,String>> groupProperties;
 
-    public Output<Map<String,String>> getGroupProperties() {
+    public Output<Map<String,String>> groupProperties() {
         return this.groupProperties == null ? Codegen.empty() : this.groupProperties;
     }
 
@@ -37,7 +37,7 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
-    public Output<String> getNamespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -48,14 +48,14 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
     @Import(name="schemaCompatibility")
       private final @Nullable Output<Either<String,SchemaCompatibility>> schemaCompatibility;
 
-    public Output<Either<String,SchemaCompatibility>> getSchemaCompatibility() {
+    public Output<Either<String,SchemaCompatibility>> schemaCompatibility() {
         return this.schemaCompatibility == null ? Codegen.empty() : this.schemaCompatibility;
     }
 
@@ -66,14 +66,14 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schemaGroupName")
       private final @Nullable Output<String> schemaGroupName;
 
-    public Output<String> getSchemaGroupName() {
+    public Output<String> schemaGroupName() {
         return this.schemaGroupName == null ? Codegen.empty() : this.schemaGroupName;
     }
 
     @Import(name="schemaType")
       private final @Nullable Output<Either<String,SchemaType>> schemaType;
 
-    public Output<Either<String,SchemaType>> getSchemaType() {
+    public Output<Either<String,SchemaType>> schemaType() {
         return this.schemaType == null ? Codegen.empty() : this.schemaType;
     }
 

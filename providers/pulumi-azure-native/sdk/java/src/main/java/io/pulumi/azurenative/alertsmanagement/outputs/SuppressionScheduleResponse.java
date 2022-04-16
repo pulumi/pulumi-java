@@ -57,35 +57,35 @@ public final class SuppressionScheduleResponse {
      * End date for suppression
      * 
     */
-    public Optional<String> getEndDate() {
+    public Optional<String> endDate() {
         return Optional.ofNullable(this.endDate);
     }
     /**
      * End date for suppression
      * 
     */
-    public Optional<String> getEndTime() {
+    public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
      * Specifies the values for recurrence pattern
      * 
     */
-    public List<Integer> getRecurrenceValues() {
+    public List<Integer> recurrenceValues() {
         return this.recurrenceValues == null ? List.of() : this.recurrenceValues;
     }
     /**
      * Start date for suppression
      * 
     */
-    public Optional<String> getStartDate() {
+    public Optional<String> startDate() {
         return Optional.ofNullable(this.startDate);
     }
     /**
      * Start time for suppression
      * 
     */
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
 

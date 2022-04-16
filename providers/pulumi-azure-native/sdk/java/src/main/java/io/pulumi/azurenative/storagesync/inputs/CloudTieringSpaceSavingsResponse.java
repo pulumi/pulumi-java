@@ -25,7 +25,7 @@ public final class CloudTieringSpaceSavingsResponse extends io.pulumi.resources.
     @Import(name="cachedSizeBytes", required=true)
       private final Double cachedSizeBytes;
 
-    public Double getCachedSizeBytes() {
+    public Double cachedSizeBytes() {
         return this.cachedSizeBytes;
     }
 
@@ -36,7 +36,7 @@ public final class CloudTieringSpaceSavingsResponse extends io.pulumi.resources.
     @Import(name="lastUpdatedTimestamp", required=true)
       private final String lastUpdatedTimestamp;
 
-    public String getLastUpdatedTimestamp() {
+    public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
 
@@ -47,7 +47,7 @@ public final class CloudTieringSpaceSavingsResponse extends io.pulumi.resources.
     @Import(name="spaceSavingsBytes", required=true)
       private final Double spaceSavingsBytes;
 
-    public Double getSpaceSavingsBytes() {
+    public Double spaceSavingsBytes() {
         return this.spaceSavingsBytes;
     }
 
@@ -58,7 +58,7 @@ public final class CloudTieringSpaceSavingsResponse extends io.pulumi.resources.
     @Import(name="spaceSavingsPercent", required=true)
       private final Integer spaceSavingsPercent;
 
-    public Integer getSpaceSavingsPercent() {
+    public Integer spaceSavingsPercent() {
         return this.spaceSavingsPercent;
     }
 
@@ -69,7 +69,7 @@ public final class CloudTieringSpaceSavingsResponse extends io.pulumi.resources.
     @Import(name="totalSizeCloudBytes", required=true)
       private final Double totalSizeCloudBytes;
 
-    public Double getTotalSizeCloudBytes() {
+    public Double totalSizeCloudBytes() {
         return this.totalSizeCloudBytes;
     }
 
@@ -80,7 +80,7 @@ public final class CloudTieringSpaceSavingsResponse extends io.pulumi.resources.
     @Import(name="volumeSizeBytes", required=true)
       private final Double volumeSizeBytes;
 
-    public Double getVolumeSizeBytes() {
+    public Double volumeSizeBytes() {
         return this.volumeSizeBytes;
     }
 

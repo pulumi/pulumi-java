@@ -45,32 +45,32 @@ public final class GetWorkloadIdentityPoolResult {
         this.workloadIdentityPoolId = workloadIdentityPoolId;
     }
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
-    public Boolean getDisabled() {
+    public Boolean disabled() {
         return this.disabled;
     }
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
-    public String getState() {
+    public String state() {
         return this.state;
     }
-    public String getWorkloadIdentityPoolId() {
+    public String workloadIdentityPoolId() {
         return this.workloadIdentityPoolId;
     }
 

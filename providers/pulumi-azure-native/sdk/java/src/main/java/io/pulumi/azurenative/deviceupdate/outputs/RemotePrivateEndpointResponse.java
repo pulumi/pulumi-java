@@ -66,42 +66,42 @@ public final class RemotePrivateEndpointResponse {
      * List of connection details.
      * 
     */
-    public List<ConnectionDetailsResponse> getConnectionDetails() {
+    public List<ConnectionDetailsResponse> connectionDetails() {
         return this.connectionDetails == null ? List.of() : this.connectionDetails;
     }
     /**
      * Remote endpoint resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * List of private link service connections that need manual approval.
      * 
     */
-    public List<PrivateLinkServiceConnectionResponse> getManualPrivateLinkServiceConnections() {
+    public List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections() {
         return this.manualPrivateLinkServiceConnections == null ? List.of() : this.manualPrivateLinkServiceConnections;
     }
     /**
      * List of automatically approved private link service connections.
      * 
     */
-    public List<PrivateLinkServiceConnectionResponse> getPrivateLinkServiceConnections() {
+    public List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections() {
         return this.privateLinkServiceConnections == null ? List.of() : this.privateLinkServiceConnections;
     }
     /**
      * List of private link service proxies.
      * 
     */
-    public List<PrivateLinkServiceProxyResponse> getPrivateLinkServiceProxies() {
+    public List<PrivateLinkServiceProxyResponse> privateLinkServiceProxies() {
         return this.privateLinkServiceProxies == null ? List.of() : this.privateLinkServiceProxies;
     }
     /**
      * Virtual network traffic tag.
      * 
     */
-    public String getVnetTrafficTag() {
+    public String vnetTrafficTag() {
         return this.vnetTrafficTag;
     }
 

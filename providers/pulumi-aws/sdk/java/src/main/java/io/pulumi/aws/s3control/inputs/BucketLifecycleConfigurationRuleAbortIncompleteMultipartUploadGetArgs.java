@@ -21,7 +21,7 @@ public final class BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploa
     @Import(name="daysAfterInitiation", required=true)
       private final Output<Integer> daysAfterInitiation;
 
-    public Output<Integer> getDaysAfterInitiation() {
+    public Output<Integer> daysAfterInitiation() {
         return this.daysAfterInitiation;
     }
 

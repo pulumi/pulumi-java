@@ -46,7 +46,7 @@ public class RemoteRenderingAccount extends io.pulumi.resources.CustomResource {
      * @return Correspond domain name of certain Spatial Anchors Account
      * 
      */
-    public Output<String> getAccountDomain() {
+    public Output<String> accountDomain() {
         return this.accountDomain;
     }
     /**
@@ -60,7 +60,7 @@ public class RemoteRenderingAccount extends io.pulumi.resources.CustomResource {
      * @return unique id of certain account.
      * 
      */
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     /**
@@ -74,7 +74,7 @@ public class RemoteRenderingAccount extends io.pulumi.resources.CustomResource {
      * @return The identity associated with this account
      * 
      */
-    public Output</* @Nullable */ IdentityResponse> getIdentity() {
+    public Output</* @Nullable */ IdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -88,7 +88,7 @@ public class RemoteRenderingAccount extends io.pulumi.resources.CustomResource {
      * @return The kind of account, if supported
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getKind() {
+    public Output</* @Nullable */ SkuResponse> kind() {
         return this.kind;
     }
     /**
@@ -102,7 +102,7 @@ public class RemoteRenderingAccount extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -116,7 +116,7 @@ public class RemoteRenderingAccount extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -130,7 +130,7 @@ public class RemoteRenderingAccount extends io.pulumi.resources.CustomResource {
      * @return The plan associated with this account
      * 
      */
-    public Output</* @Nullable */ IdentityResponse> getPlan() {
+    public Output</* @Nullable */ IdentityResponse> plan() {
         return this.plan;
     }
     /**
@@ -144,7 +144,7 @@ public class RemoteRenderingAccount extends io.pulumi.resources.CustomResource {
      * @return The sku associated with this account
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -158,7 +158,7 @@ public class RemoteRenderingAccount extends io.pulumi.resources.CustomResource {
      * @return The name of the storage account associated with this accountId
      * 
      */
-    public Output</* @Nullable */ String> getStorageAccountName() {
+    public Output</* @Nullable */ String> storageAccountName() {
         return this.storageAccountName;
     }
     /**
@@ -172,7 +172,7 @@ public class RemoteRenderingAccount extends io.pulumi.resources.CustomResource {
      * @return System metadata for this account
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -186,7 +186,7 @@ public class RemoteRenderingAccount extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -200,7 +200,7 @@ public class RemoteRenderingAccount extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

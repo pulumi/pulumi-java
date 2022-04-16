@@ -15,7 +15,7 @@ public final class GetWarmPoolArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="autoScalingGroupName", required=true)
       private final String autoScalingGroupName;
 
-    public String getAutoScalingGroupName() {
+    public String autoScalingGroupName() {
         return this.autoScalingGroupName;
     }
 

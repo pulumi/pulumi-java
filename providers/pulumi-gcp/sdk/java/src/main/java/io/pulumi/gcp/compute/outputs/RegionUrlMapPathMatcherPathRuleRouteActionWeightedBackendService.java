@@ -55,7 +55,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
      * headerActions specified as part of this backendServiceWeight.
      * 
     */
-    public String getBackendService() {
+    public String backendService() {
         return this.backendService;
     }
     /**
@@ -65,7 +65,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
      * Structure is documented below.
      * 
     */
-    public Optional<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderAction> getHeaderAction() {
+    public Optional<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderAction> headerAction() {
         return Optional.ofNullable(this.headerAction);
     }
     /**
@@ -77,7 +77,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
      * The value must be between 0 and 1000
      * 
     */
-    public Integer getWeight() {
+    public Integer weight() {
         return this.weight;
     }
 

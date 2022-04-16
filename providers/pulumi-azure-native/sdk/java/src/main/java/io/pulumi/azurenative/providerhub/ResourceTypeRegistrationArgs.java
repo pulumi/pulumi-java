@@ -19,7 +19,7 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
     @Import(name="properties")
       private final @Nullable Output<ResourceTypeRegistrationPropertiesArgs> properties;
 
-    public Output<ResourceTypeRegistrationPropertiesArgs> getProperties() {
+    public Output<ResourceTypeRegistrationPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -30,7 +30,7 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
     @Import(name="providerNamespace", required=true)
       private final Output<String> providerNamespace;
 
-    public Output<String> getProviderNamespace() {
+    public Output<String> providerNamespace() {
         return this.providerNamespace;
     }
 
@@ -41,7 +41,7 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 

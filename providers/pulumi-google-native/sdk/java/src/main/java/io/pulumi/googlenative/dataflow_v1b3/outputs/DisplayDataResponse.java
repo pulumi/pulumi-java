@@ -104,84 +104,84 @@ public final class DisplayDataResponse {
      * Contains value if the data is of a boolean type.
      * 
     */
-    public Boolean getBoolValue() {
+    public Boolean boolValue() {
         return this.boolValue;
     }
     /**
      * Contains value if the data is of duration type.
      * 
     */
-    public String getDurationValue() {
+    public String durationValue() {
         return this.durationValue;
     }
     /**
      * Contains value if the data is of float type.
      * 
     */
-    public Double getFloatValue() {
+    public Double floatValue() {
         return this.floatValue;
     }
     /**
      * Contains value if the data is of int64 type.
      * 
     */
-    public String getInt64Value() {
+    public String int64Value() {
         return this.int64Value;
     }
     /**
      * Contains value if the data is of java class type.
      * 
     */
-    public String getJavaClassValue() {
+    public String javaClassValue() {
         return this.javaClassValue;
     }
     /**
      * The key identifying the display data. This is intended to be used as a label for the display data when viewed in a dax monitoring system.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * An optional label to display in a dax UI for the element.
      * 
     */
-    public String getLabel() {
+    public String label() {
         return this.label;
     }
     /**
      * The namespace for the key. This is usually a class name or programming language namespace (i.e. python module) which defines the display data. This allows a dax monitoring system to specially handle the data and perform custom rendering.
      * 
     */
-    public String getNamespace() {
+    public String namespace() {
         return this.namespace;
     }
     /**
      * A possible additional shorter value to display. For example a java_class_name_value of com.mypackage.MyDoFn will be stored with MyDoFn as the short_str_value and com.mypackage.MyDoFn as the java_class_name value. short_str_value can be displayed and java_class_name_value will be displayed as a tooltip.
      * 
     */
-    public String getShortStrValue() {
+    public String shortStrValue() {
         return this.shortStrValue;
     }
     /**
      * Contains value if the data is of string type.
      * 
     */
-    public String getStrValue() {
+    public String strValue() {
         return this.strValue;
     }
     /**
      * Contains value if the data is of timestamp type.
      * 
     */
-    public String getTimestampValue() {
+    public String timestampValue() {
         return this.timestampValue;
     }
     /**
      * An optional full URL.
      * 
     */
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

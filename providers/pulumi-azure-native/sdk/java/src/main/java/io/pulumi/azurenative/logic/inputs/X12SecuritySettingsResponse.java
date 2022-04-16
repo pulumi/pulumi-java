@@ -25,7 +25,7 @@ public final class X12SecuritySettingsResponse extends io.pulumi.resources.Invok
     @Import(name="authorizationQualifier", required=true)
       private final String authorizationQualifier;
 
-    public String getAuthorizationQualifier() {
+    public String authorizationQualifier() {
         return this.authorizationQualifier;
     }
 
@@ -36,7 +36,7 @@ public final class X12SecuritySettingsResponse extends io.pulumi.resources.Invok
     @Import(name="authorizationValue")
       private final @Nullable String authorizationValue;
 
-    public Optional<String> getAuthorizationValue() {
+    public Optional<String> authorizationValue() {
         return this.authorizationValue == null ? Optional.empty() : Optional.ofNullable(this.authorizationValue);
     }
 
@@ -47,7 +47,7 @@ public final class X12SecuritySettingsResponse extends io.pulumi.resources.Invok
     @Import(name="passwordValue")
       private final @Nullable String passwordValue;
 
-    public Optional<String> getPasswordValue() {
+    public Optional<String> passwordValue() {
         return this.passwordValue == null ? Optional.empty() : Optional.ofNullable(this.passwordValue);
     }
 
@@ -58,7 +58,7 @@ public final class X12SecuritySettingsResponse extends io.pulumi.resources.Invok
     @Import(name="securityQualifier", required=true)
       private final String securityQualifier;
 
-    public String getSecurityQualifier() {
+    public String securityQualifier() {
         return this.securityQualifier;
     }
 

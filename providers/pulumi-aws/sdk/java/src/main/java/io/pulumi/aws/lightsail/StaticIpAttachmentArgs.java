@@ -21,7 +21,7 @@ public final class StaticIpAttachmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="instanceName", required=true)
       private final Output<String> instanceName;
 
-    public Output<String> getInstanceName() {
+    public Output<String> instanceName() {
         return this.instanceName;
     }
 
@@ -32,7 +32,7 @@ public final class StaticIpAttachmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="staticIpName", required=true)
       private final Output<String> staticIpName;
 
-    public Output<String> getStaticIpName() {
+    public Output<String> staticIpName() {
         return this.staticIpName;
     }
 

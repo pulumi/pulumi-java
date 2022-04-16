@@ -17,35 +17,35 @@ public final class GetMigratingVmArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
     @Import(name="migratingVmId", required=true)
       private final String migratingVmId;
 
-    public String getMigratingVmId() {
+    public String migratingVmId() {
         return this.migratingVmId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="sourceId", required=true)
       private final String sourceId;
 
-    public String getSourceId() {
+    public String sourceId() {
         return this.sourceId;
     }
 
     @Import(name="view")
       private final @Nullable String view;
 
-    public Optional<String> getView() {
+    public Optional<String> view() {
         return this.view == null ? Optional.empty() : Optional.ofNullable(this.view);
     }
 

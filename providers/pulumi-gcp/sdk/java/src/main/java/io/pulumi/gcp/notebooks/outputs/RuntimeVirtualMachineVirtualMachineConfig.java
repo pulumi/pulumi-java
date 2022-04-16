@@ -175,7 +175,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      * Structure is documented below.
      * 
     */
-    public Optional<RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig> getAcceleratorConfig() {
+    public Optional<RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig> acceleratorConfig() {
         return Optional.ofNullable(this.acceleratorConfig);
     }
     /**
@@ -183,7 +183,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      * Structure is documented below.
      * 
     */
-    public List<RuntimeVirtualMachineVirtualMachineConfigContainerImage> getContainerImages() {
+    public List<RuntimeVirtualMachineVirtualMachineConfigContainerImage> containerImages() {
         return this.containerImages == null ? List.of() : this.containerImages;
     }
     /**
@@ -191,7 +191,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      * Structure is documented below.
      * 
     */
-    public RuntimeVirtualMachineVirtualMachineConfigDataDisk getDataDisk() {
+    public RuntimeVirtualMachineVirtualMachineConfigDataDisk dataDisk() {
         return this.dataDisk;
     }
     /**
@@ -199,7 +199,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      * Structure is documented below.
      * 
     */
-    public Optional<RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig> getEncryptionConfig() {
+    public Optional<RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig> encryptionConfig() {
         return Optional.ofNullable(this.encryptionConfig);
     }
     /**
@@ -209,7 +209,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      * storing-retrieving-metadata#guest_attributes)).
      * 
     */
-    public Map<String,String> getGuestAttributes() {
+    public Map<String,String> guestAttributes() {
         return this.guestAttributes == null ? Map.of() : this.guestAttributes;
     }
     /**
@@ -221,7 +221,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      * accessible without external IP addresses.
      * 
     */
-    public Optional<Boolean> getInternalIpOnly() {
+    public Optional<Boolean> internalIpOnly() {
         return Optional.ofNullable(this.internalIpOnly);
     }
     /**
@@ -230,14 +230,14 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      * applicable for persistent disks.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels == null ? Map.of() : this.labels;
     }
     /**
      * The Compute Engine machine type used for runtimes.
      * 
     */
-    public String getMachineType() {
+    public String machineType() {
         return this.machineType;
     }
     /**
@@ -247,7 +247,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      * _metadata)).
      * 
     */
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
@@ -267,7 +267,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      *   configuring Private Service Access.
      * 
     */
-    public Optional<String> getNetwork() {
+    public Optional<String> network() {
         return Optional.ofNullable(this.network);
     }
     /**
@@ -276,7 +276,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      * Possible values are `UNSPECIFIED_NIC_TYPE`, `VIRTIO_NET`, and `GVNIC`.
      * 
     */
-    public Optional<String> getNicType() {
+    public Optional<String> nicType() {
         return Optional.ofNullable(this.nicType);
     }
     /**
@@ -284,7 +284,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      * Structure is documented below.
      * 
     */
-    public Optional<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfig> getShieldedInstanceConfig() {
+    public Optional<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfig> shieldedInstanceConfig() {
         return Optional.ofNullable(this.shieldedInstanceConfig);
     }
     /**
@@ -296,7 +296,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      * * `projects/[project_id]/regions/us-east1/subnetworks/sub0`
      * 
     */
-    public Optional<String> getSubnet() {
+    public Optional<String> subnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
@@ -305,7 +305,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      * label-or-tag-resources#tags)).
      * 
     */
-    public List<String> getTags() {
+    public List<String> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
@@ -313,7 +313,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      * The zone where the virtual machine is located.
      * 
     */
-    public Optional<String> getZone() {
+    public Optional<String> zone() {
         return Optional.ofNullable(this.zone);
     }
 

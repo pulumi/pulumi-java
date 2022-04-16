@@ -66,28 +66,28 @@ public final class DataTransferServiceResourcePropertiesResponse {
      * Time of the last state change (ISO-8601 format).
      * 
     */
-    public String getCreationTime() {
+    public String creationTime() {
         return this.creationTime;
     }
     /**
      * Instance count for the service.
      * 
     */
-    public Optional<Integer> getInstanceCount() {
+    public Optional<Integer> instanceCount() {
         return Optional.ofNullable(this.instanceCount);
     }
     /**
      * Instance type for the service.
      * 
     */
-    public Optional<String> getInstanceSize() {
+    public Optional<String> instanceSize() {
         return Optional.ofNullable(this.instanceSize);
     }
     /**
      * An array that contains all of the locations for the service.
      * 
     */
-    public List<DataTransferRegionalServiceResourceResponse> getLocations() {
+    public List<DataTransferRegionalServiceResourceResponse> locations() {
         return this.locations;
     }
     /**
@@ -95,14 +95,14 @@ public final class DataTransferServiceResourcePropertiesResponse {
      * Expected value is 'DataTransfer'.
      * 
     */
-    public String getServiceType() {
+    public String serviceType() {
         return this.serviceType;
     }
     /**
      * Describes the status of a service.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

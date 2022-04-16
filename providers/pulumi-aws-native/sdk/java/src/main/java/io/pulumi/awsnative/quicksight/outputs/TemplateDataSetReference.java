@@ -32,14 +32,14 @@ public final class TemplateDataSetReference {
      * <p>Dataset Amazon Resource Name (ARN).</p>
      * 
     */
-    public String getDataSetArn() {
+    public String dataSetArn() {
         return this.dataSetArn;
     }
     /**
      * <p>Dataset placeholder.</p>
      * 
     */
-    public String getDataSetPlaceholder() {
+    public String dataSetPlaceholder() {
         return this.dataSetPlaceholder;
     }
 

@@ -71,49 +71,49 @@ public final class ManagedClusterAADProfileResponse {
      * AAD group object IDs that will have admin role of the cluster.
      * 
     */
-    public List<String> getAdminGroupObjectIDs() {
+    public List<String> adminGroupObjectIDs() {
         return this.adminGroupObjectIDs == null ? List.of() : this.adminGroupObjectIDs;
     }
     /**
      * The client AAD application ID.
      * 
     */
-    public Optional<String> getClientAppID() {
+    public Optional<String> clientAppID() {
         return Optional.ofNullable(this.clientAppID);
     }
     /**
      * Whether to enable Azure RBAC for Kubernetes authorization.
      * 
     */
-    public Optional<Boolean> getEnableAzureRBAC() {
+    public Optional<Boolean> enableAzureRBAC() {
         return Optional.ofNullable(this.enableAzureRBAC);
     }
     /**
      * Whether to enable managed AAD.
      * 
     */
-    public Optional<Boolean> getManaged() {
+    public Optional<Boolean> managed() {
         return Optional.ofNullable(this.managed);
     }
     /**
      * The server AAD application ID.
      * 
     */
-    public Optional<String> getServerAppID() {
+    public Optional<String> serverAppID() {
         return Optional.ofNullable(this.serverAppID);
     }
     /**
      * The server AAD application secret.
      * 
     */
-    public Optional<String> getServerAppSecret() {
+    public Optional<String> serverAppSecret() {
         return Optional.ofNullable(this.serverAppSecret);
     }
     /**
      * The AAD tenant ID to use for authentication. If not specified, will use the tenant of the deployment subscription.
      * 
     */
-    public Optional<String> getTenantID() {
+    public Optional<String> tenantID() {
         return Optional.ofNullable(this.tenantID);
     }
 

@@ -34,7 +34,7 @@ public class ControlPanel extends io.pulumi.resources.CustomResource {
      * @return Cluster to associate with the Control Panel
      * 
      */
-    public Output</* @Nullable */ String> getClusterArn() {
+    public Output</* @Nullable */ String> clusterArn() {
         return this.clusterArn;
     }
     /**
@@ -48,7 +48,7 @@ public class ControlPanel extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the cluster.
      * 
      */
-    public Output<String> getControlPanelArn() {
+    public Output<String> controlPanelArn() {
         return this.controlPanelArn;
     }
     /**
@@ -62,7 +62,7 @@ public class ControlPanel extends io.pulumi.resources.CustomResource {
      * @return A flag that Amazon Route 53 Application Recovery Controller sets to true to designate the default control panel for a cluster. When you create a cluster, Amazon Route 53 Application Recovery Controller creates a control panel, and sets this flag for that control panel. If you create a control panel yourself, this flag is set to false.
      * 
      */
-    public Output<Boolean> getDefaultControlPanel() {
+    public Output<Boolean> defaultControlPanel() {
         return this.defaultControlPanel;
     }
     /**
@@ -76,7 +76,7 @@ public class ControlPanel extends io.pulumi.resources.CustomResource {
      * @return The name of the control panel. You can use any non-white space character in the name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -90,7 +90,7 @@ public class ControlPanel extends io.pulumi.resources.CustomResource {
      * @return Count of associated routing controls
      * 
      */
-    public Output<Integer> getRoutingControlCount() {
+    public Output<Integer> routingControlCount() {
         return this.routingControlCount;
     }
     /**
@@ -104,7 +104,7 @@ public class ControlPanel extends io.pulumi.resources.CustomResource {
      * @return The deployment status of control panel. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
      * 
      */
-    public Output<ControlPanelStatus> getStatus() {
+    public Output<ControlPanelStatus> status() {
         return this.status;
     }
     /**
@@ -118,7 +118,7 @@ public class ControlPanel extends io.pulumi.resources.CustomResource {
      * @return A collection of tags associated with a resource
      * 
      */
-    public Output</* @Nullable */ List<ControlPanelTag>> getTags() {
+    public Output</* @Nullable */ List<ControlPanelTag>> tags() {
         return this.tags;
     }
 

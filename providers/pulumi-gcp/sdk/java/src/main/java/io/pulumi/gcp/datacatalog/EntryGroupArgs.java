@@ -22,7 +22,7 @@ public final class EntryGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -33,7 +33,7 @@ public final class EntryGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -45,7 +45,7 @@ public final class EntryGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="entryGroupId", required=true)
       private final Output<String> entryGroupId;
 
-    public Output<String> getEntryGroupId() {
+    public Output<String> entryGroupId() {
         return this.entryGroupId;
     }
 
@@ -57,7 +57,7 @@ public final class EntryGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -68,7 +68,7 @@ public final class EntryGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 

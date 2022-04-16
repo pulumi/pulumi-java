@@ -27,7 +27,7 @@ public final class AccessSelectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="permissions")
       private final @Nullable Output<List<String>> permissions;
 
-    public Output<List<String>> getPermissions() {
+    public Output<List<String>> permissions() {
         return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
@@ -38,7 +38,7 @@ public final class AccessSelectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roles")
       private final @Nullable Output<List<String>> roles;
 
-    public Output<List<String>> getRoles() {
+    public Output<List<String>> roles() {
         return this.roles == null ? Codegen.empty() : this.roles;
     }
 

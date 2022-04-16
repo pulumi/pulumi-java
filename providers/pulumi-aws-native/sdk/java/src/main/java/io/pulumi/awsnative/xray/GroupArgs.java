@@ -25,7 +25,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filterExpression")
       private final @Nullable Output<String> filterExpression;
 
-    public Output<String> getFilterExpression() {
+    public Output<String> filterExpression() {
         return this.filterExpression == null ? Codegen.empty() : this.filterExpression;
     }
 
@@ -36,21 +36,21 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="groupName")
       private final @Nullable Output<String> groupName;
 
-    public Output<String> getGroupName() {
+    public Output<String> groupName() {
         return this.groupName == null ? Codegen.empty() : this.groupName;
     }
 
     @Import(name="insightsConfiguration")
       private final @Nullable Output<GroupInsightsConfigurationArgs> insightsConfiguration;
 
-    public Output<GroupInsightsConfigurationArgs> getInsightsConfiguration() {
+    public Output<GroupInsightsConfigurationArgs> insightsConfiguration() {
         return this.insightsConfiguration == null ? Codegen.empty() : this.insightsConfiguration;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<TagsItemPropertiesArgs>> tags;
 
-    public Output<List<TagsItemPropertiesArgs>> getTags() {
+    public Output<List<TagsItemPropertiesArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

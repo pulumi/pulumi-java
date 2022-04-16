@@ -25,7 +25,7 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -36,7 +36,7 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
     @Import(name="principalAssignmentName")
       private final @Nullable Output<String> principalAssignmentName;
 
-    public Output<String> getPrincipalAssignmentName() {
+    public Output<String> principalAssignmentName() {
         return this.principalAssignmentName == null ? Codegen.empty() : this.principalAssignmentName;
     }
 
@@ -47,7 +47,7 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
     @Import(name="principalId", required=true)
       private final Output<String> principalId;
 
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId;
     }
 
@@ -58,7 +58,7 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
     @Import(name="principalType", required=true)
       private final Output<Either<String,PrincipalType>> principalType;
 
-    public Output<Either<String,PrincipalType>> getPrincipalType() {
+    public Output<Either<String,PrincipalType>> principalType() {
         return this.principalType;
     }
 
@@ -69,7 +69,7 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -80,7 +80,7 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
     @Import(name="role", required=true)
       private final Output<Either<String,ClusterPrincipalRole>> role;
 
-    public Output<Either<String,ClusterPrincipalRole>> getRole() {
+    public Output<Either<String,ClusterPrincipalRole>> role() {
         return this.role;
     }
 
@@ -91,7 +91,7 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 

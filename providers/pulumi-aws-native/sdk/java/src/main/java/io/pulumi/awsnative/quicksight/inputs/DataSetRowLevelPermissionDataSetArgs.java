@@ -28,14 +28,14 @@ public final class DataSetRowLevelPermissionDataSetArgs extends io.pulumi.resour
     @Import(name="arn", required=true)
       private final Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
     @Import(name="formatVersion")
       private final @Nullable Output<DataSetRowLevelPermissionFormatVersion> formatVersion;
 
-    public Output<DataSetRowLevelPermissionFormatVersion> getFormatVersion() {
+    public Output<DataSetRowLevelPermissionFormatVersion> formatVersion() {
         return this.formatVersion == null ? Codegen.empty() : this.formatVersion;
     }
 
@@ -46,14 +46,14 @@ public final class DataSetRowLevelPermissionDataSetArgs extends io.pulumi.resour
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
     @Import(name="permissionPolicy", required=true)
       private final Output<DataSetRowLevelPermissionPolicy> permissionPolicy;
 
-    public Output<DataSetRowLevelPermissionPolicy> getPermissionPolicy() {
+    public Output<DataSetRowLevelPermissionPolicy> permissionPolicy() {
         return this.permissionPolicy;
     }
 

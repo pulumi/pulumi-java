@@ -42,7 +42,7 @@ public class XssMatchSet extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN)
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +56,7 @@ public class XssMatchSet extends io.pulumi.resources.CustomResource {
      * @return The name or description of the SizeConstraintSet.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +70,7 @@ public class XssMatchSet extends io.pulumi.resources.CustomResource {
      * @return The parts of web requests that you want to inspect for cross-site scripting attacks.
      * 
      */
-    public Output</* @Nullable */ List<XssMatchSetXssMatchTuple>> getXssMatchTuples() {
+    public Output</* @Nullable */ List<XssMatchSetXssMatchTuple>> xssMatchTuples() {
         return this.xssMatchTuples;
     }
 

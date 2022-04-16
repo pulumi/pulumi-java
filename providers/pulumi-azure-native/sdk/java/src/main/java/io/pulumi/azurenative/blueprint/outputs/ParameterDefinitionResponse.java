@@ -64,42 +64,42 @@ public final class ParameterDefinitionResponse {
      * Array of allowed values for this parameter.
      * 
     */
-    public List<Object> getAllowedValues() {
+    public List<Object> allowedValues() {
         return this.allowedValues == null ? List.of() : this.allowedValues;
     }
     /**
      * Default Value for this parameter.
      * 
     */
-    public Optional<Object> getDefaultValue() {
+    public Optional<Object> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
     /**
      * Description of this parameter/resourceGroup.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * DisplayName of this parameter/resourceGroup.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.
      * 
     */
-    public Optional<String> getStrongType() {
+    public Optional<String> strongType() {
         return Optional.ofNullable(this.strongType);
     }
     /**
      * Allowed data types for Resource Manager template parameters.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -19,7 +19,7 @@ public final class GetRegisteredAsnArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="peeringName", required=true)
       private final String peeringName;
 
-    public String getPeeringName() {
+    public String peeringName() {
         return this.peeringName;
     }
 
@@ -30,7 +30,7 @@ public final class GetRegisteredAsnArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="registeredAsnName", required=true)
       private final String registeredAsnName;
 
-    public String getRegisteredAsnName() {
+    public String registeredAsnName() {
         return this.registeredAsnName;
     }
 
@@ -41,7 +41,7 @@ public final class GetRegisteredAsnArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

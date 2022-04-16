@@ -23,7 +23,7 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs exte
     @Import(name="keytab", required=true)
       private final Output<MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs> keytab;
 
-    public Output<MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs> getKeytab() {
+    public Output<MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs> keytab() {
         return this.keytab;
     }
 
@@ -34,7 +34,7 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs exte
     @Import(name="krb5ConfigGcsUri", required=true)
       private final Output<String> krb5ConfigGcsUri;
 
-    public Output<String> getKrb5ConfigGcsUri() {
+    public Output<String> krb5ConfigGcsUri() {
         return this.krb5ConfigGcsUri;
     }
 
@@ -45,7 +45,7 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs exte
     @Import(name="principal", required=true)
       private final Output<String> principal;
 
-    public Output<String> getPrincipal() {
+    public Output<String> principal() {
         return this.principal;
     }
 

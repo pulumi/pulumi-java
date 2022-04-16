@@ -27,7 +27,7 @@ public final class CisBenchmarkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="profileLevel")
       private final @Nullable Output<Integer> profileLevel;
 
-    public Output<Integer> getProfileLevel() {
+    public Output<Integer> profileLevel() {
         return this.profileLevel == null ? Codegen.empty() : this.profileLevel;
     }
 
@@ -38,7 +38,7 @@ public final class CisBenchmarkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="severity")
       private final @Nullable Output<CisBenchmarkSeverity> severity;
 
-    public Output<CisBenchmarkSeverity> getSeverity() {
+    public Output<CisBenchmarkSeverity> severity() {
         return this.severity == null ? Codegen.empty() : this.severity;
     }
 

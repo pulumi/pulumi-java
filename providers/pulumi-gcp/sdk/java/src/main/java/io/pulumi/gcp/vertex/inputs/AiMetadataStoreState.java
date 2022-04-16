@@ -26,7 +26,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -37,7 +37,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -49,7 +49,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
     @Import(name="encryptionSpec")
       private final @Nullable Output<AiMetadataStoreEncryptionSpecGetArgs> encryptionSpec;
 
-    public Output<AiMetadataStoreEncryptionSpecGetArgs> getEncryptionSpec() {
+    public Output<AiMetadataStoreEncryptionSpecGetArgs> encryptionSpec() {
         return this.encryptionSpec == null ? Codegen.empty() : this.encryptionSpec;
     }
 
@@ -60,7 +60,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -72,7 +72,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -83,7 +83,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -94,7 +94,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
     @Import(name="states")
       private final @Nullable Output<List<AiMetadataStoreStateGetArgs>> states;
 
-    public Output<List<AiMetadataStoreStateGetArgs>> getStates() {
+    public Output<List<AiMetadataStoreStateGetArgs>> states() {
         return this.states == null ? Codegen.empty() : this.states;
     }
 
@@ -106,7 +106,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 

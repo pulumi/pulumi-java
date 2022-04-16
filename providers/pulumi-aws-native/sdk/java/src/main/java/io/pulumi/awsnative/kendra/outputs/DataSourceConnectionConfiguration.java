@@ -30,19 +30,19 @@ public final class DataSourceConnectionConfiguration {
         this.tableName = tableName;
     }
 
-    public String getDatabaseHost() {
+    public String databaseHost() {
         return this.databaseHost;
     }
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
-    public Integer getDatabasePort() {
+    public Integer databasePort() {
         return this.databasePort;
     }
-    public String getSecretArn() {
+    public String secretArn() {
         return this.secretArn;
     }
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
 

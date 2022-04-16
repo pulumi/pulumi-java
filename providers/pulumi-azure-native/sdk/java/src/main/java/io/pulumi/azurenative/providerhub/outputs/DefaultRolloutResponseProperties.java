@@ -27,13 +27,13 @@ public final class DefaultRolloutResponseProperties {
         this.status = status;
     }
 
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
-    public Optional<DefaultRolloutPropertiesResponseSpecification> getSpecification() {
+    public Optional<DefaultRolloutPropertiesResponseSpecification> specification() {
         return Optional.ofNullable(this.specification);
     }
-    public Optional<DefaultRolloutPropertiesResponseStatus> getStatus() {
+    public Optional<DefaultRolloutPropertiesResponseStatus> status() {
         return Optional.ofNullable(this.status);
     }
 

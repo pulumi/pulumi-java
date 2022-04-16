@@ -21,7 +21,7 @@ public final class GetImageArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="imageDigest")
       private final @Nullable String imageDigest;
 
-    public Optional<String> getImageDigest() {
+    public Optional<String> imageDigest() {
         return this.imageDigest == null ? Optional.empty() : Optional.ofNullable(this.imageDigest);
     }
 
@@ -32,7 +32,7 @@ public final class GetImageArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="imageTag")
       private final @Nullable String imageTag;
 
-    public Optional<String> getImageTag() {
+    public Optional<String> imageTag() {
         return this.imageTag == null ? Optional.empty() : Optional.ofNullable(this.imageTag);
     }
 
@@ -43,7 +43,7 @@ public final class GetImageArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="registryId")
       private final @Nullable String registryId;
 
-    public Optional<String> getRegistryId() {
+    public Optional<String> registryId() {
         return this.registryId == null ? Optional.empty() : Optional.ofNullable(this.registryId);
     }
 
@@ -54,7 +54,7 @@ public final class GetImageArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="repositoryName", required=true)
       private final String repositoryName;
 
-    public String getRepositoryName() {
+    public String repositoryName() {
         return this.repositoryName;
     }
 

@@ -27,7 +27,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
     @Import(name="allocationStrategy")
       private final @Nullable Output<String> allocationStrategy;
 
-    public Output<String> getAllocationStrategy() {
+    public Output<String> allocationStrategy() {
         return this.allocationStrategy == null ? Codegen.empty() : this.allocationStrategy;
     }
 
@@ -38,7 +38,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
     @Import(name="bidPercentage")
       private final @Nullable Output<Integer> bidPercentage;
 
-    public Output<Integer> getBidPercentage() {
+    public Output<Integer> bidPercentage() {
         return this.bidPercentage == null ? Codegen.empty() : this.bidPercentage;
     }
 
@@ -49,7 +49,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
     @Import(name="desiredVcpus")
       private final @Nullable Output<Integer> desiredVcpus;
 
-    public Output<Integer> getDesiredVcpus() {
+    public Output<Integer> desiredVcpus() {
         return this.desiredVcpus == null ? Codegen.empty() : this.desiredVcpus;
     }
 
@@ -60,7 +60,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
     @Import(name="ec2Configuration")
       private final @Nullable Output<ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs> ec2Configuration;
 
-    public Output<ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs> getEc2Configuration() {
+    public Output<ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs> ec2Configuration() {
         return this.ec2Configuration == null ? Codegen.empty() : this.ec2Configuration;
     }
 
@@ -71,7 +71,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
     @Import(name="ec2KeyPair")
       private final @Nullable Output<String> ec2KeyPair;
 
-    public Output<String> getEc2KeyPair() {
+    public Output<String> ec2KeyPair() {
         return this.ec2KeyPair == null ? Codegen.empty() : this.ec2KeyPair;
     }
 
@@ -82,7 +82,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
     @Import(name="imageId")
       private final @Nullable Output<String> imageId;
 
-    public Output<String> getImageId() {
+    public Output<String> imageId() {
         return this.imageId == null ? Codegen.empty() : this.imageId;
     }
 
@@ -93,7 +93,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
     @Import(name="instanceRole")
       private final @Nullable Output<String> instanceRole;
 
-    public Output<String> getInstanceRole() {
+    public Output<String> instanceRole() {
         return this.instanceRole == null ? Codegen.empty() : this.instanceRole;
     }
 
@@ -104,7 +104,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
     @Import(name="instanceTypes")
       private final @Nullable Output<List<String>> instanceTypes;
 
-    public Output<List<String>> getInstanceTypes() {
+    public Output<List<String>> instanceTypes() {
         return this.instanceTypes == null ? Codegen.empty() : this.instanceTypes;
     }
 
@@ -115,7 +115,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
     @Import(name="launchTemplate")
       private final @Nullable Output<ComputeEnvironmentComputeResourcesLaunchTemplateGetArgs> launchTemplate;
 
-    public Output<ComputeEnvironmentComputeResourcesLaunchTemplateGetArgs> getLaunchTemplate() {
+    public Output<ComputeEnvironmentComputeResourcesLaunchTemplateGetArgs> launchTemplate() {
         return this.launchTemplate == null ? Codegen.empty() : this.launchTemplate;
     }
 
@@ -126,7 +126,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
     @Import(name="maxVcpus", required=true)
       private final Output<Integer> maxVcpus;
 
-    public Output<Integer> getMaxVcpus() {
+    public Output<Integer> maxVcpus() {
         return this.maxVcpus;
     }
 
@@ -137,7 +137,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
     @Import(name="minVcpus")
       private final @Nullable Output<Integer> minVcpus;
 
-    public Output<Integer> getMinVcpus() {
+    public Output<Integer> minVcpus() {
         return this.minVcpus == null ? Codegen.empty() : this.minVcpus;
     }
 
@@ -148,7 +148,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
     @Import(name="securityGroupIds", required=true)
       private final Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -159,7 +159,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
     @Import(name="spotIamFleetRole")
       private final @Nullable Output<String> spotIamFleetRole;
 
-    public Output<String> getSpotIamFleetRole() {
+    public Output<String> spotIamFleetRole() {
         return this.spotIamFleetRole == null ? Codegen.empty() : this.spotIamFleetRole;
     }
 
@@ -170,7 +170,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
     @Import(name="subnets", required=true)
       private final Output<List<String>> subnets;
 
-    public Output<List<String>> getSubnets() {
+    public Output<List<String>> subnets() {
         return this.subnets;
     }
 
@@ -181,7 +181,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -192,7 +192,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

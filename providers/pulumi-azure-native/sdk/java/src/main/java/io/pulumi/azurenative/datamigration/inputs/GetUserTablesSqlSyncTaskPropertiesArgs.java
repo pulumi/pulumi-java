@@ -27,7 +27,7 @@ public final class GetUserTablesSqlSyncTaskPropertiesArgs extends io.pulumi.reso
     @Import(name="input")
       private final @Nullable Output<GetUserTablesSqlSyncTaskInputArgs> input;
 
-    public Output<GetUserTablesSqlSyncTaskInputArgs> getInput() {
+    public Output<GetUserTablesSqlSyncTaskInputArgs> input() {
         return this.input == null ? Codegen.empty() : this.input;
     }
 
@@ -39,7 +39,7 @@ public final class GetUserTablesSqlSyncTaskPropertiesArgs extends io.pulumi.reso
     @Import(name="taskType", required=true)
       private final Output<String> taskType;
 
-    public Output<String> getTaskType() {
+    public Output<String> taskType() {
         return this.taskType;
     }
 

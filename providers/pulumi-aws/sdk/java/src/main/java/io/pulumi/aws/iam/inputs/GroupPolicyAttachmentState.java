@@ -22,7 +22,7 @@ public final class GroupPolicyAttachmentState extends io.pulumi.resources.Resour
     @Import(name="group")
       private final @Nullable Output<String> group;
 
-    public Output<String> getGroup() {
+    public Output<String> group() {
         return this.group == null ? Codegen.empty() : this.group;
     }
 
@@ -33,7 +33,7 @@ public final class GroupPolicyAttachmentState extends io.pulumi.resources.Resour
     @Import(name="policyArn")
       private final @Nullable Output<String> policyArn;
 
-    public Output<String> getPolicyArn() {
+    public Output<String> policyArn() {
         return this.policyArn == null ? Codegen.empty() : this.policyArn;
     }
 

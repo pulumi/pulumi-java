@@ -32,14 +32,14 @@ public final class AcceleratorTag {
      * Key of the tag. Value can be 1 to 127 characters.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * Value for the tag. Value can be 1 to 255 characters.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

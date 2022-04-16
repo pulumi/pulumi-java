@@ -69,42 +69,42 @@ public final class AzureVmWorkloadProtectionPolicyResponse {
      * Expected value is 'AzureWorkload'.
      * 
     */
-    public String getBackupManagementType() {
+    public String backupManagementType() {
         return this.backupManagementType;
     }
     /**
      * Fix the policy inconsistency
      * 
     */
-    public Optional<Boolean> getMakePolicyConsistent() {
+    public Optional<Boolean> makePolicyConsistent() {
         return Optional.ofNullable(this.makePolicyConsistent);
     }
     /**
      * Number of items associated with this policy.
      * 
     */
-    public Optional<Integer> getProtectedItemsCount() {
+    public Optional<Integer> protectedItemsCount() {
         return Optional.ofNullable(this.protectedItemsCount);
     }
     /**
      * Common settings for the backup management
      * 
     */
-    public Optional<SettingsResponse> getSettings() {
+    public Optional<SettingsResponse> settings() {
         return Optional.ofNullable(this.settings);
     }
     /**
      * List of sub-protection policies which includes schedule and retention
      * 
     */
-    public List<SubProtectionPolicyResponse> getSubProtectionPolicy() {
+    public List<SubProtectionPolicyResponse> subProtectionPolicy() {
         return this.subProtectionPolicy == null ? List.of() : this.subProtectionPolicy;
     }
     /**
      * Type of workload for the backup management
      * 
     */
-    public Optional<String> getWorkLoadType() {
+    public Optional<String> workLoadType() {
         return Optional.ofNullable(this.workLoadType);
     }
 

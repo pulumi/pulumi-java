@@ -24,7 +24,7 @@ public final class CloudSqlConnectionProfileResponse extends io.pulumi.resources
     @Import(name="cloudSqlId", required=true)
       private final String cloudSqlId;
 
-    public String getCloudSqlId() {
+    public String cloudSqlId() {
         return this.cloudSqlId;
     }
 
@@ -35,7 +35,7 @@ public final class CloudSqlConnectionProfileResponse extends io.pulumi.resources
     @Import(name="privateIp", required=true)
       private final String privateIp;
 
-    public String getPrivateIp() {
+    public String privateIp() {
         return this.privateIp;
     }
 
@@ -46,7 +46,7 @@ public final class CloudSqlConnectionProfileResponse extends io.pulumi.resources
     @Import(name="publicIp", required=true)
       private final String publicIp;
 
-    public String getPublicIp() {
+    public String publicIp() {
         return this.publicIp;
     }
 
@@ -57,7 +57,7 @@ public final class CloudSqlConnectionProfileResponse extends io.pulumi.resources
     @Import(name="settings", required=true)
       private final CloudSqlSettingsResponse settings;
 
-    public CloudSqlSettingsResponse getSettings() {
+    public CloudSqlSettingsResponse settings() {
         return this.settings;
     }
 

@@ -30,7 +30,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends io.pulu
     @Import(name="apiSource", required=true)
       private final Output<String> apiSource;
 
-    public Output<String> getApiSource() {
+    public Output<String> apiSource() {
         return this.apiSource;
     }
 
@@ -41,7 +41,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends io.pulu
     @Import(name="attributes")
       private final @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
 
-    public Output<List<GoogleCloudApigeeV1AttributeArgs>> getAttributes() {
+    public Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes() {
         return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
@@ -52,7 +52,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends io.pulu
     @Import(name="operations", required=true)
       private final Output<List<GoogleCloudApigeeV1GraphQLOperationArgs>> operations;
 
-    public Output<List<GoogleCloudApigeeV1GraphQLOperationArgs>> getOperations() {
+    public Output<List<GoogleCloudApigeeV1GraphQLOperationArgs>> operations() {
         return this.operations;
     }
 
@@ -63,7 +63,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends io.pulu
     @Import(name="quota")
       private final @Nullable Output<GoogleCloudApigeeV1QuotaArgs> quota;
 
-    public Output<GoogleCloudApigeeV1QuotaArgs> getQuota() {
+    public Output<GoogleCloudApigeeV1QuotaArgs> quota() {
         return this.quota == null ? Codegen.empty() : this.quota;
     }
 

@@ -40,21 +40,21 @@ public final class BackendServiceFailoverPolicyResponse {
      * This can be set to true only if the protocol is TCP. The default is false.
      * 
     */
-    public Boolean getDisableConnectionDrainOnFailover() {
+    public Boolean disableConnectionDrainOnFailover() {
         return this.disableConnectionDrainOnFailover;
     }
     /**
      * If set to true, connections to the load balancer are dropped when all primary and all backup backend VMs are unhealthy.If set to false, connections are distributed among all primary VMs when all primary and all backup backend VMs are unhealthy. For load balancers that have configurable failover: [Internal TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and [external TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/network/networklb-failover-overview). The default is false.
      * 
     */
-    public Boolean getDropTrafficIfUnhealthy() {
+    public Boolean dropTrafficIfUnhealthy() {
         return this.dropTrafficIfUnhealthy;
     }
     /**
      * The value of the field must be in the range [0, 1]. If the value is 0, the load balancer performs a failover when the number of healthy primary VMs equals zero. For all other values, the load balancer performs a failover when the total number of healthy primary VMs is less than this ratio. For load balancers that have configurable failover: [Internal TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and [external TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/network/networklb-failover-overview).
      * 
     */
-    public Double getFailoverRatio() {
+    public Double failoverRatio() {
         return this.failoverRatio;
     }
 

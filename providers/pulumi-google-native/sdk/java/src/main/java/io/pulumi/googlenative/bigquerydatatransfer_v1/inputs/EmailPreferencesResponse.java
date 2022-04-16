@@ -23,7 +23,7 @@ public final class EmailPreferencesResponse extends io.pulumi.resources.InvokeAr
     @Import(name="enableFailureEmail", required=true)
       private final Boolean enableFailureEmail;
 
-    public Boolean getEnableFailureEmail() {
+    public Boolean enableFailureEmail() {
         return this.enableFailureEmail;
     }
 

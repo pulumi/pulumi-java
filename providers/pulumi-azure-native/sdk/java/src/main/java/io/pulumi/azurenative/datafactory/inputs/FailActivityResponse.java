@@ -29,7 +29,7 @@ public final class FailActivityResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
@@ -40,7 +40,7 @@ public final class FailActivityResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -51,7 +51,7 @@ public final class FailActivityResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="errorCode", required=true)
       private final Object errorCode;
 
-    public Object getErrorCode() {
+    public Object errorCode() {
         return this.errorCode;
     }
 
@@ -62,7 +62,7 @@ public final class FailActivityResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="message", required=true)
       private final Object message;
 
-    public Object getMessage() {
+    public Object message() {
         return this.message;
     }
 
@@ -73,7 +73,7 @@ public final class FailActivityResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -85,7 +85,7 @@ public final class FailActivityResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -96,7 +96,7 @@ public final class FailActivityResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 

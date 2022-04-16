@@ -19,7 +19,7 @@ public final class GetExpressRouteCircuitPeeringArgs extends io.pulumi.resources
     @Import(name="circuitName", required=true)
       private final String circuitName;
 
-    public String getCircuitName() {
+    public String circuitName() {
         return this.circuitName;
     }
 
@@ -30,7 +30,7 @@ public final class GetExpressRouteCircuitPeeringArgs extends io.pulumi.resources
     @Import(name="peeringName", required=true)
       private final String peeringName;
 
-    public String getPeeringName() {
+    public String peeringName() {
         return this.peeringName;
     }
 
@@ -41,7 +41,7 @@ public final class GetExpressRouteCircuitPeeringArgs extends io.pulumi.resources
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

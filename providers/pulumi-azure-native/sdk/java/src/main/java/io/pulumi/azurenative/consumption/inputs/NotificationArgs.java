@@ -33,7 +33,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contactEmails", required=true)
       private final Output<List<String>> contactEmails;
 
-    public Output<List<String>> getContactEmails() {
+    public Output<List<String>> contactEmails() {
         return this.contactEmails;
     }
 
@@ -44,7 +44,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contactGroups")
       private final @Nullable Output<List<String>> contactGroups;
 
-    public Output<List<String>> getContactGroups() {
+    public Output<List<String>> contactGroups() {
         return this.contactGroups == null ? Codegen.empty() : this.contactGroups;
     }
 
@@ -55,7 +55,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contactRoles")
       private final @Nullable Output<List<String>> contactRoles;
 
-    public Output<List<String>> getContactRoles() {
+    public Output<List<String>> contactRoles() {
         return this.contactRoles == null ? Codegen.empty() : this.contactRoles;
     }
 
@@ -66,7 +66,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -77,7 +77,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locale")
       private final @Nullable Output<Either<String,CultureCode>> locale;
 
-    public Output<Either<String,CultureCode>> getLocale() {
+    public Output<Either<String,CultureCode>> locale() {
         return this.locale == null ? Codegen.empty() : this.locale;
     }
 
@@ -88,7 +88,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operator", required=true)
       private final Output<Either<String,OperatorType>> operator;
 
-    public Output<Either<String,OperatorType>> getOperator() {
+    public Output<Either<String,OperatorType>> operator() {
         return this.operator;
     }
 
@@ -99,7 +99,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="threshold", required=true)
       private final Output<Double> threshold;
 
-    public Output<Double> getThreshold() {
+    public Output<Double> threshold() {
         return this.threshold;
     }
 
@@ -110,7 +110,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="thresholdType")
       private final @Nullable Output<Either<String,ThresholdType>> thresholdType;
 
-    public Output<Either<String,ThresholdType>> getThresholdType() {
+    public Output<Either<String,ThresholdType>> thresholdType() {
         return this.thresholdType == null ? Codegen.empty() : this.thresholdType;
     }
 

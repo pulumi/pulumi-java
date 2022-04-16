@@ -34,7 +34,7 @@ public class RepositoryAssociation extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the repository association.
      * 
      */
-    public Output<String> getAssociationArn() {
+    public Output<String> associationArn() {
         return this.associationArn;
     }
     /**
@@ -48,7 +48,7 @@ public class RepositoryAssociation extends io.pulumi.resources.CustomResource {
      * @return The name of the S3 bucket associated with an associated S3 repository. It must start with `codeguru-reviewer-`.
      * 
      */
-    public Output</* @Nullable */ String> getBucketName() {
+    public Output</* @Nullable */ String> bucketName() {
         return this.bucketName;
     }
     /**
@@ -62,7 +62,7 @@ public class RepositoryAssociation extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of an AWS CodeStar Connections connection.
      * 
      */
-    public Output</* @Nullable */ String> getConnectionArn() {
+    public Output</* @Nullable */ String> connectionArn() {
         return this.connectionArn;
     }
     /**
@@ -76,7 +76,7 @@ public class RepositoryAssociation extends io.pulumi.resources.CustomResource {
      * @return Name of the repository to be associated.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -90,7 +90,7 @@ public class RepositoryAssociation extends io.pulumi.resources.CustomResource {
      * @return The owner of the repository. For a Bitbucket repository, this is the username for the account that owns the repository.
      * 
      */
-    public Output</* @Nullable */ String> getOwner() {
+    public Output</* @Nullable */ String> owner() {
         return this.owner;
     }
     /**
@@ -104,7 +104,7 @@ public class RepositoryAssociation extends io.pulumi.resources.CustomResource {
      * @return The tags associated with a repository association.
      * 
      */
-    public Output</* @Nullable */ List<RepositoryAssociationTag>> getTags() {
+    public Output</* @Nullable */ List<RepositoryAssociationTag>> tags() {
         return this.tags;
     }
     /**
@@ -118,7 +118,7 @@ public class RepositoryAssociation extends io.pulumi.resources.CustomResource {
      * @return The type of repository to be associated.
      * 
      */
-    public Output<RepositoryAssociationType> getType() {
+    public Output<RepositoryAssociationType> type() {
         return this.type;
     }
 

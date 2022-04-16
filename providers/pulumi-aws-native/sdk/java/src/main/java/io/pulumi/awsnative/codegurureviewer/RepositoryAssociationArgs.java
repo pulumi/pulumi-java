@@ -25,7 +25,7 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="bucketName")
       private final @Nullable Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName == null ? Codegen.empty() : this.bucketName;
     }
 
@@ -36,7 +36,7 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="connectionArn")
       private final @Nullable Output<String> connectionArn;
 
-    public Output<String> getConnectionArn() {
+    public Output<String> connectionArn() {
         return this.connectionArn == null ? Codegen.empty() : this.connectionArn;
     }
 
@@ -47,7 +47,7 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -58,7 +58,7 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="owner")
       private final @Nullable Output<String> owner;
 
-    public Output<String> getOwner() {
+    public Output<String> owner() {
         return this.owner == null ? Codegen.empty() : this.owner;
     }
 
@@ -69,7 +69,7 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<List<RepositoryAssociationTagArgs>> tags;
 
-    public Output<List<RepositoryAssociationTagArgs>> getTags() {
+    public Output<List<RepositoryAssociationTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -80,7 +80,7 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="type", required=true)
       private final Output<RepositoryAssociationType> type;
 
-    public Output<RepositoryAssociationType> getType() {
+    public Output<RepositoryAssociationType> type() {
         return this.type;
     }
 

@@ -23,7 +23,7 @@ public final class ResourceSelectorResponse extends io.pulumi.resources.InvokeAr
     @Import(name="fullResourceName", required=true)
       private final String fullResourceName;
 
-    public String getFullResourceName() {
+    public String fullResourceName() {
         return this.fullResourceName;
     }
 

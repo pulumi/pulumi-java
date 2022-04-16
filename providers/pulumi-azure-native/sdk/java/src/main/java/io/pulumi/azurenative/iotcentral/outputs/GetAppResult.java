@@ -92,70 +92,70 @@ public final class GetAppResult {
      * The ID of the application.
      * 
     */
-    public String getApplicationId() {
+    public String applicationId() {
         return this.applicationId;
     }
     /**
      * The display name of the application.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The ARM resource identifier.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The resource location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The ARM resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A valid instance SKU.
      * 
     */
-    public AppSkuInfoResponse getSku() {
+    public AppSkuInfoResponse sku() {
         return this.sku;
     }
     /**
      * The subdomain of the application.
      * 
     */
-    public Optional<String> getSubdomain() {
+    public Optional<String> subdomain() {
         return Optional.ofNullable(this.subdomain);
     }
     /**
      * The resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The ID of the application template, which is a blueprint that defines the characteristics and behaviors of an application. Optional; if not specified, defaults to a blank blueprint and allows the application to be defined from scratch.
      * 
     */
-    public Optional<String> getTemplate() {
+    public Optional<String> template() {
         return Optional.ofNullable(this.template);
     }
     /**
      * The resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

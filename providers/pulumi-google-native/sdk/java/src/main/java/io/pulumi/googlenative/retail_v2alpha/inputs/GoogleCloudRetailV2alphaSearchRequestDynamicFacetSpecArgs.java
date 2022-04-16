@@ -26,7 +26,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecArgs ext
     @Import(name="mode")
       private final @Nullable Output<GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecMode> mode;
 
-    public Output<GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecMode> getMode() {
+    public Output<GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecMode> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 

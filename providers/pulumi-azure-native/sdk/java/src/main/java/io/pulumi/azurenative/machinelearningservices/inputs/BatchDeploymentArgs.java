@@ -40,7 +40,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="codeConfiguration")
       private final @Nullable Output<CodeConfigurationArgs> codeConfiguration;
 
-    public Output<CodeConfigurationArgs> getCodeConfiguration() {
+    public Output<CodeConfigurationArgs> codeConfiguration() {
         return this.codeConfiguration == null ? Codegen.empty() : this.codeConfiguration;
     }
 
@@ -51,7 +51,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="compute")
       private final @Nullable Output<ComputeConfigurationArgs> compute;
 
-    public Output<ComputeConfigurationArgs> getCompute() {
+    public Output<ComputeConfigurationArgs> compute() {
         return this.compute == null ? Codegen.empty() : this.compute;
     }
 
@@ -62,7 +62,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -73,7 +73,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="environmentId")
       private final @Nullable Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId == null ? Codegen.empty() : this.environmentId;
     }
 
@@ -84,7 +84,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="environmentVariables")
       private final @Nullable Output<Map<String,String>> environmentVariables;
 
-    public Output<Map<String,String>> getEnvironmentVariables() {
+    public Output<Map<String,String>> environmentVariables() {
         return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
@@ -99,7 +99,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="errorThreshold")
       private final @Nullable Output<Integer> errorThreshold;
 
-    public Output<Integer> getErrorThreshold() {
+    public Output<Integer> errorThreshold() {
         return this.errorThreshold == null ? Codegen.empty() : this.errorThreshold;
     }
 
@@ -110,7 +110,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="loggingLevel")
       private final @Nullable Output<Either<String,BatchLoggingLevel>> loggingLevel;
 
-    public Output<Either<String,BatchLoggingLevel>> getLoggingLevel() {
+    public Output<Either<String,BatchLoggingLevel>> loggingLevel() {
         return this.loggingLevel == null ? Codegen.empty() : this.loggingLevel;
     }
 
@@ -123,7 +123,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="miniBatchSize")
       private final @Nullable Output<Double> miniBatchSize;
 
-    public Output<Double> getMiniBatchSize() {
+    public Output<Double> miniBatchSize() {
         return this.miniBatchSize == null ? Codegen.empty() : this.miniBatchSize;
     }
 
@@ -134,7 +134,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="model")
       private final @Nullable Output<Object> model;
 
-    public Output<Object> getModel() {
+    public Output<Object> model() {
         return this.model == null ? Codegen.empty() : this.model;
     }
 
@@ -145,7 +145,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="outputConfiguration")
       private final @Nullable Output<BatchOutputConfigurationArgs> outputConfiguration;
 
-    public Output<BatchOutputConfigurationArgs> getOutputConfiguration() {
+    public Output<BatchOutputConfigurationArgs> outputConfiguration() {
         return this.outputConfiguration == null ? Codegen.empty() : this.outputConfiguration;
     }
 
@@ -156,7 +156,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="partitionKeys")
       private final @Nullable Output<List<String>> partitionKeys;
 
-    public Output<List<String>> getPartitionKeys() {
+    public Output<List<String>> partitionKeys() {
         return this.partitionKeys == null ? Codegen.empty() : this.partitionKeys;
     }
 
@@ -167,7 +167,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -178,7 +178,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="retrySettings")
       private final @Nullable Output<BatchRetrySettingsArgs> retrySettings;
 
-    public Output<BatchRetrySettingsArgs> getRetrySettings() {
+    public Output<BatchRetrySettingsArgs> retrySettings() {
         return this.retrySettings == null ? Codegen.empty() : this.retrySettings;
     }
 

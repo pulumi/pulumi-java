@@ -188,154 +188,154 @@ public final class GetNoteResult {
      * A note describing an attestation role.
      * 
     */
-    public AttestationAuthorityResponse getAttestationAuthority() {
+    public AttestationAuthorityResponse attestationAuthority() {
         return this.attestationAuthority;
     }
     /**
      * A note describing a base image.
      * 
     */
-    public BasisResponse getBaseImage() {
+    public BasisResponse baseImage() {
         return this.baseImage;
     }
     /**
      * Build provenance type for a verifiable build.
      * 
     */
-    public BuildTypeResponse getBuildType() {
+    public BuildTypeResponse buildType() {
         return this.buildType;
     }
     /**
      * A note describing a compliance check.
      * 
     */
-    public ComplianceNoteResponse getCompliance() {
+    public ComplianceNoteResponse compliance() {
         return this.compliance;
     }
     /**
      * The time this note was created. This field can be used as a filter in list requests.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * A note describing something that can be deployed.
      * 
     */
-    public DeployableResponse getDeployable() {
+    public DeployableResponse deployable() {
         return this.deployable;
     }
     /**
      * A note describing a provider/analysis type.
      * 
     */
-    public DiscoveryResponse getDiscovery() {
+    public DiscoveryResponse discovery() {
         return this.discovery;
     }
     /**
      * A note describing a dsse attestation note.
      * 
     */
-    public DSSEAttestationNoteResponse getDsseAttestation() {
+    public DSSEAttestationNoteResponse dsseAttestation() {
         return this.dsseAttestation;
     }
     /**
      * Time of expiration for this note, null if note does not expire.
      * 
     */
-    public String getExpirationTime() {
+    public String expirationTime() {
         return this.expirationTime;
     }
     /**
      * This explicitly denotes which kind of note is specified. This field can be used as a filter in list requests.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * A detailed description of this `Note`.
      * 
     */
-    public String getLongDescription() {
+    public String longDescription() {
         return this.longDescription;
     }
     /**
      * The name of the note in the form "projects/{provider_project_id}/notes/{NOTE_ID}"
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A note describing a package hosted by various package managers.
      * 
     */
-    public PackageResponse getPackage_() {
+    public PackageResponse package_() {
         return this.package_;
     }
     /**
      * URLs associated with this note
      * 
     */
-    public List<RelatedUrlResponse> getRelatedUrl() {
+    public List<RelatedUrlResponse> relatedUrl() {
         return this.relatedUrl;
     }
     /**
      * A note describing a software bill of materials.
      * 
     */
-    public DocumentNoteResponse getSbom() {
+    public DocumentNoteResponse sbom() {
         return this.sbom;
     }
     /**
      * A one sentence description of this `Note`.
      * 
     */
-    public String getShortDescription() {
+    public String shortDescription() {
         return this.shortDescription;
     }
     /**
      * A note describing an SPDX File.
      * 
     */
-    public FileNoteResponse getSpdxFile() {
+    public FileNoteResponse spdxFile() {
         return this.spdxFile;
     }
     /**
      * A note describing an SPDX Package.
      * 
     */
-    public PackageInfoNoteResponse getSpdxPackage() {
+    public PackageInfoNoteResponse spdxPackage() {
         return this.spdxPackage;
     }
     /**
      * A note describing a relationship between SPDX elements.
      * 
     */
-    public RelationshipNoteResponse getSpdxRelationship() {
+    public RelationshipNoteResponse spdxRelationship() {
         return this.spdxRelationship;
     }
     /**
      * The time this note was last updated. This field can be used as a filter in list requests.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
     /**
      * A note describing an upgrade.
      * 
     */
-    public UpgradeNoteResponse getUpgrade() {
+    public UpgradeNoteResponse upgrade() {
         return this.upgrade;
     }
     /**
      * A package vulnerability type of note.
      * 
     */
-    public VulnerabilityTypeResponse getVulnerabilityType() {
+    public VulnerabilityTypeResponse vulnerabilityType() {
         return this.vulnerabilityType;
     }
 

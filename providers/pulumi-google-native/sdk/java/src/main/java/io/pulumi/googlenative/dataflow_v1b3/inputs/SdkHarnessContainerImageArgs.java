@@ -27,7 +27,7 @@ public final class SdkHarnessContainerImageArgs extends io.pulumi.resources.Reso
     @Import(name="containerImage")
       private final @Nullable Output<String> containerImage;
 
-    public Output<String> getContainerImage() {
+    public Output<String> containerImage() {
         return this.containerImage == null ? Codegen.empty() : this.containerImage;
     }
 
@@ -38,7 +38,7 @@ public final class SdkHarnessContainerImageArgs extends io.pulumi.resources.Reso
     @Import(name="environmentId")
       private final @Nullable Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId == null ? Codegen.empty() : this.environmentId;
     }
 
@@ -49,7 +49,7 @@ public final class SdkHarnessContainerImageArgs extends io.pulumi.resources.Reso
     @Import(name="useSingleCorePerContainer")
       private final @Nullable Output<Boolean> useSingleCorePerContainer;
 
-    public Output<Boolean> getUseSingleCorePerContainer() {
+    public Output<Boolean> useSingleCorePerContainer() {
         return this.useSingleCorePerContainer == null ? Codegen.empty() : this.useSingleCorePerContainer;
     }
 

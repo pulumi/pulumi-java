@@ -26,7 +26,7 @@ public final class MediaGraphUsernamePasswordCredentialsArgs extends io.pulumi.r
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -37,7 +37,7 @@ public final class MediaGraphUsernamePasswordCredentialsArgs extends io.pulumi.r
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -48,7 +48,7 @@ public final class MediaGraphUsernamePasswordCredentialsArgs extends io.pulumi.r
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 

@@ -41,21 +41,21 @@ public final class GetRegionInstanceGroupInstance {
      * URL to the instance.
      * 
     */
-    public String getInstance() {
+    public String instance() {
         return this.instance;
     }
     /**
      * List of named ports in the group, as a list of resources, each containing:
      * 
     */
-    public List<GetRegionInstanceGroupInstanceNamedPort> getNamedPorts() {
+    public List<GetRegionInstanceGroupInstanceNamedPort> namedPorts() {
         return this.namedPorts;
     }
     /**
      * String description of current state of the instance.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

@@ -24,7 +24,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextRes
     @Import(name="aliasContext", required=true)
       private final GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext;
 
-    public GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse getAliasContext() {
+    public GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext() {
         return this.aliasContext;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextRes
     @Import(name="gerritProject", required=true)
       private final String gerritProject;
 
-    public String getGerritProject() {
+    public String gerritProject() {
         return this.gerritProject;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextRes
     @Import(name="hostUri", required=true)
       private final String hostUri;
 
-    public String getHostUri() {
+    public String hostUri() {
         return this.hostUri;
     }
 
@@ -57,7 +57,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextRes
     @Import(name="revisionId", required=true)
       private final String revisionId;
 
-    public String getRevisionId() {
+    public String revisionId() {
         return this.revisionId;
     }
 

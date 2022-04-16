@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1__ContainerPortResponse extends io.pulumi.reso
     @Import(name="containerPort", required=true)
       private final Integer containerPort;
 
-    public Integer getContainerPort() {
+    public Integer containerPort() {
         return this.containerPort;
     }
 

@@ -43,21 +43,21 @@ public final class PredictionDistributionDefinitionResponse {
      * Distributions of the prediction.
      * 
     */
-    public List<PredictionDistributionDefinitionResponseDistributions> getDistributions() {
+    public List<PredictionDistributionDefinitionResponseDistributions> distributions() {
         return this.distributions == null ? List.of() : this.distributions;
     }
     /**
      * Total negatives in the distribution.
      * 
     */
-    public Optional<Double> getTotalNegatives() {
+    public Optional<Double> totalNegatives() {
         return Optional.ofNullable(this.totalNegatives);
     }
     /**
      * Total positive in the distribution.
      * 
     */
-    public Optional<Double> getTotalPositives() {
+    public Optional<Double> totalPositives() {
         return Optional.ofNullable(this.totalPositives);
     }
 

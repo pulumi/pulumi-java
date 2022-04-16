@@ -31,16 +31,16 @@ public final class UserPhoneConfig {
         this.phoneType = phoneType;
     }
 
-    public Optional<Integer> getAfterContactWorkTimeLimit() {
+    public Optional<Integer> afterContactWorkTimeLimit() {
         return Optional.ofNullable(this.afterContactWorkTimeLimit);
     }
-    public Optional<Boolean> getAutoAccept() {
+    public Optional<Boolean> autoAccept() {
         return Optional.ofNullable(this.autoAccept);
     }
-    public Optional<String> getDeskPhoneNumber() {
+    public Optional<String> deskPhoneNumber() {
         return Optional.ofNullable(this.deskPhoneNumber);
     }
-    public UserPhoneType getPhoneType() {
+    public UserPhoneType phoneType() {
         return this.phoneType;
     }
 

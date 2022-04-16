@@ -16,7 +16,7 @@ public final class GetClusterMonitoringConfig extends io.pulumi.resources.Invoke
     @Import(name="enableComponents", required=true)
       private final List<String> enableComponents;
 
-    public List<String> getEnableComponents() {
+    public List<String> enableComponents() {
         return this.enableComponents;
     }
 

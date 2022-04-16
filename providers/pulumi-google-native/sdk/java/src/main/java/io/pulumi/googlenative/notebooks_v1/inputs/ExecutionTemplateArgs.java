@@ -31,7 +31,7 @@ public final class ExecutionTemplateArgs extends io.pulumi.resources.ResourceArg
     @Import(name="acceleratorConfig")
       private final @Nullable Output<SchedulerAcceleratorConfigArgs> acceleratorConfig;
 
-    public Output<SchedulerAcceleratorConfigArgs> getAcceleratorConfig() {
+    public Output<SchedulerAcceleratorConfigArgs> acceleratorConfig() {
         return this.acceleratorConfig == null ? Codegen.empty() : this.acceleratorConfig;
     }
 
@@ -42,7 +42,7 @@ public final class ExecutionTemplateArgs extends io.pulumi.resources.ResourceArg
     @Import(name="containerImageUri")
       private final @Nullable Output<String> containerImageUri;
 
-    public Output<String> getContainerImageUri() {
+    public Output<String> containerImageUri() {
         return this.containerImageUri == null ? Codegen.empty() : this.containerImageUri;
     }
 
@@ -53,7 +53,7 @@ public final class ExecutionTemplateArgs extends io.pulumi.resources.ResourceArg
     @Import(name="dataprocParameters")
       private final @Nullable Output<DataprocParametersArgs> dataprocParameters;
 
-    public Output<DataprocParametersArgs> getDataprocParameters() {
+    public Output<DataprocParametersArgs> dataprocParameters() {
         return this.dataprocParameters == null ? Codegen.empty() : this.dataprocParameters;
     }
 
@@ -64,7 +64,7 @@ public final class ExecutionTemplateArgs extends io.pulumi.resources.ResourceArg
     @Import(name="inputNotebookFile")
       private final @Nullable Output<String> inputNotebookFile;
 
-    public Output<String> getInputNotebookFile() {
+    public Output<String> inputNotebookFile() {
         return this.inputNotebookFile == null ? Codegen.empty() : this.inputNotebookFile;
     }
 
@@ -75,7 +75,7 @@ public final class ExecutionTemplateArgs extends io.pulumi.resources.ResourceArg
     @Import(name="jobType")
       private final @Nullable Output<ExecutionTemplateJobType> jobType;
 
-    public Output<ExecutionTemplateJobType> getJobType() {
+    public Output<ExecutionTemplateJobType> jobType() {
         return this.jobType == null ? Codegen.empty() : this.jobType;
     }
 
@@ -86,7 +86,7 @@ public final class ExecutionTemplateArgs extends io.pulumi.resources.ResourceArg
     @Import(name="kernelSpec")
       private final @Nullable Output<String> kernelSpec;
 
-    public Output<String> getKernelSpec() {
+    public Output<String> kernelSpec() {
         return this.kernelSpec == null ? Codegen.empty() : this.kernelSpec;
     }
 
@@ -97,7 +97,7 @@ public final class ExecutionTemplateArgs extends io.pulumi.resources.ResourceArg
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -108,7 +108,7 @@ public final class ExecutionTemplateArgs extends io.pulumi.resources.ResourceArg
     @Import(name="masterType")
       private final @Nullable Output<String> masterType;
 
-    public Output<String> getMasterType() {
+    public Output<String> masterType() {
         return this.masterType == null ? Codegen.empty() : this.masterType;
     }
 
@@ -119,7 +119,7 @@ public final class ExecutionTemplateArgs extends io.pulumi.resources.ResourceArg
     @Import(name="outputNotebookFolder")
       private final @Nullable Output<String> outputNotebookFolder;
 
-    public Output<String> getOutputNotebookFolder() {
+    public Output<String> outputNotebookFolder() {
         return this.outputNotebookFolder == null ? Codegen.empty() : this.outputNotebookFolder;
     }
 
@@ -130,7 +130,7 @@ public final class ExecutionTemplateArgs extends io.pulumi.resources.ResourceArg
     @Import(name="parameters")
       private final @Nullable Output<String> parameters;
 
-    public Output<String> getParameters() {
+    public Output<String> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -141,7 +141,7 @@ public final class ExecutionTemplateArgs extends io.pulumi.resources.ResourceArg
     @Import(name="paramsYamlFile")
       private final @Nullable Output<String> paramsYamlFile;
 
-    public Output<String> getParamsYamlFile() {
+    public Output<String> paramsYamlFile() {
         return this.paramsYamlFile == null ? Codegen.empty() : this.paramsYamlFile;
     }
 
@@ -152,7 +152,7 @@ public final class ExecutionTemplateArgs extends io.pulumi.resources.ResourceArg
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
@@ -163,7 +163,7 @@ public final class ExecutionTemplateArgs extends io.pulumi.resources.ResourceArg
     @Import(name="vertexAiParameters")
       private final @Nullable Output<VertexAIParametersArgs> vertexAiParameters;
 
-    public Output<VertexAIParametersArgs> getVertexAiParameters() {
+    public Output<VertexAIParametersArgs> vertexAiParameters() {
         return this.vertexAiParameters == null ? Codegen.empty() : this.vertexAiParameters;
     }
 

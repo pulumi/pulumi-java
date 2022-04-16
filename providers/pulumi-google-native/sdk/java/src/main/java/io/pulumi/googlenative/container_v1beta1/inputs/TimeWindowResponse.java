@@ -24,7 +24,7 @@ public final class TimeWindowResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="endTime", required=true)
       private final String endTime;
 
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
 
@@ -35,7 +35,7 @@ public final class TimeWindowResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="maintenanceExclusionOptions", required=true)
       private final MaintenanceExclusionOptionsResponse maintenanceExclusionOptions;
 
-    public MaintenanceExclusionOptionsResponse getMaintenanceExclusionOptions() {
+    public MaintenanceExclusionOptionsResponse maintenanceExclusionOptions() {
         return this.maintenanceExclusionOptions;
     }
 
@@ -46,7 +46,7 @@ public final class TimeWindowResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

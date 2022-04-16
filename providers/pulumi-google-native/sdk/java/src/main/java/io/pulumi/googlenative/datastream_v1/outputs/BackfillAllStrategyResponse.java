@@ -33,14 +33,14 @@ public final class BackfillAllStrategyResponse {
      * MySQL data source objects to avoid backfilling.
      * 
     */
-    public MysqlRdbmsResponse getMysqlExcludedObjects() {
+    public MysqlRdbmsResponse mysqlExcludedObjects() {
         return this.mysqlExcludedObjects;
     }
     /**
      * Oracle data source objects to avoid backfilling.
      * 
     */
-    public OracleRdbmsResponse getOracleExcludedObjects() {
+    public OracleRdbmsResponse oracleExcludedObjects() {
         return this.oracleExcludedObjects;
     }
 

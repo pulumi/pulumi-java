@@ -47,28 +47,28 @@ public final class PackageIssueResponse {
      * The location of the vulnerability.
      * 
     */
-    public VulnerabilityLocationResponse getAffectedLocation() {
+    public VulnerabilityLocationResponse affectedLocation() {
         return this.affectedLocation;
     }
     /**
      * The distro or language system assigned severity for this vulnerability when that is available and note provider assigned severity when it is not available.
      * 
     */
-    public String getEffectiveSeverity() {
+    public String effectiveSeverity() {
         return this.effectiveSeverity;
     }
     /**
      * The location of the available fix for vulnerability.
      * 
     */
-    public VulnerabilityLocationResponse getFixedLocation() {
+    public VulnerabilityLocationResponse fixedLocation() {
         return this.fixedLocation;
     }
     /**
      * The type of package (e.g. OS, MAVEN, GO).
      * 
     */
-    public String getPackageType() {
+    public String packageType() {
         return this.packageType;
     }
 

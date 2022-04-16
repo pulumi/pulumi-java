@@ -32,14 +32,14 @@ public final class VirtualNodeSpecListenerTlsCertificateFile {
      * The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
      * 
     */
-    public String getCertificateChain() {
+    public String certificateChain() {
         return this.certificateChain;
     }
     /**
      * The private key for a certificate stored on the file system of the virtual node that the proxy is running on. Must be between 1 and 255 characters in length.
      * 
     */
-    public String getPrivateKey() {
+    public String privateKey() {
         return this.privateKey;
     }
 

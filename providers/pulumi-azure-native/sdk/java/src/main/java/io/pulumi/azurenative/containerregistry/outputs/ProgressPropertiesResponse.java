@@ -26,7 +26,7 @@ public final class ProgressPropertiesResponse {
      * The percentage complete of the copy operation.
      * 
     */
-    public Optional<String> getPercentage() {
+    public Optional<String> percentage() {
         return Optional.ofNullable(this.percentage);
     }
 

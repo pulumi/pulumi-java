@@ -22,7 +22,7 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
     @Import(name="certificateName")
       private final @Nullable Output<String> certificateName;
 
-    public Output<String> getCertificateName() {
+    public Output<String> certificateName() {
         return this.certificateName == null ? Codegen.empty() : this.certificateName;
     }
 
@@ -33,7 +33,7 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
     @Import(name="managedInstanceName", required=true)
       private final Output<String> managedInstanceName;
 
-    public Output<String> getManagedInstanceName() {
+    public Output<String> managedInstanceName() {
         return this.managedInstanceName;
     }
 
@@ -44,7 +44,7 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
     @Import(name="publicBlob")
       private final @Nullable Output<String> publicBlob;
 
-    public Output<String> getPublicBlob() {
+    public Output<String> publicBlob() {
         return this.publicBlob == null ? Codegen.empty() : this.publicBlob;
     }
 
@@ -55,7 +55,7 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

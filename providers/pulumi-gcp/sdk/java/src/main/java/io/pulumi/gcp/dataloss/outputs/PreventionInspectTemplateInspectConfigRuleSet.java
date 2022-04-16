@@ -37,7 +37,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSet {
      * Structure is documented below.
      * 
     */
-    public List<PreventionInspectTemplateInspectConfigRuleSetInfoType> getInfoTypes() {
+    public List<PreventionInspectTemplateInspectConfigRuleSetInfoType> infoTypes() {
         return this.infoTypes;
     }
     /**
@@ -45,7 +45,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSet {
      * Structure is documented below.
      * 
     */
-    public List<PreventionInspectTemplateInspectConfigRuleSetRule> getRules() {
+    public List<PreventionInspectTemplateInspectConfigRuleSetRule> rules() {
         return this.rules;
     }
 

@@ -32,14 +32,14 @@ public final class AssetHierarchy {
      * The ID of the child asset to be associated.
      * 
     */
-    public String getChildAssetId() {
+    public String childAssetId() {
         return this.childAssetId;
     }
     /**
      * The LogicalID of a hierarchy in the parent asset's model.
      * 
     */
-    public String getLogicalId() {
+    public String logicalId() {
         return this.logicalId;
     }
 

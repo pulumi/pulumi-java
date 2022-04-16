@@ -18,7 +18,7 @@ public final class AiMetadataStoreState {
         this.diskUtilizationBytes = diskUtilizationBytes;
     }
 
-    public Optional<String> getDiskUtilizationBytes() {
+    public Optional<String> diskUtilizationBytes() {
         return Optional.ofNullable(this.diskUtilizationBytes);
     }
 

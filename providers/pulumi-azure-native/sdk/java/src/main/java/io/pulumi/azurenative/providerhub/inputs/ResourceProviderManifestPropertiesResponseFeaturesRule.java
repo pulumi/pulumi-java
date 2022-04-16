@@ -15,7 +15,7 @@ public final class ResourceProviderManifestPropertiesResponseFeaturesRule extend
     @Import(name="requiredFeaturesPolicy", required=true)
       private final String requiredFeaturesPolicy;
 
-    public String getRequiredFeaturesPolicy() {
+    public String requiredFeaturesPolicy() {
         return this.requiredFeaturesPolicy;
     }
 

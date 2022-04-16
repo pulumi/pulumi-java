@@ -24,7 +24,7 @@ public final class DistributionPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="targetShape")
       private final @Nullable Output<DistributionPolicyTargetShape> targetShape;
 
-    public Output<DistributionPolicyTargetShape> getTargetShape() {
+    public Output<DistributionPolicyTargetShape> targetShape() {
         return this.targetShape == null ? Codegen.empty() : this.targetShape;
     }
 
@@ -35,7 +35,7 @@ public final class DistributionPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="zones")
       private final @Nullable Output<List<DistributionPolicyZoneConfigurationArgs>> zones;
 
-    public Output<List<DistributionPolicyZoneConfigurationArgs>> getZones() {
+    public Output<List<DistributionPolicyZoneConfigurationArgs>> zones() {
         return this.zones == null ? Codegen.empty() : this.zones;
     }
 

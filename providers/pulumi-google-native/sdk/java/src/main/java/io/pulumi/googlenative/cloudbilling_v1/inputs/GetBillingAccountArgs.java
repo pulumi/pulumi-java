@@ -15,7 +15,7 @@ public final class GetBillingAccountArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="billingAccountId", required=true)
       private final String billingAccountId;
 
-    public String getBillingAccountId() {
+    public String billingAccountId() {
         return this.billingAccountId;
     }
 

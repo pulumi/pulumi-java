@@ -19,7 +19,7 @@ public final class GetReportArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="reportName", required=true)
       private final String reportName;
 
-    public String getReportName() {
+    public String reportName() {
         return this.reportName;
     }
 

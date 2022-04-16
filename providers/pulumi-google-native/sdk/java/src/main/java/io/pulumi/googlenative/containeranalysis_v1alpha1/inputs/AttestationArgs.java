@@ -22,7 +22,7 @@ public final class AttestationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pgpSignedAttestation")
       private final @Nullable Output<PgpSignedAttestationArgs> pgpSignedAttestation;
 
-    public Output<PgpSignedAttestationArgs> getPgpSignedAttestation() {
+    public Output<PgpSignedAttestationArgs> pgpSignedAttestation() {
         return this.pgpSignedAttestation == null ? Codegen.empty() : this.pgpSignedAttestation;
     }
 

@@ -27,13 +27,13 @@ public final class ResourceGuardProxyBaseResponse {
         this.resourceGuardResourceId = resourceGuardResourceId;
     }
 
-    public Optional<String> getLastUpdatedTime() {
+    public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
-    public List<ResourceGuardOperationDetailResponse> getResourceGuardOperationDetails() {
+    public List<ResourceGuardOperationDetailResponse> resourceGuardOperationDetails() {
         return this.resourceGuardOperationDetails == null ? List.of() : this.resourceGuardOperationDetails;
     }
-    public Optional<String> getResourceGuardResourceId() {
+    public Optional<String> resourceGuardResourceId() {
         return Optional.ofNullable(this.resourceGuardResourceId);
     }
 

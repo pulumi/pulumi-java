@@ -26,7 +26,7 @@ public final class BucketObjectCustomerEncryptionArgs extends io.pulumi.resource
     @Import(name="encryptionAlgorithm")
       private final @Nullable Output<String> encryptionAlgorithm;
 
-    public Output<String> getEncryptionAlgorithm() {
+    public Output<String> encryptionAlgorithm() {
         return this.encryptionAlgorithm == null ? Codegen.empty() : this.encryptionAlgorithm;
     }
 
@@ -37,7 +37,7 @@ public final class BucketObjectCustomerEncryptionArgs extends io.pulumi.resource
     @Import(name="keySha256")
       private final @Nullable Output<String> keySha256;
 
-    public Output<String> getKeySha256() {
+    public Output<String> keySha256() {
         return this.keySha256 == null ? Codegen.empty() : this.keySha256;
     }
 

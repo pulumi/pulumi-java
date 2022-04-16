@@ -24,7 +24,7 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse e
     @Import(name="maxRetentionDays", required=true)
       private final Integer maxRetentionDays;
 
-    public Integer getMaxRetentionDays() {
+    public Integer maxRetentionDays() {
         return this.maxRetentionDays;
     }
 
@@ -35,7 +35,7 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse e
     @Import(name="onSourceDiskDelete", required=true)
       private final String onSourceDiskDelete;
 
-    public String getOnSourceDiskDelete() {
+    public String onSourceDiskDelete() {
         return this.onSourceDiskDelete;
     }
 

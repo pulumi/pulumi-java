@@ -25,7 +25,7 @@ public final class BaiduCredentialResponse extends io.pulumi.resources.InvokeArg
     @Import(name="baiduApiKey")
       private final @Nullable String baiduApiKey;
 
-    public Optional<String> getBaiduApiKey() {
+    public Optional<String> baiduApiKey() {
         return this.baiduApiKey == null ? Optional.empty() : Optional.ofNullable(this.baiduApiKey);
     }
 
@@ -36,7 +36,7 @@ public final class BaiduCredentialResponse extends io.pulumi.resources.InvokeArg
     @Import(name="baiduEndPoint")
       private final @Nullable String baiduEndPoint;
 
-    public Optional<String> getBaiduEndPoint() {
+    public Optional<String> baiduEndPoint() {
         return this.baiduEndPoint == null ? Optional.empty() : Optional.ofNullable(this.baiduEndPoint);
     }
 
@@ -47,7 +47,7 @@ public final class BaiduCredentialResponse extends io.pulumi.resources.InvokeArg
     @Import(name="baiduSecretKey")
       private final @Nullable String baiduSecretKey;
 
-    public Optional<String> getBaiduSecretKey() {
+    public Optional<String> baiduSecretKey() {
         return this.baiduSecretKey == null ? Optional.empty() : Optional.ofNullable(this.baiduSecretKey);
     }
 

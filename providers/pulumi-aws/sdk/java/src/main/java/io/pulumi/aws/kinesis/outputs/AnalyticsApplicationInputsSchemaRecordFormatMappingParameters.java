@@ -38,7 +38,7 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
      * See CSV Mapping Parameters below for more details.
      * 
     */
-    public Optional<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsv> getCsv() {
+    public Optional<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsv> csv() {
         return Optional.ofNullable(this.csv);
     }
     /**
@@ -46,7 +46,7 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
      * See JSON Mapping Parameters below for more details.
      * 
     */
-    public Optional<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJson> getJson() {
+    public Optional<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJson> json() {
         return Optional.ofNullable(this.json);
     }
 

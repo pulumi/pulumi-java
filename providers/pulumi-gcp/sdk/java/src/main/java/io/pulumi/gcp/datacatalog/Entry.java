@@ -57,7 +57,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
      * 
      */
-    public Output<List<EntryBigqueryDateShardedSpec>> getBigqueryDateShardedSpecs() {
+    public Output<List<EntryBigqueryDateShardedSpec>> bigqueryDateShardedSpecs() {
         return this.bigqueryDateShardedSpecs;
     }
     /**
@@ -71,7 +71,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * @return Specification that applies to a BigQuery table. This is only valid on entries of type TABLE.
      * 
      */
-    public Output<List<EntryBigqueryTableSpec>> getBigqueryTableSpecs() {
+    public Output<List<EntryBigqueryTableSpec>> bigqueryTableSpecs() {
         return this.bigqueryTableSpecs;
     }
     /**
@@ -85,7 +85,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * @return Entry description, which can consist of several sentences or paragraphs that describe entry contents.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -101,7 +101,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * for example, "Analytics Data - Jan 2011".
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -115,7 +115,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * @return The name of the entry group this entry is in.
      * 
      */
-    public Output<String> getEntryGroup() {
+    public Output<String> entryGroup() {
         return this.entryGroup;
     }
     /**
@@ -129,7 +129,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * @return The id of the entry to create.
      * 
      */
-    public Output<String> getEntryId() {
+    public Output<String> entryId() {
         return this.entryId;
     }
     /**
@@ -145,7 +145,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ EntryGcsFilesetSpec> getGcsFilesetSpec() {
+    public Output</* @Nullable */ EntryGcsFilesetSpec> gcsFilesetSpec() {
         return this.gcsFilesetSpec;
     }
     /**
@@ -159,7 +159,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * @return This field indicates the entry's source system that Data Catalog integrates with, such as BigQuery or Pub/Sub.
      * 
      */
-    public Output<String> getIntegratedSystem() {
+    public Output<String> integratedSystem() {
         return this.integratedSystem;
     }
     /**
@@ -183,7 +183,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * this field is optional and defaults to an empty string.
      * 
      */
-    public Output<String> getLinkedResource() {
+    public Output<String> linkedResource() {
         return this.linkedResource;
     }
     /**
@@ -201,7 +201,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * child resources may not actually be stored in the location in this name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -221,7 +221,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * for what fields this schema can contain.
      * 
      */
-    public Output</* @Nullable */ String> getSchema() {
+    public Output</* @Nullable */ String> schema() {
         return this.schema;
     }
     /**
@@ -239,7 +239,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Possible values are `FILESET`.
      * 
      */
-    public Output</* @Nullable */ String> getType() {
+    public Output</* @Nullable */ String> type() {
         return this.type;
     }
     /**
@@ -257,7 +257,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
      * 
      */
-    public Output</* @Nullable */ String> getUserSpecifiedSystem() {
+    public Output</* @Nullable */ String> userSpecifiedSystem() {
         return this.userSpecifiedSystem;
     }
     /**
@@ -279,7 +279,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
      * 
      */
-    public Output</* @Nullable */ String> getUserSpecifiedType() {
+    public Output</* @Nullable */ String> userSpecifiedType() {
         return this.userSpecifiedType;
     }
 

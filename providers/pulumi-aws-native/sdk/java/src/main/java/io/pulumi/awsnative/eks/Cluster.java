@@ -35,7 +35,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The ARN of the cluster, such as arn:aws:eks:us-west-2:666666666666:cluster/prod.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -49,7 +49,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The certificate-authority-data for your cluster.
      * 
      */
-    public Output<String> getCertificateAuthorityData() {
+    public Output<String> certificateAuthorityData() {
         return this.certificateAuthorityData;
     }
     /**
@@ -63,13 +63,13 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The cluster security group that was created by Amazon EKS for the cluster. Managed node groups use this security group for control plane to data plane communication.
      * 
      */
-    public Output<String> getClusterSecurityGroupId() {
+    public Output<String> clusterSecurityGroupId() {
         return this.clusterSecurityGroupId;
     }
     @Export(name="encryptionConfig", type=List.class, parameters={ClusterEncryptionConfig.class})
     private Output</* @Nullable */ List<ClusterEncryptionConfig>> encryptionConfig;
 
-    public Output</* @Nullable */ List<ClusterEncryptionConfig>> getEncryptionConfig() {
+    public Output</* @Nullable */ List<ClusterEncryptionConfig>> encryptionConfig() {
         return this.encryptionConfig;
     }
     /**
@@ -83,7 +83,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) or alias of the customer master key (CMK).
      * 
      */
-    public Output<String> getEncryptionConfigKeyArn() {
+    public Output<String> encryptionConfigKeyArn() {
         return this.encryptionConfigKeyArn;
     }
     /**
@@ -97,19 +97,19 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The endpoint for your Kubernetes API server, such as https://5E1D0CEXAMPLEA591B746AFC5AB30262.yl4.us-west-2.eks.amazonaws.com.
      * 
      */
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
     @Export(name="kubernetesNetworkConfig", type=ClusterKubernetesNetworkConfig.class, parameters={})
     private Output</* @Nullable */ ClusterKubernetesNetworkConfig> kubernetesNetworkConfig;
 
-    public Output</* @Nullable */ ClusterKubernetesNetworkConfig> getKubernetesNetworkConfig() {
+    public Output</* @Nullable */ ClusterKubernetesNetworkConfig> kubernetesNetworkConfig() {
         return this.kubernetesNetworkConfig;
     }
     @Export(name="logging", type=ClusterLogging.class, parameters={})
     private Output</* @Nullable */ ClusterLogging> logging;
 
-    public Output</* @Nullable */ ClusterLogging> getLogging() {
+    public Output</* @Nullable */ ClusterLogging> logging() {
         return this.logging;
     }
     /**
@@ -123,7 +123,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The unique name to give to your cluster.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -137,13 +137,13 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The issuer URL for the cluster's OIDC identity provider, such as https://oidc.eks.us-west-2.amazonaws.com/id/EXAMPLED539D4633E53DE1B716D3041E. If you need to remove https:// from this output value, you can include the following code in your template.
      * 
      */
-    public Output<String> getOpenIdConnectIssuerUrl() {
+    public Output<String> openIdConnectIssuerUrl() {
         return this.openIdConnectIssuerUrl;
     }
     @Export(name="resourcesVpcConfig", type=ClusterResourcesVpcConfig.class, parameters={})
     private Output<ClusterResourcesVpcConfig> resourcesVpcConfig;
 
-    public Output<ClusterResourcesVpcConfig> getResourcesVpcConfig() {
+    public Output<ClusterResourcesVpcConfig> resourcesVpcConfig() {
         return this.resourcesVpcConfig;
     }
     /**
@@ -157,7 +157,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     /**
@@ -171,7 +171,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<ClusterTag>> getTags() {
+    public Output</* @Nullable */ List<ClusterTag>> tags() {
         return this.tags;
     }
     /**
@@ -185,7 +185,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The desired Kubernetes version for your cluster. If you don't specify a value here, the latest version available in Amazon EKS is used.
      * 
      */
-    public Output</* @Nullable */ String> getVersion() {
+    public Output</* @Nullable */ String> version() {
         return this.version;
     }
 

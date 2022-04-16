@@ -23,7 +23,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
     @Import(name="algorithm", required=true)
       private final Output<String> algorithm;
 
-    public Output<String> getAlgorithm() {
+    public Output<String> algorithm() {
         return this.algorithm;
     }
 
@@ -34,7 +34,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
     @Import(name="encryptionKey")
       private final @Nullable Output<String> encryptionKey;
 
-    public Output<String> getEncryptionKey() {
+    public Output<String> encryptionKey() {
         return this.encryptionKey == null ? Codegen.empty() : this.encryptionKey;
     }
 
@@ -45,7 +45,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
     @Import(name="encryptionKeyThumbprint")
       private final @Nullable Output<String> encryptionKeyThumbprint;
 
-    public Output<String> getEncryptionKeyThumbprint() {
+    public Output<String> encryptionKeyThumbprint() {
         return this.encryptionKeyThumbprint == null ? Codegen.empty() : this.encryptionKeyThumbprint;
     }
 
@@ -56,7 +56,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
     @Import(name="integrityKey", required=true)
       private final Output<String> integrityKey;
 
-    public Output<String> getIntegrityKey() {
+    public Output<String> integrityKey() {
         return this.integrityKey;
     }
 
@@ -67,7 +67,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
     @Import(name="kind")
       private final @Nullable Output<Kind> kind;
 
-    public Output<Kind> getKind() {
+    public Output<Kind> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -78,7 +78,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
     @Import(name="managerName", required=true)
       private final Output<String> managerName;
 
-    public Output<String> getManagerName() {
+    public Output<String> managerName() {
         return this.managerName;
     }
 
@@ -89,7 +89,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
     @Import(name="portalCertificateThumbprint")
       private final @Nullable Output<String> portalCertificateThumbprint;
 
-    public Output<String> getPortalCertificateThumbprint() {
+    public Output<String> portalCertificateThumbprint() {
         return this.portalCertificateThumbprint == null ? Codegen.empty() : this.portalCertificateThumbprint;
     }
 
@@ -100,7 +100,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -111,7 +111,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

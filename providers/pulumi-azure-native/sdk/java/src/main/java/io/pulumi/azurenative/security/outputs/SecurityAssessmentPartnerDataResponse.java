@@ -32,14 +32,14 @@ public final class SecurityAssessmentPartnerDataResponse {
      * Name of the company of the partner
      * 
     */
-    public String getPartnerName() {
+    public String partnerName() {
         return this.partnerName;
     }
     /**
      * secret to authenticate the partner - write only
      * 
     */
-    public String getSecret() {
+    public String secret() {
         return this.secret;
     }
 

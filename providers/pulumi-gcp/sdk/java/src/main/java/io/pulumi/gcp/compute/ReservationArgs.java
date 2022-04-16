@@ -25,7 +25,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -42,7 +42,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -54,7 +54,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -66,7 +66,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shareSettings")
       private final @Nullable Output<ReservationShareSettingsArgs> shareSettings;
 
-    public Output<ReservationShareSettingsArgs> getShareSettings() {
+    public Output<ReservationShareSettingsArgs> shareSettings() {
         return this.shareSettings == null ? Codegen.empty() : this.shareSettings;
     }
 
@@ -78,7 +78,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="specificReservation", required=true)
       private final Output<ReservationSpecificReservationArgs> specificReservation;
 
-    public Output<ReservationSpecificReservationArgs> getSpecificReservation() {
+    public Output<ReservationSpecificReservationArgs> specificReservation() {
         return this.specificReservation;
     }
 
@@ -91,7 +91,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="specificReservationRequired")
       private final @Nullable Output<Boolean> specificReservationRequired;
 
-    public Output<Boolean> getSpecificReservationRequired() {
+    public Output<Boolean> specificReservationRequired() {
         return this.specificReservationRequired == null ? Codegen.empty() : this.specificReservationRequired;
     }
 
@@ -102,7 +102,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zone", required=true)
       private final Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone;
     }
 

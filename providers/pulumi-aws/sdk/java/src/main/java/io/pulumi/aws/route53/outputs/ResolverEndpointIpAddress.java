@@ -37,17 +37,17 @@ public final class ResolverEndpointIpAddress {
      * The IP address in the subnet that you want to use for DNS queries.
      * 
     */
-    public Optional<String> getIp() {
+    public Optional<String> ip() {
         return Optional.ofNullable(this.ip);
     }
-    public Optional<String> getIpId() {
+    public Optional<String> ipId() {
         return Optional.ofNullable(this.ipId);
     }
     /**
      * The ID of the subnet that contains the IP address.
      * 
     */
-    public String getSubnetId() {
+    public String subnetId() {
         return this.subnetId;
     }
 

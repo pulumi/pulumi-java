@@ -414,364 +414,364 @@ public final class GetClusterResult {
      * Configurations for the various addons available to run in the cluster.
      * 
     */
-    public AddonsConfigResponse getAddonsConfig() {
+    public AddonsConfigResponse addonsConfig() {
         return this.addonsConfig;
     }
     /**
      * Configuration controlling RBAC group membership information.
      * 
     */
-    public AuthenticatorGroupsConfigResponse getAuthenticatorGroupsConfig() {
+    public AuthenticatorGroupsConfigResponse authenticatorGroupsConfig() {
         return this.authenticatorGroupsConfig;
     }
     /**
      * Autopilot configuration for the cluster.
      * 
     */
-    public AutopilotResponse getAutopilot() {
+    public AutopilotResponse autopilot() {
         return this.autopilot;
     }
     /**
      * Cluster-level autoscaling configuration.
      * 
     */
-    public ClusterAutoscalingResponse getAutoscaling() {
+    public ClusterAutoscalingResponse autoscaling() {
         return this.autoscaling;
     }
     /**
      * Configuration for Binary Authorization.
      * 
     */
-    public BinaryAuthorizationResponse getBinaryAuthorization() {
+    public BinaryAuthorizationResponse binaryAuthorization() {
         return this.binaryAuthorization;
     }
     /**
      * The IP address range of the container pods in this cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`). Leave blank to have one automatically chosen or specify a `/14` block in `10.0.0.0/8`.
      * 
     */
-    public String getClusterIpv4Cidr() {
+    public String clusterIpv4Cidr() {
         return this.clusterIpv4Cidr;
     }
     /**
      * Which conditions caused the current cluster state.
      * 
     */
-    public List<StatusConditionResponse> getConditions() {
+    public List<StatusConditionResponse> conditions() {
         return this.conditions;
     }
     /**
      * Configuration of Confidential Nodes
      * 
     */
-    public ConfidentialNodesResponse getConfidentialNodes() {
+    public ConfidentialNodesResponse confidentialNodes() {
         return this.confidentialNodes;
     }
     /**
      * [Output only] The time the cluster was created, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * [Output only] The current software version of the master endpoint.
      * 
     */
-    public String getCurrentMasterVersion() {
+    public String currentMasterVersion() {
         return this.currentMasterVersion;
     }
     /**
      * [Output only] Deprecated, use [NodePools.version](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools) instead. The current version of the node software components. If they are currently at multiple versions because they're in the process of being upgraded, this reflects the minimum version of all nodes.
      * 
     */
-    public String getCurrentNodeVersion() {
+    public String currentNodeVersion() {
         return this.currentNodeVersion;
     }
     /**
      * Configuration of etcd encryption.
      * 
     */
-    public DatabaseEncryptionResponse getDatabaseEncryption() {
+    public DatabaseEncryptionResponse databaseEncryption() {
         return this.databaseEncryption;
     }
     /**
      * The default constraint on the maximum number of pods that can be run simultaneously on a node in the node pool of this cluster. Only honored if cluster created with IP Alias support.
      * 
     */
-    public MaxPodsConstraintResponse getDefaultMaxPodsConstraint() {
+    public MaxPodsConstraintResponse defaultMaxPodsConstraint() {
         return this.defaultMaxPodsConstraint;
     }
     /**
      * An optional description of this cluster.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Kubernetes alpha features are enabled on this cluster. This includes alpha API groups (e.g. v1alpha1) and features that may not be production ready in the kubernetes version of the master and nodes. The cluster has no SLA for uptime and master/node upgrades are disabled. Alpha enabled clusters are automatically deleted thirty days after creation.
      * 
     */
-    public Boolean getEnableKubernetesAlpha() {
+    public Boolean enableKubernetesAlpha() {
         return this.enableKubernetesAlpha;
     }
     /**
      * Enable the ability to use Cloud TPUs in this cluster.
      * 
     */
-    public Boolean getEnableTpu() {
+    public Boolean enableTpu() {
         return this.enableTpu;
     }
     /**
      * [Output only] The IP address of this cluster's master endpoint. The endpoint can be accessed from the internet at `https://username:password@endpoint/`. See the `masterAuth` property of this resource for username and password information.
      * 
     */
-    public String getEndpoint() {
+    public String endpoint() {
         return this.endpoint;
     }
     /**
      * [Output only] The time the cluster will be automatically deleted in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
      * 
     */
-    public String getExpireTime() {
+    public String expireTime() {
         return this.expireTime;
     }
     /**
      * The initial Kubernetes version for this cluster. Valid versions are those found in validMasterVersions returned by getServerConfig. The version can be upgraded over time; such upgrades are reflected in currentMasterVersion and currentNodeVersion. Users may specify either explicit versions offered by Kubernetes Engine or version aliases, which have the following behavior: - "latest": picks the highest valid Kubernetes version - "1.X": picks the highest valid patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid gke.N patch in the 1.X.Y version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "","-": picks the default Kubernetes version
      * 
     */
-    public String getInitialClusterVersion() {
+    public String initialClusterVersion() {
         return this.initialClusterVersion;
     }
     /**
      * Configuration for cluster IP allocation.
      * 
     */
-    public IPAllocationPolicyResponse getIpAllocationPolicy() {
+    public IPAllocationPolicyResponse ipAllocationPolicy() {
         return this.ipAllocationPolicy;
     }
     /**
      * The fingerprint of the set of labels for this cluster.
      * 
     */
-    public String getLabelFingerprint() {
+    public String labelFingerprint() {
         return this.labelFingerprint;
     }
     /**
      * Configuration for the legacy ABAC authorization mode.
      * 
     */
-    public LegacyAbacResponse getLegacyAbac() {
+    public LegacyAbacResponse legacyAbac() {
         return this.legacyAbac;
     }
     /**
      * [Output only] The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which the cluster resides.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes should be located. This field provides a default value if [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) are not specified during node pool creation. Warning: changing cluster locations will update the [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) of all node pools and will result in nodes being added and/or removed.
      * 
     */
-    public List<String> getLocations() {
+    public List<String> locations() {
         return this.locations;
     }
     /**
      * Logging configuration for the cluster.
      * 
     */
-    public LoggingConfigResponse getLoggingConfig() {
+    public LoggingConfigResponse loggingConfig() {
         return this.loggingConfig;
     }
     /**
      * The logging service the cluster should use to write logs. Currently available options: * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native resource model * `logging.googleapis.com` - The legacy Cloud Logging service (no longer available as of GKE 1.15). * `none` - no logs will be exported from the cluster. If left as an empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or `logging.googleapis.com` for earlier versions.
      * 
     */
-    public String getLoggingService() {
+    public String loggingService() {
         return this.loggingService;
     }
     /**
      * Configure the maintenance policy for this cluster.
      * 
     */
-    public MaintenancePolicyResponse getMaintenancePolicy() {
+    public MaintenancePolicyResponse maintenancePolicy() {
         return this.maintenancePolicy;
     }
     /**
      * The authentication information for accessing the master endpoint. If unspecified, the defaults are used: For clusters before v1.12, if master_auth is unspecified, `username` will be set to "admin", a random password will be generated, and a client certificate will be issued.
      * 
     */
-    public MasterAuthResponse getMasterAuth() {
+    public MasterAuthResponse masterAuth() {
         return this.masterAuth;
     }
     /**
      * The configuration options for master authorized networks feature.
      * 
     */
-    public MasterAuthorizedNetworksConfigResponse getMasterAuthorizedNetworksConfig() {
+    public MasterAuthorizedNetworksConfigResponse masterAuthorizedNetworksConfig() {
         return this.masterAuthorizedNetworksConfig;
     }
     /**
      * Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
      * 
     */
-    public MeshCertificatesResponse getMeshCertificates() {
+    public MeshCertificatesResponse meshCertificates() {
         return this.meshCertificates;
     }
     /**
      * Monitoring configuration for the cluster.
      * 
     */
-    public MonitoringConfigResponse getMonitoringConfig() {
+    public MonitoringConfigResponse monitoringConfig() {
         return this.monitoringConfig;
     }
     /**
      * The monitoring service the cluster should use to write metrics. Currently available options: * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a Kubernetes-native resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no longer available as of GKE 1.15). * `none` - No metrics will be exported from the cluster. If left as an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or `monitoring.googleapis.com` for earlier versions.
      * 
     */
-    public String getMonitoringService() {
+    public String monitoringService() {
         return this.monitoringService;
     }
     /**
      * The name of this cluster. The name must be unique within this project and location (e.g. zone or region), and can be up to 40 characters with the following restrictions: * Lowercase letters, numbers, and hyphens only. * Must start with a letter. * Must end with a number or a letter.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The name of the Google Compute Engine [network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the cluster is connected. If left unspecified, the `default` network will be used.
      * 
     */
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
     /**
      * Configuration for cluster networking.
      * 
     */
-    public NetworkConfigResponse getNetworkConfig() {
+    public NetworkConfigResponse networkConfig() {
         return this.networkConfig;
     }
     /**
      * Configuration options for the NetworkPolicy feature.
      * 
     */
-    public NetworkPolicyResponse getNetworkPolicy() {
+    public NetworkPolicyResponse networkPolicy() {
         return this.networkPolicy;
     }
     /**
      * [Output only] The size of the address space on each node for hosting containers. This is provisioned from within the `container_ipv4_cidr` range. This field will only be set when cluster is in route-based network mode.
      * 
     */
-    public Integer getNodeIpv4CidrSize() {
+    public Integer nodeIpv4CidrSize() {
         return this.nodeIpv4CidrSize;
     }
     /**
      * Default NodePool settings for the entire cluster. These settings are overridden if specified on the specific NodePool object.
      * 
     */
-    public NodePoolDefaultsResponse getNodePoolDefaults() {
+    public NodePoolDefaultsResponse nodePoolDefaults() {
         return this.nodePoolDefaults;
     }
     /**
      * The node pools associated with this cluster. This field should not be set if "node_config" or "initial_node_count" are specified.
      * 
     */
-    public List<NodePoolResponse> getNodePools() {
+    public List<NodePoolResponse> nodePools() {
         return this.nodePools;
     }
     /**
      * Notification configuration of the cluster.
      * 
     */
-    public NotificationConfigResponse getNotificationConfig() {
+    public NotificationConfigResponse notificationConfig() {
         return this.notificationConfig;
     }
     /**
      * Configuration for private cluster.
      * 
     */
-    public PrivateClusterConfigResponse getPrivateClusterConfig() {
+    public PrivateClusterConfigResponse privateClusterConfig() {
         return this.privateClusterConfig;
     }
     /**
      * Release channel configuration.
      * 
     */
-    public ReleaseChannelResponse getReleaseChannel() {
+    public ReleaseChannelResponse releaseChannel() {
         return this.releaseChannel;
     }
     /**
      * The resource labels for the cluster to use to annotate any related Google Compute Engine resources.
      * 
     */
-    public Map<String,String> getResourceLabels() {
+    public Map<String,String> resourceLabels() {
         return this.resourceLabels;
     }
     /**
      * Configuration for exporting resource usages. Resource usage export is disabled when this config is unspecified.
      * 
     */
-    public ResourceUsageExportConfigResponse getResourceUsageExportConfig() {
+    public ResourceUsageExportConfigResponse resourceUsageExportConfig() {
         return this.resourceUsageExportConfig;
     }
     /**
      * [Output only] Server-defined URL for the resource.
      * 
     */
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
     /**
      * [Output only] The IP address range of the Kubernetes services in this cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `1.2.3.4/29`). Service addresses are typically put in the last `/16` from the container CIDR.
      * 
     */
-    public String getServicesIpv4Cidr() {
+    public String servicesIpv4Cidr() {
         return this.servicesIpv4Cidr;
     }
     /**
      * Shielded Nodes configuration.
      * 
     */
-    public ShieldedNodesResponse getShieldedNodes() {
+    public ShieldedNodesResponse shieldedNodes() {
         return this.shieldedNodes;
     }
     /**
      * [Output only] The current status of this cluster.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * The name of the Google Compute Engine [subnetwork](https://cloud.google.com/compute/docs/subnetworks) to which the cluster is connected.
      * 
     */
-    public String getSubnetwork() {
+    public String subnetwork() {
         return this.subnetwork;
     }
     /**
      * [Output only] The IP address range of the Cloud TPUs in this cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `1.2.3.4/29`).
      * 
     */
-    public String getTpuIpv4CidrBlock() {
+    public String tpuIpv4CidrBlock() {
         return this.tpuIpv4CidrBlock;
     }
     /**
      * Cluster-level Vertical Pod Autoscaling configuration.
      * 
     */
-    public VerticalPodAutoscalingResponse getVerticalPodAutoscaling() {
+    public VerticalPodAutoscalingResponse verticalPodAutoscaling() {
         return this.verticalPodAutoscaling;
     }
     /**
      * Configuration for the use of Kubernetes Service Accounts in GCP IAM policies.
      * 
     */
-    public WorkloadIdentityConfigResponse getWorkloadIdentityConfig() {
+    public WorkloadIdentityConfigResponse workloadIdentityConfig() {
         return this.workloadIdentityConfig;
     }
 

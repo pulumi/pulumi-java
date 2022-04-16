@@ -32,14 +32,14 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse {
      * Input only. Immutable. The time at which the Key Management Service will automatically create a new version of the crypto key and mark it as the primary.
      * 
     */
-    public String getNextRotationTime() {
+    public String nextRotationTime() {
         return this.nextRotationTime;
     }
     /**
      * Input only. Immutable. [next_rotation_time] will be advanced by this period when the Key Management Service automatically rotates a key. Must be at least 24 hours and at most 876,000 hours.
      * 
     */
-    public String getRotationPeriod() {
+    public String rotationPeriod() {
         return this.rotationPeriod;
     }
 

@@ -47,7 +47,7 @@ public class ServiceIdentity extends io.pulumi.resources.CustomResource {
      * @return The email address of the Google managed service account.
      * 
      */
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
     /**
@@ -63,7 +63,7 @@ public class ServiceIdentity extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -77,7 +77,7 @@ public class ServiceIdentity extends io.pulumi.resources.CustomResource {
      * @return The service to generate identity for.
      * 
      */
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 

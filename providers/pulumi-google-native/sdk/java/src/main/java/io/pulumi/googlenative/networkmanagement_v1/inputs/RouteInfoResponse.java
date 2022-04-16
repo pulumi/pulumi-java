@@ -25,7 +25,7 @@ public final class RouteInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="destIpRange", required=true)
       private final String destIpRange;
 
-    public String getDestIpRange() {
+    public String destIpRange() {
         return this.destIpRange;
     }
 
@@ -36,7 +36,7 @@ public final class RouteInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -47,7 +47,7 @@ public final class RouteInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="instanceTags", required=true)
       private final List<String> instanceTags;
 
-    public List<String> getInstanceTags() {
+    public List<String> instanceTags() {
         return this.instanceTags;
     }
 
@@ -58,7 +58,7 @@ public final class RouteInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="networkUri", required=true)
       private final String networkUri;
 
-    public String getNetworkUri() {
+    public String networkUri() {
         return this.networkUri;
     }
 
@@ -69,7 +69,7 @@ public final class RouteInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="nextHop", required=true)
       private final String nextHop;
 
-    public String getNextHop() {
+    public String nextHop() {
         return this.nextHop;
     }
 
@@ -80,7 +80,7 @@ public final class RouteInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="nextHopType", required=true)
       private final String nextHopType;
 
-    public String getNextHopType() {
+    public String nextHopType() {
         return this.nextHopType;
     }
 
@@ -91,7 +91,7 @@ public final class RouteInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="priority", required=true)
       private final Integer priority;
 
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
 
@@ -102,7 +102,7 @@ public final class RouteInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="routeType", required=true)
       private final String routeType;
 
-    public String getRouteType() {
+    public String routeType() {
         return this.routeType;
     }
 
@@ -113,7 +113,7 @@ public final class RouteInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

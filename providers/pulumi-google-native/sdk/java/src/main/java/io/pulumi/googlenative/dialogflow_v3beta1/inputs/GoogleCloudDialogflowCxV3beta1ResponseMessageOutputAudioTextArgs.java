@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextA
     @Import(name="ssml")
       private final @Nullable Output<String> ssml;
 
-    public Output<String> getSsml() {
+    public Output<String> ssml() {
         return this.ssml == null ? Codegen.empty() : this.ssml;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextA
     @Import(name="text")
       private final @Nullable Output<String> text;
 
-    public Output<String> getText() {
+    public Output<String> text() {
         return this.text == null ? Codegen.empty() : this.text;
     }
 

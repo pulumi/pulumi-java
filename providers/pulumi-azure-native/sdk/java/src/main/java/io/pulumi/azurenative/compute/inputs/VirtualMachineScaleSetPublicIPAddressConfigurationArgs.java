@@ -35,7 +35,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
     @Import(name="deleteOption")
       private final @Nullable Output<Either<String,DeleteOptions>> deleteOption;
 
-    public Output<Either<String,DeleteOptions>> getDeleteOption() {
+    public Output<Either<String,DeleteOptions>> deleteOption() {
         return this.deleteOption == null ? Codegen.empty() : this.deleteOption;
     }
 
@@ -46,7 +46,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
     @Import(name="dnsSettings")
       private final @Nullable Output<VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsArgs> dnsSettings;
 
-    public Output<VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsArgs> getDnsSettings() {
+    public Output<VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsArgs> dnsSettings() {
         return this.dnsSettings == null ? Codegen.empty() : this.dnsSettings;
     }
 
@@ -57,7 +57,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
     @Import(name="idleTimeoutInMinutes")
       private final @Nullable Output<Integer> idleTimeoutInMinutes;
 
-    public Output<Integer> getIdleTimeoutInMinutes() {
+    public Output<Integer> idleTimeoutInMinutes() {
         return this.idleTimeoutInMinutes == null ? Codegen.empty() : this.idleTimeoutInMinutes;
     }
 
@@ -68,7 +68,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
     @Import(name="ipTags")
       private final @Nullable Output<List<VirtualMachineScaleSetIpTagArgs>> ipTags;
 
-    public Output<List<VirtualMachineScaleSetIpTagArgs>> getIpTags() {
+    public Output<List<VirtualMachineScaleSetIpTagArgs>> ipTags() {
         return this.ipTags == null ? Codegen.empty() : this.ipTags;
     }
 
@@ -79,7 +79,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -90,7 +90,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
     @Import(name="publicIPAddressVersion")
       private final @Nullable Output<Either<String,IPVersion>> publicIPAddressVersion;
 
-    public Output<Either<String,IPVersion>> getPublicIPAddressVersion() {
+    public Output<Either<String,IPVersion>> publicIPAddressVersion() {
         return this.publicIPAddressVersion == null ? Codegen.empty() : this.publicIPAddressVersion;
     }
 
@@ -101,7 +101,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
     @Import(name="publicIPPrefix")
       private final @Nullable Output<SubResourceArgs> publicIPPrefix;
 
-    public Output<SubResourceArgs> getPublicIPPrefix() {
+    public Output<SubResourceArgs> publicIPPrefix() {
         return this.publicIPPrefix == null ? Codegen.empty() : this.publicIPPrefix;
     }
 
@@ -112,7 +112,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
     @Import(name="sku")
       private final @Nullable Output<PublicIPAddressSkuArgs> sku;
 
-    public Output<PublicIPAddressSkuArgs> getSku() {
+    public Output<PublicIPAddressSkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 

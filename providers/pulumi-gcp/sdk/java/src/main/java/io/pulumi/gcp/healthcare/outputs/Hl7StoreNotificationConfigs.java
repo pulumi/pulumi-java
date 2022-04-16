@@ -55,7 +55,7 @@ public final class Hl7StoreNotificationConfigs {
      * * labels.x, a string value of the label with key x as set using the Message.labels map. For example, labels."priority"="high". The operator :* can be used to assert the existence of a label. For example, labels."priority":*.
      * 
     */
-    public Optional<String> getFilter() {
+    public Optional<String> filter() {
         return Optional.ofNullable(this.filter);
     }
     /**
@@ -67,7 +67,7 @@ public final class Hl7StoreNotificationConfigs {
      * Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
      * 
     */
-    public String getPubsubTopic() {
+    public String pubsubTopic() {
         return this.pubsubTopic;
     }
 

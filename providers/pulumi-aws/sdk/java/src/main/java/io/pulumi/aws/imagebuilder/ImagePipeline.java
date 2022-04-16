@@ -44,7 +44,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the image pipeline.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -58,7 +58,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * @return Date the image pipeline was created.
      * 
      */
-    public Output<String> getDateCreated() {
+    public Output<String> dateCreated() {
         return this.dateCreated;
     }
     /**
@@ -72,7 +72,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * @return Date the image pipeline was last run.
      * 
      */
-    public Output<String> getDateLastRun() {
+    public Output<String> dateLastRun() {
         return this.dateLastRun;
     }
     /**
@@ -86,7 +86,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * @return Date the image pipeline will run next.
      * 
      */
-    public Output<String> getDateNextRun() {
+    public Output<String> dateNextRun() {
         return this.dateNextRun;
     }
     /**
@@ -100,7 +100,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * @return Date the image pipeline was updated.
      * 
      */
-    public Output<String> getDateUpdated() {
+    public Output<String> dateUpdated() {
         return this.dateUpdated;
     }
     /**
@@ -114,7 +114,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * @return Description of the image pipeline.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -128,7 +128,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
      * 
      */
-    public Output</* @Nullable */ String> getDistributionConfigurationArn() {
+    public Output</* @Nullable */ String> distributionConfigurationArn() {
         return this.distributionConfigurationArn;
     }
     /**
@@ -142,7 +142,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * @return Whether additional information about the image being created is collected. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnhancedImageMetadataEnabled() {
+    public Output</* @Nullable */ Boolean> enhancedImageMetadataEnabled() {
         return this.enhancedImageMetadataEnabled;
     }
     /**
@@ -156,7 +156,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
      * 
      */
-    public Output<String> getImageRecipeArn() {
+    public Output<String> imageRecipeArn() {
         return this.imageRecipeArn;
     }
     /**
@@ -170,7 +170,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * @return Configuration block with image tests configuration. Detailed below.
      * 
      */
-    public Output<ImagePipelineImageTestsConfiguration> getImageTestsConfiguration() {
+    public Output<ImagePipelineImageTestsConfiguration> imageTestsConfiguration() {
         return this.imageTestsConfiguration;
     }
     /**
@@ -184,7 +184,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
      * 
      */
-    public Output<String> getInfrastructureConfigurationArn() {
+    public Output<String> infrastructureConfigurationArn() {
         return this.infrastructureConfigurationArn;
     }
     /**
@@ -198,7 +198,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * @return Name of the image pipeline.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -212,7 +212,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * @return Platform of the image pipeline.
      * 
      */
-    public Output<String> getPlatform() {
+    public Output<String> platform() {
         return this.platform;
     }
     /**
@@ -226,7 +226,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * @return Configuration block with schedule settings. Detailed below.
      * 
      */
-    public Output</* @Nullable */ ImagePipelineSchedule> getSchedule() {
+    public Output</* @Nullable */ ImagePipelineSchedule> schedule() {
         return this.schedule;
     }
     /**
@@ -240,7 +240,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * @return Status of the image pipeline. Valid values are `DISABLED` and `ENABLED`. Defaults to `ENABLED`.
      * 
      */
-    public Output</* @Nullable */ String> getStatus() {
+    public Output</* @Nullable */ String> status() {
         return this.status;
     }
     /**
@@ -254,7 +254,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags for the image pipeline. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -268,7 +268,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

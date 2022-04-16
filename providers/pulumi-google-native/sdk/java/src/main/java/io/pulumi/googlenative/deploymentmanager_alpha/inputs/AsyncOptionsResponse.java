@@ -24,7 +24,7 @@ public final class AsyncOptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="methodMatch", required=true)
       private final String methodMatch;
 
-    public String getMethodMatch() {
+    public String methodMatch() {
         return this.methodMatch;
     }
 
@@ -35,7 +35,7 @@ public final class AsyncOptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="pollingOptions", required=true)
       private final PollingOptionsResponse pollingOptions;
 
-    public PollingOptionsResponse getPollingOptions() {
+    public PollingOptionsResponse pollingOptions() {
         return this.pollingOptions;
     }
 

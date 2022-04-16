@@ -25,7 +25,7 @@ public final class CacheKeyPolicyResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="includeHost", required=true)
       private final Boolean includeHost;
 
-    public Boolean getIncludeHost() {
+    public Boolean includeHost() {
         return this.includeHost;
     }
 
@@ -36,7 +36,7 @@ public final class CacheKeyPolicyResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="includeHttpHeaders", required=true)
       private final List<String> includeHttpHeaders;
 
-    public List<String> getIncludeHttpHeaders() {
+    public List<String> includeHttpHeaders() {
         return this.includeHttpHeaders;
     }
 
@@ -47,7 +47,7 @@ public final class CacheKeyPolicyResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="includeNamedCookies", required=true)
       private final List<String> includeNamedCookies;
 
-    public List<String> getIncludeNamedCookies() {
+    public List<String> includeNamedCookies() {
         return this.includeNamedCookies;
     }
 
@@ -58,7 +58,7 @@ public final class CacheKeyPolicyResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="includeProtocol", required=true)
       private final Boolean includeProtocol;
 
-    public Boolean getIncludeProtocol() {
+    public Boolean includeProtocol() {
         return this.includeProtocol;
     }
 
@@ -69,7 +69,7 @@ public final class CacheKeyPolicyResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="includeQueryString", required=true)
       private final Boolean includeQueryString;
 
-    public Boolean getIncludeQueryString() {
+    public Boolean includeQueryString() {
         return this.includeQueryString;
     }
 
@@ -80,7 +80,7 @@ public final class CacheKeyPolicyResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="queryStringBlacklist", required=true)
       private final List<String> queryStringBlacklist;
 
-    public List<String> getQueryStringBlacklist() {
+    public List<String> queryStringBlacklist() {
         return this.queryStringBlacklist;
     }
 
@@ -91,7 +91,7 @@ public final class CacheKeyPolicyResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="queryStringWhitelist", required=true)
       private final List<String> queryStringWhitelist;
 
-    public List<String> getQueryStringWhitelist() {
+    public List<String> queryStringWhitelist() {
         return this.queryStringWhitelist;
     }
 

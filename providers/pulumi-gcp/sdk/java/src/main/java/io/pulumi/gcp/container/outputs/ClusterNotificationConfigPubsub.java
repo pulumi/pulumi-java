@@ -37,14 +37,14 @@ public final class ClusterNotificationConfigPubsub {
      * If enabled, pods must be valid under a PodSecurityPolicy to be created.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
     /**
      * The pubsub topic to push upgrade notifications to. Must be in the same project as the cluster. Must be in the format: `projects/{project}/topics/{topic}`.
      * 
     */
-    public Optional<String> getTopic() {
+    public Optional<String> topic() {
         return Optional.ofNullable(this.topic);
     }
 

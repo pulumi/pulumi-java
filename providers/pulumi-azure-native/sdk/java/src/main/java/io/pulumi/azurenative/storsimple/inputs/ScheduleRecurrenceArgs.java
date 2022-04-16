@@ -29,7 +29,7 @@ public final class ScheduleRecurrenceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="recurrenceType", required=true)
       private final Output<RecurrenceType> recurrenceType;
 
-    public Output<RecurrenceType> getRecurrenceType() {
+    public Output<RecurrenceType> recurrenceType() {
         return this.recurrenceType;
     }
 
@@ -40,7 +40,7 @@ public final class ScheduleRecurrenceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="recurrenceValue", required=true)
       private final Output<Integer> recurrenceValue;
 
-    public Output<Integer> getRecurrenceValue() {
+    public Output<Integer> recurrenceValue() {
         return this.recurrenceValue;
     }
 
@@ -51,7 +51,7 @@ public final class ScheduleRecurrenceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="weeklyDaysList")
       private final @Nullable Output<List<DayOfWeek>> weeklyDaysList;
 
-    public Output<List<DayOfWeek>> getWeeklyDaysList() {
+    public Output<List<DayOfWeek>> weeklyDaysList() {
         return this.weeklyDaysList == null ? Codegen.empty() : this.weeklyDaysList;
     }
 

@@ -24,7 +24,7 @@ public final class ShareSettingsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="projectMap", required=true)
       private final Map<String,String> projectMap;
 
-    public Map<String,String> getProjectMap() {
+    public Map<String,String> projectMap() {
         return this.projectMap;
     }
 
@@ -35,7 +35,7 @@ public final class ShareSettingsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="shareType", required=true)
       private final String shareType;
 
-    public String getShareType() {
+    public String shareType() {
         return this.shareType;
     }
 

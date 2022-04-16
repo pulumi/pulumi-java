@@ -26,7 +26,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="latLng", required=true)
       private final LatLngResponse latLng;
 
-    public LatLngResponse getLatLng() {
+    public LatLngResponse latLng() {
         return this.latLng;
     }
 
@@ -37,7 +37,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="locationType", required=true)
       private final String locationType;
 
-    public String getLocationType() {
+    public String locationType() {
         return this.locationType;
     }
 
@@ -48,7 +48,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="postalAddress", required=true)
       private final PostalAddressResponse postalAddress;
 
-    public PostalAddressResponse getPostalAddress() {
+    public PostalAddressResponse postalAddress() {
         return this.postalAddress;
     }
 
@@ -59,7 +59,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="radiusInMiles", required=true)
       private final Double radiusInMiles;
 
-    public Double getRadiusInMiles() {
+    public Double radiusInMiles() {
         return this.radiusInMiles;
     }
 

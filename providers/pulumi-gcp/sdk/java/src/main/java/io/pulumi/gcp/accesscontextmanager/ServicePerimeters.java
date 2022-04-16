@@ -56,7 +56,7 @@ public class ServicePerimeters extends io.pulumi.resources.CustomResource {
      * Format: accessPolicies/{policy_id}
      * 
      */
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
     /**
@@ -72,7 +72,7 @@ public class ServicePerimeters extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<ServicePerimetersServicePerimeter>> getServicePerimeters() {
+    public Output</* @Nullable */ List<ServicePerimetersServicePerimeter>> servicePerimeters() {
         return this.servicePerimeters;
     }
 

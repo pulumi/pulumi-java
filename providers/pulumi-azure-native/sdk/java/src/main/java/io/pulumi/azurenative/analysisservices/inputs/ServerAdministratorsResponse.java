@@ -26,7 +26,7 @@ public final class ServerAdministratorsResponse extends io.pulumi.resources.Invo
     @Import(name="members")
       private final @Nullable List<String> members;
 
-    public List<String> getMembers() {
+    public List<String> members() {
         return this.members == null ? List.of() : this.members;
     }
 

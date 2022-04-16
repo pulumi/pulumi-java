@@ -22,7 +22,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="agentVersion")
       private final @Nullable Output<String> agentVersion;
 
-    public Output<String> getAgentVersion() {
+    public Output<String> agentVersion() {
         return this.agentVersion == null ? Codegen.empty() : this.agentVersion;
     }
 
@@ -33,7 +33,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="clusterId")
       private final @Nullable Output<String> clusterId;
 
-    public Output<String> getClusterId() {
+    public Output<String> clusterId() {
         return this.clusterId == null ? Codegen.empty() : this.clusterId;
     }
 
@@ -44,7 +44,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName == null ? Codegen.empty() : this.clusterName;
     }
 
@@ -55,7 +55,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
@@ -66,7 +66,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="lastHeartBeat")
       private final @Nullable Output<String> lastHeartBeat;
 
-    public Output<String> getLastHeartBeat() {
+    public Output<String> lastHeartBeat() {
         return this.lastHeartBeat == null ? Codegen.empty() : this.lastHeartBeat;
     }
 
@@ -77,7 +77,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -88,7 +88,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="serverCertificate")
       private final @Nullable Output<String> serverCertificate;
 
-    public Output<String> getServerCertificate() {
+    public Output<String> serverCertificate() {
         return this.serverCertificate == null ? Codegen.empty() : this.serverCertificate;
     }
 
@@ -99,7 +99,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="serverId")
       private final @Nullable Output<String> serverId;
 
-    public Output<String> getServerId() {
+    public Output<String> serverId() {
         return this.serverId == null ? Codegen.empty() : this.serverId;
     }
 
@@ -110,7 +110,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="serverOSVersion")
       private final @Nullable Output<String> serverOSVersion;
 
-    public Output<String> getServerOSVersion() {
+    public Output<String> serverOSVersion() {
         return this.serverOSVersion == null ? Codegen.empty() : this.serverOSVersion;
     }
 
@@ -121,7 +121,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="serverRole")
       private final @Nullable Output<String> serverRole;
 
-    public Output<String> getServerRole() {
+    public Output<String> serverRole() {
         return this.serverRole == null ? Codegen.empty() : this.serverRole;
     }
 
@@ -132,7 +132,7 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="storageSyncServiceName", required=true)
       private final Output<String> storageSyncServiceName;
 
-    public Output<String> getStorageSyncServiceName() {
+    public Output<String> storageSyncServiceName() {
         return this.storageSyncServiceName;
     }
 

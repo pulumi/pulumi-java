@@ -23,7 +23,7 @@ public final class GetPolicyDocumentArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="overrideJson")
       private final @Nullable String overrideJson;
 
-    public Optional<String> getOverrideJson() {
+    public Optional<String> overrideJson() {
         return this.overrideJson == null ? Optional.empty() : Optional.ofNullable(this.overrideJson);
     }
 
@@ -34,7 +34,7 @@ public final class GetPolicyDocumentArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="overridePolicyDocuments")
       private final @Nullable List<String> overridePolicyDocuments;
 
-    public List<String> getOverridePolicyDocuments() {
+    public List<String> overridePolicyDocuments() {
         return this.overridePolicyDocuments == null ? List.of() : this.overridePolicyDocuments;
     }
 
@@ -45,7 +45,7 @@ public final class GetPolicyDocumentArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="policyId")
       private final @Nullable String policyId;
 
-    public Optional<String> getPolicyId() {
+    public Optional<String> policyId() {
         return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
     }
 
@@ -56,7 +56,7 @@ public final class GetPolicyDocumentArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="sourceJson")
       private final @Nullable String sourceJson;
 
-    public Optional<String> getSourceJson() {
+    public Optional<String> sourceJson() {
         return this.sourceJson == null ? Optional.empty() : Optional.ofNullable(this.sourceJson);
     }
 
@@ -67,7 +67,7 @@ public final class GetPolicyDocumentArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="sourcePolicyDocuments")
       private final @Nullable List<String> sourcePolicyDocuments;
 
-    public List<String> getSourcePolicyDocuments() {
+    public List<String> sourcePolicyDocuments() {
         return this.sourcePolicyDocuments == null ? List.of() : this.sourcePolicyDocuments;
     }
 
@@ -78,7 +78,7 @@ public final class GetPolicyDocumentArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="statements")
       private final @Nullable List<GetPolicyDocumentStatement> statements;
 
-    public List<GetPolicyDocumentStatement> getStatements() {
+    public List<GetPolicyDocumentStatement> statements() {
         return this.statements == null ? List.of() : this.statements;
     }
 
@@ -89,7 +89,7 @@ public final class GetPolicyDocumentArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="version")
       private final @Nullable String version;
 
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

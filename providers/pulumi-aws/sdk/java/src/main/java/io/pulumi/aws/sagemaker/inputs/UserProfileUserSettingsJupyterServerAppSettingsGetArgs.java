@@ -24,7 +24,7 @@ public final class UserProfileUserSettingsJupyterServerAppSettingsGetArgs extend
     @Import(name="defaultResourceSpec", required=true)
       private final Output<UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec;
 
-    public Output<UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs> getDefaultResourceSpec() {
+    public Output<UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec() {
         return this.defaultResourceSpec;
     }
 
@@ -35,7 +35,7 @@ public final class UserProfileUserSettingsJupyterServerAppSettingsGetArgs extend
     @Import(name="lifecycleConfigArns")
       private final @Nullable Output<List<String>> lifecycleConfigArns;
 
-    public Output<List<String>> getLifecycleConfigArns() {
+    public Output<List<String>> lifecycleConfigArns() {
         return this.lifecycleConfigArns == null ? Codegen.empty() : this.lifecycleConfigArns;
     }
 

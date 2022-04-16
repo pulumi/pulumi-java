@@ -26,7 +26,7 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -37,7 +37,7 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="options", required=true)
       private final List<OptionResponse> options;
 
-    public List<OptionResponse> getOptions() {
+    public List<OptionResponse> options() {
         return this.options;
     }
 
@@ -48,7 +48,7 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="requestStreaming", required=true)
       private final Boolean requestStreaming;
 
-    public Boolean getRequestStreaming() {
+    public Boolean requestStreaming() {
         return this.requestStreaming;
     }
 
@@ -59,7 +59,7 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="requestTypeUrl", required=true)
       private final String requestTypeUrl;
 
-    public String getRequestTypeUrl() {
+    public String requestTypeUrl() {
         return this.requestTypeUrl;
     }
 
@@ -70,7 +70,7 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="responseStreaming", required=true)
       private final Boolean responseStreaming;
 
-    public Boolean getResponseStreaming() {
+    public Boolean responseStreaming() {
         return this.responseStreaming;
     }
 
@@ -81,7 +81,7 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="responseTypeUrl", required=true)
       private final String responseTypeUrl;
 
-    public String getResponseTypeUrl() {
+    public String responseTypeUrl() {
         return this.responseTypeUrl;
     }
 
@@ -92,7 +92,7 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="syntax", required=true)
       private final String syntax;
 
-    public String getSyntax() {
+    public String syntax() {
         return this.syntax;
     }
 

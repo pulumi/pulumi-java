@@ -30,7 +30,7 @@ public final class TlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="credentials", required=true)
       private final Output<UsernamePasswordCredentialsArgs> credentials;
 
-    public Output<UsernamePasswordCredentialsArgs> getCredentials() {
+    public Output<UsernamePasswordCredentialsArgs> credentials() {
         return this.credentials;
     }
 
@@ -41,7 +41,7 @@ public final class TlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="trustedCertificates")
       private final @Nullable Output<PemCertificateListArgs> trustedCertificates;
 
-    public Output<PemCertificateListArgs> getTrustedCertificates() {
+    public Output<PemCertificateListArgs> trustedCertificates() {
         return this.trustedCertificates == null ? Codegen.empty() : this.trustedCertificates;
     }
 
@@ -52,7 +52,7 @@ public final class TlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel")
       private final @Nullable Output<SecureIotDeviceRemoteTunnelArgs> tunnel;
 
-    public Output<SecureIotDeviceRemoteTunnelArgs> getTunnel() {
+    public Output<SecureIotDeviceRemoteTunnelArgs> tunnel() {
         return this.tunnel == null ? Codegen.empty() : this.tunnel;
     }
 
@@ -64,7 +64,7 @@ public final class TlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -75,7 +75,7 @@ public final class TlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="url", required=true)
       private final Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 
@@ -86,7 +86,7 @@ public final class TlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="validationOptions")
       private final @Nullable Output<TlsValidationOptionsArgs> validationOptions;
 
-    public Output<TlsValidationOptionsArgs> getValidationOptions() {
+    public Output<TlsValidationOptionsArgs> validationOptions() {
         return this.validationOptions == null ? Codegen.empty() : this.validationOptions;
     }
 

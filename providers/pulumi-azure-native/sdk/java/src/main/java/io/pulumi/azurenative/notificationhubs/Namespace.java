@@ -45,7 +45,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return The time the namespace was created.
      * 
      */
-    public Output</* @Nullable */ String> getCreatedAt() {
+    public Output</* @Nullable */ String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -59,7 +59,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return Whether or not the namespace is set as Critical.
      * 
      */
-    public Output</* @Nullable */ Boolean> getCritical() {
+    public Output</* @Nullable */ Boolean> critical() {
         return this.critical;
     }
     /**
@@ -73,7 +73,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return Data center for the namespace
      * 
      */
-    public Output</* @Nullable */ String> getDataCenter() {
+    public Output</* @Nullable */ String> dataCenter() {
         return this.dataCenter;
     }
     /**
@@ -87,7 +87,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return Whether or not the namespace is currently enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -101,7 +101,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -115,7 +115,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return Identifier for Azure Insights metrics
      * 
      */
-    public Output<String> getMetricId() {
+    public Output<String> metricId() {
         return this.metricId;
     }
     /**
@@ -129,7 +129,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -143,7 +143,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return The namespace type.
      * 
      */
-    public Output</* @Nullable */ String> getNamespaceType() {
+    public Output</* @Nullable */ String> namespaceType() {
         return this.namespaceType;
     }
     /**
@@ -157,7 +157,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return Provisioning state of the Namespace.
      * 
      */
-    public Output</* @Nullable */ String> getProvisioningState() {
+    public Output</* @Nullable */ String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -171,7 +171,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return Specifies the targeted region in which the namespace should be created. It can be any of the following values: Australia East, Australia Southeast, Central US, East US, East US 2, West US, North Central US, South Central US, East Asia, Southeast Asia, Brazil South, Japan East, Japan West, North Europe, West Europe
      * 
      */
-    public Output</* @Nullable */ String> getRegion() {
+    public Output</* @Nullable */ String> region() {
         return this.region;
     }
     /**
@@ -185,7 +185,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return ScaleUnit where the namespace gets created
      * 
      */
-    public Output</* @Nullable */ String> getScaleUnit() {
+    public Output</* @Nullable */ String> scaleUnit() {
         return this.scaleUnit;
     }
     /**
@@ -199,7 +199,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return Endpoint you can use to perform NotificationHub operations.
      * 
      */
-    public Output</* @Nullable */ String> getServiceBusEndpoint() {
+    public Output</* @Nullable */ String> serviceBusEndpoint() {
         return this.serviceBusEndpoint;
     }
     /**
@@ -213,7 +213,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return The sku of the created namespace
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -227,7 +227,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return Status of the namespace. It can be any of these values:1 = Created/Active2 = Creating3 = Suspended4 = Deleting
      * 
      */
-    public Output</* @Nullable */ String> getStatus() {
+    public Output</* @Nullable */ String> status() {
         return this.status;
     }
     /**
@@ -241,7 +241,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return The Id of the Azure subscription associated with the namespace.
      * 
      */
-    public Output</* @Nullable */ String> getSubscriptionId() {
+    public Output</* @Nullable */ String> subscriptionId() {
         return this.subscriptionId;
     }
     /**
@@ -255,7 +255,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -269,7 +269,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -283,7 +283,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return The time the namespace was updated.
      * 
      */
-    public Output</* @Nullable */ String> getUpdatedAt() {
+    public Output</* @Nullable */ String> updatedAt() {
         return this.updatedAt;
     }
 

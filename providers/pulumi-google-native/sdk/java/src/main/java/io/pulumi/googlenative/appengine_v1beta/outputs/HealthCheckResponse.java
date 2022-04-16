@@ -69,49 +69,49 @@ public final class HealthCheckResponse {
      * Interval between health checks.
      * 
     */
-    public String getCheckInterval() {
+    public String checkInterval() {
         return this.checkInterval;
     }
     /**
      * Whether to explicitly disable health checks for this instance.
      * 
     */
-    public Boolean getDisableHealthCheck() {
+    public Boolean disableHealthCheck() {
         return this.disableHealthCheck;
     }
     /**
      * Number of consecutive successful health checks required before receiving traffic.
      * 
     */
-    public Integer getHealthyThreshold() {
+    public Integer healthyThreshold() {
         return this.healthyThreshold;
     }
     /**
      * Host header to send when performing an HTTP health check. Example: "myapp.appspot.com"
      * 
     */
-    public String getHost() {
+    public String host() {
         return this.host;
     }
     /**
      * Number of consecutive failed health checks required before an instance is restarted.
      * 
     */
-    public Integer getRestartThreshold() {
+    public Integer restartThreshold() {
         return this.restartThreshold;
     }
     /**
      * Time before the health check is considered failed.
      * 
     */
-    public String getTimeout() {
+    public String timeout() {
         return this.timeout;
     }
     /**
      * Number of consecutive failed health checks required before removing traffic.
      * 
     */
-    public Integer getUnhealthyThreshold() {
+    public Integer unhealthyThreshold() {
         return this.unhealthyThreshold;
     }
 

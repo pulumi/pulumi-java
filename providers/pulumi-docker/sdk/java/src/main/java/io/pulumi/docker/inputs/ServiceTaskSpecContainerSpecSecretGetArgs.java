@@ -19,42 +19,42 @@ public final class ServiceTaskSpecContainerSpecSecretGetArgs extends io.pulumi.r
     @Import(name="fileGid")
       private final @Nullable Output<String> fileGid;
 
-    public Output<String> getFileGid() {
+    public Output<String> fileGid() {
         return this.fileGid == null ? Codegen.empty() : this.fileGid;
     }
 
     @Import(name="fileMode")
       private final @Nullable Output<Integer> fileMode;
 
-    public Output<Integer> getFileMode() {
+    public Output<Integer> fileMode() {
         return this.fileMode == null ? Codegen.empty() : this.fileMode;
     }
 
     @Import(name="fileName", required=true)
       private final Output<String> fileName;
 
-    public Output<String> getFileName() {
+    public Output<String> fileName() {
         return this.fileName;
     }
 
     @Import(name="fileUid")
       private final @Nullable Output<String> fileUid;
 
-    public Output<String> getFileUid() {
+    public Output<String> fileUid() {
         return this.fileUid == null ? Codegen.empty() : this.fileUid;
     }
 
     @Import(name="secretId", required=true)
       private final Output<String> secretId;
 
-    public Output<String> getSecretId() {
+    public Output<String> secretId() {
         return this.secretId;
     }
 
     @Import(name="secretName")
       private final @Nullable Output<String> secretName;
 
-    public Output<String> getSecretName() {
+    public Output<String> secretName() {
         return this.secretName == null ? Codegen.empty() : this.secretName;
     }
 

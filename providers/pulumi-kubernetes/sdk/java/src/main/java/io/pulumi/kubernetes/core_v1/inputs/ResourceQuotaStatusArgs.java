@@ -27,7 +27,7 @@ public final class ResourceQuotaStatusArgs extends io.pulumi.resources.ResourceA
     @Import(name="hard")
       private final @Nullable Output<Map<String,String>> hard;
 
-    public Output<Map<String,String>> getHard() {
+    public Output<Map<String,String>> hard() {
         return this.hard == null ? Codegen.empty() : this.hard;
     }
 
@@ -38,7 +38,7 @@ public final class ResourceQuotaStatusArgs extends io.pulumi.resources.ResourceA
     @Import(name="used")
       private final @Nullable Output<Map<String,String>> used;
 
-    public Output<Map<String,String>> getUsed() {
+    public Output<Map<String,String>> used() {
         return this.used == null ? Codegen.empty() : this.used;
     }
 

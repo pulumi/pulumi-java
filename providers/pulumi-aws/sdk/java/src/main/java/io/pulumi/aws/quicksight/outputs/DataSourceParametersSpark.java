@@ -33,14 +33,14 @@ public final class DataSourceParametersSpark {
      * The host to which to connect.
      * 
     */
-    public String getHost() {
+    public String host() {
         return this.host;
     }
     /**
      * The warehouse to which to connect.
      * 
     */
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 

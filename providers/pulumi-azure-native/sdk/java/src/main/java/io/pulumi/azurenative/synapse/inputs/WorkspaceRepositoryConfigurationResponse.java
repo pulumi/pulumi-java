@@ -25,7 +25,7 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
     @Import(name="accountName")
       private final @Nullable String accountName;
 
-    public Optional<String> getAccountName() {
+    public Optional<String> accountName() {
         return this.accountName == null ? Optional.empty() : Optional.ofNullable(this.accountName);
     }
 
@@ -36,7 +36,7 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
     @Import(name="collaborationBranch")
       private final @Nullable String collaborationBranch;
 
-    public Optional<String> getCollaborationBranch() {
+    public Optional<String> collaborationBranch() {
         return this.collaborationBranch == null ? Optional.empty() : Optional.ofNullable(this.collaborationBranch);
     }
 
@@ -47,7 +47,7 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
     @Import(name="hostName")
       private final @Nullable String hostName;
 
-    public Optional<String> getHostName() {
+    public Optional<String> hostName() {
         return this.hostName == null ? Optional.empty() : Optional.ofNullable(this.hostName);
     }
 
@@ -58,7 +58,7 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
     @Import(name="lastCommitId")
       private final @Nullable String lastCommitId;
 
-    public Optional<String> getLastCommitId() {
+    public Optional<String> lastCommitId() {
         return this.lastCommitId == null ? Optional.empty() : Optional.ofNullable(this.lastCommitId);
     }
 
@@ -69,7 +69,7 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
     @Import(name="projectName")
       private final @Nullable String projectName;
 
-    public Optional<String> getProjectName() {
+    public Optional<String> projectName() {
         return this.projectName == null ? Optional.empty() : Optional.ofNullable(this.projectName);
     }
 
@@ -80,7 +80,7 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
     @Import(name="repositoryName")
       private final @Nullable String repositoryName;
 
-    public Optional<String> getRepositoryName() {
+    public Optional<String> repositoryName() {
         return this.repositoryName == null ? Optional.empty() : Optional.ofNullable(this.repositoryName);
     }
 
@@ -91,7 +91,7 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
     @Import(name="rootFolder")
       private final @Nullable String rootFolder;
 
-    public Optional<String> getRootFolder() {
+    public Optional<String> rootFolder() {
         return this.rootFolder == null ? Optional.empty() : Optional.ofNullable(this.rootFolder);
     }
 
@@ -102,7 +102,7 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
     @Import(name="tenantId")
       private final @Nullable String tenantId;
 
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
     }
 
@@ -113,7 +113,7 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

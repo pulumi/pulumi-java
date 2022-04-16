@@ -31,49 +31,49 @@ public class Dataset extends io.pulumi.resources.CustomResource {
     @Export(name="actions", type=List.class, parameters={DatasetAction.class})
     private Output<List<DatasetAction>> actions;
 
-    public Output<List<DatasetAction>> getActions() {
+    public Output<List<DatasetAction>> actions() {
         return this.actions;
     }
     @Export(name="contentDeliveryRules", type=List.class, parameters={DatasetContentDeliveryRule.class})
     private Output</* @Nullable */ List<DatasetContentDeliveryRule>> contentDeliveryRules;
 
-    public Output</* @Nullable */ List<DatasetContentDeliveryRule>> getContentDeliveryRules() {
+    public Output</* @Nullable */ List<DatasetContentDeliveryRule>> contentDeliveryRules() {
         return this.contentDeliveryRules;
     }
     @Export(name="datasetName", type=String.class, parameters={})
     private Output</* @Nullable */ String> datasetName;
 
-    public Output</* @Nullable */ String> getDatasetName() {
+    public Output</* @Nullable */ String> datasetName() {
         return this.datasetName;
     }
     @Export(name="lateDataRules", type=List.class, parameters={DatasetLateDataRule.class})
     private Output</* @Nullable */ List<DatasetLateDataRule>> lateDataRules;
 
-    public Output</* @Nullable */ List<DatasetLateDataRule>> getLateDataRules() {
+    public Output</* @Nullable */ List<DatasetLateDataRule>> lateDataRules() {
         return this.lateDataRules;
     }
     @Export(name="retentionPeriod", type=DatasetRetentionPeriod.class, parameters={})
     private Output</* @Nullable */ DatasetRetentionPeriod> retentionPeriod;
 
-    public Output</* @Nullable */ DatasetRetentionPeriod> getRetentionPeriod() {
+    public Output</* @Nullable */ DatasetRetentionPeriod> retentionPeriod() {
         return this.retentionPeriod;
     }
     @Export(name="tags", type=List.class, parameters={DatasetTag.class})
     private Output</* @Nullable */ List<DatasetTag>> tags;
 
-    public Output</* @Nullable */ List<DatasetTag>> getTags() {
+    public Output</* @Nullable */ List<DatasetTag>> tags() {
         return this.tags;
     }
     @Export(name="triggers", type=List.class, parameters={DatasetTrigger.class})
     private Output</* @Nullable */ List<DatasetTrigger>> triggers;
 
-    public Output</* @Nullable */ List<DatasetTrigger>> getTriggers() {
+    public Output</* @Nullable */ List<DatasetTrigger>> triggers() {
         return this.triggers;
     }
     @Export(name="versioningConfiguration", type=DatasetVersioningConfiguration.class, parameters={})
     private Output</* @Nullable */ DatasetVersioningConfiguration> versioningConfiguration;
 
-    public Output</* @Nullable */ DatasetVersioningConfiguration> getVersioningConfiguration() {
+    public Output</* @Nullable */ DatasetVersioningConfiguration> versioningConfiguration() {
         return this.versioningConfiguration;
     }
 

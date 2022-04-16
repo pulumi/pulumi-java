@@ -23,7 +23,7 @@ public final class AzureFirewallIpGroupsResponse extends io.pulumi.resources.Inv
     @Import(name="changeNumber", required=true)
       private final String changeNumber;
 
-    public String getChangeNumber() {
+    public String changeNumber() {
         return this.changeNumber;
     }
 
@@ -34,7 +34,7 @@ public final class AzureFirewallIpGroupsResponse extends io.pulumi.resources.Inv
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

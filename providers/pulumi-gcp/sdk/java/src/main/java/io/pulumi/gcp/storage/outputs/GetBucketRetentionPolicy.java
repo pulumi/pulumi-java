@@ -21,10 +21,10 @@ public final class GetBucketRetentionPolicy {
         this.retentionPeriod = retentionPeriod;
     }
 
-    public Boolean getIsLocked() {
+    public Boolean isLocked() {
         return this.isLocked;
     }
-    public Integer getRetentionPeriod() {
+    public Integer retentionPeriod() {
         return this.retentionPeriod;
     }
 

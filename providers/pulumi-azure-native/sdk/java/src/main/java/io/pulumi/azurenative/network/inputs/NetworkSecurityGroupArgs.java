@@ -29,7 +29,7 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -40,7 +40,7 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -51,7 +51,7 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
     @Import(name="securityRules")
       private final @Nullable Output<List<SecurityRuleArgs>> securityRules;
 
-    public Output<List<SecurityRuleArgs>> getSecurityRules() {
+    public Output<List<SecurityRuleArgs>> securityRules() {
         return this.securityRules == null ? Codegen.empty() : this.securityRules;
     }
 
@@ -62,7 +62,7 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

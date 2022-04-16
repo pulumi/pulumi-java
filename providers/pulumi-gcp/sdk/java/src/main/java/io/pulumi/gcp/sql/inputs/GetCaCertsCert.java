@@ -19,7 +19,7 @@ public final class GetCaCertsCert extends io.pulumi.resources.InvokeArgs {
     @Import(name="cert", required=true)
       private final String cert;
 
-    public String getCert() {
+    public String cert() {
         return this.cert;
     }
 
@@ -30,7 +30,7 @@ public final class GetCaCertsCert extends io.pulumi.resources.InvokeArgs {
     @Import(name="commonName", required=true)
       private final String commonName;
 
-    public String getCommonName() {
+    public String commonName() {
         return this.commonName;
     }
 
@@ -41,7 +41,7 @@ public final class GetCaCertsCert extends io.pulumi.resources.InvokeArgs {
     @Import(name="createTime", required=true)
       private final String createTime;
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
 
@@ -52,7 +52,7 @@ public final class GetCaCertsCert extends io.pulumi.resources.InvokeArgs {
     @Import(name="expirationTime", required=true)
       private final String expirationTime;
 
-    public String getExpirationTime() {
+    public String expirationTime() {
         return this.expirationTime;
     }
 
@@ -63,7 +63,7 @@ public final class GetCaCertsCert extends io.pulumi.resources.InvokeArgs {
     @Import(name="sha1Fingerprint", required=true)
       private final String sha1Fingerprint;
 
-    public String getSha1Fingerprint() {
+    public String sha1Fingerprint() {
         return this.sha1Fingerprint;
     }
 

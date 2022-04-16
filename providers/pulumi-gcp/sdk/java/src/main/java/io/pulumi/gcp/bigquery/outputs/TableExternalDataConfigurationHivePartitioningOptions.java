@@ -65,7 +65,7 @@ public final class TableExternalDataConfigurationHivePartitioningOptions {
      * * CUSTOM: when set to `CUSTOM`, you must encode the partition key schema within the `source_uri_prefix` by setting `source_uri_prefix` to `gs://bucket/path_to_table/{key1:TYPE1}/{key2:TYPE2}/{key3:TYPE3}`.
      * 
     */
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
     /**
@@ -74,7 +74,7 @@ public final class TableExternalDataConfigurationHivePartitioningOptions {
      * specified.
      * 
     */
-    public Optional<Boolean> getRequirePartitionFilter() {
+    public Optional<Boolean> requirePartitionFilter() {
         return Optional.ofNullable(this.requirePartitionFilter);
     }
     /**
@@ -88,7 +88,7 @@ public final class TableExternalDataConfigurationHivePartitioningOptions {
      * Note that when `mode` is set to `CUSTOM`, you must encode the partition key schema within the `source_uri_prefix` by setting `source_uri_prefix` to `gs://bucket/path_to_table/{key1:TYPE1}/{key2:TYPE2}/{key3:TYPE3}`.
      * 
     */
-    public Optional<String> getSourceUriPrefix() {
+    public Optional<String> sourceUriPrefix() {
         return Optional.ofNullable(this.sourceUriPrefix);
     }
 

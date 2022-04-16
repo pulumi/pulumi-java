@@ -26,7 +26,7 @@ public final class CacheEncryptionSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="keyEncryptionKey")
       private final @Nullable Output<KeyVaultKeyReferenceArgs> keyEncryptionKey;
 
-    public Output<KeyVaultKeyReferenceArgs> getKeyEncryptionKey() {
+    public Output<KeyVaultKeyReferenceArgs> keyEncryptionKey() {
         return this.keyEncryptionKey == null ? Codegen.empty() : this.keyEncryptionKey;
     }
 

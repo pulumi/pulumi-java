@@ -26,7 +26,7 @@ public final class CspmMonitorAwsOfferingNativeCloudConnectionArgs extends io.pu
     @Import(name="cloudRoleArn")
       private final @Nullable Output<String> cloudRoleArn;
 
-    public Output<String> getCloudRoleArn() {
+    public Output<String> cloudRoleArn() {
         return this.cloudRoleArn == null ? Codegen.empty() : this.cloudRoleArn;
     }
 

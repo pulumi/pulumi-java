@@ -16,14 +16,14 @@ public final class GetTableServerSideEncryption extends io.pulumi.resources.Invo
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
     @Import(name="kmsKeyArn", required=true)
       private final String kmsKeyArn;
 
-    public String getKmsKeyArn() {
+    public String kmsKeyArn() {
         return this.kmsKeyArn;
     }
 

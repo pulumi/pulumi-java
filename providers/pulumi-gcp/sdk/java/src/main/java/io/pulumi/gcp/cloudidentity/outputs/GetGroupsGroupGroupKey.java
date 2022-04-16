@@ -20,10 +20,10 @@ public final class GetGroupsGroupGroupKey {
         this.namespace = namespace;
     }
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getNamespace() {
+    public String namespace() {
         return this.namespace;
     }
 

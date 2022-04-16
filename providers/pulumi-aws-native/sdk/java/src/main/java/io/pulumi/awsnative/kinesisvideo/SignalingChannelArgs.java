@@ -26,7 +26,7 @@ public final class SignalingChannelArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="messageTtlSeconds")
       private final @Nullable Output<Integer> messageTtlSeconds;
 
-    public Output<Integer> getMessageTtlSeconds() {
+    public Output<Integer> messageTtlSeconds() {
         return this.messageTtlSeconds == null ? Codegen.empty() : this.messageTtlSeconds;
     }
 
@@ -37,7 +37,7 @@ public final class SignalingChannelArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -48,7 +48,7 @@ public final class SignalingChannelArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<List<SignalingChannelTagArgs>> tags;
 
-    public Output<List<SignalingChannelTagArgs>> getTags() {
+    public Output<List<SignalingChannelTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -59,7 +59,7 @@ public final class SignalingChannelArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="type")
       private final @Nullable Output<SignalingChannelType> type;
 
-    public Output<SignalingChannelType> getType() {
+    public Output<SignalingChannelType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

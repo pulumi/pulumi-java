@@ -26,7 +26,7 @@ public final class FileSystemTokenStoreResponse {
      * The directory in which the tokens will be stored.
      * 
     */
-    public Optional<String> getDirectory() {
+    public Optional<String> directory() {
         return Optional.ofNullable(this.directory);
     }
 

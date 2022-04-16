@@ -40,21 +40,21 @@ public final class AptSettingsResponse {
      * List of packages to exclude from update. These packages will be excluded
      * 
     */
-    public List<String> getExcludes() {
+    public List<String> excludes() {
         return this.excludes;
     }
     /**
      * An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field cannot be specified with any other patch configuration fields.
      * 
     */
-    public List<String> getExclusivePackages() {
+    public List<String> exclusivePackages() {
         return this.exclusivePackages;
     }
     /**
      * By changing the type to DIST, the patching is performed using `apt-get dist-upgrade` instead.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

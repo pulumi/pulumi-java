@@ -26,7 +26,7 @@ public final class ConnectionMonitorOutputResponse extends io.pulumi.resources.I
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
@@ -37,7 +37,7 @@ public final class ConnectionMonitorOutputResponse extends io.pulumi.resources.I
     @Import(name="workspaceSettings")
       private final @Nullable ConnectionMonitorWorkspaceSettingsResponse workspaceSettings;
 
-    public Optional<ConnectionMonitorWorkspaceSettingsResponse> getWorkspaceSettings() {
+    public Optional<ConnectionMonitorWorkspaceSettingsResponse> workspaceSettings() {
         return this.workspaceSettings == null ? Optional.empty() : Optional.ofNullable(this.workspaceSettings);
     }
 

@@ -42,7 +42,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) assigned by AWS to this endpoint.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +56,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The deployment configuration for an endpoint, which contains the desired deployment strategy and rollback configurations. See Deployment Config.
      * 
      */
-    public Output</* @Nullable */ EndpointDeploymentConfig> getDeploymentConfig() {
+    public Output</* @Nullable */ EndpointDeploymentConfig> deploymentConfig() {
         return this.deploymentConfig;
     }
     /**
@@ -70,7 +70,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The name of the endpoint configuration to use.
      * 
      */
-    public Output<String> getEndpointConfigName() {
+    public Output<String> endpointConfigName() {
         return this.endpointConfigName;
     }
     /**
@@ -84,7 +84,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The name of the endpoint.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -98,7 +98,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -112,7 +112,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

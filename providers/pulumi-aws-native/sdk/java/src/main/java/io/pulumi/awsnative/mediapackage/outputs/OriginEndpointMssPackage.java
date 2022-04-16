@@ -38,24 +38,24 @@ public final class OriginEndpointMssPackage {
         this.streamSelection = streamSelection;
     }
 
-    public Optional<OriginEndpointMssEncryption> getEncryption() {
+    public Optional<OriginEndpointMssEncryption> encryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
      * The time window (in seconds) contained in each manifest.
      * 
     */
-    public Optional<Integer> getManifestWindowSeconds() {
+    public Optional<Integer> manifestWindowSeconds() {
         return Optional.ofNullable(this.manifestWindowSeconds);
     }
     /**
      * The duration (in seconds) of each segment.
      * 
     */
-    public Optional<Integer> getSegmentDurationSeconds() {
+    public Optional<Integer> segmentDurationSeconds() {
         return Optional.ofNullable(this.segmentDurationSeconds);
     }
-    public Optional<OriginEndpointStreamSelection> getStreamSelection() {
+    public Optional<OriginEndpointStreamSelection> streamSelection() {
         return Optional.ofNullable(this.streamSelection);
     }
 

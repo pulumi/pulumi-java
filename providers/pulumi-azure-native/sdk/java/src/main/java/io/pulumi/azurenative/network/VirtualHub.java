@@ -48,7 +48,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * @return Address-prefix for this VirtualHub.
      * 
      */
-    public Output</* @Nullable */ String> getAddressPrefix() {
+    public Output</* @Nullable */ String> addressPrefix() {
         return this.addressPrefix;
     }
     /**
@@ -62,7 +62,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * @return Flag to control transit for VirtualRouter hub.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAllowBranchToBranchTraffic() {
+    public Output</* @Nullable */ Boolean> allowBranchToBranchTraffic() {
         return this.allowBranchToBranchTraffic;
     }
     /**
@@ -76,7 +76,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * @return The azureFirewall associated with this VirtualHub.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getAzureFirewall() {
+    public Output</* @Nullable */ SubResourceResponse> azureFirewall() {
         return this.azureFirewall;
     }
     /**
@@ -90,7 +90,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * @return List of references to Bgp Connections.
      * 
      */
-    public Output<List<SubResourceResponse>> getBgpConnections() {
+    public Output<List<SubResourceResponse>> bgpConnections() {
         return this.bgpConnections;
     }
     /**
@@ -104,7 +104,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -118,7 +118,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * @return The expressRouteGateway associated with this VirtualHub.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getExpressRouteGateway() {
+    public Output</* @Nullable */ SubResourceResponse> expressRouteGateway() {
         return this.expressRouteGateway;
     }
     /**
@@ -132,7 +132,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * @return List of references to IpConfigurations.
      * 
      */
-    public Output<List<SubResourceResponse>> getIpConfigurations() {
+    public Output<List<SubResourceResponse>> ipConfigurations() {
         return this.ipConfigurations;
     }
     /**
@@ -146,7 +146,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -160,7 +160,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -174,7 +174,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * @return The P2SVpnGateway associated with this VirtualHub.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getP2SVpnGateway() {
+    public Output</* @Nullable */ SubResourceResponse> p2SVpnGateway() {
         return this.p2SVpnGateway;
     }
     /**
@@ -188,7 +188,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the virtual hub resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -202,7 +202,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * @return The routeTable associated with this virtual hub.
      * 
      */
-    public Output</* @Nullable */ VirtualHubRouteTableResponse> getRouteTable() {
+    public Output</* @Nullable */ VirtualHubRouteTableResponse> routeTable() {
         return this.routeTable;
     }
     /**
@@ -216,7 +216,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * @return The routing state.
      * 
      */
-    public Output<String> getRoutingState() {
+    public Output<String> routingState() {
         return this.routingState;
     }
     /**
@@ -230,7 +230,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * @return The securityPartnerProvider associated with this VirtualHub.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getSecurityPartnerProvider() {
+    public Output</* @Nullable */ SubResourceResponse> securityPartnerProvider() {
         return this.securityPartnerProvider;
     }
     /**
@@ -244,7 +244,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * @return The Security Provider name.
      * 
      */
-    public Output</* @Nullable */ String> getSecurityProviderName() {
+    public Output</* @Nullable */ String> securityProviderName() {
         return this.securityProviderName;
     }
     /**
@@ -258,7 +258,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * @return The sku of this VirtualHub.
      * 
      */
-    public Output</* @Nullable */ String> getSku() {
+    public Output</* @Nullable */ String> sku() {
         return this.sku;
     }
     /**
@@ -272,7 +272,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -286,7 +286,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -300,7 +300,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * @return List of all virtual hub route table v2s associated with this VirtualHub.
      * 
      */
-    public Output</* @Nullable */ List<VirtualHubRouteTableV2Response>> getVirtualHubRouteTableV2s() {
+    public Output</* @Nullable */ List<VirtualHubRouteTableV2Response>> virtualHubRouteTableV2s() {
         return this.virtualHubRouteTableV2s;
     }
     /**
@@ -314,7 +314,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * @return VirtualRouter ASN.
      * 
      */
-    public Output</* @Nullable */ Double> getVirtualRouterAsn() {
+    public Output</* @Nullable */ Double> virtualRouterAsn() {
         return this.virtualRouterAsn;
     }
     /**
@@ -328,7 +328,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * @return VirtualRouter IPs.
      * 
      */
-    public Output</* @Nullable */ List<String>> getVirtualRouterIps() {
+    public Output</* @Nullable */ List<String>> virtualRouterIps() {
         return this.virtualRouterIps;
     }
     /**
@@ -342,7 +342,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * @return The VirtualWAN to which the VirtualHub belongs.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getVirtualWan() {
+    public Output</* @Nullable */ SubResourceResponse> virtualWan() {
         return this.virtualWan;
     }
     /**
@@ -356,7 +356,7 @@ public class VirtualHub extends io.pulumi.resources.CustomResource {
      * @return The VpnGateway associated with this VirtualHub.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getVpnGateway() {
+    public Output</* @Nullable */ SubResourceResponse> vpnGateway() {
         return this.vpnGateway;
     }
 

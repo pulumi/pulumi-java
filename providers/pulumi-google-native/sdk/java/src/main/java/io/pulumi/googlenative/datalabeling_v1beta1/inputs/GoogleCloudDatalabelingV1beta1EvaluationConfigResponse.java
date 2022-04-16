@@ -23,7 +23,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationConfigResponse extend
     @Import(name="boundingBoxEvaluationOptions", required=true)
       private final GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse boundingBoxEvaluationOptions;
 
-    public GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse getBoundingBoxEvaluationOptions() {
+    public GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse boundingBoxEvaluationOptions() {
         return this.boundingBoxEvaluationOptions;
     }
 

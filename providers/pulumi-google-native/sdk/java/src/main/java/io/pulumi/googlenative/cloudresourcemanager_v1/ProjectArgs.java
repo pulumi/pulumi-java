@@ -25,7 +25,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -36,7 +36,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -47,7 +47,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lifecycleState")
       private final @Nullable Output<ProjectLifecycleState> lifecycleState;
 
-    public Output<ProjectLifecycleState> getLifecycleState() {
+    public Output<ProjectLifecycleState> lifecycleState() {
         return this.lifecycleState == null ? Codegen.empty() : this.lifecycleState;
     }
 
@@ -58,7 +58,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -69,7 +69,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent")
       private final @Nullable Output<ResourceIdArgs> parent;
 
-    public Output<ResourceIdArgs> getParent() {
+    public Output<ResourceIdArgs> parent() {
         return this.parent == null ? Codegen.empty() : this.parent;
     }
 
@@ -80,7 +80,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="projectId")
       private final @Nullable Output<String> projectId;
 
-    public Output<String> getProjectId() {
+    public Output<String> projectId() {
         return this.projectId == null ? Codegen.empty() : this.projectId;
     }
 
@@ -91,7 +91,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="projectNumber")
       private final @Nullable Output<String> projectNumber;
 
-    public Output<String> getProjectNumber() {
+    public Output<String> projectNumber() {
         return this.projectNumber == null ? Codegen.empty() : this.projectNumber;
     }
 

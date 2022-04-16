@@ -35,14 +35,14 @@ public final class ContainerRecipeTargetContainerRepository {
      * The name of the container repository where the output container image is stored. This name is prefixed by the repository location.
      * 
     */
-    public Optional<String> getRepositoryName() {
+    public Optional<String> repositoryName() {
         return Optional.ofNullable(this.repositoryName);
     }
     /**
      * Specifies the service in which this image was registered.
      * 
     */
-    public Optional<ContainerRecipeTargetContainerRepositoryService> getService() {
+    public Optional<ContainerRecipeTargetContainerRepositoryService> service() {
         return Optional.ofNullable(this.service);
     }
 

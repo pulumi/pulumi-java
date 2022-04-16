@@ -21,7 +21,7 @@ public final class ScheduledActionTargetActionResumeClusterGetArgs extends io.pu
     @Import(name="clusterIdentifier", required=true)
       private final Output<String> clusterIdentifier;
 
-    public Output<String> getClusterIdentifier() {
+    public Output<String> clusterIdentifier() {
         return this.clusterIdentifier;
     }
 

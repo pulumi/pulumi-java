@@ -29,7 +29,7 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
     @Import(name="colSpan", required=true)
       private final Output<Integer> colSpan;
 
-    public Output<Integer> getColSpan() {
+    public Output<Integer> colSpan() {
         return this.colSpan;
     }
 
@@ -40,7 +40,7 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
     @Import(name="metadata")
       private final @Nullable Output<Map<String,Object>> metadata;
 
-    public Output<Map<String,Object>> getMetadata() {
+    public Output<Map<String,Object>> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -51,7 +51,7 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
     @Import(name="rowSpan", required=true)
       private final Output<Integer> rowSpan;
 
-    public Output<Integer> getRowSpan() {
+    public Output<Integer> rowSpan() {
         return this.rowSpan;
     }
 
@@ -62,7 +62,7 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
     @Import(name="x", required=true)
       private final Output<Integer> x;
 
-    public Output<Integer> getX() {
+    public Output<Integer> x() {
         return this.x;
     }
 
@@ -73,7 +73,7 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
     @Import(name="y", required=true)
       private final Output<Integer> y;
 
-    public Output<Integer> getY() {
+    public Output<Integer> y() {
         return this.y;
     }
 

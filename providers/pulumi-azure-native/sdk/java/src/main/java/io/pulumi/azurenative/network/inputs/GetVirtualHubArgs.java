@@ -19,7 +19,7 @@ public final class GetVirtualHubArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetVirtualHubArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="virtualHubName", required=true)
       private final String virtualHubName;
 
-    public String getVirtualHubName() {
+    public String virtualHubName() {
         return this.virtualHubName;
     }
 

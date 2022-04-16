@@ -21,14 +21,14 @@ public final class SubscriptionStateRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="allowedActions")
       private final @Nullable Output<List<String>> allowedActions;
 
-    public Output<List<String>> getAllowedActions() {
+    public Output<List<String>> allowedActions() {
         return this.allowedActions == null ? Codegen.empty() : this.allowedActions;
     }
 
     @Import(name="state")
       private final @Nullable Output<Either<String,SubscriptionState>> state;
 
-    public Output<Either<String,SubscriptionState>> getState() {
+    public Output<Either<String,SubscriptionState>> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

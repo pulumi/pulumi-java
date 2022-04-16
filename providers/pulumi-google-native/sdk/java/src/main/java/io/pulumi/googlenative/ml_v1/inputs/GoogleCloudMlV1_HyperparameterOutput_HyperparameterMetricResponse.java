@@ -24,7 +24,7 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResp
     @Import(name="objectiveValue", required=true)
       private final Double objectiveValue;
 
-    public Double getObjectiveValue() {
+    public Double objectiveValue() {
         return this.objectiveValue;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResp
     @Import(name="trainingStep", required=true)
       private final String trainingStep;
 
-    public String getTrainingStep() {
+    public String trainingStep() {
         return this.trainingStep;
     }
 

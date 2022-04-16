@@ -25,7 +25,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse extends io
     @Import(name="allowAll", required=true)
       private final Boolean allowAll;
 
-    public Boolean getAllowAll() {
+    public Boolean allowAll() {
         return this.allowAll;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse extends io
     @Import(name="condition", required=true)
       private final GoogleTypeExprResponse condition;
 
-    public GoogleTypeExprResponse getCondition() {
+    public GoogleTypeExprResponse condition() {
         return this.condition;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse extends io
     @Import(name="denyAll", required=true)
       private final Boolean denyAll;
 
-    public Boolean getDenyAll() {
+    public Boolean denyAll() {
         return this.denyAll;
     }
 
@@ -58,7 +58,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse extends io
     @Import(name="enforce", required=true)
       private final Boolean enforce;
 
-    public Boolean getEnforce() {
+    public Boolean enforce() {
         return this.enforce;
     }
 
@@ -69,7 +69,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse extends io
     @Import(name="values", required=true)
       private final GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse values;
 
-    public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse getValues() {
+    public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse values() {
         return this.values;
     }
 

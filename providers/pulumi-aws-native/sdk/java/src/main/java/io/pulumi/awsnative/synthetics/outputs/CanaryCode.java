@@ -31,19 +31,19 @@ public final class CanaryCode {
         this.script = script;
     }
 
-    public String getHandler() {
+    public String handler() {
         return this.handler;
     }
-    public Optional<String> getS3Bucket() {
+    public Optional<String> s3Bucket() {
         return Optional.ofNullable(this.s3Bucket);
     }
-    public Optional<String> getS3Key() {
+    public Optional<String> s3Key() {
         return Optional.ofNullable(this.s3Key);
     }
-    public Optional<String> getS3ObjectVersion() {
+    public Optional<String> s3ObjectVersion() {
         return Optional.ofNullable(this.s3ObjectVersion);
     }
-    public Optional<String> getScript() {
+    public Optional<String> script() {
         return Optional.ofNullable(this.script);
     }
 

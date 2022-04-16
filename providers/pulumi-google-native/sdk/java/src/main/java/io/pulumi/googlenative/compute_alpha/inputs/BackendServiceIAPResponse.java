@@ -25,7 +25,7 @@ public final class BackendServiceIAPResponse extends io.pulumi.resources.InvokeA
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
@@ -36,7 +36,7 @@ public final class BackendServiceIAPResponse extends io.pulumi.resources.InvokeA
     @Import(name="oauth2ClientId", required=true)
       private final String oauth2ClientId;
 
-    public String getOauth2ClientId() {
+    public String oauth2ClientId() {
         return this.oauth2ClientId;
     }
 
@@ -47,7 +47,7 @@ public final class BackendServiceIAPResponse extends io.pulumi.resources.InvokeA
     @Import(name="oauth2ClientInfo", required=true)
       private final BackendServiceIAPOAuth2ClientInfoResponse oauth2ClientInfo;
 
-    public BackendServiceIAPOAuth2ClientInfoResponse getOauth2ClientInfo() {
+    public BackendServiceIAPOAuth2ClientInfoResponse oauth2ClientInfo() {
         return this.oauth2ClientInfo;
     }
 
@@ -58,7 +58,7 @@ public final class BackendServiceIAPResponse extends io.pulumi.resources.InvokeA
     @Import(name="oauth2ClientSecret", required=true)
       private final String oauth2ClientSecret;
 
-    public String getOauth2ClientSecret() {
+    public String oauth2ClientSecret() {
         return this.oauth2ClientSecret;
     }
 
@@ -69,7 +69,7 @@ public final class BackendServiceIAPResponse extends io.pulumi.resources.InvokeA
     @Import(name="oauth2ClientSecretSha256", required=true)
       private final String oauth2ClientSecretSha256;
 
-    public String getOauth2ClientSecretSha256() {
+    public String oauth2ClientSecretSha256() {
         return this.oauth2ClientSecretSha256;
     }
 

@@ -25,7 +25,7 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
     @Import(name="enablePrivateEndpoint", required=true)
       private final Boolean enablePrivateEndpoint;
 
-    public Boolean getEnablePrivateEndpoint() {
+    public Boolean enablePrivateEndpoint() {
         return this.enablePrivateEndpoint;
     }
 
@@ -36,7 +36,7 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
     @Import(name="enablePrivateNodes", required=true)
       private final Boolean enablePrivateNodes;
 
-    public Boolean getEnablePrivateNodes() {
+    public Boolean enablePrivateNodes() {
         return this.enablePrivateNodes;
     }
 
@@ -47,7 +47,7 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
     @Import(name="masterGlobalAccessConfig", required=true)
       private final PrivateClusterMasterGlobalAccessConfigResponse masterGlobalAccessConfig;
 
-    public PrivateClusterMasterGlobalAccessConfigResponse getMasterGlobalAccessConfig() {
+    public PrivateClusterMasterGlobalAccessConfigResponse masterGlobalAccessConfig() {
         return this.masterGlobalAccessConfig;
     }
 
@@ -58,7 +58,7 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
     @Import(name="masterIpv4CidrBlock", required=true)
       private final String masterIpv4CidrBlock;
 
-    public String getMasterIpv4CidrBlock() {
+    public String masterIpv4CidrBlock() {
         return this.masterIpv4CidrBlock;
     }
 
@@ -69,7 +69,7 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
     @Import(name="peeringName", required=true)
       private final String peeringName;
 
-    public String getPeeringName() {
+    public String peeringName() {
         return this.peeringName;
     }
 
@@ -80,7 +80,7 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
     @Import(name="privateEndpoint", required=true)
       private final String privateEndpoint;
 
-    public String getPrivateEndpoint() {
+    public String privateEndpoint() {
         return this.privateEndpoint;
     }
 
@@ -91,7 +91,7 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
     @Import(name="publicEndpoint", required=true)
       private final String publicEndpoint;
 
-    public String getPublicEndpoint() {
+    public String publicEndpoint() {
         return this.publicEndpoint;
     }
 

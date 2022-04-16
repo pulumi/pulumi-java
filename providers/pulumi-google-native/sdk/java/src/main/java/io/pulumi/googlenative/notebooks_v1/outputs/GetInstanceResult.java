@@ -266,238 +266,238 @@ public final class GetInstanceResult {
      * The hardware accelerator used on this instance. If you use accelerators, make sure that your configuration has [enough vCPUs and memory to support the `machine_type` you have selected](/compute/docs/gpus/#gpus-list).
      * 
     */
-    public AcceleratorConfigResponse getAcceleratorConfig() {
+    public AcceleratorConfigResponse acceleratorConfig() {
         return this.acceleratorConfig;
     }
     /**
      * Input only. The size of the boot disk in GB attached to this instance, up to a maximum of 64000 GB (64 TB). The minimum recommended value is 100 GB. If not specified, this defaults to 100.
      * 
     */
-    public String getBootDiskSizeGb() {
+    public String bootDiskSizeGb() {
         return this.bootDiskSizeGb;
     }
     /**
      * Input only. The type of the boot disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).
      * 
     */
-    public String getBootDiskType() {
+    public String bootDiskType() {
         return this.bootDiskType;
     }
     /**
      * Use a container image to start the notebook instance.
      * 
     */
-    public ContainerImageResponse getContainerImage() {
+    public ContainerImageResponse containerImage() {
         return this.containerImage;
     }
     /**
      * Instance creation time.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we'll automatically choose from official GPU drivers.
      * 
     */
-    public String getCustomGpuDriverPath() {
+    public String customGpuDriverPath() {
         return this.customGpuDriverPath;
     }
     /**
      * Input only. The size of the data disk in GB attached to this instance, up to a maximum of 64000 GB (64 TB). You can choose the size of the data disk based on how big your notebooks and data are. If not specified, this defaults to 100.
      * 
     */
-    public String getDataDiskSizeGb() {
+    public String dataDiskSizeGb() {
         return this.dataDiskSizeGb;
     }
     /**
      * Input only. The type of the data disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).
      * 
     */
-    public String getDataDiskType() {
+    public String dataDiskType() {
         return this.dataDiskType;
     }
     /**
      * Input only. Disk encryption method used on the boot and data disks, defaults to GMEK.
      * 
     */
-    public String getDiskEncryption() {
+    public String diskEncryption() {
         return this.diskEncryption;
     }
     /**
      * Attached disks to notebook instance.
      * 
     */
-    public List<DiskResponse> getDisks() {
+    public List<DiskResponse> disks() {
         return this.disks;
     }
     /**
      * Whether the end user authorizes Google Cloud to install GPU driver on this instance. If this field is empty or set to false, the GPU driver won't be installed. Only applicable to instances with GPUs.
      * 
     */
-    public Boolean getInstallGpuDriver() {
+    public Boolean installGpuDriver() {
         return this.installGpuDriver;
     }
     /**
      * Input only. The owner of this instance after creation. Format: `alias@example.com` Currently supports one owner only. If not specified, all of the service account users of your VM instance's service account can use the instance.
      * 
     */
-    public List<String> getInstanceOwners() {
+    public List<String> instanceOwners() {
         return this.instanceOwners;
     }
     /**
      * Input only. The KMS key used to encrypt the disks, only applicable if disk_encryption is CMEK. Format: `projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}` Learn more about [using your own encryption keys](/kms/docs/quickstart).
      * 
     */
-    public String getKmsKey() {
+    public String kmsKey() {
         return this.kmsKey;
     }
     /**
      * Labels to apply to this instance. These can be later modified by the setLabels method.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * The [Compute Engine machine type](/compute/docs/machine-types) of this instance.
      * 
     */
-    public String getMachineType() {
+    public String machineType() {
         return this.machineType;
     }
     /**
      * Custom metadata to apply to this instance.
      * 
     */
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata;
     }
     /**
      * The name of this notebook instance. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The name of the VPC that this instance is in. Format: `projects/{project_id}/global/networks/{network_id}`
      * 
     */
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
     /**
      * Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.
      * 
     */
-    public String getNicType() {
+    public String nicType() {
         return this.nicType;
     }
     /**
      * If true, the notebook instance will not register with the proxy.
      * 
     */
-    public Boolean getNoProxyAccess() {
+    public Boolean noProxyAccess() {
         return this.noProxyAccess;
     }
     /**
      * If true, no public IP will be assigned to this instance.
      * 
     */
-    public Boolean getNoPublicIp() {
+    public Boolean noPublicIp() {
         return this.noPublicIp;
     }
     /**
      * Input only. If true, the data disk will not be auto deleted when deleting the instance.
      * 
     */
-    public Boolean getNoRemoveDataDisk() {
+    public Boolean noRemoveDataDisk() {
         return this.noRemoveDataDisk;
     }
     /**
      * Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path (`gs://path-to-file/file-name`).
      * 
     */
-    public String getPostStartupScript() {
+    public String postStartupScript() {
         return this.postStartupScript;
     }
     /**
      * The proxy endpoint that is used to access the Jupyter notebook.
      * 
     */
-    public String getProxyUri() {
+    public String proxyUri() {
         return this.proxyUri;
     }
     /**
      * Optional. The optional reservation affinity. Setting this field will apply the specified [Zonal Compute Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources) to this notebook instance.
      * 
     */
-    public ReservationAffinityResponse getReservationAffinity() {
+    public ReservationAffinityResponse reservationAffinity() {
         return this.reservationAffinity;
     }
     /**
      * The service account on this instance, giving access to other Google Cloud services. You can use any service account within the same project, but you must have the service account user permission to use the instance. If not specified, the [Compute Engine default service account](https://cloud.google.com/compute/docs/access/service-accounts#default_service_account) is used.
      * 
     */
-    public String getServiceAccount() {
+    public String serviceAccount() {
         return this.serviceAccount;
     }
     /**
      * Optional. The URIs of service account scopes to be included in Compute Engine instances. If not specified, the following [scopes](https://cloud.google.com/compute/docs/access/service-accounts#accesscopesiam) are defined: - https://www.googleapis.com/auth/cloud-platform - https://www.googleapis.com/auth/userinfo.email If not using default scopes, you need at least: https://www.googleapis.com/auth/compute
      * 
     */
-    public List<String> getServiceAccountScopes() {
+    public List<String> serviceAccountScopes() {
         return this.serviceAccountScopes;
     }
     /**
      * Optional. Shielded VM configuration. [Images using supported Shielded VM features](https://cloud.google.com/compute/docs/instances/modifying-shielded-vm).
      * 
     */
-    public ShieldedInstanceConfigResponse getShieldedInstanceConfig() {
+    public ShieldedInstanceConfigResponse shieldedInstanceConfig() {
         return this.shieldedInstanceConfig;
     }
     /**
      * The state of this instance.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The name of the subnet that this instance is in. Format: `projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}`
      * 
     */
-    public String getSubnet() {
+    public String subnet() {
         return this.subnet;
     }
     /**
      * Optional. The Compute Engine tags to add to runtime (see [Tagging instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
      * 
     */
-    public List<String> getTags() {
+    public List<String> tags() {
         return this.tags;
     }
     /**
      * Instance update time.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
     /**
      * The upgrade history of this instance.
      * 
     */
-    public List<UpgradeHistoryEntryResponse> getUpgradeHistory() {
+    public List<UpgradeHistoryEntryResponse> upgradeHistory() {
         return this.upgradeHistory;
     }
     /**
      * Use a Compute Engine VM image to start the notebook instance.
      * 
     */
-    public VmImageResponse getVmImage() {
+    public VmImageResponse vmImage() {
         return this.vmImage;
     }
 

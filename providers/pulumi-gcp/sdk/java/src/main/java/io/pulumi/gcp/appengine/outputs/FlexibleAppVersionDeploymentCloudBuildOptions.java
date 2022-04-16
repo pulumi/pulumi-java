@@ -35,7 +35,7 @@ public final class FlexibleAppVersionDeploymentCloudBuildOptions {
      * Path to the yaml file used in deployment, used to determine runtime configuration details.
      * 
     */
-    public String getAppYamlPath() {
+    public String appYamlPath() {
         return this.appYamlPath;
     }
     /**
@@ -43,7 +43,7 @@ public final class FlexibleAppVersionDeploymentCloudBuildOptions {
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
     */
-    public Optional<String> getCloudBuildTimeout() {
+    public Optional<String> cloudBuildTimeout() {
         return Optional.ofNullable(this.cloudBuildTimeout);
     }
 

@@ -24,7 +24,7 @@ public final class LogMatchResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="filter", required=true)
       private final String filter;
 
-    public String getFilter() {
+    public String filter() {
         return this.filter;
     }
 
@@ -35,7 +35,7 @@ public final class LogMatchResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="labelExtractors", required=true)
       private final Map<String,String> labelExtractors;
 
-    public Map<String,String> getLabelExtractors() {
+    public Map<String,String> labelExtractors() {
         return this.labelExtractors;
     }
 

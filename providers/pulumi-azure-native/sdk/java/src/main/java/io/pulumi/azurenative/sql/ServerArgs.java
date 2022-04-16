@@ -27,7 +27,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="administratorLogin")
       private final @Nullable Output<String> administratorLogin;
 
-    public Output<String> getAdministratorLogin() {
+    public Output<String> administratorLogin() {
         return this.administratorLogin == null ? Codegen.empty() : this.administratorLogin;
     }
 
@@ -38,7 +38,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="administratorLoginPassword")
       private final @Nullable Output<String> administratorLoginPassword;
 
-    public Output<String> getAdministratorLoginPassword() {
+    public Output<String> administratorLoginPassword() {
         return this.administratorLoginPassword == null ? Codegen.empty() : this.administratorLoginPassword;
     }
 
@@ -49,7 +49,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="administrators")
       private final @Nullable Output<ServerExternalAdministratorArgs> administrators;
 
-    public Output<ServerExternalAdministratorArgs> getAdministrators() {
+    public Output<ServerExternalAdministratorArgs> administrators() {
         return this.administrators == null ? Codegen.empty() : this.administrators;
     }
 
@@ -60,7 +60,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<ResourceIdentityArgs> identity;
 
-    public Output<ResourceIdentityArgs> getIdentity() {
+    public Output<ResourceIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -71,7 +71,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyId")
       private final @Nullable Output<String> keyId;
 
-    public Output<String> getKeyId() {
+    public Output<String> keyId() {
         return this.keyId == null ? Codegen.empty() : this.keyId;
     }
 
@@ -82,7 +82,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -93,7 +93,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minimalTlsVersion")
       private final @Nullable Output<String> minimalTlsVersion;
 
-    public Output<String> getMinimalTlsVersion() {
+    public Output<String> minimalTlsVersion() {
         return this.minimalTlsVersion == null ? Codegen.empty() : this.minimalTlsVersion;
     }
 
@@ -104,7 +104,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="primaryUserAssignedIdentityId")
       private final @Nullable Output<String> primaryUserAssignedIdentityId;
 
-    public Output<String> getPrimaryUserAssignedIdentityId() {
+    public Output<String> primaryUserAssignedIdentityId() {
         return this.primaryUserAssignedIdentityId == null ? Codegen.empty() : this.primaryUserAssignedIdentityId;
     }
 
@@ -115,7 +115,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,ServerPublicNetworkAccess>> publicNetworkAccess;
 
-    public Output<Either<String,ServerPublicNetworkAccess>> getPublicNetworkAccess() {
+    public Output<Either<String,ServerPublicNetworkAccess>> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
@@ -126,7 +126,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -137,7 +137,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverName")
       private final @Nullable Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName == null ? Codegen.empty() : this.serverName;
     }
 
@@ -148,7 +148,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -159,7 +159,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

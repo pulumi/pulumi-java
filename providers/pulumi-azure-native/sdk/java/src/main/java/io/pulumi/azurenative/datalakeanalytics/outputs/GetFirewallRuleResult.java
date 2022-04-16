@@ -53,35 +53,35 @@ public final class GetFirewallRuleResult {
      * The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
      * 
     */
-    public String getEndIpAddress() {
+    public String endIpAddress() {
         return this.endIpAddress;
     }
     /**
      * The resource identifier.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
      * 
     */
-    public String getStartIpAddress() {
+    public String startIpAddress() {
         return this.startIpAddress;
     }
     /**
      * The resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

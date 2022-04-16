@@ -27,7 +27,7 @@ public final class TxtRecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<List<String>> value;
 
-    public Output<List<String>> getValue() {
+    public Output<List<String>> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

@@ -25,7 +25,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptRespo
      * A list of sequential transcript segments that comprise the conversation.
      * 
     */
-    public List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> getTranscriptSegments() {
+    public List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> transcriptSegments() {
         return this.transcriptSegments;
     }
 

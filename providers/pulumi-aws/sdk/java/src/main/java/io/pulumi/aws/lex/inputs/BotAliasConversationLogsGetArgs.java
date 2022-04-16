@@ -24,7 +24,7 @@ public final class BotAliasConversationLogsGetArgs extends io.pulumi.resources.R
     @Import(name="iamRoleArn", required=true)
       private final Output<String> iamRoleArn;
 
-    public Output<String> getIamRoleArn() {
+    public Output<String> iamRoleArn() {
         return this.iamRoleArn;
     }
 
@@ -35,7 +35,7 @@ public final class BotAliasConversationLogsGetArgs extends io.pulumi.resources.R
     @Import(name="logSettings")
       private final @Nullable Output<List<BotAliasConversationLogsLogSettingGetArgs>> logSettings;
 
-    public Output<List<BotAliasConversationLogsLogSettingGetArgs>> getLogSettings() {
+    public Output<List<BotAliasConversationLogsLogSettingGetArgs>> logSettings() {
         return this.logSettings == null ? Codegen.empty() : this.logSettings;
     }
 

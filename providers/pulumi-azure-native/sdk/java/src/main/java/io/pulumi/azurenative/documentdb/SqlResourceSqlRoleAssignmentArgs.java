@@ -22,7 +22,7 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -33,7 +33,7 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
     @Import(name="principalId")
       private final @Nullable Output<String> principalId;
 
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId == null ? Codegen.empty() : this.principalId;
     }
 
@@ -44,7 +44,7 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,7 +55,7 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
     @Import(name="roleAssignmentId")
       private final @Nullable Output<String> roleAssignmentId;
 
-    public Output<String> getRoleAssignmentId() {
+    public Output<String> roleAssignmentId() {
         return this.roleAssignmentId == null ? Codegen.empty() : this.roleAssignmentId;
     }
 
@@ -66,7 +66,7 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
     @Import(name="roleDefinitionId")
       private final @Nullable Output<String> roleDefinitionId;
 
-    public Output<String> getRoleDefinitionId() {
+    public Output<String> roleDefinitionId() {
         return this.roleDefinitionId == null ? Codegen.empty() : this.roleDefinitionId;
     }
 
@@ -77,7 +77,7 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
     @Import(name="scope")
       private final @Nullable Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 

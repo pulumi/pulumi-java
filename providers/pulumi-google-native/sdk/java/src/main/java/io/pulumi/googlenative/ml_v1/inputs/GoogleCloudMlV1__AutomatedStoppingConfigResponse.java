@@ -20,14 +20,14 @@ public final class GoogleCloudMlV1__AutomatedStoppingConfigResponse extends io.p
     @Import(name="decayCurveStoppingConfig", required=true)
       private final GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse decayCurveStoppingConfig;
 
-    public GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse getDecayCurveStoppingConfig() {
+    public GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse decayCurveStoppingConfig() {
         return this.decayCurveStoppingConfig;
     }
 
     @Import(name="medianAutomatedStoppingConfig", required=true)
       private final GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse medianAutomatedStoppingConfig;
 
-    public GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse getMedianAutomatedStoppingConfig() {
+    public GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse medianAutomatedStoppingConfig() {
         return this.medianAutomatedStoppingConfig;
     }
 

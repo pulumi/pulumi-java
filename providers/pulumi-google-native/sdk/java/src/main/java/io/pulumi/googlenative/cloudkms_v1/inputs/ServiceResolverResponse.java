@@ -25,7 +25,7 @@ public final class ServiceResolverResponse extends io.pulumi.resources.InvokeArg
     @Import(name="endpointFilter", required=true)
       private final String endpointFilter;
 
-    public String getEndpointFilter() {
+    public String endpointFilter() {
         return this.endpointFilter;
     }
 
@@ -36,7 +36,7 @@ public final class ServiceResolverResponse extends io.pulumi.resources.InvokeArg
     @Import(name="hostname", required=true)
       private final String hostname;
 
-    public String getHostname() {
+    public String hostname() {
         return this.hostname;
     }
 
@@ -47,7 +47,7 @@ public final class ServiceResolverResponse extends io.pulumi.resources.InvokeArg
     @Import(name="serverCertificates", required=true)
       private final List<CertificateResponse> serverCertificates;
 
-    public List<CertificateResponse> getServerCertificates() {
+    public List<CertificateResponse> serverCertificates() {
         return this.serverCertificates;
     }
 
@@ -58,7 +58,7 @@ public final class ServiceResolverResponse extends io.pulumi.resources.InvokeArg
     @Import(name="serviceDirectoryService", required=true)
       private final String serviceDirectoryService;
 
-    public String getServiceDirectoryService() {
+    public String serviceDirectoryService() {
         return this.serviceDirectoryService;
     }
 

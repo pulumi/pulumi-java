@@ -31,7 +31,7 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
     @Import(name="androidInstrumentationTest", required=true)
       private final AndroidInstrumentationTestResponse androidInstrumentationTest;
 
-    public AndroidInstrumentationTestResponse getAndroidInstrumentationTest() {
+    public AndroidInstrumentationTestResponse androidInstrumentationTest() {
         return this.androidInstrumentationTest;
     }
 
@@ -42,7 +42,7 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
     @Import(name="androidRoboTest", required=true)
       private final AndroidRoboTestResponse androidRoboTest;
 
-    public AndroidRoboTestResponse getAndroidRoboTest() {
+    public AndroidRoboTestResponse androidRoboTest() {
         return this.androidRoboTest;
     }
 
@@ -53,7 +53,7 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
     @Import(name="androidTestLoop", required=true)
       private final AndroidTestLoopResponse androidTestLoop;
 
-    public AndroidTestLoopResponse getAndroidTestLoop() {
+    public AndroidTestLoopResponse androidTestLoop() {
         return this.androidTestLoop;
     }
 
@@ -64,7 +64,7 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
     @Import(name="disablePerformanceMetrics", required=true)
       private final Boolean disablePerformanceMetrics;
 
-    public Boolean getDisablePerformanceMetrics() {
+    public Boolean disablePerformanceMetrics() {
         return this.disablePerformanceMetrics;
     }
 
@@ -75,7 +75,7 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
     @Import(name="disableVideoRecording", required=true)
       private final Boolean disableVideoRecording;
 
-    public Boolean getDisableVideoRecording() {
+    public Boolean disableVideoRecording() {
         return this.disableVideoRecording;
     }
 
@@ -86,7 +86,7 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
     @Import(name="iosTestLoop", required=true)
       private final IosTestLoopResponse iosTestLoop;
 
-    public IosTestLoopResponse getIosTestLoop() {
+    public IosTestLoopResponse iosTestLoop() {
         return this.iosTestLoop;
     }
 
@@ -97,7 +97,7 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
     @Import(name="iosTestSetup", required=true)
       private final IosTestSetupResponse iosTestSetup;
 
-    public IosTestSetupResponse getIosTestSetup() {
+    public IosTestSetupResponse iosTestSetup() {
         return this.iosTestSetup;
     }
 
@@ -108,7 +108,7 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
     @Import(name="iosXcTest", required=true)
       private final IosXcTestResponse iosXcTest;
 
-    public IosXcTestResponse getIosXcTest() {
+    public IosXcTestResponse iosXcTest() {
         return this.iosXcTest;
     }
 
@@ -119,7 +119,7 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
     @Import(name="testSetup", required=true)
       private final TestSetupResponse testSetup;
 
-    public TestSetupResponse getTestSetup() {
+    public TestSetupResponse testSetup() {
         return this.testSetup;
     }
 
@@ -130,7 +130,7 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
     @Import(name="testTimeout", required=true)
       private final String testTimeout;
 
-    public String getTestTimeout() {
+    public String testTimeout() {
         return this.testTimeout;
     }
 

@@ -23,7 +23,7 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -34,7 +34,7 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="registryName", required=true)
       private final Output<String> registryName;
 
-    public Output<String> getRegistryName() {
+    public Output<String> registryName() {
         return this.registryName;
     }
 
@@ -45,7 +45,7 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="replicationName")
       private final @Nullable Output<String> replicationName;
 
-    public Output<String> getReplicationName() {
+    public Output<String> replicationName() {
         return this.replicationName == null ? Codegen.empty() : this.replicationName;
     }
 
@@ -56,7 +56,7 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +67,7 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -39,21 +39,21 @@ public final class JwtClaimsResponse {
      * Value for the "aud" claim.
      * 
     */
-    public String getAudience() {
+    public String audience() {
         return this.audience;
     }
     /**
      * Value for the "iss" claim.
      * 
     */
-    public String getIssuer() {
+    public String issuer() {
         return this.issuer;
     }
     /**
      * Value for the "sub" claim.
      * 
     */
-    public String getSubject() {
+    public String subject() {
         return this.subject;
     }
 

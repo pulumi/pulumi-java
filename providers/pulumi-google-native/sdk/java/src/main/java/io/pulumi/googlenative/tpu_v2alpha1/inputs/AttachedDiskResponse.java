@@ -23,7 +23,7 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="mode", required=true)
       private final String mode;
 
-    public String getMode() {
+    public String mode() {
         return this.mode;
     }
 
@@ -34,7 +34,7 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sourceDisk", required=true)
       private final String sourceDisk;
 
-    public String getSourceDisk() {
+    public String sourceDisk() {
         return this.sourceDisk;
     }
 

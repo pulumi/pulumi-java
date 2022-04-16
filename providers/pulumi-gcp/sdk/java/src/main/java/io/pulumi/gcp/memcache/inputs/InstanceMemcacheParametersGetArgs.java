@@ -24,7 +24,7 @@ public final class InstanceMemcacheParametersGetArgs extends io.pulumi.resources
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -35,7 +35,7 @@ public final class InstanceMemcacheParametersGetArgs extends io.pulumi.resources
     @Import(name="params")
       private final @Nullable Output<Map<String,String>> params;
 
-    public Output<Map<String,String>> getParams() {
+    public Output<Map<String,String>> params() {
         return this.params == null ? Codegen.empty() : this.params;
     }
 

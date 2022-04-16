@@ -31,7 +31,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
     @Import(name="appApk")
       private final @Nullable Output<FileReferenceArgs> appApk;
 
-    public Output<FileReferenceArgs> getAppApk() {
+    public Output<FileReferenceArgs> appApk() {
         return this.appApk == null ? Codegen.empty() : this.appApk;
     }
 
@@ -42,7 +42,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
     @Import(name="appBundle")
       private final @Nullable Output<AppBundleArgs> appBundle;
 
-    public Output<AppBundleArgs> getAppBundle() {
+    public Output<AppBundleArgs> appBundle() {
         return this.appBundle == null ? Codegen.empty() : this.appBundle;
     }
 
@@ -53,7 +53,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
     @Import(name="appPackageId")
       private final @Nullable Output<String> appPackageId;
 
-    public Output<String> getAppPackageId() {
+    public Output<String> appPackageId() {
         return this.appPackageId == null ? Codegen.empty() : this.appPackageId;
     }
 
@@ -64,7 +64,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
     @Import(name="orchestratorOption")
       private final @Nullable Output<AndroidInstrumentationTestOrchestratorOption> orchestratorOption;
 
-    public Output<AndroidInstrumentationTestOrchestratorOption> getOrchestratorOption() {
+    public Output<AndroidInstrumentationTestOrchestratorOption> orchestratorOption() {
         return this.orchestratorOption == null ? Codegen.empty() : this.orchestratorOption;
     }
 
@@ -75,7 +75,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
     @Import(name="shardingOption")
       private final @Nullable Output<ShardingOptionArgs> shardingOption;
 
-    public Output<ShardingOptionArgs> getShardingOption() {
+    public Output<ShardingOptionArgs> shardingOption() {
         return this.shardingOption == null ? Codegen.empty() : this.shardingOption;
     }
 
@@ -86,7 +86,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
     @Import(name="testApk", required=true)
       private final Output<FileReferenceArgs> testApk;
 
-    public Output<FileReferenceArgs> getTestApk() {
+    public Output<FileReferenceArgs> testApk() {
         return this.testApk;
     }
 
@@ -97,7 +97,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
     @Import(name="testPackageId")
       private final @Nullable Output<String> testPackageId;
 
-    public Output<String> getTestPackageId() {
+    public Output<String> testPackageId() {
         return this.testPackageId == null ? Codegen.empty() : this.testPackageId;
     }
 
@@ -108,7 +108,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
     @Import(name="testRunnerClass")
       private final @Nullable Output<String> testRunnerClass;
 
-    public Output<String> getTestRunnerClass() {
+    public Output<String> testRunnerClass() {
         return this.testRunnerClass == null ? Codegen.empty() : this.testRunnerClass;
     }
 
@@ -119,7 +119,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
     @Import(name="testTargets")
       private final @Nullable Output<List<String>> testTargets;
 
-    public Output<List<String>> getTestTargets() {
+    public Output<List<String>> testTargets() {
         return this.testTargets == null ? Codegen.empty() : this.testTargets;
     }
 

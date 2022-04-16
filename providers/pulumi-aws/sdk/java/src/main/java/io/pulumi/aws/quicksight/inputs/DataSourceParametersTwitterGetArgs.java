@@ -22,7 +22,7 @@ public final class DataSourceParametersTwitterGetArgs extends io.pulumi.resource
     @Import(name="maxRows", required=true)
       private final Output<Integer> maxRows;
 
-    public Output<Integer> getMaxRows() {
+    public Output<Integer> maxRows() {
         return this.maxRows;
     }
 
@@ -33,7 +33,7 @@ public final class DataSourceParametersTwitterGetArgs extends io.pulumi.resource
     @Import(name="query", required=true)
       private final Output<String> query;
 
-    public Output<String> getQuery() {
+    public Output<String> query() {
         return this.query;
     }
 

@@ -22,7 +22,7 @@ public final class GetSecretVersionArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
@@ -33,7 +33,7 @@ public final class GetSecretVersionArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="secret", required=true)
       private final String secret;
 
-    public String getSecret() {
+    public String secret() {
         return this.secret;
     }
 
@@ -45,7 +45,7 @@ public final class GetSecretVersionArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="version")
       private final @Nullable String version;
 
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

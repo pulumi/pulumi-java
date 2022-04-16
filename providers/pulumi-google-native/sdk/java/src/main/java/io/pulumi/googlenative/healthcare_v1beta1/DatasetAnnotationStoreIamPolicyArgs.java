@@ -22,7 +22,7 @@ public final class DatasetAnnotationStoreIamPolicyArgs extends io.pulumi.resourc
     @Import(name="annotationStoreId", required=true)
       private final Output<String> annotationStoreId;
 
-    public Output<String> getAnnotationStoreId() {
+    public Output<String> annotationStoreId() {
         return this.annotationStoreId;
     }
 
@@ -33,7 +33,7 @@ public final class DatasetAnnotationStoreIamPolicyArgs extends io.pulumi.resourc
     @Import(name="auditConfigs")
       private final @Nullable Output<List<AuditConfigArgs>> auditConfigs;
 
-    public Output<List<AuditConfigArgs>> getAuditConfigs() {
+    public Output<List<AuditConfigArgs>> auditConfigs() {
         return this.auditConfigs == null ? Codegen.empty() : this.auditConfigs;
     }
 
@@ -44,14 +44,14 @@ public final class DatasetAnnotationStoreIamPolicyArgs extends io.pulumi.resourc
     @Import(name="bindings")
       private final @Nullable Output<List<BindingArgs>> bindings;
 
-    public Output<List<BindingArgs>> getBindings() {
+    public Output<List<BindingArgs>> bindings() {
         return this.bindings == null ? Codegen.empty() : this.bindings;
     }
 
     @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
@@ -62,21 +62,21 @@ public final class DatasetAnnotationStoreIamPolicyArgs extends io.pulumi.resourc
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -87,7 +87,7 @@ public final class DatasetAnnotationStoreIamPolicyArgs extends io.pulumi.resourc
     @Import(name="updateMask")
       private final @Nullable Output<String> updateMask;
 
-    public Output<String> getUpdateMask() {
+    public Output<String> updateMask() {
         return this.updateMask == null ? Codegen.empty() : this.updateMask;
     }
 
@@ -98,7 +98,7 @@ public final class DatasetAnnotationStoreIamPolicyArgs extends io.pulumi.resourc
     @Import(name="version")
       private final @Nullable Output<Integer> version;
 
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

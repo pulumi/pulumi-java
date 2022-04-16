@@ -19,14 +19,14 @@ public final class InAppTemplateOverrideButtonConfigurationArgs extends io.pulum
     @Import(name="buttonAction")
       private final @Nullable Output<InAppTemplateButtonAction> buttonAction;
 
-    public Output<InAppTemplateButtonAction> getButtonAction() {
+    public Output<InAppTemplateButtonAction> buttonAction() {
         return this.buttonAction == null ? Codegen.empty() : this.buttonAction;
     }
 
     @Import(name="link")
       private final @Nullable Output<String> link;
 
-    public Output<String> getLink() {
+    public Output<String> link() {
         return this.link == null ? Codegen.empty() : this.link;
     }
 

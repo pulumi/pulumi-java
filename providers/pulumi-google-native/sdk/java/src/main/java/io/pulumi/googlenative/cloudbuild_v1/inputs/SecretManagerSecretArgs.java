@@ -26,7 +26,7 @@ public final class SecretManagerSecretArgs extends io.pulumi.resources.ResourceA
     @Import(name="env")
       private final @Nullable Output<String> env;
 
-    public Output<String> getEnv() {
+    public Output<String> env() {
         return this.env == null ? Codegen.empty() : this.env;
     }
 
@@ -37,7 +37,7 @@ public final class SecretManagerSecretArgs extends io.pulumi.resources.ResourceA
     @Import(name="versionName")
       private final @Nullable Output<String> versionName;
 
-    public Output<String> getVersionName() {
+    public Output<String> versionName() {
         return this.versionName == null ? Codegen.empty() : this.versionName;
     }
 

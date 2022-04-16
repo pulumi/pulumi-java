@@ -22,10 +22,10 @@ public final class ServiceTaskSpecContainerSpecMountTmpfsOptions {
         this.sizeBytes = sizeBytes;
     }
 
-    public Optional<Integer> getMode() {
+    public Optional<Integer> mode() {
         return Optional.ofNullable(this.mode);
     }
-    public Optional<Integer> getSizeBytes() {
+    public Optional<Integer> sizeBytes() {
         return Optional.ofNullable(this.sizeBytes);
     }
 

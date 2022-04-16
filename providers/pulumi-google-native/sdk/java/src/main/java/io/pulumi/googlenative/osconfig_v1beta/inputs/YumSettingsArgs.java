@@ -28,7 +28,7 @@ public final class YumSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="excludes")
       private final @Nullable Output<List<String>> excludes;
 
-    public Output<List<String>> getExcludes() {
+    public Output<List<String>> excludes() {
         return this.excludes == null ? Codegen.empty() : this.excludes;
     }
 
@@ -39,7 +39,7 @@ public final class YumSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="exclusivePackages")
       private final @Nullable Output<List<String>> exclusivePackages;
 
-    public Output<List<String>> getExclusivePackages() {
+    public Output<List<String>> exclusivePackages() {
         return this.exclusivePackages == null ? Codegen.empty() : this.exclusivePackages;
     }
 
@@ -50,7 +50,7 @@ public final class YumSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minimal")
       private final @Nullable Output<Boolean> minimal;
 
-    public Output<Boolean> getMinimal() {
+    public Output<Boolean> minimal() {
         return this.minimal == null ? Codegen.empty() : this.minimal;
     }
 
@@ -61,7 +61,7 @@ public final class YumSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="security")
       private final @Nullable Output<Boolean> security;
 
-    public Output<Boolean> getSecurity() {
+    public Output<Boolean> security() {
         return this.security == null ? Codegen.empty() : this.security;
     }
 

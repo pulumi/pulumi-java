@@ -15,7 +15,7 @@ public final class FlowGoogleAnalyticsSourceProperties extends io.pulumi.resourc
     @Import(name="object", required=true)
       private final String object;
 
-    public String getObject() {
+    public String object() {
         return this.object;
     }
 

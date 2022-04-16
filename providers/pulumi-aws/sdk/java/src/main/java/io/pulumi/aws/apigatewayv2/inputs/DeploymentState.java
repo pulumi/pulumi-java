@@ -24,7 +24,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiId")
       private final @Nullable Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId == null ? Codegen.empty() : this.apiId;
     }
 
@@ -35,7 +35,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoDeployed")
       private final @Nullable Output<Boolean> autoDeployed;
 
-    public Output<Boolean> getAutoDeployed() {
+    public Output<Boolean> autoDeployed() {
         return this.autoDeployed == null ? Codegen.empty() : this.autoDeployed;
     }
 
@@ -46,7 +46,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -57,7 +57,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="triggers")
       private final @Nullable Output<Map<String,String>> triggers;
 
-    public Output<Map<String,String>> getTriggers() {
+    public Output<Map<String,String>> triggers() {
         return this.triggers == null ? Codegen.empty() : this.triggers;
     }
 

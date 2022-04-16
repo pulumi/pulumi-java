@@ -29,7 +29,7 @@ public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.
     @Import(name="defaultLoad")
       private final @Nullable Output<Integer> defaultLoad;
 
-    public Output<Integer> getDefaultLoad() {
+    public Output<Integer> defaultLoad() {
         return this.defaultLoad == null ? Codegen.empty() : this.defaultLoad;
     }
 
@@ -40,7 +40,7 @@ public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -51,7 +51,7 @@ public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.
     @Import(name="primaryDefaultLoad")
       private final @Nullable Output<Integer> primaryDefaultLoad;
 
-    public Output<Integer> getPrimaryDefaultLoad() {
+    public Output<Integer> primaryDefaultLoad() {
         return this.primaryDefaultLoad == null ? Codegen.empty() : this.primaryDefaultLoad;
     }
 
@@ -62,7 +62,7 @@ public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.
     @Import(name="secondaryDefaultLoad")
       private final @Nullable Output<Integer> secondaryDefaultLoad;
 
-    public Output<Integer> getSecondaryDefaultLoad() {
+    public Output<Integer> secondaryDefaultLoad() {
         return this.secondaryDefaultLoad == null ? Codegen.empty() : this.secondaryDefaultLoad;
     }
 
@@ -73,7 +73,7 @@ public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.
     @Import(name="weight")
       private final @Nullable Output<Either<String,ServiceLoadMetricWeight>> weight;
 
-    public Output<Either<String,ServiceLoadMetricWeight>> getWeight() {
+    public Output<Either<String,ServiceLoadMetricWeight>> weight() {
         return this.weight == null ? Codegen.empty() : this.weight;
     }
 

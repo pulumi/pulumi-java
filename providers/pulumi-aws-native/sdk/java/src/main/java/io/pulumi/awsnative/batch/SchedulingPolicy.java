@@ -23,13 +23,13 @@ public class SchedulingPolicy extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="fairsharePolicy", type=SchedulingPolicyFairsharePolicy.class, parameters={})
     private Output</* @Nullable */ SchedulingPolicyFairsharePolicy> fairsharePolicy;
 
-    public Output</* @Nullable */ SchedulingPolicyFairsharePolicy> getFairsharePolicy() {
+    public Output</* @Nullable */ SchedulingPolicyFairsharePolicy> fairsharePolicy() {
         return this.fairsharePolicy;
     }
     /**
@@ -43,7 +43,7 @@ public class SchedulingPolicy extends io.pulumi.resources.CustomResource {
      * @return Name of Scheduling Policy.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -57,7 +57,7 @@ public class SchedulingPolicy extends io.pulumi.resources.CustomResource {
      * @return A key-value pair to associate with a resource.
      * 
      */
-    public Output</* @Nullable */ Object> getTags() {
+    public Output</* @Nullable */ Object> tags() {
         return this.tags;
     }
 

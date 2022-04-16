@@ -17,7 +17,7 @@ public final class GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsS
         this.realms = realms;
     }
 
-    public List<String> getRealms() {
+    public List<String> realms() {
         return this.realms;
     }
 

@@ -23,7 +23,7 @@ public final class MembershipEndpointGetArgs extends io.pulumi.resources.Resourc
     @Import(name="gkeCluster")
       private final @Nullable Output<MembershipEndpointGkeClusterGetArgs> gkeCluster;
 
-    public Output<MembershipEndpointGkeClusterGetArgs> getGkeCluster() {
+    public Output<MembershipEndpointGkeClusterGetArgs> gkeCluster() {
         return this.gkeCluster == null ? Codegen.empty() : this.gkeCluster;
     }
 

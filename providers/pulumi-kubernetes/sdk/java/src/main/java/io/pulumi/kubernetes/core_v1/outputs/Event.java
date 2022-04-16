@@ -144,119 +144,119 @@ public final class Event {
      * What action was taken/failed regarding to the Regarding object.
      * 
     */
-    public Optional<String> getAction() {
+    public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
     */
-    public Optional<String> getApiVersion() {
+    public Optional<String> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
      * The number of times this event has occurred.
      * 
     */
-    public Optional<Integer> getCount() {
+    public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
     /**
      * Time when this Event was first observed.
      * 
     */
-    public Optional<String> getEventTime() {
+    public Optional<String> eventTime() {
         return Optional.ofNullable(this.eventTime);
     }
     /**
      * The time at which the event was first recorded. (Time of server receipt is in TypeMeta.)
      * 
     */
-    public Optional<String> getFirstTimestamp() {
+    public Optional<String> firstTimestamp() {
         return Optional.ofNullable(this.firstTimestamp);
     }
     /**
      * The object that this event is about.
      * 
     */
-    public ObjectReference getInvolvedObject() {
+    public ObjectReference involvedObject() {
         return this.involvedObject;
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The time at which the most recent occurrence of this event was recorded.
      * 
     */
-    public Optional<String> getLastTimestamp() {
+    public Optional<String> lastTimestamp() {
         return Optional.ofNullable(this.lastTimestamp);
     }
     /**
      * A human-readable description of the status of this operation.
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
      * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
     */
-    public ObjectMeta getMetadata() {
+    public ObjectMeta metadata() {
         return this.metadata;
     }
     /**
      * This should be a short, machine understandable string that gives the reason for the transition into the object's current status.
      * 
     */
-    public Optional<String> getReason() {
+    public Optional<String> reason() {
         return Optional.ofNullable(this.reason);
     }
     /**
      * Optional secondary object for more complex actions.
      * 
     */
-    public Optional<ObjectReference> getRelated() {
+    public Optional<ObjectReference> related() {
         return Optional.ofNullable(this.related);
     }
     /**
      * Name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`.
      * 
     */
-    public Optional<String> getReportingComponent() {
+    public Optional<String> reportingComponent() {
         return Optional.ofNullable(this.reportingComponent);
     }
     /**
      * ID of the controller instance, e.g. `kubelet-xyzf`.
      * 
     */
-    public Optional<String> getReportingInstance() {
+    public Optional<String> reportingInstance() {
         return Optional.ofNullable(this.reportingInstance);
     }
     /**
      * Data about the Event series this event represents or nil if it's a singleton Event.
      * 
     */
-    public Optional<EventSeries> getSeries() {
+    public Optional<EventSeries> series() {
         return Optional.ofNullable(this.series);
     }
     /**
      * The component reporting this event. Should be a short machine understandable string.
      * 
     */
-    public Optional<EventSource> getSource() {
+    public Optional<EventSource> source() {
         return Optional.ofNullable(this.source);
     }
     /**
      * Type of this event (Normal, Warning), new types could be added in the future
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

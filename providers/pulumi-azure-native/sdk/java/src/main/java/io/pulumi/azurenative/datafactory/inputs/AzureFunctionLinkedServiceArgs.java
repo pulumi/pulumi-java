@@ -35,7 +35,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -46,7 +46,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
     @Import(name="authentication")
       private final @Nullable Output<Object> authentication;
 
-    public Output<Object> getAuthentication() {
+    public Output<Object> authentication() {
         return this.authentication == null ? Codegen.empty() : this.authentication;
     }
 
@@ -57,7 +57,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
         return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
@@ -68,7 +68,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
     @Import(name="credential")
       private final @Nullable Output<CredentialReferenceArgs> credential;
 
-    public Output<CredentialReferenceArgs> getCredential() {
+    public Output<CredentialReferenceArgs> credential() {
         return this.credential == null ? Codegen.empty() : this.credential;
     }
 
@@ -79,7 +79,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -90,7 +90,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
+    public Output<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
@@ -101,7 +101,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
     @Import(name="functionAppUrl", required=true)
       private final Output<Object> functionAppUrl;
 
-    public Output<Object> getFunctionAppUrl() {
+    public Output<Object> functionAppUrl() {
         return this.functionAppUrl;
     }
 
@@ -112,7 +112,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
     @Import(name="functionKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> functionKey;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getFunctionKey() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> functionKey() {
         return this.functionKey == null ? Codegen.empty() : this.functionKey;
     }
 
@@ -123,7 +123,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -134,7 +134,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
     @Import(name="resourceId")
       private final @Nullable Output<Object> resourceId;
 
-    public Output<Object> getResourceId() {
+    public Output<Object> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
@@ -146,7 +146,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

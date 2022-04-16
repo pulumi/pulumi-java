@@ -27,7 +27,7 @@ public final class BucketTopicConfigurationArgs extends io.pulumi.resources.Reso
     @Import(name="event", required=true)
       private final Output<String> event;
 
-    public Output<String> getEvent() {
+    public Output<String> event() {
         return this.event;
     }
 
@@ -38,7 +38,7 @@ public final class BucketTopicConfigurationArgs extends io.pulumi.resources.Reso
     @Import(name="filter")
       private final @Nullable Output<BucketNotificationFilterArgs> filter;
 
-    public Output<BucketNotificationFilterArgs> getFilter() {
+    public Output<BucketNotificationFilterArgs> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -49,7 +49,7 @@ public final class BucketTopicConfigurationArgs extends io.pulumi.resources.Reso
     @Import(name="topic", required=true)
       private final Output<String> topic;
 
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic;
     }
 

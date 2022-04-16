@@ -27,7 +27,7 @@ public final class CbcsDrmConfigurationResponse extends io.pulumi.resources.Invo
     @Import(name="fairPlay")
       private final @Nullable StreamingPolicyFairPlayConfigurationResponse fairPlay;
 
-    public Optional<StreamingPolicyFairPlayConfigurationResponse> getFairPlay() {
+    public Optional<StreamingPolicyFairPlayConfigurationResponse> fairPlay() {
         return this.fairPlay == null ? Optional.empty() : Optional.ofNullable(this.fairPlay);
     }
 
@@ -38,7 +38,7 @@ public final class CbcsDrmConfigurationResponse extends io.pulumi.resources.Invo
     @Import(name="playReady")
       private final @Nullable StreamingPolicyPlayReadyConfigurationResponse playReady;
 
-    public Optional<StreamingPolicyPlayReadyConfigurationResponse> getPlayReady() {
+    public Optional<StreamingPolicyPlayReadyConfigurationResponse> playReady() {
         return this.playReady == null ? Optional.empty() : Optional.ofNullable(this.playReady);
     }
 
@@ -49,7 +49,7 @@ public final class CbcsDrmConfigurationResponse extends io.pulumi.resources.Invo
     @Import(name="widevine")
       private final @Nullable StreamingPolicyWidevineConfigurationResponse widevine;
 
-    public Optional<StreamingPolicyWidevineConfigurationResponse> getWidevine() {
+    public Optional<StreamingPolicyWidevineConfigurationResponse> widevine() {
         return this.widevine == null ? Optional.empty() : Optional.ofNullable(this.widevine);
     }
 

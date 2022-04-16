@@ -23,7 +23,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZoneId")
       private final @Nullable Output<String> availabilityZoneId;
 
-    public Output<String> getAvailabilityZoneId() {
+    public Output<String> availabilityZoneId() {
         return this.availabilityZoneId == null ? Codegen.empty() : this.availabilityZoneId;
     }
 
@@ -34,7 +34,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZoneName")
       private final @Nullable Output<String> availabilityZoneName;
 
-    public Output<String> getAvailabilityZoneName() {
+    public Output<String> availabilityZoneName() {
         return this.availabilityZoneName == null ? Codegen.empty() : this.availabilityZoneName;
     }
 
@@ -45,7 +45,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
 
-    public Output<String> getDnsName() {
+    public Output<String> dnsName() {
         return this.dnsName == null ? Codegen.empty() : this.dnsName;
     }
 
@@ -56,7 +56,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileSystemArn")
       private final @Nullable Output<String> fileSystemArn;
 
-    public Output<String> getFileSystemArn() {
+    public Output<String> fileSystemArn() {
         return this.fileSystemArn == null ? Codegen.empty() : this.fileSystemArn;
     }
 
@@ -67,7 +67,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileSystemId")
       private final @Nullable Output<String> fileSystemId;
 
-    public Output<String> getFileSystemId() {
+    public Output<String> fileSystemId() {
         return this.fileSystemId == null ? Codegen.empty() : this.fileSystemId;
     }
 
@@ -79,7 +79,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
@@ -90,7 +90,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="mountTargetDnsName")
       private final @Nullable Output<String> mountTargetDnsName;
 
-    public Output<String> getMountTargetDnsName() {
+    public Output<String> mountTargetDnsName() {
         return this.mountTargetDnsName == null ? Codegen.empty() : this.mountTargetDnsName;
     }
 
@@ -101,7 +101,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkInterfaceId")
       private final @Nullable Output<String> networkInterfaceId;
 
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId == null ? Codegen.empty() : this.networkInterfaceId;
     }
 
@@ -112,7 +112,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
@@ -124,7 +124,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> getSecurityGroups() {
+    public Output<List<String>> securityGroups() {
         return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
@@ -135,7 +135,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 

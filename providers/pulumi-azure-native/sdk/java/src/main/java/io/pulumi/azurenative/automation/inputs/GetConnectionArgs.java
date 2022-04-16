@@ -19,7 +19,7 @@ public final class GetConnectionArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="automationAccountName", required=true)
       private final String automationAccountName;
 
-    public String getAutomationAccountName() {
+    public String automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetConnectionArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="connectionName", required=true)
       private final String connectionName;
 
-    public String getConnectionName() {
+    public String connectionName() {
         return this.connectionName;
     }
 
@@ -41,7 +41,7 @@ public final class GetConnectionArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -45,7 +45,7 @@ public final class InstanceNetworkInterfaceAccessConfig {
      * network ip. If not given, one will be generated.
      * 
     */
-    public Optional<String> getNatIp() {
+    public Optional<String> natIp() {
         return Optional.ofNullable(this.natIp);
     }
     /**
@@ -53,7 +53,7 @@ public final class InstanceNetworkInterfaceAccessConfig {
      * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
      * 
     */
-    public Optional<String> getNetworkTier() {
+    public Optional<String> networkTier() {
         return Optional.ofNullable(this.networkTier);
     }
     /**
@@ -61,7 +61,7 @@ public final class InstanceNetworkInterfaceAccessConfig {
      * records for the external IPv6 ranges..
      * 
     */
-    public Optional<String> getPublicPtrDomainName() {
+    public Optional<String> publicPtrDomainName() {
         return Optional.ofNullable(this.publicPtrDomainName);
     }
 

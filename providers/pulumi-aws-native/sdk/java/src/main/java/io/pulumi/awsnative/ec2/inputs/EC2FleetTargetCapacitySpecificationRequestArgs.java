@@ -20,35 +20,35 @@ public final class EC2FleetTargetCapacitySpecificationRequestArgs extends io.pul
     @Import(name="defaultTargetCapacityType")
       private final @Nullable Output<EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType> defaultTargetCapacityType;
 
-    public Output<EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType> getDefaultTargetCapacityType() {
+    public Output<EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType> defaultTargetCapacityType() {
         return this.defaultTargetCapacityType == null ? Codegen.empty() : this.defaultTargetCapacityType;
     }
 
     @Import(name="onDemandTargetCapacity")
       private final @Nullable Output<Integer> onDemandTargetCapacity;
 
-    public Output<Integer> getOnDemandTargetCapacity() {
+    public Output<Integer> onDemandTargetCapacity() {
         return this.onDemandTargetCapacity == null ? Codegen.empty() : this.onDemandTargetCapacity;
     }
 
     @Import(name="spotTargetCapacity")
       private final @Nullable Output<Integer> spotTargetCapacity;
 
-    public Output<Integer> getSpotTargetCapacity() {
+    public Output<Integer> spotTargetCapacity() {
         return this.spotTargetCapacity == null ? Codegen.empty() : this.spotTargetCapacity;
     }
 
     @Import(name="targetCapacityUnitType")
       private final @Nullable Output<EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType> targetCapacityUnitType;
 
-    public Output<EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType> getTargetCapacityUnitType() {
+    public Output<EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType> targetCapacityUnitType() {
         return this.targetCapacityUnitType == null ? Codegen.empty() : this.targetCapacityUnitType;
     }
 
     @Import(name="totalTargetCapacity", required=true)
       private final Output<Integer> totalTargetCapacity;
 
-    public Output<Integer> getTotalTargetCapacity() {
+    public Output<Integer> totalTargetCapacity() {
         return this.totalTargetCapacity;
     }
 

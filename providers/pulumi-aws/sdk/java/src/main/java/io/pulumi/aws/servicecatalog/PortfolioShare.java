@@ -49,7 +49,7 @@ public class PortfolioShare extends io.pulumi.resources.CustomResource {
      * @return Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
      * 
      */
-    public Output</* @Nullable */ String> getAcceptLanguage() {
+    public Output</* @Nullable */ String> acceptLanguage() {
         return this.acceptLanguage;
     }
     /**
@@ -63,7 +63,7 @@ public class PortfolioShare extends io.pulumi.resources.CustomResource {
      * @return Whether the shared portfolio is imported by the recipient account. If the recipient is organizational, the share is automatically imported, and the field is always set to true.
      * 
      */
-    public Output<Boolean> getAccepted() {
+    public Output<Boolean> accepted() {
         return this.accepted;
     }
     /**
@@ -77,7 +77,7 @@ public class PortfolioShare extends io.pulumi.resources.CustomResource {
      * @return Portfolio identifier.
      * 
      */
-    public Output<String> getPortfolioId() {
+    public Output<String> portfolioId() {
         return this.portfolioId;
     }
     /**
@@ -91,7 +91,7 @@ public class PortfolioShare extends io.pulumi.resources.CustomResource {
      * @return Identifier of the principal with whom you will share the portfolio. Valid values AWS account IDs and ARNs of AWS Organizations and organizational units.
      * 
      */
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId;
     }
     /**
@@ -105,7 +105,7 @@ public class PortfolioShare extends io.pulumi.resources.CustomResource {
      * @return Whether to enable sharing of `aws.servicecatalog.TagOption` resources when creating the portfolio share.
      * 
      */
-    public Output</* @Nullable */ Boolean> getShareTagOptions() {
+    public Output</* @Nullable */ Boolean> shareTagOptions() {
         return this.shareTagOptions;
     }
     /**
@@ -119,7 +119,7 @@ public class PortfolioShare extends io.pulumi.resources.CustomResource {
      * @return Type of portfolio share. Valid values are `ACCOUNT` (an external account), `ORGANIZATION` (a share to every account in an organization), `ORGANIZATIONAL_UNIT`, `ORGANIZATION_MEMBER_ACCOUNT` (a share to an account in an organization).
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -133,7 +133,7 @@ public class PortfolioShare extends io.pulumi.resources.CustomResource {
      * @return Whether to wait (up to the timeout) for the share to be accepted. Organizational shares are automatically accepted.
      * 
      */
-    public Output</* @Nullable */ Boolean> getWaitForAcceptance() {
+    public Output</* @Nullable */ Boolean> waitForAcceptance() {
         return this.waitForAcceptance;
     }
 

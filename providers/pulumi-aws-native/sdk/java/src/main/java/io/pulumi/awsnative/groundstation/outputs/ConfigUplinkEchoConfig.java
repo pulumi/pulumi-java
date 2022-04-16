@@ -23,10 +23,10 @@ public final class ConfigUplinkEchoConfig {
         this.enabled = enabled;
     }
 
-    public Optional<String> getAntennaUplinkConfigArn() {
+    public Optional<String> antennaUplinkConfigArn() {
         return Optional.ofNullable(this.antennaUplinkConfigArn);
     }
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
 

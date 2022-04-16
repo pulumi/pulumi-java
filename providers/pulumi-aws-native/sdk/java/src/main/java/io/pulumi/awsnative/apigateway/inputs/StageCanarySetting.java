@@ -28,7 +28,7 @@ public final class StageCanarySetting extends io.pulumi.resources.InvokeArgs {
     @Import(name="deploymentId")
       private final @Nullable String deploymentId;
 
-    public Optional<String> getDeploymentId() {
+    public Optional<String> deploymentId() {
         return this.deploymentId == null ? Optional.empty() : Optional.ofNullable(this.deploymentId);
     }
 
@@ -39,7 +39,7 @@ public final class StageCanarySetting extends io.pulumi.resources.InvokeArgs {
     @Import(name="percentTraffic")
       private final @Nullable Double percentTraffic;
 
-    public Optional<Double> getPercentTraffic() {
+    public Optional<Double> percentTraffic() {
         return this.percentTraffic == null ? Optional.empty() : Optional.ofNullable(this.percentTraffic);
     }
 
@@ -50,7 +50,7 @@ public final class StageCanarySetting extends io.pulumi.resources.InvokeArgs {
     @Import(name="stageVariableOverrides")
       private final @Nullable Object stageVariableOverrides;
 
-    public Optional<Object> getStageVariableOverrides() {
+    public Optional<Object> stageVariableOverrides() {
         return this.stageVariableOverrides == null ? Optional.empty() : Optional.ofNullable(this.stageVariableOverrides);
     }
 
@@ -61,7 +61,7 @@ public final class StageCanarySetting extends io.pulumi.resources.InvokeArgs {
     @Import(name="useStageCache")
       private final @Nullable Boolean useStageCache;
 
-    public Optional<Boolean> getUseStageCache() {
+    public Optional<Boolean> useStageCache() {
         return this.useStageCache == null ? Optional.empty() : Optional.ofNullable(this.useStageCache);
     }
 

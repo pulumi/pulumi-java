@@ -22,7 +22,7 @@ public final class WebAclRuleStatementAndStatementArgs extends io.pulumi.resourc
     @Import(name="statements", required=true)
       private final Output<List<WebAclRuleStatementAndStatementStatementArgs>> statements;
 
-    public Output<List<WebAclRuleStatementAndStatementStatementArgs>> getStatements() {
+    public Output<List<WebAclRuleStatementAndStatementStatementArgs>> statements() {
         return this.statements;
     }
 

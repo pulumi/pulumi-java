@@ -51,28 +51,28 @@ public final class MigrateSqlServerSqlDbSyncTaskInputResponse {
      * Databases to migrate
      * 
     */
-    public List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> getSelectedDatabases() {
+    public List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases() {
         return this.selectedDatabases;
     }
     /**
      * Information for connecting to source
      * 
     */
-    public SqlConnectionInfoResponse getSourceConnectionInfo() {
+    public SqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
     /**
      * Information for connecting to target
      * 
     */
-    public SqlConnectionInfoResponse getTargetConnectionInfo() {
+    public SqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
     /**
      * Validation options
      * 
     */
-    public Optional<MigrationValidationOptionsResponse> getValidationOptions() {
+    public Optional<MigrationValidationOptionsResponse> validationOptions() {
         return Optional.ofNullable(this.validationOptions);
     }
 

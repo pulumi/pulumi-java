@@ -27,7 +27,7 @@ public final class AzureDatabricksDeltaLakeImportCommandArgs extends io.pulumi.r
     @Import(name="dateFormat")
       private final @Nullable Output<Object> dateFormat;
 
-    public Output<Object> getDateFormat() {
+    public Output<Object> dateFormat() {
         return this.dateFormat == null ? Codegen.empty() : this.dateFormat;
     }
 
@@ -38,7 +38,7 @@ public final class AzureDatabricksDeltaLakeImportCommandArgs extends io.pulumi.r
     @Import(name="timestampFormat")
       private final @Nullable Output<Object> timestampFormat;
 
-    public Output<Object> getTimestampFormat() {
+    public Output<Object> timestampFormat() {
         return this.timestampFormat == null ? Codegen.empty() : this.timestampFormat;
     }
 
@@ -50,7 +50,7 @@ public final class AzureDatabricksDeltaLakeImportCommandArgs extends io.pulumi.r
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

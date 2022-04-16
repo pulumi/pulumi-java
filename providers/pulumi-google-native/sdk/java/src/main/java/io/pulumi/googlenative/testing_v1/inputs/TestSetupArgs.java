@@ -32,7 +32,7 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="account")
       private final @Nullable Output<AccountArgs> account;
 
-    public Output<AccountArgs> getAccount() {
+    public Output<AccountArgs> account() {
         return this.account == null ? Codegen.empty() : this.account;
     }
 
@@ -43,7 +43,7 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="additionalApks")
       private final @Nullable Output<List<ApkArgs>> additionalApks;
 
-    public Output<List<ApkArgs>> getAdditionalApks() {
+    public Output<List<ApkArgs>> additionalApks() {
         return this.additionalApks == null ? Codegen.empty() : this.additionalApks;
     }
 
@@ -54,7 +54,7 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="directoriesToPull")
       private final @Nullable Output<List<String>> directoriesToPull;
 
-    public Output<List<String>> getDirectoriesToPull() {
+    public Output<List<String>> directoriesToPull() {
         return this.directoriesToPull == null ? Codegen.empty() : this.directoriesToPull;
     }
 
@@ -65,7 +65,7 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dontAutograntPermissions")
       private final @Nullable Output<Boolean> dontAutograntPermissions;
 
-    public Output<Boolean> getDontAutograntPermissions() {
+    public Output<Boolean> dontAutograntPermissions() {
         return this.dontAutograntPermissions == null ? Codegen.empty() : this.dontAutograntPermissions;
     }
 
@@ -76,7 +76,7 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="environmentVariables")
       private final @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
 
-    public Output<List<EnvironmentVariableArgs>> getEnvironmentVariables() {
+    public Output<List<EnvironmentVariableArgs>> environmentVariables() {
         return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
@@ -87,7 +87,7 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filesToPush")
       private final @Nullable Output<List<DeviceFileArgs>> filesToPush;
 
-    public Output<List<DeviceFileArgs>> getFilesToPush() {
+    public Output<List<DeviceFileArgs>> filesToPush() {
         return this.filesToPush == null ? Codegen.empty() : this.filesToPush;
     }
 
@@ -98,7 +98,7 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkProfile")
       private final @Nullable Output<String> networkProfile;
 
-    public Output<String> getNetworkProfile() {
+    public Output<String> networkProfile() {
         return this.networkProfile == null ? Codegen.empty() : this.networkProfile;
     }
 

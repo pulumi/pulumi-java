@@ -27,7 +27,7 @@ public final class ResourceSetDescriptionArgs extends io.pulumi.resources.Resour
     @Import(name="elements")
       private final @Nullable Output<List<String>> elements;
 
-    public Output<List<String>> getElements() {
+    public Output<List<String>> elements() {
         return this.elements == null ? Codegen.empty() : this.elements;
     }
 
@@ -38,7 +38,7 @@ public final class ResourceSetDescriptionArgs extends io.pulumi.resources.Resour
     @Import(name="exceptions")
       private final @Nullable Output<List<String>> exceptions;
 
-    public Output<List<String>> getExceptions() {
+    public Output<List<String>> exceptions() {
         return this.exceptions == null ? Codegen.empty() : this.exceptions;
     }
 

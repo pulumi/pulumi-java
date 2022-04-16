@@ -26,7 +26,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessTier")
       private final @Nullable Output<BlobAccessTier> accessTier;
 
-    public Output<BlobAccessTier> getAccessTier() {
+    public Output<BlobAccessTier> accessTier() {
         return this.accessTier == null ? Codegen.empty() : this.accessTier;
     }
 
@@ -37,7 +37,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -48,7 +48,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="blobName")
       private final @Nullable Output<String> blobName;
 
-    public Output<String> getBlobName() {
+    public Output<String> blobName() {
         return this.blobName == null ? Codegen.empty() : this.blobName;
     }
 
@@ -59,7 +59,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containerName", required=true)
       private final Output<String> containerName;
 
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName;
     }
 
@@ -70,7 +70,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentMd5")
       private final @Nullable Output<String> contentMd5;
 
-    public Output<String> getContentMd5() {
+    public Output<String> contentMd5() {
         return this.contentMd5 == null ? Codegen.empty() : this.contentMd5;
     }
 
@@ -81,7 +81,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
@@ -92,7 +92,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -103,7 +103,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -114,7 +114,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="source")
       private final @Nullable Output<AssetOrArchive> source;
 
-    public Output<AssetOrArchive> getSource() {
+    public Output<AssetOrArchive> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 
@@ -125,7 +125,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<BlobType> type;
 
-    public Output<BlobType> getType() {
+    public Output<BlobType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

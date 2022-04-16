@@ -25,7 +25,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="endTimeOfDay", required=true)
       private final TimeOfDayResponse endTimeOfDay;
 
-    public TimeOfDayResponse getEndTimeOfDay() {
+    public TimeOfDayResponse endTimeOfDay() {
         return this.endTimeOfDay;
     }
 
@@ -36,7 +36,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="repeatInterval", required=true)
       private final String repeatInterval;
 
-    public String getRepeatInterval() {
+    public String repeatInterval() {
         return this.repeatInterval;
     }
 
@@ -47,7 +47,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="scheduleEndDate", required=true)
       private final DateResponse scheduleEndDate;
 
-    public DateResponse getScheduleEndDate() {
+    public DateResponse scheduleEndDate() {
         return this.scheduleEndDate;
     }
 
@@ -58,7 +58,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="scheduleStartDate", required=true)
       private final DateResponse scheduleStartDate;
 
-    public DateResponse getScheduleStartDate() {
+    public DateResponse scheduleStartDate() {
         return this.scheduleStartDate;
     }
 
@@ -69,7 +69,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="startTimeOfDay", required=true)
       private final TimeOfDayResponse startTimeOfDay;
 
-    public TimeOfDayResponse getStartTimeOfDay() {
+    public TimeOfDayResponse startTimeOfDay() {
         return this.startTimeOfDay;
     }
 

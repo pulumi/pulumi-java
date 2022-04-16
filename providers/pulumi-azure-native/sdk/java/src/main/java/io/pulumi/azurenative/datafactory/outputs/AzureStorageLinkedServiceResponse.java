@@ -97,63 +97,63 @@ public final class AzureStorageLinkedServiceResponse {
      * The Azure key vault secret reference of accountKey in connection string.
      * 
     */
-    public Optional<AzureKeyVaultSecretReferenceResponse> getAccountKey() {
+    public Optional<AzureKeyVaultSecretReferenceResponse> accountKey() {
         return Optional.ofNullable(this.accountKey);
     }
     /**
      * List of tags that can be used for describing the linked service.
      * 
     */
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The integration runtime reference.
      * 
     */
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * The connection string. It is mutually exclusive with sasUri property. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
     */
-    public Optional<Object> getConnectionString() {
+    public Optional<Object> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
      * Linked service description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<String> getEncryptedCredential() {
+    public Optional<String> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * Parameters for linked service.
      * 
     */
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * The Azure key vault secret reference of sasToken in sas uri.
      * 
     */
-    public Optional<AzureKeyVaultSecretReferenceResponse> getSasToken() {
+    public Optional<AzureKeyVaultSecretReferenceResponse> sasToken() {
         return Optional.ofNullable(this.sasToken);
     }
     /**
      * SAS URI of the Azure Storage resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
     */
-    public Optional<Object> getSasUri() {
+    public Optional<Object> sasUri() {
         return Optional.ofNullable(this.sasUri);
     }
     /**
@@ -161,7 +161,7 @@ public final class AzureStorageLinkedServiceResponse {
      * Expected value is 'AzureStorage'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

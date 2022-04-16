@@ -26,7 +26,7 @@ public final class GitHubClientSecretArgs extends io.pulumi.resources.ResourceAr
     @Import(name="byoaSecretAkvUrl")
       private final @Nullable Output<String> byoaSecretAkvUrl;
 
-    public Output<String> getByoaSecretAkvUrl() {
+    public Output<String> byoaSecretAkvUrl() {
         return this.byoaSecretAkvUrl == null ? Codegen.empty() : this.byoaSecretAkvUrl;
     }
 
@@ -37,7 +37,7 @@ public final class GitHubClientSecretArgs extends io.pulumi.resources.ResourceAr
     @Import(name="byoaSecretName")
       private final @Nullable Output<String> byoaSecretName;
 
-    public Output<String> getByoaSecretName() {
+    public Output<String> byoaSecretName() {
         return this.byoaSecretName == null ? Codegen.empty() : this.byoaSecretName;
     }
 

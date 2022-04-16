@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse extends 
     @Import(name="equivalenceClassSize", required=true)
       private final String equivalenceClassSize;
 
-    public String getEquivalenceClassSize() {
+    public String equivalenceClassSize() {
         return this.equivalenceClassSize;
     }
 
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse extends 
     @Import(name="quasiIdsValues", required=true)
       private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
 
-    public List<GooglePrivacyDlpV2ValueResponse> getQuasiIdsValues() {
+    public List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues() {
         return this.quasiIdsValues;
     }
 

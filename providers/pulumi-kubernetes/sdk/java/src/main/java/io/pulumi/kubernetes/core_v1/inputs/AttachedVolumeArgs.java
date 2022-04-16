@@ -25,7 +25,7 @@ public final class AttachedVolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="devicePath", required=true)
       private final Output<String> devicePath;
 
-    public Output<String> getDevicePath() {
+    public Output<String> devicePath() {
         return this.devicePath;
     }
 
@@ -36,7 +36,7 @@ public final class AttachedVolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

@@ -27,7 +27,7 @@ public final class CencDrmConfigurationArgs extends io.pulumi.resources.Resource
     @Import(name="playReady")
       private final @Nullable Output<StreamingPolicyPlayReadyConfigurationArgs> playReady;
 
-    public Output<StreamingPolicyPlayReadyConfigurationArgs> getPlayReady() {
+    public Output<StreamingPolicyPlayReadyConfigurationArgs> playReady() {
         return this.playReady == null ? Codegen.empty() : this.playReady;
     }
 
@@ -38,7 +38,7 @@ public final class CencDrmConfigurationArgs extends io.pulumi.resources.Resource
     @Import(name="widevine")
       private final @Nullable Output<StreamingPolicyWidevineConfigurationArgs> widevine;
 
-    public Output<StreamingPolicyWidevineConfigurationArgs> getWidevine() {
+    public Output<StreamingPolicyWidevineConfigurationArgs> widevine() {
         return this.widevine == null ? Codegen.empty() : this.widevine;
     }
 

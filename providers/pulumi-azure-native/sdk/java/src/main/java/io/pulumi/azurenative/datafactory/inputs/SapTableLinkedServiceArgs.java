@@ -34,7 +34,7 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -45,7 +45,7 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="clientId")
       private final @Nullable Output<Object> clientId;
 
-    public Output<Object> getClientId() {
+    public Output<Object> clientId() {
         return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
@@ -56,7 +56,7 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
         return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
@@ -67,7 +67,7 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -78,7 +78,7 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
+    public Output<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
@@ -89,7 +89,7 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="language")
       private final @Nullable Output<Object> language;
 
-    public Output<Object> getLanguage() {
+    public Output<Object> language() {
         return this.language == null ? Codegen.empty() : this.language;
     }
 
@@ -100,7 +100,7 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="logonGroup")
       private final @Nullable Output<Object> logonGroup;
 
-    public Output<Object> getLogonGroup() {
+    public Output<Object> logonGroup() {
         return this.logonGroup == null ? Codegen.empty() : this.logonGroup;
     }
 
@@ -111,7 +111,7 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="messageServer")
       private final @Nullable Output<Object> messageServer;
 
-    public Output<Object> getMessageServer() {
+    public Output<Object> messageServer() {
         return this.messageServer == null ? Codegen.empty() : this.messageServer;
     }
 
@@ -122,7 +122,7 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="messageServerService")
       private final @Nullable Output<Object> messageServerService;
 
-    public Output<Object> getMessageServerService() {
+    public Output<Object> messageServerService() {
         return this.messageServerService == null ? Codegen.empty() : this.messageServerService;
     }
 
@@ -133,7 +133,7 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -144,7 +144,7 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -155,7 +155,7 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="server")
       private final @Nullable Output<Object> server;
 
-    public Output<Object> getServer() {
+    public Output<Object> server() {
         return this.server == null ? Codegen.empty() : this.server;
     }
 
@@ -166,7 +166,7 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="sncLibraryPath")
       private final @Nullable Output<Object> sncLibraryPath;
 
-    public Output<Object> getSncLibraryPath() {
+    public Output<Object> sncLibraryPath() {
         return this.sncLibraryPath == null ? Codegen.empty() : this.sncLibraryPath;
     }
 
@@ -177,7 +177,7 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="sncMode")
       private final @Nullable Output<Object> sncMode;
 
-    public Output<Object> getSncMode() {
+    public Output<Object> sncMode() {
         return this.sncMode == null ? Codegen.empty() : this.sncMode;
     }
 
@@ -188,7 +188,7 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="sncMyName")
       private final @Nullable Output<Object> sncMyName;
 
-    public Output<Object> getSncMyName() {
+    public Output<Object> sncMyName() {
         return this.sncMyName == null ? Codegen.empty() : this.sncMyName;
     }
 
@@ -199,7 +199,7 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="sncPartnerName")
       private final @Nullable Output<Object> sncPartnerName;
 
-    public Output<Object> getSncPartnerName() {
+    public Output<Object> sncPartnerName() {
         return this.sncPartnerName == null ? Codegen.empty() : this.sncPartnerName;
     }
 
@@ -210,7 +210,7 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="sncQop")
       private final @Nullable Output<Object> sncQop;
 
-    public Output<Object> getSncQop() {
+    public Output<Object> sncQop() {
         return this.sncQop == null ? Codegen.empty() : this.sncQop;
     }
 
@@ -221,7 +221,7 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="systemId")
       private final @Nullable Output<Object> systemId;
 
-    public Output<Object> getSystemId() {
+    public Output<Object> systemId() {
         return this.systemId == null ? Codegen.empty() : this.systemId;
     }
 
@@ -232,7 +232,7 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="systemNumber")
       private final @Nullable Output<Object> systemNumber;
 
-    public Output<Object> getSystemNumber() {
+    public Output<Object> systemNumber() {
         return this.systemNumber == null ? Codegen.empty() : this.systemNumber;
     }
 
@@ -244,7 +244,7 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -255,7 +255,7 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
     @Import(name="userName")
       private final @Nullable Output<Object> userName;
 
-    public Output<Object> getUserName() {
+    public Output<Object> userName() {
         return this.userName == null ? Codegen.empty() : this.userName;
     }
 

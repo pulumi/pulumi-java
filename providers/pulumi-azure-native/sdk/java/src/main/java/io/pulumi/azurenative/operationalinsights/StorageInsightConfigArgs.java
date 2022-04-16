@@ -25,7 +25,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
     @Import(name="containers")
       private final @Nullable Output<List<String>> containers;
 
-    public Output<List<String>> getContainers() {
+    public Output<List<String>> containers() {
         return this.containers == null ? Codegen.empty() : this.containers;
     }
 
@@ -36,7 +36,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
-    public Output<String> getETag() {
+    public Output<String> eTag() {
         return this.eTag == null ? Codegen.empty() : this.eTag;
     }
 
@@ -47,7 +47,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -58,7 +58,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
     @Import(name="storageAccount", required=true)
       private final Output<StorageAccountArgs> storageAccount;
 
-    public Output<StorageAccountArgs> getStorageAccount() {
+    public Output<StorageAccountArgs> storageAccount() {
         return this.storageAccount;
     }
 
@@ -69,7 +69,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
     @Import(name="storageInsightName")
       private final @Nullable Output<String> storageInsightName;
 
-    public Output<String> getStorageInsightName() {
+    public Output<String> storageInsightName() {
         return this.storageInsightName == null ? Codegen.empty() : this.storageInsightName;
     }
 
@@ -80,7 +80,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
     @Import(name="tables")
       private final @Nullable Output<List<String>> tables;
 
-    public Output<List<String>> getTables() {
+    public Output<List<String>> tables() {
         return this.tables == null ? Codegen.empty() : this.tables;
     }
 
@@ -91,7 +91,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -102,7 +102,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

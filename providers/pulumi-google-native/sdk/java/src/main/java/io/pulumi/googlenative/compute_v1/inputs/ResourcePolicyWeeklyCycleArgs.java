@@ -27,7 +27,7 @@ public final class ResourcePolicyWeeklyCycleArgs extends io.pulumi.resources.Res
     @Import(name="dayOfWeeks")
       private final @Nullable Output<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> dayOfWeeks;
 
-    public Output<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> getDayOfWeeks() {
+    public Output<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> dayOfWeeks() {
         return this.dayOfWeeks == null ? Codegen.empty() : this.dayOfWeeks;
     }
 

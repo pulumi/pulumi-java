@@ -35,25 +35,25 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Autoscaling configuration ARN
      * 
      */
-    public Output</* @Nullable */ String> getAutoScalingConfigurationArn() {
+    public Output</* @Nullable */ String> autoScalingConfigurationArn() {
         return this.autoScalingConfigurationArn;
     }
     @Export(name="encryptionConfiguration", type=ServiceEncryptionConfiguration.class, parameters={})
     private Output</* @Nullable */ ServiceEncryptionConfiguration> encryptionConfiguration;
 
-    public Output</* @Nullable */ ServiceEncryptionConfiguration> getEncryptionConfiguration() {
+    public Output</* @Nullable */ ServiceEncryptionConfiguration> encryptionConfiguration() {
         return this.encryptionConfiguration;
     }
     @Export(name="healthCheckConfiguration", type=ServiceHealthCheckConfiguration.class, parameters={})
     private Output</* @Nullable */ ServiceHealthCheckConfiguration> healthCheckConfiguration;
 
-    public Output</* @Nullable */ ServiceHealthCheckConfiguration> getHealthCheckConfiguration() {
+    public Output</* @Nullable */ ServiceHealthCheckConfiguration> healthCheckConfiguration() {
         return this.healthCheckConfiguration;
     }
     @Export(name="instanceConfiguration", type=ServiceInstanceConfiguration.class, parameters={})
     private Output</* @Nullable */ ServiceInstanceConfiguration> instanceConfiguration;
 
-    public Output</* @Nullable */ ServiceInstanceConfiguration> getInstanceConfiguration() {
+    public Output</* @Nullable */ ServiceInstanceConfiguration> instanceConfiguration() {
         return this.instanceConfiguration;
     }
     /**
@@ -67,7 +67,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the AppRunner Service.
      * 
      */
-    public Output<String> getServiceArn() {
+    public Output<String> serviceArn() {
         return this.serviceArn;
     }
     /**
@@ -81,7 +81,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The AppRunner Service Id
      * 
      */
-    public Output<String> getServiceId() {
+    public Output<String> serviceId() {
         return this.serviceId;
     }
     /**
@@ -95,7 +95,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The AppRunner Service Name.
      * 
      */
-    public Output</* @Nullable */ String> getServiceName() {
+    public Output</* @Nullable */ String> serviceName() {
         return this.serviceName;
     }
     /**
@@ -109,13 +109,13 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The Service Url of the AppRunner Service.
      * 
      */
-    public Output<String> getServiceUrl() {
+    public Output<String> serviceUrl() {
         return this.serviceUrl;
     }
     @Export(name="sourceConfiguration", type=ServiceSourceConfiguration.class, parameters={})
     private Output<ServiceSourceConfiguration> sourceConfiguration;
 
-    public Output<ServiceSourceConfiguration> getSourceConfiguration() {
+    public Output<ServiceSourceConfiguration> sourceConfiguration() {
         return this.sourceConfiguration;
     }
     /**
@@ -129,13 +129,13 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return AppRunner Service status.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     @Export(name="tags", type=List.class, parameters={ServiceTag.class})
     private Output</* @Nullable */ List<ServiceTag>> tags;
 
-    public Output</* @Nullable */ List<ServiceTag>> getTags() {
+    public Output</* @Nullable */ List<ServiceTag>> tags() {
         return this.tags;
     }
 

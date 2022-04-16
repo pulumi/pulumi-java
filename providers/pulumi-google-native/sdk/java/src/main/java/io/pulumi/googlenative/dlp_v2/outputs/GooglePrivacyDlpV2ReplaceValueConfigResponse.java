@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2ReplaceValueConfigResponse {
      * Value to replace it with.
      * 
     */
-    public GooglePrivacyDlpV2ValueResponse getNewValue() {
+    public GooglePrivacyDlpV2ValueResponse newValue() {
         return this.newValue;
     }
 

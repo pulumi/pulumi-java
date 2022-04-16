@@ -25,7 +25,7 @@ public final class HttpProxyConfigurationResponse extends io.pulumi.resources.In
     @Import(name="httpsProxy")
       private final @Nullable String httpsProxy;
 
-    public Optional<String> getHttpsProxy() {
+    public Optional<String> httpsProxy() {
         return this.httpsProxy == null ? Optional.empty() : Optional.ofNullable(this.httpsProxy);
     }
 

@@ -27,7 +27,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="items")
       private final @Nullable Output<List<MetadataItemsItemArgs>> items;
 
-    public Output<List<MetadataItemsItemArgs>> getItems() {
+    public Output<List<MetadataItemsItemArgs>> items() {
         return this.items == null ? Codegen.empty() : this.items;
     }
 

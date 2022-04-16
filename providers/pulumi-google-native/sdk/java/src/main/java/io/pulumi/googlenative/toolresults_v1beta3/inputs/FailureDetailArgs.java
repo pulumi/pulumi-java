@@ -26,7 +26,7 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="crashed")
       private final @Nullable Output<Boolean> crashed;
 
-    public Output<Boolean> getCrashed() {
+    public Output<Boolean> crashed() {
         return this.crashed == null ? Codegen.empty() : this.crashed;
     }
 
@@ -37,7 +37,7 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deviceOutOfMemory")
       private final @Nullable Output<Boolean> deviceOutOfMemory;
 
-    public Output<Boolean> getDeviceOutOfMemory() {
+    public Output<Boolean> deviceOutOfMemory() {
         return this.deviceOutOfMemory == null ? Codegen.empty() : this.deviceOutOfMemory;
     }
 
@@ -48,7 +48,7 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="failedRoboscript")
       private final @Nullable Output<Boolean> failedRoboscript;
 
-    public Output<Boolean> getFailedRoboscript() {
+    public Output<Boolean> failedRoboscript() {
         return this.failedRoboscript == null ? Codegen.empty() : this.failedRoboscript;
     }
 
@@ -59,7 +59,7 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notInstalled")
       private final @Nullable Output<Boolean> notInstalled;
 
-    public Output<Boolean> getNotInstalled() {
+    public Output<Boolean> notInstalled() {
         return this.notInstalled == null ? Codegen.empty() : this.notInstalled;
     }
 
@@ -70,7 +70,7 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="otherNativeCrash")
       private final @Nullable Output<Boolean> otherNativeCrash;
 
-    public Output<Boolean> getOtherNativeCrash() {
+    public Output<Boolean> otherNativeCrash() {
         return this.otherNativeCrash == null ? Codegen.empty() : this.otherNativeCrash;
     }
 
@@ -81,7 +81,7 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timedOut")
       private final @Nullable Output<Boolean> timedOut;
 
-    public Output<Boolean> getTimedOut() {
+    public Output<Boolean> timedOut() {
         return this.timedOut == null ? Codegen.empty() : this.timedOut;
     }
 
@@ -92,7 +92,7 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="unableToCrawl")
       private final @Nullable Output<Boolean> unableToCrawl;
 
-    public Output<Boolean> getUnableToCrawl() {
+    public Output<Boolean> unableToCrawl() {
         return this.unableToCrawl == null ? Codegen.empty() : this.unableToCrawl;
     }
 

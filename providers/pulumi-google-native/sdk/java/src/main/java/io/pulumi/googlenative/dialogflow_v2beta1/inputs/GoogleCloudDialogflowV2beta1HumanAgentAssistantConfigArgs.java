@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs ext
     @Import(name="endUserSuggestionConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs> endUserSuggestionConfig;
 
-    public Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs> getEndUserSuggestionConfig() {
+    public Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs> endUserSuggestionConfig() {
         return this.endUserSuggestionConfig == null ? Codegen.empty() : this.endUserSuggestionConfig;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs ext
     @Import(name="humanAgentSuggestionConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs> humanAgentSuggestionConfig;
 
-    public Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs> getHumanAgentSuggestionConfig() {
+    public Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs> humanAgentSuggestionConfig() {
         return this.humanAgentSuggestionConfig == null ? Codegen.empty() : this.humanAgentSuggestionConfig;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs ext
     @Import(name="messageAnalysisConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigArgs> messageAnalysisConfig;
 
-    public Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigArgs> getMessageAnalysisConfig() {
+    public Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigArgs> messageAnalysisConfig() {
         return this.messageAnalysisConfig == null ? Codegen.empty() : this.messageAnalysisConfig;
     }
 
@@ -61,7 +61,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs ext
     @Import(name="notificationConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs> notificationConfig;
 
-    public Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs> getNotificationConfig() {
+    public Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs> notificationConfig() {
         return this.notificationConfig == null ? Codegen.empty() : this.notificationConfig;
     }
 

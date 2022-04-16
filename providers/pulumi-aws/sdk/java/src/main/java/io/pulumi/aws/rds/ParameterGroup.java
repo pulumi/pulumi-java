@@ -39,7 +39,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * @return The ARN of the db parameter group.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -53,7 +53,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * @return The description of the DB parameter group. Defaults to "Managed by Pulumi".
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -67,7 +67,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * @return The family of the DB parameter group.
      * 
      */
-    public Output<String> getFamily() {
+    public Output<String> family() {
         return this.family;
     }
     /**
@@ -81,7 +81,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * @return The name of the DB parameter.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -95,7 +95,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * @return Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -109,7 +109,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * @return A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via [`aws rds describe-db-parameters`](https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-parameters.html) after initial creation of the group.
      * 
      */
-    public Output</* @Nullable */ List<ParameterGroupParameter>> getParameters() {
+    public Output</* @Nullable */ List<ParameterGroupParameter>> parameters() {
         return this.parameters;
     }
     /**
@@ -123,7 +123,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -137,7 +137,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

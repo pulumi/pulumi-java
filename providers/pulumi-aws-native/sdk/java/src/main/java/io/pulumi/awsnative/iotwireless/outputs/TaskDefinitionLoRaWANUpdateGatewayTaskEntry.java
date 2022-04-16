@@ -22,10 +22,10 @@ public final class TaskDefinitionLoRaWANUpdateGatewayTaskEntry {
         this.updateVersion = updateVersion;
     }
 
-    public Optional<TaskDefinitionLoRaWANGatewayVersion> getCurrentVersion() {
+    public Optional<TaskDefinitionLoRaWANGatewayVersion> currentVersion() {
         return Optional.ofNullable(this.currentVersion);
     }
-    public Optional<TaskDefinitionLoRaWANGatewayVersion> getUpdateVersion() {
+    public Optional<TaskDefinitionLoRaWANGatewayVersion> updateVersion() {
         return Optional.ofNullable(this.updateVersion);
     }
 

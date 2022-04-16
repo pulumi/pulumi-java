@@ -23,7 +23,7 @@ public final class InstanceAttachedDiskArgs extends io.pulumi.resources.Resource
     @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
@@ -37,14 +37,14 @@ public final class InstanceAttachedDiskArgs extends io.pulumi.resources.Resource
     @Import(name="diskEncryptionKeyRaw")
       private final @Nullable Output<String> diskEncryptionKeyRaw;
 
-    public Output<String> getDiskEncryptionKeyRaw() {
+    public Output<String> diskEncryptionKeyRaw() {
         return this.diskEncryptionKeyRaw == null ? Codegen.empty() : this.diskEncryptionKeyRaw;
     }
 
     @Import(name="diskEncryptionKeySha256")
       private final @Nullable Output<String> diskEncryptionKeySha256;
 
-    public Output<String> getDiskEncryptionKeySha256() {
+    public Output<String> diskEncryptionKeySha256() {
         return this.diskEncryptionKeySha256 == null ? Codegen.empty() : this.diskEncryptionKeySha256;
     }
 
@@ -57,7 +57,7 @@ public final class InstanceAttachedDiskArgs extends io.pulumi.resources.Resource
     @Import(name="kmsKeySelfLink")
       private final @Nullable Output<String> kmsKeySelfLink;
 
-    public Output<String> getKmsKeySelfLink() {
+    public Output<String> kmsKeySelfLink() {
         return this.kmsKeySelfLink == null ? Codegen.empty() : this.kmsKeySelfLink;
     }
 
@@ -71,7 +71,7 @@ public final class InstanceAttachedDiskArgs extends io.pulumi.resources.Resource
     @Import(name="mode")
       private final @Nullable Output<String> mode;
 
-    public Output<String> getMode() {
+    public Output<String> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -82,7 +82,7 @@ public final class InstanceAttachedDiskArgs extends io.pulumi.resources.Resource
     @Import(name="source", required=true)
       private final Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source;
     }
 

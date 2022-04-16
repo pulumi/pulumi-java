@@ -26,7 +26,7 @@ public final class InstanceSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="activeDeadlineSeconds", required=true)
       private final String activeDeadlineSeconds;
 
-    public String getActiveDeadlineSeconds() {
+    public String activeDeadlineSeconds() {
         return this.activeDeadlineSeconds;
     }
 
@@ -37,7 +37,7 @@ public final class InstanceSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="containers", required=true)
       private final List<ContainerResponse> containers;
 
-    public List<ContainerResponse> getContainers() {
+    public List<ContainerResponse> containers() {
         return this.containers;
     }
 
@@ -48,7 +48,7 @@ public final class InstanceSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="restartPolicy", required=true)
       private final String restartPolicy;
 
-    public String getRestartPolicy() {
+    public String restartPolicy() {
         return this.restartPolicy;
     }
 
@@ -59,7 +59,7 @@ public final class InstanceSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="serviceAccountName", required=true)
       private final String serviceAccountName;
 
-    public String getServiceAccountName() {
+    public String serviceAccountName() {
         return this.serviceAccountName;
     }
 
@@ -70,7 +70,7 @@ public final class InstanceSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="terminationGracePeriodSeconds", required=true)
       private final String terminationGracePeriodSeconds;
 
-    public String getTerminationGracePeriodSeconds() {
+    public String terminationGracePeriodSeconds() {
         return this.terminationGracePeriodSeconds;
     }
 
@@ -81,7 +81,7 @@ public final class InstanceSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="volumes", required=true)
       private final List<VolumeResponse> volumes;
 
-    public List<VolumeResponse> getVolumes() {
+    public List<VolumeResponse> volumes() {
         return this.volumes;
     }
 

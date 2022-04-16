@@ -36,14 +36,14 @@ public final class EnvironmentContainerImage {
      * For example: gcr.io/{project_id}/{imageName}
      * 
     */
-    public String getRepository() {
+    public String repository() {
         return this.repository;
     }
     /**
      * The tag of the container image. If not specified, this defaults to the latest tag.
      * 
     */
-    public Optional<String> getTag() {
+    public Optional<String> tag() {
         return Optional.ofNullable(this.tag);
     }
 

@@ -45,31 +45,31 @@ public final class SpotFleetRequestLaunchSpecificationEbsBlockDevice {
         this.volumeType = volumeType;
     }
 
-    public Optional<Boolean> getDeleteOnTermination() {
+    public Optional<Boolean> deleteOnTermination() {
         return Optional.ofNullable(this.deleteOnTermination);
     }
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
-    public Optional<Boolean> getEncrypted() {
+    public Optional<Boolean> encrypted() {
         return Optional.ofNullable(this.encrypted);
     }
-    public Optional<Integer> getIops() {
+    public Optional<Integer> iops() {
         return Optional.ofNullable(this.iops);
     }
-    public Optional<String> getKmsKeyId() {
+    public Optional<String> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
-    public Optional<String> getSnapshotId() {
+    public Optional<String> snapshotId() {
         return Optional.ofNullable(this.snapshotId);
     }
-    public Optional<Integer> getThroughput() {
+    public Optional<Integer> throughput() {
         return Optional.ofNullable(this.throughput);
     }
-    public Optional<Integer> getVolumeSize() {
+    public Optional<Integer> volumeSize() {
         return Optional.ofNullable(this.volumeSize);
     }
-    public Optional<String> getVolumeType() {
+    public Optional<String> volumeType() {
         return Optional.ofNullable(this.volumeType);
     }
 

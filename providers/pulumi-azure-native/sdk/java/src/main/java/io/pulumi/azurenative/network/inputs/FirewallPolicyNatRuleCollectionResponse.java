@@ -32,7 +32,7 @@ public final class FirewallPolicyNatRuleCollectionResponse extends io.pulumi.res
     @Import(name="action")
       private final @Nullable FirewallPolicyNatRuleCollectionActionResponse action;
 
-    public Optional<FirewallPolicyNatRuleCollectionActionResponse> getAction() {
+    public Optional<FirewallPolicyNatRuleCollectionActionResponse> action() {
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
     }
 
@@ -43,7 +43,7 @@ public final class FirewallPolicyNatRuleCollectionResponse extends io.pulumi.res
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -54,7 +54,7 @@ public final class FirewallPolicyNatRuleCollectionResponse extends io.pulumi.res
     @Import(name="priority")
       private final @Nullable Integer priority;
 
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
     }
 
@@ -66,7 +66,7 @@ public final class FirewallPolicyNatRuleCollectionResponse extends io.pulumi.res
     @Import(name="ruleCollectionType", required=true)
       private final String ruleCollectionType;
 
-    public String getRuleCollectionType() {
+    public String ruleCollectionType() {
         return this.ruleCollectionType;
     }
 
@@ -77,7 +77,7 @@ public final class FirewallPolicyNatRuleCollectionResponse extends io.pulumi.res
     @Import(name="rules")
       private final @Nullable List<Object> rules;
 
-    public List<Object> getRules() {
+    public List<Object> rules() {
         return this.rules == null ? List.of() : this.rules;
     }
 

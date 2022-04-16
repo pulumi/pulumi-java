@@ -25,7 +25,7 @@ public final class EventSubscriptionState extends io.pulumi.resources.ResourceAr
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -36,7 +36,7 @@ public final class EventSubscriptionState extends io.pulumi.resources.ResourceAr
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -47,7 +47,7 @@ public final class EventSubscriptionState extends io.pulumi.resources.ResourceAr
     @Import(name="eventCategories")
       private final @Nullable Output<List<String>> eventCategories;
 
-    public Output<List<String>> getEventCategories() {
+    public Output<List<String>> eventCategories() {
         return this.eventCategories == null ? Codegen.empty() : this.eventCategories;
     }
 
@@ -58,7 +58,7 @@ public final class EventSubscriptionState extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -69,7 +69,7 @@ public final class EventSubscriptionState extends io.pulumi.resources.ResourceAr
     @Import(name="snsTopicArn")
       private final @Nullable Output<String> snsTopicArn;
 
-    public Output<String> getSnsTopicArn() {
+    public Output<String> snsTopicArn() {
         return this.snsTopicArn == null ? Codegen.empty() : this.snsTopicArn;
     }
 
@@ -80,7 +80,7 @@ public final class EventSubscriptionState extends io.pulumi.resources.ResourceAr
     @Import(name="sourceIds")
       private final @Nullable Output<List<String>> sourceIds;
 
-    public Output<List<String>> getSourceIds() {
+    public Output<List<String>> sourceIds() {
         return this.sourceIds == null ? Codegen.empty() : this.sourceIds;
     }
 
@@ -91,7 +91,7 @@ public final class EventSubscriptionState extends io.pulumi.resources.ResourceAr
     @Import(name="sourceType")
       private final @Nullable Output<String> sourceType;
 
-    public Output<String> getSourceType() {
+    public Output<String> sourceType() {
         return this.sourceType == null ? Codegen.empty() : this.sourceType;
     }
 
@@ -102,7 +102,7 @@ public final class EventSubscriptionState extends io.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -113,7 +113,7 @@ public final class EventSubscriptionState extends io.pulumi.resources.ResourceAr
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

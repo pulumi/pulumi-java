@@ -24,7 +24,7 @@ public final class KeyVaultAndSecretReferenceResponse extends io.pulumi.resource
     @Import(name="secretUrl", required=true)
       private final String secretUrl;
 
-    public String getSecretUrl() {
+    public String secretUrl() {
         return this.secretUrl;
     }
 
@@ -35,7 +35,7 @@ public final class KeyVaultAndSecretReferenceResponse extends io.pulumi.resource
     @Import(name="sourceVault", required=true)
       private final SourceVaultResponse sourceVault;
 
-    public SourceVaultResponse getSourceVault() {
+    public SourceVaultResponse sourceVault() {
         return this.sourceVault;
     }
 

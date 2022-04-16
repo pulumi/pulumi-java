@@ -42,7 +42,7 @@ public class SerialPort extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -56,7 +56,7 @@ public class SerialPort extends io.pulumi.resources.CustomResource {
      * @return Specifies whether the port is enabled for a serial console connection.
      * 
      */
-    public Output</* @Nullable */ String> getState() {
+    public Output</* @Nullable */ String> state() {
         return this.state;
     }
     /**
@@ -70,7 +70,7 @@ public class SerialPort extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

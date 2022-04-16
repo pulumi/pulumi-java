@@ -97,70 +97,70 @@ public final class SSISPackageLocationResponse {
      * The package access credential.
      * 
     */
-    public Optional<SSISAccessCredentialResponse> getAccessCredential() {
+    public Optional<SSISAccessCredentialResponse> accessCredential() {
         return Optional.ofNullable(this.accessCredential);
     }
     /**
      * The embedded child package list.
      * 
     */
-    public List<SSISChildPackageResponse> getChildPackages() {
+    public List<SSISChildPackageResponse> childPackages() {
         return this.childPackages == null ? List.of() : this.childPackages;
     }
     /**
      * The configuration file access credential.
      * 
     */
-    public Optional<SSISAccessCredentialResponse> getConfigurationAccessCredential() {
+    public Optional<SSISAccessCredentialResponse> configurationAccessCredential() {
         return Optional.ofNullable(this.configurationAccessCredential);
     }
     /**
      * The configuration file of the package execution. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getConfigurationPath() {
+    public Optional<Object> configurationPath() {
         return Optional.ofNullable(this.configurationPath);
     }
     /**
      * The embedded package content. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getPackageContent() {
+    public Optional<Object> packageContent() {
         return Optional.ofNullable(this.packageContent);
     }
     /**
      * The embedded package last modified date.
      * 
     */
-    public Optional<String> getPackageLastModifiedDate() {
+    public Optional<String> packageLastModifiedDate() {
         return Optional.ofNullable(this.packageLastModifiedDate);
     }
     /**
      * The package name.
      * 
     */
-    public Optional<String> getPackageName() {
+    public Optional<String> packageName() {
         return Optional.ofNullable(this.packageName);
     }
     /**
      * Password of the package.
      * 
     */
-    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPackagePassword() {
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> packagePassword() {
         return Optional.ofNullable(this.packagePassword);
     }
     /**
      * The SSIS package path. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getPackagePath() {
+    public Optional<Object> packagePath() {
         return Optional.ofNullable(this.packagePath);
     }
     /**
      * The type of SSIS package location.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

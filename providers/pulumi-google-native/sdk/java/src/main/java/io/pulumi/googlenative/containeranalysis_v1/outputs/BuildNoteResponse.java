@@ -24,7 +24,7 @@ public final class BuildNoteResponse {
      * Immutable. Version of the builder which produced this build.
      * 
     */
-    public String getBuilderVersion() {
+    public String builderVersion() {
         return this.builderVersion;
     }
 

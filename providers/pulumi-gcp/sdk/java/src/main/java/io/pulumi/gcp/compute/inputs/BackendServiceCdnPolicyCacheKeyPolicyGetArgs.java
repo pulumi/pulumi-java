@@ -24,7 +24,7 @@ public final class BackendServiceCdnPolicyCacheKeyPolicyGetArgs extends io.pulum
     @Import(name="includeHost")
       private final @Nullable Output<Boolean> includeHost;
 
-    public Output<Boolean> getIncludeHost() {
+    public Output<Boolean> includeHost() {
         return this.includeHost == null ? Codegen.empty() : this.includeHost;
     }
 
@@ -35,7 +35,7 @@ public final class BackendServiceCdnPolicyCacheKeyPolicyGetArgs extends io.pulum
     @Import(name="includeProtocol")
       private final @Nullable Output<Boolean> includeProtocol;
 
-    public Output<Boolean> getIncludeProtocol() {
+    public Output<Boolean> includeProtocol() {
         return this.includeProtocol == null ? Codegen.empty() : this.includeProtocol;
     }
 
@@ -51,7 +51,7 @@ public final class BackendServiceCdnPolicyCacheKeyPolicyGetArgs extends io.pulum
     @Import(name="includeQueryString")
       private final @Nullable Output<Boolean> includeQueryString;
 
-    public Output<Boolean> getIncludeQueryString() {
+    public Output<Boolean> includeQueryString() {
         return this.includeQueryString == null ? Codegen.empty() : this.includeQueryString;
     }
 
@@ -66,7 +66,7 @@ public final class BackendServiceCdnPolicyCacheKeyPolicyGetArgs extends io.pulum
     @Import(name="queryStringBlacklists")
       private final @Nullable Output<List<String>> queryStringBlacklists;
 
-    public Output<List<String>> getQueryStringBlacklists() {
+    public Output<List<String>> queryStringBlacklists() {
         return this.queryStringBlacklists == null ? Codegen.empty() : this.queryStringBlacklists;
     }
 
@@ -81,7 +81,7 @@ public final class BackendServiceCdnPolicyCacheKeyPolicyGetArgs extends io.pulum
     @Import(name="queryStringWhitelists")
       private final @Nullable Output<List<String>> queryStringWhitelists;
 
-    public Output<List<String>> getQueryStringWhitelists() {
+    public Output<List<String>> queryStringWhitelists() {
         return this.queryStringWhitelists == null ? Codegen.empty() : this.queryStringWhitelists;
     }
 

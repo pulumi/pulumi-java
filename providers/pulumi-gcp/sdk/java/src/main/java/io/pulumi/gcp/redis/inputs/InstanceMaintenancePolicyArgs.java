@@ -27,7 +27,7 @@ public final class InstanceMaintenancePolicyArgs extends io.pulumi.resources.Res
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -40,7 +40,7 @@ public final class InstanceMaintenancePolicyArgs extends io.pulumi.resources.Res
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -54,7 +54,7 @@ public final class InstanceMaintenancePolicyArgs extends io.pulumi.resources.Res
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
@@ -68,7 +68,7 @@ public final class InstanceMaintenancePolicyArgs extends io.pulumi.resources.Res
     @Import(name="weeklyMaintenanceWindows")
       private final @Nullable Output<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs>> weeklyMaintenanceWindows;
 
-    public Output<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs>> getWeeklyMaintenanceWindows() {
+    public Output<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs>> weeklyMaintenanceWindows() {
         return this.weeklyMaintenanceWindows == null ? Codegen.empty() : this.weeklyMaintenanceWindows;
     }
 

@@ -21,7 +21,7 @@ public final class GetProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="containerName", required=true)
       private final String containerName;
 
-    public String getContainerName() {
+    public String containerName() {
         return this.containerName;
     }
 
@@ -32,7 +32,7 @@ public final class GetProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="fabricName", required=true)
       private final String fabricName;
 
-    public String getFabricName() {
+    public String fabricName() {
         return this.fabricName;
     }
 
@@ -43,7 +43,7 @@ public final class GetProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="filter")
       private final @Nullable String filter;
 
-    public Optional<String> getFilter() {
+    public Optional<String> filter() {
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
     }
 
@@ -54,7 +54,7 @@ public final class GetProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="protectedItemName", required=true)
       private final String protectedItemName;
 
-    public String getProtectedItemName() {
+    public String protectedItemName() {
         return this.protectedItemName;
     }
 
@@ -65,7 +65,7 @@ public final class GetProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -76,7 +76,7 @@ public final class GetProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="vaultName", required=true)
       private final String vaultName;
 
-    public String getVaultName() {
+    public String vaultName() {
         return this.vaultName;
     }
 

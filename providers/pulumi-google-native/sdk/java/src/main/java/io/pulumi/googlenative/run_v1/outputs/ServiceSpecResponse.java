@@ -34,14 +34,14 @@ public final class ServiceSpecResponse {
      * Template holds the latest specification for the Revision to be stamped out.
      * 
     */
-    public RevisionTemplateResponse getTemplate() {
+    public RevisionTemplateResponse template() {
         return this.template;
     }
     /**
      * Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations.
      * 
     */
-    public List<TrafficTargetResponse> getTraffic() {
+    public List<TrafficTargetResponse> traffic() {
         return this.traffic;
     }
 

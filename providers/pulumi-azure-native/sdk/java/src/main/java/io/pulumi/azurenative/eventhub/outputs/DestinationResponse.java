@@ -48,28 +48,28 @@ public final class DestinationResponse {
      * Blob naming convention for archive, e.g. {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}. Here all the parameters (Namespace,EventHub .. etc) are mandatory irrespective of order
      * 
     */
-    public Optional<String> getArchiveNameFormat() {
+    public Optional<String> archiveNameFormat() {
         return Optional.ofNullable(this.archiveNameFormat);
     }
     /**
      * Blob container Name
      * 
     */
-    public Optional<String> getBlobContainer() {
+    public Optional<String> blobContainer() {
         return Optional.ofNullable(this.blobContainer);
     }
     /**
      * Name for capture destination
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Resource id of the storage account to be used to create the blobs
      * 
     */
-    public Optional<String> getStorageAccountResourceId() {
+    public Optional<String> storageAccountResourceId() {
         return Optional.ofNullable(this.storageAccountResourceId);
     }
 

@@ -26,7 +26,7 @@ public final class StageDefaultRouteSettingsGetArgs extends io.pulumi.resources.
     @Import(name="dataTraceEnabled")
       private final @Nullable Output<Boolean> dataTraceEnabled;
 
-    public Output<Boolean> getDataTraceEnabled() {
+    public Output<Boolean> dataTraceEnabled() {
         return this.dataTraceEnabled == null ? Codegen.empty() : this.dataTraceEnabled;
     }
 
@@ -37,7 +37,7 @@ public final class StageDefaultRouteSettingsGetArgs extends io.pulumi.resources.
     @Import(name="detailedMetricsEnabled")
       private final @Nullable Output<Boolean> detailedMetricsEnabled;
 
-    public Output<Boolean> getDetailedMetricsEnabled() {
+    public Output<Boolean> detailedMetricsEnabled() {
         return this.detailedMetricsEnabled == null ? Codegen.empty() : this.detailedMetricsEnabled;
     }
 
@@ -49,7 +49,7 @@ public final class StageDefaultRouteSettingsGetArgs extends io.pulumi.resources.
     @Import(name="loggingLevel")
       private final @Nullable Output<String> loggingLevel;
 
-    public Output<String> getLoggingLevel() {
+    public Output<String> loggingLevel() {
         return this.loggingLevel == null ? Codegen.empty() : this.loggingLevel;
     }
 
@@ -60,7 +60,7 @@ public final class StageDefaultRouteSettingsGetArgs extends io.pulumi.resources.
     @Import(name="throttlingBurstLimit")
       private final @Nullable Output<Integer> throttlingBurstLimit;
 
-    public Output<Integer> getThrottlingBurstLimit() {
+    public Output<Integer> throttlingBurstLimit() {
         return this.throttlingBurstLimit == null ? Codegen.empty() : this.throttlingBurstLimit;
     }
 
@@ -71,7 +71,7 @@ public final class StageDefaultRouteSettingsGetArgs extends io.pulumi.resources.
     @Import(name="throttlingRateLimit")
       private final @Nullable Output<Double> throttlingRateLimit;
 
-    public Output<Double> getThrottlingRateLimit() {
+    public Output<Double> throttlingRateLimit() {
         return this.throttlingRateLimit == null ? Codegen.empty() : this.throttlingRateLimit;
     }
 

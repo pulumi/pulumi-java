@@ -44,19 +44,19 @@ public class SqlMigrationService extends io.pulumi.resources.CustomResource {
      * @return Current state of the Integration runtime.
      * 
      */
-    public Output<String> getIntegrationRuntimeState() {
+    public Output<String> integrationRuntimeState() {
         return this.integrationRuntimeState;
     }
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,25 +70,25 @@ public class SqlMigrationService extends io.pulumi.resources.CustomResource {
      * @return Provisioning state to track the async operation status.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

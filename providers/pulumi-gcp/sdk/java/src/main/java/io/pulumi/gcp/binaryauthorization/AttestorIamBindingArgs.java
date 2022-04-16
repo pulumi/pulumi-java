@@ -24,21 +24,21 @@ public final class AttestorIamBindingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="attestor", required=true)
       private final Output<String> attestor;
 
-    public Output<String> getAttestor() {
+    public Output<String> attestor() {
         return this.attestor;
     }
 
     @Import(name="condition")
       private final @Nullable Output<AttestorIamBindingConditionArgs> condition;
 
-    public Output<AttestorIamBindingConditionArgs> getCondition() {
+    public Output<AttestorIamBindingConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
@@ -50,7 +50,7 @@ public final class AttestorIamBindingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -63,7 +63,7 @@ public final class AttestorIamBindingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

@@ -28,7 +28,7 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientInfo")
       private final @Nullable Output<ClientInfoArgs> clientInfo;
 
-    public Output<ClientInfoArgs> getClientInfo() {
+    public Output<ClientInfoArgs> clientInfo() {
         return this.clientInfo == null ? Codegen.empty() : this.clientInfo;
     }
 
@@ -39,7 +39,7 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="environmentMatrix", required=true)
       private final Output<EnvironmentMatrixArgs> environmentMatrix;
 
-    public Output<EnvironmentMatrixArgs> getEnvironmentMatrix() {
+    public Output<EnvironmentMatrixArgs> environmentMatrix() {
         return this.environmentMatrix;
     }
 
@@ -50,7 +50,7 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="failFast")
       private final @Nullable Output<Boolean> failFast;
 
-    public Output<Boolean> getFailFast() {
+    public Output<Boolean> failFast() {
         return this.failFast == null ? Codegen.empty() : this.failFast;
     }
 
@@ -61,7 +61,7 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="flakyTestAttempts")
       private final @Nullable Output<Integer> flakyTestAttempts;
 
-    public Output<Integer> getFlakyTestAttempts() {
+    public Output<Integer> flakyTestAttempts() {
         return this.flakyTestAttempts == null ? Codegen.empty() : this.flakyTestAttempts;
     }
 
@@ -72,14 +72,14 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -90,7 +90,7 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resultStorage", required=true)
       private final Output<ResultStorageArgs> resultStorage;
 
-    public Output<ResultStorageArgs> getResultStorage() {
+    public Output<ResultStorageArgs> resultStorage() {
         return this.resultStorage;
     }
 
@@ -101,7 +101,7 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="testSpecification", required=true)
       private final Output<TestSpecificationArgs> testSpecification;
 
-    public Output<TestSpecificationArgs> getTestSpecification() {
+    public Output<TestSpecificationArgs> testSpecification() {
         return this.testSpecification;
     }
 

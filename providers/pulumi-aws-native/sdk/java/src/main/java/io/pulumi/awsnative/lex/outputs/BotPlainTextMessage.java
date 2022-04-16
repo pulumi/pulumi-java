@@ -24,7 +24,7 @@ public final class BotPlainTextMessage {
      * The message to send to the user.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

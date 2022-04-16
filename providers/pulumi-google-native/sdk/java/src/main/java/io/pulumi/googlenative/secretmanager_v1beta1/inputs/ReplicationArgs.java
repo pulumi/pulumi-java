@@ -27,7 +27,7 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="automatic")
       private final @Nullable Output<AutomaticArgs> automatic;
 
-    public Output<AutomaticArgs> getAutomatic() {
+    public Output<AutomaticArgs> automatic() {
         return this.automatic == null ? Codegen.empty() : this.automatic;
     }
 
@@ -38,7 +38,7 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userManaged")
       private final @Nullable Output<UserManagedArgs> userManaged;
 
-    public Output<UserManagedArgs> getUserManaged() {
+    public Output<UserManagedArgs> userManaged() {
         return this.userManaged == null ? Codegen.empty() : this.userManaged;
     }
 

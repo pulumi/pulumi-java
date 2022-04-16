@@ -31,7 +31,7 @@ public class Sharedflow extends io.pulumi.resources.CustomResource {
      * @return The id of the most recently created revision for this shared flow.
      * 
      */
-    public Output<String> getLatestRevisionId() {
+    public Output<String> latestRevisionId() {
         return this.latestRevisionId;
     }
     /**
@@ -45,7 +45,7 @@ public class Sharedflow extends io.pulumi.resources.CustomResource {
      * @return Metadata describing the shared flow.
      * 
      */
-    public Output<GoogleCloudApigeeV1EntityMetadataResponse> getMetaData() {
+    public Output<GoogleCloudApigeeV1EntityMetadataResponse> metaData() {
         return this.metaData;
     }
     /**
@@ -59,7 +59,7 @@ public class Sharedflow extends io.pulumi.resources.CustomResource {
      * @return The ID of the shared flow.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +73,7 @@ public class Sharedflow extends io.pulumi.resources.CustomResource {
      * @return A list of revisions of this shared flow.
      * 
      */
-    public Output<List<String>> getRevision() {
+    public Output<List<String>> revision() {
         return this.revision;
     }
 

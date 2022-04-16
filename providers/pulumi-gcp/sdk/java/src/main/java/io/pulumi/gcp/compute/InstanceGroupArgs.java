@@ -25,7 +25,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -38,7 +38,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instances")
       private final @Nullable Output<List<String>> instances;
 
-    public Output<List<String>> getInstances() {
+    public Output<List<String>> instances() {
         return this.instances == null ? Codegen.empty() : this.instances;
     }
 
@@ -49,7 +49,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -61,7 +61,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="namedPorts")
       private final @Nullable Output<List<InstanceGroupNamedPortArgs>> namedPorts;
 
-    public Output<List<InstanceGroupNamedPortArgs>> getNamedPorts() {
+    public Output<List<InstanceGroupNamedPortArgs>> namedPorts() {
         return this.namedPorts == null ? Codegen.empty() : this.namedPorts;
     }
 
@@ -75,7 +75,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
@@ -87,7 +87,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -98,7 +98,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

@@ -39,7 +39,7 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicy {
      * Structure is documented below.
      * 
     */
-    public Optional<ServicePerimetersServicePerimeterSpecEgressPolicyEgressFrom> getEgressFrom() {
+    public Optional<ServicePerimetersServicePerimeterSpecEgressPolicyEgressFrom> egressFrom() {
         return Optional.ofNullable(this.egressFrom);
     }
     /**
@@ -48,7 +48,7 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicy {
      * Structure is documented below.
      * 
     */
-    public Optional<ServicePerimetersServicePerimeterSpecEgressPolicyEgressTo> getEgressTo() {
+    public Optional<ServicePerimetersServicePerimeterSpecEgressPolicyEgressTo> egressTo() {
         return Optional.ofNullable(this.egressTo);
     }
 

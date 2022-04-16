@@ -23,7 +23,7 @@ public final class InterconnectAttachmentPrivateInfoResponse extends io.pulumi.r
     @Import(name="tag8021q", required=true)
       private final Integer tag8021q;
 
-    public Integer getTag8021q() {
+    public Integer tag8021q() {
         return this.tag8021q;
     }
 

@@ -23,7 +23,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -34,14 +34,14 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainRedirect")
       private final @Nullable Output<DomainRedirectArgs> domainRedirect;
 
-    public Output<DomainRedirectArgs> getDomainRedirect() {
+    public Output<DomainRedirectArgs> domainRedirect() {
         return this.domainRedirect == null ? Codegen.empty() : this.domainRedirect;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -52,14 +52,14 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="site", required=true)
       private final Output<String> site;
 
-    public Output<String> getSite() {
+    public Output<String> site() {
         return this.site;
     }
 
     @Import(name="siteId", required=true)
       private final Output<String> siteId;
 
-    public Output<String> getSiteId() {
+    public Output<String> siteId() {
         return this.siteId;
     }
 

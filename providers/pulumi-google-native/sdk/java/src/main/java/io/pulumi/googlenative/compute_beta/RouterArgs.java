@@ -28,7 +28,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bgp")
       private final @Nullable Output<RouterBgpArgs> bgp;
 
-    public Output<RouterBgpArgs> getBgp() {
+    public Output<RouterBgpArgs> bgp() {
         return this.bgp == null ? Codegen.empty() : this.bgp;
     }
 
@@ -39,7 +39,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bgpPeers")
       private final @Nullable Output<List<RouterBgpPeerArgs>> bgpPeers;
 
-    public Output<List<RouterBgpPeerArgs>> getBgpPeers() {
+    public Output<List<RouterBgpPeerArgs>> bgpPeers() {
         return this.bgpPeers == null ? Codegen.empty() : this.bgpPeers;
     }
 
@@ -50,7 +50,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -61,7 +61,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptedInterconnectRouter")
       private final @Nullable Output<Boolean> encryptedInterconnectRouter;
 
-    public Output<Boolean> getEncryptedInterconnectRouter() {
+    public Output<Boolean> encryptedInterconnectRouter() {
         return this.encryptedInterconnectRouter == null ? Codegen.empty() : this.encryptedInterconnectRouter;
     }
 
@@ -72,7 +72,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="interfaces")
       private final @Nullable Output<List<RouterInterfaceArgs>> interfaces;
 
-    public Output<List<RouterInterfaceArgs>> getInterfaces() {
+    public Output<List<RouterInterfaceArgs>> interfaces() {
         return this.interfaces == null ? Codegen.empty() : this.interfaces;
     }
 
@@ -83,7 +83,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -94,7 +94,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nats")
       private final @Nullable Output<List<RouterNatArgs>> nats;
 
-    public Output<List<RouterNatArgs>> getNats() {
+    public Output<List<RouterNatArgs>> nats() {
         return this.nats == null ? Codegen.empty() : this.nats;
     }
 
@@ -105,28 +105,28 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 

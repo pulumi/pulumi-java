@@ -22,7 +22,7 @@ public final class SharedVPCServiceProjectState extends io.pulumi.resources.Reso
     @Import(name="hostProject")
       private final @Nullable Output<String> hostProject;
 
-    public Output<String> getHostProject() {
+    public Output<String> hostProject() {
         return this.hostProject == null ? Codegen.empty() : this.hostProject;
     }
 
@@ -33,7 +33,7 @@ public final class SharedVPCServiceProjectState extends io.pulumi.resources.Reso
     @Import(name="serviceProject")
       private final @Nullable Output<String> serviceProject;
 
-    public Output<String> getServiceProject() {
+    public Output<String> serviceProject() {
         return this.serviceProject == null ? Codegen.empty() : this.serviceProject;
     }
 

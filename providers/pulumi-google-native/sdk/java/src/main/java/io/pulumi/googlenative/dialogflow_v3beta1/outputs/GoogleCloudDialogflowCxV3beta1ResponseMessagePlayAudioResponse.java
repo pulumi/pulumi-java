@@ -33,14 +33,14 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioRespons
      * Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.
      * 
     */
-    public Boolean getAllowPlaybackInterruption() {
+    public Boolean allowPlaybackInterruption() {
         return this.allowPlaybackInterruption;
     }
     /**
      * URI of the audio clip. Dialogflow does not impose any validation on this value. It is specific to the client that reads it.
      * 
     */
-    public String getAudioUri() {
+    public String audioUri() {
         return this.audioUri;
     }
 

@@ -26,7 +26,7 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
     @Import(name="failureThreshold")
       private final @Nullable Output<Integer> failureThreshold;
 
-    public Output<Integer> getFailureThreshold() {
+    public Output<Integer> failureThreshold() {
         return this.failureThreshold == null ? Codegen.empty() : this.failureThreshold;
     }
 
@@ -37,7 +37,7 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
     @Import(name="initialDelaySeconds")
       private final @Nullable Output<Integer> initialDelaySeconds;
 
-    public Output<Integer> getInitialDelaySeconds() {
+    public Output<Integer> initialDelaySeconds() {
         return this.initialDelaySeconds == null ? Codegen.empty() : this.initialDelaySeconds;
     }
 
@@ -48,7 +48,7 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
     @Import(name="periodSeconds")
       private final @Nullable Output<Integer> periodSeconds;
 
-    public Output<Integer> getPeriodSeconds() {
+    public Output<Integer> periodSeconds() {
         return this.periodSeconds == null ? Codegen.empty() : this.periodSeconds;
     }
 
@@ -59,7 +59,7 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
     @Import(name="successThreshold")
       private final @Nullable Output<Integer> successThreshold;
 
-    public Output<Integer> getSuccessThreshold() {
+    public Output<Integer> successThreshold() {
         return this.successThreshold == null ? Codegen.empty() : this.successThreshold;
     }
 
@@ -70,7 +70,7 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
     @Import(name="timeoutSeconds")
       private final @Nullable Output<Integer> timeoutSeconds;
 
-    public Output<Integer> getTimeoutSeconds() {
+    public Output<Integer> timeoutSeconds() {
         return this.timeoutSeconds == null ? Codegen.empty() : this.timeoutSeconds;
     }
 

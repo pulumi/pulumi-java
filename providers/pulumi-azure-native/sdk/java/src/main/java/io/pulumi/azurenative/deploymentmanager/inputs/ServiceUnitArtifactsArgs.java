@@ -26,7 +26,7 @@ public final class ServiceUnitArtifactsArgs extends io.pulumi.resources.Resource
     @Import(name="parametersArtifactSourceRelativePath")
       private final @Nullable Output<String> parametersArtifactSourceRelativePath;
 
-    public Output<String> getParametersArtifactSourceRelativePath() {
+    public Output<String> parametersArtifactSourceRelativePath() {
         return this.parametersArtifactSourceRelativePath == null ? Codegen.empty() : this.parametersArtifactSourceRelativePath;
     }
 
@@ -37,7 +37,7 @@ public final class ServiceUnitArtifactsArgs extends io.pulumi.resources.Resource
     @Import(name="parametersUri")
       private final @Nullable Output<String> parametersUri;
 
-    public Output<String> getParametersUri() {
+    public Output<String> parametersUri() {
         return this.parametersUri == null ? Codegen.empty() : this.parametersUri;
     }
 
@@ -48,7 +48,7 @@ public final class ServiceUnitArtifactsArgs extends io.pulumi.resources.Resource
     @Import(name="templateArtifactSourceRelativePath")
       private final @Nullable Output<String> templateArtifactSourceRelativePath;
 
-    public Output<String> getTemplateArtifactSourceRelativePath() {
+    public Output<String> templateArtifactSourceRelativePath() {
         return this.templateArtifactSourceRelativePath == null ? Codegen.empty() : this.templateArtifactSourceRelativePath;
     }
 
@@ -59,7 +59,7 @@ public final class ServiceUnitArtifactsArgs extends io.pulumi.resources.Resource
     @Import(name="templateUri")
       private final @Nullable Output<String> templateUri;
 
-    public Output<String> getTemplateUri() {
+    public Output<String> templateUri() {
         return this.templateUri == null ? Codegen.empty() : this.templateUri;
     }
 

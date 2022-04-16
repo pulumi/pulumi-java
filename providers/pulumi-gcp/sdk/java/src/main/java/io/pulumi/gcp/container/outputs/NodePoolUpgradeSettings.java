@@ -38,7 +38,7 @@ public final class NodePoolUpgradeSettings {
      * Can be set to 0 or greater.
      * 
     */
-    public Integer getMaxSurge() {
+    public Integer maxSurge() {
         return this.maxSurge;
     }
     /**
@@ -47,7 +47,7 @@ public final class NodePoolUpgradeSettings {
      * parallel. Can be set to 0 or greater.
      * 
     */
-    public Integer getMaxUnavailable() {
+    public Integer maxUnavailable() {
         return this.maxUnavailable;
     }
 

@@ -42,7 +42,7 @@ public class WebAclAssociation extends io.pulumi.resources.CustomResource {
      * @return ARN of the resource to associate with. For example, an Application Load Balancer or API Gateway Stage.
      * 
      */
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
     /**
@@ -56,7 +56,7 @@ public class WebAclAssociation extends io.pulumi.resources.CustomResource {
      * @return The ID of the WAF Regional WebACL to create an association.
      * 
      */
-    public Output<String> getWebAclId() {
+    public Output<String> webAclId() {
         return this.webAclId;
     }
 

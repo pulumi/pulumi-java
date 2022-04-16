@@ -25,7 +25,7 @@ public final class ApplicationGatewayBackendAddressResponse extends io.pulumi.re
     @Import(name="fqdn")
       private final @Nullable String fqdn;
 
-    public Optional<String> getFqdn() {
+    public Optional<String> fqdn() {
         return this.fqdn == null ? Optional.empty() : Optional.ofNullable(this.fqdn);
     }
 
@@ -36,7 +36,7 @@ public final class ApplicationGatewayBackendAddressResponse extends io.pulumi.re
     @Import(name="ipAddress")
       private final @Nullable String ipAddress;
 
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
     }
 

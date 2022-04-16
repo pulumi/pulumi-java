@@ -16,7 +16,7 @@ public final class DataQualityJobDefinitionDataQualityJobInput {
         this.endpointInput = endpointInput;
     }
 
-    public DataQualityJobDefinitionEndpointInput getEndpointInput() {
+    public DataQualityJobDefinitionEndpointInput endpointInput() {
         return this.endpointInput;
     }
 

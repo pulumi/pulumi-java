@@ -30,7 +30,7 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigG
     @Import(name="outputSchema")
       private final @Nullable Output<String> outputSchema;
 
-    public Output<String> getOutputSchema() {
+    public Output<String> outputSchema() {
         return this.outputSchema == null ? Codegen.empty() : this.outputSchema;
     }
 
@@ -42,7 +42,7 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigG
     @Import(name="table", required=true)
       private final Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableGetArgs> table;
 
-    public Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableGetArgs> getTable() {
+    public Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableGetArgs> table() {
         return this.table;
     }
 

@@ -25,7 +25,7 @@ public final class RandomIdArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="byteLength", required=true)
       private final Output<Integer> byteLength;
 
-    public Output<Integer> getByteLength() {
+    public Output<Integer> byteLength() {
         return this.byteLength;
     }
 
@@ -36,7 +36,7 @@ public final class RandomIdArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keepers")
       private final @Nullable Output<Map<String,Object>> keepers;
 
-    public Output<Map<String,Object>> getKeepers() {
+    public Output<Map<String,Object>> keepers() {
         return this.keepers == null ? Codegen.empty() : this.keepers;
     }
 
@@ -47,7 +47,7 @@ public final class RandomIdArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 

@@ -28,7 +28,7 @@ public final class SelfHostedIntegrationRuntimeResponse extends io.pulumi.resour
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -39,7 +39,7 @@ public final class SelfHostedIntegrationRuntimeResponse extends io.pulumi.resour
     @Import(name="linkedInfo")
       private final @Nullable Either<LinkedIntegrationRuntimeKeyAuthorizationResponse,LinkedIntegrationRuntimeRbacAuthorizationResponse> linkedInfo;
 
-    public Either<LinkedIntegrationRuntimeKeyAuthorizationResponse,LinkedIntegrationRuntimeRbacAuthorizationResponse> getLinkedInfo() {
+    public Either<LinkedIntegrationRuntimeKeyAuthorizationResponse,LinkedIntegrationRuntimeRbacAuthorizationResponse> linkedInfo() {
         return this.linkedInfo == null ? null : this.linkedInfo;
     }
 
@@ -51,7 +51,7 @@ public final class SelfHostedIntegrationRuntimeResponse extends io.pulumi.resour
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

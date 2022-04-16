@@ -137,77 +137,77 @@ public final class SqlServerSinkResponse {
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getDisableMetricsCollection() {
+    public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
      * 
     */
-    public Optional<Object> getMaxConcurrentConnections() {
+    public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * SQL pre-copy script. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getPreCopyScript() {
+    public Optional<Object> preCopyScript() {
         return Optional.ofNullable(this.preCopyScript);
     }
     /**
      * Sink retry count. Type: integer (or Expression with resultType integer).
      * 
     */
-    public Optional<Object> getSinkRetryCount() {
+    public Optional<Object> sinkRetryCount() {
         return Optional.ofNullable(this.sinkRetryCount);
     }
     /**
      * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
     */
-    public Optional<Object> getSinkRetryWait() {
+    public Optional<Object> sinkRetryWait() {
         return Optional.ofNullable(this.sinkRetryWait);
     }
     /**
      * SQL writer stored procedure name. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getSqlWriterStoredProcedureName() {
+    public Optional<Object> sqlWriterStoredProcedureName() {
         return Optional.ofNullable(this.sqlWriterStoredProcedureName);
     }
     /**
      * SQL writer table type. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getSqlWriterTableType() {
+    public Optional<Object> sqlWriterTableType() {
         return Optional.ofNullable(this.sqlWriterTableType);
     }
     /**
      * Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getSqlWriterUseTableLock() {
+    public Optional<Object> sqlWriterUseTableLock() {
         return Optional.ofNullable(this.sqlWriterUseTableLock);
     }
     /**
      * SQL stored procedure parameters.
      * 
     */
-    public Map<String,StoredProcedureParameterResponse> getStoredProcedureParameters() {
+    public Map<String,StoredProcedureParameterResponse> storedProcedureParameters() {
         return this.storedProcedureParameters == null ? Map.of() : this.storedProcedureParameters;
     }
     /**
      * The stored procedure parameter name of the table type. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getStoredProcedureTableTypeParameterName() {
+    public Optional<Object> storedProcedureTableTypeParameterName() {
         return Optional.ofNullable(this.storedProcedureTableTypeParameterName);
     }
     /**
      * The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getTableOption() {
+    public Optional<Object> tableOption() {
         return Optional.ofNullable(this.tableOption);
     }
     /**
@@ -215,35 +215,35 @@ public final class SqlServerSinkResponse {
      * Expected value is 'SqlServerSink'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * SQL upsert settings.
      * 
     */
-    public Optional<SqlUpsertSettingsResponse> getUpsertSettings() {
+    public Optional<SqlUpsertSettingsResponse> upsertSettings() {
         return Optional.ofNullable(this.upsertSettings);
     }
     /**
      * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
     */
-    public Optional<Object> getWriteBatchSize() {
+    public Optional<Object> writeBatchSize() {
         return Optional.ofNullable(this.writeBatchSize);
     }
     /**
      * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
     */
-    public Optional<Object> getWriteBatchTimeout() {
+    public Optional<Object> writeBatchTimeout() {
         return Optional.ofNullable(this.writeBatchTimeout);
     }
     /**
      * Write behavior when copying data into sql server. Type: SqlWriteBehaviorEnum (or Expression with resultType SqlWriteBehaviorEnum)
      * 
     */
-    public Optional<Object> getWriteBehavior() {
+    public Optional<Object> writeBehavior() {
         return Optional.ofNullable(this.writeBehavior);
     }
 

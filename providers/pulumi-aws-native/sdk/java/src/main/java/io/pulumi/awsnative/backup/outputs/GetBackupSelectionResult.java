@@ -22,10 +22,10 @@ public final class GetBackupSelectionResult {
         this.selectionId = selectionId;
     }
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<String> getSelectionId() {
+    public Optional<String> selectionId() {
         return Optional.ofNullable(this.selectionId);
     }
 

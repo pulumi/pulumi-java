@@ -18,14 +18,14 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="desiredState")
       private final @Nullable Output<String> desiredState;
 
-    public Output<String> getDesiredState() {
+    public Output<String> desiredState() {
         return this.desiredState == null ? Codegen.empty() : this.desiredState;
     }
 
     @Import(name="properties")
       private final @Nullable Output<String> properties;
 
-    public Output<String> getProperties() {
+    public Output<String> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -36,7 +36,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
@@ -47,7 +47,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="schema")
       private final @Nullable Output<String> schema;
 
-    public Output<String> getSchema() {
+    public Output<String> schema() {
         return this.schema == null ? Codegen.empty() : this.schema;
     }
 
@@ -58,7 +58,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="typeName")
       private final @Nullable Output<String> typeName;
 
-    public Output<String> getTypeName() {
+    public Output<String> typeName() {
         return this.typeName == null ? Codegen.empty() : this.typeName;
     }
 
@@ -69,7 +69,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="typeVersionId")
       private final @Nullable Output<String> typeVersionId;
 
-    public Output<String> getTypeVersionId() {
+    public Output<String> typeVersionId() {
         return this.typeVersionId == null ? Codegen.empty() : this.typeVersionId;
     }
 

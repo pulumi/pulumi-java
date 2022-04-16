@@ -17,7 +17,7 @@ public final class WebACLImmunityTimePropertyArgs extends io.pulumi.resources.Re
     @Import(name="immunityTime", required=true)
       private final Output<Integer> immunityTime;
 
-    public Output<Integer> getImmunityTime() {
+    public Output<Integer> immunityTime() {
         return this.immunityTime;
     }
 

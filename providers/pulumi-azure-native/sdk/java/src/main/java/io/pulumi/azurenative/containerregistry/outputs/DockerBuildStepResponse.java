@@ -95,63 +95,63 @@ public final class DockerBuildStepResponse {
      * The collection of override arguments to be used when executing this build step.
      * 
     */
-    public List<ArgumentResponse> getArguments() {
+    public List<ArgumentResponse> arguments() {
         return this.arguments == null ? List.of() : this.arguments;
     }
     /**
      * List of base image dependencies for a step.
      * 
     */
-    public List<BaseImageDependencyResponse> getBaseImageDependencies() {
+    public List<BaseImageDependencyResponse> baseImageDependencies() {
         return this.baseImageDependencies;
     }
     /**
      * The token (git PAT or SAS token of storage account blob) associated with the context for a step.
      * 
     */
-    public Optional<String> getContextAccessToken() {
+    public Optional<String> contextAccessToken() {
         return Optional.ofNullable(this.contextAccessToken);
     }
     /**
      * The URL(absolute or relative) of the source context for the task step.
      * 
     */
-    public Optional<String> getContextPath() {
+    public Optional<String> contextPath() {
         return Optional.ofNullable(this.contextPath);
     }
     /**
      * The Docker file path relative to the source context.
      * 
     */
-    public String getDockerFilePath() {
+    public String dockerFilePath() {
         return this.dockerFilePath;
     }
     /**
      * The fully qualified image names including the repository and tag.
      * 
     */
-    public List<String> getImageNames() {
+    public List<String> imageNames() {
         return this.imageNames == null ? List.of() : this.imageNames;
     }
     /**
      * The value of this property indicates whether the image built should be pushed to the registry or not.
      * 
     */
-    public Optional<Boolean> getIsPushEnabled() {
+    public Optional<Boolean> isPushEnabled() {
         return Optional.ofNullable(this.isPushEnabled);
     }
     /**
      * The value of this property indicates whether the image cache is enabled or not.
      * 
     */
-    public Optional<Boolean> getNoCache() {
+    public Optional<Boolean> noCache() {
         return Optional.ofNullable(this.noCache);
     }
     /**
      * The name of the target build stage for the docker build.
      * 
     */
-    public Optional<String> getTarget() {
+    public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
     /**
@@ -159,7 +159,7 @@ public final class DockerBuildStepResponse {
      * Expected value is 'Docker'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

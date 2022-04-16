@@ -28,7 +28,7 @@ public final class Vp9CodecSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="bitrateBps", required=true)
       private final Output<Integer> bitrateBps;
 
-    public Output<Integer> getBitrateBps() {
+    public Output<Integer> bitrateBps() {
         return this.bitrateBps;
     }
 
@@ -39,7 +39,7 @@ public final class Vp9CodecSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="crfLevel")
       private final @Nullable Output<Integer> crfLevel;
 
-    public Output<Integer> getCrfLevel() {
+    public Output<Integer> crfLevel() {
         return this.crfLevel == null ? Codegen.empty() : this.crfLevel;
     }
 
@@ -50,7 +50,7 @@ public final class Vp9CodecSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="frameRate", required=true)
       private final Output<Double> frameRate;
 
-    public Output<Double> getFrameRate() {
+    public Output<Double> frameRate() {
         return this.frameRate;
     }
 
@@ -61,7 +61,7 @@ public final class Vp9CodecSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="gopDuration")
       private final @Nullable Output<String> gopDuration;
 
-    public Output<String> getGopDuration() {
+    public Output<String> gopDuration() {
         return this.gopDuration == null ? Codegen.empty() : this.gopDuration;
     }
 
@@ -72,7 +72,7 @@ public final class Vp9CodecSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="gopFrameCount")
       private final @Nullable Output<Integer> gopFrameCount;
 
-    public Output<Integer> getGopFrameCount() {
+    public Output<Integer> gopFrameCount() {
         return this.gopFrameCount == null ? Codegen.empty() : this.gopFrameCount;
     }
 
@@ -83,7 +83,7 @@ public final class Vp9CodecSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="heightPixels")
       private final @Nullable Output<Integer> heightPixels;
 
-    public Output<Integer> getHeightPixels() {
+    public Output<Integer> heightPixels() {
         return this.heightPixels == null ? Codegen.empty() : this.heightPixels;
     }
 
@@ -94,7 +94,7 @@ public final class Vp9CodecSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="pixelFormat")
       private final @Nullable Output<String> pixelFormat;
 
-    public Output<String> getPixelFormat() {
+    public Output<String> pixelFormat() {
         return this.pixelFormat == null ? Codegen.empty() : this.pixelFormat;
     }
 
@@ -105,7 +105,7 @@ public final class Vp9CodecSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="profile")
       private final @Nullable Output<String> profile;
 
-    public Output<String> getProfile() {
+    public Output<String> profile() {
         return this.profile == null ? Codegen.empty() : this.profile;
     }
 
@@ -116,7 +116,7 @@ public final class Vp9CodecSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="rateControlMode")
       private final @Nullable Output<String> rateControlMode;
 
-    public Output<String> getRateControlMode() {
+    public Output<String> rateControlMode() {
         return this.rateControlMode == null ? Codegen.empty() : this.rateControlMode;
     }
 
@@ -127,7 +127,7 @@ public final class Vp9CodecSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="widthPixels")
       private final @Nullable Output<Integer> widthPixels;
 
-    public Output<Integer> getWidthPixels() {
+    public Output<Integer> widthPixels() {
         return this.widthPixels == null ? Codegen.empty() : this.widthPixels;
     }
 

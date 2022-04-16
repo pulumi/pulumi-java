@@ -22,7 +22,7 @@ public final class DatasetCreateRequestTimeSeriesArgs extends io.pulumi.resource
     @Import(name="coarseGrainTimestamp")
       private final @Nullable Output<String> coarseGrainTimestamp;
 
-    public Output<String> getCoarseGrainTimestamp() {
+    public Output<String> coarseGrainTimestamp() {
         return this.coarseGrainTimestamp == null ? Codegen.empty() : this.coarseGrainTimestamp;
     }
 
@@ -33,7 +33,7 @@ public final class DatasetCreateRequestTimeSeriesArgs extends io.pulumi.resource
     @Import(name="fineGrainTimestamp")
       private final @Nullable Output<String> fineGrainTimestamp;
 
-    public Output<String> getFineGrainTimestamp() {
+    public Output<String> fineGrainTimestamp() {
         return this.fineGrainTimestamp == null ? Codegen.empty() : this.fineGrainTimestamp;
     }
 

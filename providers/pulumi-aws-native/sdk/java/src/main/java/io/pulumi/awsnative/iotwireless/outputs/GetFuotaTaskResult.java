@@ -114,91 +114,91 @@ public final class GetFuotaTaskResult {
      * FUOTA task arn. Returned after successful create.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Multicast group to associate. Only for update request.
      * 
     */
-    public Optional<String> getAssociateMulticastGroup() {
+    public Optional<String> associateMulticastGroup() {
         return Optional.ofNullable(this.associateMulticastGroup);
     }
     /**
      * Wireless device to associate. Only for update request.
      * 
     */
-    public Optional<String> getAssociateWirelessDevice() {
+    public Optional<String> associateWirelessDevice() {
         return Optional.ofNullable(this.associateWirelessDevice);
     }
     /**
      * FUOTA task description
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Multicast group to disassociate. Only for update request.
      * 
     */
-    public Optional<String> getDisassociateMulticastGroup() {
+    public Optional<String> disassociateMulticastGroup() {
         return Optional.ofNullable(this.disassociateMulticastGroup);
     }
     /**
      * Wireless device to disassociate. Only for update request.
      * 
     */
-    public Optional<String> getDisassociateWirelessDevice() {
+    public Optional<String> disassociateWirelessDevice() {
         return Optional.ofNullable(this.disassociateWirelessDevice);
     }
     /**
      * FUOTA task firmware update image binary S3 link
      * 
     */
-    public Optional<String> getFirmwareUpdateImage() {
+    public Optional<String> firmwareUpdateImage() {
         return Optional.ofNullable(this.firmwareUpdateImage);
     }
     /**
      * FUOTA task firmware IAM role for reading S3
      * 
     */
-    public Optional<String> getFirmwareUpdateRole() {
+    public Optional<String> firmwareUpdateRole() {
         return Optional.ofNullable(this.firmwareUpdateRole);
     }
     /**
      * FUOTA task status. Returned after successful read.
      * 
     */
-    public Optional<String> getFuotaTaskStatus() {
+    public Optional<String> fuotaTaskStatus() {
         return Optional.ofNullable(this.fuotaTaskStatus);
     }
     /**
      * FUOTA task id. Returned after successful create.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * FUOTA task LoRaWAN
      * 
     */
-    public Optional<FuotaTaskLoRaWAN> getLoRaWAN() {
+    public Optional<FuotaTaskLoRaWAN> loRaWAN() {
         return Optional.ofNullable(this.loRaWAN);
     }
     /**
      * Name of FUOTA task
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * A list of key-value pairs that contain metadata for the FUOTA task.
      * 
     */
-    public List<FuotaTaskTag> getTags() {
+    public List<FuotaTaskTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

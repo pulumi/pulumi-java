@@ -26,7 +26,7 @@ public final class ImageTemplateVhdDistributorResponse extends io.pulumi.resourc
     @Import(name="artifactTags")
       private final @Nullable Map<String,String> artifactTags;
 
-    public Map<String,String> getArtifactTags() {
+    public Map<String,String> artifactTags() {
         return this.artifactTags == null ? Map.of() : this.artifactTags;
     }
 
@@ -37,7 +37,7 @@ public final class ImageTemplateVhdDistributorResponse extends io.pulumi.resourc
     @Import(name="runOutputName", required=true)
       private final String runOutputName;
 
-    public String getRunOutputName() {
+    public String runOutputName() {
         return this.runOutputName;
     }
 
@@ -49,7 +49,7 @@ public final class ImageTemplateVhdDistributorResponse extends io.pulumi.resourc
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

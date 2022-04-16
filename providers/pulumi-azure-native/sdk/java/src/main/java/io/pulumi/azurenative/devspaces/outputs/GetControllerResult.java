@@ -98,77 +98,77 @@ public final class GetControllerResult {
      * DNS name for accessing DataPlane services
      * 
     */
-    public String getDataPlaneFqdn() {
+    public String dataPlaneFqdn() {
         return this.dataPlaneFqdn;
     }
     /**
      * DNS suffix for public endpoints running in the Azure Dev Spaces Controller.
      * 
     */
-    public String getHostSuffix() {
+    public String hostSuffix() {
         return this.hostSuffix;
     }
     /**
      * Fully qualified resource Id for the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Region where the Azure resource is located.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Provisioning state of the Azure Dev Spaces Controller.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Model representing SKU for Azure Dev Spaces Controller.
      * 
     */
-    public SkuResponse getSku() {
+    public SkuResponse sku() {
         return this.sku;
     }
     /**
      * Tags for the Azure resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * DNS of the target container host's API server
      * 
     */
-    public String getTargetContainerHostApiServerFqdn() {
+    public String targetContainerHostApiServerFqdn() {
         return this.targetContainerHostApiServerFqdn;
     }
     /**
      * Resource ID of the target container host
      * 
     */
-    public String getTargetContainerHostResourceId() {
+    public String targetContainerHostResourceId() {
         return this.targetContainerHostResourceId;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

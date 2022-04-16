@@ -27,7 +27,7 @@ public final class HostRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -38,7 +38,7 @@ public final class HostRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hosts")
       private final @Nullable Output<List<String>> hosts;
 
-    public Output<List<String>> getHosts() {
+    public Output<List<String>> hosts() {
         return this.hosts == null ? Codegen.empty() : this.hosts;
     }
 
@@ -49,7 +49,7 @@ public final class HostRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pathMatcher")
       private final @Nullable Output<String> pathMatcher;
 
-    public Output<String> getPathMatcher() {
+    public Output<String> pathMatcher() {
         return this.pathMatcher == null ? Codegen.empty() : this.pathMatcher;
     }
 

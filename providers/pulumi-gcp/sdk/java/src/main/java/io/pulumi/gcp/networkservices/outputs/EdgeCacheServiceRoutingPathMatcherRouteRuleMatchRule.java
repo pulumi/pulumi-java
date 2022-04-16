@@ -75,7 +75,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule {
      * For satisfying the matchRule condition, the path of the request must exactly match the value specified in fullPathMatch after removing any query parameters and anchor that may be part of the original URL.
      * 
     */
-    public Optional<String> getFullPathMatch() {
+    public Optional<String> fullPathMatch() {
         return Optional.ofNullable(this.fullPathMatch);
     }
     /**
@@ -83,14 +83,14 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule {
      * Structure is documented below.
      * 
     */
-    public List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch> getHeaderMatches() {
+    public List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch> headerMatches() {
         return this.headerMatches == null ? List.of() : this.headerMatches;
     }
     /**
      * Specifies that prefixMatch and fullPathMatch matches are case sensitive.
      * 
     */
-    public Optional<Boolean> getIgnoreCase() {
+    public Optional<Boolean> ignoreCase() {
         return Optional.ofNullable(this.ignoreCase);
     }
     /**
@@ -104,14 +104,14 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule {
      * captures in total.
      * 
     */
-    public Optional<String> getPathTemplateMatch() {
+    public Optional<String> pathTemplateMatch() {
         return Optional.ofNullable(this.pathTemplateMatch);
     }
     /**
      * The value of the header must start with the contents of prefixMatch.
      * 
     */
-    public Optional<String> getPrefixMatch() {
+    public Optional<String> prefixMatch() {
         return Optional.ofNullable(this.prefixMatch);
     }
     /**
@@ -119,7 +119,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule {
      * Structure is documented below.
      * 
     */
-    public List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch> getQueryParameterMatches() {
+    public List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch> queryParameterMatches() {
         return this.queryParameterMatches == null ? List.of() : this.queryParameterMatches;
     }
 

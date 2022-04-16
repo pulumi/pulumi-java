@@ -24,7 +24,7 @@ public final class RuleGroupRuleGroupGetArgs extends io.pulumi.resources.Resourc
     @Import(name="ruleVariables")
       private final @Nullable Output<RuleGroupRuleGroupRuleVariablesGetArgs> ruleVariables;
 
-    public Output<RuleGroupRuleGroupRuleVariablesGetArgs> getRuleVariables() {
+    public Output<RuleGroupRuleGroupRuleVariablesGetArgs> ruleVariables() {
         return this.ruleVariables == null ? Codegen.empty() : this.ruleVariables;
     }
 
@@ -35,7 +35,7 @@ public final class RuleGroupRuleGroupGetArgs extends io.pulumi.resources.Resourc
     @Import(name="rulesSource", required=true)
       private final Output<RuleGroupRuleGroupRulesSourceGetArgs> rulesSource;
 
-    public Output<RuleGroupRuleGroupRulesSourceGetArgs> getRulesSource() {
+    public Output<RuleGroupRuleGroupRulesSourceGetArgs> rulesSource() {
         return this.rulesSource;
     }
 
@@ -46,7 +46,7 @@ public final class RuleGroupRuleGroupGetArgs extends io.pulumi.resources.Resourc
     @Import(name="statefulRuleOptions")
       private final @Nullable Output<RuleGroupRuleGroupStatefulRuleOptionsGetArgs> statefulRuleOptions;
 
-    public Output<RuleGroupRuleGroupStatefulRuleOptionsGetArgs> getStatefulRuleOptions() {
+    public Output<RuleGroupRuleGroupStatefulRuleOptionsGetArgs> statefulRuleOptions() {
         return this.statefulRuleOptions == null ? Codegen.empty() : this.statefulRuleOptions;
     }
 

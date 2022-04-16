@@ -18,14 +18,14 @@ public final class InstanceFromTemplateNetworkInterfaceAliasIpRangeArgs extends 
     @Import(name="ipCidrRange", required=true)
       private final Output<String> ipCidrRange;
 
-    public Output<String> getIpCidrRange() {
+    public Output<String> ipCidrRange() {
         return this.ipCidrRange;
     }
 
     @Import(name="subnetworkRangeName")
       private final @Nullable Output<String> subnetworkRangeName;
 
-    public Output<String> getSubnetworkRangeName() {
+    public Output<String> subnetworkRangeName() {
         return this.subnetworkRangeName == null ? Codegen.empty() : this.subnetworkRangeName;
     }
 

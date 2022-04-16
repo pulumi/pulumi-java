@@ -21,7 +21,7 @@ public final class PatchGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="baselineId", required=true)
       private final Output<String> baselineId;
 
-    public Output<String> getBaselineId() {
+    public Output<String> baselineId() {
         return this.baselineId;
     }
 
@@ -32,7 +32,7 @@ public final class PatchGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="patchGroup", required=true)
       private final Output<String> patchGroup;
 
-    public Output<String> getPatchGroup() {
+    public Output<String> patchGroup() {
         return this.patchGroup;
     }
 

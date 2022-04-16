@@ -23,7 +23,7 @@ public final class CloudSQLInstanceInfoResponse extends io.pulumi.resources.Invo
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -34,7 +34,7 @@ public final class CloudSQLInstanceInfoResponse extends io.pulumi.resources.Invo
     @Import(name="externalIp", required=true)
       private final String externalIp;
 
-    public String getExternalIp() {
+    public String externalIp() {
         return this.externalIp;
     }
 
@@ -45,7 +45,7 @@ public final class CloudSQLInstanceInfoResponse extends io.pulumi.resources.Invo
     @Import(name="internalIp", required=true)
       private final String internalIp;
 
-    public String getInternalIp() {
+    public String internalIp() {
         return this.internalIp;
     }
 
@@ -56,7 +56,7 @@ public final class CloudSQLInstanceInfoResponse extends io.pulumi.resources.Invo
     @Import(name="networkUri", required=true)
       private final String networkUri;
 
-    public String getNetworkUri() {
+    public String networkUri() {
         return this.networkUri;
     }
 
@@ -67,7 +67,7 @@ public final class CloudSQLInstanceInfoResponse extends io.pulumi.resources.Invo
     @Import(name="region", required=true)
       private final String region;
 
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 
@@ -78,7 +78,7 @@ public final class CloudSQLInstanceInfoResponse extends io.pulumi.resources.Invo
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

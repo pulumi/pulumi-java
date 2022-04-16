@@ -49,7 +49,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * Use the `aws.apigateway.Account` resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
      * 
      */
-    public Output</* @Nullable */ StageAccessLogSettings> getAccessLogSettings() {
+    public Output</* @Nullable */ StageAccessLogSettings> accessLogSettings() {
         return this.accessLogSettings;
     }
     /**
@@ -63,7 +63,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @return The API identifier.
      * 
      */
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
     /**
@@ -77,7 +77,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @return The ARN of the stage.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -91,7 +91,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @return Whether updates to an API automatically trigger a new deployment. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoDeploy() {
+    public Output</* @Nullable */ Boolean> autoDeploy() {
         return this.autoDeploy;
     }
     /**
@@ -107,7 +107,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * Supported only for WebSocket APIs.
      * 
      */
-    public Output</* @Nullable */ String> getClientCertificateId() {
+    public Output</* @Nullable */ String> clientCertificateId() {
         return this.clientCertificateId;
     }
     /**
@@ -121,7 +121,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @return The default route settings for the stage.
      * 
      */
-    public Output</* @Nullable */ StageDefaultRouteSettings> getDefaultRouteSettings() {
+    public Output</* @Nullable */ StageDefaultRouteSettings> defaultRouteSettings() {
         return this.defaultRouteSettings;
     }
     /**
@@ -135,7 +135,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @return The deployment identifier of the stage. Use the `aws.apigatewayv2.Deployment` resource to configure a deployment.
      * 
      */
-    public Output<String> getDeploymentId() {
+    public Output<String> deploymentId() {
         return this.deploymentId;
     }
     /**
@@ -149,7 +149,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @return The description for the stage. Must be less than or equal to 1024 characters in length.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -167,7 +167,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
      * 
      */
-    public Output<String> getExecutionArn() {
+    public Output<String> executionArn() {
         return this.executionArn;
     }
     /**
@@ -183,7 +183,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * e.g., `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/`
      * 
      */
-    public Output<String> getInvokeUrl() {
+    public Output<String> invokeUrl() {
         return this.invokeUrl;
     }
     /**
@@ -197,7 +197,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @return The name of the stage. Must be between 1 and 128 characters in length.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -211,7 +211,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @return Route settings for the stage.
      * 
      */
-    public Output</* @Nullable */ List<StageRouteSetting>> getRouteSettings() {
+    public Output</* @Nullable */ List<StageRouteSetting>> routeSettings() {
         return this.routeSettings;
     }
     /**
@@ -225,7 +225,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @return A map that defines the stage variables for the stage.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getStageVariables() {
+    public Output</* @Nullable */ Map<String,String>> stageVariables() {
         return this.stageVariables;
     }
     /**
@@ -239,7 +239,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the stage. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -253,7 +253,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

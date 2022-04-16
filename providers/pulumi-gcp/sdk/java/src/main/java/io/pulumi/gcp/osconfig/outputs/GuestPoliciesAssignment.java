@@ -71,7 +71,7 @@ public final class GuestPoliciesAssignment {
      * Structure is documented below.
      * 
     */
-    public List<GuestPoliciesAssignmentGroupLabel> getGroupLabels() {
+    public List<GuestPoliciesAssignmentGroupLabel> groupLabels() {
         return this.groupLabels == null ? List.of() : this.groupLabels;
     }
     /**
@@ -81,7 +81,7 @@ public final class GuestPoliciesAssignment {
      * Only supported for project-level policies.
      * 
     */
-    public List<String> getInstanceNamePrefixes() {
+    public List<String> instanceNamePrefixes() {
         return this.instanceNamePrefixes == null ? List.of() : this.instanceNamePrefixes;
     }
     /**
@@ -92,7 +92,7 @@ public final class GuestPoliciesAssignment {
      * Only supported for project-level policies and must reference instances within this project.
      * 
     */
-    public List<String> getInstances() {
+    public List<String> instances() {
         return this.instances == null ? List.of() : this.instances;
     }
     /**
@@ -101,7 +101,7 @@ public final class GuestPoliciesAssignment {
      * Structure is documented below.
      * 
     */
-    public List<GuestPoliciesAssignmentOsType> getOsTypes() {
+    public List<GuestPoliciesAssignmentOsType> osTypes() {
         return this.osTypes == null ? List.of() : this.osTypes;
     }
     /**
@@ -109,7 +109,7 @@ public final class GuestPoliciesAssignment {
      * Zonal targeting is uncommon and is supported to facilitate the management of changes by zone.
      * 
     */
-    public List<String> getZones() {
+    public List<String> zones() {
         return this.zones == null ? List.of() : this.zones;
     }
 

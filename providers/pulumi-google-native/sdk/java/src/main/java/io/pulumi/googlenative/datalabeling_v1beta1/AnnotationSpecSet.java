@@ -32,7 +32,7 @@ public class AnnotationSpecSet extends io.pulumi.resources.CustomResource {
      * @return The array of AnnotationSpecs that you define when you create the AnnotationSpecSet. These are the possible labels for the labeling task.
      * 
      */
-    public Output<List<GoogleCloudDatalabelingV1beta1AnnotationSpecResponse>> getAnnotationSpecs() {
+    public Output<List<GoogleCloudDatalabelingV1beta1AnnotationSpecResponse>> annotationSpecs() {
         return this.annotationSpecs;
     }
     /**
@@ -46,7 +46,7 @@ public class AnnotationSpecSet extends io.pulumi.resources.CustomResource {
      * @return The names of any related resources that are blocking changes to the annotation spec set.
      * 
      */
-    public Output<List<String>> getBlockingResources() {
+    public Output<List<String>> blockingResources() {
         return this.blockingResources;
     }
     /**
@@ -60,7 +60,7 @@ public class AnnotationSpecSet extends io.pulumi.resources.CustomResource {
      * @return Optional. User-provided description of the annotation specification set. The description can be up to 10,000 characters long.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -74,7 +74,7 @@ public class AnnotationSpecSet extends io.pulumi.resources.CustomResource {
      * @return The display name for AnnotationSpecSet that you define when you create it. Maximum of 64 characters.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -88,7 +88,7 @@ public class AnnotationSpecSet extends io.pulumi.resources.CustomResource {
      * @return The AnnotationSpecSet resource name in the following format: "projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}"
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

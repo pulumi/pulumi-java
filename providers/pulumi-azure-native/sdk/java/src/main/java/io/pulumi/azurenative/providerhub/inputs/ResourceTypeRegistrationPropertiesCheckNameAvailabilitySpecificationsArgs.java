@@ -20,14 +20,14 @@ public final class ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecif
     @Import(name="enableDefaultValidation")
       private final @Nullable Output<Boolean> enableDefaultValidation;
 
-    public Output<Boolean> getEnableDefaultValidation() {
+    public Output<Boolean> enableDefaultValidation() {
         return this.enableDefaultValidation == null ? Codegen.empty() : this.enableDefaultValidation;
     }
 
     @Import(name="resourceTypesWithCustomValidation")
       private final @Nullable Output<List<String>> resourceTypesWithCustomValidation;
 
-    public Output<List<String>> getResourceTypesWithCustomValidation() {
+    public Output<List<String>> resourceTypesWithCustomValidation() {
         return this.resourceTypesWithCustomValidation == null ? Codegen.empty() : this.resourceTypesWithCustomValidation;
     }
 

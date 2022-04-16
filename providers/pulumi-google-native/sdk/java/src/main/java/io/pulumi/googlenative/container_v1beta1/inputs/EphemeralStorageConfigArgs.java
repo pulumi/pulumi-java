@@ -26,7 +26,7 @@ public final class EphemeralStorageConfigArgs extends io.pulumi.resources.Resour
     @Import(name="localSsdCount")
       private final @Nullable Output<Integer> localSsdCount;
 
-    public Output<Integer> getLocalSsdCount() {
+    public Output<Integer> localSsdCount() {
         return this.localSsdCount == null ? Codegen.empty() : this.localSsdCount;
     }
 

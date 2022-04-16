@@ -115,91 +115,91 @@ public final class GetCustomIPPrefixResult {
      * The prefix range in CIDR notation. Should include the start address and the prefix length.
      * 
     */
-    public Optional<String> getCidr() {
+    public Optional<String> cidr() {
         return Optional.ofNullable(this.cidr);
     }
     /**
      * The commissioned state of the Custom IP Prefix.
      * 
     */
-    public Optional<String> getCommissionedState() {
+    public Optional<String> commissionedState() {
         return Optional.ofNullable(this.commissionedState);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * The extended location of the custom IP prefix.
      * 
     */
-    public Optional<ExtendedLocationResponse> getExtendedLocation() {
+    public Optional<ExtendedLocationResponse> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning state of the custom IP prefix resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The list of all referenced PublicIpPrefixes.
      * 
     */
-    public List<SubResourceResponse> getPublicIpPrefixes() {
+    public List<SubResourceResponse> publicIpPrefixes() {
         return this.publicIpPrefixes;
     }
     /**
      * The resource GUID property of the custom IP prefix resource.
      * 
     */
-    public String getResourceGuid() {
+    public String resourceGuid() {
         return this.resourceGuid;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * A list of availability zones denoting the IP allocated for the resource needs to come from.
      * 
     */
-    public List<String> getZones() {
+    public List<String> zones() {
         return this.zones == null ? List.of() : this.zones;
     }
 

@@ -44,7 +44,7 @@ public class SapMonitor extends io.pulumi.resources.CustomResource {
      * @return The value indicating whether to send analytics to Microsoft
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableCustomerAnalytics() {
+    public Output</* @Nullable */ Boolean> enableCustomerAnalytics() {
         return this.enableCustomerAnalytics;
     }
     /**
@@ -58,7 +58,7 @@ public class SapMonitor extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -72,7 +72,7 @@ public class SapMonitor extends io.pulumi.resources.CustomResource {
      * @return The ARM ID of the Log Analytics Workspace that is used for monitoring
      * 
      */
-    public Output</* @Nullable */ String> getLogAnalyticsWorkspaceArmId() {
+    public Output</* @Nullable */ String> logAnalyticsWorkspaceArmId() {
         return this.logAnalyticsWorkspaceArmId;
     }
     /**
@@ -86,7 +86,7 @@ public class SapMonitor extends io.pulumi.resources.CustomResource {
      * @return The workspace ID of the log analytics workspace to be used for monitoring
      * 
      */
-    public Output</* @Nullable */ String> getLogAnalyticsWorkspaceId() {
+    public Output</* @Nullable */ String> logAnalyticsWorkspaceId() {
         return this.logAnalyticsWorkspaceId;
     }
     /**
@@ -100,7 +100,7 @@ public class SapMonitor extends io.pulumi.resources.CustomResource {
      * @return The shared key of the log analytics workspace that is used for monitoring
      * 
      */
-    public Output</* @Nullable */ String> getLogAnalyticsWorkspaceSharedKey() {
+    public Output</* @Nullable */ String> logAnalyticsWorkspaceSharedKey() {
         return this.logAnalyticsWorkspaceSharedKey;
     }
     /**
@@ -114,7 +114,7 @@ public class SapMonitor extends io.pulumi.resources.CustomResource {
      * @return The name of the resource group the SAP Monitor resources get deployed into.
      * 
      */
-    public Output<String> getManagedResourceGroupName() {
+    public Output<String> managedResourceGroupName() {
         return this.managedResourceGroupName;
     }
     /**
@@ -128,7 +128,7 @@ public class SapMonitor extends io.pulumi.resources.CustomResource {
      * @return The subnet which the SAP monitor will be deployed in
      * 
      */
-    public Output</* @Nullable */ String> getMonitorSubnet() {
+    public Output</* @Nullable */ String> monitorSubnet() {
         return this.monitorSubnet;
     }
     /**
@@ -142,7 +142,7 @@ public class SapMonitor extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -156,7 +156,7 @@ public class SapMonitor extends io.pulumi.resources.CustomResource {
      * @return State of provisioning of the HanaInstance
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -170,7 +170,7 @@ public class SapMonitor extends io.pulumi.resources.CustomResource {
      * @return The version of the payload running in the Collector VM
      * 
      */
-    public Output<String> getSapMonitorCollectorVersion() {
+    public Output<String> sapMonitorCollectorVersion() {
         return this.sapMonitorCollectorVersion;
     }
     /**
@@ -184,7 +184,7 @@ public class SapMonitor extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -198,7 +198,7 @@ public class SapMonitor extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

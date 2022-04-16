@@ -26,7 +26,7 @@ public final class PushConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pushEndpoint")
       private final @Nullable Output<String> pushEndpoint;
 
-    public Output<String> getPushEndpoint() {
+    public Output<String> pushEndpoint() {
         return this.pushEndpoint == null ? Codegen.empty() : this.pushEndpoint;
     }
 

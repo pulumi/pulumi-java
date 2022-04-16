@@ -25,7 +25,7 @@ public final class ClusterLoggingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterLogging")
       private final @Nullable Output<ClusterLoggingArgs> clusterLogging;
 
-    public Output<ClusterLoggingArgs> getClusterLogging() {
+    public Output<ClusterLoggingArgs> clusterLogging() {
         return this.clusterLogging == null ? Codegen.empty() : this.clusterLogging;
     }
 

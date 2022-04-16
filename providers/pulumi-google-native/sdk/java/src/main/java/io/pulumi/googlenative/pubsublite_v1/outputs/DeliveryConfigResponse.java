@@ -24,7 +24,7 @@ public final class DeliveryConfigResponse {
      * The DeliveryRequirement for this subscription.
      * 
     */
-    public String getDeliveryRequirement() {
+    public String deliveryRequirement() {
         return this.deliveryRequirement;
     }
 

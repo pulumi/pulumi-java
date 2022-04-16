@@ -19,7 +19,7 @@ public final class GetDomainServiceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="domainServiceName", required=true)
       private final String domainServiceName;
 
-    public String getDomainServiceName() {
+    public String domainServiceName() {
         return this.domainServiceName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDomainServiceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

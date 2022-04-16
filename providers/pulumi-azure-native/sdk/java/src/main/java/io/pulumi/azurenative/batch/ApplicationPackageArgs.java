@@ -22,7 +22,7 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -33,7 +33,7 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
     @Import(name="applicationName", required=true)
       private final Output<String> applicationName;
 
-    public Output<String> getApplicationName() {
+    public Output<String> applicationName() {
         return this.applicationName;
     }
 
@@ -44,7 +44,7 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,7 +55,7 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
     @Import(name="versionName")
       private final @Nullable Output<String> versionName;
 
-    public Output<String> getVersionName() {
+    public Output<String> versionName() {
         return this.versionName == null ? Codegen.empty() : this.versionName;
     }
 

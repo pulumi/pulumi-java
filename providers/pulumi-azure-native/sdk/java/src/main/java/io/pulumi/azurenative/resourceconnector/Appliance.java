@@ -46,7 +46,7 @@ public class Appliance extends io.pulumi.resources.CustomResource {
      * @return Represents a supported Fabric/Infra. (AKSEdge etc...).
      * 
      */
-    public Output</* @Nullable */ String> getDistro() {
+    public Output</* @Nullable */ String> distro() {
         return this.distro;
     }
     /**
@@ -60,7 +60,7 @@ public class Appliance extends io.pulumi.resources.CustomResource {
      * @return Identity for the resource.
      * 
      */
-    public Output</* @Nullable */ IdentityResponse> getIdentity() {
+    public Output</* @Nullable */ IdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -74,7 +74,7 @@ public class Appliance extends io.pulumi.resources.CustomResource {
      * @return Contains infrastructure information about the Appliance
      * 
      */
-    public Output</* @Nullable */ AppliancePropertiesResponseInfrastructureConfig> getInfrastructureConfig() {
+    public Output</* @Nullable */ AppliancePropertiesResponseInfrastructureConfig> infrastructureConfig() {
         return this.infrastructureConfig;
     }
     /**
@@ -88,7 +88,7 @@ public class Appliance extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -102,7 +102,7 @@ public class Appliance extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -116,7 +116,7 @@ public class Appliance extends io.pulumi.resources.CustomResource {
      * @return The current deployment or provisioning state, which only appears in the response.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -130,7 +130,7 @@ public class Appliance extends io.pulumi.resources.CustomResource {
      * @return Certificates pair used to download MSI certificate from HIS
      * 
      */
-    public Output</* @Nullable */ String> getPublicKey() {
+    public Output</* @Nullable */ String> publicKey() {
         return this.publicKey;
     }
     /**
@@ -144,7 +144,7 @@ public class Appliance extends io.pulumi.resources.CustomResource {
      * @return Appliance’s health and state of connection to on-prem
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -158,7 +158,7 @@ public class Appliance extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -172,7 +172,7 @@ public class Appliance extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -186,7 +186,7 @@ public class Appliance extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -200,7 +200,7 @@ public class Appliance extends io.pulumi.resources.CustomResource {
      * @return Version of the Appliance
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

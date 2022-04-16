@@ -25,7 +25,7 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="keepers")
       private final @Nullable Output<Map<String,Object>> keepers;
 
-    public Output<Map<String,Object>> getKeepers() {
+    public Output<Map<String,Object>> keepers() {
         return this.keepers == null ? Codegen.empty() : this.keepers;
     }
 
@@ -36,7 +36,7 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="length")
       private final @Nullable Output<Integer> length;
 
-    public Output<Integer> getLength() {
+    public Output<Integer> length() {
         return this.length == null ? Codegen.empty() : this.length;
     }
 
@@ -47,7 +47,7 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
@@ -58,7 +58,7 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="separator")
       private final @Nullable Output<String> separator;
 
-    public Output<String> getSeparator() {
+    public Output<String> separator() {
         return this.separator == null ? Codegen.empty() : this.separator;
     }
 

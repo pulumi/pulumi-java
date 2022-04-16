@@ -37,147 +37,147 @@ public final class SpotFleetInstanceRequirementsRequest extends io.pulumi.resour
     @Import(name="acceleratorCount")
       private final @Nullable SpotFleetAcceleratorCountRequest acceleratorCount;
 
-    public Optional<SpotFleetAcceleratorCountRequest> getAcceleratorCount() {
+    public Optional<SpotFleetAcceleratorCountRequest> acceleratorCount() {
         return this.acceleratorCount == null ? Optional.empty() : Optional.ofNullable(this.acceleratorCount);
     }
 
     @Import(name="acceleratorManufacturers")
       private final @Nullable List<SpotFleetInstanceRequirementsRequestAcceleratorManufacturersItem> acceleratorManufacturers;
 
-    public List<SpotFleetInstanceRequirementsRequestAcceleratorManufacturersItem> getAcceleratorManufacturers() {
+    public List<SpotFleetInstanceRequirementsRequestAcceleratorManufacturersItem> acceleratorManufacturers() {
         return this.acceleratorManufacturers == null ? List.of() : this.acceleratorManufacturers;
     }
 
     @Import(name="acceleratorNames")
       private final @Nullable List<SpotFleetInstanceRequirementsRequestAcceleratorNamesItem> acceleratorNames;
 
-    public List<SpotFleetInstanceRequirementsRequestAcceleratorNamesItem> getAcceleratorNames() {
+    public List<SpotFleetInstanceRequirementsRequestAcceleratorNamesItem> acceleratorNames() {
         return this.acceleratorNames == null ? List.of() : this.acceleratorNames;
     }
 
     @Import(name="acceleratorTotalMemoryMiB")
       private final @Nullable SpotFleetAcceleratorTotalMemoryMiBRequest acceleratorTotalMemoryMiB;
 
-    public Optional<SpotFleetAcceleratorTotalMemoryMiBRequest> getAcceleratorTotalMemoryMiB() {
+    public Optional<SpotFleetAcceleratorTotalMemoryMiBRequest> acceleratorTotalMemoryMiB() {
         return this.acceleratorTotalMemoryMiB == null ? Optional.empty() : Optional.ofNullable(this.acceleratorTotalMemoryMiB);
     }
 
     @Import(name="acceleratorTypes")
       private final @Nullable List<SpotFleetInstanceRequirementsRequestAcceleratorTypesItem> acceleratorTypes;
 
-    public List<SpotFleetInstanceRequirementsRequestAcceleratorTypesItem> getAcceleratorTypes() {
+    public List<SpotFleetInstanceRequirementsRequestAcceleratorTypesItem> acceleratorTypes() {
         return this.acceleratorTypes == null ? List.of() : this.acceleratorTypes;
     }
 
     @Import(name="bareMetal")
       private final @Nullable SpotFleetInstanceRequirementsRequestBareMetal bareMetal;
 
-    public Optional<SpotFleetInstanceRequirementsRequestBareMetal> getBareMetal() {
+    public Optional<SpotFleetInstanceRequirementsRequestBareMetal> bareMetal() {
         return this.bareMetal == null ? Optional.empty() : Optional.ofNullable(this.bareMetal);
     }
 
     @Import(name="baselineEbsBandwidthMbps")
       private final @Nullable SpotFleetBaselineEbsBandwidthMbpsRequest baselineEbsBandwidthMbps;
 
-    public Optional<SpotFleetBaselineEbsBandwidthMbpsRequest> getBaselineEbsBandwidthMbps() {
+    public Optional<SpotFleetBaselineEbsBandwidthMbpsRequest> baselineEbsBandwidthMbps() {
         return this.baselineEbsBandwidthMbps == null ? Optional.empty() : Optional.ofNullable(this.baselineEbsBandwidthMbps);
     }
 
     @Import(name="burstablePerformance")
       private final @Nullable SpotFleetInstanceRequirementsRequestBurstablePerformance burstablePerformance;
 
-    public Optional<SpotFleetInstanceRequirementsRequestBurstablePerformance> getBurstablePerformance() {
+    public Optional<SpotFleetInstanceRequirementsRequestBurstablePerformance> burstablePerformance() {
         return this.burstablePerformance == null ? Optional.empty() : Optional.ofNullable(this.burstablePerformance);
     }
 
     @Import(name="cpuManufacturers")
       private final @Nullable List<SpotFleetInstanceRequirementsRequestCpuManufacturersItem> cpuManufacturers;
 
-    public List<SpotFleetInstanceRequirementsRequestCpuManufacturersItem> getCpuManufacturers() {
+    public List<SpotFleetInstanceRequirementsRequestCpuManufacturersItem> cpuManufacturers() {
         return this.cpuManufacturers == null ? List.of() : this.cpuManufacturers;
     }
 
     @Import(name="excludedInstanceTypes")
       private final @Nullable List<String> excludedInstanceTypes;
 
-    public List<String> getExcludedInstanceTypes() {
+    public List<String> excludedInstanceTypes() {
         return this.excludedInstanceTypes == null ? List.of() : this.excludedInstanceTypes;
     }
 
     @Import(name="instanceGenerations")
       private final @Nullable List<SpotFleetInstanceRequirementsRequestInstanceGenerationsItem> instanceGenerations;
 
-    public List<SpotFleetInstanceRequirementsRequestInstanceGenerationsItem> getInstanceGenerations() {
+    public List<SpotFleetInstanceRequirementsRequestInstanceGenerationsItem> instanceGenerations() {
         return this.instanceGenerations == null ? List.of() : this.instanceGenerations;
     }
 
     @Import(name="localStorage")
       private final @Nullable SpotFleetInstanceRequirementsRequestLocalStorage localStorage;
 
-    public Optional<SpotFleetInstanceRequirementsRequestLocalStorage> getLocalStorage() {
+    public Optional<SpotFleetInstanceRequirementsRequestLocalStorage> localStorage() {
         return this.localStorage == null ? Optional.empty() : Optional.ofNullable(this.localStorage);
     }
 
     @Import(name="localStorageTypes")
       private final @Nullable List<SpotFleetInstanceRequirementsRequestLocalStorageTypesItem> localStorageTypes;
 
-    public List<SpotFleetInstanceRequirementsRequestLocalStorageTypesItem> getLocalStorageTypes() {
+    public List<SpotFleetInstanceRequirementsRequestLocalStorageTypesItem> localStorageTypes() {
         return this.localStorageTypes == null ? List.of() : this.localStorageTypes;
     }
 
     @Import(name="memoryGiBPerVCpu")
       private final @Nullable SpotFleetMemoryGiBPerVCpuRequest memoryGiBPerVCpu;
 
-    public Optional<SpotFleetMemoryGiBPerVCpuRequest> getMemoryGiBPerVCpu() {
+    public Optional<SpotFleetMemoryGiBPerVCpuRequest> memoryGiBPerVCpu() {
         return this.memoryGiBPerVCpu == null ? Optional.empty() : Optional.ofNullable(this.memoryGiBPerVCpu);
     }
 
     @Import(name="memoryMiB")
       private final @Nullable SpotFleetMemoryMiBRequest memoryMiB;
 
-    public Optional<SpotFleetMemoryMiBRequest> getMemoryMiB() {
+    public Optional<SpotFleetMemoryMiBRequest> memoryMiB() {
         return this.memoryMiB == null ? Optional.empty() : Optional.ofNullable(this.memoryMiB);
     }
 
     @Import(name="networkInterfaceCount")
       private final @Nullable SpotFleetNetworkInterfaceCountRequest networkInterfaceCount;
 
-    public Optional<SpotFleetNetworkInterfaceCountRequest> getNetworkInterfaceCount() {
+    public Optional<SpotFleetNetworkInterfaceCountRequest> networkInterfaceCount() {
         return this.networkInterfaceCount == null ? Optional.empty() : Optional.ofNullable(this.networkInterfaceCount);
     }
 
     @Import(name="onDemandMaxPricePercentageOverLowestPrice")
       private final @Nullable Integer onDemandMaxPricePercentageOverLowestPrice;
 
-    public Optional<Integer> getOnDemandMaxPricePercentageOverLowestPrice() {
+    public Optional<Integer> onDemandMaxPricePercentageOverLowestPrice() {
         return this.onDemandMaxPricePercentageOverLowestPrice == null ? Optional.empty() : Optional.ofNullable(this.onDemandMaxPricePercentageOverLowestPrice);
     }
 
     @Import(name="requireHibernateSupport")
       private final @Nullable Boolean requireHibernateSupport;
 
-    public Optional<Boolean> getRequireHibernateSupport() {
+    public Optional<Boolean> requireHibernateSupport() {
         return this.requireHibernateSupport == null ? Optional.empty() : Optional.ofNullable(this.requireHibernateSupport);
     }
 
     @Import(name="spotMaxPricePercentageOverLowestPrice")
       private final @Nullable Integer spotMaxPricePercentageOverLowestPrice;
 
-    public Optional<Integer> getSpotMaxPricePercentageOverLowestPrice() {
+    public Optional<Integer> spotMaxPricePercentageOverLowestPrice() {
         return this.spotMaxPricePercentageOverLowestPrice == null ? Optional.empty() : Optional.ofNullable(this.spotMaxPricePercentageOverLowestPrice);
     }
 
     @Import(name="totalLocalStorageGB")
       private final @Nullable SpotFleetTotalLocalStorageGBRequest totalLocalStorageGB;
 
-    public Optional<SpotFleetTotalLocalStorageGBRequest> getTotalLocalStorageGB() {
+    public Optional<SpotFleetTotalLocalStorageGBRequest> totalLocalStorageGB() {
         return this.totalLocalStorageGB == null ? Optional.empty() : Optional.ofNullable(this.totalLocalStorageGB);
     }
 
     @Import(name="vCpuCount")
       private final @Nullable SpotFleetVCpuCountRangeRequest vCpuCount;
 
-    public Optional<SpotFleetVCpuCountRangeRequest> getVCpuCount() {
+    public Optional<SpotFleetVCpuCountRangeRequest> vCpuCount() {
         return this.vCpuCount == null ? Optional.empty() : Optional.ofNullable(this.vCpuCount);
     }
 

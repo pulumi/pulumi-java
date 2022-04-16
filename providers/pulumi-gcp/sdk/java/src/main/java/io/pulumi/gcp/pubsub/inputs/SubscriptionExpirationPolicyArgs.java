@@ -25,7 +25,7 @@ public final class SubscriptionExpirationPolicyArgs extends io.pulumi.resources.
     @Import(name="ttl", required=true)
       private final Output<String> ttl;
 
-    public Output<String> getTtl() {
+    public Output<String> ttl() {
         return this.ttl;
     }
 

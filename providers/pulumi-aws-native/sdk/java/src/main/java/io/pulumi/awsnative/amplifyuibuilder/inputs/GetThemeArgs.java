@@ -15,21 +15,21 @@ public final class GetThemeArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="appId", required=true)
       private final String appId;
 
-    public String getAppId() {
+    public String appId() {
         return this.appId;
     }
 
     @Import(name="environmentName", required=true)
       private final String environmentName;
 
-    public String getEnvironmentName() {
+    public String environmentName() {
         return this.environmentName;
     }
 
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

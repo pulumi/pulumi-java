@@ -23,84 +23,84 @@ public final class CloudFormationProvisionedProductArgs extends io.pulumi.resour
     @Import(name="acceptLanguage")
       private final @Nullable Output<CloudFormationProvisionedProductAcceptLanguage> acceptLanguage;
 
-    public Output<CloudFormationProvisionedProductAcceptLanguage> getAcceptLanguage() {
+    public Output<CloudFormationProvisionedProductAcceptLanguage> acceptLanguage() {
         return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
     }
 
     @Import(name="notificationArns")
       private final @Nullable Output<List<String>> notificationArns;
 
-    public Output<List<String>> getNotificationArns() {
+    public Output<List<String>> notificationArns() {
         return this.notificationArns == null ? Codegen.empty() : this.notificationArns;
     }
 
     @Import(name="pathId")
       private final @Nullable Output<String> pathId;
 
-    public Output<String> getPathId() {
+    public Output<String> pathId() {
         return this.pathId == null ? Codegen.empty() : this.pathId;
     }
 
     @Import(name="pathName")
       private final @Nullable Output<String> pathName;
 
-    public Output<String> getPathName() {
+    public Output<String> pathName() {
         return this.pathName == null ? Codegen.empty() : this.pathName;
     }
 
     @Import(name="productId")
       private final @Nullable Output<String> productId;
 
-    public Output<String> getProductId() {
+    public Output<String> productId() {
         return this.productId == null ? Codegen.empty() : this.productId;
     }
 
     @Import(name="productName")
       private final @Nullable Output<String> productName;
 
-    public Output<String> getProductName() {
+    public Output<String> productName() {
         return this.productName == null ? Codegen.empty() : this.productName;
     }
 
     @Import(name="provisionedProductName")
       private final @Nullable Output<String> provisionedProductName;
 
-    public Output<String> getProvisionedProductName() {
+    public Output<String> provisionedProductName() {
         return this.provisionedProductName == null ? Codegen.empty() : this.provisionedProductName;
     }
 
     @Import(name="provisioningArtifactId")
       private final @Nullable Output<String> provisioningArtifactId;
 
-    public Output<String> getProvisioningArtifactId() {
+    public Output<String> provisioningArtifactId() {
         return this.provisioningArtifactId == null ? Codegen.empty() : this.provisioningArtifactId;
     }
 
     @Import(name="provisioningArtifactName")
       private final @Nullable Output<String> provisioningArtifactName;
 
-    public Output<String> getProvisioningArtifactName() {
+    public Output<String> provisioningArtifactName() {
         return this.provisioningArtifactName == null ? Codegen.empty() : this.provisioningArtifactName;
     }
 
     @Import(name="provisioningParameters")
       private final @Nullable Output<List<CloudFormationProvisionedProductProvisioningParameterArgs>> provisioningParameters;
 
-    public Output<List<CloudFormationProvisionedProductProvisioningParameterArgs>> getProvisioningParameters() {
+    public Output<List<CloudFormationProvisionedProductProvisioningParameterArgs>> provisioningParameters() {
         return this.provisioningParameters == null ? Codegen.empty() : this.provisioningParameters;
     }
 
     @Import(name="provisioningPreferences")
       private final @Nullable Output<CloudFormationProvisionedProductProvisioningPreferencesArgs> provisioningPreferences;
 
-    public Output<CloudFormationProvisionedProductProvisioningPreferencesArgs> getProvisioningPreferences() {
+    public Output<CloudFormationProvisionedProductProvisioningPreferencesArgs> provisioningPreferences() {
         return this.provisioningPreferences == null ? Codegen.empty() : this.provisioningPreferences;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<CloudFormationProvisionedProductTagArgs>> tags;
 
-    public Output<List<CloudFormationProvisionedProductTagArgs>> getTags() {
+    public Output<List<CloudFormationProvisionedProductTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

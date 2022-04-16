@@ -27,7 +27,7 @@ public final class GrafeasV1beta1BuildDetailsArgs extends io.pulumi.resources.Re
     @Import(name="provenance", required=true)
       private final Output<BuildProvenanceArgs> provenance;
 
-    public Output<BuildProvenanceArgs> getProvenance() {
+    public Output<BuildProvenanceArgs> provenance() {
         return this.provenance;
     }
 
@@ -38,7 +38,7 @@ public final class GrafeasV1beta1BuildDetailsArgs extends io.pulumi.resources.Re
     @Import(name="provenanceBytes")
       private final @Nullable Output<String> provenanceBytes;
 
-    public Output<String> getProvenanceBytes() {
+    public Output<String> provenanceBytes() {
         return this.provenanceBytes == null ? Codegen.empty() : this.provenanceBytes;
     }
 

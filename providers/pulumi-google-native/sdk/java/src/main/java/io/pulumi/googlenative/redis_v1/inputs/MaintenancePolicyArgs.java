@@ -28,7 +28,7 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -39,7 +39,7 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="weeklyMaintenanceWindow")
       private final @Nullable Output<List<WeeklyMaintenanceWindowArgs>> weeklyMaintenanceWindow;
 
-    public Output<List<WeeklyMaintenanceWindowArgs>> getWeeklyMaintenanceWindow() {
+    public Output<List<WeeklyMaintenanceWindowArgs>> weeklyMaintenanceWindow() {
         return this.weeklyMaintenanceWindow == null ? Codegen.empty() : this.weeklyMaintenanceWindow;
     }
 

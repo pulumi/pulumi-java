@@ -23,7 +23,7 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigArgs extends io.pulum
     @Import(name="snapshotAnalysis")
       private final @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs> snapshotAnalysis;
 
-    public Output<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs> getSnapshotAnalysis() {
+    public Output<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs> snapshotAnalysis() {
         return this.snapshotAnalysis == null ? Codegen.empty() : this.snapshotAnalysis;
     }
 

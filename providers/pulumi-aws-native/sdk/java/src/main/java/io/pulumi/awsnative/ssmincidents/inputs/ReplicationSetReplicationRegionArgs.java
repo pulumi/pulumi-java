@@ -23,14 +23,14 @@ public final class ReplicationSetReplicationRegionArgs extends io.pulumi.resourc
     @Import(name="regionConfiguration")
       private final @Nullable Output<ReplicationSetRegionConfigurationArgs> regionConfiguration;
 
-    public Output<ReplicationSetRegionConfigurationArgs> getRegionConfiguration() {
+    public Output<ReplicationSetRegionConfigurationArgs> regionConfiguration() {
         return this.regionConfiguration == null ? Codegen.empty() : this.regionConfiguration;
     }
 
     @Import(name="regionName")
       private final @Nullable Output<String> regionName;
 
-    public Output<String> getRegionName() {
+    public Output<String> regionName() {
         return this.regionName == null ? Codegen.empty() : this.regionName;
     }
 

@@ -22,21 +22,21 @@ public final class DeviceLastErrorStatusArgs extends io.pulumi.resources.Resourc
     @Import(name="details")
       private final @Nullable Output<List<Map<String,Object>>> details;
 
-    public Output<List<Map<String,Object>>> getDetails() {
+    public Output<List<Map<String,Object>>> details() {
         return this.details == null ? Codegen.empty() : this.details;
     }
 
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message == null ? Codegen.empty() : this.message;
     }
 
     @Import(name="number")
       private final @Nullable Output<Integer> number;
 
-    public Output<Integer> getNumber() {
+    public Output<Integer> number() {
         return this.number == null ? Codegen.empty() : this.number;
     }
 

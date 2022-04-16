@@ -29,7 +29,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dispositionNotificationTo")
       private final @Nullable Output<String> dispositionNotificationTo;
 
-    public Output<String> getDispositionNotificationTo() {
+    public Output<String> dispositionNotificationTo() {
         return this.dispositionNotificationTo == null ? Codegen.empty() : this.dispositionNotificationTo;
     }
 
@@ -40,7 +40,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mdnText")
       private final @Nullable Output<String> mdnText;
 
-    public Output<String> getMdnText() {
+    public Output<String> mdnText() {
         return this.mdnText == null ? Codegen.empty() : this.mdnText;
     }
 
@@ -51,7 +51,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="micHashingAlgorithm", required=true)
       private final Output<Either<String,HashingAlgorithm>> micHashingAlgorithm;
 
-    public Output<Either<String,HashingAlgorithm>> getMicHashingAlgorithm() {
+    public Output<Either<String,HashingAlgorithm>> micHashingAlgorithm() {
         return this.micHashingAlgorithm;
     }
 
@@ -62,7 +62,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="needMDN", required=true)
       private final Output<Boolean> needMDN;
 
-    public Output<Boolean> getNeedMDN() {
+    public Output<Boolean> needMDN() {
         return this.needMDN;
     }
 
@@ -73,7 +73,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="receiptDeliveryUrl")
       private final @Nullable Output<String> receiptDeliveryUrl;
 
-    public Output<String> getReceiptDeliveryUrl() {
+    public Output<String> receiptDeliveryUrl() {
         return this.receiptDeliveryUrl == null ? Codegen.empty() : this.receiptDeliveryUrl;
     }
 
@@ -84,7 +84,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sendInboundMDNToMessageBox", required=true)
       private final Output<Boolean> sendInboundMDNToMessageBox;
 
-    public Output<Boolean> getSendInboundMDNToMessageBox() {
+    public Output<Boolean> sendInboundMDNToMessageBox() {
         return this.sendInboundMDNToMessageBox;
     }
 
@@ -95,7 +95,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sendMDNAsynchronously", required=true)
       private final Output<Boolean> sendMDNAsynchronously;
 
-    public Output<Boolean> getSendMDNAsynchronously() {
+    public Output<Boolean> sendMDNAsynchronously() {
         return this.sendMDNAsynchronously;
     }
 
@@ -106,7 +106,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="signMDN", required=true)
       private final Output<Boolean> signMDN;
 
-    public Output<Boolean> getSignMDN() {
+    public Output<Boolean> signMDN() {
         return this.signMDN;
     }
 
@@ -117,7 +117,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="signOutboundMDNIfOptional", required=true)
       private final Output<Boolean> signOutboundMDNIfOptional;
 
-    public Output<Boolean> getSignOutboundMDNIfOptional() {
+    public Output<Boolean> signOutboundMDNIfOptional() {
         return this.signOutboundMDNIfOptional;
     }
 

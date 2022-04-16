@@ -23,7 +23,7 @@ public final class WaitStepAttributesResponse extends io.pulumi.resources.Invoke
     @Import(name="duration", required=true)
       private final String duration;
 
-    public String getDuration() {
+    public String duration() {
         return this.duration;
     }
 

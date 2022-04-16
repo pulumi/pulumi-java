@@ -33,14 +33,14 @@ public final class LoggingDestinationResponse {
      * Names of the logs to be sent to this destination. Each name must be defined in the Service.logs section. If the log name is not a domain scoped name, it will be automatically prefixed with the service name followed by "/".
      * 
     */
-    public List<String> getLogs() {
+    public List<String> logs() {
         return this.logs;
     }
     /**
      * The monitored resource type. The type must be defined in the Service.monitored_resources section.
      * 
     */
-    public String getMonitoredResource() {
+    public String monitoredResource() {
         return this.monitoredResource;
     }
 

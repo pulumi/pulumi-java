@@ -29,7 +29,7 @@ public final class BatchAccountIdentityArgs extends io.pulumi.resources.Resource
     @Import(name="type", required=true)
       private final Output<ResourceIdentityType> type;
 
-    public Output<ResourceIdentityType> getType() {
+    public Output<ResourceIdentityType> type() {
         return this.type;
     }
 
@@ -40,7 +40,7 @@ public final class BatchAccountIdentityArgs extends io.pulumi.resources.Resource
     @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
-    public Output<Map<String,Object>> getUserAssignedIdentities() {
+    public Output<Map<String,Object>> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Codegen.empty() : this.userAssignedIdentities;
     }
 

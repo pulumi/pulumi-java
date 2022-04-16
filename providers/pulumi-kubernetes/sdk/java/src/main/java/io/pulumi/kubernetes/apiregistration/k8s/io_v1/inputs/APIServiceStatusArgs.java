@@ -27,7 +27,7 @@ public final class APIServiceStatusArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="conditions")
       private final @Nullable Output<List<APIServiceConditionArgs>> conditions;
 
-    public Output<List<APIServiceConditionArgs>> getConditions() {
+    public Output<List<APIServiceConditionArgs>> conditions() {
         return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 

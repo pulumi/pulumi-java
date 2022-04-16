@@ -23,7 +23,7 @@ public final class ConnectionDetailsResponse extends io.pulumi.resources.InvokeA
     @Import(name="groupId", required=true)
       private final String groupId;
 
-    public String getGroupId() {
+    public String groupId() {
         return this.groupId;
     }
 
@@ -34,7 +34,7 @@ public final class ConnectionDetailsResponse extends io.pulumi.resources.InvokeA
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -45,7 +45,7 @@ public final class ConnectionDetailsResponse extends io.pulumi.resources.InvokeA
     @Import(name="linkIdentifier", required=true)
       private final String linkIdentifier;
 
-    public String getLinkIdentifier() {
+    public String linkIdentifier() {
         return this.linkIdentifier;
     }
 
@@ -56,7 +56,7 @@ public final class ConnectionDetailsResponse extends io.pulumi.resources.InvokeA
     @Import(name="memberName", required=true)
       private final String memberName;
 
-    public String getMemberName() {
+    public String memberName() {
         return this.memberName;
     }
 
@@ -67,7 +67,7 @@ public final class ConnectionDetailsResponse extends io.pulumi.resources.InvokeA
     @Import(name="privateIpAddress", required=true)
       private final String privateIpAddress;
 
-    public String getPrivateIpAddress() {
+    public String privateIpAddress() {
         return this.privateIpAddress;
     }
 

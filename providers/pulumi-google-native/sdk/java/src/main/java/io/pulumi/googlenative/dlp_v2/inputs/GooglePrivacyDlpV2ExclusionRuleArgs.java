@@ -29,7 +29,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
     @Import(name="dictionary")
       private final @Nullable Output<GooglePrivacyDlpV2DictionaryArgs> dictionary;
 
-    public Output<GooglePrivacyDlpV2DictionaryArgs> getDictionary() {
+    public Output<GooglePrivacyDlpV2DictionaryArgs> dictionary() {
         return this.dictionary == null ? Codegen.empty() : this.dictionary;
     }
 
@@ -40,7 +40,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
     @Import(name="excludeInfoTypes")
       private final @Nullable Output<GooglePrivacyDlpV2ExcludeInfoTypesArgs> excludeInfoTypes;
 
-    public Output<GooglePrivacyDlpV2ExcludeInfoTypesArgs> getExcludeInfoTypes() {
+    public Output<GooglePrivacyDlpV2ExcludeInfoTypesArgs> excludeInfoTypes() {
         return this.excludeInfoTypes == null ? Codegen.empty() : this.excludeInfoTypes;
     }
 
@@ -51,7 +51,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
     @Import(name="matchingType")
       private final @Nullable Output<GooglePrivacyDlpV2ExclusionRuleMatchingType> matchingType;
 
-    public Output<GooglePrivacyDlpV2ExclusionRuleMatchingType> getMatchingType() {
+    public Output<GooglePrivacyDlpV2ExclusionRuleMatchingType> matchingType() {
         return this.matchingType == null ? Codegen.empty() : this.matchingType;
     }
 
@@ -62,7 +62,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
     @Import(name="regex")
       private final @Nullable Output<GooglePrivacyDlpV2RegexArgs> regex;
 
-    public Output<GooglePrivacyDlpV2RegexArgs> getRegex() {
+    public Output<GooglePrivacyDlpV2RegexArgs> regex() {
         return this.regex == null ? Codegen.empty() : this.regex;
     }
 

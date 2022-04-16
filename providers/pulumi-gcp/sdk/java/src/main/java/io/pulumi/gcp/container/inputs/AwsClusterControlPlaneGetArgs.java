@@ -31,7 +31,7 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
     @Import(name="awsServicesAuthentication", required=true)
       private final Output<AwsClusterControlPlaneAwsServicesAuthenticationGetArgs> awsServicesAuthentication;
 
-    public Output<AwsClusterControlPlaneAwsServicesAuthenticationGetArgs> getAwsServicesAuthentication() {
+    public Output<AwsClusterControlPlaneAwsServicesAuthenticationGetArgs> awsServicesAuthentication() {
         return this.awsServicesAuthentication;
     }
 
@@ -42,7 +42,7 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
     @Import(name="configEncryption", required=true)
       private final Output<AwsClusterControlPlaneConfigEncryptionGetArgs> configEncryption;
 
-    public Output<AwsClusterControlPlaneConfigEncryptionGetArgs> getConfigEncryption() {
+    public Output<AwsClusterControlPlaneConfigEncryptionGetArgs> configEncryption() {
         return this.configEncryption;
     }
 
@@ -53,7 +53,7 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
     @Import(name="databaseEncryption", required=true)
       private final Output<AwsClusterControlPlaneDatabaseEncryptionGetArgs> databaseEncryption;
 
-    public Output<AwsClusterControlPlaneDatabaseEncryptionGetArgs> getDatabaseEncryption() {
+    public Output<AwsClusterControlPlaneDatabaseEncryptionGetArgs> databaseEncryption() {
         return this.databaseEncryption;
     }
 
@@ -64,7 +64,7 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
     @Import(name="iamInstanceProfile", required=true)
       private final Output<String> iamInstanceProfile;
 
-    public Output<String> getIamInstanceProfile() {
+    public Output<String> iamInstanceProfile() {
         return this.iamInstanceProfile;
     }
 
@@ -75,7 +75,7 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
@@ -86,7 +86,7 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
     @Import(name="mainVolume")
       private final @Nullable Output<AwsClusterControlPlaneMainVolumeGetArgs> mainVolume;
 
-    public Output<AwsClusterControlPlaneMainVolumeGetArgs> getMainVolume() {
+    public Output<AwsClusterControlPlaneMainVolumeGetArgs> mainVolume() {
         return this.mainVolume == null ? Codegen.empty() : this.mainVolume;
     }
 
@@ -97,7 +97,7 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
     @Import(name="proxyConfig")
       private final @Nullable Output<AwsClusterControlPlaneProxyConfigGetArgs> proxyConfig;
 
-    public Output<AwsClusterControlPlaneProxyConfigGetArgs> getProxyConfig() {
+    public Output<AwsClusterControlPlaneProxyConfigGetArgs> proxyConfig() {
         return this.proxyConfig == null ? Codegen.empty() : this.proxyConfig;
     }
 
@@ -108,7 +108,7 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
     @Import(name="rootVolume")
       private final @Nullable Output<AwsClusterControlPlaneRootVolumeGetArgs> rootVolume;
 
-    public Output<AwsClusterControlPlaneRootVolumeGetArgs> getRootVolume() {
+    public Output<AwsClusterControlPlaneRootVolumeGetArgs> rootVolume() {
         return this.rootVolume == null ? Codegen.empty() : this.rootVolume;
     }
 
@@ -119,7 +119,7 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
     @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
     }
 
@@ -130,7 +130,7 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
     @Import(name="sshConfig")
       private final @Nullable Output<AwsClusterControlPlaneSshConfigGetArgs> sshConfig;
 
-    public Output<AwsClusterControlPlaneSshConfigGetArgs> getSshConfig() {
+    public Output<AwsClusterControlPlaneSshConfigGetArgs> sshConfig() {
         return this.sshConfig == null ? Codegen.empty() : this.sshConfig;
     }
 
@@ -141,7 +141,7 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
     @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
 
@@ -152,7 +152,7 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -163,7 +163,7 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
     @Import(name="version", required=true)
       private final Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

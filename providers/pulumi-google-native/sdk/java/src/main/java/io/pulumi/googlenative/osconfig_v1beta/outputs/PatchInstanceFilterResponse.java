@@ -56,35 +56,35 @@ public final class PatchInstanceFilterResponse {
      * Target all VM instances in the project. If true, no other criteria is permitted.
      * 
     */
-    public Boolean getAll() {
+    public Boolean all() {
         return this.all;
     }
     /**
      * Targets VM instances matching at least one of these label sets. This allows targeting of disparate groups, for example "env=prod or env=staging".
      * 
     */
-    public List<PatchInstanceFilterGroupLabelResponse> getGroupLabels() {
+    public List<PatchInstanceFilterGroupLabelResponse> groupLabels() {
         return this.groupLabels;
     }
     /**
      * Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group VMs when targeting configs, for example prefix="prod-".
      * 
     */
-    public List<String> getInstanceNamePrefixes() {
+    public List<String> instanceNamePrefixes() {
         return this.instanceNamePrefixes;
     }
     /**
      * Targets any of the VM instances specified. Instances are specified by their URI in the form `zones/[ZONE]/instances/[INSTANCE_NAME]`, `projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`, or `https://www.googleapis.com/compute/v1/projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`
      * 
     */
-    public List<String> getInstances() {
+    public List<String> instances() {
         return this.instances;
     }
     /**
      * Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.
      * 
     */
-    public List<String> getZones() {
+    public List<String> zones() {
         return this.zones;
     }
 

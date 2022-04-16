@@ -27,7 +27,7 @@ public final class ExecutionTemplateResponse extends io.pulumi.resources.InvokeA
     @Import(name="acceleratorConfig", required=true)
       private final SchedulerAcceleratorConfigResponse acceleratorConfig;
 
-    public SchedulerAcceleratorConfigResponse getAcceleratorConfig() {
+    public SchedulerAcceleratorConfigResponse acceleratorConfig() {
         return this.acceleratorConfig;
     }
 
@@ -38,7 +38,7 @@ public final class ExecutionTemplateResponse extends io.pulumi.resources.InvokeA
     @Import(name="containerImageUri", required=true)
       private final String containerImageUri;
 
-    public String getContainerImageUri() {
+    public String containerImageUri() {
         return this.containerImageUri;
     }
 
@@ -49,7 +49,7 @@ public final class ExecutionTemplateResponse extends io.pulumi.resources.InvokeA
     @Import(name="dataprocParameters", required=true)
       private final DataprocParametersResponse dataprocParameters;
 
-    public DataprocParametersResponse getDataprocParameters() {
+    public DataprocParametersResponse dataprocParameters() {
         return this.dataprocParameters;
     }
 
@@ -60,7 +60,7 @@ public final class ExecutionTemplateResponse extends io.pulumi.resources.InvokeA
     @Import(name="inputNotebookFile", required=true)
       private final String inputNotebookFile;
 
-    public String getInputNotebookFile() {
+    public String inputNotebookFile() {
         return this.inputNotebookFile;
     }
 
@@ -71,7 +71,7 @@ public final class ExecutionTemplateResponse extends io.pulumi.resources.InvokeA
     @Import(name="jobType", required=true)
       private final String jobType;
 
-    public String getJobType() {
+    public String jobType() {
         return this.jobType;
     }
 
@@ -82,7 +82,7 @@ public final class ExecutionTemplateResponse extends io.pulumi.resources.InvokeA
     @Import(name="kernelSpec", required=true)
       private final String kernelSpec;
 
-    public String getKernelSpec() {
+    public String kernelSpec() {
         return this.kernelSpec;
     }
 
@@ -93,7 +93,7 @@ public final class ExecutionTemplateResponse extends io.pulumi.resources.InvokeA
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
 
@@ -104,7 +104,7 @@ public final class ExecutionTemplateResponse extends io.pulumi.resources.InvokeA
     @Import(name="masterType", required=true)
       private final String masterType;
 
-    public String getMasterType() {
+    public String masterType() {
         return this.masterType;
     }
 
@@ -115,7 +115,7 @@ public final class ExecutionTemplateResponse extends io.pulumi.resources.InvokeA
     @Import(name="outputNotebookFolder", required=true)
       private final String outputNotebookFolder;
 
-    public String getOutputNotebookFolder() {
+    public String outputNotebookFolder() {
         return this.outputNotebookFolder;
     }
 
@@ -126,7 +126,7 @@ public final class ExecutionTemplateResponse extends io.pulumi.resources.InvokeA
     @Import(name="parameters", required=true)
       private final String parameters;
 
-    public String getParameters() {
+    public String parameters() {
         return this.parameters;
     }
 
@@ -137,7 +137,7 @@ public final class ExecutionTemplateResponse extends io.pulumi.resources.InvokeA
     @Import(name="paramsYamlFile", required=true)
       private final String paramsYamlFile;
 
-    public String getParamsYamlFile() {
+    public String paramsYamlFile() {
         return this.paramsYamlFile;
     }
 
@@ -148,7 +148,7 @@ public final class ExecutionTemplateResponse extends io.pulumi.resources.InvokeA
     @Import(name="serviceAccount", required=true)
       private final String serviceAccount;
 
-    public String getServiceAccount() {
+    public String serviceAccount() {
         return this.serviceAccount;
     }
 
@@ -159,7 +159,7 @@ public final class ExecutionTemplateResponse extends io.pulumi.resources.InvokeA
     @Import(name="vertexAiParameters", required=true)
       private final VertexAIParametersResponse vertexAiParameters;
 
-    public VertexAIParametersResponse getVertexAiParameters() {
+    public VertexAIParametersResponse vertexAiParameters() {
         return this.vertexAiParameters;
     }
 

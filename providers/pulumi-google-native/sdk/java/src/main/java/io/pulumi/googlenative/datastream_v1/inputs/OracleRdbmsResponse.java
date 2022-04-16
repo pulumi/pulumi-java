@@ -24,7 +24,7 @@ public final class OracleRdbmsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="oracleSchemas", required=true)
       private final List<OracleSchemaResponse> oracleSchemas;
 
-    public List<OracleSchemaResponse> getOracleSchemas() {
+    public List<OracleSchemaResponse> oracleSchemas() {
         return this.oracleSchemas;
     }
 

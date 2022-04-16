@@ -24,7 +24,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="groupName", required=true)
       private final Output<String> groupName;
 
-    public Output<String> getGroupName() {
+    public Output<String> groupName() {
         return this.groupName;
     }
 
@@ -35,7 +35,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -46,7 +46,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -57,7 +57,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicKey")
       private final @Nullable Output<String> publicKey;
 
-    public Output<String> getPublicKey() {
+    public Output<String> publicKey() {
         return this.publicKey == null ? Codegen.empty() : this.publicKey;
     }
 
@@ -68,7 +68,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
@@ -79,7 +79,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<ServiceSkuArgs> sku;
 
-    public Output<ServiceSkuArgs> getSku() {
+    public Output<ServiceSkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -90,7 +90,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -101,7 +101,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="virtualSubnetId", required=true)
       private final Output<String> virtualSubnetId;
 
-    public Output<String> getVirtualSubnetId() {
+    public Output<String> virtualSubnetId() {
         return this.virtualSubnetId;
     }
 

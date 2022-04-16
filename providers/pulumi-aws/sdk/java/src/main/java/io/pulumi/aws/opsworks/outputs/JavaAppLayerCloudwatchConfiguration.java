@@ -24,10 +24,10 @@ public final class JavaAppLayerCloudwatchConfiguration {
         this.logStreams = logStreams;
     }
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
-    public List<JavaAppLayerCloudwatchConfigurationLogStream> getLogStreams() {
+    public List<JavaAppLayerCloudwatchConfigurationLogStream> logStreams() {
         return this.logStreams == null ? List.of() : this.logStreams;
     }
 

@@ -23,7 +23,7 @@ public final class SasTokenInformationResponse extends io.pulumi.resources.Invok
     @Import(name="accessToken", required=true)
       private final String accessToken;
 
-    public String getAccessToken() {
+    public String accessToken() {
         return this.accessToken;
     }
 

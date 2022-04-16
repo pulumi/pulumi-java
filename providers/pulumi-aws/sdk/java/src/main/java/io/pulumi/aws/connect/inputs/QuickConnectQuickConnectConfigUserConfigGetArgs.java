@@ -21,7 +21,7 @@ public final class QuickConnectQuickConnectConfigUserConfigGetArgs extends io.pu
     @Import(name="contactFlowId", required=true)
       private final Output<String> contactFlowId;
 
-    public Output<String> getContactFlowId() {
+    public Output<String> contactFlowId() {
         return this.contactFlowId;
     }
 
@@ -32,7 +32,7 @@ public final class QuickConnectQuickConnectConfigUserConfigGetArgs extends io.pu
     @Import(name="userId", required=true)
       private final Output<String> userId;
 
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId;
     }
 

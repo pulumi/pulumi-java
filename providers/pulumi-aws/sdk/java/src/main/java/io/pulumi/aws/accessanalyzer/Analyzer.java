@@ -41,7 +41,7 @@ public class Analyzer extends io.pulumi.resources.CustomResource {
      * @return Name of the Analyzer.
      * 
      */
-    public Output<String> getAnalyzerName() {
+    public Output<String> analyzerName() {
         return this.analyzerName;
     }
     /**
@@ -55,7 +55,7 @@ public class Analyzer extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Analyzer.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -69,7 +69,7 @@ public class Analyzer extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -83,7 +83,7 @@ public class Analyzer extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -97,7 +97,7 @@ public class Analyzer extends io.pulumi.resources.CustomResource {
      * @return Type of Analyzer. Valid values are `ACCOUNT` or `ORGANIZATION`. Defaults to `ACCOUNT`.
      * 
      */
-    public Output</* @Nullable */ String> getType() {
+    public Output</* @Nullable */ String> type() {
         return this.type;
     }
 

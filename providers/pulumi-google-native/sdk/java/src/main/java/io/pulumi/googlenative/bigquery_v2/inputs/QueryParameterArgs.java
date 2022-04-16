@@ -24,7 +24,7 @@ public final class QueryParameterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -35,7 +35,7 @@ public final class QueryParameterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameterType")
       private final @Nullable Output<QueryParameterTypeArgs> parameterType;
 
-    public Output<QueryParameterTypeArgs> getParameterType() {
+    public Output<QueryParameterTypeArgs> parameterType() {
         return this.parameterType == null ? Codegen.empty() : this.parameterType;
     }
 
@@ -46,7 +46,7 @@ public final class QueryParameterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameterValue")
       private final @Nullable Output<QueryParameterValueArgs> parameterValue;
 
-    public Output<QueryParameterValueArgs> getParameterValue() {
+    public Output<QueryParameterValueArgs> parameterValue() {
         return this.parameterValue == null ? Codegen.empty() : this.parameterValue;
     }
 

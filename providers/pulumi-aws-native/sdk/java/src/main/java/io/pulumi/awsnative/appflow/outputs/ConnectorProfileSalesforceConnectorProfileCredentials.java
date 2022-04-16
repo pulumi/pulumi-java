@@ -49,28 +49,28 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentials {
      * The credentials used to access protected resources.
      * 
     */
-    public Optional<String> getAccessToken() {
+    public Optional<String> accessToken() {
         return Optional.ofNullable(this.accessToken);
     }
     /**
      * The client credentials to fetch access token and refresh token.
      * 
     */
-    public Optional<String> getClientCredentialsArn() {
+    public Optional<String> clientCredentialsArn() {
         return Optional.ofNullable(this.clientCredentialsArn);
     }
     /**
      * The oauth needed to request security tokens from the connector endpoint.
      * 
     */
-    public Optional<ConnectorProfileConnectorOAuthRequest> getConnectorOAuthRequest() {
+    public Optional<ConnectorProfileConnectorOAuthRequest> connectorOAuthRequest() {
         return Optional.ofNullable(this.connectorOAuthRequest);
     }
     /**
      * The credentials used to acquire new access tokens.
      * 
     */
-    public Optional<String> getRefreshToken() {
+    public Optional<String> refreshToken() {
         return Optional.ofNullable(this.refreshToken);
     }
 

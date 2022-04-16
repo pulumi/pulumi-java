@@ -27,7 +27,7 @@ public final class DataplexConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lakeResources")
       private final @Nullable Output<Map<String,String>> lakeResources;
 
-    public Output<Map<String,String>> getLakeResources() {
+    public Output<Map<String,String>> lakeResources() {
         return this.lakeResources == null ? Codegen.empty() : this.lakeResources;
     }
 

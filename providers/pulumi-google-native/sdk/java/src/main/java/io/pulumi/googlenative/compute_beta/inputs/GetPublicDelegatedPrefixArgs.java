@@ -17,21 +17,21 @@ public final class GetPublicDelegatedPrefixArgs extends io.pulumi.resources.Invo
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="publicDelegatedPrefix", required=true)
       private final String publicDelegatedPrefix;
 
-    public String getPublicDelegatedPrefix() {
+    public String publicDelegatedPrefix() {
         return this.publicDelegatedPrefix;
     }
 
     @Import(name="region", required=true)
       private final String region;
 
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 

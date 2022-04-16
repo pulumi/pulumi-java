@@ -18,21 +18,21 @@ public final class GetClusterMaintenancePolicy extends io.pulumi.resources.Invok
     @Import(name="dailyMaintenanceWindows", required=true)
       private final List<GetClusterMaintenancePolicyDailyMaintenanceWindow> dailyMaintenanceWindows;
 
-    public List<GetClusterMaintenancePolicyDailyMaintenanceWindow> getDailyMaintenanceWindows() {
+    public List<GetClusterMaintenancePolicyDailyMaintenanceWindow> dailyMaintenanceWindows() {
         return this.dailyMaintenanceWindows;
     }
 
     @Import(name="maintenanceExclusions", required=true)
       private final List<GetClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions;
 
-    public List<GetClusterMaintenancePolicyMaintenanceExclusion> getMaintenanceExclusions() {
+    public List<GetClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions() {
         return this.maintenanceExclusions;
     }
 
     @Import(name="recurringWindows", required=true)
       private final List<GetClusterMaintenancePolicyRecurringWindow> recurringWindows;
 
-    public List<GetClusterMaintenancePolicyRecurringWindow> getRecurringWindows() {
+    public List<GetClusterMaintenancePolicyRecurringWindow> recurringWindows() {
         return this.recurringWindows;
     }
 

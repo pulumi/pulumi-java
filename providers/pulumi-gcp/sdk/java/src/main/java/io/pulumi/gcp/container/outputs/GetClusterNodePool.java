@@ -67,50 +67,50 @@ public final class GetClusterNodePool {
         this.version = version;
     }
 
-    public List<GetClusterNodePoolAutoscaling> getAutoscalings() {
+    public List<GetClusterNodePoolAutoscaling> autoscalings() {
         return this.autoscalings;
     }
-    public Integer getInitialNodeCount() {
+    public Integer initialNodeCount() {
         return this.initialNodeCount;
     }
-    public List<String> getInstanceGroupUrls() {
+    public List<String> instanceGroupUrls() {
         return this.instanceGroupUrls;
     }
-    public List<String> getManagedInstanceGroupUrls() {
+    public List<String> managedInstanceGroupUrls() {
         return this.managedInstanceGroupUrls;
     }
-    public List<GetClusterNodePoolManagement> getManagements() {
+    public List<GetClusterNodePoolManagement> managements() {
         return this.managements;
     }
-    public Integer getMaxPodsPerNode() {
+    public Integer maxPodsPerNode() {
         return this.maxPodsPerNode;
     }
     /**
      * The name of the cluster.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getNamePrefix() {
+    public String namePrefix() {
         return this.namePrefix;
     }
-    public List<GetClusterNodePoolNetworkConfig> getNetworkConfigs() {
+    public List<GetClusterNodePoolNetworkConfig> networkConfigs() {
         return this.networkConfigs;
     }
-    public List<GetClusterNodePoolNodeConfig> getNodeConfigs() {
+    public List<GetClusterNodePoolNodeConfig> nodeConfigs() {
         return this.nodeConfigs;
     }
-    public Integer getNodeCount() {
+    public Integer nodeCount() {
         return this.nodeCount;
     }
-    public List<String> getNodeLocations() {
+    public List<String> nodeLocations() {
         return this.nodeLocations;
     }
-    public List<GetClusterNodePoolUpgradeSetting> getUpgradeSettings() {
+    public List<GetClusterNodePoolUpgradeSetting> upgradeSettings() {
         return this.upgradeSettings;
     }
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

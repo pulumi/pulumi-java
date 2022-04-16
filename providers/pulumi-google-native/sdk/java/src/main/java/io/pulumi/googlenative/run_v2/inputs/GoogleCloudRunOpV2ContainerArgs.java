@@ -31,7 +31,7 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
     @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
-    public Output<List<String>> getArgs() {
+    public Output<List<String>> args() {
         return this.args == null ? Codegen.empty() : this.args;
     }
 
@@ -42,7 +42,7 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
     @Import(name="command")
       private final @Nullable Output<List<String>> command;
 
-    public Output<List<String>> getCommand() {
+    public Output<List<String>> command() {
         return this.command == null ? Codegen.empty() : this.command;
     }
 
@@ -53,7 +53,7 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
     @Import(name="env")
       private final @Nullable Output<List<GoogleCloudRunOpV2EnvVarArgs>> env;
 
-    public Output<List<GoogleCloudRunOpV2EnvVarArgs>> getEnv() {
+    public Output<List<GoogleCloudRunOpV2EnvVarArgs>> env() {
         return this.env == null ? Codegen.empty() : this.env;
     }
 
@@ -64,7 +64,7 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
     @Import(name="image", required=true)
       private final Output<String> image;
 
-    public Output<String> getImage() {
+    public Output<String> image() {
         return this.image;
     }
 
@@ -75,7 +75,7 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -86,7 +86,7 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
     @Import(name="ports")
       private final @Nullable Output<List<GoogleCloudRunOpV2ContainerPortArgs>> ports;
 
-    public Output<List<GoogleCloudRunOpV2ContainerPortArgs>> getPorts() {
+    public Output<List<GoogleCloudRunOpV2ContainerPortArgs>> ports() {
         return this.ports == null ? Codegen.empty() : this.ports;
     }
 
@@ -97,7 +97,7 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
     @Import(name="resources")
       private final @Nullable Output<GoogleCloudRunOpV2ResourceRequirementsArgs> resources;
 
-    public Output<GoogleCloudRunOpV2ResourceRequirementsArgs> getResources() {
+    public Output<GoogleCloudRunOpV2ResourceRequirementsArgs> resources() {
         return this.resources == null ? Codegen.empty() : this.resources;
     }
 
@@ -108,7 +108,7 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
     @Import(name="volumeMounts")
       private final @Nullable Output<List<GoogleCloudRunOpV2VolumeMountArgs>> volumeMounts;
 
-    public Output<List<GoogleCloudRunOpV2VolumeMountArgs>> getVolumeMounts() {
+    public Output<List<GoogleCloudRunOpV2VolumeMountArgs>> volumeMounts() {
         return this.volumeMounts == null ? Codegen.empty() : this.volumeMounts;
     }
 

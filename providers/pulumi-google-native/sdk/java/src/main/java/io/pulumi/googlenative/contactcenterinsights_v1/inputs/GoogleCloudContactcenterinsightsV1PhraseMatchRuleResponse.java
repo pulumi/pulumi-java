@@ -25,7 +25,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse ext
     @Import(name="config", required=true)
       private final GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse config;
 
-    public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse getConfig() {
+    public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse config() {
         return this.config;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse ext
     @Import(name="negated", required=true)
       private final Boolean negated;
 
-    public Boolean getNegated() {
+    public Boolean negated() {
         return this.negated;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse ext
     @Import(name="query", required=true)
       private final String query;
 
-    public String getQuery() {
+    public String query() {
         return this.query;
     }
 

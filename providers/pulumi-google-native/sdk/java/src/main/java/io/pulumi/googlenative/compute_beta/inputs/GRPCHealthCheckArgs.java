@@ -24,7 +24,7 @@ public final class GRPCHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="grpcServiceName")
       private final @Nullable Output<String> grpcServiceName;
 
-    public Output<String> getGrpcServiceName() {
+    public Output<String> grpcServiceName() {
         return this.grpcServiceName == null ? Codegen.empty() : this.grpcServiceName;
     }
 
@@ -35,7 +35,7 @@ public final class GRPCHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -46,7 +46,7 @@ public final class GRPCHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="portName")
       private final @Nullable Output<String> portName;
 
-    public Output<String> getPortName() {
+    public Output<String> portName() {
         return this.portName == null ? Codegen.empty() : this.portName;
     }
 
@@ -57,7 +57,7 @@ public final class GRPCHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="portSpecification")
       private final @Nullable Output<GRPCHealthCheckPortSpecification> portSpecification;
 
-    public Output<GRPCHealthCheckPortSpecification> getPortSpecification() {
+    public Output<GRPCHealthCheckPortSpecification> portSpecification() {
         return this.portSpecification == null ? Codegen.empty() : this.portSpecification;
     }
 

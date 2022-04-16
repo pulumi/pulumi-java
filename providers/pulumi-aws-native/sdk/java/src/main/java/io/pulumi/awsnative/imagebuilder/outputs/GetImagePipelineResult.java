@@ -102,77 +102,77 @@ public final class GetImagePipelineResult {
      * The Amazon Resource Name (ARN) of the image pipeline.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The Amazon Resource Name (ARN) of the container recipe that defines how images are configured and tested.
      * 
     */
-    public Optional<String> getContainerRecipeArn() {
+    public Optional<String> containerRecipeArn() {
         return Optional.ofNullable(this.containerRecipeArn);
     }
     /**
      * The description of the image pipeline.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The Amazon Resource Name (ARN) of the distribution configuration associated with this image pipeline.
      * 
     */
-    public Optional<String> getDistributionConfigurationArn() {
+    public Optional<String> distributionConfigurationArn() {
         return Optional.ofNullable(this.distributionConfigurationArn);
     }
     /**
      * Collects additional information about the image being created, including the operating system (OS) version and package list.
      * 
     */
-    public Optional<Boolean> getEnhancedImageMetadataEnabled() {
+    public Optional<Boolean> enhancedImageMetadataEnabled() {
         return Optional.ofNullable(this.enhancedImageMetadataEnabled);
     }
     /**
      * The Amazon Resource Name (ARN) of the image recipe that defines how images are configured, tested, and assessed.
      * 
     */
-    public Optional<String> getImageRecipeArn() {
+    public Optional<String> imageRecipeArn() {
         return Optional.ofNullable(this.imageRecipeArn);
     }
     /**
      * The image tests configuration of the image pipeline.
      * 
     */
-    public Optional<ImagePipelineImageTestsConfiguration> getImageTestsConfiguration() {
+    public Optional<ImagePipelineImageTestsConfiguration> imageTestsConfiguration() {
         return Optional.ofNullable(this.imageTestsConfiguration);
     }
     /**
      * The Amazon Resource Name (ARN) of the infrastructure configuration associated with this image pipeline.
      * 
     */
-    public Optional<String> getInfrastructureConfigurationArn() {
+    public Optional<String> infrastructureConfigurationArn() {
         return Optional.ofNullable(this.infrastructureConfigurationArn);
     }
     /**
      * The schedule of the image pipeline.
      * 
     */
-    public Optional<ImagePipelineSchedule> getSchedule() {
+    public Optional<ImagePipelineSchedule> schedule() {
         return Optional.ofNullable(this.schedule);
     }
     /**
      * The status of the image pipeline.
      * 
     */
-    public Optional<ImagePipelineStatus> getStatus() {
+    public Optional<ImagePipelineStatus> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The tags of this image pipeline.
      * 
     */
-    public Optional<Object> getTags() {
+    public Optional<Object> tags() {
         return Optional.ofNullable(this.tags);
     }
 

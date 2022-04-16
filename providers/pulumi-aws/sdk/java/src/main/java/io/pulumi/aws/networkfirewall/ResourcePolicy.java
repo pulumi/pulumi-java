@@ -32,7 +32,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
     @Export(name="policy", type=String.class, parameters={})
     private Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
     /**
@@ -46,7 +46,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the rule group or firewall policy.
      * 
      */
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
 

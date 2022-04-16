@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1NotificationConfigResponse extend
     @Import(name="messageFormat", required=true)
       private final String messageFormat;
 
-    public String getMessageFormat() {
+    public String messageFormat() {
         return this.messageFormat;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1NotificationConfigResponse extend
     @Import(name="topic", required=true)
       private final String topic;
 
-    public String getTopic() {
+    public String topic() {
         return this.topic;
     }
 

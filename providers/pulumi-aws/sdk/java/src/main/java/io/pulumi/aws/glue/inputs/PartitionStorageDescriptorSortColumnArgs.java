@@ -22,7 +22,7 @@ public final class PartitionStorageDescriptorSortColumnArgs extends io.pulumi.re
     @Import(name="column", required=true)
       private final Output<String> column;
 
-    public Output<String> getColumn() {
+    public Output<String> column() {
         return this.column;
     }
 
@@ -33,7 +33,7 @@ public final class PartitionStorageDescriptorSortColumnArgs extends io.pulumi.re
     @Import(name="sortOrder", required=true)
       private final Output<Integer> sortOrder;
 
-    public Output<Integer> getSortOrder() {
+    public Output<Integer> sortOrder() {
         return this.sortOrder;
     }
 

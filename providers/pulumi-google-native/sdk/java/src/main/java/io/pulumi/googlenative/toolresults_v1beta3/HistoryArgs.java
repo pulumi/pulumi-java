@@ -23,7 +23,7 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -34,7 +34,7 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="historyId")
       private final @Nullable Output<String> historyId;
 
-    public Output<String> getHistoryId() {
+    public Output<String> historyId() {
         return this.historyId == null ? Codegen.empty() : this.historyId;
     }
 
@@ -45,21 +45,21 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -70,7 +70,7 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="testPlatform")
       private final @Nullable Output<HistoryTestPlatform> testPlatform;
 
-    public Output<HistoryTestPlatform> getTestPlatform() {
+    public Output<HistoryTestPlatform> testPlatform() {
         return this.testPlatform == null ? Codegen.empty() : this.testPlatform;
     }
 

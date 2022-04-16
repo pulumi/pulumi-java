@@ -69,44 +69,44 @@ public final class GetEventTypeResult {
      * The ARN of the event type.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The time when the event type was created.
      * 
     */
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * The description of the event type.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public List<EventTypeEntityType> getEntityTypes() {
+    public List<EventTypeEntityType> entityTypes() {
         return this.entityTypes == null ? List.of() : this.entityTypes;
     }
-    public List<EventTypeEventVariable> getEventVariables() {
+    public List<EventTypeEventVariable> eventVariables() {
         return this.eventVariables == null ? List.of() : this.eventVariables;
     }
-    public List<EventTypeLabel> getLabels() {
+    public List<EventTypeLabel> labels() {
         return this.labels == null ? List.of() : this.labels;
     }
     /**
      * The time when the event type was last updated.
      * 
     */
-    public Optional<String> getLastUpdatedTime() {
+    public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     /**
      * Tags associated with this event type.
      * 
     */
-    public List<EventTypeTag> getTags() {
+    public List<EventTypeTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

@@ -23,7 +23,7 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -34,7 +34,7 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -45,7 +45,7 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="subnetId", required=true)
       private final String subnetId;
 
-    public String getSubnetId() {
+    public String subnetId() {
         return this.subnetId;
     }
 
@@ -56,7 +56,7 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

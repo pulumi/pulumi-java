@@ -26,7 +26,7 @@ public final class UniqueKeyResponse {
      * List of paths must be unique for each document in the Azure Cosmos DB service
      * 
     */
-    public List<String> getPaths() {
+    public List<String> paths() {
         return this.paths == null ? List.of() : this.paths;
     }
 

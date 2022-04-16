@@ -46,28 +46,28 @@ public final class PersistenceConfigResponse {
      * Optional. Controls whether Persistence features are enabled. If not provided, the existing value will be used.
      * 
     */
-    public String getPersistenceMode() {
+    public String persistenceMode() {
         return this.persistenceMode;
     }
     /**
      * The next time that a snapshot attempt is scheduled to occur.
      * 
     */
-    public String getRdbNextSnapshotTime() {
+    public String rdbNextSnapshotTime() {
         return this.rdbNextSnapshotTime;
     }
     /**
      * Optional. Period between RDB snapshots. Snapshots will be attempted every period starting from the provided snapshot start time. For example, a start time of 01/01/2033 06:45 and SIX_HOURS snapshot period will do nothing until 01/01/2033, and then trigger snapshots every day at 06:45, 12:45, 18:45, and 00:45 the next day, and so on. If not provided, TWENTY_FOUR_HOURS will be used as default.
      * 
     */
-    public String getRdbSnapshotPeriod() {
+    public String rdbSnapshotPeriod() {
         return this.rdbSnapshotPeriod;
     }
     /**
      * Optional. Date and time that the first snapshot was/will be attempted, and to which future snapshots will be aligned. If not provided, the current time will be used.
      * 
     */
-    public String getRdbSnapshotStartTime() {
+    public String rdbSnapshotStartTime() {
         return this.rdbSnapshotStartTime;
     }
 

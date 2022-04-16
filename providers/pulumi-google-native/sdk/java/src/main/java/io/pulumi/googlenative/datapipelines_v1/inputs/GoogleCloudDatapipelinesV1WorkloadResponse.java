@@ -24,7 +24,7 @@ public final class GoogleCloudDatapipelinesV1WorkloadResponse extends io.pulumi.
     @Import(name="dataflowFlexTemplateRequest", required=true)
       private final GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse dataflowFlexTemplateRequest;
 
-    public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse getDataflowFlexTemplateRequest() {
+    public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse dataflowFlexTemplateRequest() {
         return this.dataflowFlexTemplateRequest;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDatapipelinesV1WorkloadResponse extends io.pulumi.
     @Import(name="dataflowLaunchTemplateRequest", required=true)
       private final GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse dataflowLaunchTemplateRequest;
 
-    public GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse getDataflowLaunchTemplateRequest() {
+    public GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse dataflowLaunchTemplateRequest() {
         return this.dataflowLaunchTemplateRequest;
     }
 

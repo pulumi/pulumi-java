@@ -22,35 +22,35 @@ public final class InstanceFromMachineImageSchedulingArgs extends io.pulumi.reso
     @Import(name="automaticRestart")
       private final @Nullable Output<Boolean> automaticRestart;
 
-    public Output<Boolean> getAutomaticRestart() {
+    public Output<Boolean> automaticRestart() {
         return this.automaticRestart == null ? Codegen.empty() : this.automaticRestart;
     }
 
     @Import(name="minNodeCpus")
       private final @Nullable Output<Integer> minNodeCpus;
 
-    public Output<Integer> getMinNodeCpus() {
+    public Output<Integer> minNodeCpus() {
         return this.minNodeCpus == null ? Codegen.empty() : this.minNodeCpus;
     }
 
     @Import(name="nodeAffinities")
       private final @Nullable Output<List<InstanceFromMachineImageSchedulingNodeAffinityArgs>> nodeAffinities;
 
-    public Output<List<InstanceFromMachineImageSchedulingNodeAffinityArgs>> getNodeAffinities() {
+    public Output<List<InstanceFromMachineImageSchedulingNodeAffinityArgs>> nodeAffinities() {
         return this.nodeAffinities == null ? Codegen.empty() : this.nodeAffinities;
     }
 
     @Import(name="onHostMaintenance")
       private final @Nullable Output<String> onHostMaintenance;
 
-    public Output<String> getOnHostMaintenance() {
+    public Output<String> onHostMaintenance() {
         return this.onHostMaintenance == null ? Codegen.empty() : this.onHostMaintenance;
     }
 
     @Import(name="preemptible")
       private final @Nullable Output<Boolean> preemptible;
 
-    public Output<Boolean> getPreemptible() {
+    public Output<Boolean> preemptible() {
         return this.preemptible == null ? Codegen.empty() : this.preemptible;
     }
 

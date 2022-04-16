@@ -27,7 +27,7 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -38,7 +38,7 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destination", required=true)
       private final Output<InventoryDestinationArgs> destination;
 
-    public Output<InventoryDestinationArgs> getDestination() {
+    public Output<InventoryDestinationArgs> destination() {
         return this.destination;
     }
 
@@ -49,7 +49,7 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -60,7 +60,7 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filter")
       private final @Nullable Output<InventoryFilterArgs> filter;
 
-    public Output<InventoryFilterArgs> getFilter() {
+    public Output<InventoryFilterArgs> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -71,7 +71,7 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="includedObjectVersions", required=true)
       private final Output<String> includedObjectVersions;
 
-    public Output<String> getIncludedObjectVersions() {
+    public Output<String> includedObjectVersions() {
         return this.includedObjectVersions;
     }
 
@@ -82,7 +82,7 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -93,7 +93,7 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="optionalFields")
       private final @Nullable Output<List<String>> optionalFields;
 
-    public Output<List<String>> getOptionalFields() {
+    public Output<List<String>> optionalFields() {
         return this.optionalFields == null ? Codegen.empty() : this.optionalFields;
     }
 
@@ -104,7 +104,7 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedule", required=true)
       private final Output<InventoryScheduleArgs> schedule;
 
-    public Output<InventoryScheduleArgs> getSchedule() {
+    public Output<InventoryScheduleArgs> schedule() {
         return this.schedule;
     }
 

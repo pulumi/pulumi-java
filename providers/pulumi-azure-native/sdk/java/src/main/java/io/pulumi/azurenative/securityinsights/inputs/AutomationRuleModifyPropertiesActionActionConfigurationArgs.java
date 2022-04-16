@@ -34,7 +34,7 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
     @Import(name="classification")
       private final @Nullable Output<Either<String,IncidentClassification>> classification;
 
-    public Output<Either<String,IncidentClassification>> getClassification() {
+    public Output<Either<String,IncidentClassification>> classification() {
         return this.classification == null ? Codegen.empty() : this.classification;
     }
 
@@ -45,7 +45,7 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
     @Import(name="classificationComment")
       private final @Nullable Output<String> classificationComment;
 
-    public Output<String> getClassificationComment() {
+    public Output<String> classificationComment() {
         return this.classificationComment == null ? Codegen.empty() : this.classificationComment;
     }
 
@@ -56,7 +56,7 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
     @Import(name="classificationReason")
       private final @Nullable Output<Either<String,IncidentClassificationReason>> classificationReason;
 
-    public Output<Either<String,IncidentClassificationReason>> getClassificationReason() {
+    public Output<Either<String,IncidentClassificationReason>> classificationReason() {
         return this.classificationReason == null ? Codegen.empty() : this.classificationReason;
     }
 
@@ -67,7 +67,7 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
     @Import(name="labels")
       private final @Nullable Output<List<IncidentLabelArgs>> labels;
 
-    public Output<List<IncidentLabelArgs>> getLabels() {
+    public Output<List<IncidentLabelArgs>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -78,7 +78,7 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
     @Import(name="owner")
       private final @Nullable Output<IncidentOwnerInfoArgs> owner;
 
-    public Output<IncidentOwnerInfoArgs> getOwner() {
+    public Output<IncidentOwnerInfoArgs> owner() {
         return this.owner == null ? Codegen.empty() : this.owner;
     }
 
@@ -89,7 +89,7 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
     @Import(name="severity")
       private final @Nullable Output<Either<String,IncidentSeverity>> severity;
 
-    public Output<Either<String,IncidentSeverity>> getSeverity() {
+    public Output<Either<String,IncidentSeverity>> severity() {
         return this.severity == null ? Codegen.empty() : this.severity;
     }
 
@@ -100,7 +100,7 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
     @Import(name="status")
       private final @Nullable Output<Either<String,IncidentStatus>> status;
 
-    public Output<Either<String,IncidentStatus>> getStatus() {
+    public Output<Either<String,IncidentStatus>> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

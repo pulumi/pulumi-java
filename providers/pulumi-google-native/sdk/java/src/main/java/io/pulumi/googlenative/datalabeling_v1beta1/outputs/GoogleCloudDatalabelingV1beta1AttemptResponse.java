@@ -26,14 +26,14 @@ public final class GoogleCloudDatalabelingV1beta1AttemptResponse {
         this.partialFailures = partialFailures;
     }
 
-    public String getAttemptTime() {
+    public String attemptTime() {
         return this.attemptTime;
     }
     /**
      * Details of errors that occurred.
      * 
     */
-    public List<GoogleRpcStatusResponse> getPartialFailures() {
+    public List<GoogleRpcStatusResponse> partialFailures() {
         return this.partialFailures;
     }
 

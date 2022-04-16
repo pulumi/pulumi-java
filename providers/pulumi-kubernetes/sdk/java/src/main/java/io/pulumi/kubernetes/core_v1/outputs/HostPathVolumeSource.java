@@ -34,14 +34,14 @@ public final class HostPathVolumeSource {
      * Path of the directory on the host. If the path is a symlink, it will follow the link to the real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
      * 
     */
-    public String getPath() {
+    public String path() {
         return this.path;
     }
     /**
      * Type for HostPath Volume Defaults to "" More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

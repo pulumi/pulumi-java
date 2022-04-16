@@ -22,7 +22,7 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 

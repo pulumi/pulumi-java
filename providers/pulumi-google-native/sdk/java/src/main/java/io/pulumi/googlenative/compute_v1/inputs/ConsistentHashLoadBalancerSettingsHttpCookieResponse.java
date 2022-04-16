@@ -24,7 +24,7 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieResponse extends 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -35,7 +35,7 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieResponse extends 
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 
@@ -46,7 +46,7 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieResponse extends 
     @Import(name="ttl", required=true)
       private final DurationResponse ttl;
 
-    public DurationResponse getTtl() {
+    public DurationResponse ttl() {
         return this.ttl;
     }
 

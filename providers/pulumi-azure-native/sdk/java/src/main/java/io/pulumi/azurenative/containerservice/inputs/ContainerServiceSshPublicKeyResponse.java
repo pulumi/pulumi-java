@@ -23,7 +23,7 @@ public final class ContainerServiceSshPublicKeyResponse extends io.pulumi.resour
     @Import(name="keyData", required=true)
       private final String keyData;
 
-    public String getKeyData() {
+    public String keyData() {
         return this.keyData;
     }
 

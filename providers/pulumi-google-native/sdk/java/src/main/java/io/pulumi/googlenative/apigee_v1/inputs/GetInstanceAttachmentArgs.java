@@ -15,21 +15,21 @@ public final class GetInstanceAttachmentArgs extends io.pulumi.resources.InvokeA
     @Import(name="attachmentId", required=true)
       private final String attachmentId;
 
-    public String getAttachmentId() {
+    public String attachmentId() {
         return this.attachmentId;
     }
 
     @Import(name="instanceId", required=true)
       private final String instanceId;
 
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
 
     @Import(name="organizationId", required=true)
       private final String organizationId;
 
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 

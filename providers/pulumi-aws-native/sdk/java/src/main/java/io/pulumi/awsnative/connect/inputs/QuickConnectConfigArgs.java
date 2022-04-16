@@ -25,28 +25,28 @@ public final class QuickConnectConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="phoneConfig")
       private final @Nullable Output<QuickConnectPhoneNumberQuickConnectConfigArgs> phoneConfig;
 
-    public Output<QuickConnectPhoneNumberQuickConnectConfigArgs> getPhoneConfig() {
+    public Output<QuickConnectPhoneNumberQuickConnectConfigArgs> phoneConfig() {
         return this.phoneConfig == null ? Codegen.empty() : this.phoneConfig;
     }
 
     @Import(name="queueConfig")
       private final @Nullable Output<QuickConnectQueueQuickConnectConfigArgs> queueConfig;
 
-    public Output<QuickConnectQueueQuickConnectConfigArgs> getQueueConfig() {
+    public Output<QuickConnectQueueQuickConnectConfigArgs> queueConfig() {
         return this.queueConfig == null ? Codegen.empty() : this.queueConfig;
     }
 
     @Import(name="quickConnectType", required=true)
       private final Output<QuickConnectType> quickConnectType;
 
-    public Output<QuickConnectType> getQuickConnectType() {
+    public Output<QuickConnectType> quickConnectType() {
         return this.quickConnectType;
     }
 
     @Import(name="userConfig")
       private final @Nullable Output<QuickConnectUserQuickConnectConfigArgs> userConfig;
 
-    public Output<QuickConnectUserQuickConnectConfigArgs> getUserConfig() {
+    public Output<QuickConnectUserQuickConnectConfigArgs> userConfig() {
         return this.userConfig == null ? Codegen.empty() : this.userConfig;
     }
 

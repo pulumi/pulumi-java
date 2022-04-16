@@ -33,7 +33,7 @@ public final class VideoSequenceAbsoluteTimeMarkersResponse {
      * The sequence of datetime ranges. Example: '[["2021-10-05T03:30:00Z", "2021-10-05T03:40:00Z"]]'.
      * 
     */
-    public String getRanges() {
+    public String ranges() {
         return this.ranges;
     }
     /**
@@ -41,7 +41,7 @@ public final class VideoSequenceAbsoluteTimeMarkersResponse {
      * Expected value is '#Microsoft.VideoAnalyzer.VideoSequenceAbsoluteTimeMarkers'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -23,7 +23,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="amazonSideAsn")
       private final @Nullable Output<String> amazonSideAsn;
 
-    public Output<String> getAmazonSideAsn() {
+    public Output<String> amazonSideAsn() {
         return this.amazonSideAsn == null ? Codegen.empty() : this.amazonSideAsn;
     }
 
@@ -34,7 +34,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
@@ -45,7 +45,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -56,7 +56,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 

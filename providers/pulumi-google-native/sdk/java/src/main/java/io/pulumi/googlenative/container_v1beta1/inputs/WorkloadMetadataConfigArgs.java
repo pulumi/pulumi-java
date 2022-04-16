@@ -27,7 +27,7 @@ public final class WorkloadMetadataConfigArgs extends io.pulumi.resources.Resour
     @Import(name="mode")
       private final @Nullable Output<WorkloadMetadataConfigMode> mode;
 
-    public Output<WorkloadMetadataConfigMode> getMode() {
+    public Output<WorkloadMetadataConfigMode> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -38,7 +38,7 @@ public final class WorkloadMetadataConfigArgs extends io.pulumi.resources.Resour
     @Import(name="nodeMetadata")
       private final @Nullable Output<WorkloadMetadataConfigNodeMetadata> nodeMetadata;
 
-    public Output<WorkloadMetadataConfigNodeMetadata> getNodeMetadata() {
+    public Output<WorkloadMetadataConfigNodeMetadata> nodeMetadata() {
         return this.nodeMetadata == null ? Codegen.empty() : this.nodeMetadata;
     }
 

@@ -22,7 +22,7 @@ public final class InstanceGroupManagerStatusResponse extends io.pulumi.resource
     @Import(name="autoscaler", required=true)
       private final String autoscaler;
 
-    public String getAutoscaler() {
+    public String autoscaler() {
         return this.autoscaler;
     }
 
@@ -33,7 +33,7 @@ public final class InstanceGroupManagerStatusResponse extends io.pulumi.resource
     @Import(name="isStable", required=true)
       private final Boolean isStable;
 
-    public Boolean getIsStable() {
+    public Boolean isStable() {
         return this.isStable;
     }
 
@@ -44,7 +44,7 @@ public final class InstanceGroupManagerStatusResponse extends io.pulumi.resource
     @Import(name="stateful", required=true)
       private final InstanceGroupManagerStatusStatefulResponse stateful;
 
-    public InstanceGroupManagerStatusStatefulResponse getStateful() {
+    public InstanceGroupManagerStatusStatefulResponse stateful() {
         return this.stateful;
     }
 
@@ -55,7 +55,7 @@ public final class InstanceGroupManagerStatusResponse extends io.pulumi.resource
     @Import(name="versionTarget", required=true)
       private final InstanceGroupManagerStatusVersionTargetResponse versionTarget;
 
-    public InstanceGroupManagerStatusVersionTargetResponse getVersionTarget() {
+    public InstanceGroupManagerStatusVersionTargetResponse versionTarget() {
         return this.versionTarget;
     }
 

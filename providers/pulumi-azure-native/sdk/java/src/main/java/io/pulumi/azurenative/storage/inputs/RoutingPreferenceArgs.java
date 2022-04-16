@@ -29,7 +29,7 @@ public final class RoutingPreferenceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="publishInternetEndpoints")
       private final @Nullable Output<Boolean> publishInternetEndpoints;
 
-    public Output<Boolean> getPublishInternetEndpoints() {
+    public Output<Boolean> publishInternetEndpoints() {
         return this.publishInternetEndpoints == null ? Codegen.empty() : this.publishInternetEndpoints;
     }
 
@@ -40,7 +40,7 @@ public final class RoutingPreferenceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="publishMicrosoftEndpoints")
       private final @Nullable Output<Boolean> publishMicrosoftEndpoints;
 
-    public Output<Boolean> getPublishMicrosoftEndpoints() {
+    public Output<Boolean> publishMicrosoftEndpoints() {
         return this.publishMicrosoftEndpoints == null ? Codegen.empty() : this.publishMicrosoftEndpoints;
     }
 
@@ -51,7 +51,7 @@ public final class RoutingPreferenceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="routingChoice")
       private final @Nullable Output<Either<String,RoutingChoice>> routingChoice;
 
-    public Output<Either<String,RoutingChoice>> getRoutingChoice() {
+    public Output<Either<String,RoutingChoice>> routingChoice() {
         return this.routingChoice == null ? Codegen.empty() : this.routingChoice;
     }
 

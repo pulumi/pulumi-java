@@ -27,7 +27,7 @@ public final class CloudAuditLoggingFeatureSpecArgs extends io.pulumi.resources.
     @Import(name="allowlistedServiceAccounts")
       private final @Nullable Output<List<String>> allowlistedServiceAccounts;
 
-    public Output<List<String>> getAllowlistedServiceAccounts() {
+    public Output<List<String>> allowlistedServiceAccounts() {
         return this.allowlistedServiceAccounts == null ? Codegen.empty() : this.allowlistedServiceAccounts;
     }
 

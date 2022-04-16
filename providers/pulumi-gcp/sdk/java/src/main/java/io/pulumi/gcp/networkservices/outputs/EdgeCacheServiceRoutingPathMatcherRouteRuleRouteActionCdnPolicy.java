@@ -124,7 +124,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * Structure is documented below.
      * 
     */
-    public Optional<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy> getCacheKeyPolicy() {
+    public Optional<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy> cacheKeyPolicy() {
         return Optional.ofNullable(this.cacheKeyPolicy);
     }
     /**
@@ -133,7 +133,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * Possible values are `CACHE_ALL_STATIC`, `USE_ORIGIN_HEADERS`, `FORCE_CACHE_ALL`, and `BYPASS_CACHE`.
      * 
     */
-    public Optional<String> getCacheMode() {
+    public Optional<String> cacheMode() {
         return Optional.ofNullable(this.cacheMode);
     }
     /**
@@ -146,7 +146,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      *   A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
     */
-    public Optional<String> getClientTtl() {
+    public Optional<String> clientTtl() {
         return Optional.ofNullable(this.clientTtl);
     }
     /**
@@ -162,7 +162,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      *   A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
     */
-    public Optional<String> getDefaultTtl() {
+    public Optional<String> defaultTtl() {
         return Optional.ofNullable(this.defaultTtl);
     }
     /**
@@ -177,7 +177,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      *   A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
     */
-    public Optional<String> getMaxTtl() {
+    public Optional<String> maxTtl() {
         return Optional.ofNullable(this.maxTtl);
     }
     /**
@@ -189,7 +189,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      *   These defaults can be overridden in negativeCachingPolicy
      * 
     */
-    public Optional<Boolean> getNegativeCaching() {
+    public Optional<Boolean> negativeCaching() {
         return Optional.ofNullable(this.negativeCaching);
     }
     /**
@@ -199,14 +199,14 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      *   Note that when specifying an explicit negativeCachingPolicy, you should take care to specify a cache TTL for all response codes that you wish to cache. The CDNPolicy will not apply any default negative caching when a policy exists.
      * 
     */
-    public Map<String,String> getNegativeCachingPolicy() {
+    public Map<String,String> negativeCachingPolicy() {
         return this.negativeCachingPolicy == null ? Map.of() : this.negativeCachingPolicy;
     }
     /**
      * The EdgeCacheKeyset containing the set of public keys used to validate signed requests at the edge.
      * 
     */
-    public Optional<String> getSignedRequestKeyset() {
+    public Optional<String> signedRequestKeyset() {
         return Optional.ofNullable(this.signedRequestKeyset);
     }
     /**
@@ -216,7 +216,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * Possible values are `DISABLED` and `REQUIRE_SIGNATURES`.
      * 
     */
-    public Optional<String> getSignedRequestMode() {
+    public Optional<String> signedRequestMode() {
         return Optional.ofNullable(this.signedRequestMode);
     }
 

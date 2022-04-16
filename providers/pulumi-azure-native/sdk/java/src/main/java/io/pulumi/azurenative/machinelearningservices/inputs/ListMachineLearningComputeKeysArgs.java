@@ -19,7 +19,7 @@ public final class ListMachineLearningComputeKeysArgs extends io.pulumi.resource
     @Import(name="computeName", required=true)
       private final String computeName;
 
-    public String getComputeName() {
+    public String computeName() {
         return this.computeName;
     }
 
@@ -30,7 +30,7 @@ public final class ListMachineLearningComputeKeysArgs extends io.pulumi.resource
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class ListMachineLearningComputeKeysArgs extends io.pulumi.resource
     @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
-    public String getWorkspaceName() {
+    public String workspaceName() {
         return this.workspaceName;
     }
 

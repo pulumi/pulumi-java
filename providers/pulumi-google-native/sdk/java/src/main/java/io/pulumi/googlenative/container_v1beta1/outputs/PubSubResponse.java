@@ -41,21 +41,21 @@ public final class PubSubResponse {
      * Enable notifications for Pub/Sub.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
     /**
      * Allows filtering to one or more specific event types. If no filter is specified, or if a filter is specified with no event types, all event types will be sent
      * 
     */
-    public FilterResponse getFilter() {
+    public FilterResponse filter() {
         return this.filter;
     }
     /**
      * The desired Pub/Sub topic to which notifications will be sent by GKE. Format is `projects/{project}/topics/{topic}`.
      * 
     */
-    public String getTopic() {
+    public String topic() {
         return this.topic;
     }
 

@@ -39,7 +39,7 @@ public final class JsonReadSettingsResponse {
      * Compression settings.
      * 
     */
-    public Optional<Object> getCompressionProperties() {
+    public Optional<Object> compressionProperties() {
         return Optional.ofNullable(this.compressionProperties);
     }
     /**
@@ -47,7 +47,7 @@ public final class JsonReadSettingsResponse {
      * Expected value is 'JsonReadSettings'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

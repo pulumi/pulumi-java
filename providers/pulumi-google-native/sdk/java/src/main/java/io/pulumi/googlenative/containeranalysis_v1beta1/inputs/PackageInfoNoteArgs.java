@@ -30,7 +30,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="analyzed")
       private final @Nullable Output<Boolean> analyzed;
 
-    public Output<Boolean> getAnalyzed() {
+    public Output<Boolean> analyzed() {
         return this.analyzed == null ? Codegen.empty() : this.analyzed;
     }
 
@@ -41,7 +41,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="attribution")
       private final @Nullable Output<String> attribution;
 
-    public Output<String> getAttribution() {
+    public Output<String> attribution() {
         return this.attribution == null ? Codegen.empty() : this.attribution;
     }
 
@@ -52,7 +52,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="checksum")
       private final @Nullable Output<String> checksum;
 
-    public Output<String> getChecksum() {
+    public Output<String> checksum() {
         return this.checksum == null ? Codegen.empty() : this.checksum;
     }
 
@@ -63,7 +63,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="copyright")
       private final @Nullable Output<String> copyright;
 
-    public Output<String> getCopyright() {
+    public Output<String> copyright() {
         return this.copyright == null ? Codegen.empty() : this.copyright;
     }
 
@@ -74,7 +74,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="detailedDescription")
       private final @Nullable Output<String> detailedDescription;
 
-    public Output<String> getDetailedDescription() {
+    public Output<String> detailedDescription() {
         return this.detailedDescription == null ? Codegen.empty() : this.detailedDescription;
     }
 
@@ -85,7 +85,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="downloadLocation")
       private final @Nullable Output<String> downloadLocation;
 
-    public Output<String> getDownloadLocation() {
+    public Output<String> downloadLocation() {
         return this.downloadLocation == null ? Codegen.empty() : this.downloadLocation;
     }
 
@@ -96,7 +96,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="externalRefs")
       private final @Nullable Output<List<ExternalRefArgs>> externalRefs;
 
-    public Output<List<ExternalRefArgs>> getExternalRefs() {
+    public Output<List<ExternalRefArgs>> externalRefs() {
         return this.externalRefs == null ? Codegen.empty() : this.externalRefs;
     }
 
@@ -107,7 +107,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="filesLicenseInfo")
       private final @Nullable Output<List<String>> filesLicenseInfo;
 
-    public Output<List<String>> getFilesLicenseInfo() {
+    public Output<List<String>> filesLicenseInfo() {
         return this.filesLicenseInfo == null ? Codegen.empty() : this.filesLicenseInfo;
     }
 
@@ -118,7 +118,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="homePage")
       private final @Nullable Output<String> homePage;
 
-    public Output<String> getHomePage() {
+    public Output<String> homePage() {
         return this.homePage == null ? Codegen.empty() : this.homePage;
     }
 
@@ -129,7 +129,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="licenseDeclared")
       private final @Nullable Output<LicenseArgs> licenseDeclared;
 
-    public Output<LicenseArgs> getLicenseDeclared() {
+    public Output<LicenseArgs> licenseDeclared() {
         return this.licenseDeclared == null ? Codegen.empty() : this.licenseDeclared;
     }
 
@@ -140,7 +140,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="originator")
       private final @Nullable Output<String> originator;
 
-    public Output<String> getOriginator() {
+    public Output<String> originator() {
         return this.originator == null ? Codegen.empty() : this.originator;
     }
 
@@ -151,7 +151,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="packageType")
       private final @Nullable Output<String> packageType;
 
-    public Output<String> getPackageType() {
+    public Output<String> packageType() {
         return this.packageType == null ? Codegen.empty() : this.packageType;
     }
 
@@ -162,7 +162,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="summaryDescription")
       private final @Nullable Output<String> summaryDescription;
 
-    public Output<String> getSummaryDescription() {
+    public Output<String> summaryDescription() {
         return this.summaryDescription == null ? Codegen.empty() : this.summaryDescription;
     }
 
@@ -173,7 +173,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="supplier")
       private final @Nullable Output<String> supplier;
 
-    public Output<String> getSupplier() {
+    public Output<String> supplier() {
         return this.supplier == null ? Codegen.empty() : this.supplier;
     }
 
@@ -184,7 +184,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 
@@ -195,7 +195,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="verificationCode")
       private final @Nullable Output<String> verificationCode;
 
-    public Output<String> getVerificationCode() {
+    public Output<String> verificationCode() {
         return this.verificationCode == null ? Codegen.empty() : this.verificationCode;
     }
 
@@ -206,7 +206,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

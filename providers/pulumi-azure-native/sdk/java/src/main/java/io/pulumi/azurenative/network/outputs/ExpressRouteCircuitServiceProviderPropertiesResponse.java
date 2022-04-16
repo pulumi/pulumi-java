@@ -42,21 +42,21 @@ public final class ExpressRouteCircuitServiceProviderPropertiesResponse {
      * The BandwidthInMbps.
      * 
     */
-    public Optional<Integer> getBandwidthInMbps() {
+    public Optional<Integer> bandwidthInMbps() {
         return Optional.ofNullable(this.bandwidthInMbps);
     }
     /**
      * The peering location.
      * 
     */
-    public Optional<String> getPeeringLocation() {
+    public Optional<String> peeringLocation() {
         return Optional.ofNullable(this.peeringLocation);
     }
     /**
      * The serviceProviderName.
      * 
     */
-    public Optional<String> getServiceProviderName() {
+    public Optional<String> serviceProviderName() {
         return Optional.ofNullable(this.serviceProviderName);
     }
 

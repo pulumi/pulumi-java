@@ -19,14 +19,14 @@ public final class GroupConfigurationItem extends io.pulumi.resources.InvokeArgs
     @Import(name="parameters")
       private final @Nullable List<GroupConfigurationParameter> parameters;
 
-    public List<GroupConfigurationParameter> getParameters() {
+    public List<GroupConfigurationParameter> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
 
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

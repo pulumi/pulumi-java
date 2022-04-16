@@ -56,35 +56,35 @@ public final class StaticSiteTemplateOptionsResponse {
      * Description of the newly generated repository.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Whether or not the newly generated repository is a private repository. Defaults to false (i.e. public).
      * 
     */
-    public Optional<Boolean> getIsPrivate() {
+    public Optional<Boolean> isPrivate() {
         return Optional.ofNullable(this.isPrivate);
     }
     /**
      * Owner of the newly generated repository.
      * 
     */
-    public Optional<String> getOwner() {
+    public Optional<String> owner() {
         return Optional.ofNullable(this.owner);
     }
     /**
      * Name of the newly generated repository.
      * 
     */
-    public Optional<String> getRepositoryName() {
+    public Optional<String> repositoryName() {
         return Optional.ofNullable(this.repositoryName);
     }
     /**
      * URL of the template repository. The newly generated repository will be based on this one.
      * 
     */
-    public Optional<String> getTemplateRepositoryUrl() {
+    public Optional<String> templateRepositoryUrl() {
         return Optional.ofNullable(this.templateRepositoryUrl);
     }
 

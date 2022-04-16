@@ -21,7 +21,7 @@ public final class GetProfileArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="hubName", required=true)
       private final String hubName;
 
-    public String getHubName() {
+    public String hubName() {
         return this.hubName;
     }
 
@@ -32,7 +32,7 @@ public final class GetProfileArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="localeCode")
       private final @Nullable String localeCode;
 
-    public Optional<String> getLocaleCode() {
+    public Optional<String> localeCode() {
         return this.localeCode == null ? Optional.empty() : Optional.ofNullable(this.localeCode);
     }
 
@@ -43,7 +43,7 @@ public final class GetProfileArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="profileName", required=true)
       private final String profileName;
 
-    public String getProfileName() {
+    public String profileName() {
         return this.profileName;
     }
 
@@ -54,7 +54,7 @@ public final class GetProfileArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

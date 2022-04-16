@@ -25,13 +25,13 @@ public final class InstanceFromMachineImageShieldedInstanceConfig {
         this.enableVtpm = enableVtpm;
     }
 
-    public Optional<Boolean> getEnableIntegrityMonitoring() {
+    public Optional<Boolean> enableIntegrityMonitoring() {
         return Optional.ofNullable(this.enableIntegrityMonitoring);
     }
-    public Optional<Boolean> getEnableSecureBoot() {
+    public Optional<Boolean> enableSecureBoot() {
         return Optional.ofNullable(this.enableSecureBoot);
     }
-    public Optional<Boolean> getEnableVtpm() {
+    public Optional<Boolean> enableVtpm() {
         return Optional.ofNullable(this.enableVtpm);
     }
 

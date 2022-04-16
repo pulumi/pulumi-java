@@ -23,7 +23,7 @@ public final class ProjectDefaultNetworkTierState extends io.pulumi.resources.Re
     @Import(name="networkTier")
       private final @Nullable Output<String> networkTier;
 
-    public Output<String> getNetworkTier() {
+    public Output<String> networkTier() {
         return this.networkTier == null ? Codegen.empty() : this.networkTier;
     }
 
@@ -35,7 +35,7 @@ public final class ProjectDefaultNetworkTierState extends io.pulumi.resources.Re
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

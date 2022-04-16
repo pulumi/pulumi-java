@@ -62,42 +62,42 @@ public final class GetProviderInstanceResult {
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * A JSON string containing metadata of the provider instance.
      * 
     */
-    public Optional<String> getMetadata() {
+    public Optional<String> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A JSON string containing the properties of the provider instance.
      * 
     */
-    public String getProperties() {
+    public String properties() {
         return this.properties;
     }
     /**
      * State of provisioning of the provider instance
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

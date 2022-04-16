@@ -24,7 +24,7 @@ public final class ClusterClusterConfigInitializationActionArgs extends io.pulum
     @Import(name="script", required=true)
       private final Output<String> script;
 
-    public Output<String> getScript() {
+    public Output<String> script() {
         return this.script;
     }
 
@@ -37,7 +37,7 @@ public final class ClusterClusterConfigInitializationActionArgs extends io.pulum
     @Import(name="timeoutSec")
       private final @Nullable Output<Integer> timeoutSec;
 
-    public Output<Integer> getTimeoutSec() {
+    public Output<Integer> timeoutSec() {
         return this.timeoutSec == null ? Codegen.empty() : this.timeoutSec;
     }
 

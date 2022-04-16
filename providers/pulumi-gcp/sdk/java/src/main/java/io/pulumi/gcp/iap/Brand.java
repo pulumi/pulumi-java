@@ -54,7 +54,7 @@ public class Brand extends io.pulumi.resources.CustomResource {
      * @return Application name displayed on OAuth consent screen.
      * 
      */
-    public Output<String> getApplicationTitle() {
+    public Output<String> applicationTitle() {
         return this.applicationTitle;
     }
     /**
@@ -70,7 +70,7 @@ public class Brand extends io.pulumi.resources.CustomResource {
      * identification corresponds to the project number as only one brand per project can be created.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +84,7 @@ public class Brand extends io.pulumi.resources.CustomResource {
      * @return Whether the brand is only intended for usage inside the GSuite organization only.
      * 
      */
-    public Output<Boolean> getOrgInternalOnly() {
+    public Output<Boolean> orgInternalOnly() {
         return this.orgInternalOnly;
     }
     /**
@@ -100,7 +100,7 @@ public class Brand extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -122,7 +122,7 @@ public class Brand extends io.pulumi.resources.CustomResource {
      * is an owner of the specified group in Cloud Identity.
      * 
      */
-    public Output<String> getSupportEmail() {
+    public Output<String> supportEmail() {
         return this.supportEmail;
     }
 

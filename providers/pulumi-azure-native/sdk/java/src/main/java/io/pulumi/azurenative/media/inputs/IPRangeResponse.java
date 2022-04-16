@@ -26,7 +26,7 @@ public final class IPRangeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="address")
       private final @Nullable String address;
 
-    public Optional<String> getAddress() {
+    public Optional<String> address() {
         return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
     }
 
@@ -37,7 +37,7 @@ public final class IPRangeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -48,7 +48,7 @@ public final class IPRangeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="subnetPrefixLength")
       private final @Nullable Integer subnetPrefixLength;
 
-    public Optional<Integer> getSubnetPrefixLength() {
+    public Optional<Integer> subnetPrefixLength() {
         return this.subnetPrefixLength == null ? Optional.empty() : Optional.ofNullable(this.subnetPrefixLength);
     }
 

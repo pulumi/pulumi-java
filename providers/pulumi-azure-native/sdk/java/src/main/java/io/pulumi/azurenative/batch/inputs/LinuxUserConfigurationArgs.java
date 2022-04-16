@@ -23,7 +23,7 @@ public final class LinuxUserConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="gid")
       private final @Nullable Output<Integer> gid;
 
-    public Output<Integer> getGid() {
+    public Output<Integer> gid() {
         return this.gid == null ? Codegen.empty() : this.gid;
     }
 
@@ -34,7 +34,7 @@ public final class LinuxUserConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="sshPrivateKey")
       private final @Nullable Output<String> sshPrivateKey;
 
-    public Output<String> getSshPrivateKey() {
+    public Output<String> sshPrivateKey() {
         return this.sshPrivateKey == null ? Codegen.empty() : this.sshPrivateKey;
     }
 
@@ -45,7 +45,7 @@ public final class LinuxUserConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="uid")
       private final @Nullable Output<Integer> uid;
 
-    public Output<Integer> getUid() {
+    public Output<Integer> uid() {
         return this.uid == null ? Codegen.empty() : this.uid;
     }
 

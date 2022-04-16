@@ -23,7 +23,7 @@ public final class ScriptHandlerResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="scriptPath", required=true)
       private final String scriptPath;
 
-    public String getScriptPath() {
+    public String scriptPath() {
         return this.scriptPath;
     }
 

@@ -23,7 +23,7 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
     @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
 
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate == null ? Codegen.empty() : this.createdDate;
     }
 
@@ -45,7 +45,7 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -56,7 +56,7 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
     @Import(name="expirationDate")
       private final @Nullable Output<String> expirationDate;
 
-    public Output<String> getExpirationDate() {
+    public Output<String> expirationDate() {
         return this.expirationDate == null ? Codegen.empty() : this.expirationDate;
     }
 
@@ -67,7 +67,7 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
     @Import(name="pemEncodedCertificate")
       private final @Nullable Output<String> pemEncodedCertificate;
 
-    public Output<String> getPemEncodedCertificate() {
+    public Output<String> pemEncodedCertificate() {
         return this.pemEncodedCertificate == null ? Codegen.empty() : this.pemEncodedCertificate;
     }
 
@@ -78,7 +78,7 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -89,7 +89,7 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

@@ -166,119 +166,119 @@ public final class DelimitedTextDatasetResponse {
      * List of tags that can be used for describing the Dataset.
      * 
     */
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The column delimiter. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getColumnDelimiter() {
+    public Optional<Object> columnDelimiter() {
         return Optional.ofNullable(this.columnDelimiter);
     }
     /**
      * The data compressionCodec. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getCompressionCodec() {
+    public Optional<Object> compressionCodec() {
         return Optional.ofNullable(this.compressionCodec);
     }
     /**
      * The data compression method used for DelimitedText.
      * 
     */
-    public Optional<Object> getCompressionLevel() {
+    public Optional<Object> compressionLevel() {
         return Optional.ofNullable(this.compressionLevel);
     }
     /**
      * Dataset description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The code page name of the preferred encoding. If miss, the default value is UTF-8, unless BOM denotes another Unicode encoding. Refer to the name column of the table in the following link to set supported values: https://msdn.microsoft.com/library/system.text.encoding.aspx. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getEncodingName() {
+    public Optional<Object> encodingName() {
         return Optional.ofNullable(this.encodingName);
     }
     /**
      * The escape character. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getEscapeChar() {
+    public Optional<Object> escapeChar() {
         return Optional.ofNullable(this.escapeChar);
     }
     /**
      * When used as input, treat the first row of data as headers. When used as output,write the headers into the output as the first row of data. The default value is false. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getFirstRowAsHeader() {
+    public Optional<Object> firstRowAsHeader() {
         return Optional.ofNullable(this.firstRowAsHeader);
     }
     /**
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
      * 
     */
-    public Optional<DatasetResponseFolder> getFolder() {
+    public Optional<DatasetResponseFolder> folder() {
         return Optional.ofNullable(this.folder);
     }
     /**
      * Linked service reference.
      * 
     */
-    public LinkedServiceReferenceResponse getLinkedServiceName() {
+    public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
     /**
      * The location of the delimited text storage.
      * 
     */
-    public Object getLocation() {
+    public Object location() {
         return this.location;
     }
     /**
      * The null value string. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getNullValue() {
+    public Optional<Object> nullValue() {
         return Optional.ofNullable(this.nullValue);
     }
     /**
      * Parameters for dataset.
      * 
     */
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * The quote character. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getQuoteChar() {
+    public Optional<Object> quoteChar() {
         return Optional.ofNullable(this.quoteChar);
     }
     /**
      * The row delimiter. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getRowDelimiter() {
+    public Optional<Object> rowDelimiter() {
         return Optional.ofNullable(this.rowDelimiter);
     }
     /**
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
      * 
     */
-    public Optional<Object> getSchema() {
+    public Optional<Object> schema() {
         return Optional.ofNullable(this.schema);
     }
     /**
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
      * 
     */
-    public Optional<Object> getStructure() {
+    public Optional<Object> structure() {
         return Optional.ofNullable(this.structure);
     }
     /**
@@ -286,7 +286,7 @@ public final class DelimitedTextDatasetResponse {
      * Expected value is 'DelimitedText'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

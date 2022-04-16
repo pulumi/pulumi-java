@@ -15,7 +15,7 @@ public final class GetV1IamPolicyArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="v1Id", required=true)
       private final String v1Id;
 
-    public String getV1Id() {
+    public String v1Id() {
         return this.v1Id;
     }
 

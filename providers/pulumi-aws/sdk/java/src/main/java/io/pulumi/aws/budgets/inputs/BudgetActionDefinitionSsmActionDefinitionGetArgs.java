@@ -22,7 +22,7 @@ public final class BudgetActionDefinitionSsmActionDefinitionGetArgs extends io.p
     @Import(name="actionSubType", required=true)
       private final Output<String> actionSubType;
 
-    public Output<String> getActionSubType() {
+    public Output<String> actionSubType() {
         return this.actionSubType;
     }
 
@@ -33,7 +33,7 @@ public final class BudgetActionDefinitionSsmActionDefinitionGetArgs extends io.p
     @Import(name="instanceIds", required=true)
       private final Output<List<String>> instanceIds;
 
-    public Output<List<String>> getInstanceIds() {
+    public Output<List<String>> instanceIds() {
         return this.instanceIds;
     }
 
@@ -44,7 +44,7 @@ public final class BudgetActionDefinitionSsmActionDefinitionGetArgs extends io.p
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 

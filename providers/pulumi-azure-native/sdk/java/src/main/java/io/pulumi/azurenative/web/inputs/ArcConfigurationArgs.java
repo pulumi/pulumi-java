@@ -20,49 +20,49 @@ public final class ArcConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="artifactStorageAccessMode")
       private final @Nullable Output<String> artifactStorageAccessMode;
 
-    public Output<String> getArtifactStorageAccessMode() {
+    public Output<String> artifactStorageAccessMode() {
         return this.artifactStorageAccessMode == null ? Codegen.empty() : this.artifactStorageAccessMode;
     }
 
     @Import(name="artifactStorageClassName")
       private final @Nullable Output<String> artifactStorageClassName;
 
-    public Output<String> getArtifactStorageClassName() {
+    public Output<String> artifactStorageClassName() {
         return this.artifactStorageClassName == null ? Codegen.empty() : this.artifactStorageClassName;
     }
 
     @Import(name="artifactStorageMountPath")
       private final @Nullable Output<String> artifactStorageMountPath;
 
-    public Output<String> getArtifactStorageMountPath() {
+    public Output<String> artifactStorageMountPath() {
         return this.artifactStorageMountPath == null ? Codegen.empty() : this.artifactStorageMountPath;
     }
 
     @Import(name="artifactStorageNodeName")
       private final @Nullable Output<String> artifactStorageNodeName;
 
-    public Output<String> getArtifactStorageNodeName() {
+    public Output<String> artifactStorageNodeName() {
         return this.artifactStorageNodeName == null ? Codegen.empty() : this.artifactStorageNodeName;
     }
 
     @Import(name="artifactsStorageType")
       private final @Nullable Output<StorageType> artifactsStorageType;
 
-    public Output<StorageType> getArtifactsStorageType() {
+    public Output<StorageType> artifactsStorageType() {
         return this.artifactsStorageType == null ? Codegen.empty() : this.artifactsStorageType;
     }
 
     @Import(name="frontEndServiceConfiguration")
       private final @Nullable Output<FrontEndConfigurationArgs> frontEndServiceConfiguration;
 
-    public Output<FrontEndConfigurationArgs> getFrontEndServiceConfiguration() {
+    public Output<FrontEndConfigurationArgs> frontEndServiceConfiguration() {
         return this.frontEndServiceConfiguration == null ? Codegen.empty() : this.frontEndServiceConfiguration;
     }
 
     @Import(name="kubeConfig")
       private final @Nullable Output<String> kubeConfig;
 
-    public Output<String> getKubeConfig() {
+    public Output<String> kubeConfig() {
         return this.kubeConfig == null ? Codegen.empty() : this.kubeConfig;
     }
 

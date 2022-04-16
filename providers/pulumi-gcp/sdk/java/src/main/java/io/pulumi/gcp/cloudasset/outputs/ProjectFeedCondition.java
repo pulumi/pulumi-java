@@ -52,14 +52,14 @@ public final class ProjectFeedCondition {
      * e.g. when hovered over it in a UI.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Textual representation of an expression in Common Expression Language syntax.
      * 
     */
-    public String getExpression() {
+    public String expression() {
         return this.expression;
     }
     /**
@@ -67,7 +67,7 @@ public final class ProjectFeedCondition {
      * name and a position in the file.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
@@ -75,7 +75,7 @@ public final class ProjectFeedCondition {
      * This can be used e.g. in UIs which allow to enter the expression.
      * 
     */
-    public Optional<String> getTitle() {
+    public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
 

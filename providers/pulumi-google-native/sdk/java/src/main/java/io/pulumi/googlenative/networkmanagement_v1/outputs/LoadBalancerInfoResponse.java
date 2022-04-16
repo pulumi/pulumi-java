@@ -55,35 +55,35 @@ public final class LoadBalancerInfoResponse {
      * Type of load balancer's backend configuration.
      * 
     */
-    public String getBackendType() {
+    public String backendType() {
         return this.backendType;
     }
     /**
      * Backend configuration URI.
      * 
     */
-    public String getBackendUri() {
+    public String backendUri() {
         return this.backendUri;
     }
     /**
      * Information for the loadbalancer backends.
      * 
     */
-    public List<LoadBalancerBackendResponse> getBackends() {
+    public List<LoadBalancerBackendResponse> backends() {
         return this.backends;
     }
     /**
      * URI of the health check for the load balancer.
      * 
     */
-    public String getHealthCheckUri() {
+    public String healthCheckUri() {
         return this.healthCheckUri;
     }
     /**
      * Type of the load balancer.
      * 
     */
-    public String getLoadBalancerType() {
+    public String loadBalancerType() {
         return this.loadBalancerType;
     }
 

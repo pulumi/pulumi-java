@@ -26,7 +26,7 @@ public final class JavaScriptFunctionBindingArgs extends io.pulumi.resources.Res
     @Import(name="script")
       private final @Nullable Output<String> script;
 
-    public Output<String> getScript() {
+    public Output<String> script() {
         return this.script == null ? Codegen.empty() : this.script;
     }
 
@@ -38,7 +38,7 @@ public final class JavaScriptFunctionBindingArgs extends io.pulumi.resources.Res
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

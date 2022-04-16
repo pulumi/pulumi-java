@@ -23,7 +23,7 @@ public final class DeidentifyTemplateArgs extends io.pulumi.resources.ResourceAr
     @Import(name="deidentifyConfig")
       private final @Nullable Output<GooglePrivacyDlpV2DeidentifyConfigArgs> deidentifyConfig;
 
-    public Output<GooglePrivacyDlpV2DeidentifyConfigArgs> getDeidentifyConfig() {
+    public Output<GooglePrivacyDlpV2DeidentifyConfigArgs> deidentifyConfig() {
         return this.deidentifyConfig == null ? Codegen.empty() : this.deidentifyConfig;
     }
 
@@ -34,7 +34,7 @@ public final class DeidentifyTemplateArgs extends io.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -45,21 +45,21 @@ public final class DeidentifyTemplateArgs extends io.pulumi.resources.ResourceAr
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -70,7 +70,7 @@ public final class DeidentifyTemplateArgs extends io.pulumi.resources.ResourceAr
     @Import(name="templateId")
       private final @Nullable Output<String> templateId;
 
-    public Output<String> getTemplateId() {
+    public Output<String> templateId() {
         return this.templateId == null ? Codegen.empty() : this.templateId;
     }
 

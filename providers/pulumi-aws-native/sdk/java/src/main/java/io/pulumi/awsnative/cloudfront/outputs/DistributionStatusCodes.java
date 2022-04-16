@@ -21,10 +21,10 @@ public final class DistributionStatusCodes {
         this.quantity = quantity;
     }
 
-    public List<Integer> getItems() {
+    public List<Integer> items() {
         return this.items;
     }
-    public Integer getQuantity() {
+    public Integer quantity() {
         return this.quantity;
     }
 

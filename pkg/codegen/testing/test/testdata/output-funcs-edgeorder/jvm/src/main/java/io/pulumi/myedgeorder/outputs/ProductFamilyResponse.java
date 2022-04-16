@@ -82,56 +82,56 @@ public final class ProductFamilyResponse {
      * Availability information of the product system.
      * 
     */
-    public AvailabilityInformationResponse getAvailabilityInformation() {
+    public AvailabilityInformationResponse availabilityInformation() {
         return this.availabilityInformation;
     }
     /**
      * Cost information for the product system.
      * 
     */
-    public CostInformationResponse getCostInformation() {
+    public CostInformationResponse costInformation() {
         return this.costInformation;
     }
     /**
      * Description related to the product system.
      * 
     */
-    public DescriptionResponse getDescription() {
+    public DescriptionResponse description() {
         return this.description;
     }
     /**
      * Display Name for the product system.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * list of filters supported for a product
      * 
     */
-    public List<FilterablePropertyResponse> getFilterableProperties() {
+    public List<FilterablePropertyResponse> filterableProperties() {
         return this.filterableProperties;
     }
     /**
      * Hierarchy information of a product.
      * 
     */
-    public HierarchyInformationResponse getHierarchyInformation() {
+    public HierarchyInformationResponse hierarchyInformation() {
         return this.hierarchyInformation;
     }
     /**
      * Image information for the product system.
      * 
     */
-    public List<ImageInformationResponse> getImageInformation() {
+    public List<ImageInformationResponse> imageInformation() {
         return this.imageInformation;
     }
     /**
      * List of product lines supported in the product family
      * 
     */
-    public List<ProductLineResponse> getProductLines() {
+    public List<ProductLineResponse> productLines() {
         return this.productLines;
     }
 

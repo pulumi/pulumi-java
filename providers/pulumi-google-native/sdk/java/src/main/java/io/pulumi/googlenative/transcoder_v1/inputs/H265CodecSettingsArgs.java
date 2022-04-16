@@ -29,7 +29,7 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="allowOpenGop")
       private final @Nullable Output<Boolean> allowOpenGop;
 
-    public Output<Boolean> getAllowOpenGop() {
+    public Output<Boolean> allowOpenGop() {
         return this.allowOpenGop == null ? Codegen.empty() : this.allowOpenGop;
     }
 
@@ -40,7 +40,7 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="aqStrength")
       private final @Nullable Output<Double> aqStrength;
 
-    public Output<Double> getAqStrength() {
+    public Output<Double> aqStrength() {
         return this.aqStrength == null ? Codegen.empty() : this.aqStrength;
     }
 
@@ -51,7 +51,7 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="bFrameCount")
       private final @Nullable Output<Integer> bFrameCount;
 
-    public Output<Integer> getBFrameCount() {
+    public Output<Integer> bFrameCount() {
         return this.bFrameCount == null ? Codegen.empty() : this.bFrameCount;
     }
 
@@ -62,7 +62,7 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="bPyramid")
       private final @Nullable Output<Boolean> bPyramid;
 
-    public Output<Boolean> getBPyramid() {
+    public Output<Boolean> bPyramid() {
         return this.bPyramid == null ? Codegen.empty() : this.bPyramid;
     }
 
@@ -73,7 +73,7 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="bitrateBps", required=true)
       private final Output<Integer> bitrateBps;
 
-    public Output<Integer> getBitrateBps() {
+    public Output<Integer> bitrateBps() {
         return this.bitrateBps;
     }
 
@@ -84,7 +84,7 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="crfLevel")
       private final @Nullable Output<Integer> crfLevel;
 
-    public Output<Integer> getCrfLevel() {
+    public Output<Integer> crfLevel() {
         return this.crfLevel == null ? Codegen.empty() : this.crfLevel;
     }
 
@@ -95,7 +95,7 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="enableTwoPass")
       private final @Nullable Output<Boolean> enableTwoPass;
 
-    public Output<Boolean> getEnableTwoPass() {
+    public Output<Boolean> enableTwoPass() {
         return this.enableTwoPass == null ? Codegen.empty() : this.enableTwoPass;
     }
 
@@ -106,7 +106,7 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="frameRate", required=true)
       private final Output<Double> frameRate;
 
-    public Output<Double> getFrameRate() {
+    public Output<Double> frameRate() {
         return this.frameRate;
     }
 
@@ -117,7 +117,7 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="gopDuration")
       private final @Nullable Output<String> gopDuration;
 
-    public Output<String> getGopDuration() {
+    public Output<String> gopDuration() {
         return this.gopDuration == null ? Codegen.empty() : this.gopDuration;
     }
 
@@ -128,7 +128,7 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="gopFrameCount")
       private final @Nullable Output<Integer> gopFrameCount;
 
-    public Output<Integer> getGopFrameCount() {
+    public Output<Integer> gopFrameCount() {
         return this.gopFrameCount == null ? Codegen.empty() : this.gopFrameCount;
     }
 
@@ -139,7 +139,7 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="heightPixels")
       private final @Nullable Output<Integer> heightPixels;
 
-    public Output<Integer> getHeightPixels() {
+    public Output<Integer> heightPixels() {
         return this.heightPixels == null ? Codegen.empty() : this.heightPixels;
     }
 
@@ -150,7 +150,7 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="pixelFormat")
       private final @Nullable Output<String> pixelFormat;
 
-    public Output<String> getPixelFormat() {
+    public Output<String> pixelFormat() {
         return this.pixelFormat == null ? Codegen.empty() : this.pixelFormat;
     }
 
@@ -161,7 +161,7 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="preset")
       private final @Nullable Output<String> preset;
 
-    public Output<String> getPreset() {
+    public Output<String> preset() {
         return this.preset == null ? Codegen.empty() : this.preset;
     }
 
@@ -172,7 +172,7 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="profile")
       private final @Nullable Output<String> profile;
 
-    public Output<String> getProfile() {
+    public Output<String> profile() {
         return this.profile == null ? Codegen.empty() : this.profile;
     }
 
@@ -183,7 +183,7 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="rateControlMode")
       private final @Nullable Output<String> rateControlMode;
 
-    public Output<String> getRateControlMode() {
+    public Output<String> rateControlMode() {
         return this.rateControlMode == null ? Codegen.empty() : this.rateControlMode;
     }
 
@@ -194,7 +194,7 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tune")
       private final @Nullable Output<String> tune;
 
-    public Output<String> getTune() {
+    public Output<String> tune() {
         return this.tune == null ? Codegen.empty() : this.tune;
     }
 
@@ -205,7 +205,7 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="vbvFullnessBits")
       private final @Nullable Output<Integer> vbvFullnessBits;
 
-    public Output<Integer> getVbvFullnessBits() {
+    public Output<Integer> vbvFullnessBits() {
         return this.vbvFullnessBits == null ? Codegen.empty() : this.vbvFullnessBits;
     }
 
@@ -216,7 +216,7 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="vbvSizeBits")
       private final @Nullable Output<Integer> vbvSizeBits;
 
-    public Output<Integer> getVbvSizeBits() {
+    public Output<Integer> vbvSizeBits() {
         return this.vbvSizeBits == null ? Codegen.empty() : this.vbvSizeBits;
     }
 
@@ -227,7 +227,7 @@ public final class H265CodecSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="widthPixels")
       private final @Nullable Output<Integer> widthPixels;
 
-    public Output<Integer> getWidthPixels() {
+    public Output<Integer> widthPixels() {
         return this.widthPixels == null ? Codegen.empty() : this.widthPixels;
     }
 

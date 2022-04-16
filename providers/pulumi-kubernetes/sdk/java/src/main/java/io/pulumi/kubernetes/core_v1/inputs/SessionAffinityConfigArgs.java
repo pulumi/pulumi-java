@@ -26,7 +26,7 @@ public final class SessionAffinityConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="clientIP")
       private final @Nullable Output<ClientIPConfigArgs> clientIP;
 
-    public Output<ClientIPConfigArgs> getClientIP() {
+    public Output<ClientIPConfigArgs> clientIP() {
         return this.clientIP == null ? Codegen.empty() : this.clientIP;
     }
 

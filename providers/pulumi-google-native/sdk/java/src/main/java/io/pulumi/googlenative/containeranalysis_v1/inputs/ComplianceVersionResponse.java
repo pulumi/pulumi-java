@@ -23,7 +23,7 @@ public final class ComplianceVersionResponse extends io.pulumi.resources.InvokeA
     @Import(name="cpeUri", required=true)
       private final String cpeUri;
 
-    public String getCpeUri() {
+    public String cpeUri() {
         return this.cpeUri;
     }
 
@@ -34,7 +34,7 @@ public final class ComplianceVersionResponse extends io.pulumi.resources.InvokeA
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

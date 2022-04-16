@@ -24,7 +24,7 @@ public final class CertificateAuthorityRevocationConfigurationCrlConfigurationGe
     @Import(name="customCname")
       private final @Nullable Output<String> customCname;
 
-    public Output<String> getCustomCname() {
+    public Output<String> customCname() {
         return this.customCname == null ? Codegen.empty() : this.customCname;
     }
 
@@ -35,7 +35,7 @@ public final class CertificateAuthorityRevocationConfigurationCrlConfigurationGe
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -46,7 +46,7 @@ public final class CertificateAuthorityRevocationConfigurationCrlConfigurationGe
     @Import(name="expirationInDays", required=true)
       private final Output<Integer> expirationInDays;
 
-    public Output<Integer> getExpirationInDays() {
+    public Output<Integer> expirationInDays() {
         return this.expirationInDays;
     }
 
@@ -57,7 +57,7 @@ public final class CertificateAuthorityRevocationConfigurationCrlConfigurationGe
     @Import(name="s3BucketName")
       private final @Nullable Output<String> s3BucketName;
 
-    public Output<String> getS3BucketName() {
+    public Output<String> s3BucketName() {
         return this.s3BucketName == null ? Codegen.empty() : this.s3BucketName;
     }
 
@@ -68,7 +68,7 @@ public final class CertificateAuthorityRevocationConfigurationCrlConfigurationGe
     @Import(name="s3ObjectAcl")
       private final @Nullable Output<String> s3ObjectAcl;
 
-    public Output<String> getS3ObjectAcl() {
+    public Output<String> s3ObjectAcl() {
         return this.s3ObjectAcl == null ? Codegen.empty() : this.s3ObjectAcl;
     }
 

@@ -144,119 +144,119 @@ public final class Event {
      * action is what action was taken/failed regarding to the regarding object. It is machine-readable. This field cannot be empty for new Events and it can have at most 128 characters.
      * 
     */
-    public Optional<String> getAction() {
+    public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
     */
-    public Optional<String> getApiVersion() {
+    public Optional<String> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
      * deprecatedCount is the deprecated field assuring backward compatibility with core.v1 Event type.
      * 
     */
-    public Optional<Integer> getDeprecatedCount() {
+    public Optional<Integer> deprecatedCount() {
         return Optional.ofNullable(this.deprecatedCount);
     }
     /**
      * deprecatedFirstTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type.
      * 
     */
-    public Optional<String> getDeprecatedFirstTimestamp() {
+    public Optional<String> deprecatedFirstTimestamp() {
         return Optional.ofNullable(this.deprecatedFirstTimestamp);
     }
     /**
      * deprecatedLastTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type.
      * 
     */
-    public Optional<String> getDeprecatedLastTimestamp() {
+    public Optional<String> deprecatedLastTimestamp() {
         return Optional.ofNullable(this.deprecatedLastTimestamp);
     }
     /**
      * deprecatedSource is the deprecated field assuring backward compatibility with core.v1 Event type.
      * 
     */
-    public Optional<EventSource> getDeprecatedSource() {
+    public Optional<EventSource> deprecatedSource() {
         return Optional.ofNullable(this.deprecatedSource);
     }
     /**
      * eventTime is the time when this Event was first observed. It is required.
      * 
     */
-    public String getEventTime() {
+    public String eventTime() {
         return this.eventTime;
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
     */
-    public Optional<ObjectMeta> getMetadata() {
+    public Optional<ObjectMeta> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * note is a human-readable description of the status of this operation. Maximal length of the note is 1kB, but libraries should be prepared to handle values up to 64kB.
      * 
     */
-    public Optional<String> getNote() {
+    public Optional<String> note() {
         return Optional.ofNullable(this.note);
     }
     /**
      * reason is why the action was taken. It is human-readable. This field cannot be empty for new Events and it can have at most 128 characters.
      * 
     */
-    public Optional<String> getReason() {
+    public Optional<String> reason() {
         return Optional.ofNullable(this.reason);
     }
     /**
      * regarding contains the object this Event is about. In most cases it's an Object reporting controller implements, e.g. ReplicaSetController implements ReplicaSets and this event is emitted because it acts on some changes in a ReplicaSet object.
      * 
     */
-    public Optional<ObjectReference> getRegarding() {
+    public Optional<ObjectReference> regarding() {
         return Optional.ofNullable(this.regarding);
     }
     /**
      * related is the optional secondary object for more complex actions. E.g. when regarding object triggers a creation or deletion of related object.
      * 
     */
-    public Optional<ObjectReference> getRelated() {
+    public Optional<ObjectReference> related() {
         return Optional.ofNullable(this.related);
     }
     /**
      * reportingController is the name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`. This field cannot be empty for new Events.
      * 
     */
-    public Optional<String> getReportingController() {
+    public Optional<String> reportingController() {
         return Optional.ofNullable(this.reportingController);
     }
     /**
      * reportingInstance is the ID of the controller instance, e.g. `kubelet-xyzf`. This field cannot be empty for new Events and it can have at most 128 characters.
      * 
     */
-    public Optional<String> getReportingInstance() {
+    public Optional<String> reportingInstance() {
         return Optional.ofNullable(this.reportingInstance);
     }
     /**
      * series is data about the Event series this event represents or nil if it's a singleton Event.
      * 
     */
-    public Optional<EventSeries> getSeries() {
+    public Optional<EventSeries> series() {
         return Optional.ofNullable(this.series);
     }
     /**
      * type is the type of this event (Normal, Warning), new types could be added in the future. It is machine-readable. This field cannot be empty for new Events.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

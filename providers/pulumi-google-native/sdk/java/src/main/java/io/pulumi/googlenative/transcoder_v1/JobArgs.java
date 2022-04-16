@@ -24,7 +24,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="config")
       private final @Nullable Output<JobConfigArgs> config;
 
-    public Output<JobConfigArgs> getConfig() {
+    public Output<JobConfigArgs> config() {
         return this.config == null ? Codegen.empty() : this.config;
     }
 
@@ -35,14 +35,14 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputUri")
       private final @Nullable Output<String> inputUri;
 
-    public Output<String> getInputUri() {
+    public Output<String> inputUri() {
         return this.inputUri == null ? Codegen.empty() : this.inputUri;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -53,7 +53,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -64,14 +64,14 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputUri")
       private final @Nullable Output<String> outputUri;
 
-    public Output<String> getOutputUri() {
+    public Output<String> outputUri() {
         return this.outputUri == null ? Codegen.empty() : this.outputUri;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -82,7 +82,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="templateId")
       private final @Nullable Output<String> templateId;
 
-    public Output<String> getTemplateId() {
+    public Output<String> templateId() {
         return this.templateId == null ? Codegen.empty() : this.templateId;
     }
 
@@ -93,7 +93,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ttlAfterCompletionDays")
       private final @Nullable Output<Integer> ttlAfterCompletionDays;
 
-    public Output<Integer> getTtlAfterCompletionDays() {
+    public Output<Integer> ttlAfterCompletionDays() {
         return this.ttlAfterCompletionDays == null ? Codegen.empty() : this.ttlAfterCompletionDays;
     }
 

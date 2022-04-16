@@ -26,7 +26,7 @@ public final class VersionSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mshField")
       private final @Nullable Output<String> mshField;
 
-    public Output<String> getMshField() {
+    public Output<String> mshField() {
         return this.mshField == null ? Codegen.empty() : this.mshField;
     }
 
@@ -37,7 +37,7 @@ public final class VersionSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

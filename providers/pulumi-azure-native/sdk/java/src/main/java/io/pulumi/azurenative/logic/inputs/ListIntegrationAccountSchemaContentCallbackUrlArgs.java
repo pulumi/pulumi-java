@@ -23,7 +23,7 @@ public final class ListIntegrationAccountSchemaContentCallbackUrlArgs extends io
     @Import(name="integrationAccountName", required=true)
       private final String integrationAccountName;
 
-    public String getIntegrationAccountName() {
+    public String integrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -34,7 +34,7 @@ public final class ListIntegrationAccountSchemaContentCallbackUrlArgs extends io
     @Import(name="keyType")
       private final @Nullable Either<String,KeyType> keyType;
 
-    public Either<String,KeyType> getKeyType() {
+    public Either<String,KeyType> keyType() {
         return this.keyType == null ? null : this.keyType;
     }
 
@@ -45,7 +45,7 @@ public final class ListIntegrationAccountSchemaContentCallbackUrlArgs extends io
     @Import(name="notAfter")
       private final @Nullable String notAfter;
 
-    public Optional<String> getNotAfter() {
+    public Optional<String> notAfter() {
         return this.notAfter == null ? Optional.empty() : Optional.ofNullable(this.notAfter);
     }
 
@@ -56,7 +56,7 @@ public final class ListIntegrationAccountSchemaContentCallbackUrlArgs extends io
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +67,7 @@ public final class ListIntegrationAccountSchemaContentCallbackUrlArgs extends io
     @Import(name="schemaName", required=true)
       private final String schemaName;
 
-    public String getSchemaName() {
+    public String schemaName() {
         return this.schemaName;
     }
 

@@ -32,14 +32,14 @@ public final class SchematizedDataResponse {
      * JSON output of the parser.
      * 
     */
-    public String getData() {
+    public String data() {
         return this.data;
     }
     /**
      * The error output of the parser.
      * 
     */
-    public String getError() {
+    public String error() {
         return this.error;
     }
 

@@ -28,7 +28,7 @@ public final class AssetModelCompositeModelArgs extends io.pulumi.resources.Reso
     @Import(name="compositeModelProperties")
       private final @Nullable Output<List<AssetModelPropertyArgs>> compositeModelProperties;
 
-    public Output<List<AssetModelPropertyArgs>> getCompositeModelProperties() {
+    public Output<List<AssetModelPropertyArgs>> compositeModelProperties() {
         return this.compositeModelProperties == null ? Codegen.empty() : this.compositeModelProperties;
     }
 
@@ -39,7 +39,7 @@ public final class AssetModelCompositeModelArgs extends io.pulumi.resources.Reso
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -50,7 +50,7 @@ public final class AssetModelCompositeModelArgs extends io.pulumi.resources.Reso
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -61,7 +61,7 @@ public final class AssetModelCompositeModelArgs extends io.pulumi.resources.Reso
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -16,7 +16,7 @@ public final class NodePoolNodeConfigGcfsConfig {
         this.enabled = enabled;
     }
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

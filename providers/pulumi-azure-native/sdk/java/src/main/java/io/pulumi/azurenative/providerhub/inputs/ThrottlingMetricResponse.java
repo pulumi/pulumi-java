@@ -18,21 +18,21 @@ public final class ThrottlingMetricResponse extends io.pulumi.resources.InvokeAr
     @Import(name="interval")
       private final @Nullable String interval;
 
-    public Optional<String> getInterval() {
+    public Optional<String> interval() {
         return this.interval == null ? Optional.empty() : Optional.ofNullable(this.interval);
     }
 
     @Import(name="limit", required=true)
       private final Double limit;
 
-    public Double getLimit() {
+    public Double limit() {
         return this.limit;
     }
 
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

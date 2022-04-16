@@ -28,7 +28,7 @@ public final class DataCollectionRuleDestinationsArgs extends io.pulumi.resource
     @Import(name="azureMonitorMetrics")
       private final @Nullable Output<DestinationsSpecAzureMonitorMetricsArgs> azureMonitorMetrics;
 
-    public Output<DestinationsSpecAzureMonitorMetricsArgs> getAzureMonitorMetrics() {
+    public Output<DestinationsSpecAzureMonitorMetricsArgs> azureMonitorMetrics() {
         return this.azureMonitorMetrics == null ? Codegen.empty() : this.azureMonitorMetrics;
     }
 
@@ -39,7 +39,7 @@ public final class DataCollectionRuleDestinationsArgs extends io.pulumi.resource
     @Import(name="logAnalytics")
       private final @Nullable Output<List<LogAnalyticsDestinationArgs>> logAnalytics;
 
-    public Output<List<LogAnalyticsDestinationArgs>> getLogAnalytics() {
+    public Output<List<LogAnalyticsDestinationArgs>> logAnalytics() {
         return this.logAnalytics == null ? Codegen.empty() : this.logAnalytics;
     }
 

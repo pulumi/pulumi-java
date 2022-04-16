@@ -35,14 +35,14 @@ public final class ServiceAttachmentConsumerAcceptList {
      * create.
      * 
     */
-    public Integer getConnectionLimit() {
+    public Integer connectionLimit() {
         return this.connectionLimit;
     }
     /**
      * A project that is allowed to connect to this service attachment.
      * 
     */
-    public String getProjectIdOrNum() {
+    public String projectIdOrNum() {
         return this.projectIdOrNum;
     }
 

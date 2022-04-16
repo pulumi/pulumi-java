@@ -26,7 +26,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="application", required=true)
       private final Output<String> application;
 
-    public Output<String> getApplication() {
+    public Output<String> application() {
         return this.application;
     }
 
@@ -38,7 +38,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cnamePrefix")
       private final @Nullable Output<String> cnamePrefix;
 
-    public Output<String> getCnamePrefix() {
+    public Output<String> cnamePrefix() {
         return this.cnamePrefix == null ? Codegen.empty() : this.cnamePrefix;
     }
 
@@ -49,7 +49,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -61,7 +61,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -73,7 +73,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="platformArn")
       private final @Nullable Output<String> platformArn;
 
-    public Output<String> getPlatformArn() {
+    public Output<String> platformArn() {
         return this.platformArn == null ? Codegen.empty() : this.platformArn;
     }
 
@@ -87,7 +87,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pollInterval")
       private final @Nullable Output<String> pollInterval;
 
-    public Output<String> getPollInterval() {
+    public Output<String> pollInterval() {
         return this.pollInterval == null ? Codegen.empty() : this.pollInterval;
     }
 
@@ -100,7 +100,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="settings")
       private final @Nullable Output<List<EnvironmentSettingArgs>> settings;
 
-    public Output<List<EnvironmentSettingArgs>> getSettings() {
+    public Output<List<EnvironmentSettingArgs>> settings() {
         return this.settings == null ? Codegen.empty() : this.settings;
     }
 
@@ -112,7 +112,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="solutionStackName")
       private final @Nullable Output<String> solutionStackName;
 
-    public Output<String> getSolutionStackName() {
+    public Output<String> solutionStackName() {
         return this.solutionStackName == null ? Codegen.empty() : this.solutionStackName;
     }
 
@@ -123,7 +123,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -135,7 +135,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="templateName")
       private final @Nullable Output<String> templateName;
 
-    public Output<String> getTemplateName() {
+    public Output<String> templateName() {
         return this.templateName == null ? Codegen.empty() : this.templateName;
     }
 
@@ -147,7 +147,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tier")
       private final @Nullable Output<String> tier;
 
-    public Output<String> getTier() {
+    public Output<String> tier() {
         return this.tier == null ? Codegen.empty() : this.tier;
     }
 
@@ -159,7 +159,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 
@@ -173,7 +173,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="waitForReadyTimeout")
       private final @Nullable Output<String> waitForReadyTimeout;
 
-    public Output<String> getWaitForReadyTimeout() {
+    public Output<String> waitForReadyTimeout() {
         return this.waitForReadyTimeout == null ? Codegen.empty() : this.waitForReadyTimeout;
     }
 

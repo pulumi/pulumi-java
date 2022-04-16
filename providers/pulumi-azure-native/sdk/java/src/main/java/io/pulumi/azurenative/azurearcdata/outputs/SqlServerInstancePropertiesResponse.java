@@ -121,101 +121,101 @@ public final class SqlServerInstancePropertiesResponse {
      * SQL Server collation.
      * 
     */
-    public Optional<String> getCollation() {
+    public Optional<String> collation() {
         return Optional.ofNullable(this.collation);
     }
     /**
      * ARM Resource id of the container resource (Azure Arc for Servers).
      * 
     */
-    public String getContainerResourceId() {
+    public String containerResourceId() {
         return this.containerResourceId;
     }
     /**
      * The time when the resource was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * SQL Server current version.
      * 
     */
-    public Optional<String> getCurrentVersion() {
+    public Optional<String> currentVersion() {
         return Optional.ofNullable(this.currentVersion);
     }
     /**
      * SQL Server edition.
      * 
     */
-    public Optional<String> getEdition() {
+    public Optional<String> edition() {
         return Optional.ofNullable(this.edition);
     }
     /**
      * SQL Server instance name.
      * 
     */
-    public Optional<String> getInstanceName() {
+    public Optional<String> instanceName() {
         return Optional.ofNullable(this.instanceName);
     }
     /**
      * SQL Server license type.
      * 
     */
-    public Optional<String> getLicenseType() {
+    public Optional<String> licenseType() {
         return Optional.ofNullable(this.licenseType);
     }
     /**
      * SQL Server update level.
      * 
     */
-    public Optional<String> getPatchLevel() {
+    public Optional<String> patchLevel() {
         return Optional.ofNullable(this.patchLevel);
     }
     /**
      * SQL Server product ID.
      * 
     */
-    public Optional<String> getProductId() {
+    public Optional<String> productId() {
         return Optional.ofNullable(this.productId);
     }
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The cloud connectivity status.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Dynamic TCP ports used by SQL Server.
      * 
     */
-    public Optional<String> getTcpDynamicPorts() {
+    public Optional<String> tcpDynamicPorts() {
         return Optional.ofNullable(this.tcpDynamicPorts);
     }
     /**
      * Static TCP ports used by SQL Server.
      * 
     */
-    public Optional<String> getTcpStaticPorts() {
+    public Optional<String> tcpStaticPorts() {
         return Optional.ofNullable(this.tcpStaticPorts);
     }
     /**
      * The number of logical processors used by the SQL Server instance.
      * 
     */
-    public Optional<String> getVCore() {
+    public Optional<String> vCore() {
         return Optional.ofNullable(this.vCore);
     }
     /**
      * SQL Server version.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

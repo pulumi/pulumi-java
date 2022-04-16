@@ -27,7 +27,7 @@ public final class DistributionCutArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="distributionFilter")
       private final @Nullable Output<String> distributionFilter;
 
-    public Output<String> getDistributionFilter() {
+    public Output<String> distributionFilter() {
         return this.distributionFilter == null ? Codegen.empty() : this.distributionFilter;
     }
 
@@ -38,7 +38,7 @@ public final class DistributionCutArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="range")
       private final @Nullable Output<GoogleMonitoringV3RangeArgs> range;
 
-    public Output<GoogleMonitoringV3RangeArgs> getRange() {
+    public Output<GoogleMonitoringV3RangeArgs> range() {
         return this.range == null ? Codegen.empty() : this.range;
     }
 

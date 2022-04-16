@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigRespon
     @Import(name="exactMatchConfig", required=true)
       private final GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse exactMatchConfig;
 
-    public GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse getExactMatchConfig() {
+    public GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse exactMatchConfig() {
         return this.exactMatchConfig;
     }
 

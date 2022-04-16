@@ -56,35 +56,35 @@ public final class MonitoredResourceResponse {
      * The ARM id of the resource.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Reason for why the resource is sending logs (or why it is not sending).
      * 
     */
-    public Optional<String> getReasonForLogsStatus() {
+    public Optional<String> reasonForLogsStatus() {
         return Optional.ofNullable(this.reasonForLogsStatus);
     }
     /**
      * Reason for why the resource is sending metrics (or why it is not sending).
      * 
     */
-    public Optional<String> getReasonForMetricsStatus() {
+    public Optional<String> reasonForMetricsStatus() {
         return Optional.ofNullable(this.reasonForMetricsStatus);
     }
     /**
      * Flag indicating if resource is sending logs to Datadog.
      * 
     */
-    public Optional<Boolean> getSendingLogs() {
+    public Optional<Boolean> sendingLogs() {
         return Optional.ofNullable(this.sendingLogs);
     }
     /**
      * Flag indicating if resource is sending metrics to Datadog.
      * 
     */
-    public Optional<Boolean> getSendingMetrics() {
+    public Optional<Boolean> sendingMetrics() {
         return Optional.ofNullable(this.sendingMetrics);
     }
 

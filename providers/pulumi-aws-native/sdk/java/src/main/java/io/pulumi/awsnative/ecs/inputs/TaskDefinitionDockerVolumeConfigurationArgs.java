@@ -20,35 +20,35 @@ public final class TaskDefinitionDockerVolumeConfigurationArgs extends io.pulumi
     @Import(name="autoprovision")
       private final @Nullable Output<Boolean> autoprovision;
 
-    public Output<Boolean> getAutoprovision() {
+    public Output<Boolean> autoprovision() {
         return this.autoprovision == null ? Codegen.empty() : this.autoprovision;
     }
 
     @Import(name="driver")
       private final @Nullable Output<String> driver;
 
-    public Output<String> getDriver() {
+    public Output<String> driver() {
         return this.driver == null ? Codegen.empty() : this.driver;
     }
 
     @Import(name="driverOpts")
       private final @Nullable Output<Object> driverOpts;
 
-    public Output<Object> getDriverOpts() {
+    public Output<Object> driverOpts() {
         return this.driverOpts == null ? Codegen.empty() : this.driverOpts;
     }
 
     @Import(name="labels")
       private final @Nullable Output<Object> labels;
 
-    public Output<Object> getLabels() {
+    public Output<Object> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="scope")
       private final @Nullable Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 

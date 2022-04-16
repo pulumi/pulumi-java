@@ -23,7 +23,7 @@ public final class GoogleCloudApigeeV1CustomReportMetricResponse extends io.pulu
     @Import(name="function", required=true)
       private final String function;
 
-    public String getFunction() {
+    public String function() {
         return this.function;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudApigeeV1CustomReportMetricResponse extends io.pulu
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

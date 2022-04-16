@@ -27,7 +27,7 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="height")
       private final @Nullable Output<Integer> height;
 
-    public Output<Integer> getHeight() {
+    public Output<Integer> height() {
         return this.height == null ? Codegen.empty() : this.height;
     }
 
@@ -38,7 +38,7 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="widget")
       private final @Nullable Output<WidgetArgs> widget;
 
-    public Output<WidgetArgs> getWidget() {
+    public Output<WidgetArgs> widget() {
         return this.widget == null ? Codegen.empty() : this.widget;
     }
 
@@ -49,7 +49,7 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="width")
       private final @Nullable Output<Integer> width;
 
-    public Output<Integer> getWidth() {
+    public Output<Integer> width() {
         return this.width == null ? Codegen.empty() : this.width;
     }
 
@@ -60,7 +60,7 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="xPos")
       private final @Nullable Output<Integer> xPos;
 
-    public Output<Integer> getXPos() {
+    public Output<Integer> xPos() {
         return this.xPos == null ? Codegen.empty() : this.xPos;
     }
 
@@ -71,7 +71,7 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="yPos")
       private final @Nullable Output<Integer> yPos;
 
-    public Output<Integer> getYPos() {
+    public Output<Integer> yPos() {
         return this.yPos == null ? Codegen.empty() : this.yPos;
     }
 

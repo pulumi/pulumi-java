@@ -41,21 +41,21 @@ public final class EnvFromSourceResponse {
      * (Optional) The ConfigMap to select from
      * 
     */
-    public ConfigMapEnvSourceResponse getConfigMapRef() {
+    public ConfigMapEnvSourceResponse configMapRef() {
         return this.configMapRef;
     }
     /**
      * (Optional) An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.
      * 
     */
-    public String getPrefix() {
+    public String prefix() {
         return this.prefix;
     }
     /**
      * (Optional) The Secret to select from
      * 
     */
-    public SecretEnvSourceResponse getSecretRef() {
+    public SecretEnvSourceResponse secretRef() {
         return this.secretRef;
     }
 

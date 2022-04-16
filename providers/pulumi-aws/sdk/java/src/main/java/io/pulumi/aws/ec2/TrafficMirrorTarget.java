@@ -42,7 +42,7 @@ public class TrafficMirrorTarget extends io.pulumi.resources.CustomResource {
      * @return The ARN of the traffic mirror target.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +56,7 @@ public class TrafficMirrorTarget extends io.pulumi.resources.CustomResource {
      * @return A description of the traffic mirror session.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -70,7 +70,7 @@ public class TrafficMirrorTarget extends io.pulumi.resources.CustomResource {
      * @return The network interface ID that is associated with the target.
      * 
      */
-    public Output</* @Nullable */ String> getNetworkInterfaceId() {
+    public Output</* @Nullable */ String> networkInterfaceId() {
         return this.networkInterfaceId;
     }
     /**
@@ -84,7 +84,7 @@ public class TrafficMirrorTarget extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Network Load Balancer that is associated with the target.
      * 
      */
-    public Output</* @Nullable */ String> getNetworkLoadBalancerArn() {
+    public Output</* @Nullable */ String> networkLoadBalancerArn() {
         return this.networkLoadBalancerArn;
     }
     /**
@@ -98,7 +98,7 @@ public class TrafficMirrorTarget extends io.pulumi.resources.CustomResource {
      * @return The ID of the AWS account that owns the traffic mirror target.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -112,7 +112,7 @@ public class TrafficMirrorTarget extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -126,7 +126,7 @@ public class TrafficMirrorTarget extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

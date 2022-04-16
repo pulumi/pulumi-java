@@ -32,14 +32,14 @@ public final class SourceResponse {
      * Source name for content indexed by the Indexing API.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Predefined content source for Google Apps.
      * 
     */
-    public String getPredefinedSource() {
+    public String predefinedSource() {
         return this.predefinedSource;
     }
 

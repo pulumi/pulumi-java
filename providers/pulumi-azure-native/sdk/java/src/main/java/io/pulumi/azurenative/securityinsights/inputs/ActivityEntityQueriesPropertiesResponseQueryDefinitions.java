@@ -25,7 +25,7 @@ public final class ActivityEntityQueriesPropertiesResponseQueryDefinitions exten
     @Import(name="query")
       private final @Nullable String query;
 
-    public Optional<String> getQuery() {
+    public Optional<String> query() {
         return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
     }
 

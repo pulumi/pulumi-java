@@ -32,7 +32,7 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="accessPolicies")
       private final @Nullable List<ServiceAccessPolicyEntryResponse> accessPolicies;
 
-    public List<ServiceAccessPolicyEntryResponse> getAccessPolicies() {
+    public List<ServiceAccessPolicyEntryResponse> accessPolicies() {
         return this.accessPolicies == null ? List.of() : this.accessPolicies;
     }
 
@@ -43,7 +43,7 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="authenticationConfiguration")
       private final @Nullable ServiceAuthenticationConfigurationInfoResponse authenticationConfiguration;
 
-    public Optional<ServiceAuthenticationConfigurationInfoResponse> getAuthenticationConfiguration() {
+    public Optional<ServiceAuthenticationConfigurationInfoResponse> authenticationConfiguration() {
         return this.authenticationConfiguration == null ? Optional.empty() : Optional.ofNullable(this.authenticationConfiguration);
     }
 
@@ -54,7 +54,7 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="corsConfiguration")
       private final @Nullable ServiceCorsConfigurationInfoResponse corsConfiguration;
 
-    public Optional<ServiceCorsConfigurationInfoResponse> getCorsConfiguration() {
+    public Optional<ServiceCorsConfigurationInfoResponse> corsConfiguration() {
         return this.corsConfiguration == null ? Optional.empty() : Optional.ofNullable(this.corsConfiguration);
     }
 
@@ -65,7 +65,7 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="cosmosDbConfiguration")
       private final @Nullable ServiceCosmosDbConfigurationInfoResponse cosmosDbConfiguration;
 
-    public Optional<ServiceCosmosDbConfigurationInfoResponse> getCosmosDbConfiguration() {
+    public Optional<ServiceCosmosDbConfigurationInfoResponse> cosmosDbConfiguration() {
         return this.cosmosDbConfiguration == null ? Optional.empty() : Optional.ofNullable(this.cosmosDbConfiguration);
     }
 
@@ -76,7 +76,7 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="exportConfiguration")
       private final @Nullable ServiceExportConfigurationInfoResponse exportConfiguration;
 
-    public Optional<ServiceExportConfigurationInfoResponse> getExportConfiguration() {
+    public Optional<ServiceExportConfigurationInfoResponse> exportConfiguration() {
         return this.exportConfiguration == null ? Optional.empty() : Optional.ofNullable(this.exportConfiguration);
     }
 
@@ -87,7 +87,7 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="privateEndpointConnections")
       private final @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
 
-    public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
+    public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
     }
 
@@ -98,7 +98,7 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -109,7 +109,7 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="publicNetworkAccess")
       private final @Nullable String publicNetworkAccess;
 
-    public Optional<String> getPublicNetworkAccess() {
+    public Optional<String> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Optional.empty() : Optional.ofNullable(this.publicNetworkAccess);
     }
 

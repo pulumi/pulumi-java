@@ -22,7 +22,7 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appId")
       private final @Nullable Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId == null ? Codegen.empty() : this.appId;
     }
 
@@ -33,7 +33,7 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appStoreId")
       private final @Nullable Output<String> appStoreId;
 
-    public Output<String> getAppStoreId() {
+    public Output<String> appStoreId() {
         return this.appStoreId == null ? Codegen.empty() : this.appStoreId;
     }
 
@@ -44,7 +44,7 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bundleId")
       private final @Nullable Output<String> bundleId;
 
-    public Output<String> getBundleId() {
+    public Output<String> bundleId() {
         return this.bundleId == null ? Codegen.empty() : this.bundleId;
     }
 
@@ -55,7 +55,7 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -66,7 +66,7 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -77,7 +77,7 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -88,7 +88,7 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="teamId")
       private final @Nullable Output<String> teamId;
 
-    public Output<String> getTeamId() {
+    public Output<String> teamId() {
         return this.teamId == null ? Codegen.empty() : this.teamId;
     }
 

@@ -23,7 +23,7 @@ public final class InventoryDestinationBucketEncryptionArgs extends io.pulumi.re
     @Import(name="sseKms")
       private final @Nullable Output<InventoryDestinationBucketEncryptionSseKmsArgs> sseKms;
 
-    public Output<InventoryDestinationBucketEncryptionSseKmsArgs> getSseKms() {
+    public Output<InventoryDestinationBucketEncryptionSseKmsArgs> sseKms() {
         return this.sseKms == null ? Codegen.empty() : this.sseKms;
     }
 
@@ -34,7 +34,7 @@ public final class InventoryDestinationBucketEncryptionArgs extends io.pulumi.re
     @Import(name="sseS3")
       private final @Nullable Output<InventoryDestinationBucketEncryptionSseS3Args> sseS3;
 
-    public Output<InventoryDestinationBucketEncryptionSseS3Args> getSseS3() {
+    public Output<InventoryDestinationBucketEncryptionSseS3Args> sseS3() {
         return this.sseS3 == null ? Codegen.empty() : this.sseS3;
     }
 

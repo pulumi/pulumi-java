@@ -19,49 +19,49 @@ public final class EnvironmentConfigPrivateEnvironmentConfigGetArgs extends io.p
     @Import(name="cloudComposerConnectionSubnetwork")
       private final @Nullable Output<String> cloudComposerConnectionSubnetwork;
 
-    public Output<String> getCloudComposerConnectionSubnetwork() {
+    public Output<String> cloudComposerConnectionSubnetwork() {
         return this.cloudComposerConnectionSubnetwork == null ? Codegen.empty() : this.cloudComposerConnectionSubnetwork;
     }
 
     @Import(name="cloudComposerNetworkIpv4CidrBlock")
       private final @Nullable Output<String> cloudComposerNetworkIpv4CidrBlock;
 
-    public Output<String> getCloudComposerNetworkIpv4CidrBlock() {
+    public Output<String> cloudComposerNetworkIpv4CidrBlock() {
         return this.cloudComposerNetworkIpv4CidrBlock == null ? Codegen.empty() : this.cloudComposerNetworkIpv4CidrBlock;
     }
 
     @Import(name="cloudSqlIpv4CidrBlock")
       private final @Nullable Output<String> cloudSqlIpv4CidrBlock;
 
-    public Output<String> getCloudSqlIpv4CidrBlock() {
+    public Output<String> cloudSqlIpv4CidrBlock() {
         return this.cloudSqlIpv4CidrBlock == null ? Codegen.empty() : this.cloudSqlIpv4CidrBlock;
     }
 
     @Import(name="enablePrivateEndpoint")
       private final @Nullable Output<Boolean> enablePrivateEndpoint;
 
-    public Output<Boolean> getEnablePrivateEndpoint() {
+    public Output<Boolean> enablePrivateEndpoint() {
         return this.enablePrivateEndpoint == null ? Codegen.empty() : this.enablePrivateEndpoint;
     }
 
     @Import(name="enablePrivatelyUsedPublicIps")
       private final @Nullable Output<Boolean> enablePrivatelyUsedPublicIps;
 
-    public Output<Boolean> getEnablePrivatelyUsedPublicIps() {
+    public Output<Boolean> enablePrivatelyUsedPublicIps() {
         return this.enablePrivatelyUsedPublicIps == null ? Codegen.empty() : this.enablePrivatelyUsedPublicIps;
     }
 
     @Import(name="masterIpv4CidrBlock")
       private final @Nullable Output<String> masterIpv4CidrBlock;
 
-    public Output<String> getMasterIpv4CidrBlock() {
+    public Output<String> masterIpv4CidrBlock() {
         return this.masterIpv4CidrBlock == null ? Codegen.empty() : this.masterIpv4CidrBlock;
     }
 
     @Import(name="webServerIpv4CidrBlock")
       private final @Nullable Output<String> webServerIpv4CidrBlock;
 
-    public Output<String> getWebServerIpv4CidrBlock() {
+    public Output<String> webServerIpv4CidrBlock() {
         return this.webServerIpv4CidrBlock == null ? Codegen.empty() : this.webServerIpv4CidrBlock;
     }
 

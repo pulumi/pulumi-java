@@ -24,7 +24,7 @@ public final class GoogleCloudDatacatalogV1GcsFileSpecResponse extends io.pulumi
     @Import(name="filePath", required=true)
       private final String filePath;
 
-    public String getFilePath() {
+    public String filePath() {
         return this.filePath;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDatacatalogV1GcsFileSpecResponse extends io.pulumi
     @Import(name="gcsTimestamps", required=true)
       private final GoogleCloudDatacatalogV1SystemTimestampsResponse gcsTimestamps;
 
-    public GoogleCloudDatacatalogV1SystemTimestampsResponse getGcsTimestamps() {
+    public GoogleCloudDatacatalogV1SystemTimestampsResponse gcsTimestamps() {
         return this.gcsTimestamps;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudDatacatalogV1GcsFileSpecResponse extends io.pulumi
     @Import(name="sizeBytes", required=true)
       private final String sizeBytes;
 
-    public String getSizeBytes() {
+    public String sizeBytes() {
         return this.sizeBytes;
     }
 

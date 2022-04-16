@@ -27,7 +27,7 @@ public final class PrivateEndpointConnectionPropertiesArgs extends io.pulumi.res
     @Import(name="privateEndpoint")
       private final @Nullable Output<PrivateEndpointConnectionPropertiesPrivateEndpointArgs> privateEndpoint;
 
-    public Output<PrivateEndpointConnectionPropertiesPrivateEndpointArgs> getPrivateEndpoint() {
+    public Output<PrivateEndpointConnectionPropertiesPrivateEndpointArgs> privateEndpoint() {
         return this.privateEndpoint == null ? Codegen.empty() : this.privateEndpoint;
     }
 
@@ -38,7 +38,7 @@ public final class PrivateEndpointConnectionPropertiesArgs extends io.pulumi.res
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
-    public Output<PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
+    public Output<PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Codegen.empty() : this.privateLinkServiceConnectionState;
     }
 

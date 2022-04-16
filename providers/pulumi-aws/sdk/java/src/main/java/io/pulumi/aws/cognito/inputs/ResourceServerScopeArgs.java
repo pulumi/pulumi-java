@@ -21,7 +21,7 @@ public final class ResourceServerScopeArgs extends io.pulumi.resources.ResourceA
     @Import(name="scopeDescription", required=true)
       private final Output<String> scopeDescription;
 
-    public Output<String> getScopeDescription() {
+    public Output<String> scopeDescription() {
         return this.scopeDescription;
     }
 
@@ -32,7 +32,7 @@ public final class ResourceServerScopeArgs extends io.pulumi.resources.ResourceA
     @Import(name="scopeName", required=true)
       private final Output<String> scopeName;
 
-    public Output<String> getScopeName() {
+    public Output<String> scopeName() {
         return this.scopeName;
     }
 

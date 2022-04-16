@@ -25,14 +25,14 @@ public final class B2CTenantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="properties", required=true)
       private final Output<CreateTenantRequestBodyPropertiesArgs> properties;
 
-    public Output<CreateTenantRequestBodyPropertiesArgs> getProperties() {
+    public Output<CreateTenantRequestBodyPropertiesArgs> properties() {
         return this.properties;
     }
 
@@ -43,7 +43,7 @@ public final class B2CTenantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,7 +54,7 @@ public final class B2CTenantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
@@ -65,7 +65,7 @@ public final class B2CTenantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku", required=true)
       private final Output<B2CResourceSKUArgs> sku;
 
-    public Output<B2CResourceSKUArgs> getSku() {
+    public Output<B2CResourceSKUArgs> sku() {
         return this.sku;
     }
 
@@ -76,7 +76,7 @@ public final class B2CTenantArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

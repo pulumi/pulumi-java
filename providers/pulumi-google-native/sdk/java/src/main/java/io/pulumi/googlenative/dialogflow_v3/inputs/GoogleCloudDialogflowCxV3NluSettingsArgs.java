@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowCxV3NluSettingsArgs extends io.pulumi.re
     @Import(name="classificationThreshold")
       private final @Nullable Output<Double> classificationThreshold;
 
-    public Output<Double> getClassificationThreshold() {
+    public Output<Double> classificationThreshold() {
         return this.classificationThreshold == null ? Codegen.empty() : this.classificationThreshold;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowCxV3NluSettingsArgs extends io.pulumi.re
     @Import(name="modelTrainingMode")
       private final @Nullable Output<GoogleCloudDialogflowCxV3NluSettingsModelTrainingMode> modelTrainingMode;
 
-    public Output<GoogleCloudDialogflowCxV3NluSettingsModelTrainingMode> getModelTrainingMode() {
+    public Output<GoogleCloudDialogflowCxV3NluSettingsModelTrainingMode> modelTrainingMode() {
         return this.modelTrainingMode == null ? Codegen.empty() : this.modelTrainingMode;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudDialogflowCxV3NluSettingsArgs extends io.pulumi.re
     @Import(name="modelType")
       private final @Nullable Output<GoogleCloudDialogflowCxV3NluSettingsModelType> modelType;
 
-    public Output<GoogleCloudDialogflowCxV3NluSettingsModelType> getModelType() {
+    public Output<GoogleCloudDialogflowCxV3NluSettingsModelType> modelType() {
         return this.modelType == null ? Codegen.empty() : this.modelType;
     }
 

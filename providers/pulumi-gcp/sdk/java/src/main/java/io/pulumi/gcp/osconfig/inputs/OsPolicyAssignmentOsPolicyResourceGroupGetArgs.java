@@ -24,7 +24,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupGetArgs extends io.pul
     @Import(name="inventoryFilters")
       private final @Nullable Output<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs>> inventoryFilters;
 
-    public Output<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs>> getInventoryFilters() {
+    public Output<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs>> inventoryFilters() {
         return this.inventoryFilters == null ? Codegen.empty() : this.inventoryFilters;
     }
 
@@ -35,7 +35,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupGetArgs extends io.pul
     @Import(name="resources", required=true)
       private final Output<List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs>> resources;
 
-    public Output<List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs>> getResources() {
+    public Output<List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs>> resources() {
         return this.resources;
     }
 

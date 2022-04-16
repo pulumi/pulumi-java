@@ -24,7 +24,7 @@ public final class ContactResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="email", required=true)
       private final String email;
 
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
 
@@ -35,7 +35,7 @@ public final class ContactResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="faxNumber", required=true)
       private final String faxNumber;
 
-    public String getFaxNumber() {
+    public String faxNumber() {
         return this.faxNumber;
     }
 
@@ -46,7 +46,7 @@ public final class ContactResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="phoneNumber", required=true)
       private final String phoneNumber;
 
-    public String getPhoneNumber() {
+    public String phoneNumber() {
         return this.phoneNumber;
     }
 
@@ -57,7 +57,7 @@ public final class ContactResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="postalAddress", required=true)
       private final PostalAddressResponse postalAddress;
 
-    public PostalAddressResponse getPostalAddress() {
+    public PostalAddressResponse postalAddress() {
         return this.postalAddress;
     }
 

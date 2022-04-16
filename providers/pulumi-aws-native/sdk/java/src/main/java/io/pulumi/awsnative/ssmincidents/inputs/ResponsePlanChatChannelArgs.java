@@ -23,7 +23,7 @@ public final class ResponsePlanChatChannelArgs extends io.pulumi.resources.Resou
     @Import(name="chatbotSns")
       private final @Nullable Output<List<String>> chatbotSns;
 
-    public Output<List<String>> getChatbotSns() {
+    public Output<List<String>> chatbotSns() {
         return this.chatbotSns == null ? Codegen.empty() : this.chatbotSns;
     }
 

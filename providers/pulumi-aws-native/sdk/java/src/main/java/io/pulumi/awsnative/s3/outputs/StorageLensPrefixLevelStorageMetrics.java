@@ -31,10 +31,10 @@ public final class StorageLensPrefixLevelStorageMetrics {
      * Specifies whether prefix-level storage metrics are enabled or disabled.
      * 
     */
-    public Optional<Boolean> getIsEnabled() {
+    public Optional<Boolean> isEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
-    public Optional<StorageLensSelectionCriteria> getSelectionCriteria() {
+    public Optional<StorageLensSelectionCriteria> selectionCriteria() {
         return Optional.ofNullable(this.selectionCriteria);
     }
 

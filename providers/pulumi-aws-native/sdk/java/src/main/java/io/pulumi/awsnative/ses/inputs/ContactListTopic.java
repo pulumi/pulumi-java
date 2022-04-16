@@ -17,7 +17,7 @@ public final class ContactListTopic extends io.pulumi.resources.InvokeArgs {
     @Import(name="defaultSubscriptionStatus", required=true)
       private final String defaultSubscriptionStatus;
 
-    public String getDefaultSubscriptionStatus() {
+    public String defaultSubscriptionStatus() {
         return this.defaultSubscriptionStatus;
     }
 
@@ -28,7 +28,7 @@ public final class ContactListTopic extends io.pulumi.resources.InvokeArgs {
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -39,7 +39,7 @@ public final class ContactListTopic extends io.pulumi.resources.InvokeArgs {
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -50,7 +50,7 @@ public final class ContactListTopic extends io.pulumi.resources.InvokeArgs {
     @Import(name="topicName", required=true)
       private final String topicName;
 
-    public String getTopicName() {
+    public String topicName() {
         return this.topicName;
     }
 

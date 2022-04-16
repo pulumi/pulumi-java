@@ -23,7 +23,7 @@ public final class ComputeInstanceConnectivityEndpointsResponse extends io.pulum
     @Import(name="privateIpAddress", required=true)
       private final String privateIpAddress;
 
-    public String getPrivateIpAddress() {
+    public String privateIpAddress() {
         return this.privateIpAddress;
     }
 
@@ -34,7 +34,7 @@ public final class ComputeInstanceConnectivityEndpointsResponse extends io.pulum
     @Import(name="publicIpAddress", required=true)
       private final String publicIpAddress;
 
-    public String getPublicIpAddress() {
+    public String publicIpAddress() {
         return this.publicIpAddress;
     }
 

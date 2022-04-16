@@ -31,7 +31,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsArgs extends io.pulumi.r
     @Import(name="bytesLimitPerFile")
       private final @Nullable Output<String> bytesLimitPerFile;
 
-    public Output<String> getBytesLimitPerFile() {
+    public Output<String> bytesLimitPerFile() {
         return this.bytesLimitPerFile == null ? Codegen.empty() : this.bytesLimitPerFile;
     }
 
@@ -42,7 +42,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsArgs extends io.pulumi.r
     @Import(name="bytesLimitPerFilePercent")
       private final @Nullable Output<Integer> bytesLimitPerFilePercent;
 
-    public Output<Integer> getBytesLimitPerFilePercent() {
+    public Output<Integer> bytesLimitPerFilePercent() {
         return this.bytesLimitPerFilePercent == null ? Codegen.empty() : this.bytesLimitPerFilePercent;
     }
 
@@ -53,7 +53,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsArgs extends io.pulumi.r
     @Import(name="fileSet")
       private final @Nullable Output<GooglePrivacyDlpV2FileSetArgs> fileSet;
 
-    public Output<GooglePrivacyDlpV2FileSetArgs> getFileSet() {
+    public Output<GooglePrivacyDlpV2FileSetArgs> fileSet() {
         return this.fileSet == null ? Codegen.empty() : this.fileSet;
     }
 
@@ -64,7 +64,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsArgs extends io.pulumi.r
     @Import(name="fileTypes")
       private final @Nullable Output<List<GooglePrivacyDlpV2CloudStorageOptionsFileTypesItem>> fileTypes;
 
-    public Output<List<GooglePrivacyDlpV2CloudStorageOptionsFileTypesItem>> getFileTypes() {
+    public Output<List<GooglePrivacyDlpV2CloudStorageOptionsFileTypesItem>> fileTypes() {
         return this.fileTypes == null ? Codegen.empty() : this.fileTypes;
     }
 
@@ -75,14 +75,14 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsArgs extends io.pulumi.r
     @Import(name="filesLimitPercent")
       private final @Nullable Output<Integer> filesLimitPercent;
 
-    public Output<Integer> getFilesLimitPercent() {
+    public Output<Integer> filesLimitPercent() {
         return this.filesLimitPercent == null ? Codegen.empty() : this.filesLimitPercent;
     }
 
     @Import(name="sampleMethod")
       private final @Nullable Output<GooglePrivacyDlpV2CloudStorageOptionsSampleMethod> sampleMethod;
 
-    public Output<GooglePrivacyDlpV2CloudStorageOptionsSampleMethod> getSampleMethod() {
+    public Output<GooglePrivacyDlpV2CloudStorageOptionsSampleMethod> sampleMethod() {
         return this.sampleMethod == null ? Codegen.empty() : this.sampleMethod;
     }
 

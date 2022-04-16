@@ -26,7 +26,7 @@ public final class IntegrationServiceEnvironmentSkuResponse extends io.pulumi.re
     @Import(name="capacity")
       private final @Nullable Integer capacity;
 
-    public Optional<Integer> getCapacity() {
+    public Optional<Integer> capacity() {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
@@ -37,7 +37,7 @@ public final class IntegrationServiceEnvironmentSkuResponse extends io.pulumi.re
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 

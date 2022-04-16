@@ -54,35 +54,35 @@ public final class ClusterPropertiesResponse {
      * Represents the number of streaming units currently being used on the cluster.
      * 
     */
-    public Integer getCapacityAllocated() {
+    public Integer capacityAllocated() {
         return this.capacityAllocated;
     }
     /**
      * Represents the sum of the SUs of all streaming jobs associated with the cluster. If all of the jobs were running, this would be the capacity allocated.
      * 
     */
-    public Integer getCapacityAssigned() {
+    public Integer capacityAssigned() {
         return this.capacityAssigned;
     }
     /**
      * Unique identifier for the cluster.
      * 
     */
-    public String getClusterId() {
+    public String clusterId() {
         return this.clusterId;
     }
     /**
      * The date this cluster was created.
      * 
     */
-    public String getCreatedDate() {
+    public String createdDate() {
         return this.createdDate;
     }
     /**
      * The status of the cluster provisioning. The three terminal states are: Succeeded, Failed and Canceled
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

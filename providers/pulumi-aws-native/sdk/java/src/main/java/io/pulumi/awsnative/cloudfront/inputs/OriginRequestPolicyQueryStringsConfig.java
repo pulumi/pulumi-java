@@ -18,14 +18,14 @@ public final class OriginRequestPolicyQueryStringsConfig extends io.pulumi.resou
     @Import(name="queryStringBehavior", required=true)
       private final String queryStringBehavior;
 
-    public String getQueryStringBehavior() {
+    public String queryStringBehavior() {
         return this.queryStringBehavior;
     }
 
     @Import(name="queryStrings")
       private final @Nullable List<String> queryStrings;
 
-    public List<String> getQueryStrings() {
+    public List<String> queryStrings() {
         return this.queryStrings == null ? List.of() : this.queryStrings;
     }
 

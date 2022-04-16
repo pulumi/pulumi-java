@@ -27,7 +27,7 @@ public final class MonitoringDestinationArgs extends io.pulumi.resources.Resourc
     @Import(name="metrics")
       private final @Nullable Output<List<String>> metrics;
 
-    public Output<List<String>> getMetrics() {
+    public Output<List<String>> metrics() {
         return this.metrics == null ? Codegen.empty() : this.metrics;
     }
 
@@ -38,7 +38,7 @@ public final class MonitoringDestinationArgs extends io.pulumi.resources.Resourc
     @Import(name="monitoredResource")
       private final @Nullable Output<String> monitoredResource;
 
-    public Output<String> getMonitoredResource() {
+    public Output<String> monitoredResource() {
         return this.monitoredResource == null ? Codegen.empty() : this.monitoredResource;
     }
 

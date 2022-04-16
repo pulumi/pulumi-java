@@ -16,35 +16,35 @@ public final class GetLoadBalancerHealthCheck extends io.pulumi.resources.Invoke
     @Import(name="healthyThreshold", required=true)
       private final Integer healthyThreshold;
 
-    public Integer getHealthyThreshold() {
+    public Integer healthyThreshold() {
         return this.healthyThreshold;
     }
 
     @Import(name="interval", required=true)
       private final Integer interval;
 
-    public Integer getInterval() {
+    public Integer interval() {
         return this.interval;
     }
 
     @Import(name="target", required=true)
       private final String target;
 
-    public String getTarget() {
+    public String target() {
         return this.target;
     }
 
     @Import(name="timeout", required=true)
       private final Integer timeout;
 
-    public Integer getTimeout() {
+    public Integer timeout() {
         return this.timeout;
     }
 
     @Import(name="unhealthyThreshold", required=true)
       private final Integer unhealthyThreshold;
 
-    public Integer getUnhealthyThreshold() {
+    public Integer unhealthyThreshold() {
         return this.unhealthyThreshold;
     }
 

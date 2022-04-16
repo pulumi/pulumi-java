@@ -46,7 +46,7 @@ public class DigitalTwinsEndpoint extends io.pulumi.resources.CustomResource {
      * @return Extension resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -60,7 +60,7 @@ public class DigitalTwinsEndpoint extends io.pulumi.resources.CustomResource {
      * @return DigitalTwinsInstance endpoint resource properties.
      * 
      */
-    public Output<Object> getProperties() {
+    public Output<Object> properties() {
         return this.properties;
     }
     /**
@@ -74,7 +74,7 @@ public class DigitalTwinsEndpoint extends io.pulumi.resources.CustomResource {
      * @return The resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

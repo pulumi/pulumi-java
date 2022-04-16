@@ -54,35 +54,35 @@ public final class GetManagedPrivateEndpointResult {
      * Etag identifies change in the resource.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * The resource identifier.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Managed private endpoint properties.
      * 
     */
-    public ManagedPrivateEndpointResponse getProperties() {
+    public ManagedPrivateEndpointResponse properties() {
         return this.properties;
     }
     /**
      * The resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

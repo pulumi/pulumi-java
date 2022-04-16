@@ -29,7 +29,7 @@ public final class BackendBucketCdnPolicyResponse extends io.pulumi.resources.In
     @Import(name="bypassCacheOnRequestHeaders", required=true)
       private final List<BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse> bypassCacheOnRequestHeaders;
 
-    public List<BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse> getBypassCacheOnRequestHeaders() {
+    public List<BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse> bypassCacheOnRequestHeaders() {
         return this.bypassCacheOnRequestHeaders;
     }
 
@@ -40,7 +40,7 @@ public final class BackendBucketCdnPolicyResponse extends io.pulumi.resources.In
     @Import(name="cacheKeyPolicy", required=true)
       private final BackendBucketCdnPolicyCacheKeyPolicyResponse cacheKeyPolicy;
 
-    public BackendBucketCdnPolicyCacheKeyPolicyResponse getCacheKeyPolicy() {
+    public BackendBucketCdnPolicyCacheKeyPolicyResponse cacheKeyPolicy() {
         return this.cacheKeyPolicy;
     }
 
@@ -51,7 +51,7 @@ public final class BackendBucketCdnPolicyResponse extends io.pulumi.resources.In
     @Import(name="cacheMode", required=true)
       private final String cacheMode;
 
-    public String getCacheMode() {
+    public String cacheMode() {
         return this.cacheMode;
     }
 
@@ -62,7 +62,7 @@ public final class BackendBucketCdnPolicyResponse extends io.pulumi.resources.In
     @Import(name="clientTtl", required=true)
       private final Integer clientTtl;
 
-    public Integer getClientTtl() {
+    public Integer clientTtl() {
         return this.clientTtl;
     }
 
@@ -73,7 +73,7 @@ public final class BackendBucketCdnPolicyResponse extends io.pulumi.resources.In
     @Import(name="defaultTtl", required=true)
       private final Integer defaultTtl;
 
-    public Integer getDefaultTtl() {
+    public Integer defaultTtl() {
         return this.defaultTtl;
     }
 
@@ -84,7 +84,7 @@ public final class BackendBucketCdnPolicyResponse extends io.pulumi.resources.In
     @Import(name="maxTtl", required=true)
       private final Integer maxTtl;
 
-    public Integer getMaxTtl() {
+    public Integer maxTtl() {
         return this.maxTtl;
     }
 
@@ -95,7 +95,7 @@ public final class BackendBucketCdnPolicyResponse extends io.pulumi.resources.In
     @Import(name="negativeCaching", required=true)
       private final Boolean negativeCaching;
 
-    public Boolean getNegativeCaching() {
+    public Boolean negativeCaching() {
         return this.negativeCaching;
     }
 
@@ -106,7 +106,7 @@ public final class BackendBucketCdnPolicyResponse extends io.pulumi.resources.In
     @Import(name="negativeCachingPolicy", required=true)
       private final List<BackendBucketCdnPolicyNegativeCachingPolicyResponse> negativeCachingPolicy;
 
-    public List<BackendBucketCdnPolicyNegativeCachingPolicyResponse> getNegativeCachingPolicy() {
+    public List<BackendBucketCdnPolicyNegativeCachingPolicyResponse> negativeCachingPolicy() {
         return this.negativeCachingPolicy;
     }
 
@@ -117,7 +117,7 @@ public final class BackendBucketCdnPolicyResponse extends io.pulumi.resources.In
     @Import(name="requestCoalescing", required=true)
       private final Boolean requestCoalescing;
 
-    public Boolean getRequestCoalescing() {
+    public Boolean requestCoalescing() {
         return this.requestCoalescing;
     }
 
@@ -128,7 +128,7 @@ public final class BackendBucketCdnPolicyResponse extends io.pulumi.resources.In
     @Import(name="serveWhileStale", required=true)
       private final Integer serveWhileStale;
 
-    public Integer getServeWhileStale() {
+    public Integer serveWhileStale() {
         return this.serveWhileStale;
     }
 
@@ -139,7 +139,7 @@ public final class BackendBucketCdnPolicyResponse extends io.pulumi.resources.In
     @Import(name="signedUrlCacheMaxAgeSec", required=true)
       private final String signedUrlCacheMaxAgeSec;
 
-    public String getSignedUrlCacheMaxAgeSec() {
+    public String signedUrlCacheMaxAgeSec() {
         return this.signedUrlCacheMaxAgeSec;
     }
 
@@ -150,7 +150,7 @@ public final class BackendBucketCdnPolicyResponse extends io.pulumi.resources.In
     @Import(name="signedUrlKeyNames", required=true)
       private final List<String> signedUrlKeyNames;
 
-    public List<String> getSignedUrlKeyNames() {
+    public List<String> signedUrlKeyNames() {
         return this.signedUrlKeyNames;
     }
 

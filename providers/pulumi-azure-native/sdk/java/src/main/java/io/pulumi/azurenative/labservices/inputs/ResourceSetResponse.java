@@ -25,7 +25,7 @@ public final class ResourceSetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceSettingId")
       private final @Nullable String resourceSettingId;
 
-    public Optional<String> getResourceSettingId() {
+    public Optional<String> resourceSettingId() {
         return this.resourceSettingId == null ? Optional.empty() : Optional.ofNullable(this.resourceSettingId);
     }
 
@@ -36,7 +36,7 @@ public final class ResourceSetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="vmResourceId")
       private final @Nullable String vmResourceId;
 
-    public Optional<String> getVmResourceId() {
+    public Optional<String> vmResourceId() {
         return this.vmResourceId == null ? Optional.empty() : Optional.ofNullable(this.vmResourceId);
     }
 

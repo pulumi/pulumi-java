@@ -21,7 +21,7 @@ public final class ManagedClusterPodIdentityResponseProvisioningInfo extends io.
     @Import(name="error")
       private final @Nullable CloudErrorResponse error;
 
-    public Optional<CloudErrorResponse> getError() {
+    public Optional<CloudErrorResponse> error() {
         return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
     }
 

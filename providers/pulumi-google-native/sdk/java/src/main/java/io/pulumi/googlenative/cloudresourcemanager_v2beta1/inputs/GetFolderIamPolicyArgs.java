@@ -15,7 +15,7 @@ public final class GetFolderIamPolicyArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="folderId", required=true)
       private final String folderId;
 
-    public String getFolderId() {
+    public String folderId() {
         return this.folderId;
     }
 

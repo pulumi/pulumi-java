@@ -32,7 +32,7 @@ public final class RuleGroupRuleStatementGetArgs extends io.pulumi.resources.Res
     @Import(name="andStatement")
       private final @Nullable Output<RuleGroupRuleStatementAndStatementGetArgs> andStatement;
 
-    public Output<RuleGroupRuleStatementAndStatementGetArgs> getAndStatement() {
+    public Output<RuleGroupRuleStatementAndStatementGetArgs> andStatement() {
         return this.andStatement == null ? Codegen.empty() : this.andStatement;
     }
 
@@ -43,7 +43,7 @@ public final class RuleGroupRuleStatementGetArgs extends io.pulumi.resources.Res
     @Import(name="byteMatchStatement")
       private final @Nullable Output<RuleGroupRuleStatementByteMatchStatementGetArgs> byteMatchStatement;
 
-    public Output<RuleGroupRuleStatementByteMatchStatementGetArgs> getByteMatchStatement() {
+    public Output<RuleGroupRuleStatementByteMatchStatementGetArgs> byteMatchStatement() {
         return this.byteMatchStatement == null ? Codegen.empty() : this.byteMatchStatement;
     }
 
@@ -54,7 +54,7 @@ public final class RuleGroupRuleStatementGetArgs extends io.pulumi.resources.Res
     @Import(name="geoMatchStatement")
       private final @Nullable Output<RuleGroupRuleStatementGeoMatchStatementGetArgs> geoMatchStatement;
 
-    public Output<RuleGroupRuleStatementGeoMatchStatementGetArgs> getGeoMatchStatement() {
+    public Output<RuleGroupRuleStatementGeoMatchStatementGetArgs> geoMatchStatement() {
         return this.geoMatchStatement == null ? Codegen.empty() : this.geoMatchStatement;
     }
 
@@ -65,7 +65,7 @@ public final class RuleGroupRuleStatementGetArgs extends io.pulumi.resources.Res
     @Import(name="ipSetReferenceStatement")
       private final @Nullable Output<RuleGroupRuleStatementIpSetReferenceStatementGetArgs> ipSetReferenceStatement;
 
-    public Output<RuleGroupRuleStatementIpSetReferenceStatementGetArgs> getIpSetReferenceStatement() {
+    public Output<RuleGroupRuleStatementIpSetReferenceStatementGetArgs> ipSetReferenceStatement() {
         return this.ipSetReferenceStatement == null ? Codegen.empty() : this.ipSetReferenceStatement;
     }
 
@@ -76,7 +76,7 @@ public final class RuleGroupRuleStatementGetArgs extends io.pulumi.resources.Res
     @Import(name="labelMatchStatement")
       private final @Nullable Output<RuleGroupRuleStatementLabelMatchStatementGetArgs> labelMatchStatement;
 
-    public Output<RuleGroupRuleStatementLabelMatchStatementGetArgs> getLabelMatchStatement() {
+    public Output<RuleGroupRuleStatementLabelMatchStatementGetArgs> labelMatchStatement() {
         return this.labelMatchStatement == null ? Codegen.empty() : this.labelMatchStatement;
     }
 
@@ -87,7 +87,7 @@ public final class RuleGroupRuleStatementGetArgs extends io.pulumi.resources.Res
     @Import(name="notStatement")
       private final @Nullable Output<RuleGroupRuleStatementNotStatementGetArgs> notStatement;
 
-    public Output<RuleGroupRuleStatementNotStatementGetArgs> getNotStatement() {
+    public Output<RuleGroupRuleStatementNotStatementGetArgs> notStatement() {
         return this.notStatement == null ? Codegen.empty() : this.notStatement;
     }
 
@@ -98,7 +98,7 @@ public final class RuleGroupRuleStatementGetArgs extends io.pulumi.resources.Res
     @Import(name="orStatement")
       private final @Nullable Output<RuleGroupRuleStatementOrStatementGetArgs> orStatement;
 
-    public Output<RuleGroupRuleStatementOrStatementGetArgs> getOrStatement() {
+    public Output<RuleGroupRuleStatementOrStatementGetArgs> orStatement() {
         return this.orStatement == null ? Codegen.empty() : this.orStatement;
     }
 
@@ -109,7 +109,7 @@ public final class RuleGroupRuleStatementGetArgs extends io.pulumi.resources.Res
     @Import(name="regexPatternSetReferenceStatement")
       private final @Nullable Output<RuleGroupRuleStatementRegexPatternSetReferenceStatementGetArgs> regexPatternSetReferenceStatement;
 
-    public Output<RuleGroupRuleStatementRegexPatternSetReferenceStatementGetArgs> getRegexPatternSetReferenceStatement() {
+    public Output<RuleGroupRuleStatementRegexPatternSetReferenceStatementGetArgs> regexPatternSetReferenceStatement() {
         return this.regexPatternSetReferenceStatement == null ? Codegen.empty() : this.regexPatternSetReferenceStatement;
     }
 
@@ -120,7 +120,7 @@ public final class RuleGroupRuleStatementGetArgs extends io.pulumi.resources.Res
     @Import(name="sizeConstraintStatement")
       private final @Nullable Output<RuleGroupRuleStatementSizeConstraintStatementGetArgs> sizeConstraintStatement;
 
-    public Output<RuleGroupRuleStatementSizeConstraintStatementGetArgs> getSizeConstraintStatement() {
+    public Output<RuleGroupRuleStatementSizeConstraintStatementGetArgs> sizeConstraintStatement() {
         return this.sizeConstraintStatement == null ? Codegen.empty() : this.sizeConstraintStatement;
     }
 
@@ -131,7 +131,7 @@ public final class RuleGroupRuleStatementGetArgs extends io.pulumi.resources.Res
     @Import(name="sqliMatchStatement")
       private final @Nullable Output<RuleGroupRuleStatementSqliMatchStatementGetArgs> sqliMatchStatement;
 
-    public Output<RuleGroupRuleStatementSqliMatchStatementGetArgs> getSqliMatchStatement() {
+    public Output<RuleGroupRuleStatementSqliMatchStatementGetArgs> sqliMatchStatement() {
         return this.sqliMatchStatement == null ? Codegen.empty() : this.sqliMatchStatement;
     }
 
@@ -142,7 +142,7 @@ public final class RuleGroupRuleStatementGetArgs extends io.pulumi.resources.Res
     @Import(name="xssMatchStatement")
       private final @Nullable Output<RuleGroupRuleStatementXssMatchStatementGetArgs> xssMatchStatement;
 
-    public Output<RuleGroupRuleStatementXssMatchStatementGetArgs> getXssMatchStatement() {
+    public Output<RuleGroupRuleStatementXssMatchStatementGetArgs> xssMatchStatement() {
         return this.xssMatchStatement == null ? Codegen.empty() : this.xssMatchStatement;
     }
 

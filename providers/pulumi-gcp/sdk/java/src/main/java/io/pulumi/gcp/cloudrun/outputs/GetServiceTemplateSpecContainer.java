@@ -47,31 +47,31 @@ public final class GetServiceTemplateSpecContainer {
         this.workingDir = workingDir;
     }
 
-    public List<String> getArgs() {
+    public List<String> args() {
         return this.args;
     }
-    public List<String> getCommands() {
+    public List<String> commands() {
         return this.commands;
     }
-    public List<GetServiceTemplateSpecContainerEnvFrom> getEnvFroms() {
+    public List<GetServiceTemplateSpecContainerEnvFrom> envFroms() {
         return this.envFroms;
     }
-    public List<GetServiceTemplateSpecContainerEnv> getEnvs() {
+    public List<GetServiceTemplateSpecContainerEnv> envs() {
         return this.envs;
     }
-    public String getImage() {
+    public String image() {
         return this.image;
     }
-    public List<GetServiceTemplateSpecContainerPort> getPorts() {
+    public List<GetServiceTemplateSpecContainerPort> ports() {
         return this.ports;
     }
-    public List<GetServiceTemplateSpecContainerResource> getResources() {
+    public List<GetServiceTemplateSpecContainerResource> resources() {
         return this.resources;
     }
-    public List<GetServiceTemplateSpecContainerVolumeMount> getVolumeMounts() {
+    public List<GetServiceTemplateSpecContainerVolumeMount> volumeMounts() {
         return this.volumeMounts;
     }
-    public String getWorkingDir() {
+    public String workingDir() {
         return this.workingDir;
     }
 

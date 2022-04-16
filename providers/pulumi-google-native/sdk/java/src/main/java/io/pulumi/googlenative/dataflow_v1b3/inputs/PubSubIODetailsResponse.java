@@ -23,7 +23,7 @@ public final class PubSubIODetailsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="subscription", required=true)
       private final String subscription;
 
-    public String getSubscription() {
+    public String subscription() {
         return this.subscription;
     }
 
@@ -34,7 +34,7 @@ public final class PubSubIODetailsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="topic", required=true)
       private final String topic;
 
-    public String getTopic() {
+    public String topic() {
         return this.topic;
     }
 

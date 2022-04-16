@@ -23,7 +23,7 @@ public final class NetworkEndpointGroupCloudFunctionResponse extends io.pulumi.r
     @Import(name="function", required=true)
       private final String function;
 
-    public String getFunction() {
+    public String function() {
         return this.function;
     }
 
@@ -34,7 +34,7 @@ public final class NetworkEndpointGroupCloudFunctionResponse extends io.pulumi.r
     @Import(name="urlMask", required=true)
       private final String urlMask;
 
-    public String getUrlMask() {
+    public String urlMask() {
         return this.urlMask;
     }
 

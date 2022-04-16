@@ -20,21 +20,21 @@ public final class ClusterLoggingInfoBrokerLogsArgs extends io.pulumi.resources.
     @Import(name="cloudwatchLogs")
       private final @Nullable Output<ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs> cloudwatchLogs;
 
-    public Output<ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs> getCloudwatchLogs() {
+    public Output<ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs> cloudwatchLogs() {
         return this.cloudwatchLogs == null ? Codegen.empty() : this.cloudwatchLogs;
     }
 
     @Import(name="firehose")
       private final @Nullable Output<ClusterLoggingInfoBrokerLogsFirehoseArgs> firehose;
 
-    public Output<ClusterLoggingInfoBrokerLogsFirehoseArgs> getFirehose() {
+    public Output<ClusterLoggingInfoBrokerLogsFirehoseArgs> firehose() {
         return this.firehose == null ? Codegen.empty() : this.firehose;
     }
 
     @Import(name="s3")
       private final @Nullable Output<ClusterLoggingInfoBrokerLogsS3Args> s3;
 
-    public Output<ClusterLoggingInfoBrokerLogsS3Args> getS3() {
+    public Output<ClusterLoggingInfoBrokerLogsS3Args> s3() {
         return this.s3 == null ? Codegen.empty() : this.s3;
     }
 

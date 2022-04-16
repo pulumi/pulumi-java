@@ -20,10 +20,10 @@ public final class TableColumn {
         this.columnType = columnType;
     }
 
-    public String getColumnName() {
+    public String columnName() {
         return this.columnName;
     }
-    public String getColumnType() {
+    public String columnType() {
         return this.columnType;
     }
 

@@ -24,7 +24,7 @@ public final class PacketMirroringFilterArgs extends io.pulumi.resources.Resourc
     @Import(name="cidrRanges")
       private final @Nullable Output<List<String>> cidrRanges;
 
-    public Output<List<String>> getCidrRanges() {
+    public Output<List<String>> cidrRanges() {
         return this.cidrRanges == null ? Codegen.empty() : this.cidrRanges;
     }
 
@@ -35,7 +35,7 @@ public final class PacketMirroringFilterArgs extends io.pulumi.resources.Resourc
     @Import(name="direction")
       private final @Nullable Output<PacketMirroringFilterDirection> direction;
 
-    public Output<PacketMirroringFilterDirection> getDirection() {
+    public Output<PacketMirroringFilterDirection> direction() {
         return this.direction == null ? Codegen.empty() : this.direction;
     }
 
@@ -46,7 +46,7 @@ public final class PacketMirroringFilterArgs extends io.pulumi.resources.Resourc
     @Import(name="ipProtocols")
       private final @Nullable Output<List<String>> ipProtocols;
 
-    public Output<List<String>> getIpProtocols() {
+    public Output<List<String>> ipProtocols() {
         return this.ipProtocols == null ? Codegen.empty() : this.ipProtocols;
     }
 

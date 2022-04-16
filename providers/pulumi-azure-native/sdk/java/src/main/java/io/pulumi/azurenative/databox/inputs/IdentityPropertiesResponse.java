@@ -26,7 +26,7 @@ public final class IdentityPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
@@ -37,7 +37,7 @@ public final class IdentityPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="userAssigned")
       private final @Nullable UserAssignedPropertiesResponse userAssigned;
 
-    public Optional<UserAssignedPropertiesResponse> getUserAssigned() {
+    public Optional<UserAssignedPropertiesResponse> userAssigned() {
         return this.userAssigned == null ? Optional.empty() : Optional.ofNullable(this.userAssigned);
     }
 

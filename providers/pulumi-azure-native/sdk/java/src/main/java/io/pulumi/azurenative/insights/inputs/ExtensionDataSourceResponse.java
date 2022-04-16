@@ -28,7 +28,7 @@ public final class ExtensionDataSourceResponse extends io.pulumi.resources.Invok
     @Import(name="extensionName", required=true)
       private final String extensionName;
 
-    public String getExtensionName() {
+    public String extensionName() {
         return this.extensionName;
     }
 
@@ -39,7 +39,7 @@ public final class ExtensionDataSourceResponse extends io.pulumi.resources.Invok
     @Import(name="extensionSettings")
       private final @Nullable Object extensionSettings;
 
-    public Optional<Object> getExtensionSettings() {
+    public Optional<Object> extensionSettings() {
         return this.extensionSettings == null ? Optional.empty() : Optional.ofNullable(this.extensionSettings);
     }
 
@@ -50,7 +50,7 @@ public final class ExtensionDataSourceResponse extends io.pulumi.resources.Invok
     @Import(name="inputDataSources")
       private final @Nullable List<String> inputDataSources;
 
-    public List<String> getInputDataSources() {
+    public List<String> inputDataSources() {
         return this.inputDataSources == null ? List.of() : this.inputDataSources;
     }
 
@@ -62,7 +62,7 @@ public final class ExtensionDataSourceResponse extends io.pulumi.resources.Invok
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -74,7 +74,7 @@ public final class ExtensionDataSourceResponse extends io.pulumi.resources.Invok
     @Import(name="streams")
       private final @Nullable List<String> streams;
 
-    public List<String> getStreams() {
+    public List<String> streams() {
         return this.streams == null ? List.of() : this.streams;
     }
 

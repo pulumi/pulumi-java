@@ -22,10 +22,10 @@ public final class GetNotificationChannelResult {
         this.snsTopicArn = snsTopicArn;
     }
 
-    public Optional<String> getSnsRoleName() {
+    public Optional<String> snsRoleName() {
         return Optional.ofNullable(this.snsRoleName);
     }
-    public Optional<String> getSnsTopicArn() {
+    public Optional<String> snsTopicArn() {
         return Optional.ofNullable(this.snsTopicArn);
     }
 

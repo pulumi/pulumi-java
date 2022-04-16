@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2StoredTypeArgs extends io.pulumi.resources.
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -37,7 +37,7 @@ public final class GooglePrivacyDlpV2StoredTypeArgs extends io.pulumi.resources.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

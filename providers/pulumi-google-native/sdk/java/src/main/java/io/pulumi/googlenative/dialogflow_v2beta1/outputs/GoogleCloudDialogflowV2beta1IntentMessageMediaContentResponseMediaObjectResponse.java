@@ -54,35 +54,35 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      * Url where the media is stored.
      * 
     */
-    public String getContentUrl() {
+    public String contentUrl() {
         return this.contentUrl;
     }
     /**
      * Optional. Description of media card.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Optional. Icon to display above media content.
      * 
     */
-    public GoogleCloudDialogflowV2beta1IntentMessageImageResponse getIcon() {
+    public GoogleCloudDialogflowV2beta1IntentMessageImageResponse icon() {
         return this.icon;
     }
     /**
      * Optional. Image to display above media content.
      * 
     */
-    public GoogleCloudDialogflowV2beta1IntentMessageImageResponse getLargeImage() {
+    public GoogleCloudDialogflowV2beta1IntentMessageImageResponse largeImage() {
         return this.largeImage;
     }
     /**
      * Name of media card.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

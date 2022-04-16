@@ -28,7 +28,7 @@ public final class MembershipEndpoint {
      * Structure is documented below.
      * 
     */
-    public Optional<MembershipEndpointGkeCluster> getGkeCluster() {
+    public Optional<MembershipEndpointGkeCluster> gkeCluster() {
         return Optional.ofNullable(this.gkeCluster);
     }
 

@@ -25,7 +25,7 @@ public final class IntentSlotValueElicitationPromptArgs extends io.pulumi.resour
     @Import(name="maxAttempts", required=true)
       private final Output<Integer> maxAttempts;
 
-    public Output<Integer> getMaxAttempts() {
+    public Output<Integer> maxAttempts() {
         return this.maxAttempts;
     }
 
@@ -38,7 +38,7 @@ public final class IntentSlotValueElicitationPromptArgs extends io.pulumi.resour
     @Import(name="messages", required=true)
       private final Output<List<IntentSlotValueElicitationPromptMessageArgs>> messages;
 
-    public Output<List<IntentSlotValueElicitationPromptMessageArgs>> getMessages() {
+    public Output<List<IntentSlotValueElicitationPromptMessageArgs>> messages() {
         return this.messages;
     }
 
@@ -51,7 +51,7 @@ public final class IntentSlotValueElicitationPromptArgs extends io.pulumi.resour
     @Import(name="responseCard")
       private final @Nullable Output<String> responseCard;
 
-    public Output<String> getResponseCard() {
+    public Output<String> responseCard() {
         return this.responseCard == null ? Codegen.empty() : this.responseCard;
     }
 

@@ -22,7 +22,7 @@ public final class PermissionSetInlinePolicyState extends io.pulumi.resources.Re
     @Import(name="inlinePolicy")
       private final @Nullable Output<String> inlinePolicy;
 
-    public Output<String> getInlinePolicy() {
+    public Output<String> inlinePolicy() {
         return this.inlinePolicy == null ? Codegen.empty() : this.inlinePolicy;
     }
 
@@ -33,7 +33,7 @@ public final class PermissionSetInlinePolicyState extends io.pulumi.resources.Re
     @Import(name="instanceArn")
       private final @Nullable Output<String> instanceArn;
 
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn == null ? Codegen.empty() : this.instanceArn;
     }
 
@@ -44,7 +44,7 @@ public final class PermissionSetInlinePolicyState extends io.pulumi.resources.Re
     @Import(name="permissionSetArn")
       private final @Nullable Output<String> permissionSetArn;
 
-    public Output<String> getPermissionSetArn() {
+    public Output<String> permissionSetArn() {
         return this.permissionSetArn == null ? Codegen.empty() : this.permissionSetArn;
     }
 

@@ -26,7 +26,7 @@ public final class WorkloadIdentityConfigArgs extends io.pulumi.resources.Resour
     @Import(name="identityNamespace")
       private final @Nullable Output<String> identityNamespace;
 
-    public Output<String> getIdentityNamespace() {
+    public Output<String> identityNamespace() {
         return this.identityNamespace == null ? Codegen.empty() : this.identityNamespace;
     }
 
@@ -37,7 +37,7 @@ public final class WorkloadIdentityConfigArgs extends io.pulumi.resources.Resour
     @Import(name="identityProvider")
       private final @Nullable Output<String> identityProvider;
 
-    public Output<String> getIdentityProvider() {
+    public Output<String> identityProvider() {
         return this.identityProvider == null ? Codegen.empty() : this.identityProvider;
     }
 
@@ -48,7 +48,7 @@ public final class WorkloadIdentityConfigArgs extends io.pulumi.resources.Resour
     @Import(name="workloadPool")
       private final @Nullable Output<String> workloadPool;
 
-    public Output<String> getWorkloadPool() {
+    public Output<String> workloadPool() {
         return this.workloadPool == null ? Codegen.empty() : this.workloadPool;
     }
 

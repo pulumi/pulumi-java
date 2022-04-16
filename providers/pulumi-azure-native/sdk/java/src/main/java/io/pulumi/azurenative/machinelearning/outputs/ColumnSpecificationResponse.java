@@ -58,35 +58,35 @@ public final class ColumnSpecificationResponse {
      * If the data type is categorical, this provides the list of accepted categories.
      * 
     */
-    public List<Object> getEnum_() {
+    public List<Object> enum_() {
         return this.enum_ == null ? List.of() : this.enum_;
     }
     /**
      * Additional format information for the data type.
      * 
     */
-    public Optional<String> getFormat() {
+    public Optional<String> format() {
         return Optional.ofNullable(this.format);
     }
     /**
      * Data type of the column.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Flag indicating if the type supports null values or not.
      * 
     */
-    public Optional<Boolean> getXMsIsnullable() {
+    public Optional<Boolean> xMsIsnullable() {
         return Optional.ofNullable(this.xMsIsnullable);
     }
     /**
      * Flag indicating whether the categories are treated as an ordered set or not, if this is a categorical column.
      * 
     */
-    public Optional<Boolean> getXMsIsordered() {
+    public Optional<Boolean> xMsIsordered() {
         return Optional.ofNullable(this.xMsIsordered);
     }
 

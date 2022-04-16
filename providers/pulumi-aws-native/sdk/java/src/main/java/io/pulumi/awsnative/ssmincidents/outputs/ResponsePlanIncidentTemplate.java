@@ -58,35 +58,35 @@ public final class ResponsePlanIncidentTemplate {
      * The deduplication string.
      * 
     */
-    public Optional<String> getDedupeString() {
+    public Optional<String> dedupeString() {
         return Optional.ofNullable(this.dedupeString);
     }
     /**
      * The impact value.
      * 
     */
-    public Integer getImpact() {
+    public Integer impact() {
         return this.impact;
     }
     /**
      * The list of notification targets.
      * 
     */
-    public List<ResponsePlanNotificationTargetItem> getNotificationTargets() {
+    public List<ResponsePlanNotificationTargetItem> notificationTargets() {
         return this.notificationTargets == null ? List.of() : this.notificationTargets;
     }
     /**
      * The summary string.
      * 
     */
-    public Optional<String> getSummary() {
+    public Optional<String> summary() {
         return Optional.ofNullable(this.summary);
     }
     /**
      * The title string.
      * 
     */
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

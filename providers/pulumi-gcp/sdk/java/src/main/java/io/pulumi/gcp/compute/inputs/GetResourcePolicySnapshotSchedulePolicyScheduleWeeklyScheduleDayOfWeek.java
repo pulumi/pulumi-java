@@ -15,14 +15,14 @@ public final class GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule
     @Import(name="day", required=true)
       private final String day;
 
-    public String getDay() {
+    public String day() {
         return this.day;
     }
 
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

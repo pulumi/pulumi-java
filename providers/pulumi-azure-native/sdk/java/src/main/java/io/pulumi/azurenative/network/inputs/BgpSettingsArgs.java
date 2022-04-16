@@ -30,7 +30,7 @@ public final class BgpSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="asn")
       private final @Nullable Output<Double> asn;
 
-    public Output<Double> getAsn() {
+    public Output<Double> asn() {
         return this.asn == null ? Codegen.empty() : this.asn;
     }
 
@@ -41,7 +41,7 @@ public final class BgpSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bgpPeeringAddress")
       private final @Nullable Output<String> bgpPeeringAddress;
 
-    public Output<String> getBgpPeeringAddress() {
+    public Output<String> bgpPeeringAddress() {
         return this.bgpPeeringAddress == null ? Codegen.empty() : this.bgpPeeringAddress;
     }
 
@@ -52,7 +52,7 @@ public final class BgpSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bgpPeeringAddresses")
       private final @Nullable Output<List<IPConfigurationBgpPeeringAddressArgs>> bgpPeeringAddresses;
 
-    public Output<List<IPConfigurationBgpPeeringAddressArgs>> getBgpPeeringAddresses() {
+    public Output<List<IPConfigurationBgpPeeringAddressArgs>> bgpPeeringAddresses() {
         return this.bgpPeeringAddresses == null ? Codegen.empty() : this.bgpPeeringAddresses;
     }
 
@@ -63,7 +63,7 @@ public final class BgpSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="peerWeight")
       private final @Nullable Output<Integer> peerWeight;
 
-    public Output<Integer> getPeerWeight() {
+    public Output<Integer> peerWeight() {
         return this.peerWeight == null ? Codegen.empty() : this.peerWeight;
     }
 

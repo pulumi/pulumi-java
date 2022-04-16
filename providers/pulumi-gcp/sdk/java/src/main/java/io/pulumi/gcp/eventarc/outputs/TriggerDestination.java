@@ -35,14 +35,14 @@ public final class TriggerDestination {
      * The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
      * 
     */
-    public Optional<String> getCloudFunction() {
+    public Optional<String> cloudFunction() {
         return Optional.ofNullable(this.cloudFunction);
     }
     /**
      * Cloud Run fully-managed service that receives the events. The service should be running in the same project of the trigger.
      * 
     */
-    public Optional<TriggerDestinationCloudRunService> getCloudRunService() {
+    public Optional<TriggerDestinationCloudRunService> cloudRunService() {
         return Optional.ofNullable(this.cloudRunService);
     }
 

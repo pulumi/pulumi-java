@@ -24,7 +24,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGooget {
      * Required. The name of the repository.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

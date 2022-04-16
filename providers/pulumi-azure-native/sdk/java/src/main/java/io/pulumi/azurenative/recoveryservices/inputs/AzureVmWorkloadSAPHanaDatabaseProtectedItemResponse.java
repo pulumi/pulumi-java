@@ -30,7 +30,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse extends i
     @Import(name="backupManagementType")
       private final @Nullable String backupManagementType;
 
-    public Optional<String> getBackupManagementType() {
+    public Optional<String> backupManagementType() {
         return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
     }
 
@@ -41,7 +41,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse extends i
     @Import(name="backupSetName")
       private final @Nullable String backupSetName;
 
-    public Optional<String> getBackupSetName() {
+    public Optional<String> backupSetName() {
         return this.backupSetName == null ? Optional.empty() : Optional.ofNullable(this.backupSetName);
     }
 
@@ -52,7 +52,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse extends i
     @Import(name="containerName")
       private final @Nullable String containerName;
 
-    public Optional<String> getContainerName() {
+    public Optional<String> containerName() {
         return this.containerName == null ? Optional.empty() : Optional.ofNullable(this.containerName);
     }
 
@@ -63,7 +63,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse extends i
     @Import(name="createMode")
       private final @Nullable String createMode;
 
-    public Optional<String> getCreateMode() {
+    public Optional<String> createMode() {
         return this.createMode == null ? Optional.empty() : Optional.ofNullable(this.createMode);
     }
 
@@ -74,7 +74,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse extends i
     @Import(name="deferredDeleteTimeInUTC")
       private final @Nullable String deferredDeleteTimeInUTC;
 
-    public Optional<String> getDeferredDeleteTimeInUTC() {
+    public Optional<String> deferredDeleteTimeInUTC() {
         return this.deferredDeleteTimeInUTC == null ? Optional.empty() : Optional.ofNullable(this.deferredDeleteTimeInUTC);
     }
 
@@ -85,7 +85,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse extends i
     @Import(name="deferredDeleteTimeRemaining")
       private final @Nullable String deferredDeleteTimeRemaining;
 
-    public Optional<String> getDeferredDeleteTimeRemaining() {
+    public Optional<String> deferredDeleteTimeRemaining() {
         return this.deferredDeleteTimeRemaining == null ? Optional.empty() : Optional.ofNullable(this.deferredDeleteTimeRemaining);
     }
 
@@ -96,7 +96,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse extends i
     @Import(name="extendedInfo")
       private final @Nullable AzureVmWorkloadProtectedItemExtendedInfoResponse extendedInfo;
 
-    public Optional<AzureVmWorkloadProtectedItemExtendedInfoResponse> getExtendedInfo() {
+    public Optional<AzureVmWorkloadProtectedItemExtendedInfoResponse> extendedInfo() {
         return this.extendedInfo == null ? Optional.empty() : Optional.ofNullable(this.extendedInfo);
     }
 
@@ -107,7 +107,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse extends i
     @Import(name="friendlyName")
       private final @Nullable String friendlyName;
 
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
     }
 
@@ -118,7 +118,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse extends i
     @Import(name="isDeferredDeleteScheduleUpcoming")
       private final @Nullable Boolean isDeferredDeleteScheduleUpcoming;
 
-    public Optional<Boolean> getIsDeferredDeleteScheduleUpcoming() {
+    public Optional<Boolean> isDeferredDeleteScheduleUpcoming() {
         return this.isDeferredDeleteScheduleUpcoming == null ? Optional.empty() : Optional.ofNullable(this.isDeferredDeleteScheduleUpcoming);
     }
 
@@ -129,7 +129,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse extends i
     @Import(name="isRehydrate")
       private final @Nullable Boolean isRehydrate;
 
-    public Optional<Boolean> getIsRehydrate() {
+    public Optional<Boolean> isRehydrate() {
         return this.isRehydrate == null ? Optional.empty() : Optional.ofNullable(this.isRehydrate);
     }
 
@@ -140,7 +140,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse extends i
     @Import(name="isScheduledForDeferredDelete")
       private final @Nullable Boolean isScheduledForDeferredDelete;
 
-    public Optional<Boolean> getIsScheduledForDeferredDelete() {
+    public Optional<Boolean> isScheduledForDeferredDelete() {
         return this.isScheduledForDeferredDelete == null ? Optional.empty() : Optional.ofNullable(this.isScheduledForDeferredDelete);
     }
 
@@ -151,7 +151,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse extends i
     @Import(name="kpisHealths")
       private final @Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths;
 
-    public Map<String,KPIResourceHealthDetailsResponse> getKpisHealths() {
+    public Map<String,KPIResourceHealthDetailsResponse> kpisHealths() {
         return this.kpisHealths == null ? Map.of() : this.kpisHealths;
     }
 
@@ -162,7 +162,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse extends i
     @Import(name="lastBackupErrorDetail")
       private final @Nullable ErrorDetailResponse lastBackupErrorDetail;
 
-    public Optional<ErrorDetailResponse> getLastBackupErrorDetail() {
+    public Optional<ErrorDetailResponse> lastBackupErrorDetail() {
         return this.lastBackupErrorDetail == null ? Optional.empty() : Optional.ofNullable(this.lastBackupErrorDetail);
     }
 
@@ -173,7 +173,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse extends i
     @Import(name="lastBackupStatus")
       private final @Nullable String lastBackupStatus;
 
-    public Optional<String> getLastBackupStatus() {
+    public Optional<String> lastBackupStatus() {
         return this.lastBackupStatus == null ? Optional.empty() : Optional.ofNullable(this.lastBackupStatus);
     }
 
@@ -184,7 +184,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse extends i
     @Import(name="lastBackupTime")
       private final @Nullable String lastBackupTime;
 
-    public Optional<String> getLastBackupTime() {
+    public Optional<String> lastBackupTime() {
         return this.lastBackupTime == null ? Optional.empty() : Optional.ofNullable(this.lastBackupTime);
     }
 
@@ -195,7 +195,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse extends i
     @Import(name="lastRecoveryPoint")
       private final @Nullable String lastRecoveryPoint;
 
-    public Optional<String> getLastRecoveryPoint() {
+    public Optional<String> lastRecoveryPoint() {
         return this.lastRecoveryPoint == null ? Optional.empty() : Optional.ofNullable(this.lastRecoveryPoint);
     }
 
@@ -206,7 +206,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse extends i
     @Import(name="parentName")
       private final @Nullable String parentName;
 
-    public Optional<String> getParentName() {
+    public Optional<String> parentName() {
         return this.parentName == null ? Optional.empty() : Optional.ofNullable(this.parentName);
     }
 
@@ -217,7 +217,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse extends i
     @Import(name="parentType")
       private final @Nullable String parentType;
 
-    public Optional<String> getParentType() {
+    public Optional<String> parentType() {
         return this.parentType == null ? Optional.empty() : Optional.ofNullable(this.parentType);
     }
 
@@ -228,7 +228,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse extends i
     @Import(name="policyId")
       private final @Nullable String policyId;
 
-    public Optional<String> getPolicyId() {
+    public Optional<String> policyId() {
         return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
     }
 
@@ -239,7 +239,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse extends i
     @Import(name="protectedItemDataSourceId")
       private final @Nullable String protectedItemDataSourceId;
 
-    public Optional<String> getProtectedItemDataSourceId() {
+    public Optional<String> protectedItemDataSourceId() {
         return this.protectedItemDataSourceId == null ? Optional.empty() : Optional.ofNullable(this.protectedItemDataSourceId);
     }
 
@@ -250,7 +250,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse extends i
     @Import(name="protectedItemHealthStatus")
       private final @Nullable String protectedItemHealthStatus;
 
-    public Optional<String> getProtectedItemHealthStatus() {
+    public Optional<String> protectedItemHealthStatus() {
         return this.protectedItemHealthStatus == null ? Optional.empty() : Optional.ofNullable(this.protectedItemHealthStatus);
     }
 
@@ -262,7 +262,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse extends i
     @Import(name="protectedItemType", required=true)
       private final String protectedItemType;
 
-    public String getProtectedItemType() {
+    public String protectedItemType() {
         return this.protectedItemType;
     }
 
@@ -273,7 +273,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse extends i
     @Import(name="protectionState")
       private final @Nullable String protectionState;
 
-    public Optional<String> getProtectionState() {
+    public Optional<String> protectionState() {
         return this.protectionState == null ? Optional.empty() : Optional.ofNullable(this.protectionState);
     }
 
@@ -284,7 +284,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse extends i
     @Import(name="protectionStatus")
       private final @Nullable String protectionStatus;
 
-    public Optional<String> getProtectionStatus() {
+    public Optional<String> protectionStatus() {
         return this.protectionStatus == null ? Optional.empty() : Optional.ofNullable(this.protectionStatus);
     }
 
@@ -295,7 +295,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse extends i
     @Import(name="serverName")
       private final @Nullable String serverName;
 
-    public Optional<String> getServerName() {
+    public Optional<String> serverName() {
         return this.serverName == null ? Optional.empty() : Optional.ofNullable(this.serverName);
     }
 
@@ -306,7 +306,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse extends i
     @Import(name="sourceResourceId")
       private final @Nullable String sourceResourceId;
 
-    public Optional<String> getSourceResourceId() {
+    public Optional<String> sourceResourceId() {
         return this.sourceResourceId == null ? Optional.empty() : Optional.ofNullable(this.sourceResourceId);
     }
 
@@ -317,7 +317,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse extends i
     @Import(name="workloadType")
       private final @Nullable String workloadType;
 
-    public Optional<String> getWorkloadType() {
+    public Optional<String> workloadType() {
         return this.workloadType == null ? Optional.empty() : Optional.ofNullable(this.workloadType);
     }
 

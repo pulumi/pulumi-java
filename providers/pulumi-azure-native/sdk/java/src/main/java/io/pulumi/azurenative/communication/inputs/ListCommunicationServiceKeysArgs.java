@@ -19,7 +19,7 @@ public final class ListCommunicationServiceKeysArgs extends io.pulumi.resources.
     @Import(name="communicationServiceName", required=true)
       private final String communicationServiceName;
 
-    public String getCommunicationServiceName() {
+    public String communicationServiceName() {
         return this.communicationServiceName;
     }
 
@@ -30,7 +30,7 @@ public final class ListCommunicationServiceKeysArgs extends io.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

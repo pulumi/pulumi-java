@@ -24,21 +24,21 @@ public final class PrivateEndpointConnectionResponseProperties extends io.pulumi
     @Import(name="groupIds")
       private final @Nullable List<String> groupIds;
 
-    public List<String> getGroupIds() {
+    public List<String> groupIds() {
         return this.groupIds == null ? List.of() : this.groupIds;
     }
 
     @Import(name="privateEndpoint")
       private final @Nullable ConnectionPropertiesResponsePrivateEndpoint privateEndpoint;
 
-    public Optional<ConnectionPropertiesResponsePrivateEndpoint> getPrivateEndpoint() {
+    public Optional<ConnectionPropertiesResponsePrivateEndpoint> privateEndpoint() {
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
     }
 
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable ConnectionPropertiesResponsePrivateLinkServiceConnectionState privateLinkServiceConnectionState;
 
-    public Optional<ConnectionPropertiesResponsePrivateLinkServiceConnectionState> getPrivateLinkServiceConnectionState() {
+    public Optional<ConnectionPropertiesResponsePrivateLinkServiceConnectionState> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
@@ -49,7 +49,7 @@ public final class PrivateEndpointConnectionResponseProperties extends io.pulumi
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

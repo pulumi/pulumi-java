@@ -22,7 +22,7 @@ public final class GetApisArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -33,7 +33,7 @@ public final class GetApisArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="protocolType")
       private final @Nullable String protocolType;
 
-    public Optional<String> getProtocolType() {
+    public Optional<String> protocolType() {
         return this.protocolType == null ? Optional.empty() : Optional.ofNullable(this.protocolType);
     }
 
@@ -45,7 +45,7 @@ public final class GetApisArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

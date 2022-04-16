@@ -29,7 +29,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
     @Import(name="autodetect", required=true)
       private final Output<Boolean> autodetect;
 
-    public Output<Boolean> getAutodetect() {
+    public Output<Boolean> autodetect() {
         return this.autodetect;
     }
 
@@ -41,7 +41,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
     @Import(name="compression")
       private final @Nullable Output<String> compression;
 
-    public Output<String> getCompression() {
+    public Output<String> compression() {
         return this.compression == null ? Codegen.empty() : this.compression;
     }
 
@@ -53,7 +53,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
     @Import(name="csvOptions")
       private final @Nullable Output<TableExternalDataConfigurationCsvOptionsGetArgs> csvOptions;
 
-    public Output<TableExternalDataConfigurationCsvOptionsGetArgs> getCsvOptions() {
+    public Output<TableExternalDataConfigurationCsvOptionsGetArgs> csvOptions() {
         return this.csvOptions == null ? Codegen.empty() : this.csvOptions;
     }
 
@@ -66,7 +66,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
     @Import(name="googleSheetsOptions")
       private final @Nullable Output<TableExternalDataConfigurationGoogleSheetsOptionsGetArgs> googleSheetsOptions;
 
-    public Output<TableExternalDataConfigurationGoogleSheetsOptionsGetArgs> getGoogleSheetsOptions() {
+    public Output<TableExternalDataConfigurationGoogleSheetsOptionsGetArgs> googleSheetsOptions() {
         return this.googleSheetsOptions == null ? Codegen.empty() : this.googleSheetsOptions;
     }
 
@@ -80,7 +80,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
     @Import(name="hivePartitioningOptions")
       private final @Nullable Output<TableExternalDataConfigurationHivePartitioningOptionsGetArgs> hivePartitioningOptions;
 
-    public Output<TableExternalDataConfigurationHivePartitioningOptionsGetArgs> getHivePartitioningOptions() {
+    public Output<TableExternalDataConfigurationHivePartitioningOptionsGetArgs> hivePartitioningOptions() {
         return this.hivePartitioningOptions == null ? Codegen.empty() : this.hivePartitioningOptions;
     }
 
@@ -96,7 +96,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
     @Import(name="ignoreUnknownValues")
       private final @Nullable Output<Boolean> ignoreUnknownValues;
 
-    public Output<Boolean> getIgnoreUnknownValues() {
+    public Output<Boolean> ignoreUnknownValues() {
         return this.ignoreUnknownValues == null ? Codegen.empty() : this.ignoreUnknownValues;
     }
 
@@ -108,7 +108,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
     @Import(name="maxBadRecords")
       private final @Nullable Output<Integer> maxBadRecords;
 
-    public Output<Integer> getMaxBadRecords() {
+    public Output<Integer> maxBadRecords() {
         return this.maxBadRecords == null ? Codegen.empty() : this.maxBadRecords;
     }
 
@@ -129,7 +129,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
     @Import(name="schema")
       private final @Nullable Output<String> schema;
 
-    public Output<String> getSchema() {
+    public Output<String> schema() {
         return this.schema == null ? Codegen.empty() : this.schema;
     }
 
@@ -144,7 +144,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
     @Import(name="sourceFormat", required=true)
       private final Output<String> sourceFormat;
 
-    public Output<String> getSourceFormat() {
+    public Output<String> sourceFormat() {
         return this.sourceFormat;
     }
 
@@ -156,7 +156,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
     @Import(name="sourceUris", required=true)
       private final Output<List<String>> sourceUris;
 
-    public Output<List<String>> getSourceUris() {
+    public Output<List<String>> sourceUris() {
         return this.sourceUris;
     }
 

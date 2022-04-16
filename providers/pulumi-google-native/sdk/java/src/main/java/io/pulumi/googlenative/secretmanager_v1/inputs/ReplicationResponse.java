@@ -24,7 +24,7 @@ public final class ReplicationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="automatic", required=true)
       private final AutomaticResponse automatic;
 
-    public AutomaticResponse getAutomatic() {
+    public AutomaticResponse automatic() {
         return this.automatic;
     }
 
@@ -35,7 +35,7 @@ public final class ReplicationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="userManaged", required=true)
       private final UserManagedResponse userManaged;
 
-    public UserManagedResponse getUserManaged() {
+    public UserManagedResponse userManaged() {
         return this.userManaged;
     }
 

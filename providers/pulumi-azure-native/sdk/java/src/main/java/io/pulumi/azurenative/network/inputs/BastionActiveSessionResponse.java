@@ -25,7 +25,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
     @Import(name="protocol", required=true)
       private final String protocol;
 
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
 
@@ -36,7 +36,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
     @Import(name="resourceType", required=true)
       private final String resourceType;
 
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
 
@@ -47,7 +47,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
     @Import(name="sessionDurationInMins", required=true)
       private final Double sessionDurationInMins;
 
-    public Double getSessionDurationInMins() {
+    public Double sessionDurationInMins() {
         return this.sessionDurationInMins;
     }
 
@@ -58,7 +58,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
     @Import(name="sessionId", required=true)
       private final String sessionId;
 
-    public String getSessionId() {
+    public String sessionId() {
         return this.sessionId;
     }
 
@@ -69,7 +69,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
     @Import(name="startTime", required=true)
       private final Object startTime;
 
-    public Object getStartTime() {
+    public Object startTime() {
         return this.startTime;
     }
 
@@ -80,7 +80,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
     @Import(name="targetHostName", required=true)
       private final String targetHostName;
 
-    public String getTargetHostName() {
+    public String targetHostName() {
         return this.targetHostName;
     }
 
@@ -91,7 +91,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
     @Import(name="targetIpAddress", required=true)
       private final String targetIpAddress;
 
-    public String getTargetIpAddress() {
+    public String targetIpAddress() {
         return this.targetIpAddress;
     }
 
@@ -102,7 +102,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
     @Import(name="targetResourceGroup", required=true)
       private final String targetResourceGroup;
 
-    public String getTargetResourceGroup() {
+    public String targetResourceGroup() {
         return this.targetResourceGroup;
     }
 
@@ -113,7 +113,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
     @Import(name="targetResourceId", required=true)
       private final String targetResourceId;
 
-    public String getTargetResourceId() {
+    public String targetResourceId() {
         return this.targetResourceId;
     }
 
@@ -124,7 +124,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
     @Import(name="targetSubscriptionId", required=true)
       private final String targetSubscriptionId;
 
-    public String getTargetSubscriptionId() {
+    public String targetSubscriptionId() {
         return this.targetSubscriptionId;
     }
 
@@ -135,7 +135,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
     @Import(name="userName", required=true)
       private final String userName;
 
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

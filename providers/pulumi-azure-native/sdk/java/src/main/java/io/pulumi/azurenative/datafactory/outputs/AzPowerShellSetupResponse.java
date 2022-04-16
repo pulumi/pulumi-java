@@ -34,14 +34,14 @@ public final class AzPowerShellSetupResponse {
      * Expected value is 'AzPowerShellSetup'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The required version of Azure PowerShell to install.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

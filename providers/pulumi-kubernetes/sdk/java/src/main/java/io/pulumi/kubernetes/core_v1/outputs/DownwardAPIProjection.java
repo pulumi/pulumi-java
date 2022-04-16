@@ -26,7 +26,7 @@ public final class DownwardAPIProjection {
      * Items is a list of DownwardAPIVolume file
      * 
     */
-    public List<DownwardAPIVolumeFile> getItems() {
+    public List<DownwardAPIVolumeFile> items() {
         return this.items == null ? List.of() : this.items;
     }
 

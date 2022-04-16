@@ -27,7 +27,7 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
     @Import(name="group")
       private final @Nullable Output<String> group;
 
-    public Output<String> getGroup() {
+    public Output<String> group() {
         return this.group == null ? Codegen.empty() : this.group;
     }
 
@@ -38,7 +38,7 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
+    public Output<Boolean> readOnly() {
         return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
@@ -49,7 +49,7 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
     @Import(name="registry", required=true)
       private final Output<String> registry;
 
-    public Output<String> getRegistry() {
+    public Output<String> registry() {
         return this.registry;
     }
 
@@ -60,7 +60,7 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
     @Import(name="tenant")
       private final @Nullable Output<String> tenant;
 
-    public Output<String> getTenant() {
+    public Output<String> tenant() {
         return this.tenant == null ? Codegen.empty() : this.tenant;
     }
 
@@ -71,7 +71,7 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
     @Import(name="user")
       private final @Nullable Output<String> user;
 
-    public Output<String> getUser() {
+    public Output<String> user() {
         return this.user == null ? Codegen.empty() : this.user;
     }
 
@@ -82,7 +82,7 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
     @Import(name="volume", required=true)
       private final Output<String> volume;
 
-    public Output<String> getVolume() {
+    public Output<String> volume() {
         return this.volume;
     }
 

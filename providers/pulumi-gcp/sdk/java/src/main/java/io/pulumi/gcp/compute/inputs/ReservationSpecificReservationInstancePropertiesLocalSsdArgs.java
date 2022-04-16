@@ -23,7 +23,7 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsdArgs 
     @Import(name="diskSizeGb", required=true)
       private final Output<Integer> diskSizeGb;
 
-    public Output<Integer> getDiskSizeGb() {
+    public Output<Integer> diskSizeGb() {
         return this.diskSizeGb;
     }
 
@@ -36,7 +36,7 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsdArgs 
     @Import(name="interface")
       private final @Nullable Output<String> interface_;
 
-    public Output<String> getInterface_() {
+    public Output<String> interface_() {
         return this.interface_ == null ? Codegen.empty() : this.interface_;
     }
 

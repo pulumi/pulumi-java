@@ -85,56 +85,56 @@ public final class CassandraSourceResponse {
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
      * 
     */
-    public Optional<Object> getAdditionalColumns() {
+    public Optional<Object> additionalColumns() {
         return Optional.ofNullable(this.additionalColumns);
     }
     /**
      * The consistency level specifies how many Cassandra servers must respond to a read request before returning data to the client application. Cassandra checks the specified number of Cassandra servers for data to satisfy the read request. Must be one of cassandraSourceReadConsistencyLevels. The default value is 'ONE'. It is case-insensitive.
      * 
     */
-    public Optional<String> getConsistencyLevel() {
+    public Optional<String> consistencyLevel() {
         return Optional.ofNullable(this.consistencyLevel);
     }
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getDisableMetricsCollection() {
+    public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
     */
-    public Optional<Object> getMaxConcurrentConnections() {
+    public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * Database query. Should be a SQL-92 query expression or Cassandra Query Language (CQL) command. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getQuery() {
+    public Optional<Object> query() {
         return Optional.ofNullable(this.query);
     }
     /**
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
     */
-    public Optional<Object> getQueryTimeout() {
+    public Optional<Object> queryTimeout() {
         return Optional.ofNullable(this.queryTimeout);
     }
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
      * 
     */
-    public Optional<Object> getSourceRetryCount() {
+    public Optional<Object> sourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
     */
-    public Optional<Object> getSourceRetryWait() {
+    public Optional<Object> sourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
     /**
@@ -142,7 +142,7 @@ public final class CassandraSourceResponse {
      * Expected value is 'CassandraSource'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

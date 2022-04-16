@@ -25,7 +25,7 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
     @Import(name="b64Std")
       private final @Nullable Output<String> b64Std;
 
-    public Output<String> getB64Std() {
+    public Output<String> b64Std() {
         return this.b64Std == null ? Codegen.empty() : this.b64Std;
     }
 
@@ -36,7 +36,7 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
     @Import(name="b64Url")
       private final @Nullable Output<String> b64Url;
 
-    public Output<String> getB64Url() {
+    public Output<String> b64Url() {
         return this.b64Url == null ? Codegen.empty() : this.b64Url;
     }
 
@@ -47,7 +47,7 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
     @Import(name="byteLength")
       private final @Nullable Output<Integer> byteLength;
 
-    public Output<Integer> getByteLength() {
+    public Output<Integer> byteLength() {
         return this.byteLength == null ? Codegen.empty() : this.byteLength;
     }
 
@@ -58,7 +58,7 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
     @Import(name="dec")
       private final @Nullable Output<String> dec;
 
-    public Output<String> getDec() {
+    public Output<String> dec() {
         return this.dec == null ? Codegen.empty() : this.dec;
     }
 
@@ -69,7 +69,7 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
     @Import(name="hex")
       private final @Nullable Output<String> hex;
 
-    public Output<String> getHex() {
+    public Output<String> hex() {
         return this.hex == null ? Codegen.empty() : this.hex;
     }
 
@@ -80,7 +80,7 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
     @Import(name="keepers")
       private final @Nullable Output<Map<String,Object>> keepers;
 
-    public Output<Map<String,Object>> getKeepers() {
+    public Output<Map<String,Object>> keepers() {
         return this.keepers == null ? Codegen.empty() : this.keepers;
     }
 
@@ -91,7 +91,7 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 

@@ -25,7 +25,7 @@ public final class OracleSchemaResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="oracleTables", required=true)
       private final List<OracleTableResponse> oracleTables;
 
-    public List<OracleTableResponse> getOracleTables() {
+    public List<OracleTableResponse> oracleTables() {
         return this.oracleTables;
     }
 
@@ -36,7 +36,7 @@ public final class OracleSchemaResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="schema", required=true)
       private final String schema;
 
-    public String getSchema() {
+    public String schema() {
         return this.schema;
     }
 

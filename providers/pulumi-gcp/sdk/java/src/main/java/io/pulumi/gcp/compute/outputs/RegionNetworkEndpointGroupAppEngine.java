@@ -52,7 +52,7 @@ public final class RegionNetworkEndpointGroupAppEngine {
      * Example value: "default", "my-service".
      * 
     */
-    public Optional<String> getService() {
+    public Optional<String> service() {
         return Optional.ofNullable(this.service);
     }
     /**
@@ -64,7 +64,7 @@ public final class RegionNetworkEndpointGroupAppEngine {
      * will parse them to { function = "function1" } and { function = "function2" } respectively.
      * 
     */
-    public Optional<String> getUrlMask() {
+    public Optional<String> urlMask() {
         return Optional.ofNullable(this.urlMask);
     }
     /**
@@ -73,7 +73,7 @@ public final class RegionNetworkEndpointGroupAppEngine {
      * Example value: "v1", "v2".
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

@@ -46,26 +46,26 @@ public final class GetAccountKeyResult {
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getKeyAlgorithm() {
+    public String keyAlgorithm() {
         return this.keyAlgorithm;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
     /**
      * The public key, base64 encoded
      * 
     */
-    public String getPublicKey() {
+    public String publicKey() {
         return this.publicKey;
     }
-    public Optional<String> getPublicKeyType() {
+    public Optional<String> publicKeyType() {
         return Optional.ofNullable(this.publicKeyType);
     }
 

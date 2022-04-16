@@ -24,7 +24,7 @@ public final class ApplicationGatewayConnectionDrainingResponse extends io.pulum
     @Import(name="drainTimeoutInSec", required=true)
       private final Integer drainTimeoutInSec;
 
-    public Integer getDrainTimeoutInSec() {
+    public Integer drainTimeoutInSec() {
         return this.drainTimeoutInSec;
     }
 
@@ -35,7 +35,7 @@ public final class ApplicationGatewayConnectionDrainingResponse extends io.pulum
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

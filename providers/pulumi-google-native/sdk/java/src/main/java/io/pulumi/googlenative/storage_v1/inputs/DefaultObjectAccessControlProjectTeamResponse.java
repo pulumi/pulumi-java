@@ -23,7 +23,7 @@ public final class DefaultObjectAccessControlProjectTeamResponse extends io.pulu
     @Import(name="projectNumber", required=true)
       private final String projectNumber;
 
-    public String getProjectNumber() {
+    public String projectNumber() {
         return this.projectNumber;
     }
 
@@ -34,7 +34,7 @@ public final class DefaultObjectAccessControlProjectTeamResponse extends io.pulu
     @Import(name="team", required=true)
       private final String team;
 
-    public String getTeam() {
+    public String team() {
         return this.team;
     }
 

@@ -24,7 +24,7 @@ public final class OptionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -35,7 +35,7 @@ public final class OptionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
       private final Map<String,String> value;
 
-    public Map<String,String> getValue() {
+    public Map<String,String> value() {
         return this.value;
     }
 

@@ -23,7 +23,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -34,7 +34,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -45,7 +45,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
@@ -56,7 +56,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceTopologyName", required=true)
       private final Output<String> serviceTopologyName;
 
-    public Output<String> getServiceTopologyName() {
+    public Output<String> serviceTopologyName() {
         return this.serviceTopologyName;
     }
 
@@ -67,7 +67,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -78,7 +78,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetLocation", required=true)
       private final Output<String> targetLocation;
 
-    public Output<String> getTargetLocation() {
+    public Output<String> targetLocation() {
         return this.targetLocation;
     }
 
@@ -89,7 +89,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetSubscriptionId", required=true)
       private final Output<String> targetSubscriptionId;
 
-    public Output<String> getTargetSubscriptionId() {
+    public Output<String> targetSubscriptionId() {
         return this.targetSubscriptionId;
     }
 

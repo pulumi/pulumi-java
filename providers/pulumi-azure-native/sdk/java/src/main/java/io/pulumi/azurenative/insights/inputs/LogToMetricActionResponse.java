@@ -25,7 +25,7 @@ public final class LogToMetricActionResponse extends io.pulumi.resources.InvokeA
     @Import(name="criteria", required=true)
       private final List<CriteriaResponse> criteria;
 
-    public List<CriteriaResponse> getCriteria() {
+    public List<CriteriaResponse> criteria() {
         return this.criteria;
     }
 
@@ -37,7 +37,7 @@ public final class LogToMetricActionResponse extends io.pulumi.resources.InvokeA
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

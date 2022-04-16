@@ -19,14 +19,14 @@ public final class DatasetContentDeliveryRuleArgs extends io.pulumi.resources.Re
     @Import(name="destination", required=true)
       private final Output<DatasetContentDeliveryRuleDestinationArgs> destination;
 
-    public Output<DatasetContentDeliveryRuleDestinationArgs> getDestination() {
+    public Output<DatasetContentDeliveryRuleDestinationArgs> destination() {
         return this.destination;
     }
 
     @Import(name="entryName")
       private final @Nullable Output<String> entryName;
 
-    public Output<String> getEntryName() {
+    public Output<String> entryName() {
         return this.entryName == null ? Codegen.empty() : this.entryName;
     }
 

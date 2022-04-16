@@ -18,14 +18,14 @@ public final class DistributionLegacyS3OriginArgs extends io.pulumi.resources.Re
     @Import(name="dNSName", required=true)
       private final Output<String> dNSName;
 
-    public Output<String> getDNSName() {
+    public Output<String> dNSName() {
         return this.dNSName;
     }
 
     @Import(name="originAccessIdentity")
       private final @Nullable Output<String> originAccessIdentity;
 
-    public Output<String> getOriginAccessIdentity() {
+    public Output<String> originAccessIdentity() {
         return this.originAccessIdentity == null ? Codegen.empty() : this.originAccessIdentity;
     }
 

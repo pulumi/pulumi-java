@@ -38,25 +38,25 @@ public final class GetClusterPrivateClusterConfig {
         this.publicEndpoint = publicEndpoint;
     }
 
-    public Boolean getEnablePrivateEndpoint() {
+    public Boolean enablePrivateEndpoint() {
         return this.enablePrivateEndpoint;
     }
-    public Boolean getEnablePrivateNodes() {
+    public Boolean enablePrivateNodes() {
         return this.enablePrivateNodes;
     }
-    public List<GetClusterPrivateClusterConfigMasterGlobalAccessConfig> getMasterGlobalAccessConfigs() {
+    public List<GetClusterPrivateClusterConfigMasterGlobalAccessConfig> masterGlobalAccessConfigs() {
         return this.masterGlobalAccessConfigs;
     }
-    public String getMasterIpv4CidrBlock() {
+    public String masterIpv4CidrBlock() {
         return this.masterIpv4CidrBlock;
     }
-    public String getPeeringName() {
+    public String peeringName() {
         return this.peeringName;
     }
-    public String getPrivateEndpoint() {
+    public String privateEndpoint() {
         return this.privateEndpoint;
     }
-    public String getPublicEndpoint() {
+    public String publicEndpoint() {
         return this.publicEndpoint;
     }
 

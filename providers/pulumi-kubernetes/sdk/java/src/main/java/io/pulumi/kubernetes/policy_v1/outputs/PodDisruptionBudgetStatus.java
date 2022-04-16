@@ -89,49 +89,49 @@ public final class PodDisruptionBudgetStatus {
      *                   disruptions are provided by the disruptionsAllowed property.
      * 
     */
-    public List<Condition> getConditions() {
+    public List<Condition> conditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
     /**
      * current number of healthy pods
      * 
     */
-    public Integer getCurrentHealthy() {
+    public Integer currentHealthy() {
         return this.currentHealthy;
     }
     /**
      * minimum desired number of healthy pods
      * 
     */
-    public Integer getDesiredHealthy() {
+    public Integer desiredHealthy() {
         return this.desiredHealthy;
     }
     /**
      * DisruptedPods contains information about pods whose eviction was processed by the API server eviction subresource handler but has not yet been observed by the PodDisruptionBudget controller. A pod will be in this map from the time when the API server processed the eviction request to the time when the pod is seen by PDB controller as having been marked for deletion (or after a timeout). The key in the map is the name of the pod and the value is the time when the API server processed the eviction request. If the deletion didn't occur and a pod is still there it will be removed from the list automatically by PodDisruptionBudget controller after some time. If everything goes smooth this map should be empty for the most of the time. Large number of entries in the map may indicate problems with pod deletions.
      * 
     */
-    public Map<String,String> getDisruptedPods() {
+    public Map<String,String> disruptedPods() {
         return this.disruptedPods == null ? Map.of() : this.disruptedPods;
     }
     /**
      * Number of pod disruptions that are currently allowed.
      * 
     */
-    public Integer getDisruptionsAllowed() {
+    public Integer disruptionsAllowed() {
         return this.disruptionsAllowed;
     }
     /**
      * total number of pods counted by this disruption budget
      * 
     */
-    public Integer getExpectedPods() {
+    public Integer expectedPods() {
         return this.expectedPods;
     }
     /**
      * Most recent generation observed when updating this PDB status. DisruptionsAllowed and other status information is valid only if observedGeneration equals to PDB's object generation.
      * 
     */
-    public Optional<Integer> getObservedGeneration() {
+    public Optional<Integer> observedGeneration() {
         return Optional.ofNullable(this.observedGeneration);
     }
 

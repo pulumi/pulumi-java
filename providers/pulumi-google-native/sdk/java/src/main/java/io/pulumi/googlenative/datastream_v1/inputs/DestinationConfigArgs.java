@@ -27,7 +27,7 @@ public final class DestinationConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="destinationConnectionProfile", required=true)
       private final Output<String> destinationConnectionProfile;
 
-    public Output<String> getDestinationConnectionProfile() {
+    public Output<String> destinationConnectionProfile() {
         return this.destinationConnectionProfile;
     }
 
@@ -38,7 +38,7 @@ public final class DestinationConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="gcsDestinationConfig")
       private final @Nullable Output<GcsDestinationConfigArgs> gcsDestinationConfig;
 
-    public Output<GcsDestinationConfigArgs> getGcsDestinationConfig() {
+    public Output<GcsDestinationConfigArgs> gcsDestinationConfig() {
         return this.gcsDestinationConfig == null ? Codegen.empty() : this.gcsDestinationConfig;
     }
 

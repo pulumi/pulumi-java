@@ -25,7 +25,7 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action")
       private final @Nullable Output<WebAclRuleActionArgs> action;
 
-    public Output<WebAclRuleActionArgs> getAction() {
+    public Output<WebAclRuleActionArgs> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -36,7 +36,7 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="overrideAction")
       private final @Nullable Output<WebAclRuleOverrideActionArgs> overrideAction;
 
-    public Output<WebAclRuleOverrideActionArgs> getOverrideAction() {
+    public Output<WebAclRuleOverrideActionArgs> overrideAction() {
         return this.overrideAction == null ? Codegen.empty() : this.overrideAction;
     }
 
@@ -48,7 +48,7 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 
@@ -59,7 +59,7 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ruleId", required=true)
       private final Output<String> ruleId;
 
-    public Output<String> getRuleId() {
+    public Output<String> ruleId() {
         return this.ruleId;
     }
 
@@ -70,7 +70,7 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

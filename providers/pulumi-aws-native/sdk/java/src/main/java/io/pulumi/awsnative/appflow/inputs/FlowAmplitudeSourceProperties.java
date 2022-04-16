@@ -15,7 +15,7 @@ public final class FlowAmplitudeSourceProperties extends io.pulumi.resources.Inv
     @Import(name="object", required=true)
       private final String object;
 
-    public String getObject() {
+    public String object() {
         return this.object;
     }
 

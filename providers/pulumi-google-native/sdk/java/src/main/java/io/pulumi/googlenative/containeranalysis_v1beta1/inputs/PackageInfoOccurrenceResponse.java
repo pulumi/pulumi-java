@@ -24,7 +24,7 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
     @Import(name="comment", required=true)
       private final String comment;
 
-    public String getComment() {
+    public String comment() {
         return this.comment;
     }
 
@@ -35,7 +35,7 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
     @Import(name="filename", required=true)
       private final String filename;
 
-    public String getFilename() {
+    public String filename() {
         return this.filename;
     }
 
@@ -46,7 +46,7 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
     @Import(name="homePage", required=true)
       private final String homePage;
 
-    public String getHomePage() {
+    public String homePage() {
         return this.homePage;
     }
 
@@ -57,7 +57,7 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
     @Import(name="licenseConcluded", required=true)
       private final LicenseResponse licenseConcluded;
 
-    public LicenseResponse getLicenseConcluded() {
+    public LicenseResponse licenseConcluded() {
         return this.licenseConcluded;
     }
 
@@ -68,7 +68,7 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
     @Import(name="packageType", required=true)
       private final String packageType;
 
-    public String getPackageType() {
+    public String packageType() {
         return this.packageType;
     }
 
@@ -79,7 +79,7 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
     @Import(name="sourceInfo", required=true)
       private final String sourceInfo;
 
-    public String getSourceInfo() {
+    public String sourceInfo() {
         return this.sourceInfo;
     }
 
@@ -90,7 +90,7 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
     @Import(name="summaryDescription", required=true)
       private final String summaryDescription;
 
-    public String getSummaryDescription() {
+    public String summaryDescription() {
         return this.summaryDescription;
     }
 
@@ -101,7 +101,7 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
     @Import(name="title", required=true)
       private final String title;
 
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 
@@ -112,7 +112,7 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

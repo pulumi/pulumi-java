@@ -19,7 +19,7 @@ public final class GetWatchlistItemArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final String operationalInsightsResourceProvider;
 
-    public String getOperationalInsightsResourceProvider() {
+    public String operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
 
@@ -30,7 +30,7 @@ public final class GetWatchlistItemArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetWatchlistItemArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="watchlistAlias", required=true)
       private final String watchlistAlias;
 
-    public String getWatchlistAlias() {
+    public String watchlistAlias() {
         return this.watchlistAlias;
     }
 
@@ -52,7 +52,7 @@ public final class GetWatchlistItemArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="watchlistItemId", required=true)
       private final String watchlistItemId;
 
-    public String getWatchlistItemId() {
+    public String watchlistItemId() {
         return this.watchlistItemId;
     }
 
@@ -63,7 +63,7 @@ public final class GetWatchlistItemArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
-    public String getWorkspaceName() {
+    public String workspaceName() {
         return this.workspaceName;
     }
 

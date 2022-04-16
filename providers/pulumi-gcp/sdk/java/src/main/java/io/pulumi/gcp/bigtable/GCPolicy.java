@@ -41,7 +41,7 @@ public class GCPolicy extends io.pulumi.resources.CustomResource {
      * @return The name of the column family.
      * 
      */
-    public Output<String> getColumnFamily() {
+    public Output<String> columnFamily() {
         return this.columnFamily;
     }
     /**
@@ -55,7 +55,7 @@ public class GCPolicy extends io.pulumi.resources.CustomResource {
      * @return The name of the Bigtable instance.
      * 
      */
-    public Output<String> getInstanceName() {
+    public Output<String> instanceName() {
         return this.instanceName;
     }
     /**
@@ -69,7 +69,7 @@ public class GCPolicy extends io.pulumi.resources.CustomResource {
      * @return GC policy that applies to all cells older than the given age.
      * 
      */
-    public Output</* @Nullable */ GCPolicyMaxAge> getMaxAge() {
+    public Output</* @Nullable */ GCPolicyMaxAge> maxAge() {
         return this.maxAge;
     }
     /**
@@ -83,7 +83,7 @@ public class GCPolicy extends io.pulumi.resources.CustomResource {
      * @return GC policy that applies to all versions of a cell except for the most recent.
      * 
      */
-    public Output</* @Nullable */ List<GCPolicyMaxVersion>> getMaxVersions() {
+    public Output</* @Nullable */ List<GCPolicyMaxVersion>> maxVersions() {
         return this.maxVersions;
     }
     /**
@@ -97,7 +97,7 @@ public class GCPolicy extends io.pulumi.resources.CustomResource {
      * @return If multiple policies are set, you should choose between `UNION` OR `INTERSECTION`.
      * 
      */
-    public Output</* @Nullable */ String> getMode() {
+    public Output</* @Nullable */ String> mode() {
         return this.mode;
     }
     /**
@@ -111,7 +111,7 @@ public class GCPolicy extends io.pulumi.resources.CustomResource {
      * @return The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -125,7 +125,7 @@ public class GCPolicy extends io.pulumi.resources.CustomResource {
      * @return The name of the table.
      * 
      */
-    public Output<String> getTable() {
+    public Output<String> table() {
         return this.table;
     }
 

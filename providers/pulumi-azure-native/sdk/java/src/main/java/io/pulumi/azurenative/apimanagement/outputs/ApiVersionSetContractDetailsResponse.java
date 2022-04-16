@@ -62,42 +62,42 @@ public final class ApiVersionSetContractDetailsResponse {
      * Description of API Version Set.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Identifier for existing API Version Set. Omit this value to create a new Version Set.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The display Name of the API Version Set.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
      * 
     */
-    public Optional<String> getVersionHeaderName() {
+    public Optional<String> versionHeaderName() {
         return Optional.ofNullable(this.versionHeaderName);
     }
     /**
      * Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
      * 
     */
-    public Optional<String> getVersionQueryName() {
+    public Optional<String> versionQueryName() {
         return Optional.ofNullable(this.versionQueryName);
     }
     /**
      * An value that determines where the API Version identifier will be located in a HTTP request.
      * 
     */
-    public Optional<String> getVersioningScheme() {
+    public Optional<String> versioningScheme() {
         return Optional.ofNullable(this.versioningScheme);
     }
 

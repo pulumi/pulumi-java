@@ -27,7 +27,7 @@ public final class DownwardAPIProjectionArgs extends io.pulumi.resources.Resourc
     @Import(name="items")
       private final @Nullable Output<List<DownwardAPIVolumeFileArgs>> items;
 
-    public Output<List<DownwardAPIVolumeFileArgs>> getItems() {
+    public Output<List<DownwardAPIVolumeFileArgs>> items() {
         return this.items == null ? Codegen.empty() : this.items;
     }
 

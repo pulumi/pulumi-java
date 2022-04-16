@@ -27,7 +27,7 @@ public final class SubscriptionLogSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="category")
       private final @Nullable Output<String> category;
 
-    public Output<String> getCategory() {
+    public Output<String> category() {
         return this.category == null ? Codegen.empty() : this.category;
     }
 
@@ -38,7 +38,7 @@ public final class SubscriptionLogSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 

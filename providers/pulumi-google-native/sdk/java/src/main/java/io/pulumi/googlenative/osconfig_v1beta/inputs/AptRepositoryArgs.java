@@ -28,7 +28,7 @@ public final class AptRepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="archiveType")
       private final @Nullable Output<AptRepositoryArchiveType> archiveType;
 
-    public Output<AptRepositoryArchiveType> getArchiveType() {
+    public Output<AptRepositoryArchiveType> archiveType() {
         return this.archiveType == null ? Codegen.empty() : this.archiveType;
     }
 
@@ -39,7 +39,7 @@ public final class AptRepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="components", required=true)
       private final Output<List<String>> components;
 
-    public Output<List<String>> getComponents() {
+    public Output<List<String>> components() {
         return this.components;
     }
 
@@ -50,7 +50,7 @@ public final class AptRepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="distribution", required=true)
       private final Output<String> distribution;
 
-    public Output<String> getDistribution() {
+    public Output<String> distribution() {
         return this.distribution;
     }
 
@@ -61,7 +61,7 @@ public final class AptRepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gpgKey")
       private final @Nullable Output<String> gpgKey;
 
-    public Output<String> getGpgKey() {
+    public Output<String> gpgKey() {
         return this.gpgKey == null ? Codegen.empty() : this.gpgKey;
     }
 
@@ -72,7 +72,7 @@ public final class AptRepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uri", required=true)
       private final Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 

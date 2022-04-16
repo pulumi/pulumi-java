@@ -23,7 +23,7 @@ public final class CxPageEventHandlerGetArgs extends io.pulumi.resources.Resourc
     @Import(name="event")
       private final @Nullable Output<String> event;
 
-    public Output<String> getEvent() {
+    public Output<String> event() {
         return this.event == null ? Codegen.empty() : this.event;
     }
 
@@ -35,7 +35,7 @@ public final class CxPageEventHandlerGetArgs extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -47,7 +47,7 @@ public final class CxPageEventHandlerGetArgs extends io.pulumi.resources.Resourc
     @Import(name="targetFlow")
       private final @Nullable Output<String> targetFlow;
 
-    public Output<String> getTargetFlow() {
+    public Output<String> targetFlow() {
         return this.targetFlow == null ? Codegen.empty() : this.targetFlow;
     }
 
@@ -59,7 +59,7 @@ public final class CxPageEventHandlerGetArgs extends io.pulumi.resources.Resourc
     @Import(name="targetPage")
       private final @Nullable Output<String> targetPage;
 
-    public Output<String> getTargetPage() {
+    public Output<String> targetPage() {
         return this.targetPage == null ? Codegen.empty() : this.targetPage;
     }
 
@@ -71,7 +71,7 @@ public final class CxPageEventHandlerGetArgs extends io.pulumi.resources.Resourc
     @Import(name="triggerFulfillment")
       private final @Nullable Output<CxPageEventHandlerTriggerFulfillmentGetArgs> triggerFulfillment;
 
-    public Output<CxPageEventHandlerTriggerFulfillmentGetArgs> getTriggerFulfillment() {
+    public Output<CxPageEventHandlerTriggerFulfillmentGetArgs> triggerFulfillment() {
         return this.triggerFulfillment == null ? Codegen.empty() : this.triggerFulfillment;
     }
 

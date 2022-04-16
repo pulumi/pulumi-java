@@ -22,7 +22,7 @@ public final class DisasterRecoveryConfigurationArgs extends io.pulumi.resources
     @Import(name="disasterRecoveryConfigurationName")
       private final @Nullable Output<String> disasterRecoveryConfigurationName;
 
-    public Output<String> getDisasterRecoveryConfigurationName() {
+    public Output<String> disasterRecoveryConfigurationName() {
         return this.disasterRecoveryConfigurationName == null ? Codegen.empty() : this.disasterRecoveryConfigurationName;
     }
 
@@ -33,7 +33,7 @@ public final class DisasterRecoveryConfigurationArgs extends io.pulumi.resources
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -44,7 +44,7 @@ public final class DisasterRecoveryConfigurationArgs extends io.pulumi.resources
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 

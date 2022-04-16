@@ -25,7 +25,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -36,7 +36,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptedPassword")
       private final @Nullable Output<AsymmetricEncryptedSecretArgs> encryptedPassword;
 
-    public Output<AsymmetricEncryptedSecretArgs> getEncryptedPassword() {
+    public Output<AsymmetricEncryptedSecretArgs> encryptedPassword() {
         return this.encryptedPassword == null ? Codegen.empty() : this.encryptedPassword;
     }
 
@@ -47,7 +47,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -58,7 +58,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -69,7 +69,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userType", required=true)
       private final Output<Either<String,UserType>> userType;
 
-    public Output<Either<String,UserType>> getUserType() {
+    public Output<Either<String,UserType>> userType() {
         return this.userType;
     }
 

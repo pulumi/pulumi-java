@@ -41,21 +41,21 @@ public final class GrpcServiceConfigResponse {
      * The call credentials to access the SDS server.
      * 
     */
-    public CallCredentialsResponse getCallCredentials() {
+    public CallCredentialsResponse callCredentials() {
         return this.callCredentials;
     }
     /**
      * The channel credentials to access the SDS server.
      * 
     */
-    public ChannelCredentialsResponse getChannelCredentials() {
+    public ChannelCredentialsResponse channelCredentials() {
         return this.channelCredentials;
     }
     /**
      * The target URI of the SDS server.
      * 
     */
-    public String getTargetUri() {
+    public String targetUri() {
         return this.targetUri;
     }
 

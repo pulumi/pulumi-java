@@ -18,7 +18,7 @@ public final class SpotFleetSpotMaintenanceStrategiesArgs extends io.pulumi.reso
     @Import(name="capacityRebalance")
       private final @Nullable Output<SpotFleetSpotCapacityRebalanceArgs> capacityRebalance;
 
-    public Output<SpotFleetSpotCapacityRebalanceArgs> getCapacityRebalance() {
+    public Output<SpotFleetSpotCapacityRebalanceArgs> capacityRebalance() {
         return this.capacityRebalance == null ? Codegen.empty() : this.capacityRebalance;
     }
 

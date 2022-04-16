@@ -24,7 +24,7 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -35,7 +35,7 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataConnectionName")
       private final @Nullable Output<String> dataConnectionName;
 
-    public Output<String> getDataConnectionName() {
+    public Output<String> dataConnectionName() {
         return this.dataConnectionName == null ? Codegen.empty() : this.dataConnectionName;
     }
 
@@ -46,7 +46,7 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -57,7 +57,7 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<Either<String,DataConnectionKind>> kind;
 
-    public Output<Either<String,DataConnectionKind>> getKind() {
+    public Output<Either<String,DataConnectionKind>> kind() {
         return this.kind;
     }
 
@@ -68,7 +68,7 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -79,7 +79,7 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

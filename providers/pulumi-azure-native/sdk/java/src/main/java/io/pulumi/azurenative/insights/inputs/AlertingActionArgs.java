@@ -31,7 +31,7 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="aznsAction")
       private final @Nullable Output<AzNsActionGroupArgs> aznsAction;
 
-    public Output<AzNsActionGroupArgs> getAznsAction() {
+    public Output<AzNsActionGroupArgs> aznsAction() {
         return this.aznsAction == null ? Codegen.empty() : this.aznsAction;
     }
 
@@ -43,7 +43,7 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -54,7 +54,7 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="severity", required=true)
       private final Output<Either<String,AlertSeverity>> severity;
 
-    public Output<Either<String,AlertSeverity>> getSeverity() {
+    public Output<Either<String,AlertSeverity>> severity() {
         return this.severity;
     }
 
@@ -65,7 +65,7 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="throttlingInMin")
       private final @Nullable Output<Integer> throttlingInMin;
 
-    public Output<Integer> getThrottlingInMin() {
+    public Output<Integer> throttlingInMin() {
         return this.throttlingInMin == null ? Codegen.empty() : this.throttlingInMin;
     }
 
@@ -76,7 +76,7 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="trigger", required=true)
       private final Output<TriggerConditionArgs> trigger;
 
-    public Output<TriggerConditionArgs> getTrigger() {
+    public Output<TriggerConditionArgs> trigger() {
         return this.trigger;
     }
 

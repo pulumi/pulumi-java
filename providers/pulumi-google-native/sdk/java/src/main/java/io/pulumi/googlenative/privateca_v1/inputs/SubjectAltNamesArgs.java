@@ -28,7 +28,7 @@ public final class SubjectAltNamesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="customSans")
       private final @Nullable Output<List<X509ExtensionArgs>> customSans;
 
-    public Output<List<X509ExtensionArgs>> getCustomSans() {
+    public Output<List<X509ExtensionArgs>> customSans() {
         return this.customSans == null ? Codegen.empty() : this.customSans;
     }
 
@@ -39,7 +39,7 @@ public final class SubjectAltNamesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="dnsNames")
       private final @Nullable Output<List<String>> dnsNames;
 
-    public Output<List<String>> getDnsNames() {
+    public Output<List<String>> dnsNames() {
         return this.dnsNames == null ? Codegen.empty() : this.dnsNames;
     }
 
@@ -50,7 +50,7 @@ public final class SubjectAltNamesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="emailAddresses")
       private final @Nullable Output<List<String>> emailAddresses;
 
-    public Output<List<String>> getEmailAddresses() {
+    public Output<List<String>> emailAddresses() {
         return this.emailAddresses == null ? Codegen.empty() : this.emailAddresses;
     }
 
@@ -61,7 +61,7 @@ public final class SubjectAltNamesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="ipAddresses")
       private final @Nullable Output<List<String>> ipAddresses;
 
-    public Output<List<String>> getIpAddresses() {
+    public Output<List<String>> ipAddresses() {
         return this.ipAddresses == null ? Codegen.empty() : this.ipAddresses;
     }
 
@@ -72,7 +72,7 @@ public final class SubjectAltNamesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="uris")
       private final @Nullable Output<List<String>> uris;
 
-    public Output<List<String>> getUris() {
+    public Output<List<String>> uris() {
         return this.uris == null ? Codegen.empty() : this.uris;
     }
 

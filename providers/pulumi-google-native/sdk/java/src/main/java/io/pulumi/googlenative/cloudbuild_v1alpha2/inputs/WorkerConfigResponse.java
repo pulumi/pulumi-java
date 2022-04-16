@@ -23,7 +23,7 @@ public final class WorkerConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="diskSizeGb", required=true)
       private final String diskSizeGb;
 
-    public String getDiskSizeGb() {
+    public String diskSizeGb() {
         return this.diskSizeGb;
     }
 
@@ -34,7 +34,7 @@ public final class WorkerConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="machineType", required=true)
       private final String machineType;
 
-    public String getMachineType() {
+    public String machineType() {
         return this.machineType;
     }
 

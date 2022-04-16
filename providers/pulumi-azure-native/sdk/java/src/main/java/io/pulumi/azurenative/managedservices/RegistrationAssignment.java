@@ -43,7 +43,7 @@ public class RegistrationAssignment extends io.pulumi.resources.CustomResource {
      * @return Name of the registration assignment.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +57,7 @@ public class RegistrationAssignment extends io.pulumi.resources.CustomResource {
      * @return Properties of a registration assignment.
      * 
      */
-    public Output<RegistrationAssignmentPropertiesResponse> getProperties() {
+    public Output<RegistrationAssignmentPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -71,7 +71,7 @@ public class RegistrationAssignment extends io.pulumi.resources.CustomResource {
      * @return Type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

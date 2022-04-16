@@ -98,70 +98,70 @@ public final class GatewayPropertiesResponse {
      * API metadata property for Spring Cloud Gateway
      * 
     */
-    public Optional<GatewayApiMetadataPropertiesResponse> getApiMetadataProperties() {
+    public Optional<GatewayApiMetadataPropertiesResponse> apiMetadataProperties() {
         return Optional.ofNullable(this.apiMetadataProperties);
     }
     /**
      * Cross-Origin Resource Sharing property
      * 
     */
-    public Optional<GatewayCorsPropertiesResponse> getCorsProperties() {
+    public Optional<GatewayCorsPropertiesResponse> corsProperties() {
         return Optional.ofNullable(this.corsProperties);
     }
     /**
      * Indicate if only https is allowed.
      * 
     */
-    public Optional<Boolean> getHttpsOnly() {
+    public Optional<Boolean> httpsOnly() {
         return Optional.ofNullable(this.httpsOnly);
     }
     /**
      * Collection of instances belong to Spring Cloud Gateway.
      * 
     */
-    public List<GatewayInstanceResponse> getInstances() {
+    public List<GatewayInstanceResponse> instances() {
         return this.instances;
     }
     /**
      * Properties of the Spring Cloud Gateway Operator.
      * 
     */
-    public GatewayOperatorPropertiesResponse getOperatorProperties() {
+    public GatewayOperatorPropertiesResponse operatorProperties() {
         return this.operatorProperties;
     }
     /**
      * State of the Spring Cloud Gateway.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Indicates whether the Spring Cloud Gateway exposes endpoint.
      * 
     */
-    public Optional<Boolean> getPublic_() {
+    public Optional<Boolean> public_() {
         return Optional.ofNullable(this.public_);
     }
     /**
      * The requested resource quantity for required CPU and Memory.
      * 
     */
-    public Optional<GatewayResourceRequestsResponse> getResourceRequests() {
+    public Optional<GatewayResourceRequestsResponse> resourceRequests() {
         return Optional.ofNullable(this.resourceRequests);
     }
     /**
      * Single sign-on related configuration
      * 
     */
-    public Optional<SsoPropertiesResponse> getSsoProperties() {
+    public Optional<SsoPropertiesResponse> ssoProperties() {
         return Optional.ofNullable(this.ssoProperties);
     }
     /**
      * URL of the Spring Cloud Gateway, exposed when 'public' is true.
      * 
     */
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

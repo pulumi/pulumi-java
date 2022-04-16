@@ -41,21 +41,21 @@ public final class DeploymentUpdateResponse {
      * An optional user-provided description of the deployment after the current update has been applied.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Map of One Platform labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
      * 
     */
-    public List<DeploymentUpdateLabelEntryResponse> getLabels() {
+    public List<DeploymentUpdateLabelEntryResponse> labels() {
         return this.labels;
     }
     /**
      * URL of the manifest representing the update configuration of this deployment.
      * 
     */
-    public String getManifest() {
+    public String manifest() {
         return this.manifest;
     }
 

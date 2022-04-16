@@ -25,49 +25,49 @@ public final class GlobalTableReplicaSpecificationArgs extends io.pulumi.resourc
     @Import(name="contributorInsightsSpecification")
       private final @Nullable Output<GlobalTableContributorInsightsSpecificationArgs> contributorInsightsSpecification;
 
-    public Output<GlobalTableContributorInsightsSpecificationArgs> getContributorInsightsSpecification() {
+    public Output<GlobalTableContributorInsightsSpecificationArgs> contributorInsightsSpecification() {
         return this.contributorInsightsSpecification == null ? Codegen.empty() : this.contributorInsightsSpecification;
     }
 
     @Import(name="globalSecondaryIndexes")
       private final @Nullable Output<List<GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs>> globalSecondaryIndexes;
 
-    public Output<List<GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs>> getGlobalSecondaryIndexes() {
+    public Output<List<GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs>> globalSecondaryIndexes() {
         return this.globalSecondaryIndexes == null ? Codegen.empty() : this.globalSecondaryIndexes;
     }
 
     @Import(name="pointInTimeRecoverySpecification")
       private final @Nullable Output<GlobalTablePointInTimeRecoverySpecificationArgs> pointInTimeRecoverySpecification;
 
-    public Output<GlobalTablePointInTimeRecoverySpecificationArgs> getPointInTimeRecoverySpecification() {
+    public Output<GlobalTablePointInTimeRecoverySpecificationArgs> pointInTimeRecoverySpecification() {
         return this.pointInTimeRecoverySpecification == null ? Codegen.empty() : this.pointInTimeRecoverySpecification;
     }
 
     @Import(name="readProvisionedThroughputSettings")
       private final @Nullable Output<GlobalTableReadProvisionedThroughputSettingsArgs> readProvisionedThroughputSettings;
 
-    public Output<GlobalTableReadProvisionedThroughputSettingsArgs> getReadProvisionedThroughputSettings() {
+    public Output<GlobalTableReadProvisionedThroughputSettingsArgs> readProvisionedThroughputSettings() {
         return this.readProvisionedThroughputSettings == null ? Codegen.empty() : this.readProvisionedThroughputSettings;
     }
 
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
     @Import(name="sSESpecification")
       private final @Nullable Output<GlobalTableReplicaSSESpecificationArgs> sSESpecification;
 
-    public Output<GlobalTableReplicaSSESpecificationArgs> getSSESpecification() {
+    public Output<GlobalTableReplicaSSESpecificationArgs> sSESpecification() {
         return this.sSESpecification == null ? Codegen.empty() : this.sSESpecification;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<GlobalTableTagArgs>> tags;
 
-    public Output<List<GlobalTableTagArgs>> getTags() {
+    public Output<List<GlobalTableTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

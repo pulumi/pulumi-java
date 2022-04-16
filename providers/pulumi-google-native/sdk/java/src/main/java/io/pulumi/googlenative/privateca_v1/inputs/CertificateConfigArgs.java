@@ -28,7 +28,7 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="publicKey")
       private final @Nullable Output<PublicKeyArgs> publicKey;
 
-    public Output<PublicKeyArgs> getPublicKey() {
+    public Output<PublicKeyArgs> publicKey() {
         return this.publicKey == null ? Codegen.empty() : this.publicKey;
     }
 
@@ -39,7 +39,7 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="subjectConfig", required=true)
       private final Output<SubjectConfigArgs> subjectConfig;
 
-    public Output<SubjectConfigArgs> getSubjectConfig() {
+    public Output<SubjectConfigArgs> subjectConfig() {
         return this.subjectConfig;
     }
 
@@ -50,7 +50,7 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="x509Config", required=true)
       private final Output<X509ParametersArgs> x509Config;
 
-    public Output<X509ParametersArgs> getX509Config() {
+    public Output<X509ParametersArgs> x509Config() {
         return this.x509Config;
     }
 

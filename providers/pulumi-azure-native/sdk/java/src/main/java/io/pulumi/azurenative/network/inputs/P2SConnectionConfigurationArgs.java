@@ -29,7 +29,7 @@ public final class P2SConnectionConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="enableInternetSecurity")
       private final @Nullable Output<Boolean> enableInternetSecurity;
 
-    public Output<Boolean> getEnableInternetSecurity() {
+    public Output<Boolean> enableInternetSecurity() {
         return this.enableInternetSecurity == null ? Codegen.empty() : this.enableInternetSecurity;
     }
 
@@ -40,7 +40,7 @@ public final class P2SConnectionConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -51,7 +51,7 @@ public final class P2SConnectionConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -62,7 +62,7 @@ public final class P2SConnectionConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="routingConfiguration")
       private final @Nullable Output<RoutingConfigurationArgs> routingConfiguration;
 
-    public Output<RoutingConfigurationArgs> getRoutingConfiguration() {
+    public Output<RoutingConfigurationArgs> routingConfiguration() {
         return this.routingConfiguration == null ? Codegen.empty() : this.routingConfiguration;
     }
 
@@ -73,7 +73,7 @@ public final class P2SConnectionConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="vpnClientAddressPool")
       private final @Nullable Output<AddressSpaceArgs> vpnClientAddressPool;
 
-    public Output<AddressSpaceArgs> getVpnClientAddressPool() {
+    public Output<AddressSpaceArgs> vpnClientAddressPool() {
         return this.vpnClientAddressPool == null ? Codegen.empty() : this.vpnClientAddressPool;
     }
 

@@ -28,7 +28,7 @@ public final class PacketCaptureFilterArgs extends io.pulumi.resources.ResourceA
     @Import(name="localIPAddress")
       private final @Nullable Output<String> localIPAddress;
 
-    public Output<String> getLocalIPAddress() {
+    public Output<String> localIPAddress() {
         return this.localIPAddress == null ? Codegen.empty() : this.localIPAddress;
     }
 
@@ -39,7 +39,7 @@ public final class PacketCaptureFilterArgs extends io.pulumi.resources.ResourceA
     @Import(name="localPort")
       private final @Nullable Output<String> localPort;
 
-    public Output<String> getLocalPort() {
+    public Output<String> localPort() {
         return this.localPort == null ? Codegen.empty() : this.localPort;
     }
 
@@ -50,7 +50,7 @@ public final class PacketCaptureFilterArgs extends io.pulumi.resources.ResourceA
     @Import(name="protocol")
       private final @Nullable Output<Either<String,PcProtocol>> protocol;
 
-    public Output<Either<String,PcProtocol>> getProtocol() {
+    public Output<Either<String,PcProtocol>> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
@@ -61,7 +61,7 @@ public final class PacketCaptureFilterArgs extends io.pulumi.resources.ResourceA
     @Import(name="remoteIPAddress")
       private final @Nullable Output<String> remoteIPAddress;
 
-    public Output<String> getRemoteIPAddress() {
+    public Output<String> remoteIPAddress() {
         return this.remoteIPAddress == null ? Codegen.empty() : this.remoteIPAddress;
     }
 
@@ -72,7 +72,7 @@ public final class PacketCaptureFilterArgs extends io.pulumi.resources.ResourceA
     @Import(name="remotePort")
       private final @Nullable Output<String> remotePort;
 
-    public Output<String> getRemotePort() {
+    public Output<String> remotePort() {
         return this.remotePort == null ? Codegen.empty() : this.remotePort;
     }
 

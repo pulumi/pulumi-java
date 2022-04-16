@@ -27,7 +27,7 @@ public final class ThresholdCustomAlertRuleArgs extends io.pulumi.resources.Reso
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 
@@ -38,7 +38,7 @@ public final class ThresholdCustomAlertRuleArgs extends io.pulumi.resources.Reso
     @Import(name="maxThreshold", required=true)
       private final Output<Integer> maxThreshold;
 
-    public Output<Integer> getMaxThreshold() {
+    public Output<Integer> maxThreshold() {
         return this.maxThreshold;
     }
 
@@ -49,7 +49,7 @@ public final class ThresholdCustomAlertRuleArgs extends io.pulumi.resources.Reso
     @Import(name="minThreshold", required=true)
       private final Output<Integer> minThreshold;
 
-    public Output<Integer> getMinThreshold() {
+    public Output<Integer> minThreshold() {
         return this.minThreshold;
     }
 
@@ -61,7 +61,7 @@ public final class ThresholdCustomAlertRuleArgs extends io.pulumi.resources.Reso
     @Import(name="ruleType", required=true)
       private final Output<String> ruleType;
 
-    public Output<String> getRuleType() {
+    public Output<String> ruleType() {
         return this.ruleType;
     }
 

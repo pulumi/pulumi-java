@@ -100,80 +100,80 @@ public final class GetReportDefinitionResult {
      * A list of additional artifacts.
      * 
     */
-    public List<String> getAdditionalArtifacts() {
+    public List<String> additionalArtifacts() {
         return this.additionalArtifacts;
     }
     /**
      * A list of schema elements.
      * 
     */
-    public List<String> getAdditionalSchemaElements() {
+    public List<String> additionalSchemaElements() {
         return this.additionalSchemaElements;
     }
     /**
      * Preferred format for report.
      * 
     */
-    public String getCompression() {
+    public String compression() {
         return this.compression;
     }
     /**
      * Preferred compression format for report.
      * 
     */
-    public String getFormat() {
+    public String format() {
         return this.format;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * If true reports are updated after they have been finalized.
      * 
     */
-    public Boolean getRefreshClosedReports() {
+    public Boolean refreshClosedReports() {
         return this.refreshClosedReports;
     }
-    public String getReportName() {
+    public String reportName() {
         return this.reportName;
     }
     /**
      * Overwrite the previous version of each report or to deliver the report in addition to the previous versions.
      * 
     */
-    public String getReportVersioning() {
+    public String reportVersioning() {
         return this.reportVersioning;
     }
     /**
      * Name of customer S3 bucket.
      * 
     */
-    public String getS3Bucket() {
+    public String s3Bucket() {
         return this.s3Bucket;
     }
     /**
      * Preferred report path prefix.
      * 
     */
-    public String getS3Prefix() {
+    public String s3Prefix() {
         return this.s3Prefix;
     }
     /**
      * Region of customer S3 bucket.
      * 
     */
-    public String getS3Region() {
+    public String s3Region() {
         return this.s3Region;
     }
     /**
      * The frequency on which report data are measured and displayed.
      * 
     */
-    public String getTimeUnit() {
+    public String timeUnit() {
         return this.timeUnit;
     }
 

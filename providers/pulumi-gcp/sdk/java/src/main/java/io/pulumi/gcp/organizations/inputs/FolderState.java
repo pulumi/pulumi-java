@@ -23,7 +23,7 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -35,7 +35,7 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -46,7 +46,7 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
     @Import(name="folderId")
       private final @Nullable Output<String> folderId;
 
-    public Output<String> getFolderId() {
+    public Output<String> folderId() {
         return this.folderId == null ? Codegen.empty() : this.folderId;
     }
 
@@ -57,7 +57,7 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lifecycleState")
       private final @Nullable Output<String> lifecycleState;
 
-    public Output<String> getLifecycleState() {
+    public Output<String> lifecycleState() {
         return this.lifecycleState == null ? Codegen.empty() : this.lifecycleState;
     }
 
@@ -68,7 +68,7 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -80,7 +80,7 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent == null ? Codegen.empty() : this.parent;
     }
 

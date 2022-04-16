@@ -27,7 +27,7 @@ public final class ConfigurationGroupResponse extends io.pulumi.resources.Invoke
     @Import(name="conditionalMembership")
       private final @Nullable String conditionalMembership;
 
-    public Optional<String> getConditionalMembership() {
+    public Optional<String> conditionalMembership() {
         return this.conditionalMembership == null ? Optional.empty() : Optional.ofNullable(this.conditionalMembership);
     }
 
@@ -38,7 +38,7 @@ public final class ConfigurationGroupResponse extends io.pulumi.resources.Invoke
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -49,7 +49,7 @@ public final class ConfigurationGroupResponse extends io.pulumi.resources.Invoke
     @Import(name="displayName")
       private final @Nullable String displayName;
 
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
@@ -60,7 +60,7 @@ public final class ConfigurationGroupResponse extends io.pulumi.resources.Invoke
     @Import(name="groupMembers")
       private final @Nullable List<GroupMembersItemResponse> groupMembers;
 
-    public List<GroupMembersItemResponse> getGroupMembers() {
+    public List<GroupMembersItemResponse> groupMembers() {
         return this.groupMembers == null ? List.of() : this.groupMembers;
     }
 
@@ -71,7 +71,7 @@ public final class ConfigurationGroupResponse extends io.pulumi.resources.Invoke
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -82,7 +82,7 @@ public final class ConfigurationGroupResponse extends io.pulumi.resources.Invoke
     @Import(name="memberType")
       private final @Nullable String memberType;
 
-    public Optional<String> getMemberType() {
+    public Optional<String> memberType() {
         return this.memberType == null ? Optional.empty() : Optional.ofNullable(this.memberType);
     }
 
@@ -93,7 +93,7 @@ public final class ConfigurationGroupResponse extends io.pulumi.resources.Invoke
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

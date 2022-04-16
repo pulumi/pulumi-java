@@ -52,7 +52,7 @@ public class AiMetadataStore extends io.pulumi.resources.CustomResource {
      * nine fractional digits.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -66,7 +66,7 @@ public class AiMetadataStore extends io.pulumi.resources.CustomResource {
      * @return Description of the MetadataStore.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -82,7 +82,7 @@ public class AiMetadataStore extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AiMetadataStoreEncryptionSpec> getEncryptionSpec() {
+    public Output</* @Nullable */ AiMetadataStoreEncryptionSpec> encryptionSpec() {
         return this.encryptionSpec;
     }
     /**
@@ -96,7 +96,7 @@ public class AiMetadataStore extends io.pulumi.resources.CustomResource {
      * @return The name of the MetadataStore. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -112,7 +112,7 @@ public class AiMetadataStore extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -126,7 +126,7 @@ public class AiMetadataStore extends io.pulumi.resources.CustomResource {
      * @return The region of the Metadata Store. eg us-central1
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -140,7 +140,7 @@ public class AiMetadataStore extends io.pulumi.resources.CustomResource {
      * @return State information of the MetadataStore.
      * 
      */
-    public Output<List<AiMetadataStoreState>> getStates() {
+    public Output<List<AiMetadataStoreState>> states() {
         return this.states;
     }
     /**
@@ -156,7 +156,7 @@ public class AiMetadataStore extends io.pulumi.resources.CustomResource {
      * to nine fractional digits.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

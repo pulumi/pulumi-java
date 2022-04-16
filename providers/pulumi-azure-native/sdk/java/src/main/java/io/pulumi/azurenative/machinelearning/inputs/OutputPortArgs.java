@@ -28,7 +28,7 @@ public final class OutputPortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<Either<String,OutputPortType>> type;
 
-    public Output<Either<String,OutputPortType>> getType() {
+    public Output<Either<String,OutputPortType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

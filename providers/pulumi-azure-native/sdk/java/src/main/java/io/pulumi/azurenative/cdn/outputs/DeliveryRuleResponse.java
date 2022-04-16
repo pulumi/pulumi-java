@@ -73,28 +73,28 @@ public final class DeliveryRuleResponse {
      * A list of actions that are executed when all the conditions of a rule are satisfied.
      * 
     */
-    public List<Object> getActions() {
+    public List<Object> actions() {
         return this.actions;
     }
     /**
      * A list of conditions that must be matched for the actions to be executed
      * 
     */
-    public List<Object> getConditions() {
+    public List<Object> conditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
     /**
      * Name of the rule
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.
      * 
     */
-    public Integer getOrder() {
+    public Integer order() {
         return this.order;
     }
 

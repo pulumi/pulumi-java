@@ -24,7 +24,7 @@ public final class NetworkEndpointResponse extends io.pulumi.resources.InvokeArg
     @Import(name="ipAddress", required=true)
       private final String ipAddress;
 
-    public String getIpAddress() {
+    public String ipAddress() {
         return this.ipAddress;
     }
 
@@ -35,7 +35,7 @@ public final class NetworkEndpointResponse extends io.pulumi.resources.InvokeArg
     @Import(name="port", required=true)
       private final Integer port;
 
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 

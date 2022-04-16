@@ -20,14 +20,14 @@ public final class DataSourceOneDriveUsersArgs extends io.pulumi.resources.Resou
     @Import(name="oneDriveUserList")
       private final @Nullable Output<List<String>> oneDriveUserList;
 
-    public Output<List<String>> getOneDriveUserList() {
+    public Output<List<String>> oneDriveUserList() {
         return this.oneDriveUserList == null ? Codegen.empty() : this.oneDriveUserList;
     }
 
     @Import(name="oneDriveUserS3Path")
       private final @Nullable Output<DataSourceS3PathArgs> oneDriveUserS3Path;
 
-    public Output<DataSourceS3PathArgs> getOneDriveUserS3Path() {
+    public Output<DataSourceS3PathArgs> oneDriveUserS3Path() {
         return this.oneDriveUserS3Path == null ? Codegen.empty() : this.oneDriveUserS3Path;
     }
 

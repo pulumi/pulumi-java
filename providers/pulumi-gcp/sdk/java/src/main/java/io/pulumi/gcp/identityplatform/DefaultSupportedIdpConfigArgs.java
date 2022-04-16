@@ -23,7 +23,7 @@ public final class DefaultSupportedIdpConfigArgs extends io.pulumi.resources.Res
     @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
 
@@ -34,7 +34,7 @@ public final class DefaultSupportedIdpConfigArgs extends io.pulumi.resources.Res
     @Import(name="clientSecret", required=true)
       private final Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
+    public Output<String> clientSecret() {
         return this.clientSecret;
     }
 
@@ -45,7 +45,7 @@ public final class DefaultSupportedIdpConfigArgs extends io.pulumi.resources.Res
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -66,7 +66,7 @@ public final class DefaultSupportedIdpConfigArgs extends io.pulumi.resources.Res
     @Import(name="idpId", required=true)
       private final Output<String> idpId;
 
-    public Output<String> getIdpId() {
+    public Output<String> idpId() {
         return this.idpId;
     }
 
@@ -78,7 +78,7 @@ public final class DefaultSupportedIdpConfigArgs extends io.pulumi.resources.Res
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

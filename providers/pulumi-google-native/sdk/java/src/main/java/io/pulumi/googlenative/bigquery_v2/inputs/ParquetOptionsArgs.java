@@ -22,7 +22,7 @@ public final class ParquetOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableListInference")
       private final @Nullable Output<Boolean> enableListInference;
 
-    public Output<Boolean> getEnableListInference() {
+    public Output<Boolean> enableListInference() {
         return this.enableListInference == null ? Codegen.empty() : this.enableListInference;
     }
 
@@ -33,7 +33,7 @@ public final class ParquetOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enumAsString")
       private final @Nullable Output<Boolean> enumAsString;
 
-    public Output<Boolean> getEnumAsString() {
+    public Output<Boolean> enumAsString() {
         return this.enumAsString == null ? Codegen.empty() : this.enumAsString;
     }
 

@@ -23,7 +23,7 @@ public final class ScoringConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="disableFreshness", required=true)
       private final Boolean disableFreshness;
 
-    public Boolean getDisableFreshness() {
+    public Boolean disableFreshness() {
         return this.disableFreshness;
     }
 
@@ -34,7 +34,7 @@ public final class ScoringConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="disablePersonalization", required=true)
       private final Boolean disablePersonalization;
 
-    public Boolean getDisablePersonalization() {
+    public Boolean disablePersonalization() {
         return this.disablePersonalization;
     }
 

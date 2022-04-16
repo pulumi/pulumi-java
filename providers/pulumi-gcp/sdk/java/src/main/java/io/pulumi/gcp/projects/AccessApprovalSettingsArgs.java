@@ -28,7 +28,7 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="enrolledServices", required=true)
       private final Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices;
 
-    public Output<List<AccessApprovalSettingsEnrolledServiceArgs>> getEnrolledServices() {
+    public Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices() {
         return this.enrolledServices;
     }
 
@@ -41,7 +41,7 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="notificationEmails")
       private final @Nullable Output<List<String>> notificationEmails;
 
-    public Output<List<String>> getNotificationEmails() {
+    public Output<List<String>> notificationEmails() {
         return this.notificationEmails == null ? Codegen.empty() : this.notificationEmails;
     }
 
@@ -59,7 +59,7 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> project;
 
     @Deprecated /* Deprecated in favor of `project_id` */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -70,7 +70,7 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="projectId", required=true)
       private final Output<String> projectId;
 
-    public Output<String> getProjectId() {
+    public Output<String> projectId() {
         return this.projectId;
     }
 

@@ -23,7 +23,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateId", required=true)
       private final Output<String> certificateId;
 
-    public Output<String> getCertificateId() {
+    public Output<String> certificateId() {
         return this.certificateId;
     }
 
@@ -34,7 +34,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificatePem")
       private final @Nullable Output<String> certificatePem;
 
-    public Output<String> getCertificatePem() {
+    public Output<String> certificatePem() {
         return this.certificatePem == null ? Codegen.empty() : this.certificatePem;
     }
 
@@ -45,7 +45,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateWallet")
       private final @Nullable Output<String> certificateWallet;
 
-    public Output<String> getCertificateWallet() {
+    public Output<String> certificateWallet() {
         return this.certificateWallet == null ? Codegen.empty() : this.certificateWallet;
     }
 
@@ -56,7 +56,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

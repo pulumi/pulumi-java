@@ -26,7 +26,7 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventTimeToLiveInMinutes")
       private final @Nullable Output<Integer> eventTimeToLiveInMinutes;
 
-    public Output<Integer> getEventTimeToLiveInMinutes() {
+    public Output<Integer> eventTimeToLiveInMinutes() {
         return this.eventTimeToLiveInMinutes == null ? Codegen.empty() : this.eventTimeToLiveInMinutes;
     }
 
@@ -37,7 +37,7 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxDeliveryAttempts")
       private final @Nullable Output<Integer> maxDeliveryAttempts;
 
-    public Output<Integer> getMaxDeliveryAttempts() {
+    public Output<Integer> maxDeliveryAttempts() {
         return this.maxDeliveryAttempts == null ? Codegen.empty() : this.maxDeliveryAttempts;
     }
 

@@ -19,7 +19,7 @@ public final class GetManagementGroupNetworkManagerConnectionArgs extends io.pul
     @Import(name="managementGroupId", required=true)
       private final String managementGroupId;
 
-    public String getManagementGroupId() {
+    public String managementGroupId() {
         return this.managementGroupId;
     }
 
@@ -30,7 +30,7 @@ public final class GetManagementGroupNetworkManagerConnectionArgs extends io.pul
     @Import(name="networkManagerConnectionName", required=true)
       private final String networkManagerConnectionName;
 
-    public String getNetworkManagerConnectionName() {
+    public String networkManagerConnectionName() {
         return this.networkManagerConnectionName;
     }
 

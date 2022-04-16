@@ -46,7 +46,7 @@ public class AssetFilter extends io.pulumi.resources.CustomResource {
      * @return The first quality.
      * 
      */
-    public Output</* @Nullable */ FirstQualityResponse> getFirstQuality() {
+    public Output</* @Nullable */ FirstQualityResponse> firstQuality() {
         return this.firstQuality;
     }
     /**
@@ -60,7 +60,7 @@ public class AssetFilter extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -74,7 +74,7 @@ public class AssetFilter extends io.pulumi.resources.CustomResource {
      * @return The presentation time range.
      * 
      */
-    public Output</* @Nullable */ PresentationTimeRangeResponse> getPresentationTimeRange() {
+    public Output</* @Nullable */ PresentationTimeRangeResponse> presentationTimeRange() {
         return this.presentationTimeRange;
     }
     /**
@@ -88,7 +88,7 @@ public class AssetFilter extends io.pulumi.resources.CustomResource {
      * @return The system metadata relating to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -102,7 +102,7 @@ public class AssetFilter extends io.pulumi.resources.CustomResource {
      * @return The tracks selection conditions.
      * 
      */
-    public Output</* @Nullable */ List<FilterTrackSelectionResponse>> getTracks() {
+    public Output</* @Nullable */ List<FilterTrackSelectionResponse>> tracks() {
         return this.tracks;
     }
     /**
@@ -116,7 +116,7 @@ public class AssetFilter extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

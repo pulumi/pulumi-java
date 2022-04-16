@@ -50,28 +50,28 @@ public final class SlsaProvenanceResponse {
      * builder is the builder of this provenance
      * 
     */
-    public SlsaBuilderResponse getBuilder() {
+    public SlsaBuilderResponse builder_() {
         return this.builder;
     }
     /**
      * The collection of artifacts that influenced the build including sources, dependencies, build tools, base images, and so on. This is considered to be incomplete unless metadata.completeness.materials is true. Unset or null is equivalent to empty.
      * 
     */
-    public List<MaterialResponse> getMaterials() {
+    public List<MaterialResponse> materials() {
         return this.materials;
     }
     /**
      * metadata is the metadata of the provenance
      * 
     */
-    public SlsaMetadataResponse getMetadata() {
+    public SlsaMetadataResponse metadata() {
         return this.metadata;
     }
     /**
      * Identifies the configuration used for the build. When combined with materials, this SHOULD fully describe the build, such that re-running this recipe results in bit-for-bit identical output (if the build is reproducible).
      * 
     */
-    public SlsaRecipeResponse getRecipe() {
+    public SlsaRecipeResponse recipe() {
         return this.recipe;
     }
 
@@ -101,7 +101,7 @@ public final class SlsaProvenanceResponse {
     	      this.recipe = defaults.recipe;
         }
 
-        public Builder builder(SlsaBuilderResponse builder) {
+        public Builder builder_(SlsaBuilderResponse builder) {
             this.builder = Objects.requireNonNull(builder);
             return this;
         }

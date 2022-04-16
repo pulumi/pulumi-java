@@ -60,42 +60,42 @@ public final class GetSubscriptionResult {
      * Name of the API product for which the developer is purchasing a subscription.
      * 
     */
-    public String getApiproduct() {
+    public String apiproduct() {
         return this.apiproduct;
     }
     /**
      * Time when the API product subscription was created in milliseconds since epoch.
      * 
     */
-    public String getCreatedAt() {
+    public String createdAt() {
         return this.createdAt;
     }
     /**
      * Time when the API product subscription ends in milliseconds since epoch.
      * 
     */
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
     /**
      * Time when the API product subscription was last modified in milliseconds since epoch.
      * 
     */
-    public String getLastModifiedAt() {
+    public String lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
      * Name of the API product subscription.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Time when the API product subscription starts in milliseconds since epoch.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

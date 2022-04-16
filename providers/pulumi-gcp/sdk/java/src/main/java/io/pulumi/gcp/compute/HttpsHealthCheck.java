@@ -64,7 +64,7 @@ public class HttpsHealthCheck extends io.pulumi.resources.CustomResource {
      * seconds.
      * 
      */
-    public Output</* @Nullable */ Integer> getCheckIntervalSec() {
+    public Output</* @Nullable */ Integer> checkIntervalSec() {
         return this.checkIntervalSec;
     }
     /**
@@ -78,7 +78,7 @@ public class HttpsHealthCheck extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -94,7 +94,7 @@ public class HttpsHealthCheck extends io.pulumi.resources.CustomResource {
      * you create the resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -110,7 +110,7 @@ public class HttpsHealthCheck extends io.pulumi.resources.CustomResource {
      * consecutive successes. The default value is 2.
      * 
      */
-    public Output</* @Nullable */ Integer> getHealthyThreshold() {
+    public Output</* @Nullable */ Integer> healthyThreshold() {
         return this.healthyThreshold;
     }
     /**
@@ -128,7 +128,7 @@ public class HttpsHealthCheck extends io.pulumi.resources.CustomResource {
      * health check is performed will be used.
      * 
      */
-    public Output</* @Nullable */ String> getHost() {
+    public Output</* @Nullable */ String> host() {
         return this.host;
     }
     /**
@@ -154,7 +154,7 @@ public class HttpsHealthCheck extends io.pulumi.resources.CustomResource {
      * last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -170,7 +170,7 @@ public class HttpsHealthCheck extends io.pulumi.resources.CustomResource {
      * The default value is 443.
      * 
      */
-    public Output</* @Nullable */ Integer> getPort() {
+    public Output</* @Nullable */ Integer> port() {
         return this.port;
     }
     /**
@@ -186,7 +186,7 @@ public class HttpsHealthCheck extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -202,7 +202,7 @@ public class HttpsHealthCheck extends io.pulumi.resources.CustomResource {
      * The default value is /.
      * 
      */
-    public Output</* @Nullable */ String> getRequestPath() {
+    public Output</* @Nullable */ String> requestPath() {
         return this.requestPath;
     }
     /**
@@ -216,7 +216,7 @@ public class HttpsHealthCheck extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -234,7 +234,7 @@ public class HttpsHealthCheck extends io.pulumi.resources.CustomResource {
      * greater value than checkIntervalSec.
      * 
      */
-    public Output</* @Nullable */ Integer> getTimeoutSec() {
+    public Output</* @Nullable */ Integer> timeoutSec() {
         return this.timeoutSec;
     }
     /**
@@ -250,7 +250,7 @@ public class HttpsHealthCheck extends io.pulumi.resources.CustomResource {
      * consecutive failures. The default value is 2.
      * 
      */
-    public Output</* @Nullable */ Integer> getUnhealthyThreshold() {
+    public Output</* @Nullable */ Integer> unhealthyThreshold() {
         return this.unhealthyThreshold;
     }
 

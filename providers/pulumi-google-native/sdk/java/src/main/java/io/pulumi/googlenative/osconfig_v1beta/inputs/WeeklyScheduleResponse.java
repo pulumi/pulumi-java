@@ -23,7 +23,7 @@ public final class WeeklyScheduleResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="dayOfWeek", required=true)
       private final String dayOfWeek;
 
-    public String getDayOfWeek() {
+    public String dayOfWeek() {
         return this.dayOfWeek;
     }
 

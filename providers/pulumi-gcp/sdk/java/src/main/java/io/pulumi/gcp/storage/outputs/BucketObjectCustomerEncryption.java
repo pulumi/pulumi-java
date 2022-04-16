@@ -34,14 +34,14 @@ public final class BucketObjectCustomerEncryption {
      * Encryption algorithm. Default: AES256
      * 
     */
-    public Optional<String> getEncryptionAlgorithm() {
+    public Optional<String> encryptionAlgorithm() {
         return Optional.ofNullable(this.encryptionAlgorithm);
     }
     /**
      * Base64 encoded Customer-Supplied Encryption Key.
      * 
     */
-    public String getEncryptionKey() {
+    public String encryptionKey() {
         return this.encryptionKey;
     }
 

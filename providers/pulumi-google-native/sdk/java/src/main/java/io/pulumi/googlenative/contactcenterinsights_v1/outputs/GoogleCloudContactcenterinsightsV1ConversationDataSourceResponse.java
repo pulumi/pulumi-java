@@ -33,14 +33,14 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceRespo
      * The source when the conversation comes from Dialogflow.
      * 
     */
-    public GoogleCloudContactcenterinsightsV1DialogflowSourceResponse getDialogflowSource() {
+    public GoogleCloudContactcenterinsightsV1DialogflowSourceResponse dialogflowSource() {
         return this.dialogflowSource;
     }
     /**
      * A Cloud Storage location specification for the audio and transcript.
      * 
     */
-    public GoogleCloudContactcenterinsightsV1GcsSourceResponse getGcsSource() {
+    public GoogleCloudContactcenterinsightsV1GcsSourceResponse gcsSource() {
         return this.gcsSource;
     }
 

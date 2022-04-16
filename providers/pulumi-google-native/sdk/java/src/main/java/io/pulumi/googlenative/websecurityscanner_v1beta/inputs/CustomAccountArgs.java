@@ -25,7 +25,7 @@ public final class CustomAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="loginUrl", required=true)
       private final Output<String> loginUrl;
 
-    public Output<String> getLoginUrl() {
+    public Output<String> loginUrl() {
         return this.loginUrl;
     }
 
@@ -36,7 +36,7 @@ public final class CustomAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -47,7 +47,7 @@ public final class CustomAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 

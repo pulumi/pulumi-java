@@ -34,13 +34,13 @@ public class Analyzer extends io.pulumi.resources.CustomResource {
      * @return Analyzer name
      * 
      */
-    public Output</* @Nullable */ String> getAnalyzerName() {
+    public Output</* @Nullable */ String> analyzerName() {
         return this.analyzerName;
     }
     @Export(name="archiveRules", type=List.class, parameters={AnalyzerArchiveRule.class})
     private Output</* @Nullable */ List<AnalyzerArchiveRule>> archiveRules;
 
-    public Output</* @Nullable */ List<AnalyzerArchiveRule>> getArchiveRules() {
+    public Output</* @Nullable */ List<AnalyzerArchiveRule>> archiveRules() {
         return this.archiveRules;
     }
     /**
@@ -54,7 +54,7 @@ public class Analyzer extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the analyzer
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -68,7 +68,7 @@ public class Analyzer extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<AnalyzerTag>> getTags() {
+    public Output</* @Nullable */ List<AnalyzerTag>> tags() {
         return this.tags;
     }
     /**
@@ -82,7 +82,7 @@ public class Analyzer extends io.pulumi.resources.CustomResource {
      * @return The type of the analyzer, must be ACCOUNT or ORGANIZATION
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

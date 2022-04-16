@@ -22,7 +22,7 @@ public final class GuestPoliciesAssignmentGroupLabelGetArgs extends io.pulumi.re
     @Import(name="labels", required=true)
       private final Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
 

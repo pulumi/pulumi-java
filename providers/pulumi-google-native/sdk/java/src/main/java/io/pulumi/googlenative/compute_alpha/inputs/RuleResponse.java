@@ -26,7 +26,7 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="action", required=true)
       private final String action;
 
-    public String getAction() {
+    public String action() {
         return this.action;
     }
 
@@ -37,7 +37,7 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="conditions", required=true)
       private final List<ConditionResponse> conditions;
 
-    public List<ConditionResponse> getConditions() {
+    public List<ConditionResponse> conditions() {
         return this.conditions;
     }
 
@@ -48,7 +48,7 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -59,7 +59,7 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="ins", required=true)
       private final List<String> ins;
 
-    public List<String> getIns() {
+    public List<String> ins() {
         return this.ins;
     }
 
@@ -70,7 +70,7 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="logConfigs", required=true)
       private final List<LogConfigResponse> logConfigs;
 
-    public List<LogConfigResponse> getLogConfigs() {
+    public List<LogConfigResponse> logConfigs() {
         return this.logConfigs;
     }
 
@@ -81,7 +81,7 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="notIns", required=true)
       private final List<String> notIns;
 
-    public List<String> getNotIns() {
+    public List<String> notIns() {
         return this.notIns;
     }
 
@@ -92,7 +92,7 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="permissions", required=true)
       private final List<String> permissions;
 
-    public List<String> getPermissions() {
+    public List<String> permissions() {
         return this.permissions;
     }
 

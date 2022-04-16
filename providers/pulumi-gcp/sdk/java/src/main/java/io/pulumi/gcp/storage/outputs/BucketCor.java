@@ -50,28 +50,28 @@ public final class BucketCor {
      * The value, in seconds, to return in the [Access-Control-Max-Age header](https://www.w3.org/TR/cors/#access-control-max-age-response-header) used in preflight responses.
      * 
     */
-    public Optional<Integer> getMaxAgeSeconds() {
+    public Optional<Integer> maxAgeSeconds() {
         return Optional.ofNullable(this.maxAgeSeconds);
     }
     /**
      * The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: "*" is permitted in the list of methods, and means "any method".
      * 
     */
-    public List<String> getMethods() {
+    public List<String> methods() {
         return this.methods == null ? List.of() : this.methods;
     }
     /**
      * The list of [Origins](https://tools.ietf.org/html/rfc6454) eligible to receive CORS response headers. Note: "*" is permitted in the list of origins, and means "any Origin".
      * 
     */
-    public List<String> getOrigins() {
+    public List<String> origins() {
         return this.origins == null ? List.of() : this.origins;
     }
     /**
      * The list of HTTP headers other than the [simple response headers](https://www.w3.org/TR/cors/#simple-response-header) to give permission for the user-agent to share across domains.
      * 
     */
-    public List<String> getResponseHeaders() {
+    public List<String> responseHeaders() {
         return this.responseHeaders == null ? List.of() : this.responseHeaders;
     }
 

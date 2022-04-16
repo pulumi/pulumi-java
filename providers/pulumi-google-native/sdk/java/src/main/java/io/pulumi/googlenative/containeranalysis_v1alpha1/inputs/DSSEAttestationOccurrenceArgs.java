@@ -27,14 +27,14 @@ public final class DSSEAttestationOccurrenceArgs extends io.pulumi.resources.Res
     @Import(name="envelope")
       private final @Nullable Output<EnvelopeArgs> envelope;
 
-    public Output<EnvelopeArgs> getEnvelope() {
+    public Output<EnvelopeArgs> envelope() {
         return this.envelope == null ? Codegen.empty() : this.envelope;
     }
 
     @Import(name="statement")
       private final @Nullable Output<InTotoStatementArgs> statement;
 
-    public Output<InTotoStatementArgs> getStatement() {
+    public Output<InTotoStatementArgs> statement() {
         return this.statement == null ? Codegen.empty() : this.statement;
     }
 

@@ -23,7 +23,7 @@ public final class RetentionTagResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="eTag", required=true)
       private final String eTag;
 
-    public String getETag() {
+    public String eTag() {
         return this.eTag;
     }
 
@@ -34,7 +34,7 @@ public final class RetentionTagResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -45,7 +45,7 @@ public final class RetentionTagResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tagName", required=true)
       private final String tagName;
 
-    public String getTagName() {
+    public String tagName() {
         return this.tagName;
     }
 

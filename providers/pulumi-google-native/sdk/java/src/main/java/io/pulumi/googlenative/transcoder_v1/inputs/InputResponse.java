@@ -24,7 +24,7 @@ public final class InputResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 
@@ -35,7 +35,7 @@ public final class InputResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="preprocessingConfig", required=true)
       private final PreprocessingConfigResponse preprocessingConfig;
 
-    public PreprocessingConfigResponse getPreprocessingConfig() {
+    public PreprocessingConfigResponse preprocessingConfig() {
         return this.preprocessingConfig;
     }
 
@@ -46,7 +46,7 @@ public final class InputResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

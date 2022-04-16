@@ -17,7 +17,7 @@ public final class ResponseHeadersPolicyArgs extends io.pulumi.resources.Resourc
     @Import(name="responseHeadersPolicyConfig", required=true)
       private final Output<ResponseHeadersPolicyConfigArgs> responseHeadersPolicyConfig;
 
-    public Output<ResponseHeadersPolicyConfigArgs> getResponseHeadersPolicyConfig() {
+    public Output<ResponseHeadersPolicyConfigArgs> responseHeadersPolicyConfig() {
         return this.responseHeadersPolicyConfig;
     }
 

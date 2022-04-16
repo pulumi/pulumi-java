@@ -23,7 +23,7 @@ public final class JobHttpTargetOauthTokenArgs extends io.pulumi.resources.Resou
     @Import(name="scope")
       private final @Nullable Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 
@@ -35,7 +35,7 @@ public final class JobHttpTargetOauthTokenArgs extends io.pulumi.resources.Resou
     @Import(name="serviceAccountEmail", required=true)
       private final Output<String> serviceAccountEmail;
 
-    public Output<String> getServiceAccountEmail() {
+    public Output<String> serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
 

@@ -20,7 +20,7 @@ public final class NodeGroupAutoscalingPolicyResponse extends io.pulumi.resource
     @Import(name="maxNodes", required=true)
       private final Integer maxNodes;
 
-    public Integer getMaxNodes() {
+    public Integer maxNodes() {
         return this.maxNodes;
     }
 
@@ -31,7 +31,7 @@ public final class NodeGroupAutoscalingPolicyResponse extends io.pulumi.resource
     @Import(name="minNodes", required=true)
       private final Integer minNodes;
 
-    public Integer getMinNodes() {
+    public Integer minNodes() {
         return this.minNodes;
     }
 
@@ -42,7 +42,7 @@ public final class NodeGroupAutoscalingPolicyResponse extends io.pulumi.resource
     @Import(name="mode", required=true)
       private final String mode;
 
-    public String getMode() {
+    public String mode() {
         return this.mode;
     }
 

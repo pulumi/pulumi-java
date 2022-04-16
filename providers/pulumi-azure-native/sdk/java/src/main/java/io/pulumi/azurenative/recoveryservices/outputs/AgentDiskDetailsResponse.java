@@ -55,35 +55,35 @@ public final class AgentDiskDetailsResponse {
      * The disk capacity in bytes.
      * 
     */
-    public Double getCapacityInBytes() {
+    public Double capacityInBytes() {
         return this.capacityInBytes;
     }
     /**
      * The disk Id.
      * 
     */
-    public String getDiskId() {
+    public String diskId() {
         return this.diskId;
     }
     /**
      * The disk name.
      * 
     */
-    public String getDiskName() {
+    public String diskName() {
         return this.diskName;
     }
     /**
      * A value indicating whether the disk is the OS disk.
      * 
     */
-    public String getIsOSDisk() {
+    public String isOSDisk() {
         return this.isOSDisk;
     }
     /**
      * The lun of disk.
      * 
     */
-    public Integer getLunId() {
+    public Integer lunId() {
         return this.lunId;
     }
 

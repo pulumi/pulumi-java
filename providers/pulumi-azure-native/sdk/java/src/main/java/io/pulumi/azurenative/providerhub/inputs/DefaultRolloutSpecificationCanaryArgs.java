@@ -19,14 +19,14 @@ public final class DefaultRolloutSpecificationCanaryArgs extends io.pulumi.resou
     @Import(name="regions")
       private final @Nullable Output<List<String>> regions;
 
-    public Output<List<String>> getRegions() {
+    public Output<List<String>> regions() {
         return this.regions == null ? Codegen.empty() : this.regions;
     }
 
     @Import(name="skipRegions")
       private final @Nullable Output<List<String>> skipRegions;
 
-    public Output<List<String>> getSkipRegions() {
+    public Output<List<String>> skipRegions() {
         return this.skipRegions == null ? Codegen.empty() : this.skipRegions;
     }
 

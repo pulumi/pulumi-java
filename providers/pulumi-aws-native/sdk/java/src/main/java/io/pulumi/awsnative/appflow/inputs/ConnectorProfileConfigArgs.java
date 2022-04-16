@@ -23,14 +23,14 @@ public final class ConnectorProfileConfigArgs extends io.pulumi.resources.Resour
     @Import(name="connectorProfileCredentials", required=true)
       private final Output<ConnectorProfileCredentialsArgs> connectorProfileCredentials;
 
-    public Output<ConnectorProfileCredentialsArgs> getConnectorProfileCredentials() {
+    public Output<ConnectorProfileCredentialsArgs> connectorProfileCredentials() {
         return this.connectorProfileCredentials;
     }
 
     @Import(name="connectorProfileProperties")
       private final @Nullable Output<ConnectorProfilePropertiesArgs> connectorProfileProperties;
 
-    public Output<ConnectorProfilePropertiesArgs> getConnectorProfileProperties() {
+    public Output<ConnectorProfilePropertiesArgs> connectorProfileProperties() {
         return this.connectorProfileProperties == null ? Codegen.empty() : this.connectorProfileProperties;
     }
 

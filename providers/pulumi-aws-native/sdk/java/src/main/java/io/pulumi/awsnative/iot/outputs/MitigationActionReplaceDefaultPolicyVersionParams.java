@@ -16,7 +16,7 @@ public final class MitigationActionReplaceDefaultPolicyVersionParams {
         this.templateName = templateName;
     }
 
-    public MitigationActionReplaceDefaultPolicyVersionParamsTemplateName getTemplateName() {
+    public MitigationActionReplaceDefaultPolicyVersionParamsTemplateName templateName() {
         return this.templateName;
     }
 

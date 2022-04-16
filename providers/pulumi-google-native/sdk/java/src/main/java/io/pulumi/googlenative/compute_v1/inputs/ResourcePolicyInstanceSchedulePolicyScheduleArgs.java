@@ -26,7 +26,7 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleArgs extends io.p
     @Import(name="schedule")
       private final @Nullable Output<String> schedule;
 
-    public Output<String> getSchedule() {
+    public Output<String> schedule() {
         return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 

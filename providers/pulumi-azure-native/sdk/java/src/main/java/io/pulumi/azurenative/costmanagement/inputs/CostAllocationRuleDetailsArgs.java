@@ -28,7 +28,7 @@ public final class CostAllocationRuleDetailsArgs extends io.pulumi.resources.Res
     @Import(name="sourceResources")
       private final @Nullable Output<List<SourceCostAllocationResourceArgs>> sourceResources;
 
-    public Output<List<SourceCostAllocationResourceArgs>> getSourceResources() {
+    public Output<List<SourceCostAllocationResourceArgs>> sourceResources() {
         return this.sourceResources == null ? Codegen.empty() : this.sourceResources;
     }
 
@@ -39,7 +39,7 @@ public final class CostAllocationRuleDetailsArgs extends io.pulumi.resources.Res
     @Import(name="targetResources")
       private final @Nullable Output<List<TargetCostAllocationResourceArgs>> targetResources;
 
-    public Output<List<TargetCostAllocationResourceArgs>> getTargetResources() {
+    public Output<List<TargetCostAllocationResourceArgs>> targetResources() {
         return this.targetResources == null ? Codegen.empty() : this.targetResources;
     }
 

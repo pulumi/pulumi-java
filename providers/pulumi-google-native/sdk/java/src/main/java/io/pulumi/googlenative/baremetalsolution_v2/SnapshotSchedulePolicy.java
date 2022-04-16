@@ -33,7 +33,7 @@ public class SnapshotSchedulePolicy extends io.pulumi.resources.CustomResource {
      * @return The description of the snapshot schedule policy.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -47,7 +47,7 @@ public class SnapshotSchedulePolicy extends io.pulumi.resources.CustomResource {
      * @return Labels as key value pairs.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -61,7 +61,7 @@ public class SnapshotSchedulePolicy extends io.pulumi.resources.CustomResource {
      * @return The name of the snapshot schedule policy.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -75,7 +75,7 @@ public class SnapshotSchedulePolicy extends io.pulumi.resources.CustomResource {
      * @return The snapshot schedules contained in this policy. You can specify a maximum of 5 schedules.
      * 
      */
-    public Output<List<ScheduleResponse>> getSchedules() {
+    public Output<List<ScheduleResponse>> schedules() {
         return this.schedules;
     }
 

@@ -44,7 +44,7 @@ public class HybridUseBenefit extends io.pulumi.resources.CustomResource {
      * @return Created date
      * 
      */
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate;
     }
     /**
@@ -58,7 +58,7 @@ public class HybridUseBenefit extends io.pulumi.resources.CustomResource {
      * @return Indicates the revision of the hybrid use benefit
      * 
      */
-    public Output<Integer> getEtag() {
+    public Output<Integer> etag() {
         return this.etag;
     }
     /**
@@ -72,7 +72,7 @@ public class HybridUseBenefit extends io.pulumi.resources.CustomResource {
      * @return Last updated date
      * 
      */
-    public Output<String> getLastUpdatedDate() {
+    public Output<String> lastUpdatedDate() {
         return this.lastUpdatedDate;
     }
     /**
@@ -86,7 +86,7 @@ public class HybridUseBenefit extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +100,7 @@ public class HybridUseBenefit extends io.pulumi.resources.CustomResource {
      * @return Provisioning state
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -114,7 +114,7 @@ public class HybridUseBenefit extends io.pulumi.resources.CustomResource {
      * @return Hybrid use benefit SKU
      * 
      */
-    public Output<SkuResponse> getSku() {
+    public Output<SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -128,7 +128,7 @@ public class HybridUseBenefit extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

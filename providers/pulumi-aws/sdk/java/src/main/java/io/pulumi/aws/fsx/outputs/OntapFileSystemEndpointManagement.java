@@ -35,14 +35,14 @@ public final class OntapFileSystemEndpointManagement {
      * The Domain Name Service (DNS) name for the file system. You can mount your file system using its DNS name.
      * 
     */
-    public Optional<String> getDnsName() {
+    public Optional<String> dnsName() {
         return Optional.ofNullable(this.dnsName);
     }
     /**
      * IP addresses of the file system endpoint.
      * 
     */
-    public List<String> getIpAddresses() {
+    public List<String> ipAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }
 

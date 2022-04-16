@@ -23,7 +23,7 @@ public final class VirtualNodeSpecListenerTlsValidationTrustGetArgs extends io.p
     @Import(name="file")
       private final @Nullable Output<VirtualNodeSpecListenerTlsValidationTrustFileGetArgs> file;
 
-    public Output<VirtualNodeSpecListenerTlsValidationTrustFileGetArgs> getFile() {
+    public Output<VirtualNodeSpecListenerTlsValidationTrustFileGetArgs> file() {
         return this.file == null ? Codegen.empty() : this.file;
     }
 
@@ -34,7 +34,7 @@ public final class VirtualNodeSpecListenerTlsValidationTrustGetArgs extends io.p
     @Import(name="sds")
       private final @Nullable Output<VirtualNodeSpecListenerTlsValidationTrustSdsGetArgs> sds;
 
-    public Output<VirtualNodeSpecListenerTlsValidationTrustSdsGetArgs> getSds() {
+    public Output<VirtualNodeSpecListenerTlsValidationTrustSdsGetArgs> sds() {
         return this.sds == null ? Codegen.empty() : this.sds;
     }
 

@@ -42,7 +42,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * @return EC2 Transit Gateway Route Table Amazon Resource Name (ARN).
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +56,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * @return Boolean whether this is the default association route table for the EC2 Transit Gateway.
      * 
      */
-    public Output<Boolean> getDefaultAssociationRouteTable() {
+    public Output<Boolean> defaultAssociationRouteTable() {
         return this.defaultAssociationRouteTable;
     }
     /**
@@ -70,7 +70,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * @return Boolean whether this is the default propagation route table for the EC2 Transit Gateway.
      * 
      */
-    public Output<Boolean> getDefaultPropagationRouteTable() {
+    public Output<Boolean> defaultPropagationRouteTable() {
         return this.defaultPropagationRouteTable;
     }
     /**
@@ -84,7 +84,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * @return Key-value tags for the EC2 Transit Gateway Route Table. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -98,7 +98,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -112,7 +112,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * @return Identifier of EC2 Transit Gateway.
      * 
      */
-    public Output<String> getTransitGatewayId() {
+    public Output<String> transitGatewayId() {
         return this.transitGatewayId;
     }
 

@@ -28,7 +28,7 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs extends io.
     @Import(name="bigQueryField")
       private final @Nullable Output<GooglePrivacyDlpV2BigQueryFieldArgs> bigQueryField;
 
-    public Output<GooglePrivacyDlpV2BigQueryFieldArgs> getBigQueryField() {
+    public Output<GooglePrivacyDlpV2BigQueryFieldArgs> bigQueryField() {
         return this.bigQueryField == null ? Codegen.empty() : this.bigQueryField;
     }
 
@@ -39,7 +39,7 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs extends io.
     @Import(name="cloudStorageFileSet")
       private final @Nullable Output<GooglePrivacyDlpV2CloudStorageFileSetArgs> cloudStorageFileSet;
 
-    public Output<GooglePrivacyDlpV2CloudStorageFileSetArgs> getCloudStorageFileSet() {
+    public Output<GooglePrivacyDlpV2CloudStorageFileSetArgs> cloudStorageFileSet() {
         return this.cloudStorageFileSet == null ? Codegen.empty() : this.cloudStorageFileSet;
     }
 
@@ -50,7 +50,7 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs extends io.
     @Import(name="outputPath")
       private final @Nullable Output<GooglePrivacyDlpV2CloudStoragePathArgs> outputPath;
 
-    public Output<GooglePrivacyDlpV2CloudStoragePathArgs> getOutputPath() {
+    public Output<GooglePrivacyDlpV2CloudStoragePathArgs> outputPath() {
         return this.outputPath == null ? Codegen.empty() : this.outputPath;
     }
 

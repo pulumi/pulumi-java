@@ -35,14 +35,14 @@ public final class KubeClientSettingsArgs {
      * Maximum burst for throttle. Default value is 10.
      * 
     */
-    public @Nullable Output<Integer> getBurst() {
+    public @Nullable Output<Integer> burst() {
         return this.burst;
     }
     /**
      * Maximum queries per second (QPS) to the API server from this client. Default value is 5.
      * 
     */
-    public @Nullable Output<Double> getQps() {
+    public @Nullable Output<Double> qps() {
         return this.qps;
     }
 

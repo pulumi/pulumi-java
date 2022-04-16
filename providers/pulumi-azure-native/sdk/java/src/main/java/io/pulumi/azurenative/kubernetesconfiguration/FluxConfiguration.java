@@ -48,7 +48,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * @return Combined status of the Flux Kubernetes resources created by the fluxConfiguration or created by the managed objects.
      * 
      */
-    public Output<String> getComplianceState() {
+    public Output<String> complianceState() {
         return this.complianceState;
     }
     /**
@@ -62,7 +62,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * @return Key-value pairs of protected configuration settings for the configuration
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getConfigurationProtectedSettings() {
+    public Output</* @Nullable */ Map<String,String>> configurationProtectedSettings() {
         return this.configurationProtectedSettings;
     }
     /**
@@ -76,7 +76,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * @return Error message returned to the user in the case of provisioning failure.
      * 
      */
-    public Output<String> getErrorMessage() {
+    public Output<String> errorMessage() {
         return this.errorMessage;
     }
     /**
@@ -90,7 +90,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * @return Parameters to reconcile to the GitRepository source kind type.
      * 
      */
-    public Output</* @Nullable */ GitRepositoryDefinitionResponse> getGitRepository() {
+    public Output</* @Nullable */ GitRepositoryDefinitionResponse> gitRepository() {
         return this.gitRepository;
     }
     /**
@@ -104,7 +104,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * @return Array of kustomizations used to reconcile the artifact pulled by the source type on the cluster.
      * 
      */
-    public Output</* @Nullable */ Map<String,KustomizationDefinitionResponse>> getKustomizations() {
+    public Output</* @Nullable */ Map<String,KustomizationDefinitionResponse>> kustomizations() {
         return this.kustomizations;
     }
     /**
@@ -118,7 +118,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * @return Datetime the fluxConfiguration last synced its source on the cluster.
      * 
      */
-    public Output<String> getLastSourceSyncedAt() {
+    public Output<String> lastSourceSyncedAt() {
         return this.lastSourceSyncedAt;
     }
     /**
@@ -132,7 +132,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * @return Branch and SHA of the last source commit synced with the cluster.
      * 
      */
-    public Output<String> getLastSourceSyncedCommitId() {
+    public Output<String> lastSourceSyncedCommitId() {
         return this.lastSourceSyncedCommitId;
     }
     /**
@@ -146,7 +146,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -160,7 +160,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * @return The namespace to which this configuration is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
      * 
      */
-    public Output</* @Nullable */ String> getNamespace() {
+    public Output</* @Nullable */ String> namespace() {
         return this.namespace;
     }
     /**
@@ -174,7 +174,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * @return Status of the creation of the fluxConfiguration.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -188,7 +188,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * @return Public Key associated with this fluxConfiguration (either generated within the cluster or provided by the user).
      * 
      */
-    public Output<String> getRepositoryPublicKey() {
+    public Output<String> repositoryPublicKey() {
         return this.repositoryPublicKey;
     }
     /**
@@ -202,7 +202,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * @return Scope at which the operator will be installed.
      * 
      */
-    public Output</* @Nullable */ String> getScope() {
+    public Output</* @Nullable */ String> scope() {
         return this.scope;
     }
     /**
@@ -216,7 +216,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * @return Source Kind to pull the configuration data from.
      * 
      */
-    public Output</* @Nullable */ String> getSourceKind() {
+    public Output</* @Nullable */ String> sourceKind() {
         return this.sourceKind;
     }
     /**
@@ -230,7 +230,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * @return Statuses of the Flux Kubernetes resources created by the fluxConfiguration or created by the managed objects provisioned by the fluxConfiguration.
      * 
      */
-    public Output<List<ObjectStatusDefinitionResponse>> getStatuses() {
+    public Output<List<ObjectStatusDefinitionResponse>> statuses() {
         return this.statuses;
     }
     /**
@@ -244,7 +244,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * @return Whether this configuration should suspend its reconciliation of its kustomizations and sources.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSuspend() {
+    public Output</* @Nullable */ Boolean> suspend() {
         return this.suspend;
     }
     /**
@@ -258,7 +258,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * @return Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -272,7 +272,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

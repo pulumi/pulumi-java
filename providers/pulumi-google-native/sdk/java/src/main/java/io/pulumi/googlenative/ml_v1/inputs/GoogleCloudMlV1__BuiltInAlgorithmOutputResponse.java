@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse extends io.pu
     @Import(name="framework", required=true)
       private final String framework;
 
-    public String getFramework() {
+    public String framework() {
         return this.framework;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse extends io.pu
     @Import(name="modelPath", required=true)
       private final String modelPath;
 
-    public String getModelPath() {
+    public String modelPath() {
         return this.modelPath;
     }
 
@@ -45,7 +45,7 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse extends io.pu
     @Import(name="pythonVersion", required=true)
       private final String pythonVersion;
 
-    public String getPythonVersion() {
+    public String pythonVersion() {
         return this.pythonVersion;
     }
 
@@ -56,7 +56,7 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse extends io.pu
     @Import(name="runtimeVersion", required=true)
       private final String runtimeVersion;
 
-    public String getRuntimeVersion() {
+    public String runtimeVersion() {
         return this.runtimeVersion;
     }
 

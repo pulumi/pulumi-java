@@ -39,21 +39,21 @@ public final class GoogleCloudApigeeV1QuotaResponse {
      * Time interval over which the number of request messages is calculated.
      * 
     */
-    public String getInterval() {
+    public String interval() {
         return this.interval;
     }
     /**
      * Upper limit allowed for the time interval and time unit specified. Requests exceeding this limit will be rejected.
      * 
     */
-    public String getLimit() {
+    public String limit() {
         return this.limit;
     }
     /**
      * Time unit defined for the `interval`. Valid values include `minute`, `hour`, `day`, or `month`. If `limit` and `interval` are valid, the default value is `hour`; otherwise, the default is null.
      * 
     */
-    public String getTimeUnit() {
+    public String timeUnit() {
         return this.timeUnit;
     }
 

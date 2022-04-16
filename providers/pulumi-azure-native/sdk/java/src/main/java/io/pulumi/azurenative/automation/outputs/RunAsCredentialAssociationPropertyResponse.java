@@ -26,7 +26,7 @@ public final class RunAsCredentialAssociationPropertyResponse {
      * Gets or sets the name of the credential.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

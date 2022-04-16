@@ -35,7 +35,7 @@ public final class JavaScriptFunctionBindingResponse {
      * The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'
      * 
     */
-    public Optional<String> getScript() {
+    public Optional<String> script() {
         return Optional.ofNullable(this.script);
     }
     /**
@@ -43,7 +43,7 @@ public final class JavaScriptFunctionBindingResponse {
      * Expected value is 'Microsoft.StreamAnalytics/JavascriptUdf'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

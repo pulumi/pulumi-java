@@ -21,7 +21,7 @@ public final class MonitoringSubscriptionMonitoringSubscriptionGetArgs extends i
     @Import(name="realtimeMetricsSubscriptionConfig", required=true)
       private final Output<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs> realtimeMetricsSubscriptionConfig;
 
-    public Output<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs> getRealtimeMetricsSubscriptionConfig() {
+    public Output<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs> realtimeMetricsSubscriptionConfig() {
         return this.realtimeMetricsSubscriptionConfig;
     }
 

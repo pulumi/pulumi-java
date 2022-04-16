@@ -23,7 +23,7 @@ public final class LiteReservationState extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -35,7 +35,7 @@ public final class LiteReservationState extends io.pulumi.resources.ResourceArgs
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -46,7 +46,7 @@ public final class LiteReservationState extends io.pulumi.resources.ResourceArgs
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -59,7 +59,7 @@ public final class LiteReservationState extends io.pulumi.resources.ResourceArgs
     @Import(name="throughputCapacity")
       private final @Nullable Output<Integer> throughputCapacity;
 
-    public Output<Integer> getThroughputCapacity() {
+    public Output<Integer> throughputCapacity() {
         return this.throughputCapacity == null ? Codegen.empty() : this.throughputCapacity;
     }
 

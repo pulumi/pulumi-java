@@ -23,7 +23,7 @@ public final class PreventionInspectTemplateArgs extends io.pulumi.resources.Res
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -34,7 +34,7 @@ public final class PreventionInspectTemplateArgs extends io.pulumi.resources.Res
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -46,7 +46,7 @@ public final class PreventionInspectTemplateArgs extends io.pulumi.resources.Res
     @Import(name="inspectConfig")
       private final @Nullable Output<PreventionInspectTemplateInspectConfigArgs> inspectConfig;
 
-    public Output<PreventionInspectTemplateInspectConfigArgs> getInspectConfig() {
+    public Output<PreventionInspectTemplateInspectConfigArgs> inspectConfig() {
         return this.inspectConfig == null ? Codegen.empty() : this.inspectConfig;
     }
 
@@ -61,7 +61,7 @@ public final class PreventionInspectTemplateArgs extends io.pulumi.resources.Res
     @Import(name="parent", required=true)
       private final Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
 

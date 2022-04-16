@@ -25,7 +25,7 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="additionalBindings", required=true)
       private final List<HttpRuleResponse> additionalBindings;
 
-    public List<HttpRuleResponse> getAdditionalBindings() {
+    public List<HttpRuleResponse> additionalBindings() {
         return this.additionalBindings;
     }
 
@@ -36,7 +36,7 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="body", required=true)
       private final String body;
 
-    public String getBody() {
+    public String body() {
         return this.body;
     }
 
@@ -47,7 +47,7 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="custom", required=true)
       private final CustomHttpPatternResponse custom;
 
-    public CustomHttpPatternResponse getCustom() {
+    public CustomHttpPatternResponse custom() {
         return this.custom;
     }
 
@@ -58,7 +58,7 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="delete", required=true)
       private final String delete;
 
-    public String getDelete() {
+    public String delete() {
         return this.delete;
     }
 
@@ -69,7 +69,7 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="get", required=true)
       private final String get;
 
-    public String getGet() {
+    public String get() {
         return this.get;
     }
 
@@ -80,7 +80,7 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="patch", required=true)
       private final String patch;
 
-    public String getPatch() {
+    public String patch() {
         return this.patch;
     }
 
@@ -91,7 +91,7 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="post", required=true)
       private final String post;
 
-    public String getPost() {
+    public String post() {
         return this.post;
     }
 
@@ -102,7 +102,7 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="put", required=true)
       private final String put;
 
-    public String getPut() {
+    public String put() {
         return this.put;
     }
 
@@ -113,7 +113,7 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="responseBody", required=true)
       private final String responseBody;
 
-    public String getResponseBody() {
+    public String responseBody() {
         return this.responseBody;
     }
 
@@ -124,7 +124,7 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="selector", required=true)
       private final String selector;
 
-    public String getSelector() {
+    public String selector() {
         return this.selector;
     }
 

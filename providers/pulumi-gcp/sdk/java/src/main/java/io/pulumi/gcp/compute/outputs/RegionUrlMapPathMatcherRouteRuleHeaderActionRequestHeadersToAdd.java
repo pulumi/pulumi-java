@@ -42,14 +42,14 @@ public final class RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToA
      * The name of the header.
      * 
     */
-    public String getHeaderName() {
+    public String headerName() {
         return this.headerName;
     }
     /**
      * The value of the header to add.
      * 
     */
-    public String getHeaderValue() {
+    public String headerValue() {
         return this.headerValue;
     }
     /**
@@ -58,7 +58,7 @@ public final class RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToA
      * were set for that header.
      * 
     */
-    public Boolean getReplace() {
+    public Boolean replace() {
         return this.replace;
     }
 

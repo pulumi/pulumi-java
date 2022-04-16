@@ -26,7 +26,7 @@ public final class GoogleCloudMlV1__RouteMapArgs extends io.pulumi.resources.Res
     @Import(name="health")
       private final @Nullable Output<String> health;
 
-    public Output<String> getHealth() {
+    public Output<String> health() {
         return this.health == null ? Codegen.empty() : this.health;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudMlV1__RouteMapArgs extends io.pulumi.resources.Res
     @Import(name="predict")
       private final @Nullable Output<String> predict;
 
-    public Output<String> getPredict() {
+    public Output<String> predict() {
         return this.predict == null ? Codegen.empty() : this.predict;
     }
 

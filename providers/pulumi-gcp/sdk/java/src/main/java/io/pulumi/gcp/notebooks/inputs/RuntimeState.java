@@ -28,7 +28,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessConfig")
       private final @Nullable Output<RuntimeAccessConfigGetArgs> accessConfig;
 
-    public Output<RuntimeAccessConfigGetArgs> getAccessConfig() {
+    public Output<RuntimeAccessConfigGetArgs> accessConfig() {
         return this.accessConfig == null ? Codegen.empty() : this.accessConfig;
     }
 
@@ -40,7 +40,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="healthState")
       private final @Nullable Output<String> healthState;
 
-    public Output<String> getHealthState() {
+    public Output<String> healthState() {
         return this.healthState == null ? Codegen.empty() : this.healthState;
     }
 
@@ -51,7 +51,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -62,7 +62,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="metrics")
       private final @Nullable Output<List<RuntimeMetricGetArgs>> metrics;
 
-    public Output<List<RuntimeMetricGetArgs>> getMetrics() {
+    public Output<List<RuntimeMetricGetArgs>> metrics() {
         return this.metrics == null ? Codegen.empty() : this.metrics;
     }
 
@@ -73,7 +73,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -85,7 +85,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -97,7 +97,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="softwareConfig")
       private final @Nullable Output<RuntimeSoftwareConfigGetArgs> softwareConfig;
 
-    public Output<RuntimeSoftwareConfigGetArgs> getSoftwareConfig() {
+    public Output<RuntimeSoftwareConfigGetArgs> softwareConfig() {
         return this.softwareConfig == null ? Codegen.empty() : this.softwareConfig;
     }
 
@@ -108,7 +108,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -120,7 +120,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="virtualMachine")
       private final @Nullable Output<RuntimeVirtualMachineGetArgs> virtualMachine;
 
-    public Output<RuntimeVirtualMachineGetArgs> getVirtualMachine() {
+    public Output<RuntimeVirtualMachineGetArgs> virtualMachine() {
         return this.virtualMachine == null ? Codegen.empty() : this.virtualMachine;
     }
 

@@ -46,7 +46,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Indicates whether the job is completed. If the value is false, the job is still in progress. If true, the job is completed, and status.state field will indicate if it was successful, failed, or cancelled.
      * 
      */
-    public Output<Boolean> getDone() {
+    public Output<Boolean> done() {
         return this.done;
     }
     /**
@@ -60,7 +60,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return If present, the location of miscellaneous control files which may be used as part of job setup and handling. If not present, control files may be placed in the same location as driver_output_uri.
      * 
      */
-    public Output<String> getDriverControlFilesUri() {
+    public Output<String> driverControlFilesUri() {
         return this.driverControlFilesUri;
     }
     /**
@@ -74,7 +74,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return A URI pointing to the location of the stdout of the job's driver program.
      * 
      */
-    public Output<String> getDriverOutputResourceUri() {
+    public Output<String> driverOutputResourceUri() {
         return this.driverOutputResourceUri;
     }
     /**
@@ -88,7 +88,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Optional. Job is a Hadoop job.
      * 
      */
-    public Output<HadoopJobResponse> getHadoopJob() {
+    public Output<HadoopJobResponse> hadoopJob() {
         return this.hadoopJob;
     }
     /**
@@ -102,7 +102,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Optional. Job is a Hive job.
      * 
      */
-    public Output<HiveJobResponse> getHiveJob() {
+    public Output<HiveJobResponse> hiveJob() {
         return this.hiveJob;
     }
     /**
@@ -116,7 +116,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return A UUID that uniquely identifies a job within the project over time. This is in contrast to a user-settable reference.job_id that may be reused over time.
      * 
      */
-    public Output<String> getJobUuid() {
+    public Output<String> jobUuid() {
         return this.jobUuid;
     }
     /**
@@ -130,7 +130,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Optional. The labels to associate with this job. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a job.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -144,7 +144,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Optional. Job is a Pig job.
      * 
      */
-    public Output<PigJobResponse> getPigJob() {
+    public Output<PigJobResponse> pigJob() {
         return this.pigJob;
     }
     /**
@@ -158,7 +158,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Job information, including how, when, and where to run the job.
      * 
      */
-    public Output<JobPlacementResponse> getPlacement() {
+    public Output<JobPlacementResponse> placement() {
         return this.placement;
     }
     /**
@@ -172,7 +172,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Optional. Job is a Presto job.
      * 
      */
-    public Output<PrestoJobResponse> getPrestoJob() {
+    public Output<PrestoJobResponse> prestoJob() {
         return this.prestoJob;
     }
     /**
@@ -186,7 +186,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Optional. Job is a PySpark job.
      * 
      */
-    public Output<PySparkJobResponse> getPysparkJob() {
+    public Output<PySparkJobResponse> pysparkJob() {
         return this.pysparkJob;
     }
     /**
@@ -200,7 +200,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Optional. The fully qualified reference to the job, which can be used to obtain the equivalent REST path of the job resource. If this property is not specified when a job is created, the server generates a job_id.
      * 
      */
-    public Output<JobReferenceResponse> getReference() {
+    public Output<JobReferenceResponse> reference() {
         return this.reference;
     }
     /**
@@ -214,7 +214,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Optional. Job scheduling configuration.
      * 
      */
-    public Output<JobSchedulingResponse> getScheduling() {
+    public Output<JobSchedulingResponse> scheduling() {
         return this.scheduling;
     }
     /**
@@ -228,7 +228,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Optional. Job is a Spark job.
      * 
      */
-    public Output<SparkJobResponse> getSparkJob() {
+    public Output<SparkJobResponse> sparkJob() {
         return this.sparkJob;
     }
     /**
@@ -242,7 +242,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Optional. Job is a SparkR job.
      * 
      */
-    public Output<SparkRJobResponse> getSparkRJob() {
+    public Output<SparkRJobResponse> sparkRJob() {
         return this.sparkRJob;
     }
     /**
@@ -256,7 +256,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Optional. Job is a SparkSql job.
      * 
      */
-    public Output<SparkSqlJobResponse> getSparkSqlJob() {
+    public Output<SparkSqlJobResponse> sparkSqlJob() {
         return this.sparkSqlJob;
     }
     /**
@@ -270,7 +270,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The job status. Additional application-specific status information may be contained in the type_job and yarn_applications fields.
      * 
      */
-    public Output<JobStatusResponse> getStatus() {
+    public Output<JobStatusResponse> status() {
         return this.status;
     }
     /**
@@ -284,7 +284,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The previous job status.
      * 
      */
-    public Output<List<JobStatusResponse>> getStatusHistory() {
+    public Output<List<JobStatusResponse>> statusHistory() {
         return this.statusHistory;
     }
     /**
@@ -298,7 +298,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The collection of YARN applications spun up by this job.Beta Feature: This report is available for testing purposes only. It may be changed before final release.
      * 
      */
-    public Output<List<YarnApplicationResponse>> getYarnApplications() {
+    public Output<List<YarnApplicationResponse>> yarnApplications() {
         return this.yarnApplications;
     }
 

@@ -30,7 +30,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
     @Import(name="chapAuthDiscovery")
       private final @Nullable Output<Boolean> chapAuthDiscovery;
 
-    public Output<Boolean> getChapAuthDiscovery() {
+    public Output<Boolean> chapAuthDiscovery() {
         return this.chapAuthDiscovery == null ? Codegen.empty() : this.chapAuthDiscovery;
     }
 
@@ -41,7 +41,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
     @Import(name="chapAuthSession")
       private final @Nullable Output<Boolean> chapAuthSession;
 
-    public Output<Boolean> getChapAuthSession() {
+    public Output<Boolean> chapAuthSession() {
         return this.chapAuthSession == null ? Codegen.empty() : this.chapAuthSession;
     }
 
@@ -52,7 +52,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
     @Import(name="fsType")
       private final @Nullable Output<String> fsType;
 
-    public Output<String> getFsType() {
+    public Output<String> fsType() {
         return this.fsType == null ? Codegen.empty() : this.fsType;
     }
 
@@ -63,7 +63,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
     @Import(name="initiatorName")
       private final @Nullable Output<String> initiatorName;
 
-    public Output<String> getInitiatorName() {
+    public Output<String> initiatorName() {
         return this.initiatorName == null ? Codegen.empty() : this.initiatorName;
     }
 
@@ -74,7 +74,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
     @Import(name="iqn", required=true)
       private final Output<String> iqn;
 
-    public Output<String> getIqn() {
+    public Output<String> iqn() {
         return this.iqn;
     }
 
@@ -85,7 +85,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
     @Import(name="iscsiInterface")
       private final @Nullable Output<String> iscsiInterface;
 
-    public Output<String> getIscsiInterface() {
+    public Output<String> iscsiInterface() {
         return this.iscsiInterface == null ? Codegen.empty() : this.iscsiInterface;
     }
 
@@ -96,7 +96,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
     @Import(name="lun", required=true)
       private final Output<Integer> lun;
 
-    public Output<Integer> getLun() {
+    public Output<Integer> lun() {
         return this.lun;
     }
 
@@ -107,7 +107,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
     @Import(name="portals")
       private final @Nullable Output<List<String>> portals;
 
-    public Output<List<String>> getPortals() {
+    public Output<List<String>> portals() {
         return this.portals == null ? Codegen.empty() : this.portals;
     }
 
@@ -118,7 +118,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
+    public Output<Boolean> readOnly() {
         return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
@@ -129,7 +129,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
     @Import(name="secretRef")
       private final @Nullable Output<SecretReferenceArgs> secretRef;
 
-    public Output<SecretReferenceArgs> getSecretRef() {
+    public Output<SecretReferenceArgs> secretRef() {
         return this.secretRef == null ? Codegen.empty() : this.secretRef;
     }
 
@@ -140,7 +140,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
     @Import(name="targetPortal", required=true)
       private final Output<String> targetPortal;
 
-    public Output<String> getTargetPortal() {
+    public Output<String> targetPortal() {
         return this.targetPortal;
     }
 

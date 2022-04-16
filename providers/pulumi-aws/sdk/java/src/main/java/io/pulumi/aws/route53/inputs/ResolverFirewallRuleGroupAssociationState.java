@@ -24,7 +24,7 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
     @Import(name="firewallRuleGroupId")
       private final @Nullable Output<String> firewallRuleGroupId;
 
-    public Output<String> getFirewallRuleGroupId() {
+    public Output<String> firewallRuleGroupId() {
         return this.firewallRuleGroupId == null ? Codegen.empty() : this.firewallRuleGroupId;
     }
 
@@ -46,7 +46,7 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
     @Import(name="mutationProtection")
       private final @Nullable Output<String> mutationProtection;
 
-    public Output<String> getMutationProtection() {
+    public Output<String> mutationProtection() {
         return this.mutationProtection == null ? Codegen.empty() : this.mutationProtection;
     }
 
@@ -57,7 +57,7 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -68,7 +68,7 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -79,7 +79,7 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -90,7 +90,7 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -101,7 +101,7 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 

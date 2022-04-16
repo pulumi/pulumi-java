@@ -95,7 +95,7 @@ public final class AzureVMAppContainerProtectionContainerResponse {
      * Type of backup management for the container.
      * 
     */
-    public Optional<String> getBackupManagementType() {
+    public Optional<String> backupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
     /**
@@ -106,63 +106,63 @@ public final class AzureVMAppContainerProtectionContainerResponse {
      * Expected value is 'VMAppContainer'.
      * 
     */
-    public String getContainerType() {
+    public String containerType() {
         return this.containerType;
     }
     /**
      * Additional details of a workload container.
      * 
     */
-    public Optional<AzureWorkloadContainerExtendedInfoResponse> getExtendedInfo() {
+    public Optional<AzureWorkloadContainerExtendedInfoResponse> extendedInfo() {
         return Optional.ofNullable(this.extendedInfo);
     }
     /**
      * Friendly name of the container.
      * 
     */
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * Status of health of the container.
      * 
     */
-    public Optional<String> getHealthStatus() {
+    public Optional<String> healthStatus() {
         return Optional.ofNullable(this.healthStatus);
     }
     /**
      * Time stamp when this container was updated.
      * 
     */
-    public Optional<String> getLastUpdatedTime() {
+    public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     /**
      * Re-Do Operation
      * 
     */
-    public Optional<String> getOperationType() {
+    public Optional<String> operationType() {
         return Optional.ofNullable(this.operationType);
     }
     /**
      * Status of registration of the container with the Recovery Services Vault.
      * 
     */
-    public Optional<String> getRegistrationStatus() {
+    public Optional<String> registrationStatus() {
         return Optional.ofNullable(this.registrationStatus);
     }
     /**
      * ARM ID of the virtual machine represented by this Azure Workload Container
      * 
     */
-    public Optional<String> getSourceResourceId() {
+    public Optional<String> sourceResourceId() {
         return Optional.ofNullable(this.sourceResourceId);
     }
     /**
      * Workload type for which registration was sent.
      * 
     */
-    public Optional<String> getWorkloadType() {
+    public Optional<String> workloadType() {
         return Optional.ofNullable(this.workloadType);
     }
 

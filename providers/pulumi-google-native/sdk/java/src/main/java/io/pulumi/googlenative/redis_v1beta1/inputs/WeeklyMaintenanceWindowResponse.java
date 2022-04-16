@@ -24,7 +24,7 @@ public final class WeeklyMaintenanceWindowResponse extends io.pulumi.resources.I
     @Import(name="day", required=true)
       private final String day;
 
-    public String getDay() {
+    public String day() {
         return this.day;
     }
 
@@ -35,7 +35,7 @@ public final class WeeklyMaintenanceWindowResponse extends io.pulumi.resources.I
     @Import(name="duration", required=true)
       private final String duration;
 
-    public String getDuration() {
+    public String duration() {
         return this.duration;
     }
 
@@ -46,7 +46,7 @@ public final class WeeklyMaintenanceWindowResponse extends io.pulumi.resources.I
     @Import(name="startTime", required=true)
       private final TimeOfDayResponse startTime;
 
-    public TimeOfDayResponse getStartTime() {
+    public TimeOfDayResponse startTime() {
         return this.startTime;
     }
 

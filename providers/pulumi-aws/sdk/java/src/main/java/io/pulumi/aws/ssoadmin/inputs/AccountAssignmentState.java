@@ -22,7 +22,7 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
     @Import(name="instanceArn")
       private final @Nullable Output<String> instanceArn;
 
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn == null ? Codegen.empty() : this.instanceArn;
     }
 
@@ -33,7 +33,7 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
     @Import(name="permissionSetArn")
       private final @Nullable Output<String> permissionSetArn;
 
-    public Output<String> getPermissionSetArn() {
+    public Output<String> permissionSetArn() {
         return this.permissionSetArn == null ? Codegen.empty() : this.permissionSetArn;
     }
 
@@ -44,7 +44,7 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
     @Import(name="principalId")
       private final @Nullable Output<String> principalId;
 
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId == null ? Codegen.empty() : this.principalId;
     }
 
@@ -55,7 +55,7 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
     @Import(name="principalType")
       private final @Nullable Output<String> principalType;
 
-    public Output<String> getPrincipalType() {
+    public Output<String> principalType() {
         return this.principalType == null ? Codegen.empty() : this.principalType;
     }
 
@@ -66,7 +66,7 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
     @Import(name="targetId")
       private final @Nullable Output<String> targetId;
 
-    public Output<String> getTargetId() {
+    public Output<String> targetId() {
         return this.targetId == null ? Codegen.empty() : this.targetId;
     }
 
@@ -77,7 +77,7 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
     @Import(name="targetType")
       private final @Nullable Output<String> targetType;
 
-    public Output<String> getTargetType() {
+    public Output<String> targetType() {
         return this.targetType == null ? Codegen.empty() : this.targetType;
     }
 

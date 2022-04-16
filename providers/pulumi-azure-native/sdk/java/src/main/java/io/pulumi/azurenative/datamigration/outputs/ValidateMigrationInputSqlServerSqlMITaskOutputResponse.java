@@ -79,56 +79,56 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse {
      * Errors associated with the BackupFolder path
      * 
     */
-    public List<ReportableExceptionResponse> getBackupFolderErrors() {
+    public List<ReportableExceptionResponse> backupFolderErrors() {
         return this.backupFolderErrors;
     }
     /**
      * Errors associated with backup share user name and password credentials
      * 
     */
-    public List<ReportableExceptionResponse> getBackupShareCredentialsErrors() {
+    public List<ReportableExceptionResponse> backupShareCredentialsErrors() {
         return this.backupShareCredentialsErrors;
     }
     /**
      * Errors associated with the storage account provided.
      * 
     */
-    public List<ReportableExceptionResponse> getBackupStorageAccountErrors() {
+    public List<ReportableExceptionResponse> backupStorageAccountErrors() {
         return this.backupStorageAccountErrors;
     }
     /**
      * Information about backup files when existing backup mode is used.
      * 
     */
-    public Optional<DatabaseBackupInfoResponse> getDatabaseBackupInfo() {
+    public Optional<DatabaseBackupInfoResponse> databaseBackupInfo() {
         return Optional.ofNullable(this.databaseBackupInfo);
     }
     /**
      * Errors associated with existing backup files.
      * 
     */
-    public List<ReportableExceptionResponse> getExistingBackupErrors() {
+    public List<ReportableExceptionResponse> existingBackupErrors() {
         return this.existingBackupErrors;
     }
     /**
      * Result identifier
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Name of database
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Errors associated with the RestoreDatabaseName
      * 
     */
-    public List<ReportableExceptionResponse> getRestoreDatabaseNameErrors() {
+    public List<ReportableExceptionResponse> restoreDatabaseNameErrors() {
         return this.restoreDatabaseNameErrors;
     }
 

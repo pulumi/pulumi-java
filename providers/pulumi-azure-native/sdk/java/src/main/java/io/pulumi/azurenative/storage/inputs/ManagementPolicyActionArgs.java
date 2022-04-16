@@ -28,7 +28,7 @@ public final class ManagementPolicyActionArgs extends io.pulumi.resources.Resour
     @Import(name="baseBlob")
       private final @Nullable Output<ManagementPolicyBaseBlobArgs> baseBlob;
 
-    public Output<ManagementPolicyBaseBlobArgs> getBaseBlob() {
+    public Output<ManagementPolicyBaseBlobArgs> baseBlob() {
         return this.baseBlob == null ? Codegen.empty() : this.baseBlob;
     }
 
@@ -39,7 +39,7 @@ public final class ManagementPolicyActionArgs extends io.pulumi.resources.Resour
     @Import(name="snapshot")
       private final @Nullable Output<ManagementPolicySnapShotArgs> snapshot;
 
-    public Output<ManagementPolicySnapShotArgs> getSnapshot() {
+    public Output<ManagementPolicySnapShotArgs> snapshot() {
         return this.snapshot == null ? Codegen.empty() : this.snapshot;
     }
 
@@ -50,7 +50,7 @@ public final class ManagementPolicyActionArgs extends io.pulumi.resources.Resour
     @Import(name="version")
       private final @Nullable Output<ManagementPolicyVersionArgs> version;
 
-    public Output<ManagementPolicyVersionArgs> getVersion() {
+    public Output<ManagementPolicyVersionArgs> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2FileSetResponse extends io.pulumi.resources
     @Import(name="regexFileSet", required=true)
       private final GooglePrivacyDlpV2CloudStorageRegexFileSetResponse regexFileSet;
 
-    public GooglePrivacyDlpV2CloudStorageRegexFileSetResponse getRegexFileSet() {
+    public GooglePrivacyDlpV2CloudStorageRegexFileSetResponse regexFileSet() {
         return this.regexFileSet;
     }
 
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2FileSetResponse extends io.pulumi.resources
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

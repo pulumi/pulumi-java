@@ -55,7 +55,7 @@ public final class URLMapPathMatcherRouteRuleHeaderAction {
      * Structure is documented below.
      * 
     */
-    public List<URLMapPathMatcherRouteRuleHeaderActionRequestHeadersToAdd> getRequestHeadersToAdds() {
+    public List<URLMapPathMatcherRouteRuleHeaderActionRequestHeadersToAdd> requestHeadersToAdds() {
         return this.requestHeadersToAdds == null ? List.of() : this.requestHeadersToAdds;
     }
     /**
@@ -63,7 +63,7 @@ public final class URLMapPathMatcherRouteRuleHeaderAction {
      * forwarding the request to the backendService.
      * 
     */
-    public List<String> getRequestHeadersToRemoves() {
+    public List<String> requestHeadersToRemoves() {
         return this.requestHeadersToRemoves == null ? List.of() : this.requestHeadersToRemoves;
     }
     /**
@@ -71,7 +71,7 @@ public final class URLMapPathMatcherRouteRuleHeaderAction {
      * Structure is documented below.
      * 
     */
-    public List<URLMapPathMatcherRouteRuleHeaderActionResponseHeadersToAdd> getResponseHeadersToAdds() {
+    public List<URLMapPathMatcherRouteRuleHeaderActionResponseHeadersToAdd> responseHeadersToAdds() {
         return this.responseHeadersToAdds == null ? List.of() : this.responseHeadersToAdds;
     }
     /**
@@ -79,7 +79,7 @@ public final class URLMapPathMatcherRouteRuleHeaderAction {
      * response back to the client.
      * 
     */
-    public List<String> getResponseHeadersToRemoves() {
+    public List<String> responseHeadersToRemoves() {
         return this.responseHeadersToRemoves == null ? List.of() : this.responseHeadersToRemoves;
     }
 

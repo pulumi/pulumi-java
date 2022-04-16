@@ -35,14 +35,14 @@ public final class ListIotDpsResourceKeysResult {
      * The next link.
      * 
     */
-    public String getNextLink() {
+    public String nextLink() {
         return this.nextLink;
     }
     /**
      * The list of shared access policies.
      * 
     */
-    public List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> getValue() {
+    public List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> value() {
         return this.value == null ? List.of() : this.value;
     }
 

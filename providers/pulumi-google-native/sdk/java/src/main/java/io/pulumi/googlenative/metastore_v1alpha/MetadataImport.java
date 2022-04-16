@@ -32,7 +32,7 @@ public class MetadataImport extends io.pulumi.resources.CustomResource {
      * @return The time when the metadata import was started.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -46,7 +46,7 @@ public class MetadataImport extends io.pulumi.resources.CustomResource {
      * @return Immutable. A database dump from a pre-existing metastore's database.
      * 
      */
-    public Output<DatabaseDumpResponse> getDatabaseDump() {
+    public Output<DatabaseDumpResponse> databaseDump() {
         return this.databaseDump;
     }
     /**
@@ -60,7 +60,7 @@ public class MetadataImport extends io.pulumi.resources.CustomResource {
      * @return The description of the metadata import.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -74,7 +74,7 @@ public class MetadataImport extends io.pulumi.resources.CustomResource {
      * @return The time when the metadata import finished.
      * 
      */
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime;
     }
     /**
@@ -88,7 +88,7 @@ public class MetadataImport extends io.pulumi.resources.CustomResource {
      * @return Immutable. The relative resource name of the metadata import, of the form:projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{metadata_import_id}.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -102,7 +102,7 @@ public class MetadataImport extends io.pulumi.resources.CustomResource {
      * @return The current state of the metadata import.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -116,7 +116,7 @@ public class MetadataImport extends io.pulumi.resources.CustomResource {
      * @return The time when the metadata import was last updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

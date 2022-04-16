@@ -34,14 +34,14 @@ public final class VirtualNetworkProfileResponse {
      * The ID of the virtual network.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the subnet.
      * 
     */
-    public Optional<String> getSubnet() {
+    public Optional<String> subnet() {
         return Optional.ofNullable(this.subnet);
     }
 

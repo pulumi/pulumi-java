@@ -26,7 +26,7 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
     @Import(name="dnsServiceIP")
       private final @Nullable String dnsServiceIP;
 
-    public Optional<String> getDnsServiceIP() {
+    public Optional<String> dnsServiceIP() {
         return this.dnsServiceIP == null ? Optional.empty() : Optional.ofNullable(this.dnsServiceIP);
     }
 
@@ -37,7 +37,7 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
     @Import(name="dockerBridgeCidr")
       private final @Nullable String dockerBridgeCidr;
 
-    public Optional<String> getDockerBridgeCidr() {
+    public Optional<String> dockerBridgeCidr() {
         return this.dockerBridgeCidr == null ? Optional.empty() : Optional.ofNullable(this.dockerBridgeCidr);
     }
 
@@ -48,7 +48,7 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
     @Import(name="loadBalancerProfile")
       private final @Nullable ManagedClusterLoadBalancerProfileResponse loadBalancerProfile;
 
-    public Optional<ManagedClusterLoadBalancerProfileResponse> getLoadBalancerProfile() {
+    public Optional<ManagedClusterLoadBalancerProfileResponse> loadBalancerProfile() {
         return this.loadBalancerProfile == null ? Optional.empty() : Optional.ofNullable(this.loadBalancerProfile);
     }
 
@@ -59,7 +59,7 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
     @Import(name="loadBalancerSku")
       private final @Nullable String loadBalancerSku;
 
-    public Optional<String> getLoadBalancerSku() {
+    public Optional<String> loadBalancerSku() {
         return this.loadBalancerSku == null ? Optional.empty() : Optional.ofNullable(this.loadBalancerSku);
     }
 
@@ -70,7 +70,7 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
     @Import(name="networkMode")
       private final @Nullable String networkMode;
 
-    public Optional<String> getNetworkMode() {
+    public Optional<String> networkMode() {
         return this.networkMode == null ? Optional.empty() : Optional.ofNullable(this.networkMode);
     }
 
@@ -81,7 +81,7 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
     @Import(name="networkPlugin")
       private final @Nullable String networkPlugin;
 
-    public Optional<String> getNetworkPlugin() {
+    public Optional<String> networkPlugin() {
         return this.networkPlugin == null ? Optional.empty() : Optional.ofNullable(this.networkPlugin);
     }
 
@@ -92,7 +92,7 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
     @Import(name="networkPolicy")
       private final @Nullable String networkPolicy;
 
-    public Optional<String> getNetworkPolicy() {
+    public Optional<String> networkPolicy() {
         return this.networkPolicy == null ? Optional.empty() : Optional.ofNullable(this.networkPolicy);
     }
 
@@ -103,7 +103,7 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
     @Import(name="outboundType")
       private final @Nullable String outboundType;
 
-    public Optional<String> getOutboundType() {
+    public Optional<String> outboundType() {
         return this.outboundType == null ? Optional.empty() : Optional.ofNullable(this.outboundType);
     }
 
@@ -114,7 +114,7 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
     @Import(name="podCidr")
       private final @Nullable String podCidr;
 
-    public Optional<String> getPodCidr() {
+    public Optional<String> podCidr() {
         return this.podCidr == null ? Optional.empty() : Optional.ofNullable(this.podCidr);
     }
 
@@ -125,7 +125,7 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
     @Import(name="serviceCidr")
       private final @Nullable String serviceCidr;
 
-    public Optional<String> getServiceCidr() {
+    public Optional<String> serviceCidr() {
         return this.serviceCidr == null ? Optional.empty() : Optional.ofNullable(this.serviceCidr);
     }
 

@@ -18,7 +18,7 @@ public final class CertificateCertificateDescriptionCertFingerprintArgs extends 
     @Import(name="sha256Hash")
       private final @Nullable Output<String> sha256Hash;
 
-    public Output<String> getSha256Hash() {
+    public Output<String> sha256Hash() {
         return this.sha256Hash == null ? Codegen.empty() : this.sha256Hash;
     }
 

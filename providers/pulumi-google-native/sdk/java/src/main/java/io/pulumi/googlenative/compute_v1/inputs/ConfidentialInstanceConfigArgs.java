@@ -26,7 +26,7 @@ public final class ConfidentialInstanceConfigArgs extends io.pulumi.resources.Re
     @Import(name="enableConfidentialCompute")
       private final @Nullable Output<Boolean> enableConfidentialCompute;
 
-    public Output<Boolean> getEnableConfidentialCompute() {
+    public Output<Boolean> enableConfidentialCompute() {
         return this.enableConfidentialCompute == null ? Codegen.empty() : this.enableConfidentialCompute;
     }
 

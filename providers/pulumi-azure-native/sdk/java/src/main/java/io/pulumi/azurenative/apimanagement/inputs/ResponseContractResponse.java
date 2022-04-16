@@ -29,7 +29,7 @@ public final class ResponseContractResponse extends io.pulumi.resources.InvokeAr
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -40,7 +40,7 @@ public final class ResponseContractResponse extends io.pulumi.resources.InvokeAr
     @Import(name="headers")
       private final @Nullable List<ParameterContractResponse> headers;
 
-    public List<ParameterContractResponse> getHeaders() {
+    public List<ParameterContractResponse> headers() {
         return this.headers == null ? List.of() : this.headers;
     }
 
@@ -51,7 +51,7 @@ public final class ResponseContractResponse extends io.pulumi.resources.InvokeAr
     @Import(name="representations")
       private final @Nullable List<RepresentationContractResponse> representations;
 
-    public List<RepresentationContractResponse> getRepresentations() {
+    public List<RepresentationContractResponse> representations() {
         return this.representations == null ? List.of() : this.representations;
     }
 
@@ -62,7 +62,7 @@ public final class ResponseContractResponse extends io.pulumi.resources.InvokeAr
     @Import(name="statusCode", required=true)
       private final Integer statusCode;
 
-    public Integer getStatusCode() {
+    public Integer statusCode() {
         return this.statusCode;
     }
 

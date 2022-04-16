@@ -32,14 +32,14 @@ public final class LoadBalancerConfigResponse {
      * Load balancer type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Load balancer version
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

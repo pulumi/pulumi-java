@@ -24,7 +24,7 @@ public final class RegionNetworkEndpointGroupCloudRunGetArgs extends io.pulumi.r
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service == null ? Codegen.empty() : this.service;
     }
 
@@ -38,7 +38,7 @@ public final class RegionNetworkEndpointGroupCloudRunGetArgs extends io.pulumi.r
     @Import(name="tag")
       private final @Nullable Output<String> tag;
 
-    public Output<String> getTag() {
+    public Output<String> tag() {
         return this.tag == null ? Codegen.empty() : this.tag;
     }
 
@@ -54,7 +54,7 @@ public final class RegionNetworkEndpointGroupCloudRunGetArgs extends io.pulumi.r
     @Import(name="urlMask")
       private final @Nullable Output<String> urlMask;
 
-    public Output<String> getUrlMask() {
+    public Output<String> urlMask() {
         return this.urlMask == null ? Codegen.empty() : this.urlMask;
     }
 

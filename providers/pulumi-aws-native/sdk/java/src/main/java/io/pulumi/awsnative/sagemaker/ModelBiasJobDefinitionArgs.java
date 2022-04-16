@@ -27,49 +27,49 @@ public final class ModelBiasJobDefinitionArgs extends io.pulumi.resources.Resour
     @Import(name="jobDefinitionName")
       private final @Nullable Output<String> jobDefinitionName;
 
-    public Output<String> getJobDefinitionName() {
+    public Output<String> jobDefinitionName() {
         return this.jobDefinitionName == null ? Codegen.empty() : this.jobDefinitionName;
     }
 
     @Import(name="jobResources", required=true)
       private final Output<ModelBiasJobDefinitionMonitoringResourcesArgs> jobResources;
 
-    public Output<ModelBiasJobDefinitionMonitoringResourcesArgs> getJobResources() {
+    public Output<ModelBiasJobDefinitionMonitoringResourcesArgs> jobResources() {
         return this.jobResources;
     }
 
     @Import(name="modelBiasAppSpecification", required=true)
       private final Output<ModelBiasJobDefinitionModelBiasAppSpecificationArgs> modelBiasAppSpecification;
 
-    public Output<ModelBiasJobDefinitionModelBiasAppSpecificationArgs> getModelBiasAppSpecification() {
+    public Output<ModelBiasJobDefinitionModelBiasAppSpecificationArgs> modelBiasAppSpecification() {
         return this.modelBiasAppSpecification;
     }
 
     @Import(name="modelBiasBaselineConfig")
       private final @Nullable Output<ModelBiasJobDefinitionModelBiasBaselineConfigArgs> modelBiasBaselineConfig;
 
-    public Output<ModelBiasJobDefinitionModelBiasBaselineConfigArgs> getModelBiasBaselineConfig() {
+    public Output<ModelBiasJobDefinitionModelBiasBaselineConfigArgs> modelBiasBaselineConfig() {
         return this.modelBiasBaselineConfig == null ? Codegen.empty() : this.modelBiasBaselineConfig;
     }
 
     @Import(name="modelBiasJobInput", required=true)
       private final Output<ModelBiasJobDefinitionModelBiasJobInputArgs> modelBiasJobInput;
 
-    public Output<ModelBiasJobDefinitionModelBiasJobInputArgs> getModelBiasJobInput() {
+    public Output<ModelBiasJobDefinitionModelBiasJobInputArgs> modelBiasJobInput() {
         return this.modelBiasJobInput;
     }
 
     @Import(name="modelBiasJobOutputConfig", required=true)
       private final Output<ModelBiasJobDefinitionMonitoringOutputConfigArgs> modelBiasJobOutputConfig;
 
-    public Output<ModelBiasJobDefinitionMonitoringOutputConfigArgs> getModelBiasJobOutputConfig() {
+    public Output<ModelBiasJobDefinitionMonitoringOutputConfigArgs> modelBiasJobOutputConfig() {
         return this.modelBiasJobOutputConfig;
     }
 
     @Import(name="networkConfig")
       private final @Nullable Output<ModelBiasJobDefinitionNetworkConfigArgs> networkConfig;
 
-    public Output<ModelBiasJobDefinitionNetworkConfigArgs> getNetworkConfig() {
+    public Output<ModelBiasJobDefinitionNetworkConfigArgs> networkConfig() {
         return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
     }
 
@@ -80,14 +80,14 @@ public final class ModelBiasJobDefinitionArgs extends io.pulumi.resources.Resour
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="stoppingCondition")
       private final @Nullable Output<ModelBiasJobDefinitionStoppingConditionArgs> stoppingCondition;
 
-    public Output<ModelBiasJobDefinitionStoppingConditionArgs> getStoppingCondition() {
+    public Output<ModelBiasJobDefinitionStoppingConditionArgs> stoppingCondition() {
         return this.stoppingCondition == null ? Codegen.empty() : this.stoppingCondition;
     }
 
@@ -98,7 +98,7 @@ public final class ModelBiasJobDefinitionArgs extends io.pulumi.resources.Resour
     @Import(name="tags")
       private final @Nullable Output<List<ModelBiasJobDefinitionTagArgs>> tags;
 
-    public Output<List<ModelBiasJobDefinitionTagArgs>> getTags() {
+    public Output<List<ModelBiasJobDefinitionTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

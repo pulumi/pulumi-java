@@ -23,7 +23,7 @@ public final class LabelDescriptorResponse extends io.pulumi.resources.InvokeArg
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -34,7 +34,7 @@ public final class LabelDescriptorResponse extends io.pulumi.resources.InvokeArg
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 
@@ -45,7 +45,7 @@ public final class LabelDescriptorResponse extends io.pulumi.resources.InvokeArg
     @Import(name="valueType", required=true)
       private final String valueType;
 
-    public String getValueType() {
+    public String valueType() {
         return this.valueType;
     }
 

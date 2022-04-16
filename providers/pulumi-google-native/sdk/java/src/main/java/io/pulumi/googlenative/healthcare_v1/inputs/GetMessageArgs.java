@@ -17,42 +17,42 @@ public final class GetMessageArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="datasetId", required=true)
       private final String datasetId;
 
-    public String getDatasetId() {
+    public String datasetId() {
         return this.datasetId;
     }
 
     @Import(name="hl7V2StoreId", required=true)
       private final String hl7V2StoreId;
 
-    public String getHl7V2StoreId() {
+    public String hl7V2StoreId() {
         return this.hl7V2StoreId;
     }
 
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
     @Import(name="messageId", required=true)
       private final String messageId;
 
-    public String getMessageId() {
+    public String messageId() {
         return this.messageId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="view")
       private final @Nullable String view;
 
-    public Optional<String> getView() {
+    public Optional<String> view() {
         return this.view == null ? Optional.empty() : Optional.ofNullable(this.view);
     }
 

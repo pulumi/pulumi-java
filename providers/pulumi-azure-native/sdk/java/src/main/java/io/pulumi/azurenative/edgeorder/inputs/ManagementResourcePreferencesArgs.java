@@ -26,7 +26,7 @@ public final class ManagementResourcePreferencesArgs extends io.pulumi.resources
     @Import(name="preferredManagementResourceId")
       private final @Nullable Output<String> preferredManagementResourceId;
 
-    public Output<String> getPreferredManagementResourceId() {
+    public Output<String> preferredManagementResourceId() {
         return this.preferredManagementResourceId == null ? Codegen.empty() : this.preferredManagementResourceId;
     }
 

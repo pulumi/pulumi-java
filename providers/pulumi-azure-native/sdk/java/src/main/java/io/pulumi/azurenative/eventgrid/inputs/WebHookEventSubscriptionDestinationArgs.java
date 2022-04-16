@@ -27,7 +27,7 @@ public final class WebHookEventSubscriptionDestinationArgs extends io.pulumi.res
     @Import(name="azureActiveDirectoryApplicationIdOrUri")
       private final @Nullable Output<String> azureActiveDirectoryApplicationIdOrUri;
 
-    public Output<String> getAzureActiveDirectoryApplicationIdOrUri() {
+    public Output<String> azureActiveDirectoryApplicationIdOrUri() {
         return this.azureActiveDirectoryApplicationIdOrUri == null ? Codegen.empty() : this.azureActiveDirectoryApplicationIdOrUri;
     }
 
@@ -38,7 +38,7 @@ public final class WebHookEventSubscriptionDestinationArgs extends io.pulumi.res
     @Import(name="azureActiveDirectoryTenantId")
       private final @Nullable Output<String> azureActiveDirectoryTenantId;
 
-    public Output<String> getAzureActiveDirectoryTenantId() {
+    public Output<String> azureActiveDirectoryTenantId() {
         return this.azureActiveDirectoryTenantId == null ? Codegen.empty() : this.azureActiveDirectoryTenantId;
     }
 
@@ -50,7 +50,7 @@ public final class WebHookEventSubscriptionDestinationArgs extends io.pulumi.res
     @Import(name="endpointType", required=true)
       private final Output<String> endpointType;
 
-    public Output<String> getEndpointType() {
+    public Output<String> endpointType() {
         return this.endpointType;
     }
 
@@ -61,7 +61,7 @@ public final class WebHookEventSubscriptionDestinationArgs extends io.pulumi.res
     @Import(name="endpointUrl")
       private final @Nullable Output<String> endpointUrl;
 
-    public Output<String> getEndpointUrl() {
+    public Output<String> endpointUrl() {
         return this.endpointUrl == null ? Codegen.empty() : this.endpointUrl;
     }
 
@@ -72,7 +72,7 @@ public final class WebHookEventSubscriptionDestinationArgs extends io.pulumi.res
     @Import(name="maxEventsPerBatch")
       private final @Nullable Output<Integer> maxEventsPerBatch;
 
-    public Output<Integer> getMaxEventsPerBatch() {
+    public Output<Integer> maxEventsPerBatch() {
         return this.maxEventsPerBatch == null ? Codegen.empty() : this.maxEventsPerBatch;
     }
 
@@ -83,7 +83,7 @@ public final class WebHookEventSubscriptionDestinationArgs extends io.pulumi.res
     @Import(name="preferredBatchSizeInKilobytes")
       private final @Nullable Output<Integer> preferredBatchSizeInKilobytes;
 
-    public Output<Integer> getPreferredBatchSizeInKilobytes() {
+    public Output<Integer> preferredBatchSizeInKilobytes() {
         return this.preferredBatchSizeInKilobytes == null ? Codegen.empty() : this.preferredBatchSizeInKilobytes;
     }
 

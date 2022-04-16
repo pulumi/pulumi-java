@@ -25,7 +25,7 @@ public final class ServiceTemplateArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="metadata")
       private final @Nullable Output<ServiceTemplateMetadataArgs> metadata;
 
-    public Output<ServiceTemplateMetadataArgs> getMetadata() {
+    public Output<ServiceTemplateMetadataArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -37,7 +37,7 @@ public final class ServiceTemplateArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="spec")
       private final @Nullable Output<ServiceTemplateSpecArgs> spec;
 
-    public Output<ServiceTemplateSpecArgs> getSpec() {
+    public Output<ServiceTemplateSpecArgs> spec() {
         return this.spec == null ? Codegen.empty() : this.spec;
     }
 

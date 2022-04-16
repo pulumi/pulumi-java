@@ -45,7 +45,7 @@ public class JobSchedule extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the id of job schedule.
      * 
      */
-    public Output</* @Nullable */ String> getJobScheduleId() {
+    public Output</* @Nullable */ String> jobScheduleId() {
         return this.jobScheduleId;
     }
     /**
@@ -59,7 +59,7 @@ public class JobSchedule extends io.pulumi.resources.CustomResource {
      * @return Gets the name of the variable.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +73,7 @@ public class JobSchedule extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the parameters of the job schedule.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getParameters() {
+    public Output</* @Nullable */ Map<String,String>> parameters() {
         return this.parameters;
     }
     /**
@@ -87,7 +87,7 @@ public class JobSchedule extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the hybrid worker group that the scheduled job should run on.
      * 
      */
-    public Output</* @Nullable */ String> getRunOn() {
+    public Output</* @Nullable */ String> runOn() {
         return this.runOn;
     }
     /**
@@ -101,7 +101,7 @@ public class JobSchedule extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the runbook.
      * 
      */
-    public Output</* @Nullable */ RunbookAssociationPropertyResponse> getRunbook() {
+    public Output</* @Nullable */ RunbookAssociationPropertyResponse> runbook() {
         return this.runbook;
     }
     /**
@@ -115,7 +115,7 @@ public class JobSchedule extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the schedule.
      * 
      */
-    public Output</* @Nullable */ ScheduleAssociationPropertyResponse> getSchedule() {
+    public Output</* @Nullable */ ScheduleAssociationPropertyResponse> schedule() {
         return this.schedule;
     }
     /**
@@ -129,7 +129,7 @@ public class JobSchedule extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

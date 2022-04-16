@@ -29,7 +29,7 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="destination")
       private final @Nullable Output<DestinationArgs> destination;
 
-    public Output<DestinationArgs> getDestination() {
+    public Output<DestinationArgs> destination() {
         return this.destination == null ? Codegen.empty() : this.destination;
     }
 
@@ -40,7 +40,7 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -51,7 +51,7 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="encoding")
       private final @Nullable Output<EncodingCaptureDescription> encoding;
 
-    public Output<EncodingCaptureDescription> getEncoding() {
+    public Output<EncodingCaptureDescription> encoding() {
         return this.encoding == null ? Codegen.empty() : this.encoding;
     }
 
@@ -62,7 +62,7 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="intervalInSeconds")
       private final @Nullable Output<Integer> intervalInSeconds;
 
-    public Output<Integer> getIntervalInSeconds() {
+    public Output<Integer> intervalInSeconds() {
         return this.intervalInSeconds == null ? Codegen.empty() : this.intervalInSeconds;
     }
 
@@ -73,7 +73,7 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="sizeLimitInBytes")
       private final @Nullable Output<Integer> sizeLimitInBytes;
 
-    public Output<Integer> getSizeLimitInBytes() {
+    public Output<Integer> sizeLimitInBytes() {
         return this.sizeLimitInBytes == null ? Codegen.empty() : this.sizeLimitInBytes;
     }
 
@@ -84,7 +84,7 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="skipEmptyArchives")
       private final @Nullable Output<Boolean> skipEmptyArchives;
 
-    public Output<Boolean> getSkipEmptyArchives() {
+    public Output<Boolean> skipEmptyArchives() {
         return this.skipEmptyArchives == null ? Codegen.empty() : this.skipEmptyArchives;
     }
 

@@ -28,7 +28,7 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="contextAccessToken")
       private final @Nullable Output<String> contextAccessToken;
 
-    public Output<String> getContextAccessToken() {
+    public Output<String> contextAccessToken() {
         return this.contextAccessToken == null ? Codegen.empty() : this.contextAccessToken;
     }
 
@@ -39,7 +39,7 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="contextPath")
       private final @Nullable Output<String> contextPath;
 
-    public Output<String> getContextPath() {
+    public Output<String> contextPath() {
         return this.contextPath == null ? Codegen.empty() : this.contextPath;
     }
 
@@ -50,7 +50,7 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="encodedTaskContent", required=true)
       private final Output<String> encodedTaskContent;
 
-    public Output<String> getEncodedTaskContent() {
+    public Output<String> encodedTaskContent() {
         return this.encodedTaskContent;
     }
 
@@ -61,7 +61,7 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="encodedValuesContent")
       private final @Nullable Output<String> encodedValuesContent;
 
-    public Output<String> getEncodedValuesContent() {
+    public Output<String> encodedValuesContent() {
         return this.encodedValuesContent == null ? Codegen.empty() : this.encodedValuesContent;
     }
 
@@ -73,7 +73,7 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -84,7 +84,7 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="values")
       private final @Nullable Output<List<SetValueArgs>> values;
 
-    public Output<List<SetValueArgs>> getValues() {
+    public Output<List<SetValueArgs>> values() {
         return this.values == null ? Codegen.empty() : this.values;
     }
 

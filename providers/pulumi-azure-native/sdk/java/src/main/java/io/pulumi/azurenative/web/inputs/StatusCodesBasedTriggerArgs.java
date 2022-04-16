@@ -27,7 +27,7 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
     @Import(name="count")
       private final @Nullable Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count == null ? Codegen.empty() : this.count;
     }
 
@@ -38,7 +38,7 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -49,7 +49,7 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
     @Import(name="status")
       private final @Nullable Output<Integer> status;
 
-    public Output<Integer> getStatus() {
+    public Output<Integer> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -60,7 +60,7 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
     @Import(name="subStatus")
       private final @Nullable Output<Integer> subStatus;
 
-    public Output<Integer> getSubStatus() {
+    public Output<Integer> subStatus() {
         return this.subStatus == null ? Codegen.empty() : this.subStatus;
     }
 
@@ -71,7 +71,7 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
     @Import(name="timeInterval")
       private final @Nullable Output<String> timeInterval;
 
-    public Output<String> getTimeInterval() {
+    public Output<String> timeInterval() {
         return this.timeInterval == null ? Codegen.empty() : this.timeInterval;
     }
 
@@ -82,7 +82,7 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
     @Import(name="win32Status")
       private final @Nullable Output<Integer> win32Status;
 
-    public Output<Integer> getWin32Status() {
+    public Output<Integer> win32Status() {
         return this.win32Status == null ? Codegen.empty() : this.win32Status;
     }
 

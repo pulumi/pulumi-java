@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionsArgs exte
     @Import(name="suggestions", required=true)
       private final Output<List<GoogleCloudDialogflowV2beta1IntentMessageSuggestionArgs>> suggestions;
 
-    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageSuggestionArgs>> getSuggestions() {
+    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageSuggestionArgs>> suggestions() {
         return this.suggestions;
     }
 

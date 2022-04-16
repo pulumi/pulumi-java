@@ -87,63 +87,63 @@ public final class GetCustomResourceProviderResult {
      * A list of actions that the custom resource provider implements.
      * 
     */
-    public List<CustomRPActionRouteDefinitionResponse> getActions() {
+    public List<CustomRPActionRouteDefinitionResponse> actions() {
         return this.actions == null ? List.of() : this.actions;
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning state of the resource provider.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * A list of resource types that the custom resource provider implements.
      * 
     */
-    public List<CustomRPResourceTypeRouteDefinitionResponse> getResourceTypes() {
+    public List<CustomRPResourceTypeRouteDefinitionResponse> resourceTypes() {
         return this.resourceTypes == null ? List.of() : this.resourceTypes;
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * A list of validations to run on the custom resource provider's requests.
      * 
     */
-    public List<CustomRPValidationsResponse> getValidations() {
+    public List<CustomRPValidationsResponse> validations() {
         return this.validations == null ? List.of() : this.validations;
     }
 

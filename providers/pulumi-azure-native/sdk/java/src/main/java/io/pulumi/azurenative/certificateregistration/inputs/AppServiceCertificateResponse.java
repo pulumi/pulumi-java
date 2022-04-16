@@ -25,7 +25,7 @@ public final class AppServiceCertificateResponse extends io.pulumi.resources.Inv
     @Import(name="keyVaultId")
       private final @Nullable String keyVaultId;
 
-    public Optional<String> getKeyVaultId() {
+    public Optional<String> keyVaultId() {
         return this.keyVaultId == null ? Optional.empty() : Optional.ofNullable(this.keyVaultId);
     }
 
@@ -36,7 +36,7 @@ public final class AppServiceCertificateResponse extends io.pulumi.resources.Inv
     @Import(name="keyVaultSecretName")
       private final @Nullable String keyVaultSecretName;
 
-    public Optional<String> getKeyVaultSecretName() {
+    public Optional<String> keyVaultSecretName() {
         return this.keyVaultSecretName == null ? Optional.empty() : Optional.ofNullable(this.keyVaultSecretName);
     }
 
@@ -47,7 +47,7 @@ public final class AppServiceCertificateResponse extends io.pulumi.resources.Inv
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

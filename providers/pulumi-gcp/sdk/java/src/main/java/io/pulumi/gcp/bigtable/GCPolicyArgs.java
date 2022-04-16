@@ -25,7 +25,7 @@ public final class GCPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="columnFamily", required=true)
       private final Output<String> columnFamily;
 
-    public Output<String> getColumnFamily() {
+    public Output<String> columnFamily() {
         return this.columnFamily;
     }
 
@@ -36,7 +36,7 @@ public final class GCPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceName", required=true)
       private final Output<String> instanceName;
 
-    public Output<String> getInstanceName() {
+    public Output<String> instanceName() {
         return this.instanceName;
     }
 
@@ -47,7 +47,7 @@ public final class GCPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxAge")
       private final @Nullable Output<GCPolicyMaxAgeArgs> maxAge;
 
-    public Output<GCPolicyMaxAgeArgs> getMaxAge() {
+    public Output<GCPolicyMaxAgeArgs> maxAge() {
         return this.maxAge == null ? Codegen.empty() : this.maxAge;
     }
 
@@ -58,7 +58,7 @@ public final class GCPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxVersions")
       private final @Nullable Output<List<GCPolicyMaxVersionArgs>> maxVersions;
 
-    public Output<List<GCPolicyMaxVersionArgs>> getMaxVersions() {
+    public Output<List<GCPolicyMaxVersionArgs>> maxVersions() {
         return this.maxVersions == null ? Codegen.empty() : this.maxVersions;
     }
 
@@ -69,7 +69,7 @@ public final class GCPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mode")
       private final @Nullable Output<String> mode;
 
-    public Output<String> getMode() {
+    public Output<String> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -80,7 +80,7 @@ public final class GCPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -91,7 +91,7 @@ public final class GCPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="table", required=true)
       private final Output<String> table;
 
-    public Output<String> getTable() {
+    public Output<String> table() {
         return this.table;
     }
 

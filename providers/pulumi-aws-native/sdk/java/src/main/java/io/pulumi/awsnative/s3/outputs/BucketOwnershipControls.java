@@ -17,7 +17,7 @@ public final class BucketOwnershipControls {
         this.rules = rules;
     }
 
-    public List<BucketOwnershipControlsRule> getRules() {
+    public List<BucketOwnershipControlsRule> rules() {
         return this.rules;
     }
 

@@ -28,7 +28,7 @@ public final class BlobOutputDataSourceArgs extends io.pulumi.resources.Resource
     @Import(name="container")
       private final @Nullable Output<String> container;
 
-    public Output<String> getContainer() {
+    public Output<String> container() {
         return this.container == null ? Codegen.empty() : this.container;
     }
 
@@ -39,7 +39,7 @@ public final class BlobOutputDataSourceArgs extends io.pulumi.resources.Resource
     @Import(name="dateFormat")
       private final @Nullable Output<String> dateFormat;
 
-    public Output<String> getDateFormat() {
+    public Output<String> dateFormat() {
         return this.dateFormat == null ? Codegen.empty() : this.dateFormat;
     }
 
@@ -50,7 +50,7 @@ public final class BlobOutputDataSourceArgs extends io.pulumi.resources.Resource
     @Import(name="pathPattern")
       private final @Nullable Output<String> pathPattern;
 
-    public Output<String> getPathPattern() {
+    public Output<String> pathPattern() {
         return this.pathPattern == null ? Codegen.empty() : this.pathPattern;
     }
 
@@ -61,7 +61,7 @@ public final class BlobOutputDataSourceArgs extends io.pulumi.resources.Resource
     @Import(name="storageAccounts")
       private final @Nullable Output<List<StorageAccountArgs>> storageAccounts;
 
-    public Output<List<StorageAccountArgs>> getStorageAccounts() {
+    public Output<List<StorageAccountArgs>> storageAccounts() {
         return this.storageAccounts == null ? Codegen.empty() : this.storageAccounts;
     }
 
@@ -72,7 +72,7 @@ public final class BlobOutputDataSourceArgs extends io.pulumi.resources.Resource
     @Import(name="timeFormat")
       private final @Nullable Output<String> timeFormat;
 
-    public Output<String> getTimeFormat() {
+    public Output<String> timeFormat() {
         return this.timeFormat == null ? Codegen.empty() : this.timeFormat;
     }
 
@@ -84,7 +84,7 @@ public final class BlobOutputDataSourceArgs extends io.pulumi.resources.Resource
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

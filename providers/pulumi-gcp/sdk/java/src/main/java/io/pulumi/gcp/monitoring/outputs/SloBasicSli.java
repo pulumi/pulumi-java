@@ -76,7 +76,7 @@ public final class SloBasicSli {
      * Structure is documented below.
      * 
     */
-    public Optional<SloBasicSliAvailability> getAvailability() {
+    public Optional<SloBasicSliAvailability> availability() {
         return Optional.ofNullable(this.availability);
     }
     /**
@@ -84,7 +84,7 @@ public final class SloBasicSli {
      * Structure is documented below.
      * 
     */
-    public Optional<SloBasicSliLatency> getLatency() {
+    public Optional<SloBasicSliLatency> latency() {
         return Optional.ofNullable(this.latency);
     }
     /**
@@ -96,7 +96,7 @@ public final class SloBasicSli {
      * field will result in an error.
      * 
     */
-    public List<String> getLocations() {
+    public List<String> locations() {
         return this.locations == null ? List.of() : this.locations;
     }
     /**
@@ -108,7 +108,7 @@ public final class SloBasicSli {
      * error.
      * 
     */
-    public List<String> getMethods() {
+    public List<String> methods() {
         return this.methods == null ? List.of() : this.methods;
     }
     /**
@@ -120,7 +120,7 @@ public final class SloBasicSli {
      * field will result in an error.
      * 
     */
-    public List<String> getVersions() {
+    public List<String> versions() {
         return this.versions == null ? List.of() : this.versions;
     }
 

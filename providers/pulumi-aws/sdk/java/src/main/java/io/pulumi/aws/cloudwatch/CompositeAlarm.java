@@ -45,7 +45,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * @return Indicates whether actions should be executed during any changes to the alarm state of the composite alarm. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getActionsEnabled() {
+    public Output</* @Nullable */ Boolean> actionsEnabled() {
         return this.actionsEnabled;
     }
     /**
@@ -59,7 +59,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * @return The set of actions to execute when this alarm transitions to the `ALARM` state from any other state. Each action is specified as an ARN. Up to 5 actions are allowed.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAlarmActions() {
+    public Output</* @Nullable */ List<String>> alarmActions() {
         return this.alarmActions;
     }
     /**
@@ -73,7 +73,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * @return The description for the composite alarm.
      * 
      */
-    public Output</* @Nullable */ String> getAlarmDescription() {
+    public Output</* @Nullable */ String> alarmDescription() {
         return this.alarmDescription;
     }
     /**
@@ -87,7 +87,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * @return The name for the composite alarm. This name must be unique within the region.
      * 
      */
-    public Output<String> getAlarmName() {
+    public Output<String> alarmName() {
         return this.alarmName;
     }
     /**
@@ -101,7 +101,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * @return An expression that specifies which other alarms are to be evaluated to determine this composite alarm's state. For syntax, see [Creating a Composite Alarm](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Create_Composite_Alarm.html). The maximum length is 10240 characters.
      * 
      */
-    public Output<String> getAlarmRule() {
+    public Output<String> alarmRule() {
         return this.alarmRule;
     }
     /**
@@ -115,7 +115,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * @return The ARN of the composite alarm.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -129,7 +129,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * @return The set of actions to execute when this alarm transitions to the `INSUFFICIENT_DATA` state from any other state. Each action is specified as an ARN. Up to 5 actions are allowed.
      * 
      */
-    public Output</* @Nullable */ List<String>> getInsufficientDataActions() {
+    public Output</* @Nullable */ List<String>> insufficientDataActions() {
         return this.insufficientDataActions;
     }
     /**
@@ -143,7 +143,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * @return The set of actions to execute when this alarm transitions to an `OK` state from any other state. Each action is specified as an ARN. Up to 5 actions are allowed.
      * 
      */
-    public Output</* @Nullable */ List<String>> getOkActions() {
+    public Output</* @Nullable */ List<String>> okActions() {
         return this.okActions;
     }
     /**
@@ -157,7 +157,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * @return A map of tags to associate with the alarm. Up to 50 tags are allowed. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -171,7 +171,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

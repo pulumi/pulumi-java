@@ -32,14 +32,14 @@ public final class JobOutputResponse {
      * ARM ID of the datastore where the job logs and artifacts are stored, or null for the default container ("azureml") in the workspace's storage account.
      * 
     */
-    public String getDatastoreId() {
+    public String datastoreId() {
         return this.datastoreId;
     }
     /**
      * Path within the datastore to the job logs and artifacts.
      * 
     */
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 

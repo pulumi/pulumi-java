@@ -24,7 +24,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appName")
       private final @Nullable Output<String> appName;
 
-    public Output<String> getAppName() {
+    public Output<String> appName() {
         return this.appName == null ? Codegen.empty() : this.appName;
     }
 
@@ -35,7 +35,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<ManagedIdentityPropertiesArgs> identity;
 
-    public Output<ManagedIdentityPropertiesArgs> getIdentity() {
+    public Output<ManagedIdentityPropertiesArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -46,7 +46,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -57,7 +57,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<AppResourcePropertiesArgs> properties;
 
-    public Output<AppResourcePropertiesArgs> getProperties() {
+    public Output<AppResourcePropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -68,7 +68,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -79,7 +79,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 

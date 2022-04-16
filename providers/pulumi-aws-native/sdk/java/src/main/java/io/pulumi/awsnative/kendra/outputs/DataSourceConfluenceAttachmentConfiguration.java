@@ -24,10 +24,10 @@ public final class DataSourceConfluenceAttachmentConfiguration {
         this.crawlAttachments = crawlAttachments;
     }
 
-    public List<DataSourceConfluenceAttachmentToIndexFieldMapping> getAttachmentFieldMappings() {
+    public List<DataSourceConfluenceAttachmentToIndexFieldMapping> attachmentFieldMappings() {
         return this.attachmentFieldMappings == null ? List.of() : this.attachmentFieldMappings;
     }
-    public Optional<Boolean> getCrawlAttachments() {
+    public Optional<Boolean> crawlAttachments() {
         return Optional.ofNullable(this.crawlAttachments);
     }
 

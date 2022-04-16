@@ -20,7 +20,7 @@ public final class GetDomainCognitoOption extends io.pulumi.resources.InvokeArgs
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
@@ -31,7 +31,7 @@ public final class GetDomainCognitoOption extends io.pulumi.resources.InvokeArgs
     @Import(name="identityPoolId", required=true)
       private final String identityPoolId;
 
-    public String getIdentityPoolId() {
+    public String identityPoolId() {
         return this.identityPoolId;
     }
 
@@ -42,7 +42,7 @@ public final class GetDomainCognitoOption extends io.pulumi.resources.InvokeArgs
     @Import(name="roleArn", required=true)
       private final String roleArn;
 
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 
@@ -53,7 +53,7 @@ public final class GetDomainCognitoOption extends io.pulumi.resources.InvokeArgs
     @Import(name="userPoolId", required=true)
       private final String userPoolId;
 
-    public String getUserPoolId() {
+    public String userPoolId() {
         return this.userPoolId;
     }
 

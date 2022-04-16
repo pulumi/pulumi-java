@@ -31,7 +31,7 @@ public final class ApplicationMetricDescriptionArgs extends io.pulumi.resources.
     @Import(name="maximumCapacity")
       private final @Nullable Output<Double> maximumCapacity;
 
-    public Output<Double> getMaximumCapacity() {
+    public Output<Double> maximumCapacity() {
         return this.maximumCapacity == null ? Codegen.empty() : this.maximumCapacity;
     }
 
@@ -42,7 +42,7 @@ public final class ApplicationMetricDescriptionArgs extends io.pulumi.resources.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -57,7 +57,7 @@ public final class ApplicationMetricDescriptionArgs extends io.pulumi.resources.
     @Import(name="reservationCapacity")
       private final @Nullable Output<Double> reservationCapacity;
 
-    public Output<Double> getReservationCapacity() {
+    public Output<Double> reservationCapacity() {
         return this.reservationCapacity == null ? Codegen.empty() : this.reservationCapacity;
     }
 
@@ -70,7 +70,7 @@ public final class ApplicationMetricDescriptionArgs extends io.pulumi.resources.
     @Import(name="totalApplicationCapacity")
       private final @Nullable Output<Double> totalApplicationCapacity;
 
-    public Output<Double> getTotalApplicationCapacity() {
+    public Output<Double> totalApplicationCapacity() {
         return this.totalApplicationCapacity == null ? Codegen.empty() : this.totalApplicationCapacity;
     }
 

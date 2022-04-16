@@ -22,7 +22,7 @@ public final class StackCustomCookbooksSourceGetArgs extends io.pulumi.resources
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -33,7 +33,7 @@ public final class StackCustomCookbooksSourceGetArgs extends io.pulumi.resources
     @Import(name="revision")
       private final @Nullable Output<String> revision;
 
-    public Output<String> getRevision() {
+    public Output<String> revision() {
         return this.revision == null ? Codegen.empty() : this.revision;
     }
 
@@ -44,7 +44,7 @@ public final class StackCustomCookbooksSourceGetArgs extends io.pulumi.resources
     @Import(name="sshKey")
       private final @Nullable Output<String> sshKey;
 
-    public Output<String> getSshKey() {
+    public Output<String> sshKey() {
         return this.sshKey == null ? Codegen.empty() : this.sshKey;
     }
 
@@ -55,7 +55,7 @@ public final class StackCustomCookbooksSourceGetArgs extends io.pulumi.resources
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -66,7 +66,7 @@ public final class StackCustomCookbooksSourceGetArgs extends io.pulumi.resources
     @Import(name="url", required=true)
       private final Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 
@@ -77,7 +77,7 @@ public final class StackCustomCookbooksSourceGetArgs extends io.pulumi.resources
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 

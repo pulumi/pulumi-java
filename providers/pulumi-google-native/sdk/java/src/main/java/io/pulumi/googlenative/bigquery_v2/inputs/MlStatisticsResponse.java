@@ -21,7 +21,7 @@ public final class MlStatisticsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="iterationResults", required=true)
       private final List<IterationResultResponse> iterationResults;
 
-    public List<IterationResultResponse> getIterationResults() {
+    public List<IterationResultResponse> iterationResults() {
         return this.iterationResults;
     }
 
@@ -32,7 +32,7 @@ public final class MlStatisticsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="maxIterations", required=true)
       private final String maxIterations;
 
-    public String getMaxIterations() {
+    public String maxIterations() {
         return this.maxIterations;
     }
 

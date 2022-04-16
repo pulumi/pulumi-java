@@ -29,7 +29,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mountPoint")
       private final @Nullable Output<String> mountPoint;
 
-    public Output<String> getMountPoint() {
+    public Output<String> mountPoint() {
         return this.mountPoint == null ? Codegen.empty() : this.mountPoint;
     }
 
@@ -40,7 +40,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -51,7 +51,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
+    public Output<Boolean> readOnly() {
         return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
@@ -62,7 +62,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sizeGb")
       private final @Nullable Output<Integer> sizeGb;
 
-    public Output<Integer> getSizeGb() {
+    public Output<Integer> sizeGb() {
         return this.sizeGb == null ? Codegen.empty() : this.sizeGb;
     }
 
@@ -73,7 +73,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="source")
       private final @Nullable Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 
@@ -84,7 +84,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<DiskType> type;
 
-    public Output<DiskType> getType() {
+    public Output<DiskType> type() {
         return this.type;
     }
 

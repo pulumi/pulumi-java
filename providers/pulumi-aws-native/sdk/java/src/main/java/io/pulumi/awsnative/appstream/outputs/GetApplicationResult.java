@@ -48,34 +48,34 @@ public final class GetApplicationResult {
         this.workingDirectory = workingDirectory;
     }
 
-    public Optional<String> getAppBlockArn() {
+    public Optional<String> appBlockArn() {
         return Optional.ofNullable(this.appBlockArn);
     }
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public List<String> getAttributesToDelete() {
+    public List<String> attributesToDelete() {
         return this.attributesToDelete == null ? List.of() : this.attributesToDelete;
     }
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
-    public Optional<ApplicationS3Location> getIconS3Location() {
+    public Optional<ApplicationS3Location> iconS3Location() {
         return Optional.ofNullable(this.iconS3Location);
     }
-    public Optional<String> getLaunchParameters() {
+    public Optional<String> launchParameters() {
         return Optional.ofNullable(this.launchParameters);
     }
-    public Optional<String> getLaunchPath() {
+    public Optional<String> launchPath() {
         return Optional.ofNullable(this.launchPath);
     }
-    public Optional<String> getWorkingDirectory() {
+    public Optional<String> workingDirectory() {
         return Optional.ofNullable(this.workingDirectory);
     }
 

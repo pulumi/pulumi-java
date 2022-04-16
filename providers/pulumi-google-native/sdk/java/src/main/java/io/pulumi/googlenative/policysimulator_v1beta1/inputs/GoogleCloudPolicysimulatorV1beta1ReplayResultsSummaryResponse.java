@@ -24,7 +24,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
     @Import(name="differenceCount", required=true)
       private final Integer differenceCount;
 
-    public Integer getDifferenceCount() {
+    public Integer differenceCount() {
         return this.differenceCount;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
     @Import(name="errorCount", required=true)
       private final Integer errorCount;
 
-    public Integer getErrorCount() {
+    public Integer errorCount() {
         return this.errorCount;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
     @Import(name="logCount", required=true)
       private final Integer logCount;
 
-    public Integer getLogCount() {
+    public Integer logCount() {
         return this.logCount;
     }
 
@@ -57,7 +57,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
     @Import(name="newestDate", required=true)
       private final GoogleTypeDateResponse newestDate;
 
-    public GoogleTypeDateResponse getNewestDate() {
+    public GoogleTypeDateResponse newestDate() {
         return this.newestDate;
     }
 
@@ -68,7 +68,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
     @Import(name="oldestDate", required=true)
       private final GoogleTypeDateResponse oldestDate;
 
-    public GoogleTypeDateResponse getOldestDate() {
+    public GoogleTypeDateResponse oldestDate() {
         return this.oldestDate;
     }
 
@@ -79,7 +79,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
     @Import(name="unchangedCount", required=true)
       private final Integer unchangedCount;
 
-    public Integer getUnchangedCount() {
+    public Integer unchangedCount() {
         return this.unchangedCount;
     }
 

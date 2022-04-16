@@ -26,7 +26,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateAuthorityId", required=true)
       private final Output<String> certificateAuthorityId;
 
-    public Output<String> getCertificateAuthorityId() {
+    public Output<String> certificateAuthorityId() {
         return this.certificateAuthorityId;
     }
 
@@ -38,7 +38,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="config", required=true)
       private final Output<AuthorityConfigArgs> config;
 
-    public Output<AuthorityConfigArgs> getConfig() {
+    public Output<AuthorityConfigArgs> config() {
         return this.config;
     }
 
@@ -53,7 +53,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gcsBucket")
       private final @Nullable Output<String> gcsBucket;
 
-    public Output<String> getGcsBucket() {
+    public Output<String> gcsBucket() {
         return this.gcsBucket == null ? Codegen.empty() : this.gcsBucket;
     }
 
@@ -65,7 +65,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ignoreActiveCertificatesOnDeletion")
       private final @Nullable Output<Boolean> ignoreActiveCertificatesOnDeletion;
 
-    public Output<Boolean> getIgnoreActiveCertificatesOnDeletion() {
+    public Output<Boolean> ignoreActiveCertificatesOnDeletion() {
         return this.ignoreActiveCertificatesOnDeletion == null ? Codegen.empty() : this.ignoreActiveCertificatesOnDeletion;
     }
 
@@ -79,7 +79,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keySpec", required=true)
       private final Output<AuthorityKeySpecArgs> keySpec;
 
-    public Output<AuthorityKeySpecArgs> getKeySpec() {
+    public Output<AuthorityKeySpecArgs> keySpec() {
         return this.keySpec;
     }
 
@@ -92,7 +92,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -105,7 +105,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lifetime")
       private final @Nullable Output<String> lifetime;
 
-    public Output<String> getLifetime() {
+    public Output<String> lifetime() {
         return this.lifetime == null ? Codegen.empty() : this.lifetime;
     }
 
@@ -117,7 +117,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -128,7 +128,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pool", required=true)
       private final Output<String> pool;
 
-    public Output<String> getPool() {
+    public Output<String> pool() {
         return this.pool;
     }
 
@@ -140,7 +140,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -156,7 +156,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

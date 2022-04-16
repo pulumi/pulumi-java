@@ -28,7 +28,7 @@ public final class VideoStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="h264")
       private final @Nullable Output<H264CodecSettingsArgs> h264;
 
-    public Output<H264CodecSettingsArgs> getH264() {
+    public Output<H264CodecSettingsArgs> h264() {
         return this.h264 == null ? Codegen.empty() : this.h264;
     }
 
@@ -39,7 +39,7 @@ public final class VideoStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="h265")
       private final @Nullable Output<H265CodecSettingsArgs> h265;
 
-    public Output<H265CodecSettingsArgs> getH265() {
+    public Output<H265CodecSettingsArgs> h265() {
         return this.h265 == null ? Codegen.empty() : this.h265;
     }
 
@@ -50,7 +50,7 @@ public final class VideoStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vp9")
       private final @Nullable Output<Vp9CodecSettingsArgs> vp9;
 
-    public Output<Vp9CodecSettingsArgs> getVp9() {
+    public Output<Vp9CodecSettingsArgs> vp9() {
         return this.vp9 == null ? Codegen.empty() : this.vp9;
     }
 

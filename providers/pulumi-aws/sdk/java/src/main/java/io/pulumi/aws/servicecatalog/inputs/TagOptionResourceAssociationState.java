@@ -22,7 +22,7 @@ public final class TagOptionResourceAssociationState extends io.pulumi.resources
     @Import(name="resourceArn")
       private final @Nullable Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn == null ? Codegen.empty() : this.resourceArn;
     }
 
@@ -33,7 +33,7 @@ public final class TagOptionResourceAssociationState extends io.pulumi.resources
     @Import(name="resourceCreatedTime")
       private final @Nullable Output<String> resourceCreatedTime;
 
-    public Output<String> getResourceCreatedTime() {
+    public Output<String> resourceCreatedTime() {
         return this.resourceCreatedTime == null ? Codegen.empty() : this.resourceCreatedTime;
     }
 
@@ -44,7 +44,7 @@ public final class TagOptionResourceAssociationState extends io.pulumi.resources
     @Import(name="resourceDescription")
       private final @Nullable Output<String> resourceDescription;
 
-    public Output<String> getResourceDescription() {
+    public Output<String> resourceDescription() {
         return this.resourceDescription == null ? Codegen.empty() : this.resourceDescription;
     }
 
@@ -55,7 +55,7 @@ public final class TagOptionResourceAssociationState extends io.pulumi.resources
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
@@ -66,7 +66,7 @@ public final class TagOptionResourceAssociationState extends io.pulumi.resources
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
@@ -77,7 +77,7 @@ public final class TagOptionResourceAssociationState extends io.pulumi.resources
     @Import(name="tagOptionId")
       private final @Nullable Output<String> tagOptionId;
 
-    public Output<String> getTagOptionId() {
+    public Output<String> tagOptionId() {
         return this.tagOptionId == null ? Codegen.empty() : this.tagOptionId;
     }
 

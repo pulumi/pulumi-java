@@ -106,77 +106,77 @@ public final class GetPipelineTopologyResult {
      * An optional description of the pipeline topology. It is recommended that the expected use of the topology to be described here.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Topology kind.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * List of the topology parameter declarations. Parameters declared here can be referenced throughout the topology nodes through the use of "${PARAMETER_NAME}" string pattern. Parameters can have optional default values and can later be defined in individual instances of the pipeline.
      * 
     */
-    public List<ParameterDeclarationResponse> getParameters() {
+    public List<ParameterDeclarationResponse> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
      * List of the topology processor nodes. Processor nodes enable pipeline data to be analyzed, processed or transformed.
      * 
     */
-    public List<EncoderProcessorResponse> getProcessors() {
+    public List<EncoderProcessorResponse> processors() {
         return this.processors == null ? List.of() : this.processors;
     }
     /**
      * List of the topology sink nodes. Sink nodes allow pipeline data to be stored or exported.
      * 
     */
-    public List<VideoSinkResponse> getSinks() {
+    public List<VideoSinkResponse> sinks() {
         return this.sinks;
     }
     /**
      * Describes the properties of a SKU.
      * 
     */
-    public SkuResponse getSku() {
+    public SkuResponse sku() {
         return this.sku;
     }
     /**
      * List of the topology source nodes. Source nodes enable external data to be ingested by the pipeline.
      * 
     */
-    public List<Either<RtspSourceResponse,VideoSourceResponse>> getSources() {
+    public List<Either<RtspSourceResponse,VideoSourceResponse>> sources() {
         return this.sources;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

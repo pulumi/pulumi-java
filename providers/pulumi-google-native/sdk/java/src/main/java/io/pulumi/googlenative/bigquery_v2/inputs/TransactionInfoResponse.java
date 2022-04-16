@@ -19,7 +19,7 @@ public final class TransactionInfoResponse extends io.pulumi.resources.InvokeArg
     @Import(name="transactionId", required=true)
       private final String transactionId;
 
-    public String getTransactionId() {
+    public String transactionId() {
         return this.transactionId;
     }
 

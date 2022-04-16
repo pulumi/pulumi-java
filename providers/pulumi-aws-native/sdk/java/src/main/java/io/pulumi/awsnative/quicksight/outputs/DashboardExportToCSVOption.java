@@ -18,7 +18,7 @@ public final class DashboardExportToCSVOption {
         this.availabilityStatus = availabilityStatus;
     }
 
-    public Optional<DashboardBehavior> getAvailabilityStatus() {
+    public Optional<DashboardBehavior> availabilityStatus() {
         return Optional.ofNullable(this.availabilityStatus);
     }
 

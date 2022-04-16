@@ -48,28 +48,28 @@ public final class Template {
      * The HTML body of the email.
      * 
     */
-    public Optional<String> getHtmlPart() {
+    public Optional<String> htmlPart() {
         return Optional.ofNullable(this.htmlPart);
     }
     /**
      * The subject line of the email.
      * 
     */
-    public String getSubjectPart() {
+    public String subjectPart() {
         return this.subjectPart;
     }
     /**
      * The name of the template.
      * 
     */
-    public Optional<String> getTemplateName() {
+    public Optional<String> templateName() {
         return Optional.ofNullable(this.templateName);
     }
     /**
      * The email body that is visible to recipients whose email clients do not display HTML content.
      * 
     */
-    public Optional<String> getTextPart() {
+    public Optional<String> textPart() {
         return Optional.ofNullable(this.textPart);
     }
 

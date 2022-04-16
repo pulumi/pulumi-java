@@ -23,7 +23,7 @@ public final class InstanceGroupNamedPortArgs extends io.pulumi.resources.Resour
     @Import(name="group", required=true)
       private final Output<String> group;
 
-    public Output<String> getGroup() {
+    public Output<String> group() {
         return this.group;
     }
 
@@ -35,7 +35,7 @@ public final class InstanceGroupNamedPortArgs extends io.pulumi.resources.Resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -46,7 +46,7 @@ public final class InstanceGroupNamedPortArgs extends io.pulumi.resources.Resour
     @Import(name="port", required=true)
       private final Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
 
@@ -58,7 +58,7 @@ public final class InstanceGroupNamedPortArgs extends io.pulumi.resources.Resour
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -69,7 +69,7 @@ public final class InstanceGroupNamedPortArgs extends io.pulumi.resources.Resour
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

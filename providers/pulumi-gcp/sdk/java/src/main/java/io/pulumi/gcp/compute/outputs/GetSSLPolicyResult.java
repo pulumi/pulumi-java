@@ -84,7 +84,7 @@ public final class GetSSLPolicyResult {
         this.selfLink = selfLink;
     }
 
-    public String getCreationTimestamp() {
+    public String creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -93,62 +93,62 @@ public final class GetSSLPolicyResult {
      * attribute will be empty.
      * 
     */
-    public List<String> getCustomFeatures() {
+    public List<String> customFeatures() {
         return this.customFeatures;
     }
     /**
      * Description of this SSL Policy.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The set of enabled encryption ciphers as a result of the policy config
      * 
     */
-    public List<String> getEnabledFeatures() {
+    public List<String> enabledFeatures() {
         return this.enabledFeatures;
     }
     /**
      * Fingerprint of this resource.
      * 
     */
-    public String getFingerprint() {
+    public String fingerprint() {
         return this.fingerprint;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The minimum supported TLS version of this policy.
      * 
     */
-    public String getMinTlsVersion() {
+    public String minTlsVersion() {
         return this.minTlsVersion;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The Google-curated or custom profile used by this policy.
      * 
     */
-    public String getProfile() {
+    public String profile() {
         return this.profile;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
     /**
      * The URI of the created resource.
      * 
     */
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
 

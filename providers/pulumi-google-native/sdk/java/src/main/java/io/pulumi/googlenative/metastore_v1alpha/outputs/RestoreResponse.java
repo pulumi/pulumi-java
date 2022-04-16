@@ -60,42 +60,42 @@ public final class RestoreResponse {
      * The relative resource name of the metastore service backup to restore from, in the following form:projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}.
      * 
     */
-    public String getBackup() {
+    public String backup() {
         return this.backup;
     }
     /**
      * The restore details containing the revision of the service to be restored to, in format of JSON.
      * 
     */
-    public String getDetails() {
+    public String details() {
         return this.details;
     }
     /**
      * The time when the restore ended.
      * 
     */
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
     /**
      * The time when the restore started.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
     /**
      * The current state of the restore.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The type of restore.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -22,7 +22,7 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
     @Import(name="policyId")
       private final @Nullable Output<String> policyId;
 
-    public Output<String> getPolicyId() {
+    public Output<String> policyId() {
         return this.policyId == null ? Codegen.empty() : this.policyId;
     }
 
@@ -33,7 +33,7 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
     @Import(name="targetId")
       private final @Nullable Output<String> targetId;
 
-    public Output<String> getTargetId() {
+    public Output<String> targetId() {
         return this.targetId == null ? Codegen.empty() : this.targetId;
     }
 

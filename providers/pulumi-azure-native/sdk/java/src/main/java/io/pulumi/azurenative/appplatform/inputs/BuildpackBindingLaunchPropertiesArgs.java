@@ -27,7 +27,7 @@ public final class BuildpackBindingLaunchPropertiesArgs extends io.pulumi.resour
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -38,7 +38,7 @@ public final class BuildpackBindingLaunchPropertiesArgs extends io.pulumi.resour
     @Import(name="secrets")
       private final @Nullable Output<Map<String,String>> secrets;
 
-    public Output<Map<String,String>> getSecrets() {
+    public Output<Map<String,String>> secrets() {
         return this.secrets == null ? Codegen.empty() : this.secrets;
     }
 

@@ -30,7 +30,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="dataSourceRestrictions")
       private final @Nullable Output<List<DataSourceRestrictionArgs>> dataSourceRestrictions;
 
-    public Output<List<DataSourceRestrictionArgs>> getDataSourceRestrictions() {
+    public Output<List<DataSourceRestrictionArgs>> dataSourceRestrictions() {
         return this.dataSourceRestrictions == null ? Codegen.empty() : this.dataSourceRestrictions;
     }
 
@@ -41,7 +41,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="defaultFacetOptions")
       private final @Nullable Output<List<FacetOptionsArgs>> defaultFacetOptions;
 
-    public Output<List<FacetOptionsArgs>> getDefaultFacetOptions() {
+    public Output<List<FacetOptionsArgs>> defaultFacetOptions() {
         return this.defaultFacetOptions == null ? Codegen.empty() : this.defaultFacetOptions;
     }
 
@@ -52,7 +52,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="defaultSortOptions")
       private final @Nullable Output<SortOptionsArgs> defaultSortOptions;
 
-    public Output<SortOptionsArgs> getDefaultSortOptions() {
+    public Output<SortOptionsArgs> defaultSortOptions() {
         return this.defaultSortOptions == null ? Codegen.empty() : this.defaultSortOptions;
     }
 
@@ -63,7 +63,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -74,7 +74,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="enableAuditLog")
       private final @Nullable Output<Boolean> enableAuditLog;
 
-    public Output<Boolean> getEnableAuditLog() {
+    public Output<Boolean> enableAuditLog() {
         return this.enableAuditLog == null ? Codegen.empty() : this.enableAuditLog;
     }
 
@@ -85,7 +85,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -96,7 +96,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="queryInterpretationConfig")
       private final @Nullable Output<QueryInterpretationConfigArgs> queryInterpretationConfig;
 
-    public Output<QueryInterpretationConfigArgs> getQueryInterpretationConfig() {
+    public Output<QueryInterpretationConfigArgs> queryInterpretationConfig() {
         return this.queryInterpretationConfig == null ? Codegen.empty() : this.queryInterpretationConfig;
     }
 
@@ -107,7 +107,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="returnResultThumbnailUrls")
       private final @Nullable Output<Boolean> returnResultThumbnailUrls;
 
-    public Output<Boolean> getReturnResultThumbnailUrls() {
+    public Output<Boolean> returnResultThumbnailUrls() {
         return this.returnResultThumbnailUrls == null ? Codegen.empty() : this.returnResultThumbnailUrls;
     }
 
@@ -118,7 +118,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="scoringConfig")
       private final @Nullable Output<ScoringConfigArgs> scoringConfig;
 
-    public Output<ScoringConfigArgs> getScoringConfig() {
+    public Output<ScoringConfigArgs> scoringConfig() {
         return this.scoringConfig == null ? Codegen.empty() : this.scoringConfig;
     }
 
@@ -129,7 +129,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="sourceConfig")
       private final @Nullable Output<List<SourceConfigArgs>> sourceConfig;
 
-    public Output<List<SourceConfigArgs>> getSourceConfig() {
+    public Output<List<SourceConfigArgs>> sourceConfig() {
         return this.sourceConfig == null ? Codegen.empty() : this.sourceConfig;
     }
 

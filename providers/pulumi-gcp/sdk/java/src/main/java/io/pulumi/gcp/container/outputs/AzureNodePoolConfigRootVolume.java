@@ -26,7 +26,7 @@ public final class AzureNodePoolConfigRootVolume {
      * Optional. The size of the disk, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource.
      * 
     */
-    public Optional<Integer> getSizeGib() {
+    public Optional<Integer> sizeGib() {
         return Optional.ofNullable(this.sizeGib);
     }
 

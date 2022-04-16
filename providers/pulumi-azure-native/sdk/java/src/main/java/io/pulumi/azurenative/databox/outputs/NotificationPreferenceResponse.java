@@ -33,14 +33,14 @@ public final class NotificationPreferenceResponse {
      * Notification is required or not.
      * 
     */
-    public Boolean getSendNotification() {
+    public Boolean sendNotification() {
         return this.sendNotification;
     }
     /**
      * Name of the stage.
      * 
     */
-    public String getStageName() {
+    public String stageName() {
         return this.stageName;
     }
 

@@ -36,14 +36,14 @@ public final class ListWebhookEventsResult {
      * The URI that can be used to request the next list of events.
      * 
     */
-    public Optional<String> getNextLink() {
+    public Optional<String> nextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * The list of events. Since this list may be incomplete, the nextLink field should be used to request the next list of events.
      * 
     */
-    public List<EventResponse> getValue() {
+    public List<EventResponse> value() {
         return this.value == null ? List.of() : this.value;
     }
 

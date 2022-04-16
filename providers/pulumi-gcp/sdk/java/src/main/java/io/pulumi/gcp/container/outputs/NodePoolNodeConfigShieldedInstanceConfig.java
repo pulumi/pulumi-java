@@ -22,10 +22,10 @@ public final class NodePoolNodeConfigShieldedInstanceConfig {
         this.enableSecureBoot = enableSecureBoot;
     }
 
-    public Optional<Boolean> getEnableIntegrityMonitoring() {
+    public Optional<Boolean> enableIntegrityMonitoring() {
         return Optional.ofNullable(this.enableIntegrityMonitoring);
     }
-    public Optional<Boolean> getEnableSecureBoot() {
+    public Optional<Boolean> enableSecureBoot() {
         return Optional.ofNullable(this.enableSecureBoot);
     }
 

@@ -18,14 +18,14 @@ public final class CertificateRevocationDetailGetArgs extends io.pulumi.resource
     @Import(name="revocationState")
       private final @Nullable Output<String> revocationState;
 
-    public Output<String> getRevocationState() {
+    public Output<String> revocationState() {
         return this.revocationState == null ? Codegen.empty() : this.revocationState;
     }
 
     @Import(name="revocationTime")
       private final @Nullable Output<String> revocationTime;
 
-    public Output<String> getRevocationTime() {
+    public Output<String> revocationTime() {
         return this.revocationTime == null ? Codegen.empty() : this.revocationTime;
     }
 

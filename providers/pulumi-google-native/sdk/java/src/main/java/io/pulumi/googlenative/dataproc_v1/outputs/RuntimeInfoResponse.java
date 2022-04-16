@@ -40,21 +40,21 @@ public final class RuntimeInfoResponse {
      * A URI pointing to the location of the diagnostics tarball.
      * 
     */
-    public String getDiagnosticOutputUri() {
+    public String diagnosticOutputUri() {
         return this.diagnosticOutputUri;
     }
     /**
      * Map of remote access endpoints (such as web interfaces and APIs) to their URIs.
      * 
     */
-    public Map<String,String> getEndpoints() {
+    public Map<String,String> endpoints() {
         return this.endpoints;
     }
     /**
      * A URI pointing to the location of the stdout and stderr of the workload.
      * 
     */
-    public String getOutputUri() {
+    public String outputUri() {
         return this.outputUri;
     }
 

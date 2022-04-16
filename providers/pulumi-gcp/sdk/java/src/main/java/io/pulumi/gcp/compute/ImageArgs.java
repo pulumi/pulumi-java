@@ -28,7 +28,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -39,7 +39,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGb")
       private final @Nullable Output<Integer> diskSizeGb;
 
-    public Output<Integer> getDiskSizeGb() {
+    public Output<Integer> diskSizeGb() {
         return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
     }
 
@@ -54,7 +54,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="family")
       private final @Nullable Output<String> family;
 
-    public Output<String> getFamily() {
+    public Output<String> family() {
         return this.family == null ? Codegen.empty() : this.family;
     }
 
@@ -67,7 +67,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="guestOsFeatures")
       private final @Nullable Output<List<ImageGuestOsFeatureArgs>> guestOsFeatures;
 
-    public Output<List<ImageGuestOsFeatureArgs>> getGuestOsFeatures() {
+    public Output<List<ImageGuestOsFeatureArgs>> guestOsFeatures() {
         return this.guestOsFeatures == null ? Codegen.empty() : this.guestOsFeatures;
     }
 
@@ -78,7 +78,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -89,7 +89,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="licenses")
       private final @Nullable Output<List<String>> licenses;
 
-    public Output<List<String>> getLicenses() {
+    public Output<List<String>> licenses() {
         return this.licenses == null ? Codegen.empty() : this.licenses;
     }
 
@@ -106,7 +106,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -118,7 +118,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -130,7 +130,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rawDisk")
       private final @Nullable Output<ImageRawDiskArgs> rawDisk;
 
-    public Output<ImageRawDiskArgs> getRawDisk() {
+    public Output<ImageRawDiskArgs> rawDisk() {
         return this.rawDisk == null ? Codegen.empty() : this.rawDisk;
     }
 
@@ -143,7 +143,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceDisk")
       private final @Nullable Output<String> sourceDisk;
 
-    public Output<String> getSourceDisk() {
+    public Output<String> sourceDisk() {
         return this.sourceDisk == null ? Codegen.empty() : this.sourceDisk;
     }
 
@@ -159,7 +159,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceImage")
       private final @Nullable Output<String> sourceImage;
 
-    public Output<String> getSourceImage() {
+    public Output<String> sourceImage() {
         return this.sourceImage == null ? Codegen.empty() : this.sourceImage;
     }
 
@@ -176,7 +176,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceSnapshot")
       private final @Nullable Output<String> sourceSnapshot;
 
-    public Output<String> getSourceSnapshot() {
+    public Output<String> sourceSnapshot() {
         return this.sourceSnapshot == null ? Codegen.empty() : this.sourceSnapshot;
     }
 

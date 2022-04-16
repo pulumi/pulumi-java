@@ -23,7 +23,7 @@ public final class LaunchTemplatePlacementGetArgs extends io.pulumi.resources.Re
     @Import(name="affinity")
       private final @Nullable Output<String> affinity;
 
-    public Output<String> getAffinity() {
+    public Output<String> affinity() {
         return this.affinity == null ? Codegen.empty() : this.affinity;
     }
 
@@ -34,7 +34,7 @@ public final class LaunchTemplatePlacementGetArgs extends io.pulumi.resources.Re
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
@@ -45,7 +45,7 @@ public final class LaunchTemplatePlacementGetArgs extends io.pulumi.resources.Re
     @Import(name="groupName")
       private final @Nullable Output<String> groupName;
 
-    public Output<String> getGroupName() {
+    public Output<String> groupName() {
         return this.groupName == null ? Codegen.empty() : this.groupName;
     }
 
@@ -56,7 +56,7 @@ public final class LaunchTemplatePlacementGetArgs extends io.pulumi.resources.Re
     @Import(name="hostId")
       private final @Nullable Output<String> hostId;
 
-    public Output<String> getHostId() {
+    public Output<String> hostId() {
         return this.hostId == null ? Codegen.empty() : this.hostId;
     }
 
@@ -67,7 +67,7 @@ public final class LaunchTemplatePlacementGetArgs extends io.pulumi.resources.Re
     @Import(name="hostResourceGroupArn")
       private final @Nullable Output<String> hostResourceGroupArn;
 
-    public Output<String> getHostResourceGroupArn() {
+    public Output<String> hostResourceGroupArn() {
         return this.hostResourceGroupArn == null ? Codegen.empty() : this.hostResourceGroupArn;
     }
 
@@ -78,7 +78,7 @@ public final class LaunchTemplatePlacementGetArgs extends io.pulumi.resources.Re
     @Import(name="partitionNumber")
       private final @Nullable Output<Integer> partitionNumber;
 
-    public Output<Integer> getPartitionNumber() {
+    public Output<Integer> partitionNumber() {
         return this.partitionNumber == null ? Codegen.empty() : this.partitionNumber;
     }
 
@@ -89,7 +89,7 @@ public final class LaunchTemplatePlacementGetArgs extends io.pulumi.resources.Re
     @Import(name="spreadDomain")
       private final @Nullable Output<String> spreadDomain;
 
-    public Output<String> getSpreadDomain() {
+    public Output<String> spreadDomain() {
         return this.spreadDomain == null ? Codegen.empty() : this.spreadDomain;
     }
 
@@ -100,7 +100,7 @@ public final class LaunchTemplatePlacementGetArgs extends io.pulumi.resources.Re
     @Import(name="tenancy")
       private final @Nullable Output<String> tenancy;
 
-    public Output<String> getTenancy() {
+    public Output<String> tenancy() {
         return this.tenancy == null ? Codegen.empty() : this.tenancy;
     }
 

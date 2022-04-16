@@ -27,7 +27,7 @@ public final class BuildSignatureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyId")
       private final @Nullable Output<String> keyId;
 
-    public Output<String> getKeyId() {
+    public Output<String> keyId() {
         return this.keyId == null ? Codegen.empty() : this.keyId;
     }
 
@@ -38,7 +38,7 @@ public final class BuildSignatureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyType")
       private final @Nullable Output<BuildSignatureKeyType> keyType;
 
-    public Output<BuildSignatureKeyType> getKeyType() {
+    public Output<BuildSignatureKeyType> keyType() {
         return this.keyType == null ? Codegen.empty() : this.keyType;
     }
 
@@ -49,7 +49,7 @@ public final class BuildSignatureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicKey")
       private final @Nullable Output<String> publicKey;
 
-    public Output<String> getPublicKey() {
+    public Output<String> publicKey() {
         return this.publicKey == null ? Codegen.empty() : this.publicKey;
     }
 
@@ -60,7 +60,7 @@ public final class BuildSignatureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="signature", required=true)
       private final Output<String> signature;
 
-    public Output<String> getSignature() {
+    public Output<String> signature() {
         return this.signature;
     }
 

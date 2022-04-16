@@ -36,14 +36,14 @@ public final class ServiceStatus {
      * Current service state
      * 
     */
-    public List<Condition> getConditions() {
+    public List<Condition> conditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
     /**
      * LoadBalancer contains the current status of the load-balancer, if one is present.
      * 
     */
-    public Optional<LoadBalancerStatus> getLoadBalancer() {
+    public Optional<LoadBalancerStatus> loadBalancer() {
         return Optional.ofNullable(this.loadBalancer);
     }
 

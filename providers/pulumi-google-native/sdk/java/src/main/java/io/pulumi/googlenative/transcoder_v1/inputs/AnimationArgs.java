@@ -28,7 +28,7 @@ public final class AnimationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="animationEnd")
       private final @Nullable Output<AnimationEndArgs> animationEnd;
 
-    public Output<AnimationEndArgs> getAnimationEnd() {
+    public Output<AnimationEndArgs> animationEnd() {
         return this.animationEnd == null ? Codegen.empty() : this.animationEnd;
     }
 
@@ -39,7 +39,7 @@ public final class AnimationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="animationFade")
       private final @Nullable Output<AnimationFadeArgs> animationFade;
 
-    public Output<AnimationFadeArgs> getAnimationFade() {
+    public Output<AnimationFadeArgs> animationFade() {
         return this.animationFade == null ? Codegen.empty() : this.animationFade;
     }
 
@@ -50,7 +50,7 @@ public final class AnimationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="animationStatic")
       private final @Nullable Output<AnimationStaticArgs> animationStatic;
 
-    public Output<AnimationStaticArgs> getAnimationStatic() {
+    public Output<AnimationStaticArgs> animationStatic() {
         return this.animationStatic == null ? Codegen.empty() : this.animationStatic;
     }
 

@@ -17,7 +17,7 @@ public final class ApplicationPackageReferenceResponse extends io.pulumi.resourc
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -28,7 +28,7 @@ public final class ApplicationPackageReferenceResponse extends io.pulumi.resourc
     @Import(name="version")
       private final @Nullable String version;
 
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

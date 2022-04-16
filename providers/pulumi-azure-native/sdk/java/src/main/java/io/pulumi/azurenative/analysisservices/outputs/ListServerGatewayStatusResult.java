@@ -26,7 +26,7 @@ public final class ListServerGatewayStatusResult {
      * Live message of list gateway. Status: 0 - Live
      * 
     */
-    public Optional<Integer> getStatus() {
+    public Optional<Integer> status() {
         return Optional.ofNullable(this.status);
     }
 

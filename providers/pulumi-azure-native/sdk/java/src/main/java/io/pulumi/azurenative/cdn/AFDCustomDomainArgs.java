@@ -24,7 +24,7 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="azureDnsZone")
       private final @Nullable Output<ResourceReferenceArgs> azureDnsZone;
 
-    public Output<ResourceReferenceArgs> getAzureDnsZone() {
+    public Output<ResourceReferenceArgs> azureDnsZone() {
         return this.azureDnsZone == null ? Codegen.empty() : this.azureDnsZone;
     }
 
@@ -35,7 +35,7 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="customDomainName")
       private final @Nullable Output<String> customDomainName;
 
-    public Output<String> getCustomDomainName() {
+    public Output<String> customDomainName() {
         return this.customDomainName == null ? Codegen.empty() : this.customDomainName;
     }
 
@@ -46,7 +46,7 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="hostName", required=true)
       private final Output<String> hostName;
 
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName;
     }
 
@@ -57,7 +57,7 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
-    public Output<String> getProfileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -68,7 +68,7 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -79,7 +79,7 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tlsSettings")
       private final @Nullable Output<AFDDomainHttpsParametersArgs> tlsSettings;
 
-    public Output<AFDDomainHttpsParametersArgs> getTlsSettings() {
+    public Output<AFDDomainHttpsParametersArgs> tlsSettings() {
         return this.tlsSettings == null ? Codegen.empty() : this.tlsSettings;
     }
 

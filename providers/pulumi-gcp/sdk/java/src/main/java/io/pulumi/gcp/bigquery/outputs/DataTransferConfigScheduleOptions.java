@@ -57,7 +57,7 @@ public final class DataTransferConfigScheduleOptions {
      * be ignored.
      * 
     */
-    public Optional<Boolean> getDisableAutoScheduling() {
+    public Optional<Boolean> disableAutoScheduling() {
         return Optional.ofNullable(this.disableAutoScheduling);
     }
     /**
@@ -67,7 +67,7 @@ public final class DataTransferConfigScheduleOptions {
      * limited by this option.
      * 
     */
-    public Optional<String> getEndTime() {
+    public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
@@ -78,7 +78,7 @@ public final class DataTransferConfigScheduleOptions {
      * limited by this option.
      * 
     */
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
 

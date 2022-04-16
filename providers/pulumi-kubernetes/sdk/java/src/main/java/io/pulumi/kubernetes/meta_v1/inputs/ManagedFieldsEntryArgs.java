@@ -27,7 +27,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
+    public Output<String> apiVersion() {
         return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
@@ -38,7 +38,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
     @Import(name="fieldsType")
       private final @Nullable Output<String> fieldsType;
 
-    public Output<String> getFieldsType() {
+    public Output<String> fieldsType() {
         return this.fieldsType == null ? Codegen.empty() : this.fieldsType;
     }
 
@@ -49,7 +49,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
     @Import(name="fieldsV1")
       private final @Nullable Output<JsonElement> fieldsV1;
 
-    public Output<JsonElement> getFieldsV1() {
+    public Output<JsonElement> fieldsV1() {
         return this.fieldsV1 == null ? Codegen.empty() : this.fieldsV1;
     }
 
@@ -60,7 +60,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
     @Import(name="manager")
       private final @Nullable Output<String> manager;
 
-    public Output<String> getManager() {
+    public Output<String> manager() {
         return this.manager == null ? Codegen.empty() : this.manager;
     }
 
@@ -71,7 +71,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
     @Import(name="operation")
       private final @Nullable Output<String> operation;
 
-    public Output<String> getOperation() {
+    public Output<String> operation() {
         return this.operation == null ? Codegen.empty() : this.operation;
     }
 
@@ -82,7 +82,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
     @Import(name="subresource")
       private final @Nullable Output<String> subresource;
 
-    public Output<String> getSubresource() {
+    public Output<String> subresource() {
         return this.subresource == null ? Codegen.empty() : this.subresource;
     }
 
@@ -93,7 +93,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
     @Import(name="time")
       private final @Nullable Output<String> time;
 
-    public Output<String> getTime() {
+    public Output<String> time() {
         return this.time == null ? Codegen.empty() : this.time;
     }
 

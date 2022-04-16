@@ -23,10 +23,10 @@ public final class CertificateAuthorityRevocationConfiguration {
         this.ocspConfiguration = ocspConfiguration;
     }
 
-    public Optional<CertificateAuthorityCrlConfiguration> getCrlConfiguration() {
+    public Optional<CertificateAuthorityCrlConfiguration> crlConfiguration() {
         return Optional.ofNullable(this.crlConfiguration);
     }
-    public Optional<CertificateAuthorityOcspConfiguration> getOcspConfiguration() {
+    public Optional<CertificateAuthorityOcspConfiguration> ocspConfiguration() {
         return Optional.ofNullable(this.ocspConfiguration);
     }
 

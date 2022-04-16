@@ -27,7 +27,7 @@ public final class DockerImageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="dockerImageUri", required=true)
       private final String dockerImageUri;
 
-    public String getDockerImageUri() {
+    public String dockerImageUri() {
         return this.dockerImageUri;
     }
 
@@ -39,7 +39,7 @@ public final class DockerImageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="dockerSpecificationType", required=true)
       private final String dockerSpecificationType;
 
-    public String getDockerSpecificationType() {
+    public String dockerSpecificationType() {
         return this.dockerSpecificationType;
     }
 
@@ -50,7 +50,7 @@ public final class DockerImageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="platform")
       private final @Nullable DockerImagePlatformResponse platform;
 
-    public Optional<DockerImagePlatformResponse> getPlatform() {
+    public Optional<DockerImagePlatformResponse> platform() {
         return this.platform == null ? Optional.empty() : Optional.ofNullable(this.platform);
     }
 

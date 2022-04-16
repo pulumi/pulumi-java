@@ -86,56 +86,56 @@ public final class HttpReadSettingsResponse {
      * The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getAdditionalHeaders() {
+    public Optional<Object> additionalHeaders() {
         return Optional.ofNullable(this.additionalHeaders);
     }
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getDisableMetricsCollection() {
+    public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * Indicates whether to enable partition discovery.
      * 
     */
-    public Optional<Boolean> getEnablePartitionDiscovery() {
+    public Optional<Boolean> enablePartitionDiscovery() {
         return Optional.ofNullable(this.enablePartitionDiscovery);
     }
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
     */
-    public Optional<Object> getMaxConcurrentConnections() {
+    public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getPartitionRootPath() {
+    public Optional<Object> partitionRootPath() {
         return Optional.ofNullable(this.partitionRootPath);
     }
     /**
      * The HTTP request body to the RESTful API if requestMethod is POST. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getRequestBody() {
+    public Optional<Object> requestBody() {
         return Optional.ofNullable(this.requestBody);
     }
     /**
      * The HTTP method used to call the RESTful API. The default is GET. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getRequestMethod() {
+    public Optional<Object> requestMethod() {
         return Optional.ofNullable(this.requestMethod);
     }
     /**
      * Specifies the timeout for a HTTP client to get HTTP response from HTTP server.
      * 
     */
-    public Optional<Object> getRequestTimeout() {
+    public Optional<Object> requestTimeout() {
         return Optional.ofNullable(this.requestTimeout);
     }
     /**
@@ -143,7 +143,7 @@ public final class HttpReadSettingsResponse {
      * Expected value is 'HttpReadSettings'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -26,7 +26,7 @@ public final class ClusterNodePoolNodeConfigSandboxConfig {
      * Accepted values are:
      * 
     */
-    public String getSandboxType() {
+    public String sandboxType() {
         return this.sandboxType;
     }
 

@@ -49,36 +49,36 @@ public final class GetExportResult {
         this.stageName = stageName;
     }
 
-    public String getApiId() {
+    public String apiId() {
         return this.apiId;
     }
     /**
      * The id of the API.
      * 
     */
-    public String getBody() {
+    public String body() {
         return this.body;
     }
-    public Optional<String> getExportVersion() {
+    public Optional<String> exportVersion() {
         return Optional.ofNullable(this.exportVersion);
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Optional<Boolean> getIncludeExtensions() {
+    public Optional<Boolean> includeExtensions() {
         return Optional.ofNullable(this.includeExtensions);
     }
-    public String getOutputType() {
+    public String outputType() {
         return this.outputType;
     }
-    public String getSpecification() {
+    public String specification() {
         return this.specification;
     }
-    public Optional<String> getStageName() {
+    public Optional<String> stageName() {
         return Optional.ofNullable(this.stageName);
     }
 

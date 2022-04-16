@@ -25,7 +25,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deadLetterQueueUrl")
       private final @Nullable Output<String> deadLetterQueueUrl;
 
-    public Output<String> getDeadLetterQueueUrl() {
+    public Output<String> deadLetterQueueUrl() {
         return this.deadLetterQueueUrl == null ? Codegen.empty() : this.deadLetterQueueUrl;
     }
 
@@ -36,7 +36,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultEncryptionKey")
       private final @Nullable Output<String> defaultEncryptionKey;
 
-    public Output<String> getDefaultEncryptionKey() {
+    public Output<String> defaultEncryptionKey() {
         return this.defaultEncryptionKey == null ? Codegen.empty() : this.defaultEncryptionKey;
     }
 
@@ -47,7 +47,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultExpirationDays")
       private final @Nullable Output<Integer> defaultExpirationDays;
 
-    public Output<Integer> getDefaultExpirationDays() {
+    public Output<Integer> defaultExpirationDays() {
         return this.defaultExpirationDays == null ? Codegen.empty() : this.defaultExpirationDays;
     }
 
@@ -58,7 +58,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
@@ -69,7 +69,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DomainTagArgs>> tags;
 
-    public Output<List<DomainTagArgs>> getTags() {
+    public Output<List<DomainTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

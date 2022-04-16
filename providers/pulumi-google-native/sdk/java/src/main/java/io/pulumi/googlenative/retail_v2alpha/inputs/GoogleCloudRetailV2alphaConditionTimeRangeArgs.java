@@ -26,7 +26,7 @@ public final class GoogleCloudRetailV2alphaConditionTimeRangeArgs extends io.pul
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudRetailV2alphaConditionTimeRangeArgs extends io.pul
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 

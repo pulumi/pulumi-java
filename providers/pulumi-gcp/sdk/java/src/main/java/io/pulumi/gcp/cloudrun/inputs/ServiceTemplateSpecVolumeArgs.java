@@ -22,7 +22,7 @@ public final class ServiceTemplateSpecVolumeArgs extends io.pulumi.resources.Res
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -36,7 +36,7 @@ public final class ServiceTemplateSpecVolumeArgs extends io.pulumi.resources.Res
     @Import(name="secret", required=true)
       private final Output<ServiceTemplateSpecVolumeSecretArgs> secret;
 
-    public Output<ServiceTemplateSpecVolumeSecretArgs> getSecret() {
+    public Output<ServiceTemplateSpecVolumeSecretArgs> secret() {
         return this.secret;
     }
 

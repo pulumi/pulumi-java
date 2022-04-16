@@ -44,7 +44,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return The time the namespace was created.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -58,7 +58,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return The Geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -72,7 +72,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return Identifier for Azure Insights metrics
      * 
      */
-    public Output<String> getMetricId() {
+    public Output<String> metricId() {
         return this.metricId;
     }
     /**
@@ -86,7 +86,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +100,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return Provisioning state of the namespace.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -114,7 +114,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return Endpoint you can use to perform Service Bus operations.
      * 
      */
-    public Output<String> getServiceBusEndpoint() {
+    public Output<String> serviceBusEndpoint() {
         return this.serviceBusEndpoint;
     }
     /**
@@ -128,7 +128,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return Properties of Sku
      * 
      */
-    public Output</* @Nullable */ SBSkuResponse> getSku() {
+    public Output</* @Nullable */ SBSkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -142,7 +142,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -156,7 +156,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -170,7 +170,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return The time the namespace was updated.
      * 
      */
-    public Output<String> getUpdatedAt() {
+    public Output<String> updatedAt() {
         return this.updatedAt;
     }
 

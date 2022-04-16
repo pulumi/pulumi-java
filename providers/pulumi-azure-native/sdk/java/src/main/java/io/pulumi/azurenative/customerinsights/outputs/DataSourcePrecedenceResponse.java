@@ -63,42 +63,42 @@ public final class DataSourcePrecedenceResponse {
      * The data source reference id.
      * 
     */
-    public String getDataSourceReferenceId() {
+    public String dataSourceReferenceId() {
         return this.dataSourceReferenceId;
     }
     /**
      * The data source type.
      * 
     */
-    public String getDataSourceType() {
+    public String dataSourceType() {
         return this.dataSourceType;
     }
     /**
      * The data source ID.
      * 
     */
-    public Integer getId() {
+    public Integer id() {
         return this.id;
     }
     /**
      * The data source name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * the precedence value.
      * 
     */
-    public Optional<Integer> getPrecedence() {
+    public Optional<Integer> precedence() {
         return Optional.ofNullable(this.precedence);
     }
     /**
      * The data source status.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

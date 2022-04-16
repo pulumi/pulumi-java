@@ -29,7 +29,7 @@ public final class DnsKeySpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="algorithm")
       private final @Nullable Output<DnsKeySpecAlgorithm> algorithm;
 
-    public Output<DnsKeySpecAlgorithm> getAlgorithm() {
+    public Output<DnsKeySpecAlgorithm> algorithm() {
         return this.algorithm == null ? Codegen.empty() : this.algorithm;
     }
 
@@ -40,7 +40,7 @@ public final class DnsKeySpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyLength")
       private final @Nullable Output<Integer> keyLength;
 
-    public Output<Integer> getKeyLength() {
+    public Output<Integer> keyLength() {
         return this.keyLength == null ? Codegen.empty() : this.keyLength;
     }
 
@@ -51,14 +51,14 @@ public final class DnsKeySpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyType")
       private final @Nullable Output<DnsKeySpecKeyType> keyType;
 
-    public Output<DnsKeySpecKeyType> getKeyType() {
+    public Output<DnsKeySpecKeyType> keyType() {
         return this.keyType == null ? Codegen.empty() : this.keyType;
     }
 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 

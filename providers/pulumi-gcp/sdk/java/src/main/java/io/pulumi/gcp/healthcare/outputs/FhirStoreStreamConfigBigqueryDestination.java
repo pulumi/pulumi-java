@@ -34,7 +34,7 @@ public final class FhirStoreStreamConfigBigqueryDestination {
      * BigQuery URI to a dataset, up to 2000 characters long, in the format bq://projectId.bqDatasetId
      * 
     */
-    public String getDatasetUri() {
+    public String datasetUri() {
         return this.datasetUri;
     }
     /**
@@ -42,7 +42,7 @@ public final class FhirStoreStreamConfigBigqueryDestination {
      * Structure is documented below.
      * 
     */
-    public FhirStoreStreamConfigBigqueryDestinationSchemaConfig getSchemaConfig() {
+    public FhirStoreStreamConfigBigqueryDestinationSchemaConfig schemaConfig() {
         return this.schemaConfig;
     }
 

@@ -48,28 +48,28 @@ public final class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataR
      * The system's confidence score that this suggestion is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
      * 
     */
-    public Double getConfidenceScore() {
+    public Double confidenceScore() {
         return this.confidenceScore;
     }
     /**
      * Map that contains metadata about the Smart Compose suggestion and the document from which it originates.
      * 
     */
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata;
     }
     /**
      * Name of the query record. Format: projects/{project}/locations/{location}/queryRecords/{query_record}
      * 
     */
-    public String getQueryRecord() {
+    public String queryRecord() {
         return this.queryRecord;
     }
     /**
      * The content of the suggestion.
      * 
     */
-    public String getSuggestion() {
+    public String suggestion() {
         return this.suggestion;
     }
 

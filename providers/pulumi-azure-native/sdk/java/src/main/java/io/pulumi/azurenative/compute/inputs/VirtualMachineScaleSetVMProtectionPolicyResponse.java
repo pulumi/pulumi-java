@@ -25,7 +25,7 @@ public final class VirtualMachineScaleSetVMProtectionPolicyResponse extends io.p
     @Import(name="protectFromScaleIn")
       private final @Nullable Boolean protectFromScaleIn;
 
-    public Optional<Boolean> getProtectFromScaleIn() {
+    public Optional<Boolean> protectFromScaleIn() {
         return this.protectFromScaleIn == null ? Optional.empty() : Optional.ofNullable(this.protectFromScaleIn);
     }
 
@@ -36,7 +36,7 @@ public final class VirtualMachineScaleSetVMProtectionPolicyResponse extends io.p
     @Import(name="protectFromScaleSetActions")
       private final @Nullable Boolean protectFromScaleSetActions;
 
-    public Optional<Boolean> getProtectFromScaleSetActions() {
+    public Optional<Boolean> protectFromScaleSetActions() {
         return this.protectFromScaleSetActions == null ? Optional.empty() : Optional.ofNullable(this.protectFromScaleSetActions);
     }
 

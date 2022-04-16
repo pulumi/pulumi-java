@@ -27,7 +27,7 @@ public final class NodeNetworkConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="createPodRange")
       private final @Nullable Output<Boolean> createPodRange;
 
-    public Output<Boolean> getCreatePodRange() {
+    public Output<Boolean> createPodRange() {
         return this.createPodRange == null ? Codegen.empty() : this.createPodRange;
     }
 
@@ -38,7 +38,7 @@ public final class NodeNetworkConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="podIpv4CidrBlock")
       private final @Nullable Output<String> podIpv4CidrBlock;
 
-    public Output<String> getPodIpv4CidrBlock() {
+    public Output<String> podIpv4CidrBlock() {
         return this.podIpv4CidrBlock == null ? Codegen.empty() : this.podIpv4CidrBlock;
     }
 
@@ -49,7 +49,7 @@ public final class NodeNetworkConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="podRange")
       private final @Nullable Output<String> podRange;
 
-    public Output<String> getPodRange() {
+    public Output<String> podRange() {
         return this.podRange == null ? Codegen.empty() : this.podRange;
     }
 

@@ -23,7 +23,7 @@ public final class SslSettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="certificateId", required=true)
       private final String certificateId;
 
-    public String getCertificateId() {
+    public String certificateId() {
         return this.certificateId;
     }
 
@@ -34,7 +34,7 @@ public final class SslSettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="pendingManagedCertificateId", required=true)
       private final String pendingManagedCertificateId;
 
-    public String getPendingManagedCertificateId() {
+    public String pendingManagedCertificateId() {
         return this.pendingManagedCertificateId;
     }
 
@@ -45,7 +45,7 @@ public final class SslSettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sslManagementType", required=true)
       private final String sslManagementType;
 
-    public String getSslManagementType() {
+    public String sslManagementType() {
         return this.sslManagementType;
     }
 

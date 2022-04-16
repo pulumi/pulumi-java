@@ -27,7 +27,7 @@ public final class AzureFunctionEventSubscriptionDestinationResponse extends io.
     @Import(name="endpointType", required=true)
       private final String endpointType;
 
-    public String getEndpointType() {
+    public String endpointType() {
         return this.endpointType;
     }
 
@@ -38,7 +38,7 @@ public final class AzureFunctionEventSubscriptionDestinationResponse extends io.
     @Import(name="maxEventsPerBatch")
       private final @Nullable Integer maxEventsPerBatch;
 
-    public Optional<Integer> getMaxEventsPerBatch() {
+    public Optional<Integer> maxEventsPerBatch() {
         return this.maxEventsPerBatch == null ? Optional.empty() : Optional.ofNullable(this.maxEventsPerBatch);
     }
 
@@ -49,7 +49,7 @@ public final class AzureFunctionEventSubscriptionDestinationResponse extends io.
     @Import(name="preferredBatchSizeInKilobytes")
       private final @Nullable Integer preferredBatchSizeInKilobytes;
 
-    public Optional<Integer> getPreferredBatchSizeInKilobytes() {
+    public Optional<Integer> preferredBatchSizeInKilobytes() {
         return this.preferredBatchSizeInKilobytes == null ? Optional.empty() : Optional.ofNullable(this.preferredBatchSizeInKilobytes);
     }
 
@@ -60,7 +60,7 @@ public final class AzureFunctionEventSubscriptionDestinationResponse extends io.
     @Import(name="resourceId")
       private final @Nullable String resourceId;
 
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
     }
 

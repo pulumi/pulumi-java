@@ -27,7 +27,7 @@ public final class StaticSiteBuildPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="apiBuildCommand")
       private final @Nullable Output<String> apiBuildCommand;
 
-    public Output<String> getApiBuildCommand() {
+    public Output<String> apiBuildCommand() {
         return this.apiBuildCommand == null ? Codegen.empty() : this.apiBuildCommand;
     }
 
@@ -38,7 +38,7 @@ public final class StaticSiteBuildPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="apiLocation")
       private final @Nullable Output<String> apiLocation;
 
-    public Output<String> getApiLocation() {
+    public Output<String> apiLocation() {
         return this.apiLocation == null ? Codegen.empty() : this.apiLocation;
     }
 
@@ -49,7 +49,7 @@ public final class StaticSiteBuildPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="appArtifactLocation")
       private final @Nullable Output<String> appArtifactLocation;
 
-    public Output<String> getAppArtifactLocation() {
+    public Output<String> appArtifactLocation() {
         return this.appArtifactLocation == null ? Codegen.empty() : this.appArtifactLocation;
     }
 
@@ -60,7 +60,7 @@ public final class StaticSiteBuildPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="appBuildCommand")
       private final @Nullable Output<String> appBuildCommand;
 
-    public Output<String> getAppBuildCommand() {
+    public Output<String> appBuildCommand() {
         return this.appBuildCommand == null ? Codegen.empty() : this.appBuildCommand;
     }
 
@@ -71,7 +71,7 @@ public final class StaticSiteBuildPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="appLocation")
       private final @Nullable Output<String> appLocation;
 
-    public Output<String> getAppLocation() {
+    public Output<String> appLocation() {
         return this.appLocation == null ? Codegen.empty() : this.appLocation;
     }
 
@@ -82,7 +82,7 @@ public final class StaticSiteBuildPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="githubActionSecretNameOverride")
       private final @Nullable Output<String> githubActionSecretNameOverride;
 
-    public Output<String> getGithubActionSecretNameOverride() {
+    public Output<String> githubActionSecretNameOverride() {
         return this.githubActionSecretNameOverride == null ? Codegen.empty() : this.githubActionSecretNameOverride;
     }
 
@@ -93,7 +93,7 @@ public final class StaticSiteBuildPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="outputLocation")
       private final @Nullable Output<String> outputLocation;
 
-    public Output<String> getOutputLocation() {
+    public Output<String> outputLocation() {
         return this.outputLocation == null ? Codegen.empty() : this.outputLocation;
     }
 
@@ -104,7 +104,7 @@ public final class StaticSiteBuildPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="skipGithubActionWorkflowGeneration")
       private final @Nullable Output<Boolean> skipGithubActionWorkflowGeneration;
 
-    public Output<Boolean> getSkipGithubActionWorkflowGeneration() {
+    public Output<Boolean> skipGithubActionWorkflowGeneration() {
         return this.skipGithubActionWorkflowGeneration == null ? Codegen.empty() : this.skipGithubActionWorkflowGeneration;
     }
 

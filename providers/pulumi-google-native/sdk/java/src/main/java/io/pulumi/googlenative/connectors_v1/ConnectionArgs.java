@@ -28,7 +28,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authConfig")
       private final @Nullable Output<AuthConfigArgs> authConfig;
 
-    public Output<AuthConfigArgs> getAuthConfig() {
+    public Output<AuthConfigArgs> authConfig() {
         return this.authConfig == null ? Codegen.empty() : this.authConfig;
     }
 
@@ -39,14 +39,14 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configVariables")
       private final @Nullable Output<List<ConfigVariableArgs>> configVariables;
 
-    public Output<List<ConfigVariableArgs>> getConfigVariables() {
+    public Output<List<ConfigVariableArgs>> configVariables() {
         return this.configVariables == null ? Codegen.empty() : this.configVariables;
     }
 
     @Import(name="connectionId", required=true)
       private final Output<String> connectionId;
 
-    public Output<String> getConnectionId() {
+    public Output<String> connectionId() {
         return this.connectionId;
     }
 
@@ -57,7 +57,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectorVersion", required=true)
       private final Output<String> connectorVersion;
 
-    public Output<String> getConnectorVersion() {
+    public Output<String> connectorVersion() {
         return this.connectorVersion;
     }
 
@@ -68,7 +68,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -79,14 +79,14 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -97,14 +97,14 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lockConfig")
       private final @Nullable Output<LockConfigArgs> lockConfig;
 
-    public Output<LockConfigArgs> getLockConfig() {
+    public Output<LockConfigArgs> lockConfig() {
         return this.lockConfig == null ? Codegen.empty() : this.lockConfig;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -115,7 +115,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
@@ -126,7 +126,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="suspended")
       private final @Nullable Output<Boolean> suspended;
 
-    public Output<Boolean> getSuspended() {
+    public Output<Boolean> suspended() {
         return this.suspended == null ? Codegen.empty() : this.suspended;
     }
 

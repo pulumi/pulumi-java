@@ -64,42 +64,42 @@ public final class WorkflowTriggerRecurrenceResponse {
      * The end time.
      * 
     */
-    public Optional<String> getEndTime() {
+    public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
      * The frequency.
      * 
     */
-    public Optional<String> getFrequency() {
+    public Optional<String> frequency() {
         return Optional.ofNullable(this.frequency);
     }
     /**
      * The interval.
      * 
     */
-    public Optional<Integer> getInterval() {
+    public Optional<Integer> interval() {
         return Optional.ofNullable(this.interval);
     }
     /**
      * The recurrence schedule.
      * 
     */
-    public Optional<RecurrenceScheduleResponse> getSchedule() {
+    public Optional<RecurrenceScheduleResponse> schedule() {
         return Optional.ofNullable(this.schedule);
     }
     /**
      * The start time.
      * 
     */
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
      * The time zone.
      * 
     */
-    public Optional<String> getTimeZone() {
+    public Optional<String> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }
 

@@ -26,7 +26,7 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
     @Import(name="alias")
       private final @Nullable Output<String> alias;
 
-    public Output<String> getAlias() {
+    public Output<String> alias() {
         return this.alias == null ? Codegen.empty() : this.alias;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
     @Import(name="function")
       private final @Nullable Output<String> function;
 
-    public Output<String> getFunction() {
+    public Output<String> function() {
         return this.function == null ? Codegen.empty() : this.function;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -59,7 +59,7 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
     @Import(name="operator")
       private final @Nullable Output<String> operator;
 
-    public Output<String> getOperator() {
+    public Output<String> operator() {
         return this.operator == null ? Codegen.empty() : this.operator;
     }
 
@@ -70,7 +70,7 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

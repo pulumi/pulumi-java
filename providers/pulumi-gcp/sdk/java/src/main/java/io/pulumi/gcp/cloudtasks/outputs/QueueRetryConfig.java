@@ -80,7 +80,7 @@ public final class QueueRetryConfig {
      * -1 indicates unlimited attempts.
      * 
     */
-    public Optional<Integer> getMaxAttempts() {
+    public Optional<Integer> maxAttempts() {
         return Optional.ofNullable(this.maxAttempts);
     }
     /**
@@ -89,7 +89,7 @@ public final class QueueRetryConfig {
      * specifies that the task should be retried.
      * 
     */
-    public Optional<String> getMaxBackoff() {
+    public Optional<String> maxBackoff() {
         return Optional.ofNullable(this.maxBackoff);
     }
     /**
@@ -99,7 +99,7 @@ public final class QueueRetryConfig {
      * up to maxAttempts times.
      * 
     */
-    public Optional<Integer> getMaxDoublings() {
+    public Optional<Integer> maxDoublings() {
         return Optional.ofNullable(this.maxDoublings);
     }
     /**
@@ -111,7 +111,7 @@ public final class QueueRetryConfig {
      * If zero, then the task age is unlimited.
      * 
     */
-    public Optional<String> getMaxRetryDuration() {
+    public Optional<String> maxRetryDuration() {
         return Optional.ofNullable(this.maxRetryDuration);
     }
     /**
@@ -120,7 +120,7 @@ public final class QueueRetryConfig {
      * specifies that the task should be retried.
      * 
     */
-    public Optional<String> getMinBackoff() {
+    public Optional<String> minBackoff() {
         return Optional.ofNullable(this.minBackoff);
     }
 

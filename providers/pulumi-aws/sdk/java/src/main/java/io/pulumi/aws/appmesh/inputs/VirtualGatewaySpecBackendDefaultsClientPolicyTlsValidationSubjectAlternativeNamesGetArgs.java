@@ -21,7 +21,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSub
     @Import(name="match", required=true)
       private final Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchGetArgs> match;
 
-    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchGetArgs> getMatch() {
+    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchGetArgs> match() {
         return this.match;
     }
 

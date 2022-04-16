@@ -32,7 +32,7 @@ public final class SubscriptionExpirationPolicy {
      * Example - "3.5s".
      * 
     */
-    public String getTtl() {
+    public String ttl() {
         return this.ttl;
     }
 

@@ -40,7 +40,7 @@ public class ProjectSink extends io.pulumi.resources.CustomResource {
      * @return Options that affect sinks exporting data to BigQuery. Structure documented below.
      * 
      */
-    public Output<ProjectSinkBigqueryOptions> getBigqueryOptions() {
+    public Output<ProjectSinkBigqueryOptions> bigqueryOptions() {
         return this.bigqueryOptions;
     }
     /**
@@ -54,7 +54,7 @@ public class ProjectSink extends io.pulumi.resources.CustomResource {
      * @return A description of this exclusion.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -74,7 +74,7 @@ public class ProjectSink extends io.pulumi.resources.CustomResource {
      * The writer associated with the sink must have access to write to the above resource.
      * 
      */
-    public Output<String> getDestination() {
+    public Output<String> destination() {
         return this.destination;
     }
     /**
@@ -88,7 +88,7 @@ public class ProjectSink extends io.pulumi.resources.CustomResource {
      * @return If set to True, then this exclusion is disabled and it does not exclude any log entries.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisabled() {
+    public Output</* @Nullable */ Boolean> disabled() {
         return this.disabled;
     }
     /**
@@ -102,7 +102,7 @@ public class ProjectSink extends io.pulumi.resources.CustomResource {
      * @return Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and one of exclusion_filters it will not be exported.  Can be repeated multiple times for multiple exclusions. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<ProjectSinkExclusion>> getExclusions() {
+    public Output</* @Nullable */ List<ProjectSinkExclusion>> exclusions() {
         return this.exclusions;
     }
     /**
@@ -118,7 +118,7 @@ public class ProjectSink extends io.pulumi.resources.CustomResource {
      * write a filter.
      * 
      */
-    public Output</* @Nullable */ String> getFilter() {
+    public Output</* @Nullable */ String> filter() {
         return this.filter;
     }
     /**
@@ -132,7 +132,7 @@ public class ProjectSink extends io.pulumi.resources.CustomResource {
      * @return A client-assigned identifier, such as `load-balancer-exclusion`. Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -148,7 +148,7 @@ public class ProjectSink extends io.pulumi.resources.CustomResource {
      * used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -168,7 +168,7 @@ public class ProjectSink extends io.pulumi.resources.CustomResource {
      * `bigquery_options`, you must set `unique_writer_identity` to true.
      * 
      */
-    public Output</* @Nullable */ Boolean> getUniqueWriterIdentity() {
+    public Output</* @Nullable */ Boolean> uniqueWriterIdentity() {
         return this.uniqueWriterIdentity;
     }
     /**
@@ -184,7 +184,7 @@ public class ProjectSink extends io.pulumi.resources.CustomResource {
      * configured `destination`.
      * 
      */
-    public Output<String> getWriterIdentity() {
+    public Output<String> writerIdentity() {
         return this.writerIdentity;
     }
 

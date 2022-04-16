@@ -45,7 +45,7 @@ public class MultipleActivationKey extends io.pulumi.resources.CustomResource {
      * @return Agreement number under which the key is requested.
      * 
      */
-    public Output</* @Nullable */ String> getAgreementNumber() {
+    public Output</* @Nullable */ String> agreementNumber() {
         return this.agreementNumber;
     }
     /**
@@ -59,7 +59,7 @@ public class MultipleActivationKey extends io.pulumi.resources.CustomResource {
      * @return End of support of security updates activated by the MAK key.
      * 
      */
-    public Output<String> getExpirationDate() {
+    public Output<String> expirationDate() {
         return this.expirationDate;
     }
     /**
@@ -73,7 +73,7 @@ public class MultipleActivationKey extends io.pulumi.resources.CustomResource {
      * @return Number of activations/servers using the MAK key.
      * 
      */
-    public Output</* @Nullable */ Integer> getInstalledServerNumber() {
+    public Output</* @Nullable */ Integer> installedServerNumber() {
         return this.installedServerNumber;
     }
     /**
@@ -87,7 +87,7 @@ public class MultipleActivationKey extends io.pulumi.resources.CustomResource {
      * @return <code> true </code> if user has eligible on-premises Windows physical or virtual machines, and that the requested key will only be used in their organization; <code> false </code> otherwise.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsEligible() {
+    public Output</* @Nullable */ Boolean> isEligible() {
         return this.isEligible;
     }
     /**
@@ -101,7 +101,7 @@ public class MultipleActivationKey extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -115,7 +115,7 @@ public class MultipleActivationKey extends io.pulumi.resources.CustomResource {
      * @return MAK 5x5 key.
      * 
      */
-    public Output<String> getMultipleActivationKey() {
+    public Output<String> multipleActivationKey() {
         return this.multipleActivationKey;
     }
     /**
@@ -129,7 +129,7 @@ public class MultipleActivationKey extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -143,13 +143,13 @@ public class MultipleActivationKey extends io.pulumi.resources.CustomResource {
      * @return Type of OS for which the key is requested.
      * 
      */
-    public Output</* @Nullable */ String> getOsType() {
+    public Output</* @Nullable */ String> osType() {
         return this.osType;
     }
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -163,7 +163,7 @@ public class MultipleActivationKey extends io.pulumi.resources.CustomResource {
      * @return Type of support
      * 
      */
-    public Output</* @Nullable */ String> getSupportType() {
+    public Output</* @Nullable */ String> supportType() {
         return this.supportType;
     }
     /**
@@ -177,7 +177,7 @@ public class MultipleActivationKey extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -191,7 +191,7 @@ public class MultipleActivationKey extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

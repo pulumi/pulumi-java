@@ -21,7 +21,7 @@ public final class RouteWarningsItemResponse extends io.pulumi.resources.InvokeA
     @Import(name="code", required=true)
       private final String code;
 
-    public String getCode() {
+    public String code() {
         return this.code;
     }
 
@@ -32,7 +32,7 @@ public final class RouteWarningsItemResponse extends io.pulumi.resources.InvokeA
     @Import(name="data", required=true)
       private final List<RouteWarningsItemDataItemResponse> data;
 
-    public List<RouteWarningsItemDataItemResponse> getData() {
+    public List<RouteWarningsItemDataItemResponse> data() {
         return this.data;
     }
 
@@ -43,7 +43,7 @@ public final class RouteWarningsItemResponse extends io.pulumi.resources.InvokeA
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 

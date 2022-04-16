@@ -19,7 +19,7 @@ public final class GetDedicatedCloudNodeArgs extends io.pulumi.resources.InvokeA
     @Import(name="dedicatedCloudNodeName", required=true)
       private final String dedicatedCloudNodeName;
 
-    public String getDedicatedCloudNodeName() {
+    public String dedicatedCloudNodeName() {
         return this.dedicatedCloudNodeName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDedicatedCloudNodeArgs extends io.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

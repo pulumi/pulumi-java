@@ -24,7 +24,7 @@ public final class WebAppConnectionStringsSlotArgs extends io.pulumi.resources.R
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -35,7 +35,7 @@ public final class WebAppConnectionStringsSlotArgs extends io.pulumi.resources.R
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -46,7 +46,7 @@ public final class WebAppConnectionStringsSlotArgs extends io.pulumi.resources.R
     @Import(name="properties")
       private final @Nullable Output<Map<String,ConnStringValueTypePairArgs>> properties;
 
-    public Output<Map<String,ConnStringValueTypePairArgs>> getProperties() {
+    public Output<Map<String,ConnStringValueTypePairArgs>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -57,7 +57,7 @@ public final class WebAppConnectionStringsSlotArgs extends io.pulumi.resources.R
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,7 +68,7 @@ public final class WebAppConnectionStringsSlotArgs extends io.pulumi.resources.R
     @Import(name="slot", required=true)
       private final Output<String> slot;
 
-    public Output<String> getSlot() {
+    public Output<String> slot() {
         return this.slot;
     }
 

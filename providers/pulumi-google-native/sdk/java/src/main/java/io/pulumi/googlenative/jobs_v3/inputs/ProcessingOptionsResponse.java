@@ -24,7 +24,7 @@ public final class ProcessingOptionsResponse extends io.pulumi.resources.InvokeA
     @Import(name="disableStreetAddressResolution", required=true)
       private final Boolean disableStreetAddressResolution;
 
-    public Boolean getDisableStreetAddressResolution() {
+    public Boolean disableStreetAddressResolution() {
         return this.disableStreetAddressResolution;
     }
 
@@ -35,7 +35,7 @@ public final class ProcessingOptionsResponse extends io.pulumi.resources.InvokeA
     @Import(name="htmlSanitization", required=true)
       private final String htmlSanitization;
 
-    public String getHtmlSanitization() {
+    public String htmlSanitization() {
         return this.htmlSanitization;
     }
 

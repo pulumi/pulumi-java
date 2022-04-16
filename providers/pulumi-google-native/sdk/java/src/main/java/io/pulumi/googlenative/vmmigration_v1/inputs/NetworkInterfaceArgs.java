@@ -26,7 +26,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="externalIp")
       private final @Nullable Output<String> externalIp;
 
-    public Output<String> getExternalIp() {
+    public Output<String> externalIp() {
         return this.externalIp == null ? Codegen.empty() : this.externalIp;
     }
 
@@ -37,7 +37,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="internalIp")
       private final @Nullable Output<String> internalIp;
 
-    public Output<String> getInternalIp() {
+    public Output<String> internalIp() {
         return this.internalIp == null ? Codegen.empty() : this.internalIp;
     }
 
@@ -48,7 +48,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
@@ -59,7 +59,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
-    public Output<String> getSubnetwork() {
+    public Output<String> subnetwork() {
         return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 

@@ -25,7 +25,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="cloudFunction", required=true)
       private final CloudFunctionEndpointResponse cloudFunction;
 
-    public CloudFunctionEndpointResponse getCloudFunction() {
+    public CloudFunctionEndpointResponse cloudFunction() {
         return this.cloudFunction;
     }
 
@@ -36,7 +36,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="cloudSqlInstance", required=true)
       private final String cloudSqlInstance;
 
-    public String getCloudSqlInstance() {
+    public String cloudSqlInstance() {
         return this.cloudSqlInstance;
     }
 
@@ -47,7 +47,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="gkeMasterCluster", required=true)
       private final String gkeMasterCluster;
 
-    public String getGkeMasterCluster() {
+    public String gkeMasterCluster() {
         return this.gkeMasterCluster;
     }
 
@@ -58,7 +58,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="instance", required=true)
       private final String instance;
 
-    public String getInstance() {
+    public String instance() {
         return this.instance;
     }
 
@@ -69,7 +69,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="ipAddress", required=true)
       private final String ipAddress;
 
-    public String getIpAddress() {
+    public String ipAddress() {
         return this.ipAddress;
     }
 
@@ -80,7 +80,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="network", required=true)
       private final String network;
 
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
 
@@ -91,7 +91,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="networkType", required=true)
       private final String networkType;
 
-    public String getNetworkType() {
+    public String networkType() {
         return this.networkType;
     }
 
@@ -102,7 +102,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="port", required=true)
       private final Integer port;
 
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 
@@ -113,7 +113,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="project", required=true)
       private final String project;
 
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 

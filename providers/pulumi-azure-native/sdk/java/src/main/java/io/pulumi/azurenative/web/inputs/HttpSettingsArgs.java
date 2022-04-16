@@ -28,7 +28,7 @@ public final class HttpSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="forwardProxy")
       private final @Nullable Output<ForwardProxyArgs> forwardProxy;
 
-    public Output<ForwardProxyArgs> getForwardProxy() {
+    public Output<ForwardProxyArgs> forwardProxy() {
         return this.forwardProxy == null ? Codegen.empty() : this.forwardProxy;
     }
 
@@ -39,7 +39,7 @@ public final class HttpSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requireHttps")
       private final @Nullable Output<Boolean> requireHttps;
 
-    public Output<Boolean> getRequireHttps() {
+    public Output<Boolean> requireHttps() {
         return this.requireHttps == null ? Codegen.empty() : this.requireHttps;
     }
 
@@ -50,7 +50,7 @@ public final class HttpSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="routes")
       private final @Nullable Output<HttpSettingsRoutesArgs> routes;
 
-    public Output<HttpSettingsRoutesArgs> getRoutes() {
+    public Output<HttpSettingsRoutesArgs> routes() {
         return this.routes == null ? Codegen.empty() : this.routes;
     }
 

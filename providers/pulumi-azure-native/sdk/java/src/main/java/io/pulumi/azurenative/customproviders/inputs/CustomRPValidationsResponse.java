@@ -25,7 +25,7 @@ public final class CustomRPValidationsResponse extends io.pulumi.resources.Invok
     @Import(name="specification", required=true)
       private final String specification;
 
-    public String getSpecification() {
+    public String specification() {
         return this.specification;
     }
 
@@ -36,7 +36,7 @@ public final class CustomRPValidationsResponse extends io.pulumi.resources.Invok
     @Import(name="validationType")
       private final @Nullable String validationType;
 
-    public Optional<String> getValidationType() {
+    public Optional<String> validationType() {
         return this.validationType == null ? Optional.empty() : Optional.ofNullable(this.validationType);
     }
 

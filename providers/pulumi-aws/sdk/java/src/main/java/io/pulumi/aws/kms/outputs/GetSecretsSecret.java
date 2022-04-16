@@ -49,28 +49,28 @@ public final class GetSecretsSecret {
      * An optional mapping that makes up the Encryption Context for the secret.
      * 
     */
-    public Map<String,String> getContext() {
+    public Map<String,String> context() {
         return this.context == null ? Map.of() : this.context;
     }
     /**
      * An optional list of Grant Tokens for the secret.
      * 
     */
-    public List<String> getGrantTokens() {
+    public List<String> grantTokens() {
         return this.grantTokens == null ? List.of() : this.grantTokens;
     }
     /**
      * The name to export this secret under in the attributes.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Base64 encoded payload, as returned from a KMS encrypt operation.
      * 
     */
-    public String getPayload() {
+    public String payload() {
         return this.payload;
     }
 

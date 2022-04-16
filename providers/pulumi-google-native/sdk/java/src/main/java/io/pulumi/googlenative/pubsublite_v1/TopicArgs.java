@@ -21,7 +21,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -32,7 +32,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -43,14 +43,14 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="partitionConfig")
       private final @Nullable Output<PartitionConfigArgs> partitionConfig;
 
-    public Output<PartitionConfigArgs> getPartitionConfig() {
+    public Output<PartitionConfigArgs> partitionConfig() {
         return this.partitionConfig == null ? Codegen.empty() : this.partitionConfig;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -61,7 +61,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reservationConfig")
       private final @Nullable Output<ReservationConfigArgs> reservationConfig;
 
-    public Output<ReservationConfigArgs> getReservationConfig() {
+    public Output<ReservationConfigArgs> reservationConfig() {
         return this.reservationConfig == null ? Codegen.empty() : this.reservationConfig;
     }
 
@@ -72,14 +72,14 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retentionConfig")
       private final @Nullable Output<RetentionConfigArgs> retentionConfig;
 
-    public Output<RetentionConfigArgs> getRetentionConfig() {
+    public Output<RetentionConfigArgs> retentionConfig() {
         return this.retentionConfig == null ? Codegen.empty() : this.retentionConfig;
     }
 
     @Import(name="topicId", required=true)
       private final Output<String> topicId;
 
-    public Output<String> getTopicId() {
+    public Output<String> topicId() {
         return this.topicId;
     }
 

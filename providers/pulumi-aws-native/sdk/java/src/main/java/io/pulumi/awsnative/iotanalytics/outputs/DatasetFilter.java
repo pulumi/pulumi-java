@@ -18,7 +18,7 @@ public final class DatasetFilter {
         this.deltaTime = deltaTime;
     }
 
-    public Optional<DatasetDeltaTime> getDeltaTime() {
+    public Optional<DatasetDeltaTime> deltaTime() {
         return Optional.ofNullable(this.deltaTime);
     }
 

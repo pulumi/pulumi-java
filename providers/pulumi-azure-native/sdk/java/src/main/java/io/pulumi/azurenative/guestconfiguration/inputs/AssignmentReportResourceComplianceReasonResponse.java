@@ -23,7 +23,7 @@ public final class AssignmentReportResourceComplianceReasonResponse extends io.p
     @Import(name="code", required=true)
       private final String code;
 
-    public String getCode() {
+    public String code() {
         return this.code;
     }
 
@@ -34,7 +34,7 @@ public final class AssignmentReportResourceComplianceReasonResponse extends io.p
     @Import(name="phrase", required=true)
       private final String phrase;
 
-    public String getPhrase() {
+    public String phrase() {
         return this.phrase;
     }
 

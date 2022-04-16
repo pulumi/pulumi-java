@@ -80,56 +80,56 @@ public final class GetManagedHsmResult {
      * The Azure Resource Manager resource ID for the managed HSM Pool.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The supported Azure location where the managed HSM Pool should be created.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the managed HSM Pool.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Properties of the managed HSM
      * 
     */
-    public ManagedHsmPropertiesResponse getProperties() {
+    public ManagedHsmPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * SKU details
      * 
     */
-    public Optional<ManagedHsmSkuResponse> getSku() {
+    public Optional<ManagedHsmSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Metadata pertaining to creation and last modification of the key vault resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The resource type of the managed HSM Pool.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

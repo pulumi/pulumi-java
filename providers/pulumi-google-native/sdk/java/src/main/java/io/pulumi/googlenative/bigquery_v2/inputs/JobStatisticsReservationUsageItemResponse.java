@@ -19,7 +19,7 @@ public final class JobStatisticsReservationUsageItemResponse extends io.pulumi.r
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -30,7 +30,7 @@ public final class JobStatisticsReservationUsageItemResponse extends io.pulumi.r
     @Import(name="slotMs", required=true)
       private final String slotMs;
 
-    public String getSlotMs() {
+    public String slotMs() {
         return this.slotMs;
     }
 

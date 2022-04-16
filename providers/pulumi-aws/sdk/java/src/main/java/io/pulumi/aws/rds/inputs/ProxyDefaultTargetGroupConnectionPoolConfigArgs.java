@@ -24,7 +24,7 @@ public final class ProxyDefaultTargetGroupConnectionPoolConfigArgs extends io.pu
     @Import(name="connectionBorrowTimeout")
       private final @Nullable Output<Integer> connectionBorrowTimeout;
 
-    public Output<Integer> getConnectionBorrowTimeout() {
+    public Output<Integer> connectionBorrowTimeout() {
         return this.connectionBorrowTimeout == null ? Codegen.empty() : this.connectionBorrowTimeout;
     }
 
@@ -35,7 +35,7 @@ public final class ProxyDefaultTargetGroupConnectionPoolConfigArgs extends io.pu
     @Import(name="initQuery")
       private final @Nullable Output<String> initQuery;
 
-    public Output<String> getInitQuery() {
+    public Output<String> initQuery() {
         return this.initQuery == null ? Codegen.empty() : this.initQuery;
     }
 
@@ -46,7 +46,7 @@ public final class ProxyDefaultTargetGroupConnectionPoolConfigArgs extends io.pu
     @Import(name="maxConnectionsPercent")
       private final @Nullable Output<Integer> maxConnectionsPercent;
 
-    public Output<Integer> getMaxConnectionsPercent() {
+    public Output<Integer> maxConnectionsPercent() {
         return this.maxConnectionsPercent == null ? Codegen.empty() : this.maxConnectionsPercent;
     }
 
@@ -57,7 +57,7 @@ public final class ProxyDefaultTargetGroupConnectionPoolConfigArgs extends io.pu
     @Import(name="maxIdleConnectionsPercent")
       private final @Nullable Output<Integer> maxIdleConnectionsPercent;
 
-    public Output<Integer> getMaxIdleConnectionsPercent() {
+    public Output<Integer> maxIdleConnectionsPercent() {
         return this.maxIdleConnectionsPercent == null ? Codegen.empty() : this.maxIdleConnectionsPercent;
     }
 
@@ -68,7 +68,7 @@ public final class ProxyDefaultTargetGroupConnectionPoolConfigArgs extends io.pu
     @Import(name="sessionPinningFilters")
       private final @Nullable Output<List<String>> sessionPinningFilters;
 
-    public Output<List<String>> getSessionPinningFilters() {
+    public Output<List<String>> sessionPinningFilters() {
         return this.sessionPinningFilters == null ? Codegen.empty() : this.sessionPinningFilters;
     }
 

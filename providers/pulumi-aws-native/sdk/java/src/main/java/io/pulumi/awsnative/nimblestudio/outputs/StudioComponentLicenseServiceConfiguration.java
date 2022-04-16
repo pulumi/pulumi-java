@@ -26,7 +26,7 @@ public final class StudioComponentLicenseServiceConfiguration {
      * <p>The endpoint of the license service that is accessed by the studio component resource.</p>
      * 
     */
-    public Optional<String> getEndpoint() {
+    public Optional<String> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
 

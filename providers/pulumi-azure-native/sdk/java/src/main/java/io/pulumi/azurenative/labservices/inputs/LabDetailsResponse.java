@@ -25,7 +25,7 @@ public final class LabDetailsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -36,7 +36,7 @@ public final class LabDetailsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -47,7 +47,7 @@ public final class LabDetailsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
@@ -58,7 +58,7 @@ public final class LabDetailsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="usageQuota", required=true)
       private final String usageQuota;
 
-    public String getUsageQuota() {
+    public String usageQuota() {
         return this.usageQuota;
     }
 

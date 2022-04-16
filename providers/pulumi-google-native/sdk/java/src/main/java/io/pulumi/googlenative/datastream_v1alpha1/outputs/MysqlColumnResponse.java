@@ -69,49 +69,49 @@ public final class MysqlColumnResponse {
      * Column collation.
      * 
     */
-    public String getCollation() {
+    public String collation() {
         return this.collation;
     }
     /**
      * Column name.
      * 
     */
-    public String getColumnName() {
+    public String columnName() {
         return this.columnName;
     }
     /**
      * The MySQL data type. Full data types list can be found here: https://dev.mysql.com/doc/refman/8.0/en/data-types.html
      * 
     */
-    public String getDataType() {
+    public String dataType() {
         return this.dataType;
     }
     /**
      * Column length.
      * 
     */
-    public Integer getLength() {
+    public Integer length() {
         return this.length;
     }
     /**
      * Whether or not the column can accept a null value.
      * 
     */
-    public Boolean getNullable() {
+    public Boolean nullable() {
         return this.nullable;
     }
     /**
      * The ordinal position of the column in the table.
      * 
     */
-    public Integer getOrdinalPosition() {
+    public Integer ordinalPosition() {
         return this.ordinalPosition;
     }
     /**
      * Whether or not the column represents a primary key.
      * 
     */
-    public Boolean getPrimaryKey() {
+    public Boolean primaryKey() {
         return this.primaryKey;
     }
 

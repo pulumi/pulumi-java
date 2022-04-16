@@ -24,7 +24,7 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyResponse extends io.pulum
     @Import(name="includeHttpHeaders", required=true)
       private final List<String> includeHttpHeaders;
 
-    public List<String> getIncludeHttpHeaders() {
+    public List<String> includeHttpHeaders() {
         return this.includeHttpHeaders;
     }
 
@@ -35,7 +35,7 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyResponse extends io.pulum
     @Import(name="queryStringWhitelist", required=true)
       private final List<String> queryStringWhitelist;
 
-    public List<String> getQueryStringWhitelist() {
+    public List<String> queryStringWhitelist() {
         return this.queryStringWhitelist;
     }
 

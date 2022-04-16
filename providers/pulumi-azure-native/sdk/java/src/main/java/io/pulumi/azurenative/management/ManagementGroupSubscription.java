@@ -43,7 +43,7 @@ public class ManagementGroupSubscription extends io.pulumi.resources.CustomResou
      * @return The friendly name of the subscription.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -57,7 +57,7 @@ public class ManagementGroupSubscription extends io.pulumi.resources.CustomResou
      * @return The stringified id of the subscription. For example, 00000000-0000-0000-0000-000000000000
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class ManagementGroupSubscription extends io.pulumi.resources.CustomResou
      * @return The ID of the parent management group.
      * 
      */
-    public Output</* @Nullable */ DescendantParentGroupInfoResponse> getParent() {
+    public Output</* @Nullable */ DescendantParentGroupInfoResponse> parent() {
         return this.parent;
     }
     /**
@@ -85,7 +85,7 @@ public class ManagementGroupSubscription extends io.pulumi.resources.CustomResou
      * @return The state of the subscription.
      * 
      */
-    public Output</* @Nullable */ String> getState() {
+    public Output</* @Nullable */ String> state() {
         return this.state;
     }
     /**
@@ -99,7 +99,7 @@ public class ManagementGroupSubscription extends io.pulumi.resources.CustomResou
      * @return The AAD Tenant ID associated with the subscription. For example, 00000000-0000-0000-0000-000000000000
      * 
      */
-    public Output</* @Nullable */ String> getTenant() {
+    public Output</* @Nullable */ String> tenant() {
         return this.tenant;
     }
     /**
@@ -113,7 +113,7 @@ public class ManagementGroupSubscription extends io.pulumi.resources.CustomResou
      * @return The type of the resource.  For example, Microsoft.Management/managementGroups/subscriptions
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

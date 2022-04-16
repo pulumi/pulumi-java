@@ -78,56 +78,56 @@ public final class GooglePrivacyDlpV2ValueResponse {
      * boolean
      * 
     */
-    public Boolean getBooleanValue() {
+    public Boolean booleanValue() {
         return this.booleanValue;
     }
     /**
      * date
      * 
     */
-    public GoogleTypeDateResponse getDateValue() {
+    public GoogleTypeDateResponse dateValue() {
         return this.dateValue;
     }
     /**
      * day of week
      * 
     */
-    public String getDayOfWeekValue() {
+    public String dayOfWeekValue() {
         return this.dayOfWeekValue;
     }
     /**
      * float
      * 
     */
-    public Double getFloatValue() {
+    public Double floatValue() {
         return this.floatValue;
     }
     /**
      * integer
      * 
     */
-    public String getIntegerValue() {
+    public String integerValue() {
         return this.integerValue;
     }
     /**
      * string
      * 
     */
-    public String getStringValue() {
+    public String stringValue() {
         return this.stringValue;
     }
     /**
      * time of day
      * 
     */
-    public GoogleTypeTimeOfDayResponse getTimeValue() {
+    public GoogleTypeTimeOfDayResponse timeValue() {
         return this.timeValue;
     }
     /**
      * timestamp
      * 
     */
-    public String getTimestampValue() {
+    public String timestampValue() {
         return this.timestampValue;
     }
 

@@ -22,7 +22,7 @@ public final class JwtArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="compactJwt")
       private final @Nullable Output<String> compactJwt;
 
-    public Output<String> getCompactJwt() {
+    public Output<String> compactJwt() {
         return this.compactJwt == null ? Codegen.empty() : this.compactJwt;
     }
 

@@ -29,7 +29,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="copyTagsToSnapshots")
       private final @Nullable Output<Boolean> copyTagsToSnapshots;
 
-    public Output<Boolean> getCopyTagsToSnapshots() {
+    public Output<Boolean> copyTagsToSnapshots() {
         return this.copyTagsToSnapshots == null ? Codegen.empty() : this.copyTagsToSnapshots;
     }
 
@@ -40,7 +40,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataCompressionType")
       private final @Nullable Output<String> dataCompressionType;
 
-    public Output<String> getDataCompressionType() {
+    public Output<String> dataCompressionType() {
         return this.dataCompressionType == null ? Codegen.empty() : this.dataCompressionType;
     }
 
@@ -51,7 +51,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -62,7 +62,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nfsExports")
       private final @Nullable Output<OpenZfsVolumeNfsExportsArgs> nfsExports;
 
-    public Output<OpenZfsVolumeNfsExportsArgs> getNfsExports() {
+    public Output<OpenZfsVolumeNfsExportsArgs> nfsExports() {
         return this.nfsExports == null ? Codegen.empty() : this.nfsExports;
     }
 
@@ -73,7 +73,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="originSnapshot")
       private final @Nullable Output<OpenZfsVolumeOriginSnapshotArgs> originSnapshot;
 
-    public Output<OpenZfsVolumeOriginSnapshotArgs> getOriginSnapshot() {
+    public Output<OpenZfsVolumeOriginSnapshotArgs> originSnapshot() {
         return this.originSnapshot == null ? Codegen.empty() : this.originSnapshot;
     }
 
@@ -84,7 +84,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parentVolumeId", required=true)
       private final Output<String> parentVolumeId;
 
-    public Output<String> getParentVolumeId() {
+    public Output<String> parentVolumeId() {
         return this.parentVolumeId;
     }
 
@@ -95,7 +95,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
+    public Output<Boolean> readOnly() {
         return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
@@ -106,7 +106,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageCapacityQuotaGib")
       private final @Nullable Output<Integer> storageCapacityQuotaGib;
 
-    public Output<Integer> getStorageCapacityQuotaGib() {
+    public Output<Integer> storageCapacityQuotaGib() {
         return this.storageCapacityQuotaGib == null ? Codegen.empty() : this.storageCapacityQuotaGib;
     }
 
@@ -117,7 +117,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageCapacityReservationGib")
       private final @Nullable Output<Integer> storageCapacityReservationGib;
 
-    public Output<Integer> getStorageCapacityReservationGib() {
+    public Output<Integer> storageCapacityReservationGib() {
         return this.storageCapacityReservationGib == null ? Codegen.empty() : this.storageCapacityReservationGib;
     }
 
@@ -128,7 +128,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -139,7 +139,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -150,14 +150,14 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userAndGroupQuotas")
       private final @Nullable Output<List<OpenZfsVolumeUserAndGroupQuotaArgs>> userAndGroupQuotas;
 
-    public Output<List<OpenZfsVolumeUserAndGroupQuotaArgs>> getUserAndGroupQuotas() {
+    public Output<List<OpenZfsVolumeUserAndGroupQuotaArgs>> userAndGroupQuotas() {
         return this.userAndGroupQuotas == null ? Codegen.empty() : this.userAndGroupQuotas;
     }
 
     @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;
 
-    public Output<String> getVolumeType() {
+    public Output<String> volumeType() {
         return this.volumeType == null ? Codegen.empty() : this.volumeType;
     }
 

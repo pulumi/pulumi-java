@@ -26,7 +26,7 @@ public final class UserIdentityContractArgs extends io.pulumi.resources.Resource
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -37,7 +37,7 @@ public final class UserIdentityContractArgs extends io.pulumi.resources.Resource
     @Import(name="provider")
       private final @Nullable Output<String> provider;
 
-    public Output<String> getProvider() {
+    public Output<String> provider() {
         return this.provider == null ? Codegen.empty() : this.provider;
     }
 

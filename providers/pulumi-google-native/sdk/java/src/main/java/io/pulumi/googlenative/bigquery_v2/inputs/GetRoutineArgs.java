@@ -17,28 +17,28 @@ public final class GetRoutineArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="datasetId", required=true)
       private final String datasetId;
 
-    public String getDatasetId() {
+    public String datasetId() {
         return this.datasetId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="readMask")
       private final @Nullable String readMask;
 
-    public Optional<String> getReadMask() {
+    public Optional<String> readMask() {
         return this.readMask == null ? Optional.empty() : Optional.ofNullable(this.readMask);
     }
 
     @Import(name="routineId", required=true)
       private final String routineId;
 
-    public String getRoutineId() {
+    public String routineId() {
         return this.routineId;
     }
 

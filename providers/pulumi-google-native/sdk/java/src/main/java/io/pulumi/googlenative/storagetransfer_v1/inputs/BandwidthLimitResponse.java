@@ -23,7 +23,7 @@ public final class BandwidthLimitResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="limitMbps", required=true)
       private final String limitMbps;
 
-    public String getLimitMbps() {
+    public String limitMbps() {
         return this.limitMbps;
     }
 

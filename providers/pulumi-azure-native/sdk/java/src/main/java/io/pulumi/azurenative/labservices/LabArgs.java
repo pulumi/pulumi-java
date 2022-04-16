@@ -26,7 +26,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labAccountName", required=true)
       private final Output<String> labAccountName;
 
-    public Output<String> getLabAccountName() {
+    public Output<String> labAccountName() {
         return this.labAccountName;
     }
 
@@ -37,7 +37,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labName")
       private final @Nullable Output<String> labName;
 
-    public Output<String> getLabName() {
+    public Output<String> labName() {
         return this.labName == null ? Codegen.empty() : this.labName;
     }
 
@@ -48,7 +48,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -59,7 +59,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxUsersInLab")
       private final @Nullable Output<Integer> maxUsersInLab;
 
-    public Output<Integer> getMaxUsersInLab() {
+    public Output<Integer> maxUsersInLab() {
         return this.maxUsersInLab == null ? Codegen.empty() : this.maxUsersInLab;
     }
 
@@ -70,7 +70,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
 
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
@@ -81,7 +81,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -92,7 +92,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -103,7 +103,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uniqueIdentifier")
       private final @Nullable Output<String> uniqueIdentifier;
 
-    public Output<String> getUniqueIdentifier() {
+    public Output<String> uniqueIdentifier() {
         return this.uniqueIdentifier == null ? Codegen.empty() : this.uniqueIdentifier;
     }
 
@@ -114,7 +114,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="usageQuota")
       private final @Nullable Output<String> usageQuota;
 
-    public Output<String> getUsageQuota() {
+    public Output<String> usageQuota() {
         return this.usageQuota == null ? Codegen.empty() : this.usageQuota;
     }
 
@@ -125,7 +125,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userAccessMode")
       private final @Nullable Output<Either<String,LabUserAccessMode>> userAccessMode;
 
-    public Output<Either<String,LabUserAccessMode>> getUserAccessMode() {
+    public Output<Either<String,LabUserAccessMode>> userAccessMode() {
         return this.userAccessMode == null ? Codegen.empty() : this.userAccessMode;
     }
 

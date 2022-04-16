@@ -37,22 +37,22 @@ public final class AnomalyDetectorCsvFormatDescriptor {
         this.quoteSymbol = quoteSymbol;
     }
 
-    public Optional<String> getCharset() {
+    public Optional<String> charset() {
         return Optional.ofNullable(this.charset);
     }
-    public Optional<Boolean> getContainsHeader() {
+    public Optional<Boolean> containsHeader() {
         return Optional.ofNullable(this.containsHeader);
     }
-    public Optional<String> getDelimiter() {
+    public Optional<String> delimiter() {
         return Optional.ofNullable(this.delimiter);
     }
-    public Optional<AnomalyDetectorCsvFormatDescriptorFileCompression> getFileCompression() {
+    public Optional<AnomalyDetectorCsvFormatDescriptorFileCompression> fileCompression() {
         return Optional.ofNullable(this.fileCompression);
     }
-    public List<String> getHeaderList() {
+    public List<String> headerList() {
         return this.headerList == null ? List.of() : this.headerList;
     }
-    public Optional<String> getQuoteSymbol() {
+    public Optional<String> quoteSymbol() {
         return Optional.ofNullable(this.quoteSymbol);
     }
 

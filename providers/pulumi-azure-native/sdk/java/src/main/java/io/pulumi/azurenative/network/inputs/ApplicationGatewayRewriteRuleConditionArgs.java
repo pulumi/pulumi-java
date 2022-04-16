@@ -27,7 +27,7 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends io.pulumi.
     @Import(name="ignoreCase")
       private final @Nullable Output<Boolean> ignoreCase;
 
-    public Output<Boolean> getIgnoreCase() {
+    public Output<Boolean> ignoreCase() {
         return this.ignoreCase == null ? Codegen.empty() : this.ignoreCase;
     }
 
@@ -38,7 +38,7 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends io.pulumi.
     @Import(name="negate")
       private final @Nullable Output<Boolean> negate;
 
-    public Output<Boolean> getNegate() {
+    public Output<Boolean> negate() {
         return this.negate == null ? Codegen.empty() : this.negate;
     }
 
@@ -49,7 +49,7 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends io.pulumi.
     @Import(name="pattern")
       private final @Nullable Output<String> pattern;
 
-    public Output<String> getPattern() {
+    public Output<String> pattern() {
         return this.pattern == null ? Codegen.empty() : this.pattern;
     }
 
@@ -60,7 +60,7 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends io.pulumi.
     @Import(name="variable")
       private final @Nullable Output<String> variable;
 
-    public Output<String> getVariable() {
+    public Output<String> variable() {
         return this.variable == null ? Codegen.empty() : this.variable;
     }
 

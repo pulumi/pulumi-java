@@ -24,7 +24,7 @@ public final class LinuxNodeConfigResponse extends io.pulumi.resources.InvokeArg
     @Import(name="sysctls", required=true)
       private final Map<String,String> sysctls;
 
-    public Map<String,String> getSysctls() {
+    public Map<String,String> sysctls() {
         return this.sysctls;
     }
 

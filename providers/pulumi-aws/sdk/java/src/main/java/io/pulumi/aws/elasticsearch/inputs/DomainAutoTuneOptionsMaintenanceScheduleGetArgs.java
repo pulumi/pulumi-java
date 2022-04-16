@@ -22,7 +22,7 @@ public final class DomainAutoTuneOptionsMaintenanceScheduleGetArgs extends io.pu
     @Import(name="cronExpressionForRecurrence", required=true)
       private final Output<String> cronExpressionForRecurrence;
 
-    public Output<String> getCronExpressionForRecurrence() {
+    public Output<String> cronExpressionForRecurrence() {
         return this.cronExpressionForRecurrence;
     }
 
@@ -33,7 +33,7 @@ public final class DomainAutoTuneOptionsMaintenanceScheduleGetArgs extends io.pu
     @Import(name="duration", required=true)
       private final Output<DomainAutoTuneOptionsMaintenanceScheduleDurationGetArgs> duration;
 
-    public Output<DomainAutoTuneOptionsMaintenanceScheduleDurationGetArgs> getDuration() {
+    public Output<DomainAutoTuneOptionsMaintenanceScheduleDurationGetArgs> duration() {
         return this.duration;
     }
 
@@ -44,7 +44,7 @@ public final class DomainAutoTuneOptionsMaintenanceScheduleGetArgs extends io.pu
     @Import(name="startAt", required=true)
       private final Output<String> startAt;
 
-    public Output<String> getStartAt() {
+    public Output<String> startAt() {
         return this.startAt;
     }
 

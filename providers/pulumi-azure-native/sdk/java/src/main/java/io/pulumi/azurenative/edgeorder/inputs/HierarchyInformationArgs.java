@@ -26,7 +26,7 @@ public final class HierarchyInformationArgs extends io.pulumi.resources.Resource
     @Import(name="configurationName")
       private final @Nullable Output<String> configurationName;
 
-    public Output<String> getConfigurationName() {
+    public Output<String> configurationName() {
         return this.configurationName == null ? Codegen.empty() : this.configurationName;
     }
 
@@ -37,7 +37,7 @@ public final class HierarchyInformationArgs extends io.pulumi.resources.Resource
     @Import(name="productFamilyName")
       private final @Nullable Output<String> productFamilyName;
 
-    public Output<String> getProductFamilyName() {
+    public Output<String> productFamilyName() {
         return this.productFamilyName == null ? Codegen.empty() : this.productFamilyName;
     }
 
@@ -48,7 +48,7 @@ public final class HierarchyInformationArgs extends io.pulumi.resources.Resource
     @Import(name="productLineName")
       private final @Nullable Output<String> productLineName;
 
-    public Output<String> getProductLineName() {
+    public Output<String> productLineName() {
         return this.productLineName == null ? Codegen.empty() : this.productLineName;
     }
 
@@ -59,7 +59,7 @@ public final class HierarchyInformationArgs extends io.pulumi.resources.Resource
     @Import(name="productName")
       private final @Nullable Output<String> productName;
 
-    public Output<String> getProductName() {
+    public Output<String> productName() {
         return this.productName == null ? Codegen.empty() : this.productName;
     }
 

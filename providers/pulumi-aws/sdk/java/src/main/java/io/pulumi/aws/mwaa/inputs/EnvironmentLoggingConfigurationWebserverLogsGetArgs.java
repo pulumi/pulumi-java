@@ -19,7 +19,7 @@ public final class EnvironmentLoggingConfigurationWebserverLogsGetArgs extends i
     @Import(name="cloudWatchLogGroupArn")
       private final @Nullable Output<String> cloudWatchLogGroupArn;
 
-    public Output<String> getCloudWatchLogGroupArn() {
+    public Output<String> cloudWatchLogGroupArn() {
         return this.cloudWatchLogGroupArn == null ? Codegen.empty() : this.cloudWatchLogGroupArn;
     }
 
@@ -30,7 +30,7 @@ public final class EnvironmentLoggingConfigurationWebserverLogsGetArgs extends i
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -41,7 +41,7 @@ public final class EnvironmentLoggingConfigurationWebserverLogsGetArgs extends i
     @Import(name="logLevel")
       private final @Nullable Output<String> logLevel;
 
-    public Output<String> getLogLevel() {
+    public Output<String> logLevel() {
         return this.logLevel == null ? Codegen.empty() : this.logLevel;
     }
 

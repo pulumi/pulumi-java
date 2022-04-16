@@ -24,7 +24,7 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="addresses")
       private final @Nullable Output<List<String>> addresses;
 
-    public Output<List<String>> getAddresses() {
+    public Output<List<String>> addresses() {
         return this.addresses == null ? Codegen.empty() : this.addresses;
     }
 
@@ -35,7 +35,7 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -46,7 +46,7 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -57,14 +57,14 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipAddressVersion")
       private final @Nullable Output<String> ipAddressVersion;
 
-    public Output<String> getIpAddressVersion() {
+    public Output<String> ipAddressVersion() {
         return this.ipAddressVersion == null ? Codegen.empty() : this.ipAddressVersion;
     }
 
     @Import(name="lockToken")
       private final @Nullable Output<String> lockToken;
 
-    public Output<String> getLockToken() {
+    public Output<String> lockToken() {
         return this.lockToken == null ? Codegen.empty() : this.lockToken;
     }
 
@@ -75,7 +75,7 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -86,7 +86,7 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="scope")
       private final @Nullable Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 
@@ -97,7 +97,7 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -108,7 +108,7 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

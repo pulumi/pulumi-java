@@ -24,7 +24,7 @@ public final class ServiceAccountResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="email", required=true)
       private final String email;
 
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
 
@@ -35,7 +35,7 @@ public final class ServiceAccountResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="scope", required=true)
       private final List<String> scope;
 
-    public List<String> getScope() {
+    public List<String> scope() {
         return this.scope;
     }
 

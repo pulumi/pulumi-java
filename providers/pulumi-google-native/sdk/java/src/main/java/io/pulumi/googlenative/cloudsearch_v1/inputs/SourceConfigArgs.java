@@ -28,7 +28,7 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="crowdingConfig")
       private final @Nullable Output<SourceCrowdingConfigArgs> crowdingConfig;
 
-    public Output<SourceCrowdingConfigArgs> getCrowdingConfig() {
+    public Output<SourceCrowdingConfigArgs> crowdingConfig() {
         return this.crowdingConfig == null ? Codegen.empty() : this.crowdingConfig;
     }
 
@@ -39,7 +39,7 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scoringConfig")
       private final @Nullable Output<SourceScoringConfigArgs> scoringConfig;
 
-    public Output<SourceScoringConfigArgs> getScoringConfig() {
+    public Output<SourceScoringConfigArgs> scoringConfig() {
         return this.scoringConfig == null ? Codegen.empty() : this.scoringConfig;
     }
 
@@ -50,7 +50,7 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="source")
       private final @Nullable Output<SourceArgs> source;
 
-    public Output<SourceArgs> getSource() {
+    public Output<SourceArgs> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 

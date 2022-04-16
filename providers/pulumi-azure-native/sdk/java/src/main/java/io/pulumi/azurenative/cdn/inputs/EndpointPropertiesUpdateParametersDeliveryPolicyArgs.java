@@ -28,7 +28,7 @@ public final class EndpointPropertiesUpdateParametersDeliveryPolicyArgs extends 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -39,7 +39,7 @@ public final class EndpointPropertiesUpdateParametersDeliveryPolicyArgs extends 
     @Import(name="rules", required=true)
       private final Output<List<DeliveryRuleArgs>> rules;
 
-    public Output<List<DeliveryRuleArgs>> getRules() {
+    public Output<List<DeliveryRuleArgs>> rules() {
         return this.rules;
     }
 

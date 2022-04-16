@@ -23,7 +23,7 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends i
     @Import(name="ipRange", required=true)
       private final String ipRange;
 
-    public String getIpRange() {
+    public String ipRange() {
         return this.ipRange;
     }
 
@@ -34,7 +34,7 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends i
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -45,7 +45,7 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends i
     @Import(name="project", required=true)
       private final String project;
 
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 
@@ -56,7 +56,7 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends i
     @Import(name="region", required=true)
       private final String region;
 
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 
@@ -67,7 +67,7 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends i
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

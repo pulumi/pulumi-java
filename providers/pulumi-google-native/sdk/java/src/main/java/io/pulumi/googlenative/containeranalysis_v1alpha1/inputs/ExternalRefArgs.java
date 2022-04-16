@@ -27,7 +27,7 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="category")
       private final @Nullable Output<ExternalRefCategory> category;
 
-    public Output<ExternalRefCategory> getCategory() {
+    public Output<ExternalRefCategory> category() {
         return this.category == null ? Codegen.empty() : this.category;
     }
 
@@ -38,7 +38,7 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 
@@ -49,7 +49,7 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locator")
       private final @Nullable Output<String> locator;
 
-    public Output<String> getLocator() {
+    public Output<String> locator() {
         return this.locator == null ? Codegen.empty() : this.locator;
     }
 
@@ -60,7 +60,7 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

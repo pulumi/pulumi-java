@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends io.p
     @Import(name="audio", required=true)
       private final GoogleCloudDialogflowCxV3beta1AudioInputResponse audio;
 
-    public GoogleCloudDialogflowCxV3beta1AudioInputResponse getAudio() {
+    public GoogleCloudDialogflowCxV3beta1AudioInputResponse audio() {
         return this.audio;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends io.p
     @Import(name="dtmf", required=true)
       private final GoogleCloudDialogflowCxV3beta1DtmfInputResponse dtmf;
 
-    public GoogleCloudDialogflowCxV3beta1DtmfInputResponse getDtmf() {
+    public GoogleCloudDialogflowCxV3beta1DtmfInputResponse dtmf() {
         return this.dtmf;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends io.p
     @Import(name="event", required=true)
       private final GoogleCloudDialogflowCxV3beta1EventInputResponse event;
 
-    public GoogleCloudDialogflowCxV3beta1EventInputResponse getEvent() {
+    public GoogleCloudDialogflowCxV3beta1EventInputResponse event() {
         return this.event;
     }
 
@@ -61,7 +61,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends io.p
     @Import(name="intent", required=true)
       private final GoogleCloudDialogflowCxV3beta1IntentInputResponse intent;
 
-    public GoogleCloudDialogflowCxV3beta1IntentInputResponse getIntent() {
+    public GoogleCloudDialogflowCxV3beta1IntentInputResponse intent() {
         return this.intent;
     }
 
@@ -72,7 +72,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends io.p
     @Import(name="languageCode", required=true)
       private final String languageCode;
 
-    public String getLanguageCode() {
+    public String languageCode() {
         return this.languageCode;
     }
 
@@ -83,7 +83,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends io.p
     @Import(name="text", required=true)
       private final GoogleCloudDialogflowCxV3beta1TextInputResponse text;
 
-    public GoogleCloudDialogflowCxV3beta1TextInputResponse getText() {
+    public GoogleCloudDialogflowCxV3beta1TextInputResponse text() {
         return this.text;
     }
 

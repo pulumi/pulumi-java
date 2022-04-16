@@ -20,7 +20,7 @@ public final class GetDomainVpcOption extends io.pulumi.resources.InvokeArgs {
     @Import(name="availabilityZones", required=true)
       private final List<String> availabilityZones;
 
-    public List<String> getAvailabilityZones() {
+    public List<String> availabilityZones() {
         return this.availabilityZones;
     }
 
@@ -31,7 +31,7 @@ public final class GetDomainVpcOption extends io.pulumi.resources.InvokeArgs {
     @Import(name="securityGroupIds", required=true)
       private final List<String> securityGroupIds;
 
-    public List<String> getSecurityGroupIds() {
+    public List<String> securityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -42,7 +42,7 @@ public final class GetDomainVpcOption extends io.pulumi.resources.InvokeArgs {
     @Import(name="subnetIds", required=true)
       private final List<String> subnetIds;
 
-    public List<String> getSubnetIds() {
+    public List<String> subnetIds() {
         return this.subnetIds;
     }
 
@@ -53,7 +53,7 @@ public final class GetDomainVpcOption extends io.pulumi.resources.InvokeArgs {
     @Import(name="vpcId", required=true)
       private final String vpcId;
 
-    public String getVpcId() {
+    public String vpcId() {
         return this.vpcId;
     }
 

@@ -21,7 +21,7 @@ public final class ResourcePolicyInstanceSchedulePolicyVmStopScheduleGetArgs ext
     @Import(name="schedule", required=true)
       private final Output<String> schedule;
 
-    public Output<String> getSchedule() {
+    public Output<String> schedule() {
         return this.schedule;
     }
 

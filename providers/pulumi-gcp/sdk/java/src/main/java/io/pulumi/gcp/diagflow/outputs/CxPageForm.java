@@ -28,7 +28,7 @@ public final class CxPageForm {
      * Structure is documented below.
      * 
     */
-    public List<CxPageFormParameter> getParameters() {
+    public List<CxPageFormParameter> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
 

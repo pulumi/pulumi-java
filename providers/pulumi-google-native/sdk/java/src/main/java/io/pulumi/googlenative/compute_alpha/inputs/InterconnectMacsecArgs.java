@@ -28,7 +28,7 @@ public final class InterconnectMacsecArgs extends io.pulumi.resources.ResourceAr
     @Import(name="failOpen")
       private final @Nullable Output<Boolean> failOpen;
 
-    public Output<Boolean> getFailOpen() {
+    public Output<Boolean> failOpen() {
         return this.failOpen == null ? Codegen.empty() : this.failOpen;
     }
 
@@ -39,7 +39,7 @@ public final class InterconnectMacsecArgs extends io.pulumi.resources.ResourceAr
     @Import(name="preSharedKeys", required=true)
       private final Output<List<InterconnectMacsecPreSharedKeyArgs>> preSharedKeys;
 
-    public Output<List<InterconnectMacsecPreSharedKeyArgs>> getPreSharedKeys() {
+    public Output<List<InterconnectMacsecPreSharedKeyArgs>> preSharedKeys() {
         return this.preSharedKeys;
     }
 

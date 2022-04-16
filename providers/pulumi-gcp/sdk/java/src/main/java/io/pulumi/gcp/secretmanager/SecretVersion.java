@@ -44,7 +44,7 @@ public class SecretVersion extends io.pulumi.resources.CustomResource {
      * @return The time at which the Secret was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -58,7 +58,7 @@ public class SecretVersion extends io.pulumi.resources.CustomResource {
      * @return The time at which the Secret was destroyed. Only present if state is DESTROYED.
      * 
      */
-    public Output<String> getDestroyTime() {
+    public Output<String> destroyTime() {
         return this.destroyTime;
     }
     /**
@@ -72,7 +72,7 @@ public class SecretVersion extends io.pulumi.resources.CustomResource {
      * @return The current state of the SecretVersion.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -86,7 +86,7 @@ public class SecretVersion extends io.pulumi.resources.CustomResource {
      * @return The resource name of the SecretVersion. Format: 'projects/{{project}}/secrets/{{secret_id}}/versions/{{version}}'
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +100,7 @@ public class SecretVersion extends io.pulumi.resources.CustomResource {
      * @return Secret Manager secret resource
      * 
      */
-    public Output<String> getSecret() {
+    public Output<String> secret() {
         return this.secret;
     }
     /**
@@ -116,7 +116,7 @@ public class SecretVersion extends io.pulumi.resources.CustomResource {
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
-    public Output<String> getSecretData() {
+    public Output<String> secretData() {
         return this.secretData;
     }
 

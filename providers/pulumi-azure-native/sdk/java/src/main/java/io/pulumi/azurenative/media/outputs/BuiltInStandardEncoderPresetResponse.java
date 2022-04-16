@@ -34,14 +34,14 @@ public final class BuiltInStandardEncoderPresetResponse {
      * Expected value is '#Microsoft.Media.BuiltInStandardEncoderPreset'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
     /**
      * The built-in preset to be used for encoding videos.
      * 
     */
-    public String getPresetName() {
+    public String presetName() {
         return this.presetName;
     }
 

@@ -18,7 +18,7 @@ public final class ResponsePlanAction {
         this.ssmAutomation = ssmAutomation;
     }
 
-    public Optional<ResponsePlanSsmAutomation> getSsmAutomation() {
+    public Optional<ResponsePlanSsmAutomation> ssmAutomation() {
         return Optional.ofNullable(this.ssmAutomation);
     }
 

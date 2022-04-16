@@ -19,7 +19,7 @@ public final class ListBotConnectionWithSecretsArgs extends io.pulumi.resources.
     @Import(name="connectionName", required=true)
       private final String connectionName;
 
-    public String getConnectionName() {
+    public String connectionName() {
         return this.connectionName;
     }
 
@@ -30,7 +30,7 @@ public final class ListBotConnectionWithSecretsArgs extends io.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class ListBotConnectionWithSecretsArgs extends io.pulumi.resources.
     @Import(name="resourceName", required=true)
       private final String resourceName;
 
-    public String getPropResourceName() {
+    public String resourceName() {
         return this.resourceName;
     }
 

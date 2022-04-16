@@ -168,7 +168,7 @@ public final class AlertPolicyConditionConditionThreshold {
      * Structure is documented below.
      * 
     */
-    public List<AlertPolicyConditionConditionThresholdAggregation> getAggregations() {
+    public List<AlertPolicyConditionConditionThresholdAggregation> aggregations() {
         return this.aggregations == null ? List.of() : this.aggregations;
     }
     /**
@@ -183,7 +183,7 @@ public final class AlertPolicyConditionConditionThreshold {
      * Possible values are `COMPARISON_GT`, `COMPARISON_GE`, `COMPARISON_LT`, `COMPARISON_LE`, `COMPARISON_EQ`, and `COMPARISON_NE`.
      * 
     */
-    public String getComparison() {
+    public String comparison() {
         return this.comparison;
     }
     /**
@@ -206,7 +206,7 @@ public final class AlertPolicyConditionConditionThreshold {
      * Structure is documented below.
      * 
     */
-    public List<AlertPolicyConditionConditionThresholdDenominatorAggregation> getDenominatorAggregations() {
+    public List<AlertPolicyConditionConditionThresholdDenominatorAggregation> denominatorAggregations() {
         return this.denominatorAggregations == null ? List.of() : this.denominatorAggregations;
     }
     /**
@@ -227,7 +227,7 @@ public final class AlertPolicyConditionConditionThreshold {
      * in length.
      * 
     */
-    public Optional<String> getDenominatorFilter() {
+    public Optional<String> denominatorFilter() {
         return Optional.ofNullable(this.denominatorFilter);
     }
     /**
@@ -248,14 +248,14 @@ public final class AlertPolicyConditionConditionThreshold {
      * alerted on quickly.
      * 
     */
-    public String getDuration() {
+    public String duration() {
         return this.duration;
     }
     /**
      * A logs-based filter.
      * 
     */
-    public Optional<String> getFilter() {
+    public Optional<String> filter() {
         return Optional.ofNullable(this.filter);
     }
     /**
@@ -263,7 +263,7 @@ public final class AlertPolicyConditionConditionThreshold {
      * series.
      * 
     */
-    public Optional<Double> getThresholdValue() {
+    public Optional<Double> thresholdValue() {
         return Optional.ofNullable(this.thresholdValue);
     }
     /**
@@ -278,7 +278,7 @@ public final class AlertPolicyConditionConditionThreshold {
      * Structure is documented below.
      * 
     */
-    public Optional<AlertPolicyConditionConditionThresholdTrigger> getTrigger() {
+    public Optional<AlertPolicyConditionConditionThresholdTrigger> trigger() {
         return Optional.ofNullable(this.trigger);
     }
 

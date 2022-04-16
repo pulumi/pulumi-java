@@ -29,7 +29,7 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="legendTemplate")
       private final @Nullable Output<String> legendTemplate;
 
-    public Output<String> getLegendTemplate() {
+    public Output<String> legendTemplate() {
         return this.legendTemplate == null ? Codegen.empty() : this.legendTemplate;
     }
 
@@ -40,7 +40,7 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minAlignmentPeriod")
       private final @Nullable Output<String> minAlignmentPeriod;
 
-    public Output<String> getMinAlignmentPeriod() {
+    public Output<String> minAlignmentPeriod() {
         return this.minAlignmentPeriod == null ? Codegen.empty() : this.minAlignmentPeriod;
     }
 
@@ -51,7 +51,7 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="plotType")
       private final @Nullable Output<DataSetPlotType> plotType;
 
-    public Output<DataSetPlotType> getPlotType() {
+    public Output<DataSetPlotType> plotType() {
         return this.plotType == null ? Codegen.empty() : this.plotType;
     }
 
@@ -62,7 +62,7 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetAxis")
       private final @Nullable Output<DataSetTargetAxis> targetAxis;
 
-    public Output<DataSetTargetAxis> getTargetAxis() {
+    public Output<DataSetTargetAxis> targetAxis() {
         return this.targetAxis == null ? Codegen.empty() : this.targetAxis;
     }
 
@@ -73,7 +73,7 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeSeriesQuery", required=true)
       private final Output<TimeSeriesQueryArgs> timeSeriesQuery;
 
-    public Output<TimeSeriesQueryArgs> getTimeSeriesQuery() {
+    public Output<TimeSeriesQueryArgs> timeSeriesQuery() {
         return this.timeSeriesQuery;
     }
 

@@ -33,14 +33,14 @@ public final class LoginServerPropertiesResponse {
      * The host of the connected registry. Can be FQDN or IP.
      * 
     */
-    public String getHost() {
+    public String host() {
         return this.host;
     }
     /**
      * The TLS properties of the connected registry login server.
      * 
     */
-    public TlsPropertiesResponse getTls() {
+    public TlsPropertiesResponse tls() {
         return this.tls;
     }
 

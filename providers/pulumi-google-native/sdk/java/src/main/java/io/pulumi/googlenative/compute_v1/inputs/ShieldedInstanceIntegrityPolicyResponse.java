@@ -23,7 +23,7 @@ public final class ShieldedInstanceIntegrityPolicyResponse extends io.pulumi.res
     @Import(name="updateAutoLearnPolicy", required=true)
       private final Boolean updateAutoLearnPolicy;
 
-    public Boolean getUpdateAutoLearnPolicy() {
+    public Boolean updateAutoLearnPolicy() {
         return this.updateAutoLearnPolicy;
     }
 

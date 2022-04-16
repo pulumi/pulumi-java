@@ -24,73 +24,73 @@ public class TransitGateway extends io.pulumi.resources.CustomResource {
     @Export(name="amazonSideAsn", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> amazonSideAsn;
 
-    public Output</* @Nullable */ Integer> getAmazonSideAsn() {
+    public Output</* @Nullable */ Integer> amazonSideAsn() {
         return this.amazonSideAsn;
     }
     @Export(name="associationDefaultRouteTableId", type=String.class, parameters={})
     private Output</* @Nullable */ String> associationDefaultRouteTableId;
 
-    public Output</* @Nullable */ String> getAssociationDefaultRouteTableId() {
+    public Output</* @Nullable */ String> associationDefaultRouteTableId() {
         return this.associationDefaultRouteTableId;
     }
     @Export(name="autoAcceptSharedAttachments", type=String.class, parameters={})
     private Output</* @Nullable */ String> autoAcceptSharedAttachments;
 
-    public Output</* @Nullable */ String> getAutoAcceptSharedAttachments() {
+    public Output</* @Nullable */ String> autoAcceptSharedAttachments() {
         return this.autoAcceptSharedAttachments;
     }
     @Export(name="defaultRouteTableAssociation", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultRouteTableAssociation;
 
-    public Output</* @Nullable */ String> getDefaultRouteTableAssociation() {
+    public Output</* @Nullable */ String> defaultRouteTableAssociation() {
         return this.defaultRouteTableAssociation;
     }
     @Export(name="defaultRouteTablePropagation", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultRouteTablePropagation;
 
-    public Output</* @Nullable */ String> getDefaultRouteTablePropagation() {
+    public Output</* @Nullable */ String> defaultRouteTablePropagation() {
         return this.defaultRouteTablePropagation;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="dnsSupport", type=String.class, parameters={})
     private Output</* @Nullable */ String> dnsSupport;
 
-    public Output</* @Nullable */ String> getDnsSupport() {
+    public Output</* @Nullable */ String> dnsSupport() {
         return this.dnsSupport;
     }
     @Export(name="multicastSupport", type=String.class, parameters={})
     private Output</* @Nullable */ String> multicastSupport;
 
-    public Output</* @Nullable */ String> getMulticastSupport() {
+    public Output</* @Nullable */ String> multicastSupport() {
         return this.multicastSupport;
     }
     @Export(name="propagationDefaultRouteTableId", type=String.class, parameters={})
     private Output</* @Nullable */ String> propagationDefaultRouteTableId;
 
-    public Output</* @Nullable */ String> getPropagationDefaultRouteTableId() {
+    public Output</* @Nullable */ String> propagationDefaultRouteTableId() {
         return this.propagationDefaultRouteTableId;
     }
     @Export(name="tags", type=List.class, parameters={TransitGatewayTag.class})
     private Output</* @Nullable */ List<TransitGatewayTag>> tags;
 
-    public Output</* @Nullable */ List<TransitGatewayTag>> getTags() {
+    public Output</* @Nullable */ List<TransitGatewayTag>> tags() {
         return this.tags;
     }
     @Export(name="transitGatewayCidrBlocks", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> transitGatewayCidrBlocks;
 
-    public Output</* @Nullable */ List<String>> getTransitGatewayCidrBlocks() {
+    public Output</* @Nullable */ List<String>> transitGatewayCidrBlocks() {
         return this.transitGatewayCidrBlocks;
     }
     @Export(name="vpnEcmpSupport", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpnEcmpSupport;
 
-    public Output</* @Nullable */ String> getVpnEcmpSupport() {
+    public Output</* @Nullable */ String> vpnEcmpSupport() {
         return this.vpnEcmpSupport;
     }
 

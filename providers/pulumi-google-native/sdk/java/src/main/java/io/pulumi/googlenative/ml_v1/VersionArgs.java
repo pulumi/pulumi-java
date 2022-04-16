@@ -32,7 +32,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="acceleratorConfig")
       private final @Nullable Output<GoogleCloudMlV1__AcceleratorConfigArgs> acceleratorConfig;
 
-    public Output<GoogleCloudMlV1__AcceleratorConfigArgs> getAcceleratorConfig() {
+    public Output<GoogleCloudMlV1__AcceleratorConfigArgs> acceleratorConfig() {
         return this.acceleratorConfig == null ? Codegen.empty() : this.acceleratorConfig;
     }
 
@@ -43,7 +43,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoScaling")
       private final @Nullable Output<GoogleCloudMlV1__AutoScalingArgs> autoScaling;
 
-    public Output<GoogleCloudMlV1__AutoScalingArgs> getAutoScaling() {
+    public Output<GoogleCloudMlV1__AutoScalingArgs> autoScaling() {
         return this.autoScaling == null ? Codegen.empty() : this.autoScaling;
     }
 
@@ -54,7 +54,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="container")
       private final @Nullable Output<GoogleCloudMlV1__ContainerSpecArgs> container;
 
-    public Output<GoogleCloudMlV1__ContainerSpecArgs> getContainer() {
+    public Output<GoogleCloudMlV1__ContainerSpecArgs> container() {
         return this.container == null ? Codegen.empty() : this.container;
     }
 
@@ -65,7 +65,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deploymentUri")
       private final @Nullable Output<String> deploymentUri;
 
-    public Output<String> getDeploymentUri() {
+    public Output<String> deploymentUri() {
         return this.deploymentUri == null ? Codegen.empty() : this.deploymentUri;
     }
 
@@ -76,7 +76,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -87,7 +87,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -98,7 +98,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="explanationConfig")
       private final @Nullable Output<GoogleCloudMlV1__ExplanationConfigArgs> explanationConfig;
 
-    public Output<GoogleCloudMlV1__ExplanationConfigArgs> getExplanationConfig() {
+    public Output<GoogleCloudMlV1__ExplanationConfigArgs> explanationConfig() {
         return this.explanationConfig == null ? Codegen.empty() : this.explanationConfig;
     }
 
@@ -109,7 +109,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="framework")
       private final @Nullable Output<VersionFramework> framework;
 
-    public Output<VersionFramework> getFramework() {
+    public Output<VersionFramework> framework() {
         return this.framework == null ? Codegen.empty() : this.framework;
     }
 
@@ -120,7 +120,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -131,7 +131,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
-    public Output<String> getMachineType() {
+    public Output<String> machineType() {
         return this.machineType == null ? Codegen.empty() : this.machineType;
     }
 
@@ -142,14 +142,14 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="manualScaling")
       private final @Nullable Output<GoogleCloudMlV1__ManualScalingArgs> manualScaling;
 
-    public Output<GoogleCloudMlV1__ManualScalingArgs> getManualScaling() {
+    public Output<GoogleCloudMlV1__ManualScalingArgs> manualScaling() {
         return this.manualScaling == null ? Codegen.empty() : this.manualScaling;
     }
 
     @Import(name="modelId", required=true)
       private final Output<String> modelId;
 
-    public Output<String> getModelId() {
+    public Output<String> modelId() {
         return this.modelId;
     }
 
@@ -160,7 +160,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -171,7 +171,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="packageUris")
       private final @Nullable Output<List<String>> packageUris;
 
-    public Output<List<String>> getPackageUris() {
+    public Output<List<String>> packageUris() {
         return this.packageUris == null ? Codegen.empty() : this.packageUris;
     }
 
@@ -182,14 +182,14 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="predictionClass")
       private final @Nullable Output<String> predictionClass;
 
-    public Output<String> getPredictionClass() {
+    public Output<String> predictionClass() {
         return this.predictionClass == null ? Codegen.empty() : this.predictionClass;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -200,7 +200,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pythonVersion", required=true)
       private final Output<String> pythonVersion;
 
-    public Output<String> getPythonVersion() {
+    public Output<String> pythonVersion() {
         return this.pythonVersion;
     }
 
@@ -211,7 +211,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requestLoggingConfig")
       private final @Nullable Output<GoogleCloudMlV1__RequestLoggingConfigArgs> requestLoggingConfig;
 
-    public Output<GoogleCloudMlV1__RequestLoggingConfigArgs> getRequestLoggingConfig() {
+    public Output<GoogleCloudMlV1__RequestLoggingConfigArgs> requestLoggingConfig() {
         return this.requestLoggingConfig == null ? Codegen.empty() : this.requestLoggingConfig;
     }
 
@@ -222,7 +222,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="routes")
       private final @Nullable Output<GoogleCloudMlV1__RouteMapArgs> routes;
 
-    public Output<GoogleCloudMlV1__RouteMapArgs> getRoutes() {
+    public Output<GoogleCloudMlV1__RouteMapArgs> routes() {
         return this.routes == null ? Codegen.empty() : this.routes;
     }
 
@@ -233,7 +233,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="runtimeVersion", required=true)
       private final Output<String> runtimeVersion;
 
-    public Output<String> getRuntimeVersion() {
+    public Output<String> runtimeVersion() {
         return this.runtimeVersion;
     }
 
@@ -244,7 +244,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 

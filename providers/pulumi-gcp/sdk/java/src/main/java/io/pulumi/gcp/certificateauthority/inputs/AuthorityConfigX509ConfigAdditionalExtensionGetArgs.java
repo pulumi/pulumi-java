@@ -24,7 +24,7 @@ public final class AuthorityConfigX509ConfigAdditionalExtensionGetArgs extends i
     @Import(name="critical", required=true)
       private final Output<Boolean> critical;
 
-    public Output<Boolean> getCritical() {
+    public Output<Boolean> critical() {
         return this.critical;
     }
 
@@ -36,7 +36,7 @@ public final class AuthorityConfigX509ConfigAdditionalExtensionGetArgs extends i
     @Import(name="objectId", required=true)
       private final Output<AuthorityConfigX509ConfigAdditionalExtensionObjectIdGetArgs> objectId;
 
-    public Output<AuthorityConfigX509ConfigAdditionalExtensionObjectIdGetArgs> getObjectId() {
+    public Output<AuthorityConfigX509ConfigAdditionalExtensionObjectIdGetArgs> objectId() {
         return this.objectId;
     }
 
@@ -47,7 +47,7 @@ public final class AuthorityConfigX509ConfigAdditionalExtensionGetArgs extends i
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

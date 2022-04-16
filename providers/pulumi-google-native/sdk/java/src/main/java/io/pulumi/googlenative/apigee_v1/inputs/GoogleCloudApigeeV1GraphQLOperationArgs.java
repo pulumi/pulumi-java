@@ -27,7 +27,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationArgs extends io.pulumi.res
     @Import(name="operation")
       private final @Nullable Output<String> operation;
 
-    public Output<String> getOperation() {
+    public Output<String> operation() {
         return this.operation == null ? Codegen.empty() : this.operation;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationArgs extends io.pulumi.res
     @Import(name="operationTypes", required=true)
       private final Output<List<String>> operationTypes;
 
-    public Output<List<String>> getOperationTypes() {
+    public Output<List<String>> operationTypes() {
         return this.operationTypes;
     }
 

@@ -26,7 +26,7 @@ public final class JobDeliveryInfoResponse {
      * Scheduled date time.
      * 
     */
-    public Optional<String> getScheduledDateTime() {
+    public Optional<String> scheduledDateTime() {
         return Optional.ofNullable(this.scheduledDateTime);
     }
 

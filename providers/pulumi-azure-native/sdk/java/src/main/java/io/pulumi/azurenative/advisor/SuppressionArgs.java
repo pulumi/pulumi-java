@@ -22,7 +22,7 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -33,7 +33,7 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="recommendationId", required=true)
       private final Output<String> recommendationId;
 
-    public Output<String> getRecommendationId() {
+    public Output<String> recommendationId() {
         return this.recommendationId;
     }
 
@@ -44,7 +44,7 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceUri", required=true)
       private final Output<String> resourceUri;
 
-    public Output<String> getResourceUri() {
+    public Output<String> resourceUri() {
         return this.resourceUri;
     }
 
@@ -55,7 +55,7 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="suppressionId")
       private final @Nullable Output<String> suppressionId;
 
-    public Output<String> getSuppressionId() {
+    public Output<String> suppressionId() {
         return this.suppressionId == null ? Codegen.empty() : this.suppressionId;
     }
 
@@ -66,7 +66,7 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ttl")
       private final @Nullable Output<String> ttl;
 
-    public Output<String> getTtl() {
+    public Output<String> ttl() {
         return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 

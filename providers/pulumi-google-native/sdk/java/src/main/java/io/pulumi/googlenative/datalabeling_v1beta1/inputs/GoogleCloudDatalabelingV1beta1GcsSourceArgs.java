@@ -25,7 +25,7 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceArgs extends io.pulumi
     @Import(name="inputUri", required=true)
       private final Output<String> inputUri;
 
-    public Output<String> getInputUri() {
+    public Output<String> inputUri() {
         return this.inputUri;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceArgs extends io.pulumi
     @Import(name="mimeType", required=true)
       private final Output<String> mimeType;
 
-    public Output<String> getMimeType() {
+    public Output<String> mimeType() {
         return this.mimeType;
     }
 

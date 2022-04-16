@@ -19,7 +19,7 @@ public final class GetExpressRouteCrossConnectionPeeringArgs extends io.pulumi.r
     @Import(name="crossConnectionName", required=true)
       private final String crossConnectionName;
 
-    public String getCrossConnectionName() {
+    public String crossConnectionName() {
         return this.crossConnectionName;
     }
 
@@ -30,7 +30,7 @@ public final class GetExpressRouteCrossConnectionPeeringArgs extends io.pulumi.r
     @Import(name="peeringName", required=true)
       private final String peeringName;
 
-    public String getPeeringName() {
+    public String peeringName() {
         return this.peeringName;
     }
 
@@ -41,7 +41,7 @@ public final class GetExpressRouteCrossConnectionPeeringArgs extends io.pulumi.r
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

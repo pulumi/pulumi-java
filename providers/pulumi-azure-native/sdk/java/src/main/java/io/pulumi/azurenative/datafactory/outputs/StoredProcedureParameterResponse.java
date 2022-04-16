@@ -35,14 +35,14 @@ public final class StoredProcedureParameterResponse {
      * Stored procedure parameter type.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
      * Stored procedure parameter value. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getValue() {
+    public Optional<Object> value() {
         return Optional.ofNullable(this.value);
     }
 

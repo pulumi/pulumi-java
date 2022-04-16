@@ -27,7 +27,7 @@ public final class RequestsBasedTriggerArgs extends io.pulumi.resources.Resource
     @Import(name="count")
       private final @Nullable Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count == null ? Codegen.empty() : this.count;
     }
 
@@ -38,7 +38,7 @@ public final class RequestsBasedTriggerArgs extends io.pulumi.resources.Resource
     @Import(name="timeInterval")
       private final @Nullable Output<String> timeInterval;
 
-    public Output<String> getTimeInterval() {
+    public Output<String> timeInterval() {
         return this.timeInterval == null ? Codegen.empty() : this.timeInterval;
     }
 

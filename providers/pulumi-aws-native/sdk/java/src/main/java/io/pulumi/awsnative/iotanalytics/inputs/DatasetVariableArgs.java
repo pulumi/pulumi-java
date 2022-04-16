@@ -21,35 +21,35 @@ public final class DatasetVariableArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="datasetContentVersionValue")
       private final @Nullable Output<DatasetContentVersionValueArgs> datasetContentVersionValue;
 
-    public Output<DatasetContentVersionValueArgs> getDatasetContentVersionValue() {
+    public Output<DatasetContentVersionValueArgs> datasetContentVersionValue() {
         return this.datasetContentVersionValue == null ? Codegen.empty() : this.datasetContentVersionValue;
     }
 
     @Import(name="doubleValue")
       private final @Nullable Output<Double> doubleValue;
 
-    public Output<Double> getDoubleValue() {
+    public Output<Double> doubleValue() {
         return this.doubleValue == null ? Codegen.empty() : this.doubleValue;
     }
 
     @Import(name="outputFileUriValue")
       private final @Nullable Output<DatasetOutputFileUriValueArgs> outputFileUriValue;
 
-    public Output<DatasetOutputFileUriValueArgs> getOutputFileUriValue() {
+    public Output<DatasetOutputFileUriValueArgs> outputFileUriValue() {
         return this.outputFileUriValue == null ? Codegen.empty() : this.outputFileUriValue;
     }
 
     @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;
 
-    public Output<String> getStringValue() {
+    public Output<String> stringValue() {
         return this.stringValue == null ? Codegen.empty() : this.stringValue;
     }
 
     @Import(name="variableName", required=true)
       private final Output<String> variableName;
 
-    public Output<String> getVariableName() {
+    public Output<String> variableName() {
         return this.variableName;
     }
 

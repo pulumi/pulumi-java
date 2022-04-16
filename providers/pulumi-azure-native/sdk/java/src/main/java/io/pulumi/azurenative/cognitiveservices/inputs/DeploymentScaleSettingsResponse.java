@@ -26,7 +26,7 @@ public final class DeploymentScaleSettingsResponse extends io.pulumi.resources.I
     @Import(name="capacity")
       private final @Nullable Integer capacity;
 
-    public Optional<Integer> getCapacity() {
+    public Optional<Integer> capacity() {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
@@ -37,7 +37,7 @@ public final class DeploymentScaleSettingsResponse extends io.pulumi.resources.I
     @Import(name="scaleType")
       private final @Nullable String scaleType;
 
-    public Optional<String> getScaleType() {
+    public Optional<String> scaleType() {
         return this.scaleType == null ? Optional.empty() : Optional.ofNullable(this.scaleType);
     }
 

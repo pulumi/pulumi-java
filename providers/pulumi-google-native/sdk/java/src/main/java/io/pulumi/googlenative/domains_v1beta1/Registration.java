@@ -35,7 +35,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * @return Settings for contact information linked to the `Registration`. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureContactSettings` method.
      * 
      */
-    public Output<ContactSettingsResponse> getContactSettings() {
+    public Output<ContactSettingsResponse> contactSettings() {
         return this.contactSettings;
     }
     /**
@@ -49,7 +49,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * @return The creation timestamp of the `Registration` resource.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -63,7 +63,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * @return Settings controlling the DNS configuration of the `Registration`. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureDnsSettings` method.
      * 
      */
-    public Output<DnsSettingsResponse> getDnsSettings() {
+    public Output<DnsSettingsResponse> dnsSettings() {
         return this.dnsSettings;
     }
     /**
@@ -77,7 +77,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * @return Immutable. The domain name. Unicode domain names must be expressed in Punycode format.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -91,7 +91,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * @return The expiration timestamp of the `Registration`.
      * 
      */
-    public Output<String> getExpireTime() {
+    public Output<String> expireTime() {
         return this.expireTime;
     }
     /**
@@ -105,7 +105,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * @return The set of issues with the `Registration` that require attention.
      * 
      */
-    public Output<List<String>> getIssues() {
+    public Output<List<String>> issues() {
         return this.issues;
     }
     /**
@@ -119,7 +119,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * @return Set of labels associated with the `Registration`.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -133,7 +133,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * @return Settings for management of the `Registration`, including renewal, billing, and transfer. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureManagementSettings` method.
      * 
      */
-    public Output<ManagementSettingsResponse> getManagementSettings() {
+    public Output<ManagementSettingsResponse> managementSettings() {
         return this.managementSettings;
     }
     /**
@@ -147,7 +147,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * @return Name of the `Registration` resource, in the format `projects/*{@literal /}locations/*{@literal /}registrations/`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -161,7 +161,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * @return Pending contact settings for the `Registration`. Updates to the `contact_settings` field that change its `registrant_contact` or `privacy` fields require email confirmation by the `registrant_contact` before taking effect. This field is set only if there are pending updates to the `contact_settings` that have not been confirmed. To confirm the changes, the `registrant_contact` must follow the instructions in the email they receive.
      * 
      */
-    public Output<ContactSettingsResponse> getPendingContactSettings() {
+    public Output<ContactSettingsResponse> pendingContactSettings() {
         return this.pendingContactSettings;
     }
     /**
@@ -175,7 +175,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * @return The state of the `Registration`
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -189,7 +189,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * @return Set of options for the `contact_settings.privacy` field that this `Registration` supports.
      * 
      */
-    public Output<List<String>> getSupportedPrivacy() {
+    public Output<List<String>> supportedPrivacy() {
         return this.supportedPrivacy;
     }
 

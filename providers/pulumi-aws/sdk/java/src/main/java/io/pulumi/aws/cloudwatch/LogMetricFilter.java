@@ -41,7 +41,7 @@ public class LogMetricFilter extends io.pulumi.resources.CustomResource {
      * @return The name of the log group to associate the metric filter with.
      * 
      */
-    public Output<String> getLogGroupName() {
+    public Output<String> logGroupName() {
         return this.logGroupName;
     }
     /**
@@ -55,7 +55,7 @@ public class LogMetricFilter extends io.pulumi.resources.CustomResource {
      * @return A block defining collection of information needed to define how metric data gets emitted. See below.
      * 
      */
-    public Output<LogMetricFilterMetricTransformation> getMetricTransformation() {
+    public Output<LogMetricFilterMetricTransformation> metricTransformation() {
         return this.metricTransformation;
     }
     /**
@@ -69,7 +69,7 @@ public class LogMetricFilter extends io.pulumi.resources.CustomResource {
      * @return A name for the metric filter.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +85,7 @@ public class LogMetricFilter extends io.pulumi.resources.CustomResource {
      * for extracting metric data out of ingested log events.
      * 
      */
-    public Output<String> getPattern() {
+    public Output<String> pattern() {
         return this.pattern;
     }
 

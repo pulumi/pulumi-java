@@ -24,7 +24,7 @@ public final class RegionalReplicationStatusResponse extends io.pulumi.resources
     @Import(name="details", required=true)
       private final String details;
 
-    public String getDetails() {
+    public String details() {
         return this.details;
     }
 
@@ -35,7 +35,7 @@ public final class RegionalReplicationStatusResponse extends io.pulumi.resources
     @Import(name="progress", required=true)
       private final Integer progress;
 
-    public Integer getProgress() {
+    public Integer progress() {
         return this.progress;
     }
 
@@ -46,7 +46,7 @@ public final class RegionalReplicationStatusResponse extends io.pulumi.resources
     @Import(name="region", required=true)
       private final String region;
 
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 
@@ -57,7 +57,7 @@ public final class RegionalReplicationStatusResponse extends io.pulumi.resources
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

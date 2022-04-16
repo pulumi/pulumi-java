@@ -23,7 +23,7 @@ public final class PosixGroupResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="gid", required=true)
       private final String gid;
 
-    public String getGid() {
+    public String gid() {
         return this.gid;
     }
 
@@ -34,7 +34,7 @@ public final class PosixGroupResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -45,7 +45,7 @@ public final class PosixGroupResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="systemId", required=true)
       private final String systemId;
 
-    public String getSystemId() {
+    public String systemId() {
         return this.systemId;
     }
 

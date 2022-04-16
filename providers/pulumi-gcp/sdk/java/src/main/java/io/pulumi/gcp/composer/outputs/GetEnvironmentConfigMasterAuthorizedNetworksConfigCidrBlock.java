@@ -20,10 +20,10 @@ public final class GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock {
         this.displayName = displayName;
     }
 
-    public String getCidrBlock() {
+    public String cidrBlock() {
         return this.cidrBlock;
     }
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 

@@ -19,42 +19,42 @@ public final class SpotFleetLaunchTemplateOverrides extends io.pulumi.resources.
     @Import(name="availabilityZone")
       private final @Nullable String availabilityZone;
 
-    public Optional<String> getAvailabilityZone() {
+    public Optional<String> availabilityZone() {
         return this.availabilityZone == null ? Optional.empty() : Optional.ofNullable(this.availabilityZone);
     }
 
     @Import(name="instanceRequirements")
       private final @Nullable SpotFleetInstanceRequirementsRequest instanceRequirements;
 
-    public Optional<SpotFleetInstanceRequirementsRequest> getInstanceRequirements() {
+    public Optional<SpotFleetInstanceRequirementsRequest> instanceRequirements() {
         return this.instanceRequirements == null ? Optional.empty() : Optional.ofNullable(this.instanceRequirements);
     }
 
     @Import(name="instanceType")
       private final @Nullable String instanceType;
 
-    public Optional<String> getInstanceType() {
+    public Optional<String> instanceType() {
         return this.instanceType == null ? Optional.empty() : Optional.ofNullable(this.instanceType);
     }
 
     @Import(name="spotPrice")
       private final @Nullable String spotPrice;
 
-    public Optional<String> getSpotPrice() {
+    public Optional<String> spotPrice() {
         return this.spotPrice == null ? Optional.empty() : Optional.ofNullable(this.spotPrice);
     }
 
     @Import(name="subnetId")
       private final @Nullable String subnetId;
 
-    public Optional<String> getSubnetId() {
+    public Optional<String> subnetId() {
         return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
     }
 
     @Import(name="weightedCapacity")
       private final @Nullable Double weightedCapacity;
 
-    public Optional<Double> getWeightedCapacity() {
+    public Optional<Double> weightedCapacity() {
         return this.weightedCapacity == null ? Optional.empty() : Optional.ofNullable(this.weightedCapacity);
     }
 

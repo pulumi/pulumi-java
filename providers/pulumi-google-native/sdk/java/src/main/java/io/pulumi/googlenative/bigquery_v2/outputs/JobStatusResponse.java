@@ -41,21 +41,21 @@ public final class JobStatusResponse {
      * Final error result of the job. If present, indicates that the job has completed and was unsuccessful.
      * 
     */
-    public ErrorProtoResponse getErrorResult() {
+    public ErrorProtoResponse errorResult() {
         return this.errorResult;
     }
     /**
      * The first errors encountered during the running of the job. The final message includes the number of errors that caused the process to stop. Errors here do not necessarily mean that the job has completed or was unsuccessful.
      * 
     */
-    public List<ErrorProtoResponse> getErrors() {
+    public List<ErrorProtoResponse> errors() {
         return this.errors;
     }
     /**
      * Running state of the job.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

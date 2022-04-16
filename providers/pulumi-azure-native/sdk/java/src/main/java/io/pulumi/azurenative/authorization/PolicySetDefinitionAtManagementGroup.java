@@ -47,7 +47,7 @@ public class PolicySetDefinitionAtManagementGroup extends io.pulumi.resources.Cu
      * @return The policy set definition description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -61,7 +61,7 @@ public class PolicySetDefinitionAtManagementGroup extends io.pulumi.resources.Cu
      * @return The display name of the policy set definition.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -75,7 +75,7 @@ public class PolicySetDefinitionAtManagementGroup extends io.pulumi.resources.Cu
      * @return The policy set definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.
      * 
      */
-    public Output</* @Nullable */ Object> getMetadata() {
+    public Output</* @Nullable */ Object> metadata() {
         return this.metadata;
     }
     /**
@@ -89,7 +89,7 @@ public class PolicySetDefinitionAtManagementGroup extends io.pulumi.resources.Cu
      * @return The name of the policy set definition.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -103,7 +103,7 @@ public class PolicySetDefinitionAtManagementGroup extends io.pulumi.resources.Cu
      * @return The policy set definition parameters that can be used in policy definition references.
      * 
      */
-    public Output</* @Nullable */ Map<String,ParameterDefinitionsValueResponse>> getParameters() {
+    public Output</* @Nullable */ Map<String,ParameterDefinitionsValueResponse>> parameters() {
         return this.parameters;
     }
     /**
@@ -117,7 +117,7 @@ public class PolicySetDefinitionAtManagementGroup extends io.pulumi.resources.Cu
      * @return The metadata describing groups of policy definition references within the policy set definition.
      * 
      */
-    public Output</* @Nullable */ List<PolicyDefinitionGroupResponse>> getPolicyDefinitionGroups() {
+    public Output</* @Nullable */ List<PolicyDefinitionGroupResponse>> policyDefinitionGroups() {
         return this.policyDefinitionGroups;
     }
     /**
@@ -131,7 +131,7 @@ public class PolicySetDefinitionAtManagementGroup extends io.pulumi.resources.Cu
      * @return An array of policy definition references.
      * 
      */
-    public Output<List<PolicyDefinitionReferenceResponse>> getPolicyDefinitions() {
+    public Output<List<PolicyDefinitionReferenceResponse>> policyDefinitions() {
         return this.policyDefinitions;
     }
     /**
@@ -145,7 +145,7 @@ public class PolicySetDefinitionAtManagementGroup extends io.pulumi.resources.Cu
      * @return The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
      * 
      */
-    public Output</* @Nullable */ String> getPolicyType() {
+    public Output</* @Nullable */ String> policyType() {
         return this.policyType;
     }
     /**
@@ -159,7 +159,7 @@ public class PolicySetDefinitionAtManagementGroup extends io.pulumi.resources.Cu
      * @return The type of the resource (Microsoft.Authorization/policySetDefinitions).
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

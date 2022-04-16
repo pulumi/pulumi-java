@@ -24,7 +24,7 @@ public final class EdgeCacheServiceRoutingPathMatcherArgs extends io.pulumi.reso
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -35,7 +35,7 @@ public final class EdgeCacheServiceRoutingPathMatcherArgs extends io.pulumi.reso
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -47,7 +47,7 @@ public final class EdgeCacheServiceRoutingPathMatcherArgs extends io.pulumi.reso
     @Import(name="routeRules", required=true)
       private final Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleArgs>> routeRules;
 
-    public Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleArgs>> getRouteRules() {
+    public Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleArgs>> routeRules() {
         return this.routeRules;
     }
 

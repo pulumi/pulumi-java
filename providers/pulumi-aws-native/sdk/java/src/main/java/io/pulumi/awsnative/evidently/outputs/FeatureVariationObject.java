@@ -33,19 +33,19 @@ public final class FeatureVariationObject {
         this.variationName = variationName;
     }
 
-    public Optional<Boolean> getBooleanValue() {
+    public Optional<Boolean> booleanValue() {
         return Optional.ofNullable(this.booleanValue);
     }
-    public Optional<Double> getDoubleValue() {
+    public Optional<Double> doubleValue() {
         return Optional.ofNullable(this.doubleValue);
     }
-    public Optional<Double> getLongValue() {
+    public Optional<Double> longValue() {
         return Optional.ofNullable(this.longValue);
     }
-    public Optional<String> getStringValue() {
+    public Optional<String> stringValue() {
         return Optional.ofNullable(this.stringValue);
     }
-    public Optional<String> getVariationName() {
+    public Optional<String> variationName() {
         return Optional.ofNullable(this.variationName);
     }
 

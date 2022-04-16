@@ -26,14 +26,14 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterConfig")
       private final @Nullable Output<ClusterConfigArgs> clusterConfig;
 
-    public Output<ClusterConfigArgs> getClusterConfig() {
+    public Output<ClusterConfigArgs> clusterConfig() {
         return this.clusterConfig == null ? Codegen.empty() : this.clusterConfig;
     }
 
     @Import(name="clusterId", required=true)
       private final Output<String> clusterId;
 
-    public Output<String> getClusterId() {
+    public Output<String> clusterId() {
         return this.clusterId;
     }
 
@@ -44,7 +44,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultStorageType")
       private final @Nullable Output<ClusterDefaultStorageType> defaultStorageType;
 
-    public Output<ClusterDefaultStorageType> getDefaultStorageType() {
+    public Output<ClusterDefaultStorageType> defaultStorageType() {
         return this.defaultStorageType == null ? Codegen.empty() : this.defaultStorageType;
     }
 
@@ -55,14 +55,14 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptionConfig")
       private final @Nullable Output<EncryptionConfigArgs> encryptionConfig;
 
-    public Output<EncryptionConfigArgs> getEncryptionConfig() {
+    public Output<EncryptionConfigArgs> encryptionConfig() {
         return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
     }
 
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -73,7 +73,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -84,14 +84,14 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -102,7 +102,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serveNodes")
       private final @Nullable Output<Integer> serveNodes;
 
-    public Output<Integer> getServeNodes() {
+    public Output<Integer> serveNodes() {
         return this.serveNodes == null ? Codegen.empty() : this.serveNodes;
     }
 

@@ -22,7 +22,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectA
     @Import(name="commonName")
       private final @Nullable Output<String> commonName;
 
-    public Output<String> getCommonName() {
+    public Output<String> commonName() {
         return this.commonName == null ? Codegen.empty() : this.commonName;
     }
 
@@ -33,7 +33,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectA
     @Import(name="country")
       private final @Nullable Output<String> country;
 
-    public Output<String> getCountry() {
+    public Output<String> country() {
         return this.country == null ? Codegen.empty() : this.country;
     }
 
@@ -44,7 +44,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectA
     @Import(name="distinguishedNameQualifier")
       private final @Nullable Output<String> distinguishedNameQualifier;
 
-    public Output<String> getDistinguishedNameQualifier() {
+    public Output<String> distinguishedNameQualifier() {
         return this.distinguishedNameQualifier == null ? Codegen.empty() : this.distinguishedNameQualifier;
     }
 
@@ -55,7 +55,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectA
     @Import(name="generationQualifier")
       private final @Nullable Output<String> generationQualifier;
 
-    public Output<String> getGenerationQualifier() {
+    public Output<String> generationQualifier() {
         return this.generationQualifier == null ? Codegen.empty() : this.generationQualifier;
     }
 
@@ -66,7 +66,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectA
     @Import(name="givenName")
       private final @Nullable Output<String> givenName;
 
-    public Output<String> getGivenName() {
+    public Output<String> givenName() {
         return this.givenName == null ? Codegen.empty() : this.givenName;
     }
 
@@ -77,7 +77,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectA
     @Import(name="initials")
       private final @Nullable Output<String> initials;
 
-    public Output<String> getInitials() {
+    public Output<String> initials() {
         return this.initials == null ? Codegen.empty() : this.initials;
     }
 
@@ -88,7 +88,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectA
     @Import(name="locality")
       private final @Nullable Output<String> locality;
 
-    public Output<String> getLocality() {
+    public Output<String> locality() {
         return this.locality == null ? Codegen.empty() : this.locality;
     }
 
@@ -99,7 +99,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectA
     @Import(name="organization")
       private final @Nullable Output<String> organization;
 
-    public Output<String> getOrganization() {
+    public Output<String> organization() {
         return this.organization == null ? Codegen.empty() : this.organization;
     }
 
@@ -110,7 +110,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectA
     @Import(name="organizationalUnit")
       private final @Nullable Output<String> organizationalUnit;
 
-    public Output<String> getOrganizationalUnit() {
+    public Output<String> organizationalUnit() {
         return this.organizationalUnit == null ? Codegen.empty() : this.organizationalUnit;
     }
 
@@ -121,7 +121,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectA
     @Import(name="pseudonym")
       private final @Nullable Output<String> pseudonym;
 
-    public Output<String> getPseudonym() {
+    public Output<String> pseudonym() {
         return this.pseudonym == null ? Codegen.empty() : this.pseudonym;
     }
 
@@ -132,7 +132,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectA
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -143,7 +143,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectA
     @Import(name="surname")
       private final @Nullable Output<String> surname;
 
-    public Output<String> getSurname() {
+    public Output<String> surname() {
         return this.surname == null ? Codegen.empty() : this.surname;
     }
 
@@ -154,7 +154,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectA
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 

@@ -26,7 +26,7 @@ public final class FileServerWriteSettingsResponse extends io.pulumi.resources.I
     @Import(name="copyBehavior")
       private final @Nullable Object copyBehavior;
 
-    public Optional<Object> getCopyBehavior() {
+    public Optional<Object> copyBehavior() {
         return this.copyBehavior == null ? Optional.empty() : Optional.ofNullable(this.copyBehavior);
     }
 
@@ -37,7 +37,7 @@ public final class FileServerWriteSettingsResponse extends io.pulumi.resources.I
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
-    public Optional<Object> getDisableMetricsCollection() {
+    public Optional<Object> disableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
@@ -48,7 +48,7 @@ public final class FileServerWriteSettingsResponse extends io.pulumi.resources.I
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
-    public Optional<Object> getMaxConcurrentConnections() {
+    public Optional<Object> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
@@ -60,7 +60,7 @@ public final class FileServerWriteSettingsResponse extends io.pulumi.resources.I
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

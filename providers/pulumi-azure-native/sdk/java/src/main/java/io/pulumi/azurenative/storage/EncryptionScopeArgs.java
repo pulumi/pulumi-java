@@ -27,7 +27,7 @@ public final class EncryptionScopeArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -38,7 +38,7 @@ public final class EncryptionScopeArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="encryptionScopeName")
       private final @Nullable Output<String> encryptionScopeName;
 
-    public Output<String> getEncryptionScopeName() {
+    public Output<String> encryptionScopeName() {
         return this.encryptionScopeName == null ? Codegen.empty() : this.encryptionScopeName;
     }
 
@@ -49,7 +49,7 @@ public final class EncryptionScopeArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="keyVaultProperties")
       private final @Nullable Output<EncryptionScopeKeyVaultPropertiesArgs> keyVaultProperties;
 
-    public Output<EncryptionScopeKeyVaultPropertiesArgs> getKeyVaultProperties() {
+    public Output<EncryptionScopeKeyVaultPropertiesArgs> keyVaultProperties() {
         return this.keyVaultProperties == null ? Codegen.empty() : this.keyVaultProperties;
     }
 
@@ -60,7 +60,7 @@ public final class EncryptionScopeArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="requireInfrastructureEncryption")
       private final @Nullable Output<Boolean> requireInfrastructureEncryption;
 
-    public Output<Boolean> getRequireInfrastructureEncryption() {
+    public Output<Boolean> requireInfrastructureEncryption() {
         return this.requireInfrastructureEncryption == null ? Codegen.empty() : this.requireInfrastructureEncryption;
     }
 
@@ -71,7 +71,7 @@ public final class EncryptionScopeArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -82,7 +82,7 @@ public final class EncryptionScopeArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="source")
       private final @Nullable Output<Either<String,EncryptionScopeSource>> source;
 
-    public Output<Either<String,EncryptionScopeSource>> getSource() {
+    public Output<Either<String,EncryptionScopeSource>> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 
@@ -93,7 +93,7 @@ public final class EncryptionScopeArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="state")
       private final @Nullable Output<Either<String,EncryptionScopeState>> state;
 
-    public Output<Either<String,EncryptionScopeState>> getState() {
+    public Output<Either<String,EncryptionScopeState>> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

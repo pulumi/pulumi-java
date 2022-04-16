@@ -52,14 +52,14 @@ public final class NetworkInterfaceResourceSettingsResponse {
      * Gets or sets a value indicating whether accelerated networking is enabled.
      * 
     */
-    public Optional<Boolean> getEnableAcceleratedNetworking() {
+    public Optional<Boolean> enableAcceleratedNetworking() {
         return Optional.ofNullable(this.enableAcceleratedNetworking);
     }
     /**
      * Gets or sets the IP configurations of the NIC.
      * 
     */
-    public List<NicIpConfigurationResourceSettingsResponse> getIpConfigurations() {
+    public List<NicIpConfigurationResourceSettingsResponse> ipConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
     /**
@@ -67,14 +67,14 @@ public final class NetworkInterfaceResourceSettingsResponse {
      * Expected value is 'Microsoft.Network/networkInterfaces'.
      * 
     */
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
     /**
      * Gets or sets the target Resource name.
      * 
     */
-    public String getTargetResourceName() {
+    public String targetResourceName() {
         return this.targetResourceName;
     }
 

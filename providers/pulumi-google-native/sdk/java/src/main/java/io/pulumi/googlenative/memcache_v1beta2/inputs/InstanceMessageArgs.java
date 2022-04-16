@@ -23,7 +23,7 @@ public final class InstanceMessageArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="code")
       private final @Nullable Output<InstanceMessageCode> code;
 
-    public Output<InstanceMessageCode> getCode() {
+    public Output<InstanceMessageCode> code() {
         return this.code == null ? Codegen.empty() : this.code;
     }
 
@@ -34,7 +34,7 @@ public final class InstanceMessageArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message == null ? Codegen.empty() : this.message;
     }
 

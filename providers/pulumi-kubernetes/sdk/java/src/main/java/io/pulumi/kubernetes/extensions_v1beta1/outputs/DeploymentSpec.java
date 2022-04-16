@@ -88,63 +88,63 @@ public final class DeploymentSpec {
      * Minimum number of seconds for which a newly created pod should be ready without any of its container crashing, for it to be considered available. Defaults to 0 (pod will be considered available as soon as it is ready)
      * 
     */
-    public Optional<Integer> getMinReadySeconds() {
+    public Optional<Integer> minReadySeconds() {
         return Optional.ofNullable(this.minReadySeconds);
     }
     /**
      * Indicates that the deployment is paused and will not be processed by the deployment controller.
      * 
     */
-    public Optional<Boolean> getPaused() {
+    public Optional<Boolean> paused() {
         return Optional.ofNullable(this.paused);
     }
     /**
      * The maximum time in seconds for a deployment to make progress before it is considered to be failed. The deployment controller will continue to process failed deployments and a condition with a ProgressDeadlineExceeded reason will be surfaced in the deployment status. Note that progress will not be estimated during the time a deployment is paused. This is set to the max value of int32 (i.e. 2147483647) by default, which means "no deadline".
      * 
     */
-    public Optional<Integer> getProgressDeadlineSeconds() {
+    public Optional<Integer> progressDeadlineSeconds() {
         return Optional.ofNullable(this.progressDeadlineSeconds);
     }
     /**
      * Number of desired pods. This is a pointer to distinguish between explicit zero and not specified. Defaults to 1.
      * 
     */
-    public Optional<Integer> getReplicas() {
+    public Optional<Integer> replicas() {
         return Optional.ofNullable(this.replicas);
     }
     /**
      * The number of old ReplicaSets to retain to allow rollback. This is a pointer to distinguish between explicit zero and not specified. This is set to the max value of int32 (i.e. 2147483647) by default, which means "retaining all old RelicaSets".
      * 
     */
-    public Optional<Integer> getRevisionHistoryLimit() {
+    public Optional<Integer> revisionHistoryLimit() {
         return Optional.ofNullable(this.revisionHistoryLimit);
     }
     /**
      * DEPRECATED. The config this deployment is rolling back to. Will be cleared after rollback is done.
      * 
     */
-    public Optional<RollbackConfig> getRollbackTo() {
+    public Optional<RollbackConfig> rollbackTo() {
         return Optional.ofNullable(this.rollbackTo);
     }
     /**
      * Label selector for pods. Existing ReplicaSets whose pods are selected by this will be the ones affected by this deployment.
      * 
     */
-    public Optional<LabelSelector> getSelector() {
+    public Optional<LabelSelector> selector() {
         return Optional.ofNullable(this.selector);
     }
     /**
      * The deployment strategy to use to replace existing pods with new ones.
      * 
     */
-    public Optional<DeploymentStrategy> getStrategy() {
+    public Optional<DeploymentStrategy> strategy() {
         return Optional.ofNullable(this.strategy);
     }
     /**
      * Template describes the pods that will be created.
      * 
     */
-    public PodTemplateSpec getTemplate() {
+    public PodTemplateSpec template() {
         return this.template;
     }
 

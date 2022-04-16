@@ -30,7 +30,7 @@ public final class CustomServiceTelemetry {
      * https://cloud.google.com/apis/design/resource_names.
      * 
     */
-    public Optional<String> getPropResourceName() {
+    public Optional<String> resourceName() {
         return Optional.ofNullable(this.resourceName);
     }
 

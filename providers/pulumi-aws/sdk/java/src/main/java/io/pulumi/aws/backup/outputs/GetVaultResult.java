@@ -58,38 +58,38 @@ public final class GetVaultResult {
      * The ARN of the vault.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The server-side encryption key that is used to protect your backups.
      * 
     */
-    public String getKmsKeyArn() {
+    public String kmsKeyArn() {
         return this.kmsKeyArn;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The number of recovery points that are stored in a backup vault.
      * 
     */
-    public Integer getRecoveryPoints() {
+    public Integer recoveryPoints() {
         return this.recoveryPoints;
     }
     /**
      * Metadata that you can assign to help organize the resources that you create.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

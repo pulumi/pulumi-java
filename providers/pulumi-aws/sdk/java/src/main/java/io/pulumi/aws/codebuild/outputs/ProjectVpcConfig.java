@@ -40,21 +40,21 @@ public final class ProjectVpcConfig {
      * Security group IDs to assign to running builds.
      * 
     */
-    public List<String> getSecurityGroupIds() {
+    public List<String> securityGroupIds() {
         return this.securityGroupIds;
     }
     /**
      * Subnet IDs within which to run builds.
      * 
     */
-    public List<String> getSubnets() {
+    public List<String> subnets() {
         return this.subnets;
     }
     /**
      * ID of the VPC within which to run builds.
      * 
     */
-    public String getVpcId() {
+    public String vpcId() {
         return this.vpcId;
     }
 

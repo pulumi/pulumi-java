@@ -26,7 +26,7 @@ public final class PartnerContentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="b2b")
       private final @Nullable Output<B2BPartnerContentArgs> b2b;
 
-    public Output<B2BPartnerContentArgs> getB2b() {
+    public Output<B2BPartnerContentArgs> b2b() {
         return this.b2b == null ? Codegen.empty() : this.b2b;
     }
 

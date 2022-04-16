@@ -26,7 +26,7 @@ public final class IotMappingPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="content")
       private final @Nullable Output<Object> content;
 
-    public Output<Object> getContent() {
+    public Output<Object> content() {
         return this.content == null ? Codegen.empty() : this.content;
     }
 

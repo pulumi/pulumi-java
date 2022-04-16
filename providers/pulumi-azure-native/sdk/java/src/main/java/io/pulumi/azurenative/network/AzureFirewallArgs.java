@@ -33,7 +33,7 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="additionalProperties")
       private final @Nullable Output<Map<String,String>> additionalProperties;
 
-    public Output<Map<String,String>> getAdditionalProperties() {
+    public Output<Map<String,String>> additionalProperties() {
         return this.additionalProperties == null ? Codegen.empty() : this.additionalProperties;
     }
 
@@ -44,7 +44,7 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationRuleCollections")
       private final @Nullable Output<List<AzureFirewallApplicationRuleCollectionArgs>> applicationRuleCollections;
 
-    public Output<List<AzureFirewallApplicationRuleCollectionArgs>> getApplicationRuleCollections() {
+    public Output<List<AzureFirewallApplicationRuleCollectionArgs>> applicationRuleCollections() {
         return this.applicationRuleCollections == null ? Codegen.empty() : this.applicationRuleCollections;
     }
 
@@ -55,7 +55,7 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="azureFirewallName")
       private final @Nullable Output<String> azureFirewallName;
 
-    public Output<String> getAzureFirewallName() {
+    public Output<String> azureFirewallName() {
         return this.azureFirewallName == null ? Codegen.empty() : this.azureFirewallName;
     }
 
@@ -66,7 +66,7 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="firewallPolicy")
       private final @Nullable Output<SubResourceArgs> firewallPolicy;
 
-    public Output<SubResourceArgs> getFirewallPolicy() {
+    public Output<SubResourceArgs> firewallPolicy() {
         return this.firewallPolicy == null ? Codegen.empty() : this.firewallPolicy;
     }
 
@@ -77,7 +77,7 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hubIPAddresses")
       private final @Nullable Output<HubIPAddressesArgs> hubIPAddresses;
 
-    public Output<HubIPAddressesArgs> getHubIPAddresses() {
+    public Output<HubIPAddressesArgs> hubIPAddresses() {
         return this.hubIPAddresses == null ? Codegen.empty() : this.hubIPAddresses;
     }
 
@@ -88,7 +88,7 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -99,7 +99,7 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipConfigurations")
       private final @Nullable Output<List<AzureFirewallIPConfigurationArgs>> ipConfigurations;
 
-    public Output<List<AzureFirewallIPConfigurationArgs>> getIpConfigurations() {
+    public Output<List<AzureFirewallIPConfigurationArgs>> ipConfigurations() {
         return this.ipConfigurations == null ? Codegen.empty() : this.ipConfigurations;
     }
 
@@ -110,7 +110,7 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -121,7 +121,7 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="managementIpConfiguration")
       private final @Nullable Output<AzureFirewallIPConfigurationArgs> managementIpConfiguration;
 
-    public Output<AzureFirewallIPConfigurationArgs> getManagementIpConfiguration() {
+    public Output<AzureFirewallIPConfigurationArgs> managementIpConfiguration() {
         return this.managementIpConfiguration == null ? Codegen.empty() : this.managementIpConfiguration;
     }
 
@@ -132,7 +132,7 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="natRuleCollections")
       private final @Nullable Output<List<AzureFirewallNatRuleCollectionArgs>> natRuleCollections;
 
-    public Output<List<AzureFirewallNatRuleCollectionArgs>> getNatRuleCollections() {
+    public Output<List<AzureFirewallNatRuleCollectionArgs>> natRuleCollections() {
         return this.natRuleCollections == null ? Codegen.empty() : this.natRuleCollections;
     }
 
@@ -143,7 +143,7 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkRuleCollections")
       private final @Nullable Output<List<AzureFirewallNetworkRuleCollectionArgs>> networkRuleCollections;
 
-    public Output<List<AzureFirewallNetworkRuleCollectionArgs>> getNetworkRuleCollections() {
+    public Output<List<AzureFirewallNetworkRuleCollectionArgs>> networkRuleCollections() {
         return this.networkRuleCollections == null ? Codegen.empty() : this.networkRuleCollections;
     }
 
@@ -154,7 +154,7 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -165,7 +165,7 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<AzureFirewallSkuArgs> sku;
 
-    public Output<AzureFirewallSkuArgs> getSku() {
+    public Output<AzureFirewallSkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -176,7 +176,7 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -187,7 +187,7 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="threatIntelMode")
       private final @Nullable Output<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode;
 
-    public Output<Either<String,AzureFirewallThreatIntelMode>> getThreatIntelMode() {
+    public Output<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode() {
         return this.threatIntelMode == null ? Codegen.empty() : this.threatIntelMode;
     }
 
@@ -198,7 +198,7 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="virtualHub")
       private final @Nullable Output<SubResourceArgs> virtualHub;
 
-    public Output<SubResourceArgs> getVirtualHub() {
+    public Output<SubResourceArgs> virtualHub() {
         return this.virtualHub == null ? Codegen.empty() : this.virtualHub;
     }
 
@@ -209,7 +209,7 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> getZones() {
+    public Output<List<String>> zones() {
         return this.zones == null ? Codegen.empty() : this.zones;
     }
 

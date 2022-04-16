@@ -22,7 +22,7 @@ public final class MailFromState extends io.pulumi.resources.ResourceArgs {
     @Import(name="behaviorOnMxFailure")
       private final @Nullable Output<String> behaviorOnMxFailure;
 
-    public Output<String> getBehaviorOnMxFailure() {
+    public Output<String> behaviorOnMxFailure() {
         return this.behaviorOnMxFailure == null ? Codegen.empty() : this.behaviorOnMxFailure;
     }
 
@@ -33,7 +33,7 @@ public final class MailFromState extends io.pulumi.resources.ResourceArgs {
     @Import(name="domain")
       private final @Nullable Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain == null ? Codegen.empty() : this.domain;
     }
 
@@ -44,7 +44,7 @@ public final class MailFromState extends io.pulumi.resources.ResourceArgs {
     @Import(name="mailFromDomain")
       private final @Nullable Output<String> mailFromDomain;
 
-    public Output<String> getMailFromDomain() {
+    public Output<String> mailFromDomain() {
         return this.mailFromDomain == null ? Codegen.empty() : this.mailFromDomain;
     }
 

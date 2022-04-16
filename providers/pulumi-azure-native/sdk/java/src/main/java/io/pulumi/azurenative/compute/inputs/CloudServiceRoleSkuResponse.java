@@ -26,7 +26,7 @@ public final class CloudServiceRoleSkuResponse extends io.pulumi.resources.Invok
     @Import(name="capacity")
       private final @Nullable Double capacity;
 
-    public Optional<Double> getCapacity() {
+    public Optional<Double> capacity() {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
@@ -37,7 +37,7 @@ public final class CloudServiceRoleSkuResponse extends io.pulumi.resources.Invok
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -48,7 +48,7 @@ public final class CloudServiceRoleSkuResponse extends io.pulumi.resources.Invok
     @Import(name="tier")
       private final @Nullable String tier;
 
-    public Optional<String> getTier() {
+    public Optional<String> tier() {
         return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
     }
 

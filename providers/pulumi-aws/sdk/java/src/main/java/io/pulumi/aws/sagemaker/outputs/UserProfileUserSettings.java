@@ -67,42 +67,42 @@ public final class UserProfileUserSettings {
      * The execution role ARN for the user.
      * 
     */
-    public String getExecutionRole() {
+    public String executionRole() {
         return this.executionRole;
     }
     /**
      * The Jupyter server's app settings. See Jupyter Server App Settings below.
      * 
     */
-    public Optional<UserProfileUserSettingsJupyterServerAppSettings> getJupyterServerAppSettings() {
+    public Optional<UserProfileUserSettingsJupyterServerAppSettings> jupyterServerAppSettings() {
         return Optional.ofNullable(this.jupyterServerAppSettings);
     }
     /**
      * The kernel gateway app settings. See Kernel Gateway App Settings below.
      * 
     */
-    public Optional<UserProfileUserSettingsKernelGatewayAppSettings> getKernelGatewayAppSettings() {
+    public Optional<UserProfileUserSettingsKernelGatewayAppSettings> kernelGatewayAppSettings() {
         return Optional.ofNullable(this.kernelGatewayAppSettings);
     }
     /**
      * The security groups.
      * 
     */
-    public List<String> getSecurityGroups() {
+    public List<String> securityGroups() {
         return this.securityGroups == null ? List.of() : this.securityGroups;
     }
     /**
      * The sharing settings. See Sharing Settings below.
      * 
     */
-    public Optional<UserProfileUserSettingsSharingSettings> getSharingSettings() {
+    public Optional<UserProfileUserSettingsSharingSettings> sharingSettings() {
         return Optional.ofNullable(this.sharingSettings);
     }
     /**
      * The TensorBoard app settings. See TensorBoard App Settings below.
      * 
     */
-    public Optional<UserProfileUserSettingsTensorBoardAppSettings> getTensorBoardAppSettings() {
+    public Optional<UserProfileUserSettingsTensorBoardAppSettings> tensorBoardAppSettings() {
         return Optional.ofNullable(this.tensorBoardAppSettings);
     }
 

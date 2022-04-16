@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariantResponse exten
     @Import(name="isControlGroup", required=true)
       private final Boolean isControlGroup;
 
-    public Boolean getIsControlGroup() {
+    public Boolean isControlGroup() {
         return this.isControlGroup;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariantResponse exten
     @Import(name="trafficAllocation", required=true)
       private final Double trafficAllocation;
 
-    public Double getTrafficAllocation() {
+    public Double trafficAllocation() {
         return this.trafficAllocation;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariantResponse exten
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

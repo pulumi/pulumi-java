@@ -22,10 +22,10 @@ public final class TaskDefinitionKernelCapabilities {
         this.drop = drop;
     }
 
-    public List<String> getAdd() {
+    public List<String> add() {
         return this.add == null ? List.of() : this.add;
     }
-    public List<String> getDrop() {
+    public List<String> drop() {
         return this.drop == null ? List.of() : this.drop;
     }
 

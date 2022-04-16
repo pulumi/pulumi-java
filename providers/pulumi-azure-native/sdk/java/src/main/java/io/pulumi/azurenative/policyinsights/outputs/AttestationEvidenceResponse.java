@@ -34,14 +34,14 @@ public final class AttestationEvidenceResponse {
      * The description for this piece of evidence.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The URI location of the evidence.
      * 
     */
-    public Optional<String> getSourceUri() {
+    public Optional<String> sourceUri() {
         return Optional.ofNullable(this.sourceUri);
     }
 

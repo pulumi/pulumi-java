@@ -25,7 +25,7 @@ public final class SelectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="conditions")
       private final @Nullable Output<List<SelectionConditionGetArgs>> conditions;
 
-    public Output<List<SelectionConditionGetArgs>> getConditions() {
+    public Output<List<SelectionConditionGetArgs>> conditions() {
         return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
@@ -36,7 +36,7 @@ public final class SelectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="iamRoleArn")
       private final @Nullable Output<String> iamRoleArn;
 
-    public Output<String> getIamRoleArn() {
+    public Output<String> iamRoleArn() {
         return this.iamRoleArn == null ? Codegen.empty() : this.iamRoleArn;
     }
 
@@ -47,7 +47,7 @@ public final class SelectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -58,7 +58,7 @@ public final class SelectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="notResources")
       private final @Nullable Output<List<String>> notResources;
 
-    public Output<List<String>> getNotResources() {
+    public Output<List<String>> notResources() {
         return this.notResources == null ? Codegen.empty() : this.notResources;
     }
 
@@ -69,7 +69,7 @@ public final class SelectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="planId")
       private final @Nullable Output<String> planId;
 
-    public Output<String> getPlanId() {
+    public Output<String> planId() {
         return this.planId == null ? Codegen.empty() : this.planId;
     }
 
@@ -80,7 +80,7 @@ public final class SelectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="resources")
       private final @Nullable Output<List<String>> resources;
 
-    public Output<List<String>> getResources() {
+    public Output<List<String>> resources() {
         return this.resources == null ? Codegen.empty() : this.resources;
     }
 
@@ -91,7 +91,7 @@ public final class SelectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="selectionTags")
       private final @Nullable Output<List<SelectionSelectionTagGetArgs>> selectionTags;
 
-    public Output<List<SelectionSelectionTagGetArgs>> getSelectionTags() {
+    public Output<List<SelectionSelectionTagGetArgs>> selectionTags() {
         return this.selectionTags == null ? Codegen.empty() : this.selectionTags;
     }
 

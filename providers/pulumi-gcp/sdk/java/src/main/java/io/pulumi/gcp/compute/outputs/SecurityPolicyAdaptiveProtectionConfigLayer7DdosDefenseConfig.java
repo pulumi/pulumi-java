@@ -35,14 +35,14 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
      * If set to true, enables CAAP for L7 DDoS detection.
      * 
     */
-    public Optional<Boolean> getEnable() {
+    public Optional<Boolean> enable() {
         return Optional.ofNullable(this.enable);
     }
     /**
      * Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.
      * 
     */
-    public Optional<String> getRuleVisibility() {
+    public Optional<String> ruleVisibility() {
         return Optional.ofNullable(this.ruleVisibility);
     }
 

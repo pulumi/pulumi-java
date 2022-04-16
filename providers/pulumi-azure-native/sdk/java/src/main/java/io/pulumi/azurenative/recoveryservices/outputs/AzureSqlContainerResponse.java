@@ -59,7 +59,7 @@ public final class AzureSqlContainerResponse {
      * Type of backup management for the container.
      * 
     */
-    public Optional<String> getBackupManagementType() {
+    public Optional<String> backupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
     /**
@@ -70,28 +70,28 @@ public final class AzureSqlContainerResponse {
      * Expected value is 'AzureSqlContainer'.
      * 
     */
-    public String getContainerType() {
+    public String containerType() {
         return this.containerType;
     }
     /**
      * Friendly name of the container.
      * 
     */
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * Status of health of the container.
      * 
     */
-    public Optional<String> getHealthStatus() {
+    public Optional<String> healthStatus() {
         return Optional.ofNullable(this.healthStatus);
     }
     /**
      * Status of registration of the container with the Recovery Services Vault.
      * 
     */
-    public Optional<String> getRegistrationStatus() {
+    public Optional<String> registrationStatus() {
         return Optional.ofNullable(this.registrationStatus);
     }
 

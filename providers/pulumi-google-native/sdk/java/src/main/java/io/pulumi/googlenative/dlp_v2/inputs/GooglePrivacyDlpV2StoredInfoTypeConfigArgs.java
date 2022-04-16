@@ -29,7 +29,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -40,7 +40,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
     @Import(name="dictionary")
       private final @Nullable Output<GooglePrivacyDlpV2DictionaryArgs> dictionary;
 
-    public Output<GooglePrivacyDlpV2DictionaryArgs> getDictionary() {
+    public Output<GooglePrivacyDlpV2DictionaryArgs> dictionary() {
         return this.dictionary == null ? Codegen.empty() : this.dictionary;
     }
 
@@ -51,7 +51,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -62,7 +62,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
     @Import(name="largeCustomDictionary")
       private final @Nullable Output<GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs> largeCustomDictionary;
 
-    public Output<GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs> getLargeCustomDictionary() {
+    public Output<GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs> largeCustomDictionary() {
         return this.largeCustomDictionary == null ? Codegen.empty() : this.largeCustomDictionary;
     }
 
@@ -73,7 +73,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
     @Import(name="regex")
       private final @Nullable Output<GooglePrivacyDlpV2RegexArgs> regex;
 
-    public Output<GooglePrivacyDlpV2RegexArgs> getRegex() {
+    public Output<GooglePrivacyDlpV2RegexArgs> regex() {
         return this.regex == null ? Codegen.empty() : this.regex;
     }
 

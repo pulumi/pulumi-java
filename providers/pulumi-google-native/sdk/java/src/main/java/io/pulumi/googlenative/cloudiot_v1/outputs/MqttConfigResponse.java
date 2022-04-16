@@ -24,7 +24,7 @@ public final class MqttConfigResponse {
      * If enabled, allows connections using the MQTT protocol. Otherwise, MQTT connections to this registry will fail.
      * 
     */
-    public String getMqttEnabledState() {
+    public String mqttEnabledState() {
         return this.mqttEnabledState;
     }
 

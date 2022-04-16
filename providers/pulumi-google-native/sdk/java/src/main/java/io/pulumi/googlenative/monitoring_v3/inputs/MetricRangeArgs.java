@@ -27,7 +27,7 @@ public final class MetricRangeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="range")
       private final @Nullable Output<GoogleMonitoringV3RangeArgs> range;
 
-    public Output<GoogleMonitoringV3RangeArgs> getRange() {
+    public Output<GoogleMonitoringV3RangeArgs> range() {
         return this.range == null ? Codegen.empty() : this.range;
     }
 
@@ -38,7 +38,7 @@ public final class MetricRangeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeSeries")
       private final @Nullable Output<String> timeSeries;
 
-    public Output<String> getTimeSeries() {
+    public Output<String> timeSeries() {
         return this.timeSeries == null ? Codegen.empty() : this.timeSeries;
     }
 

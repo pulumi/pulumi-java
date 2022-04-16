@@ -26,13 +26,13 @@ public final class TopicRuleIotAnalyticsAction {
         this.roleArn = roleArn;
     }
 
-    public Optional<Boolean> getBatchMode() {
+    public Optional<Boolean> batchMode() {
         return Optional.ofNullable(this.batchMode);
     }
-    public String getChannelName() {
+    public String channelName() {
         return this.channelName;
     }
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 

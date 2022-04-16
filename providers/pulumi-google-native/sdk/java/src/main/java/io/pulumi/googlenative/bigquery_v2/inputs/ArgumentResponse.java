@@ -24,7 +24,7 @@ public final class ArgumentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="argumentKind", required=true)
       private final String argumentKind;
 
-    public String getArgumentKind() {
+    public String argumentKind() {
         return this.argumentKind;
     }
 
@@ -35,7 +35,7 @@ public final class ArgumentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="dataType", required=true)
       private final StandardSqlDataTypeResponse dataType;
 
-    public StandardSqlDataTypeResponse getDataType() {
+    public StandardSqlDataTypeResponse dataType() {
         return this.dataType;
     }
 
@@ -46,7 +46,7 @@ public final class ArgumentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="mode", required=true)
       private final String mode;
 
-    public String getMode() {
+    public String mode() {
         return this.mode;
     }
 
@@ -57,7 +57,7 @@ public final class ArgumentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

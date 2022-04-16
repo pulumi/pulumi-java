@@ -28,7 +28,7 @@ public final class CaPoolIssuancePolicyGetArgs extends io.pulumi.resources.Resou
     @Import(name="allowedIssuanceModes")
       private final @Nullable Output<CaPoolIssuancePolicyAllowedIssuanceModesGetArgs> allowedIssuanceModes;
 
-    public Output<CaPoolIssuancePolicyAllowedIssuanceModesGetArgs> getAllowedIssuanceModes() {
+    public Output<CaPoolIssuancePolicyAllowedIssuanceModesGetArgs> allowedIssuanceModes() {
         return this.allowedIssuanceModes == null ? Codegen.empty() : this.allowedIssuanceModes;
     }
 
@@ -41,7 +41,7 @@ public final class CaPoolIssuancePolicyGetArgs extends io.pulumi.resources.Resou
     @Import(name="allowedKeyTypes")
       private final @Nullable Output<List<CaPoolIssuancePolicyAllowedKeyTypeGetArgs>> allowedKeyTypes;
 
-    public Output<List<CaPoolIssuancePolicyAllowedKeyTypeGetArgs>> getAllowedKeyTypes() {
+    public Output<List<CaPoolIssuancePolicyAllowedKeyTypeGetArgs>> allowedKeyTypes() {
         return this.allowedKeyTypes == null ? Codegen.empty() : this.allowedKeyTypes;
     }
 
@@ -56,7 +56,7 @@ public final class CaPoolIssuancePolicyGetArgs extends io.pulumi.resources.Resou
     @Import(name="baselineValues")
       private final @Nullable Output<CaPoolIssuancePolicyBaselineValuesGetArgs> baselineValues;
 
-    public Output<CaPoolIssuancePolicyBaselineValuesGetArgs> getBaselineValues() {
+    public Output<CaPoolIssuancePolicyBaselineValuesGetArgs> baselineValues() {
         return this.baselineValues == null ? Codegen.empty() : this.baselineValues;
     }
 
@@ -69,7 +69,7 @@ public final class CaPoolIssuancePolicyGetArgs extends io.pulumi.resources.Resou
     @Import(name="identityConstraints")
       private final @Nullable Output<CaPoolIssuancePolicyIdentityConstraintsGetArgs> identityConstraints;
 
-    public Output<CaPoolIssuancePolicyIdentityConstraintsGetArgs> getIdentityConstraints() {
+    public Output<CaPoolIssuancePolicyIdentityConstraintsGetArgs> identityConstraints() {
         return this.identityConstraints == null ? Codegen.empty() : this.identityConstraints;
     }
 
@@ -81,7 +81,7 @@ public final class CaPoolIssuancePolicyGetArgs extends io.pulumi.resources.Resou
     @Import(name="maximumLifetime")
       private final @Nullable Output<String> maximumLifetime;
 
-    public Output<String> getMaximumLifetime() {
+    public Output<String> maximumLifetime() {
         return this.maximumLifetime == null ? Codegen.empty() : this.maximumLifetime;
     }
 

@@ -22,7 +22,7 @@ public final class BotExternalSourceSettingArgs extends io.pulumi.resources.Reso
     @Import(name="grammarSlotTypeSetting")
       private final @Nullable Output<BotGrammarSlotTypeSettingArgs> grammarSlotTypeSetting;
 
-    public Output<BotGrammarSlotTypeSettingArgs> getGrammarSlotTypeSetting() {
+    public Output<BotGrammarSlotTypeSettingArgs> grammarSlotTypeSetting() {
         return this.grammarSlotTypeSetting == null ? Codegen.empty() : this.grammarSlotTypeSetting;
     }
 

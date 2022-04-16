@@ -26,7 +26,7 @@ public final class ResultStorageResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="googleCloudStorage", required=true)
       private final GoogleCloudStorageResponse googleCloudStorage;
 
-    public GoogleCloudStorageResponse getGoogleCloudStorage() {
+    public GoogleCloudStorageResponse googleCloudStorage() {
         return this.googleCloudStorage;
     }
 
@@ -37,7 +37,7 @@ public final class ResultStorageResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="resultsUrl", required=true)
       private final String resultsUrl;
 
-    public String getResultsUrl() {
+    public String resultsUrl() {
         return this.resultsUrl;
     }
 
@@ -48,7 +48,7 @@ public final class ResultStorageResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="toolResultsExecution", required=true)
       private final ToolResultsExecutionResponse toolResultsExecution;
 
-    public ToolResultsExecutionResponse getToolResultsExecution() {
+    public ToolResultsExecutionResponse toolResultsExecution() {
         return this.toolResultsExecution;
     }
 
@@ -59,7 +59,7 @@ public final class ResultStorageResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="toolResultsHistory", required=true)
       private final ToolResultsHistoryResponse toolResultsHistory;
 
-    public ToolResultsHistoryResponse getToolResultsHistory() {
+    public ToolResultsHistoryResponse toolResultsHistory() {
         return this.toolResultsHistory;
     }
 

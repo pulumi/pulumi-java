@@ -40,7 +40,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The ARN assigned by AWS to this policy.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -54,7 +54,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The default version of this policy.
      * 
      */
-    public Output<String> getDefaultVersionId() {
+    public Output<String> defaultVersionId() {
         return this.defaultVersionId;
     }
     /**
@@ -68,7 +68,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The name of the policy.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -82,7 +82,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The policy document. This is a JSON formatted string. Use the [IoT Developer Guide](http://docs.aws.amazon.com/iot/latest/developerguide/iot-policies.html) for more information on IoT Policies.
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 

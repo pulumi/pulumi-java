@@ -24,7 +24,7 @@ public final class BucketLifecycleResponse extends io.pulumi.resources.InvokeArg
     @Import(name="rule", required=true)
       private final List<BucketLifecycleRuleItemResponse> rule;
 
-    public List<BucketLifecycleRuleItemResponse> getRule() {
+    public List<BucketLifecycleRuleItemResponse> rule() {
         return this.rule;
     }
 

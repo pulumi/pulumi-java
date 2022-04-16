@@ -26,7 +26,7 @@ public final class ResourceLimitsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cpu")
       private final @Nullable Output<Double> cpu;
 
-    public Output<Double> getCpu() {
+    public Output<Double> cpu() {
         return this.cpu == null ? Codegen.empty() : this.cpu;
     }
 
@@ -37,7 +37,7 @@ public final class ResourceLimitsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="memoryInGB")
       private final @Nullable Output<Double> memoryInGB;
 
-    public Output<Double> getMemoryInGB() {
+    public Output<Double> memoryInGB() {
         return this.memoryInGB == null ? Codegen.empty() : this.memoryInGB;
     }
 

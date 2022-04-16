@@ -23,7 +23,7 @@ public final class RouterNatRuleActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="sourceNatActiveIps")
       private final @Nullable Output<List<String>> sourceNatActiveIps;
 
-    public Output<List<String>> getSourceNatActiveIps() {
+    public Output<List<String>> sourceNatActiveIps() {
         return this.sourceNatActiveIps == null ? Codegen.empty() : this.sourceNatActiveIps;
     }
 
@@ -34,7 +34,7 @@ public final class RouterNatRuleActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="sourceNatActiveRanges")
       private final @Nullable Output<List<String>> sourceNatActiveRanges;
 
-    public Output<List<String>> getSourceNatActiveRanges() {
+    public Output<List<String>> sourceNatActiveRanges() {
         return this.sourceNatActiveRanges == null ? Codegen.empty() : this.sourceNatActiveRanges;
     }
 
@@ -45,7 +45,7 @@ public final class RouterNatRuleActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="sourceNatDrainIps")
       private final @Nullable Output<List<String>> sourceNatDrainIps;
 
-    public Output<List<String>> getSourceNatDrainIps() {
+    public Output<List<String>> sourceNatDrainIps() {
         return this.sourceNatDrainIps == null ? Codegen.empty() : this.sourceNatDrainIps;
     }
 
@@ -56,7 +56,7 @@ public final class RouterNatRuleActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="sourceNatDrainRanges")
       private final @Nullable Output<List<String>> sourceNatDrainRanges;
 
-    public Output<List<String>> getSourceNatDrainRanges() {
+    public Output<List<String>> sourceNatDrainRanges() {
         return this.sourceNatDrainRanges == null ? Codegen.empty() : this.sourceNatDrainRanges;
     }
 

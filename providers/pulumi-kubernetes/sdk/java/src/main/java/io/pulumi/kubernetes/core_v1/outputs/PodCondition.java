@@ -68,35 +68,35 @@ public final class PodCondition {
      * Last time we probed the condition.
      * 
     */
-    public Optional<String> getLastProbeTime() {
+    public Optional<String> lastProbeTime() {
         return Optional.ofNullable(this.lastProbeTime);
     }
     /**
      * Last time the condition transitioned from one status to another.
      * 
     */
-    public Optional<String> getLastTransitionTime() {
+    public Optional<String> lastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
     /**
      * Human-readable message indicating details about last transition.
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
      * Unique, one-word, CamelCase reason for the condition's last transition.
      * 
     */
-    public Optional<String> getReason() {
+    public Optional<String> reason() {
         return Optional.ofNullable(this.reason);
     }
     /**
      * Status is the status of the condition. Can be True, False, Unknown. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
@@ -109,7 +109,7 @@ public final class PodCondition {
      *  - `"Ready"` means the pod is able to service requests and should be added to the load balancing pools of all matching services.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

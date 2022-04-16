@@ -29,7 +29,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsA
     @Import(name="metrics")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs>> metrics;
 
-    public Output<List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs>> getMetrics() {
+    public Output<List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs>> metrics() {
         return this.metrics == null ? Codegen.empty() : this.metrics;
     }
 
@@ -40,7 +40,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsA
     @Import(name="sessionCount")
       private final @Nullable Output<Integer> sessionCount;
 
-    public Output<Integer> getSessionCount() {
+    public Output<Integer> sessionCount() {
         return this.sessionCount == null ? Codegen.empty() : this.sessionCount;
     }
 
@@ -51,7 +51,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsA
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

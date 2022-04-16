@@ -24,10 +24,10 @@ public final class DeliveryStreamHttpEndpointRequestConfiguration {
         this.contentEncoding = contentEncoding;
     }
 
-    public List<DeliveryStreamHttpEndpointCommonAttribute> getCommonAttributes() {
+    public List<DeliveryStreamHttpEndpointCommonAttribute> commonAttributes() {
         return this.commonAttributes == null ? List.of() : this.commonAttributes;
     }
-    public Optional<DeliveryStreamHttpEndpointRequestConfigurationContentEncoding> getContentEncoding() {
+    public Optional<DeliveryStreamHttpEndpointRequestConfigurationContentEncoding> contentEncoding() {
         return Optional.ofNullable(this.contentEncoding);
     }
 

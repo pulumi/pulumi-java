@@ -28,7 +28,7 @@ public final class BasicLevelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="combiningFunction")
       private final @Nullable Output<BasicLevelCombiningFunction> combiningFunction;
 
-    public Output<BasicLevelCombiningFunction> getCombiningFunction() {
+    public Output<BasicLevelCombiningFunction> combiningFunction() {
         return this.combiningFunction == null ? Codegen.empty() : this.combiningFunction;
     }
 
@@ -39,7 +39,7 @@ public final class BasicLevelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conditions", required=true)
       private final Output<List<ConditionArgs>> conditions;
 
-    public Output<List<ConditionArgs>> getConditions() {
+    public Output<List<ConditionArgs>> conditions() {
         return this.conditions;
     }
 

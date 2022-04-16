@@ -37,7 +37,7 @@ public final class AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicas 
      * integer.
      * 
     */
-    public Optional<Integer> getFixed() {
+    public Optional<Integer> fixed() {
         return Optional.ofNullable(this.fixed);
     }
     /**
@@ -45,7 +45,7 @@ public final class AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicas 
      * For example, specify 80 for 80%.
      * 
     */
-    public Optional<Integer> getPercent() {
+    public Optional<Integer> percent() {
         return Optional.ofNullable(this.percent);
     }
 

@@ -23,7 +23,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs ex
     @Import(name="enforce")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGetArgs> enforce;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGetArgs> getEnforce() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGetArgs> enforce() {
         return this.enforce == null ? Codegen.empty() : this.enforce;
     }
 
@@ -34,7 +34,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs ex
     @Import(name="validate", required=true)
       private final Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs> validate;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs> getValidate() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs> validate() {
         return this.validate;
     }
 

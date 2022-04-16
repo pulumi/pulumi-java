@@ -22,7 +22,7 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="control", required=true)
       private final Output<String> control;
 
-    public Output<String> getControl() {
+    public Output<String> control() {
         return this.control;
     }
 
@@ -33,14 +33,14 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="endTime", required=true)
       private final Output<String> endTime;
 
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime;
     }
 
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -51,14 +51,14 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="metricLabels", required=true)
       private final Output<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs> metricLabels;
 
-    public Output<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs> getMetricLabels() {
+    public Output<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs> metricLabels() {
         return this.metricLabels;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -69,7 +69,7 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="startTime", required=true)
       private final Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
 
@@ -80,7 +80,7 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="treatment", required=true)
       private final Output<String> treatment;
 
-    public Output<String> getTreatment() {
+    public Output<String> treatment() {
         return this.treatment;
     }
 

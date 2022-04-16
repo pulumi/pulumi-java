@@ -23,10 +23,10 @@ public final class ConfigUplinkSpectrumConfig {
         this.polarization = polarization;
     }
 
-    public Optional<ConfigFrequency> getCenterFrequency() {
+    public Optional<ConfigFrequency> centerFrequency() {
         return Optional.ofNullable(this.centerFrequency);
     }
-    public Optional<ConfigPolarization> getPolarization() {
+    public Optional<ConfigPolarization> polarization() {
         return Optional.ofNullable(this.polarization);
     }
 

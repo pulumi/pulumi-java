@@ -177,147 +177,147 @@ public final class GetExpressRouteCircuitResult {
      * Allow classic operations.
      * 
     */
-    public Optional<Boolean> getAllowClassicOperations() {
+    public Optional<Boolean> allowClassicOperations() {
         return Optional.ofNullable(this.allowClassicOperations);
     }
     /**
      * The list of authorizations.
      * 
     */
-    public List<ExpressRouteCircuitAuthorizationResponse> getAuthorizations() {
+    public List<ExpressRouteCircuitAuthorizationResponse> authorizations() {
         return this.authorizations == null ? List.of() : this.authorizations;
     }
     /**
      * The bandwidth of the circuit when the circuit is provisioned on an ExpressRoutePort resource.
      * 
     */
-    public Optional<Double> getBandwidthInGbps() {
+    public Optional<Double> bandwidthInGbps() {
         return Optional.ofNullable(this.bandwidthInGbps);
     }
     /**
      * The CircuitProvisioningState state of the resource.
      * 
     */
-    public Optional<String> getCircuitProvisioningState() {
+    public Optional<String> circuitProvisioningState() {
         return Optional.ofNullable(this.circuitProvisioningState);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * The reference to the ExpressRoutePort resource when the circuit is provisioned on an ExpressRoutePort resource.
      * 
     */
-    public Optional<SubResourceResponse> getExpressRoutePort() {
+    public Optional<SubResourceResponse> expressRoutePort() {
         return Optional.ofNullable(this.expressRoutePort);
     }
     /**
      * The GatewayManager Etag.
      * 
     */
-    public Optional<String> getGatewayManagerEtag() {
+    public Optional<String> gatewayManagerEtag() {
         return Optional.ofNullable(this.gatewayManagerEtag);
     }
     /**
      * Flag denoting global reach status.
      * 
     */
-    public Optional<Boolean> getGlobalReachEnabled() {
+    public Optional<Boolean> globalReachEnabled() {
         return Optional.ofNullable(this.globalReachEnabled);
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The list of peerings.
      * 
     */
-    public List<ExpressRouteCircuitPeeringResponse> getPeerings() {
+    public List<ExpressRouteCircuitPeeringResponse> peerings() {
         return this.peerings == null ? List.of() : this.peerings;
     }
     /**
      * The provisioning state of the express route circuit resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The ServiceKey.
      * 
     */
-    public Optional<String> getServiceKey() {
+    public Optional<String> serviceKey() {
         return Optional.ofNullable(this.serviceKey);
     }
     /**
      * The ServiceProviderNotes.
      * 
     */
-    public Optional<String> getServiceProviderNotes() {
+    public Optional<String> serviceProviderNotes() {
         return Optional.ofNullable(this.serviceProviderNotes);
     }
     /**
      * The ServiceProviderProperties.
      * 
     */
-    public Optional<ExpressRouteCircuitServiceProviderPropertiesResponse> getServiceProviderProperties() {
+    public Optional<ExpressRouteCircuitServiceProviderPropertiesResponse> serviceProviderProperties() {
         return Optional.ofNullable(this.serviceProviderProperties);
     }
     /**
      * The ServiceProviderProvisioningState state of the resource.
      * 
     */
-    public Optional<String> getServiceProviderProvisioningState() {
+    public Optional<String> serviceProviderProvisioningState() {
         return Optional.ofNullable(this.serviceProviderProvisioningState);
     }
     /**
      * The SKU.
      * 
     */
-    public Optional<ExpressRouteCircuitSkuResponse> getSku() {
+    public Optional<ExpressRouteCircuitSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * The identifier of the circuit traffic. Outer tag for QinQ encapsulation.
      * 
     */
-    public Integer getStag() {
+    public Integer stag() {
         return this.stag;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

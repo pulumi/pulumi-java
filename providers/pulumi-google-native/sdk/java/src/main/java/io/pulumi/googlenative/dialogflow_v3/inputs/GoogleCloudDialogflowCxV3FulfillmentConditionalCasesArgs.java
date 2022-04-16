@@ -27,7 +27,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs exte
     @Import(name="cases")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs>> cases;
 
-    public Output<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs>> getCases() {
+    public Output<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs>> cases() {
         return this.cases == null ? Codegen.empty() : this.cases;
     }
 

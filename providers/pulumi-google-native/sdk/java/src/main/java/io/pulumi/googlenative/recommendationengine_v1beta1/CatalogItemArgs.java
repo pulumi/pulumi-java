@@ -22,7 +22,7 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="catalogId", required=true)
       private final Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
+    public Output<String> catalogId() {
         return this.catalogId;
     }
 
@@ -33,7 +33,7 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="categoryHierarchies", required=true)
       private final Output<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs>> categoryHierarchies;
 
-    public Output<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs>> getCategoryHierarchies() {
+    public Output<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs>> categoryHierarchies() {
         return this.categoryHierarchies;
     }
 
@@ -44,7 +44,7 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -55,7 +55,7 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -66,7 +66,7 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="itemAttributes")
       private final @Nullable Output<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> itemAttributes;
 
-    public Output<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> getItemAttributes() {
+    public Output<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> itemAttributes() {
         return this.itemAttributes == null ? Codegen.empty() : this.itemAttributes;
     }
 
@@ -77,14 +77,14 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="itemGroupId")
       private final @Nullable Output<String> itemGroupId;
 
-    public Output<String> getItemGroupId() {
+    public Output<String> itemGroupId() {
         return this.itemGroupId == null ? Codegen.empty() : this.itemGroupId;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -95,14 +95,14 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="productMetadata")
       private final @Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> productMetadata;
 
-    public Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> getProductMetadata() {
+    public Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> productMetadata() {
         return this.productMetadata == null ? Codegen.empty() : this.productMetadata;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -113,7 +113,7 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> getTags() {
+    public Output<List<String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -124,7 +124,7 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="title", required=true)
       private final Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 

@@ -25,7 +25,7 @@ public final class ResourceSelectorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="fullResourceName", required=true)
       private final Output<String> fullResourceName;
 
-    public Output<String> getFullResourceName() {
+    public Output<String> fullResourceName() {
         return this.fullResourceName;
     }
 

@@ -21,7 +21,7 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
     @Import(name="endedOn", required=true)
       private final String endedOn;
 
-    public String getEndedOn() {
+    public String endedOn() {
         return this.endedOn;
     }
 
@@ -32,7 +32,7 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
     @Import(name="exceptionsAndWarnings", required=true)
       private final List<ReportableExceptionResponse> exceptionsAndWarnings;
 
-    public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
+    public List<ReportableExceptionResponse> exceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
 
@@ -43,7 +43,7 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -54,7 +54,7 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
     @Import(name="loginName", required=true)
       private final String loginName;
 
-    public String getLoginName() {
+    public String loginName() {
         return this.loginName;
     }
 
@@ -65,7 +65,7 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 
@@ -77,7 +77,7 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
     @Import(name="resultType", required=true)
       private final String resultType;
 
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
 
@@ -88,7 +88,7 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
     @Import(name="stage", required=true)
       private final String stage;
 
-    public String getStage() {
+    public String stage() {
         return this.stage;
     }
 
@@ -99,7 +99,7 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
     @Import(name="startedOn", required=true)
       private final String startedOn;
 
-    public String getStartedOn() {
+    public String startedOn() {
         return this.startedOn;
     }
 
@@ -110,7 +110,7 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

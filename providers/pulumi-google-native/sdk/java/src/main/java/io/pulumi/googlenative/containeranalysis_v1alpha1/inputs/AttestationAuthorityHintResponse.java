@@ -23,7 +23,7 @@ public final class AttestationAuthorityHintResponse extends io.pulumi.resources.
     @Import(name="humanReadableName", required=true)
       private final String humanReadableName;
 
-    public String getHumanReadableName() {
+    public String humanReadableName() {
         return this.humanReadableName;
     }
 

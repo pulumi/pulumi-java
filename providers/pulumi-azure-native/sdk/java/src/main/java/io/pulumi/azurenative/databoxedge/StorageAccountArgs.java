@@ -25,7 +25,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataPolicy", required=true)
       private final Output<Either<String,DataPolicy>> dataPolicy;
 
-    public Output<Either<String,DataPolicy>> getDataPolicy() {
+    public Output<Either<String,DataPolicy>> dataPolicy() {
         return this.dataPolicy;
     }
 
@@ -36,7 +36,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -47,7 +47,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -58,7 +58,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -69,7 +69,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageAccountCredentialId")
       private final @Nullable Output<String> storageAccountCredentialId;
 
-    public Output<String> getStorageAccountCredentialId() {
+    public Output<String> storageAccountCredentialId() {
         return this.storageAccountCredentialId == null ? Codegen.empty() : this.storageAccountCredentialId;
     }
 
@@ -80,7 +80,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageAccountName")
       private final @Nullable Output<String> storageAccountName;
 
-    public Output<String> getStorageAccountName() {
+    public Output<String> storageAccountName() {
         return this.storageAccountName == null ? Codegen.empty() : this.storageAccountName;
     }
 
@@ -91,7 +91,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageAccountStatus")
       private final @Nullable Output<Either<String,StorageAccountStatus>> storageAccountStatus;
 
-    public Output<Either<String,StorageAccountStatus>> getStorageAccountStatus() {
+    public Output<Either<String,StorageAccountStatus>> storageAccountStatus() {
         return this.storageAccountStatus == null ? Codegen.empty() : this.storageAccountStatus;
     }
 

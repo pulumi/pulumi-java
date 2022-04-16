@@ -25,7 +25,7 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="endAddress")
       private final @Nullable String endAddress;
 
-    public Optional<String> getEndAddress() {
+    public Optional<String> endAddress() {
         return this.endAddress == null ? Optional.empty() : Optional.ofNullable(this.endAddress);
     }
 
@@ -36,7 +36,7 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -47,7 +47,7 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="kind")
       private final @Nullable String kind;
 
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
     }
 
@@ -58,7 +58,7 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -74,7 +74,7 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="routeType")
       private final @Nullable String routeType;
 
-    public Optional<String> getRouteType() {
+    public Optional<String> routeType() {
         return this.routeType == null ? Optional.empty() : Optional.ofNullable(this.routeType);
     }
 
@@ -85,7 +85,7 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="startAddress")
       private final @Nullable String startAddress;
 
-    public Optional<String> getStartAddress() {
+    public Optional<String> startAddress() {
         return this.startAddress == null ? Optional.empty() : Optional.ofNullable(this.startAddress);
     }
 
@@ -96,7 +96,7 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

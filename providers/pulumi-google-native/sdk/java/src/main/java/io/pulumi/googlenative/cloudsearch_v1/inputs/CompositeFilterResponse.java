@@ -21,7 +21,7 @@ public final class CompositeFilterResponse extends io.pulumi.resources.InvokeArg
     @Import(name="logicOperator", required=true)
       private final String logicOperator;
 
-    public String getLogicOperator() {
+    public String logicOperator() {
         return this.logicOperator;
     }
 
@@ -32,7 +32,7 @@ public final class CompositeFilterResponse extends io.pulumi.resources.InvokeArg
     @Import(name="subFilters", required=true)
       private final List<FilterResponse> subFilters;
 
-    public List<FilterResponse> getSubFilters() {
+    public List<FilterResponse> subFilters() {
         return this.subFilters;
     }
 

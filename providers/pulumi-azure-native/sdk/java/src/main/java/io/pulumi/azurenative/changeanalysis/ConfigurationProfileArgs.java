@@ -24,7 +24,7 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
     @Import(name="identity")
       private final @Nullable Output<ResourceIdentityArgs> identity;
 
-    public Output<ResourceIdentityArgs> getIdentity() {
+    public Output<ResourceIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -35,7 +35,7 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -46,7 +46,7 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
     @Import(name="profileName")
       private final @Nullable Output<String> profileName;
 
-    public Output<String> getProfileName() {
+    public Output<String> profileName() {
         return this.profileName == null ? Codegen.empty() : this.profileName;
     }
 
@@ -57,7 +57,7 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
     @Import(name="properties")
       private final @Nullable Output<ConfigurationProfileResourcePropertiesArgs> properties;
 
-    public Output<ConfigurationProfileResourcePropertiesArgs> getProperties() {
+    public Output<ConfigurationProfileResourcePropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 

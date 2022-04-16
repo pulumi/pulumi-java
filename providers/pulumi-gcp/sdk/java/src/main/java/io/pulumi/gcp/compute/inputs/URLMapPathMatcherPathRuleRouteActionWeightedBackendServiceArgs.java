@@ -24,7 +24,7 @@ public final class URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceArg
     @Import(name="backendService", required=true)
       private final Output<String> backendService;
 
-    public Output<String> getBackendService() {
+    public Output<String> backendService() {
         return this.backendService;
     }
 
@@ -39,7 +39,7 @@ public final class URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceArg
     @Import(name="headerAction")
       private final @Nullable Output<URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionArgs> headerAction;
 
-    public Output<URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionArgs> getHeaderAction() {
+    public Output<URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionArgs> headerAction() {
         return this.headerAction == null ? Codegen.empty() : this.headerAction;
     }
 
@@ -55,7 +55,7 @@ public final class URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceArg
     @Import(name="weight", required=true)
       private final Output<Integer> weight;
 
-    public Output<Integer> getWeight() {
+    public Output<Integer> weight() {
         return this.weight;
     }
 

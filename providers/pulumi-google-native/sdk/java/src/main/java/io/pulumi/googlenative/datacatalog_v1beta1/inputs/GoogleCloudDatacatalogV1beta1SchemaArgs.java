@@ -26,7 +26,7 @@ public final class GoogleCloudDatacatalogV1beta1SchemaArgs extends io.pulumi.res
     @Import(name="columns", required=true)
       private final Output<List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs>> columns;
 
-    public Output<List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs>> getColumns() {
+    public Output<List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs>> columns() {
         return this.columns;
     }
 

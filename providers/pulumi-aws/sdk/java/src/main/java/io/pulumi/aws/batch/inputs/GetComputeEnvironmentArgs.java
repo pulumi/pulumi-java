@@ -22,7 +22,7 @@ public final class GetComputeEnvironmentArgs extends io.pulumi.resources.InvokeA
     @Import(name="computeEnvironmentName", required=true)
       private final String computeEnvironmentName;
 
-    public String getComputeEnvironmentName() {
+    public String computeEnvironmentName() {
         return this.computeEnvironmentName;
     }
 
@@ -33,7 +33,7 @@ public final class GetComputeEnvironmentArgs extends io.pulumi.resources.InvokeA
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

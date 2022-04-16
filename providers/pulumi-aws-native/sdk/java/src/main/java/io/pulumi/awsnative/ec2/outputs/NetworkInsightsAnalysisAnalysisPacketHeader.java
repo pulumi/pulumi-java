@@ -33,19 +33,19 @@ public final class NetworkInsightsAnalysisAnalysisPacketHeader {
         this.sourcePortRanges = sourcePortRanges;
     }
 
-    public List<String> getDestinationAddresses() {
+    public List<String> destinationAddresses() {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
     }
-    public List<NetworkInsightsAnalysisPortRange> getDestinationPortRanges() {
+    public List<NetworkInsightsAnalysisPortRange> destinationPortRanges() {
         return this.destinationPortRanges == null ? List.of() : this.destinationPortRanges;
     }
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
-    public List<String> getSourceAddresses() {
+    public List<String> sourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
-    public List<NetworkInsightsAnalysisPortRange> getSourcePortRanges() {
+    public List<NetworkInsightsAnalysisPortRange> sourcePortRanges() {
         return this.sourcePortRanges == null ? List.of() : this.sourcePortRanges;
     }
 

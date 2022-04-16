@@ -27,7 +27,7 @@ public final class DataStoreInfoBaseArgs extends io.pulumi.resources.ResourceArg
     @Import(name="dataStoreType", required=true)
       private final Output<Either<String,DataStoreTypes>> dataStoreType;
 
-    public Output<Either<String,DataStoreTypes>> getDataStoreType() {
+    public Output<Either<String,DataStoreTypes>> dataStoreType() {
         return this.dataStoreType;
     }
 
@@ -38,7 +38,7 @@ public final class DataStoreInfoBaseArgs extends io.pulumi.resources.ResourceArg
     @Import(name="objectType", required=true)
       private final Output<String> objectType;
 
-    public Output<String> getObjectType() {
+    public Output<String> objectType() {
         return this.objectType;
     }
 

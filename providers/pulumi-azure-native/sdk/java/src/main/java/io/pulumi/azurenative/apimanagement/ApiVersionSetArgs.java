@@ -24,7 +24,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -35,7 +35,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -46,7 +46,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -57,7 +57,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -68,7 +68,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="versionHeaderName")
       private final @Nullable Output<String> versionHeaderName;
 
-    public Output<String> getVersionHeaderName() {
+    public Output<String> versionHeaderName() {
         return this.versionHeaderName == null ? Codegen.empty() : this.versionHeaderName;
     }
 
@@ -79,7 +79,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="versionQueryName")
       private final @Nullable Output<String> versionQueryName;
 
-    public Output<String> getVersionQueryName() {
+    public Output<String> versionQueryName() {
         return this.versionQueryName == null ? Codegen.empty() : this.versionQueryName;
     }
 
@@ -90,7 +90,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="versionSetId")
       private final @Nullable Output<String> versionSetId;
 
-    public Output<String> getVersionSetId() {
+    public Output<String> versionSetId() {
         return this.versionSetId == null ? Codegen.empty() : this.versionSetId;
     }
 
@@ -101,7 +101,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="versioningScheme", required=true)
       private final Output<Either<String,VersioningScheme>> versioningScheme;
 
-    public Output<Either<String,VersioningScheme>> getVersioningScheme() {
+    public Output<Either<String,VersioningScheme>> versioningScheme() {
         return this.versioningScheme;
     }
 

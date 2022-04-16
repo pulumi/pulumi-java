@@ -40,21 +40,21 @@ public final class ClientCertificateCommonNameResponse {
      * The common name of the client certificate.
      * 
     */
-    public String getCertificateCommonName() {
+    public String certificateCommonName() {
         return this.certificateCommonName;
     }
     /**
      * The issuer thumbprint of the client certificate.
      * 
     */
-    public String getCertificateIssuerThumbprint() {
+    public String certificateIssuerThumbprint() {
         return this.certificateIssuerThumbprint;
     }
     /**
      * Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.
      * 
     */
-    public Boolean getIsAdmin() {
+    public Boolean isAdmin() {
         return this.isAdmin;
     }
 

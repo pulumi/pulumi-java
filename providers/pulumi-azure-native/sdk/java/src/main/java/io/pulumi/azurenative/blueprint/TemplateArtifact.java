@@ -45,7 +45,7 @@ public class TemplateArtifact extends io.pulumi.resources.CustomResource {
      * @return Artifacts which need to be deployed before the specified artifact.
      * 
      */
-    public Output</* @Nullable */ List<String>> getDependsOn() {
+    public Output</* @Nullable */ List<String>> dependsOn() {
         return this.dependsOn;
     }
     /**
@@ -59,7 +59,7 @@ public class TemplateArtifact extends io.pulumi.resources.CustomResource {
      * @return Multi-line explain this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -73,7 +73,7 @@ public class TemplateArtifact extends io.pulumi.resources.CustomResource {
      * @return One-liner string explain this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -89,7 +89,7 @@ public class TemplateArtifact extends io.pulumi.resources.CustomResource {
      * Expected value is 'template'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -103,7 +103,7 @@ public class TemplateArtifact extends io.pulumi.resources.CustomResource {
      * @return Name of this resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -117,7 +117,7 @@ public class TemplateArtifact extends io.pulumi.resources.CustomResource {
      * @return Resource Manager template blueprint artifact parameter values.
      * 
      */
-    public Output<Map<String,ParameterValueResponse>> getParameters() {
+    public Output<Map<String,ParameterValueResponse>> parameters() {
         return this.parameters;
     }
     /**
@@ -131,7 +131,7 @@ public class TemplateArtifact extends io.pulumi.resources.CustomResource {
      * @return If applicable, the name of the resource group placeholder to which the Resource Manager template blueprint artifact will be deployed.
      * 
      */
-    public Output</* @Nullable */ String> getResourceGroup() {
+    public Output</* @Nullable */ String> resourceGroup() {
         return this.resourceGroup;
     }
     /**
@@ -145,7 +145,7 @@ public class TemplateArtifact extends io.pulumi.resources.CustomResource {
      * @return The Resource Manager template blueprint artifact body.
      * 
      */
-    public Output<Object> getTemplate() {
+    public Output<Object> template() {
         return this.template;
     }
     /**
@@ -159,7 +159,7 @@ public class TemplateArtifact extends io.pulumi.resources.CustomResource {
      * @return Type of this resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

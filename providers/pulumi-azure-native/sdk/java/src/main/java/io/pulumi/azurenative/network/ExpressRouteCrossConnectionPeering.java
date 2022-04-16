@@ -46,7 +46,7 @@ public class ExpressRouteCrossConnectionPeering extends io.pulumi.resources.Cust
      * @return The Azure ASN.
      * 
      */
-    public Output<Integer> getAzureASN() {
+    public Output<Integer> azureASN() {
         return this.azureASN;
     }
     /**
@@ -60,7 +60,7 @@ public class ExpressRouteCrossConnectionPeering extends io.pulumi.resources.Cust
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -74,7 +74,7 @@ public class ExpressRouteCrossConnectionPeering extends io.pulumi.resources.Cust
      * @return The GatewayManager Etag.
      * 
      */
-    public Output</* @Nullable */ String> getGatewayManagerEtag() {
+    public Output</* @Nullable */ String> gatewayManagerEtag() {
         return this.gatewayManagerEtag;
     }
     /**
@@ -88,7 +88,7 @@ public class ExpressRouteCrossConnectionPeering extends io.pulumi.resources.Cust
      * @return The IPv6 peering configuration.
      * 
      */
-    public Output</* @Nullable */ Ipv6ExpressRouteCircuitPeeringConfigResponse> getIpv6PeeringConfig() {
+    public Output</* @Nullable */ Ipv6ExpressRouteCircuitPeeringConfigResponse> ipv6PeeringConfig() {
         return this.ipv6PeeringConfig;
     }
     /**
@@ -102,7 +102,7 @@ public class ExpressRouteCrossConnectionPeering extends io.pulumi.resources.Cust
      * @return Who was the last to modify the peering.
      * 
      */
-    public Output<String> getLastModifiedBy() {
+    public Output<String> lastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
@@ -116,7 +116,7 @@ public class ExpressRouteCrossConnectionPeering extends io.pulumi.resources.Cust
      * @return The Microsoft peering configuration.
      * 
      */
-    public Output</* @Nullable */ ExpressRouteCircuitPeeringConfigResponse> getMicrosoftPeeringConfig() {
+    public Output</* @Nullable */ ExpressRouteCircuitPeeringConfigResponse> microsoftPeeringConfig() {
         return this.microsoftPeeringConfig;
     }
     /**
@@ -130,7 +130,7 @@ public class ExpressRouteCrossConnectionPeering extends io.pulumi.resources.Cust
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -144,7 +144,7 @@ public class ExpressRouteCrossConnectionPeering extends io.pulumi.resources.Cust
      * @return The peer ASN.
      * 
      */
-    public Output</* @Nullable */ Double> getPeerASN() {
+    public Output</* @Nullable */ Double> peerASN() {
         return this.peerASN;
     }
     /**
@@ -158,7 +158,7 @@ public class ExpressRouteCrossConnectionPeering extends io.pulumi.resources.Cust
      * @return The peering type.
      * 
      */
-    public Output</* @Nullable */ String> getPeeringType() {
+    public Output</* @Nullable */ String> peeringType() {
         return this.peeringType;
     }
     /**
@@ -172,7 +172,7 @@ public class ExpressRouteCrossConnectionPeering extends io.pulumi.resources.Cust
      * @return The primary port.
      * 
      */
-    public Output<String> getPrimaryAzurePort() {
+    public Output<String> primaryAzurePort() {
         return this.primaryAzurePort;
     }
     /**
@@ -186,7 +186,7 @@ public class ExpressRouteCrossConnectionPeering extends io.pulumi.resources.Cust
      * @return The primary address prefix.
      * 
      */
-    public Output</* @Nullable */ String> getPrimaryPeerAddressPrefix() {
+    public Output</* @Nullable */ String> primaryPeerAddressPrefix() {
         return this.primaryPeerAddressPrefix;
     }
     /**
@@ -200,7 +200,7 @@ public class ExpressRouteCrossConnectionPeering extends io.pulumi.resources.Cust
      * @return The provisioning state of the express route cross connection peering resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -214,7 +214,7 @@ public class ExpressRouteCrossConnectionPeering extends io.pulumi.resources.Cust
      * @return The secondary port.
      * 
      */
-    public Output<String> getSecondaryAzurePort() {
+    public Output<String> secondaryAzurePort() {
         return this.secondaryAzurePort;
     }
     /**
@@ -228,7 +228,7 @@ public class ExpressRouteCrossConnectionPeering extends io.pulumi.resources.Cust
      * @return The secondary address prefix.
      * 
      */
-    public Output</* @Nullable */ String> getSecondaryPeerAddressPrefix() {
+    public Output</* @Nullable */ String> secondaryPeerAddressPrefix() {
         return this.secondaryPeerAddressPrefix;
     }
     /**
@@ -242,7 +242,7 @@ public class ExpressRouteCrossConnectionPeering extends io.pulumi.resources.Cust
      * @return The shared key.
      * 
      */
-    public Output</* @Nullable */ String> getSharedKey() {
+    public Output</* @Nullable */ String> sharedKey() {
         return this.sharedKey;
     }
     /**
@@ -256,7 +256,7 @@ public class ExpressRouteCrossConnectionPeering extends io.pulumi.resources.Cust
      * @return The peering state.
      * 
      */
-    public Output</* @Nullable */ String> getState() {
+    public Output</* @Nullable */ String> state() {
         return this.state;
     }
     /**
@@ -270,7 +270,7 @@ public class ExpressRouteCrossConnectionPeering extends io.pulumi.resources.Cust
      * @return The VLAN ID.
      * 
      */
-    public Output</* @Nullable */ Integer> getVlanId() {
+    public Output</* @Nullable */ Integer> vlanId() {
         return this.vlanId;
     }
 

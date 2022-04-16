@@ -71,49 +71,49 @@ public final class GetBlobContainerImmutabilityPolicyResult {
      * This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
      * 
     */
-    public Optional<Boolean> getAllowProtectedAppendWrites() {
+    public Optional<Boolean> allowProtectedAppendWrites() {
         return Optional.ofNullable(this.allowProtectedAppendWrites);
     }
     /**
      * Resource Etag.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The immutability period for the blobs in the container since the policy creation, in days.
      * 
     */
-    public Optional<Integer> getImmutabilityPeriodSinceCreationInDays() {
+    public Optional<Integer> immutabilityPeriodSinceCreationInDays() {
         return Optional.ofNullable(this.immutabilityPeriodSinceCreationInDays);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

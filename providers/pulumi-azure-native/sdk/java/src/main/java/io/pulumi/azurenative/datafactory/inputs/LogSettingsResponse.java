@@ -27,7 +27,7 @@ public final class LogSettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="copyActivityLogSettings")
       private final @Nullable CopyActivityLogSettingsResponse copyActivityLogSettings;
 
-    public Optional<CopyActivityLogSettingsResponse> getCopyActivityLogSettings() {
+    public Optional<CopyActivityLogSettingsResponse> copyActivityLogSettings() {
         return this.copyActivityLogSettings == null ? Optional.empty() : Optional.ofNullable(this.copyActivityLogSettings);
     }
 
@@ -38,7 +38,7 @@ public final class LogSettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="enableCopyActivityLog")
       private final @Nullable Object enableCopyActivityLog;
 
-    public Optional<Object> getEnableCopyActivityLog() {
+    public Optional<Object> enableCopyActivityLog() {
         return this.enableCopyActivityLog == null ? Optional.empty() : Optional.ofNullable(this.enableCopyActivityLog);
     }
 
@@ -49,7 +49,7 @@ public final class LogSettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="logLocationSettings", required=true)
       private final LogLocationSettingsResponse logLocationSettings;
 
-    public LogLocationSettingsResponse getLogLocationSettings() {
+    public LogLocationSettingsResponse logLocationSettings() {
         return this.logLocationSettings;
     }
 

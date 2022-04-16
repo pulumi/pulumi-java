@@ -25,7 +25,7 @@ public final class HybridComputePrivateLinkScopePropertiesResponse extends io.pu
     @Import(name="privateLinkScopeId", required=true)
       private final String privateLinkScopeId;
 
-    public String getPrivateLinkScopeId() {
+    public String privateLinkScopeId() {
         return this.privateLinkScopeId;
     }
 
@@ -36,7 +36,7 @@ public final class HybridComputePrivateLinkScopePropertiesResponse extends io.pu
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -47,7 +47,7 @@ public final class HybridComputePrivateLinkScopePropertiesResponse extends io.pu
     @Import(name="publicNetworkAccess")
       private final @Nullable String publicNetworkAccess;
 
-    public Optional<String> getPublicNetworkAccess() {
+    public Optional<String> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Optional.empty() : Optional.ofNullable(this.publicNetworkAccess);
     }
 

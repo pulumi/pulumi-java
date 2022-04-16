@@ -35,7 +35,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
     @Import(name="accessToken")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getAccessToken() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken() {
         return this.accessToken == null ? Codegen.empty() : this.accessToken;
     }
 
@@ -46,7 +46,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -57,7 +57,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
     @Import(name="authentication")
       private final @Nullable Output<Object> authentication;
 
-    public Output<Object> getAuthentication() {
+    public Output<Object> authentication() {
         return this.authentication == null ? Codegen.empty() : this.authentication;
     }
 
@@ -68,7 +68,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
         return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
@@ -79,7 +79,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
     @Import(name="credential")
       private final @Nullable Output<CredentialReferenceArgs> credential;
 
-    public Output<CredentialReferenceArgs> getCredential() {
+    public Output<CredentialReferenceArgs> credential() {
         return this.credential == null ? Codegen.empty() : this.credential;
     }
 
@@ -90,7 +90,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -101,7 +101,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
     @Import(name="domain", required=true)
       private final Output<Object> domain;
 
-    public Output<Object> getDomain() {
+    public Output<Object> domain() {
         return this.domain;
     }
 
@@ -112,7 +112,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
+    public Output<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
@@ -123,7 +123,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
     @Import(name="existingClusterId")
       private final @Nullable Output<Object> existingClusterId;
 
-    public Output<Object> getExistingClusterId() {
+    public Output<Object> existingClusterId() {
         return this.existingClusterId == null ? Codegen.empty() : this.existingClusterId;
     }
 
@@ -134,7 +134,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
     @Import(name="instancePoolId")
       private final @Nullable Output<Object> instancePoolId;
 
-    public Output<Object> getInstancePoolId() {
+    public Output<Object> instancePoolId() {
         return this.instancePoolId == null ? Codegen.empty() : this.instancePoolId;
     }
 
@@ -145,7 +145,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
     @Import(name="newClusterCustomTags")
       private final @Nullable Output<Map<String,Object>> newClusterCustomTags;
 
-    public Output<Map<String,Object>> getNewClusterCustomTags() {
+    public Output<Map<String,Object>> newClusterCustomTags() {
         return this.newClusterCustomTags == null ? Codegen.empty() : this.newClusterCustomTags;
     }
 
@@ -156,7 +156,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
     @Import(name="newClusterDriverNodeType")
       private final @Nullable Output<Object> newClusterDriverNodeType;
 
-    public Output<Object> getNewClusterDriverNodeType() {
+    public Output<Object> newClusterDriverNodeType() {
         return this.newClusterDriverNodeType == null ? Codegen.empty() : this.newClusterDriverNodeType;
     }
 
@@ -167,7 +167,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
     @Import(name="newClusterEnableElasticDisk")
       private final @Nullable Output<Object> newClusterEnableElasticDisk;
 
-    public Output<Object> getNewClusterEnableElasticDisk() {
+    public Output<Object> newClusterEnableElasticDisk() {
         return this.newClusterEnableElasticDisk == null ? Codegen.empty() : this.newClusterEnableElasticDisk;
     }
 
@@ -178,7 +178,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
     @Import(name="newClusterInitScripts")
       private final @Nullable Output<Object> newClusterInitScripts;
 
-    public Output<Object> getNewClusterInitScripts() {
+    public Output<Object> newClusterInitScripts() {
         return this.newClusterInitScripts == null ? Codegen.empty() : this.newClusterInitScripts;
     }
 
@@ -189,7 +189,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
     @Import(name="newClusterLogDestination")
       private final @Nullable Output<Object> newClusterLogDestination;
 
-    public Output<Object> getNewClusterLogDestination() {
+    public Output<Object> newClusterLogDestination() {
         return this.newClusterLogDestination == null ? Codegen.empty() : this.newClusterLogDestination;
     }
 
@@ -200,7 +200,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
     @Import(name="newClusterNodeType")
       private final @Nullable Output<Object> newClusterNodeType;
 
-    public Output<Object> getNewClusterNodeType() {
+    public Output<Object> newClusterNodeType() {
         return this.newClusterNodeType == null ? Codegen.empty() : this.newClusterNodeType;
     }
 
@@ -211,7 +211,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
     @Import(name="newClusterNumOfWorker")
       private final @Nullable Output<Object> newClusterNumOfWorker;
 
-    public Output<Object> getNewClusterNumOfWorker() {
+    public Output<Object> newClusterNumOfWorker() {
         return this.newClusterNumOfWorker == null ? Codegen.empty() : this.newClusterNumOfWorker;
     }
 
@@ -222,7 +222,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
     @Import(name="newClusterSparkConf")
       private final @Nullable Output<Map<String,Object>> newClusterSparkConf;
 
-    public Output<Map<String,Object>> getNewClusterSparkConf() {
+    public Output<Map<String,Object>> newClusterSparkConf() {
         return this.newClusterSparkConf == null ? Codegen.empty() : this.newClusterSparkConf;
     }
 
@@ -233,7 +233,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
     @Import(name="newClusterSparkEnvVars")
       private final @Nullable Output<Map<String,Object>> newClusterSparkEnvVars;
 
-    public Output<Map<String,Object>> getNewClusterSparkEnvVars() {
+    public Output<Map<String,Object>> newClusterSparkEnvVars() {
         return this.newClusterSparkEnvVars == null ? Codegen.empty() : this.newClusterSparkEnvVars;
     }
 
@@ -244,7 +244,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
     @Import(name="newClusterVersion")
       private final @Nullable Output<Object> newClusterVersion;
 
-    public Output<Object> getNewClusterVersion() {
+    public Output<Object> newClusterVersion() {
         return this.newClusterVersion == null ? Codegen.empty() : this.newClusterVersion;
     }
 
@@ -255,7 +255,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -266,7 +266,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
     @Import(name="policyId")
       private final @Nullable Output<Object> policyId;
 
-    public Output<Object> getPolicyId() {
+    public Output<Object> policyId() {
         return this.policyId == null ? Codegen.empty() : this.policyId;
     }
 
@@ -278,7 +278,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -289,7 +289,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
     @Import(name="workspaceResourceId")
       private final @Nullable Output<Object> workspaceResourceId;
 
-    public Output<Object> getWorkspaceResourceId() {
+    public Output<Object> workspaceResourceId() {
         return this.workspaceResourceId == null ? Codegen.empty() : this.workspaceResourceId;
     }
 

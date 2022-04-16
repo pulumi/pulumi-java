@@ -26,7 +26,7 @@ public final class PersistentVolumeStatusArgs extends io.pulumi.resources.Resour
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message == null ? Codegen.empty() : this.message;
     }
 
@@ -44,7 +44,7 @@ public final class PersistentVolumeStatusArgs extends io.pulumi.resources.Resour
     @Import(name="phase")
       private final @Nullable Output<String> phase;
 
-    public Output<String> getPhase() {
+    public Output<String> phase() {
         return this.phase == null ? Codegen.empty() : this.phase;
     }
 
@@ -55,7 +55,7 @@ public final class PersistentVolumeStatusArgs extends io.pulumi.resources.Resour
     @Import(name="reason")
       private final @Nullable Output<String> reason;
 
-    public Output<String> getReason() {
+    public Output<String> reason() {
         return this.reason == null ? Codegen.empty() : this.reason;
     }
 

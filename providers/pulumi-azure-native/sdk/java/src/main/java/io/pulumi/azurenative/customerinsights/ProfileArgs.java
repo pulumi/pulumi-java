@@ -28,7 +28,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiEntitySetName")
       private final @Nullable Output<String> apiEntitySetName;
 
-    public Output<String> getApiEntitySetName() {
+    public Output<String> apiEntitySetName() {
         return this.apiEntitySetName == null ? Codegen.empty() : this.apiEntitySetName;
     }
 
@@ -39,7 +39,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attributes")
       private final @Nullable Output<Map<String,List<String>>> attributes;
 
-    public Output<Map<String,List<String>>> getAttributes() {
+    public Output<Map<String,List<String>>> attributes() {
         return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
@@ -50,7 +50,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<Map<String,String>> description;
 
-    public Output<Map<String,String>> getDescription() {
+    public Output<Map<String,String>> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -61,7 +61,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<Map<String,String>> displayName;
 
-    public Output<Map<String,String>> getDisplayName() {
+    public Output<Map<String,String>> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -72,7 +72,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="entityType")
       private final @Nullable Output<EntityTypes> entityType;
 
-    public Output<EntityTypes> getEntityType() {
+    public Output<EntityTypes> entityType() {
         return this.entityType == null ? Codegen.empty() : this.entityType;
     }
 
@@ -83,7 +83,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fields")
       private final @Nullable Output<List<PropertyDefinitionArgs>> fields;
 
-    public Output<List<PropertyDefinitionArgs>> getFields() {
+    public Output<List<PropertyDefinitionArgs>> fields() {
         return this.fields == null ? Codegen.empty() : this.fields;
     }
 
@@ -94,7 +94,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hubName", required=true)
       private final Output<String> hubName;
 
-    public Output<String> getHubName() {
+    public Output<String> hubName() {
         return this.hubName;
     }
 
@@ -105,7 +105,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instancesCount")
       private final @Nullable Output<Integer> instancesCount;
 
-    public Output<Integer> getInstancesCount() {
+    public Output<Integer> instancesCount() {
         return this.instancesCount == null ? Codegen.empty() : this.instancesCount;
     }
 
@@ -116,7 +116,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="largeImage")
       private final @Nullable Output<String> largeImage;
 
-    public Output<String> getLargeImage() {
+    public Output<String> largeImage() {
         return this.largeImage == null ? Codegen.empty() : this.largeImage;
     }
 
@@ -127,7 +127,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="localizedAttributes")
       private final @Nullable Output<Map<String,Map<String,String>>> localizedAttributes;
 
-    public Output<Map<String,Map<String,String>>> getLocalizedAttributes() {
+    public Output<Map<String,Map<String,String>>> localizedAttributes() {
         return this.localizedAttributes == null ? Codegen.empty() : this.localizedAttributes;
     }
 
@@ -138,7 +138,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mediumImage")
       private final @Nullable Output<String> mediumImage;
 
-    public Output<String> getMediumImage() {
+    public Output<String> mediumImage() {
         return this.mediumImage == null ? Codegen.empty() : this.mediumImage;
     }
 
@@ -149,7 +149,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="profileName")
       private final @Nullable Output<String> profileName;
 
-    public Output<String> getProfileName() {
+    public Output<String> profileName() {
         return this.profileName == null ? Codegen.empty() : this.profileName;
     }
 
@@ -160,7 +160,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -171,7 +171,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schemaItemTypeLink")
       private final @Nullable Output<String> schemaItemTypeLink;
 
-    public Output<String> getSchemaItemTypeLink() {
+    public Output<String> schemaItemTypeLink() {
         return this.schemaItemTypeLink == null ? Codegen.empty() : this.schemaItemTypeLink;
     }
 
@@ -182,7 +182,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="smallImage")
       private final @Nullable Output<String> smallImage;
 
-    public Output<String> getSmallImage() {
+    public Output<String> smallImage() {
         return this.smallImage == null ? Codegen.empty() : this.smallImage;
     }
 
@@ -193,7 +193,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="strongIds")
       private final @Nullable Output<List<StrongIdArgs>> strongIds;
 
-    public Output<List<StrongIdArgs>> getStrongIds() {
+    public Output<List<StrongIdArgs>> strongIds() {
         return this.strongIds == null ? Codegen.empty() : this.strongIds;
     }
 
@@ -204,7 +204,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timestampFieldName")
       private final @Nullable Output<String> timestampFieldName;
 
-    public Output<String> getTimestampFieldName() {
+    public Output<String> timestampFieldName() {
         return this.timestampFieldName == null ? Codegen.empty() : this.timestampFieldName;
     }
 
@@ -215,7 +215,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="typeName")
       private final @Nullable Output<String> typeName;
 
-    public Output<String> getTypeName() {
+    public Output<String> typeName() {
         return this.typeName == null ? Codegen.empty() : this.typeName;
     }
 

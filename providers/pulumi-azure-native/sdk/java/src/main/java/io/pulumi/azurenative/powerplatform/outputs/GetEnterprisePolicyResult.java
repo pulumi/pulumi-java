@@ -103,77 +103,77 @@ public final class GetEnterprisePolicyResult {
      * The encryption settings for a configuration store.
      * 
     */
-    public Optional<PropertiesResponseEncryption> getEncryption() {
+    public Optional<PropertiesResponseEncryption> encryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The identity of the EnterprisePolicy.
      * 
     */
-    public Optional<EnterprisePolicyIdentityResponse> getIdentity() {
+    public Optional<EnterprisePolicyIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The kind (type) of Enterprise Policy.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The geo-location where the resource lives
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Settings concerning lockbox.
      * 
     */
-    public Optional<PropertiesResponseLockbox> getLockbox() {
+    public Optional<PropertiesResponseLockbox> lockbox() {
         return Optional.ofNullable(this.lockbox);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Settings concerning network injection.
      * 
     */
-    public Optional<PropertiesResponseNetworkInjection> getNetworkInjection() {
+    public Optional<PropertiesResponseNetworkInjection> networkInjection() {
         return Optional.ofNullable(this.networkInjection);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

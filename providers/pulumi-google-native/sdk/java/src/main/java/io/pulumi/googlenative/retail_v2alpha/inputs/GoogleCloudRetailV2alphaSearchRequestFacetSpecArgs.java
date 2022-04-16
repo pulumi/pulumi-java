@@ -30,7 +30,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs extends io
     @Import(name="enableDynamicPosition")
       private final @Nullable Output<Boolean> enableDynamicPosition;
 
-    public Output<Boolean> getEnableDynamicPosition() {
+    public Output<Boolean> enableDynamicPosition() {
         return this.enableDynamicPosition == null ? Codegen.empty() : this.enableDynamicPosition;
     }
 
@@ -41,7 +41,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs extends io
     @Import(name="excludedFilterKeys")
       private final @Nullable Output<List<String>> excludedFilterKeys;
 
-    public Output<List<String>> getExcludedFilterKeys() {
+    public Output<List<String>> excludedFilterKeys() {
         return this.excludedFilterKeys == null ? Codegen.empty() : this.excludedFilterKeys;
     }
 
@@ -52,7 +52,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs extends io
     @Import(name="facetKey", required=true)
       private final Output<GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs> facetKey;
 
-    public Output<GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs> getFacetKey() {
+    public Output<GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs> facetKey() {
         return this.facetKey;
     }
 
@@ -63,7 +63,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs extends io
     @Import(name="limit")
       private final @Nullable Output<Integer> limit;
 
-    public Output<Integer> getLimit() {
+    public Output<Integer> limit() {
         return this.limit == null ? Codegen.empty() : this.limit;
     }
 

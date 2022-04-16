@@ -26,7 +26,7 @@ public final class WorkspaceKeyDetailsArgs extends io.pulumi.resources.ResourceA
     @Import(name="keyVaultUrl")
       private final @Nullable Output<String> keyVaultUrl;
 
-    public Output<String> getKeyVaultUrl() {
+    public Output<String> keyVaultUrl() {
         return this.keyVaultUrl == null ? Codegen.empty() : this.keyVaultUrl;
     }
 
@@ -37,7 +37,7 @@ public final class WorkspaceKeyDetailsArgs extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

@@ -53,35 +53,35 @@ public final class GetDataCollectorResult {
      * The time at which the data collector was created in milliseconds since the epoch.
      * 
     */
-    public String getCreatedAt() {
+    public String createdAt() {
         return this.createdAt;
     }
     /**
      * A description of the data collector.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The time at which the Data Collector was last updated in milliseconds since the epoch.
      * 
     */
-    public String getLastModifiedAt() {
+    public String lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
      * ID of the data collector. Must begin with `dc_`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Immutable. The type of data this data collector will collect.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

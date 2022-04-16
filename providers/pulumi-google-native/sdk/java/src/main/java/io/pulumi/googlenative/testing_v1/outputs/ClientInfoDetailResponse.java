@@ -32,14 +32,14 @@ public final class ClientInfoDetailResponse {
      * The key of detailed client information.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * The value of detailed client information.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

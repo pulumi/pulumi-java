@@ -25,7 +25,7 @@ public final class ArtifactObjectsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
@@ -36,7 +36,7 @@ public final class ArtifactObjectsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="paths", required=true)
       private final List<String> paths;
 
-    public List<String> getPaths() {
+    public List<String> paths() {
         return this.paths;
     }
 
@@ -47,7 +47,7 @@ public final class ArtifactObjectsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="timing", required=true)
       private final TimeSpanResponse timing;
 
-    public TimeSpanResponse getTiming() {
+    public TimeSpanResponse timing() {
         return this.timing;
     }
 

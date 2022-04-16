@@ -24,7 +24,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigRespons
     @Import(name="email", required=true)
       private final String email;
 
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigRespons
     @Import(name="minAcceptableMeanAveragePrecision", required=true)
       private final Double minAcceptableMeanAveragePrecision;
 
-    public Double getMinAcceptableMeanAveragePrecision() {
+    public Double minAcceptableMeanAveragePrecision() {
         return this.minAcceptableMeanAveragePrecision;
     }
 

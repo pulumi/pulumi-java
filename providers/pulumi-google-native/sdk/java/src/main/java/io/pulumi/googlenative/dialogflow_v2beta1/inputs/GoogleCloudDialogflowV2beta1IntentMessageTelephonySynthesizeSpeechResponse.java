@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
     @Import(name="ssml", required=true)
       private final String ssml;
 
-    public String getSsml() {
+    public String ssml() {
         return this.ssml;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
     @Import(name="text", required=true)
       private final String text;
 
-    public String getText() {
+    public String text() {
         return this.text;
     }
 

@@ -27,7 +27,7 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="count")
       private final @Nullable Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count == null ? Codegen.empty() : this.count;
     }
 
@@ -38,7 +38,7 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastObservedTime")
       private final @Nullable Output<String> lastObservedTime;
 
-    public Output<String> getLastObservedTime() {
+    public Output<String> lastObservedTime() {
         return this.lastObservedTime == null ? Codegen.empty() : this.lastObservedTime;
     }
 
@@ -49,7 +49,7 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

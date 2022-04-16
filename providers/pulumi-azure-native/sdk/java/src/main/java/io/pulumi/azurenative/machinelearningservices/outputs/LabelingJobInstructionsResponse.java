@@ -26,7 +26,7 @@ public final class LabelingJobInstructionsResponse {
      * The link to a page with detailed labeling instructions for labelers.
      * 
     */
-    public Optional<String> getUri() {
+    public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }
 

@@ -33,14 +33,14 @@ public final class DeviceFileResponse {
      * A reference to an opaque binary blob file.
      * 
     */
-    public ObbFileResponse getObbFile() {
+    public ObbFileResponse obbFile() {
         return this.obbFile;
     }
     /**
      * A reference to a regular file.
      * 
     */
-    public RegularFileResponse getRegularFile() {
+    public RegularFileResponse regularFile() {
         return this.regularFile;
     }
 

@@ -45,7 +45,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * @return Origin is enabled for load balancing or not
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -59,7 +59,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * @return The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.This should be unique across all origins in an endpoint.
      * 
      */
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName;
     }
     /**
@@ -73,7 +73,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * @return The value of the HTTP port. Must be between 1 and 65535.
      * 
      */
-    public Output</* @Nullable */ Integer> getHttpPort() {
+    public Output</* @Nullable */ Integer> httpPort() {
         return this.httpPort;
     }
     /**
@@ -87,7 +87,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * @return The value of the HTTPS port. Must be between 1 and 65535.
      * 
      */
-    public Output</* @Nullable */ Integer> getHttpsPort() {
+    public Output</* @Nullable */ Integer> httpsPort() {
         return this.httpsPort;
     }
     /**
@@ -101,7 +101,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -115,7 +115,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * @return The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default. This overrides the host header defined at Endpoint
      * 
      */
-    public Output</* @Nullable */ String> getOriginHostHeader() {
+    public Output</* @Nullable */ String> originHostHeader() {
         return this.originHostHeader;
     }
     /**
@@ -129,7 +129,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * @return Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5
      * 
      */
-    public Output</* @Nullable */ Integer> getPriority() {
+    public Output</* @Nullable */ Integer> priority() {
         return this.priority;
     }
     /**
@@ -143,7 +143,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * @return The approval status for the connection to the Private Link
      * 
      */
-    public Output<String> getPrivateEndpointStatus() {
+    public Output<String> privateEndpointStatus() {
         return this.privateEndpointStatus;
     }
     /**
@@ -157,7 +157,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * @return The Alias of the Private Link resource. Populating this optional field indicates that this origin is 'Private'
      * 
      */
-    public Output</* @Nullable */ String> getPrivateLinkAlias() {
+    public Output</* @Nullable */ String> privateLinkAlias() {
         return this.privateLinkAlias;
     }
     /**
@@ -171,7 +171,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * @return A custom message to be included in the approval request to connect to the Private Link.
      * 
      */
-    public Output</* @Nullable */ String> getPrivateLinkApprovalMessage() {
+    public Output</* @Nullable */ String> privateLinkApprovalMessage() {
         return this.privateLinkApprovalMessage;
     }
     /**
@@ -185,7 +185,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * @return The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated
      * 
      */
-    public Output</* @Nullable */ String> getPrivateLinkLocation() {
+    public Output</* @Nullable */ String> privateLinkLocation() {
         return this.privateLinkLocation;
     }
     /**
@@ -199,7 +199,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * @return The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
      * 
      */
-    public Output</* @Nullable */ String> getPrivateLinkResourceId() {
+    public Output</* @Nullable */ String> privateLinkResourceId() {
         return this.privateLinkResourceId;
     }
     /**
@@ -213,7 +213,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * @return Provisioning status of the origin.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -227,7 +227,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * @return Resource status of the origin.
      * 
      */
-    public Output<String> getResourceState() {
+    public Output<String> resourceState() {
         return this.resourceState;
     }
     /**
@@ -241,7 +241,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * @return Read only system data
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -255,7 +255,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -269,7 +269,7 @@ public class Origin extends io.pulumi.resources.CustomResource {
      * @return Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
      * 
      */
-    public Output</* @Nullable */ Integer> getWeight() {
+    public Output</* @Nullable */ Integer> weight() {
         return this.weight;
     }
 

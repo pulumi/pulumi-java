@@ -42,7 +42,7 @@ public class Upload extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name of this upload.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +56,7 @@ public class Upload extends io.pulumi.resources.CustomResource {
      * @return The upload's category.
      * 
      */
-    public Output<String> getCategory() {
+    public Output<String> category() {
         return this.category;
     }
     /**
@@ -70,7 +70,7 @@ public class Upload extends io.pulumi.resources.CustomResource {
      * @return The upload's content type (for example, application/octet-stream).
      * 
      */
-    public Output</* @Nullable */ String> getContentType() {
+    public Output</* @Nullable */ String> contentType() {
         return this.contentType;
     }
     /**
@@ -84,7 +84,7 @@ public class Upload extends io.pulumi.resources.CustomResource {
      * @return The upload's metadata. For example, for Android, this contains information that is parsed from the manifest and is displayed in the AWS Device Farm console after the associated app is uploaded.
      * 
      */
-    public Output<String> getMetadata() {
+    public Output<String> metadata() {
         return this.metadata;
     }
     /**
@@ -98,7 +98,7 @@ public class Upload extends io.pulumi.resources.CustomResource {
      * @return The upload's file name. The name should not contain any forward slashes (/). If you are uploading an iOS app, the file name must end with the .ipa extension. If you are uploading an Android app, the file name must end with the .apk extension. For all others, the file name must end with the .zip file extension.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -112,7 +112,7 @@ public class Upload extends io.pulumi.resources.CustomResource {
      * @return The ARN of the project for the upload.
      * 
      */
-    public Output<String> getProjectArn() {
+    public Output<String> projectArn() {
         return this.projectArn;
     }
     /**
@@ -126,7 +126,7 @@ public class Upload extends io.pulumi.resources.CustomResource {
      * @return The upload's upload type. See [AWS Docs](https://docs.aws.amazon.com/devicefarm/latest/APIReference/API_CreateUpload.html#API_CreateUpload_RequestSyntax) for valid list of values.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -140,7 +140,7 @@ public class Upload extends io.pulumi.resources.CustomResource {
      * @return The presigned Amazon S3 URL that was used to store a file using a PUT request.
      * 
      */
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 

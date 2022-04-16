@@ -24,7 +24,7 @@ public final class ProjectSinkBigqueryOptionsArgs extends io.pulumi.resources.Re
     @Import(name="usePartitionedTables", required=true)
       private final Output<Boolean> usePartitionedTables;
 
-    public Output<Boolean> getUsePartitionedTables() {
+    public Output<Boolean> usePartitionedTables() {
         return this.usePartitionedTables;
     }
 

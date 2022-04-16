@@ -22,10 +22,10 @@ public final class RuleGroupRuleDefinition {
         this.matchAttributes = matchAttributes;
     }
 
-    public List<String> getActions() {
+    public List<String> actions() {
         return this.actions;
     }
-    public RuleGroupMatchAttributes getMatchAttributes() {
+    public RuleGroupMatchAttributes matchAttributes() {
         return this.matchAttributes;
     }
 

@@ -51,28 +51,28 @@ public final class TestResponse {
      * The commands used in the test.
      * 
     */
-    public List<CommandResponse> getCommands() {
+    public List<CommandResponse> commands() {
         return this.commands;
     }
     /**
      * Indicates if this test is active.It doesn't schedule test for not active Test.
      * 
     */
-    public Optional<Boolean> getIsActive() {
+    public Optional<Boolean> isActive() {
         return Optional.ofNullable(this.isActive);
     }
     /**
      * The type of the test.
      * 
     */
-    public String getTestType() {
+    public String testType() {
         return this.testType;
     }
     /**
      * The status of the validation run of the package.
      * 
     */
-    public String getValidationRunStatus() {
+    public String validationRunStatus() {
         return this.validationRunStatus;
     }
 

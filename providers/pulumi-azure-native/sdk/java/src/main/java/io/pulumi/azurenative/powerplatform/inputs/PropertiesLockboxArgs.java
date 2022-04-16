@@ -28,7 +28,7 @@ public final class PropertiesLockboxArgs extends io.pulumi.resources.ResourceArg
     @Import(name="state")
       private final @Nullable Output<Either<String,State>> state;
 
-    public Output<Either<String,State>> getState() {
+    public Output<Either<String,State>> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

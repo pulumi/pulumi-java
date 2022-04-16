@@ -61,42 +61,42 @@ public final class GetInspectTemplateResult {
      * The creation timestamp of an inspectTemplate.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Short description (max 256 chars).
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Display name (max 256 chars).
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * The core content of the template. Configuration of the scanning process.
      * 
     */
-    public GooglePrivacyDlpV2InspectConfigResponse getInspectConfig() {
+    public GooglePrivacyDlpV2InspectConfigResponse inspectConfig() {
         return this.inspectConfig;
     }
     /**
      * The template name. The template will have one of the following formats: `projects/PROJECT_ID/inspectTemplates/TEMPLATE_ID` OR `organizations/ORGANIZATION_ID/inspectTemplates/TEMPLATE_ID`;
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The last update timestamp of an inspectTemplate.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

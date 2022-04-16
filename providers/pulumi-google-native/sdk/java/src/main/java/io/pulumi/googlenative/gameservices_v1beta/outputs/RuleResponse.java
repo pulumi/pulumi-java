@@ -70,49 +70,49 @@ public final class RuleResponse {
      * Required
      * 
     */
-    public String getAction() {
+    public String action() {
         return this.action;
     }
     /**
      * Additional restrictions that must be met. All conditions must pass for the rule to match.
      * 
     */
-    public List<ConditionResponse> getConditions() {
+    public List<ConditionResponse> conditions() {
         return this.conditions;
     }
     /**
      * Human-readable description of the rule.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * If one or more 'in' clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR is in at least one of these entries.
      * 
     */
-    public List<String> getIn() {
+    public List<String> in() {
         return this.in;
     }
     /**
      * The config returned to callers of CheckPolicy for any entries that match the LOG action.
      * 
     */
-    public List<LogConfigResponse> getLogConfig() {
+    public List<LogConfigResponse> logConfig() {
         return this.logConfig;
     }
     /**
      * If one or more 'not_in' clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR is in none of the entries. The format for in and not_in entries can be found at in the Local IAM documentation (see go/local-iam#features).
      * 
     */
-    public List<String> getNotIn() {
+    public List<String> notIn() {
         return this.notIn;
     }
     /**
      * A permission is a string of form '..' (e.g., 'storage.buckets.list'). A value of '*' matches all permissions, and a verb part of '*' (e.g., 'storage.buckets.*') matches all verbs.
      * 
     */
-    public List<String> getPermissions() {
+    public List<String> permissions() {
         return this.permissions;
     }
 

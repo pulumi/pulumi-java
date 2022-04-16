@@ -56,35 +56,35 @@ public final class DataBoxSecretResponse {
      * Per account level access credentials.
      * 
     */
-    public List<AccountCredentialDetailsResponse> getAccountCredentialDetails() {
+    public List<AccountCredentialDetailsResponse> accountCredentialDetails() {
         return this.accountCredentialDetails;
     }
     /**
      * Password for out of the box experience on device.
      * 
     */
-    public String getDevicePassword() {
+    public String devicePassword() {
         return this.devicePassword;
     }
     /**
      * Serial number of the assigned device.
      * 
     */
-    public String getDeviceSerialNumber() {
+    public String deviceSerialNumber() {
         return this.deviceSerialNumber;
     }
     /**
      * The base 64 encoded public key to authenticate with the device
      * 
     */
-    public String getEncodedValidationCertPubKey() {
+    public String encodedValidationCertPubKey() {
         return this.encodedValidationCertPubKey;
     }
     /**
      * Network configuration of the appliance.
      * 
     */
-    public List<ApplianceNetworkConfigurationResponse> getNetworkConfigurations() {
+    public List<ApplianceNetworkConfigurationResponse> networkConfigurations() {
         return this.networkConfigurations;
     }
 

@@ -28,7 +28,7 @@ public final class DataCenterResourceResponseProperties extends io.pulumi.resour
     @Import(name="base64EncodedCassandraYamlFragment")
       private final @Nullable String base64EncodedCassandraYamlFragment;
 
-    public Optional<String> getBase64EncodedCassandraYamlFragment() {
+    public Optional<String> base64EncodedCassandraYamlFragment() {
         return this.base64EncodedCassandraYamlFragment == null ? Optional.empty() : Optional.ofNullable(this.base64EncodedCassandraYamlFragment);
     }
 
@@ -39,7 +39,7 @@ public final class DataCenterResourceResponseProperties extends io.pulumi.resour
     @Import(name="dataCenterLocation")
       private final @Nullable String dataCenterLocation;
 
-    public Optional<String> getDataCenterLocation() {
+    public Optional<String> dataCenterLocation() {
         return this.dataCenterLocation == null ? Optional.empty() : Optional.ofNullable(this.dataCenterLocation);
     }
 
@@ -50,7 +50,7 @@ public final class DataCenterResourceResponseProperties extends io.pulumi.resour
     @Import(name="delegatedSubnetId")
       private final @Nullable String delegatedSubnetId;
 
-    public Optional<String> getDelegatedSubnetId() {
+    public Optional<String> delegatedSubnetId() {
         return this.delegatedSubnetId == null ? Optional.empty() : Optional.ofNullable(this.delegatedSubnetId);
     }
 
@@ -61,7 +61,7 @@ public final class DataCenterResourceResponseProperties extends io.pulumi.resour
     @Import(name="nodeCount")
       private final @Nullable Integer nodeCount;
 
-    public Optional<Integer> getNodeCount() {
+    public Optional<Integer> nodeCount() {
         return this.nodeCount == null ? Optional.empty() : Optional.ofNullable(this.nodeCount);
     }
 
@@ -72,7 +72,7 @@ public final class DataCenterResourceResponseProperties extends io.pulumi.resour
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
@@ -83,7 +83,7 @@ public final class DataCenterResourceResponseProperties extends io.pulumi.resour
     @Import(name="seedNodes", required=true)
       private final List<SeedNodeResponse> seedNodes;
 
-    public List<SeedNodeResponse> getSeedNodes() {
+    public List<SeedNodeResponse> seedNodes() {
         return this.seedNodes;
     }
 

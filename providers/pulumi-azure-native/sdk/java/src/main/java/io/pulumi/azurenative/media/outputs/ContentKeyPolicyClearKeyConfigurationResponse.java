@@ -26,7 +26,7 @@ public final class ContentKeyPolicyClearKeyConfigurationResponse {
      * Expected value is '#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

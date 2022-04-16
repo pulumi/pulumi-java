@@ -17,21 +17,21 @@ public final class GetConfigArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="configId", required=true)
       private final String configId;
 
-    public String getConfigId() {
+    public String configId() {
         return this.configId;
     }
 
     @Import(name="serviceName", required=true)
       private final String serviceName;
 
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 
     @Import(name="view")
       private final @Nullable String view;
 
-    public Optional<String> getView() {
+    public Optional<String> view() {
         return this.view == null ? Optional.empty() : Optional.ofNullable(this.view);
     }
 

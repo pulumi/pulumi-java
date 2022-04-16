@@ -46,14 +46,14 @@ public final class ServiceTemplateSpecContainerEnvFrom {
      * Structure is documented below.
      * 
     */
-    public Optional<ServiceTemplateSpecContainerEnvFromConfigMapRef> getConfigMapRef() {
+    public Optional<ServiceTemplateSpecContainerEnvFromConfigMapRef> configMapRef() {
         return Optional.ofNullable(this.configMapRef);
     }
     /**
      * An optional identifier to prepend to each key in the ConfigMap.
      * 
     */
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
@@ -61,7 +61,7 @@ public final class ServiceTemplateSpecContainerEnvFrom {
      * Structure is documented below.
      * 
     */
-    public Optional<ServiceTemplateSpecContainerEnvFromSecretRef> getSecretRef() {
+    public Optional<ServiceTemplateSpecContainerEnvFromSecretRef> secretRef() {
         return Optional.ofNullable(this.secretRef);
     }
 

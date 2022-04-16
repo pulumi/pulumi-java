@@ -58,35 +58,35 @@ public final class AlexaChannelResponse {
      * Expected value is 'AlexaChannel'.
      * 
     */
-    public String getChannelName() {
+    public String channelName() {
         return this.channelName;
     }
     /**
      * Entity Tag of the resource
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Specifies the location of the resource.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The set of properties specific to Alexa channel resource
      * 
     */
-    public Optional<AlexaChannelPropertiesResponse> getProperties() {
+    public Optional<AlexaChannelPropertiesResponse> properties() {
         return Optional.ofNullable(this.properties);
     }
     /**
      * Provisioning state of the resource
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

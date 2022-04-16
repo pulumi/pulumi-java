@@ -50,28 +50,28 @@ public final class PatchDeploymentRecurringScheduleTimeOfDay {
      * An API may choose to allow the value "24:00:00" for scenarios like business closing time.
      * 
     */
-    public Optional<Integer> getHours() {
+    public Optional<Integer> hours() {
         return Optional.ofNullable(this.hours);
     }
     /**
      * Minutes of hour of day. Must be from 0 to 59.
      * 
     */
-    public Optional<Integer> getMinutes() {
+    public Optional<Integer> minutes() {
         return Optional.ofNullable(this.minutes);
     }
     /**
      * Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
      * 
     */
-    public Optional<Integer> getNanos() {
+    public Optional<Integer> nanos() {
         return Optional.ofNullable(this.nanos);
     }
     /**
      * Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.
      * 
     */
-    public Optional<Integer> getSeconds() {
+    public Optional<Integer> seconds() {
         return Optional.ofNullable(this.seconds);
     }
 

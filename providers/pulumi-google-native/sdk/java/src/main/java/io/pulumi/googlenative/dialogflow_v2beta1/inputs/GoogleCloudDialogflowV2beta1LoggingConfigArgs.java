@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowV2beta1LoggingConfigArgs extends io.pulu
     @Import(name="enableStackdriverLogging")
       private final @Nullable Output<Boolean> enableStackdriverLogging;
 
-    public Output<Boolean> getEnableStackdriverLogging() {
+    public Output<Boolean> enableStackdriverLogging() {
         return this.enableStackdriverLogging == null ? Codegen.empty() : this.enableStackdriverLogging;
     }
 

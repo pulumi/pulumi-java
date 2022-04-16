@@ -23,7 +23,7 @@ public final class FileContentBufferArgs extends io.pulumi.resources.ResourceArg
     @Import(name="content")
       private final @Nullable Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content == null ? Codegen.empty() : this.content;
     }
 
@@ -34,7 +34,7 @@ public final class FileContentBufferArgs extends io.pulumi.resources.ResourceArg
     @Import(name="fileType")
       private final @Nullable Output<FileContentBufferFileType> fileType;
 
-    public Output<FileContentBufferFileType> getFileType() {
+    public Output<FileContentBufferFileType> fileType() {
         return this.fileType == null ? Codegen.empty() : this.fileType;
     }
 

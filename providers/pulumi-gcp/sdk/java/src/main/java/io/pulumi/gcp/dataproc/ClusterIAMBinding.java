@@ -66,13 +66,13 @@ public class ClusterIAMBinding extends io.pulumi.resources.CustomResource {
      * @return The name or relative resource id of the cluster to manage IAM policies for.
      * 
      */
-    public Output<String> getCluster() {
+    public Output<String> cluster() {
         return this.cluster;
     }
     @Export(name="condition", type=ClusterIAMBindingCondition.class, parameters={})
     private Output</* @Nullable */ ClusterIAMBindingCondition> condition;
 
-    public Output</* @Nullable */ ClusterIAMBindingCondition> getCondition() {
+    public Output</* @Nullable */ ClusterIAMBindingCondition> condition() {
         return this.condition;
     }
     /**
@@ -86,13 +86,13 @@ public class ClusterIAMBinding extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the clusters's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
     /**
@@ -108,7 +108,7 @@ public class ClusterIAMBinding extends io.pulumi.resources.CustomResource {
      * is not provided, the provider will use a default.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -124,7 +124,7 @@ public class ClusterIAMBinding extends io.pulumi.resources.CustomResource {
      * is not provided, the provider will use a default.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -142,7 +142,7 @@ public class ClusterIAMBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

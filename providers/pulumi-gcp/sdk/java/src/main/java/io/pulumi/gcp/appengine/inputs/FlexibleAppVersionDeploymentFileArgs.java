@@ -22,7 +22,7 @@ public final class FlexibleAppVersionDeploymentFileArgs extends io.pulumi.resour
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -33,7 +33,7 @@ public final class FlexibleAppVersionDeploymentFileArgs extends io.pulumi.resour
     @Import(name="sha1Sum")
       private final @Nullable Output<String> sha1Sum;
 
-    public Output<String> getSha1Sum() {
+    public Output<String> sha1Sum() {
         return this.sha1Sum == null ? Codegen.empty() : this.sha1Sum;
     }
 
@@ -44,7 +44,7 @@ public final class FlexibleAppVersionDeploymentFileArgs extends io.pulumi.resour
     @Import(name="sourceUrl", required=true)
       private final Output<String> sourceUrl;
 
-    public Output<String> getSourceUrl() {
+    public Output<String> sourceUrl() {
         return this.sourceUrl;
     }
 

@@ -23,14 +23,14 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
     @Import(name="peering")
       private final @Nullable Output<String> peering;
 
-    public Output<String> getPeering() {
+    public Output<String> peering() {
         return this.peering == null ? Codegen.empty() : this.peering;
     }
 
@@ -43,7 +43,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="reservedPeeringRanges")
       private final @Nullable Output<List<String>> reservedPeeringRanges;
 
-    public Output<List<String>> getReservedPeeringRanges() {
+    public Output<List<String>> reservedPeeringRanges() {
         return this.reservedPeeringRanges == null ? Codegen.empty() : this.reservedPeeringRanges;
     }
 
@@ -56,7 +56,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service == null ? Codegen.empty() : this.service;
     }
 

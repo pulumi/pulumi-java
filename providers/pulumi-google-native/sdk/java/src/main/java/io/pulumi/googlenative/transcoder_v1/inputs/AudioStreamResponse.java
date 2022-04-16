@@ -26,7 +26,7 @@ public final class AudioStreamResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="bitrateBps", required=true)
       private final Integer bitrateBps;
 
-    public Integer getBitrateBps() {
+    public Integer bitrateBps() {
         return this.bitrateBps;
     }
 
@@ -37,7 +37,7 @@ public final class AudioStreamResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="channelCount", required=true)
       private final Integer channelCount;
 
-    public Integer getChannelCount() {
+    public Integer channelCount() {
         return this.channelCount;
     }
 
@@ -48,7 +48,7 @@ public final class AudioStreamResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="channelLayout", required=true)
       private final List<String> channelLayout;
 
-    public List<String> getChannelLayout() {
+    public List<String> channelLayout() {
         return this.channelLayout;
     }
 
@@ -59,7 +59,7 @@ public final class AudioStreamResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="codec", required=true)
       private final String codec;
 
-    public String getCodec() {
+    public String codec() {
         return this.codec;
     }
 
@@ -70,7 +70,7 @@ public final class AudioStreamResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="mapping", required=true)
       private final List<AudioMappingResponse> mapping;
 
-    public List<AudioMappingResponse> getMapping() {
+    public List<AudioMappingResponse> mapping() {
         return this.mapping;
     }
 
@@ -81,7 +81,7 @@ public final class AudioStreamResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sampleRateHertz", required=true)
       private final Integer sampleRateHertz;
 
-    public Integer getSampleRateHertz() {
+    public Integer sampleRateHertz() {
         return this.sampleRateHertz;
     }
 

@@ -24,7 +24,7 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsArgs extends
     @Import(name="imageType")
       private final @Nullable Output<String> imageType;
 
-    public Output<String> getImageType() {
+    public Output<String> imageType() {
         return this.imageType == null ? Codegen.empty() : this.imageType;
     }
 
@@ -39,7 +39,7 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsArgs extends
     @Import(name="minCpuPlatform")
       private final @Nullable Output<String> minCpuPlatform;
 
-    public Output<String> getMinCpuPlatform() {
+    public Output<String> minCpuPlatform() {
         return this.minCpuPlatform == null ? Codegen.empty() : this.minCpuPlatform;
     }
 
@@ -52,7 +52,7 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsArgs extends
     @Import(name="oauthScopes")
       private final @Nullable Output<List<String>> oauthScopes;
 
-    public Output<List<String>> getOauthScopes() {
+    public Output<List<String>> oauthScopes() {
         return this.oauthScopes == null ? Codegen.empty() : this.oauthScopes;
     }
 
@@ -64,7 +64,7 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsArgs extends
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 

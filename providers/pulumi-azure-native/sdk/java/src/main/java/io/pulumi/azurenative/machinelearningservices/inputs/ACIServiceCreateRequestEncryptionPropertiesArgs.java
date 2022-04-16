@@ -25,7 +25,7 @@ public final class ACIServiceCreateRequestEncryptionPropertiesArgs extends io.pu
     @Import(name="keyName", required=true)
       private final Output<String> keyName;
 
-    public Output<String> getKeyName() {
+    public Output<String> keyName() {
         return this.keyName;
     }
 
@@ -36,7 +36,7 @@ public final class ACIServiceCreateRequestEncryptionPropertiesArgs extends io.pu
     @Import(name="keyVersion", required=true)
       private final Output<String> keyVersion;
 
-    public Output<String> getKeyVersion() {
+    public Output<String> keyVersion() {
         return this.keyVersion;
     }
 
@@ -47,7 +47,7 @@ public final class ACIServiceCreateRequestEncryptionPropertiesArgs extends io.pu
     @Import(name="vaultBaseUrl", required=true)
       private final Output<String> vaultBaseUrl;
 
-    public Output<String> getVaultBaseUrl() {
+    public Output<String> vaultBaseUrl() {
         return this.vaultBaseUrl;
     }
 

@@ -19,7 +19,7 @@ public final class GetVPCDHCPOptionsAssociationArgs extends io.pulumi.resources.
     @Import(name="dhcpOptionsId", required=true)
       private final String dhcpOptionsId;
 
-    public String getDhcpOptionsId() {
+    public String dhcpOptionsId() {
         return this.dhcpOptionsId;
     }
 
@@ -30,7 +30,7 @@ public final class GetVPCDHCPOptionsAssociationArgs extends io.pulumi.resources.
     @Import(name="vpcId", required=true)
       private final String vpcId;
 
-    public String getVpcId() {
+    public String vpcId() {
         return this.vpcId;
     }
 

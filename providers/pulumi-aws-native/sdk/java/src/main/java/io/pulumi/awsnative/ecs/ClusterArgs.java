@@ -23,7 +23,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="capacityProviders")
       private final @Nullable Output<List<String>> capacityProviders;
 
-    public Output<List<String>> getCapacityProviders() {
+    public Output<List<String>> capacityProviders() {
         return this.capacityProviders == null ? Codegen.empty() : this.capacityProviders;
     }
 
@@ -34,35 +34,35 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName == null ? Codegen.empty() : this.clusterName;
     }
 
     @Import(name="clusterSettings")
       private final @Nullable Output<List<ClusterSettingsArgs>> clusterSettings;
 
-    public Output<List<ClusterSettingsArgs>> getClusterSettings() {
+    public Output<List<ClusterSettingsArgs>> clusterSettings() {
         return this.clusterSettings == null ? Codegen.empty() : this.clusterSettings;
     }
 
     @Import(name="configuration")
       private final @Nullable Output<ClusterConfigurationArgs> configuration;
 
-    public Output<ClusterConfigurationArgs> getConfiguration() {
+    public Output<ClusterConfigurationArgs> configuration() {
         return this.configuration == null ? Codegen.empty() : this.configuration;
     }
 
     @Import(name="defaultCapacityProviderStrategy")
       private final @Nullable Output<List<ClusterCapacityProviderStrategyItemArgs>> defaultCapacityProviderStrategy;
 
-    public Output<List<ClusterCapacityProviderStrategyItemArgs>> getDefaultCapacityProviderStrategy() {
+    public Output<List<ClusterCapacityProviderStrategyItemArgs>> defaultCapacityProviderStrategy() {
         return this.defaultCapacityProviderStrategy == null ? Codegen.empty() : this.defaultCapacityProviderStrategy;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<ClusterTagArgs>> tags;
 
-    public Output<List<ClusterTagArgs>> getTags() {
+    public Output<List<ClusterTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

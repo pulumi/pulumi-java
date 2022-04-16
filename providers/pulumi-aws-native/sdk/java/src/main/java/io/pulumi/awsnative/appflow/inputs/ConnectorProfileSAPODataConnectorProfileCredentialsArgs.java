@@ -19,14 +19,14 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsArgs exten
     @Import(name="basicAuthCredentials")
       private final @Nullable Output<ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsPropertiesArgs> basicAuthCredentials;
 
-    public Output<ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsPropertiesArgs> getBasicAuthCredentials() {
+    public Output<ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsPropertiesArgs> basicAuthCredentials() {
         return this.basicAuthCredentials == null ? Codegen.empty() : this.basicAuthCredentials;
     }
 
     @Import(name="oAuthCredentials")
       private final @Nullable Output<ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs> oAuthCredentials;
 
-    public Output<ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs> getOAuthCredentials() {
+    public Output<ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs> oAuthCredentials() {
         return this.oAuthCredentials == null ? Codegen.empty() : this.oAuthCredentials;
     }
 

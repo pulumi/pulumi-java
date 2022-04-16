@@ -21,7 +21,7 @@ public final class StreamStreamModeDetailsGetArgs extends io.pulumi.resources.Re
     @Import(name="streamMode", required=true)
       private final Output<String> streamMode;
 
-    public Output<String> getStreamMode() {
+    public Output<String> streamMode() {
         return this.streamMode;
     }
 

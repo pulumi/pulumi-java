@@ -28,7 +28,7 @@ public final class StreamConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bigqueryDestination")
       private final @Nullable Output<GoogleCloudHealthcareV1FhirBigQueryDestinationArgs> bigqueryDestination;
 
-    public Output<GoogleCloudHealthcareV1FhirBigQueryDestinationArgs> getBigqueryDestination() {
+    public Output<GoogleCloudHealthcareV1FhirBigQueryDestinationArgs> bigqueryDestination() {
         return this.bigqueryDestination == null ? Codegen.empty() : this.bigqueryDestination;
     }
 
@@ -39,7 +39,7 @@ public final class StreamConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceTypes")
       private final @Nullable Output<List<String>> resourceTypes;
 
-    public Output<List<String>> getResourceTypes() {
+    public Output<List<String>> resourceTypes() {
         return this.resourceTypes == null ? Codegen.empty() : this.resourceTypes;
     }
 

@@ -50,37 +50,37 @@ public final class GetPatchBaselineResult {
         this.owner = owner;
     }
 
-    public Optional<Boolean> getDefaultBaseline() {
+    public Optional<Boolean> defaultBaseline() {
         return Optional.ofNullable(this.defaultBaseline);
     }
     /**
      * The description of the baseline.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the baseline.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getNamePrefix() {
+    public Optional<String> namePrefix() {
         return Optional.ofNullable(this.namePrefix);
     }
-    public Optional<String> getOperatingSystem() {
+    public Optional<String> operatingSystem() {
         return Optional.ofNullable(this.operatingSystem);
     }
-    public String getOwner() {
+    public String owner() {
         return this.owner;
     }
 

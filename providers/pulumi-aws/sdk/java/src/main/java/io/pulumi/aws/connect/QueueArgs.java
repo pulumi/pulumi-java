@@ -26,7 +26,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hoursOfOperationId", required=true)
       private final Output<String> hoursOfOperationId;
 
-    public Output<String> getHoursOfOperationId() {
+    public Output<String> hoursOfOperationId() {
         return this.hoursOfOperationId;
     }
 
@@ -48,7 +48,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -59,7 +59,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxContacts")
       private final @Nullable Output<Integer> maxContacts;
 
-    public Output<Integer> getMaxContacts() {
+    public Output<Integer> maxContacts() {
         return this.maxContacts == null ? Codegen.empty() : this.maxContacts;
     }
 
@@ -70,7 +70,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -81,7 +81,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outboundCallerConfig")
       private final @Nullable Output<QueueOutboundCallerConfigArgs> outboundCallerConfig;
 
-    public Output<QueueOutboundCallerConfigArgs> getOutboundCallerConfig() {
+    public Output<QueueOutboundCallerConfigArgs> outboundCallerConfig() {
         return this.outboundCallerConfig == null ? Codegen.empty() : this.outboundCallerConfig;
     }
 
@@ -92,7 +92,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="quickConnectIds")
       private final @Nullable Output<List<String>> quickConnectIds;
 
-    public Output<List<String>> getQuickConnectIds() {
+    public Output<List<String>> quickConnectIds() {
         return this.quickConnectIds == null ? Codegen.empty() : this.quickConnectIds;
     }
 
@@ -103,7 +103,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -114,7 +114,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -125,7 +125,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

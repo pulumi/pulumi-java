@@ -24,7 +24,7 @@ public final class EventTargetHttpTargetArgs extends io.pulumi.resources.Resourc
     @Import(name="headerParameters")
       private final @Nullable Output<Map<String,String>> headerParameters;
 
-    public Output<Map<String,String>> getHeaderParameters() {
+    public Output<Map<String,String>> headerParameters() {
         return this.headerParameters == null ? Codegen.empty() : this.headerParameters;
     }
 
@@ -35,7 +35,7 @@ public final class EventTargetHttpTargetArgs extends io.pulumi.resources.Resourc
     @Import(name="pathParameterValues")
       private final @Nullable Output<List<String>> pathParameterValues;
 
-    public Output<List<String>> getPathParameterValues() {
+    public Output<List<String>> pathParameterValues() {
         return this.pathParameterValues == null ? Codegen.empty() : this.pathParameterValues;
     }
 
@@ -46,7 +46,7 @@ public final class EventTargetHttpTargetArgs extends io.pulumi.resources.Resourc
     @Import(name="queryStringParameters")
       private final @Nullable Output<Map<String,String>> queryStringParameters;
 
-    public Output<Map<String,String>> getQueryStringParameters() {
+    public Output<Map<String,String>> queryStringParameters() {
         return this.queryStringParameters == null ? Codegen.empty() : this.queryStringParameters;
     }
 

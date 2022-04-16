@@ -28,7 +28,7 @@ public final class LoadBalancerIngressArgs extends io.pulumi.resources.ResourceA
     @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
-    public Output<String> getHostname() {
+    public Output<String> hostname() {
         return this.hostname == null ? Codegen.empty() : this.hostname;
     }
 
@@ -39,7 +39,7 @@ public final class LoadBalancerIngressArgs extends io.pulumi.resources.ResourceA
     @Import(name="ip")
       private final @Nullable Output<String> ip;
 
-    public Output<String> getIp() {
+    public Output<String> ip() {
         return this.ip == null ? Codegen.empty() : this.ip;
     }
 
@@ -50,7 +50,7 @@ public final class LoadBalancerIngressArgs extends io.pulumi.resources.ResourceA
     @Import(name="ports")
       private final @Nullable Output<List<PortStatusArgs>> ports;
 
-    public Output<List<PortStatusArgs>> getPorts() {
+    public Output<List<PortStatusArgs>> ports() {
         return this.ports == null ? Codegen.empty() : this.ports;
     }
 

@@ -51,7 +51,7 @@ public final class TriggerPubsubConfig {
      * Service account that will make the push request.
      * 
     */
-    public Optional<String> getServiceAccountEmail() {
+    public Optional<String> serviceAccountEmail() {
         return Optional.ofNullable(this.serviceAccountEmail);
     }
     /**
@@ -60,7 +60,7 @@ public final class TriggerPubsubConfig {
      * Only populated on get requests.
      * 
     */
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
@@ -68,14 +68,14 @@ public final class TriggerPubsubConfig {
      * Output only. Name of the subscription.
      * 
     */
-    public Optional<String> getSubscription() {
+    public Optional<String> subscription() {
         return Optional.ofNullable(this.subscription);
     }
     /**
      * The name of the topic from which this subscription is receiving messages.
      * 
     */
-    public String getTopic() {
+    public String topic() {
         return this.topic;
     }
 

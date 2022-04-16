@@ -25,7 +25,7 @@ public final class EdgeCacheKeysetState extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -36,7 +36,7 @@ public final class EdgeCacheKeysetState extends io.pulumi.resources.ResourceArgs
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -49,7 +49,7 @@ public final class EdgeCacheKeysetState extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -61,7 +61,7 @@ public final class EdgeCacheKeysetState extends io.pulumi.resources.ResourceArgs
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -76,7 +76,7 @@ public final class EdgeCacheKeysetState extends io.pulumi.resources.ResourceArgs
     @Import(name="publicKeys")
       private final @Nullable Output<List<EdgeCacheKeysetPublicKeyGetArgs>> publicKeys;
 
-    public Output<List<EdgeCacheKeysetPublicKeyGetArgs>> getPublicKeys() {
+    public Output<List<EdgeCacheKeysetPublicKeyGetArgs>> publicKeys() {
         return this.publicKeys == null ? Codegen.empty() : this.publicKeys;
     }
 

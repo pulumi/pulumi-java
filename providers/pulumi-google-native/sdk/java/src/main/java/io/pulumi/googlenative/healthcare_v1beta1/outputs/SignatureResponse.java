@@ -48,28 +48,28 @@ public final class SignatureResponse {
      * Optional. An image of the user's signature.
      * 
     */
-    public ImageResponse getImage() {
+    public ImageResponse image() {
         return this.image;
     }
     /**
      * Optional. Metadata associated with the user's signature. For example, the user's name or the user's title.
      * 
     */
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata;
     }
     /**
      * Optional. Timestamp of the signature.
      * 
     */
-    public String getSignatureTime() {
+    public String signatureTime() {
         return this.signatureTime;
     }
     /**
      * User's UUID provided by the client.
      * 
     */
-    public String getUserId() {
+    public String userId() {
         return this.userId;
     }
 

@@ -53,35 +53,35 @@ public final class MetadataExportResponse {
      * The type of the database dump.
      * 
     */
-    public String getDatabaseDumpType() {
+    public String databaseDumpType() {
         return this.databaseDumpType;
     }
     /**
      * A Cloud Storage URI of a folder that metadata are exported to, in the form of gs:////, where is automatically generated.
      * 
     */
-    public String getDestinationGcsUri() {
+    public String destinationGcsUri() {
         return this.destinationGcsUri;
     }
     /**
      * The time when the export ended.
      * 
     */
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
     /**
      * The time when the export started.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
     /**
      * The current state of the export.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

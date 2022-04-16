@@ -69,49 +69,49 @@ public final class ObjectReference {
      * API version of the referent.
      * 
     */
-    public Optional<String> getApiVersion() {
+    public Optional<String> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
      * If referring to a piece of an object instead of an entire object, this string should contain a valid JSON/Go field access statement, such as desiredState.manifest.containers[2]. For example, if the object reference is to a container within a pod, this would take on a value like: "spec.containers{name}" (where "name" refers to the name of the container that triggered the event) or if no container name is specified "spec.containers[2]" (container with index 2 in this pod). This syntax is chosen only to have some well-defined way of referencing a part of an object.
      * 
     */
-    public Optional<String> getFieldPath() {
+    public Optional<String> fieldPath() {
         return Optional.ofNullable(this.fieldPath);
     }
     /**
      * Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
      * 
     */
-    public Optional<String> getNamespace() {
+    public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
     /**
      * Specific resourceVersion to which this reference is made, if any. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency
      * 
     */
-    public Optional<String> getResourceVersion() {
+    public Optional<String> resourceVersion() {
         return Optional.ofNullable(this.resourceVersion);
     }
     /**
      * UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#uids
      * 
     */
-    public Optional<String> getUid() {
+    public Optional<String> uid() {
         return Optional.ofNullable(this.uid);
     }
 

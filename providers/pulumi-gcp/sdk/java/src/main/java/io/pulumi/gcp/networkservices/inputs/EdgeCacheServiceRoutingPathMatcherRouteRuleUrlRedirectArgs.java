@@ -23,7 +23,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectArgs ex
     @Import(name="hostRedirect")
       private final @Nullable Output<String> hostRedirect;
 
-    public Output<String> getHostRedirect() {
+    public Output<String> hostRedirect() {
         return this.hostRedirect == null ? Codegen.empty() : this.hostRedirect;
     }
 
@@ -35,7 +35,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectArgs ex
     @Import(name="httpsRedirect")
       private final @Nullable Output<Boolean> httpsRedirect;
 
-    public Output<Boolean> getHttpsRedirect() {
+    public Output<Boolean> httpsRedirect() {
         return this.httpsRedirect == null ? Codegen.empty() : this.httpsRedirect;
     }
 
@@ -48,7 +48,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectArgs ex
     @Import(name="pathRedirect")
       private final @Nullable Output<String> pathRedirect;
 
-    public Output<String> getPathRedirect() {
+    public Output<String> pathRedirect() {
         return this.pathRedirect == null ? Codegen.empty() : this.pathRedirect;
     }
 
@@ -60,7 +60,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectArgs ex
     @Import(name="prefixRedirect")
       private final @Nullable Output<String> prefixRedirect;
 
-    public Output<String> getPrefixRedirect() {
+    public Output<String> prefixRedirect() {
         return this.prefixRedirect == null ? Codegen.empty() : this.prefixRedirect;
     }
 
@@ -74,7 +74,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectArgs ex
     @Import(name="redirectResponseCode")
       private final @Nullable Output<String> redirectResponseCode;
 
-    public Output<String> getRedirectResponseCode() {
+    public Output<String> redirectResponseCode() {
         return this.redirectResponseCode == null ? Codegen.empty() : this.redirectResponseCode;
     }
 
@@ -85,7 +85,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectArgs ex
     @Import(name="stripQuery")
       private final @Nullable Output<Boolean> stripQuery;
 
-    public Output<Boolean> getStripQuery() {
+    public Output<Boolean> stripQuery() {
         return this.stripQuery == null ? Codegen.empty() : this.stripQuery;
     }
 

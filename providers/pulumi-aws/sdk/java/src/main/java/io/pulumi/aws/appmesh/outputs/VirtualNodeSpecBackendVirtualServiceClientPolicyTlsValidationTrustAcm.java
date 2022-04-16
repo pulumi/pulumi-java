@@ -25,7 +25,7 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
      * One or more ACM Amazon Resource Name (ARN)s.
      * 
     */
-    public List<String> getCertificateAuthorityArns() {
+    public List<String> certificateAuthorityArns() {
         return this.certificateAuthorityArns;
     }
 

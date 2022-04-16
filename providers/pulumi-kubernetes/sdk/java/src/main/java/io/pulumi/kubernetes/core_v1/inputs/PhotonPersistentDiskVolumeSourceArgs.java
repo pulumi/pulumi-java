@@ -26,7 +26,7 @@ public final class PhotonPersistentDiskVolumeSourceArgs extends io.pulumi.resour
     @Import(name="fsType")
       private final @Nullable Output<String> fsType;
 
-    public Output<String> getFsType() {
+    public Output<String> fsType() {
         return this.fsType == null ? Codegen.empty() : this.fsType;
     }
 
@@ -37,7 +37,7 @@ public final class PhotonPersistentDiskVolumeSourceArgs extends io.pulumi.resour
     @Import(name="pdID", required=true)
       private final Output<String> pdID;
 
-    public Output<String> getPdID() {
+    public Output<String> pdID() {
         return this.pdID;
     }
 

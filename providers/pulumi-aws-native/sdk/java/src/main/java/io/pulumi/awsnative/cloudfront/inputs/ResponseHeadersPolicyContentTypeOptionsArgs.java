@@ -17,7 +17,7 @@ public final class ResponseHeadersPolicyContentTypeOptionsArgs extends io.pulumi
     @Import(name="override", required=true)
       private final Output<Boolean> override;
 
-    public Output<Boolean> getOverride() {
+    public Output<Boolean> override() {
         return this.override;
     }
 

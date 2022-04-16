@@ -26,7 +26,7 @@ public final class WorkspaceCappingResponse extends io.pulumi.resources.InvokeAr
     @Import(name="dailyQuotaGb")
       private final @Nullable Double dailyQuotaGb;
 
-    public Optional<Double> getDailyQuotaGb() {
+    public Optional<Double> dailyQuotaGb() {
         return this.dailyQuotaGb == null ? Optional.empty() : Optional.ofNullable(this.dailyQuotaGb);
     }
 
@@ -37,7 +37,7 @@ public final class WorkspaceCappingResponse extends io.pulumi.resources.InvokeAr
     @Import(name="dataIngestionStatus", required=true)
       private final String dataIngestionStatus;
 
-    public String getDataIngestionStatus() {
+    public String dataIngestionStatus() {
         return this.dataIngestionStatus;
     }
 
@@ -48,7 +48,7 @@ public final class WorkspaceCappingResponse extends io.pulumi.resources.InvokeAr
     @Import(name="quotaNextResetTime", required=true)
       private final String quotaNextResetTime;
 
-    public String getQuotaNextResetTime() {
+    public String quotaNextResetTime() {
         return this.quotaNextResetTime;
     }
 

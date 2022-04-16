@@ -26,7 +26,7 @@ public final class BucketLoggingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logBucket")
       private final @Nullable Output<String> logBucket;
 
-    public Output<String> getLogBucket() {
+    public Output<String> logBucket() {
         return this.logBucket == null ? Codegen.empty() : this.logBucket;
     }
 
@@ -37,7 +37,7 @@ public final class BucketLoggingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logObjectPrefix")
       private final @Nullable Output<String> logObjectPrefix;
 
-    public Output<String> getLogObjectPrefix() {
+    public Output<String> logObjectPrefix() {
         return this.logObjectPrefix == null ? Codegen.empty() : this.logObjectPrefix;
     }
 

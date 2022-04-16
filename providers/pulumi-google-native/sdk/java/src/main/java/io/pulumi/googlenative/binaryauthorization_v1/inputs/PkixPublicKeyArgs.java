@@ -27,7 +27,7 @@ public final class PkixPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicKeyPem")
       private final @Nullable Output<String> publicKeyPem;
 
-    public Output<String> getPublicKeyPem() {
+    public Output<String> publicKeyPem() {
         return this.publicKeyPem == null ? Codegen.empty() : this.publicKeyPem;
     }
 
@@ -38,7 +38,7 @@ public final class PkixPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="signatureAlgorithm")
       private final @Nullable Output<PkixPublicKeySignatureAlgorithm> signatureAlgorithm;
 
-    public Output<PkixPublicKeySignatureAlgorithm> getSignatureAlgorithm() {
+    public Output<PkixPublicKeySignatureAlgorithm> signatureAlgorithm() {
         return this.signatureAlgorithm == null ? Codegen.empty() : this.signatureAlgorithm;
     }
 

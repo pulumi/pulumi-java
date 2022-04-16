@@ -21,7 +21,7 @@ public final class PullThroughCacheRuleArgs extends io.pulumi.resources.Resource
     @Import(name="ecrRepositoryPrefix", required=true)
       private final Output<String> ecrRepositoryPrefix;
 
-    public Output<String> getEcrRepositoryPrefix() {
+    public Output<String> ecrRepositoryPrefix() {
         return this.ecrRepositoryPrefix;
     }
 
@@ -32,7 +32,7 @@ public final class PullThroughCacheRuleArgs extends io.pulumi.resources.Resource
     @Import(name="upstreamRegistryUrl", required=true)
       private final Output<String> upstreamRegistryUrl;
 
-    public Output<String> getUpstreamRegistryUrl() {
+    public Output<String> upstreamRegistryUrl() {
         return this.upstreamRegistryUrl;
     }
 

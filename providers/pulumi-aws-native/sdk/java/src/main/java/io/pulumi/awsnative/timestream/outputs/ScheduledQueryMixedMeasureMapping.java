@@ -34,19 +34,19 @@ public final class ScheduledQueryMixedMeasureMapping {
         this.targetMeasureName = targetMeasureName;
     }
 
-    public Optional<String> getMeasureName() {
+    public Optional<String> measureName() {
         return Optional.ofNullable(this.measureName);
     }
-    public ScheduledQueryMixedMeasureMappingMeasureValueType getMeasureValueType() {
+    public ScheduledQueryMixedMeasureMappingMeasureValueType measureValueType() {
         return this.measureValueType;
     }
-    public List<ScheduledQueryMultiMeasureAttributeMapping> getMultiMeasureAttributeMappings() {
+    public List<ScheduledQueryMultiMeasureAttributeMapping> multiMeasureAttributeMappings() {
         return this.multiMeasureAttributeMappings == null ? List.of() : this.multiMeasureAttributeMappings;
     }
-    public Optional<String> getSourceColumn() {
+    public Optional<String> sourceColumn() {
         return Optional.ofNullable(this.sourceColumn);
     }
-    public Optional<String> getTargetMeasureName() {
+    public Optional<String> targetMeasureName() {
         return Optional.ofNullable(this.targetMeasureName);
     }
 

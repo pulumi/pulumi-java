@@ -40,7 +40,7 @@ public final class DistributionRestrictionsGeoRestriction {
      * distribute your content (`blacklist`).
      * 
     */
-    public List<String> getLocations() {
+    public List<String> locations() {
         return this.locations == null ? List.of() : this.locations;
     }
     /**
@@ -49,7 +49,7 @@ public final class DistributionRestrictionsGeoRestriction {
      * `blacklist`.
      * 
     */
-    public String getRestrictionType() {
+    public String restrictionType() {
         return this.restrictionType;
     }
 

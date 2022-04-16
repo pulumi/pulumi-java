@@ -81,63 +81,63 @@ public final class KeyUsageOptionsResponse {
      * The key may be used to sign certificates.
      * 
     */
-    public Boolean getCertSign() {
+    public Boolean certSign() {
         return this.certSign;
     }
     /**
      * The key may be used for cryptographic commitments. Note that this may also be referred to as "non-repudiation".
      * 
     */
-    public Boolean getContentCommitment() {
+    public Boolean contentCommitment() {
         return this.contentCommitment;
     }
     /**
      * The key may be used sign certificate revocation lists.
      * 
     */
-    public Boolean getCrlSign() {
+    public Boolean crlSign() {
         return this.crlSign;
     }
     /**
      * The key may be used to encipher data.
      * 
     */
-    public Boolean getDataEncipherment() {
+    public Boolean dataEncipherment() {
         return this.dataEncipherment;
     }
     /**
      * The key may be used to decipher only.
      * 
     */
-    public Boolean getDecipherOnly() {
+    public Boolean decipherOnly() {
         return this.decipherOnly;
     }
     /**
      * The key may be used for digital signatures.
      * 
     */
-    public Boolean getDigitalSignature() {
+    public Boolean digitalSignature() {
         return this.digitalSignature;
     }
     /**
      * The key may be used to encipher only.
      * 
     */
-    public Boolean getEncipherOnly() {
+    public Boolean encipherOnly() {
         return this.encipherOnly;
     }
     /**
      * The key may be used in a key agreement protocol.
      * 
     */
-    public Boolean getKeyAgreement() {
+    public Boolean keyAgreement() {
         return this.keyAgreement;
     }
     /**
      * The key may be used to encipher other keys.
      * 
     */
-    public Boolean getKeyEncipherment() {
+    public Boolean keyEncipherment() {
         return this.keyEncipherment;
     }
 

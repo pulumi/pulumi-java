@@ -29,7 +29,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hosts", required=true)
       private final Output<List<String>> hosts;
 
-    public Output<List<String>> getHosts() {
+    public Output<List<String>> hosts() {
         return this.hosts;
     }
 
@@ -40,7 +40,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpHeaderMatch")
       private final @Nullable Output<HttpHeaderMatchArgs> httpHeaderMatch;
 
-    public Output<HttpHeaderMatchArgs> getHttpHeaderMatch() {
+    public Output<HttpHeaderMatchArgs> httpHeaderMatch() {
         return this.httpHeaderMatch == null ? Codegen.empty() : this.httpHeaderMatch;
     }
 
@@ -51,7 +51,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="methods")
       private final @Nullable Output<List<String>> methods;
 
-    public Output<List<String>> getMethods() {
+    public Output<List<String>> methods() {
         return this.methods == null ? Codegen.empty() : this.methods;
     }
 
@@ -62,7 +62,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ports", required=true)
       private final Output<List<Integer>> ports;
 
-    public Output<List<Integer>> getPorts() {
+    public Output<List<Integer>> ports() {
         return this.ports;
     }
 

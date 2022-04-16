@@ -44,14 +44,14 @@ public final class PatchDeploymentPatchConfigWindowsUpdate {
      * Each value may be one of `CRITICAL`, `SECURITY`, `DEFINITION`, `DRIVER`, `FEATURE_PACK`, `SERVICE_PACK`, `TOOL`, `UPDATE_ROLLUP`, and `UPDATE`.
      * 
     */
-    public List<String> getClassifications() {
+    public List<String> classifications() {
         return this.classifications == null ? List.of() : this.classifications;
     }
     /**
      * List of KBs to exclude from update.
      * 
     */
-    public List<String> getExcludes() {
+    public List<String> excludes() {
         return this.excludes == null ? List.of() : this.excludes;
     }
     /**
@@ -59,7 +59,7 @@ public final class PatchDeploymentPatchConfigWindowsUpdate {
      * This field must not be used with other patch configurations.
      * 
     */
-    public List<String> getExclusivePatches() {
+    public List<String> exclusivePatches() {
         return this.exclusivePatches == null ? List.of() : this.exclusivePatches;
     }
 

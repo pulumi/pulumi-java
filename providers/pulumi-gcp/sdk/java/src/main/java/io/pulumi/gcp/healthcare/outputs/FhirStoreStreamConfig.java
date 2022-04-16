@@ -47,7 +47,7 @@ public final class FhirStoreStreamConfig {
      * Structure is documented below.
      * 
     */
-    public FhirStoreStreamConfigBigqueryDestination getBigqueryDestination() {
+    public FhirStoreStreamConfigBigqueryDestination bigqueryDestination() {
         return this.bigqueryDestination;
     }
     /**
@@ -56,7 +56,7 @@ public final class FhirStoreStreamConfig {
      * an empty list as an intent to stream all the supported resource types in this FHIR store.
      * 
     */
-    public List<String> getResourceTypes() {
+    public List<String> resourceTypes() {
         return this.resourceTypes == null ? List.of() : this.resourceTypes;
     }
 

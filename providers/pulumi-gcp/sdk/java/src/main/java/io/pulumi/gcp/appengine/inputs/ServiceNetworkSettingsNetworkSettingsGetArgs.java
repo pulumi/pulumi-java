@@ -24,7 +24,7 @@ public final class ServiceNetworkSettingsNetworkSettingsGetArgs extends io.pulum
     @Import(name="ingressTrafficAllowed")
       private final @Nullable Output<String> ingressTrafficAllowed;
 
-    public Output<String> getIngressTrafficAllowed() {
+    public Output<String> ingressTrafficAllowed() {
         return this.ingressTrafficAllowed == null ? Codegen.empty() : this.ingressTrafficAllowed;
     }
 

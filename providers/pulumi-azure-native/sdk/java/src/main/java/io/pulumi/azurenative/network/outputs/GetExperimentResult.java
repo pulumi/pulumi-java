@@ -106,84 +106,84 @@ public final class GetExperimentResult {
      * The description of the details or intents of the Experiment
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The state of the Experiment
      * 
     */
-    public Optional<String> getEnabledState() {
+    public Optional<String> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
      * The endpoint A of an experiment
      * 
     */
-    public Optional<ExperimentEndpointResponse> getEndpointA() {
+    public Optional<ExperimentEndpointResponse> endpointA() {
         return Optional.ofNullable(this.endpointA);
     }
     /**
      * The endpoint B of an experiment
      * 
     */
-    public Optional<ExperimentEndpointResponse> getEndpointB() {
+    public Optional<ExperimentEndpointResponse> endpointB() {
         return Optional.ofNullable(this.endpointB);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource status.
      * 
     */
-    public String getResourceState() {
+    public String resourceState() {
         return this.resourceState;
     }
     /**
      * The uri to the Script used in the Experiment
      * 
     */
-    public String getScriptFileUri() {
+    public String scriptFileUri() {
         return this.scriptFileUri;
     }
     /**
      * The description of Experiment status from the server side
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

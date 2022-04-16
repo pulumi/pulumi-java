@@ -26,7 +26,7 @@ public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="days", required=true)
       private final Output<Integer> days;
 
-    public Output<Integer> getDays() {
+    public Output<Integer> days() {
         return this.days;
     }
 
@@ -37,7 +37,7 @@ public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 

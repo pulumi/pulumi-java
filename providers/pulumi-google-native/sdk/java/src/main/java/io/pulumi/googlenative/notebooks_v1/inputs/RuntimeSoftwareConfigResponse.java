@@ -27,7 +27,7 @@ public final class RuntimeSoftwareConfigResponse extends io.pulumi.resources.Inv
     @Import(name="customGpuDriverPath", required=true)
       private final String customGpuDriverPath;
 
-    public String getCustomGpuDriverPath() {
+    public String customGpuDriverPath() {
         return this.customGpuDriverPath;
     }
 
@@ -38,7 +38,7 @@ public final class RuntimeSoftwareConfigResponse extends io.pulumi.resources.Inv
     @Import(name="enableHealthMonitoring", required=true)
       private final Boolean enableHealthMonitoring;
 
-    public Boolean getEnableHealthMonitoring() {
+    public Boolean enableHealthMonitoring() {
         return this.enableHealthMonitoring;
     }
 
@@ -49,7 +49,7 @@ public final class RuntimeSoftwareConfigResponse extends io.pulumi.resources.Inv
     @Import(name="idleShutdown", required=true)
       private final Boolean idleShutdown;
 
-    public Boolean getIdleShutdown() {
+    public Boolean idleShutdown() {
         return this.idleShutdown;
     }
 
@@ -60,7 +60,7 @@ public final class RuntimeSoftwareConfigResponse extends io.pulumi.resources.Inv
     @Import(name="idleShutdownTimeout", required=true)
       private final Integer idleShutdownTimeout;
 
-    public Integer getIdleShutdownTimeout() {
+    public Integer idleShutdownTimeout() {
         return this.idleShutdownTimeout;
     }
 
@@ -71,7 +71,7 @@ public final class RuntimeSoftwareConfigResponse extends io.pulumi.resources.Inv
     @Import(name="installGpuDriver", required=true)
       private final Boolean installGpuDriver;
 
-    public Boolean getInstallGpuDriver() {
+    public Boolean installGpuDriver() {
         return this.installGpuDriver;
     }
 
@@ -82,7 +82,7 @@ public final class RuntimeSoftwareConfigResponse extends io.pulumi.resources.Inv
     @Import(name="kernels", required=true)
       private final List<ContainerImageResponse> kernels;
 
-    public List<ContainerImageResponse> getKernels() {
+    public List<ContainerImageResponse> kernels() {
         return this.kernels;
     }
 
@@ -93,7 +93,7 @@ public final class RuntimeSoftwareConfigResponse extends io.pulumi.resources.Inv
     @Import(name="notebookUpgradeSchedule", required=true)
       private final String notebookUpgradeSchedule;
 
-    public String getNotebookUpgradeSchedule() {
+    public String notebookUpgradeSchedule() {
         return this.notebookUpgradeSchedule;
     }
 
@@ -104,7 +104,7 @@ public final class RuntimeSoftwareConfigResponse extends io.pulumi.resources.Inv
     @Import(name="postStartupScript", required=true)
       private final String postStartupScript;
 
-    public String getPostStartupScript() {
+    public String postStartupScript() {
         return this.postStartupScript;
     }
 

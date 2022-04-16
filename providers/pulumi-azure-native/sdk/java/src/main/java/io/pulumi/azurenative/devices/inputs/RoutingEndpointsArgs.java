@@ -30,7 +30,7 @@ public final class RoutingEndpointsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="eventHubs")
       private final @Nullable Output<List<RoutingEventHubPropertiesArgs>> eventHubs;
 
-    public Output<List<RoutingEventHubPropertiesArgs>> getEventHubs() {
+    public Output<List<RoutingEventHubPropertiesArgs>> eventHubs() {
         return this.eventHubs == null ? Codegen.empty() : this.eventHubs;
     }
 
@@ -41,7 +41,7 @@ public final class RoutingEndpointsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="serviceBusQueues")
       private final @Nullable Output<List<RoutingServiceBusQueueEndpointPropertiesArgs>> serviceBusQueues;
 
-    public Output<List<RoutingServiceBusQueueEndpointPropertiesArgs>> getServiceBusQueues() {
+    public Output<List<RoutingServiceBusQueueEndpointPropertiesArgs>> serviceBusQueues() {
         return this.serviceBusQueues == null ? Codegen.empty() : this.serviceBusQueues;
     }
 
@@ -52,7 +52,7 @@ public final class RoutingEndpointsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="serviceBusTopics")
       private final @Nullable Output<List<RoutingServiceBusTopicEndpointPropertiesArgs>> serviceBusTopics;
 
-    public Output<List<RoutingServiceBusTopicEndpointPropertiesArgs>> getServiceBusTopics() {
+    public Output<List<RoutingServiceBusTopicEndpointPropertiesArgs>> serviceBusTopics() {
         return this.serviceBusTopics == null ? Codegen.empty() : this.serviceBusTopics;
     }
 
@@ -63,7 +63,7 @@ public final class RoutingEndpointsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="storageContainers")
       private final @Nullable Output<List<RoutingStorageContainerPropertiesArgs>> storageContainers;
 
-    public Output<List<RoutingStorageContainerPropertiesArgs>> getStorageContainers() {
+    public Output<List<RoutingStorageContainerPropertiesArgs>> storageContainers() {
         return this.storageContainers == null ? Codegen.empty() : this.storageContainers;
     }
 

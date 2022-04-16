@@ -27,13 +27,13 @@ public final class EnvironmentConfigWorkloadsConfig {
         this.worker = worker;
     }
 
-    public Optional<EnvironmentConfigWorkloadsConfigScheduler> getScheduler() {
+    public Optional<EnvironmentConfigWorkloadsConfigScheduler> scheduler() {
         return Optional.ofNullable(this.scheduler);
     }
-    public Optional<EnvironmentConfigWorkloadsConfigWebServer> getWebServer() {
+    public Optional<EnvironmentConfigWorkloadsConfigWebServer> webServer() {
         return Optional.ofNullable(this.webServer);
     }
-    public Optional<EnvironmentConfigWorkloadsConfigWorker> getWorker() {
+    public Optional<EnvironmentConfigWorkloadsConfigWorker> worker() {
         return Optional.ofNullable(this.worker);
     }
 

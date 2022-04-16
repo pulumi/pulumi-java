@@ -62,42 +62,42 @@ public final class SharedPrivateLinkResourcePropertiesResponse {
      * The group id from the provider of resource the shared private link resource is for.
      * 
     */
-    public Optional<String> getGroupId() {
+    public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
     }
     /**
      * The resource id of the resource the shared private link resource is for.
      * 
     */
-    public Optional<String> getPrivateLinkResourceId() {
+    public Optional<String> privateLinkResourceId() {
         return Optional.ofNullable(this.privateLinkResourceId);
     }
     /**
      * The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.
      * 
     */
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * The request message for requesting approval of the shared private link resource.
      * 
     */
-    public Optional<String> getRequestMessage() {
+    public Optional<String> requestMessage() {
         return Optional.ofNullable(this.requestMessage);
     }
     /**
      * Optional. Can be used to specify the Azure Resource Manager location of the resource to which a shared private link is to be created. This is only required for those resources whose DNS configuration are regional (such as Azure Kubernetes Service).
      * 
     */
-    public Optional<String> getResourceRegion() {
+    public Optional<String> resourceRegion() {
         return Optional.ofNullable(this.resourceRegion);
     }
     /**
      * Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
 

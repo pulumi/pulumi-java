@@ -26,7 +26,7 @@ public final class ImageGuestOsFeature {
      * Possible values are `MULTI_IP_SUBNET`, `SECURE_BOOT`, `SEV_CAPABLE`, `UEFI_COMPATIBLE`, `VIRTIO_SCSI_MULTIQUEUE`, `WINDOWS`, and `GVNIC`.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

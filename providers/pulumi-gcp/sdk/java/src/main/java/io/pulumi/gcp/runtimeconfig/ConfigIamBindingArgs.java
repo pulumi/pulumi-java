@@ -20,7 +20,7 @@ public final class ConfigIamBindingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="condition")
       private final @Nullable Output<ConfigIamBindingConditionArgs> condition;
 
-    public Output<ConfigIamBindingConditionArgs> getCondition() {
+    public Output<ConfigIamBindingConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -31,14 +31,14 @@ public final class ConfigIamBindingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="config", required=true)
       private final Output<String> config;
 
-    public Output<String> getConfig() {
+    public Output<String> config() {
         return this.config;
     }
 
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
@@ -50,7 +50,7 @@ public final class ConfigIamBindingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -63,7 +63,7 @@ public final class ConfigIamBindingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

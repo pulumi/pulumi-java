@@ -16,7 +16,7 @@ public final class BotSampleUtterance {
         this.utterance = utterance;
     }
 
-    public String getUtterance() {
+    public String utterance() {
         return this.utterance;
     }
 

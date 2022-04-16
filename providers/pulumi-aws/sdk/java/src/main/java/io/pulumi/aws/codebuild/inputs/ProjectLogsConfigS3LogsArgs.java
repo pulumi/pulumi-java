@@ -23,7 +23,7 @@ public final class ProjectLogsConfigS3LogsArgs extends io.pulumi.resources.Resou
     @Import(name="bucketOwnerAccess")
       private final @Nullable Output<String> bucketOwnerAccess;
 
-    public Output<String> getBucketOwnerAccess() {
+    public Output<String> bucketOwnerAccess() {
         return this.bucketOwnerAccess == null ? Codegen.empty() : this.bucketOwnerAccess;
     }
 
@@ -34,7 +34,7 @@ public final class ProjectLogsConfigS3LogsArgs extends io.pulumi.resources.Resou
     @Import(name="encryptionDisabled")
       private final @Nullable Output<Boolean> encryptionDisabled;
 
-    public Output<Boolean> getEncryptionDisabled() {
+    public Output<Boolean> encryptionDisabled() {
         return this.encryptionDisabled == null ? Codegen.empty() : this.encryptionDisabled;
     }
 
@@ -45,7 +45,7 @@ public final class ProjectLogsConfigS3LogsArgs extends io.pulumi.resources.Resou
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -56,7 +56,7 @@ public final class ProjectLogsConfigS3LogsArgs extends io.pulumi.resources.Resou
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

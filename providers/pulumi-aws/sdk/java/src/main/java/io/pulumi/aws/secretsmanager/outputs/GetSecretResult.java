@@ -100,38 +100,38 @@ public final class GetSecretResult {
      * The Amazon Resource Name (ARN) of the secret.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * A description of the secret.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The Key Management Service (KMS) Customer Master Key (CMK) associated with the secret.
      * 
     */
-    public String getKmsKeyId() {
+    public String kmsKeyId() {
         return this.kmsKeyId;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The resource-based policy document that's attached to the secret.
      * 
     */
-    public String getPolicy() {
+    public String policy() {
         return this.policy;
     }
     /**
@@ -142,7 +142,7 @@ public final class GetSecretResult {
      * 
     */
     @Deprecated /* Use the aws_secretsmanager_secret_rotation data source instead */
-    public Boolean getRotationEnabled() {
+    public Boolean rotationEnabled() {
         return this.rotationEnabled;
     }
     /**
@@ -153,7 +153,7 @@ public final class GetSecretResult {
      * 
     */
     @Deprecated /* Use the aws_secretsmanager_secret_rotation data source instead */
-    public String getRotationLambdaArn() {
+    public String rotationLambdaArn() {
         return this.rotationLambdaArn;
     }
     /**
@@ -164,14 +164,14 @@ public final class GetSecretResult {
      * 
     */
     @Deprecated /* Use the aws_secretsmanager_secret_rotation data source instead */
-    public List<GetSecretRotationRule> getRotationRules() {
+    public List<GetSecretRotationRule> rotationRules() {
         return this.rotationRules;
     }
     /**
      * Tags of the secret.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

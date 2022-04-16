@@ -32,14 +32,14 @@ public final class ReportConfigTimePeriodResponse {
      * The start date to pull data from.
      * 
     */
-    public String getFrom() {
+    public String from() {
         return this.from;
     }
     /**
      * The end date to pull data to.
      * 
     */
-    public String getTo() {
+    public String to() {
         return this.to;
     }
 

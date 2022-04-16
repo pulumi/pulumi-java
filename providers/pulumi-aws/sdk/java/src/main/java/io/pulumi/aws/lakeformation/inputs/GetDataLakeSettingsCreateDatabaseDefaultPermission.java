@@ -20,7 +20,7 @@ public final class GetDataLakeSettingsCreateDatabaseDefaultPermission extends io
     @Import(name="permissions", required=true)
       private final List<String> permissions;
 
-    public List<String> getPermissions() {
+    public List<String> permissions() {
         return this.permissions;
     }
 
@@ -31,7 +31,7 @@ public final class GetDataLakeSettingsCreateDatabaseDefaultPermission extends io
     @Import(name="principal", required=true)
       private final String principal;
 
-    public String getPrincipal() {
+    public String principal() {
         return this.principal;
     }
 

@@ -26,7 +26,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="charset")
       private final @Nullable Output<String> charset;
 
-    public Output<String> getCharset() {
+    public Output<String> charset() {
         return this.charset == null ? Codegen.empty() : this.charset;
     }
 
@@ -41,7 +41,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="collation")
       private final @Nullable Output<String> collation;
 
-    public Output<String> getCollation() {
+    public Output<String> collation() {
         return this.collation == null ? Codegen.empty() : this.collation;
     }
 
@@ -53,7 +53,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instance", required=true)
       private final Output<String> instance;
 
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
 
@@ -65,7 +65,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -77,7 +77,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

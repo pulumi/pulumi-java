@@ -18,28 +18,28 @@ public final class ResponseHeadersPolicyStrictTransportSecurity extends io.pulum
     @Import(name="accessControlMaxAgeSec", required=true)
       private final Integer accessControlMaxAgeSec;
 
-    public Integer getAccessControlMaxAgeSec() {
+    public Integer accessControlMaxAgeSec() {
         return this.accessControlMaxAgeSec;
     }
 
     @Import(name="includeSubdomains")
       private final @Nullable Boolean includeSubdomains;
 
-    public Optional<Boolean> getIncludeSubdomains() {
+    public Optional<Boolean> includeSubdomains() {
         return this.includeSubdomains == null ? Optional.empty() : Optional.ofNullable(this.includeSubdomains);
     }
 
     @Import(name="override", required=true)
       private final Boolean override;
 
-    public Boolean getOverride() {
+    public Boolean override() {
         return this.override;
     }
 
     @Import(name="preload")
       private final @Nullable Boolean preload;
 
-    public Optional<Boolean> getPreload() {
+    public Optional<Boolean> preload() {
         return this.preload == null ? Optional.empty() : Optional.ofNullable(this.preload);
     }
 

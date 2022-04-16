@@ -91,28 +91,28 @@ public final class AzureDataExplorerConnectionPropertiesResponse {
      * The name of the Azure Data Explorer database.
      * 
     */
-    public String getAdxDatabaseName() {
+    public String adxDatabaseName() {
         return this.adxDatabaseName;
     }
     /**
      * The URI of the Azure Data Explorer endpoint.
      * 
     */
-    public String getAdxEndpointUri() {
+    public String adxEndpointUri() {
         return this.adxEndpointUri;
     }
     /**
      * The resource ID of the Azure Data Explorer cluster.
      * 
     */
-    public String getAdxResourceId() {
+    public String adxResourceId() {
         return this.adxResourceId;
     }
     /**
      * The name of the Azure Data Explorer table.
      * 
     */
-    public Optional<String> getAdxTableName() {
+    public Optional<String> adxTableName() {
         return Optional.ofNullable(this.adxTableName);
     }
     /**
@@ -120,42 +120,42 @@ public final class AzureDataExplorerConnectionPropertiesResponse {
      * Expected value is 'AzureDataExplorer'.
      * 
     */
-    public String getConnectionType() {
+    public String connectionType() {
         return this.connectionType;
     }
     /**
      * The EventHub consumer group to use when ADX reads from EventHub. Defaults to $Default.
      * 
     */
-    public Optional<String> getEventHubConsumerGroup() {
+    public Optional<String> eventHubConsumerGroup() {
         return Optional.ofNullable(this.eventHubConsumerGroup);
     }
     /**
      * The URL of the EventHub namespace for identity-based authentication. It must include the protocol sb://
      * 
     */
-    public String getEventHubEndpointUri() {
+    public String eventHubEndpointUri() {
         return this.eventHubEndpointUri;
     }
     /**
      * The EventHub name in the EventHub namespace for identity-based authentication.
      * 
     */
-    public String getEventHubEntityPath() {
+    public String eventHubEntityPath() {
         return this.eventHubEntityPath;
     }
     /**
      * The resource ID of the EventHub namespace.
      * 
     */
-    public String getEventHubNamespaceResourceId() {
+    public String eventHubNamespaceResourceId() {
         return this.eventHubNamespaceResourceId;
     }
     /**
      * The provisioning state.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

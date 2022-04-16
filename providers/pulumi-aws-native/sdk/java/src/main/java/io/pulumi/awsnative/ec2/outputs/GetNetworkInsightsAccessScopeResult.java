@@ -33,19 +33,19 @@ public final class GetNetworkInsightsAccessScopeResult {
         this.updatedDate = updatedDate;
     }
 
-    public Optional<String> getCreatedDate() {
+    public Optional<String> createdDate() {
         return Optional.ofNullable(this.createdDate);
     }
-    public Optional<String> getNetworkInsightsAccessScopeArn() {
+    public Optional<String> networkInsightsAccessScopeArn() {
         return Optional.ofNullable(this.networkInsightsAccessScopeArn);
     }
-    public Optional<String> getNetworkInsightsAccessScopeId() {
+    public Optional<String> networkInsightsAccessScopeId() {
         return Optional.ofNullable(this.networkInsightsAccessScopeId);
     }
-    public List<NetworkInsightsAccessScopeTag> getTags() {
+    public List<NetworkInsightsAccessScopeTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
-    public Optional<String> getUpdatedDate() {
+    public Optional<String> updatedDate() {
         return Optional.ofNullable(this.updatedDate);
     }
 

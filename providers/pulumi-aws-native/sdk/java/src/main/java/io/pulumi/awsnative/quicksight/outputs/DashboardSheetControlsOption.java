@@ -18,7 +18,7 @@ public final class DashboardSheetControlsOption {
         this.visibilityState = visibilityState;
     }
 
-    public Optional<DashboardUIState> getVisibilityState() {
+    public Optional<DashboardUIState> visibilityState() {
         return Optional.ofNullable(this.visibilityState);
     }
 

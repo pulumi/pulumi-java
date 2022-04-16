@@ -23,7 +23,7 @@ public final class GitFileSourceResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 
@@ -34,7 +34,7 @@ public final class GitFileSourceResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="repoType", required=true)
       private final String repoType;
 
-    public String getRepoType() {
+    public String repoType() {
         return this.repoType;
     }
 
@@ -45,7 +45,7 @@ public final class GitFileSourceResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="revision", required=true)
       private final String revision;
 
-    public String getRevision() {
+    public String revision() {
         return this.revision;
     }
 
@@ -56,7 +56,7 @@ public final class GitFileSourceResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

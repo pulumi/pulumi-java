@@ -30,7 +30,7 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
     @Import(name="apt", required=true)
       private final OSPolicyResourcePackageResourceAPTResponse apt;
 
-    public OSPolicyResourcePackageResourceAPTResponse getApt() {
+    public OSPolicyResourcePackageResourceAPTResponse apt() {
         return this.apt;
     }
 
@@ -41,7 +41,7 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
     @Import(name="deb", required=true)
       private final OSPolicyResourcePackageResourceDebResponse deb;
 
-    public OSPolicyResourcePackageResourceDebResponse getDeb() {
+    public OSPolicyResourcePackageResourceDebResponse deb() {
         return this.deb;
     }
 
@@ -52,7 +52,7 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
     @Import(name="desiredState", required=true)
       private final String desiredState;
 
-    public String getDesiredState() {
+    public String desiredState() {
         return this.desiredState;
     }
 
@@ -63,7 +63,7 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
     @Import(name="googet", required=true)
       private final OSPolicyResourcePackageResourceGooGetResponse googet;
 
-    public OSPolicyResourcePackageResourceGooGetResponse getGooget() {
+    public OSPolicyResourcePackageResourceGooGetResponse googet() {
         return this.googet;
     }
 
@@ -74,7 +74,7 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
     @Import(name="msi", required=true)
       private final OSPolicyResourcePackageResourceMSIResponse msi;
 
-    public OSPolicyResourcePackageResourceMSIResponse getMsi() {
+    public OSPolicyResourcePackageResourceMSIResponse msi() {
         return this.msi;
     }
 
@@ -85,7 +85,7 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
     @Import(name="rpm", required=true)
       private final OSPolicyResourcePackageResourceRPMResponse rpm;
 
-    public OSPolicyResourcePackageResourceRPMResponse getRpm() {
+    public OSPolicyResourcePackageResourceRPMResponse rpm() {
         return this.rpm;
     }
 
@@ -96,7 +96,7 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
     @Import(name="yum", required=true)
       private final OSPolicyResourcePackageResourceYUMResponse yum;
 
-    public OSPolicyResourcePackageResourceYUMResponse getYum() {
+    public OSPolicyResourcePackageResourceYUMResponse yum() {
         return this.yum;
     }
 
@@ -107,7 +107,7 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
     @Import(name="zypper", required=true)
       private final OSPolicyResourcePackageResourceZypperResponse zypper;
 
-    public OSPolicyResourcePackageResourceZypperResponse getZypper() {
+    public OSPolicyResourcePackageResourceZypperResponse zypper() {
         return this.zypper;
     }
 

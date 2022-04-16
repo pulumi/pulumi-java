@@ -26,7 +26,7 @@ public final class SystemAssignedIdentityAuthInfoResponse {
      * Expected value is 'systemAssignedIdentity'.
      * 
     */
-    public String getAuthType() {
+    public String authType() {
         return this.authType;
     }
 

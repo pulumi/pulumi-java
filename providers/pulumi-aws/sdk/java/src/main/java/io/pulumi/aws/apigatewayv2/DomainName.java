@@ -47,7 +47,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * @return The [API mapping selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions) for the domain name.
      * 
      */
-    public Output<String> getApiMappingSelectionExpression() {
+    public Output<String> apiMappingSelectionExpression() {
         return this.apiMappingSelectionExpression;
     }
     /**
@@ -61,7 +61,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * @return The ARN of the domain name.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -75,7 +75,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * @return The domain name. Must be between 1 and 512 characters in length.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -89,7 +89,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * @return The domain name configuration.
      * 
      */
-    public Output<DomainNameDomainNameConfiguration> getDomainNameConfiguration() {
+    public Output<DomainNameDomainNameConfiguration> domainNameConfiguration() {
         return this.domainNameConfiguration;
     }
     /**
@@ -103,7 +103,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * @return The mutual TLS authentication configuration for the domain name.
      * 
      */
-    public Output</* @Nullable */ DomainNameMutualTlsAuthentication> getMutualTlsAuthentication() {
+    public Output</* @Nullable */ DomainNameMutualTlsAuthentication> mutualTlsAuthentication() {
         return this.mutualTlsAuthentication;
     }
     /**
@@ -117,7 +117,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the domain name. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -131,7 +131,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

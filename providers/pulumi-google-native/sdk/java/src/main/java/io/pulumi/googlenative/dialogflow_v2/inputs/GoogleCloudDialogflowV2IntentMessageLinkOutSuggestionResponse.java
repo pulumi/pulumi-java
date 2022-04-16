@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse
     @Import(name="destinationName", required=true)
       private final String destinationName;
 
-    public String getDestinationName() {
+    public String destinationName() {
         return this.destinationName;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

@@ -19,7 +19,7 @@ public final class InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse 
     @Import(name="allEffective", required=true)
       private final Boolean allEffective;
 
-    public Boolean getAllEffective() {
+    public Boolean allEffective() {
         return this.allEffective;
     }
 

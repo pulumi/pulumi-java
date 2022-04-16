@@ -24,7 +24,7 @@ public final class VmmDetailsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="instanceType", required=true)
       private final String instanceType;
 
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
 

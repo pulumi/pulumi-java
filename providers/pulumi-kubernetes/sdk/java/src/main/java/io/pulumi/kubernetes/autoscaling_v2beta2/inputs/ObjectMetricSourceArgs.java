@@ -23,7 +23,7 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="describedObject", required=true)
       private final Output<CrossVersionObjectReferenceArgs> describedObject;
 
-    public Output<CrossVersionObjectReferenceArgs> getDescribedObject() {
+    public Output<CrossVersionObjectReferenceArgs> describedObject() {
         return this.describedObject;
     }
 
@@ -34,7 +34,7 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="metric", required=true)
       private final Output<MetricIdentifierArgs> metric;
 
-    public Output<MetricIdentifierArgs> getMetric() {
+    public Output<MetricIdentifierArgs> metric() {
         return this.metric;
     }
 
@@ -45,7 +45,7 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="target", required=true)
       private final Output<MetricTargetArgs> target;
 
-    public Output<MetricTargetArgs> getTarget() {
+    public Output<MetricTargetArgs> target() {
         return this.target;
     }
 

@@ -23,7 +23,7 @@ public final class DomainNameDomainNameConfigurationGetArgs extends io.pulumi.re
     @Import(name="certificateArn", required=true)
       private final Output<String> certificateArn;
 
-    public Output<String> getCertificateArn() {
+    public Output<String> certificateArn() {
         return this.certificateArn;
     }
 
@@ -34,7 +34,7 @@ public final class DomainNameDomainNameConfigurationGetArgs extends io.pulumi.re
     @Import(name="endpointType", required=true)
       private final Output<String> endpointType;
 
-    public Output<String> getEndpointType() {
+    public Output<String> endpointType() {
         return this.endpointType;
     }
 
@@ -45,7 +45,7 @@ public final class DomainNameDomainNameConfigurationGetArgs extends io.pulumi.re
     @Import(name="hostedZoneId")
       private final @Nullable Output<String> hostedZoneId;
 
-    public Output<String> getHostedZoneId() {
+    public Output<String> hostedZoneId() {
         return this.hostedZoneId == null ? Codegen.empty() : this.hostedZoneId;
     }
 
@@ -56,7 +56,7 @@ public final class DomainNameDomainNameConfigurationGetArgs extends io.pulumi.re
     @Import(name="securityPolicy", required=true)
       private final Output<String> securityPolicy;
 
-    public Output<String> getSecurityPolicy() {
+    public Output<String> securityPolicy() {
         return this.securityPolicy;
     }
 
@@ -67,7 +67,7 @@ public final class DomainNameDomainNameConfigurationGetArgs extends io.pulumi.re
     @Import(name="targetDomainName")
       private final @Nullable Output<String> targetDomainName;
 
-    public Output<String> getTargetDomainName() {
+    public Output<String> targetDomainName() {
         return this.targetDomainName == null ? Codegen.empty() : this.targetDomainName;
     }
 

@@ -25,7 +25,7 @@ public final class MetricDimensionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="sourceName", required=true)
       private final Output<String> sourceName;
 
-    public Output<String> getSourceName() {
+    public Output<String> sourceName() {
         return this.sourceName;
     }
 
@@ -36,7 +36,7 @@ public final class MetricDimensionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="sourceType", required=true)
       private final Output<String> sourceType;
 
-    public Output<String> getSourceType() {
+    public Output<String> sourceType() {
         return this.sourceType;
     }
 

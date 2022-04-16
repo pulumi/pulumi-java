@@ -35,14 +35,14 @@ public final class AzureFilesIdentityBasedAuthenticationResponse {
      * Required if choose AD.
      * 
     */
-    public Optional<ActiveDirectoryPropertiesResponse> getActiveDirectoryProperties() {
+    public Optional<ActiveDirectoryPropertiesResponse> activeDirectoryProperties() {
         return Optional.ofNullable(this.activeDirectoryProperties);
     }
     /**
      * Indicates the directory service used.
      * 
     */
-    public String getDirectoryServiceOptions() {
+    public String directoryServiceOptions() {
         return this.directoryServiceOptions;
     }
 

@@ -24,7 +24,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="condition")
       private final @Nullable Output<String> condition;
 
-    public Output<String> getCondition() {
+    public Output<String> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -35,7 +35,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conditionVersion")
       private final @Nullable Output<String> conditionVersion;
 
-    public Output<String> getConditionVersion() {
+    public Output<String> conditionVersion() {
         return this.conditionVersion == null ? Codegen.empty() : this.conditionVersion;
     }
 
@@ -46,7 +46,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="delegatedManagedIdentityResourceId")
       private final @Nullable Output<String> delegatedManagedIdentityResourceId;
 
-    public Output<String> getDelegatedManagedIdentityResourceId() {
+    public Output<String> delegatedManagedIdentityResourceId() {
         return this.delegatedManagedIdentityResourceId == null ? Codegen.empty() : this.delegatedManagedIdentityResourceId;
     }
 
@@ -57,7 +57,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -68,7 +68,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="principalId", required=true)
       private final Output<String> principalId;
 
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId;
     }
 
@@ -79,7 +79,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="principalType")
       private final @Nullable Output<Either<String,PrincipalType>> principalType;
 
-    public Output<Either<String,PrincipalType>> getPrincipalType() {
+    public Output<Either<String,PrincipalType>> principalType() {
         return this.principalType == null ? Codegen.empty() : this.principalType;
     }
 
@@ -90,7 +90,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleAssignmentName")
       private final @Nullable Output<String> roleAssignmentName;
 
-    public Output<String> getRoleAssignmentName() {
+    public Output<String> roleAssignmentName() {
         return this.roleAssignmentName == null ? Codegen.empty() : this.roleAssignmentName;
     }
 
@@ -101,7 +101,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleDefinitionId", required=true)
       private final Output<String> roleDefinitionId;
 
-    public Output<String> getRoleDefinitionId() {
+    public Output<String> roleDefinitionId() {
         return this.roleDefinitionId;
     }
 
@@ -112,7 +112,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 

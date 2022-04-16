@@ -25,7 +25,7 @@ public final class GatewayOperatorPropertiesResponse extends io.pulumi.resources
     @Import(name="instances", required=true)
       private final List<GatewayInstanceResponse> instances;
 
-    public List<GatewayInstanceResponse> getInstances() {
+    public List<GatewayInstanceResponse> instances() {
         return this.instances;
     }
 
@@ -36,7 +36,7 @@ public final class GatewayOperatorPropertiesResponse extends io.pulumi.resources
     @Import(name="resourceRequests", required=true)
       private final GatewayOperatorResourceRequestsResponse resourceRequests;
 
-    public GatewayOperatorResourceRequestsResponse getResourceRequests() {
+    public GatewayOperatorResourceRequestsResponse resourceRequests() {
         return this.resourceRequests;
     }
 

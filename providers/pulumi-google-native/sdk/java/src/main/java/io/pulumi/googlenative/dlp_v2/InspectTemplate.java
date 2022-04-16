@@ -31,7 +31,7 @@ public class InspectTemplate extends io.pulumi.resources.CustomResource {
      * @return The creation timestamp of an inspectTemplate.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -45,7 +45,7 @@ public class InspectTemplate extends io.pulumi.resources.CustomResource {
      * @return Short description (max 256 chars).
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -59,7 +59,7 @@ public class InspectTemplate extends io.pulumi.resources.CustomResource {
      * @return Display name (max 256 chars).
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -73,7 +73,7 @@ public class InspectTemplate extends io.pulumi.resources.CustomResource {
      * @return The core content of the template. Configuration of the scanning process.
      * 
      */
-    public Output<GooglePrivacyDlpV2InspectConfigResponse> getInspectConfig() {
+    public Output<GooglePrivacyDlpV2InspectConfigResponse> inspectConfig() {
         return this.inspectConfig;
     }
     /**
@@ -87,7 +87,7 @@ public class InspectTemplate extends io.pulumi.resources.CustomResource {
      * @return The template name. The template will have one of the following formats: `projects/PROJECT_ID/inspectTemplates/TEMPLATE_ID` OR `organizations/ORGANIZATION_ID/inspectTemplates/TEMPLATE_ID`;
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +101,7 @@ public class InspectTemplate extends io.pulumi.resources.CustomResource {
      * @return The last update timestamp of an inspectTemplate.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

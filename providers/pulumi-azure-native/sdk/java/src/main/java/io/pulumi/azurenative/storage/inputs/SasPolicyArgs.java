@@ -27,7 +27,7 @@ public final class SasPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expirationAction", required=true)
       private final Output<Either<String,ExpirationAction>> expirationAction;
 
-    public Output<Either<String,ExpirationAction>> getExpirationAction() {
+    public Output<Either<String,ExpirationAction>> expirationAction() {
         return this.expirationAction;
     }
 
@@ -38,7 +38,7 @@ public final class SasPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sasExpirationPeriod", required=true)
       private final Output<String> sasExpirationPeriod;
 
-    public Output<String> getSasExpirationPeriod() {
+    public Output<String> sasExpirationPeriod() {
         return this.sasExpirationPeriod;
     }
 

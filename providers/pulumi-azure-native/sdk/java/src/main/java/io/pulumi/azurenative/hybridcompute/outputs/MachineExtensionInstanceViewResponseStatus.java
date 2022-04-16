@@ -53,35 +53,35 @@ public final class MachineExtensionInstanceViewResponseStatus {
      * The status code.
      * 
     */
-    public String getCode() {
+    public String code() {
         return this.code;
     }
     /**
      * The short localizable label for the status.
      * 
     */
-    public String getDisplayStatus() {
+    public String displayStatus() {
         return this.displayStatus;
     }
     /**
      * The level code.
      * 
     */
-    public String getLevel() {
+    public String level() {
         return this.level;
     }
     /**
      * The detailed status message, including for alerts and error messages.
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
     /**
      * The time of the status.
      * 
     */
-    public String getTime() {
+    public String time() {
         return this.time;
     }
 

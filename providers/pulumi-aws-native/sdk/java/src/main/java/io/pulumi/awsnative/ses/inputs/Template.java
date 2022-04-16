@@ -25,7 +25,7 @@ public final class Template extends io.pulumi.resources.InvokeArgs {
     @Import(name="htmlPart")
       private final @Nullable String htmlPart;
 
-    public Optional<String> getHtmlPart() {
+    public Optional<String> htmlPart() {
         return this.htmlPart == null ? Optional.empty() : Optional.ofNullable(this.htmlPart);
     }
 
@@ -36,7 +36,7 @@ public final class Template extends io.pulumi.resources.InvokeArgs {
     @Import(name="subjectPart", required=true)
       private final String subjectPart;
 
-    public String getSubjectPart() {
+    public String subjectPart() {
         return this.subjectPart;
     }
 
@@ -47,7 +47,7 @@ public final class Template extends io.pulumi.resources.InvokeArgs {
     @Import(name="templateName")
       private final @Nullable String templateName;
 
-    public Optional<String> getTemplateName() {
+    public Optional<String> templateName() {
         return this.templateName == null ? Optional.empty() : Optional.ofNullable(this.templateName);
     }
 
@@ -58,7 +58,7 @@ public final class Template extends io.pulumi.resources.InvokeArgs {
     @Import(name="textPart")
       private final @Nullable String textPart;
 
-    public Optional<String> getTextPart() {
+    public Optional<String> textPart() {
         return this.textPart == null ? Optional.empty() : Optional.ofNullable(this.textPart);
     }
 

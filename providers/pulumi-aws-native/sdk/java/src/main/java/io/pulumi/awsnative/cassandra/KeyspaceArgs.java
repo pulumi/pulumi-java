@@ -24,14 +24,14 @@ public final class KeyspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyspaceName")
       private final @Nullable Output<String> keyspaceName;
 
-    public Output<String> getKeyspaceName() {
+    public Output<String> keyspaceName() {
         return this.keyspaceName == null ? Codegen.empty() : this.keyspaceName;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<KeyspaceTagArgs>> tags;
 
-    public Output<List<KeyspaceTagArgs>> getTags() {
+    public Output<List<KeyspaceTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

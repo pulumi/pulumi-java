@@ -26,7 +26,7 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email == null ? Codegen.empty() : this.email;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
     @Import(name="firstName")
       private final @Nullable Output<String> firstName;
 
-    public Output<String> getFirstName() {
+    public Output<String> firstName() {
         return this.firstName == null ? Codegen.empty() : this.firstName;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
     @Import(name="lastName")
       private final @Nullable Output<String> lastName;
 
-    public Output<String> getLastName() {
+    public Output<String> lastName() {
         return this.lastName == null ? Codegen.empty() : this.lastName;
     }
 
@@ -59,7 +59,7 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
     @Import(name="phone")
       private final @Nullable Output<String> phone;
 
-    public Output<String> getPhone() {
+    public Output<String> phone() {
         return this.phone == null ? Codegen.empty() : this.phone;
     }
 
@@ -70,7 +70,7 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 

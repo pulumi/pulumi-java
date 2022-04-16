@@ -42,21 +42,21 @@ public final class EnumValueResponse {
      * Enum value name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Enum value number.
      * 
     */
-    public Integer getNumber() {
+    public Integer number() {
         return this.number;
     }
     /**
      * Protocol buffer options.
      * 
     */
-    public List<OptionResponse> getOptions() {
+    public List<OptionResponse> options() {
         return this.options;
     }
 

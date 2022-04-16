@@ -25,7 +25,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -36,7 +36,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
@@ -47,7 +47,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
     @Import(name="propagatingVgws")
       private final @Nullable Output<List<String>> propagatingVgws;
 
-    public Output<List<String>> getPropagatingVgws() {
+    public Output<List<String>> propagatingVgws() {
         return this.propagatingVgws == null ? Codegen.empty() : this.propagatingVgws;
     }
 
@@ -58,7 +58,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
     @Import(name="routes")
       private final @Nullable Output<List<RouteTableRouteGetArgs>> routes;
 
-    public Output<List<RouteTableRouteGetArgs>> getRoutes() {
+    public Output<List<RouteTableRouteGetArgs>> routes() {
         return this.routes == null ? Codegen.empty() : this.routes;
     }
 
@@ -69,7 +69,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -80,7 +80,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -91,7 +91,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 

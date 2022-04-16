@@ -18,21 +18,21 @@ public final class TopicRuleKinesisActionArgs extends io.pulumi.resources.Resour
     @Import(name="partitionKey")
       private final @Nullable Output<String> partitionKey;
 
-    public Output<String> getPartitionKey() {
+    public Output<String> partitionKey() {
         return this.partitionKey == null ? Codegen.empty() : this.partitionKey;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="streamName", required=true)
       private final Output<String> streamName;
 
-    public Output<String> getStreamName() {
+    public Output<String> streamName() {
         return this.streamName;
     }
 

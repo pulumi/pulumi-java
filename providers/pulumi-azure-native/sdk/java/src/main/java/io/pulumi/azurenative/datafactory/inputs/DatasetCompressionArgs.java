@@ -26,7 +26,7 @@ public final class DatasetCompressionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="level")
       private final @Nullable Output<Object> level;
 
-    public Output<Object> getLevel() {
+    public Output<Object> level() {
         return this.level == null ? Codegen.empty() : this.level;
     }
 
@@ -37,7 +37,7 @@ public final class DatasetCompressionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
       private final Output<Object> type;
 
-    public Output<Object> getType() {
+    public Output<Object> type() {
         return this.type;
     }
 

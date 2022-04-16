@@ -23,7 +23,7 @@ public final class ContainerInfoResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="image", required=true)
       private final String image;
 
-    public String getImage() {
+    public String image() {
         return this.image;
     }
 

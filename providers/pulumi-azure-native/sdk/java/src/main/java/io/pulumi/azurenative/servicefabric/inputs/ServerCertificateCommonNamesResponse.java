@@ -27,7 +27,7 @@ public final class ServerCertificateCommonNamesResponse extends io.pulumi.resour
     @Import(name="commonNames")
       private final @Nullable List<ServerCertificateCommonNameResponse> commonNames;
 
-    public List<ServerCertificateCommonNameResponse> getCommonNames() {
+    public List<ServerCertificateCommonNameResponse> commonNames() {
         return this.commonNames == null ? List.of() : this.commonNames;
     }
 
@@ -38,7 +38,7 @@ public final class ServerCertificateCommonNamesResponse extends io.pulumi.resour
     @Import(name="x509StoreName")
       private final @Nullable String x509StoreName;
 
-    public Optional<String> getX509StoreName() {
+    public Optional<String> x509StoreName() {
         return this.x509StoreName == null ? Optional.empty() : Optional.ofNullable(this.x509StoreName);
     }
 

@@ -25,7 +25,7 @@ public final class InboundSamlConfigState extends io.pulumi.resources.ResourceAr
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -36,7 +36,7 @@ public final class InboundSamlConfigState extends io.pulumi.resources.ResourceAr
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -48,7 +48,7 @@ public final class InboundSamlConfigState extends io.pulumi.resources.ResourceAr
     @Import(name="idpConfig")
       private final @Nullable Output<InboundSamlConfigIdpConfigGetArgs> idpConfig;
 
-    public Output<InboundSamlConfigIdpConfigGetArgs> getIdpConfig() {
+    public Output<InboundSamlConfigIdpConfigGetArgs> idpConfig() {
         return this.idpConfig == null ? Codegen.empty() : this.idpConfig;
     }
 
@@ -61,7 +61,7 @@ public final class InboundSamlConfigState extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -73,7 +73,7 @@ public final class InboundSamlConfigState extends io.pulumi.resources.ResourceAr
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -86,7 +86,7 @@ public final class InboundSamlConfigState extends io.pulumi.resources.ResourceAr
     @Import(name="spConfig")
       private final @Nullable Output<InboundSamlConfigSpConfigGetArgs> spConfig;
 
-    public Output<InboundSamlConfigSpConfigGetArgs> getSpConfig() {
+    public Output<InboundSamlConfigSpConfigGetArgs> spConfig() {
         return this.spConfig == null ? Codegen.empty() : this.spConfig;
     }
 

@@ -26,7 +26,7 @@ public final class CustomHttpPatternArgs extends io.pulumi.resources.ResourceArg
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -37,7 +37,7 @@ public final class CustomHttpPatternArgs extends io.pulumi.resources.ResourceArg
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 

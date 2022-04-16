@@ -25,13 +25,13 @@ public final class PipelineFilter {
         this.next = next;
     }
 
-    public String getFilter() {
+    public String filter() {
         return this.filter;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getNext() {
+    public Optional<String> next() {
         return Optional.ofNullable(this.next);
     }
 

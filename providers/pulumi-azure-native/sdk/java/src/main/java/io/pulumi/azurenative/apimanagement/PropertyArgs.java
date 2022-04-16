@@ -24,7 +24,7 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -35,7 +35,7 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="propId")
       private final @Nullable Output<String> propId;
 
-    public Output<String> getPropId() {
+    public Output<String> propId() {
         return this.propId == null ? Codegen.empty() : this.propId;
     }
 
@@ -46,7 +46,7 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -57,7 +57,7 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secret")
       private final @Nullable Output<Boolean> secret;
 
-    public Output<Boolean> getSecret() {
+    public Output<Boolean> secret() {
         return this.secret == null ? Codegen.empty() : this.secret;
     }
 
@@ -68,7 +68,7 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -79,7 +79,7 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> getTags() {
+    public Output<List<String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -90,7 +90,7 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

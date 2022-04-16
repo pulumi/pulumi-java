@@ -23,7 +23,7 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideRealmsSele
     @Import(name="realms")
       private final @Nullable Output<List<String>> realms;
 
-    public Output<List<String>> getRealms() {
+    public Output<List<String>> realms() {
         return this.realms == null ? Codegen.empty() : this.realms;
     }
 

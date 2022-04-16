@@ -24,7 +24,7 @@ public final class DefaultSnatStatusResponse {
      * Disables cluster default sNAT rules.
      * 
     */
-    public Boolean getDisabled() {
+    public Boolean disabled() {
         return this.disabled;
     }
 

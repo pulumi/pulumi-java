@@ -19,7 +19,7 @@ public final class GetHybridIdentityMetadatumArgs extends io.pulumi.resources.In
     @Import(name="metadataName", required=true)
       private final String metadataName;
 
-    public String getMetadataName() {
+    public String metadataName() {
         return this.metadataName;
     }
 
@@ -30,7 +30,7 @@ public final class GetHybridIdentityMetadatumArgs extends io.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetHybridIdentityMetadatumArgs extends io.pulumi.resources.In
     @Import(name="virtualMachineName", required=true)
       private final String virtualMachineName;
 
-    public String getVirtualMachineName() {
+    public String virtualMachineName() {
         return this.virtualMachineName;
     }
 

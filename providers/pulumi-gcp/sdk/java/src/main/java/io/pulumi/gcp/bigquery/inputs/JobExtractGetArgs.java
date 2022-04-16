@@ -27,7 +27,7 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="compression")
       private final @Nullable Output<String> compression;
 
-    public Output<String> getCompression() {
+    public Output<String> compression() {
         return this.compression == null ? Codegen.empty() : this.compression;
     }
 
@@ -40,7 +40,7 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinationFormat")
       private final @Nullable Output<String> destinationFormat;
 
-    public Output<String> getDestinationFormat() {
+    public Output<String> destinationFormat() {
         return this.destinationFormat == null ? Codegen.empty() : this.destinationFormat;
     }
 
@@ -51,7 +51,7 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinationUris", required=true)
       private final Output<List<String>> destinationUris;
 
-    public Output<List<String>> getDestinationUris() {
+    public Output<List<String>> destinationUris() {
         return this.destinationUris;
     }
 
@@ -63,7 +63,7 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fieldDelimiter")
       private final @Nullable Output<String> fieldDelimiter;
 
-    public Output<String> getFieldDelimiter() {
+    public Output<String> fieldDelimiter() {
         return this.fieldDelimiter == null ? Codegen.empty() : this.fieldDelimiter;
     }
 
@@ -74,7 +74,7 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="printHeader")
       private final @Nullable Output<Boolean> printHeader;
 
-    public Output<Boolean> getPrintHeader() {
+    public Output<Boolean> printHeader() {
         return this.printHeader == null ? Codegen.empty() : this.printHeader;
     }
 
@@ -86,7 +86,7 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceModel")
       private final @Nullable Output<JobExtractSourceModelGetArgs> sourceModel;
 
-    public Output<JobExtractSourceModelGetArgs> getSourceModel() {
+    public Output<JobExtractSourceModelGetArgs> sourceModel() {
         return this.sourceModel == null ? Codegen.empty() : this.sourceModel;
     }
 
@@ -98,7 +98,7 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceTable")
       private final @Nullable Output<JobExtractSourceTableGetArgs> sourceTable;
 
-    public Output<JobExtractSourceTableGetArgs> getSourceTable() {
+    public Output<JobExtractSourceTableGetArgs> sourceTable() {
         return this.sourceTable == null ? Codegen.empty() : this.sourceTable;
     }
 
@@ -109,7 +109,7 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="useAvroLogicalTypes")
       private final @Nullable Output<Boolean> useAvroLogicalTypes;
 
-    public Output<Boolean> getUseAvroLogicalTypes() {
+    public Output<Boolean> useAvroLogicalTypes() {
         return this.useAvroLogicalTypes == null ? Codegen.empty() : this.useAvroLogicalTypes;
     }
 

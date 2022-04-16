@@ -26,7 +26,7 @@ public final class OSPolicyResourceFileGcsArgs extends io.pulumi.resources.Resou
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -37,7 +37,7 @@ public final class OSPolicyResourceFileGcsArgs extends io.pulumi.resources.Resou
     @Import(name="generation")
       private final @Nullable Output<String> generation;
 
-    public Output<String> getGeneration() {
+    public Output<String> generation() {
         return this.generation == null ? Codegen.empty() : this.generation;
     }
 
@@ -48,7 +48,7 @@ public final class OSPolicyResourceFileGcsArgs extends io.pulumi.resources.Resou
     @Import(name="object", required=true)
       private final Output<String> object;
 
-    public Output<String> getObject() {
+    public Output<String> object() {
         return this.object;
     }
 

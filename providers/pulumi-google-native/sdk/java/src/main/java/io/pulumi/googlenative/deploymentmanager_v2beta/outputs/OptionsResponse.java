@@ -50,28 +50,28 @@ public final class OptionsResponse {
      * Options regarding how to thread async requests.
      * 
     */
-    public List<AsyncOptionsResponse> getAsyncOptions() {
+    public List<AsyncOptionsResponse> asyncOptions() {
         return this.asyncOptions;
     }
     /**
      * The mappings that apply for requests.
      * 
     */
-    public List<InputMappingResponse> getInputMappings() {
+    public List<InputMappingResponse> inputMappings() {
         return this.inputMappings;
     }
     /**
      * Options for how to validate and process properties on a resource.
      * 
     */
-    public ValidationOptionsResponse getValidationOptions() {
+    public ValidationOptionsResponse validationOptions() {
         return this.validationOptions;
     }
     /**
      * Additional properties block described as a jsonSchema, these properties will never be part of the json payload, but they can be consumed by InputMappings, this must be a valid json schema draft-04. The properties specified here will be decouple in a different section. This schema will be merged to the schema validation, and properties here will be extracted From the payload and consumed explicitly by InputMappings. ex: field1: type: string field2: type: number
      * 
     */
-    public String getVirtualProperties() {
+    public String virtualProperties() {
         return this.virtualProperties;
     }
 

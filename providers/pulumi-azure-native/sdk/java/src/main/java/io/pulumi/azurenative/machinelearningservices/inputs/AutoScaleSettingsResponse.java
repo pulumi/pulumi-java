@@ -22,7 +22,7 @@ public final class AutoScaleSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="maxInstances")
       private final @Nullable Integer maxInstances;
 
-    public Optional<Integer> getMaxInstances() {
+    public Optional<Integer> maxInstances() {
         return this.maxInstances == null ? Optional.empty() : Optional.ofNullable(this.maxInstances);
     }
 
@@ -33,7 +33,7 @@ public final class AutoScaleSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="minInstances")
       private final @Nullable Integer minInstances;
 
-    public Optional<Integer> getMinInstances() {
+    public Optional<Integer> minInstances() {
         return this.minInstances == null ? Optional.empty() : Optional.ofNullable(this.minInstances);
     }
 
@@ -44,7 +44,7 @@ public final class AutoScaleSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="pollingInterval")
       private final @Nullable String pollingInterval;
 
-    public Optional<String> getPollingInterval() {
+    public Optional<String> pollingInterval() {
         return this.pollingInterval == null ? Optional.empty() : Optional.ofNullable(this.pollingInterval);
     }
 
@@ -55,7 +55,7 @@ public final class AutoScaleSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="scaleType", required=true)
       private final String scaleType;
 
-    public String getScaleType() {
+    public String scaleType() {
         return this.scaleType;
     }
 
@@ -66,7 +66,7 @@ public final class AutoScaleSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="targetUtilizationPercentage")
       private final @Nullable Integer targetUtilizationPercentage;
 
-    public Optional<Integer> getTargetUtilizationPercentage() {
+    public Optional<Integer> targetUtilizationPercentage() {
         return this.targetUtilizationPercentage == null ? Optional.empty() : Optional.ofNullable(this.targetUtilizationPercentage);
     }
 

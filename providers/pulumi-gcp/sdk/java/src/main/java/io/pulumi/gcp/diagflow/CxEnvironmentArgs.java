@@ -24,7 +24,7 @@ public final class CxEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -35,7 +35,7 @@ public final class CxEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -47,7 +47,7 @@ public final class CxEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent == null ? Codegen.empty() : this.parent;
     }
 
@@ -59,7 +59,7 @@ public final class CxEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="versionConfigs", required=true)
       private final Output<List<CxEnvironmentVersionConfigArgs>> versionConfigs;
 
-    public Output<List<CxEnvironmentVersionConfigArgs>> getVersionConfigs() {
+    public Output<List<CxEnvironmentVersionConfigArgs>> versionConfigs() {
         return this.versionConfigs;
     }
 

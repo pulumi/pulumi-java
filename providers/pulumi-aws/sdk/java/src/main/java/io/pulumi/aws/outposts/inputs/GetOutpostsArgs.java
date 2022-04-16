@@ -21,7 +21,7 @@ public final class GetOutpostsArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="availabilityZone")
       private final @Nullable String availabilityZone;
 
-    public Optional<String> getAvailabilityZone() {
+    public Optional<String> availabilityZone() {
         return this.availabilityZone == null ? Optional.empty() : Optional.ofNullable(this.availabilityZone);
     }
 
@@ -32,7 +32,7 @@ public final class GetOutpostsArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="availabilityZoneId")
       private final @Nullable String availabilityZoneId;
 
-    public Optional<String> getAvailabilityZoneId() {
+    public Optional<String> availabilityZoneId() {
         return this.availabilityZoneId == null ? Optional.empty() : Optional.ofNullable(this.availabilityZoneId);
     }
 
@@ -43,7 +43,7 @@ public final class GetOutpostsArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="ownerId")
       private final @Nullable String ownerId;
 
-    public Optional<String> getOwnerId() {
+    public Optional<String> ownerId() {
         return this.ownerId == null ? Optional.empty() : Optional.ofNullable(this.ownerId);
     }
 
@@ -54,7 +54,7 @@ public final class GetOutpostsArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="siteId")
       private final @Nullable String siteId;
 
-    public Optional<String> getSiteId() {
+    public Optional<String> siteId() {
         return this.siteId == null ? Optional.empty() : Optional.ofNullable(this.siteId);
     }
 

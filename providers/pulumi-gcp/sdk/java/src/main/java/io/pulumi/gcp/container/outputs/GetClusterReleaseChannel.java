@@ -16,7 +16,7 @@ public final class GetClusterReleaseChannel {
         this.channel = channel;
     }
 
-    public String getChannel() {
+    public String channel() {
         return this.channel;
     }
 

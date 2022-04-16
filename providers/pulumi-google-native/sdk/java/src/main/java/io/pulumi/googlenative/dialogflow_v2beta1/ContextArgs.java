@@ -20,7 +20,7 @@ public final class ContextArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
@@ -31,14 +31,14 @@ public final class ContextArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lifespanCount")
       private final @Nullable Output<Integer> lifespanCount;
 
-    public Output<Integer> getLifespanCount() {
+    public Output<Integer> lifespanCount() {
         return this.lifespanCount == null ? Codegen.empty() : this.lifespanCount;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -49,7 +49,7 @@ public final class ContextArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -60,28 +60,28 @@ public final class ContextArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
+    public Output<Map<String,String>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="sessionId", required=true)
       private final Output<String> sessionId;
 
-    public Output<String> getSessionId() {
+    public Output<String> sessionId() {
         return this.sessionId;
     }
 
     @Import(name="userId", required=true)
       private final Output<String> userId;
 
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId;
     }
 

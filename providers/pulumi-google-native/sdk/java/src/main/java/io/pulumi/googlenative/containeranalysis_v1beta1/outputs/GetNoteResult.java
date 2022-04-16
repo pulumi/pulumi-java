@@ -179,147 +179,147 @@ public final class GetNoteResult {
      * A note describing an attestation role.
      * 
     */
-    public AuthorityResponse getAttestationAuthority() {
+    public AuthorityResponse attestationAuthority() {
         return this.attestationAuthority;
     }
     /**
      * A note describing a base image.
      * 
     */
-    public BasisResponse getBaseImage() {
+    public BasisResponse baseImage() {
         return this.baseImage;
     }
     /**
      * A note describing build provenance for a verifiable build.
      * 
     */
-    public BuildResponse getBuild() {
+    public BuildResponse build() {
         return this.build;
     }
     /**
      * The time this note was created. This field can be used as a filter in list requests.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * A note describing something that can be deployed.
      * 
     */
-    public DeployableResponse getDeployable() {
+    public DeployableResponse deployable() {
         return this.deployable;
     }
     /**
      * A note describing the initial analysis of a resource.
      * 
     */
-    public DiscoveryResponse getDiscovery() {
+    public DiscoveryResponse discovery() {
         return this.discovery;
     }
     /**
      * Time of expiration for this note. Empty if note does not expire.
      * 
     */
-    public String getExpirationTime() {
+    public String expirationTime() {
         return this.expirationTime;
     }
     /**
      * A note describing an in-toto link.
      * 
     */
-    public InTotoResponse getIntoto() {
+    public InTotoResponse intoto() {
         return this.intoto;
     }
     /**
      * The type of analysis. This field can be used as a filter in list requests.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * A detailed description of this note.
      * 
     */
-    public String getLongDescription() {
+    public String longDescription() {
         return this.longDescription;
     }
     /**
      * The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A note describing a package hosted by various package managers.
      * 
     */
-    public PackageResponse getPackage_() {
+    public PackageResponse package_() {
         return this.package_;
     }
     /**
      * Other notes related to this note.
      * 
     */
-    public List<String> getRelatedNoteNames() {
+    public List<String> relatedNoteNames() {
         return this.relatedNoteNames;
     }
     /**
      * URLs associated with this note.
      * 
     */
-    public List<RelatedUrlResponse> getRelatedUrl() {
+    public List<RelatedUrlResponse> relatedUrl() {
         return this.relatedUrl;
     }
     /**
      * A note describing a software bill of materials.
      * 
     */
-    public DocumentNoteResponse getSbom() {
+    public DocumentNoteResponse sbom() {
         return this.sbom;
     }
     /**
      * A one sentence description of this note.
      * 
     */
-    public String getShortDescription() {
+    public String shortDescription() {
         return this.shortDescription;
     }
     /**
      * A note describing an SPDX File.
      * 
     */
-    public FileNoteResponse getSpdxFile() {
+    public FileNoteResponse spdxFile() {
         return this.spdxFile;
     }
     /**
      * A note describing an SPDX Package.
      * 
     */
-    public PackageInfoNoteResponse getSpdxPackage() {
+    public PackageInfoNoteResponse spdxPackage() {
         return this.spdxPackage;
     }
     /**
      * A note describing an SPDX File.
      * 
     */
-    public RelationshipNoteResponse getSpdxRelationship() {
+    public RelationshipNoteResponse spdxRelationship() {
         return this.spdxRelationship;
     }
     /**
      * The time this note was last updated. This field can be used as a filter in list requests.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
     /**
      * A note describing a package vulnerability.
      * 
     */
-    public VulnerabilityResponse getVulnerability() {
+    public VulnerabilityResponse vulnerability() {
         return this.vulnerability;
     }
 

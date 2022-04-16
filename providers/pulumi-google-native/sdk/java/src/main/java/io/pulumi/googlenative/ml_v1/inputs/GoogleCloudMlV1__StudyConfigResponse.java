@@ -27,7 +27,7 @@ public final class GoogleCloudMlV1__StudyConfigResponse extends io.pulumi.resour
     @Import(name="algorithm", required=true)
       private final String algorithm;
 
-    public String getAlgorithm() {
+    public String algorithm() {
         return this.algorithm;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudMlV1__StudyConfigResponse extends io.pulumi.resour
     @Import(name="automatedStoppingConfig", required=true)
       private final GoogleCloudMlV1__AutomatedStoppingConfigResponse automatedStoppingConfig;
 
-    public GoogleCloudMlV1__AutomatedStoppingConfigResponse getAutomatedStoppingConfig() {
+    public GoogleCloudMlV1__AutomatedStoppingConfigResponse automatedStoppingConfig() {
         return this.automatedStoppingConfig;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudMlV1__StudyConfigResponse extends io.pulumi.resour
     @Import(name="metrics", required=true)
       private final List<GoogleCloudMlV1_StudyConfig_MetricSpecResponse> metrics;
 
-    public List<GoogleCloudMlV1_StudyConfig_MetricSpecResponse> getMetrics() {
+    public List<GoogleCloudMlV1_StudyConfig_MetricSpecResponse> metrics() {
         return this.metrics;
     }
 
@@ -60,7 +60,7 @@ public final class GoogleCloudMlV1__StudyConfigResponse extends io.pulumi.resour
     @Import(name="parameters", required=true)
       private final List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> parameters;
 
-    public List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> getParameters() {
+    public List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> parameters() {
         return this.parameters;
     }
 

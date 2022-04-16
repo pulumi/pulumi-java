@@ -29,7 +29,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="asAdministrators")
       private final @Nullable Output<ServerAdministratorsArgs> asAdministrators;
 
-    public Output<ServerAdministratorsArgs> getAsAdministrators() {
+    public Output<ServerAdministratorsArgs> asAdministrators() {
         return this.asAdministrators == null ? Codegen.empty() : this.asAdministrators;
     }
 
@@ -40,7 +40,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backupBlobContainerUri")
       private final @Nullable Output<String> backupBlobContainerUri;
 
-    public Output<String> getBackupBlobContainerUri() {
+    public Output<String> backupBlobContainerUri() {
         return this.backupBlobContainerUri == null ? Codegen.empty() : this.backupBlobContainerUri;
     }
 
@@ -51,7 +51,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gatewayDetails")
       private final @Nullable Output<GatewayDetailsArgs> gatewayDetails;
 
-    public Output<GatewayDetailsArgs> getGatewayDetails() {
+    public Output<GatewayDetailsArgs> gatewayDetails() {
         return this.gatewayDetails == null ? Codegen.empty() : this.gatewayDetails;
     }
 
@@ -62,7 +62,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipV4FirewallSettings")
       private final @Nullable Output<IPv4FirewallSettingsArgs> ipV4FirewallSettings;
 
-    public Output<IPv4FirewallSettingsArgs> getIpV4FirewallSettings() {
+    public Output<IPv4FirewallSettingsArgs> ipV4FirewallSettings() {
         return this.ipV4FirewallSettings == null ? Codegen.empty() : this.ipV4FirewallSettings;
     }
 
@@ -73,7 +73,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -84,7 +84,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="managedMode")
       private final @Nullable Output<Integer> managedMode;
 
-    public Output<Integer> getManagedMode() {
+    public Output<Integer> managedMode() {
         return this.managedMode == null ? Codegen.empty() : this.managedMode;
     }
 
@@ -95,7 +95,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="querypoolConnectionMode")
       private final @Nullable Output<ConnectionMode> querypoolConnectionMode;
 
-    public Output<ConnectionMode> getQuerypoolConnectionMode() {
+    public Output<ConnectionMode> querypoolConnectionMode() {
         return this.querypoolConnectionMode == null ? Codegen.empty() : this.querypoolConnectionMode;
     }
 
@@ -106,7 +106,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -117,7 +117,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverMonitorMode")
       private final @Nullable Output<Integer> serverMonitorMode;
 
-    public Output<Integer> getServerMonitorMode() {
+    public Output<Integer> serverMonitorMode() {
         return this.serverMonitorMode == null ? Codegen.empty() : this.serverMonitorMode;
     }
 
@@ -128,7 +128,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverName")
       private final @Nullable Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName == null ? Codegen.empty() : this.serverName;
     }
 
@@ -139,7 +139,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku", required=true)
       private final Output<ResourceSkuArgs> sku;
 
-    public Output<ResourceSkuArgs> getSku() {
+    public Output<ResourceSkuArgs> sku() {
         return this.sku;
     }
 
@@ -150,7 +150,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

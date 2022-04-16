@@ -23,7 +23,7 @@ public final class VirtualGatewaySpecListenerTlsValidationTrustArgs extends io.p
     @Import(name="file")
       private final @Nullable Output<VirtualGatewaySpecListenerTlsValidationTrustFileArgs> file;
 
-    public Output<VirtualGatewaySpecListenerTlsValidationTrustFileArgs> getFile() {
+    public Output<VirtualGatewaySpecListenerTlsValidationTrustFileArgs> file() {
         return this.file == null ? Codegen.empty() : this.file;
     }
 
@@ -34,7 +34,7 @@ public final class VirtualGatewaySpecListenerTlsValidationTrustArgs extends io.p
     @Import(name="sds")
       private final @Nullable Output<VirtualGatewaySpecListenerTlsValidationTrustSdsArgs> sds;
 
-    public Output<VirtualGatewaySpecListenerTlsValidationTrustSdsArgs> getSds() {
+    public Output<VirtualGatewaySpecListenerTlsValidationTrustSdsArgs> sds() {
         return this.sds == null ? Codegen.empty() : this.sds;
     }
 

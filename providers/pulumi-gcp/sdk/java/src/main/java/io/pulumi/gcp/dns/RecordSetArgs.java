@@ -25,7 +25,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="managedZone", required=true)
       private final Output<String> managedZone;
 
-    public Output<String> getManagedZone() {
+    public Output<String> managedZone() {
         return this.managedZone;
     }
 
@@ -36,7 +36,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -48,7 +48,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -62,7 +62,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rrdatas", required=true)
       private final Output<List<String>> rrdatas;
 
-    public Output<List<String>> getRrdatas() {
+    public Output<List<String>> rrdatas() {
         return this.rrdatas;
     }
 
@@ -73,7 +73,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ttl")
       private final @Nullable Output<Integer> ttl;
 
-    public Output<Integer> getTtl() {
+    public Output<Integer> ttl() {
         return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 
@@ -84,7 +84,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -23,7 +23,7 @@ public final class RestoreResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="backup", required=true)
       private final String backup;
 
-    public String getBackup() {
+    public String backup() {
         return this.backup;
     }
 
@@ -34,7 +34,7 @@ public final class RestoreResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="details", required=true)
       private final String details;
 
-    public String getDetails() {
+    public String details() {
         return this.details;
     }
 
@@ -45,7 +45,7 @@ public final class RestoreResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="endTime", required=true)
       private final String endTime;
 
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
 
@@ -56,7 +56,7 @@ public final class RestoreResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
@@ -67,7 +67,7 @@ public final class RestoreResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 
@@ -78,7 +78,7 @@ public final class RestoreResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

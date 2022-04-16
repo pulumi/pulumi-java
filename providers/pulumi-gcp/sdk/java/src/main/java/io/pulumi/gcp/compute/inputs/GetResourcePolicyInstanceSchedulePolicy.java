@@ -18,35 +18,35 @@ public final class GetResourcePolicyInstanceSchedulePolicy extends io.pulumi.res
     @Import(name="expirationTime", required=true)
       private final String expirationTime;
 
-    public String getExpirationTime() {
+    public String expirationTime() {
         return this.expirationTime;
     }
 
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
     @Import(name="timeZone", required=true)
       private final String timeZone;
 
-    public String getTimeZone() {
+    public String timeZone() {
         return this.timeZone;
     }
 
     @Import(name="vmStartSchedules", required=true)
       private final List<GetResourcePolicyInstanceSchedulePolicyVmStartSchedule> vmStartSchedules;
 
-    public List<GetResourcePolicyInstanceSchedulePolicyVmStartSchedule> getVmStartSchedules() {
+    public List<GetResourcePolicyInstanceSchedulePolicyVmStartSchedule> vmStartSchedules() {
         return this.vmStartSchedules;
     }
 
     @Import(name="vmStopSchedules", required=true)
       private final List<GetResourcePolicyInstanceSchedulePolicyVmStopSchedule> vmStopSchedules;
 
-    public List<GetResourcePolicyInstanceSchedulePolicyVmStopSchedule> getVmStopSchedules() {
+    public List<GetResourcePolicyInstanceSchedulePolicyVmStopSchedule> vmStopSchedules() {
         return this.vmStopSchedules;
     }
 

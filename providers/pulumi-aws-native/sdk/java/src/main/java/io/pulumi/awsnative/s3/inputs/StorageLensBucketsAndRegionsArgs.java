@@ -23,14 +23,14 @@ public final class StorageLensBucketsAndRegionsArgs extends io.pulumi.resources.
     @Import(name="buckets")
       private final @Nullable Output<List<String>> buckets;
 
-    public Output<List<String>> getBuckets() {
+    public Output<List<String>> buckets() {
         return this.buckets == null ? Codegen.empty() : this.buckets;
     }
 
     @Import(name="regions")
       private final @Nullable Output<List<String>> regions;
 
-    public Output<List<String>> getRegions() {
+    public Output<List<String>> regions() {
         return this.regions == null ? Codegen.empty() : this.regions;
     }
 

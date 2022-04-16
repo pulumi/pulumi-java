@@ -27,7 +27,7 @@ public final class OverheadArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="podFixed")
       private final @Nullable Output<Map<String,String>> podFixed;
 
-    public Output<Map<String,String>> getPodFixed() {
+    public Output<Map<String,String>> podFixed() {
         return this.podFixed == null ? Codegen.empty() : this.podFixed;
     }
 

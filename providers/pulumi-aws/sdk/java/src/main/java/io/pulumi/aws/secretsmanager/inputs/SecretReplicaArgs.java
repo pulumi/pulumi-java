@@ -22,7 +22,7 @@ public final class SecretReplicaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -33,7 +33,7 @@ public final class SecretReplicaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastAccessedDate")
       private final @Nullable Output<String> lastAccessedDate;
 
-    public Output<String> getLastAccessedDate() {
+    public Output<String> lastAccessedDate() {
         return this.lastAccessedDate == null ? Codegen.empty() : this.lastAccessedDate;
     }
 
@@ -44,7 +44,7 @@ public final class SecretReplicaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
@@ -55,7 +55,7 @@ public final class SecretReplicaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -66,7 +66,7 @@ public final class SecretReplicaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="statusMessage")
       private final @Nullable Output<String> statusMessage;
 
-    public Output<String> getStatusMessage() {
+    public Output<String> statusMessage() {
         return this.statusMessage == null ? Codegen.empty() : this.statusMessage;
     }
 

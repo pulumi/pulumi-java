@@ -105,7 +105,7 @@ public final class GetInstanceTemplateNetworkInterface {
      * on that network). This block can be repeated multiple times. Structure documented below.
      * 
     */
-    public List<GetInstanceTemplateNetworkInterfaceAccessConfig> getAccessConfigs() {
+    public List<GetInstanceTemplateNetworkInterfaceAccessConfig> accessConfigs() {
         return this.accessConfigs;
     }
     /**
@@ -114,20 +114,20 @@ public final class GetInstanceTemplateNetworkInterface {
      * interfaces on subnet-mode networks. Structure documented below.
      * 
     */
-    public List<GetInstanceTemplateNetworkInterfaceAliasIpRange> getAliasIpRanges() {
+    public List<GetInstanceTemplateNetworkInterfaceAliasIpRange> aliasIpRanges() {
         return this.aliasIpRanges;
     }
-    public List<GetInstanceTemplateNetworkInterfaceIpv6AccessConfig> getIpv6AccessConfigs() {
+    public List<GetInstanceTemplateNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs() {
         return this.ipv6AccessConfigs;
     }
-    public String getIpv6AccessType() {
+    public String ipv6AccessType() {
         return this.ipv6AccessType;
     }
     /**
      * The name of the instance template. One of `name` or `filter` must be provided.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -136,7 +136,7 @@ public final class GetInstanceTemplateNetworkInterface {
      * `subnetwork` for custom subnetted networks.
      * 
     */
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
     /**
@@ -144,16 +144,16 @@ public final class GetInstanceTemplateNetworkInterface {
      * empty, the address will be automatically assigned.
      * 
     */
-    public String getNetworkIp() {
+    public String networkIp() {
         return this.networkIp;
     }
-    public String getNicType() {
+    public String nicType() {
         return this.nicType;
     }
-    public Integer getQueueCount() {
+    public Integer queueCount() {
         return this.queueCount;
     }
-    public String getStackType() {
+    public String stackType() {
         return this.stackType;
     }
     /**
@@ -162,7 +162,7 @@ public final class GetInstanceTemplateNetworkInterface {
      * created in. Either `network` or `subnetwork` must be provided.
      * 
     */
-    public String getSubnetwork() {
+    public String subnetwork() {
         return this.subnetwork;
     }
     /**
@@ -170,7 +170,7 @@ public final class GetInstanceTemplateNetworkInterface {
      * If it is not provided, the provider project is used.
      * 
     */
-    public String getSubnetworkProject() {
+    public String subnetworkProject() {
         return this.subnetworkProject;
     }
 

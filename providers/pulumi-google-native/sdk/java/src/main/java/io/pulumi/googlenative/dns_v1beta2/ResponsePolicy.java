@@ -33,7 +33,7 @@ public class ResponsePolicy extends io.pulumi.resources.CustomResource {
      * @return User-provided description for this Response Policy.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -47,13 +47,13 @@ public class ResponsePolicy extends io.pulumi.resources.CustomResource {
      * @return The list of Google Kubernetes Engine clusters to which this response policy is applied.
      * 
      */
-    public Output<List<ResponsePolicyGKEClusterResponse>> getGkeClusters() {
+    public Output<List<ResponsePolicyGKEClusterResponse>> gkeClusters() {
         return this.gkeClusters;
     }
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -67,7 +67,7 @@ public class ResponsePolicy extends io.pulumi.resources.CustomResource {
      * @return List of network names specifying networks to which this policy is applied.
      * 
      */
-    public Output<List<ResponsePolicyNetworkResponse>> getNetworks() {
+    public Output<List<ResponsePolicyNetworkResponse>> networks() {
         return this.networks;
     }
     /**
@@ -81,7 +81,7 @@ public class ResponsePolicy extends io.pulumi.resources.CustomResource {
      * @return User assigned name for this Response Policy.
      * 
      */
-    public Output<String> getResponsePolicyName() {
+    public Output<String> responsePolicyName() {
         return this.responsePolicyName;
     }
 

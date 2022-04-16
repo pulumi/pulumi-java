@@ -34,14 +34,14 @@ public final class PackageResponse {
      * The various channels by which a package is distributed.
      * 
     */
-    public List<DistributionResponse> getDistribution() {
+    public List<DistributionResponse> distribution() {
         return this.distribution;
     }
     /**
      * Immutable. The name of the package.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

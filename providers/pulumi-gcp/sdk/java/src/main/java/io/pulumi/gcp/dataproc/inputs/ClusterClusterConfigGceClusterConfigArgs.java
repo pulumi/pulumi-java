@@ -30,7 +30,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
     @Import(name="internalIpOnly")
       private final @Nullable Output<Boolean> internalIpOnly;
 
-    public Output<Boolean> getInternalIpOnly() {
+    public Output<Boolean> internalIpOnly() {
         return this.internalIpOnly == null ? Codegen.empty() : this.internalIpOnly;
     }
 
@@ -42,7 +42,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -55,7 +55,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
@@ -67,7 +67,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
@@ -82,7 +82,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
     @Import(name="serviceAccountScopes")
       private final @Nullable Output<List<String>> serviceAccountScopes;
 
-    public Output<List<String>> getServiceAccountScopes() {
+    public Output<List<String>> serviceAccountScopes() {
         return this.serviceAccountScopes == null ? Codegen.empty() : this.serviceAccountScopes;
     }
 
@@ -93,7 +93,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
     @Import(name="shieldedInstanceConfig")
       private final @Nullable Output<ClusterClusterConfigGceClusterConfigShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
-    public Output<ClusterClusterConfigGceClusterConfigShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
+    public Output<ClusterClusterConfigGceClusterConfigShieldedInstanceConfigArgs> shieldedInstanceConfig() {
         return this.shieldedInstanceConfig == null ? Codegen.empty() : this.shieldedInstanceConfig;
     }
 
@@ -105,7 +105,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
     @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
-    public Output<String> getSubnetwork() {
+    public Output<String> subnetwork() {
         return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 
@@ -117,7 +117,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> getTags() {
+    public Output<List<String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -134,7 +134,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

@@ -24,7 +24,7 @@ public final class WorkloadIdentityConfigResponse {
      * The workload pool to attach all Kubernetes service accounts to.
      * 
     */
-    public String getWorkloadPool() {
+    public String workloadPool() {
         return this.workloadPool;
     }
 

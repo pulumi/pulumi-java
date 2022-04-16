@@ -26,7 +26,7 @@ public final class IpConfigurationResponse extends io.pulumi.resources.InvokeArg
     @Import(name="allocatedIpRange", required=true)
       private final String allocatedIpRange;
 
-    public String getAllocatedIpRange() {
+    public String allocatedIpRange() {
         return this.allocatedIpRange;
     }
 
@@ -37,7 +37,7 @@ public final class IpConfigurationResponse extends io.pulumi.resources.InvokeArg
     @Import(name="authorizedNetworks", required=true)
       private final List<AclEntryResponse> authorizedNetworks;
 
-    public List<AclEntryResponse> getAuthorizedNetworks() {
+    public List<AclEntryResponse> authorizedNetworks() {
         return this.authorizedNetworks;
     }
 
@@ -48,7 +48,7 @@ public final class IpConfigurationResponse extends io.pulumi.resources.InvokeArg
     @Import(name="ipv4Enabled", required=true)
       private final Boolean ipv4Enabled;
 
-    public Boolean getIpv4Enabled() {
+    public Boolean ipv4Enabled() {
         return this.ipv4Enabled;
     }
 
@@ -59,7 +59,7 @@ public final class IpConfigurationResponse extends io.pulumi.resources.InvokeArg
     @Import(name="privateNetwork", required=true)
       private final String privateNetwork;
 
-    public String getPrivateNetwork() {
+    public String privateNetwork() {
         return this.privateNetwork;
     }
 
@@ -70,7 +70,7 @@ public final class IpConfigurationResponse extends io.pulumi.resources.InvokeArg
     @Import(name="requireSsl", required=true)
       private final Boolean requireSsl;
 
-    public Boolean getRequireSsl() {
+    public Boolean requireSsl() {
         return this.requireSsl;
     }
 

@@ -17,42 +17,42 @@ public final class GetObjectAccessControlArgs extends io.pulumi.resources.Invoke
     @Import(name="bucket", required=true)
       private final String bucket;
 
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
 
     @Import(name="entity", required=true)
       private final String entity;
 
-    public String getEntity() {
+    public String entity() {
         return this.entity;
     }
 
     @Import(name="generation")
       private final @Nullable String generation;
 
-    public Optional<String> getGeneration() {
+    public Optional<String> generation() {
         return this.generation == null ? Optional.empty() : Optional.ofNullable(this.generation);
     }
 
     @Import(name="object", required=true)
       private final String object;
 
-    public String getObject() {
+    public String object() {
         return this.object;
     }
 
     @Import(name="provisionalUserProject")
       private final @Nullable String provisionalUserProject;
 
-    public Optional<String> getProvisionalUserProject() {
+    public Optional<String> provisionalUserProject() {
         return this.provisionalUserProject == null ? Optional.empty() : Optional.ofNullable(this.provisionalUserProject);
     }
 
     @Import(name="userProject")
       private final @Nullable String userProject;
 
-    public Optional<String> getUserProject() {
+    public Optional<String> userProject() {
         return this.userProject == null ? Optional.empty() : Optional.ofNullable(this.userProject);
     }
 

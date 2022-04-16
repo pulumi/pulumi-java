@@ -25,7 +25,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs
     @Import(name="apt")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptArgs> apt;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptArgs> getApt() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptArgs> apt() {
         return this.apt == null ? Codegen.empty() : this.apt;
     }
 
@@ -36,7 +36,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs
     @Import(name="goo")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooArgs> goo;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooArgs> getGoo() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooArgs> goo() {
         return this.goo == null ? Codegen.empty() : this.goo;
     }
 
@@ -47,7 +47,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs
     @Import(name="yum")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumArgs> yum;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumArgs> getYum() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumArgs> yum() {
         return this.yum == null ? Codegen.empty() : this.yum;
     }
 
@@ -58,7 +58,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs
     @Import(name="zypper")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperArgs> zypper;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperArgs> getZypper() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperArgs> zypper() {
         return this.zypper == null ? Codegen.empty() : this.zypper;
     }
 

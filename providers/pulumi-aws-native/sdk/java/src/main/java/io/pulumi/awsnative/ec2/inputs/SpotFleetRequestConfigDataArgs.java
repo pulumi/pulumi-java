@@ -30,154 +30,154 @@ public final class SpotFleetRequestConfigDataArgs extends io.pulumi.resources.Re
     @Import(name="allocationStrategy")
       private final @Nullable Output<SpotFleetRequestConfigDataAllocationStrategy> allocationStrategy;
 
-    public Output<SpotFleetRequestConfigDataAllocationStrategy> getAllocationStrategy() {
+    public Output<SpotFleetRequestConfigDataAllocationStrategy> allocationStrategy() {
         return this.allocationStrategy == null ? Codegen.empty() : this.allocationStrategy;
     }
 
     @Import(name="context")
       private final @Nullable Output<String> context;
 
-    public Output<String> getContext() {
+    public Output<String> context() {
         return this.context == null ? Codegen.empty() : this.context;
     }
 
     @Import(name="excessCapacityTerminationPolicy")
       private final @Nullable Output<SpotFleetRequestConfigDataExcessCapacityTerminationPolicy> excessCapacityTerminationPolicy;
 
-    public Output<SpotFleetRequestConfigDataExcessCapacityTerminationPolicy> getExcessCapacityTerminationPolicy() {
+    public Output<SpotFleetRequestConfigDataExcessCapacityTerminationPolicy> excessCapacityTerminationPolicy() {
         return this.excessCapacityTerminationPolicy == null ? Codegen.empty() : this.excessCapacityTerminationPolicy;
     }
 
     @Import(name="iamFleetRole", required=true)
       private final Output<String> iamFleetRole;
 
-    public Output<String> getIamFleetRole() {
+    public Output<String> iamFleetRole() {
         return this.iamFleetRole;
     }
 
     @Import(name="instanceInterruptionBehavior")
       private final @Nullable Output<SpotFleetRequestConfigDataInstanceInterruptionBehavior> instanceInterruptionBehavior;
 
-    public Output<SpotFleetRequestConfigDataInstanceInterruptionBehavior> getInstanceInterruptionBehavior() {
+    public Output<SpotFleetRequestConfigDataInstanceInterruptionBehavior> instanceInterruptionBehavior() {
         return this.instanceInterruptionBehavior == null ? Codegen.empty() : this.instanceInterruptionBehavior;
     }
 
     @Import(name="instancePoolsToUseCount")
       private final @Nullable Output<Integer> instancePoolsToUseCount;
 
-    public Output<Integer> getInstancePoolsToUseCount() {
+    public Output<Integer> instancePoolsToUseCount() {
         return this.instancePoolsToUseCount == null ? Codegen.empty() : this.instancePoolsToUseCount;
     }
 
     @Import(name="launchSpecifications")
       private final @Nullable Output<List<SpotFleetLaunchSpecificationArgs>> launchSpecifications;
 
-    public Output<List<SpotFleetLaunchSpecificationArgs>> getLaunchSpecifications() {
+    public Output<List<SpotFleetLaunchSpecificationArgs>> launchSpecifications() {
         return this.launchSpecifications == null ? Codegen.empty() : this.launchSpecifications;
     }
 
     @Import(name="launchTemplateConfigs")
       private final @Nullable Output<List<SpotFleetLaunchTemplateConfigArgs>> launchTemplateConfigs;
 
-    public Output<List<SpotFleetLaunchTemplateConfigArgs>> getLaunchTemplateConfigs() {
+    public Output<List<SpotFleetLaunchTemplateConfigArgs>> launchTemplateConfigs() {
         return this.launchTemplateConfigs == null ? Codegen.empty() : this.launchTemplateConfigs;
     }
 
     @Import(name="loadBalancersConfig")
       private final @Nullable Output<SpotFleetLoadBalancersConfigArgs> loadBalancersConfig;
 
-    public Output<SpotFleetLoadBalancersConfigArgs> getLoadBalancersConfig() {
+    public Output<SpotFleetLoadBalancersConfigArgs> loadBalancersConfig() {
         return this.loadBalancersConfig == null ? Codegen.empty() : this.loadBalancersConfig;
     }
 
     @Import(name="onDemandAllocationStrategy")
       private final @Nullable Output<String> onDemandAllocationStrategy;
 
-    public Output<String> getOnDemandAllocationStrategy() {
+    public Output<String> onDemandAllocationStrategy() {
         return this.onDemandAllocationStrategy == null ? Codegen.empty() : this.onDemandAllocationStrategy;
     }
 
     @Import(name="onDemandMaxTotalPrice")
       private final @Nullable Output<String> onDemandMaxTotalPrice;
 
-    public Output<String> getOnDemandMaxTotalPrice() {
+    public Output<String> onDemandMaxTotalPrice() {
         return this.onDemandMaxTotalPrice == null ? Codegen.empty() : this.onDemandMaxTotalPrice;
     }
 
     @Import(name="onDemandTargetCapacity")
       private final @Nullable Output<Integer> onDemandTargetCapacity;
 
-    public Output<Integer> getOnDemandTargetCapacity() {
+    public Output<Integer> onDemandTargetCapacity() {
         return this.onDemandTargetCapacity == null ? Codegen.empty() : this.onDemandTargetCapacity;
     }
 
     @Import(name="replaceUnhealthyInstances")
       private final @Nullable Output<Boolean> replaceUnhealthyInstances;
 
-    public Output<Boolean> getReplaceUnhealthyInstances() {
+    public Output<Boolean> replaceUnhealthyInstances() {
         return this.replaceUnhealthyInstances == null ? Codegen.empty() : this.replaceUnhealthyInstances;
     }
 
     @Import(name="spotMaintenanceStrategies")
       private final @Nullable Output<SpotFleetSpotMaintenanceStrategiesArgs> spotMaintenanceStrategies;
 
-    public Output<SpotFleetSpotMaintenanceStrategiesArgs> getSpotMaintenanceStrategies() {
+    public Output<SpotFleetSpotMaintenanceStrategiesArgs> spotMaintenanceStrategies() {
         return this.spotMaintenanceStrategies == null ? Codegen.empty() : this.spotMaintenanceStrategies;
     }
 
     @Import(name="spotMaxTotalPrice")
       private final @Nullable Output<String> spotMaxTotalPrice;
 
-    public Output<String> getSpotMaxTotalPrice() {
+    public Output<String> spotMaxTotalPrice() {
         return this.spotMaxTotalPrice == null ? Codegen.empty() : this.spotMaxTotalPrice;
     }
 
     @Import(name="spotPrice")
       private final @Nullable Output<String> spotPrice;
 
-    public Output<String> getSpotPrice() {
+    public Output<String> spotPrice() {
         return this.spotPrice == null ? Codegen.empty() : this.spotPrice;
     }
 
     @Import(name="targetCapacity", required=true)
       private final Output<Integer> targetCapacity;
 
-    public Output<Integer> getTargetCapacity() {
+    public Output<Integer> targetCapacity() {
         return this.targetCapacity;
     }
 
     @Import(name="targetCapacityUnitType")
       private final @Nullable Output<SpotFleetRequestConfigDataTargetCapacityUnitType> targetCapacityUnitType;
 
-    public Output<SpotFleetRequestConfigDataTargetCapacityUnitType> getTargetCapacityUnitType() {
+    public Output<SpotFleetRequestConfigDataTargetCapacityUnitType> targetCapacityUnitType() {
         return this.targetCapacityUnitType == null ? Codegen.empty() : this.targetCapacityUnitType;
     }
 
     @Import(name="terminateInstancesWithExpiration")
       private final @Nullable Output<Boolean> terminateInstancesWithExpiration;
 
-    public Output<Boolean> getTerminateInstancesWithExpiration() {
+    public Output<Boolean> terminateInstancesWithExpiration() {
         return this.terminateInstancesWithExpiration == null ? Codegen.empty() : this.terminateInstancesWithExpiration;
     }
 
     @Import(name="type")
       private final @Nullable Output<SpotFleetRequestConfigDataType> type;
 
-    public Output<SpotFleetRequestConfigDataType> getType() {
+    public Output<SpotFleetRequestConfigDataType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
     @Import(name="validFrom")
       private final @Nullable Output<String> validFrom;
 
-    public Output<String> getValidFrom() {
+    public Output<String> validFrom() {
         return this.validFrom == null ? Codegen.empty() : this.validFrom;
     }
 
     @Import(name="validUntil")
       private final @Nullable Output<String> validUntil;
 
-    public Output<String> getValidUntil() {
+    public Output<String> validUntil() {
         return this.validUntil == null ? Codegen.empty() : this.validUntil;
     }
 

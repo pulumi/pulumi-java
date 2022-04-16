@@ -51,28 +51,28 @@ public final class RouteSpecGrpcRoute {
      * The action to take if a match is determined.
      * 
     */
-    public RouteSpecGrpcRouteAction getAction() {
+    public RouteSpecGrpcRouteAction action() {
         return this.action;
     }
     /**
      * The criteria for determining an gRPC request match.
      * 
     */
-    public Optional<RouteSpecGrpcRouteMatch> getMatch() {
+    public Optional<RouteSpecGrpcRouteMatch> match() {
         return Optional.ofNullable(this.match);
     }
     /**
      * The retry policy.
      * 
     */
-    public Optional<RouteSpecGrpcRouteRetryPolicy> getRetryPolicy() {
+    public Optional<RouteSpecGrpcRouteRetryPolicy> retryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
     /**
      * The types of timeouts.
      * 
     */
-    public Optional<RouteSpecGrpcRouteTimeout> getTimeout() {
+    public Optional<RouteSpecGrpcRouteTimeout> timeout() {
         return Optional.ofNullable(this.timeout);
     }
 

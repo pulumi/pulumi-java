@@ -26,7 +26,7 @@ public final class ConfigurationServicePropertiesArgs extends io.pulumi.resource
     @Import(name="settings")
       private final @Nullable Output<ConfigurationServiceSettingsArgs> settings;
 
-    public Output<ConfigurationServiceSettingsArgs> getSettings() {
+    public Output<ConfigurationServiceSettingsArgs> settings() {
         return this.settings == null ? Codegen.empty() : this.settings;
     }
 

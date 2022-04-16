@@ -22,7 +22,7 @@ public final class KinesisStreamingDestinationState extends io.pulumi.resources.
     @Import(name="streamArn")
       private final @Nullable Output<String> streamArn;
 
-    public Output<String> getStreamArn() {
+    public Output<String> streamArn() {
         return this.streamArn == null ? Codegen.empty() : this.streamArn;
     }
 
@@ -34,7 +34,7 @@ public final class KinesisStreamingDestinationState extends io.pulumi.resources.
     @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName == null ? Codegen.empty() : this.tableName;
     }
 

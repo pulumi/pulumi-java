@@ -23,7 +23,7 @@ public final class InternalCheckerResponse extends io.pulumi.resources.InvokeArg
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -34,7 +34,7 @@ public final class InternalCheckerResponse extends io.pulumi.resources.InvokeArg
     @Import(name="gcpZone", required=true)
       private final String gcpZone;
 
-    public String getGcpZone() {
+    public String gcpZone() {
         return this.gcpZone;
     }
 
@@ -45,7 +45,7 @@ public final class InternalCheckerResponse extends io.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -56,7 +56,7 @@ public final class InternalCheckerResponse extends io.pulumi.resources.InvokeArg
     @Import(name="network", required=true)
       private final String network;
 
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
 
@@ -67,7 +67,7 @@ public final class InternalCheckerResponse extends io.pulumi.resources.InvokeArg
     @Import(name="peerProjectId", required=true)
       private final String peerProjectId;
 
-    public String getPeerProjectId() {
+    public String peerProjectId() {
         return this.peerProjectId;
     }
 
@@ -78,7 +78,7 @@ public final class InternalCheckerResponse extends io.pulumi.resources.InvokeArg
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

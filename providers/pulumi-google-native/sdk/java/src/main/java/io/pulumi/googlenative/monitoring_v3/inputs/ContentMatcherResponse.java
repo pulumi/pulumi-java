@@ -23,7 +23,7 @@ public final class ContentMatcherResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="content", required=true)
       private final String content;
 
-    public String getContent() {
+    public String content() {
         return this.content;
     }
 
@@ -34,7 +34,7 @@ public final class ContentMatcherResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="matcher", required=true)
       private final String matcher;
 
-    public String getMatcher() {
+    public String matcher() {
         return this.matcher;
     }
 

@@ -40,21 +40,21 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieResponse {
      * Name of the cookie.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Path to set for the cookie.
      * 
     */
-    public String getPath() {
+    public String path() {
         return this.path;
     }
     /**
      * Lifetime of the cookie.
      * 
     */
-    public DurationResponse getTtl() {
+    public DurationResponse ttl() {
         return this.ttl;
     }
 

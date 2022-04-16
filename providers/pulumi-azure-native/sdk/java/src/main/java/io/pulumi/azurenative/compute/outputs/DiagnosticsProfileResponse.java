@@ -26,7 +26,7 @@ public final class DiagnosticsProfileResponse {
      * Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. <br><br> You can easily view the output of your console log. <br><br> Azure also enables you to see a screenshot of the VM from the hypervisor.
      * 
     */
-    public Optional<BootDiagnosticsResponse> getBootDiagnostics() {
+    public Optional<BootDiagnosticsResponse> bootDiagnostics() {
         return Optional.ofNullable(this.bootDiagnostics);
     }
 

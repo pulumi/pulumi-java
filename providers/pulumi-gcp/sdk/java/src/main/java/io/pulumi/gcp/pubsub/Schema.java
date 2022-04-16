@@ -59,7 +59,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * that is a valid schema definition of the type specified in type.
      * 
      */
-    public Output</* @Nullable */ String> getDefinition() {
+    public Output</* @Nullable */ String> definition() {
         return this.definition;
     }
     /**
@@ -73,7 +73,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return The ID to use for the schema, which will become the final component of the schema's resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -89,7 +89,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -107,7 +107,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * Possible values are `TYPE_UNSPECIFIED`, `PROTOCOL_BUFFER`, and `AVRO`.
      * 
      */
-    public Output</* @Nullable */ String> getType() {
+    public Output</* @Nullable */ String> type() {
         return this.type;
     }
 

@@ -32,7 +32,7 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
     @Import(name="method")
       private final @Nullable Output<Either<String,HTTPConfigurationMethod>> method;
 
-    public Output<Either<String,HTTPConfigurationMethod>> getMethod() {
+    public Output<Either<String,HTTPConfigurationMethod>> method() {
         return this.method == null ? Codegen.empty() : this.method;
     }
 
@@ -43,7 +43,7 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -54,7 +54,7 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -65,7 +65,7 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
     @Import(name="preferHTTPS")
       private final @Nullable Output<Boolean> preferHTTPS;
 
-    public Output<Boolean> getPreferHTTPS() {
+    public Output<Boolean> preferHTTPS() {
         return this.preferHTTPS == null ? Codegen.empty() : this.preferHTTPS;
     }
 
@@ -76,7 +76,7 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
     @Import(name="requestHeaders")
       private final @Nullable Output<List<HTTPHeaderArgs>> requestHeaders;
 
-    public Output<List<HTTPHeaderArgs>> getRequestHeaders() {
+    public Output<List<HTTPHeaderArgs>> requestHeaders() {
         return this.requestHeaders == null ? Codegen.empty() : this.requestHeaders;
     }
 
@@ -87,7 +87,7 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
     @Import(name="validStatusCodeRanges")
       private final @Nullable Output<List<String>> validStatusCodeRanges;
 
-    public Output<List<String>> getValidStatusCodeRanges() {
+    public Output<List<String>> validStatusCodeRanges() {
         return this.validStatusCodeRanges == null ? Codegen.empty() : this.validStatusCodeRanges;
     }
 

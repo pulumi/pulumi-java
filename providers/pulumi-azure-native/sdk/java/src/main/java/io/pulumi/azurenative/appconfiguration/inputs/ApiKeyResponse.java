@@ -24,7 +24,7 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="connectionString", required=true)
       private final String connectionString;
 
-    public String getConnectionString() {
+    public String connectionString() {
         return this.connectionString;
     }
 
@@ -35,7 +35,7 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -46,7 +46,7 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="lastModified", required=true)
       private final String lastModified;
 
-    public String getLastModified() {
+    public String lastModified() {
         return this.lastModified;
     }
 
@@ -57,7 +57,7 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -68,7 +68,7 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="readOnly", required=true)
       private final Boolean readOnly;
 
-    public Boolean getReadOnly() {
+    public Boolean readOnly() {
         return this.readOnly;
     }
 
@@ -79,7 +79,7 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

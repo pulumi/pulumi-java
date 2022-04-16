@@ -23,7 +23,7 @@ public final class ClusteringArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fields")
       private final @Nullable Output<List<String>> fields;
 
-    public Output<List<String>> getFields() {
+    public Output<List<String>> fields() {
         return this.fields == null ? Codegen.empty() : this.fields;
     }
 

@@ -49,28 +49,28 @@ public final class PackageRepositoryResponse {
      * An Apt Repository.
      * 
     */
-    public AptRepositoryResponse getApt() {
+    public AptRepositoryResponse apt() {
         return this.apt;
     }
     /**
      * A Goo Repository.
      * 
     */
-    public GooRepositoryResponse getGoo() {
+    public GooRepositoryResponse goo() {
         return this.goo;
     }
     /**
      * A Yum Repository.
      * 
     */
-    public YumRepositoryResponse getYum() {
+    public YumRepositoryResponse yum() {
         return this.yum;
     }
     /**
      * A Zypper Repository.
      * 
     */
-    public ZypperRepositoryResponse getZypper() {
+    public ZypperRepositoryResponse zypper() {
         return this.zypper;
     }
 

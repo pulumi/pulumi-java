@@ -26,7 +26,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterAutoscalingConfig")
       private final @Nullable Output<ClusterAutoscalingConfigArgs> clusterAutoscalingConfig;
 
-    public Output<ClusterAutoscalingConfigArgs> getClusterAutoscalingConfig() {
+    public Output<ClusterAutoscalingConfigArgs> clusterAutoscalingConfig() {
         return this.clusterAutoscalingConfig == null ? Codegen.empty() : this.clusterAutoscalingConfig;
     }
 

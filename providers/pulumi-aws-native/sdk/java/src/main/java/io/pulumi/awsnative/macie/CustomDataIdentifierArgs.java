@@ -24,7 +24,7 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -35,7 +35,7 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
     @Import(name="ignoreWords")
       private final @Nullable Output<List<String>> ignoreWords;
 
-    public Output<List<String>> getIgnoreWords() {
+    public Output<List<String>> ignoreWords() {
         return this.ignoreWords == null ? Codegen.empty() : this.ignoreWords;
     }
 
@@ -46,7 +46,7 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
     @Import(name="keywords")
       private final @Nullable Output<List<String>> keywords;
 
-    public Output<List<String>> getKeywords() {
+    public Output<List<String>> keywords() {
         return this.keywords == null ? Codegen.empty() : this.keywords;
     }
 
@@ -57,7 +57,7 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
     @Import(name="maximumMatchDistance")
       private final @Nullable Output<Integer> maximumMatchDistance;
 
-    public Output<Integer> getMaximumMatchDistance() {
+    public Output<Integer> maximumMatchDistance() {
         return this.maximumMatchDistance == null ? Codegen.empty() : this.maximumMatchDistance;
     }
 
@@ -68,7 +68,7 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -79,7 +79,7 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
     @Import(name="regex", required=true)
       private final Output<String> regex;
 
-    public Output<String> getRegex() {
+    public Output<String> regex() {
         return this.regex;
     }
 

@@ -27,7 +27,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="actionGroupId", required=true)
       private final Output<String> actionGroupId;
 
-    public Output<String> getActionGroupId() {
+    public Output<String> actionGroupId() {
         return this.actionGroupId;
     }
 
@@ -38,7 +38,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="webhookProperties")
       private final @Nullable Output<Map<String,String>> webhookProperties;
 
-    public Output<Map<String,String>> getWebhookProperties() {
+    public Output<Map<String,String>> webhookProperties() {
         return this.webhookProperties == null ? Codegen.empty() : this.webhookProperties;
     }
 

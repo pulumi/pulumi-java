@@ -17,7 +17,7 @@ public final class ManagedZonePrivateVisibilityConfig {
         this.networks = networks;
     }
 
-    public List<ManagedZonePrivateVisibilityConfigNetwork> getNetworks() {
+    public List<ManagedZonePrivateVisibilityConfigNetwork> networks() {
         return this.networks;
     }
 

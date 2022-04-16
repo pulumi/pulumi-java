@@ -24,7 +24,7 @@ public final class FieldLevelEncryptionConfigArgs extends io.pulumi.resources.Re
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 
@@ -35,7 +35,7 @@ public final class FieldLevelEncryptionConfigArgs extends io.pulumi.resources.Re
     @Import(name="contentTypeProfileConfig", required=true)
       private final Output<FieldLevelEncryptionConfigContentTypeProfileConfigArgs> contentTypeProfileConfig;
 
-    public Output<FieldLevelEncryptionConfigContentTypeProfileConfigArgs> getContentTypeProfileConfig() {
+    public Output<FieldLevelEncryptionConfigContentTypeProfileConfigArgs> contentTypeProfileConfig() {
         return this.contentTypeProfileConfig;
     }
 
@@ -46,7 +46,7 @@ public final class FieldLevelEncryptionConfigArgs extends io.pulumi.resources.Re
     @Import(name="queryArgProfileConfig", required=true)
       private final Output<FieldLevelEncryptionConfigQueryArgProfileConfigArgs> queryArgProfileConfig;
 
-    public Output<FieldLevelEncryptionConfigQueryArgProfileConfigArgs> getQueryArgProfileConfig() {
+    public Output<FieldLevelEncryptionConfigQueryArgProfileConfigArgs> queryArgProfileConfig() {
         return this.queryArgProfileConfig;
     }
 

@@ -24,7 +24,7 @@ public final class BucketVersioningResponse {
      * While set to true, versioning is fully enabled for this bucket.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

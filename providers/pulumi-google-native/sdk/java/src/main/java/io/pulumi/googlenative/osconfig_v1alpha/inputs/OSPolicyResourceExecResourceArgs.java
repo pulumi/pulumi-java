@@ -26,7 +26,7 @@ public final class OSPolicyResourceExecResourceArgs extends io.pulumi.resources.
     @Import(name="enforce")
       private final @Nullable Output<OSPolicyResourceExecResourceExecArgs> enforce;
 
-    public Output<OSPolicyResourceExecResourceExecArgs> getEnforce() {
+    public Output<OSPolicyResourceExecResourceExecArgs> enforce() {
         return this.enforce == null ? Codegen.empty() : this.enforce;
     }
 
@@ -37,7 +37,7 @@ public final class OSPolicyResourceExecResourceArgs extends io.pulumi.resources.
     @Import(name="validate", required=true)
       private final Output<OSPolicyResourceExecResourceExecArgs> validate;
 
-    public Output<OSPolicyResourceExecResourceExecArgs> getValidate() {
+    public Output<OSPolicyResourceExecResourceExecArgs> validate() {
         return this.validate;
     }
 

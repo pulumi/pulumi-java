@@ -24,7 +24,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
     @Import(name="compatibility")
       private final @Nullable Output<String> compatibility;
 
-    public Output<String> getCompatibility() {
+    public Output<String> compatibility() {
         return this.compatibility == null ? Codegen.empty() : this.compatibility;
     }
 
@@ -46,7 +46,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataFormat")
       private final @Nullable Output<String> dataFormat;
 
-    public Output<String> getDataFormat() {
+    public Output<String> dataFormat() {
         return this.dataFormat == null ? Codegen.empty() : this.dataFormat;
     }
 
@@ -57,7 +57,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -68,7 +68,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
     @Import(name="latestSchemaVersion")
       private final @Nullable Output<Integer> latestSchemaVersion;
 
-    public Output<Integer> getLatestSchemaVersion() {
+    public Output<Integer> latestSchemaVersion() {
         return this.latestSchemaVersion == null ? Codegen.empty() : this.latestSchemaVersion;
     }
 
@@ -79,7 +79,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
     @Import(name="nextSchemaVersion")
       private final @Nullable Output<Integer> nextSchemaVersion;
 
-    public Output<Integer> getNextSchemaVersion() {
+    public Output<Integer> nextSchemaVersion() {
         return this.nextSchemaVersion == null ? Codegen.empty() : this.nextSchemaVersion;
     }
 
@@ -90,7 +90,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
     @Import(name="registryArn")
       private final @Nullable Output<String> registryArn;
 
-    public Output<String> getRegistryArn() {
+    public Output<String> registryArn() {
         return this.registryArn == null ? Codegen.empty() : this.registryArn;
     }
 
@@ -101,7 +101,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
     @Import(name="registryName")
       private final @Nullable Output<String> registryName;
 
-    public Output<String> getRegistryName() {
+    public Output<String> registryName() {
         return this.registryName == null ? Codegen.empty() : this.registryName;
     }
 
@@ -112,7 +112,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
     @Import(name="schemaCheckpoint")
       private final @Nullable Output<Integer> schemaCheckpoint;
 
-    public Output<Integer> getSchemaCheckpoint() {
+    public Output<Integer> schemaCheckpoint() {
         return this.schemaCheckpoint == null ? Codegen.empty() : this.schemaCheckpoint;
     }
 
@@ -123,7 +123,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
     @Import(name="schemaDefinition")
       private final @Nullable Output<String> schemaDefinition;
 
-    public Output<String> getSchemaDefinition() {
+    public Output<String> schemaDefinition() {
         return this.schemaDefinition == null ? Codegen.empty() : this.schemaDefinition;
     }
 
@@ -134,7 +134,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
     @Import(name="schemaName")
       private final @Nullable Output<String> schemaName;
 
-    public Output<String> getSchemaName() {
+    public Output<String> schemaName() {
         return this.schemaName == null ? Codegen.empty() : this.schemaName;
     }
 
@@ -145,7 +145,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -156,7 +156,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

@@ -32,14 +32,14 @@ public final class AnalyticsApplicationInputsKinesisFirehose {
      * The ARN of the Kinesis Firehose delivery stream.
      * 
     */
-    public String getResourceArn() {
+    public String resourceArn() {
         return this.resourceArn;
     }
     /**
      * The ARN of the IAM Role used to access the stream.
      * 
     */
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 

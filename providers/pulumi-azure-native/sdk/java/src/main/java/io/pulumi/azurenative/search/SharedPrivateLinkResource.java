@@ -43,7 +43,7 @@ public class SharedPrivateLinkResource extends io.pulumi.resources.CustomResourc
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +57,7 @@ public class SharedPrivateLinkResource extends io.pulumi.resources.CustomResourc
      * @return Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.
      * 
      */
-    public Output<SharedPrivateLinkResourcePropertiesResponse> getProperties() {
+    public Output<SharedPrivateLinkResourcePropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -71,7 +71,7 @@ public class SharedPrivateLinkResource extends io.pulumi.resources.CustomResourc
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

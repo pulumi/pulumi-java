@@ -24,7 +24,7 @@ public final class FileIODetailsResponse {
      * File Pattern used to access files by the connector.
      * 
     */
-    public String getFilePattern() {
+    public String filePattern() {
         return this.filePattern;
     }
 

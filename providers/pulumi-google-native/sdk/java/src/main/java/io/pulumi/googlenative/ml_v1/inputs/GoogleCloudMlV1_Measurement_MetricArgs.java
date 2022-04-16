@@ -26,7 +26,7 @@ public final class GoogleCloudMlV1_Measurement_MetricArgs extends io.pulumi.reso
     @Import(name="metric", required=true)
       private final Output<String> metric;
 
-    public Output<String> getMetric() {
+    public Output<String> metric() {
         return this.metric;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudMlV1_Measurement_MetricArgs extends io.pulumi.reso
     @Import(name="value", required=true)
       private final Output<Double> value;
 
-    public Output<Double> getValue() {
+    public Output<Double> value() {
         return this.value;
     }
 

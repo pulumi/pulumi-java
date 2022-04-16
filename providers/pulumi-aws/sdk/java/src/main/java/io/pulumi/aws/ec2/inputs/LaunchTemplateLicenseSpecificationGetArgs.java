@@ -21,7 +21,7 @@ public final class LaunchTemplateLicenseSpecificationGetArgs extends io.pulumi.r
     @Import(name="licenseConfigurationArn", required=true)
       private final Output<String> licenseConfigurationArn;
 
-    public Output<String> getLicenseConfigurationArn() {
+    public Output<String> licenseConfigurationArn() {
         return this.licenseConfigurationArn;
     }
 

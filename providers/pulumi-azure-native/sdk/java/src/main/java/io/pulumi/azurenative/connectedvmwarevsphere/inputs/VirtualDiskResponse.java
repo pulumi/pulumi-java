@@ -26,7 +26,7 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="controllerKey")
       private final @Nullable Integer controllerKey;
 
-    public Optional<Integer> getControllerKey() {
+    public Optional<Integer> controllerKey() {
         return this.controllerKey == null ? Optional.empty() : Optional.ofNullable(this.controllerKey);
     }
 
@@ -37,7 +37,7 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="deviceKey")
       private final @Nullable Integer deviceKey;
 
-    public Optional<Integer> getDeviceKey() {
+    public Optional<Integer> deviceKey() {
         return this.deviceKey == null ? Optional.empty() : Optional.ofNullable(this.deviceKey);
     }
 
@@ -48,7 +48,7 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="deviceName")
       private final @Nullable String deviceName;
 
-    public Optional<String> getDeviceName() {
+    public Optional<String> deviceName() {
         return this.deviceName == null ? Optional.empty() : Optional.ofNullable(this.deviceName);
     }
 
@@ -59,7 +59,7 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="diskMode")
       private final @Nullable String diskMode;
 
-    public Optional<String> getDiskMode() {
+    public Optional<String> diskMode() {
         return this.diskMode == null ? Optional.empty() : Optional.ofNullable(this.diskMode);
     }
 
@@ -70,7 +70,7 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="diskObjectId", required=true)
       private final String diskObjectId;
 
-    public String getDiskObjectId() {
+    public String diskObjectId() {
         return this.diskObjectId;
     }
 
@@ -81,7 +81,7 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="diskSizeGB")
       private final @Nullable Integer diskSizeGB;
 
-    public Optional<Integer> getDiskSizeGB() {
+    public Optional<Integer> diskSizeGB() {
         return this.diskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGB);
     }
 
@@ -92,7 +92,7 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="diskType")
       private final @Nullable String diskType;
 
-    public Optional<String> getDiskType() {
+    public Optional<String> diskType() {
         return this.diskType == null ? Optional.empty() : Optional.ofNullable(this.diskType);
     }
 
@@ -103,7 +103,7 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="label", required=true)
       private final String label;
 
-    public String getLabel() {
+    public String label() {
         return this.label;
     }
 
@@ -114,7 +114,7 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -125,7 +125,7 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="unitNumber")
       private final @Nullable Integer unitNumber;
 
-    public Optional<Integer> getUnitNumber() {
+    public Optional<Integer> unitNumber() {
         return this.unitNumber == null ? Optional.empty() : Optional.ofNullable(this.unitNumber);
     }
 

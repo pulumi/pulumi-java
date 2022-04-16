@@ -21,7 +21,7 @@ public final class ProgressPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="percentage")
       private final @Nullable String percentage;
 
-    public Optional<String> getPercentage() {
+    public Optional<String> percentage() {
         return this.percentage == null ? Optional.empty() : Optional.ofNullable(this.percentage);
     }
 

@@ -15,7 +15,7 @@ public final class GetApplicationInstanceArgs extends io.pulumi.resources.Invoke
     @Import(name="applicationInstanceId", required=true)
       private final String applicationInstanceId;
 
-    public String getApplicationInstanceId() {
+    public String applicationInstanceId() {
         return this.applicationInstanceId;
     }
 

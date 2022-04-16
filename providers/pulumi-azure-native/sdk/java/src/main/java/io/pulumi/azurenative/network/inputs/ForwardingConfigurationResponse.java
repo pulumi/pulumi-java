@@ -27,7 +27,7 @@ public final class ForwardingConfigurationResponse extends io.pulumi.resources.I
     @Import(name="backendPool")
       private final @Nullable SubResourceResponse backendPool;
 
-    public Optional<SubResourceResponse> getBackendPool() {
+    public Optional<SubResourceResponse> backendPool() {
         return this.backendPool == null ? Optional.empty() : Optional.ofNullable(this.backendPool);
     }
 
@@ -38,7 +38,7 @@ public final class ForwardingConfigurationResponse extends io.pulumi.resources.I
     @Import(name="cacheConfiguration")
       private final @Nullable CacheConfigurationResponse cacheConfiguration;
 
-    public Optional<CacheConfigurationResponse> getCacheConfiguration() {
+    public Optional<CacheConfigurationResponse> cacheConfiguration() {
         return this.cacheConfiguration == null ? Optional.empty() : Optional.ofNullable(this.cacheConfiguration);
     }
 
@@ -49,7 +49,7 @@ public final class ForwardingConfigurationResponse extends io.pulumi.resources.I
     @Import(name="customForwardingPath")
       private final @Nullable String customForwardingPath;
 
-    public Optional<String> getCustomForwardingPath() {
+    public Optional<String> customForwardingPath() {
         return this.customForwardingPath == null ? Optional.empty() : Optional.ofNullable(this.customForwardingPath);
     }
 
@@ -60,7 +60,7 @@ public final class ForwardingConfigurationResponse extends io.pulumi.resources.I
     @Import(name="forwardingProtocol")
       private final @Nullable String forwardingProtocol;
 
-    public Optional<String> getForwardingProtocol() {
+    public Optional<String> forwardingProtocol() {
         return this.forwardingProtocol == null ? Optional.empty() : Optional.ofNullable(this.forwardingProtocol);
     }
 
@@ -71,7 +71,7 @@ public final class ForwardingConfigurationResponse extends io.pulumi.resources.I
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

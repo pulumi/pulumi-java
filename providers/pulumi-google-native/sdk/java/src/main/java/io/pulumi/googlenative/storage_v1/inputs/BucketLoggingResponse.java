@@ -23,7 +23,7 @@ public final class BucketLoggingResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="logBucket", required=true)
       private final String logBucket;
 
-    public String getLogBucket() {
+    public String logBucket() {
         return this.logBucket;
     }
 
@@ -34,7 +34,7 @@ public final class BucketLoggingResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="logObjectPrefix", required=true)
       private final String logObjectPrefix;
 
-    public String getLogObjectPrefix() {
+    public String logObjectPrefix() {
         return this.logObjectPrefix;
     }
 

@@ -31,7 +31,7 @@ public class Filter extends io.pulumi.resources.CustomResource {
      * @return Findings filter ARN.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -45,7 +45,7 @@ public class Filter extends io.pulumi.resources.CustomResource {
      * @return Findings filter description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -59,7 +59,7 @@ public class Filter extends io.pulumi.resources.CustomResource {
      * @return Findings filter action.
      * 
      */
-    public Output<FilterAction> getFilterAction() {
+    public Output<FilterAction> filterAction() {
         return this.filterAction;
     }
     /**
@@ -73,7 +73,7 @@ public class Filter extends io.pulumi.resources.CustomResource {
      * @return Findings filter criteria.
      * 
      */
-    public Output<FilterCriteria> getFilterCriteria() {
+    public Output<FilterCriteria> filterCriteria() {
         return this.filterCriteria;
     }
     /**
@@ -87,7 +87,7 @@ public class Filter extends io.pulumi.resources.CustomResource {
      * @return Findings filter name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

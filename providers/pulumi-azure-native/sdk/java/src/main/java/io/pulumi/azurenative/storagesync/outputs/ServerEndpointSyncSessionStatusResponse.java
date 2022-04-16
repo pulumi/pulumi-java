@@ -78,56 +78,56 @@ public final class ServerEndpointSyncSessionStatusResponse {
      * Array of per-item errors coming from the last sync session.
      * 
     */
-    public List<ServerEndpointFilesNotSyncingErrorResponse> getFilesNotSyncingErrors() {
+    public List<ServerEndpointFilesNotSyncingErrorResponse> filesNotSyncingErrors() {
         return this.filesNotSyncingErrors;
     }
     /**
      * Sync mode
      * 
     */
-    public String getLastSyncMode() {
+    public String lastSyncMode() {
         return this.lastSyncMode;
     }
     /**
      * Last sync per item error count.
      * 
     */
-    public Double getLastSyncPerItemErrorCount() {
+    public Double lastSyncPerItemErrorCount() {
         return this.lastSyncPerItemErrorCount;
     }
     /**
      * Last sync result (HResult)
      * 
     */
-    public Integer getLastSyncResult() {
+    public Integer lastSyncResult() {
         return this.lastSyncResult;
     }
     /**
      * Last sync success timestamp
      * 
     */
-    public String getLastSyncSuccessTimestamp() {
+    public String lastSyncSuccessTimestamp() {
         return this.lastSyncSuccessTimestamp;
     }
     /**
      * Last sync timestamp
      * 
     */
-    public String getLastSyncTimestamp() {
+    public String lastSyncTimestamp() {
         return this.lastSyncTimestamp;
     }
     /**
      * Count of persistent files not syncing.
      * 
     */
-    public Double getPersistentFilesNotSyncingCount() {
+    public Double persistentFilesNotSyncingCount() {
         return this.persistentFilesNotSyncingCount;
     }
     /**
      * Count of transient files not syncing.
      * 
     */
-    public Double getTransientFilesNotSyncingCount() {
+    public Double transientFilesNotSyncingCount() {
         return this.transientFilesNotSyncingCount;
     }
 

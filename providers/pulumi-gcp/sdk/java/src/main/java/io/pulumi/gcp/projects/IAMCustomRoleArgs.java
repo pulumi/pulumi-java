@@ -23,7 +23,7 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -34,7 +34,7 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="permissions", required=true)
       private final Output<List<String>> permissions;
 
-    public Output<List<String>> getPermissions() {
+    public Output<List<String>> permissions() {
         return this.permissions;
     }
 
@@ -46,7 +46,7 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -57,7 +57,7 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleId", required=true)
       private final Output<String> roleId;
 
-    public Output<String> getRoleId() {
+    public Output<String> roleId() {
         return this.roleId;
     }
 
@@ -70,7 +70,7 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stage")
       private final @Nullable Output<String> stage;
 
-    public Output<String> getStage() {
+    public Output<String> stage() {
         return this.stage == null ? Codegen.empty() : this.stage;
     }
 
@@ -81,7 +81,7 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="title", required=true)
       private final Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 

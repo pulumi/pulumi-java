@@ -18,21 +18,21 @@ public final class WebACLRegexPatternSetReferenceStatement extends io.pulumi.res
     @Import(name="arn", required=true)
       private final String arn;
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
 
     @Import(name="fieldToMatch", required=true)
       private final WebACLFieldToMatch fieldToMatch;
 
-    public WebACLFieldToMatch getFieldToMatch() {
+    public WebACLFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
 
     @Import(name="textTransformations", required=true)
       private final List<WebACLTextTransformation> textTransformations;
 
-    public List<WebACLTextTransformation> getTextTransformations() {
+    public List<WebACLTextTransformation> textTransformations() {
         return this.textTransformations;
     }
 

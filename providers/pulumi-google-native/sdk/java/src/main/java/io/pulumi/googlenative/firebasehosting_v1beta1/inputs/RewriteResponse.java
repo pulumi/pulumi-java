@@ -25,7 +25,7 @@ public final class RewriteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="dynamicLinks", required=true)
       private final Boolean dynamicLinks;
 
-    public Boolean getDynamicLinks() {
+    public Boolean dynamicLinks() {
         return this.dynamicLinks;
     }
 
@@ -36,7 +36,7 @@ public final class RewriteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="function", required=true)
       private final String function;
 
-    public String getFunction() {
+    public String function() {
         return this.function;
     }
 
@@ -47,7 +47,7 @@ public final class RewriteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="glob", required=true)
       private final String glob;
 
-    public String getGlob() {
+    public String glob() {
         return this.glob;
     }
 
@@ -58,7 +58,7 @@ public final class RewriteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 
@@ -69,7 +69,7 @@ public final class RewriteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="regex", required=true)
       private final String regex;
 
-    public String getRegex() {
+    public String regex() {
         return this.regex;
     }
 
@@ -80,7 +80,7 @@ public final class RewriteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="run", required=true)
       private final CloudRunRewriteResponse run;
 
-    public CloudRunRewriteResponse getRun() {
+    public CloudRunRewriteResponse run() {
         return this.run;
     }
 

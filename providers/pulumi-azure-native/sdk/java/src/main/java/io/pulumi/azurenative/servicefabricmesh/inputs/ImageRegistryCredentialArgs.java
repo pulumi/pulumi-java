@@ -26,7 +26,7 @@ public final class ImageRegistryCredentialArgs extends io.pulumi.resources.Resou
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -37,7 +37,7 @@ public final class ImageRegistryCredentialArgs extends io.pulumi.resources.Resou
     @Import(name="server", required=true)
       private final Output<String> server;
 
-    public Output<String> getServer() {
+    public Output<String> server() {
         return this.server;
     }
 
@@ -48,7 +48,7 @@ public final class ImageRegistryCredentialArgs extends io.pulumi.resources.Resou
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 

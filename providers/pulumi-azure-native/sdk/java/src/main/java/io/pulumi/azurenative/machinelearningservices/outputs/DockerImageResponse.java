@@ -45,7 +45,7 @@ public final class DockerImageResponse {
      * <seealso href="https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-custom-docker-image#use-a-custom-base-image" />
      * 
     */
-    public String getDockerImageUri() {
+    public String dockerImageUri() {
         return this.dockerImageUri;
     }
     /**
@@ -53,14 +53,14 @@ public final class DockerImageResponse {
      * Expected value is 'Image'.
      * 
     */
-    public String getDockerSpecificationType() {
+    public String dockerSpecificationType() {
         return this.dockerSpecificationType;
     }
     /**
      * The platform information of the docker image.
      * 
     */
-    public Optional<DockerImagePlatformResponse> getPlatform() {
+    public Optional<DockerImagePlatformResponse> platform() {
         return Optional.ofNullable(this.platform);
     }
 

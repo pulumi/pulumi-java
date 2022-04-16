@@ -38,7 +38,7 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpec {
      * The full file path
      * 
     */
-    public Optional<String> getFilePath() {
+    public Optional<String> filePath() {
         return Optional.ofNullable(this.filePath);
     }
     /**
@@ -46,7 +46,7 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpec {
      * The size of the file, in bytes.
      * 
     */
-    public Optional<Integer> getSizeBytes() {
+    public Optional<Integer> sizeBytes() {
         return Optional.ofNullable(this.sizeBytes);
     }
 

@@ -35,14 +35,14 @@ public final class AutoscaleResponse {
      * Parameters for load-based autoscale
      * 
     */
-    public Optional<AutoscaleCapacityResponse> getCapacity() {
+    public Optional<AutoscaleCapacityResponse> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * Parameters for schedule-based autoscale
      * 
     */
-    public Optional<AutoscaleRecurrenceResponse> getRecurrence() {
+    public Optional<AutoscaleRecurrenceResponse> recurrence() {
         return Optional.ofNullable(this.recurrence);
     }
 

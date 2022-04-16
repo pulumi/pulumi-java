@@ -20,7 +20,7 @@ public final class TableSchemaResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="fields", required=true)
       private final List<TableFieldSchemaResponse> fields;
 
-    public List<TableFieldSchemaResponse> getFields() {
+    public List<TableFieldSchemaResponse> fields() {
         return this.fields;
     }
 

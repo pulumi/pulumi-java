@@ -16,14 +16,14 @@ public final class AnomalyDetectorVpcConfiguration extends io.pulumi.resources.I
     @Import(name="securityGroupIdList", required=true)
       private final List<String> securityGroupIdList;
 
-    public List<String> getSecurityGroupIdList() {
+    public List<String> securityGroupIdList() {
         return this.securityGroupIdList;
     }
 
     @Import(name="subnetIdList", required=true)
       private final List<String> subnetIdList;
 
-    public List<String> getSubnetIdList() {
+    public List<String> subnetIdList() {
         return this.subnetIdList;
     }
 

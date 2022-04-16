@@ -32,14 +32,14 @@ public final class SDKInfoResponse {
      * The SDK Language.
      * 
     */
-    public String getLanguage() {
+    public String language() {
         return this.language;
     }
     /**
      * Optional. The SDK version.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

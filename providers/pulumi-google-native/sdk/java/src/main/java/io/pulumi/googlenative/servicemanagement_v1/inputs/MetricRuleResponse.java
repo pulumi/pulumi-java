@@ -24,7 +24,7 @@ public final class MetricRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="metricCosts", required=true)
       private final Map<String,String> metricCosts;
 
-    public Map<String,String> getMetricCosts() {
+    public Map<String,String> metricCosts() {
         return this.metricCosts;
     }
 
@@ -35,7 +35,7 @@ public final class MetricRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="selector", required=true)
       private final String selector;
 
-    public String getSelector() {
+    public String selector() {
         return this.selector;
     }
 

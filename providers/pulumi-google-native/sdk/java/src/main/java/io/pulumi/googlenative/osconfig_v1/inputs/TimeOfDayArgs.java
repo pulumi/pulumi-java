@@ -26,7 +26,7 @@ public final class TimeOfDayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hours")
       private final @Nullable Output<Integer> hours;
 
-    public Output<Integer> getHours() {
+    public Output<Integer> hours() {
         return this.hours == null ? Codegen.empty() : this.hours;
     }
 
@@ -37,7 +37,7 @@ public final class TimeOfDayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minutes")
       private final @Nullable Output<Integer> minutes;
 
-    public Output<Integer> getMinutes() {
+    public Output<Integer> minutes() {
         return this.minutes == null ? Codegen.empty() : this.minutes;
     }
 
@@ -48,7 +48,7 @@ public final class TimeOfDayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nanos")
       private final @Nullable Output<Integer> nanos;
 
-    public Output<Integer> getNanos() {
+    public Output<Integer> nanos() {
         return this.nanos == null ? Codegen.empty() : this.nanos;
     }
 
@@ -59,7 +59,7 @@ public final class TimeOfDayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="seconds")
       private final @Nullable Output<Integer> seconds;
 
-    public Output<Integer> getSeconds() {
+    public Output<Integer> seconds() {
         return this.seconds == null ? Codegen.empty() : this.seconds;
     }
 

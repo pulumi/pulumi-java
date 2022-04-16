@@ -42,7 +42,7 @@ public final class BudgetThresholdRule {
      * Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
      * 
     */
-    public Optional<String> getSpendBasis() {
+    public Optional<String> spendBasis() {
         return Optional.ofNullable(this.spendBasis);
     }
     /**
@@ -50,7 +50,7 @@ public final class BudgetThresholdRule {
      * 1.0-based percentage, so 0.5 = 50%. Must be >= 0.
      * 
     */
-    public Double getThresholdPercent() {
+    public Double thresholdPercent() {
         return this.thresholdPercent;
     }
 

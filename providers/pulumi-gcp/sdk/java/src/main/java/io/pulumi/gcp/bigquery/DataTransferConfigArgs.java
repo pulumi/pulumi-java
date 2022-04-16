@@ -32,7 +32,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dataRefreshWindowDays")
       private final @Nullable Output<Integer> dataRefreshWindowDays;
 
-    public Output<Integer> getDataRefreshWindowDays() {
+    public Output<Integer> dataRefreshWindowDays() {
         return this.dataRefreshWindowDays == null ? Codegen.empty() : this.dataRefreshWindowDays;
     }
 
@@ -43,7 +43,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dataSourceId", required=true)
       private final Output<String> dataSourceId;
 
-    public Output<String> getDataSourceId() {
+    public Output<String> dataSourceId() {
         return this.dataSourceId;
     }
 
@@ -54,7 +54,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="destinationDatasetId")
       private final @Nullable Output<String> destinationDatasetId;
 
-    public Output<String> getDestinationDatasetId() {
+    public Output<String> destinationDatasetId() {
         return this.destinationDatasetId == null ? Codegen.empty() : this.destinationDatasetId;
     }
 
@@ -65,7 +65,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
@@ -76,7 +76,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -89,7 +89,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="emailPreferences")
       private final @Nullable Output<DataTransferConfigEmailPreferencesArgs> emailPreferences;
 
-    public Output<DataTransferConfigEmailPreferencesArgs> getEmailPreferences() {
+    public Output<DataTransferConfigEmailPreferencesArgs> emailPreferences() {
         return this.emailPreferences == null ? Codegen.empty() : this.emailPreferences;
     }
 
@@ -101,7 +101,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -113,7 +113,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="notificationPubsubTopic")
       private final @Nullable Output<String> notificationPubsubTopic;
 
-    public Output<String> getNotificationPubsubTopic() {
+    public Output<String> notificationPubsubTopic() {
         return this.notificationPubsubTopic == null ? Codegen.empty() : this.notificationPubsubTopic;
     }
 
@@ -126,7 +126,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="params", required=true)
       private final Output<Map<String,String>> params;
 
-    public Output<Map<String,String>> getParams() {
+    public Output<Map<String,String>> params() {
         return this.params;
     }
 
@@ -138,7 +138,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -156,7 +156,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="schedule")
       private final @Nullable Output<String> schedule;
 
-    public Output<String> getSchedule() {
+    public Output<String> schedule() {
         return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
@@ -168,7 +168,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="scheduleOptions")
       private final @Nullable Output<DataTransferConfigScheduleOptionsArgs> scheduleOptions;
 
-    public Output<DataTransferConfigScheduleOptionsArgs> getScheduleOptions() {
+    public Output<DataTransferConfigScheduleOptionsArgs> scheduleOptions() {
         return this.scheduleOptions == null ? Codegen.empty() : this.scheduleOptions;
     }
 
@@ -185,7 +185,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="sensitiveParams")
       private final @Nullable Output<DataTransferConfigSensitiveParamsArgs> sensitiveParams;
 
-    public Output<DataTransferConfigSensitiveParamsArgs> getSensitiveParams() {
+    public Output<DataTransferConfigSensitiveParamsArgs> sensitiveParams() {
         return this.sensitiveParams == null ? Codegen.empty() : this.sensitiveParams;
     }
 
@@ -198,7 +198,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="serviceAccountName")
       private final @Nullable Output<String> serviceAccountName;
 
-    public Output<String> getServiceAccountName() {
+    public Output<String> serviceAccountName() {
         return this.serviceAccountName == null ? Codegen.empty() : this.serviceAccountName;
     }
 

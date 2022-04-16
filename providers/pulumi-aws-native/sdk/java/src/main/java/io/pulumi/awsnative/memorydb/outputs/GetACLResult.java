@@ -50,28 +50,28 @@ public final class GetACLResult {
      * The Amazon Resource Name (ARN) of the acl.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Indicates acl status. Can be "creating", "active", "modifying", "deleting".
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * An array of key-value pairs to apply to this cluster.
      * 
     */
-    public List<ACLTag> getTags() {
+    public List<ACLTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * List of users associated to this acl.
      * 
     */
-    public List<String> getUserNames() {
+    public List<String> userNames() {
         return this.userNames == null ? List.of() : this.userNames;
     }
 

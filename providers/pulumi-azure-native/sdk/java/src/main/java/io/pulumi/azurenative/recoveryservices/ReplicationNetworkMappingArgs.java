@@ -23,7 +23,7 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
     @Import(name="fabricName", required=true)
       private final Output<String> fabricName;
 
-    public Output<String> getFabricName() {
+    public Output<String> fabricName() {
         return this.fabricName;
     }
 
@@ -34,7 +34,7 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
     @Import(name="networkMappingName")
       private final @Nullable Output<String> networkMappingName;
 
-    public Output<String> getNetworkMappingName() {
+    public Output<String> networkMappingName() {
         return this.networkMappingName == null ? Codegen.empty() : this.networkMappingName;
     }
 
@@ -45,7 +45,7 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
     @Import(name="networkName", required=true)
       private final Output<String> networkName;
 
-    public Output<String> getNetworkName() {
+    public Output<String> networkName() {
         return this.networkName;
     }
 
@@ -56,7 +56,7 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
     @Import(name="properties")
       private final @Nullable Output<CreateNetworkMappingInputPropertiesArgs> properties;
 
-    public Output<CreateNetworkMappingInputPropertiesArgs> getProperties() {
+    public Output<CreateNetworkMappingInputPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -67,7 +67,7 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,7 +78,7 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 

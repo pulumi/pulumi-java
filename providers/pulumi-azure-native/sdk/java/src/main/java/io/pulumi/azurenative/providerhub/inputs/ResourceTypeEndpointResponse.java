@@ -21,49 +21,49 @@ public final class ResourceTypeEndpointResponse extends io.pulumi.resources.Invo
     @Import(name="apiVersions")
       private final @Nullable List<String> apiVersions;
 
-    public List<String> getApiVersions() {
+    public List<String> apiVersions() {
         return this.apiVersions == null ? List.of() : this.apiVersions;
     }
 
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
     @Import(name="extensions")
       private final @Nullable List<ResourceTypeExtensionResponse> extensions;
 
-    public List<ResourceTypeExtensionResponse> getExtensions() {
+    public List<ResourceTypeExtensionResponse> extensions() {
         return this.extensions == null ? List.of() : this.extensions;
     }
 
     @Import(name="featuresRule")
       private final @Nullable ResourceTypeEndpointResponseFeaturesRule featuresRule;
 
-    public Optional<ResourceTypeEndpointResponseFeaturesRule> getFeaturesRule() {
+    public Optional<ResourceTypeEndpointResponseFeaturesRule> featuresRule() {
         return this.featuresRule == null ? Optional.empty() : Optional.ofNullable(this.featuresRule);
     }
 
     @Import(name="locations")
       private final @Nullable List<String> locations;
 
-    public List<String> getLocations() {
+    public List<String> locations() {
         return this.locations == null ? List.of() : this.locations;
     }
 
     @Import(name="requiredFeatures")
       private final @Nullable List<String> requiredFeatures;
 
-    public List<String> getRequiredFeatures() {
+    public List<String> requiredFeatures() {
         return this.requiredFeatures == null ? List.of() : this.requiredFeatures;
     }
 
     @Import(name="timeout")
       private final @Nullable String timeout;
 
-    public Optional<String> getTimeout() {
+    public Optional<String> timeout() {
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
     }
 

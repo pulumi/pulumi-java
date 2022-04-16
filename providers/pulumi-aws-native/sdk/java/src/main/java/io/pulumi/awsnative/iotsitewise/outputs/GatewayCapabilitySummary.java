@@ -22,10 +22,10 @@ public final class GatewayCapabilitySummary {
         this.capabilityNamespace = capabilityNamespace;
     }
 
-    public Optional<String> getCapabilityConfiguration() {
+    public Optional<String> capabilityConfiguration() {
         return Optional.ofNullable(this.capabilityConfiguration);
     }
-    public String getCapabilityNamespace() {
+    public String capabilityNamespace() {
         return this.capabilityNamespace;
     }
 

@@ -23,10 +23,10 @@ public final class ConfigFrequency {
         this.value = value;
     }
 
-    public Optional<ConfigFrequencyUnits> getUnits() {
+    public Optional<ConfigFrequencyUnits> units() {
         return Optional.ofNullable(this.units);
     }
-    public Optional<Double> getValue() {
+    public Optional<Double> value() {
         return Optional.ofNullable(this.value);
     }
 

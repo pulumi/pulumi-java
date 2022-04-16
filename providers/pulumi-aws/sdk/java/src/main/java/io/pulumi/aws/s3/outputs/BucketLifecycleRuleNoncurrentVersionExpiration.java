@@ -26,7 +26,7 @@ public final class BucketLifecycleRuleNoncurrentVersionExpiration {
      * Specifies the number of days noncurrent object versions expire.
      * 
     */
-    public Optional<Integer> getDays() {
+    public Optional<Integer> days() {
         return Optional.ofNullable(this.days);
     }
 

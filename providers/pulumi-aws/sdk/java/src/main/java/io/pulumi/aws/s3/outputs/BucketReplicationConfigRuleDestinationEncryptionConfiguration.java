@@ -24,7 +24,7 @@ public final class BucketReplicationConfigRuleDestinationEncryptionConfiguration
      * The ID (Key ARN or Alias ARN) of the customer managed AWS KMS key stored in AWS Key Management Service (KMS) for the destination bucket.
      * 
     */
-    public String getReplicaKmsKeyId() {
+    public String replicaKmsKeyId() {
         return this.replicaKmsKeyId;
     }
 

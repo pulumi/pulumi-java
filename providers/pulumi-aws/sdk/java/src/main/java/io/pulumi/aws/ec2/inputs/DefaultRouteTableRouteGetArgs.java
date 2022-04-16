@@ -22,7 +22,7 @@ public final class DefaultRouteTableRouteGetArgs extends io.pulumi.resources.Res
     @Import(name="cidrBlock")
       private final @Nullable Output<String> cidrBlock;
 
-    public Output<String> getCidrBlock() {
+    public Output<String> cidrBlock() {
         return this.cidrBlock == null ? Codegen.empty() : this.cidrBlock;
     }
 
@@ -33,7 +33,7 @@ public final class DefaultRouteTableRouteGetArgs extends io.pulumi.resources.Res
     @Import(name="destinationPrefixListId")
       private final @Nullable Output<String> destinationPrefixListId;
 
-    public Output<String> getDestinationPrefixListId() {
+    public Output<String> destinationPrefixListId() {
         return this.destinationPrefixListId == null ? Codegen.empty() : this.destinationPrefixListId;
     }
 
@@ -44,7 +44,7 @@ public final class DefaultRouteTableRouteGetArgs extends io.pulumi.resources.Res
     @Import(name="egressOnlyGatewayId")
       private final @Nullable Output<String> egressOnlyGatewayId;
 
-    public Output<String> getEgressOnlyGatewayId() {
+    public Output<String> egressOnlyGatewayId() {
         return this.egressOnlyGatewayId == null ? Codegen.empty() : this.egressOnlyGatewayId;
     }
 
@@ -55,7 +55,7 @@ public final class DefaultRouteTableRouteGetArgs extends io.pulumi.resources.Res
     @Import(name="gatewayId")
       private final @Nullable Output<String> gatewayId;
 
-    public Output<String> getGatewayId() {
+    public Output<String> gatewayId() {
         return this.gatewayId == null ? Codegen.empty() : this.gatewayId;
     }
 
@@ -66,7 +66,7 @@ public final class DefaultRouteTableRouteGetArgs extends io.pulumi.resources.Res
     @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
@@ -77,7 +77,7 @@ public final class DefaultRouteTableRouteGetArgs extends io.pulumi.resources.Res
     @Import(name="ipv6CidrBlock")
       private final @Nullable Output<String> ipv6CidrBlock;
 
-    public Output<String> getIpv6CidrBlock() {
+    public Output<String> ipv6CidrBlock() {
         return this.ipv6CidrBlock == null ? Codegen.empty() : this.ipv6CidrBlock;
     }
 
@@ -88,7 +88,7 @@ public final class DefaultRouteTableRouteGetArgs extends io.pulumi.resources.Res
     @Import(name="natGatewayId")
       private final @Nullable Output<String> natGatewayId;
 
-    public Output<String> getNatGatewayId() {
+    public Output<String> natGatewayId() {
         return this.natGatewayId == null ? Codegen.empty() : this.natGatewayId;
     }
 
@@ -99,7 +99,7 @@ public final class DefaultRouteTableRouteGetArgs extends io.pulumi.resources.Res
     @Import(name="networkInterfaceId")
       private final @Nullable Output<String> networkInterfaceId;
 
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId == null ? Codegen.empty() : this.networkInterfaceId;
     }
 
@@ -110,7 +110,7 @@ public final class DefaultRouteTableRouteGetArgs extends io.pulumi.resources.Res
     @Import(name="transitGatewayId")
       private final @Nullable Output<String> transitGatewayId;
 
-    public Output<String> getTransitGatewayId() {
+    public Output<String> transitGatewayId() {
         return this.transitGatewayId == null ? Codegen.empty() : this.transitGatewayId;
     }
 
@@ -121,7 +121,7 @@ public final class DefaultRouteTableRouteGetArgs extends io.pulumi.resources.Res
     @Import(name="vpcEndpointId")
       private final @Nullable Output<String> vpcEndpointId;
 
-    public Output<String> getVpcEndpointId() {
+    public Output<String> vpcEndpointId() {
         return this.vpcEndpointId == null ? Codegen.empty() : this.vpcEndpointId;
     }
 
@@ -132,7 +132,7 @@ public final class DefaultRouteTableRouteGetArgs extends io.pulumi.resources.Res
     @Import(name="vpcPeeringConnectionId")
       private final @Nullable Output<String> vpcPeeringConnectionId;
 
-    public Output<String> getVpcPeeringConnectionId() {
+    public Output<String> vpcPeeringConnectionId() {
         return this.vpcPeeringConnectionId == null ? Codegen.empty() : this.vpcPeeringConnectionId;
     }
 

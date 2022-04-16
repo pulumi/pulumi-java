@@ -151,126 +151,126 @@ public final class ApplicationGatewayBackendHttpSettingsResponse {
      * Cookie name to use for the affinity cookie.
      * 
     */
-    public Optional<String> getAffinityCookieName() {
+    public Optional<String> affinityCookieName() {
         return Optional.ofNullable(this.affinityCookieName);
     }
     /**
      * Array of references to application gateway authentication certificates.
      * 
     */
-    public List<SubResourceResponse> getAuthenticationCertificates() {
+    public List<SubResourceResponse> authenticationCertificates() {
         return this.authenticationCertificates == null ? List.of() : this.authenticationCertificates;
     }
     /**
      * Connection draining of the backend http settings resource.
      * 
     */
-    public Optional<ApplicationGatewayConnectionDrainingResponse> getConnectionDraining() {
+    public Optional<ApplicationGatewayConnectionDrainingResponse> connectionDraining() {
         return Optional.ofNullable(this.connectionDraining);
     }
     /**
      * Cookie based affinity.
      * 
     */
-    public Optional<String> getCookieBasedAffinity() {
+    public Optional<String> cookieBasedAffinity() {
         return Optional.ofNullable(this.cookieBasedAffinity);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Host header to be sent to the backend servers.
      * 
     */
-    public Optional<String> getHostName() {
+    public Optional<String> hostName() {
         return Optional.ofNullable(this.hostName);
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the backend http settings that is unique within an Application Gateway.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Path which should be used as a prefix for all HTTP requests. Null means no path will be prefixed. Default value is null.
      * 
     */
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
      * Whether to pick host header should be picked from the host name of the backend server. Default value is false.
      * 
     */
-    public Optional<Boolean> getPickHostNameFromBackendAddress() {
+    public Optional<Boolean> pickHostNameFromBackendAddress() {
         return Optional.ofNullable(this.pickHostNameFromBackendAddress);
     }
     /**
      * The destination port on the backend.
      * 
     */
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
     /**
      * Probe resource of an application gateway.
      * 
     */
-    public Optional<SubResourceResponse> getProbe() {
+    public Optional<SubResourceResponse> probe() {
         return Optional.ofNullable(this.probe);
     }
     /**
      * Whether the probe is enabled. Default value is false.
      * 
     */
-    public Optional<Boolean> getProbeEnabled() {
+    public Optional<Boolean> probeEnabled() {
         return Optional.ofNullable(this.probeEnabled);
     }
     /**
      * The protocol used to communicate with the backend.
      * 
     */
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
      * The provisioning state of the backend HTTP settings resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Request timeout in seconds. Application Gateway will fail the request if response is not received within RequestTimeout. Acceptable values are from 1 second to 86400 seconds.
      * 
     */
-    public Optional<Integer> getRequestTimeout() {
+    public Optional<Integer> requestTimeout() {
         return Optional.ofNullable(this.requestTimeout);
     }
     /**
      * Array of references to application gateway trusted root certificates.
      * 
     */
-    public List<SubResourceResponse> getTrustedRootCertificates() {
+    public List<SubResourceResponse> trustedRootCertificates() {
         return this.trustedRootCertificates == null ? List.of() : this.trustedRootCertificates;
     }
     /**
      * Type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -28,7 +28,7 @@ public final class ServiceCodeConfigurationValues extends io.pulumi.resources.In
     @Import(name="buildCommand")
       private final @Nullable String buildCommand;
 
-    public Optional<String> getBuildCommand() {
+    public Optional<String> buildCommand() {
         return this.buildCommand == null ? Optional.empty() : Optional.ofNullable(this.buildCommand);
     }
 
@@ -39,7 +39,7 @@ public final class ServiceCodeConfigurationValues extends io.pulumi.resources.In
     @Import(name="port")
       private final @Nullable String port;
 
-    public Optional<String> getPort() {
+    public Optional<String> port() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
@@ -50,14 +50,14 @@ public final class ServiceCodeConfigurationValues extends io.pulumi.resources.In
     @Import(name="runtime", required=true)
       private final ServiceCodeConfigurationValuesRuntime runtime;
 
-    public ServiceCodeConfigurationValuesRuntime getRuntime() {
+    public ServiceCodeConfigurationValuesRuntime runtime() {
         return this.runtime;
     }
 
     @Import(name="runtimeEnvironmentVariables")
       private final @Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables;
 
-    public List<ServiceKeyValuePair> getRuntimeEnvironmentVariables() {
+    public List<ServiceKeyValuePair> runtimeEnvironmentVariables() {
         return this.runtimeEnvironmentVariables == null ? List.of() : this.runtimeEnvironmentVariables;
     }
 
@@ -68,7 +68,7 @@ public final class ServiceCodeConfigurationValues extends io.pulumi.resources.In
     @Import(name="startCommand")
       private final @Nullable String startCommand;
 
-    public Optional<String> getStartCommand() {
+    public Optional<String> startCommand() {
         return this.startCommand == null ? Optional.empty() : Optional.ofNullable(this.startCommand);
     }
 

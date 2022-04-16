@@ -25,7 +25,7 @@ public final class TargetEligibilityErrorMessageResponse extends io.pulumi.resou
     @Import(name="message")
       private final @Nullable String message;
 
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
@@ -36,7 +36,7 @@ public final class TargetEligibilityErrorMessageResponse extends io.pulumi.resou
     @Import(name="resolution")
       private final @Nullable String resolution;
 
-    public Optional<String> getResolution() {
+    public Optional<String> resolution() {
         return this.resolution == null ? Optional.empty() : Optional.ofNullable(this.resolution);
     }
 
@@ -47,7 +47,7 @@ public final class TargetEligibilityErrorMessageResponse extends io.pulumi.resou
     @Import(name="resultCode")
       private final @Nullable String resultCode;
 
-    public Optional<String> getResultCode() {
+    public Optional<String> resultCode() {
         return this.resultCode == null ? Optional.empty() : Optional.ofNullable(this.resultCode);
     }
 

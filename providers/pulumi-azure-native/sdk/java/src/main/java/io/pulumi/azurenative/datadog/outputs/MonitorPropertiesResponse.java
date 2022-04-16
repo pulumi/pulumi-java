@@ -64,41 +64,41 @@ public final class MonitorPropertiesResponse {
      * Datadog organization properties
      * 
     */
-    public Optional<DatadogOrganizationPropertiesResponse> getDatadogOrganizationProperties() {
+    public Optional<DatadogOrganizationPropertiesResponse> datadogOrganizationProperties() {
         return Optional.ofNullable(this.datadogOrganizationProperties);
     }
-    public String getLiftrResourceCategory() {
+    public String liftrResourceCategory() {
         return this.liftrResourceCategory;
     }
     /**
      * The priority of the resource.
      * 
     */
-    public Integer getLiftrResourcePreference() {
+    public Integer liftrResourcePreference() {
         return this.liftrResourcePreference;
     }
     /**
      * Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
      * 
     */
-    public String getMarketplaceSubscriptionStatus() {
+    public String marketplaceSubscriptionStatus() {
         return this.marketplaceSubscriptionStatus;
     }
     /**
      * Flag specifying if the resource monitoring is enabled or disabled.
      * 
     */
-    public Optional<String> getMonitoringStatus() {
+    public Optional<String> monitoringStatus() {
         return Optional.ofNullable(this.monitoringStatus);
     }
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * User info
      * 
     */
-    public Optional<UserInfoResponse> getUserInfo() {
+    public Optional<UserInfoResponse> userInfo() {
         return Optional.ofNullable(this.userInfo);
     }
 

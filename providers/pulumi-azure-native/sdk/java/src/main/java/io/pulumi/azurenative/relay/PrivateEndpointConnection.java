@@ -45,7 +45,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -59,7 +59,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +73,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return Properties of the private endpoint object.
      * 
      */
-    public Output</* @Nullable */ PrivateEndpointResponse> getPrivateEndpoint() {
+    public Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
@@ -87,7 +87,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return Approval state of the private link connection.
      * 
      */
-    public Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
@@ -101,7 +101,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return Provisioning state of the private endpoint connection.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -115,7 +115,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -129,7 +129,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

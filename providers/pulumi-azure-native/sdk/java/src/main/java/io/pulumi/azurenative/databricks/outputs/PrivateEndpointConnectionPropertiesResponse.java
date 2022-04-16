@@ -43,21 +43,21 @@ public final class PrivateEndpointConnectionPropertiesResponse {
      * Private endpoint
      * 
     */
-    public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
+    public Optional<PrivateEndpointResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * Private endpoint connection state
      * 
     */
-    public PrivateLinkServiceConnectionStateResponse getPrivateLinkServiceConnectionState() {
+    public PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
      * Provisioning state of the private endpoint connection.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

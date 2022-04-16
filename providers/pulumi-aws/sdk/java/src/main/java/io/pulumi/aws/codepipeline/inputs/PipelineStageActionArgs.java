@@ -25,7 +25,7 @@ public final class PipelineStageActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="category", required=true)
       private final Output<String> category;
 
-    public Output<String> getCategory() {
+    public Output<String> category() {
         return this.category;
     }
 
@@ -36,7 +36,7 @@ public final class PipelineStageActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="configuration")
       private final @Nullable Output<Map<String,String>> configuration;
 
-    public Output<Map<String,String>> getConfiguration() {
+    public Output<Map<String,String>> configuration() {
         return this.configuration == null ? Codegen.empty() : this.configuration;
     }
 
@@ -47,7 +47,7 @@ public final class PipelineStageActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="inputArtifacts")
       private final @Nullable Output<List<String>> inputArtifacts;
 
-    public Output<List<String>> getInputArtifacts() {
+    public Output<List<String>> inputArtifacts() {
         return this.inputArtifacts == null ? Codegen.empty() : this.inputArtifacts;
     }
 
@@ -58,7 +58,7 @@ public final class PipelineStageActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -69,7 +69,7 @@ public final class PipelineStageActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
@@ -80,7 +80,7 @@ public final class PipelineStageActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="outputArtifacts")
       private final @Nullable Output<List<String>> outputArtifacts;
 
-    public Output<List<String>> getOutputArtifacts() {
+    public Output<List<String>> outputArtifacts() {
         return this.outputArtifacts == null ? Codegen.empty() : this.outputArtifacts;
     }
 
@@ -91,7 +91,7 @@ public final class PipelineStageActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="owner", required=true)
       private final Output<String> owner;
 
-    public Output<String> getOwner() {
+    public Output<String> owner() {
         return this.owner;
     }
 
@@ -102,7 +102,7 @@ public final class PipelineStageActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="provider", required=true)
       private final Output<String> provider;
 
-    public Output<String> getProvider() {
+    public Output<String> provider() {
         return this.provider;
     }
 
@@ -113,7 +113,7 @@ public final class PipelineStageActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -124,7 +124,7 @@ public final class PipelineStageActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
@@ -135,7 +135,7 @@ public final class PipelineStageActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="runOrder")
       private final @Nullable Output<Integer> runOrder;
 
-    public Output<Integer> getRunOrder() {
+    public Output<Integer> runOrder() {
         return this.runOrder == null ? Codegen.empty() : this.runOrder;
     }
 
@@ -146,7 +146,7 @@ public final class PipelineStageActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="version", required=true)
       private final Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

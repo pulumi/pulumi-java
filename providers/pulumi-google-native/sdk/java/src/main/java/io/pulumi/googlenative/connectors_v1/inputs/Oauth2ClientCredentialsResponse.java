@@ -24,7 +24,7 @@ public final class Oauth2ClientCredentialsResponse extends io.pulumi.resources.I
     @Import(name="clientId", required=true)
       private final String clientId;
 
-    public String getClientId() {
+    public String clientId() {
         return this.clientId;
     }
 
@@ -35,7 +35,7 @@ public final class Oauth2ClientCredentialsResponse extends io.pulumi.resources.I
     @Import(name="clientSecret", required=true)
       private final SecretResponse clientSecret;
 
-    public SecretResponse getClientSecret() {
+    public SecretResponse clientSecret() {
         return this.clientSecret;
     }
 

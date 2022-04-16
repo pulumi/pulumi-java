@@ -26,7 +26,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isAutoInflateEnabled")
       private final @Nullable Output<Boolean> isAutoInflateEnabled;
 
-    public Output<Boolean> getIsAutoInflateEnabled() {
+    public Output<Boolean> isAutoInflateEnabled() {
         return this.isAutoInflateEnabled == null ? Codegen.empty() : this.isAutoInflateEnabled;
     }
 
@@ -37,7 +37,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kafkaEnabled")
       private final @Nullable Output<Boolean> kafkaEnabled;
 
-    public Output<Boolean> getKafkaEnabled() {
+    public Output<Boolean> kafkaEnabled() {
         return this.kafkaEnabled == null ? Codegen.empty() : this.kafkaEnabled;
     }
 
@@ -48,7 +48,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -59,7 +59,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maximumThroughputUnits")
       private final @Nullable Output<Integer> maximumThroughputUnits;
 
-    public Output<Integer> getMaximumThroughputUnits() {
+    public Output<Integer> maximumThroughputUnits() {
         return this.maximumThroughputUnits == null ? Codegen.empty() : this.maximumThroughputUnits;
     }
 
@@ -70,7 +70,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="namespaceName")
       private final @Nullable Output<String> namespaceName;
 
-    public Output<String> getNamespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName == null ? Codegen.empty() : this.namespaceName;
     }
 
@@ -81,7 +81,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -92,7 +92,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -103,7 +103,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

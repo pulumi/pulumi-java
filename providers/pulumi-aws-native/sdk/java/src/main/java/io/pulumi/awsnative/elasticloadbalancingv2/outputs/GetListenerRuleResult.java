@@ -36,19 +36,19 @@ public final class GetListenerRuleResult {
         this.ruleArn = ruleArn;
     }
 
-    public List<ListenerRuleAction> getActions() {
+    public List<ListenerRuleAction> actions() {
         return this.actions == null ? List.of() : this.actions;
     }
-    public List<ListenerRuleRuleCondition> getConditions() {
+    public List<ListenerRuleRuleCondition> conditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
-    public Optional<Boolean> getIsDefault() {
+    public Optional<Boolean> isDefault() {
         return Optional.ofNullable(this.isDefault);
     }
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
-    public Optional<String> getRuleArn() {
+    public Optional<String> ruleArn() {
         return Optional.ofNullable(this.ruleArn);
     }
 

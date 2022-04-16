@@ -27,7 +27,7 @@ public final class PriorityLevelConfigurationStatusArgs extends io.pulumi.resour
     @Import(name="conditions")
       private final @Nullable Output<List<PriorityLevelConfigurationConditionArgs>> conditions;
 
-    public Output<List<PriorityLevelConfigurationConditionArgs>> getConditions() {
+    public Output<List<PriorityLevelConfigurationConditionArgs>> conditions() {
         return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 

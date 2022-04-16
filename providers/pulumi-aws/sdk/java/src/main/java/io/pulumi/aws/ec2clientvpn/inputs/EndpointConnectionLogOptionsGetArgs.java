@@ -23,7 +23,7 @@ public final class EndpointConnectionLogOptionsGetArgs extends io.pulumi.resourc
     @Import(name="cloudwatchLogGroup")
       private final @Nullable Output<String> cloudwatchLogGroup;
 
-    public Output<String> getCloudwatchLogGroup() {
+    public Output<String> cloudwatchLogGroup() {
         return this.cloudwatchLogGroup == null ? Codegen.empty() : this.cloudwatchLogGroup;
     }
 
@@ -34,7 +34,7 @@ public final class EndpointConnectionLogOptionsGetArgs extends io.pulumi.resourc
     @Import(name="cloudwatchLogStream")
       private final @Nullable Output<String> cloudwatchLogStream;
 
-    public Output<String> getCloudwatchLogStream() {
+    public Output<String> cloudwatchLogStream() {
         return this.cloudwatchLogStream == null ? Codegen.empty() : this.cloudwatchLogStream;
     }
 
@@ -45,7 +45,7 @@ public final class EndpointConnectionLogOptionsGetArgs extends io.pulumi.resourc
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 

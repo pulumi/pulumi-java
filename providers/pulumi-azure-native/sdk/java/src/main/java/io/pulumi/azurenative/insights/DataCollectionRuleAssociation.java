@@ -42,7 +42,7 @@ public class DataCollectionRuleAssociation extends io.pulumi.resources.CustomRes
      * @return The resource ID of the data collection rule that is to be associated.
      * 
      */
-    public Output</* @Nullable */ String> getDataCollectionRuleId() {
+    public Output</* @Nullable */ String> dataCollectionRuleId() {
         return this.dataCollectionRuleId;
     }
     /**
@@ -56,7 +56,7 @@ public class DataCollectionRuleAssociation extends io.pulumi.resources.CustomRes
      * @return Description of the association.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -70,7 +70,7 @@ public class DataCollectionRuleAssociation extends io.pulumi.resources.CustomRes
      * @return Resource entity tag (ETag).
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -84,7 +84,7 @@ public class DataCollectionRuleAssociation extends io.pulumi.resources.CustomRes
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -98,7 +98,7 @@ public class DataCollectionRuleAssociation extends io.pulumi.resources.CustomRes
      * @return The resource provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -112,7 +112,7 @@ public class DataCollectionRuleAssociation extends io.pulumi.resources.CustomRes
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

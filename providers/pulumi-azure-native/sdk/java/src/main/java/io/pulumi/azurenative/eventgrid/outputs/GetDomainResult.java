@@ -125,70 +125,70 @@ public final class GetDomainResult {
      * Endpoint for the domain.
      * 
     */
-    public String getEndpoint() {
+    public String endpoint() {
         return this.endpoint;
     }
     /**
      * Fully qualified identifier of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
      * 
     */
-    public List<InboundIpRuleResponse> getInboundIpRules() {
+    public List<InboundIpRuleResponse> inboundIpRules() {
         return this.inboundIpRules == null ? List.of() : this.inboundIpRules;
     }
     /**
      * This determines the format that Event Grid should expect for incoming events published to the domain.
      * 
     */
-    public Optional<String> getInputSchema() {
+    public Optional<String> inputSchema() {
         return Optional.ofNullable(this.inputSchema);
     }
     /**
      * Information about the InputSchemaMapping which specified the info about mapping event payload.
      * 
     */
-    public Optional<JsonInputSchemaMappingResponse> getInputSchemaMapping() {
+    public Optional<JsonInputSchemaMappingResponse> inputSchemaMapping() {
         return Optional.ofNullable(this.inputSchemaMapping);
     }
     /**
      * Location of the resource.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Metric resource id for the domain.
      * 
     */
-    public String getMetricResourceId() {
+    public String metricResourceId() {
         return this.metricResourceId;
     }
     /**
      * Name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * List of private endpoint connections.
      * 
     */
-    public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
+    public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * Provisioning state of the domain.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -196,28 +196,28 @@ public final class GetDomainResult {
      * You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.DomainProperties.InboundIpRules" />
      * 
     */
-    public Optional<String> getPublicNetworkAccess() {
+    public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
      * The system metadata relating to Domain resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Tags of the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -16,7 +16,7 @@ public final class CloudFrontOriginAccessIdentityConfig {
         this.comment = comment;
     }
 
-    public String getComment() {
+    public String comment() {
         return this.comment;
     }
 

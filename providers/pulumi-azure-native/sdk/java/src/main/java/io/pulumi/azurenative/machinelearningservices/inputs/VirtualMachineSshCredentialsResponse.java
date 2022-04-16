@@ -25,7 +25,7 @@ public final class VirtualMachineSshCredentialsResponse extends io.pulumi.resour
     @Import(name="password")
       private final @Nullable String password;
 
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
@@ -36,7 +36,7 @@ public final class VirtualMachineSshCredentialsResponse extends io.pulumi.resour
     @Import(name="privateKeyData")
       private final @Nullable String privateKeyData;
 
-    public Optional<String> getPrivateKeyData() {
+    public Optional<String> privateKeyData() {
         return this.privateKeyData == null ? Optional.empty() : Optional.ofNullable(this.privateKeyData);
     }
 
@@ -47,7 +47,7 @@ public final class VirtualMachineSshCredentialsResponse extends io.pulumi.resour
     @Import(name="publicKeyData")
       private final @Nullable String publicKeyData;
 
-    public Optional<String> getPublicKeyData() {
+    public Optional<String> publicKeyData() {
         return this.publicKeyData == null ? Optional.empty() : Optional.ofNullable(this.publicKeyData);
     }
 
@@ -58,7 +58,7 @@ public final class VirtualMachineSshCredentialsResponse extends io.pulumi.resour
     @Import(name="username")
       private final @Nullable String username;
 
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
     }
 

@@ -24,7 +24,7 @@ public final class ShardResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="numShards", required=true)
       private final Integer numShards;
 
-    public Integer getNumShards() {
+    public Integer numShards() {
         return this.numShards;
     }
 
@@ -35,7 +35,7 @@ public final class ShardResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="shardIndex", required=true)
       private final Integer shardIndex;
 
-    public Integer getShardIndex() {
+    public Integer shardIndex() {
         return this.shardIndex;
     }
 
@@ -46,7 +46,7 @@ public final class ShardResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="testTargetsForShard", required=true)
       private final TestTargetsForShardResponse testTargetsForShard;
 
-    public TestTargetsForShardResponse getTestTargetsForShard() {
+    public TestTargetsForShardResponse testTargetsForShard() {
         return this.testTargetsForShard;
     }
 

@@ -33,14 +33,14 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse {
      * Uses LivePerson (https://www.liveperson.com).
      * 
     */
-    public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigResponse getLivePersonConfig() {
+    public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig() {
         return this.livePersonConfig;
     }
     /**
      * Uses Salesforce Live Agent.
      * 
     */
-    public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse getSalesforceLiveAgentConfig() {
+    public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig() {
         return this.salesforceLiveAgentConfig;
     }
 

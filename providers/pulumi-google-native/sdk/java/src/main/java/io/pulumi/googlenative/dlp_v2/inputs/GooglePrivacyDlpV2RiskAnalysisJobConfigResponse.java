@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigResponse extends io.pu
     @Import(name="actions", required=true)
       private final List<GooglePrivacyDlpV2ActionResponse> actions;
 
-    public List<GooglePrivacyDlpV2ActionResponse> getActions() {
+    public List<GooglePrivacyDlpV2ActionResponse> actions() {
         return this.actions;
     }
 
@@ -37,7 +37,7 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigResponse extends io.pu
     @Import(name="privacyMetric", required=true)
       private final GooglePrivacyDlpV2PrivacyMetricResponse privacyMetric;
 
-    public GooglePrivacyDlpV2PrivacyMetricResponse getPrivacyMetric() {
+    public GooglePrivacyDlpV2PrivacyMetricResponse privacyMetric() {
         return this.privacyMetric;
     }
 
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigResponse extends io.pu
     @Import(name="sourceTable", required=true)
       private final GooglePrivacyDlpV2BigQueryTableResponse sourceTable;
 
-    public GooglePrivacyDlpV2BigQueryTableResponse getSourceTable() {
+    public GooglePrivacyDlpV2BigQueryTableResponse sourceTable() {
         return this.sourceTable;
     }
 

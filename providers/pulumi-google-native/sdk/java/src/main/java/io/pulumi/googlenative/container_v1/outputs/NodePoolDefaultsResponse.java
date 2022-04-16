@@ -24,7 +24,7 @@ public final class NodePoolDefaultsResponse {
      * Subset of NodeConfig message that has defaults.
      * 
     */
-    public NodeConfigDefaultsResponse getNodeConfigDefaults() {
+    public NodeConfigDefaultsResponse nodeConfigDefaults() {
         return this.nodeConfigDefaults;
     }
 

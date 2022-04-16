@@ -25,7 +25,7 @@ public final class DefaultVpcState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -37,7 +37,7 @@ public final class DefaultVpcState extends io.pulumi.resources.ResourceArgs {
     @Import(name="assignGeneratedIpv6CidrBlock")
       private final @Nullable Output<Boolean> assignGeneratedIpv6CidrBlock;
 
-    public Output<Boolean> getAssignGeneratedIpv6CidrBlock() {
+    public Output<Boolean> assignGeneratedIpv6CidrBlock() {
         return this.assignGeneratedIpv6CidrBlock == null ? Codegen.empty() : this.assignGeneratedIpv6CidrBlock;
     }
 
@@ -48,7 +48,7 @@ public final class DefaultVpcState extends io.pulumi.resources.ResourceArgs {
     @Import(name="cidrBlock")
       private final @Nullable Output<String> cidrBlock;
 
-    public Output<String> getCidrBlock() {
+    public Output<String> cidrBlock() {
         return this.cidrBlock == null ? Codegen.empty() : this.cidrBlock;
     }
 
@@ -59,7 +59,7 @@ public final class DefaultVpcState extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultNetworkAclId")
       private final @Nullable Output<String> defaultNetworkAclId;
 
-    public Output<String> getDefaultNetworkAclId() {
+    public Output<String> defaultNetworkAclId() {
         return this.defaultNetworkAclId == null ? Codegen.empty() : this.defaultNetworkAclId;
     }
 
@@ -70,7 +70,7 @@ public final class DefaultVpcState extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultRouteTableId")
       private final @Nullable Output<String> defaultRouteTableId;
 
-    public Output<String> getDefaultRouteTableId() {
+    public Output<String> defaultRouteTableId() {
         return this.defaultRouteTableId == null ? Codegen.empty() : this.defaultRouteTableId;
     }
 
@@ -81,14 +81,14 @@ public final class DefaultVpcState extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultSecurityGroupId")
       private final @Nullable Output<String> defaultSecurityGroupId;
 
-    public Output<String> getDefaultSecurityGroupId() {
+    public Output<String> defaultSecurityGroupId() {
         return this.defaultSecurityGroupId == null ? Codegen.empty() : this.defaultSecurityGroupId;
     }
 
     @Import(name="dhcpOptionsId")
       private final @Nullable Output<String> dhcpOptionsId;
 
-    public Output<String> getDhcpOptionsId() {
+    public Output<String> dhcpOptionsId() {
         return this.dhcpOptionsId == null ? Codegen.empty() : this.dhcpOptionsId;
     }
 
@@ -101,14 +101,14 @@ public final class DefaultVpcState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableClassiclink")
       private final @Nullable Output<Boolean> enableClassiclink;
 
-    public Output<Boolean> getEnableClassiclink() {
+    public Output<Boolean> enableClassiclink() {
         return this.enableClassiclink == null ? Codegen.empty() : this.enableClassiclink;
     }
 
     @Import(name="enableClassiclinkDnsSupport")
       private final @Nullable Output<Boolean> enableClassiclinkDnsSupport;
 
-    public Output<Boolean> getEnableClassiclinkDnsSupport() {
+    public Output<Boolean> enableClassiclinkDnsSupport() {
         return this.enableClassiclinkDnsSupport == null ? Codegen.empty() : this.enableClassiclinkDnsSupport;
     }
 
@@ -119,7 +119,7 @@ public final class DefaultVpcState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableDnsHostnames")
       private final @Nullable Output<Boolean> enableDnsHostnames;
 
-    public Output<Boolean> getEnableDnsHostnames() {
+    public Output<Boolean> enableDnsHostnames() {
         return this.enableDnsHostnames == null ? Codegen.empty() : this.enableDnsHostnames;
     }
 
@@ -130,7 +130,7 @@ public final class DefaultVpcState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableDnsSupport")
       private final @Nullable Output<Boolean> enableDnsSupport;
 
-    public Output<Boolean> getEnableDnsSupport() {
+    public Output<Boolean> enableDnsSupport() {
         return this.enableDnsSupport == null ? Codegen.empty() : this.enableDnsSupport;
     }
 
@@ -141,21 +141,21 @@ public final class DefaultVpcState extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceTenancy")
       private final @Nullable Output<String> instanceTenancy;
 
-    public Output<String> getInstanceTenancy() {
+    public Output<String> instanceTenancy() {
         return this.instanceTenancy == null ? Codegen.empty() : this.instanceTenancy;
     }
 
     @Import(name="ipv4IpamPoolId")
       private final @Nullable Output<String> ipv4IpamPoolId;
 
-    public Output<String> getIpv4IpamPoolId() {
+    public Output<String> ipv4IpamPoolId() {
         return this.ipv4IpamPoolId == null ? Codegen.empty() : this.ipv4IpamPoolId;
     }
 
     @Import(name="ipv4NetmaskLength")
       private final @Nullable Output<Integer> ipv4NetmaskLength;
 
-    public Output<Integer> getIpv4NetmaskLength() {
+    public Output<Integer> ipv4NetmaskLength() {
         return this.ipv4NetmaskLength == null ? Codegen.empty() : this.ipv4NetmaskLength;
     }
 
@@ -166,7 +166,7 @@ public final class DefaultVpcState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipv6AssociationId")
       private final @Nullable Output<String> ipv6AssociationId;
 
-    public Output<String> getIpv6AssociationId() {
+    public Output<String> ipv6AssociationId() {
         return this.ipv6AssociationId == null ? Codegen.empty() : this.ipv6AssociationId;
     }
 
@@ -177,28 +177,28 @@ public final class DefaultVpcState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipv6CidrBlock")
       private final @Nullable Output<String> ipv6CidrBlock;
 
-    public Output<String> getIpv6CidrBlock() {
+    public Output<String> ipv6CidrBlock() {
         return this.ipv6CidrBlock == null ? Codegen.empty() : this.ipv6CidrBlock;
     }
 
     @Import(name="ipv6CidrBlockNetworkBorderGroup")
       private final @Nullable Output<String> ipv6CidrBlockNetworkBorderGroup;
 
-    public Output<String> getIpv6CidrBlockNetworkBorderGroup() {
+    public Output<String> ipv6CidrBlockNetworkBorderGroup() {
         return this.ipv6CidrBlockNetworkBorderGroup == null ? Codegen.empty() : this.ipv6CidrBlockNetworkBorderGroup;
     }
 
     @Import(name="ipv6IpamPoolId")
       private final @Nullable Output<String> ipv6IpamPoolId;
 
-    public Output<String> getIpv6IpamPoolId() {
+    public Output<String> ipv6IpamPoolId() {
         return this.ipv6IpamPoolId == null ? Codegen.empty() : this.ipv6IpamPoolId;
     }
 
     @Import(name="ipv6NetmaskLength")
       private final @Nullable Output<Integer> ipv6NetmaskLength;
 
-    public Output<Integer> getIpv6NetmaskLength() {
+    public Output<Integer> ipv6NetmaskLength() {
         return this.ipv6NetmaskLength == null ? Codegen.empty() : this.ipv6NetmaskLength;
     }
 
@@ -211,7 +211,7 @@ public final class DefaultVpcState extends io.pulumi.resources.ResourceArgs {
     @Import(name="mainRouteTableId")
       private final @Nullable Output<String> mainRouteTableId;
 
-    public Output<String> getMainRouteTableId() {
+    public Output<String> mainRouteTableId() {
         return this.mainRouteTableId == null ? Codegen.empty() : this.mainRouteTableId;
     }
 
@@ -222,7 +222,7 @@ public final class DefaultVpcState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
@@ -233,14 +233,14 @@ public final class DefaultVpcState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

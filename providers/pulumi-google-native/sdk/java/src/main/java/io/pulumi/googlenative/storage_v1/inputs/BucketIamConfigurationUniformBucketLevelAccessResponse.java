@@ -24,7 +24,7 @@ public final class BucketIamConfigurationUniformBucketLevelAccessResponse extend
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
@@ -35,7 +35,7 @@ public final class BucketIamConfigurationUniformBucketLevelAccessResponse extend
     @Import(name="lockedTime", required=true)
       private final String lockedTime;
 
-    public String getLockedTime() {
+    public String lockedTime() {
         return this.lockedTime;
     }
 

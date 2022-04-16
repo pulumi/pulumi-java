@@ -26,7 +26,7 @@ public final class SourceCrowdingConfigArgs extends io.pulumi.resources.Resource
     @Import(name="numResults")
       private final @Nullable Output<Integer> numResults;
 
-    public Output<Integer> getNumResults() {
+    public Output<Integer> numResults() {
         return this.numResults == null ? Codegen.empty() : this.numResults;
     }
 
@@ -37,7 +37,7 @@ public final class SourceCrowdingConfigArgs extends io.pulumi.resources.Resource
     @Import(name="numSuggestions")
       private final @Nullable Output<Integer> numSuggestions;
 
-    public Output<Integer> getNumSuggestions() {
+    public Output<Integer> numSuggestions() {
         return this.numSuggestions == null ? Codegen.empty() : this.numSuggestions;
     }
 

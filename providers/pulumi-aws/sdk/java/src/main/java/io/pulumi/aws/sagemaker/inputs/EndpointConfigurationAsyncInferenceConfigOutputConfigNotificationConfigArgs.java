@@ -22,7 +22,7 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigNotifica
     @Import(name="errorTopic")
       private final @Nullable Output<String> errorTopic;
 
-    public Output<String> getErrorTopic() {
+    public Output<String> errorTopic() {
         return this.errorTopic == null ? Codegen.empty() : this.errorTopic;
     }
 
@@ -33,7 +33,7 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigNotifica
     @Import(name="successTopic")
       private final @Nullable Output<String> successTopic;
 
-    public Output<String> getSuccessTopic() {
+    public Output<String> successTopic() {
         return this.successTopic == null ? Codegen.empty() : this.successTopic;
     }
 

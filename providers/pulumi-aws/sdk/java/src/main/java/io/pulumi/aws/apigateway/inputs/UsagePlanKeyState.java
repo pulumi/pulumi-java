@@ -22,7 +22,7 @@ public final class UsagePlanKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyId")
       private final @Nullable Output<String> keyId;
 
-    public Output<String> getKeyId() {
+    public Output<String> keyId() {
         return this.keyId == null ? Codegen.empty() : this.keyId;
     }
 
@@ -33,7 +33,7 @@ public final class UsagePlanKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyType")
       private final @Nullable Output<String> keyType;
 
-    public Output<String> getKeyType() {
+    public Output<String> keyType() {
         return this.keyType == null ? Codegen.empty() : this.keyType;
     }
 
@@ -44,7 +44,7 @@ public final class UsagePlanKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -55,7 +55,7 @@ public final class UsagePlanKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="usagePlanId")
       private final @Nullable Output<String> usagePlanId;
 
-    public Output<String> getUsagePlanId() {
+    public Output<String> usagePlanId() {
         return this.usagePlanId == null ? Codegen.empty() : this.usagePlanId;
     }
 
@@ -66,7 +66,7 @@ public final class UsagePlanKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

@@ -25,7 +25,7 @@ public final class VirtualNodeSpecListenerConnectionPoolArgs extends io.pulumi.r
     @Import(name="grpc")
       private final @Nullable Output<VirtualNodeSpecListenerConnectionPoolGrpcArgs> grpc;
 
-    public Output<VirtualNodeSpecListenerConnectionPoolGrpcArgs> getGrpc() {
+    public Output<VirtualNodeSpecListenerConnectionPoolGrpcArgs> grpc() {
         return this.grpc == null ? Codegen.empty() : this.grpc;
     }
 
@@ -36,7 +36,7 @@ public final class VirtualNodeSpecListenerConnectionPoolArgs extends io.pulumi.r
     @Import(name="http")
       private final @Nullable Output<VirtualNodeSpecListenerConnectionPoolHttpArgs> http;
 
-    public Output<VirtualNodeSpecListenerConnectionPoolHttpArgs> getHttp() {
+    public Output<VirtualNodeSpecListenerConnectionPoolHttpArgs> http() {
         return this.http == null ? Codegen.empty() : this.http;
     }
 
@@ -47,7 +47,7 @@ public final class VirtualNodeSpecListenerConnectionPoolArgs extends io.pulumi.r
     @Import(name="http2")
       private final @Nullable Output<VirtualNodeSpecListenerConnectionPoolHttp2Args> http2;
 
-    public Output<VirtualNodeSpecListenerConnectionPoolHttp2Args> getHttp2() {
+    public Output<VirtualNodeSpecListenerConnectionPoolHttp2Args> http2() {
         return this.http2 == null ? Codegen.empty() : this.http2;
     }
 
@@ -58,7 +58,7 @@ public final class VirtualNodeSpecListenerConnectionPoolArgs extends io.pulumi.r
     @Import(name="tcp")
       private final @Nullable Output<VirtualNodeSpecListenerConnectionPoolTcpArgs> tcp;
 
-    public Output<VirtualNodeSpecListenerConnectionPoolTcpArgs> getTcp() {
+    public Output<VirtualNodeSpecListenerConnectionPoolTcpArgs> tcp() {
         return this.tcp == null ? Codegen.empty() : this.tcp;
     }
 

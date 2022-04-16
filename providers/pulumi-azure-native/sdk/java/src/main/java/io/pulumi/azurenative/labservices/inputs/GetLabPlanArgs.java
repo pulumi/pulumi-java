@@ -19,7 +19,7 @@ public final class GetLabPlanArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="labPlanName", required=true)
       private final String labPlanName;
 
-    public String getLabPlanName() {
+    public String labPlanName() {
         return this.labPlanName;
     }
 
@@ -30,7 +30,7 @@ public final class GetLabPlanArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

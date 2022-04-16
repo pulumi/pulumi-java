@@ -23,13 +23,13 @@ public final class GetEnvironmentConfigWorkloadsConfigWebServer {
         this.storageGb = storageGb;
     }
 
-    public Double getCpu() {
+    public Double cpu() {
         return this.cpu;
     }
-    public Double getMemoryGb() {
+    public Double memoryGb() {
         return this.memoryGb;
     }
-    public Double getStorageGb() {
+    public Double storageGb() {
         return this.storageGb;
     }
 

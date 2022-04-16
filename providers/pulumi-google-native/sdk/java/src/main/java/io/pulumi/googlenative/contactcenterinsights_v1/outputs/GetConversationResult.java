@@ -159,133 +159,133 @@ public final class GetConversationResult {
      * An opaque, user-specified string representing the human agent who handled the conversation.
      * 
     */
-    public String getAgentId() {
+    public String agentId() {
         return this.agentId;
     }
     /**
      * Call-specific metadata.
      * 
     */
-    public GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse getCallMetadata() {
+    public GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse callMetadata() {
         return this.callMetadata;
     }
     /**
      * The time at which the conversation was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The source of the audio and transcription for the conversation.
      * 
     */
-    public GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse getDataSource() {
+    public GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse dataSource() {
         return this.dataSource;
     }
     /**
      * All the matched Dialogflow intents in the call. The key corresponds to a Dialogflow intent, format: projects/{project}/agent/{agent}/intents/{intent}
      * 
     */
-    public Map<String,String> getDialogflowIntents() {
+    public Map<String,String> dialogflowIntents() {
         return this.dialogflowIntents;
     }
     /**
      * The duration of the conversation.
      * 
     */
-    public String getDuration() {
+    public String duration() {
         return this.duration;
     }
     /**
      * The time at which this conversation should expire. After this time, the conversation data and any associated analyses will be deleted.
      * 
     */
-    public String getExpireTime() {
+    public String expireTime() {
         return this.expireTime;
     }
     /**
      * A map for the user to specify any custom fields. A maximum of 20 labels per conversation is allowed, with a maximum of 256 characters per entry.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * A user-specified language code for the conversation.
      * 
     */
-    public String getLanguageCode() {
+    public String languageCode() {
         return this.languageCode;
     }
     /**
      * The conversation's latest analysis, if one exists.
      * 
     */
-    public GoogleCloudContactcenterinsightsV1AnalysisResponse getLatestAnalysis() {
+    public GoogleCloudContactcenterinsightsV1AnalysisResponse latestAnalysis() {
         return this.latestAnalysis;
     }
     /**
      * Immutable. The conversation medium, if unspecified will default to PHONE_CALL.
      * 
     */
-    public String getMedium() {
+    public String medium() {
         return this.medium;
     }
     /**
      * Immutable. The resource name of the conversation. Format: projects/{project}/locations/{location}/conversations/{conversation}
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Obfuscated user ID which the customer sent to us.
      * 
     */
-    public String getObfuscatedUserId() {
+    public String obfuscatedUserId() {
         return this.obfuscatedUserId;
     }
     /**
      * The annotations that were generated during the customer and agent interaction.
      * 
     */
-    public List<GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse> getRuntimeAnnotations() {
+    public List<GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse> runtimeAnnotations() {
         return this.runtimeAnnotations;
     }
     /**
      * The time at which the conversation started.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
     /**
      * The conversation transcript.
      * 
     */
-    public GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse getTranscript() {
+    public GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse transcript() {
         return this.transcript;
     }
     /**
      * Input only. The TTL for this resource. If specified, then this TTL will be used to calculate the expire time.
      * 
     */
-    public String getTtl() {
+    public String ttl() {
         return this.ttl;
     }
     /**
      * The number of turns in the conversation.
      * 
     */
-    public Integer getTurnCount() {
+    public Integer turnCount() {
         return this.turnCount;
     }
     /**
      * The most recent time at which the conversation was updated.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

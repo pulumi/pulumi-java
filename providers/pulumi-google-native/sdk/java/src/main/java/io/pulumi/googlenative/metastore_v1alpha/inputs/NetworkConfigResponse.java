@@ -24,7 +24,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="consumers", required=true)
       private final List<ConsumerResponse> consumers;
 
-    public List<ConsumerResponse> getConsumers() {
+    public List<ConsumerResponse> consumers() {
         return this.consumers;
     }
 

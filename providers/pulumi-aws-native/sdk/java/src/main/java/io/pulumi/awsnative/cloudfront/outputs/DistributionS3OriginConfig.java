@@ -18,7 +18,7 @@ public final class DistributionS3OriginConfig {
         this.originAccessIdentity = originAccessIdentity;
     }
 
-    public Optional<String> getOriginAccessIdentity() {
+    public Optional<String> originAccessIdentity() {
         return Optional.ofNullable(this.originAccessIdentity);
     }
 

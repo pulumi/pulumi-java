@@ -29,7 +29,7 @@ public final class ModelVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datastoreId")
       private final @Nullable Output<String> datastoreId;
 
-    public Output<String> getDatastoreId() {
+    public Output<String> datastoreId() {
         return this.datastoreId == null ? Codegen.empty() : this.datastoreId;
     }
 
@@ -40,7 +40,7 @@ public final class ModelVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -51,7 +51,7 @@ public final class ModelVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="flavors")
       private final @Nullable Output<Map<String,FlavorDataArgs>> flavors;
 
-    public Output<Map<String,FlavorDataArgs>> getFlavors() {
+    public Output<Map<String,FlavorDataArgs>> flavors() {
         return this.flavors == null ? Codegen.empty() : this.flavors;
     }
 
@@ -62,7 +62,7 @@ public final class ModelVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isAnonymous")
       private final @Nullable Output<Boolean> isAnonymous;
 
-    public Output<Boolean> getIsAnonymous() {
+    public Output<Boolean> isAnonymous() {
         return this.isAnonymous == null ? Codegen.empty() : this.isAnonymous;
     }
 
@@ -73,7 +73,7 @@ public final class ModelVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="path", required=true)
       private final Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
 
@@ -84,7 +84,7 @@ public final class ModelVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -95,7 +95,7 @@ public final class ModelVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

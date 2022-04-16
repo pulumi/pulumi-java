@@ -24,7 +24,7 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredent
      * Azure shared access signature. See [Grant limited access to Azure Storage resources using shared access signatures (SAS)](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview).
      * 
     */
-    public String getSasToken() {
+    public String sasToken() {
         return this.sasToken;
     }
 

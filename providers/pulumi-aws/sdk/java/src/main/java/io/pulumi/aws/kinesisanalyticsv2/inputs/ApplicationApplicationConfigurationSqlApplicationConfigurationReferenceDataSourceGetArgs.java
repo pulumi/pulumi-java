@@ -20,7 +20,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="referenceId")
       private final @Nullable Output<String> referenceId;
 
-    public Output<String> getReferenceId() {
+    public Output<String> referenceId() {
         return this.referenceId == null ? Codegen.empty() : this.referenceId;
     }
 
@@ -31,7 +31,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="referenceSchema", required=true)
       private final Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaGetArgs> referenceSchema;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaGetArgs> getReferenceSchema() {
+    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaGetArgs> referenceSchema() {
         return this.referenceSchema;
     }
 
@@ -42,7 +42,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="s3ReferenceDataSource", required=true)
       private final Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceGetArgs> s3ReferenceDataSource;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceGetArgs> getS3ReferenceDataSource() {
+    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceGetArgs> s3ReferenceDataSource() {
         return this.s3ReferenceDataSource;
     }
 
@@ -53,7 +53,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 

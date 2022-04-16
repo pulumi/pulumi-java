@@ -23,7 +23,7 @@ public final class PadResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="bottomPixels", required=true)
       private final Integer bottomPixels;
 
-    public Integer getBottomPixels() {
+    public Integer bottomPixels() {
         return this.bottomPixels;
     }
 
@@ -34,7 +34,7 @@ public final class PadResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="leftPixels", required=true)
       private final Integer leftPixels;
 
-    public Integer getLeftPixels() {
+    public Integer leftPixels() {
         return this.leftPixels;
     }
 
@@ -45,7 +45,7 @@ public final class PadResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="rightPixels", required=true)
       private final Integer rightPixels;
 
-    public Integer getRightPixels() {
+    public Integer rightPixels() {
         return this.rightPixels;
     }
 
@@ -56,7 +56,7 @@ public final class PadResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="topPixels", required=true)
       private final Integer topPixels;
 
-    public Integer getTopPixels() {
+    public Integer topPixels() {
         return this.topPixels;
     }
 

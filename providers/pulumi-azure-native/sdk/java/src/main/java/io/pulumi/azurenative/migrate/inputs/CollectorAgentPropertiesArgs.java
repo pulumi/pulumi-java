@@ -18,7 +18,7 @@ public final class CollectorAgentPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="spnDetails")
       private final @Nullable Output<CollectorBodyAgentSpnPropertiesArgs> spnDetails;
 
-    public Output<CollectorBodyAgentSpnPropertiesArgs> getSpnDetails() {
+    public Output<CollectorBodyAgentSpnPropertiesArgs> spnDetails() {
         return this.spnDetails == null ? Codegen.empty() : this.spnDetails;
     }
 

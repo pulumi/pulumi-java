@@ -16,7 +16,7 @@ public final class SubsettingResponse {
         this.policy = policy;
     }
 
-    public String getPolicy() {
+    public String policy() {
         return this.policy;
     }
 

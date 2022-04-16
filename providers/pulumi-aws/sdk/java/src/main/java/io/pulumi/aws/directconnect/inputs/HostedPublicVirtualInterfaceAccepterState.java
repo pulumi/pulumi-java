@@ -23,7 +23,7 @@ public final class HostedPublicVirtualInterfaceAccepterState extends io.pulumi.r
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class HostedPublicVirtualInterfaceAccepterState extends io.pulumi.r
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -45,7 +45,7 @@ public final class HostedPublicVirtualInterfaceAccepterState extends io.pulumi.r
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -56,7 +56,7 @@ public final class HostedPublicVirtualInterfaceAccepterState extends io.pulumi.r
     @Import(name="virtualInterfaceId")
       private final @Nullable Output<String> virtualInterfaceId;
 
-    public Output<String> getVirtualInterfaceId() {
+    public Output<String> virtualInterfaceId() {
         return this.virtualInterfaceId == null ? Codegen.empty() : this.virtualInterfaceId;
     }
 

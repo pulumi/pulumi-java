@@ -25,7 +25,7 @@ public final class ResourceNavigationLinkResponse extends io.pulumi.resources.In
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -36,7 +36,7 @@ public final class ResourceNavigationLinkResponse extends io.pulumi.resources.In
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -47,7 +47,7 @@ public final class ResourceNavigationLinkResponse extends io.pulumi.resources.In
     @Import(name="link")
       private final @Nullable String link;
 
-    public Optional<String> getLink() {
+    public Optional<String> link() {
         return this.link == null ? Optional.empty() : Optional.ofNullable(this.link);
     }
 
@@ -58,7 +58,7 @@ public final class ResourceNavigationLinkResponse extends io.pulumi.resources.In
     @Import(name="linkedResourceType")
       private final @Nullable String linkedResourceType;
 
-    public Optional<String> getLinkedResourceType() {
+    public Optional<String> linkedResourceType() {
         return this.linkedResourceType == null ? Optional.empty() : Optional.ofNullable(this.linkedResourceType);
     }
 
@@ -69,7 +69,7 @@ public final class ResourceNavigationLinkResponse extends io.pulumi.resources.In
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -80,7 +80,7 @@ public final class ResourceNavigationLinkResponse extends io.pulumi.resources.In
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -91,7 +91,7 @@ public final class ResourceNavigationLinkResponse extends io.pulumi.resources.In
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

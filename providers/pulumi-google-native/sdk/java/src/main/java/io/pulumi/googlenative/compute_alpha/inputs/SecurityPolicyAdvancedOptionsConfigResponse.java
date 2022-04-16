@@ -15,14 +15,14 @@ public final class SecurityPolicyAdvancedOptionsConfigResponse extends io.pulumi
     @Import(name="jsonParsing", required=true)
       private final String jsonParsing;
 
-    public String getJsonParsing() {
+    public String jsonParsing() {
         return this.jsonParsing;
     }
 
     @Import(name="logLevel", required=true)
       private final String logLevel;
 
-    public String getLogLevel() {
+    public String logLevel() {
         return this.logLevel;
     }
 

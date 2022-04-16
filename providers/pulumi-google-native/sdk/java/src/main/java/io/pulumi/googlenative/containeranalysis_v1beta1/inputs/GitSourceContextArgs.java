@@ -26,7 +26,7 @@ public final class GitSourceContextArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="revisionId")
       private final @Nullable Output<String> revisionId;
 
-    public Output<String> getRevisionId() {
+    public Output<String> revisionId() {
         return this.revisionId == null ? Codegen.empty() : this.revisionId;
     }
 
@@ -37,7 +37,7 @@ public final class GitSourceContextArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 

@@ -28,7 +28,7 @@ public final class ImageTemplateSharedImageDistributorResponse extends io.pulumi
     @Import(name="artifactTags")
       private final @Nullable Map<String,String> artifactTags;
 
-    public Map<String,String> getArtifactTags() {
+    public Map<String,String> artifactTags() {
         return this.artifactTags == null ? Map.of() : this.artifactTags;
     }
 
@@ -39,7 +39,7 @@ public final class ImageTemplateSharedImageDistributorResponse extends io.pulumi
     @Import(name="excludeFromLatest")
       private final @Nullable Boolean excludeFromLatest;
 
-    public Optional<Boolean> getExcludeFromLatest() {
+    public Optional<Boolean> excludeFromLatest() {
         return this.excludeFromLatest == null ? Optional.empty() : Optional.ofNullable(this.excludeFromLatest);
     }
 
@@ -50,7 +50,7 @@ public final class ImageTemplateSharedImageDistributorResponse extends io.pulumi
     @Import(name="galleryImageId", required=true)
       private final String galleryImageId;
 
-    public String getGalleryImageId() {
+    public String galleryImageId() {
         return this.galleryImageId;
     }
 
@@ -61,7 +61,7 @@ public final class ImageTemplateSharedImageDistributorResponse extends io.pulumi
     @Import(name="replicationRegions", required=true)
       private final List<String> replicationRegions;
 
-    public List<String> getReplicationRegions() {
+    public List<String> replicationRegions() {
         return this.replicationRegions;
     }
 
@@ -72,7 +72,7 @@ public final class ImageTemplateSharedImageDistributorResponse extends io.pulumi
     @Import(name="runOutputName", required=true)
       private final String runOutputName;
 
-    public String getRunOutputName() {
+    public String runOutputName() {
         return this.runOutputName;
     }
 
@@ -83,7 +83,7 @@ public final class ImageTemplateSharedImageDistributorResponse extends io.pulumi
     @Import(name="storageAccountType")
       private final @Nullable String storageAccountType;
 
-    public Optional<String> getStorageAccountType() {
+    public Optional<String> storageAccountType() {
         return this.storageAccountType == null ? Optional.empty() : Optional.ofNullable(this.storageAccountType);
     }
 
@@ -95,7 +95,7 @@ public final class ImageTemplateSharedImageDistributorResponse extends io.pulumi
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

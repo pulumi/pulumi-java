@@ -67,42 +67,42 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest {
      * The list of assets.
      * 
     */
-    public List<ImageAssetResponse> getAssets() {
+    public List<ImageAssetResponse> assets() {
         return this.assets == null ? List.of() : this.assets;
     }
     /**
      * The name of the driver file.
      * 
     */
-    public Optional<String> getDriverProgram() {
+    public Optional<String> driverProgram() {
         return Optional.ofNullable(this.driverProgram);
     }
     /**
      * The details of the AZURE ML environment.
      * 
     */
-    public Optional<EnvironmentImageResponseResponseEnvironment> getEnvironment() {
+    public Optional<EnvironmentImageResponseResponseEnvironment> environment() {
         return Optional.ofNullable(this.environment);
     }
     /**
      * The unique identifying details of the AZURE ML environment.
      * 
     */
-    public Optional<EnvironmentImageResponseResponseEnvironmentReference> getEnvironmentReference() {
+    public Optional<EnvironmentImageResponseResponseEnvironmentReference> environmentReference() {
         return Optional.ofNullable(this.environmentReference);
     }
     /**
      * The list of model Ids.
      * 
     */
-    public List<String> getModelIds() {
+    public List<String> modelIds() {
         return this.modelIds == null ? List.of() : this.modelIds;
     }
     /**
      * The list of models.
      * 
     */
-    public List<ModelResponse> getModels() {
+    public List<ModelResponse> models() {
         return this.models == null ? List.of() : this.models;
     }
 

@@ -25,7 +25,7 @@ public final class DWCopyCommandDefaultValueResponse extends io.pulumi.resources
     @Import(name="columnName")
       private final @Nullable Object columnName;
 
-    public Optional<Object> getColumnName() {
+    public Optional<Object> columnName() {
         return this.columnName == null ? Optional.empty() : Optional.ofNullable(this.columnName);
     }
 
@@ -36,7 +36,7 @@ public final class DWCopyCommandDefaultValueResponse extends io.pulumi.resources
     @Import(name="defaultValue")
       private final @Nullable Object defaultValue;
 
-    public Optional<Object> getDefaultValue() {
+    public Optional<Object> defaultValue() {
         return this.defaultValue == null ? Optional.empty() : Optional.ofNullable(this.defaultValue);
     }
 

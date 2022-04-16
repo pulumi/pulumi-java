@@ -28,7 +28,7 @@ public final class ApplicationLogsConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="azureBlobStorage")
       private final @Nullable Output<AzureBlobStorageApplicationLogsConfigArgs> azureBlobStorage;
 
-    public Output<AzureBlobStorageApplicationLogsConfigArgs> getAzureBlobStorage() {
+    public Output<AzureBlobStorageApplicationLogsConfigArgs> azureBlobStorage() {
         return this.azureBlobStorage == null ? Codegen.empty() : this.azureBlobStorage;
     }
 
@@ -39,7 +39,7 @@ public final class ApplicationLogsConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="azureTableStorage")
       private final @Nullable Output<AzureTableStorageApplicationLogsConfigArgs> azureTableStorage;
 
-    public Output<AzureTableStorageApplicationLogsConfigArgs> getAzureTableStorage() {
+    public Output<AzureTableStorageApplicationLogsConfigArgs> azureTableStorage() {
         return this.azureTableStorage == null ? Codegen.empty() : this.azureTableStorage;
     }
 
@@ -50,7 +50,7 @@ public final class ApplicationLogsConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="fileSystem")
       private final @Nullable Output<FileSystemApplicationLogsConfigArgs> fileSystem;
 
-    public Output<FileSystemApplicationLogsConfigArgs> getFileSystem() {
+    public Output<FileSystemApplicationLogsConfigArgs> fileSystem() {
         return this.fileSystem == null ? Codegen.empty() : this.fileSystem;
     }
 

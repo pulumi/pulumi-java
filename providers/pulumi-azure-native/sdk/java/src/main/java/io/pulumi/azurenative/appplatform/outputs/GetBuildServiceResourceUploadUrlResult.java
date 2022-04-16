@@ -34,14 +34,14 @@ public final class GetBuildServiceResourceUploadUrlResult {
      * Source relative path
      * 
     */
-    public Optional<String> getRelativePath() {
+    public Optional<String> relativePath() {
         return Optional.ofNullable(this.relativePath);
     }
     /**
      * Upload URL
      * 
     */
-    public Optional<String> getUploadUrl() {
+    public Optional<String> uploadUrl() {
         return Optional.ofNullable(this.uploadUrl);
     }
 

@@ -19,7 +19,7 @@ public final class DiagnosticResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="field", required=true)
       private final String field;
 
-    public String getField() {
+    public String field() {
         return this.field;
     }
 
@@ -30,7 +30,7 @@ public final class DiagnosticResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="level", required=true)
       private final String level;
 
-    public String getLevel() {
+    public String level() {
         return this.level;
     }
 

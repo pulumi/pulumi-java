@@ -24,7 +24,7 @@ public final class PipelineRunTargetPropertiesArgs extends io.pulumi.resources.R
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -35,7 +35,7 @@ public final class PipelineRunTargetPropertiesArgs extends io.pulumi.resources.R
     @Import(name="type")
       private final @Nullable Output<Either<String,PipelineRunTargetType>> type;
 
-    public Output<Either<String,PipelineRunTargetType>> getType() {
+    public Output<Either<String,PipelineRunTargetType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

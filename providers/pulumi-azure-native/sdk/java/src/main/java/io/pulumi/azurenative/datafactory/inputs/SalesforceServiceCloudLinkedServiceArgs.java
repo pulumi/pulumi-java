@@ -34,7 +34,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -45,7 +45,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
     @Import(name="apiVersion")
       private final @Nullable Output<Object> apiVersion;
 
-    public Output<Object> getApiVersion() {
+    public Output<Object> apiVersion() {
         return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
@@ -56,7 +56,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
         return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
@@ -67,7 +67,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -78,7 +78,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
+    public Output<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
@@ -89,7 +89,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
     @Import(name="environmentUrl")
       private final @Nullable Output<Object> environmentUrl;
 
-    public Output<Object> getEnvironmentUrl() {
+    public Output<Object> environmentUrl() {
         return this.environmentUrl == null ? Codegen.empty() : this.environmentUrl;
     }
 
@@ -100,7 +100,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
     @Import(name="extendedProperties")
       private final @Nullable Output<Object> extendedProperties;
 
-    public Output<Object> getExtendedProperties() {
+    public Output<Object> extendedProperties() {
         return this.extendedProperties == null ? Codegen.empty() : this.extendedProperties;
     }
 
@@ -111,7 +111,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -122,7 +122,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
     @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -133,7 +133,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
     @Import(name="securityToken")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> securityToken;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getSecurityToken() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> securityToken() {
         return this.securityToken == null ? Codegen.empty() : this.securityToken;
     }
 
@@ -145,7 +145,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -156,7 +156,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
     @Import(name="username")
       private final @Nullable Output<Object> username;
 
-    public Output<Object> getUsername() {
+    public Output<Object> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 

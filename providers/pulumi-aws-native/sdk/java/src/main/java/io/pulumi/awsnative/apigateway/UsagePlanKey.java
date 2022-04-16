@@ -30,7 +30,7 @@ public class UsagePlanKey extends io.pulumi.resources.CustomResource {
      * @return The ID of the usage plan key.
      * 
      */
-    public Output<String> getKeyId() {
+    public Output<String> keyId() {
         return this.keyId;
     }
     /**
@@ -44,7 +44,7 @@ public class UsagePlanKey extends io.pulumi.resources.CustomResource {
      * @return The type of usage plan key. Currently, the only valid key type is API_KEY.
      * 
      */
-    public Output<UsagePlanKeyKeyType> getKeyType() {
+    public Output<UsagePlanKeyKeyType> keyType() {
         return this.keyType;
     }
     /**
@@ -58,7 +58,7 @@ public class UsagePlanKey extends io.pulumi.resources.CustomResource {
      * @return The ID of the usage plan.
      * 
      */
-    public Output<String> getUsagePlanId() {
+    public Output<String> usagePlanId() {
         return this.usagePlanId;
     }
 

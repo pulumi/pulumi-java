@@ -24,7 +24,7 @@ public final class IndexState extends io.pulumi.resources.ResourceArgs {
     @Import(name="collection")
       private final @Nullable Output<String> collection;
 
-    public Output<String> getCollection() {
+    public Output<String> collection() {
         return this.collection == null ? Codegen.empty() : this.collection;
     }
 
@@ -35,7 +35,7 @@ public final class IndexState extends io.pulumi.resources.ResourceArgs {
     @Import(name="database")
       private final @Nullable Output<String> database;
 
-    public Output<String> getDatabase() {
+    public Output<String> database() {
         return this.database == null ? Codegen.empty() : this.database;
     }
 
@@ -52,7 +52,7 @@ public final class IndexState extends io.pulumi.resources.ResourceArgs {
     @Import(name="fields")
       private final @Nullable Output<List<IndexFieldGetArgs>> fields;
 
-    public Output<List<IndexFieldGetArgs>> getFields() {
+    public Output<List<IndexFieldGetArgs>> fields() {
         return this.fields == null ? Codegen.empty() : this.fields;
     }
 
@@ -64,7 +64,7 @@ public final class IndexState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -76,7 +76,7 @@ public final class IndexState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -89,7 +89,7 @@ public final class IndexState extends io.pulumi.resources.ResourceArgs {
     @Import(name="queryScope")
       private final @Nullable Output<String> queryScope;
 
-    public Output<String> getQueryScope() {
+    public Output<String> queryScope() {
         return this.queryScope == null ? Codegen.empty() : this.queryScope;
     }
 

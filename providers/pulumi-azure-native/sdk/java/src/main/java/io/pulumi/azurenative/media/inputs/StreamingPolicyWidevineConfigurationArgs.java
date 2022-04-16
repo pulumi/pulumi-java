@@ -26,7 +26,7 @@ public final class StreamingPolicyWidevineConfigurationArgs extends io.pulumi.re
     @Import(name="customLicenseAcquisitionUrlTemplate")
       private final @Nullable Output<String> customLicenseAcquisitionUrlTemplate;
 
-    public Output<String> getCustomLicenseAcquisitionUrlTemplate() {
+    public Output<String> customLicenseAcquisitionUrlTemplate() {
         return this.customLicenseAcquisitionUrlTemplate == null ? Codegen.empty() : this.customLicenseAcquisitionUrlTemplate;
     }
 

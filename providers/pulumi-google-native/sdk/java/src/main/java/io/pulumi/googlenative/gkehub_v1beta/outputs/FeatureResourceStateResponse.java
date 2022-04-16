@@ -24,7 +24,7 @@ public final class FeatureResourceStateResponse {
      * The current state of the Feature resource in the Hub API.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

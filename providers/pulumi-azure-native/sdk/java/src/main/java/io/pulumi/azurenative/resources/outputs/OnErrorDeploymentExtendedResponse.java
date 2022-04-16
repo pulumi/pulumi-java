@@ -41,21 +41,21 @@ public final class OnErrorDeploymentExtendedResponse {
      * The deployment to be used on error case.
      * 
     */
-    public Optional<String> getDeploymentName() {
+    public Optional<String> deploymentName() {
         return Optional.ofNullable(this.deploymentName);
     }
     /**
      * The state of the provisioning for the on error deployment.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

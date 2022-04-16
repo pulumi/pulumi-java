@@ -56,7 +56,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * @return The time when the Membership was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -70,7 +70,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * @return The name of the Group to create this membership in.
      * 
      */
-    public Output<String> getGroup() {
+    public Output<String> group() {
         return this.group;
     }
     /**
@@ -86,7 +86,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<GroupMembershipMemberKey> getMemberKey() {
+    public Output<GroupMembershipMemberKey> memberKey() {
         return this.memberKey;
     }
     /**
@@ -102,7 +102,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -118,7 +118,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<GroupMembershipPreferredMemberKey> getPreferredMemberKey() {
+    public Output<GroupMembershipPreferredMemberKey> preferredMemberKey() {
         return this.preferredMemberKey;
     }
     /**
@@ -136,7 +136,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<List<GroupMembershipRole>> getRoles() {
+    public Output<List<GroupMembershipRole>> roles() {
         return this.roles;
     }
     /**
@@ -150,7 +150,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * @return The type of the membership.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -164,7 +164,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * @return The time when the Membership was last updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

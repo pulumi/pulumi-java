@@ -25,7 +25,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGe
     @Import(name="allowInsecure")
       private final @Nullable Output<Boolean> allowInsecure;
 
-    public Output<Boolean> getAllowInsecure() {
+    public Output<Boolean> allowInsecure() {
         return this.allowInsecure == null ? Codegen.empty() : this.allowInsecure;
     }
 
@@ -36,7 +36,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGe
     @Import(name="gcs")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGcsGetArgs> gcs;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGcsGetArgs> getGcs() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGcsGetArgs> gcs() {
         return this.gcs == null ? Codegen.empty() : this.gcs;
     }
 
@@ -47,7 +47,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGe
     @Import(name="localPath")
       private final @Nullable Output<String> localPath;
 
-    public Output<String> getLocalPath() {
+    public Output<String> localPath() {
         return this.localPath == null ? Codegen.empty() : this.localPath;
     }
 
@@ -58,7 +58,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGe
     @Import(name="remote")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemoteGetArgs> remote;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemoteGetArgs> getRemote() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemoteGetArgs> remote() {
         return this.remote == null ? Codegen.empty() : this.remote;
     }
 

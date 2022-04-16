@@ -25,7 +25,7 @@ public final class AnimationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="animationEnd", required=true)
       private final AnimationEndResponse animationEnd;
 
-    public AnimationEndResponse getAnimationEnd() {
+    public AnimationEndResponse animationEnd() {
         return this.animationEnd;
     }
 
@@ -36,7 +36,7 @@ public final class AnimationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="animationFade", required=true)
       private final AnimationFadeResponse animationFade;
 
-    public AnimationFadeResponse getAnimationFade() {
+    public AnimationFadeResponse animationFade() {
         return this.animationFade;
     }
 
@@ -47,7 +47,7 @@ public final class AnimationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="animationStatic", required=true)
       private final AnimationStaticResponse animationStatic;
 
-    public AnimationStaticResponse getAnimationStatic() {
+    public AnimationStaticResponse animationStatic() {
         return this.animationStatic;
     }
 

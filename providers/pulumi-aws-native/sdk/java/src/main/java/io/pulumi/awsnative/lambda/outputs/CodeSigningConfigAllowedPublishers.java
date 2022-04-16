@@ -25,7 +25,7 @@ public final class CodeSigningConfigAllowedPublishers {
      * List of Signing profile version Arns
      * 
     */
-    public List<String> getSigningProfileVersionArns() {
+    public List<String> signingProfileVersionArns() {
         return this.signingProfileVersionArns;
     }
 

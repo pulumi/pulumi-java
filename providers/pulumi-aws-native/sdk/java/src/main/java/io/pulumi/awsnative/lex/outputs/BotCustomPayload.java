@@ -24,7 +24,7 @@ public final class BotCustomPayload {
      * The string that is sent to your application.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

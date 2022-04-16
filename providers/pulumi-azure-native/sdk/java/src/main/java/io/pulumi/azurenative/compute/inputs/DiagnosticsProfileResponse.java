@@ -25,7 +25,7 @@ public final class DiagnosticsProfileResponse extends io.pulumi.resources.Invoke
     @Import(name="bootDiagnostics")
       private final @Nullable BootDiagnosticsResponse bootDiagnostics;
 
-    public Optional<BootDiagnosticsResponse> getBootDiagnostics() {
+    public Optional<BootDiagnosticsResponse> bootDiagnostics() {
         return this.bootDiagnostics == null ? Optional.empty() : Optional.ofNullable(this.bootDiagnostics);
     }
 

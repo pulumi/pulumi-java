@@ -24,7 +24,7 @@ public final class VpcIpamPreviewNextCidrArgs extends io.pulumi.resources.Resour
     @Import(name="disallowedCidrs")
       private final @Nullable Output<List<String>> disallowedCidrs;
 
-    public Output<List<String>> getDisallowedCidrs() {
+    public Output<List<String>> disallowedCidrs() {
         return this.disallowedCidrs == null ? Codegen.empty() : this.disallowedCidrs;
     }
 
@@ -35,7 +35,7 @@ public final class VpcIpamPreviewNextCidrArgs extends io.pulumi.resources.Resour
     @Import(name="ipamPoolId", required=true)
       private final Output<String> ipamPoolId;
 
-    public Output<String> getIpamPoolId() {
+    public Output<String> ipamPoolId() {
         return this.ipamPoolId;
     }
 
@@ -46,7 +46,7 @@ public final class VpcIpamPreviewNextCidrArgs extends io.pulumi.resources.Resour
     @Import(name="netmaskLength")
       private final @Nullable Output<Integer> netmaskLength;
 
-    public Output<Integer> getNetmaskLength() {
+    public Output<Integer> netmaskLength() {
         return this.netmaskLength == null ? Codegen.empty() : this.netmaskLength;
     }
 

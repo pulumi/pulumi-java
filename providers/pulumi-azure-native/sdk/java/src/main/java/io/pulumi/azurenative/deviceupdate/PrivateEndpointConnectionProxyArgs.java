@@ -23,7 +23,7 @@ public final class PrivateEndpointConnectionProxyArgs extends io.pulumi.resource
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -34,7 +34,7 @@ public final class PrivateEndpointConnectionProxyArgs extends io.pulumi.resource
     @Import(name="privateEndpointConnectionProxyId")
       private final @Nullable Output<String> privateEndpointConnectionProxyId;
 
-    public Output<String> getPrivateEndpointConnectionProxyId() {
+    public Output<String> privateEndpointConnectionProxyId() {
         return this.privateEndpointConnectionProxyId == null ? Codegen.empty() : this.privateEndpointConnectionProxyId;
     }
 
@@ -45,7 +45,7 @@ public final class PrivateEndpointConnectionProxyArgs extends io.pulumi.resource
     @Import(name="remotePrivateEndpoint")
       private final @Nullable Output<RemotePrivateEndpointArgs> remotePrivateEndpoint;
 
-    public Output<RemotePrivateEndpointArgs> getRemotePrivateEndpoint() {
+    public Output<RemotePrivateEndpointArgs> remotePrivateEndpoint() {
         return this.remotePrivateEndpoint == null ? Codegen.empty() : this.remotePrivateEndpoint;
     }
 
@@ -56,7 +56,7 @@ public final class PrivateEndpointConnectionProxyArgs extends io.pulumi.resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +67,7 @@ public final class PrivateEndpointConnectionProxyArgs extends io.pulumi.resource
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

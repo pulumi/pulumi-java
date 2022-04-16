@@ -66,42 +66,42 @@ public final class AliasResponse {
      * The default alias path metadata. Applies to the default path and to any alias path that doesn't have metadata
      * 
     */
-    public AliasPathMetadataResponse getDefaultMetadata() {
+    public AliasPathMetadataResponse defaultMetadata() {
         return this.defaultMetadata;
     }
     /**
      * The default path for an alias.
      * 
     */
-    public Optional<String> getDefaultPath() {
+    public Optional<String> defaultPath() {
         return Optional.ofNullable(this.defaultPath);
     }
     /**
      * The default pattern for an alias.
      * 
     */
-    public Optional<AliasPatternResponse> getDefaultPattern() {
+    public Optional<AliasPatternResponse> defaultPattern() {
         return Optional.ofNullable(this.defaultPattern);
     }
     /**
      * The alias name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The paths for an alias.
      * 
     */
-    public List<AliasPathResponse> getPaths() {
+    public List<AliasPathResponse> paths() {
         return this.paths == null ? List.of() : this.paths;
     }
     /**
      * The type of the alias.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

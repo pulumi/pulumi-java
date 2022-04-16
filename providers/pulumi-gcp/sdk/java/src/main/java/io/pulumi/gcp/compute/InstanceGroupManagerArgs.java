@@ -31,7 +31,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     @Import(name="autoHealingPolicies")
       private final @Nullable Output<InstanceGroupManagerAutoHealingPoliciesArgs> autoHealingPolicies;
 
-    public Output<InstanceGroupManagerAutoHealingPoliciesArgs> getAutoHealingPolicies() {
+    public Output<InstanceGroupManagerAutoHealingPoliciesArgs> autoHealingPolicies() {
         return this.autoHealingPolicies == null ? Codegen.empty() : this.autoHealingPolicies;
     }
 
@@ -47,7 +47,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     @Import(name="baseInstanceName", required=true)
       private final Output<String> baseInstanceName;
 
-    public Output<String> getBaseInstanceName() {
+    public Output<String> baseInstanceName() {
         return this.baseInstanceName;
     }
 
@@ -59,7 +59,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -70,7 +70,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -82,7 +82,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     @Import(name="namedPorts")
       private final @Nullable Output<List<InstanceGroupManagerNamedPortArgs>> namedPorts;
 
-    public Output<List<InstanceGroupManagerNamedPortArgs>> getNamedPorts() {
+    public Output<List<InstanceGroupManagerNamedPortArgs>> namedPorts() {
         return this.namedPorts == null ? Codegen.empty() : this.namedPorts;
     }
 
@@ -94,7 +94,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -105,7 +105,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     @Import(name="statefulDisks")
       private final @Nullable Output<List<InstanceGroupManagerStatefulDiskArgs>> statefulDisks;
 
-    public Output<List<InstanceGroupManagerStatefulDiskArgs>> getStatefulDisks() {
+    public Output<List<InstanceGroupManagerStatefulDiskArgs>> statefulDisks() {
         return this.statefulDisks == null ? Codegen.empty() : this.statefulDisks;
     }
 
@@ -118,7 +118,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     @Import(name="targetPools")
       private final @Nullable Output<List<String>> targetPools;
 
-    public Output<List<String>> getTargetPools() {
+    public Output<List<String>> targetPools() {
         return this.targetPools == null ? Codegen.empty() : this.targetPools;
     }
 
@@ -129,7 +129,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     @Import(name="targetSize")
       private final @Nullable Output<Integer> targetSize;
 
-    public Output<Integer> getTargetSize() {
+    public Output<Integer> targetSize() {
         return this.targetSize == null ? Codegen.empty() : this.targetSize;
     }
 
@@ -140,7 +140,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     @Import(name="updatePolicy")
       private final @Nullable Output<InstanceGroupManagerUpdatePolicyArgs> updatePolicy;
 
-    public Output<InstanceGroupManagerUpdatePolicyArgs> getUpdatePolicy() {
+    public Output<InstanceGroupManagerUpdatePolicyArgs> updatePolicy() {
         return this.updatePolicy == null ? Codegen.empty() : this.updatePolicy;
     }
 
@@ -153,7 +153,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     @Import(name="versions", required=true)
       private final Output<List<InstanceGroupManagerVersionArgs>> versions;
 
-    public Output<List<InstanceGroupManagerVersionArgs>> getVersions() {
+    public Output<List<InstanceGroupManagerVersionArgs>> versions() {
         return this.versions;
     }
 
@@ -166,7 +166,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     @Import(name="waitForInstances")
       private final @Nullable Output<Boolean> waitForInstances;
 
-    public Output<Boolean> getWaitForInstances() {
+    public Output<Boolean> waitForInstances() {
         return this.waitForInstances == null ? Codegen.empty() : this.waitForInstances;
     }
 
@@ -180,7 +180,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     @Import(name="waitForInstancesStatus")
       private final @Nullable Output<String> waitForInstancesStatus;
 
-    public Output<String> getWaitForInstancesStatus() {
+    public Output<String> waitForInstancesStatus() {
         return this.waitForInstancesStatus == null ? Codegen.empty() : this.waitForInstancesStatus;
     }
 
@@ -192,7 +192,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

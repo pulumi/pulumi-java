@@ -21,7 +21,7 @@ public final class ScheduledQueryTargetConfigurationArgs extends io.pulumi.resou
     @Import(name="timestreamConfiguration", required=true)
       private final Output<ScheduledQueryTimestreamConfigurationArgs> timestreamConfiguration;
 
-    public Output<ScheduledQueryTimestreamConfigurationArgs> getTimestreamConfiguration() {
+    public Output<ScheduledQueryTimestreamConfigurationArgs> timestreamConfiguration() {
         return this.timestreamConfiguration;
     }
 

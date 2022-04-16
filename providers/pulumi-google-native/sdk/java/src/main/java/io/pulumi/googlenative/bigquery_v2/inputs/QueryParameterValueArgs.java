@@ -24,7 +24,7 @@ public final class QueryParameterValueArgs extends io.pulumi.resources.ResourceA
     @Import(name="arrayValues")
       private final @Nullable Output<List<QueryParameterValueArgs>> arrayValues;
 
-    public Output<List<QueryParameterValueArgs>> getArrayValues() {
+    public Output<List<QueryParameterValueArgs>> arrayValues() {
         return this.arrayValues == null ? Codegen.empty() : this.arrayValues;
     }
 
@@ -35,7 +35,7 @@ public final class QueryParameterValueArgs extends io.pulumi.resources.ResourceA
     @Import(name="structValues")
       private final @Nullable Output<Map<String,String>> structValues;
 
-    public Output<Map<String,String>> getStructValues() {
+    public Output<Map<String,String>> structValues() {
         return this.structValues == null ? Codegen.empty() : this.structValues;
     }
 
@@ -46,7 +46,7 @@ public final class QueryParameterValueArgs extends io.pulumi.resources.ResourceA
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

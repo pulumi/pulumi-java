@@ -25,7 +25,7 @@ public final class NetworkPropertiesResponse extends io.pulumi.resources.InvokeA
     @Import(name="privateLink")
       private final @Nullable String privateLink;
 
-    public Optional<String> getPrivateLink() {
+    public Optional<String> privateLink() {
         return this.privateLink == null ? Optional.empty() : Optional.ofNullable(this.privateLink);
     }
 
@@ -36,7 +36,7 @@ public final class NetworkPropertiesResponse extends io.pulumi.resources.InvokeA
     @Import(name="resourceProviderConnection")
       private final @Nullable String resourceProviderConnection;
 
-    public Optional<String> getResourceProviderConnection() {
+    public Optional<String> resourceProviderConnection() {
         return this.resourceProviderConnection == null ? Optional.empty() : Optional.ofNullable(this.resourceProviderConnection);
     }
 

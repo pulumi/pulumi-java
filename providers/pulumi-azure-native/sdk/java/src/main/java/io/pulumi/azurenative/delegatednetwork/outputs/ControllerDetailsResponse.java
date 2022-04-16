@@ -26,7 +26,7 @@ public final class ControllerDetailsResponse {
      * controller arm resource id
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 

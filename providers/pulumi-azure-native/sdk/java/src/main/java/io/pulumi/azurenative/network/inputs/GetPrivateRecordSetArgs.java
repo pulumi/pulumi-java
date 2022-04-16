@@ -19,7 +19,7 @@ public final class GetPrivateRecordSetArgs extends io.pulumi.resources.InvokeArg
     @Import(name="privateZoneName", required=true)
       private final String privateZoneName;
 
-    public String getPrivateZoneName() {
+    public String privateZoneName() {
         return this.privateZoneName;
     }
 
@@ -30,7 +30,7 @@ public final class GetPrivateRecordSetArgs extends io.pulumi.resources.InvokeArg
     @Import(name="recordType", required=true)
       private final String recordType;
 
-    public String getRecordType() {
+    public String recordType() {
         return this.recordType;
     }
 
@@ -41,7 +41,7 @@ public final class GetPrivateRecordSetArgs extends io.pulumi.resources.InvokeArg
     @Import(name="relativeRecordSetName", required=true)
       private final String relativeRecordSetName;
 
-    public String getRelativeRecordSetName() {
+    public String relativeRecordSetName() {
         return this.relativeRecordSetName;
     }
 
@@ -52,7 +52,7 @@ public final class GetPrivateRecordSetArgs extends io.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

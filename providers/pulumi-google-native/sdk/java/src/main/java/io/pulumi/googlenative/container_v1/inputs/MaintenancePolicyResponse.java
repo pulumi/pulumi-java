@@ -24,7 +24,7 @@ public final class MaintenancePolicyResponse extends io.pulumi.resources.InvokeA
     @Import(name="resourceVersion", required=true)
       private final String resourceVersion;
 
-    public String getResourceVersion() {
+    public String resourceVersion() {
         return this.resourceVersion;
     }
 
@@ -35,7 +35,7 @@ public final class MaintenancePolicyResponse extends io.pulumi.resources.InvokeA
     @Import(name="window", required=true)
       private final MaintenanceWindowResponse window;
 
-    public MaintenanceWindowResponse getWindow() {
+    public MaintenanceWindowResponse window() {
         return this.window;
     }
 

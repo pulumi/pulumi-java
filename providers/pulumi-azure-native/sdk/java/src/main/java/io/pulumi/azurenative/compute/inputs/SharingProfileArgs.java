@@ -28,7 +28,7 @@ public final class SharingProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="permissions")
       private final @Nullable Output<Either<String,GallerySharingPermissionTypes>> permissions;
 
-    public Output<Either<String,GallerySharingPermissionTypes>> getPermissions() {
+    public Output<Either<String,GallerySharingPermissionTypes>> permissions() {
         return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 

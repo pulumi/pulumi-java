@@ -18,7 +18,7 @@ public final class WarmPoolInstanceReusePolicyArgs extends io.pulumi.resources.R
     @Import(name="reuseOnScaleIn")
       private final @Nullable Output<Boolean> reuseOnScaleIn;
 
-    public Output<Boolean> getReuseOnScaleIn() {
+    public Output<Boolean> reuseOnScaleIn() {
         return this.reuseOnScaleIn == null ? Codegen.empty() : this.reuseOnScaleIn;
     }
 

@@ -46,29 +46,29 @@ public final class GetLaunchResult {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public List<LaunchGroupObject> getGroups() {
+    public List<LaunchGroupObject> groups() {
         return this.groups == null ? List.of() : this.groups;
     }
-    public List<LaunchMetricDefinitionObject> getMetricMonitors() {
+    public List<LaunchMetricDefinitionObject> metricMonitors() {
         return this.metricMonitors == null ? List.of() : this.metricMonitors;
     }
-    public Optional<String> getRandomizationSalt() {
+    public Optional<String> randomizationSalt() {
         return Optional.ofNullable(this.randomizationSalt);
     }
-    public List<LaunchStepConfig> getScheduledSplitsConfig() {
+    public List<LaunchStepConfig> scheduledSplitsConfig() {
         return this.scheduledSplitsConfig == null ? List.of() : this.scheduledSplitsConfig;
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
     */
-    public List<LaunchTag> getTags() {
+    public List<LaunchTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

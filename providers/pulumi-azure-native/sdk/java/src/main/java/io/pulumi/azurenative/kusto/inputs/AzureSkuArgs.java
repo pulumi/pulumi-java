@@ -30,7 +30,7 @@ public final class AzureSkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
 
-    public Output<Integer> getCapacity() {
+    public Output<Integer> capacity() {
         return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
@@ -41,7 +41,7 @@ public final class AzureSkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<Either<String,AzureSkuName>> name;
 
-    public Output<Either<String,AzureSkuName>> getName() {
+    public Output<Either<String,AzureSkuName>> name() {
         return this.name;
     }
 
@@ -52,7 +52,7 @@ public final class AzureSkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tier", required=true)
       private final Output<Either<String,AzureSkuTier>> tier;
 
-    public Output<Either<String,AzureSkuTier>> getTier() {
+    public Output<Either<String,AzureSkuTier>> tier() {
         return this.tier;
     }
 

@@ -28,7 +28,7 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="averageValue")
       private final @Nullable Output<String> averageValue;
 
-    public Output<String> getAverageValue() {
+    public Output<String> averageValue() {
         return this.averageValue == null ? Codegen.empty() : this.averageValue;
     }
 
@@ -39,7 +39,7 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
@@ -50,7 +50,7 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="selector")
       private final @Nullable Output<LabelSelectorArgs> selector;
 
-    public Output<LabelSelectorArgs> getSelector() {
+    public Output<LabelSelectorArgs> selector() {
         return this.selector == null ? Codegen.empty() : this.selector;
     }
 
@@ -61,7 +61,7 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="target", required=true)
       private final Output<CrossVersionObjectReferenceArgs> target;
 
-    public Output<CrossVersionObjectReferenceArgs> getTarget() {
+    public Output<CrossVersionObjectReferenceArgs> target() {
         return this.target;
     }
 
@@ -72,7 +72,7 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="targetValue", required=true)
       private final Output<String> targetValue;
 
-    public Output<String> getTargetValue() {
+    public Output<String> targetValue() {
         return this.targetValue;
     }
 

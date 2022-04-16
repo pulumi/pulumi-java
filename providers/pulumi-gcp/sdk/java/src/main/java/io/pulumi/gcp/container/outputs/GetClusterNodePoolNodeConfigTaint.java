@@ -23,13 +23,13 @@ public final class GetClusterNodePoolNodeConfigTaint {
         this.value = value;
     }
 
-    public String getEffect() {
+    public String effect() {
         return this.effect;
     }
-    public String getKey() {
+    public String key() {
         return this.key;
     }
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

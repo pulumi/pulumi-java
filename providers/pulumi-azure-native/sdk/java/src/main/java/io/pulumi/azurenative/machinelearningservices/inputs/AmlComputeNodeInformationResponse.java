@@ -24,7 +24,7 @@ public final class AmlComputeNodeInformationResponse extends io.pulumi.resources
     @Import(name="nodeId", required=true)
       private final String nodeId;
 
-    public String getNodeId() {
+    public String nodeId() {
         return this.nodeId;
     }
 
@@ -35,7 +35,7 @@ public final class AmlComputeNodeInformationResponse extends io.pulumi.resources
     @Import(name="nodeState", required=true)
       private final String nodeState;
 
-    public String getNodeState() {
+    public String nodeState() {
         return this.nodeState;
     }
 
@@ -46,7 +46,7 @@ public final class AmlComputeNodeInformationResponse extends io.pulumi.resources
     @Import(name="port", required=true)
       private final Double port;
 
-    public Double getPort() {
+    public Double port() {
         return this.port;
     }
 
@@ -57,7 +57,7 @@ public final class AmlComputeNodeInformationResponse extends io.pulumi.resources
     @Import(name="privateIpAddress", required=true)
       private final String privateIpAddress;
 
-    public String getPrivateIpAddress() {
+    public String privateIpAddress() {
         return this.privateIpAddress;
     }
 
@@ -68,7 +68,7 @@ public final class AmlComputeNodeInformationResponse extends io.pulumi.resources
     @Import(name="publicIpAddress", required=true)
       private final String publicIpAddress;
 
-    public String getPublicIpAddress() {
+    public String publicIpAddress() {
         return this.publicIpAddress;
     }
 
@@ -79,7 +79,7 @@ public final class AmlComputeNodeInformationResponse extends io.pulumi.resources
     @Import(name="runId", required=true)
       private final String runId;
 
-    public String getRunId() {
+    public String runId() {
         return this.runId;
     }
 

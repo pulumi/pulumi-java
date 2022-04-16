@@ -30,10 +30,10 @@ public final class InstanceNode {
      * an identifier for the resource with format `projects/{{project}}/locations/{{region}}/instances/{{name}}`
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<String> getZone() {
+    public Optional<String> zone() {
         return Optional.ofNullable(this.zone);
     }
 

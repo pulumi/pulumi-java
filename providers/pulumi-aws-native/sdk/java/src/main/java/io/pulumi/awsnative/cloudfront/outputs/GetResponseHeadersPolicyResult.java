@@ -26,13 +26,13 @@ public final class GetResponseHeadersPolicyResult {
         this.responseHeadersPolicyConfig = responseHeadersPolicyConfig;
     }
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<String> getLastModifiedTime() {
+    public Optional<String> lastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
-    public Optional<ResponseHeadersPolicyConfig> getResponseHeadersPolicyConfig() {
+    public Optional<ResponseHeadersPolicyConfig> responseHeadersPolicyConfig() {
         return Optional.ofNullable(this.responseHeadersPolicyConfig);
     }
 

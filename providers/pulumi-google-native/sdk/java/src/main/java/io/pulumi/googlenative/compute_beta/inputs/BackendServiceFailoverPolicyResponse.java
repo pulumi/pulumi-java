@@ -24,7 +24,7 @@ public final class BackendServiceFailoverPolicyResponse extends io.pulumi.resour
     @Import(name="disableConnectionDrainOnFailover", required=true)
       private final Boolean disableConnectionDrainOnFailover;
 
-    public Boolean getDisableConnectionDrainOnFailover() {
+    public Boolean disableConnectionDrainOnFailover() {
         return this.disableConnectionDrainOnFailover;
     }
 
@@ -35,7 +35,7 @@ public final class BackendServiceFailoverPolicyResponse extends io.pulumi.resour
     @Import(name="dropTrafficIfUnhealthy", required=true)
       private final Boolean dropTrafficIfUnhealthy;
 
-    public Boolean getDropTrafficIfUnhealthy() {
+    public Boolean dropTrafficIfUnhealthy() {
         return this.dropTrafficIfUnhealthy;
     }
 
@@ -46,7 +46,7 @@ public final class BackendServiceFailoverPolicyResponse extends io.pulumi.resour
     @Import(name="failoverRatio", required=true)
       private final Double failoverRatio;
 
-    public Double getFailoverRatio() {
+    public Double failoverRatio() {
         return this.failoverRatio;
     }
 

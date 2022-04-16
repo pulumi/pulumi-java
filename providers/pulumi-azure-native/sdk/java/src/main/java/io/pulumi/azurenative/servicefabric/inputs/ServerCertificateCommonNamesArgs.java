@@ -28,7 +28,7 @@ public final class ServerCertificateCommonNamesArgs extends io.pulumi.resources.
     @Import(name="commonNames")
       private final @Nullable Output<List<ServerCertificateCommonNameArgs>> commonNames;
 
-    public Output<List<ServerCertificateCommonNameArgs>> getCommonNames() {
+    public Output<List<ServerCertificateCommonNameArgs>> commonNames() {
         return this.commonNames == null ? Codegen.empty() : this.commonNames;
     }
 
@@ -39,7 +39,7 @@ public final class ServerCertificateCommonNamesArgs extends io.pulumi.resources.
     @Import(name="x509StoreName")
       private final @Nullable Output<String> x509StoreName;
 
-    public Output<String> getX509StoreName() {
+    public Output<String> x509StoreName() {
         return this.x509StoreName == null ? Codegen.empty() : this.x509StoreName;
     }
 

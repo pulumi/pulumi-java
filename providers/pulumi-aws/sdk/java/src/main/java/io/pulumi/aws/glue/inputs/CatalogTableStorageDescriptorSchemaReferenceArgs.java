@@ -24,7 +24,7 @@ public final class CatalogTableStorageDescriptorSchemaReferenceArgs extends io.p
     @Import(name="schemaId")
       private final @Nullable Output<CatalogTableStorageDescriptorSchemaReferenceSchemaIdArgs> schemaId;
 
-    public Output<CatalogTableStorageDescriptorSchemaReferenceSchemaIdArgs> getSchemaId() {
+    public Output<CatalogTableStorageDescriptorSchemaReferenceSchemaIdArgs> schemaId() {
         return this.schemaId == null ? Codegen.empty() : this.schemaId;
     }
 
@@ -35,7 +35,7 @@ public final class CatalogTableStorageDescriptorSchemaReferenceArgs extends io.p
     @Import(name="schemaVersionId")
       private final @Nullable Output<String> schemaVersionId;
 
-    public Output<String> getSchemaVersionId() {
+    public Output<String> schemaVersionId() {
         return this.schemaVersionId == null ? Codegen.empty() : this.schemaVersionId;
     }
 
@@ -46,7 +46,7 @@ public final class CatalogTableStorageDescriptorSchemaReferenceArgs extends io.p
     @Import(name="schemaVersionNumber", required=true)
       private final Output<Integer> schemaVersionNumber;
 
-    public Output<Integer> getSchemaVersionNumber() {
+    public Output<Integer> schemaVersionNumber() {
         return this.schemaVersionNumber;
     }
 

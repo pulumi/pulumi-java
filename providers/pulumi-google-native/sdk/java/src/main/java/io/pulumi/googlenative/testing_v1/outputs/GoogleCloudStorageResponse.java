@@ -24,7 +24,7 @@ public final class GoogleCloudStorageResponse {
      * The path to a directory in GCS that will eventually contain the results for this test. The requesting user must have write access on the bucket in the supplied path.
      * 
     */
-    public String getGcsPath() {
+    public String gcsPath() {
         return this.gcsPath;
     }
 

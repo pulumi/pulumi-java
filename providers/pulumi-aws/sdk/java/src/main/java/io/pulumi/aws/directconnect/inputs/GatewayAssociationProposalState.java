@@ -23,7 +23,7 @@ public final class GatewayAssociationProposalState extends io.pulumi.resources.R
     @Import(name="allowedPrefixes")
       private final @Nullable Output<List<String>> allowedPrefixes;
 
-    public Output<List<String>> getAllowedPrefixes() {
+    public Output<List<String>> allowedPrefixes() {
         return this.allowedPrefixes == null ? Codegen.empty() : this.allowedPrefixes;
     }
 
@@ -34,7 +34,7 @@ public final class GatewayAssociationProposalState extends io.pulumi.resources.R
     @Import(name="associatedGatewayId")
       private final @Nullable Output<String> associatedGatewayId;
 
-    public Output<String> getAssociatedGatewayId() {
+    public Output<String> associatedGatewayId() {
         return this.associatedGatewayId == null ? Codegen.empty() : this.associatedGatewayId;
     }
 
@@ -45,7 +45,7 @@ public final class GatewayAssociationProposalState extends io.pulumi.resources.R
     @Import(name="associatedGatewayOwnerAccountId")
       private final @Nullable Output<String> associatedGatewayOwnerAccountId;
 
-    public Output<String> getAssociatedGatewayOwnerAccountId() {
+    public Output<String> associatedGatewayOwnerAccountId() {
         return this.associatedGatewayOwnerAccountId == null ? Codegen.empty() : this.associatedGatewayOwnerAccountId;
     }
 
@@ -56,7 +56,7 @@ public final class GatewayAssociationProposalState extends io.pulumi.resources.R
     @Import(name="associatedGatewayType")
       private final @Nullable Output<String> associatedGatewayType;
 
-    public Output<String> getAssociatedGatewayType() {
+    public Output<String> associatedGatewayType() {
         return this.associatedGatewayType == null ? Codegen.empty() : this.associatedGatewayType;
     }
 
@@ -67,7 +67,7 @@ public final class GatewayAssociationProposalState extends io.pulumi.resources.R
     @Import(name="dxGatewayId")
       private final @Nullable Output<String> dxGatewayId;
 
-    public Output<String> getDxGatewayId() {
+    public Output<String> dxGatewayId() {
         return this.dxGatewayId == null ? Codegen.empty() : this.dxGatewayId;
     }
 
@@ -78,7 +78,7 @@ public final class GatewayAssociationProposalState extends io.pulumi.resources.R
     @Import(name="dxGatewayOwnerAccountId")
       private final @Nullable Output<String> dxGatewayOwnerAccountId;
 
-    public Output<String> getDxGatewayOwnerAccountId() {
+    public Output<String> dxGatewayOwnerAccountId() {
         return this.dxGatewayOwnerAccountId == null ? Codegen.empty() : this.dxGatewayOwnerAccountId;
     }
 

@@ -28,7 +28,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backupKind")
       private final @Nullable Output<BackupRunBackupKind> backupKind;
 
-    public Output<BackupRunBackupKind> getBackupKind() {
+    public Output<BackupRunBackupKind> backupKind() {
         return this.backupKind == null ? Codegen.empty() : this.backupKind;
     }
 
@@ -39,7 +39,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -50,7 +50,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskEncryptionConfiguration")
       private final @Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
 
-    public Output<DiskEncryptionConfigurationArgs> getDiskEncryptionConfiguration() {
+    public Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration() {
         return this.diskEncryptionConfiguration == null ? Codegen.empty() : this.diskEncryptionConfiguration;
     }
 
@@ -61,7 +61,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskEncryptionStatus")
       private final @Nullable Output<DiskEncryptionStatusArgs> diskEncryptionStatus;
 
-    public Output<DiskEncryptionStatusArgs> getDiskEncryptionStatus() {
+    public Output<DiskEncryptionStatusArgs> diskEncryptionStatus() {
         return this.diskEncryptionStatus == null ? Codegen.empty() : this.diskEncryptionStatus;
     }
 
@@ -72,7 +72,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
@@ -83,7 +83,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enqueuedTime")
       private final @Nullable Output<String> enqueuedTime;
 
-    public Output<String> getEnqueuedTime() {
+    public Output<String> enqueuedTime() {
         return this.enqueuedTime == null ? Codegen.empty() : this.enqueuedTime;
     }
 
@@ -94,7 +94,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="error")
       private final @Nullable Output<OperationErrorArgs> error;
 
-    public Output<OperationErrorArgs> getError() {
+    public Output<OperationErrorArgs> error() {
         return this.error == null ? Codegen.empty() : this.error;
     }
 
@@ -105,7 +105,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -116,7 +116,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instance", required=true)
       private final Output<String> instance;
 
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
 
@@ -127,7 +127,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -138,14 +138,14 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -156,7 +156,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
@@ -167,7 +167,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
@@ -178,7 +178,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<BackupRunStatus> status;
 
-    public Output<BackupRunStatus> getStatus() {
+    public Output<BackupRunStatus> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -189,7 +189,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<BackupRunType> type;
 
-    public Output<BackupRunType> getType() {
+    public Output<BackupRunType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -200,7 +200,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="windowStartTime")
       private final @Nullable Output<String> windowStartTime;
 
-    public Output<String> getWindowStartTime() {
+    public Output<String> windowStartTime() {
         return this.windowStartTime == null ? Codegen.empty() : this.windowStartTime;
     }
 

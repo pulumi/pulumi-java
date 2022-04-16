@@ -55,35 +55,35 @@ public final class ImageOutputResourceAmi {
      * Account identifier of the AMI.
      * 
     */
-    public Optional<String> getAccountId() {
+    public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
     }
     /**
      * Description of the AMI.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Identifier of the AMI.
      * 
     */
-    public Optional<String> getImage() {
+    public Optional<String> image() {
         return Optional.ofNullable(this.image);
     }
     /**
      * Name of the AMI.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Region of the AMI.
      * 
     */
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
 

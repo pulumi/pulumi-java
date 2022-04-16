@@ -18,7 +18,7 @@ public final class DataSourceConfluencePageConfiguration extends io.pulumi.resou
     @Import(name="pageFieldMappings")
       private final @Nullable List<DataSourceConfluencePageToIndexFieldMapping> pageFieldMappings;
 
-    public List<DataSourceConfluencePageToIndexFieldMapping> getPageFieldMappings() {
+    public List<DataSourceConfluencePageToIndexFieldMapping> pageFieldMappings() {
         return this.pageFieldMappings == null ? List.of() : this.pageFieldMappings;
     }
 

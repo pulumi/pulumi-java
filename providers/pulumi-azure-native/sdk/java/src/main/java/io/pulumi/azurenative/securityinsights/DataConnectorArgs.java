@@ -24,7 +24,7 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataConnectorId")
       private final @Nullable Output<String> dataConnectorId;
 
-    public Output<String> getDataConnectorId() {
+    public Output<String> dataConnectorId() {
         return this.dataConnectorId == null ? Codegen.empty() : this.dataConnectorId;
     }
 
@@ -35,7 +35,7 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<Either<String,DataConnectorKind>> kind;
 
-    public Output<Either<String,DataConnectorKind>> getKind() {
+    public Output<Either<String,DataConnectorKind>> kind() {
         return this.kind;
     }
 
@@ -46,7 +46,7 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -57,7 +57,7 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

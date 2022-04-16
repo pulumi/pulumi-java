@@ -97,77 +97,77 @@ public final class BastionActiveSessionResponse {
      * The protocol used to connect to the target.
      * 
     */
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
     /**
      * Duration in mins the session has been active.
      * 
     */
-    public Double getSessionDurationInMins() {
+    public Double sessionDurationInMins() {
         return this.sessionDurationInMins;
     }
     /**
      * A unique id for the session.
      * 
     */
-    public String getSessionId() {
+    public String sessionId() {
         return this.sessionId;
     }
     /**
      * The time when the session started.
      * 
     */
-    public Object getStartTime() {
+    public Object startTime() {
         return this.startTime;
     }
     /**
      * The host name of the target.
      * 
     */
-    public String getTargetHostName() {
+    public String targetHostName() {
         return this.targetHostName;
     }
     /**
      * The IP Address of the target.
      * 
     */
-    public String getTargetIpAddress() {
+    public String targetIpAddress() {
         return this.targetIpAddress;
     }
     /**
      * The resource group of the target.
      * 
     */
-    public String getTargetResourceGroup() {
+    public String targetResourceGroup() {
         return this.targetResourceGroup;
     }
     /**
      * The resource id of the target.
      * 
     */
-    public String getTargetResourceId() {
+    public String targetResourceId() {
         return this.targetResourceId;
     }
     /**
      * The subscription id for the target virtual machine.
      * 
     */
-    public String getTargetSubscriptionId() {
+    public String targetSubscriptionId() {
         return this.targetSubscriptionId;
     }
     /**
      * The user name who is active on this session.
      * 
     */
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

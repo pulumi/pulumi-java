@@ -30,7 +30,7 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
     @Import(name="conditions")
       private final @Nullable Output<List<GoogleCloudRunV1ConditionArgs>> conditions;
 
-    public Output<List<GoogleCloudRunV1ConditionArgs>> getConditions() {
+    public Output<List<GoogleCloudRunV1ConditionArgs>> conditions() {
         return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
@@ -41,7 +41,7 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
     @Import(name="mappedRouteName")
       private final @Nullable Output<String> mappedRouteName;
 
-    public Output<String> getMappedRouteName() {
+    public Output<String> mappedRouteName() {
         return this.mappedRouteName == null ? Codegen.empty() : this.mappedRouteName;
     }
 
@@ -52,7 +52,7 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
     @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;
 
-    public Output<Integer> getObservedGeneration() {
+    public Output<Integer> observedGeneration() {
         return this.observedGeneration == null ? Codegen.empty() : this.observedGeneration;
     }
 
@@ -63,7 +63,7 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceRecords")
       private final @Nullable Output<List<ResourceRecordArgs>> resourceRecords;
 
-    public Output<List<ResourceRecordArgs>> getResourceRecords() {
+    public Output<List<ResourceRecordArgs>> resourceRecords() {
         return this.resourceRecords == null ? Codegen.empty() : this.resourceRecords;
     }
 
@@ -74,7 +74,7 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 

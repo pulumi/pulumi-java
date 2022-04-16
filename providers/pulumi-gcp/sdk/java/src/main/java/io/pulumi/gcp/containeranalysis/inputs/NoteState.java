@@ -34,7 +34,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="attestationAuthority")
       private final @Nullable Output<NoteAttestationAuthorityGetArgs> attestationAuthority;
 
-    public Output<NoteAttestationAuthorityGetArgs> getAttestationAuthority() {
+    public Output<NoteAttestationAuthorityGetArgs> attestationAuthority() {
         return this.attestationAuthority == null ? Codegen.empty() : this.attestationAuthority;
     }
 
@@ -45,7 +45,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -56,7 +56,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="expirationTime")
       private final @Nullable Output<String> expirationTime;
 
-    public Output<String> getExpirationTime() {
+    public Output<String> expirationTime() {
         return this.expirationTime == null ? Codegen.empty() : this.expirationTime;
     }
 
@@ -67,7 +67,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -78,7 +78,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="longDescription")
       private final @Nullable Output<String> longDescription;
 
-    public Output<String> getLongDescription() {
+    public Output<String> longDescription() {
         return this.longDescription == null ? Codegen.empty() : this.longDescription;
     }
 
@@ -89,7 +89,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -101,7 +101,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -112,7 +112,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="relatedNoteNames")
       private final @Nullable Output<List<String>> relatedNoteNames;
 
-    public Output<List<String>> getRelatedNoteNames() {
+    public Output<List<String>> relatedNoteNames() {
         return this.relatedNoteNames == null ? Codegen.empty() : this.relatedNoteNames;
     }
 
@@ -124,7 +124,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="relatedUrls")
       private final @Nullable Output<List<NoteRelatedUrlGetArgs>> relatedUrls;
 
-    public Output<List<NoteRelatedUrlGetArgs>> getRelatedUrls() {
+    public Output<List<NoteRelatedUrlGetArgs>> relatedUrls() {
         return this.relatedUrls == null ? Codegen.empty() : this.relatedUrls;
     }
 
@@ -135,7 +135,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="shortDescription")
       private final @Nullable Output<String> shortDescription;
 
-    public Output<String> getShortDescription() {
+    public Output<String> shortDescription() {
         return this.shortDescription == null ? Codegen.empty() : this.shortDescription;
     }
 
@@ -146,7 +146,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 

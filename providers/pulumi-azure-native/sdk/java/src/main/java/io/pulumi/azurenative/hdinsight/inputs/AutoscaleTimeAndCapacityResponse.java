@@ -26,7 +26,7 @@ public final class AutoscaleTimeAndCapacityResponse extends io.pulumi.resources.
     @Import(name="maxInstanceCount")
       private final @Nullable Integer maxInstanceCount;
 
-    public Optional<Integer> getMaxInstanceCount() {
+    public Optional<Integer> maxInstanceCount() {
         return this.maxInstanceCount == null ? Optional.empty() : Optional.ofNullable(this.maxInstanceCount);
     }
 
@@ -37,7 +37,7 @@ public final class AutoscaleTimeAndCapacityResponse extends io.pulumi.resources.
     @Import(name="minInstanceCount")
       private final @Nullable Integer minInstanceCount;
 
-    public Optional<Integer> getMinInstanceCount() {
+    public Optional<Integer> minInstanceCount() {
         return this.minInstanceCount == null ? Optional.empty() : Optional.ofNullable(this.minInstanceCount);
     }
 
@@ -48,7 +48,7 @@ public final class AutoscaleTimeAndCapacityResponse extends io.pulumi.resources.
     @Import(name="time")
       private final @Nullable String time;
 
-    public Optional<String> getTime() {
+    public Optional<String> time() {
         return this.time == null ? Optional.empty() : Optional.ofNullable(this.time);
     }
 

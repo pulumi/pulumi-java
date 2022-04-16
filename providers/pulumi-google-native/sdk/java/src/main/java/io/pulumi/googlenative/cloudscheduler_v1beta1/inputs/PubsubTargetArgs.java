@@ -27,7 +27,7 @@ public final class PubsubTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attributes")
       private final @Nullable Output<Map<String,String>> attributes;
 
-    public Output<Map<String,String>> getAttributes() {
+    public Output<Map<String,String>> attributes() {
         return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
@@ -38,7 +38,7 @@ public final class PubsubTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="data")
       private final @Nullable Output<String> data;
 
-    public Output<String> getData() {
+    public Output<String> data() {
         return this.data == null ? Codegen.empty() : this.data;
     }
 
@@ -49,7 +49,7 @@ public final class PubsubTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="topicName", required=true)
       private final Output<String> topicName;
 
-    public Output<String> getTopicName() {
+    public Output<String> topicName() {
         return this.topicName;
     }
 

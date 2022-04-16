@@ -19,31 +19,31 @@ public class AccountIamMember extends io.pulumi.resources.CustomResource {
     @Export(name="billingAccountId", type=String.class, parameters={})
     private Output<String> billingAccountId;
 
-    public Output<String> getBillingAccountId() {
+    public Output<String> billingAccountId() {
         return this.billingAccountId;
     }
     @Export(name="condition", type=AccountIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ AccountIamMemberCondition> condition;
 
-    public Output</* @Nullable */ AccountIamMemberCondition> getCondition() {
+    public Output</* @Nullable */ AccountIamMemberCondition> condition() {
         return this.condition;
     }
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

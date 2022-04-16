@@ -31,7 +31,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleGetArgs extends io.pulumi.
     @Import(name="fullPathMatch")
       private final @Nullable Output<String> fullPathMatch;
 
-    public Output<String> getFullPathMatch() {
+    public Output<String> fullPathMatch() {
         return this.fullPathMatch == null ? Codegen.empty() : this.fullPathMatch;
     }
 
@@ -44,7 +44,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleGetArgs extends io.pulumi.
     @Import(name="headerMatches")
       private final @Nullable Output<List<URLMapPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs>> headerMatches;
 
-    public Output<List<URLMapPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs>> getHeaderMatches() {
+    public Output<List<URLMapPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs>> headerMatches() {
         return this.headerMatches == null ? Codegen.empty() : this.headerMatches;
     }
 
@@ -56,7 +56,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleGetArgs extends io.pulumi.
     @Import(name="ignoreCase")
       private final @Nullable Output<Boolean> ignoreCase;
 
-    public Output<Boolean> getIgnoreCase() {
+    public Output<Boolean> ignoreCase() {
         return this.ignoreCase == null ? Codegen.empty() : this.ignoreCase;
     }
 
@@ -78,7 +78,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleGetArgs extends io.pulumi.
     @Import(name="metadataFilters")
       private final @Nullable Output<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterGetArgs>> metadataFilters;
 
-    public Output<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterGetArgs>> getMetadataFilters() {
+    public Output<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterGetArgs>> metadataFilters() {
         return this.metadataFilters == null ? Codegen.empty() : this.metadataFilters;
     }
 
@@ -91,7 +91,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleGetArgs extends io.pulumi.
     @Import(name="prefixMatch")
       private final @Nullable Output<String> prefixMatch;
 
-    public Output<String> getPrefixMatch() {
+    public Output<String> prefixMatch() {
         return this.prefixMatch == null ? Codegen.empty() : this.prefixMatch;
     }
 
@@ -104,7 +104,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleGetArgs extends io.pulumi.
     @Import(name="queryParameterMatches")
       private final @Nullable Output<List<URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs>> queryParameterMatches;
 
-    public Output<List<URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs>> getQueryParameterMatches() {
+    public Output<List<URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs>> queryParameterMatches() {
         return this.queryParameterMatches == null ? Codegen.empty() : this.queryParameterMatches;
     }
 
@@ -118,7 +118,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleGetArgs extends io.pulumi.
     @Import(name="regexMatch")
       private final @Nullable Output<String> regexMatch;
 
-    public Output<String> getRegexMatch() {
+    public Output<String> regexMatch() {
         return this.regexMatch == null ? Codegen.empty() : this.regexMatch;
     }
 

@@ -27,7 +27,7 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
@@ -38,7 +38,7 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
     @Import(name="metricSelector")
       private final @Nullable Output<LabelSelectorArgs> metricSelector;
 
-    public Output<LabelSelectorArgs> getMetricSelector() {
+    public Output<LabelSelectorArgs> metricSelector() {
         return this.metricSelector == null ? Codegen.empty() : this.metricSelector;
     }
 
@@ -49,7 +49,7 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
     @Import(name="targetAverageValue")
       private final @Nullable Output<String> targetAverageValue;
 
-    public Output<String> getTargetAverageValue() {
+    public Output<String> targetAverageValue() {
         return this.targetAverageValue == null ? Codegen.empty() : this.targetAverageValue;
     }
 
@@ -60,7 +60,7 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
     @Import(name="targetValue")
       private final @Nullable Output<String> targetValue;
 
-    public Output<String> getTargetValue() {
+    public Output<String> targetValue() {
         return this.targetValue == null ? Codegen.empty() : this.targetValue;
     }
 

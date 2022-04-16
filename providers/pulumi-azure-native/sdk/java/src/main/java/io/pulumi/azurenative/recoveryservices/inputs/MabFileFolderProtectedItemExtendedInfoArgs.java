@@ -27,7 +27,7 @@ public final class MabFileFolderProtectedItemExtendedInfoArgs extends io.pulumi.
     @Import(name="lastRefreshedAt")
       private final @Nullable Output<String> lastRefreshedAt;
 
-    public Output<String> getLastRefreshedAt() {
+    public Output<String> lastRefreshedAt() {
         return this.lastRefreshedAt == null ? Codegen.empty() : this.lastRefreshedAt;
     }
 
@@ -38,7 +38,7 @@ public final class MabFileFolderProtectedItemExtendedInfoArgs extends io.pulumi.
     @Import(name="oldestRecoveryPoint")
       private final @Nullable Output<String> oldestRecoveryPoint;
 
-    public Output<String> getOldestRecoveryPoint() {
+    public Output<String> oldestRecoveryPoint() {
         return this.oldestRecoveryPoint == null ? Codegen.empty() : this.oldestRecoveryPoint;
     }
 
@@ -49,7 +49,7 @@ public final class MabFileFolderProtectedItemExtendedInfoArgs extends io.pulumi.
     @Import(name="recoveryPointCount")
       private final @Nullable Output<Integer> recoveryPointCount;
 
-    public Output<Integer> getRecoveryPointCount() {
+    public Output<Integer> recoveryPointCount() {
         return this.recoveryPointCount == null ? Codegen.empty() : this.recoveryPointCount;
     }
 

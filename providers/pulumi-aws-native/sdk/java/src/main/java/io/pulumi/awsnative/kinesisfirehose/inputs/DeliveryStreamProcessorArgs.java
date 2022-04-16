@@ -20,14 +20,14 @@ public final class DeliveryStreamProcessorArgs extends io.pulumi.resources.Resou
     @Import(name="parameters")
       private final @Nullable Output<List<DeliveryStreamProcessorParameterArgs>> parameters;
 
-    public Output<List<DeliveryStreamProcessorParameterArgs>> getParameters() {
+    public Output<List<DeliveryStreamProcessorParameterArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     @Import(name="type", required=true)
       private final Output<DeliveryStreamProcessorType> type;
 
-    public Output<DeliveryStreamProcessorType> getType() {
+    public Output<DeliveryStreamProcessorType> type() {
         return this.type;
     }
 

@@ -28,7 +28,7 @@ public final class WeightedBackendServiceArgs extends io.pulumi.resources.Resour
     @Import(name="backendService")
       private final @Nullable Output<String> backendService;
 
-    public Output<String> getBackendService() {
+    public Output<String> backendService() {
         return this.backendService == null ? Codegen.empty() : this.backendService;
     }
 
@@ -39,7 +39,7 @@ public final class WeightedBackendServiceArgs extends io.pulumi.resources.Resour
     @Import(name="headerAction")
       private final @Nullable Output<HttpHeaderActionArgs> headerAction;
 
-    public Output<HttpHeaderActionArgs> getHeaderAction() {
+    public Output<HttpHeaderActionArgs> headerAction() {
         return this.headerAction == null ? Codegen.empty() : this.headerAction;
     }
 
@@ -50,7 +50,7 @@ public final class WeightedBackendServiceArgs extends io.pulumi.resources.Resour
     @Import(name="weight")
       private final @Nullable Output<Integer> weight;
 
-    public Output<Integer> getWeight() {
+    public Output<Integer> weight() {
         return this.weight == null ? Codegen.empty() : this.weight;
     }
 

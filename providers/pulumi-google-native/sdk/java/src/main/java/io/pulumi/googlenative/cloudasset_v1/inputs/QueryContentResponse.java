@@ -23,7 +23,7 @@ public final class QueryContentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="iamPolicyAnalysisQuery", required=true)
       private final IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery;
 
-    public IamPolicyAnalysisQueryResponse getIamPolicyAnalysisQuery() {
+    public IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery() {
         return this.iamPolicyAnalysisQuery;
     }
 

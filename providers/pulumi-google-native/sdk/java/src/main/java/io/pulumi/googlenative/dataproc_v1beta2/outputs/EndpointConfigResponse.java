@@ -34,14 +34,14 @@ public final class EndpointConfigResponse {
      * Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.
      * 
     */
-    public Boolean getEnableHttpPortAccess() {
+    public Boolean enableHttpPortAccess() {
         return this.enableHttpPortAccess;
     }
     /**
      * The map of port descriptions to URLs. Will only be populated if enable_http_port_access is true.
      * 
     */
-    public Map<String,String> getHttpPorts() {
+    public Map<String,String> httpPorts() {
         return this.httpPorts;
     }
 

@@ -26,7 +26,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="additionalContexts", required=true)
       private final List<SourceContextResponse> additionalContexts;
 
-    public List<SourceContextResponse> getAdditionalContexts() {
+    public List<SourceContextResponse> additionalContexts() {
         return this.additionalContexts;
     }
 
@@ -37,7 +37,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="artifactStorageSourceUri", required=true)
       private final String artifactStorageSourceUri;
 
-    public String getArtifactStorageSourceUri() {
+    public String artifactStorageSourceUri() {
         return this.artifactStorageSourceUri;
     }
 
@@ -48,7 +48,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="context", required=true)
       private final SourceContextResponse context;
 
-    public SourceContextResponse getContext() {
+    public SourceContextResponse context() {
         return this.context;
     }
 
@@ -59,7 +59,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="fileHashes", required=true)
       private final Map<String,String> fileHashes;
 
-    public Map<String,String> getFileHashes() {
+    public Map<String,String> fileHashes() {
         return this.fileHashes;
     }
 

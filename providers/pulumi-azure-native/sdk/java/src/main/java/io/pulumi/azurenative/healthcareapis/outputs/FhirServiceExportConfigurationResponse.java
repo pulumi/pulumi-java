@@ -26,7 +26,7 @@ public final class FhirServiceExportConfigurationResponse {
      * The name of the default export storage account.
      * 
     */
-    public Optional<String> getStorageAccountName() {
+    public Optional<String> storageAccountName() {
         return Optional.ofNullable(this.storageAccountName);
     }
 

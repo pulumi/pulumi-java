@@ -23,7 +23,7 @@ public final class GalleryImageIdentifierResponse extends io.pulumi.resources.In
     @Import(name="offer", required=true)
       private final String offer;
 
-    public String getOffer() {
+    public String offer() {
         return this.offer;
     }
 
@@ -34,7 +34,7 @@ public final class GalleryImageIdentifierResponse extends io.pulumi.resources.In
     @Import(name="publisher", required=true)
       private final String publisher;
 
-    public String getPublisher() {
+    public String publisher() {
         return this.publisher;
     }
 
@@ -45,7 +45,7 @@ public final class GalleryImageIdentifierResponse extends io.pulumi.resources.In
     @Import(name="sku", required=true)
       private final String sku;
 
-    public String getSku() {
+    public String sku() {
         return this.sku;
     }
 

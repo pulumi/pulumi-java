@@ -46,7 +46,7 @@ public class Logger extends io.pulumi.resources.CustomResource {
      * Instrumentation key for applicationInsights logger.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getCredentials() {
+    public Output</* @Nullable */ Map<String,String>> credentials() {
         return this.credentials;
     }
     /**
@@ -60,7 +60,7 @@ public class Logger extends io.pulumi.resources.CustomResource {
      * @return Logger description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -74,7 +74,7 @@ public class Logger extends io.pulumi.resources.CustomResource {
      * @return Whether records are buffered in the logger before publishing. Default is assumed to be true.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsBuffered() {
+    public Output</* @Nullable */ Boolean> isBuffered() {
         return this.isBuffered;
     }
     /**
@@ -88,7 +88,7 @@ public class Logger extends io.pulumi.resources.CustomResource {
      * @return Logger type.
      * 
      */
-    public Output<String> getLoggerType() {
+    public Output<String> loggerType() {
         return this.loggerType;
     }
     /**
@@ -102,7 +102,7 @@ public class Logger extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -116,7 +116,7 @@ public class Logger extends io.pulumi.resources.CustomResource {
      * @return Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).
      * 
      */
-    public Output</* @Nullable */ String> getResourceId() {
+    public Output</* @Nullable */ String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -130,7 +130,7 @@ public class Logger extends io.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

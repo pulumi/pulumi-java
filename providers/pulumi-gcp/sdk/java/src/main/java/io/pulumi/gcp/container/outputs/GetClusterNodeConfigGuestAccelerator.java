@@ -24,13 +24,13 @@ public final class GetClusterNodeConfigGuestAccelerator {
         this.type = type;
     }
 
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
-    public String getGpuPartitionSize() {
+    public String gpuPartitionSize() {
         return this.gpuPartitionSize;
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

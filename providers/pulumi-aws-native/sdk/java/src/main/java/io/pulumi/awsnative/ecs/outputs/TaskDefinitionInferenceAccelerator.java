@@ -22,10 +22,10 @@ public final class TaskDefinitionInferenceAccelerator {
         this.deviceType = deviceType;
     }
 
-    public Optional<String> getDeviceName() {
+    public Optional<String> deviceName() {
         return Optional.ofNullable(this.deviceName);
     }
-    public Optional<String> getDeviceType() {
+    public Optional<String> deviceType() {
         return Optional.ofNullable(this.deviceType);
     }
 

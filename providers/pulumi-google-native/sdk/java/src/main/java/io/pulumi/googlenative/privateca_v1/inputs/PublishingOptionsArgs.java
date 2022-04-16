@@ -26,7 +26,7 @@ public final class PublishingOptionsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="publishCaCert")
       private final @Nullable Output<Boolean> publishCaCert;
 
-    public Output<Boolean> getPublishCaCert() {
+    public Output<Boolean> publishCaCert() {
         return this.publishCaCert == null ? Codegen.empty() : this.publishCaCert;
     }
 
@@ -37,7 +37,7 @@ public final class PublishingOptionsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="publishCrl")
       private final @Nullable Output<Boolean> publishCrl;
 
-    public Output<Boolean> getPublishCrl() {
+    public Output<Boolean> publishCrl() {
         return this.publishCrl == null ? Codegen.empty() : this.publishCrl;
     }
 

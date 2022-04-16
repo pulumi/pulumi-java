@@ -26,7 +26,7 @@ public final class SigningKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyId")
       private final @Nullable Output<String> keyId;
 
-    public Output<String> getKeyId() {
+    public Output<String> keyId() {
         return this.keyId == null ? Codegen.empty() : this.keyId;
     }
 
@@ -37,7 +37,7 @@ public final class SigningKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyScheme")
       private final @Nullable Output<String> keyScheme;
 
-    public Output<String> getKeyScheme() {
+    public Output<String> keyScheme() {
         return this.keyScheme == null ? Codegen.empty() : this.keyScheme;
     }
 
@@ -48,7 +48,7 @@ public final class SigningKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyType")
       private final @Nullable Output<String> keyType;
 
-    public Output<String> getKeyType() {
+    public Output<String> keyType() {
         return this.keyType == null ? Codegen.empty() : this.keyType;
     }
 
@@ -59,7 +59,7 @@ public final class SigningKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicKeyValue")
       private final @Nullable Output<String> publicKeyValue;
 
-    public Output<String> getPublicKeyValue() {
+    public Output<String> publicKeyValue() {
         return this.publicKeyValue == null ? Codegen.empty() : this.publicKeyValue;
     }
 

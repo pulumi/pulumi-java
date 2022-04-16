@@ -18,7 +18,7 @@ public final class JobIAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobId", required=true)
       private final Output<String> jobId;
 
-    public Output<String> getJobId() {
+    public Output<String> jobId() {
         return this.jobId;
     }
 
@@ -29,7 +29,7 @@ public final class JobIAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 
@@ -41,7 +41,7 @@ public final class JobIAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -53,7 +53,7 @@ public final class JobIAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 

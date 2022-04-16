@@ -52,14 +52,14 @@ public final class DataboxJobSecretsResponse {
      * Dc Access Security Code for Customer Managed Shipping
      * 
     */
-    public DcAccessSecurityCodeResponse getDcAccessSecurityCode() {
+    public DcAccessSecurityCodeResponse dcAccessSecurityCode() {
         return this.dcAccessSecurityCode;
     }
     /**
      * Error while fetching the secrets.
      * 
     */
-    public CloudErrorResponse getError() {
+    public CloudErrorResponse error() {
         return this.error;
     }
     /**
@@ -67,14 +67,14 @@ public final class DataboxJobSecretsResponse {
      * Expected value is 'DataBox'.
      * 
     */
-    public String getJobSecretsType() {
+    public String jobSecretsType() {
         return this.jobSecretsType;
     }
     /**
      * Contains the list of secret objects for a job.
      * 
     */
-    public List<DataBoxSecretResponse> getPodSecrets() {
+    public List<DataBoxSecretResponse> podSecrets() {
         return this.podSecrets == null ? List.of() : this.podSecrets;
     }
 

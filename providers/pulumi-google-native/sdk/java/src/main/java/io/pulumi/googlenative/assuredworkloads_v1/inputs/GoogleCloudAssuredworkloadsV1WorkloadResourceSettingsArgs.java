@@ -27,7 +27,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs ext
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs ext
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs ext
     @Import(name="resourceType")
       private final @Nullable Output<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType> resourceType;
 
-    public Output<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType> getPropResourceType() {
+    public Output<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType> resourceType() {
         return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 

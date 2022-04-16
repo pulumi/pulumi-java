@@ -57,7 +57,7 @@ public final class PolicyClusterAdmissionRule {
      * The identifier for this object. Format specified above.
      * 
     */
-    public String getCluster() {
+    public String cluster() {
         return this.cluster;
     }
     /**
@@ -65,7 +65,7 @@ public final class PolicyClusterAdmissionRule {
      * Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
      * 
     */
-    public String getEnforcementMode() {
+    public String enforcementMode() {
         return this.enforcementMode;
     }
     /**
@@ -73,7 +73,7 @@ public final class PolicyClusterAdmissionRule {
      * Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
      * 
     */
-    public String getEvaluationMode() {
+    public String evaluationMode() {
         return this.evaluationMode;
     }
     /**
@@ -87,7 +87,7 @@ public final class PolicyClusterAdmissionRule {
      * specifies REQUIRE_ATTESTATION, otherwise it must be empty.
      * 
     */
-    public List<String> getRequireAttestationsBies() {
+    public List<String> requireAttestationsBies() {
         return this.requireAttestationsBies == null ? List.of() : this.requireAttestationsBies;
     }
 

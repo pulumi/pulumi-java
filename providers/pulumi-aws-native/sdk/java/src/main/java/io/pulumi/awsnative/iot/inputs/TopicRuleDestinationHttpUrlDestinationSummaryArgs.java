@@ -18,7 +18,7 @@ public final class TopicRuleDestinationHttpUrlDestinationSummaryArgs extends io.
     @Import(name="confirmationUrl")
       private final @Nullable Output<String> confirmationUrl;
 
-    public Output<String> getConfirmationUrl() {
+    public Output<String> confirmationUrl() {
         return this.confirmationUrl == null ? Codegen.empty() : this.confirmationUrl;
     }
 

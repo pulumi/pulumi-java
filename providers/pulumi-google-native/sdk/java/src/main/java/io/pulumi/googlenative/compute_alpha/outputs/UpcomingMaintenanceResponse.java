@@ -41,21 +41,21 @@ public final class UpcomingMaintenanceResponse {
      * Indicates if the maintenance can be customer triggered. From more detail, see go/sf-ctm-design.
      * 
     */
-    public Boolean getCanReschedule() {
+    public Boolean canReschedule() {
         return this.canReschedule;
     }
     /**
      * The start time window of the maintenance disruption.
      * 
     */
-    public UpcomingMaintenanceTimeWindowResponse getStartTimeWindow() {
+    public UpcomingMaintenanceTimeWindowResponse startTimeWindow() {
         return this.startTimeWindow;
     }
     /**
      * Defines the type of maintenance.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

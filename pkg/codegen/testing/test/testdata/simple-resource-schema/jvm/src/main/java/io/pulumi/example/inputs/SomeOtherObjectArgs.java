@@ -18,7 +18,7 @@ public final class SomeOtherObjectArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="baz")
       private final @Nullable Output<String> baz;
 
-    public Output<String> getBaz() {
+    public Output<String> baz() {
         return this.baz == null ? Codegen.empty() : this.baz;
     }
 

@@ -19,7 +19,7 @@ public final class GetNotificationHubAuthorizationRuleArgs extends io.pulumi.res
     @Import(name="authorizationRuleName", required=true)
       private final String authorizationRuleName;
 
-    public String getAuthorizationRuleName() {
+    public String authorizationRuleName() {
         return this.authorizationRuleName;
     }
 
@@ -30,7 +30,7 @@ public final class GetNotificationHubAuthorizationRuleArgs extends io.pulumi.res
     @Import(name="namespaceName", required=true)
       private final String namespaceName;
 
-    public String getNamespaceName() {
+    public String namespaceName() {
         return this.namespaceName;
     }
 
@@ -41,7 +41,7 @@ public final class GetNotificationHubAuthorizationRuleArgs extends io.pulumi.res
     @Import(name="notificationHubName", required=true)
       private final String notificationHubName;
 
-    public String getNotificationHubName() {
+    public String notificationHubName() {
         return this.notificationHubName;
     }
 
@@ -52,7 +52,7 @@ public final class GetNotificationHubAuthorizationRuleArgs extends io.pulumi.res
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

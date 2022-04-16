@@ -32,7 +32,7 @@ public class UserDataMapping extends io.pulumi.resources.CustomResource {
      * @return Indicates the time when this mapping was archived.
      * 
      */
-    public Output<String> getArchiveTime() {
+    public Output<String> archiveTime() {
         return this.archiveTime;
     }
     /**
@@ -46,7 +46,7 @@ public class UserDataMapping extends io.pulumi.resources.CustomResource {
      * @return Indicates whether this mapping is archived.
      * 
      */
-    public Output<Boolean> getArchived() {
+    public Output<Boolean> archived() {
         return this.archived;
     }
     /**
@@ -60,7 +60,7 @@ public class UserDataMapping extends io.pulumi.resources.CustomResource {
      * @return A unique identifier for the mapped resource.
      * 
      */
-    public Output<String> getDataId() {
+    public Output<String> dataId() {
         return this.dataId;
     }
     /**
@@ -74,7 +74,7 @@ public class UserDataMapping extends io.pulumi.resources.CustomResource {
      * @return Resource name of the User data mapping, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/userDataMappings/{user_data_mapping_id}`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -88,7 +88,7 @@ public class UserDataMapping extends io.pulumi.resources.CustomResource {
      * @return Attributes of the resource. Only explicitly set attributes are displayed here. Attribute definitions with defaults set implicitly apply to these User data mappings. Attributes listed here must be single valued, that is, exactly one value is specified for the field "values" in each Attribute.
      * 
      */
-    public Output<List<AttributeResponse>> getResourceAttributes() {
+    public Output<List<AttributeResponse>> resourceAttributes() {
         return this.resourceAttributes;
     }
     /**
@@ -102,7 +102,7 @@ public class UserDataMapping extends io.pulumi.resources.CustomResource {
      * @return User's UUID provided by the client.
      * 
      */
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId;
     }
 

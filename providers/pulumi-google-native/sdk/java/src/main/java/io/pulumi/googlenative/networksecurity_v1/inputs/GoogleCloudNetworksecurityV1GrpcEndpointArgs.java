@@ -25,7 +25,7 @@ public final class GoogleCloudNetworksecurityV1GrpcEndpointArgs extends io.pulum
     @Import(name="targetUri", required=true)
       private final Output<String> targetUri;
 
-    public Output<String> getTargetUri() {
+    public Output<String> targetUri() {
         return this.targetUri;
     }
 

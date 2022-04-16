@@ -38,7 +38,7 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay
      * represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
      * 
     */
-    public Optional<Integer> getNanos() {
+    public Optional<Integer> nanos() {
         return Optional.ofNullable(this.nanos);
     }
     /**
@@ -46,7 +46,7 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay
      * Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
      * 
     */
-    public String getSeconds() {
+    public String seconds() {
         return this.seconds;
     }
 

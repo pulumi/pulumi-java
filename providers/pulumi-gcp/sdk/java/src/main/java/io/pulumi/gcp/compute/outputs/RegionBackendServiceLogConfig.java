@@ -38,7 +38,7 @@ public final class RegionBackendServiceLogConfig {
      * Whether to enable logging for the load balancer traffic served by this backend service.
      * 
     */
-    public Optional<Boolean> getEnable() {
+    public Optional<Boolean> enable() {
         return Optional.ofNullable(this.enable);
     }
     /**
@@ -48,7 +48,7 @@ public final class RegionBackendServiceLogConfig {
      * The default value is 1.0.
      * 
     */
-    public Optional<Double> getSampleRate() {
+    public Optional<Double> sampleRate() {
         return Optional.ofNullable(this.sampleRate);
     }
 

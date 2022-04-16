@@ -47,7 +47,7 @@ public class DefaultKmsKey extends io.pulumi.resources.CustomResource {
      * @return The ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use to encrypt the EBS volume.
      * 
      */
-    public Output<String> getKeyArn() {
+    public Output<String> keyArn() {
         return this.keyArn;
     }
 

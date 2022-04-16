@@ -22,7 +22,7 @@ public final class ClusterS3ImportGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
@@ -33,7 +33,7 @@ public final class ClusterS3ImportGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="bucketPrefix")
       private final @Nullable Output<String> bucketPrefix;
 
-    public Output<String> getBucketPrefix() {
+    public Output<String> bucketPrefix() {
         return this.bucketPrefix == null ? Codegen.empty() : this.bucketPrefix;
     }
 
@@ -44,7 +44,7 @@ public final class ClusterS3ImportGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="ingestionRole", required=true)
       private final Output<String> ingestionRole;
 
-    public Output<String> getIngestionRole() {
+    public Output<String> ingestionRole() {
         return this.ingestionRole;
     }
 
@@ -55,7 +55,7 @@ public final class ClusterS3ImportGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="sourceEngine", required=true)
       private final Output<String> sourceEngine;
 
-    public Output<String> getSourceEngine() {
+    public Output<String> sourceEngine() {
         return this.sourceEngine;
     }
 
@@ -66,7 +66,7 @@ public final class ClusterS3ImportGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="sourceEngineVersion", required=true)
       private final Output<String> sourceEngineVersion;
 
-    public Output<String> getSourceEngineVersion() {
+    public Output<String> sourceEngineVersion() {
         return this.sourceEngineVersion;
     }
 

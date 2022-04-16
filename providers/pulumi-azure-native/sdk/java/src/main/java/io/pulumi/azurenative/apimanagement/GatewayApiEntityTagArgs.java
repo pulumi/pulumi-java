@@ -23,7 +23,7 @@ public final class GatewayApiEntityTagArgs extends io.pulumi.resources.ResourceA
     @Import(name="apiId")
       private final @Nullable Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId == null ? Codegen.empty() : this.apiId;
     }
 
@@ -34,7 +34,7 @@ public final class GatewayApiEntityTagArgs extends io.pulumi.resources.ResourceA
     @Import(name="gatewayId", required=true)
       private final Output<String> gatewayId;
 
-    public Output<String> getGatewayId() {
+    public Output<String> gatewayId() {
         return this.gatewayId;
     }
 
@@ -45,7 +45,7 @@ public final class GatewayApiEntityTagArgs extends io.pulumi.resources.ResourceA
     @Import(name="provisioningState")
       private final @Nullable Output<ProvisioningState> provisioningState;
 
-    public Output<ProvisioningState> getProvisioningState() {
+    public Output<ProvisioningState> provisioningState() {
         return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
@@ -56,7 +56,7 @@ public final class GatewayApiEntityTagArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +67,7 @@ public final class GatewayApiEntityTagArgs extends io.pulumi.resources.ResourceA
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 

@@ -19,7 +19,7 @@ public final class GetSecurityRuleArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="networkSecurityGroupName", required=true)
       private final String networkSecurityGroupName;
 
-    public String getNetworkSecurityGroupName() {
+    public String networkSecurityGroupName() {
         return this.networkSecurityGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetSecurityRuleArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetSecurityRuleArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="securityRuleName", required=true)
       private final String securityRuleName;
 
-    public String getSecurityRuleName() {
+    public String securityRuleName() {
         return this.securityRuleName;
     }
 

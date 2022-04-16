@@ -30,7 +30,7 @@ public final class CommonEncryptionCbcsArgs extends io.pulumi.resources.Resource
     @Import(name="clearTracks")
       private final @Nullable Output<List<TrackSelectionArgs>> clearTracks;
 
-    public Output<List<TrackSelectionArgs>> getClearTracks() {
+    public Output<List<TrackSelectionArgs>> clearTracks() {
         return this.clearTracks == null ? Codegen.empty() : this.clearTracks;
     }
 
@@ -41,7 +41,7 @@ public final class CommonEncryptionCbcsArgs extends io.pulumi.resources.Resource
     @Import(name="contentKeys")
       private final @Nullable Output<StreamingPolicyContentKeysArgs> contentKeys;
 
-    public Output<StreamingPolicyContentKeysArgs> getContentKeys() {
+    public Output<StreamingPolicyContentKeysArgs> contentKeys() {
         return this.contentKeys == null ? Codegen.empty() : this.contentKeys;
     }
 
@@ -52,7 +52,7 @@ public final class CommonEncryptionCbcsArgs extends io.pulumi.resources.Resource
     @Import(name="drm")
       private final @Nullable Output<CbcsDrmConfigurationArgs> drm;
 
-    public Output<CbcsDrmConfigurationArgs> getDrm() {
+    public Output<CbcsDrmConfigurationArgs> drm() {
         return this.drm == null ? Codegen.empty() : this.drm;
     }
 
@@ -63,7 +63,7 @@ public final class CommonEncryptionCbcsArgs extends io.pulumi.resources.Resource
     @Import(name="enabledProtocols")
       private final @Nullable Output<EnabledProtocolsArgs> enabledProtocols;
 
-    public Output<EnabledProtocolsArgs> getEnabledProtocols() {
+    public Output<EnabledProtocolsArgs> enabledProtocols() {
         return this.enabledProtocols == null ? Codegen.empty() : this.enabledProtocols;
     }
 

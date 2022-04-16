@@ -44,7 +44,7 @@ public class BandwidthSchedule extends io.pulumi.resources.CustomResource {
      * @return The days of the week when this schedule is applicable.
      * 
      */
-    public Output<List<String>> getDays() {
+    public Output<List<String>> days() {
         return this.days;
     }
     /**
@@ -58,7 +58,7 @@ public class BandwidthSchedule extends io.pulumi.resources.CustomResource {
      * @return The object name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +72,7 @@ public class BandwidthSchedule extends io.pulumi.resources.CustomResource {
      * @return The bandwidth rate in Mbps.
      * 
      */
-    public Output<Integer> getRateInMbps() {
+    public Output<Integer> rateInMbps() {
         return this.rateInMbps;
     }
     /**
@@ -86,7 +86,7 @@ public class BandwidthSchedule extends io.pulumi.resources.CustomResource {
      * @return The start time of the schedule in UTC.
      * 
      */
-    public Output<String> getStart() {
+    public Output<String> start() {
         return this.start;
     }
     /**
@@ -100,7 +100,7 @@ public class BandwidthSchedule extends io.pulumi.resources.CustomResource {
      * @return The stop time of the schedule in UTC.
      * 
      */
-    public Output<String> getStop() {
+    public Output<String> stop() {
         return this.stop;
     }
     /**
@@ -114,7 +114,7 @@ public class BandwidthSchedule extends io.pulumi.resources.CustomResource {
      * @return Bandwidth object related to ASE resource
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -128,7 +128,7 @@ public class BandwidthSchedule extends io.pulumi.resources.CustomResource {
      * @return The hierarchical type of the object.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

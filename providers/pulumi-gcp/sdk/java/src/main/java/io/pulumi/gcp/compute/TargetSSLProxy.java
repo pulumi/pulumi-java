@@ -58,7 +58,7 @@ public class TargetSSLProxy extends io.pulumi.resources.CustomResource {
      * @return A reference to the BackendService resource.
      * 
      */
-    public Output<String> getBackendService() {
+    public Output<String> backendService() {
         return this.backendService;
     }
     /**
@@ -72,7 +72,7 @@ public class TargetSSLProxy extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -86,7 +86,7 @@ public class TargetSSLProxy extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -112,7 +112,7 @@ public class TargetSSLProxy extends io.pulumi.resources.CustomResource {
      * character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -128,7 +128,7 @@ public class TargetSSLProxy extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -148,7 +148,7 @@ public class TargetSSLProxy extends io.pulumi.resources.CustomResource {
      * Possible values are `NONE` and `PROXY_V1`.
      * 
      */
-    public Output</* @Nullable */ String> getProxyHeader() {
+    public Output</* @Nullable */ String> proxyHeader() {
         return this.proxyHeader;
     }
     /**
@@ -162,7 +162,7 @@ public class TargetSSLProxy extends io.pulumi.resources.CustomResource {
      * @return The unique identifier for the resource.
      * 
      */
-    public Output<Integer> getProxyId() {
+    public Output<Integer> proxyId() {
         return this.proxyId;
     }
     /**
@@ -176,7 +176,7 @@ public class TargetSSLProxy extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -194,7 +194,7 @@ public class TargetSSLProxy extends io.pulumi.resources.CustomResource {
      * SSL certificate must be specified.
      * 
      */
-    public Output<List<String>> getSslCertificates() {
+    public Output<List<String>> sslCertificates() {
         return this.sslCertificates;
     }
     /**
@@ -212,7 +212,7 @@ public class TargetSSLProxy extends io.pulumi.resources.CustomResource {
      * resource will not have any SSL policy configured.
      * 
      */
-    public Output</* @Nullable */ String> getSslPolicy() {
+    public Output</* @Nullable */ String> sslPolicy() {
         return this.sslPolicy;
     }
 

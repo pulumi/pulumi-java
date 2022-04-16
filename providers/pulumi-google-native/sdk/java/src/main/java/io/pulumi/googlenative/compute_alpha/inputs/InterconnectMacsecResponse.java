@@ -25,7 +25,7 @@ public final class InterconnectMacsecResponse extends io.pulumi.resources.Invoke
     @Import(name="failOpen", required=true)
       private final Boolean failOpen;
 
-    public Boolean getFailOpen() {
+    public Boolean failOpen() {
         return this.failOpen;
     }
 
@@ -36,7 +36,7 @@ public final class InterconnectMacsecResponse extends io.pulumi.resources.Invoke
     @Import(name="preSharedKeys", required=true)
       private final List<InterconnectMacsecPreSharedKeyResponse> preSharedKeys;
 
-    public List<InterconnectMacsecPreSharedKeyResponse> getPreSharedKeys() {
+    public List<InterconnectMacsecPreSharedKeyResponse> preSharedKeys() {
         return this.preSharedKeys;
     }
 

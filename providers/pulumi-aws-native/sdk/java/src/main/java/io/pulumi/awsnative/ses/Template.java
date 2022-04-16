@@ -22,7 +22,7 @@ public class Template extends io.pulumi.resources.CustomResource {
     @Export(name="template", type=io.pulumi.awsnative.ses.outputs.Template.class, parameters={})
     private Output</* @Nullable */ io.pulumi.awsnative.ses.outputs.Template> template;
 
-    public Output</* @Nullable */ io.pulumi.awsnative.ses.outputs.Template> getTemplate() {
+    public Output</* @Nullable */ io.pulumi.awsnative.ses.outputs.Template> template() {
         return this.template;
     }
 

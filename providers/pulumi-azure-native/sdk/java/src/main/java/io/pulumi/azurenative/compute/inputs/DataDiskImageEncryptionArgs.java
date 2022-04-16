@@ -27,7 +27,7 @@ public final class DataDiskImageEncryptionArgs extends io.pulumi.resources.Resou
     @Import(name="diskEncryptionSetId")
       private final @Nullable Output<String> diskEncryptionSetId;
 
-    public Output<String> getDiskEncryptionSetId() {
+    public Output<String> diskEncryptionSetId() {
         return this.diskEncryptionSetId == null ? Codegen.empty() : this.diskEncryptionSetId;
     }
 
@@ -38,7 +38,7 @@ public final class DataDiskImageEncryptionArgs extends io.pulumi.resources.Resou
     @Import(name="lun", required=true)
       private final Output<Integer> lun;
 
-    public Output<Integer> getLun() {
+    public Output<Integer> lun() {
         return this.lun;
     }
 

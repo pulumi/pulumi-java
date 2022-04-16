@@ -29,7 +29,7 @@ public final class SloWindowsBasedSliArgs extends io.pulumi.resources.ResourceAr
     @Import(name="goodBadMetricFilter")
       private final @Nullable Output<String> goodBadMetricFilter;
 
-    public Output<String> getGoodBadMetricFilter() {
+    public Output<String> goodBadMetricFilter() {
         return this.goodBadMetricFilter == null ? Codegen.empty() : this.goodBadMetricFilter;
     }
 
@@ -44,7 +44,7 @@ public final class SloWindowsBasedSliArgs extends io.pulumi.resources.ResourceAr
     @Import(name="goodTotalRatioThreshold")
       private final @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdArgs> goodTotalRatioThreshold;
 
-    public Output<SloWindowsBasedSliGoodTotalRatioThresholdArgs> getGoodTotalRatioThreshold() {
+    public Output<SloWindowsBasedSliGoodTotalRatioThresholdArgs> goodTotalRatioThreshold() {
         return this.goodTotalRatioThreshold == null ? Codegen.empty() : this.goodTotalRatioThreshold;
     }
 
@@ -62,7 +62,7 @@ public final class SloWindowsBasedSliArgs extends io.pulumi.resources.ResourceAr
     @Import(name="metricMeanInRange")
       private final @Nullable Output<SloWindowsBasedSliMetricMeanInRangeArgs> metricMeanInRange;
 
-    public Output<SloWindowsBasedSliMetricMeanInRangeArgs> getMetricMeanInRange() {
+    public Output<SloWindowsBasedSliMetricMeanInRangeArgs> metricMeanInRange() {
         return this.metricMeanInRange == null ? Codegen.empty() : this.metricMeanInRange;
     }
 
@@ -80,7 +80,7 @@ public final class SloWindowsBasedSliArgs extends io.pulumi.resources.ResourceAr
     @Import(name="metricSumInRange")
       private final @Nullable Output<SloWindowsBasedSliMetricSumInRangeArgs> metricSumInRange;
 
-    public Output<SloWindowsBasedSliMetricSumInRangeArgs> getMetricSumInRange() {
+    public Output<SloWindowsBasedSliMetricSumInRangeArgs> metricSumInRange() {
         return this.metricSumInRange == null ? Codegen.empty() : this.metricSumInRange;
     }
 
@@ -93,7 +93,7 @@ public final class SloWindowsBasedSliArgs extends io.pulumi.resources.ResourceAr
     @Import(name="windowPeriod")
       private final @Nullable Output<String> windowPeriod;
 
-    public Output<String> getWindowPeriod() {
+    public Output<String> windowPeriod() {
         return this.windowPeriod == null ? Codegen.empty() : this.windowPeriod;
     }
 

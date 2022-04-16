@@ -50,28 +50,28 @@ public final class ContainerHttpGetResponse {
      * The HTTP headers.
      * 
     */
-    public Optional<HttpHeadersResponse> getHttpHeaders() {
+    public Optional<HttpHeadersResponse> httpHeaders() {
         return Optional.ofNullable(this.httpHeaders);
     }
     /**
      * The path to probe.
      * 
     */
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
      * The port number to probe.
      * 
     */
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
     /**
      * The scheme.
      * 
     */
-    public Optional<String> getScheme() {
+    public Optional<String> scheme() {
         return Optional.ofNullable(this.scheme);
     }
 

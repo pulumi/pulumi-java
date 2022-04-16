@@ -27,7 +27,7 @@ public final class GlueRecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostName", required=true)
       private final Output<String> hostName;
 
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName;
     }
 
@@ -38,7 +38,7 @@ public final class GlueRecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipv4Addresses")
       private final @Nullable Output<List<String>> ipv4Addresses;
 
-    public Output<List<String>> getIpv4Addresses() {
+    public Output<List<String>> ipv4Addresses() {
         return this.ipv4Addresses == null ? Codegen.empty() : this.ipv4Addresses;
     }
 
@@ -49,7 +49,7 @@ public final class GlueRecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipv6Addresses")
       private final @Nullable Output<List<String>> ipv6Addresses;
 
-    public Output<List<String>> getIpv6Addresses() {
+    public Output<List<String>> ipv6Addresses() {
         return this.ipv6Addresses == null ? Codegen.empty() : this.ipv6Addresses;
     }
 

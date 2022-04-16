@@ -27,7 +27,7 @@ public final class IoTEdgeAgentInfoArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="imageName", required=true)
       private final Output<String> imageName;
 
-    public Output<String> getImageName() {
+    public Output<String> imageName() {
         return this.imageName;
     }
 
@@ -38,7 +38,7 @@ public final class IoTEdgeAgentInfoArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="imageRepository")
       private final @Nullable Output<ImageRepositoryCredentialArgs> imageRepository;
 
-    public Output<ImageRepositoryCredentialArgs> getImageRepository() {
+    public Output<ImageRepositoryCredentialArgs> imageRepository() {
         return this.imageRepository == null ? Codegen.empty() : this.imageRepository;
     }
 
@@ -49,7 +49,7 @@ public final class IoTEdgeAgentInfoArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tag", required=true)
       private final Output<String> tag;
 
-    public Output<String> getTag() {
+    public Output<String> tag() {
         return this.tag;
     }
 

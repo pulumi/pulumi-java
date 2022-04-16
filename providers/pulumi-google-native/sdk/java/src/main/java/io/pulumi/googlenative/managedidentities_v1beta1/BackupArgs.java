@@ -19,14 +19,14 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backupId", required=true)
       private final Output<String> backupId;
 
-    public Output<String> getBackupId() {
+    public Output<String> backupId() {
         return this.backupId;
     }
 
     @Import(name="domainId", required=true)
       private final Output<String> domainId;
 
-    public Output<String> getDomainId() {
+    public Output<String> domainId() {
         return this.domainId;
     }
 
@@ -37,14 +37,14 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

@@ -28,16 +28,16 @@ public final class PublicKeyConfig {
         this.name = name;
     }
 
-    public String getCallerReference() {
+    public String callerReference() {
         return this.callerReference;
     }
-    public Optional<String> getComment() {
+    public Optional<String> comment() {
         return Optional.ofNullable(this.comment);
     }
-    public String getEncodedKey() {
+    public String encodedKey() {
         return this.encodedKey;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

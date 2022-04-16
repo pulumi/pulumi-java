@@ -41,21 +41,21 @@ public final class CertificateConfigResponse {
      * Optional. The public key that corresponds to this config. This is, for example, used when issuing Certificates, but not when creating a self-signed CertificateAuthority or CertificateAuthority CSR.
      * 
     */
-    public PublicKeyResponse getPublicKey() {
+    public PublicKeyResponse publicKey() {
         return this.publicKey;
     }
     /**
      * Specifies some of the values in a certificate that are related to the subject.
      * 
     */
-    public SubjectConfigResponse getSubjectConfig() {
+    public SubjectConfigResponse subjectConfig() {
         return this.subjectConfig;
     }
     /**
      * Describes how some of the technical X.509 fields in a certificate should be populated.
      * 
     */
-    public X509ParametersResponse getX509Config() {
+    public X509ParametersResponse x509Config() {
         return this.x509Config;
     }
 

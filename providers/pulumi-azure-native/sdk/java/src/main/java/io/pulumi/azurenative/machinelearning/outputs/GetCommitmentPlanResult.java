@@ -79,56 +79,56 @@ public final class GetCommitmentPlanResult {
      * An entity tag used to enforce optimistic concurrency.
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The commitment plan properties.
      * 
     */
-    public CommitmentPlanPropertiesResponse getProperties() {
+    public CommitmentPlanPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * The commitment plan SKU.
      * 
     */
-    public Optional<ResourceSkuResponse> getSku() {
+    public Optional<ResourceSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * User-defined tags for the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

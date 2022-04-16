@@ -27,7 +27,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="columnLayout")
       private final @Nullable Output<ColumnLayoutArgs> columnLayout;
 
-    public Output<ColumnLayoutArgs> getColumnLayout() {
+    public Output<ColumnLayoutArgs> columnLayout() {
         return this.columnLayout == null ? Codegen.empty() : this.columnLayout;
     }
 
@@ -38,7 +38,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -49,7 +49,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -60,7 +60,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gridLayout")
       private final @Nullable Output<GridLayoutArgs> gridLayout;
 
-    public Output<GridLayoutArgs> getGridLayout() {
+    public Output<GridLayoutArgs> gridLayout() {
         return this.gridLayout == null ? Codegen.empty() : this.gridLayout;
     }
 
@@ -71,7 +71,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -82,7 +82,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mosaicLayout")
       private final @Nullable Output<MosaicLayoutArgs> mosaicLayout;
 
-    public Output<MosaicLayoutArgs> getMosaicLayout() {
+    public Output<MosaicLayoutArgs> mosaicLayout() {
         return this.mosaicLayout == null ? Codegen.empty() : this.mosaicLayout;
     }
 
@@ -93,14 +93,14 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -111,14 +111,14 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rowLayout")
       private final @Nullable Output<RowLayoutArgs> rowLayout;
 
-    public Output<RowLayoutArgs> getRowLayout() {
+    public Output<RowLayoutArgs> rowLayout() {
         return this.rowLayout == null ? Codegen.empty() : this.rowLayout;
     }
 
     @Import(name="validateOnly")
       private final @Nullable Output<String> validateOnly;
 
-    public Output<String> getValidateOnly() {
+    public Output<String> validateOnly() {
         return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
     }
 

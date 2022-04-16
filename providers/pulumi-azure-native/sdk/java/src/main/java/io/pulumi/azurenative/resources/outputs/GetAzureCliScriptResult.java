@@ -191,56 +191,56 @@ public final class GetAzureCliScriptResult {
      * Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location 'West US 2'
      * 
     */
-    public Optional<String> getArguments() {
+    public Optional<String> arguments() {
         return Optional.ofNullable(this.arguments);
     }
     /**
      * Azure CLI module version to be used.
      * 
     */
-    public String getAzCliVersion() {
+    public String azCliVersion() {
         return this.azCliVersion;
     }
     /**
      * The clean up preference when the script execution gets in a terminal state. Default setting is 'Always'.
      * 
     */
-    public Optional<String> getCleanupPreference() {
+    public Optional<String> cleanupPreference() {
         return Optional.ofNullable(this.cleanupPreference);
     }
     /**
      * Container settings.
      * 
     */
-    public Optional<ContainerConfigurationResponse> getContainerSettings() {
+    public Optional<ContainerConfigurationResponse> containerSettings() {
         return Optional.ofNullable(this.containerSettings);
     }
     /**
      * The environment variables to pass over to the script.
      * 
     */
-    public List<EnvironmentVariableResponse> getEnvironmentVariables() {
+    public List<EnvironmentVariableResponse> environmentVariables() {
         return this.environmentVariables == null ? List.of() : this.environmentVariables;
     }
     /**
      * Gets or sets how the deployment script should be forced to execute even if the script resource has not changed. Can be current time stamp or a GUID.
      * 
     */
-    public Optional<String> getForceUpdateTag() {
+    public Optional<String> forceUpdateTag() {
         return Optional.ofNullable(this.forceUpdateTag);
     }
     /**
      * String Id used to locate any resource on Azure.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
      * 
     */
-    public Optional<ManagedServiceIdentityResponse> getIdentity() {
+    public Optional<ManagedServiceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
@@ -248,105 +248,105 @@ public final class GetAzureCliScriptResult {
      * Expected value is 'AzureCLI'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The location of the ACI and the storage account for the deployment script.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Name of this resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * List of script outputs.
      * 
     */
-    public Map<String,Object> getOutputs() {
+    public Map<String,Object> outputs() {
         return this.outputs;
     }
     /**
      * Uri for the script. This is the entry point for the external script.
      * 
     */
-    public Optional<String> getPrimaryScriptUri() {
+    public Optional<String> primaryScriptUri() {
         return Optional.ofNullable(this.primaryScriptUri);
     }
     /**
      * State of the script execution. This only appears in the response.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Interval for which the service retains the script resource after it reaches a terminal state. Resource will be deleted when this duration expires. Duration is based on ISO 8601 pattern (for example P1D means one day).
      * 
     */
-    public String getRetentionInterval() {
+    public String retentionInterval() {
         return this.retentionInterval;
     }
     /**
      * Script body.
      * 
     */
-    public Optional<String> getScriptContent() {
+    public Optional<String> scriptContent() {
         return Optional.ofNullable(this.scriptContent);
     }
     /**
      * Contains the results of script execution.
      * 
     */
-    public ScriptStatusResponse getStatus() {
+    public ScriptStatusResponse status() {
         return this.status;
     }
     /**
      * Storage Account settings.
      * 
     */
-    public Optional<StorageAccountConfigurationResponse> getStorageAccountSettings() {
+    public Optional<StorageAccountConfigurationResponse> storageAccountSettings() {
         return Optional.ofNullable(this.storageAccountSettings);
     }
     /**
      * Supporting files for the external script.
      * 
     */
-    public List<String> getSupportingScriptUris() {
+    public List<String> supportingScriptUris() {
         return this.supportingScriptUris == null ? List.of() : this.supportingScriptUris;
     }
     /**
      * The system metadata related to this resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Maximum allowed script execution time specified in ISO 8601 format. Default value is P1D
      * 
     */
-    public Optional<String> getTimeout() {
+    public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }
     /**
      * Type of this resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

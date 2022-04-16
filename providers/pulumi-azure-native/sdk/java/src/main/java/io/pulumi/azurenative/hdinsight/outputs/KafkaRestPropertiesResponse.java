@@ -36,14 +36,14 @@ public final class KafkaRestPropertiesResponse {
      * The information of AAD security group.
      * 
     */
-    public Optional<ClientGroupInfoResponse> getClientGroupInfo() {
+    public Optional<ClientGroupInfoResponse> clientGroupInfo() {
         return Optional.ofNullable(this.clientGroupInfo);
     }
     /**
      * The configurations that need to be overriden.
      * 
     */
-    public Map<String,String> getConfigurationOverride() {
+    public Map<String,String> configurationOverride() {
         return this.configurationOverride == null ? Map.of() : this.configurationOverride;
     }
 

@@ -33,7 +33,7 @@ public final class InstanceBootDiskInitializeParamsGetArgs extends io.pulumi.res
     @Import(name="image")
       private final @Nullable Output<String> image;
 
-    public Output<String> getImage() {
+    public Output<String> image() {
         return this.image == null ? Codegen.empty() : this.image;
     }
 
@@ -44,7 +44,7 @@ public final class InstanceBootDiskInitializeParamsGetArgs extends io.pulumi.res
     @Import(name="labels")
       private final @Nullable Output<Map<String,Object>> labels;
 
-    public Output<Map<String,Object>> getLabels() {
+    public Output<Map<String,Object>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -56,7 +56,7 @@ public final class InstanceBootDiskInitializeParamsGetArgs extends io.pulumi.res
     @Import(name="size")
       private final @Nullable Output<Integer> size;
 
-    public Output<Integer> getSize() {
+    public Output<Integer> size() {
         return this.size == null ? Codegen.empty() : this.size;
     }
 
@@ -67,7 +67,7 @@ public final class InstanceBootDiskInitializeParamsGetArgs extends io.pulumi.res
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

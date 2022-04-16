@@ -22,7 +22,7 @@ public final class RegionInstanceGroupManagerNamedPortArgs extends io.pulumi.res
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -34,7 +34,7 @@ public final class RegionInstanceGroupManagerNamedPortArgs extends io.pulumi.res
     @Import(name="port", required=true)
       private final Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
 

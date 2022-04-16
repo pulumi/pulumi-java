@@ -19,7 +19,7 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse ex
     @Import(name="headerName", required=true)
       private final String headerName;
 
-    public String getHeaderName() {
+    public String headerName() {
         return this.headerName;
     }
 
@@ -30,7 +30,7 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse ex
     @Import(name="headerValue", required=true)
       private final String headerValue;
 
-    public String getHeaderValue() {
+    public String headerValue() {
         return this.headerValue;
     }
 

@@ -29,7 +29,7 @@ public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.
     @Import(name="method")
       private final @Nullable String method;
 
-    public Optional<String> getMethod() {
+    public Optional<String> method() {
         return this.method == null ? Optional.empty() : Optional.ofNullable(this.method);
     }
 
@@ -40,7 +40,7 @@ public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.
     @Import(name="path")
       private final @Nullable String path;
 
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
@@ -51,7 +51,7 @@ public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.
     @Import(name="port")
       private final @Nullable Integer port;
 
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
@@ -62,7 +62,7 @@ public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.
     @Import(name="preferHTTPS")
       private final @Nullable Boolean preferHTTPS;
 
-    public Optional<Boolean> getPreferHTTPS() {
+    public Optional<Boolean> preferHTTPS() {
         return this.preferHTTPS == null ? Optional.empty() : Optional.ofNullable(this.preferHTTPS);
     }
 
@@ -73,7 +73,7 @@ public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.
     @Import(name="requestHeaders")
       private final @Nullable List<HTTPHeaderResponse> requestHeaders;
 
-    public List<HTTPHeaderResponse> getRequestHeaders() {
+    public List<HTTPHeaderResponse> requestHeaders() {
         return this.requestHeaders == null ? List.of() : this.requestHeaders;
     }
 
@@ -84,7 +84,7 @@ public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.
     @Import(name="validStatusCodeRanges")
       private final @Nullable List<String> validStatusCodeRanges;
 
-    public List<String> getValidStatusCodeRanges() {
+    public List<String> validStatusCodeRanges() {
         return this.validStatusCodeRanges == null ? List.of() : this.validStatusCodeRanges;
     }
 

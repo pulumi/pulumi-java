@@ -21,7 +21,7 @@ public final class LogResourcePolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="policyDocument", required=true)
       private final Output<String> policyDocument;
 
-    public Output<String> getPolicyDocument() {
+    public Output<String> policyDocument() {
         return this.policyDocument;
     }
 
@@ -32,7 +32,7 @@ public final class LogResourcePolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="policyName", required=true)
       private final Output<String> policyName;
 
-    public Output<String> getPolicyName() {
+    public Output<String> policyName() {
         return this.policyName;
     }
 

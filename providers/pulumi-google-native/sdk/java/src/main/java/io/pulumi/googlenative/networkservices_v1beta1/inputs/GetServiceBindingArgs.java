@@ -17,21 +17,21 @@ public final class GetServiceBindingArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="serviceBindingId", required=true)
       private final String serviceBindingId;
 
-    public String getServiceBindingId() {
+    public String serviceBindingId() {
         return this.serviceBindingId;
     }
 

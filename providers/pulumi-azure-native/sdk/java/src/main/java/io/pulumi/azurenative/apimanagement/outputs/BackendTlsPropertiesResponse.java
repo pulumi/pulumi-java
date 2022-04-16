@@ -34,14 +34,14 @@ public final class BackendTlsPropertiesResponse {
      * Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for this backend host.
      * 
     */
-    public Optional<Boolean> getValidateCertificateChain() {
+    public Optional<Boolean> validateCertificateChain() {
         return Optional.ofNullable(this.validateCertificateChain);
     }
     /**
      * Flag indicating whether SSL certificate name validation should be done when using self-signed certificates for this backend host.
      * 
     */
-    public Optional<Boolean> getValidateCertificateName() {
+    public Optional<Boolean> validateCertificateName() {
         return Optional.ofNullable(this.validateCertificateName);
     }
 

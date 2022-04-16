@@ -27,7 +27,7 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
     @Import(name="deleted")
       private final @Nullable Output<String> deleted;
 
-    public Output<String> getDeleted() {
+    public Output<String> deleted() {
         return this.deleted == null ? Codegen.empty() : this.deleted;
     }
 
@@ -38,7 +38,7 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
     @Import(name="deprecated")
       private final @Nullable Output<String> deprecated;
 
-    public Output<String> getDeprecated() {
+    public Output<String> deprecated() {
         return this.deprecated == null ? Codegen.empty() : this.deprecated;
     }
 
@@ -49,7 +49,7 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
     @Import(name="obsolete")
       private final @Nullable Output<String> obsolete;
 
-    public Output<String> getObsolete() {
+    public Output<String> obsolete() {
         return this.obsolete == null ? Codegen.empty() : this.obsolete;
     }
 
@@ -60,7 +60,7 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
     @Import(name="replacement")
       private final @Nullable Output<String> replacement;
 
-    public Output<String> getReplacement() {
+    public Output<String> replacement() {
         return this.replacement == null ? Codegen.empty() : this.replacement;
     }
 
@@ -71,7 +71,7 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
     @Import(name="state")
       private final @Nullable Output<DeprecationStatusState> state;
 
-    public Output<DeprecationStatusState> getState() {
+    public Output<DeprecationStatusState> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

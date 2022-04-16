@@ -22,7 +22,7 @@ public final class ResolverRuleAssociationArgs extends io.pulumi.resources.Resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -33,7 +33,7 @@ public final class ResolverRuleAssociationArgs extends io.pulumi.resources.Resou
     @Import(name="resolverRuleId", required=true)
       private final Output<String> resolverRuleId;
 
-    public Output<String> getResolverRuleId() {
+    public Output<String> resolverRuleId() {
         return this.resolverRuleId;
     }
 
@@ -44,7 +44,7 @@ public final class ResolverRuleAssociationArgs extends io.pulumi.resources.Resou
     @Import(name="vPCId", required=true)
       private final Output<String> vPCId;
 
-    public Output<String> getVPCId() {
+    public Output<String> vPCId() {
         return this.vPCId;
     }
 

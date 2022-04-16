@@ -21,42 +21,42 @@ public final class EC2FleetOnDemandOptionsRequestArgs extends io.pulumi.resource
     @Import(name="allocationStrategy")
       private final @Nullable Output<String> allocationStrategy;
 
-    public Output<String> getAllocationStrategy() {
+    public Output<String> allocationStrategy() {
         return this.allocationStrategy == null ? Codegen.empty() : this.allocationStrategy;
     }
 
     @Import(name="capacityReservationOptions")
       private final @Nullable Output<EC2FleetCapacityReservationOptionsRequestArgs> capacityReservationOptions;
 
-    public Output<EC2FleetCapacityReservationOptionsRequestArgs> getCapacityReservationOptions() {
+    public Output<EC2FleetCapacityReservationOptionsRequestArgs> capacityReservationOptions() {
         return this.capacityReservationOptions == null ? Codegen.empty() : this.capacityReservationOptions;
     }
 
     @Import(name="maxTotalPrice")
       private final @Nullable Output<String> maxTotalPrice;
 
-    public Output<String> getMaxTotalPrice() {
+    public Output<String> maxTotalPrice() {
         return this.maxTotalPrice == null ? Codegen.empty() : this.maxTotalPrice;
     }
 
     @Import(name="minTargetCapacity")
       private final @Nullable Output<Integer> minTargetCapacity;
 
-    public Output<Integer> getMinTargetCapacity() {
+    public Output<Integer> minTargetCapacity() {
         return this.minTargetCapacity == null ? Codegen.empty() : this.minTargetCapacity;
     }
 
     @Import(name="singleAvailabilityZone")
       private final @Nullable Output<Boolean> singleAvailabilityZone;
 
-    public Output<Boolean> getSingleAvailabilityZone() {
+    public Output<Boolean> singleAvailabilityZone() {
         return this.singleAvailabilityZone == null ? Codegen.empty() : this.singleAvailabilityZone;
     }
 
     @Import(name="singleInstanceType")
       private final @Nullable Output<Boolean> singleInstanceType;
 
-    public Output<Boolean> getSingleInstanceType() {
+    public Output<Boolean> singleInstanceType() {
         return this.singleInstanceType == null ? Codegen.empty() : this.singleInstanceType;
     }
 

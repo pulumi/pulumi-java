@@ -21,7 +21,7 @@ public final class ClusterClusterConfigAutoscalingConfigGetArgs extends io.pulum
     @Import(name="policyUri", required=true)
       private final Output<String> policyUri;
 
-    public Output<String> getPolicyUri() {
+    public Output<String> policyUri() {
         return this.policyUri;
     }
 

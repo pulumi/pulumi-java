@@ -24,7 +24,7 @@ public final class PeriodicTimerEventTriggerArgs extends io.pulumi.resources.Res
     @Import(name="customContextTag")
       private final @Nullable Output<String> customContextTag;
 
-    public Output<String> getCustomContextTag() {
+    public Output<String> customContextTag() {
         return this.customContextTag == null ? Codegen.empty() : this.customContextTag;
     }
 
@@ -35,7 +35,7 @@ public final class PeriodicTimerEventTriggerArgs extends io.pulumi.resources.Res
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -47,7 +47,7 @@ public final class PeriodicTimerEventTriggerArgs extends io.pulumi.resources.Res
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -58,7 +58,7 @@ public final class PeriodicTimerEventTriggerArgs extends io.pulumi.resources.Res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -69,7 +69,7 @@ public final class PeriodicTimerEventTriggerArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -80,7 +80,7 @@ public final class PeriodicTimerEventTriggerArgs extends io.pulumi.resources.Res
     @Import(name="sinkInfo", required=true)
       private final Output<RoleSinkInfoArgs> sinkInfo;
 
-    public Output<RoleSinkInfoArgs> getSinkInfo() {
+    public Output<RoleSinkInfoArgs> sinkInfo() {
         return this.sinkInfo;
     }
 
@@ -91,7 +91,7 @@ public final class PeriodicTimerEventTriggerArgs extends io.pulumi.resources.Res
     @Import(name="sourceInfo", required=true)
       private final Output<PeriodicTimerSourceInfoArgs> sourceInfo;
 
-    public Output<PeriodicTimerSourceInfoArgs> getSourceInfo() {
+    public Output<PeriodicTimerSourceInfoArgs> sourceInfo() {
         return this.sourceInfo;
     }
 

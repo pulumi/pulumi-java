@@ -41,21 +41,21 @@ public final class KubernetesRoleComputeResponse {
      * Memory in bytes
      * 
     */
-    public Double getMemoryInBytes() {
+    public Double memoryInBytes() {
         return this.memoryInBytes;
     }
     /**
      * Processor count
      * 
     */
-    public Integer getProcessorCount() {
+    public Integer processorCount() {
         return this.processorCount;
     }
     /**
      * VM profile
      * 
     */
-    public String getVmProfile() {
+    public String vmProfile() {
         return this.vmProfile;
     }
 

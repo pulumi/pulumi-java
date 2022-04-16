@@ -42,21 +42,21 @@ public final class InnerErrorResponse {
      * Any Key value pairs that can be provided to the client for additional  verbose information.
      * 
     */
-    public Map<String,String> getAdditionalInfo() {
+    public Map<String,String> additionalInfo() {
         return this.additionalInfo == null ? Map.of() : this.additionalInfo;
     }
     /**
      * Unique code for this error
      * 
     */
-    public Optional<String> getCode() {
+    public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
     /**
      * Child Inner Error, to allow Nesting.
      * 
     */
-    public Optional<InnerErrorResponse> getEmbeddedInnerError() {
+    public Optional<InnerErrorResponse> embeddedInnerError() {
         return Optional.ofNullable(this.embeddedInnerError);
     }
 

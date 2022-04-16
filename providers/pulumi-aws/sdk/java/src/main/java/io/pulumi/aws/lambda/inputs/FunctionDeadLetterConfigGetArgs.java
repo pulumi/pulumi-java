@@ -21,7 +21,7 @@ public final class FunctionDeadLetterConfigGetArgs extends io.pulumi.resources.R
     @Import(name="targetArn", required=true)
       private final Output<String> targetArn;
 
-    public Output<String> getTargetArn() {
+    public Output<String> targetArn() {
         return this.targetArn;
     }
 

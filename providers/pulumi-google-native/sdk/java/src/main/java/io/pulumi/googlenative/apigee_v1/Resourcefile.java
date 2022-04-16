@@ -31,7 +31,7 @@ public class Resourcefile extends io.pulumi.resources.CustomResource {
      * @return The HTTP Content-Type header value specifying the content type of the body.
      * 
      */
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType;
     }
     /**
@@ -45,7 +45,7 @@ public class Resourcefile extends io.pulumi.resources.CustomResource {
      * @return The HTTP request/response body as raw binary.
      * 
      */
-    public Output<String> getData() {
+    public Output<String> data() {
         return this.data;
     }
     /**
@@ -59,7 +59,7 @@ public class Resourcefile extends io.pulumi.resources.CustomResource {
      * @return Application specific response metadata. Must be set in the first response for streaming APIs.
      * 
      */
-    public Output<List<Map<String,String>>> getExtensions() {
+    public Output<List<Map<String,String>>> extensions() {
         return this.extensions;
     }
 

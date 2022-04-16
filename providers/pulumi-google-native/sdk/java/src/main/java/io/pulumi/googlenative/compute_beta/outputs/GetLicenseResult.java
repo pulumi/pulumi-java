@@ -72,52 +72,52 @@ public final class GetLicenseResult {
      * Creation timestamp in RFC3339 text format.
      * 
     */
-    public String getCreationTimestamp() {
+    public String creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
      * An optional textual description of the resource; provided by the client when the resource is created.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Type of resource. Always compute#license for licenses.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The unique code used to attach this license to images, snapshots, and disks.
      * 
     */
-    public String getLicenseCode() {
+    public String licenseCode() {
         return this.licenseCode;
     }
     /**
      * Name of the resource. The name must be 1-63 characters long and comply with RFC1035.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public LicenseResourceRequirementsResponse getResourceRequirements() {
+    public LicenseResourceRequirementsResponse resourceRequirements() {
         return this.resourceRequirements;
     }
     /**
      * Server-defined URL for the resource.
      * 
     */
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
     /**
      * If false, licenses will not be copied from the source resource when creating an image from a disk, disk from snapshot, or snapshot from disk.
      * 
     */
-    public Boolean getTransferable() {
+    public Boolean transferable() {
         return this.transferable;
     }
 

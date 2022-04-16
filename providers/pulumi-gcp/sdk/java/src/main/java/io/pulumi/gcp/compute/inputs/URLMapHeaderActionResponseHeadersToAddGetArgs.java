@@ -22,7 +22,7 @@ public final class URLMapHeaderActionResponseHeadersToAddGetArgs extends io.pulu
     @Import(name="headerName", required=true)
       private final Output<String> headerName;
 
-    public Output<String> getHeaderName() {
+    public Output<String> headerName() {
         return this.headerName;
     }
 
@@ -33,7 +33,7 @@ public final class URLMapHeaderActionResponseHeadersToAddGetArgs extends io.pulu
     @Import(name="headerValue", required=true)
       private final Output<String> headerValue;
 
-    public Output<String> getHeaderValue() {
+    public Output<String> headerValue() {
         return this.headerValue;
     }
 
@@ -45,7 +45,7 @@ public final class URLMapHeaderActionResponseHeadersToAddGetArgs extends io.pulu
     @Import(name="replace", required=true)
       private final Output<Boolean> replace;
 
-    public Output<Boolean> getReplace() {
+    public Output<Boolean> replace() {
         return this.replace;
     }
 

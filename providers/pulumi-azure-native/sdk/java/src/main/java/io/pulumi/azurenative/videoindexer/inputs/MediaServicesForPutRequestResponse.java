@@ -25,7 +25,7 @@ public final class MediaServicesForPutRequestResponse extends io.pulumi.resource
     @Import(name="resourceId")
       private final @Nullable String resourceId;
 
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
     }
 
@@ -36,7 +36,7 @@ public final class MediaServicesForPutRequestResponse extends io.pulumi.resource
     @Import(name="userAssignedIdentity")
       private final @Nullable String userAssignedIdentity;
 
-    public Optional<String> getUserAssignedIdentity() {
+    public Optional<String> userAssignedIdentity() {
         return this.userAssignedIdentity == null ? Optional.empty() : Optional.ofNullable(this.userAssignedIdentity);
     }
 

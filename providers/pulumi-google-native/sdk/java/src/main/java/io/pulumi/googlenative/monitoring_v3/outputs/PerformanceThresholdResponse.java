@@ -41,21 +41,21 @@ public final class PerformanceThresholdResponse {
      * BasicSli to evaluate to judge window quality.
      * 
     */
-    public BasicSliResponse getBasicSliPerformance() {
+    public BasicSliResponse basicSliPerformance() {
         return this.basicSliPerformance;
     }
     /**
      * RequestBasedSli to evaluate to judge window quality.
      * 
     */
-    public RequestBasedSliResponse getPerformance() {
+    public RequestBasedSliResponse performance() {
         return this.performance;
     }
     /**
      * If window performance >= threshold, the window is counted as good.
      * 
     */
-    public Double getThreshold() {
+    public Double threshold() {
         return this.threshold;
     }
 

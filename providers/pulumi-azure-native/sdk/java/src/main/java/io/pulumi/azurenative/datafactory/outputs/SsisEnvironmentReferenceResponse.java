@@ -49,28 +49,28 @@ public final class SsisEnvironmentReferenceResponse {
      * Environment folder name.
      * 
     */
-    public Optional<String> getEnvironmentFolderName() {
+    public Optional<String> environmentFolderName() {
         return Optional.ofNullable(this.environmentFolderName);
     }
     /**
      * Environment name.
      * 
     */
-    public Optional<String> getEnvironmentName() {
+    public Optional<String> environmentName() {
         return Optional.ofNullable(this.environmentName);
     }
     /**
      * Environment reference id.
      * 
     */
-    public Optional<Double> getId() {
+    public Optional<Double> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Reference type
      * 
     */
-    public Optional<String> getReferenceType() {
+    public Optional<String> referenceType() {
         return Optional.ofNullable(this.referenceType);
     }
 

@@ -22,10 +22,10 @@ public final class JobPlacement {
         this.clusterUuid = clusterUuid;
     }
 
-    public String getClusterName() {
+    public String clusterName() {
         return this.clusterName;
     }
-    public Optional<String> getClusterUuid() {
+    public Optional<String> clusterUuid() {
         return Optional.ofNullable(this.clusterUuid);
     }
 

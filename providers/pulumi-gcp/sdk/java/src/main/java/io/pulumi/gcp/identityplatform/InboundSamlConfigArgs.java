@@ -25,7 +25,7 @@ public final class InboundSamlConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -36,7 +36,7 @@ public final class InboundSamlConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -48,7 +48,7 @@ public final class InboundSamlConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="idpConfig", required=true)
       private final Output<InboundSamlConfigIdpConfigArgs> idpConfig;
 
-    public Output<InboundSamlConfigIdpConfigArgs> getIdpConfig() {
+    public Output<InboundSamlConfigIdpConfigArgs> idpConfig() {
         return this.idpConfig;
     }
 
@@ -61,7 +61,7 @@ public final class InboundSamlConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -73,7 +73,7 @@ public final class InboundSamlConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -86,7 +86,7 @@ public final class InboundSamlConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="spConfig", required=true)
       private final Output<InboundSamlConfigSpConfigArgs> spConfig;
 
-    public Output<InboundSamlConfigSpConfigArgs> getSpConfig() {
+    public Output<InboundSamlConfigSpConfigArgs> spConfig() {
         return this.spConfig;
     }
 

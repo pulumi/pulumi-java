@@ -27,7 +27,7 @@ public final class ToolExecutionResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="commandLineArguments", required=true)
       private final List<String> commandLineArguments;
 
-    public List<String> getCommandLineArguments() {
+    public List<String> commandLineArguments() {
         return this.commandLineArguments;
     }
 
@@ -38,7 +38,7 @@ public final class ToolExecutionResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="exitCode", required=true)
       private final ToolExitCodeResponse exitCode;
 
-    public ToolExitCodeResponse getExitCode() {
+    public ToolExitCodeResponse exitCode() {
         return this.exitCode;
     }
 
@@ -49,7 +49,7 @@ public final class ToolExecutionResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="toolLogs", required=true)
       private final List<FileReferenceResponse> toolLogs;
 
-    public List<FileReferenceResponse> getToolLogs() {
+    public List<FileReferenceResponse> toolLogs() {
         return this.toolLogs;
     }
 
@@ -60,7 +60,7 @@ public final class ToolExecutionResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="toolOutputs", required=true)
       private final List<ToolOutputReferenceResponse> toolOutputs;
 
-    public List<ToolOutputReferenceResponse> getToolOutputs() {
+    public List<ToolOutputReferenceResponse> toolOutputs() {
         return this.toolOutputs;
     }
 

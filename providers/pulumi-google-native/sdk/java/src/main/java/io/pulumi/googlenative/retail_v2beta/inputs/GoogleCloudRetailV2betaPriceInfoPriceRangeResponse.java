@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2betaPriceInfoPriceRangeResponse extends io
     @Import(name="originalPrice", required=true)
       private final GoogleCloudRetailV2betaIntervalResponse originalPrice;
 
-    public GoogleCloudRetailV2betaIntervalResponse getOriginalPrice() {
+    public GoogleCloudRetailV2betaIntervalResponse originalPrice() {
         return this.originalPrice;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudRetailV2betaPriceInfoPriceRangeResponse extends io
     @Import(name="price", required=true)
       private final GoogleCloudRetailV2betaIntervalResponse price;
 
-    public GoogleCloudRetailV2betaIntervalResponse getPrice() {
+    public GoogleCloudRetailV2betaIntervalResponse price() {
         return this.price;
     }
 

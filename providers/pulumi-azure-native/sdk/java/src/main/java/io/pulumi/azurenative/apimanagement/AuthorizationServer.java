@@ -44,7 +44,7 @@ public class AuthorizationServer extends io.pulumi.resources.CustomResource {
      * @return OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2.
      * 
      */
-    public Output<String> getAuthorizationEndpoint() {
+    public Output<String> authorizationEndpoint() {
         return this.authorizationEndpoint;
     }
     /**
@@ -58,7 +58,7 @@ public class AuthorizationServer extends io.pulumi.resources.CustomResource {
      * @return HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAuthorizationMethods() {
+    public Output</* @Nullable */ List<String>> authorizationMethods() {
         return this.authorizationMethods;
     }
     /**
@@ -72,7 +72,7 @@ public class AuthorizationServer extends io.pulumi.resources.CustomResource {
      * @return Specifies the mechanism by which access token is passed to the API.
      * 
      */
-    public Output</* @Nullable */ List<String>> getBearerTokenSendingMethods() {
+    public Output</* @Nullable */ List<String>> bearerTokenSendingMethods() {
         return this.bearerTokenSendingMethods;
     }
     /**
@@ -86,7 +86,7 @@ public class AuthorizationServer extends io.pulumi.resources.CustomResource {
      * @return Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.
      * 
      */
-    public Output</* @Nullable */ List<String>> getClientAuthenticationMethod() {
+    public Output</* @Nullable */ List<String>> clientAuthenticationMethod() {
         return this.clientAuthenticationMethod;
     }
     /**
@@ -100,7 +100,7 @@ public class AuthorizationServer extends io.pulumi.resources.CustomResource {
      * @return Client or app id registered with this authorization server.
      * 
      */
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
     /**
@@ -114,7 +114,7 @@ public class AuthorizationServer extends io.pulumi.resources.CustomResource {
      * @return Optional reference to a page where client or app registration for this authorization server is performed. Contains absolute URL to entity being referenced.
      * 
      */
-    public Output<String> getClientRegistrationEndpoint() {
+    public Output<String> clientRegistrationEndpoint() {
         return this.clientRegistrationEndpoint;
     }
     /**
@@ -128,7 +128,7 @@ public class AuthorizationServer extends io.pulumi.resources.CustomResource {
      * @return Client or app secret registered with this authorization server. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
      * 
      */
-    public Output</* @Nullable */ String> getClientSecret() {
+    public Output</* @Nullable */ String> clientSecret() {
         return this.clientSecret;
     }
     /**
@@ -142,7 +142,7 @@ public class AuthorizationServer extends io.pulumi.resources.CustomResource {
      * @return Access token scope that is going to be requested by default. Can be overridden at the API level. Should be provided in the form of a string containing space-delimited values.
      * 
      */
-    public Output</* @Nullable */ String> getDefaultScope() {
+    public Output</* @Nullable */ String> defaultScope() {
         return this.defaultScope;
     }
     /**
@@ -156,7 +156,7 @@ public class AuthorizationServer extends io.pulumi.resources.CustomResource {
      * @return Description of the authorization server. Can contain HTML formatting tags.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -170,7 +170,7 @@ public class AuthorizationServer extends io.pulumi.resources.CustomResource {
      * @return User-friendly authorization server name.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -184,7 +184,7 @@ public class AuthorizationServer extends io.pulumi.resources.CustomResource {
      * @return Form of an authorization grant, which the client uses to request the access token.
      * 
      */
-    public Output<List<String>> getGrantTypes() {
+    public Output<List<String>> grantTypes() {
         return this.grantTypes;
     }
     /**
@@ -198,7 +198,7 @@ public class AuthorizationServer extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -212,7 +212,7 @@ public class AuthorizationServer extends io.pulumi.resources.CustomResource {
      * @return Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.
      * 
      */
-    public Output</* @Nullable */ String> getResourceOwnerPassword() {
+    public Output</* @Nullable */ String> resourceOwnerPassword() {
         return this.resourceOwnerPassword;
     }
     /**
@@ -226,7 +226,7 @@ public class AuthorizationServer extends io.pulumi.resources.CustomResource {
      * @return Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.
      * 
      */
-    public Output</* @Nullable */ String> getResourceOwnerUsername() {
+    public Output</* @Nullable */ String> resourceOwnerUsername() {
         return this.resourceOwnerUsername;
     }
     /**
@@ -240,7 +240,7 @@ public class AuthorizationServer extends io.pulumi.resources.CustomResource {
      * @return If true, authorization server will include state parameter from the authorization request to its response. Client may use state parameter to raise protocol security.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSupportState() {
+    public Output</* @Nullable */ Boolean> supportState() {
         return this.supportState;
     }
     /**
@@ -254,7 +254,7 @@ public class AuthorizationServer extends io.pulumi.resources.CustomResource {
      * @return Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}.
      * 
      */
-    public Output</* @Nullable */ List<TokenBodyParameterContractResponse>> getTokenBodyParameters() {
+    public Output</* @Nullable */ List<TokenBodyParameterContractResponse>> tokenBodyParameters() {
         return this.tokenBodyParameters;
     }
     /**
@@ -268,7 +268,7 @@ public class AuthorizationServer extends io.pulumi.resources.CustomResource {
      * @return OAuth token endpoint. Contains absolute URI to entity being referenced.
      * 
      */
-    public Output</* @Nullable */ String> getTokenEndpoint() {
+    public Output</* @Nullable */ String> tokenEndpoint() {
         return this.tokenEndpoint;
     }
     /**
@@ -282,7 +282,7 @@ public class AuthorizationServer extends io.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

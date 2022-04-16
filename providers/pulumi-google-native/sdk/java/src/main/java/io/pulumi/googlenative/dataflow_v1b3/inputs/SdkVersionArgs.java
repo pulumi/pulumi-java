@@ -27,7 +27,7 @@ public final class SdkVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sdkSupportStatus")
       private final @Nullable Output<SdkVersionSdkSupportStatus> sdkSupportStatus;
 
-    public Output<SdkVersionSdkSupportStatus> getSdkSupportStatus() {
+    public Output<SdkVersionSdkSupportStatus> sdkSupportStatus() {
         return this.sdkSupportStatus == null ? Codegen.empty() : this.sdkSupportStatus;
     }
 
@@ -38,7 +38,7 @@ public final class SdkVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 
@@ -49,7 +49,7 @@ public final class SdkVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="versionDisplayName")
       private final @Nullable Output<String> versionDisplayName;
 
-    public Output<String> getVersionDisplayName() {
+    public Output<String> versionDisplayName() {
         return this.versionDisplayName == null ? Codegen.empty() : this.versionDisplayName;
     }
 

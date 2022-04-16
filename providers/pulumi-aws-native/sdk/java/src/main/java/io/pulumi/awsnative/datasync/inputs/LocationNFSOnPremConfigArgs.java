@@ -26,7 +26,7 @@ public final class LocationNFSOnPremConfigArgs extends io.pulumi.resources.Resou
     @Import(name="agentArns", required=true)
       private final Output<List<String>> agentArns;
 
-    public Output<List<String>> getAgentArns() {
+    public Output<List<String>> agentArns() {
         return this.agentArns;
     }
 

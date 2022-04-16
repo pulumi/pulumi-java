@@ -25,7 +25,7 @@ public final class PrivateConnectivityArgs extends io.pulumi.resources.ResourceA
     @Import(name="privateConnection", required=true)
       private final Output<String> privateConnection;
 
-    public Output<String> getPrivateConnection() {
+    public Output<String> privateConnection() {
         return this.privateConnection;
     }
 

@@ -46,7 +46,7 @@ public final class GlobalForwardingRuleMetadataFilter {
      * Structure is documented below.
      * 
     */
-    public List<GlobalForwardingRuleMetadataFilterFilterLabel> getFilterLabels() {
+    public List<GlobalForwardingRuleMetadataFilterFilterLabel> filterLabels() {
         return this.filterLabels;
     }
     /**
@@ -59,7 +59,7 @@ public final class GlobalForwardingRuleMetadataFilter {
      * Possible values are `MATCH_ANY` and `MATCH_ALL`.
      * 
     */
-    public String getFilterMatchCriteria() {
+    public String filterMatchCriteria() {
         return this.filterMatchCriteria;
     }
 

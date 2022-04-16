@@ -41,21 +41,21 @@ public final class FileShareResponse {
      * Password credential used to connect to the share location.
      * 
     */
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The folder path for this share.
      * 
     */
-    public String getPath() {
+    public String path() {
         return this.path;
     }
     /**
      * User name credential to connect to the share location
      * 
     */
-    public Optional<String> getUserName() {
+    public Optional<String> userName() {
         return Optional.ofNullable(this.userName);
     }
 

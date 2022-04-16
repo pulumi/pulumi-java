@@ -19,7 +19,7 @@ public final class GetIngestionSettingArgs extends io.pulumi.resources.InvokeArg
     @Import(name="ingestionSettingName", required=true)
       private final String ingestionSettingName;
 
-    public String getIngestionSettingName() {
+    public String ingestionSettingName() {
         return this.ingestionSettingName;
     }
 

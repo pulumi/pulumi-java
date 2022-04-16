@@ -22,7 +22,7 @@ public final class VpcEndpointServicePrivateDnsNameConfigurationArgs extends io.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -33,7 +33,7 @@ public final class VpcEndpointServicePrivateDnsNameConfigurationArgs extends io.
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -44,7 +44,7 @@ public final class VpcEndpointServicePrivateDnsNameConfigurationArgs extends io.
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -55,7 +55,7 @@ public final class VpcEndpointServicePrivateDnsNameConfigurationArgs extends io.
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

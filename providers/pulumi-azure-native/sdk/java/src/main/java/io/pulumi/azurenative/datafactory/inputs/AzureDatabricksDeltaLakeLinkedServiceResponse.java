@@ -34,7 +34,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulu
     @Import(name="accessToken")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getAccessToken() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken() {
         return this.accessToken == null ? null : this.accessToken;
     }
 
@@ -45,7 +45,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulu
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -56,7 +56,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulu
     @Import(name="clusterId")
       private final @Nullable Object clusterId;
 
-    public Optional<Object> getClusterId() {
+    public Optional<Object> clusterId() {
         return this.clusterId == null ? Optional.empty() : Optional.ofNullable(this.clusterId);
     }
 
@@ -67,7 +67,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulu
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
@@ -78,7 +78,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulu
     @Import(name="credential")
       private final @Nullable CredentialReferenceResponse credential;
 
-    public Optional<CredentialReferenceResponse> getCredential() {
+    public Optional<CredentialReferenceResponse> credential() {
         return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
     }
 
@@ -89,7 +89,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulu
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -100,7 +100,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulu
     @Import(name="domain", required=true)
       private final Object domain;
 
-    public Object getDomain() {
+    public Object domain() {
         return this.domain;
     }
 
@@ -111,7 +111,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulu
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
@@ -122,7 +122,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulu
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -134,7 +134,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulu
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -145,7 +145,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulu
     @Import(name="workspaceResourceId")
       private final @Nullable Object workspaceResourceId;
 
-    public Optional<Object> getWorkspaceResourceId() {
+    public Optional<Object> workspaceResourceId() {
         return this.workspaceResourceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceResourceId);
     }
 

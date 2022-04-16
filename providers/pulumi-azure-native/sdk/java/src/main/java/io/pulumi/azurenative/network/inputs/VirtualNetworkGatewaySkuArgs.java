@@ -29,7 +29,7 @@ public final class VirtualNetworkGatewaySkuArgs extends io.pulumi.resources.Reso
     @Import(name="name")
       private final @Nullable Output<Either<String,VirtualNetworkGatewaySkuName>> name;
 
-    public Output<Either<String,VirtualNetworkGatewaySkuName>> getName() {
+    public Output<Either<String,VirtualNetworkGatewaySkuName>> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -40,7 +40,7 @@ public final class VirtualNetworkGatewaySkuArgs extends io.pulumi.resources.Reso
     @Import(name="tier")
       private final @Nullable Output<Either<String,VirtualNetworkGatewaySkuTier>> tier;
 
-    public Output<Either<String,VirtualNetworkGatewaySkuTier>> getTier() {
+    public Output<Either<String,VirtualNetworkGatewaySkuTier>> tier() {
         return this.tier == null ? Codegen.empty() : this.tier;
     }
 

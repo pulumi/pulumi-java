@@ -34,14 +34,14 @@ public final class VpnServerConfigRadiusClientRootCertificateResponse {
      * The certificate name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The Radius client root certificate thumbprint.
      * 
     */
-    public Optional<String> getThumbprint() {
+    public Optional<String> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
 

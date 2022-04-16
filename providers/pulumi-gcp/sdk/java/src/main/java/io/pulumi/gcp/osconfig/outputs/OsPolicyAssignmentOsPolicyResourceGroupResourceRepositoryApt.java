@@ -56,35 +56,35 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryApt 
      * Required. Type of archive files in this repository. Possible values: ARCHIVE_TYPE_UNSPECIFIED, DEB, DEB_SRC
      * 
     */
-    public String getArchiveType() {
+    public String archiveType() {
         return this.archiveType;
     }
     /**
      * Required. List of components for this repository. Must contain at least one item.
      * 
     */
-    public List<String> getComponents() {
+    public List<String> components() {
         return this.components;
     }
     /**
      * Required. Distribution of this repository.
      * 
     */
-    public String getDistribution() {
+    public String distribution() {
         return this.distribution;
     }
     /**
      * URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg`.
      * 
     */
-    public Optional<String> getGpgKey() {
+    public Optional<String> gpgKey() {
         return Optional.ofNullable(this.gpgKey);
     }
     /**
      * Required. URI for this repository.
      * 
     */
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

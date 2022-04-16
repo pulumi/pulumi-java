@@ -36,7 +36,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -47,7 +47,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
     @Import(name="delay")
       private final @Nullable Output<Object> delay;
 
-    public Output<Object> getDelay() {
+    public Output<Object> delay() {
         return this.delay == null ? Codegen.empty() : this.delay;
     }
 
@@ -58,7 +58,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
     @Import(name="dependsOn")
       private final @Nullable Output<List<Object>> dependsOn;
 
-    public Output<List<Object>> getDependsOn() {
+    public Output<List<Object>> dependsOn() {
         return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
@@ -69,7 +69,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -80,7 +80,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
@@ -91,7 +91,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
     @Import(name="frequency", required=true)
       private final Output<Either<String,TumblingWindowFrequency>> frequency;
 
-    public Output<Either<String,TumblingWindowFrequency>> getFrequency() {
+    public Output<Either<String,TumblingWindowFrequency>> frequency() {
         return this.frequency;
     }
 
@@ -102,7 +102,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
     @Import(name="interval", required=true)
       private final Output<Integer> interval;
 
-    public Output<Integer> getInterval() {
+    public Output<Integer> interval() {
         return this.interval;
     }
 
@@ -113,7 +113,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
     @Import(name="maxConcurrency", required=true)
       private final Output<Integer> maxConcurrency;
 
-    public Output<Integer> getMaxConcurrency() {
+    public Output<Integer> maxConcurrency() {
         return this.maxConcurrency;
     }
 
@@ -124,7 +124,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
     @Import(name="pipeline", required=true)
       private final Output<TriggerPipelineReferenceArgs> pipeline;
 
-    public Output<TriggerPipelineReferenceArgs> getPipeline() {
+    public Output<TriggerPipelineReferenceArgs> pipeline() {
         return this.pipeline;
     }
 
@@ -135,7 +135,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
     @Import(name="retryPolicy")
       private final @Nullable Output<RetryPolicyArgs> retryPolicy;
 
-    public Output<RetryPolicyArgs> getRetryPolicy() {
+    public Output<RetryPolicyArgs> retryPolicy() {
         return this.retryPolicy == null ? Codegen.empty() : this.retryPolicy;
     }
 
@@ -146,7 +146,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
     @Import(name="startTime", required=true)
       private final Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
 
@@ -158,7 +158,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

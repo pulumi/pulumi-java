@@ -22,7 +22,7 @@ public final class ServiceRegistryArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -33,7 +33,7 @@ public final class ServiceRegistryArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -44,7 +44,7 @@ public final class ServiceRegistryArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="serviceRegistryName")
       private final @Nullable Output<String> serviceRegistryName;
 
-    public Output<String> getServiceRegistryName() {
+    public Output<String> serviceRegistryName() {
         return this.serviceRegistryName == null ? Codegen.empty() : this.serviceRegistryName;
     }
 

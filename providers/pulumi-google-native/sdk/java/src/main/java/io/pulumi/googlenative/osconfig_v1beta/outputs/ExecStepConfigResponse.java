@@ -49,28 +49,28 @@ public final class ExecStepConfigResponse {
      * Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
      * 
     */
-    public List<Integer> getAllowedSuccessCodes() {
+    public List<Integer> allowedSuccessCodes() {
         return this.allowedSuccessCodes;
     }
     /**
      * A Google Cloud Storage object containing the executable.
      * 
     */
-    public GcsObjectResponse getGcsObject() {
+    public GcsObjectResponse gcsObject() {
         return this.gcsObject;
     }
     /**
      * The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with [shebang lines] (https://en.wikipedia.org/wiki/Shebang_\(Unix\)).
      * 
     */
-    public String getInterpreter() {
+    public String interpreter() {
         return this.interpreter;
     }
     /**
      * An absolute path to the executable on the VM.
      * 
     */
-    public String getLocalPath() {
+    public String localPath() {
         return this.localPath;
     }
 

@@ -20,7 +20,7 @@ public final class EnvironmentIamBindingArgs extends io.pulumi.resources.Resourc
     @Import(name="condition")
       private final @Nullable Output<EnvironmentIamBindingConditionArgs> condition;
 
-    public Output<EnvironmentIamBindingConditionArgs> getCondition() {
+    public Output<EnvironmentIamBindingConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -31,21 +31,21 @@ public final class EnvironmentIamBindingArgs extends io.pulumi.resources.Resourc
     @Import(name="envId", required=true)
       private final Output<String> envId;
 
-    public Output<String> getEnvId() {
+    public Output<String> envId() {
         return this.envId;
     }
 
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
     @Import(name="orgId", required=true)
       private final Output<String> orgId;
 
-    public Output<String> getOrgId() {
+    public Output<String> orgId() {
         return this.orgId;
     }
 
@@ -58,7 +58,7 @@ public final class EnvironmentIamBindingArgs extends io.pulumi.resources.Resourc
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

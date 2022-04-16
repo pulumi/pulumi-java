@@ -24,7 +24,7 @@ public final class MetadataIntegrationResponse extends io.pulumi.resources.Invok
     @Import(name="dataCatalogConfig", required=true)
       private final DataCatalogConfigResponse dataCatalogConfig;
 
-    public DataCatalogConfigResponse getDataCatalogConfig() {
+    public DataCatalogConfigResponse dataCatalogConfig() {
         return this.dataCatalogConfig;
     }
 
@@ -35,7 +35,7 @@ public final class MetadataIntegrationResponse extends io.pulumi.resources.Invok
     @Import(name="dataplexConfig", required=true)
       private final DataplexConfigResponse dataplexConfig;
 
-    public DataplexConfigResponse getDataplexConfig() {
+    public DataplexConfigResponse dataplexConfig() {
         return this.dataplexConfig;
     }
 

@@ -31,7 +31,7 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
     @Import(name="acceleratorConfig", required=true)
       private final RuntimeAcceleratorConfigResponse acceleratorConfig;
 
-    public RuntimeAcceleratorConfigResponse getAcceleratorConfig() {
+    public RuntimeAcceleratorConfigResponse acceleratorConfig() {
         return this.acceleratorConfig;
     }
 
@@ -42,7 +42,7 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
     @Import(name="containerImages", required=true)
       private final List<ContainerImageResponse> containerImages;
 
-    public List<ContainerImageResponse> getContainerImages() {
+    public List<ContainerImageResponse> containerImages() {
         return this.containerImages;
     }
 
@@ -53,7 +53,7 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
     @Import(name="dataDisk", required=true)
       private final LocalDiskResponse dataDisk;
 
-    public LocalDiskResponse getDataDisk() {
+    public LocalDiskResponse dataDisk() {
         return this.dataDisk;
     }
 
@@ -64,7 +64,7 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
     @Import(name="encryptionConfig", required=true)
       private final EncryptionConfigResponse encryptionConfig;
 
-    public EncryptionConfigResponse getEncryptionConfig() {
+    public EncryptionConfigResponse encryptionConfig() {
         return this.encryptionConfig;
     }
 
@@ -75,7 +75,7 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
     @Import(name="guestAttributes", required=true)
       private final Map<String,String> guestAttributes;
 
-    public Map<String,String> getGuestAttributes() {
+    public Map<String,String> guestAttributes() {
         return this.guestAttributes;
     }
 
@@ -86,7 +86,7 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
     @Import(name="internalIpOnly", required=true)
       private final Boolean internalIpOnly;
 
-    public Boolean getInternalIpOnly() {
+    public Boolean internalIpOnly() {
         return this.internalIpOnly;
     }
 
@@ -97,7 +97,7 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
 
@@ -108,7 +108,7 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
     @Import(name="machineType", required=true)
       private final String machineType;
 
-    public String getMachineType() {
+    public String machineType() {
         return this.machineType;
     }
 
@@ -119,7 +119,7 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
     @Import(name="metadata", required=true)
       private final Map<String,String> metadata;
 
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata;
     }
 
@@ -130,7 +130,7 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
     @Import(name="network", required=true)
       private final String network;
 
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
 
@@ -141,7 +141,7 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
     @Import(name="nicType", required=true)
       private final String nicType;
 
-    public String getNicType() {
+    public String nicType() {
         return this.nicType;
     }
 
@@ -152,7 +152,7 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
     @Import(name="shieldedInstanceConfig", required=true)
       private final RuntimeShieldedInstanceConfigResponse shieldedInstanceConfig;
 
-    public RuntimeShieldedInstanceConfigResponse getShieldedInstanceConfig() {
+    public RuntimeShieldedInstanceConfigResponse shieldedInstanceConfig() {
         return this.shieldedInstanceConfig;
     }
 
@@ -163,7 +163,7 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
     @Import(name="subnet", required=true)
       private final String subnet;
 
-    public String getSubnet() {
+    public String subnet() {
         return this.subnet;
     }
 
@@ -174,7 +174,7 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
     @Import(name="tags", required=true)
       private final List<String> tags;
 
-    public List<String> getTags() {
+    public List<String> tags() {
         return this.tags;
     }
 
@@ -185,7 +185,7 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
     @Import(name="zone", required=true)
       private final String zone;
 
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

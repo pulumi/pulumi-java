@@ -20,7 +20,7 @@ public final class FutureReservationSpecificSKUPropertiesResponse extends io.pul
     @Import(name="instanceProperties", required=true)
       private final AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties;
 
-    public AllocationSpecificSKUAllocationReservedInstancePropertiesResponse getInstanceProperties() {
+    public AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties() {
         return this.instanceProperties;
     }
 
@@ -31,7 +31,7 @@ public final class FutureReservationSpecificSKUPropertiesResponse extends io.pul
     @Import(name="totalCount", required=true)
       private final String totalCount;
 
-    public String getTotalCount() {
+    public String totalCount() {
         return this.totalCount;
     }
 

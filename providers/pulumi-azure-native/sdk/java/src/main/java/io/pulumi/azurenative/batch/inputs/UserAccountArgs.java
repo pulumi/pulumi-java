@@ -25,7 +25,7 @@ public final class UserAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="elevationLevel")
       private final @Nullable Output<ElevationLevel> elevationLevel;
 
-    public Output<ElevationLevel> getElevationLevel() {
+    public Output<ElevationLevel> elevationLevel() {
         return this.elevationLevel == null ? Codegen.empty() : this.elevationLevel;
     }
 
@@ -36,21 +36,21 @@ public final class UserAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="linuxUserConfiguration")
       private final @Nullable Output<LinuxUserConfigurationArgs> linuxUserConfiguration;
 
-    public Output<LinuxUserConfigurationArgs> getLinuxUserConfiguration() {
+    public Output<LinuxUserConfigurationArgs> linuxUserConfiguration() {
         return this.linuxUserConfiguration == null ? Codegen.empty() : this.linuxUserConfiguration;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -61,7 +61,7 @@ public final class UserAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="windowsUserConfiguration")
       private final @Nullable Output<WindowsUserConfigurationArgs> windowsUserConfiguration;
 
-    public Output<WindowsUserConfigurationArgs> getWindowsUserConfiguration() {
+    public Output<WindowsUserConfigurationArgs> windowsUserConfiguration() {
         return this.windowsUserConfiguration == null ? Codegen.empty() : this.windowsUserConfiguration;
     }
 

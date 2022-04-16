@@ -26,7 +26,7 @@ public final class GatewayDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gatewayResourceId")
       private final @Nullable Output<String> gatewayResourceId;
 
-    public Output<String> getGatewayResourceId() {
+    public Output<String> gatewayResourceId() {
         return this.gatewayResourceId == null ? Codegen.empty() : this.gatewayResourceId;
     }
 

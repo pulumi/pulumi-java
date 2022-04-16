@@ -24,7 +24,7 @@ public final class LaunchTemplateNetworkInterfaceGetArgs extends io.pulumi.resou
     @Import(name="associateCarrierIpAddress")
       private final @Nullable Output<String> associateCarrierIpAddress;
 
-    public Output<String> getAssociateCarrierIpAddress() {
+    public Output<String> associateCarrierIpAddress() {
         return this.associateCarrierIpAddress == null ? Codegen.empty() : this.associateCarrierIpAddress;
     }
 
@@ -35,7 +35,7 @@ public final class LaunchTemplateNetworkInterfaceGetArgs extends io.pulumi.resou
     @Import(name="associatePublicIpAddress")
       private final @Nullable Output<String> associatePublicIpAddress;
 
-    public Output<String> getAssociatePublicIpAddress() {
+    public Output<String> associatePublicIpAddress() {
         return this.associatePublicIpAddress == null ? Codegen.empty() : this.associatePublicIpAddress;
     }
 
@@ -46,7 +46,7 @@ public final class LaunchTemplateNetworkInterfaceGetArgs extends io.pulumi.resou
     @Import(name="deleteOnTermination")
       private final @Nullable Output<String> deleteOnTermination;
 
-    public Output<String> getDeleteOnTermination() {
+    public Output<String> deleteOnTermination() {
         return this.deleteOnTermination == null ? Codegen.empty() : this.deleteOnTermination;
     }
 
@@ -57,7 +57,7 @@ public final class LaunchTemplateNetworkInterfaceGetArgs extends io.pulumi.resou
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -68,7 +68,7 @@ public final class LaunchTemplateNetworkInterfaceGetArgs extends io.pulumi.resou
     @Import(name="deviceIndex")
       private final @Nullable Output<Integer> deviceIndex;
 
-    public Output<Integer> getDeviceIndex() {
+    public Output<Integer> deviceIndex() {
         return this.deviceIndex == null ? Codegen.empty() : this.deviceIndex;
     }
 
@@ -79,7 +79,7 @@ public final class LaunchTemplateNetworkInterfaceGetArgs extends io.pulumi.resou
     @Import(name="interfaceType")
       private final @Nullable Output<String> interfaceType;
 
-    public Output<String> getInterfaceType() {
+    public Output<String> interfaceType() {
         return this.interfaceType == null ? Codegen.empty() : this.interfaceType;
     }
 
@@ -90,7 +90,7 @@ public final class LaunchTemplateNetworkInterfaceGetArgs extends io.pulumi.resou
     @Import(name="ipv4AddressCount")
       private final @Nullable Output<Integer> ipv4AddressCount;
 
-    public Output<Integer> getIpv4AddressCount() {
+    public Output<Integer> ipv4AddressCount() {
         return this.ipv4AddressCount == null ? Codegen.empty() : this.ipv4AddressCount;
     }
 
@@ -101,7 +101,7 @@ public final class LaunchTemplateNetworkInterfaceGetArgs extends io.pulumi.resou
     @Import(name="ipv4Addresses")
       private final @Nullable Output<List<String>> ipv4Addresses;
 
-    public Output<List<String>> getIpv4Addresses() {
+    public Output<List<String>> ipv4Addresses() {
         return this.ipv4Addresses == null ? Codegen.empty() : this.ipv4Addresses;
     }
 
@@ -112,7 +112,7 @@ public final class LaunchTemplateNetworkInterfaceGetArgs extends io.pulumi.resou
     @Import(name="ipv6AddressCount")
       private final @Nullable Output<Integer> ipv6AddressCount;
 
-    public Output<Integer> getIpv6AddressCount() {
+    public Output<Integer> ipv6AddressCount() {
         return this.ipv6AddressCount == null ? Codegen.empty() : this.ipv6AddressCount;
     }
 
@@ -123,7 +123,7 @@ public final class LaunchTemplateNetworkInterfaceGetArgs extends io.pulumi.resou
     @Import(name="ipv6Addresses")
       private final @Nullable Output<List<String>> ipv6Addresses;
 
-    public Output<List<String>> getIpv6Addresses() {
+    public Output<List<String>> ipv6Addresses() {
         return this.ipv6Addresses == null ? Codegen.empty() : this.ipv6Addresses;
     }
 
@@ -134,7 +134,7 @@ public final class LaunchTemplateNetworkInterfaceGetArgs extends io.pulumi.resou
     @Import(name="networkCardIndex")
       private final @Nullable Output<Integer> networkCardIndex;
 
-    public Output<Integer> getNetworkCardIndex() {
+    public Output<Integer> networkCardIndex() {
         return this.networkCardIndex == null ? Codegen.empty() : this.networkCardIndex;
     }
 
@@ -145,7 +145,7 @@ public final class LaunchTemplateNetworkInterfaceGetArgs extends io.pulumi.resou
     @Import(name="networkInterfaceId")
       private final @Nullable Output<String> networkInterfaceId;
 
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId == null ? Codegen.empty() : this.networkInterfaceId;
     }
 
@@ -156,7 +156,7 @@ public final class LaunchTemplateNetworkInterfaceGetArgs extends io.pulumi.resou
     @Import(name="privateIpAddress")
       private final @Nullable Output<String> privateIpAddress;
 
-    public Output<String> getPrivateIpAddress() {
+    public Output<String> privateIpAddress() {
         return this.privateIpAddress == null ? Codegen.empty() : this.privateIpAddress;
     }
 
@@ -167,7 +167,7 @@ public final class LaunchTemplateNetworkInterfaceGetArgs extends io.pulumi.resou
     @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> getSecurityGroups() {
+    public Output<List<String>> securityGroups() {
         return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
@@ -178,7 +178,7 @@ public final class LaunchTemplateNetworkInterfaceGetArgs extends io.pulumi.resou
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 

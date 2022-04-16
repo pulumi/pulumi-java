@@ -21,7 +21,7 @@ public final class ModelDefinitionResponse extends io.pulumi.resources.InvokeArg
     @Import(name="modelOptions", required=true)
       private final ModelDefinitionModelOptionsResponse modelOptions;
 
-    public ModelDefinitionModelOptionsResponse getModelOptions() {
+    public ModelDefinitionModelOptionsResponse modelOptions() {
         return this.modelOptions;
     }
 
@@ -32,7 +32,7 @@ public final class ModelDefinitionResponse extends io.pulumi.resources.InvokeArg
     @Import(name="trainingRuns", required=true)
       private final List<BqmlTrainingRunResponse> trainingRuns;
 
-    public List<BqmlTrainingRunResponse> getTrainingRuns() {
+    public List<BqmlTrainingRunResponse> trainingRuns() {
         return this.trainingRuns;
     }
 

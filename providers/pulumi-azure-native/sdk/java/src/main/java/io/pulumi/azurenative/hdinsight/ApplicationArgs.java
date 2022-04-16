@@ -24,7 +24,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationName")
       private final @Nullable Output<String> applicationName;
 
-    public Output<String> getApplicationName() {
+    public Output<String> applicationName() {
         return this.applicationName == null ? Codegen.empty() : this.applicationName;
     }
 
@@ -35,7 +35,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -46,7 +46,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<ApplicationPropertiesArgs> properties;
 
-    public Output<ApplicationPropertiesArgs> getProperties() {
+    public Output<ApplicationPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -57,7 +57,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,7 +68,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

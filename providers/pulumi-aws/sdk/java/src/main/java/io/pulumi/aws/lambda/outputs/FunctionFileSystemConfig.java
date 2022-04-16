@@ -32,14 +32,14 @@ public final class FunctionFileSystemConfig {
      * Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * Path where the function can access the file system, starting with /mnt/.
      * 
     */
-    public String getLocalMountPath() {
+    public String localMountPath() {
         return this.localMountPath;
     }
 

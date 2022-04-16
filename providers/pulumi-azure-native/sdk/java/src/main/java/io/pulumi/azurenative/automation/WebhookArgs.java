@@ -25,7 +25,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
-    public Output<String> getAutomationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -36,7 +36,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expiryTime")
       private final @Nullable Output<String> expiryTime;
 
-    public Output<String> getExpiryTime() {
+    public Output<String> expiryTime() {
         return this.expiryTime == null ? Codegen.empty() : this.expiryTime;
     }
 
@@ -47,7 +47,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled == null ? Codegen.empty() : this.isEnabled;
     }
 
@@ -58,7 +58,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -69,7 +69,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
+    public Output<Map<String,String>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -80,7 +80,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,7 +91,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="runOn")
       private final @Nullable Output<String> runOn;
 
-    public Output<String> getRunOn() {
+    public Output<String> runOn() {
         return this.runOn == null ? Codegen.empty() : this.runOn;
     }
 
@@ -102,7 +102,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="runbook")
       private final @Nullable Output<RunbookAssociationPropertyArgs> runbook;
 
-    public Output<RunbookAssociationPropertyArgs> getRunbook() {
+    public Output<RunbookAssociationPropertyArgs> runbook() {
         return this.runbook == null ? Codegen.empty() : this.runbook;
     }
 
@@ -113,7 +113,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri == null ? Codegen.empty() : this.uri;
     }
 
@@ -124,7 +124,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="webhookName")
       private final @Nullable Output<String> webhookName;
 
-    public Output<String> getWebhookName() {
+    public Output<String> webhookName() {
         return this.webhookName == null ? Codegen.empty() : this.webhookName;
     }
 

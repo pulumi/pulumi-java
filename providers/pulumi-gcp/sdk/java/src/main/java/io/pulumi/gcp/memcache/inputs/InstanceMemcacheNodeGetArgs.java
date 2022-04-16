@@ -19,35 +19,35 @@ public final class InstanceMemcacheNodeGetArgs extends io.pulumi.resources.Resou
     @Import(name="host")
       private final @Nullable Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host == null ? Codegen.empty() : this.host;
     }
 
     @Import(name="nodeId")
       private final @Nullable Output<String> nodeId;
 
-    public Output<String> getNodeId() {
+    public Output<String> nodeId() {
         return this.nodeId == null ? Codegen.empty() : this.nodeId;
     }
 
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

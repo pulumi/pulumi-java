@@ -68,7 +68,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
      * Provide this property when creating the disk.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
@@ -78,7 +78,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
      * new name will be automatically generated.
      * 
     */
-    public Optional<String> getDiskName() {
+    public Optional<String> diskName() {
         return Optional.ofNullable(this.diskName);
     }
     /**
@@ -88,7 +88,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
      * or larger than 10GB. Default 100 GB.
      * 
     */
-    public Optional<Integer> getDiskSizeGb() {
+    public Optional<Integer> diskSizeGb() {
         return Optional.ofNullable(this.diskSizeGb);
     }
     /**
@@ -98,7 +98,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
      * reference/rest/v1/projects.locations.runtimes#disktype`
      * 
     */
-    public Optional<String> getDiskType() {
+    public Optional<String> diskType() {
         return Optional.ofNullable(this.diskType);
     }
     /**
@@ -107,7 +107,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
      * applicable for persistent disks.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels == null ? Map.of() : this.labels;
     }
 

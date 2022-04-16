@@ -27,7 +27,7 @@ public final class DeliveryRuleIsDeviceConditionArgs extends io.pulumi.resources
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -38,7 +38,7 @@ public final class DeliveryRuleIsDeviceConditionArgs extends io.pulumi.resources
     @Import(name="parameters", required=true)
       private final Output<IsDeviceMatchConditionParametersArgs> parameters;
 
-    public Output<IsDeviceMatchConditionParametersArgs> getParameters() {
+    public Output<IsDeviceMatchConditionParametersArgs> parameters() {
         return this.parameters;
     }
 

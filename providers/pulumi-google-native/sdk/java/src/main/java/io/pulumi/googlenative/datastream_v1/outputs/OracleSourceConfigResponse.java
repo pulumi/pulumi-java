@@ -32,14 +32,14 @@ public final class OracleSourceConfigResponse {
      * Oracle objects to exclude from the stream.
      * 
     */
-    public OracleRdbmsResponse getExcludeObjects() {
+    public OracleRdbmsResponse excludeObjects() {
         return this.excludeObjects;
     }
     /**
      * Oracle objects to include in the stream.
      * 
     */
-    public OracleRdbmsResponse getIncludeObjects() {
+    public OracleRdbmsResponse includeObjects() {
         return this.includeObjects;
     }
 

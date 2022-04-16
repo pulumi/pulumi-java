@@ -27,7 +27,7 @@ public final class GoogleCloudRetailV2alphaFulfillmentInfoArgs extends io.pulumi
     @Import(name="placeIds")
       private final @Nullable Output<List<String>> placeIds;
 
-    public Output<List<String>> getPlaceIds() {
+    public Output<List<String>> placeIds() {
         return this.placeIds == null ? Codegen.empty() : this.placeIds;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudRetailV2alphaFulfillmentInfoArgs extends io.pulumi
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

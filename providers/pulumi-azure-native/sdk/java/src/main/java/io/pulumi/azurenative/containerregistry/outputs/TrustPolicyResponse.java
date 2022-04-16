@@ -34,14 +34,14 @@ public final class TrustPolicyResponse {
      * The value that indicates whether the policy is enabled or not.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The type of trust policy.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

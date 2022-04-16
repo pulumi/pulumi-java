@@ -27,14 +27,14 @@ public final class RepositoryEncryptionConfigurationArgs extends io.pulumi.resou
     @Import(name="encryptionType", required=true)
       private final Output<RepositoryEncryptionType> encryptionType;
 
-    public Output<RepositoryEncryptionType> getEncryptionType() {
+    public Output<RepositoryEncryptionType> encryptionType() {
         return this.encryptionType;
     }
 
     @Import(name="kmsKey")
       private final @Nullable Output<String> kmsKey;
 
-    public Output<String> getKmsKey() {
+    public Output<String> kmsKey() {
         return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
     }
 

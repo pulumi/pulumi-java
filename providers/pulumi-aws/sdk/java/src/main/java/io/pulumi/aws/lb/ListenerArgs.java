@@ -26,7 +26,7 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alpnPolicy")
       private final @Nullable Output<String> alpnPolicy;
 
-    public Output<String> getAlpnPolicy() {
+    public Output<String> alpnPolicy() {
         return this.alpnPolicy == null ? Codegen.empty() : this.alpnPolicy;
     }
 
@@ -37,7 +37,7 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateArn")
       private final @Nullable Output<String> certificateArn;
 
-    public Output<String> getCertificateArn() {
+    public Output<String> certificateArn() {
         return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
     }
 
@@ -48,7 +48,7 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultActions", required=true)
       private final Output<List<ListenerDefaultActionArgs>> defaultActions;
 
-    public Output<List<ListenerDefaultActionArgs>> getDefaultActions() {
+    public Output<List<ListenerDefaultActionArgs>> defaultActions() {
         return this.defaultActions;
     }
 
@@ -59,7 +59,7 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancerArn", required=true)
       private final Output<String> loadBalancerArn;
 
-    public Output<String> getLoadBalancerArn() {
+    public Output<String> loadBalancerArn() {
         return this.loadBalancerArn;
     }
 
@@ -70,7 +70,7 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -81,7 +81,7 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
@@ -92,7 +92,7 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sslPolicy")
       private final @Nullable Output<String> sslPolicy;
 
-    public Output<String> getSslPolicy() {
+    public Output<String> sslPolicy() {
         return this.sslPolicy == null ? Codegen.empty() : this.sslPolicy;
     }
 
@@ -103,7 +103,7 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

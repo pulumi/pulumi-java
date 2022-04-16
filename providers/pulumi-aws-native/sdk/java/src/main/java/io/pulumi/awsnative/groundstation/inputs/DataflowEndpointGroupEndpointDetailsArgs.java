@@ -19,14 +19,14 @@ public final class DataflowEndpointGroupEndpointDetailsArgs extends io.pulumi.re
     @Import(name="endpoint")
       private final @Nullable Output<DataflowEndpointGroupDataflowEndpointArgs> endpoint;
 
-    public Output<DataflowEndpointGroupDataflowEndpointArgs> getEndpoint() {
+    public Output<DataflowEndpointGroupDataflowEndpointArgs> endpoint() {
         return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 
     @Import(name="securityDetails")
       private final @Nullable Output<DataflowEndpointGroupSecurityDetailsArgs> securityDetails;
 
-    public Output<DataflowEndpointGroupSecurityDetailsArgs> getSecurityDetails() {
+    public Output<DataflowEndpointGroupSecurityDetailsArgs> securityDetails() {
         return this.securityDetails == null ? Codegen.empty() : this.securityDetails;
     }
 

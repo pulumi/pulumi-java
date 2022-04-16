@@ -25,7 +25,7 @@ public final class SnapshotSchedulePolicyArgs extends io.pulumi.resources.Resour
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -36,7 +36,7 @@ public final class SnapshotSchedulePolicyArgs extends io.pulumi.resources.Resour
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -47,21 +47,21 @@ public final class SnapshotSchedulePolicyArgs extends io.pulumi.resources.Resour
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -72,14 +72,14 @@ public final class SnapshotSchedulePolicyArgs extends io.pulumi.resources.Resour
     @Import(name="schedules")
       private final @Nullable Output<List<ScheduleArgs>> schedules;
 
-    public Output<List<ScheduleArgs>> getSchedules() {
+    public Output<List<ScheduleArgs>> schedules() {
         return this.schedules == null ? Codegen.empty() : this.schedules;
     }
 
     @Import(name="snapshotSchedulePolicyId", required=true)
       private final Output<String> snapshotSchedulePolicyId;
 
-    public Output<String> getSnapshotSchedulePolicyId() {
+    public Output<String> snapshotSchedulePolicyId() {
         return this.snapshotSchedulePolicyId;
     }
 

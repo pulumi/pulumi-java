@@ -83,63 +83,63 @@ public final class GetConfigurationResult {
      * Allowed values of the configuration.
      * 
     */
-    public String getAllowedValues() {
+    public String allowedValues() {
         return this.allowedValues;
     }
     /**
      * Data type of the configuration.
      * 
     */
-    public String getDataType() {
+    public String dataType() {
         return this.dataType;
     }
     /**
      * Default value of the configuration.
      * 
     */
-    public String getDefaultValue() {
+    public String defaultValue() {
         return this.defaultValue;
     }
     /**
      * Description of the configuration.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Source of the configuration.
      * 
     */
-    public Optional<String> getSource() {
+    public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Value of the configuration.
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

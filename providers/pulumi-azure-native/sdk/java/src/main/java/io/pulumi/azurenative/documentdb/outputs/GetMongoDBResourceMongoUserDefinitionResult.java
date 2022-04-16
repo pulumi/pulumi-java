@@ -85,63 +85,63 @@ public final class GetMongoDBResourceMongoUserDefinitionResult {
      * A custom definition for the USer Definition.
      * 
     */
-    public Optional<String> getCustomData() {
+    public Optional<String> customData() {
         return Optional.ofNullable(this.customData);
     }
     /**
      * The database name for which access is being granted for this User Definition.
      * 
     */
-    public Optional<String> getDatabaseName() {
+    public Optional<String> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
     /**
      * The unique resource identifier of the database account.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The Mongo Auth mechanism. For now, we only support auth mechanism SCRAM-SHA-256.
      * 
     */
-    public Optional<String> getMechanisms() {
+    public Optional<String> mechanisms() {
         return Optional.ofNullable(this.mechanisms);
     }
     /**
      * The name of the database account.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The password for User Definition. Response does not contain user password.
      * 
     */
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The set of roles inherited by the User Definition.
      * 
     */
-    public List<RoleResponse> getRoles() {
+    public List<RoleResponse> roles() {
         return this.roles == null ? List.of() : this.roles;
     }
     /**
      * The type of Azure resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The user name for User Definition.
      * 
     */
-    public Optional<String> getUserName() {
+    public Optional<String> userName() {
         return Optional.ofNullable(this.userName);
     }
 

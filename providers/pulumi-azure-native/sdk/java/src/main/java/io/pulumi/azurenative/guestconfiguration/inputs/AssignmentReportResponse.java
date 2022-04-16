@@ -25,7 +25,7 @@ public final class AssignmentReportResponse extends io.pulumi.resources.InvokeAr
     @Import(name="assignment")
       private final @Nullable AssignmentInfoResponse assignment;
 
-    public Optional<AssignmentInfoResponse> getAssignment() {
+    public Optional<AssignmentInfoResponse> assignment() {
         return this.assignment == null ? Optional.empty() : Optional.ofNullable(this.assignment);
     }
 
@@ -36,7 +36,7 @@ public final class AssignmentReportResponse extends io.pulumi.resources.InvokeAr
     @Import(name="complianceStatus", required=true)
       private final String complianceStatus;
 
-    public String getComplianceStatus() {
+    public String complianceStatus() {
         return this.complianceStatus;
     }
 
@@ -47,7 +47,7 @@ public final class AssignmentReportResponse extends io.pulumi.resources.InvokeAr
     @Import(name="endTime", required=true)
       private final String endTime;
 
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
 
@@ -58,7 +58,7 @@ public final class AssignmentReportResponse extends io.pulumi.resources.InvokeAr
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -69,7 +69,7 @@ public final class AssignmentReportResponse extends io.pulumi.resources.InvokeAr
     @Import(name="operationType", required=true)
       private final String operationType;
 
-    public String getOperationType() {
+    public String operationType() {
         return this.operationType;
     }
 
@@ -80,7 +80,7 @@ public final class AssignmentReportResponse extends io.pulumi.resources.InvokeAr
     @Import(name="reportId", required=true)
       private final String reportId;
 
-    public String getReportId() {
+    public String reportId() {
         return this.reportId;
     }
 
@@ -91,7 +91,7 @@ public final class AssignmentReportResponse extends io.pulumi.resources.InvokeAr
     @Import(name="resources")
       private final @Nullable List<AssignmentReportResourceResponse> resources;
 
-    public List<AssignmentReportResourceResponse> getResources() {
+    public List<AssignmentReportResourceResponse> resources() {
         return this.resources == null ? List.of() : this.resources;
     }
 
@@ -102,7 +102,7 @@ public final class AssignmentReportResponse extends io.pulumi.resources.InvokeAr
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
@@ -113,7 +113,7 @@ public final class AssignmentReportResponse extends io.pulumi.resources.InvokeAr
     @Import(name="vm")
       private final @Nullable VMInfoResponse vm;
 
-    public Optional<VMInfoResponse> getVm() {
+    public Optional<VMInfoResponse> vm() {
         return this.vm == null ? Optional.empty() : Optional.ofNullable(this.vm);
     }
 

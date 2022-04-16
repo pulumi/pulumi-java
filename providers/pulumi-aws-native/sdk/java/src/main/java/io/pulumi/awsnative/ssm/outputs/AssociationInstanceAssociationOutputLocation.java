@@ -18,7 +18,7 @@ public final class AssociationInstanceAssociationOutputLocation {
         this.s3Location = s3Location;
     }
 
-    public Optional<AssociationS3OutputLocation> getS3Location() {
+    public Optional<AssociationS3OutputLocation> s3Location() {
         return Optional.ofNullable(this.s3Location);
     }
 

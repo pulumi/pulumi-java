@@ -35,14 +35,14 @@ public final class ReportGroupExportConfig {
      * contains information about the S3 bucket where the run of a report is exported. see S3 Destination documented below.
      * 
     */
-    public Optional<ReportGroupExportConfigS3Destination> getS3Destination() {
+    public Optional<ReportGroupExportConfigS3Destination> s3Destination() {
         return Optional.ofNullable(this.s3Destination);
     }
     /**
      * The export configuration type. Valid values are `S3` and `NO_EXPORT`.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

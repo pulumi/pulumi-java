@@ -55,7 +55,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * group.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -73,7 +73,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * network and zone as the instance group.
      * 
      */
-    public Output<List<String>> getInstances() {
+    public Output<List<String>> instances() {
         return this.instances;
     }
     /**
@@ -87,7 +87,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * @return The name which the port will be mapped to.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -103,7 +103,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * for details on configuration. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<InstanceGroupNamedPort>> getNamedPorts() {
+    public Output</* @Nullable */ List<InstanceGroupNamedPort>> namedPorts() {
         return this.namedPorts;
     }
     /**
@@ -123,7 +123,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * `network` nor `instances` is specified, this field will be blank).
      * 
      */
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
     /**
@@ -139,7 +139,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -153,7 +153,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -167,7 +167,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * @return The number of instances in the group.
      * 
      */
-    public Output<Integer> getSize() {
+    public Output<Integer> size() {
         return this.size;
     }
     /**
@@ -181,7 +181,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * @return The zone that this instance group should be created in.
      * 
      */
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone;
     }
 

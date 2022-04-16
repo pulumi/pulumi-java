@@ -23,7 +23,7 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="group", required=true)
       private final Output<String> group;
 
-    public Output<String> getGroup() {
+    public Output<String> group() {
         return this.group;
     }
 
@@ -34,7 +34,7 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -45,7 +45,7 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="users", required=true)
       private final Output<List<String>> users;
 
-    public Output<List<String>> getUsers() {
+    public Output<List<String>> users() {
         return this.users;
     }
 

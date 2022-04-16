@@ -23,7 +23,7 @@ public final class SecurityScanConfigScheduleArgs extends io.pulumi.resources.Re
     @Import(name="intervalDurationDays", required=true)
       private final Output<Integer> intervalDurationDays;
 
-    public Output<Integer> getIntervalDurationDays() {
+    public Output<Integer> intervalDurationDays() {
         return this.intervalDurationDays;
     }
 
@@ -36,7 +36,7 @@ public final class SecurityScanConfigScheduleArgs extends io.pulumi.resources.Re
     @Import(name="scheduleTime")
       private final @Nullable Output<String> scheduleTime;
 
-    public Output<String> getScheduleTime() {
+    public Output<String> scheduleTime() {
         return this.scheduleTime == null ? Codegen.empty() : this.scheduleTime;
     }
 

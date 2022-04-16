@@ -26,7 +26,7 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="cert")
       private final @Nullable Output<String> cert;
 
-    public Output<String> getCert() {
+    public Output<String> cert() {
         return this.cert == null ? Codegen.empty() : this.cert;
     }
 
@@ -37,7 +37,7 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="cname")
       private final @Nullable Output<String> cname;
 
-    public Output<String> getCname() {
+    public Output<String> cname() {
         return this.cname == null ? Codegen.empty() : this.cname;
     }
 
@@ -48,7 +48,7 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
@@ -59,7 +59,7 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

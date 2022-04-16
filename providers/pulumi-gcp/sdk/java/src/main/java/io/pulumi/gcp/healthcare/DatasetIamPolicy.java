@@ -80,7 +80,7 @@ public class DatasetIamPolicy extends io.pulumi.resources.CustomResource {
      * project setting will be used as a fallback.
      * 
      */
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
     /**
@@ -94,7 +94,7 @@ public class DatasetIamPolicy extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the dataset's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -110,7 +110,7 @@ public class DatasetIamPolicy extends io.pulumi.resources.CustomResource {
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 

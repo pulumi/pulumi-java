@@ -39,17 +39,17 @@ public final class GetIAMPolicyResult {
         this.policyData = policyData;
     }
 
-    public List<GetIAMPolicyAuditConfig> getAuditConfigs() {
+    public List<GetIAMPolicyAuditConfig> auditConfigs() {
         return this.auditConfigs == null ? List.of() : this.auditConfigs;
     }
-    public List<GetIAMPolicyBinding> getBindings() {
+    public List<GetIAMPolicyBinding> bindings() {
         return this.bindings == null ? List.of() : this.bindings;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -57,7 +57,7 @@ public final class GetIAMPolicyResult {
      * referencing from a resource that supports IAM.
      * 
     */
-    public String getPolicyData() {
+    public String policyData() {
         return this.policyData;
     }
 

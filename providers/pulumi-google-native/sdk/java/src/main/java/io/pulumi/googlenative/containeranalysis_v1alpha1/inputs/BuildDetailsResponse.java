@@ -25,7 +25,7 @@ public final class BuildDetailsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="intotoStatement", required=true)
       private final InTotoStatementResponse intotoStatement;
 
-    public InTotoStatementResponse getIntotoStatement() {
+    public InTotoStatementResponse intotoStatement() {
         return this.intotoStatement;
     }
 
@@ -36,7 +36,7 @@ public final class BuildDetailsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="provenance", required=true)
       private final BuildProvenanceResponse provenance;
 
-    public BuildProvenanceResponse getProvenance() {
+    public BuildProvenanceResponse provenance() {
         return this.provenance;
     }
 
@@ -47,7 +47,7 @@ public final class BuildDetailsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="provenanceBytes", required=true)
       private final String provenanceBytes;
 
-    public String getProvenanceBytes() {
+    public String provenanceBytes() {
         return this.provenanceBytes;
     }
 

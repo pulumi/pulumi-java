@@ -17,7 +17,7 @@ public final class GetClusterMasterAuthorizedNetworksConfig {
         this.cidrBlocks = cidrBlocks;
     }
 
-    public List<GetClusterMasterAuthorizedNetworksConfigCidrBlock> getCidrBlocks() {
+    public List<GetClusterMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks() {
         return this.cidrBlocks;
     }
 

@@ -25,7 +25,7 @@ public final class LoadBalancerInfoResponse extends io.pulumi.resources.InvokeAr
     @Import(name="backendType", required=true)
       private final String backendType;
 
-    public String getBackendType() {
+    public String backendType() {
         return this.backendType;
     }
 
@@ -36,7 +36,7 @@ public final class LoadBalancerInfoResponse extends io.pulumi.resources.InvokeAr
     @Import(name="backendUri", required=true)
       private final String backendUri;
 
-    public String getBackendUri() {
+    public String backendUri() {
         return this.backendUri;
     }
 
@@ -47,7 +47,7 @@ public final class LoadBalancerInfoResponse extends io.pulumi.resources.InvokeAr
     @Import(name="backends", required=true)
       private final List<LoadBalancerBackendResponse> backends;
 
-    public List<LoadBalancerBackendResponse> getBackends() {
+    public List<LoadBalancerBackendResponse> backends() {
         return this.backends;
     }
 
@@ -58,7 +58,7 @@ public final class LoadBalancerInfoResponse extends io.pulumi.resources.InvokeAr
     @Import(name="healthCheckUri", required=true)
       private final String healthCheckUri;
 
-    public String getHealthCheckUri() {
+    public String healthCheckUri() {
         return this.healthCheckUri;
     }
 
@@ -69,7 +69,7 @@ public final class LoadBalancerInfoResponse extends io.pulumi.resources.InvokeAr
     @Import(name="loadBalancerType", required=true)
       private final String loadBalancerType;
 
-    public String getLoadBalancerType() {
+    public String loadBalancerType() {
         return this.loadBalancerType;
     }
 

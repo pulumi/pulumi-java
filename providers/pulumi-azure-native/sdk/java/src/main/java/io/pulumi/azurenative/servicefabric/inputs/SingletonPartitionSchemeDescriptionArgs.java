@@ -26,7 +26,7 @@ public final class SingletonPartitionSchemeDescriptionArgs extends io.pulumi.res
     @Import(name="partitionScheme", required=true)
       private final Output<String> partitionScheme;
 
-    public Output<String> getPartitionScheme() {
+    public Output<String> partitionScheme() {
         return this.partitionScheme;
     }
 

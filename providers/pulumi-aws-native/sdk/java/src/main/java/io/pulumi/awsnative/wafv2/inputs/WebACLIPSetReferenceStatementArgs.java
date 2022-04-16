@@ -19,14 +19,14 @@ public final class WebACLIPSetReferenceStatementArgs extends io.pulumi.resources
     @Import(name="arn", required=true)
       private final Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
     @Import(name="iPSetForwardedIPConfig")
       private final @Nullable Output<WebACLIPSetForwardedIPConfigurationArgs> iPSetForwardedIPConfig;
 
-    public Output<WebACLIPSetForwardedIPConfigurationArgs> getIPSetForwardedIPConfig() {
+    public Output<WebACLIPSetForwardedIPConfigurationArgs> iPSetForwardedIPConfig() {
         return this.iPSetForwardedIPConfig == null ? Codegen.empty() : this.iPSetForwardedIPConfig;
     }
 

@@ -21,7 +21,7 @@ public final class GetConnectionGatewayArgs extends io.pulumi.resources.InvokeAr
     @Import(name="connectionGatewayName", required=true)
       private final String connectionGatewayName;
 
-    public String getConnectionGatewayName() {
+    public String connectionGatewayName() {
         return this.connectionGatewayName;
     }
 
@@ -32,7 +32,7 @@ public final class GetConnectionGatewayArgs extends io.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -43,7 +43,7 @@ public final class GetConnectionGatewayArgs extends io.pulumi.resources.InvokeAr
     @Import(name="subscriptionId")
       private final @Nullable String subscriptionId;
 
-    public Optional<String> getSubscriptionId() {
+    public Optional<String> subscriptionId() {
         return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
     }
 

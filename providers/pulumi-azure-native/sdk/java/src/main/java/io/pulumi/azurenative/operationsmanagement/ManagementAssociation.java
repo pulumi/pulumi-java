@@ -43,7 +43,7 @@ public class ManagementAssociation extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -57,7 +57,7 @@ public class ManagementAssociation extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class ManagementAssociation extends io.pulumi.resources.CustomResource {
      * @return Properties for ManagementAssociation object supported by the OperationsManagement resource provider.
      * 
      */
-    public Output<ManagementAssociationPropertiesResponse> getProperties() {
+    public Output<ManagementAssociationPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -85,7 +85,7 @@ public class ManagementAssociation extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

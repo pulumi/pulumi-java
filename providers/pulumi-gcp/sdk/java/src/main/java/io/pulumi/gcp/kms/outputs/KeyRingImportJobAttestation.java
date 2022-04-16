@@ -22,10 +22,10 @@ public final class KeyRingImportJobAttestation {
         this.format = format;
     }
 
-    public Optional<String> getContent() {
+    public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
-    public Optional<String> getFormat() {
+    public Optional<String> format() {
         return Optional.ofNullable(this.format);
     }
 

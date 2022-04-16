@@ -27,7 +27,7 @@ public final class CustomImagePropertiesFromVmResponse extends io.pulumi.resourc
     @Import(name="linuxOsInfo")
       private final @Nullable LinuxOsInfoResponse linuxOsInfo;
 
-    public Optional<LinuxOsInfoResponse> getLinuxOsInfo() {
+    public Optional<LinuxOsInfoResponse> linuxOsInfo() {
         return this.linuxOsInfo == null ? Optional.empty() : Optional.ofNullable(this.linuxOsInfo);
     }
 
@@ -38,7 +38,7 @@ public final class CustomImagePropertiesFromVmResponse extends io.pulumi.resourc
     @Import(name="sourceVmId")
       private final @Nullable String sourceVmId;
 
-    public Optional<String> getSourceVmId() {
+    public Optional<String> sourceVmId() {
         return this.sourceVmId == null ? Optional.empty() : Optional.ofNullable(this.sourceVmId);
     }
 
@@ -49,7 +49,7 @@ public final class CustomImagePropertiesFromVmResponse extends io.pulumi.resourc
     @Import(name="windowsOsInfo")
       private final @Nullable WindowsOsInfoResponse windowsOsInfo;
 
-    public Optional<WindowsOsInfoResponse> getWindowsOsInfo() {
+    public Optional<WindowsOsInfoResponse> windowsOsInfo() {
         return this.windowsOsInfo == null ? Optional.empty() : Optional.ofNullable(this.windowsOsInfo);
     }
 

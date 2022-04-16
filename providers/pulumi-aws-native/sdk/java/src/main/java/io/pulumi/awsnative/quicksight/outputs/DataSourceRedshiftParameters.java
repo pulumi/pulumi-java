@@ -51,28 +51,28 @@ public final class DataSourceRedshiftParameters {
      *             provided.</p>
      * 
     */
-    public Optional<String> getClusterId() {
+    public Optional<String> clusterId() {
         return Optional.ofNullable(this.clusterId);
     }
     /**
      * <p>Database.</p>
      * 
     */
-    public String getDatabase() {
+    public String database() {
         return this.database;
     }
     /**
      * <p>Host. This field can be blank if <code>ClusterId</code> is provided.</p>
      * 
     */
-    public Optional<String> getHost() {
+    public Optional<String> host() {
         return Optional.ofNullable(this.host);
     }
     /**
      * <p>Port. This field can be blank if the <code>ClusterId</code> is provided.</p>
      * 
     */
-    public Optional<Double> getPort() {
+    public Optional<Double> port() {
         return Optional.ofNullable(this.port);
     }
 

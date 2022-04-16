@@ -27,7 +27,7 @@ public final class LoggingDestinationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="logs")
       private final @Nullable Output<List<String>> logs;
 
-    public Output<List<String>> getLogs() {
+    public Output<List<String>> logs() {
         return this.logs == null ? Codegen.empty() : this.logs;
     }
 
@@ -38,7 +38,7 @@ public final class LoggingDestinationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="monitoredResource")
       private final @Nullable Output<String> monitoredResource;
 
-    public Output<String> getMonitoredResource() {
+    public Output<String> monitoredResource() {
         return this.monitoredResource == null ? Codegen.empty() : this.monitoredResource;
     }
 

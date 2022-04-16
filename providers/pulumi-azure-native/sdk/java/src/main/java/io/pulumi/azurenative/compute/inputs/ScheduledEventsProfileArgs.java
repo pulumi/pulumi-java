@@ -22,7 +22,7 @@ public final class ScheduledEventsProfileArgs extends io.pulumi.resources.Resour
     @Import(name="terminateNotificationProfile")
       private final @Nullable Output<TerminateNotificationProfileArgs> terminateNotificationProfile;
 
-    public Output<TerminateNotificationProfileArgs> getTerminateNotificationProfile() {
+    public Output<TerminateNotificationProfileArgs> terminateNotificationProfile() {
         return this.terminateNotificationProfile == null ? Codegen.empty() : this.terminateNotificationProfile;
     }
 

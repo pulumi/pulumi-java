@@ -219,192 +219,192 @@ public final class GetVolumeResult {
      * UUID v4 or resource identifier used to identify the Backup.
      * 
     */
-    public Optional<String> getBackupId() {
+    public Optional<String> backupId() {
         return Optional.ofNullable(this.backupId);
     }
     /**
      * Unique Baremetal Tenant Identifier.
      * 
     */
-    public String getBaremetalTenantId() {
+    public String baremetalTenantId() {
         return this.baremetalTenantId;
     }
     /**
      * A unique file path for the volume. Used when creating mount targets
      * 
     */
-    public String getCreationToken() {
+    public String creationToken() {
         return this.creationToken;
     }
     /**
      * DataProtection type volumes include an object containing details of the replication
      * 
     */
-    public Optional<VolumePropertiesResponseDataProtection> getDataProtection() {
+    public Optional<VolumePropertiesResponseDataProtection> dataProtection() {
         return Optional.ofNullable(this.dataProtection);
     }
     /**
      * Encryption Key Source. Possible values are: 'Microsoft.NetApp'
      * 
     */
-    public Optional<String> getEncryptionKeySource() {
+    public Optional<String> encryptionKeySource() {
         return Optional.ofNullable(this.encryptionKeySource);
     }
     /**
      * Set of export policy rules
      * 
     */
-    public Optional<VolumePropertiesResponseExportPolicy> getExportPolicy() {
+    public Optional<VolumePropertiesResponseExportPolicy> exportPolicy() {
         return Optional.ofNullable(this.exportPolicy);
     }
     /**
      * Unique FileSystem Identifier.
      * 
     */
-    public String getFileSystemId() {
+    public String fileSystemId() {
         return this.fileSystemId;
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Restoring
      * 
     */
-    public Optional<Boolean> getIsRestoring() {
+    public Optional<Boolean> isRestoring() {
         return Optional.ofNullable(this.isRestoring);
     }
     /**
      * Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later
      * 
     */
-    public Optional<Boolean> getKerberosEnabled() {
+    public Optional<Boolean> kerberosEnabled() {
         return Optional.ofNullable(this.kerberosEnabled);
     }
     /**
      * Specifies whether LDAP is enabled or not for a given NFS volume.
      * 
     */
-    public Optional<Boolean> getLdapEnabled() {
+    public Optional<Boolean> ldapEnabled() {
         return Optional.ofNullable(this.ldapEnabled);
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * List of mount targets
      * 
     */
-    public List<MountTargetPropertiesResponse> getMountTargets() {
+    public List<MountTargetPropertiesResponse> mountTargets() {
         return this.mountTargets;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Set of protocol types, default NFSv3, CIFS for SMB protocol
      * 
     */
-    public List<String> getProtocolTypes() {
+    public List<String> protocolTypes() {
         return this.protocolTypes == null ? List.of() : this.protocolTypes;
     }
     /**
      * Azure lifecycle management
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The security style of volume, default unix, defaults to ntfs for dual protocol or CIFS protocol
      * 
     */
-    public Optional<String> getSecurityStyle() {
+    public Optional<String> securityStyle() {
         return Optional.ofNullable(this.securityStyle);
     }
     /**
      * The service level of the file system
      * 
     */
-    public Optional<String> getServiceLevel() {
+    public Optional<String> serviceLevel() {
         return Optional.ofNullable(this.serviceLevel);
     }
     /**
      * Enables continuously available share property for smb volume. Only applicable for SMB volume
      * 
     */
-    public Optional<Boolean> getSmbContinuouslyAvailable() {
+    public Optional<Boolean> smbContinuouslyAvailable() {
         return Optional.ofNullable(this.smbContinuouslyAvailable);
     }
     /**
      * Enables encryption for in-flight smb3 data. Only applicable for SMB/DualProtocol volume. To be used with swagger version 2020-08-01 or later
      * 
     */
-    public Optional<Boolean> getSmbEncryption() {
+    public Optional<Boolean> smbEncryption() {
         return Optional.ofNullable(this.smbEncryption);
     }
     /**
      * If enabled (true) the volume will contain a read-only snapshot directory which provides access to each of the volume's snapshots (default to true).
      * 
     */
-    public Optional<Boolean> getSnapshotDirectoryVisible() {
+    public Optional<Boolean> snapshotDirectoryVisible() {
         return Optional.ofNullable(this.snapshotDirectoryVisible);
     }
     /**
      * UUID v4 or resource identifier used to identify the Snapshot.
      * 
     */
-    public Optional<String> getSnapshotId() {
+    public Optional<String> snapshotId() {
         return Optional.ofNullable(this.snapshotId);
     }
     /**
      * The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes
      * 
     */
-    public String getSubnetId() {
+    public String subnetId() {
         return this.subnetId;
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-    public Optional<Double> getThroughputMibps() {
+    public Optional<Double> throughputMibps() {
         return Optional.ofNullable(this.throughputMibps);
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.
      * 
     */
-    public Double getUsageThreshold() {
+    public Double usageThreshold() {
         return this.usageThreshold;
     }
     /**
      * What type of volume is this
      * 
     */
-    public Optional<String> getVolumeType() {
+    public Optional<String> volumeType() {
         return Optional.ofNullable(this.volumeType);
     }
 

@@ -26,7 +26,7 @@ public final class SsoPropertiesResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="clientId")
       private final @Nullable String clientId;
 
-    public Optional<String> getClientId() {
+    public Optional<String> clientId() {
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
     }
 
@@ -37,7 +37,7 @@ public final class SsoPropertiesResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="clientSecret")
       private final @Nullable String clientSecret;
 
-    public Optional<String> getClientSecret() {
+    public Optional<String> clientSecret() {
         return this.clientSecret == null ? Optional.empty() : Optional.ofNullable(this.clientSecret);
     }
 
@@ -48,7 +48,7 @@ public final class SsoPropertiesResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="issuerUri")
       private final @Nullable String issuerUri;
 
-    public Optional<String> getIssuerUri() {
+    public Optional<String> issuerUri() {
         return this.issuerUri == null ? Optional.empty() : Optional.ofNullable(this.issuerUri);
     }
 
@@ -59,7 +59,7 @@ public final class SsoPropertiesResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="scope")
       private final @Nullable List<String> scope;
 
-    public List<String> getScope() {
+    public List<String> scope() {
         return this.scope == null ? List.of() : this.scope;
     }
 

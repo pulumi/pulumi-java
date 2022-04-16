@@ -29,7 +29,7 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputArgs e
     @Import(name="enableSentimentAnalysis")
       private final @Nullable Output<Boolean> enableSentimentAnalysis;
 
-    public Output<Boolean> getEnableSentimentAnalysis() {
+    public Output<Boolean> enableSentimentAnalysis() {
         return this.enableSentimentAnalysis == null ? Codegen.empty() : this.enableSentimentAnalysis;
     }
 
@@ -40,7 +40,7 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputArgs e
     @Import(name="injectedParameters")
       private final @Nullable Output<Map<String,String>> injectedParameters;
 
-    public Output<Map<String,String>> getInjectedParameters() {
+    public Output<Map<String,String>> injectedParameters() {
         return this.injectedParameters == null ? Codegen.empty() : this.injectedParameters;
     }
 
@@ -51,7 +51,7 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputArgs e
     @Import(name="input")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1QueryInputArgs> input;
 
-    public Output<GoogleCloudDialogflowCxV3beta1QueryInputArgs> getInput() {
+    public Output<GoogleCloudDialogflowCxV3beta1QueryInputArgs> input() {
         return this.input == null ? Codegen.empty() : this.input;
     }
 
@@ -62,7 +62,7 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputArgs e
     @Import(name="isWebhookEnabled")
       private final @Nullable Output<Boolean> isWebhookEnabled;
 
-    public Output<Boolean> getIsWebhookEnabled() {
+    public Output<Boolean> isWebhookEnabled() {
         return this.isWebhookEnabled == null ? Codegen.empty() : this.isWebhookEnabled;
     }
 

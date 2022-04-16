@@ -26,7 +26,7 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="ssh")
       private final @Nullable Output<SshConfigurationArgs> ssh;
 
-    public Output<SshConfigurationArgs> getSsh() {
+    public Output<SshConfigurationArgs> ssh() {
         return this.ssh == null ? Codegen.empty() : this.ssh;
     }
 

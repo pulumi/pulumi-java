@@ -34,10 +34,10 @@ public final class ClusterClusterConfigEndpointConfig {
      * on the cluster from external sources (aka Component Gateway). Defaults to false.
      * 
     */
-    public Boolean getEnableHttpPortAccess() {
+    public Boolean enableHttpPortAccess() {
         return this.enableHttpPortAccess;
     }
-    public Map<String,Object> getHttpPorts() {
+    public Map<String,Object> httpPorts() {
         return this.httpPorts == null ? Map.of() : this.httpPorts;
     }
 

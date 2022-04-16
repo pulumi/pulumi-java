@@ -43,7 +43,7 @@ public class NetworkSecurityPerimeter extends io.pulumi.resources.CustomResource
      * @return A description of the network security perimeter.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -57,7 +57,7 @@ public class NetworkSecurityPerimeter extends io.pulumi.resources.CustomResource
      * @return A friendly name for the network security perimeter.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -71,7 +71,7 @@ public class NetworkSecurityPerimeter extends io.pulumi.resources.CustomResource
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -85,7 +85,7 @@ public class NetworkSecurityPerimeter extends io.pulumi.resources.CustomResource
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -99,7 +99,7 @@ public class NetworkSecurityPerimeter extends io.pulumi.resources.CustomResource
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -113,7 +113,7 @@ public class NetworkSecurityPerimeter extends io.pulumi.resources.CustomResource
      * @return The provisioning state of the scope assignment resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -127,7 +127,7 @@ public class NetworkSecurityPerimeter extends io.pulumi.resources.CustomResource
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -141,7 +141,7 @@ public class NetworkSecurityPerimeter extends io.pulumi.resources.CustomResource
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -22,14 +22,14 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiproduct")
       private final @Nullable Output<String> apiproduct;
 
-    public Output<String> getApiproduct() {
+    public Output<String> apiproduct() {
         return this.apiproduct == null ? Codegen.empty() : this.apiproduct;
     }
 
     @Import(name="developerId", required=true)
       private final Output<String> developerId;
 
-    public Output<String> getDeveloperId() {
+    public Output<String> developerId() {
         return this.developerId;
     }
 
@@ -40,14 +40,14 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -58,7 +58,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 

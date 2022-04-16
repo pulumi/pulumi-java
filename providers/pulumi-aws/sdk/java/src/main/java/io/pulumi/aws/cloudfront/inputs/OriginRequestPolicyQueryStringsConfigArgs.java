@@ -19,14 +19,14 @@ public final class OriginRequestPolicyQueryStringsConfigArgs extends io.pulumi.r
     @Import(name="queryStringBehavior", required=true)
       private final Output<String> queryStringBehavior;
 
-    public Output<String> getQueryStringBehavior() {
+    public Output<String> queryStringBehavior() {
         return this.queryStringBehavior;
     }
 
     @Import(name="queryStrings")
       private final @Nullable Output<OriginRequestPolicyQueryStringsConfigQueryStringsArgs> queryStrings;
 
-    public Output<OriginRequestPolicyQueryStringsConfigQueryStringsArgs> getQueryStrings() {
+    public Output<OriginRequestPolicyQueryStringsConfigQueryStringsArgs> queryStrings() {
         return this.queryStrings == null ? Codegen.empty() : this.queryStrings;
     }
 

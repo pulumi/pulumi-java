@@ -34,91 +34,91 @@ public final class DetectorModelActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="clearTimer")
       private final @Nullable Output<DetectorModelClearTimerArgs> clearTimer;
 
-    public Output<DetectorModelClearTimerArgs> getClearTimer() {
+    public Output<DetectorModelClearTimerArgs> clearTimer() {
         return this.clearTimer == null ? Codegen.empty() : this.clearTimer;
     }
 
     @Import(name="dynamoDB")
       private final @Nullable Output<DetectorModelDynamoDBArgs> dynamoDB;
 
-    public Output<DetectorModelDynamoDBArgs> getDynamoDB() {
+    public Output<DetectorModelDynamoDBArgs> dynamoDB() {
         return this.dynamoDB == null ? Codegen.empty() : this.dynamoDB;
     }
 
     @Import(name="dynamoDBv2")
       private final @Nullable Output<DetectorModelDynamoDBv2Args> dynamoDBv2;
 
-    public Output<DetectorModelDynamoDBv2Args> getDynamoDBv2() {
+    public Output<DetectorModelDynamoDBv2Args> dynamoDBv2() {
         return this.dynamoDBv2 == null ? Codegen.empty() : this.dynamoDBv2;
     }
 
     @Import(name="firehose")
       private final @Nullable Output<DetectorModelFirehoseArgs> firehose;
 
-    public Output<DetectorModelFirehoseArgs> getFirehose() {
+    public Output<DetectorModelFirehoseArgs> firehose() {
         return this.firehose == null ? Codegen.empty() : this.firehose;
     }
 
     @Import(name="iotEvents")
       private final @Nullable Output<DetectorModelIotEventsArgs> iotEvents;
 
-    public Output<DetectorModelIotEventsArgs> getIotEvents() {
+    public Output<DetectorModelIotEventsArgs> iotEvents() {
         return this.iotEvents == null ? Codegen.empty() : this.iotEvents;
     }
 
     @Import(name="iotSiteWise")
       private final @Nullable Output<DetectorModelIotSiteWiseArgs> iotSiteWise;
 
-    public Output<DetectorModelIotSiteWiseArgs> getIotSiteWise() {
+    public Output<DetectorModelIotSiteWiseArgs> iotSiteWise() {
         return this.iotSiteWise == null ? Codegen.empty() : this.iotSiteWise;
     }
 
     @Import(name="iotTopicPublish")
       private final @Nullable Output<DetectorModelIotTopicPublishArgs> iotTopicPublish;
 
-    public Output<DetectorModelIotTopicPublishArgs> getIotTopicPublish() {
+    public Output<DetectorModelIotTopicPublishArgs> iotTopicPublish() {
         return this.iotTopicPublish == null ? Codegen.empty() : this.iotTopicPublish;
     }
 
     @Import(name="lambda")
       private final @Nullable Output<DetectorModelLambdaArgs> lambda;
 
-    public Output<DetectorModelLambdaArgs> getLambda() {
+    public Output<DetectorModelLambdaArgs> lambda() {
         return this.lambda == null ? Codegen.empty() : this.lambda;
     }
 
     @Import(name="resetTimer")
       private final @Nullable Output<DetectorModelResetTimerArgs> resetTimer;
 
-    public Output<DetectorModelResetTimerArgs> getResetTimer() {
+    public Output<DetectorModelResetTimerArgs> resetTimer() {
         return this.resetTimer == null ? Codegen.empty() : this.resetTimer;
     }
 
     @Import(name="setTimer")
       private final @Nullable Output<DetectorModelSetTimerArgs> setTimer;
 
-    public Output<DetectorModelSetTimerArgs> getSetTimer() {
+    public Output<DetectorModelSetTimerArgs> setTimer() {
         return this.setTimer == null ? Codegen.empty() : this.setTimer;
     }
 
     @Import(name="setVariable")
       private final @Nullable Output<DetectorModelSetVariableArgs> setVariable;
 
-    public Output<DetectorModelSetVariableArgs> getSetVariable() {
+    public Output<DetectorModelSetVariableArgs> setVariable() {
         return this.setVariable == null ? Codegen.empty() : this.setVariable;
     }
 
     @Import(name="sns")
       private final @Nullable Output<DetectorModelSnsArgs> sns;
 
-    public Output<DetectorModelSnsArgs> getSns() {
+    public Output<DetectorModelSnsArgs> sns() {
         return this.sns == null ? Codegen.empty() : this.sns;
     }
 
     @Import(name="sqs")
       private final @Nullable Output<DetectorModelSqsArgs> sqs;
 
-    public Output<DetectorModelSqsArgs> getSqs() {
+    public Output<DetectorModelSqsArgs> sqs() {
         return this.sqs == null ? Codegen.empty() : this.sqs;
     }
 

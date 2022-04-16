@@ -24,7 +24,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configuration", required=true)
       private final Output<DataSourceConfigurationArgs> configuration;
 
-    public Output<DataSourceConfigurationArgs> getConfiguration() {
+    public Output<DataSourceConfigurationArgs> configuration() {
         return this.configuration;
     }
 
@@ -35,14 +35,14 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
     @Import(name="sinks", required=true)
       private final Output<List<SinkConfigurationArgs>> sinks;
 
-    public Output<List<SinkConfigurationArgs>> getSinks() {
+    public Output<List<SinkConfigurationArgs>> sinks() {
         return this.sinks;
     }
 

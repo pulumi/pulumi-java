@@ -23,7 +23,7 @@ public final class DirectoryWorkspaceCreationPropertiesArgs extends io.pulumi.re
     @Import(name="customSecurityGroupId")
       private final @Nullable Output<String> customSecurityGroupId;
 
-    public Output<String> getCustomSecurityGroupId() {
+    public Output<String> customSecurityGroupId() {
         return this.customSecurityGroupId == null ? Codegen.empty() : this.customSecurityGroupId;
     }
 
@@ -34,7 +34,7 @@ public final class DirectoryWorkspaceCreationPropertiesArgs extends io.pulumi.re
     @Import(name="defaultOu")
       private final @Nullable Output<String> defaultOu;
 
-    public Output<String> getDefaultOu() {
+    public Output<String> defaultOu() {
         return this.defaultOu == null ? Codegen.empty() : this.defaultOu;
     }
 
@@ -45,7 +45,7 @@ public final class DirectoryWorkspaceCreationPropertiesArgs extends io.pulumi.re
     @Import(name="enableInternetAccess")
       private final @Nullable Output<Boolean> enableInternetAccess;
 
-    public Output<Boolean> getEnableInternetAccess() {
+    public Output<Boolean> enableInternetAccess() {
         return this.enableInternetAccess == null ? Codegen.empty() : this.enableInternetAccess;
     }
 
@@ -56,7 +56,7 @@ public final class DirectoryWorkspaceCreationPropertiesArgs extends io.pulumi.re
     @Import(name="enableMaintenanceMode")
       private final @Nullable Output<Boolean> enableMaintenanceMode;
 
-    public Output<Boolean> getEnableMaintenanceMode() {
+    public Output<Boolean> enableMaintenanceMode() {
         return this.enableMaintenanceMode == null ? Codegen.empty() : this.enableMaintenanceMode;
     }
 
@@ -67,7 +67,7 @@ public final class DirectoryWorkspaceCreationPropertiesArgs extends io.pulumi.re
     @Import(name="userEnabledAsLocalAdministrator")
       private final @Nullable Output<Boolean> userEnabledAsLocalAdministrator;
 
-    public Output<Boolean> getUserEnabledAsLocalAdministrator() {
+    public Output<Boolean> userEnabledAsLocalAdministrator() {
         return this.userEnabledAsLocalAdministrator == null ? Codegen.empty() : this.userEnabledAsLocalAdministrator;
     }
 

@@ -17,7 +17,7 @@ public final class GetServiceTemplateSpecContainerEnvValueFrom {
         this.secretKeyReves = secretKeyReves;
     }
 
-    public List<GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef> getSecretKeyReves() {
+    public List<GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef> secretKeyReves() {
         return this.secretKeyReves;
     }
 

@@ -35,7 +35,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="addresses")
       private final @Nullable Output<List<NodeAddressArgs>> addresses;
 
-    public Output<List<NodeAddressArgs>> getAddresses() {
+    public Output<List<NodeAddressArgs>> addresses() {
         return this.addresses == null ? Codegen.empty() : this.addresses;
     }
 
@@ -46,7 +46,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allocatable")
       private final @Nullable Output<Map<String,String>> allocatable;
 
-    public Output<Map<String,String>> getAllocatable() {
+    public Output<Map<String,String>> allocatable() {
         return this.allocatable == null ? Codegen.empty() : this.allocatable;
     }
 
@@ -57,7 +57,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="capacity")
       private final @Nullable Output<Map<String,String>> capacity;
 
-    public Output<Map<String,String>> getCapacity() {
+    public Output<Map<String,String>> capacity() {
         return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
@@ -68,7 +68,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conditions")
       private final @Nullable Output<List<NodeConditionArgs>> conditions;
 
-    public Output<List<NodeConditionArgs>> getConditions() {
+    public Output<List<NodeConditionArgs>> conditions() {
         return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
@@ -79,7 +79,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="config")
       private final @Nullable Output<NodeConfigStatusArgs> config;
 
-    public Output<NodeConfigStatusArgs> getConfig() {
+    public Output<NodeConfigStatusArgs> config() {
         return this.config == null ? Codegen.empty() : this.config;
     }
 
@@ -90,7 +90,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="daemonEndpoints")
       private final @Nullable Output<NodeDaemonEndpointsArgs> daemonEndpoints;
 
-    public Output<NodeDaemonEndpointsArgs> getDaemonEndpoints() {
+    public Output<NodeDaemonEndpointsArgs> daemonEndpoints() {
         return this.daemonEndpoints == null ? Codegen.empty() : this.daemonEndpoints;
     }
 
@@ -101,7 +101,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="images")
       private final @Nullable Output<List<ContainerImageArgs>> images;
 
-    public Output<List<ContainerImageArgs>> getImages() {
+    public Output<List<ContainerImageArgs>> images() {
         return this.images == null ? Codegen.empty() : this.images;
     }
 
@@ -112,7 +112,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeInfo")
       private final @Nullable Output<NodeSystemInfoArgs> nodeInfo;
 
-    public Output<NodeSystemInfoArgs> getNodeInfo() {
+    public Output<NodeSystemInfoArgs> nodeInfo() {
         return this.nodeInfo == null ? Codegen.empty() : this.nodeInfo;
     }
 
@@ -128,7 +128,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="phase")
       private final @Nullable Output<String> phase;
 
-    public Output<String> getPhase() {
+    public Output<String> phase() {
         return this.phase == null ? Codegen.empty() : this.phase;
     }
 
@@ -139,7 +139,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumesAttached")
       private final @Nullable Output<List<AttachedVolumeArgs>> volumesAttached;
 
-    public Output<List<AttachedVolumeArgs>> getVolumesAttached() {
+    public Output<List<AttachedVolumeArgs>> volumesAttached() {
         return this.volumesAttached == null ? Codegen.empty() : this.volumesAttached;
     }
 
@@ -150,7 +150,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumesInUse")
       private final @Nullable Output<List<String>> volumesInUse;
 
-    public Output<List<String>> getVolumesInUse() {
+    public Output<List<String>> volumesInUse() {
         return this.volumesInUse == null ? Codegen.empty() : this.volumesInUse;
     }
 

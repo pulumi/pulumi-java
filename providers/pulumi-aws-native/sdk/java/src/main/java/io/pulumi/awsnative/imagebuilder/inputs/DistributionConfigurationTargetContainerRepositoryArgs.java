@@ -27,7 +27,7 @@ public final class DistributionConfigurationTargetContainerRepositoryArgs extend
     @Import(name="repositoryName")
       private final @Nullable Output<String> repositoryName;
 
-    public Output<String> getRepositoryName() {
+    public Output<String> repositoryName() {
         return this.repositoryName == null ? Codegen.empty() : this.repositoryName;
     }
 
@@ -38,7 +38,7 @@ public final class DistributionConfigurationTargetContainerRepositoryArgs extend
     @Import(name="service")
       private final @Nullable Output<DistributionConfigurationTargetContainerRepositoryService> service;
 
-    public Output<DistributionConfigurationTargetContainerRepositoryService> getService() {
+    public Output<DistributionConfigurationTargetContainerRepositoryService> service() {
         return this.service == null ? Codegen.empty() : this.service;
     }
 

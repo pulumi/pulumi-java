@@ -24,7 +24,7 @@ public final class DataSetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="legendTemplate", required=true)
       private final String legendTemplate;
 
-    public String getLegendTemplate() {
+    public String legendTemplate() {
         return this.legendTemplate;
     }
 
@@ -35,7 +35,7 @@ public final class DataSetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="minAlignmentPeriod", required=true)
       private final String minAlignmentPeriod;
 
-    public String getMinAlignmentPeriod() {
+    public String minAlignmentPeriod() {
         return this.minAlignmentPeriod;
     }
 
@@ -46,7 +46,7 @@ public final class DataSetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="plotType", required=true)
       private final String plotType;
 
-    public String getPlotType() {
+    public String plotType() {
         return this.plotType;
     }
 
@@ -57,7 +57,7 @@ public final class DataSetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="targetAxis", required=true)
       private final String targetAxis;
 
-    public String getTargetAxis() {
+    public String targetAxis() {
         return this.targetAxis;
     }
 
@@ -68,7 +68,7 @@ public final class DataSetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="timeSeriesQuery", required=true)
       private final TimeSeriesQueryResponse timeSeriesQuery;
 
-    public TimeSeriesQueryResponse getTimeSeriesQuery() {
+    public TimeSeriesQueryResponse timeSeriesQuery() {
         return this.timeSeriesQuery;
     }
 

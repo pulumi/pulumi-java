@@ -28,7 +28,7 @@ public final class SyncGroupSchemaArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="masterSyncMemberName")
       private final @Nullable Output<String> masterSyncMemberName;
 
-    public Output<String> getMasterSyncMemberName() {
+    public Output<String> masterSyncMemberName() {
         return this.masterSyncMemberName == null ? Codegen.empty() : this.masterSyncMemberName;
     }
 
@@ -39,7 +39,7 @@ public final class SyncGroupSchemaArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tables")
       private final @Nullable Output<List<SyncGroupSchemaTableArgs>> tables;
 
-    public Output<List<SyncGroupSchemaTableArgs>> getTables() {
+    public Output<List<SyncGroupSchemaTableArgs>> tables() {
         return this.tables == null ? Codegen.empty() : this.tables;
     }
 

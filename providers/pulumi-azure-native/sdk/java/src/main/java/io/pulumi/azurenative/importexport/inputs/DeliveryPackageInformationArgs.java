@@ -27,7 +27,7 @@ public final class DeliveryPackageInformationArgs extends io.pulumi.resources.Re
     @Import(name="carrierName", required=true)
       private final Output<String> carrierName;
 
-    public Output<String> getCarrierName() {
+    public Output<String> carrierName() {
         return this.carrierName;
     }
 
@@ -38,7 +38,7 @@ public final class DeliveryPackageInformationArgs extends io.pulumi.resources.Re
     @Import(name="driveCount")
       private final @Nullable Output<Double> driveCount;
 
-    public Output<Double> getDriveCount() {
+    public Output<Double> driveCount() {
         return this.driveCount == null ? Codegen.empty() : this.driveCount;
     }
 
@@ -49,7 +49,7 @@ public final class DeliveryPackageInformationArgs extends io.pulumi.resources.Re
     @Import(name="shipDate")
       private final @Nullable Output<String> shipDate;
 
-    public Output<String> getShipDate() {
+    public Output<String> shipDate() {
         return this.shipDate == null ? Codegen.empty() : this.shipDate;
     }
 
@@ -60,7 +60,7 @@ public final class DeliveryPackageInformationArgs extends io.pulumi.resources.Re
     @Import(name="trackingNumber", required=true)
       private final Output<String> trackingNumber;
 
-    public Output<String> getTrackingNumber() {
+    public Output<String> trackingNumber() {
         return this.trackingNumber;
     }
 

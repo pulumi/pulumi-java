@@ -23,10 +23,10 @@ public final class ProviderIgnoreTagsArgs {
         this.keys = keys;
     }
 
-    public @Nullable Output<List<String>> getKeyPrefixes() {
+    public @Nullable Output<List<String>> keyPrefixes() {
         return this.keyPrefixes;
     }
-    public @Nullable Output<List<String>> getKeys() {
+    public @Nullable Output<List<String>> keys() {
         return this.keys;
     }
 

@@ -24,70 +24,70 @@ public final class ScheduledQueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientToken")
       private final @Nullable Output<String> clientToken;
 
-    public Output<String> getClientToken() {
+    public Output<String> clientToken() {
         return this.clientToken == null ? Codegen.empty() : this.clientToken;
     }
 
     @Import(name="errorReportConfiguration", required=true)
       private final Output<ScheduledQueryErrorReportConfigurationArgs> errorReportConfiguration;
 
-    public Output<ScheduledQueryErrorReportConfigurationArgs> getErrorReportConfiguration() {
+    public Output<ScheduledQueryErrorReportConfigurationArgs> errorReportConfiguration() {
         return this.errorReportConfiguration;
     }
 
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     @Import(name="notificationConfiguration", required=true)
       private final Output<ScheduledQueryNotificationConfigurationArgs> notificationConfiguration;
 
-    public Output<ScheduledQueryNotificationConfigurationArgs> getNotificationConfiguration() {
+    public Output<ScheduledQueryNotificationConfigurationArgs> notificationConfiguration() {
         return this.notificationConfiguration;
     }
 
     @Import(name="queryString", required=true)
       private final Output<String> queryString;
 
-    public Output<String> getQueryString() {
+    public Output<String> queryString() {
         return this.queryString;
     }
 
     @Import(name="scheduleConfiguration", required=true)
       private final Output<ScheduledQueryScheduleConfigurationArgs> scheduleConfiguration;
 
-    public Output<ScheduledQueryScheduleConfigurationArgs> getScheduleConfiguration() {
+    public Output<ScheduledQueryScheduleConfigurationArgs> scheduleConfiguration() {
         return this.scheduleConfiguration;
     }
 
     @Import(name="scheduledQueryExecutionRoleArn", required=true)
       private final Output<String> scheduledQueryExecutionRoleArn;
 
-    public Output<String> getScheduledQueryExecutionRoleArn() {
+    public Output<String> scheduledQueryExecutionRoleArn() {
         return this.scheduledQueryExecutionRoleArn;
     }
 
     @Import(name="scheduledQueryName")
       private final @Nullable Output<String> scheduledQueryName;
 
-    public Output<String> getScheduledQueryName() {
+    public Output<String> scheduledQueryName() {
         return this.scheduledQueryName == null ? Codegen.empty() : this.scheduledQueryName;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<ScheduledQueryTagArgs>> tags;
 
-    public Output<List<ScheduledQueryTagArgs>> getTags() {
+    public Output<List<ScheduledQueryTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="targetConfiguration")
       private final @Nullable Output<ScheduledQueryTargetConfigurationArgs> targetConfiguration;
 
-    public Output<ScheduledQueryTargetConfigurationArgs> getTargetConfiguration() {
+    public Output<ScheduledQueryTargetConfigurationArgs> targetConfiguration() {
         return this.targetConfiguration == null ? Codegen.empty() : this.targetConfiguration;
     }
 

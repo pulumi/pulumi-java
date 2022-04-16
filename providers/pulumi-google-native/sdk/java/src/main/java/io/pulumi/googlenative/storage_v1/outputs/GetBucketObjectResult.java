@@ -242,217 +242,217 @@ public final class GetBucketObjectResult {
      * Access controls on the object.
      * 
     */
-    public List<ObjectAccessControlResponse> getAcl() {
+    public List<ObjectAccessControlResponse> acl() {
         return this.acl;
     }
     /**
      * The name of the bucket containing this object.
      * 
     */
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
     /**
      * Cache-Control directive for the object data. If omitted, and the object is accessible to all anonymous users, the default will be public, max-age=3600.
      * 
     */
-    public String getCacheControl() {
+    public String cacheControl() {
         return this.cacheControl;
     }
     /**
      * Number of underlying components that make up this object. Components are accumulated by compose operations.
      * 
     */
-    public Integer getComponentCount() {
+    public Integer componentCount() {
         return this.componentCount;
     }
     /**
      * Content-Disposition of the object data.
      * 
     */
-    public String getContentDisposition() {
+    public String contentDisposition() {
         return this.contentDisposition;
     }
     /**
      * Content-Encoding of the object data.
      * 
     */
-    public String getContentEncoding() {
+    public String contentEncoding() {
         return this.contentEncoding;
     }
     /**
      * Content-Language of the object data.
      * 
     */
-    public String getContentLanguage() {
+    public String contentLanguage() {
         return this.contentLanguage;
     }
     /**
      * Content-Type of the object data. If an object is stored without a Content-Type, it is served as application/octet-stream.
      * 
     */
-    public String getContentType() {
+    public String contentType() {
         return this.contentType;
     }
     /**
      * CRC32c checksum, as described in RFC 4960, Appendix B; encoded using base64 in big-endian byte order. For more information about using the CRC32c checksum, see Hashes and ETags: Best Practices.
      * 
     */
-    public String getCrc32c() {
+    public String crc32c() {
         return this.crc32c;
     }
     /**
      * A timestamp in RFC 3339 format specified by the user for an object.
      * 
     */
-    public String getCustomTime() {
+    public String customTime() {
         return this.customTime;
     }
     /**
      * Metadata of customer-supplied encryption key, if the object is encrypted by such a key.
      * 
     */
-    public BucketObjectCustomerEncryptionResponse getCustomerEncryption() {
+    public BucketObjectCustomerEncryptionResponse customerEncryption() {
         return this.customerEncryption;
     }
     /**
      * HTTP 1.1 Entity tag for the object.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is signified by the hold's release (i.e. this value is set to false). After being released (set to false), such objects will be subject to bucket-level retention (if any). One sample use case of this flag is for banks to hold loan documents for at least 3 years after loan is paid in full. Here, bucket-level retention is 3 years and the event is the loan being paid in full. In this example, these objects will be held intact for any number of years until the event has occurred (event-based hold on the object is released) and then 3 more years after that. That means retention duration of the objects begins from the moment event-based hold transitioned from true to false.
      * 
     */
-    public Boolean getEventBasedHold() {
+    public Boolean eventBasedHold() {
         return this.eventBasedHold;
     }
     /**
      * The content generation of this object. Used for object versioning.
      * 
     */
-    public String getGeneration() {
+    public String generation() {
         return this.generation;
     }
     /**
      * The kind of item this is. For objects, this is always storage#object.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Not currently supported. Specifying the parameter causes the request to fail with status code 400 - Bad Request.
      * 
     */
-    public String getKmsKeyName() {
+    public String kmsKeyName() {
         return this.kmsKeyName;
     }
     /**
      * MD5 hash of the data; encoded using base64. For more information about using the MD5 hash, see Hashes and ETags: Best Practices.
      * 
     */
-    public String getMd5Hash() {
+    public String md5Hash() {
         return this.md5Hash;
     }
     /**
      * Media download link.
      * 
     */
-    public String getMediaLink() {
+    public String mediaLink() {
         return this.mediaLink;
     }
     /**
      * User-provided metadata, in key/value pairs.
      * 
     */
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata;
     }
     /**
      * The version of the metadata for this object at this generation. Used for preconditions and for detecting changes in metadata. A metageneration number is only meaningful in the context of a particular generation of a particular object.
      * 
     */
-    public String getMetageneration() {
+    public String metageneration() {
         return this.metageneration;
     }
     /**
      * The name of the object. Required if not specified by URL parameter.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The owner of the object. This will always be the uploader of the object.
      * 
     */
-    public BucketObjectOwnerResponse getOwner() {
+    public BucketObjectOwnerResponse owner() {
         return this.owner;
     }
     /**
      * A server-determined value that specifies the earliest time that the object's retention period expires. This value is in RFC 3339 format. Note 1: This field is not provided for objects with an active event-based hold, since retention expiration is unknown until the hold is removed. Note 2: This value can be provided even when temporary hold is set (so that the user can reason about policy without having to first unset the temporary hold).
      * 
     */
-    public String getRetentionExpirationTime() {
+    public String retentionExpirationTime() {
         return this.retentionExpirationTime;
     }
     /**
      * The link to this object.
      * 
     */
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
     /**
      * Content-Length of the data in bytes.
      * 
     */
-    public String getSize() {
+    public String size() {
         return this.size;
     }
     /**
      * Storage class of the object.
      * 
     */
-    public String getStorageClass() {
+    public String storageClass() {
         return this.storageClass;
     }
     /**
      * Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and overwrites. A common use case of this flag is regulatory investigations where objects need to be retained while the investigation is ongoing. Note that unlike event-based hold, temporary hold does not impact retention expiration time of an object.
      * 
     */
-    public Boolean getTemporaryHold() {
+    public Boolean temporaryHold() {
         return this.temporaryHold;
     }
     /**
      * The creation time of the object in RFC 3339 format.
      * 
     */
-    public String getTimeCreated() {
+    public String timeCreated() {
         return this.timeCreated;
     }
     /**
      * The deletion time of the object in RFC 3339 format. Will be returned if and only if this version of the object has been deleted.
      * 
     */
-    public String getTimeDeleted() {
+    public String timeDeleted() {
         return this.timeDeleted;
     }
     /**
      * The time at which the object's storage class was last changed. When the object is initially created, it will be set to timeCreated.
      * 
     */
-    public String getTimeStorageClassUpdated() {
+    public String timeStorageClassUpdated() {
         return this.timeStorageClassUpdated;
     }
     /**
      * The modification time of the object metadata in RFC 3339 format.
      * 
     */
-    public String getUpdated() {
+    public String updated() {
         return this.updated;
     }
 

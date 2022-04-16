@@ -22,7 +22,7 @@ public final class NotebookInstanceLifecycleConfigurationState extends io.pulumi
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -33,7 +33,7 @@ public final class NotebookInstanceLifecycleConfigurationState extends io.pulumi
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -44,7 +44,7 @@ public final class NotebookInstanceLifecycleConfigurationState extends io.pulumi
     @Import(name="onCreate")
       private final @Nullable Output<String> onCreate;
 
-    public Output<String> getOnCreate() {
+    public Output<String> onCreate() {
         return this.onCreate == null ? Codegen.empty() : this.onCreate;
     }
 
@@ -55,7 +55,7 @@ public final class NotebookInstanceLifecycleConfigurationState extends io.pulumi
     @Import(name="onStart")
       private final @Nullable Output<String> onStart;
 
-    public Output<String> getOnStart() {
+    public Output<String> onStart() {
         return this.onStart == null ? Codegen.empty() : this.onStart;
     }
 

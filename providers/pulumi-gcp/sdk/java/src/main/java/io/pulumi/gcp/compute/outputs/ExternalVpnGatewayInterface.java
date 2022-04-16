@@ -46,7 +46,7 @@ public final class ExternalVpnGatewayInterface {
      * * `0, 1, 2, 3 - FOUR_IPS_REDUNDANCY`
      * 
     */
-    public Optional<Integer> getId() {
+    public Optional<Integer> id() {
         return Optional.ofNullable(this.id);
     }
     /**
@@ -56,7 +56,7 @@ public final class ExternalVpnGatewayInterface {
      * it cannot be an IP address from Google Compute Engine.
      * 
     */
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
 

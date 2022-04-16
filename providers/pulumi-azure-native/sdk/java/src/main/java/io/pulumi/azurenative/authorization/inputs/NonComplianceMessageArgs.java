@@ -26,7 +26,7 @@ public final class NonComplianceMessageArgs extends io.pulumi.resources.Resource
     @Import(name="message", required=true)
       private final Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message;
     }
 
@@ -37,7 +37,7 @@ public final class NonComplianceMessageArgs extends io.pulumi.resources.Resource
     @Import(name="policyDefinitionReferenceId")
       private final @Nullable Output<String> policyDefinitionReferenceId;
 
-    public Output<String> getPolicyDefinitionReferenceId() {
+    public Output<String> policyDefinitionReferenceId() {
         return this.policyDefinitionReferenceId == null ? Codegen.empty() : this.policyDefinitionReferenceId;
     }
 

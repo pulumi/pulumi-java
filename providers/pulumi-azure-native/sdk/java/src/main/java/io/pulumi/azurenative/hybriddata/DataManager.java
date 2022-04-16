@@ -44,7 +44,7 @@ public class DataManager extends io.pulumi.resources.CustomResource {
      * @return Etag of the Resource.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -62,7 +62,7 @@ public class DataManager extends io.pulumi.resources.CustomResource {
      * region is specified on update the request will succeed.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -76,7 +76,7 @@ public class DataManager extends io.pulumi.resources.CustomResource {
      * @return The Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -90,7 +90,7 @@ public class DataManager extends io.pulumi.resources.CustomResource {
      * @return The sku type.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -106,7 +106,7 @@ public class DataManager extends io.pulumi.resources.CustomResource {
      * (across resource groups).
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -120,7 +120,7 @@ public class DataManager extends io.pulumi.resources.CustomResource {
      * @return The Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -26,7 +26,7 @@ public final class IngressStatus {
      * LoadBalancer contains the current status of the load-balancer.
      * 
     */
-    public Optional<LoadBalancerStatus> getLoadBalancer() {
+    public Optional<LoadBalancerStatus> loadBalancer() {
         return Optional.ofNullable(this.loadBalancer);
     }
 

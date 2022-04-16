@@ -21,7 +21,7 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
     @Import(name="awsLambda", required=true)
       private final Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs> awsLambda;
 
-    public Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs> getAwsLambda() {
+    public Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs> awsLambda() {
         return this.awsLambda;
     }
 

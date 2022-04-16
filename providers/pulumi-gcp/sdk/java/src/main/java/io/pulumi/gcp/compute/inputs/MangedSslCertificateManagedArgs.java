@@ -18,7 +18,7 @@ public final class MangedSslCertificateManagedArgs extends io.pulumi.resources.R
     @Import(name="domains", required=true)
       private final Output<List<String>> domains;
 
-    public Output<List<String>> getDomains() {
+    public Output<List<String>> domains() {
         return this.domains;
     }
 

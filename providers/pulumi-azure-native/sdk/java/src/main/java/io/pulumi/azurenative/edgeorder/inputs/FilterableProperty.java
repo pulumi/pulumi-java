@@ -26,7 +26,7 @@ public final class FilterableProperty extends io.pulumi.resources.InvokeArgs {
     @Import(name="supportedValues", required=true)
       private final List<String> supportedValues;
 
-    public List<String> getSupportedValues() {
+    public List<String> supportedValues() {
         return this.supportedValues;
     }
 
@@ -37,7 +37,7 @@ public final class FilterableProperty extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final Either<String,SupportedFilterTypes> type;
 
-    public Either<String,SupportedFilterTypes> getType() {
+    public Either<String,SupportedFilterTypes> type() {
         return this.type;
     }
 

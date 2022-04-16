@@ -24,7 +24,7 @@ public final class DatasetAccessGetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="domain")
       private final @Nullable Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain == null ? Codegen.empty() : this.domain;
     }
 
@@ -35,7 +35,7 @@ public final class DatasetAccessGetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="groupByEmail")
       private final @Nullable Output<String> groupByEmail;
 
-    public Output<String> getGroupByEmail() {
+    public Output<String> groupByEmail() {
         return this.groupByEmail == null ? Codegen.empty() : this.groupByEmail;
     }
 
@@ -50,7 +50,7 @@ public final class DatasetAccessGetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 
@@ -61,7 +61,7 @@ public final class DatasetAccessGetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="specialGroup")
       private final @Nullable Output<String> specialGroup;
 
-    public Output<String> getSpecialGroup() {
+    public Output<String> specialGroup() {
         return this.specialGroup == null ? Codegen.empty() : this.specialGroup;
     }
 
@@ -73,7 +73,7 @@ public final class DatasetAccessGetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="userByEmail")
       private final @Nullable Output<String> userByEmail;
 
-    public Output<String> getUserByEmail() {
+    public Output<String> userByEmail() {
         return this.userByEmail == null ? Codegen.empty() : this.userByEmail;
     }
 
@@ -89,7 +89,7 @@ public final class DatasetAccessGetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="view")
       private final @Nullable Output<DatasetAccessViewGetArgs> view;
 
-    public Output<DatasetAccessViewGetArgs> getView() {
+    public Output<DatasetAccessViewGetArgs> view() {
         return this.view == null ? Codegen.empty() : this.view;
     }
 

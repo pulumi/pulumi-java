@@ -28,7 +28,7 @@ public final class DerivedArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fingerprint")
       private final @Nullable Output<FingerprintArgs> fingerprint;
 
-    public Output<FingerprintArgs> getFingerprint() {
+    public Output<FingerprintArgs> fingerprint() {
         return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
     }
 
@@ -39,7 +39,7 @@ public final class DerivedArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="layerInfo")
       private final @Nullable Output<List<LayerArgs>> layerInfo;
 
-    public Output<List<LayerArgs>> getLayerInfo() {
+    public Output<List<LayerArgs>> layerInfo() {
         return this.layerInfo == null ? Codegen.empty() : this.layerInfo;
     }
 

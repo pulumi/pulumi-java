@@ -27,7 +27,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
     @Import(name="maxReplicas", required=true)
       private final Output<Integer> maxReplicas;
 
-    public Output<Integer> getMaxReplicas() {
+    public Output<Integer> maxReplicas() {
         return this.maxReplicas;
     }
 
@@ -38,7 +38,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
     @Import(name="minReplicas")
       private final @Nullable Output<Integer> minReplicas;
 
-    public Output<Integer> getMinReplicas() {
+    public Output<Integer> minReplicas() {
         return this.minReplicas == null ? Codegen.empty() : this.minReplicas;
     }
 
@@ -49,7 +49,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
     @Import(name="scaleTargetRef", required=true)
       private final Output<CrossVersionObjectReferenceArgs> scaleTargetRef;
 
-    public Output<CrossVersionObjectReferenceArgs> getScaleTargetRef() {
+    public Output<CrossVersionObjectReferenceArgs> scaleTargetRef() {
         return this.scaleTargetRef;
     }
 
@@ -60,7 +60,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
     @Import(name="targetCPUUtilizationPercentage")
       private final @Nullable Output<Integer> targetCPUUtilizationPercentage;
 
-    public Output<Integer> getTargetCPUUtilizationPercentage() {
+    public Output<Integer> targetCPUUtilizationPercentage() {
         return this.targetCPUUtilizationPercentage == null ? Codegen.empty() : this.targetCPUUtilizationPercentage;
     }
 

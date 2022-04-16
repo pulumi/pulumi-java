@@ -37,7 +37,7 @@ public final class JobHttpTargetOauthToken {
      * "https://www.googleapis.com/auth/cloud-platform" will be used.
      * 
     */
-    public Optional<String> getScope() {
+    public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }
     /**
@@ -45,7 +45,7 @@ public final class JobHttpTargetOauthToken {
      * The service account must be within the same project as the job.
      * 
     */
-    public String getServiceAccountEmail() {
+    public String serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
 

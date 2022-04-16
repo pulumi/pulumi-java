@@ -36,7 +36,7 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort
      * The value must be between 200 and 599 inclusive.
      * 
     */
-    public Integer getHttpStatus() {
+    public Integer httpStatus() {
         return this.httpStatus;
     }
     /**
@@ -44,7 +44,7 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort
      * The value must be between 0.0 and 100.0 inclusive.
      * 
     */
-    public Double getPercentage() {
+    public Double percentage() {
         return this.percentage;
     }
 

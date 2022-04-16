@@ -27,7 +27,7 @@ public final class IntentFollowupIntentInfo {
         this.parentFollowupIntentName = parentFollowupIntentName;
     }
 
-    public Optional<String> getFollowupIntentName() {
+    public Optional<String> followupIntentName() {
         return Optional.ofNullable(this.followupIntentName);
     }
     /**
@@ -35,7 +35,7 @@ public final class IntentFollowupIntentInfo {
      * Format: projects/<Project ID>/agent/intents/<Intent ID>.
      * 
     */
-    public Optional<String> getParentFollowupIntentName() {
+    public Optional<String> parentFollowupIntentName() {
         return Optional.ofNullable(this.parentFollowupIntentName);
     }
 

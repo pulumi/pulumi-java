@@ -19,7 +19,7 @@ public final class BucketReplicaModifications extends io.pulumi.resources.Invoke
     @Import(name="status", required=true)
       private final BucketReplicaModificationsStatus status;
 
-    public BucketReplicaModificationsStatus getStatus() {
+    public BucketReplicaModificationsStatus status() {
         return this.status;
     }
 

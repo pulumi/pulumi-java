@@ -23,7 +23,7 @@ public final class WorkflowTemplatePlacementClusterSelectorGetArgs extends io.pu
     @Import(name="clusterLabels", required=true)
       private final Output<Map<String,String>> clusterLabels;
 
-    public Output<Map<String,String>> getClusterLabels() {
+    public Output<Map<String,String>> clusterLabels() {
         return this.clusterLabels;
     }
 
@@ -34,7 +34,7 @@ public final class WorkflowTemplatePlacementClusterSelectorGetArgs extends io.pu
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

@@ -64,43 +64,43 @@ public final class DeliveryStreamExtendedS3DestinationConfiguration {
         this.s3BackupMode = s3BackupMode;
     }
 
-    public String getBucketARN() {
+    public String bucketARN() {
         return this.bucketARN;
     }
-    public Optional<DeliveryStreamBufferingHints> getBufferingHints() {
+    public Optional<DeliveryStreamBufferingHints> bufferingHints() {
         return Optional.ofNullable(this.bufferingHints);
     }
-    public Optional<DeliveryStreamCloudWatchLoggingOptions> getCloudWatchLoggingOptions() {
+    public Optional<DeliveryStreamCloudWatchLoggingOptions> cloudWatchLoggingOptions() {
         return Optional.ofNullable(this.cloudWatchLoggingOptions);
     }
-    public Optional<DeliveryStreamExtendedS3DestinationConfigurationCompressionFormat> getCompressionFormat() {
+    public Optional<DeliveryStreamExtendedS3DestinationConfigurationCompressionFormat> compressionFormat() {
         return Optional.ofNullable(this.compressionFormat);
     }
-    public Optional<DeliveryStreamDataFormatConversionConfiguration> getDataFormatConversionConfiguration() {
+    public Optional<DeliveryStreamDataFormatConversionConfiguration> dataFormatConversionConfiguration() {
         return Optional.ofNullable(this.dataFormatConversionConfiguration);
     }
-    public Optional<DeliveryStreamDynamicPartitioningConfiguration> getDynamicPartitioningConfiguration() {
+    public Optional<DeliveryStreamDynamicPartitioningConfiguration> dynamicPartitioningConfiguration() {
         return Optional.ofNullable(this.dynamicPartitioningConfiguration);
     }
-    public Optional<DeliveryStreamEncryptionConfiguration> getEncryptionConfiguration() {
+    public Optional<DeliveryStreamEncryptionConfiguration> encryptionConfiguration() {
         return Optional.ofNullable(this.encryptionConfiguration);
     }
-    public Optional<String> getErrorOutputPrefix() {
+    public Optional<String> errorOutputPrefix() {
         return Optional.ofNullable(this.errorOutputPrefix);
     }
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
-    public Optional<DeliveryStreamProcessingConfiguration> getProcessingConfiguration() {
+    public Optional<DeliveryStreamProcessingConfiguration> processingConfiguration() {
         return Optional.ofNullable(this.processingConfiguration);
     }
-    public String getRoleARN() {
+    public String roleARN() {
         return this.roleARN;
     }
-    public Optional<DeliveryStreamS3DestinationConfiguration> getS3BackupConfiguration() {
+    public Optional<DeliveryStreamS3DestinationConfiguration> s3BackupConfiguration() {
         return Optional.ofNullable(this.s3BackupConfiguration);
     }
-    public Optional<DeliveryStreamExtendedS3DestinationConfigurationS3BackupMode> getS3BackupMode() {
+    public Optional<DeliveryStreamExtendedS3DestinationConfigurationS3BackupMode> s3BackupMode() {
         return Optional.ofNullable(this.s3BackupMode);
     }
 

@@ -31,7 +31,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The time when the snapshot was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -45,7 +45,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return A description of the snapshot with 2048 characters or less. Requests with longer descriptions will be rejected.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -59,7 +59,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The amount of bytes needed to allocate a full copy of the snapshot content
      * 
      */
-    public Output<String> getFilesystemUsedBytes() {
+    public Output<String> filesystemUsedBytes() {
         return this.filesystemUsedBytes;
     }
     /**
@@ -73,7 +73,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Resource labels to represent user provided metadata.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -87,7 +87,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The resource name of the snapshot, in the format `projects/{project_id}/locations/{location_id}/instances/{instance_id}/snapshots/{snapshot_id}`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +101,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The snapshot state.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 

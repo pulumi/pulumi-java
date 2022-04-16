@@ -23,7 +23,7 @@ public final class FlexibleAppVersionLivenessCheckGetArgs extends io.pulumi.reso
     @Import(name="checkInterval")
       private final @Nullable Output<String> checkInterval;
 
-    public Output<String> getCheckInterval() {
+    public Output<String> checkInterval() {
         return this.checkInterval == null ? Codegen.empty() : this.checkInterval;
     }
 
@@ -34,7 +34,7 @@ public final class FlexibleAppVersionLivenessCheckGetArgs extends io.pulumi.reso
     @Import(name="failureThreshold")
       private final @Nullable Output<Double> failureThreshold;
 
-    public Output<Double> getFailureThreshold() {
+    public Output<Double> failureThreshold() {
         return this.failureThreshold == null ? Codegen.empty() : this.failureThreshold;
     }
 
@@ -45,7 +45,7 @@ public final class FlexibleAppVersionLivenessCheckGetArgs extends io.pulumi.reso
     @Import(name="host")
       private final @Nullable Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host == null ? Codegen.empty() : this.host;
     }
 
@@ -56,7 +56,7 @@ public final class FlexibleAppVersionLivenessCheckGetArgs extends io.pulumi.reso
     @Import(name="initialDelay")
       private final @Nullable Output<String> initialDelay;
 
-    public Output<String> getInitialDelay() {
+    public Output<String> initialDelay() {
         return this.initialDelay == null ? Codegen.empty() : this.initialDelay;
     }
 
@@ -68,7 +68,7 @@ public final class FlexibleAppVersionLivenessCheckGetArgs extends io.pulumi.reso
     @Import(name="path", required=true)
       private final Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
 
@@ -79,7 +79,7 @@ public final class FlexibleAppVersionLivenessCheckGetArgs extends io.pulumi.reso
     @Import(name="successThreshold")
       private final @Nullable Output<Double> successThreshold;
 
-    public Output<Double> getSuccessThreshold() {
+    public Output<Double> successThreshold() {
         return this.successThreshold == null ? Codegen.empty() : this.successThreshold;
     }
 
@@ -90,7 +90,7 @@ public final class FlexibleAppVersionLivenessCheckGetArgs extends io.pulumi.reso
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
+    public Output<String> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 

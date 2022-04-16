@@ -57,7 +57,7 @@ public final class RegionBackendServiceConsistentHash {
      * Structure is documented below.
      * 
     */
-    public Optional<RegionBackendServiceConsistentHashHttpCookie> getHttpCookie() {
+    public Optional<RegionBackendServiceConsistentHashHttpCookie> httpCookie() {
         return Optional.ofNullable(this.httpCookie);
     }
     /**
@@ -65,7 +65,7 @@ public final class RegionBackendServiceConsistentHash {
      * This field is applicable if the sessionAffinity is set to HEADER_FIELD.
      * 
     */
-    public Optional<String> getHttpHeaderName() {
+    public Optional<String> httpHeaderName() {
         return Optional.ofNullable(this.httpHeaderName);
     }
     /**
@@ -77,7 +77,7 @@ public final class RegionBackendServiceConsistentHash {
      * Defaults to 1024.
      * 
     */
-    public Optional<Integer> getMinimumRingSize() {
+    public Optional<Integer> minimumRingSize() {
         return Optional.ofNullable(this.minimumRingSize);
     }
 

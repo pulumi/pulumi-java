@@ -27,7 +27,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="organizationArns")
       private final @Nullable Output<List<String>> organizationArns;
 
-    public Output<List<String>> getOrganizationArns() {
+    public Output<List<String>> organizationArns() {
         return this.organizationArns == null ? Codegen.empty() : this.organizationArns;
     }
 
@@ -38,7 +38,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="organizationalUnitArns")
       private final @Nullable Output<List<String>> organizationalUnitArns;
 
-    public Output<List<String>> getOrganizationalUnitArns() {
+    public Output<List<String>> organizationalUnitArns() {
         return this.organizationalUnitArns == null ? Codegen.empty() : this.organizationalUnitArns;
     }
 
@@ -49,7 +49,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="userGroups")
       private final @Nullable Output<List<String>> userGroups;
 
-    public Output<List<String>> getUserGroups() {
+    public Output<List<String>> userGroups() {
         return this.userGroups == null ? Codegen.empty() : this.userGroups;
     }
 
@@ -60,7 +60,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="userIds")
       private final @Nullable Output<List<String>> userIds;
 
-    public Output<List<String>> getUserIds() {
+    public Output<List<String>> userIds() {
         return this.userIds == null ? Codegen.empty() : this.userIds;
     }
 

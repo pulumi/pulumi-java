@@ -32,14 +32,14 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionRes
      * The name of the app or site this chip is linking to.
      * 
     */
-    public String getDestinationName() {
+    public String destinationName() {
         return this.destinationName;
     }
     /**
      * The URI of the app or site to open when the user taps the suggestion chip.
      * 
     */
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

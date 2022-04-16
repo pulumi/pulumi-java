@@ -68,49 +68,49 @@ public final class GetRuleGroupResult {
         this.visibilityConfig = visibilityConfig;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Collection of Available Labels.
      * 
     */
-    public List<RuleGroupLabelSummary> getAvailableLabels() {
+    public List<RuleGroupLabelSummary> availableLabels() {
         return this.availableLabels == null ? List.of() : this.availableLabels;
     }
-    public Optional<Integer> getCapacity() {
+    public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * Collection of Consumed Labels.
      * 
     */
-    public List<RuleGroupLabelSummary> getConsumedLabels() {
+    public List<RuleGroupLabelSummary> consumedLabels() {
         return this.consumedLabels == null ? List.of() : this.consumedLabels;
     }
-    public Optional<RuleGroupCustomResponseBodies> getCustomResponseBodies() {
+    public Optional<RuleGroupCustomResponseBodies> customResponseBodies() {
         return Optional.ofNullable(this.customResponseBodies);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<String> getLabelNamespace() {
+    public Optional<String> labelNamespace() {
         return Optional.ofNullable(this.labelNamespace);
     }
     /**
      * Collection of Rules.
      * 
     */
-    public List<RuleGroupRule> getRules() {
+    public List<RuleGroupRule> rules() {
         return this.rules == null ? List.of() : this.rules;
     }
-    public List<RuleGroupTag> getTags() {
+    public List<RuleGroupTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
-    public Optional<RuleGroupVisibilityConfig> getVisibilityConfig() {
+    public Optional<RuleGroupVisibilityConfig> visibilityConfig() {
         return Optional.ofNullable(this.visibilityConfig);
     }
 

@@ -15,14 +15,14 @@ public final class GetMembershipArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="groupId", required=true)
       private final String groupId;
 
-    public String getGroupId() {
+    public String groupId() {
         return this.groupId;
     }
 
     @Import(name="membershipId", required=true)
       private final String membershipId;
 
-    public String getMembershipId() {
+    public String membershipId() {
         return this.membershipId;
     }
 

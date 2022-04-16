@@ -43,7 +43,7 @@ public class ADLSGen2FolderDataSet extends io.pulumi.resources.CustomResource {
      * @return Unique id for identifying a data set resource
      * 
      */
-    public Output<String> getDataSetId() {
+    public Output<String> dataSetId() {
         return this.dataSetId;
     }
     /**
@@ -57,7 +57,7 @@ public class ADLSGen2FolderDataSet extends io.pulumi.resources.CustomResource {
      * @return File system to which the folder belongs.
      * 
      */
-    public Output<String> getFileSystem() {
+    public Output<String> fileSystem() {
         return this.fileSystem;
     }
     /**
@@ -71,7 +71,7 @@ public class ADLSGen2FolderDataSet extends io.pulumi.resources.CustomResource {
      * @return Folder path within the file system.
      * 
      */
-    public Output<String> getFolderPath() {
+    public Output<String> folderPath() {
         return this.folderPath;
     }
     /**
@@ -87,7 +87,7 @@ public class ADLSGen2FolderDataSet extends io.pulumi.resources.CustomResource {
      * Expected value is 'AdlsGen2Folder'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -101,7 +101,7 @@ public class ADLSGen2FolderDataSet extends io.pulumi.resources.CustomResource {
      * @return Name of the azure resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -115,7 +115,7 @@ public class ADLSGen2FolderDataSet extends io.pulumi.resources.CustomResource {
      * @return Resource group of storage account
      * 
      */
-    public Output<String> getResourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
     /**
@@ -129,7 +129,7 @@ public class ADLSGen2FolderDataSet extends io.pulumi.resources.CustomResource {
      * @return Storage account name of the source data set
      * 
      */
-    public Output<String> getStorageAccountName() {
+    public Output<String> storageAccountName() {
         return this.storageAccountName;
     }
     /**
@@ -143,7 +143,7 @@ public class ADLSGen2FolderDataSet extends io.pulumi.resources.CustomResource {
      * @return Subscription id of storage account
      * 
      */
-    public Output<String> getSubscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
     /**
@@ -157,7 +157,7 @@ public class ADLSGen2FolderDataSet extends io.pulumi.resources.CustomResource {
      * @return System Data of the Azure resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -171,7 +171,7 @@ public class ADLSGen2FolderDataSet extends io.pulumi.resources.CustomResource {
      * @return Type of the azure resource
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

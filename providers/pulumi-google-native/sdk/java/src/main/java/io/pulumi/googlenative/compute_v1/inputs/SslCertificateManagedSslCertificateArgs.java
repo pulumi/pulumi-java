@@ -27,7 +27,7 @@ public final class SslCertificateManagedSslCertificateArgs extends io.pulumi.res
     @Import(name="domains")
       private final @Nullable Output<List<String>> domains;
 
-    public Output<List<String>> getDomains() {
+    public Output<List<String>> domains() {
         return this.domains == null ? Codegen.empty() : this.domains;
     }
 

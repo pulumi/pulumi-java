@@ -39,21 +39,21 @@ public final class HealthMonitorResponse {
      * Health Monitor Details
      * 
     */
-    public String getDetails() {
+    public String details() {
         return this.details;
     }
     /**
      * Health Monitor Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Health Monitor Name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

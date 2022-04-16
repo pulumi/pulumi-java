@@ -27,7 +27,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulu
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -38,7 +38,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulu
     @Import(name="hub")
       private final @Nullable ResourceIdResponse hub;
 
-    public Optional<ResourceIdResponse> getHub() {
+    public Optional<ResourceIdResponse> hub() {
         return this.hub == null ? Optional.empty() : Optional.ofNullable(this.hub);
     }
 
@@ -49,7 +49,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulu
     @Import(name="mesh")
       private final @Nullable List<ResourceIdResponse> mesh;
 
-    public List<ResourceIdResponse> getMesh() {
+    public List<ResourceIdResponse> mesh() {
         return this.mesh == null ? List.of() : this.mesh;
     }
 
@@ -60,7 +60,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulu
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -71,7 +71,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulu
     @Import(name="spokes")
       private final @Nullable List<ResourceIdResponse> spokes;
 
-    public List<ResourceIdResponse> getSpokes() {
+    public List<ResourceIdResponse> spokes() {
         return this.spokes == null ? List.of() : this.spokes;
     }
 
@@ -82,7 +82,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulu
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

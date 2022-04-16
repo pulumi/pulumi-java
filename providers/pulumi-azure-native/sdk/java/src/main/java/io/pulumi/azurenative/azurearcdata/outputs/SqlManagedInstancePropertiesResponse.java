@@ -74,52 +74,52 @@ public final class SqlManagedInstancePropertiesResponse {
      * The instance admin user
      * 
     */
-    public Optional<String> getAdmin() {
+    public Optional<String> admin() {
         return Optional.ofNullable(this.admin);
     }
     /**
      * Username and password for basic authentication.
      * 
     */
-    public Optional<BasicLoginInformationResponse> getBasicLoginInformation() {
+    public Optional<BasicLoginInformationResponse> basicLoginInformation() {
         return Optional.ofNullable(this.basicLoginInformation);
     }
     /**
      * null
      * 
     */
-    public Optional<String> getDataControllerId() {
+    public Optional<String> dataControllerId() {
         return Optional.ofNullable(this.dataControllerId);
     }
     /**
      * The instance end time
      * 
     */
-    public Optional<String> getEndTime() {
+    public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
      * The raw kubernetes information
      * 
     */
-    public Optional<Object> getK8sRaw() {
+    public Optional<Object> k8sRaw() {
         return Optional.ofNullable(this.k8sRaw);
     }
     /**
      * Last uploaded date from Kubernetes cluster. Defaults to current date time
      * 
     */
-    public Optional<String> getLastUploadedDate() {
+    public Optional<String> lastUploadedDate() {
         return Optional.ofNullable(this.lastUploadedDate);
     }
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The instance start time
      * 
     */
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
 

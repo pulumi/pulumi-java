@@ -25,7 +25,7 @@ public final class ServicePerimetersArgs extends io.pulumi.resources.ResourceArg
     @Import(name="parent", required=true)
       private final Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
 
@@ -37,7 +37,7 @@ public final class ServicePerimetersArgs extends io.pulumi.resources.ResourceArg
     @Import(name="servicePerimeters")
       private final @Nullable Output<List<ServicePerimetersServicePerimeterArgs>> servicePerimeters;
 
-    public Output<List<ServicePerimetersServicePerimeterArgs>> getServicePerimeters() {
+    public Output<List<ServicePerimetersServicePerimeterArgs>> servicePerimeters() {
         return this.servicePerimeters == null ? Codegen.empty() : this.servicePerimeters;
     }
 

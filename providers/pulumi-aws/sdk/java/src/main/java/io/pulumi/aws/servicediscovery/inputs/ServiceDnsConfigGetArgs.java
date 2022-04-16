@@ -24,7 +24,7 @@ public final class ServiceDnsConfigGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="dnsRecords", required=true)
       private final Output<List<ServiceDnsConfigDnsRecordGetArgs>> dnsRecords;
 
-    public Output<List<ServiceDnsConfigDnsRecordGetArgs>> getDnsRecords() {
+    public Output<List<ServiceDnsConfigDnsRecordGetArgs>> dnsRecords() {
         return this.dnsRecords;
     }
 
@@ -35,7 +35,7 @@ public final class ServiceDnsConfigGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="namespaceId", required=true)
       private final Output<String> namespaceId;
 
-    public Output<String> getNamespaceId() {
+    public Output<String> namespaceId() {
         return this.namespaceId;
     }
 
@@ -46,7 +46,7 @@ public final class ServiceDnsConfigGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="routingPolicy")
       private final @Nullable Output<String> routingPolicy;
 
-    public Output<String> getRoutingPolicy() {
+    public Output<String> routingPolicy() {
         return this.routingPolicy == null ? Codegen.empty() : this.routingPolicy;
     }
 

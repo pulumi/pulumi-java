@@ -47,14 +47,14 @@ public final class IndexField {
      * Possible values are `CONTAINS`.
      * 
     */
-    public Optional<String> getArrayConfig() {
+    public Optional<String> arrayConfig() {
         return Optional.ofNullable(this.arrayConfig);
     }
     /**
      * Name of the field.
      * 
     */
-    public Optional<String> getFieldPath() {
+    public Optional<String> fieldPath() {
         return Optional.ofNullable(this.fieldPath);
     }
     /**
@@ -63,7 +63,7 @@ public final class IndexField {
      * Possible values are `ASCENDING` and `DESCENDING`.
      * 
     */
-    public Optional<String> getOrder() {
+    public Optional<String> order() {
         return Optional.ofNullable(this.order);
     }
 

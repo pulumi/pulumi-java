@@ -19,7 +19,7 @@ public final class GetDigitalTwinsEndpointArgs extends io.pulumi.resources.Invok
     @Import(name="endpointName", required=true)
       private final String endpointName;
 
-    public String getEndpointName() {
+    public String endpointName() {
         return this.endpointName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDigitalTwinsEndpointArgs extends io.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetDigitalTwinsEndpointArgs extends io.pulumi.resources.Invok
     @Import(name="resourceName", required=true)
       private final String resourceName;
 
-    public String getPropResourceName() {
+    public String resourceName() {
         return this.resourceName;
     }
 

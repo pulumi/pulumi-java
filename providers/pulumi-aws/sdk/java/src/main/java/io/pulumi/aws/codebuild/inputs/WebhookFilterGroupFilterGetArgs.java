@@ -23,7 +23,7 @@ public final class WebhookFilterGroupFilterGetArgs extends io.pulumi.resources.R
     @Import(name="excludeMatchedPattern")
       private final @Nullable Output<Boolean> excludeMatchedPattern;
 
-    public Output<Boolean> getExcludeMatchedPattern() {
+    public Output<Boolean> excludeMatchedPattern() {
         return this.excludeMatchedPattern == null ? Codegen.empty() : this.excludeMatchedPattern;
     }
 
@@ -34,7 +34,7 @@ public final class WebhookFilterGroupFilterGetArgs extends io.pulumi.resources.R
     @Import(name="pattern", required=true)
       private final Output<String> pattern;
 
-    public Output<String> getPattern() {
+    public Output<String> pattern() {
         return this.pattern;
     }
 
@@ -45,7 +45,7 @@ public final class WebhookFilterGroupFilterGetArgs extends io.pulumi.resources.R
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

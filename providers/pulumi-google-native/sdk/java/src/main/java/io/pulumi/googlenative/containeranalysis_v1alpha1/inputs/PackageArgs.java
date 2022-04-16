@@ -28,7 +28,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="distribution")
       private final @Nullable Output<List<DistributionArgs>> distribution;
 
-    public Output<List<DistributionArgs>> getDistribution() {
+    public Output<List<DistributionArgs>> distribution() {
         return this.distribution == null ? Codegen.empty() : this.distribution;
     }
 
@@ -39,7 +39,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

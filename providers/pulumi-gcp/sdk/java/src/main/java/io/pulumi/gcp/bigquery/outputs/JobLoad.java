@@ -216,7 +216,7 @@ public final class JobLoad {
      * an invalid error is returned in the job result. The default value is false. Only applicable to CSV, ignored for other formats.
      * 
     */
-    public Optional<Boolean> getAllowJaggedRows() {
+    public Optional<Boolean> allowJaggedRows() {
         return Optional.ofNullable(this.allowJaggedRows);
     }
     /**
@@ -224,14 +224,14 @@ public final class JobLoad {
      * The default value is false.
      * 
     */
-    public Optional<Boolean> getAllowQuotedNewlines() {
+    public Optional<Boolean> allowQuotedNewlines() {
         return Optional.ofNullable(this.allowQuotedNewlines);
     }
     /**
      * Indicates if we should automatically infer the options and schema for CSV and JSON sources.
      * 
     */
-    public Optional<Boolean> getAutodetect() {
+    public Optional<Boolean> autodetect() {
         return Optional.ofNullable(this.autodetect);
     }
     /**
@@ -243,7 +243,7 @@ public final class JobLoad {
      * Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
      * 
     */
-    public Optional<String> getCreateDisposition() {
+    public Optional<String> createDisposition() {
         return Optional.ofNullable(this.createDisposition);
     }
     /**
@@ -251,7 +251,7 @@ public final class JobLoad {
      * Structure is documented below.
      * 
     */
-    public Optional<JobLoadDestinationEncryptionConfiguration> getDestinationEncryptionConfiguration() {
+    public Optional<JobLoadDestinationEncryptionConfiguration> destinationEncryptionConfiguration() {
         return Optional.ofNullable(this.destinationEncryptionConfiguration);
     }
     /**
@@ -259,7 +259,7 @@ public final class JobLoad {
      * Structure is documented below.
      * 
     */
-    public JobLoadDestinationTable getDestinationTable() {
+    public JobLoadDestinationTable destinationTable() {
         return this.destinationTable;
     }
     /**
@@ -268,7 +268,7 @@ public final class JobLoad {
      * has been split using the values of the quote and fieldDelimiter properties.
      * 
     */
-    public Optional<String> getEncoding() {
+    public Optional<String> encoding() {
         return Optional.ofNullable(this.encoding);
     }
     /**
@@ -276,7 +276,7 @@ public final class JobLoad {
      * Default is ','
      * 
     */
-    public Optional<String> getFieldDelimiter() {
+    public Optional<String> fieldDelimiter() {
         return Optional.ofNullable(this.fieldDelimiter);
     }
     /**
@@ -288,7 +288,7 @@ public final class JobLoad {
      * JSON: Named values that don't match any column names
      * 
     */
-    public Optional<Boolean> getIgnoreUnknownValues() {
+    public Optional<Boolean> ignoreUnknownValues() {
         return Optional.ofNullable(this.ignoreUnknownValues);
     }
     /**
@@ -296,7 +296,7 @@ public final class JobLoad {
      * an invalid error is returned in the job result. The default value is 0, which requires that all records are valid.
      * 
     */
-    public Optional<Integer> getMaxBadRecords() {
+    public Optional<Integer> maxBadRecords() {
         return Optional.ofNullable(this.maxBadRecords);
     }
     /**
@@ -306,7 +306,7 @@ public final class JobLoad {
      * an empty value.
      * 
     */
-    public Optional<String> getNullMarker() {
+    public Optional<String> nullMarker() {
         return Optional.ofNullable(this.nullMarker);
     }
     /**
@@ -315,7 +315,7 @@ public final class JobLoad {
      * If any named property isn't found in the Cloud Datastore backup, an invalid error is returned in the job result.
      * 
     */
-    public List<String> getProjectionFields() {
+    public List<String> projectionFields() {
         return this.projectionFields == null ? List.of() : this.projectionFields;
     }
     /**
@@ -325,7 +325,7 @@ public final class JobLoad {
      * If your data contains quoted newline characters, you must also set the allowQuotedNewlines property to true.
      * 
     */
-    public Optional<String> getQuote() {
+    public Optional<String> quote() {
         return Optional.ofNullable(this.quote);
     }
     /**
@@ -337,7 +337,7 @@ public final class JobLoad {
      * ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.
      * 
     */
-    public List<String> getSchemaUpdateOptions() {
+    public List<String> schemaUpdateOptions() {
         return this.schemaUpdateOptions == null ? List.of() : this.schemaUpdateOptions;
     }
     /**
@@ -351,7 +351,7 @@ public final class JobLoad {
      * row N is just skipped. Otherwise row N is used to extract column names for the detected schema.
      * 
     */
-    public Optional<Integer> getSkipLeadingRows() {
+    public Optional<Integer> skipLeadingRows() {
         return Optional.ofNullable(this.skipLeadingRows);
     }
     /**
@@ -361,7 +361,7 @@ public final class JobLoad {
      * The default value is CSV.
      * 
     */
-    public Optional<String> getSourceFormat() {
+    public Optional<String> sourceFormat() {
         return Optional.ofNullable(this.sourceFormat);
     }
     /**
@@ -373,7 +373,7 @@ public final class JobLoad {
      * For Google Cloud Datastore backups: Exactly one URI can be specified. Also, the '*' wildcard character is not allowed.
      * 
     */
-    public List<String> getSourceUris() {
+    public List<String> sourceUris() {
         return this.sourceUris;
     }
     /**
@@ -381,7 +381,7 @@ public final class JobLoad {
      * Structure is documented below.
      * 
     */
-    public Optional<JobLoadTimePartitioning> getTimePartitioning() {
+    public Optional<JobLoadTimePartitioning> timePartitioning() {
         return Optional.ofNullable(this.timePartitioning);
     }
     /**
@@ -395,7 +395,7 @@ public final class JobLoad {
      * Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
      * 
     */
-    public Optional<String> getWriteDisposition() {
+    public Optional<String> writeDisposition() {
         return Optional.ofNullable(this.writeDisposition);
     }
 

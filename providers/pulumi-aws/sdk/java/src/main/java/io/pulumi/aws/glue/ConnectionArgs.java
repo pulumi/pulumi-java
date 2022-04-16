@@ -25,7 +25,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
+    public Output<String> catalogId() {
         return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
@@ -36,7 +36,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectionProperties")
       private final @Nullable Output<Map<String,String>> connectionProperties;
 
-    public Output<Map<String,String>> getConnectionProperties() {
+    public Output<Map<String,String>> connectionProperties() {
         return this.connectionProperties == null ? Codegen.empty() : this.connectionProperties;
     }
 
@@ -47,7 +47,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectionType")
       private final @Nullable Output<String> connectionType;
 
-    public Output<String> getConnectionType() {
+    public Output<String> connectionType() {
         return this.connectionType == null ? Codegen.empty() : this.connectionType;
     }
 
@@ -58,7 +58,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -69,7 +69,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="matchCriterias")
       private final @Nullable Output<List<String>> matchCriterias;
 
-    public Output<List<String>> getMatchCriterias() {
+    public Output<List<String>> matchCriterias() {
         return this.matchCriterias == null ? Codegen.empty() : this.matchCriterias;
     }
 
@@ -80,7 +80,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -91,7 +91,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="physicalConnectionRequirements")
       private final @Nullable Output<ConnectionPhysicalConnectionRequirementsArgs> physicalConnectionRequirements;
 
-    public Output<ConnectionPhysicalConnectionRequirementsArgs> getPhysicalConnectionRequirements() {
+    public Output<ConnectionPhysicalConnectionRequirementsArgs> physicalConnectionRequirements() {
         return this.physicalConnectionRequirements == null ? Codegen.empty() : this.physicalConnectionRequirements;
     }
 
@@ -102,7 +102,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

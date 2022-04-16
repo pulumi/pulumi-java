@@ -24,7 +24,7 @@ public final class BucketCustomPlacementConfigResponse extends io.pulumi.resourc
     @Import(name="dataLocations", required=true)
       private final List<String> dataLocations;
 
-    public List<String> getDataLocations() {
+    public List<String> dataLocations() {
         return this.dataLocations;
     }
 

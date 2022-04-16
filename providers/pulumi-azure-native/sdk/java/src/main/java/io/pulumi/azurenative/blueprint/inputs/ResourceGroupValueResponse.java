@@ -25,7 +25,7 @@ public final class ResourceGroupValueResponse extends io.pulumi.resources.Invoke
     @Import(name="location")
       private final @Nullable String location;
 
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
@@ -36,7 +36,7 @@ public final class ResourceGroupValueResponse extends io.pulumi.resources.Invoke
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 

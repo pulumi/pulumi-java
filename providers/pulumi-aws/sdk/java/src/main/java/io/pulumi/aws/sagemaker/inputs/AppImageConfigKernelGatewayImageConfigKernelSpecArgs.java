@@ -22,7 +22,7 @@ public final class AppImageConfigKernelGatewayImageConfigKernelSpecArgs extends 
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -33,7 +33,7 @@ public final class AppImageConfigKernelGatewayImageConfigKernelSpecArgs extends 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

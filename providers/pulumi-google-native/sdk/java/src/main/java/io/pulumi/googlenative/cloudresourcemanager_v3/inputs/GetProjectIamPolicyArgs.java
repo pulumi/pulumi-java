@@ -17,7 +17,7 @@ public final class GetProjectIamPolicyArgs extends io.pulumi.resources.InvokeArg
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

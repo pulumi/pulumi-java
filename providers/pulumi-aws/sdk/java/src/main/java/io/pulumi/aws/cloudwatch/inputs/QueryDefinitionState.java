@@ -23,7 +23,7 @@ public final class QueryDefinitionState extends io.pulumi.resources.ResourceArgs
     @Import(name="logGroupNames")
       private final @Nullable Output<List<String>> logGroupNames;
 
-    public Output<List<String>> getLogGroupNames() {
+    public Output<List<String>> logGroupNames() {
         return this.logGroupNames == null ? Codegen.empty() : this.logGroupNames;
     }
 
@@ -34,7 +34,7 @@ public final class QueryDefinitionState extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -45,7 +45,7 @@ public final class QueryDefinitionState extends io.pulumi.resources.ResourceArgs
     @Import(name="queryDefinitionId")
       private final @Nullable Output<String> queryDefinitionId;
 
-    public Output<String> getQueryDefinitionId() {
+    public Output<String> queryDefinitionId() {
         return this.queryDefinitionId == null ? Codegen.empty() : this.queryDefinitionId;
     }
 
@@ -56,7 +56,7 @@ public final class QueryDefinitionState extends io.pulumi.resources.ResourceArgs
     @Import(name="queryString")
       private final @Nullable Output<String> queryString;
 
-    public Output<String> getQueryString() {
+    public Output<String> queryString() {
         return this.queryString == null ? Codegen.empty() : this.queryString;
     }
 

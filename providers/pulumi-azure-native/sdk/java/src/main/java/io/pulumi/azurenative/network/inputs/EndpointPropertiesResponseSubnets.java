@@ -26,7 +26,7 @@ public final class EndpointPropertiesResponseSubnets extends io.pulumi.resources
     @Import(name="first")
       private final @Nullable String first;
 
-    public Optional<String> getFirst() {
+    public Optional<String> first() {
         return this.first == null ? Optional.empty() : Optional.ofNullable(this.first);
     }
 
@@ -37,7 +37,7 @@ public final class EndpointPropertiesResponseSubnets extends io.pulumi.resources
     @Import(name="last")
       private final @Nullable String last;
 
-    public Optional<String> getLast() {
+    public Optional<String> last() {
         return this.last == null ? Optional.empty() : Optional.ofNullable(this.last);
     }
 
@@ -48,7 +48,7 @@ public final class EndpointPropertiesResponseSubnets extends io.pulumi.resources
     @Import(name="scope")
       private final @Nullable Integer scope;
 
-    public Optional<Integer> getScope() {
+    public Optional<Integer> scope() {
         return this.scope == null ? Optional.empty() : Optional.ofNullable(this.scope);
     }
 

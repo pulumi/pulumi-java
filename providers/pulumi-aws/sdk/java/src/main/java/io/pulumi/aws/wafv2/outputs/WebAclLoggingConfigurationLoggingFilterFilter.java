@@ -41,21 +41,21 @@ public final class WebAclLoggingConfigurationLoggingFilterFilter {
      * How to handle logs that satisfy the filter's conditions and requirement. Valid values: `KEEP` or `DROP`.
      * 
     */
-    public String getBehavior() {
+    public String behavior() {
         return this.behavior;
     }
     /**
      * Match condition(s) for the filter. See Condition below for more details.
      * 
     */
-    public List<WebAclLoggingConfigurationLoggingFilterFilterCondition> getConditions() {
+    public List<WebAclLoggingConfigurationLoggingFilterFilterCondition> conditions() {
         return this.conditions;
     }
     /**
      * Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition. Valid values: `MEETS_ALL` or `MEETS_ANY`.
      * 
     */
-    public String getRequirement() {
+    public String requirement() {
         return this.requirement;
     }
 

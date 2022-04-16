@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionArgs extends io
     @Import(name="title", required=true)
       private final Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 

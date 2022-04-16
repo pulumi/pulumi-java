@@ -49,35 +49,35 @@ public final class GetIstioCanonicalServiceResult {
         this.telemetries = telemetries;
     }
 
-    public String getCanonicalService() {
+    public String canonicalService() {
         return this.canonicalService;
     }
-    public String getCanonicalServiceNamespace() {
+    public String canonicalServiceNamespace() {
         return this.canonicalServiceNamespace;
     }
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getMeshUid() {
+    public String meshUid() {
         return this.meshUid;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
-    public String getServiceId() {
+    public String serviceId() {
         return this.serviceId;
     }
-    public List<GetIstioCanonicalServiceTelemetry> getTelemetries() {
+    public List<GetIstioCanonicalServiceTelemetry> telemetries() {
         return this.telemetries;
     }
 

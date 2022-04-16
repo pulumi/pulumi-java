@@ -23,7 +23,7 @@ public final class BotMessageGroupArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="message", required=true)
       private final Output<BotMessageArgs> message;
 
-    public Output<BotMessageArgs> getMessage() {
+    public Output<BotMessageArgs> message() {
         return this.message;
     }
 
@@ -34,7 +34,7 @@ public final class BotMessageGroupArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="variations")
       private final @Nullable Output<List<BotMessageArgs>> variations;
 
-    public Output<List<BotMessageArgs>> getVariations() {
+    public Output<List<BotMessageArgs>> variations() {
         return this.variations == null ? Codegen.empty() : this.variations;
     }
 

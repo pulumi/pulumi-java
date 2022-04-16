@@ -39,28 +39,28 @@ public final class GetLaunchTemplatePlacement {
         this.tenancy = tenancy;
     }
 
-    public String getAffinity() {
+    public String affinity() {
         return this.affinity;
     }
-    public String getAvailabilityZone() {
+    public String availabilityZone() {
         return this.availabilityZone;
     }
-    public String getGroupName() {
+    public String groupName() {
         return this.groupName;
     }
-    public String getHostId() {
+    public String hostId() {
         return this.hostId;
     }
-    public String getHostResourceGroupArn() {
+    public String hostResourceGroupArn() {
         return this.hostResourceGroupArn;
     }
-    public Integer getPartitionNumber() {
+    public Integer partitionNumber() {
         return this.partitionNumber;
     }
-    public String getSpreadDomain() {
+    public String spreadDomain() {
         return this.spreadDomain;
     }
-    public String getTenancy() {
+    public String tenancy() {
         return this.tenancy;
     }
 

@@ -29,7 +29,7 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
     @Import(name="appliesToGroups")
       private final @Nullable List<ConnectivityGroupItemResponse> appliesToGroups;
 
-    public List<ConnectivityGroupItemResponse> getAppliesToGroups() {
+    public List<ConnectivityGroupItemResponse> appliesToGroups() {
         return this.appliesToGroups == null ? List.of() : this.appliesToGroups;
     }
 
@@ -40,7 +40,7 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
     @Import(name="configurationGroups")
       private final @Nullable List<ConfigurationGroupResponse> configurationGroups;
 
-    public List<ConfigurationGroupResponse> getConfigurationGroups() {
+    public List<ConfigurationGroupResponse> configurationGroups() {
         return this.configurationGroups == null ? List.of() : this.configurationGroups;
     }
 
@@ -51,7 +51,7 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
     @Import(name="connectivityTopology", required=true)
       private final String connectivityTopology;
 
-    public String getConnectivityTopology() {
+    public String connectivityTopology() {
         return this.connectivityTopology;
     }
 
@@ -62,7 +62,7 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
     @Import(name="deleteExistingPeering")
       private final @Nullable String deleteExistingPeering;
 
-    public Optional<String> getDeleteExistingPeering() {
+    public Optional<String> deleteExistingPeering() {
         return this.deleteExistingPeering == null ? Optional.empty() : Optional.ofNullable(this.deleteExistingPeering);
     }
 
@@ -73,7 +73,7 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -84,7 +84,7 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
     @Import(name="displayName")
       private final @Nullable String displayName;
 
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
@@ -95,7 +95,7 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
     @Import(name="hubs")
       private final @Nullable List<HubResponse> hubs;
 
-    public List<HubResponse> getHubs() {
+    public List<HubResponse> hubs() {
         return this.hubs == null ? List.of() : this.hubs;
     }
 
@@ -106,7 +106,7 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -117,7 +117,7 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
     @Import(name="isGlobal")
       private final @Nullable String isGlobal;
 
-    public Optional<String> getIsGlobal() {
+    public Optional<String> isGlobal() {
         return this.isGlobal == null ? Optional.empty() : Optional.ofNullable(this.isGlobal);
     }
 
@@ -128,7 +128,7 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

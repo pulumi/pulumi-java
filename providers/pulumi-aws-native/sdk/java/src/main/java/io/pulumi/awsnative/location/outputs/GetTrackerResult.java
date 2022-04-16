@@ -28,16 +28,16 @@ public final class GetTrackerResult {
         this.updateTime = updateTime;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getCreateTime() {
+    public Optional<String> createTime() {
         return Optional.ofNullable(this.createTime);
     }
-    public Optional<String> getTrackerArn() {
+    public Optional<String> trackerArn() {
         return Optional.ofNullable(this.trackerArn);
     }
-    public Optional<String> getUpdateTime() {
+    public Optional<String> updateTime() {
         return Optional.ofNullable(this.updateTime);
     }
 

@@ -43,14 +43,14 @@ public final class AzureDataLakeStoreLocationResponse {
      * Specify the file name of dataset. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getFileName() {
+    public Optional<Object> fileName() {
         return Optional.ofNullable(this.fileName);
     }
     /**
      * Specify the folder path of dataset. Type: string (or Expression with resultType string)
      * 
     */
-    public Optional<Object> getFolderPath() {
+    public Optional<Object> folderPath() {
         return Optional.ofNullable(this.folderPath);
     }
     /**
@@ -58,7 +58,7 @@ public final class AzureDataLakeStoreLocationResponse {
      * Expected value is 'AzureDataLakeStoreLocation'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

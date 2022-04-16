@@ -23,7 +23,7 @@ public final class MembershipStateResponse extends io.pulumi.resources.InvokeArg
     @Import(name="code", required=true)
       private final String code;
 
-    public String getCode() {
+    public String code() {
         return this.code;
     }
 
@@ -34,7 +34,7 @@ public final class MembershipStateResponse extends io.pulumi.resources.InvokeArg
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -45,7 +45,7 @@ public final class MembershipStateResponse extends io.pulumi.resources.InvokeArg
     @Import(name="updateTime", required=true)
       private final String updateTime;
 
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

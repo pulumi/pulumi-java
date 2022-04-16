@@ -20,7 +20,7 @@ public final class GetDomainNameEndpointConfiguration extends io.pulumi.resource
     @Import(name="types", required=true)
       private final List<String> types;
 
-    public List<String> getTypes() {
+    public List<String> types() {
         return this.types;
     }
 

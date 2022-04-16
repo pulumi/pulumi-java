@@ -24,7 +24,7 @@ public final class VoiceConnectorGroupState extends io.pulumi.resources.Resource
     @Import(name="connectors")
       private final @Nullable Output<List<VoiceConnectorGroupConnectorGetArgs>> connectors;
 
-    public Output<List<VoiceConnectorGroupConnectorGetArgs>> getConnectors() {
+    public Output<List<VoiceConnectorGroupConnectorGetArgs>> connectors() {
         return this.connectors == null ? Codegen.empty() : this.connectors;
     }
 
@@ -35,7 +35,7 @@ public final class VoiceConnectorGroupState extends io.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

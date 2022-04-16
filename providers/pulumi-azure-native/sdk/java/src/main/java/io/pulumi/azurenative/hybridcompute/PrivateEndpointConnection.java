@@ -44,7 +44,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -58,7 +58,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return Resource properties.
      * 
      */
-    public Output<PrivateEndpointConnectionPropertiesResponse> getProperties() {
+    public Output<PrivateEndpointConnectionPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -72,7 +72,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return The system meta data relating to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -86,7 +86,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -28,7 +28,7 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="completionTime")
       private final @Nullable Output<TimestampArgs> completionTime;
 
-    public Output<TimestampArgs> getCompletionTime() {
+    public Output<TimestampArgs> completionTime() {
         return this.completionTime == null ? Codegen.empty() : this.completionTime;
     }
 
@@ -39,7 +39,7 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="creationTime")
       private final @Nullable Output<TimestampArgs> creationTime;
 
-    public Output<TimestampArgs> getCreationTime() {
+    public Output<TimestampArgs> creationTime() {
         return this.creationTime == null ? Codegen.empty() : this.creationTime;
     }
 
@@ -50,7 +50,7 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dimensionDefinitions")
       private final @Nullable Output<List<MatrixDimensionDefinitionArgs>> dimensionDefinitions;
 
-    public Output<List<MatrixDimensionDefinitionArgs>> getDimensionDefinitions() {
+    public Output<List<MatrixDimensionDefinitionArgs>> dimensionDefinitions() {
         return this.dimensionDefinitions == null ? Codegen.empty() : this.dimensionDefinitions;
     }
 
@@ -61,14 +61,14 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="executionId")
       private final @Nullable Output<String> executionId;
 
-    public Output<String> getExecutionId() {
+    public Output<String> executionId() {
         return this.executionId == null ? Codegen.empty() : this.executionId;
     }
 
     @Import(name="historyId", required=true)
       private final Output<String> historyId;
 
-    public Output<String> getHistoryId() {
+    public Output<String> historyId() {
         return this.historyId;
     }
 
@@ -79,21 +79,21 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outcome")
       private final @Nullable Output<OutcomeArgs> outcome;
 
-    public Output<OutcomeArgs> getOutcome() {
+    public Output<OutcomeArgs> outcome() {
         return this.outcome == null ? Codegen.empty() : this.outcome;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -104,7 +104,7 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="specification")
       private final @Nullable Output<SpecificationArgs> specification;
 
-    public Output<SpecificationArgs> getSpecification() {
+    public Output<SpecificationArgs> specification() {
         return this.specification == null ? Codegen.empty() : this.specification;
     }
 
@@ -115,7 +115,7 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<ExecutionState> state;
 
-    public Output<ExecutionState> getState() {
+    public Output<ExecutionState> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -126,7 +126,7 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="testExecutionMatrixId")
       private final @Nullable Output<String> testExecutionMatrixId;
 
-    public Output<String> getTestExecutionMatrixId() {
+    public Output<String> testExecutionMatrixId() {
         return this.testExecutionMatrixId == null ? Codegen.empty() : this.testExecutionMatrixId;
     }
 

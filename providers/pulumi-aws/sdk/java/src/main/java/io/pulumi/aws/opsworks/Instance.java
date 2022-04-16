@@ -98,7 +98,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The AWS OpsWorks agent to install.  Defaults to `"INHERIT"`.
      * 
      */
-    public Output</* @Nullable */ String> getAgentVersion() {
+    public Output</* @Nullable */ String> agentVersion() {
         return this.agentVersion;
     }
     /**
@@ -112,7 +112,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The AMI to use for the instance.  If an AMI is specified, `os` must be `"Custom"`.
      * 
      */
-    public Output<String> getAmiId() {
+    public Output<String> amiId() {
         return this.amiId;
     }
     /**
@@ -126,7 +126,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Machine architecture for created instances.  Can be either `"x86_64"` (the default) or `"i386"`
      * 
      */
-    public Output</* @Nullable */ String> getArchitecture() {
+    public Output</* @Nullable */ String> architecture() {
         return this.architecture;
     }
     /**
@@ -140,7 +140,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Creates load-based or time-based instances.  If set, can be either: `"load"` or `"timer"`.
      * 
      */
-    public Output</* @Nullable */ String> getAutoScalingType() {
+    public Output</* @Nullable */ String> autoScalingType() {
         return this.autoScalingType;
     }
     /**
@@ -156,25 +156,25 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * by default.
      * 
      */
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone;
     }
     @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     @Export(name="deleteEbs", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deleteEbs;
 
-    public Output</* @Nullable */ Boolean> getDeleteEbs() {
+    public Output</* @Nullable */ Boolean> deleteEbs() {
         return this.deleteEbs;
     }
     @Export(name="deleteEip", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deleteEip;
 
-    public Output</* @Nullable */ Boolean> getDeleteEip() {
+    public Output</* @Nullable */ Boolean> deleteEip() {
         return this.deleteEip;
     }
     /**
@@ -190,7 +190,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * instance.  See Block Devices below for details.
      * 
      */
-    public Output<List<InstanceEbsBlockDevice>> getEbsBlockDevices() {
+    public Output<List<InstanceEbsBlockDevice>> ebsBlockDevices() {
         return this.ebsBlockDevices;
     }
     /**
@@ -204,7 +204,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return If true, the launched EC2 instance will be EBS-optimized.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEbsOptimized() {
+    public Output</* @Nullable */ Boolean> ebsOptimized() {
         return this.ebsOptimized;
     }
     /**
@@ -218,19 +218,19 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return EC2 instance ID
      * 
      */
-    public Output<String> getEc2InstanceId() {
+    public Output<String> ec2InstanceId() {
         return this.ec2InstanceId;
     }
     @Export(name="ecsClusterArn", type=String.class, parameters={})
     private Output<String> ecsClusterArn;
 
-    public Output<String> getEcsClusterArn() {
+    public Output<String> ecsClusterArn() {
         return this.ecsClusterArn;
     }
     @Export(name="elasticIp", type=String.class, parameters={})
     private Output<String> elasticIp;
 
-    public Output<String> getElasticIp() {
+    public Output<String> elasticIp() {
         return this.elasticIp;
     }
     /**
@@ -246,7 +246,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * "Instance Store") volumes on the instance. See Block Devices below for details.
      * 
      */
-    public Output<List<InstanceEphemeralBlockDevice>> getEphemeralBlockDevices() {
+    public Output<List<InstanceEphemeralBlockDevice>> ephemeralBlockDevices() {
         return this.ephemeralBlockDevices;
     }
     /**
@@ -260,13 +260,13 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The instance's host name.
      * 
      */
-    public Output<String> getHostname() {
+    public Output<String> hostname() {
         return this.hostname;
     }
     @Export(name="infrastructureClass", type=String.class, parameters={})
     private Output<String> infrastructureClass;
 
-    public Output<String> getInfrastructureClass() {
+    public Output<String> infrastructureClass() {
         return this.infrastructureClass;
     }
     /**
@@ -280,13 +280,13 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Controls where to install OS and package updates when the instance boots.  Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getInstallUpdatesOnBoot() {
+    public Output</* @Nullable */ Boolean> installUpdatesOnBoot() {
         return this.installUpdatesOnBoot;
     }
     @Export(name="instanceProfileArn", type=String.class, parameters={})
     private Output<String> instanceProfileArn;
 
-    public Output<String> getInstanceProfileArn() {
+    public Output<String> instanceProfileArn() {
         return this.instanceProfileArn;
     }
     /**
@@ -300,13 +300,13 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The type of instance to start
      * 
      */
-    public Output</* @Nullable */ String> getInstanceType() {
+    public Output</* @Nullable */ String> instanceType() {
         return this.instanceType;
     }
     @Export(name="lastServiceErrorId", type=String.class, parameters={})
     private Output<String> lastServiceErrorId;
 
-    public Output<String> getLastServiceErrorId() {
+    public Output<String> lastServiceErrorId() {
         return this.lastServiceErrorId;
     }
     /**
@@ -320,7 +320,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The ids of the layers the instance will belong to.
      * 
      */
-    public Output<List<String>> getLayerIds() {
+    public Output<List<String>> layerIds() {
         return this.layerIds;
     }
     /**
@@ -334,13 +334,13 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Name of operating system that will be installed.
      * 
      */
-    public Output<String> getOs() {
+    public Output<String> os() {
         return this.os;
     }
     @Export(name="platform", type=String.class, parameters={})
     private Output<String> platform;
 
-    public Output<String> getPlatform() {
+    public Output<String> platform() {
         return this.platform;
     }
     /**
@@ -358,7 +358,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * for your VPC
      * 
      */
-    public Output<String> getPrivateDns() {
+    public Output<String> privateDns() {
         return this.privateDns;
     }
     /**
@@ -372,7 +372,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The private IP address assigned to the instance
      * 
      */
-    public Output<String> getPrivateIp() {
+    public Output<String> privateIp() {
         return this.privateIp;
     }
     /**
@@ -388,7 +388,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * is only available if you've enabled DNS hostnames for your VPC
      * 
      */
-    public Output<String> getPublicDns() {
+    public Output<String> publicDns() {
         return this.publicDns;
     }
     /**
@@ -402,37 +402,37 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The public IP address assigned to the instance, if applicable.
      * 
      */
-    public Output<String> getPublicIp() {
+    public Output<String> publicIp() {
         return this.publicIp;
     }
     @Export(name="registeredBy", type=String.class, parameters={})
     private Output<String> registeredBy;
 
-    public Output<String> getRegisteredBy() {
+    public Output<String> registeredBy() {
         return this.registeredBy;
     }
     @Export(name="reportedAgentVersion", type=String.class, parameters={})
     private Output<String> reportedAgentVersion;
 
-    public Output<String> getReportedAgentVersion() {
+    public Output<String> reportedAgentVersion() {
         return this.reportedAgentVersion;
     }
     @Export(name="reportedOsFamily", type=String.class, parameters={})
     private Output<String> reportedOsFamily;
 
-    public Output<String> getReportedOsFamily() {
+    public Output<String> reportedOsFamily() {
         return this.reportedOsFamily;
     }
     @Export(name="reportedOsName", type=String.class, parameters={})
     private Output<String> reportedOsName;
 
-    public Output<String> getReportedOsName() {
+    public Output<String> reportedOsName() {
         return this.reportedOsName;
     }
     @Export(name="reportedOsVersion", type=String.class, parameters={})
     private Output<String> reportedOsVersion;
 
-    public Output<String> getReportedOsVersion() {
+    public Output<String> reportedOsVersion() {
         return this.reportedOsVersion;
     }
     /**
@@ -448,7 +448,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * device of the instance. See Block Devices below for details.
      * 
      */
-    public Output<List<InstanceRootBlockDevice>> getRootBlockDevices() {
+    public Output<List<InstanceRootBlockDevice>> rootBlockDevices() {
         return this.rootBlockDevices;
     }
     /**
@@ -462,13 +462,13 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Name of the type of root device instances will have by default.  Can be either `"ebs"` or `"instance-store"`
      * 
      */
-    public Output<String> getRootDeviceType() {
+    public Output<String> rootDeviceType() {
         return this.rootDeviceType;
     }
     @Export(name="rootDeviceVolumeId", type=String.class, parameters={})
     private Output<String> rootDeviceVolumeId;
 
-    public Output<String> getRootDeviceVolumeId() {
+    public Output<String> rootDeviceVolumeId() {
         return this.rootDeviceVolumeId;
     }
     /**
@@ -482,19 +482,19 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The associated security groups.
      * 
      */
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
     @Export(name="sshHostDsaKeyFingerprint", type=String.class, parameters={})
     private Output<String> sshHostDsaKeyFingerprint;
 
-    public Output<String> getSshHostDsaKeyFingerprint() {
+    public Output<String> sshHostDsaKeyFingerprint() {
         return this.sshHostDsaKeyFingerprint;
     }
     @Export(name="sshHostRsaKeyFingerprint", type=String.class, parameters={})
     private Output<String> sshHostRsaKeyFingerprint;
 
-    public Output<String> getSshHostRsaKeyFingerprint() {
+    public Output<String> sshHostRsaKeyFingerprint() {
         return this.sshHostRsaKeyFingerprint;
     }
     /**
@@ -508,7 +508,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Name of the SSH keypair that instances will have by default.
      * 
      */
-    public Output<String> getSshKeyName() {
+    public Output<String> sshKeyName() {
         return this.sshKeyName;
     }
     /**
@@ -522,7 +522,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The id of the stack the instance will belong to.
      * 
      */
-    public Output<String> getStackId() {
+    public Output<String> stackId() {
         return this.stackId;
     }
     /**
@@ -536,13 +536,13 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The desired state of the instance.  Can be either `"running"` or `"stopped"`.
      * 
      */
-    public Output</* @Nullable */ String> getState() {
+    public Output</* @Nullable */ String> state() {
         return this.state;
     }
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -556,7 +556,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Subnet ID to attach to
      * 
      */
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
     /**
@@ -570,7 +570,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Instance tenancy to use. Can be one of `"default"`, `"dedicated"` or `"host"`
      * 
      */
-    public Output<String> getTenancy() {
+    public Output<String> tenancy() {
         return this.tenancy;
     }
     /**
@@ -586,7 +586,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * will use. Can be either `"paravirtual"` or `"hvm"`.
      * 
      */
-    public Output<String> getVirtualizationType() {
+    public Output<String> virtualizationType() {
         return this.virtualizationType;
     }
 

@@ -27,7 +27,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoscalingPolicy")
       private final @Nullable Output<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy;
 
-    public Output<NodeGroupAutoscalingPolicyArgs> getAutoscalingPolicy() {
+    public Output<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy() {
         return this.autoscalingPolicy == null ? Codegen.empty() : this.autoscalingPolicy;
     }
 
@@ -38,7 +38,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -49,7 +49,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="initialSize")
       private final @Nullable Output<Integer> initialSize;
 
-    public Output<Integer> getInitialSize() {
+    public Output<Integer> initialSize() {
         return this.initialSize == null ? Codegen.empty() : this.initialSize;
     }
 
@@ -60,7 +60,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maintenancePolicy")
       private final @Nullable Output<String> maintenancePolicy;
 
-    public Output<String> getMaintenancePolicy() {
+    public Output<String> maintenancePolicy() {
         return this.maintenancePolicy == null ? Codegen.empty() : this.maintenancePolicy;
     }
 
@@ -72,7 +72,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maintenanceWindow")
       private final @Nullable Output<NodeGroupMaintenanceWindowArgs> maintenanceWindow;
 
-    public Output<NodeGroupMaintenanceWindowArgs> getMaintenanceWindow() {
+    public Output<NodeGroupMaintenanceWindowArgs> maintenanceWindow() {
         return this.maintenanceWindow == null ? Codegen.empty() : this.maintenanceWindow;
     }
 
@@ -83,7 +83,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -94,7 +94,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeTemplate", required=true)
       private final Output<String> nodeTemplate;
 
-    public Output<String> getNodeTemplate() {
+    public Output<String> nodeTemplate() {
         return this.nodeTemplate;
     }
 
@@ -106,7 +106,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -117,7 +117,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="size")
       private final @Nullable Output<Integer> size;
 
-    public Output<Integer> getSize() {
+    public Output<Integer> size() {
         return this.size == null ? Codegen.empty() : this.size;
     }
 
@@ -128,7 +128,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

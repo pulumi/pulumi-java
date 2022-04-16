@@ -21,7 +21,7 @@ public final class FirehoseDeliveryStreamKinesisSourceConfigurationArgs extends 
     @Import(name="kinesisStreamArn", required=true)
       private final Output<String> kinesisStreamArn;
 
-    public Output<String> getKinesisStreamArn() {
+    public Output<String> kinesisStreamArn() {
         return this.kinesisStreamArn;
     }
 
@@ -32,7 +32,7 @@ public final class FirehoseDeliveryStreamKinesisSourceConfigurationArgs extends 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 

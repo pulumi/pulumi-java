@@ -23,7 +23,7 @@ public final class FeatureSpecGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="multiclusteringress")
       private final @Nullable Output<FeatureSpecMulticlusteringressGetArgs> multiclusteringress;
 
-    public Output<FeatureSpecMulticlusteringressGetArgs> getMulticlusteringress() {
+    public Output<FeatureSpecMulticlusteringressGetArgs> multiclusteringress() {
         return this.multiclusteringress == null ? Codegen.empty() : this.multiclusteringress;
     }
 

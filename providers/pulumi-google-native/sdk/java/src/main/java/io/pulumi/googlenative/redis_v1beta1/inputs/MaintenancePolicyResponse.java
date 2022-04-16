@@ -25,7 +25,7 @@ public final class MaintenancePolicyResponse extends io.pulumi.resources.InvokeA
     @Import(name="createTime", required=true)
       private final String createTime;
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
 
@@ -36,7 +36,7 @@ public final class MaintenancePolicyResponse extends io.pulumi.resources.InvokeA
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -47,7 +47,7 @@ public final class MaintenancePolicyResponse extends io.pulumi.resources.InvokeA
     @Import(name="updateTime", required=true)
       private final String updateTime;
 
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 
@@ -58,7 +58,7 @@ public final class MaintenancePolicyResponse extends io.pulumi.resources.InvokeA
     @Import(name="weeklyMaintenanceWindow", required=true)
       private final List<WeeklyMaintenanceWindowResponse> weeklyMaintenanceWindow;
 
-    public List<WeeklyMaintenanceWindowResponse> getWeeklyMaintenanceWindow() {
+    public List<WeeklyMaintenanceWindowResponse> weeklyMaintenanceWindow() {
         return this.weeklyMaintenanceWindow;
     }
 

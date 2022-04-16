@@ -26,7 +26,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identityIds", required=true)
       private final Output<List<String>> identityIds;
 
-    public Output<List<String>> getIdentityIds() {
+    public Output<List<String>> identityIds() {
         return this.identityIds;
     }
 
@@ -37,7 +37,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

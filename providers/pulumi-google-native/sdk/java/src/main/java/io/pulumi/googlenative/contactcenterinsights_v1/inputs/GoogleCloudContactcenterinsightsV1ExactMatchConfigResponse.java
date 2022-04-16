@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse ex
     @Import(name="caseSensitive", required=true)
       private final Boolean caseSensitive;
 
-    public Boolean getCaseSensitive() {
+    public Boolean caseSensitive() {
         return this.caseSensitive;
     }
 

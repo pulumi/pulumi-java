@@ -51,7 +51,7 @@ public class EnvGroup extends io.pulumi.resources.CustomResource {
      * @return Hostnames of the environment group.
      * 
      */
-    public Output</* @Nullable */ List<String>> getHostnames() {
+    public Output</* @Nullable */ List<String>> hostnames() {
         return this.hostnames;
     }
     /**
@@ -65,7 +65,7 @@ public class EnvGroup extends io.pulumi.resources.CustomResource {
      * @return The resource ID of the environment group.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -81,7 +81,7 @@ public class EnvGroup extends io.pulumi.resources.CustomResource {
      * in the format `organizations/{{org_name}}`.
      * 
      */
-    public Output<String> getOrgId() {
+    public Output<String> orgId() {
         return this.orgId;
     }
 

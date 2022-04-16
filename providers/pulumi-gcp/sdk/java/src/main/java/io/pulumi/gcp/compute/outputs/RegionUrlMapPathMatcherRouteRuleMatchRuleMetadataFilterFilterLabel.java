@@ -35,7 +35,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilter
      * request, in the absence of which the request match fails.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -43,7 +43,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilter
      * length of 1024 characters.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

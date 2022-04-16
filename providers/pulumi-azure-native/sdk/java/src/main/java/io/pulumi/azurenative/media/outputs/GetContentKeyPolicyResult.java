@@ -86,63 +86,63 @@ public final class GetContentKeyPolicyResult {
      * The creation date of the Policy
      * 
     */
-    public String getCreated() {
+    public String created() {
         return this.created;
     }
     /**
      * A description for the Policy.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The last modified date of the Policy
      * 
     */
-    public String getLastModified() {
+    public String lastModified() {
         return this.lastModified;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The Key Policy options.
      * 
     */
-    public List<ContentKeyPolicyOptionResponse> getOptions() {
+    public List<ContentKeyPolicyOptionResponse> options() {
         return this.options;
     }
     /**
      * The legacy Policy ID.
      * 
     */
-    public String getPolicyId() {
+    public String policyId() {
         return this.policyId;
     }
     /**
      * The system metadata relating to this resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

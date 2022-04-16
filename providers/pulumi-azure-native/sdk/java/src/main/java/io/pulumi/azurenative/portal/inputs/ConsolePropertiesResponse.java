@@ -23,7 +23,7 @@ public final class ConsolePropertiesResponse extends io.pulumi.resources.InvokeA
     @Import(name="osType", required=true)
       private final String osType;
 
-    public String getOsType() {
+    public String osType() {
         return this.osType;
     }
 
@@ -34,7 +34,7 @@ public final class ConsolePropertiesResponse extends io.pulumi.resources.InvokeA
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -45,7 +45,7 @@ public final class ConsolePropertiesResponse extends io.pulumi.resources.InvokeA
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

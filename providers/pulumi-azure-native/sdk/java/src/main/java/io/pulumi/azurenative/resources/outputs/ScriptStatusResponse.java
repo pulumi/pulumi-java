@@ -63,42 +63,42 @@ public final class ScriptStatusResponse {
      * ACI resource Id.
      * 
     */
-    public String getContainerInstanceId() {
+    public String containerInstanceId() {
         return this.containerInstanceId;
     }
     /**
      * End time of the script execution.
      * 
     */
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
     /**
      * Error that is relayed from the script execution.
      * 
     */
-    public Optional<ErrorResponseResponse> getError() {
+    public Optional<ErrorResponseResponse> error() {
         return Optional.ofNullable(this.error);
     }
     /**
      * Time the deployment script resource will expire.
      * 
     */
-    public String getExpirationTime() {
+    public String expirationTime() {
         return this.expirationTime;
     }
     /**
      * Start time of the script execution.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
     /**
      * Storage account resource Id.
      * 
     */
-    public String getStorageAccountId() {
+    public String storageAccountId() {
         return this.storageAccountId;
     }
 

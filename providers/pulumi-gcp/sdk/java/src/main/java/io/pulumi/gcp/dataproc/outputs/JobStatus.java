@@ -28,16 +28,16 @@ public final class JobStatus {
         this.substate = substate;
     }
 
-    public Optional<String> getDetails() {
+    public Optional<String> details() {
         return Optional.ofNullable(this.details);
     }
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
-    public Optional<String> getStateStartTime() {
+    public Optional<String> stateStartTime() {
         return Optional.ofNullable(this.stateStartTime);
     }
-    public Optional<String> getSubstate() {
+    public Optional<String> substate() {
         return Optional.ofNullable(this.substate);
     }
 

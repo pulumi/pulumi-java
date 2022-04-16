@@ -68,49 +68,49 @@ public final class EndpointInfoResponse {
      * Destination IP address.
      * 
     */
-    public String getDestinationIp() {
+    public String destinationIp() {
         return this.destinationIp;
     }
     /**
      * URI of the network where this packet is sent to.
      * 
     */
-    public String getDestinationNetworkUri() {
+    public String destinationNetworkUri() {
         return this.destinationNetworkUri;
     }
     /**
      * Destination port. Only valid when protocol is TCP or UDP.
      * 
     */
-    public Integer getDestinationPort() {
+    public Integer destinationPort() {
         return this.destinationPort;
     }
     /**
      * IP protocol in string format, for example: "TCP", "UDP", "ICMP".
      * 
     */
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
     /**
      * Source IP address.
      * 
     */
-    public String getSourceIp() {
+    public String sourceIp() {
         return this.sourceIp;
     }
     /**
      * URI of the network where this packet originates from.
      * 
     */
-    public String getSourceNetworkUri() {
+    public String sourceNetworkUri() {
         return this.sourceNetworkUri;
     }
     /**
      * Source port. Only valid when protocol is TCP or UDP.
      * 
     */
-    public Integer getSourcePort() {
+    public Integer sourcePort() {
         return this.sourcePort;
     }
 

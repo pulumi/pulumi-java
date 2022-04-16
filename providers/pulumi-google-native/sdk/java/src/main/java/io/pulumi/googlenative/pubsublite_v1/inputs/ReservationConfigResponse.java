@@ -23,7 +23,7 @@ public final class ReservationConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="throughputReservation", required=true)
       private final String throughputReservation;
 
-    public String getThroughputReservation() {
+    public String throughputReservation() {
         return this.throughputReservation;
     }
 

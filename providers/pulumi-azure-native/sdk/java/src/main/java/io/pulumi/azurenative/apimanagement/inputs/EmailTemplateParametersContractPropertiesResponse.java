@@ -25,7 +25,7 @@ public final class EmailTemplateParametersContractPropertiesResponse extends io.
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -36,7 +36,7 @@ public final class EmailTemplateParametersContractPropertiesResponse extends io.
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -47,7 +47,7 @@ public final class EmailTemplateParametersContractPropertiesResponse extends io.
     @Import(name="title")
       private final @Nullable String title;
 
-    public Optional<String> getTitle() {
+    public Optional<String> title() {
         return this.title == null ? Optional.empty() : Optional.ofNullable(this.title);
     }
 

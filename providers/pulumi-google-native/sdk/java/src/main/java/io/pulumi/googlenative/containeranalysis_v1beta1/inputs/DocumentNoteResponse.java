@@ -23,7 +23,7 @@ public final class DocumentNoteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="dataLicence", required=true)
       private final String dataLicence;
 
-    public String getDataLicence() {
+    public String dataLicence() {
         return this.dataLicence;
     }
 
@@ -34,7 +34,7 @@ public final class DocumentNoteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="spdxVersion", required=true)
       private final String spdxVersion;
 
-    public String getSpdxVersion() {
+    public String spdxVersion() {
         return this.spdxVersion;
     }
 

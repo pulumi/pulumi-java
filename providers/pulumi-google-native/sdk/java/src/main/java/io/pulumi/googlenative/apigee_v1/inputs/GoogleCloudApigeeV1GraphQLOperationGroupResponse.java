@@ -25,7 +25,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationGroupResponse extends io.p
     @Import(name="operationConfigType", required=true)
       private final String operationConfigType;
 
-    public String getOperationConfigType() {
+    public String operationConfigType() {
         return this.operationConfigType;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationGroupResponse extends io.p
     @Import(name="operationConfigs", required=true)
       private final List<GoogleCloudApigeeV1GraphQLOperationConfigResponse> operationConfigs;
 
-    public List<GoogleCloudApigeeV1GraphQLOperationConfigResponse> getOperationConfigs() {
+    public List<GoogleCloudApigeeV1GraphQLOperationConfigResponse> operationConfigs() {
         return this.operationConfigs;
     }
 

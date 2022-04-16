@@ -27,7 +27,7 @@ public final class InTotoStatementResponse extends io.pulumi.resources.InvokeArg
     @Import(name="predicateType", required=true)
       private final String predicateType;
 
-    public String getPredicateType() {
+    public String predicateType() {
         return this.predicateType;
     }
 
@@ -38,7 +38,7 @@ public final class InTotoStatementResponse extends io.pulumi.resources.InvokeArg
     @Import(name="provenance", required=true)
       private final InTotoProvenanceResponse provenance;
 
-    public InTotoProvenanceResponse getProvenance() {
+    public InTotoProvenanceResponse provenance() {
         return this.provenance;
     }
 
@@ -49,7 +49,7 @@ public final class InTotoStatementResponse extends io.pulumi.resources.InvokeArg
     @Import(name="slsaProvenance", required=true)
       private final SlsaProvenanceResponse slsaProvenance;
 
-    public SlsaProvenanceResponse getSlsaProvenance() {
+    public SlsaProvenanceResponse slsaProvenance() {
         return this.slsaProvenance;
     }
 
@@ -60,7 +60,7 @@ public final class InTotoStatementResponse extends io.pulumi.resources.InvokeArg
     @Import(name="subject", required=true)
       private final List<SubjectResponse> subject;
 
-    public List<SubjectResponse> getSubject() {
+    public List<SubjectResponse> subject() {
         return this.subject;
     }
 
@@ -71,7 +71,7 @@ public final class InTotoStatementResponse extends io.pulumi.resources.InvokeArg
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

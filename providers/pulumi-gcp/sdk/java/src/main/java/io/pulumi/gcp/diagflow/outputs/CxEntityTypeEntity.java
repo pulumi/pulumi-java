@@ -37,14 +37,14 @@ public final class CxEntityTypeEntity {
      * For KIND_LIST entity types: This collection must contain exactly one synonym equal to value.
      * 
     */
-    public List<String> getSynonyms() {
+    public List<String> synonyms() {
         return this.synonyms == null ? List.of() : this.synonyms;
     }
     /**
      * The word or phrase to be excluded.
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

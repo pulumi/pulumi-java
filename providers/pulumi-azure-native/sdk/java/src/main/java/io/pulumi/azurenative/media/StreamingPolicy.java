@@ -47,7 +47,7 @@ public class StreamingPolicy extends io.pulumi.resources.CustomResource {
      * @return Configuration of CommonEncryptionCbcs
      * 
      */
-    public Output</* @Nullable */ CommonEncryptionCbcsResponse> getCommonEncryptionCbcs() {
+    public Output</* @Nullable */ CommonEncryptionCbcsResponse> commonEncryptionCbcs() {
         return this.commonEncryptionCbcs;
     }
     /**
@@ -61,7 +61,7 @@ public class StreamingPolicy extends io.pulumi.resources.CustomResource {
      * @return Configuration of CommonEncryptionCenc
      * 
      */
-    public Output</* @Nullable */ CommonEncryptionCencResponse> getCommonEncryptionCenc() {
+    public Output</* @Nullable */ CommonEncryptionCencResponse> commonEncryptionCenc() {
         return this.commonEncryptionCenc;
     }
     /**
@@ -75,7 +75,7 @@ public class StreamingPolicy extends io.pulumi.resources.CustomResource {
      * @return Creation time of Streaming Policy
      * 
      */
-    public Output<String> getCreated() {
+    public Output<String> created() {
         return this.created;
     }
     /**
@@ -89,7 +89,7 @@ public class StreamingPolicy extends io.pulumi.resources.CustomResource {
      * @return Default ContentKey used by current Streaming Policy
      * 
      */
-    public Output</* @Nullable */ String> getDefaultContentKeyPolicyName() {
+    public Output</* @Nullable */ String> defaultContentKeyPolicyName() {
         return this.defaultContentKeyPolicyName;
     }
     /**
@@ -103,7 +103,7 @@ public class StreamingPolicy extends io.pulumi.resources.CustomResource {
      * @return Configuration of EnvelopeEncryption
      * 
      */
-    public Output</* @Nullable */ EnvelopeEncryptionResponse> getEnvelopeEncryption() {
+    public Output</* @Nullable */ EnvelopeEncryptionResponse> envelopeEncryption() {
         return this.envelopeEncryption;
     }
     /**
@@ -117,7 +117,7 @@ public class StreamingPolicy extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -131,7 +131,7 @@ public class StreamingPolicy extends io.pulumi.resources.CustomResource {
      * @return Configurations of NoEncryption
      * 
      */
-    public Output</* @Nullable */ NoEncryptionResponse> getNoEncryption() {
+    public Output</* @Nullable */ NoEncryptionResponse> noEncryption() {
         return this.noEncryption;
     }
     /**
@@ -145,7 +145,7 @@ public class StreamingPolicy extends io.pulumi.resources.CustomResource {
      * @return The system metadata relating to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -159,7 +159,7 @@ public class StreamingPolicy extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

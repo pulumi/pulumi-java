@@ -42,7 +42,7 @@ public class Console extends io.pulumi.resources.CustomResource {
      * @return Cloud shell console properties.
      * 
      */
-    public Output<ConsolePropertiesResponse> getProperties() {
+    public Output<ConsolePropertiesResponse> properties() {
         return this.properties;
     }
 

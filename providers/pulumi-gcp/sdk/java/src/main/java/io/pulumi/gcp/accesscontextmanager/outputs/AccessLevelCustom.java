@@ -30,7 +30,7 @@ public final class AccessLevelCustom {
      * Structure is documented below.
      * 
     */
-    public AccessLevelCustomExpr getExpr() {
+    public AccessLevelCustomExpr expr() {
         return this.expr;
     }
 

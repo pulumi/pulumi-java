@@ -30,7 +30,7 @@ public final class AzureFirewallApplicationRuleCollectionArgs extends io.pulumi.
     @Import(name="action")
       private final @Nullable Output<AzureFirewallRCActionArgs> action;
 
-    public Output<AzureFirewallRCActionArgs> getAction() {
+    public Output<AzureFirewallRCActionArgs> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -41,7 +41,7 @@ public final class AzureFirewallApplicationRuleCollectionArgs extends io.pulumi.
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -52,7 +52,7 @@ public final class AzureFirewallApplicationRuleCollectionArgs extends io.pulumi.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -63,7 +63,7 @@ public final class AzureFirewallApplicationRuleCollectionArgs extends io.pulumi.
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -74,7 +74,7 @@ public final class AzureFirewallApplicationRuleCollectionArgs extends io.pulumi.
     @Import(name="rules")
       private final @Nullable Output<List<AzureFirewallApplicationRuleArgs>> rules;
 
-    public Output<List<AzureFirewallApplicationRuleArgs>> getRules() {
+    public Output<List<AzureFirewallApplicationRuleArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 

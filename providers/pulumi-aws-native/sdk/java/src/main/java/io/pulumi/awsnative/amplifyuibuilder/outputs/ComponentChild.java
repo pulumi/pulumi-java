@@ -29,16 +29,16 @@ public final class ComponentChild {
         this.properties = properties;
     }
 
-    public List<ComponentChild> getChildren() {
+    public List<ComponentChild> children() {
         return this.children == null ? List.of() : this.children;
     }
-    public String getComponentType() {
+    public String componentType() {
         return this.componentType;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public ComponentProperties getProperties() {
+    public ComponentProperties properties() {
         return this.properties;
     }
 

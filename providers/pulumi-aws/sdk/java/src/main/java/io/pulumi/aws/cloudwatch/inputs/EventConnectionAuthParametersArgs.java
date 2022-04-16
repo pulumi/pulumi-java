@@ -25,7 +25,7 @@ public final class EventConnectionAuthParametersArgs extends io.pulumi.resources
     @Import(name="apiKey")
       private final @Nullable Output<EventConnectionAuthParametersApiKeyArgs> apiKey;
 
-    public Output<EventConnectionAuthParametersApiKeyArgs> getApiKey() {
+    public Output<EventConnectionAuthParametersApiKeyArgs> apiKey() {
         return this.apiKey == null ? Codegen.empty() : this.apiKey;
     }
 
@@ -36,7 +36,7 @@ public final class EventConnectionAuthParametersArgs extends io.pulumi.resources
     @Import(name="basic")
       private final @Nullable Output<EventConnectionAuthParametersBasicArgs> basic;
 
-    public Output<EventConnectionAuthParametersBasicArgs> getBasic() {
+    public Output<EventConnectionAuthParametersBasicArgs> basic() {
         return this.basic == null ? Codegen.empty() : this.basic;
     }
 
@@ -47,7 +47,7 @@ public final class EventConnectionAuthParametersArgs extends io.pulumi.resources
     @Import(name="invocationHttpParameters")
       private final @Nullable Output<EventConnectionAuthParametersInvocationHttpParametersArgs> invocationHttpParameters;
 
-    public Output<EventConnectionAuthParametersInvocationHttpParametersArgs> getInvocationHttpParameters() {
+    public Output<EventConnectionAuthParametersInvocationHttpParametersArgs> invocationHttpParameters() {
         return this.invocationHttpParameters == null ? Codegen.empty() : this.invocationHttpParameters;
     }
 
@@ -58,7 +58,7 @@ public final class EventConnectionAuthParametersArgs extends io.pulumi.resources
     @Import(name="oauth")
       private final @Nullable Output<EventConnectionAuthParametersOauthArgs> oauth;
 
-    public Output<EventConnectionAuthParametersOauthArgs> getOauth() {
+    public Output<EventConnectionAuthParametersOauthArgs> oauth() {
         return this.oauth == null ? Codegen.empty() : this.oauth;
     }
 

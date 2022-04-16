@@ -18,7 +18,7 @@ public final class DeliveryStreamAmazonopensearchserviceRetryOptions {
         this.durationInSeconds = durationInSeconds;
     }
 
-    public Optional<Integer> getDurationInSeconds() {
+    public Optional<Integer> durationInSeconds() {
         return Optional.ofNullable(this.durationInSeconds);
     }
 

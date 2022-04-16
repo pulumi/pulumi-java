@@ -24,7 +24,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     @Import(name="confidence", required=true)
       private final Double confidence;
 
-    public Double getConfidence() {
+    public Double confidence() {
         return this.confidence;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     @Import(name="endOffset", required=true)
       private final String endOffset;
 
-    public String getEndOffset() {
+    public String endOffset() {
         return this.endOffset;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     @Import(name="startOffset", required=true)
       private final String startOffset;
 
-    public String getStartOffset() {
+    public String startOffset() {
         return this.startOffset;
     }
 
@@ -57,7 +57,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     @Import(name="word", required=true)
       private final String word;
 
-    public String getWord() {
+    public String word() {
         return this.word;
     }
 

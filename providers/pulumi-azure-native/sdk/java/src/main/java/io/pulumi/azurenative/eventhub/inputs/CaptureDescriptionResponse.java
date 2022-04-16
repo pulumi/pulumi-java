@@ -28,7 +28,7 @@ public final class CaptureDescriptionResponse extends io.pulumi.resources.Invoke
     @Import(name="destination")
       private final @Nullable DestinationResponse destination;
 
-    public Optional<DestinationResponse> getDestination() {
+    public Optional<DestinationResponse> destination() {
         return this.destination == null ? Optional.empty() : Optional.ofNullable(this.destination);
     }
 
@@ -39,7 +39,7 @@ public final class CaptureDescriptionResponse extends io.pulumi.resources.Invoke
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
@@ -50,7 +50,7 @@ public final class CaptureDescriptionResponse extends io.pulumi.resources.Invoke
     @Import(name="encoding")
       private final @Nullable String encoding;
 
-    public Optional<String> getEncoding() {
+    public Optional<String> encoding() {
         return this.encoding == null ? Optional.empty() : Optional.ofNullable(this.encoding);
     }
 
@@ -61,7 +61,7 @@ public final class CaptureDescriptionResponse extends io.pulumi.resources.Invoke
     @Import(name="intervalInSeconds")
       private final @Nullable Integer intervalInSeconds;
 
-    public Optional<Integer> getIntervalInSeconds() {
+    public Optional<Integer> intervalInSeconds() {
         return this.intervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.intervalInSeconds);
     }
 
@@ -72,7 +72,7 @@ public final class CaptureDescriptionResponse extends io.pulumi.resources.Invoke
     @Import(name="sizeLimitInBytes")
       private final @Nullable Integer sizeLimitInBytes;
 
-    public Optional<Integer> getSizeLimitInBytes() {
+    public Optional<Integer> sizeLimitInBytes() {
         return this.sizeLimitInBytes == null ? Optional.empty() : Optional.ofNullable(this.sizeLimitInBytes);
     }
 
@@ -83,7 +83,7 @@ public final class CaptureDescriptionResponse extends io.pulumi.resources.Invoke
     @Import(name="skipEmptyArchives")
       private final @Nullable Boolean skipEmptyArchives;
 
-    public Optional<Boolean> getSkipEmptyArchives() {
+    public Optional<Boolean> skipEmptyArchives() {
         return this.skipEmptyArchives == null ? Optional.empty() : Optional.ofNullable(this.skipEmptyArchives);
     }
 

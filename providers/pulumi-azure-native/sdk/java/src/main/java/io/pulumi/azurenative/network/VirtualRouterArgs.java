@@ -26,7 +26,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostedGateway")
       private final @Nullable Output<SubResourceArgs> hostedGateway;
 
-    public Output<SubResourceArgs> getHostedGateway() {
+    public Output<SubResourceArgs> hostedGateway() {
         return this.hostedGateway == null ? Codegen.empty() : this.hostedGateway;
     }
 
@@ -37,7 +37,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostedSubnet")
       private final @Nullable Output<SubResourceArgs> hostedSubnet;
 
-    public Output<SubResourceArgs> getHostedSubnet() {
+    public Output<SubResourceArgs> hostedSubnet() {
         return this.hostedSubnet == null ? Codegen.empty() : this.hostedSubnet;
     }
 
@@ -48,7 +48,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -59,7 +59,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -70,7 +70,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -81,7 +81,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -92,7 +92,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="virtualRouterAsn")
       private final @Nullable Output<Double> virtualRouterAsn;
 
-    public Output<Double> getVirtualRouterAsn() {
+    public Output<Double> virtualRouterAsn() {
         return this.virtualRouterAsn == null ? Codegen.empty() : this.virtualRouterAsn;
     }
 
@@ -103,7 +103,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="virtualRouterIps")
       private final @Nullable Output<List<String>> virtualRouterIps;
 
-    public Output<List<String>> getVirtualRouterIps() {
+    public Output<List<String>> virtualRouterIps() {
         return this.virtualRouterIps == null ? Codegen.empty() : this.virtualRouterIps;
     }
 
@@ -114,7 +114,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="virtualRouterName")
       private final @Nullable Output<String> virtualRouterName;
 
-    public Output<String> getVirtualRouterName() {
+    public Output<String> virtualRouterName() {
         return this.virtualRouterName == null ? Codegen.empty() : this.virtualRouterName;
     }
 

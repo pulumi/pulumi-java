@@ -34,14 +34,14 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDay
      * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
      * 
     */
-    public String getDay() {
+    public String day() {
         return this.day;
     }
     /**
      * The start time of the schedule. The timestamp is an RFC3339 string.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

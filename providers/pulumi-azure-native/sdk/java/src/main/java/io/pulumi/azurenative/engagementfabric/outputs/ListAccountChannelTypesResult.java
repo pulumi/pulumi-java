@@ -26,7 +26,7 @@ public final class ListAccountChannelTypesResult {
      * Channel descriptions
      * 
     */
-    public List<ChannelTypeDescriptionResponse> getValue() {
+    public List<ChannelTypeDescriptionResponse> value() {
         return this.value == null ? List.of() : this.value;
     }
 

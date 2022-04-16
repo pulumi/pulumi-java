@@ -43,7 +43,7 @@ public class DpsCertificate extends io.pulumi.resources.CustomResource {
      * @return The entity tag.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -57,7 +57,7 @@ public class DpsCertificate extends io.pulumi.resources.CustomResource {
      * @return The name of the certificate.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class DpsCertificate extends io.pulumi.resources.CustomResource {
      * @return properties of a certificate
      * 
      */
-    public Output<CertificatePropertiesResponse> getProperties() {
+    public Output<CertificatePropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -85,7 +85,7 @@ public class DpsCertificate extends io.pulumi.resources.CustomResource {
      * @return The resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

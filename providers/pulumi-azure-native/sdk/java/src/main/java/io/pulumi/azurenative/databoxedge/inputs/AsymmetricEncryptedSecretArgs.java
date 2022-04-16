@@ -28,7 +28,7 @@ public final class AsymmetricEncryptedSecretArgs extends io.pulumi.resources.Res
     @Import(name="encryptionAlgorithm", required=true)
       private final Output<Either<String,EncryptionAlgorithm>> encryptionAlgorithm;
 
-    public Output<Either<String,EncryptionAlgorithm>> getEncryptionAlgorithm() {
+    public Output<Either<String,EncryptionAlgorithm>> encryptionAlgorithm() {
         return this.encryptionAlgorithm;
     }
 
@@ -39,7 +39,7 @@ public final class AsymmetricEncryptedSecretArgs extends io.pulumi.resources.Res
     @Import(name="encryptionCertThumbprint")
       private final @Nullable Output<String> encryptionCertThumbprint;
 
-    public Output<String> getEncryptionCertThumbprint() {
+    public Output<String> encryptionCertThumbprint() {
         return this.encryptionCertThumbprint == null ? Codegen.empty() : this.encryptionCertThumbprint;
     }
 
@@ -50,7 +50,7 @@ public final class AsymmetricEncryptedSecretArgs extends io.pulumi.resources.Res
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

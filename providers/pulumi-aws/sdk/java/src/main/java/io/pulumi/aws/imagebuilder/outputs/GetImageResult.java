@@ -120,105 +120,105 @@ public final class GetImageResult {
         this.version = version;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * Build version Amazon Resource Name (ARN) of the image. This will always have the `#.#.#/#` suffix.
      * 
     */
-    public String getBuildVersionArn() {
+    public String buildVersionArn() {
         return this.buildVersionArn;
     }
     /**
      * Date the image was created.
      * 
     */
-    public String getDateCreated() {
+    public String dateCreated() {
         return this.dateCreated;
     }
     /**
      * Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
      * 
     */
-    public String getDistributionConfigurationArn() {
+    public String distributionConfigurationArn() {
         return this.distributionConfigurationArn;
     }
     /**
      * Whether additional information about the image being created is collected.
      * 
     */
-    public Boolean getEnhancedImageMetadataEnabled() {
+    public Boolean enhancedImageMetadataEnabled() {
         return this.enhancedImageMetadataEnabled;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
      * 
     */
-    public String getImageRecipeArn() {
+    public String imageRecipeArn() {
         return this.imageRecipeArn;
     }
     /**
      * List of an object with image tests configuration.
      * 
     */
-    public List<GetImageImageTestsConfiguration> getImageTestsConfigurations() {
+    public List<GetImageImageTestsConfiguration> imageTestsConfigurations() {
         return this.imageTestsConfigurations;
     }
     /**
      * Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
      * 
     */
-    public String getInfrastructureConfigurationArn() {
+    public String infrastructureConfigurationArn() {
         return this.infrastructureConfigurationArn;
     }
     /**
      * Name of the AMI.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Operating System version of the image.
      * 
     */
-    public String getOsVersion() {
+    public String osVersion() {
         return this.osVersion;
     }
     /**
      * List of objects with resources created by the image.
      * 
     */
-    public List<GetImageOutputResource> getOutputResources() {
+    public List<GetImageOutputResource> outputResources() {
         return this.outputResources;
     }
     /**
      * Platform of the image.
      * 
     */
-    public String getPlatform() {
+    public String platform() {
         return this.platform;
     }
     /**
      * Key-value map of resource tags for the image.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * Version of the image.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

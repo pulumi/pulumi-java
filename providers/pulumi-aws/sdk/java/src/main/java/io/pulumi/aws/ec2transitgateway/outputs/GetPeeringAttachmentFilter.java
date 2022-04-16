@@ -36,7 +36,7 @@ public final class GetPeeringAttachmentFilter {
      * [the underlying AWS API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeTransitGatewayPeeringAttachments.html).
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -44,7 +44,7 @@ public final class GetPeeringAttachmentFilter {
      * An EC2 Transit Gateway Peering Attachment be selected if any one of the given values matches.
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

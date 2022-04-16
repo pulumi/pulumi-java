@@ -27,7 +27,7 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointName", required=true)
       private final Output<String> endpointName;
 
-    public Output<String> getEndpointName() {
+    public Output<String> endpointName() {
         return this.endpointName;
     }
 
@@ -38,7 +38,7 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="healthProbeSettings")
       private final @Nullable Output<HealthProbeParametersArgs> healthProbeSettings;
 
-    public Output<HealthProbeParametersArgs> getHealthProbeSettings() {
+    public Output<HealthProbeParametersArgs> healthProbeSettings() {
         return this.healthProbeSettings == null ? Codegen.empty() : this.healthProbeSettings;
     }
 
@@ -49,7 +49,7 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="originGroupName")
       private final @Nullable Output<String> originGroupName;
 
-    public Output<String> getOriginGroupName() {
+    public Output<String> originGroupName() {
         return this.originGroupName == null ? Codegen.empty() : this.originGroupName;
     }
 
@@ -60,7 +60,7 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="origins", required=true)
       private final Output<List<ResourceReferenceArgs>> origins;
 
-    public Output<List<ResourceReferenceArgs>> getOrigins() {
+    public Output<List<ResourceReferenceArgs>> origins() {
         return this.origins;
     }
 
@@ -71,7 +71,7 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
-    public Output<String> getProfileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -82,7 +82,7 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -93,7 +93,7 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="responseBasedOriginErrorDetectionSettings")
       private final @Nullable Output<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedOriginErrorDetectionSettings;
 
-    public Output<ResponseBasedOriginErrorDetectionParametersArgs> getResponseBasedOriginErrorDetectionSettings() {
+    public Output<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedOriginErrorDetectionSettings() {
         return this.responseBasedOriginErrorDetectionSettings == null ? Codegen.empty() : this.responseBasedOriginErrorDetectionSettings;
     }
 
@@ -104,7 +104,7 @@ public final class OriginGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="trafficRestorationTimeToHealedOrNewEndpointsInMinutes")
       private final @Nullable Output<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
 
-    public Output<Integer> getTrafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
+    public Output<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
         return this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes == null ? Codegen.empty() : this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
     }
 

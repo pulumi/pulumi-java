@@ -24,7 +24,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -37,7 +37,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> getForceDestroy() {
+    public Output<Boolean> forceDestroy() {
         return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
     }
 
@@ -48,7 +48,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -59,7 +59,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -70,7 +70,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="permissionsBoundary")
       private final @Nullable Output<String> permissionsBoundary;
 
-    public Output<String> getPermissionsBoundary() {
+    public Output<String> permissionsBoundary() {
         return this.permissionsBoundary == null ? Codegen.empty() : this.permissionsBoundary;
     }
 
@@ -81,7 +81,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -92,7 +92,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -103,7 +103,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="uniqueId")
       private final @Nullable Output<String> uniqueId;
 
-    public Output<String> getUniqueId() {
+    public Output<String> uniqueId() {
         return this.uniqueId == null ? Codegen.empty() : this.uniqueId;
     }
 

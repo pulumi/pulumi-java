@@ -43,21 +43,21 @@ public final class EnvFromSource {
      * The ConfigMap to select from
      * 
     */
-    public Optional<ConfigMapEnvSource> getConfigMapRef() {
+    public Optional<ConfigMapEnvSource> configMapRef() {
         return Optional.ofNullable(this.configMapRef);
     }
     /**
      * An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.
      * 
     */
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
      * The Secret to select from
      * 
     */
-    public Optional<SecretEnvSource> getSecretRef() {
+    public Optional<SecretEnvSource> secretRef() {
         return Optional.ofNullable(this.secretRef);
     }
 

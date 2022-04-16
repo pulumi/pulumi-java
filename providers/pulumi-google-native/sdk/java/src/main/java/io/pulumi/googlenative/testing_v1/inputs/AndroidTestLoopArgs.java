@@ -30,7 +30,7 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="appApk")
       private final @Nullable Output<FileReferenceArgs> appApk;
 
-    public Output<FileReferenceArgs> getAppApk() {
+    public Output<FileReferenceArgs> appApk() {
         return this.appApk == null ? Codegen.empty() : this.appApk;
     }
 
@@ -41,7 +41,7 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="appBundle")
       private final @Nullable Output<AppBundleArgs> appBundle;
 
-    public Output<AppBundleArgs> getAppBundle() {
+    public Output<AppBundleArgs> appBundle() {
         return this.appBundle == null ? Codegen.empty() : this.appBundle;
     }
 
@@ -52,7 +52,7 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="appPackageId")
       private final @Nullable Output<String> appPackageId;
 
-    public Output<String> getAppPackageId() {
+    public Output<String> appPackageId() {
         return this.appPackageId == null ? Codegen.empty() : this.appPackageId;
     }
 
@@ -63,7 +63,7 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="scenarioLabels")
       private final @Nullable Output<List<String>> scenarioLabels;
 
-    public Output<List<String>> getScenarioLabels() {
+    public Output<List<String>> scenarioLabels() {
         return this.scenarioLabels == null ? Codegen.empty() : this.scenarioLabels;
     }
 
@@ -74,7 +74,7 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="scenarios")
       private final @Nullable Output<List<Integer>> scenarios;
 
-    public Output<List<Integer>> getScenarios() {
+    public Output<List<Integer>> scenarios() {
         return this.scenarios == null ? Codegen.empty() : this.scenarios;
     }
 

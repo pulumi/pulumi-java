@@ -43,7 +43,7 @@ public class PullThroughCacheRule extends io.pulumi.resources.CustomResource {
      * @return The repository name prefix to use when caching images from the source registry.
      * 
      */
-    public Output<String> getEcrRepositoryPrefix() {
+    public Output<String> ecrRepositoryPrefix() {
         return this.ecrRepositoryPrefix;
     }
     /**
@@ -57,7 +57,7 @@ public class PullThroughCacheRule extends io.pulumi.resources.CustomResource {
      * @return The registry ID where the repository was created.
      * 
      */
-    public Output<String> getRegistryId() {
+    public Output<String> registryId() {
         return this.registryId;
     }
     /**
@@ -71,7 +71,7 @@ public class PullThroughCacheRule extends io.pulumi.resources.CustomResource {
      * @return The registry URL of the upstream public registry to use as the source.
      * 
      */
-    public Output<String> getUpstreamRegistryUrl() {
+    public Output<String> upstreamRegistryUrl() {
         return this.upstreamRegistryUrl;
     }
 

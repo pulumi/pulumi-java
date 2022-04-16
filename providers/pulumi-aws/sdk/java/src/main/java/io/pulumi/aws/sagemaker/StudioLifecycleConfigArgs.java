@@ -23,7 +23,7 @@ public final class StudioLifecycleConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="studioLifecycleConfigAppType", required=true)
       private final Output<String> studioLifecycleConfigAppType;
 
-    public Output<String> getStudioLifecycleConfigAppType() {
+    public Output<String> studioLifecycleConfigAppType() {
         return this.studioLifecycleConfigAppType;
     }
 
@@ -34,7 +34,7 @@ public final class StudioLifecycleConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="studioLifecycleConfigContent", required=true)
       private final Output<String> studioLifecycleConfigContent;
 
-    public Output<String> getStudioLifecycleConfigContent() {
+    public Output<String> studioLifecycleConfigContent() {
         return this.studioLifecycleConfigContent;
     }
 
@@ -45,7 +45,7 @@ public final class StudioLifecycleConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="studioLifecycleConfigName", required=true)
       private final Output<String> studioLifecycleConfigName;
 
-    public Output<String> getStudioLifecycleConfigName() {
+    public Output<String> studioLifecycleConfigName() {
         return this.studioLifecycleConfigName;
     }
 
@@ -56,7 +56,7 @@ public final class StudioLifecycleConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

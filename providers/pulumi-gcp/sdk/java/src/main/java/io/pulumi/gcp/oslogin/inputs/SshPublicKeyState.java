@@ -22,7 +22,7 @@ public final class SshPublicKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="expirationTimeUsec")
       private final @Nullable Output<String> expirationTimeUsec;
 
-    public Output<String> getExpirationTimeUsec() {
+    public Output<String> expirationTimeUsec() {
         return this.expirationTimeUsec == null ? Codegen.empty() : this.expirationTimeUsec;
     }
 
@@ -33,7 +33,7 @@ public final class SshPublicKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="fingerprint")
       private final @Nullable Output<String> fingerprint;
 
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
     }
 
@@ -44,7 +44,7 @@ public final class SshPublicKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
@@ -55,7 +55,7 @@ public final class SshPublicKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -66,7 +66,7 @@ public final class SshPublicKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="user")
       private final @Nullable Output<String> user;
 
-    public Output<String> getUser() {
+    public Output<String> user() {
         return this.user == null ? Codegen.empty() : this.user;
     }
 

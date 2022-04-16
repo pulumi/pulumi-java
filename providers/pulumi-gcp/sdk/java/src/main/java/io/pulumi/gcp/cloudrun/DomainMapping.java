@@ -58,7 +58,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * @return The location of the cloud run instance. eg us-central1
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -74,7 +74,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<DomainMappingMetadata> getMetadata() {
+    public Output<DomainMappingMetadata> metadata() {
         return this.metadata;
     }
     /**
@@ -88,7 +88,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * @return Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -104,7 +104,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -120,7 +120,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<DomainMappingSpec> getSpec() {
+    public Output<DomainMappingSpec> spec() {
         return this.spec;
     }
     /**
@@ -134,7 +134,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * @return The current status of the DomainMapping.
      * 
      */
-    public Output<List<DomainMappingStatus>> getStatuses() {
+    public Output<List<DomainMappingStatus>> statuses() {
         return this.statuses;
     }
 

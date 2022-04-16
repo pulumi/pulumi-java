@@ -24,7 +24,7 @@ public final class ArtifactResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="checksum", required=true)
       private final String checksum;
 
-    public String getChecksum() {
+    public String checksum() {
         return this.checksum;
     }
 
@@ -35,7 +35,7 @@ public final class ArtifactResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="names", required=true)
       private final List<String> names;
 
-    public List<String> getNames() {
+    public List<String> names() {
         return this.names;
     }
 

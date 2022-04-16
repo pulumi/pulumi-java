@@ -29,7 +29,7 @@ public final class LiveEventPreviewArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="accessControl")
       private final @Nullable Output<LiveEventPreviewAccessControlArgs> accessControl;
 
-    public Output<LiveEventPreviewAccessControlArgs> getAccessControl() {
+    public Output<LiveEventPreviewAccessControlArgs> accessControl() {
         return this.accessControl == null ? Codegen.empty() : this.accessControl;
     }
 
@@ -40,7 +40,7 @@ public final class LiveEventPreviewArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="alternativeMediaId")
       private final @Nullable Output<String> alternativeMediaId;
 
-    public Output<String> getAlternativeMediaId() {
+    public Output<String> alternativeMediaId() {
         return this.alternativeMediaId == null ? Codegen.empty() : this.alternativeMediaId;
     }
 
@@ -51,7 +51,7 @@ public final class LiveEventPreviewArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="endpoints")
       private final @Nullable Output<List<LiveEventEndpointArgs>> endpoints;
 
-    public Output<List<LiveEventEndpointArgs>> getEndpoints() {
+    public Output<List<LiveEventEndpointArgs>> endpoints() {
         return this.endpoints == null ? Codegen.empty() : this.endpoints;
     }
 
@@ -62,7 +62,7 @@ public final class LiveEventPreviewArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="previewLocator")
       private final @Nullable Output<String> previewLocator;
 
-    public Output<String> getPreviewLocator() {
+    public Output<String> previewLocator() {
         return this.previewLocator == null ? Codegen.empty() : this.previewLocator;
     }
 
@@ -73,7 +73,7 @@ public final class LiveEventPreviewArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="streamingPolicyName")
       private final @Nullable Output<String> streamingPolicyName;
 
-    public Output<String> getStreamingPolicyName() {
+    public Output<String> streamingPolicyName() {
         return this.streamingPolicyName == null ? Codegen.empty() : this.streamingPolicyName;
     }
 

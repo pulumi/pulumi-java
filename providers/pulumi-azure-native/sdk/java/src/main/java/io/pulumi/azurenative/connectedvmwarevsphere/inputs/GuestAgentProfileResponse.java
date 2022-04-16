@@ -25,7 +25,7 @@ public final class GuestAgentProfileResponse extends io.pulumi.resources.InvokeA
     @Import(name="agentVersion", required=true)
       private final String agentVersion;
 
-    public String getAgentVersion() {
+    public String agentVersion() {
         return this.agentVersion;
     }
 
@@ -36,7 +36,7 @@ public final class GuestAgentProfileResponse extends io.pulumi.resources.InvokeA
     @Import(name="errorDetails", required=true)
       private final List<ErrorDetailResponse> errorDetails;
 
-    public List<ErrorDetailResponse> getErrorDetails() {
+    public List<ErrorDetailResponse> errorDetails() {
         return this.errorDetails;
     }
 
@@ -47,7 +47,7 @@ public final class GuestAgentProfileResponse extends io.pulumi.resources.InvokeA
     @Import(name="lastStatusChange", required=true)
       private final String lastStatusChange;
 
-    public String getLastStatusChange() {
+    public String lastStatusChange() {
         return this.lastStatusChange;
     }
 
@@ -58,7 +58,7 @@ public final class GuestAgentProfileResponse extends io.pulumi.resources.InvokeA
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
@@ -69,7 +69,7 @@ public final class GuestAgentProfileResponse extends io.pulumi.resources.InvokeA
     @Import(name="vmUuid", required=true)
       private final String vmUuid;
 
-    public String getVmUuid() {
+    public String vmUuid() {
         return this.vmUuid;
     }
 

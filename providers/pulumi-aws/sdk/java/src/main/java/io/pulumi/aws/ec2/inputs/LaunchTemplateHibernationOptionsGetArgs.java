@@ -21,7 +21,7 @@ public final class LaunchTemplateHibernationOptionsGetArgs extends io.pulumi.res
     @Import(name="configured", required=true)
       private final Output<Boolean> configured;
 
-    public Output<Boolean> getConfigured() {
+    public Output<Boolean> configured() {
         return this.configured;
     }
 

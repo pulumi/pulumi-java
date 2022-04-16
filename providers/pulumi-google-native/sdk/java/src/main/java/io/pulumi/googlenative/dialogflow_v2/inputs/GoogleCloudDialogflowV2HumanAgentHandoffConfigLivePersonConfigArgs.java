@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfi
     @Import(name="accountNumber", required=true)
       private final Output<String> accountNumber;
 
-    public Output<String> getAccountNumber() {
+    public Output<String> accountNumber() {
         return this.accountNumber;
     }
 

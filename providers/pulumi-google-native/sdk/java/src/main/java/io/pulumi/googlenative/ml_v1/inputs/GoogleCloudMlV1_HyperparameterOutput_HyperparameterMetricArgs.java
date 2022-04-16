@@ -27,7 +27,7 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs
     @Import(name="objectiveValue")
       private final @Nullable Output<Double> objectiveValue;
 
-    public Output<Double> getObjectiveValue() {
+    public Output<Double> objectiveValue() {
         return this.objectiveValue == null ? Codegen.empty() : this.objectiveValue;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs
     @Import(name="trainingStep")
       private final @Nullable Output<String> trainingStep;
 
-    public Output<String> getTrainingStep() {
+    public Output<String> trainingStep() {
         return this.trainingStep == null ? Codegen.empty() : this.trainingStep;
     }
 

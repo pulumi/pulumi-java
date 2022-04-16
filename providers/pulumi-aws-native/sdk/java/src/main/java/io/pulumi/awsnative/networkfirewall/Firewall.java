@@ -25,73 +25,73 @@ public class Firewall extends io.pulumi.resources.CustomResource {
     @Export(name="deleteProtection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deleteProtection;
 
-    public Output</* @Nullable */ Boolean> getDeleteProtection() {
+    public Output</* @Nullable */ Boolean> deleteProtection() {
         return this.deleteProtection;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="endpointIds", type=List.class, parameters={String.class})
     private Output<List<String>> endpointIds;
 
-    public Output<List<String>> getEndpointIds() {
+    public Output<List<String>> endpointIds() {
         return this.endpointIds;
     }
     @Export(name="firewallArn", type=String.class, parameters={})
     private Output<String> firewallArn;
 
-    public Output<String> getFirewallArn() {
+    public Output<String> firewallArn() {
         return this.firewallArn;
     }
     @Export(name="firewallId", type=String.class, parameters={})
     private Output<String> firewallId;
 
-    public Output<String> getFirewallId() {
+    public Output<String> firewallId() {
         return this.firewallId;
     }
     @Export(name="firewallName", type=String.class, parameters={})
     private Output<String> firewallName;
 
-    public Output<String> getFirewallName() {
+    public Output<String> firewallName() {
         return this.firewallName;
     }
     @Export(name="firewallPolicyArn", type=String.class, parameters={})
     private Output<String> firewallPolicyArn;
 
-    public Output<String> getFirewallPolicyArn() {
+    public Output<String> firewallPolicyArn() {
         return this.firewallPolicyArn;
     }
     @Export(name="firewallPolicyChangeProtection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> firewallPolicyChangeProtection;
 
-    public Output</* @Nullable */ Boolean> getFirewallPolicyChangeProtection() {
+    public Output</* @Nullable */ Boolean> firewallPolicyChangeProtection() {
         return this.firewallPolicyChangeProtection;
     }
     @Export(name="subnetChangeProtection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> subnetChangeProtection;
 
-    public Output</* @Nullable */ Boolean> getSubnetChangeProtection() {
+    public Output</* @Nullable */ Boolean> subnetChangeProtection() {
         return this.subnetChangeProtection;
     }
     @Export(name="subnetMappings", type=List.class, parameters={FirewallSubnetMapping.class})
     private Output<List<FirewallSubnetMapping>> subnetMappings;
 
-    public Output<List<FirewallSubnetMapping>> getSubnetMappings() {
+    public Output<List<FirewallSubnetMapping>> subnetMappings() {
         return this.subnetMappings;
     }
     @Export(name="tags", type=List.class, parameters={FirewallTag.class})
     private Output</* @Nullable */ List<FirewallTag>> tags;
 
-    public Output</* @Nullable */ List<FirewallTag>> getTags() {
+    public Output</* @Nullable */ List<FirewallTag>> tags() {
         return this.tags;
     }
     @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

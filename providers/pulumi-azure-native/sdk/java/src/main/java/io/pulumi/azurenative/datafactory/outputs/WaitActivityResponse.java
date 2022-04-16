@@ -67,21 +67,21 @@ public final class WaitActivityResponse {
      * Activity depends on condition.
      * 
     */
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Activity name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -89,21 +89,21 @@ public final class WaitActivityResponse {
      * Expected value is 'Wait'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
     */
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
     /**
      * Duration in seconds.
      * 
     */
-    public Object getWaitTimeInSeconds() {
+    public Object waitTimeInSeconds() {
         return this.waitTimeInSeconds;
     }
 

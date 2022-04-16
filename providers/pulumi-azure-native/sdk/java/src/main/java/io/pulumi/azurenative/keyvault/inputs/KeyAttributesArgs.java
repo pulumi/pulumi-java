@@ -27,7 +27,7 @@ public final class KeyAttributesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -38,7 +38,7 @@ public final class KeyAttributesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expires")
       private final @Nullable Output<Double> expires;
 
-    public Output<Double> getExpires() {
+    public Output<Double> expires() {
         return this.expires == null ? Codegen.empty() : this.expires;
     }
 
@@ -49,7 +49,7 @@ public final class KeyAttributesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notBefore")
       private final @Nullable Output<Double> notBefore;
 
-    public Output<Double> getNotBefore() {
+    public Output<Double> notBefore() {
         return this.notBefore == null ? Codegen.empty() : this.notBefore;
     }
 

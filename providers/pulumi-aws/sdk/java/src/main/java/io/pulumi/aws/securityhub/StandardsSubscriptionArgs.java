@@ -21,7 +21,7 @@ public final class StandardsSubscriptionArgs extends io.pulumi.resources.Resourc
     @Import(name="standardsArn", required=true)
       private final Output<String> standardsArn;
 
-    public Output<String> getStandardsArn() {
+    public Output<String> standardsArn() {
         return this.standardsArn;
     }
 

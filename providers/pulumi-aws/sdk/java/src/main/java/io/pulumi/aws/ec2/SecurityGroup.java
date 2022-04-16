@@ -56,7 +56,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * @return ARN of the security group.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -70,7 +70,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * @return Description of this egress rule.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -84,7 +84,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * @return Configuration block for egress rules. Can be specified multiple times for each egress rule. Each egress block supports fields documented below.
      * 
      */
-    public Output<List<SecurityGroupEgress>> getEgress() {
+    public Output<List<SecurityGroupEgress>> egress() {
         return this.egress;
     }
     /**
@@ -98,7 +98,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * @return Configuration block for egress rules. Can be specified multiple times for each ingress rule. Each ingress block supports fields documented below.
      * 
      */
-    public Output<List<SecurityGroupIngress>> getIngress() {
+    public Output<List<SecurityGroupIngress>> ingress() {
         return this.ingress;
     }
     /**
@@ -112,7 +112,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * @return Name of the security group. If omitted, this provider will assign a random, unique name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -126,7 +126,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * @return Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -140,7 +140,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * @return Owner ID.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -154,7 +154,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * @return Instruct this provider to revoke all of the Security Groups attached ingress and egress rules before deleting the rule itself. This is normally not needed, however certain AWS services such as Elastic Map Reduce may automatically add required rules to security groups used with the service, and those rules may contain a cyclic dependency that prevent the security groups from being destroyed without removing the dependency first. Default `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRevokeRulesOnDelete() {
+    public Output</* @Nullable */ Boolean> revokeRulesOnDelete() {
         return this.revokeRulesOnDelete;
     }
     /**
@@ -168,7 +168,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * @return Map of tags to assign to the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -182,7 +182,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -196,7 +196,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * @return VPC ID.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

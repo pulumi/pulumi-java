@@ -25,7 +25,7 @@ public final class VpcEndpointServiceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="acceptanceRequired", required=true)
       private final Output<Boolean> acceptanceRequired;
 
-    public Output<Boolean> getAcceptanceRequired() {
+    public Output<Boolean> acceptanceRequired() {
         return this.acceptanceRequired;
     }
 
@@ -36,7 +36,7 @@ public final class VpcEndpointServiceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="allowedPrincipals")
       private final @Nullable Output<List<String>> allowedPrincipals;
 
-    public Output<List<String>> getAllowedPrincipals() {
+    public Output<List<String>> allowedPrincipals() {
         return this.allowedPrincipals == null ? Codegen.empty() : this.allowedPrincipals;
     }
 
@@ -47,7 +47,7 @@ public final class VpcEndpointServiceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="gatewayLoadBalancerArns")
       private final @Nullable Output<List<String>> gatewayLoadBalancerArns;
 
-    public Output<List<String>> getGatewayLoadBalancerArns() {
+    public Output<List<String>> gatewayLoadBalancerArns() {
         return this.gatewayLoadBalancerArns == null ? Codegen.empty() : this.gatewayLoadBalancerArns;
     }
 
@@ -58,7 +58,7 @@ public final class VpcEndpointServiceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="networkLoadBalancerArns")
       private final @Nullable Output<List<String>> networkLoadBalancerArns;
 
-    public Output<List<String>> getNetworkLoadBalancerArns() {
+    public Output<List<String>> networkLoadBalancerArns() {
         return this.networkLoadBalancerArns == null ? Codegen.empty() : this.networkLoadBalancerArns;
     }
 
@@ -69,7 +69,7 @@ public final class VpcEndpointServiceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="privateDnsName")
       private final @Nullable Output<String> privateDnsName;
 
-    public Output<String> getPrivateDnsName() {
+    public Output<String> privateDnsName() {
         return this.privateDnsName == null ? Codegen.empty() : this.privateDnsName;
     }
 
@@ -80,7 +80,7 @@ public final class VpcEndpointServiceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

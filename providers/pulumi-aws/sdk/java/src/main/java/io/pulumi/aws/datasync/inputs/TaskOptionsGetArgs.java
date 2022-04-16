@@ -23,7 +23,7 @@ public final class TaskOptionsGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="atime")
       private final @Nullable Output<String> atime;
 
-    public Output<String> getAtime() {
+    public Output<String> atime() {
         return this.atime == null ? Codegen.empty() : this.atime;
     }
 
@@ -34,7 +34,7 @@ public final class TaskOptionsGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bytesPerSecond")
       private final @Nullable Output<Integer> bytesPerSecond;
 
-    public Output<Integer> getBytesPerSecond() {
+    public Output<Integer> bytesPerSecond() {
         return this.bytesPerSecond == null ? Codegen.empty() : this.bytesPerSecond;
     }
 
@@ -45,7 +45,7 @@ public final class TaskOptionsGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gid")
       private final @Nullable Output<String> gid;
 
-    public Output<String> getGid() {
+    public Output<String> gid() {
         return this.gid == null ? Codegen.empty() : this.gid;
     }
 
@@ -56,7 +56,7 @@ public final class TaskOptionsGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logLevel")
       private final @Nullable Output<String> logLevel;
 
-    public Output<String> getLogLevel() {
+    public Output<String> logLevel() {
         return this.logLevel == null ? Codegen.empty() : this.logLevel;
     }
 
@@ -67,7 +67,7 @@ public final class TaskOptionsGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mtime")
       private final @Nullable Output<String> mtime;
 
-    public Output<String> getMtime() {
+    public Output<String> mtime() {
         return this.mtime == null ? Codegen.empty() : this.mtime;
     }
 
@@ -78,7 +78,7 @@ public final class TaskOptionsGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="overwriteMode")
       private final @Nullable Output<String> overwriteMode;
 
-    public Output<String> getOverwriteMode() {
+    public Output<String> overwriteMode() {
         return this.overwriteMode == null ? Codegen.empty() : this.overwriteMode;
     }
 
@@ -89,7 +89,7 @@ public final class TaskOptionsGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="posixPermissions")
       private final @Nullable Output<String> posixPermissions;
 
-    public Output<String> getPosixPermissions() {
+    public Output<String> posixPermissions() {
         return this.posixPermissions == null ? Codegen.empty() : this.posixPermissions;
     }
 
@@ -100,7 +100,7 @@ public final class TaskOptionsGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preserveDeletedFiles")
       private final @Nullable Output<String> preserveDeletedFiles;
 
-    public Output<String> getPreserveDeletedFiles() {
+    public Output<String> preserveDeletedFiles() {
         return this.preserveDeletedFiles == null ? Codegen.empty() : this.preserveDeletedFiles;
     }
 
@@ -111,7 +111,7 @@ public final class TaskOptionsGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preserveDevices")
       private final @Nullable Output<String> preserveDevices;
 
-    public Output<String> getPreserveDevices() {
+    public Output<String> preserveDevices() {
         return this.preserveDevices == null ? Codegen.empty() : this.preserveDevices;
     }
 
@@ -122,7 +122,7 @@ public final class TaskOptionsGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="taskQueueing")
       private final @Nullable Output<String> taskQueueing;
 
-    public Output<String> getTaskQueueing() {
+    public Output<String> taskQueueing() {
         return this.taskQueueing == null ? Codegen.empty() : this.taskQueueing;
     }
 
@@ -133,7 +133,7 @@ public final class TaskOptionsGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="transferMode")
       private final @Nullable Output<String> transferMode;
 
-    public Output<String> getTransferMode() {
+    public Output<String> transferMode() {
         return this.transferMode == null ? Codegen.empty() : this.transferMode;
     }
 
@@ -144,7 +144,7 @@ public final class TaskOptionsGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uid")
       private final @Nullable Output<String> uid;
 
-    public Output<String> getUid() {
+    public Output<String> uid() {
         return this.uid == null ? Codegen.empty() : this.uid;
     }
 
@@ -155,7 +155,7 @@ public final class TaskOptionsGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="verifyMode")
       private final @Nullable Output<String> verifyMode;
 
-    public Output<String> getVerifyMode() {
+    public Output<String> verifyMode() {
         return this.verifyMode == null ? Codegen.empty() : this.verifyMode;
     }
 

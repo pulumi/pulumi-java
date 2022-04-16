@@ -23,7 +23,7 @@ public final class BuildNoteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="builderVersion", required=true)
       private final String builderVersion;
 
-    public String getBuilderVersion() {
+    public String builderVersion() {
         return this.builderVersion;
     }
 

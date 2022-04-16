@@ -23,14 +23,14 @@ public final class WorkGroupResultConfigurationArgs extends io.pulumi.resources.
     @Import(name="encryptionConfiguration")
       private final @Nullable Output<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration;
 
-    public Output<WorkGroupEncryptionConfigurationArgs> getEncryptionConfiguration() {
+    public Output<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration() {
         return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
     }
 
     @Import(name="outputLocation")
       private final @Nullable Output<String> outputLocation;
 
-    public Output<String> getOutputLocation() {
+    public Output<String> outputLocation() {
         return this.outputLocation == null ? Codegen.empty() : this.outputLocation;
     }
 

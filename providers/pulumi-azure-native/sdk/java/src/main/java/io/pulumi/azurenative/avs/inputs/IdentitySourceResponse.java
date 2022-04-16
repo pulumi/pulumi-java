@@ -25,7 +25,7 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="alias")
       private final @Nullable String alias;
 
-    public Optional<String> getAlias() {
+    public Optional<String> alias() {
         return this.alias == null ? Optional.empty() : Optional.ofNullable(this.alias);
     }
 
@@ -36,7 +36,7 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="baseGroupDN")
       private final @Nullable String baseGroupDN;
 
-    public Optional<String> getBaseGroupDN() {
+    public Optional<String> baseGroupDN() {
         return this.baseGroupDN == null ? Optional.empty() : Optional.ofNullable(this.baseGroupDN);
     }
 
@@ -47,7 +47,7 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="baseUserDN")
       private final @Nullable String baseUserDN;
 
-    public Optional<String> getBaseUserDN() {
+    public Optional<String> baseUserDN() {
         return this.baseUserDN == null ? Optional.empty() : Optional.ofNullable(this.baseUserDN);
     }
 
@@ -58,7 +58,7 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="domain")
       private final @Nullable String domain;
 
-    public Optional<String> getDomain() {
+    public Optional<String> domain() {
         return this.domain == null ? Optional.empty() : Optional.ofNullable(this.domain);
     }
 
@@ -69,7 +69,7 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -80,7 +80,7 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="password")
       private final @Nullable String password;
 
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
@@ -91,7 +91,7 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="primaryServer")
       private final @Nullable String primaryServer;
 
-    public Optional<String> getPrimaryServer() {
+    public Optional<String> primaryServer() {
         return this.primaryServer == null ? Optional.empty() : Optional.ofNullable(this.primaryServer);
     }
 
@@ -102,7 +102,7 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="secondaryServer")
       private final @Nullable String secondaryServer;
 
-    public Optional<String> getSecondaryServer() {
+    public Optional<String> secondaryServer() {
         return this.secondaryServer == null ? Optional.empty() : Optional.ofNullable(this.secondaryServer);
     }
 
@@ -113,7 +113,7 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="ssl")
       private final @Nullable String ssl;
 
-    public Optional<String> getSsl() {
+    public Optional<String> ssl() {
         return this.ssl == null ? Optional.empty() : Optional.ofNullable(this.ssl);
     }
 
@@ -124,7 +124,7 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="username")
       private final @Nullable String username;
 
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
     }
 

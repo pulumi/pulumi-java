@@ -54,35 +54,35 @@ public final class GetTestablePermissionsPermission {
      * Whether the corresponding API has been enabled for the resource.
      * 
     */
-    public Boolean getApiDisabled() {
+    public Boolean apiDisabled() {
         return this.apiDisabled;
     }
     /**
      * The level of support for custom roles. Can be one of `"NOT_SUPPORTED"`, `"SUPPORTED"`, `"TESTING"`. Default is `"SUPPORTED"`
      * 
     */
-    public String getCustomSupportLevel() {
+    public String customSupportLevel() {
         return this.customSupportLevel;
     }
     /**
      * Name of the permission.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Release stage of the permission.
      * 
     */
-    public String getStage() {
+    public String stage() {
         return this.stage;
     }
     /**
      * Human readable title of the permission.
      * 
     */
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

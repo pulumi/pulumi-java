@@ -22,7 +22,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="collection")
       private final @Nullable Output<String> collection;
 
-    public Output<String> getCollection() {
+    public Output<String> collection() {
         return this.collection == null ? Codegen.empty() : this.collection;
     }
 
@@ -33,7 +33,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -44,7 +44,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="database")
       private final @Nullable Output<String> database;
 
-    public Output<String> getDatabase() {
+    public Output<String> database() {
         return this.database == null ? Codegen.empty() : this.database;
     }
 
@@ -55,7 +55,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="documentId")
       private final @Nullable Output<String> documentId;
 
-    public Output<String> getDocumentId() {
+    public Output<String> documentId() {
         return this.documentId == null ? Codegen.empty() : this.documentId;
     }
 
@@ -66,7 +66,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="fields")
       private final @Nullable Output<String> fields;
 
-    public Output<String> getFields() {
+    public Output<String> fields() {
         return this.fields == null ? Codegen.empty() : this.fields;
     }
 
@@ -78,7 +78,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -89,7 +89,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -101,7 +101,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -112,7 +112,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 

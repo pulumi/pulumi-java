@@ -25,7 +25,7 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="content", required=true)
       private final Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content;
     }
 
@@ -36,7 +36,7 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -47,7 +47,7 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="instanceArn", required=true)
       private final Output<String> instanceArn;
 
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
 
@@ -58,7 +58,7 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -69,7 +69,7 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="state")
       private final @Nullable Output<ContactFlowModuleState> state;
 
-    public Output<ContactFlowModuleState> getState() {
+    public Output<ContactFlowModuleState> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -80,7 +80,7 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<List<ContactFlowModuleTagArgs>> tags;
 
-    public Output<List<ContactFlowModuleTagArgs>> getTags() {
+    public Output<List<ContactFlowModuleTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

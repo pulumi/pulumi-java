@@ -28,7 +28,7 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="boolValue")
       private final @Nullable Output<Boolean> boolValue;
 
-    public Output<Boolean> getBoolValue() {
+    public Output<Boolean> boolValue() {
         return this.boolValue == null ? Codegen.empty() : this.boolValue;
     }
 
@@ -39,7 +39,7 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="intValue")
       private final @Nullable Output<String> intValue;
 
-    public Output<String> getIntValue() {
+    public Output<String> intValue() {
         return this.intValue == null ? Codegen.empty() : this.intValue;
     }
 
@@ -50,7 +50,7 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
@@ -61,7 +61,7 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretValue")
       private final @Nullable Output<SecretArgs> secretValue;
 
-    public Output<SecretArgs> getSecretValue() {
+    public Output<SecretArgs> secretValue() {
         return this.secretValue == null ? Codegen.empty() : this.secretValue;
     }
 
@@ -72,7 +72,7 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;
 
-    public Output<String> getStringValue() {
+    public Output<String> stringValue() {
         return this.stringValue == null ? Codegen.empty() : this.stringValue;
     }
 

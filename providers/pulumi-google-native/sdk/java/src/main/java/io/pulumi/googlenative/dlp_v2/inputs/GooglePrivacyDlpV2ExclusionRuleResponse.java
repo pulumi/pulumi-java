@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse extends io.pulumi.res
     @Import(name="dictionary", required=true)
       private final GooglePrivacyDlpV2DictionaryResponse dictionary;
 
-    public GooglePrivacyDlpV2DictionaryResponse getDictionary() {
+    public GooglePrivacyDlpV2DictionaryResponse dictionary() {
         return this.dictionary;
     }
 
@@ -37,7 +37,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse extends io.pulumi.res
     @Import(name="excludeInfoTypes", required=true)
       private final GooglePrivacyDlpV2ExcludeInfoTypesResponse excludeInfoTypes;
 
-    public GooglePrivacyDlpV2ExcludeInfoTypesResponse getExcludeInfoTypes() {
+    public GooglePrivacyDlpV2ExcludeInfoTypesResponse excludeInfoTypes() {
         return this.excludeInfoTypes;
     }
 
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse extends io.pulumi.res
     @Import(name="matchingType", required=true)
       private final String matchingType;
 
-    public String getMatchingType() {
+    public String matchingType() {
         return this.matchingType;
     }
 
@@ -59,7 +59,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse extends io.pulumi.res
     @Import(name="regex", required=true)
       private final GooglePrivacyDlpV2RegexResponse regex;
 
-    public GooglePrivacyDlpV2RegexResponse getRegex() {
+    public GooglePrivacyDlpV2RegexResponse regex() {
         return this.regex;
     }
 

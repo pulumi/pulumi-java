@@ -23,7 +23,7 @@ public final class AutoscalingConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="policyUri", required=true)
       private final String policyUri;
 
-    public String getPolicyUri() {
+    public String policyUri() {
         return this.policyUri;
     }
 

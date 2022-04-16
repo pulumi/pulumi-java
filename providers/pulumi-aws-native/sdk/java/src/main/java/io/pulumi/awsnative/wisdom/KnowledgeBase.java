@@ -27,55 +27,55 @@ public class KnowledgeBase extends io.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="knowledgeBaseArn", type=String.class, parameters={})
     private Output<String> knowledgeBaseArn;
 
-    public Output<String> getKnowledgeBaseArn() {
+    public Output<String> knowledgeBaseArn() {
         return this.knowledgeBaseArn;
     }
     @Export(name="knowledgeBaseId", type=String.class, parameters={})
     private Output<String> knowledgeBaseId;
 
-    public Output<String> getKnowledgeBaseId() {
+    public Output<String> knowledgeBaseId() {
         return this.knowledgeBaseId;
     }
     @Export(name="knowledgeBaseType", type=KnowledgeBaseType.class, parameters={})
     private Output<KnowledgeBaseType> knowledgeBaseType;
 
-    public Output<KnowledgeBaseType> getKnowledgeBaseType() {
+    public Output<KnowledgeBaseType> knowledgeBaseType() {
         return this.knowledgeBaseType;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="renderingConfiguration", type=KnowledgeBaseRenderingConfiguration.class, parameters={})
     private Output</* @Nullable */ KnowledgeBaseRenderingConfiguration> renderingConfiguration;
 
-    public Output</* @Nullable */ KnowledgeBaseRenderingConfiguration> getRenderingConfiguration() {
+    public Output</* @Nullable */ KnowledgeBaseRenderingConfiguration> renderingConfiguration() {
         return this.renderingConfiguration;
     }
     @Export(name="serverSideEncryptionConfiguration", type=KnowledgeBaseServerSideEncryptionConfiguration.class, parameters={})
     private Output</* @Nullable */ KnowledgeBaseServerSideEncryptionConfiguration> serverSideEncryptionConfiguration;
 
-    public Output</* @Nullable */ KnowledgeBaseServerSideEncryptionConfiguration> getServerSideEncryptionConfiguration() {
+    public Output</* @Nullable */ KnowledgeBaseServerSideEncryptionConfiguration> serverSideEncryptionConfiguration() {
         return this.serverSideEncryptionConfiguration;
     }
     @Export(name="sourceConfiguration", type=KnowledgeBaseSourceConfiguration.class, parameters={})
     private Output</* @Nullable */ KnowledgeBaseSourceConfiguration> sourceConfiguration;
 
-    public Output</* @Nullable */ KnowledgeBaseSourceConfiguration> getSourceConfiguration() {
+    public Output</* @Nullable */ KnowledgeBaseSourceConfiguration> sourceConfiguration() {
         return this.sourceConfiguration;
     }
     @Export(name="tags", type=List.class, parameters={KnowledgeBaseTag.class})
     private Output</* @Nullable */ List<KnowledgeBaseTag>> tags;
 
-    public Output</* @Nullable */ List<KnowledgeBaseTag>> getTags() {
+    public Output</* @Nullable */ List<KnowledgeBaseTag>> tags() {
         return this.tags;
     }
 

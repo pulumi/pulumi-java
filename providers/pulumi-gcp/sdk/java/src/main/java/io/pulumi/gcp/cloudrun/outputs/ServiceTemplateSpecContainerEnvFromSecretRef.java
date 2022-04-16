@@ -37,14 +37,14 @@ public final class ServiceTemplateSpecContainerEnvFromSecretRef {
      * Structure is documented below.
      * 
     */
-    public Optional<ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference> getLocalObjectReference() {
+    public Optional<ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference> localObjectReference() {
         return Optional.ofNullable(this.localObjectReference);
     }
     /**
      * Specify whether the Secret must be defined
      * 
     */
-    public Optional<Boolean> getOptional() {
+    public Optional<Boolean> optional() {
         return Optional.ofNullable(this.optional);
     }
 

@@ -25,7 +25,7 @@ public final class ManualResolutionPropertiesResponse extends io.pulumi.resource
     @Import(name="targetId")
       private final @Nullable String targetId;
 
-    public Optional<String> getTargetId() {
+    public Optional<String> targetId() {
         return this.targetId == null ? Optional.empty() : Optional.ofNullable(this.targetId);
     }
 

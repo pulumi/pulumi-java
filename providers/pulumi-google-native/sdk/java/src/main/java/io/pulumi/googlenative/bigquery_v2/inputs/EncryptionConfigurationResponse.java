@@ -19,7 +19,7 @@ public final class EncryptionConfigurationResponse extends io.pulumi.resources.I
     @Import(name="kmsKeyName", required=true)
       private final String kmsKeyName;
 
-    public String getKmsKeyName() {
+    public String kmsKeyName() {
         return this.kmsKeyName;
     }
 

@@ -22,7 +22,7 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="caPoolId", required=true)
       private final Output<String> caPoolId;
 
-    public Output<String> getCaPoolId() {
+    public Output<String> caPoolId() {
         return this.caPoolId;
     }
 
@@ -33,7 +33,7 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="issuancePolicy")
       private final @Nullable Output<IssuancePolicyArgs> issuancePolicy;
 
-    public Output<IssuancePolicyArgs> getIssuancePolicy() {
+    public Output<IssuancePolicyArgs> issuancePolicy() {
         return this.issuancePolicy == null ? Codegen.empty() : this.issuancePolicy;
     }
 
@@ -44,21 +44,21 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -69,14 +69,14 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publishingOptions")
       private final @Nullable Output<PublishingOptionsArgs> publishingOptions;
 
-    public Output<PublishingOptionsArgs> getPublishingOptions() {
+    public Output<PublishingOptionsArgs> publishingOptions() {
         return this.publishingOptions == null ? Codegen.empty() : this.publishingOptions;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -87,7 +87,7 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tier", required=true)
       private final Output<CaPoolTier> tier;
 
-    public Output<CaPoolTier> getTier() {
+    public Output<CaPoolTier> tier() {
         return this.tier;
     }
 

@@ -93,70 +93,70 @@ public final class ReplicaSetResponse {
      * List of Domain Controller IP Address
      * 
     */
-    public List<String> getDomainControllerIpAddress() {
+    public List<String> domainControllerIpAddress() {
         return this.domainControllerIpAddress;
     }
     /**
      * External access ip address.
      * 
     */
-    public String getExternalAccessIpAddress() {
+    public String externalAccessIpAddress() {
         return this.externalAccessIpAddress;
     }
     /**
      * List of Domain Health Alerts
      * 
     */
-    public List<HealthAlertResponse> getHealthAlerts() {
+    public List<HealthAlertResponse> healthAlerts() {
         return this.healthAlerts;
     }
     /**
      * Last domain evaluation run DateTime
      * 
     */
-    public String getHealthLastEvaluated() {
+    public String healthLastEvaluated() {
         return this.healthLastEvaluated;
     }
     /**
      * List of Domain Health Monitors
      * 
     */
-    public List<HealthMonitorResponse> getHealthMonitors() {
+    public List<HealthMonitorResponse> healthMonitors() {
         return this.healthMonitors;
     }
     /**
      * Virtual network location
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * ReplicaSet Id
      * 
     */
-    public String getReplicaSetId() {
+    public String replicaSetId() {
         return this.replicaSetId;
     }
     /**
      * Status of Domain Service instance
      * 
     */
-    public String getServiceStatus() {
+    public String serviceStatus() {
         return this.serviceStatus;
     }
     /**
      * The name of the virtual network that Domain Services will be deployed on. The id of the subnet that Domain Services will be deployed on. /virtualNetwork/vnetName/subnets/subnetName.
      * 
     */
-    public Optional<String> getSubnetId() {
+    public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
     /**
      * Virtual network site id
      * 
     */
-    public String getVnetSiteId() {
+    public String vnetSiteId() {
         return this.vnetSiteId;
     }
 

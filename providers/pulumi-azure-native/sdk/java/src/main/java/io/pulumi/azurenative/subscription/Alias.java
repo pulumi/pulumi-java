@@ -42,7 +42,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * @return Alias ID.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -56,7 +56,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * @return Put Alias response properties.
      * 
      */
-    public Output<PutAliasResponsePropertiesResponse> getProperties() {
+    public Output<PutAliasResponsePropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -70,7 +70,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * @return Resource type, Microsoft.Subscription/aliases.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

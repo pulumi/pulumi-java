@@ -19,7 +19,7 @@ public final class ListWebAppFunctionKeysArgs extends io.pulumi.resources.Invoke
     @Import(name="functionName", required=true)
       private final String functionName;
 
-    public String getFunctionName() {
+    public String functionName() {
         return this.functionName;
     }
 
@@ -30,7 +30,7 @@ public final class ListWebAppFunctionKeysArgs extends io.pulumi.resources.Invoke
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -41,7 +41,7 @@ public final class ListWebAppFunctionKeysArgs extends io.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

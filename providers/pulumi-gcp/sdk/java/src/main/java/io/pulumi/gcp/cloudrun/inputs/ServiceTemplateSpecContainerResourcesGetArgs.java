@@ -25,7 +25,7 @@ public final class ServiceTemplateSpecContainerResourcesGetArgs extends io.pulum
     @Import(name="limits")
       private final @Nullable Output<Map<String,String>> limits;
 
-    public Output<Map<String,String>> getLimits() {
+    public Output<Map<String,String>> limits() {
         return this.limits == null ? Codegen.empty() : this.limits;
     }
 
@@ -40,7 +40,7 @@ public final class ServiceTemplateSpecContainerResourcesGetArgs extends io.pulum
     @Import(name="requests")
       private final @Nullable Output<Map<String,String>> requests;
 
-    public Output<Map<String,String>> getRequests() {
+    public Output<Map<String,String>> requests() {
         return this.requests == null ? Codegen.empty() : this.requests;
     }
 

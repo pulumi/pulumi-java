@@ -25,7 +25,7 @@ public final class TimeSeriesFilterRatioResponse extends io.pulumi.resources.Inv
     @Import(name="denominator", required=true)
       private final RatioPartResponse denominator;
 
-    public RatioPartResponse getDenominator() {
+    public RatioPartResponse denominator() {
         return this.denominator;
     }
 
@@ -36,7 +36,7 @@ public final class TimeSeriesFilterRatioResponse extends io.pulumi.resources.Inv
     @Import(name="numerator", required=true)
       private final RatioPartResponse numerator;
 
-    public RatioPartResponse getNumerator() {
+    public RatioPartResponse numerator() {
         return this.numerator;
     }
 
@@ -47,7 +47,7 @@ public final class TimeSeriesFilterRatioResponse extends io.pulumi.resources.Inv
     @Import(name="pickTimeSeriesFilter", required=true)
       private final PickTimeSeriesFilterResponse pickTimeSeriesFilter;
 
-    public PickTimeSeriesFilterResponse getPickTimeSeriesFilter() {
+    public PickTimeSeriesFilterResponse pickTimeSeriesFilter() {
         return this.pickTimeSeriesFilter;
     }
 
@@ -58,7 +58,7 @@ public final class TimeSeriesFilterRatioResponse extends io.pulumi.resources.Inv
     @Import(name="secondaryAggregation", required=true)
       private final AggregationResponse secondaryAggregation;
 
-    public AggregationResponse getSecondaryAggregation() {
+    public AggregationResponse secondaryAggregation() {
         return this.secondaryAggregation;
     }
 

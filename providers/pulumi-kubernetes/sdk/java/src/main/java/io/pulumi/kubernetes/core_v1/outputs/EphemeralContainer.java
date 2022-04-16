@@ -203,35 +203,35 @@ public final class EphemeralContainer {
      * Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
      * 
     */
-    public List<String> getArgs() {
+    public List<String> args() {
         return this.args == null ? List.of() : this.args;
     }
     /**
      * Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
      * 
     */
-    public List<String> getCommand() {
+    public List<String> command() {
         return this.command == null ? List.of() : this.command;
     }
     /**
      * List of environment variables to set in the container. Cannot be updated.
      * 
     */
-    public List<EnvVar> getEnv() {
+    public List<EnvVar> env() {
         return this.env == null ? List.of() : this.env;
     }
     /**
      * List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.
      * 
     */
-    public List<EnvFromSource> getEnvFrom() {
+    public List<EnvFromSource> envFrom() {
         return this.envFrom == null ? List.of() : this.envFrom;
     }
     /**
      * Docker image name. More info: https://kubernetes.io/docs/concepts/containers/images
      * 
     */
-    public Optional<String> getImage() {
+    public Optional<String> image() {
         return Optional.ofNullable(this.image);
     }
     /**
@@ -243,77 +243,77 @@ public final class EphemeralContainer {
      *  - `"Never"` means that kubelet never pulls an image, but only uses a local image. Container will fail if the image isn't present
      * 
     */
-    public Optional<String> getImagePullPolicy() {
+    public Optional<String> imagePullPolicy() {
         return Optional.ofNullable(this.imagePullPolicy);
     }
     /**
      * Lifecycle is not allowed for ephemeral containers.
      * 
     */
-    public Optional<Lifecycle> getLifecycle() {
+    public Optional<Lifecycle> lifecycle() {
         return Optional.ofNullable(this.lifecycle);
     }
     /**
      * Probes are not allowed for ephemeral containers.
      * 
     */
-    public Optional<Probe> getLivenessProbe() {
+    public Optional<Probe> livenessProbe() {
         return Optional.ofNullable(this.livenessProbe);
     }
     /**
      * Name of the ephemeral container specified as a DNS_LABEL. This name must be unique among all containers, init containers and ephemeral containers.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Ports are not allowed for ephemeral containers.
      * 
     */
-    public List<ContainerPort> getPorts() {
+    public List<ContainerPort> ports() {
         return this.ports == null ? List.of() : this.ports;
     }
     /**
      * Probes are not allowed for ephemeral containers.
      * 
     */
-    public Optional<Probe> getReadinessProbe() {
+    public Optional<Probe> readinessProbe() {
         return Optional.ofNullable(this.readinessProbe);
     }
     /**
      * Resources are not allowed for ephemeral containers. Ephemeral containers use spare resources already allocated to the pod.
      * 
     */
-    public Optional<ResourceRequirements> getResources() {
+    public Optional<ResourceRequirements> resources() {
         return Optional.ofNullable(this.resources);
     }
     /**
      * Optional: SecurityContext defines the security options the ephemeral container should be run with. If set, the fields of SecurityContext override the equivalent fields of PodSecurityContext.
      * 
     */
-    public Optional<SecurityContext> getSecurityContext() {
+    public Optional<SecurityContext> securityContext() {
         return Optional.ofNullable(this.securityContext);
     }
     /**
      * Probes are not allowed for ephemeral containers.
      * 
     */
-    public Optional<Probe> getStartupProbe() {
+    public Optional<Probe> startupProbe() {
         return Optional.ofNullable(this.startupProbe);
     }
     /**
      * Whether this container should allocate a buffer for stdin in the container runtime. If this is not set, reads from stdin in the container will always result in EOF. Default is false.
      * 
     */
-    public Optional<Boolean> getStdin() {
+    public Optional<Boolean> stdin() {
         return Optional.ofNullable(this.stdin);
     }
     /**
      * Whether the container runtime should close the stdin channel after it has been opened by a single attach. When stdin is true the stdin stream will remain open across multiple attach sessions. If stdinOnce is set to true, stdin is opened on container start, is empty until the first client attaches to stdin, and then remains open and accepts data until the client disconnects, at which time stdin is closed and remains closed until the container is restarted. If this flag is false, a container processes that reads from stdin will never receive an EOF. Default is false
      * 
     */
-    public Optional<Boolean> getStdinOnce() {
+    public Optional<Boolean> stdinOnce() {
         return Optional.ofNullable(this.stdinOnce);
     }
     /**
@@ -322,14 +322,14 @@ public final class EphemeralContainer {
      * The container runtime must implement support for this feature. If the runtime does not support namespace targeting then the result of setting this field is undefined.
      * 
     */
-    public Optional<String> getTargetContainerName() {
+    public Optional<String> targetContainerName() {
         return Optional.ofNullable(this.targetContainerName);
     }
     /**
      * Optional: Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log. Cannot be updated.
      * 
     */
-    public Optional<String> getTerminationMessagePath() {
+    public Optional<String> terminationMessagePath() {
         return Optional.ofNullable(this.terminationMessagePath);
     }
     /**
@@ -340,35 +340,35 @@ public final class EphemeralContainer {
      *  - `"File"` is the default behavior and will set the container status message to the contents of the container's terminationMessagePath when the container exits.
      * 
     */
-    public Optional<String> getTerminationMessagePolicy() {
+    public Optional<String> terminationMessagePolicy() {
         return Optional.ofNullable(this.terminationMessagePolicy);
     }
     /**
      * Whether this container should allocate a TTY for itself, also requires 'stdin' to be true. Default is false.
      * 
     */
-    public Optional<Boolean> getTty() {
+    public Optional<Boolean> tty() {
         return Optional.ofNullable(this.tty);
     }
     /**
      * volumeDevices is the list of block devices to be used by the container.
      * 
     */
-    public List<VolumeDevice> getVolumeDevices() {
+    public List<VolumeDevice> volumeDevices() {
         return this.volumeDevices == null ? List.of() : this.volumeDevices;
     }
     /**
      * Pod volumes to mount into the container's filesystem. Subpath mounts are not allowed for ephemeral containers. Cannot be updated.
      * 
     */
-    public List<VolumeMount> getVolumeMounts() {
+    public List<VolumeMount> volumeMounts() {
         return this.volumeMounts == null ? List.of() : this.volumeMounts;
     }
     /**
      * Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image. Cannot be updated.
      * 
     */
-    public Optional<String> getWorkingDir() {
+    public Optional<String> workingDir() {
         return Optional.ofNullable(this.workingDir);
     }
 

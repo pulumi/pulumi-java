@@ -22,7 +22,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDay
     @Import(name="day", required=true)
       private final Output<String> day;
 
-    public Output<String> getDay() {
+    public Output<String> day() {
         return this.day;
     }
 
@@ -33,7 +33,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDay
     @Import(name="startTime", required=true)
       private final Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
 

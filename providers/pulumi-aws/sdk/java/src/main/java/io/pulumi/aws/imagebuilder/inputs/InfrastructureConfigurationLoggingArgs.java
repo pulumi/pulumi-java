@@ -21,7 +21,7 @@ public final class InfrastructureConfigurationLoggingArgs extends io.pulumi.reso
     @Import(name="s3Logs", required=true)
       private final Output<InfrastructureConfigurationLoggingS3LogsArgs> s3Logs;
 
-    public Output<InfrastructureConfigurationLoggingS3LogsArgs> getS3Logs() {
+    public Output<InfrastructureConfigurationLoggingS3LogsArgs> s3Logs() {
         return this.s3Logs;
     }
 

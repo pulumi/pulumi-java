@@ -24,7 +24,7 @@ public final class ExternalVpnGatewayState extends io.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -36,7 +36,7 @@ public final class ExternalVpnGatewayState extends io.pulumi.resources.ResourceA
     @Import(name="interfaces")
       private final @Nullable Output<List<ExternalVpnGatewayInterfaceGetArgs>> interfaces;
 
-    public Output<List<ExternalVpnGatewayInterfaceGetArgs>> getInterfaces() {
+    public Output<List<ExternalVpnGatewayInterfaceGetArgs>> interfaces() {
         return this.interfaces == null ? Codegen.empty() : this.interfaces;
     }
 
@@ -53,7 +53,7 @@ public final class ExternalVpnGatewayState extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -65,7 +65,7 @@ public final class ExternalVpnGatewayState extends io.pulumi.resources.ResourceA
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -77,7 +77,7 @@ public final class ExternalVpnGatewayState extends io.pulumi.resources.ResourceA
     @Import(name="redundancyType")
       private final @Nullable Output<String> redundancyType;
 
-    public Output<String> getRedundancyType() {
+    public Output<String> redundancyType() {
         return this.redundancyType == null ? Codegen.empty() : this.redundancyType;
     }
 
@@ -88,7 +88,7 @@ public final class ExternalVpnGatewayState extends io.pulumi.resources.ResourceA
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 

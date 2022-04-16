@@ -28,7 +28,7 @@ public final class WebhookConversionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="clientConfig")
       private final @Nullable Output<WebhookClientConfigArgs> clientConfig;
 
-    public Output<WebhookClientConfigArgs> getClientConfig() {
+    public Output<WebhookClientConfigArgs> clientConfig() {
         return this.clientConfig == null ? Codegen.empty() : this.clientConfig;
     }
 
@@ -39,7 +39,7 @@ public final class WebhookConversionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="conversionReviewVersions", required=true)
       private final Output<List<String>> conversionReviewVersions;
 
-    public Output<List<String>> getConversionReviewVersions() {
+    public Output<List<String>> conversionReviewVersions() {
         return this.conversionReviewVersions;
     }
 

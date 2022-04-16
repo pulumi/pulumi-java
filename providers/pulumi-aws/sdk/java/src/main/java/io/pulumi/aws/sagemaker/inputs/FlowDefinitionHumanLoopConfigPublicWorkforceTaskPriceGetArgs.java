@@ -22,7 +22,7 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceGetArgs 
     @Import(name="amountInUsd")
       private final @Nullable Output<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdGetArgs> amountInUsd;
 
-    public Output<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdGetArgs> getAmountInUsd() {
+    public Output<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdGetArgs> amountInUsd() {
         return this.amountInUsd == null ? Codegen.empty() : this.amountInUsd;
     }
 

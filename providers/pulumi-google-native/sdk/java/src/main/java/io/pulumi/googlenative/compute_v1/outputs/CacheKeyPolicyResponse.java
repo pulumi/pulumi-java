@@ -69,49 +69,49 @@ public final class CacheKeyPolicyResponse {
      * If true, requests to different hosts will be cached separately.
      * 
     */
-    public Boolean getIncludeHost() {
+    public Boolean includeHost() {
         return this.includeHost;
     }
     /**
      * Allows HTTP request headers (by name) to be used in the cache key.
      * 
     */
-    public List<String> getIncludeHttpHeaders() {
+    public List<String> includeHttpHeaders() {
         return this.includeHttpHeaders;
     }
     /**
      * Allows HTTP cookies (by name) to be used in the cache key. The name=value pair will be used in the cache key Cloud CDN generates.
      * 
     */
-    public List<String> getIncludeNamedCookies() {
+    public List<String> includeNamedCookies() {
         return this.includeNamedCookies;
     }
     /**
      * If true, http and https requests will be cached separately.
      * 
     */
-    public Boolean getIncludeProtocol() {
+    public Boolean includeProtocol() {
         return this.includeProtocol;
     }
     /**
      * If true, include query string parameters in the cache key according to query_string_whitelist and query_string_blacklist. If neither is set, the entire query string will be included. If false, the query string will be excluded from the cache key entirely.
      * 
     */
-    public Boolean getIncludeQueryString() {
+    public Boolean includeQueryString() {
         return this.includeQueryString;
     }
     /**
      * Names of query string parameters to exclude in cache keys. All other parameters will be included. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters.
      * 
     */
-    public List<String> getQueryStringBlacklist() {
+    public List<String> queryStringBlacklist() {
         return this.queryStringBlacklist;
     }
     /**
      * Names of query string parameters to include in cache keys. All other parameters will be excluded. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters.
      * 
     */
-    public List<String> getQueryStringWhitelist() {
+    public List<String> queryStringWhitelist() {
         return this.queryStringWhitelist;
     }
 

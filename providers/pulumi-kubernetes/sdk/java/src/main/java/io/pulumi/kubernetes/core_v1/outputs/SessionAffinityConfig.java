@@ -26,7 +26,7 @@ public final class SessionAffinityConfig {
      * clientIP contains the configurations of Client IP based session affinity.
      * 
     */
-    public Optional<ClientIPConfig> getClientIP() {
+    public Optional<ClientIPConfig> clientIP() {
         return Optional.ofNullable(this.clientIP);
     }
 

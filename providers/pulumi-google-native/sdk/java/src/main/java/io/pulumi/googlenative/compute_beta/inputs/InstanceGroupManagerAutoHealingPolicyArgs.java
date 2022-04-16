@@ -23,7 +23,7 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
     @Import(name="healthCheck")
       private final @Nullable Output<String> healthCheck;
 
-    public Output<String> getHealthCheck() {
+    public Output<String> healthCheck() {
         return this.healthCheck == null ? Codegen.empty() : this.healthCheck;
     }
 
@@ -34,7 +34,7 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
     @Import(name="initialDelaySec")
       private final @Nullable Output<Integer> initialDelaySec;
 
-    public Output<Integer> getInitialDelaySec() {
+    public Output<Integer> initialDelaySec() {
         return this.initialDelaySec == null ? Codegen.empty() : this.initialDelaySec;
     }
 

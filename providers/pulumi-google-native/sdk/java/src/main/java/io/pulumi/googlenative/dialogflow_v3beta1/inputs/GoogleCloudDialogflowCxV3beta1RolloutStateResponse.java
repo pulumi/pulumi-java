@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutStateResponse extends io
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutStateResponse extends io
     @Import(name="step", required=true)
       private final String step;
 
-    public String getStep() {
+    public String step() {
         return this.step;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutStateResponse extends io
     @Import(name="stepIndex", required=true)
       private final Integer stepIndex;
 
-    public Integer getStepIndex() {
+    public Integer stepIndex() {
         return this.stepIndex;
     }
 

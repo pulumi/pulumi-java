@@ -32,7 +32,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="backendAddressPool")
       private final @Nullable Output<SubResourceArgs> backendAddressPool;
 
-    public Output<SubResourceArgs> getBackendAddressPool() {
+    public Output<SubResourceArgs> backendAddressPool() {
         return this.backendAddressPool == null ? Codegen.empty() : this.backendAddressPool;
     }
 
@@ -43,7 +43,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="backendPort")
       private final @Nullable Output<Integer> backendPort;
 
-    public Output<Integer> getBackendPort() {
+    public Output<Integer> backendPort() {
         return this.backendPort == null ? Codegen.empty() : this.backendPort;
     }
 
@@ -54,7 +54,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="disableOutboundSnat")
       private final @Nullable Output<Boolean> disableOutboundSnat;
 
-    public Output<Boolean> getDisableOutboundSnat() {
+    public Output<Boolean> disableOutboundSnat() {
         return this.disableOutboundSnat == null ? Codegen.empty() : this.disableOutboundSnat;
     }
 
@@ -65,7 +65,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="enableFloatingIP")
       private final @Nullable Output<Boolean> enableFloatingIP;
 
-    public Output<Boolean> getEnableFloatingIP() {
+    public Output<Boolean> enableFloatingIP() {
         return this.enableFloatingIP == null ? Codegen.empty() : this.enableFloatingIP;
     }
 
@@ -76,7 +76,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="enableTcpReset")
       private final @Nullable Output<Boolean> enableTcpReset;
 
-    public Output<Boolean> getEnableTcpReset() {
+    public Output<Boolean> enableTcpReset() {
         return this.enableTcpReset == null ? Codegen.empty() : this.enableTcpReset;
     }
 
@@ -87,7 +87,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="frontendIPConfiguration")
       private final @Nullable Output<SubResourceArgs> frontendIPConfiguration;
 
-    public Output<SubResourceArgs> getFrontendIPConfiguration() {
+    public Output<SubResourceArgs> frontendIPConfiguration() {
         return this.frontendIPConfiguration == null ? Codegen.empty() : this.frontendIPConfiguration;
     }
 
@@ -98,7 +98,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="frontendPort", required=true)
       private final Output<Integer> frontendPort;
 
-    public Output<Integer> getFrontendPort() {
+    public Output<Integer> frontendPort() {
         return this.frontendPort;
     }
 
@@ -109,7 +109,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -120,7 +120,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="idleTimeoutInMinutes")
       private final @Nullable Output<Integer> idleTimeoutInMinutes;
 
-    public Output<Integer> getIdleTimeoutInMinutes() {
+    public Output<Integer> idleTimeoutInMinutes() {
         return this.idleTimeoutInMinutes == null ? Codegen.empty() : this.idleTimeoutInMinutes;
     }
 
@@ -131,7 +131,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="loadDistribution")
       private final @Nullable Output<Either<String,LoadDistribution>> loadDistribution;
 
-    public Output<Either<String,LoadDistribution>> getLoadDistribution() {
+    public Output<Either<String,LoadDistribution>> loadDistribution() {
         return this.loadDistribution == null ? Codegen.empty() : this.loadDistribution;
     }
 
@@ -142,7 +142,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -153,7 +153,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="probe")
       private final @Nullable Output<SubResourceArgs> probe;
 
-    public Output<SubResourceArgs> getProbe() {
+    public Output<SubResourceArgs> probe() {
         return this.probe == null ? Codegen.empty() : this.probe;
     }
 
@@ -164,7 +164,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="protocol", required=true)
       private final Output<Either<String,TransportProtocol>> protocol;
 
-    public Output<Either<String,TransportProtocol>> getProtocol() {
+    public Output<Either<String,TransportProtocol>> protocol() {
         return this.protocol;
     }
 

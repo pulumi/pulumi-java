@@ -22,7 +22,7 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -33,7 +33,7 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
@@ -44,7 +44,7 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
     @Import(name="hotCachePeriod")
       private final @Nullable Output<String> hotCachePeriod;
 
-    public Output<String> getHotCachePeriod() {
+    public Output<String> hotCachePeriod() {
         return this.hotCachePeriod == null ? Codegen.empty() : this.hotCachePeriod;
     }
 
@@ -56,7 +56,7 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -67,7 +67,7 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -78,7 +78,7 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,7 +89,7 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
     @Import(name="softDeletePeriod")
       private final @Nullable Output<String> softDeletePeriod;
 
-    public Output<String> getSoftDeletePeriod() {
+    public Output<String> softDeletePeriod() {
         return this.softDeletePeriod == null ? Codegen.empty() : this.softDeletePeriod;
     }
 

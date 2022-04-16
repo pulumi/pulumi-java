@@ -43,7 +43,7 @@ public class MaintenanceConfiguration extends io.pulumi.resources.CustomResource
      * @return Gets or sets extensionProperties of the maintenanceConfiguration. This is for future use only and would be a set of key value pairs for additional information e.g. whether to follow SDP etc.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getExtensionProperties() {
+    public Output</* @Nullable */ Map<String,String>> extensionProperties() {
         return this.extensionProperties;
     }
     /**
@@ -57,7 +57,7 @@ public class MaintenanceConfiguration extends io.pulumi.resources.CustomResource
      * @return Gets or sets location of the resource
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -71,7 +71,7 @@ public class MaintenanceConfiguration extends io.pulumi.resources.CustomResource
      * @return Gets or sets maintenanceScope of the configuration. It represent the impact area of the maintenance
      * 
      */
-    public Output</* @Nullable */ String> getMaintenanceScope() {
+    public Output</* @Nullable */ String> maintenanceScope() {
         return this.maintenanceScope;
     }
     /**
@@ -85,7 +85,7 @@ public class MaintenanceConfiguration extends io.pulumi.resources.CustomResource
      * @return Name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +99,7 @@ public class MaintenanceConfiguration extends io.pulumi.resources.CustomResource
      * @return Gets or sets namespace of the resource e.g. Microsoft.Maintenance or Microsoft.Sql
      * 
      */
-    public Output</* @Nullable */ String> getNamespace() {
+    public Output</* @Nullable */ String> namespace() {
         return this.namespace;
     }
     /**
@@ -113,7 +113,7 @@ public class MaintenanceConfiguration extends io.pulumi.resources.CustomResource
      * @return Gets or sets tags of the resource
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -127,7 +127,7 @@ public class MaintenanceConfiguration extends io.pulumi.resources.CustomResource
      * @return Type of the resource
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -28,7 +28,7 @@ public final class NetworkRefArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointRefs")
       private final @Nullable Output<List<EndpointRefArgs>> endpointRefs;
 
-    public Output<List<EndpointRefArgs>> getEndpointRefs() {
+    public Output<List<EndpointRefArgs>> endpointRefs() {
         return this.endpointRefs == null ? Codegen.empty() : this.endpointRefs;
     }
 
@@ -39,7 +39,7 @@ public final class NetworkRefArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

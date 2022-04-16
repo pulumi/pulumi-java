@@ -93,70 +93,70 @@ public final class GetEventHubResult {
      * Properties of capture description
      * 
     */
-    public Optional<CaptureDescriptionResponse> getCaptureDescription() {
+    public Optional<CaptureDescriptionResponse> captureDescription() {
         return Optional.ofNullable(this.captureDescription);
     }
     /**
      * Exact time the Event Hub was created.
      * 
     */
-    public String getCreatedAt() {
+    public String createdAt() {
         return this.createdAt;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Number of days to retain the events for this Event Hub, value should be 1 to 7 days
      * 
     */
-    public Optional<Double> getMessageRetentionInDays() {
+    public Optional<Double> messageRetentionInDays() {
         return Optional.ofNullable(this.messageRetentionInDays);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.
      * 
     */
-    public Optional<Double> getPartitionCount() {
+    public Optional<Double> partitionCount() {
         return Optional.ofNullable(this.partitionCount);
     }
     /**
      * Current number of shards on the Event Hub.
      * 
     */
-    public List<String> getPartitionIds() {
+    public List<String> partitionIds() {
         return this.partitionIds;
     }
     /**
      * Enumerates the possible values for the status of the Event Hub.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The exact time the message was updated.
      * 
     */
-    public String getUpdatedAt() {
+    public String updatedAt() {
         return this.updatedAt;
     }
 

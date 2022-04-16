@@ -46,7 +46,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfig {
      * EGRESS rules.
      * 
     */
-    public List<String> getDestIpRanges() {
+    public List<String> destIpRanges() {
         return this.destIpRanges == null ? List.of() : this.destIpRanges;
     }
     /**
@@ -54,7 +54,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfig {
      * Structure is documented below.
      * 
     */
-    public List<OrganizationSecurityPolicyRuleMatchConfigLayer4Config> getLayer4Configs() {
+    public List<OrganizationSecurityPolicyRuleMatchConfigLayer4Config> layer4Configs() {
         return this.layer4Configs;
     }
     /**
@@ -62,7 +62,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfig {
      * INGRESS rules.
      * 
     */
-    public List<String> getSrcIpRanges() {
+    public List<String> srcIpRanges() {
         return this.srcIpRanges == null ? List.of() : this.srcIpRanges;
     }
 

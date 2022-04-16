@@ -22,7 +22,7 @@ public final class XssMatchSetXssMatchTupleGetArgs extends io.pulumi.resources.R
     @Import(name="fieldToMatch", required=true)
       private final Output<XssMatchSetXssMatchTupleFieldToMatchGetArgs> fieldToMatch;
 
-    public Output<XssMatchSetXssMatchTupleFieldToMatchGetArgs> getFieldToMatch() {
+    public Output<XssMatchSetXssMatchTupleFieldToMatchGetArgs> fieldToMatch() {
         return this.fieldToMatch;
     }
 
@@ -33,7 +33,7 @@ public final class XssMatchSetXssMatchTupleGetArgs extends io.pulumi.resources.R
     @Import(name="textTransformation", required=true)
       private final Output<String> textTransformation;
 
-    public Output<String> getTextTransformation() {
+    public Output<String> textTransformation() {
         return this.textTransformation;
     }
 

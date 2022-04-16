@@ -27,7 +27,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     @Import(name="contentUrl", required=true)
       private final Output<String> contentUrl;
 
-    public Output<String> getContentUrl() {
+    public Output<String> contentUrl() {
         return this.contentUrl;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     @Import(name="icon")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> icon;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> getIcon() {
+    public Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> icon() {
         return this.icon == null ? Codegen.empty() : this.icon;
     }
 
@@ -60,7 +60,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     @Import(name="largeImage")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> largeImage;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> getLargeImage() {
+    public Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> largeImage() {
         return this.largeImage == null ? Codegen.empty() : this.largeImage;
     }
 
@@ -71,7 +71,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

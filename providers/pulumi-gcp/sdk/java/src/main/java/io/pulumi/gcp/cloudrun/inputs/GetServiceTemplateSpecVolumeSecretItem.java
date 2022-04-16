@@ -16,21 +16,21 @@ public final class GetServiceTemplateSpecVolumeSecretItem extends io.pulumi.reso
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 
     @Import(name="mode", required=true)
       private final Integer mode;
 
-    public Integer getMode() {
+    public Integer mode() {
         return this.mode;
     }
 
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 

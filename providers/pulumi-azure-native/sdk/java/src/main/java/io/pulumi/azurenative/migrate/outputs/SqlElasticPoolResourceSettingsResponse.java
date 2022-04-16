@@ -43,21 +43,21 @@ public final class SqlElasticPoolResourceSettingsResponse {
      * Expected value is 'Microsoft.Sql/servers/elasticPools'.
      * 
     */
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
     /**
      * Gets or sets the target Resource name.
      * 
     */
-    public String getTargetResourceName() {
+    public String targetResourceName() {
         return this.targetResourceName;
     }
     /**
      * Defines the zone redundant resource setting.
      * 
     */
-    public Optional<String> getZoneRedundant() {
+    public Optional<String> zoneRedundant() {
         return Optional.ofNullable(this.zoneRedundant);
     }
 

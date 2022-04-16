@@ -21,10 +21,10 @@ public final class GetServiceTemplateSpecContainerResource {
         this.requests = requests;
     }
 
-    public Map<String,String> getLimits() {
+    public Map<String,String> limits() {
         return this.limits;
     }
-    public Map<String,String> getRequests() {
+    public Map<String,String> requests() {
         return this.requests;
     }
 

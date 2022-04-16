@@ -28,7 +28,7 @@ public final class CustomDnsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dsRecords")
       private final @Nullable Output<List<DsRecordArgs>> dsRecords;
 
-    public Output<List<DsRecordArgs>> getDsRecords() {
+    public Output<List<DsRecordArgs>> dsRecords() {
         return this.dsRecords == null ? Codegen.empty() : this.dsRecords;
     }
 
@@ -39,7 +39,7 @@ public final class CustomDnsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nameServers", required=true)
       private final Output<List<String>> nameServers;
 
-    public Output<List<String>> getNameServers() {
+    public Output<List<String>> nameServers() {
         return this.nameServers;
     }
 

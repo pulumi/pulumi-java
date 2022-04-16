@@ -24,35 +24,35 @@ public final class NotificationRegistrationPropertiesArgs extends io.pulumi.reso
     @Import(name="includedEvents")
       private final @Nullable Output<List<String>> includedEvents;
 
-    public Output<List<String>> getIncludedEvents() {
+    public Output<List<String>> includedEvents() {
         return this.includedEvents == null ? Codegen.empty() : this.includedEvents;
     }
 
     @Import(name="messageScope")
       private final @Nullable Output<Either<String,MessageScope>> messageScope;
 
-    public Output<Either<String,MessageScope>> getMessageScope() {
+    public Output<Either<String,MessageScope>> messageScope() {
         return this.messageScope == null ? Codegen.empty() : this.messageScope;
     }
 
     @Import(name="notificationEndpoints")
       private final @Nullable Output<List<NotificationEndpointArgs>> notificationEndpoints;
 
-    public Output<List<NotificationEndpointArgs>> getNotificationEndpoints() {
+    public Output<List<NotificationEndpointArgs>> notificationEndpoints() {
         return this.notificationEndpoints == null ? Codegen.empty() : this.notificationEndpoints;
     }
 
     @Import(name="notificationMode")
       private final @Nullable Output<Either<String,NotificationMode>> notificationMode;
 
-    public Output<Either<String,NotificationMode>> getNotificationMode() {
+    public Output<Either<String,NotificationMode>> notificationMode() {
         return this.notificationMode == null ? Codegen.empty() : this.notificationMode;
     }
 
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Output<Either<String,ProvisioningState>> getProvisioningState() {
+    public Output<Either<String,ProvisioningState>> provisioningState() {
         return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 

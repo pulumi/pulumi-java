@@ -25,7 +25,7 @@ public final class EdgeProfileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="subscription")
       private final @Nullable EdgeProfileSubscriptionResponse subscription;
 
-    public Optional<EdgeProfileSubscriptionResponse> getSubscription() {
+    public Optional<EdgeProfileSubscriptionResponse> subscription() {
         return this.subscription == null ? Optional.empty() : Optional.ofNullable(this.subscription);
     }
 

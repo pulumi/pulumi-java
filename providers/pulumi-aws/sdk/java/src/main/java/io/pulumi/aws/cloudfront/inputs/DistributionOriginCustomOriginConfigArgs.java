@@ -24,7 +24,7 @@ public final class DistributionOriginCustomOriginConfigArgs extends io.pulumi.re
     @Import(name="httpPort", required=true)
       private final Output<Integer> httpPort;
 
-    public Output<Integer> getHttpPort() {
+    public Output<Integer> httpPort() {
         return this.httpPort;
     }
 
@@ -35,7 +35,7 @@ public final class DistributionOriginCustomOriginConfigArgs extends io.pulumi.re
     @Import(name="httpsPort", required=true)
       private final Output<Integer> httpsPort;
 
-    public Output<Integer> getHttpsPort() {
+    public Output<Integer> httpsPort() {
         return this.httpsPort;
     }
 
@@ -46,7 +46,7 @@ public final class DistributionOriginCustomOriginConfigArgs extends io.pulumi.re
     @Import(name="originKeepaliveTimeout")
       private final @Nullable Output<Integer> originKeepaliveTimeout;
 
-    public Output<Integer> getOriginKeepaliveTimeout() {
+    public Output<Integer> originKeepaliveTimeout() {
         return this.originKeepaliveTimeout == null ? Codegen.empty() : this.originKeepaliveTimeout;
     }
 
@@ -58,7 +58,7 @@ public final class DistributionOriginCustomOriginConfigArgs extends io.pulumi.re
     @Import(name="originProtocolPolicy", required=true)
       private final Output<String> originProtocolPolicy;
 
-    public Output<String> getOriginProtocolPolicy() {
+    public Output<String> originProtocolPolicy() {
         return this.originProtocolPolicy;
     }
 
@@ -69,7 +69,7 @@ public final class DistributionOriginCustomOriginConfigArgs extends io.pulumi.re
     @Import(name="originReadTimeout")
       private final @Nullable Output<Integer> originReadTimeout;
 
-    public Output<Integer> getOriginReadTimeout() {
+    public Output<Integer> originReadTimeout() {
         return this.originReadTimeout == null ? Codegen.empty() : this.originReadTimeout;
     }
 
@@ -82,7 +82,7 @@ public final class DistributionOriginCustomOriginConfigArgs extends io.pulumi.re
     @Import(name="originSslProtocols", required=true)
       private final Output<List<String>> originSslProtocols;
 
-    public Output<List<String>> getOriginSslProtocols() {
+    public Output<List<String>> originSslProtocols() {
         return this.originSslProtocols;
     }
 

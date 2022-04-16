@@ -23,7 +23,7 @@ public final class FirewallFirewallStatusArgs extends io.pulumi.resources.Resour
     @Import(name="syncStates")
       private final @Nullable Output<List<FirewallFirewallStatusSyncStateArgs>> syncStates;
 
-    public Output<List<FirewallFirewallStatusSyncStateArgs>> getSyncStates() {
+    public Output<List<FirewallFirewallStatusSyncStateArgs>> syncStates() {
         return this.syncStates == null ? Codegen.empty() : this.syncStates;
     }
 

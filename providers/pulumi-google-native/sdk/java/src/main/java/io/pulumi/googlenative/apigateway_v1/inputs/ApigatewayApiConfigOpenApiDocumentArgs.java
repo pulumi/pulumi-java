@@ -26,7 +26,7 @@ public final class ApigatewayApiConfigOpenApiDocumentArgs extends io.pulumi.reso
     @Import(name="document")
       private final @Nullable Output<ApigatewayApiConfigFileArgs> document;
 
-    public Output<ApigatewayApiConfigFileArgs> getDocument() {
+    public Output<ApigatewayApiConfigFileArgs> document() {
         return this.document == null ? Codegen.empty() : this.document;
     }
 

@@ -23,10 +23,10 @@ public final class TableBillingMode {
         this.provisionedThroughput = provisionedThroughput;
     }
 
-    public TableMode getMode() {
+    public TableMode mode() {
         return this.mode;
     }
-    public Optional<TableProvisionedThroughput> getProvisionedThroughput() {
+    public Optional<TableProvisionedThroughput> provisionedThroughput() {
         return Optional.ofNullable(this.provisionedThroughput);
     }
 

@@ -25,7 +25,7 @@ public final class GraphParameterLinkArgs extends io.pulumi.resources.ResourceAr
     @Import(name="nodeId", required=true)
       private final Output<String> nodeId;
 
-    public Output<String> getNodeId() {
+    public Output<String> nodeId() {
         return this.nodeId;
     }
 
@@ -36,7 +36,7 @@ public final class GraphParameterLinkArgs extends io.pulumi.resources.ResourceAr
     @Import(name="parameterKey", required=true)
       private final Output<String> parameterKey;
 
-    public Output<String> getParameterKey() {
+    public Output<String> parameterKey() {
         return this.parameterKey;
     }
 

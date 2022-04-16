@@ -23,7 +23,7 @@ public final class NetworkUtilizationResponse extends io.pulumi.resources.Invoke
     @Import(name="targetReceivedBytesPerSecond", required=true)
       private final Integer targetReceivedBytesPerSecond;
 
-    public Integer getTargetReceivedBytesPerSecond() {
+    public Integer targetReceivedBytesPerSecond() {
         return this.targetReceivedBytesPerSecond;
     }
 
@@ -34,7 +34,7 @@ public final class NetworkUtilizationResponse extends io.pulumi.resources.Invoke
     @Import(name="targetReceivedPacketsPerSecond", required=true)
       private final Integer targetReceivedPacketsPerSecond;
 
-    public Integer getTargetReceivedPacketsPerSecond() {
+    public Integer targetReceivedPacketsPerSecond() {
         return this.targetReceivedPacketsPerSecond;
     }
 
@@ -45,7 +45,7 @@ public final class NetworkUtilizationResponse extends io.pulumi.resources.Invoke
     @Import(name="targetSentBytesPerSecond", required=true)
       private final Integer targetSentBytesPerSecond;
 
-    public Integer getTargetSentBytesPerSecond() {
+    public Integer targetSentBytesPerSecond() {
         return this.targetSentBytesPerSecond;
     }
 
@@ -56,7 +56,7 @@ public final class NetworkUtilizationResponse extends io.pulumi.resources.Invoke
     @Import(name="targetSentPacketsPerSecond", required=true)
       private final Integer targetSentPacketsPerSecond;
 
-    public Integer getTargetSentPacketsPerSecond() {
+    public Integer targetSentPacketsPerSecond() {
         return this.targetSentPacketsPerSecond;
     }
 

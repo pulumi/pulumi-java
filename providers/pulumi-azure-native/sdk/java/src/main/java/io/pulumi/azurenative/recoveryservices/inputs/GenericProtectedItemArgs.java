@@ -34,7 +34,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
     @Import(name="backupManagementType")
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
-    public Output<Either<String,BackupManagementType>> getBackupManagementType() {
+    public Output<Either<String,BackupManagementType>> backupManagementType() {
         return this.backupManagementType == null ? Codegen.empty() : this.backupManagementType;
     }
 
@@ -45,7 +45,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
     @Import(name="backupSetName")
       private final @Nullable Output<String> backupSetName;
 
-    public Output<String> getBackupSetName() {
+    public Output<String> backupSetName() {
         return this.backupSetName == null ? Codegen.empty() : this.backupSetName;
     }
 
@@ -56,7 +56,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
     @Import(name="containerName")
       private final @Nullable Output<String> containerName;
 
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName == null ? Codegen.empty() : this.containerName;
     }
 
@@ -67,7 +67,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
     @Import(name="createMode")
       private final @Nullable Output<Either<String,CreateMode>> createMode;
 
-    public Output<Either<String,CreateMode>> getCreateMode() {
+    public Output<Either<String,CreateMode>> createMode() {
         return this.createMode == null ? Codegen.empty() : this.createMode;
     }
 
@@ -78,7 +78,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
     @Import(name="deferredDeleteTimeInUTC")
       private final @Nullable Output<String> deferredDeleteTimeInUTC;
 
-    public Output<String> getDeferredDeleteTimeInUTC() {
+    public Output<String> deferredDeleteTimeInUTC() {
         return this.deferredDeleteTimeInUTC == null ? Codegen.empty() : this.deferredDeleteTimeInUTC;
     }
 
@@ -89,7 +89,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
     @Import(name="deferredDeleteTimeRemaining")
       private final @Nullable Output<String> deferredDeleteTimeRemaining;
 
-    public Output<String> getDeferredDeleteTimeRemaining() {
+    public Output<String> deferredDeleteTimeRemaining() {
         return this.deferredDeleteTimeRemaining == null ? Codegen.empty() : this.deferredDeleteTimeRemaining;
     }
 
@@ -100,7 +100,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
     @Import(name="fabricName")
       private final @Nullable Output<String> fabricName;
 
-    public Output<String> getFabricName() {
+    public Output<String> fabricName() {
         return this.fabricName == null ? Codegen.empty() : this.fabricName;
     }
 
@@ -111,7 +111,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
@@ -122,7 +122,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
     @Import(name="isDeferredDeleteScheduleUpcoming")
       private final @Nullable Output<Boolean> isDeferredDeleteScheduleUpcoming;
 
-    public Output<Boolean> getIsDeferredDeleteScheduleUpcoming() {
+    public Output<Boolean> isDeferredDeleteScheduleUpcoming() {
         return this.isDeferredDeleteScheduleUpcoming == null ? Codegen.empty() : this.isDeferredDeleteScheduleUpcoming;
     }
 
@@ -133,7 +133,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
     @Import(name="isRehydrate")
       private final @Nullable Output<Boolean> isRehydrate;
 
-    public Output<Boolean> getIsRehydrate() {
+    public Output<Boolean> isRehydrate() {
         return this.isRehydrate == null ? Codegen.empty() : this.isRehydrate;
     }
 
@@ -144,7 +144,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
     @Import(name="isScheduledForDeferredDelete")
       private final @Nullable Output<Boolean> isScheduledForDeferredDelete;
 
-    public Output<Boolean> getIsScheduledForDeferredDelete() {
+    public Output<Boolean> isScheduledForDeferredDelete() {
         return this.isScheduledForDeferredDelete == null ? Codegen.empty() : this.isScheduledForDeferredDelete;
     }
 
@@ -155,7 +155,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
     @Import(name="lastRecoveryPoint")
       private final @Nullable Output<String> lastRecoveryPoint;
 
-    public Output<String> getLastRecoveryPoint() {
+    public Output<String> lastRecoveryPoint() {
         return this.lastRecoveryPoint == null ? Codegen.empty() : this.lastRecoveryPoint;
     }
 
@@ -166,7 +166,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
     @Import(name="policyId")
       private final @Nullable Output<String> policyId;
 
-    public Output<String> getPolicyId() {
+    public Output<String> policyId() {
         return this.policyId == null ? Codegen.empty() : this.policyId;
     }
 
@@ -177,7 +177,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
     @Import(name="policyState")
       private final @Nullable Output<String> policyState;
 
-    public Output<String> getPolicyState() {
+    public Output<String> policyState() {
         return this.policyState == null ? Codegen.empty() : this.policyState;
     }
 
@@ -188,7 +188,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
     @Import(name="protectedItemId")
       private final @Nullable Output<Double> protectedItemId;
 
-    public Output<Double> getProtectedItemId() {
+    public Output<Double> protectedItemId() {
         return this.protectedItemId == null ? Codegen.empty() : this.protectedItemId;
     }
 
@@ -200,7 +200,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
     @Import(name="protectedItemType", required=true)
       private final Output<String> protectedItemType;
 
-    public Output<String> getProtectedItemType() {
+    public Output<String> protectedItemType() {
         return this.protectedItemType;
     }
 
@@ -211,7 +211,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
     @Import(name="protectionState")
       private final @Nullable Output<Either<String,ProtectionState>> protectionState;
 
-    public Output<Either<String,ProtectionState>> getProtectionState() {
+    public Output<Either<String,ProtectionState>> protectionState() {
         return this.protectionState == null ? Codegen.empty() : this.protectionState;
     }
 
@@ -222,7 +222,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
     @Import(name="sourceAssociations")
       private final @Nullable Output<Map<String,String>> sourceAssociations;
 
-    public Output<Map<String,String>> getSourceAssociations() {
+    public Output<Map<String,String>> sourceAssociations() {
         return this.sourceAssociations == null ? Codegen.empty() : this.sourceAssociations;
     }
 
@@ -233,7 +233,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
     @Import(name="sourceResourceId")
       private final @Nullable Output<String> sourceResourceId;
 
-    public Output<String> getSourceResourceId() {
+    public Output<String> sourceResourceId() {
         return this.sourceResourceId == null ? Codegen.empty() : this.sourceResourceId;
     }
 
@@ -244,7 +244,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
     @Import(name="workloadType")
       private final @Nullable Output<Either<String,DataSourceType>> workloadType;
 
-    public Output<Either<String,DataSourceType>> getWorkloadType() {
+    public Output<Either<String,DataSourceType>> workloadType() {
         return this.workloadType == null ? Codegen.empty() : this.workloadType;
     }
 

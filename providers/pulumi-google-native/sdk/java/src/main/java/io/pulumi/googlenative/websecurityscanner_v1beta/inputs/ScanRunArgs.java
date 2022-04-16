@@ -33,7 +33,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
@@ -44,7 +44,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="errorTrace")
       private final @Nullable Output<ScanRunErrorTraceArgs> errorTrace;
 
-    public Output<ScanRunErrorTraceArgs> getErrorTrace() {
+    public Output<ScanRunErrorTraceArgs> errorTrace() {
         return this.errorTrace == null ? Codegen.empty() : this.errorTrace;
     }
 
@@ -55,7 +55,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="executionState")
       private final @Nullable Output<ScanRunExecutionState> executionState;
 
-    public Output<ScanRunExecutionState> getExecutionState() {
+    public Output<ScanRunExecutionState> executionState() {
         return this.executionState == null ? Codegen.empty() : this.executionState;
     }
 
@@ -66,7 +66,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hasVulnerabilities")
       private final @Nullable Output<Boolean> hasVulnerabilities;
 
-    public Output<Boolean> getHasVulnerabilities() {
+    public Output<Boolean> hasVulnerabilities() {
         return this.hasVulnerabilities == null ? Codegen.empty() : this.hasVulnerabilities;
     }
 
@@ -77,7 +77,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -88,7 +88,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="progressPercent")
       private final @Nullable Output<Integer> progressPercent;
 
-    public Output<Integer> getProgressPercent() {
+    public Output<Integer> progressPercent() {
         return this.progressPercent == null ? Codegen.empty() : this.progressPercent;
     }
 
@@ -99,7 +99,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resultState")
       private final @Nullable Output<ScanRunResultState> resultState;
 
-    public Output<ScanRunResultState> getResultState() {
+    public Output<ScanRunResultState> resultState() {
         return this.resultState == null ? Codegen.empty() : this.resultState;
     }
 
@@ -110,7 +110,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
@@ -121,7 +121,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="urlsCrawledCount")
       private final @Nullable Output<String> urlsCrawledCount;
 
-    public Output<String> getUrlsCrawledCount() {
+    public Output<String> urlsCrawledCount() {
         return this.urlsCrawledCount == null ? Codegen.empty() : this.urlsCrawledCount;
     }
 
@@ -132,7 +132,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="urlsTestedCount")
       private final @Nullable Output<String> urlsTestedCount;
 
-    public Output<String> getUrlsTestedCount() {
+    public Output<String> urlsTestedCount() {
         return this.urlsTestedCount == null ? Codegen.empty() : this.urlsTestedCount;
     }
 
@@ -143,7 +143,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="warningTraces")
       private final @Nullable Output<List<ScanRunWarningTraceArgs>> warningTraces;
 
-    public Output<List<ScanRunWarningTraceArgs>> getWarningTraces() {
+    public Output<List<ScanRunWarningTraceArgs>> warningTraces() {
         return this.warningTraces == null ? Codegen.empty() : this.warningTraces;
     }
 

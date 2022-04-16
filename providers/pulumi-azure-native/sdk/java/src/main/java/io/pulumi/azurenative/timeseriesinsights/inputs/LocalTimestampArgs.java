@@ -29,7 +29,7 @@ public final class LocalTimestampArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="format")
       private final @Nullable Output<Either<String,LocalTimestampFormat>> format;
 
-    public Output<Either<String,LocalTimestampFormat>> getFormat() {
+    public Output<Either<String,LocalTimestampFormat>> format() {
         return this.format == null ? Codegen.empty() : this.format;
     }
 
@@ -40,7 +40,7 @@ public final class LocalTimestampArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeZoneOffset")
       private final @Nullable Output<LocalTimestampTimeZoneOffsetArgs> timeZoneOffset;
 
-    public Output<LocalTimestampTimeZoneOffsetArgs> getTimeZoneOffset() {
+    public Output<LocalTimestampTimeZoneOffsetArgs> timeZoneOffset() {
         return this.timeZoneOffset == null ? Codegen.empty() : this.timeZoneOffset;
     }
 

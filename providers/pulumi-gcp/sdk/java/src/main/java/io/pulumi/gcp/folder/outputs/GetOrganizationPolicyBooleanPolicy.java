@@ -16,7 +16,7 @@ public final class GetOrganizationPolicyBooleanPolicy {
         this.enforced = enforced;
     }
 
-    public Boolean getEnforced() {
+    public Boolean enforced() {
         return this.enforced;
     }
 

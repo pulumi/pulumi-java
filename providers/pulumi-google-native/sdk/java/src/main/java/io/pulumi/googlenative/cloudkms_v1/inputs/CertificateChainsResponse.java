@@ -24,7 +24,7 @@ public final class CertificateChainsResponse extends io.pulumi.resources.InvokeA
     @Import(name="caviumCerts", required=true)
       private final List<String> caviumCerts;
 
-    public List<String> getCaviumCerts() {
+    public List<String> caviumCerts() {
         return this.caviumCerts;
     }
 
@@ -35,7 +35,7 @@ public final class CertificateChainsResponse extends io.pulumi.resources.InvokeA
     @Import(name="googleCardCerts", required=true)
       private final List<String> googleCardCerts;
 
-    public List<String> getGoogleCardCerts() {
+    public List<String> googleCardCerts() {
         return this.googleCardCerts;
     }
 
@@ -46,7 +46,7 @@ public final class CertificateChainsResponse extends io.pulumi.resources.InvokeA
     @Import(name="googlePartitionCerts", required=true)
       private final List<String> googlePartitionCerts;
 
-    public List<String> getGooglePartitionCerts() {
+    public List<String> googlePartitionCerts() {
         return this.googlePartitionCerts;
     }
 

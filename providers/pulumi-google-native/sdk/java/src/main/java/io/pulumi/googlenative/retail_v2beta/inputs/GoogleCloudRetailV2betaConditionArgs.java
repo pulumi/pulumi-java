@@ -28,7 +28,7 @@ public final class GoogleCloudRetailV2betaConditionArgs extends io.pulumi.resour
     @Import(name="activeTimeRange")
       private final @Nullable Output<List<GoogleCloudRetailV2betaConditionTimeRangeArgs>> activeTimeRange;
 
-    public Output<List<GoogleCloudRetailV2betaConditionTimeRangeArgs>> getActiveTimeRange() {
+    public Output<List<GoogleCloudRetailV2betaConditionTimeRangeArgs>> activeTimeRange() {
         return this.activeTimeRange == null ? Codegen.empty() : this.activeTimeRange;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudRetailV2betaConditionArgs extends io.pulumi.resour
     @Import(name="queryTerms")
       private final @Nullable Output<List<GoogleCloudRetailV2betaConditionQueryTermArgs>> queryTerms;
 
-    public Output<List<GoogleCloudRetailV2betaConditionQueryTermArgs>> getQueryTerms() {
+    public Output<List<GoogleCloudRetailV2betaConditionQueryTermArgs>> queryTerms() {
         return this.queryTerms == null ? Codegen.empty() : this.queryTerms;
     }
 

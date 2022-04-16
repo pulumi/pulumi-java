@@ -26,7 +26,7 @@ public final class OpenIdAuthenticationSettingsContractResponse extends io.pulum
     @Import(name="bearerTokenSendingMethods")
       private final @Nullable List<String> bearerTokenSendingMethods;
 
-    public List<String> getBearerTokenSendingMethods() {
+    public List<String> bearerTokenSendingMethods() {
         return this.bearerTokenSendingMethods == null ? List.of() : this.bearerTokenSendingMethods;
     }
 
@@ -37,7 +37,7 @@ public final class OpenIdAuthenticationSettingsContractResponse extends io.pulum
     @Import(name="openidProviderId")
       private final @Nullable String openidProviderId;
 
-    public Optional<String> getOpenidProviderId() {
+    public Optional<String> openidProviderId() {
         return this.openidProviderId == null ? Optional.empty() : Optional.ofNullable(this.openidProviderId);
     }
 

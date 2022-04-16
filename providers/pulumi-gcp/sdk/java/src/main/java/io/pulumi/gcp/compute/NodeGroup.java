@@ -70,7 +70,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<NodeGroupAutoscalingPolicy> getAutoscalingPolicy() {
+    public Output<NodeGroupAutoscalingPolicy> autoscalingPolicy() {
         return this.autoscalingPolicy;
     }
     /**
@@ -84,7 +84,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -98,7 +98,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * @return An optional textual description of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -112,7 +112,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * @return The initial number of nodes in the node group. One of `initial_size` or `size` must be specified.
      * 
      */
-    public Output</* @Nullable */ Integer> getInitialSize() {
+    public Output</* @Nullable */ Integer> initialSize() {
         return this.initialSize;
     }
     /**
@@ -126,7 +126,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * @return Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT.
      * 
      */
-    public Output</* @Nullable */ String> getMaintenancePolicy() {
+    public Output</* @Nullable */ String> maintenancePolicy() {
         return this.maintenancePolicy;
     }
     /**
@@ -142,7 +142,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ NodeGroupMaintenanceWindow> getMaintenanceWindow() {
+    public Output</* @Nullable */ NodeGroupMaintenanceWindow> maintenanceWindow() {
         return this.maintenanceWindow;
     }
     /**
@@ -156,7 +156,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * @return Name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -170,7 +170,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * @return The URL of the node template to which this node group belongs.
      * 
      */
-    public Output<String> getNodeTemplate() {
+    public Output<String> nodeTemplate() {
         return this.nodeTemplate;
     }
     /**
@@ -186,7 +186,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -200,7 +200,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -214,7 +214,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * @return The total number of nodes in the node group. One of `initial_size` or `size` must be specified.
      * 
      */
-    public Output<Integer> getSize() {
+    public Output<Integer> size() {
         return this.size;
     }
     /**
@@ -228,7 +228,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * @return Zone where this node group is located
      * 
      */
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone;
     }
 

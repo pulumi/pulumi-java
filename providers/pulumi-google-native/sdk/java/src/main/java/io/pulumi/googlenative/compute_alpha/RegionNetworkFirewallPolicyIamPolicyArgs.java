@@ -27,7 +27,7 @@ public final class RegionNetworkFirewallPolicyIamPolicyArgs extends io.pulumi.re
     @Import(name="auditConfigs")
       private final @Nullable Output<List<AuditConfigArgs>> auditConfigs;
 
-    public Output<List<AuditConfigArgs>> getAuditConfigs() {
+    public Output<List<AuditConfigArgs>> auditConfigs() {
         return this.auditConfigs == null ? Codegen.empty() : this.auditConfigs;
     }
 
@@ -38,7 +38,7 @@ public final class RegionNetworkFirewallPolicyIamPolicyArgs extends io.pulumi.re
     @Import(name="bindings")
       private final @Nullable Output<List<BindingArgs>> bindings;
 
-    public Output<List<BindingArgs>> getBindings() {
+    public Output<List<BindingArgs>> bindings() {
         return this.bindings == null ? Codegen.empty() : this.bindings;
     }
 
@@ -49,28 +49,28 @@ public final class RegionNetworkFirewallPolicyIamPolicyArgs extends io.pulumi.re
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
     @Import(name="resource", required=true)
       private final Output<String> resource;
 
-    public Output<String> getResource() {
+    public Output<String> resource() {
         return this.resource;
     }
 
@@ -81,7 +81,7 @@ public final class RegionNetworkFirewallPolicyIamPolicyArgs extends io.pulumi.re
     @Import(name="rules")
       private final @Nullable Output<List<RuleArgs>> rules;
 
-    public Output<List<RuleArgs>> getRules() {
+    public Output<List<RuleArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 
@@ -92,7 +92,7 @@ public final class RegionNetworkFirewallPolicyIamPolicyArgs extends io.pulumi.re
     @Import(name="version")
       private final @Nullable Output<Integer> version;
 
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

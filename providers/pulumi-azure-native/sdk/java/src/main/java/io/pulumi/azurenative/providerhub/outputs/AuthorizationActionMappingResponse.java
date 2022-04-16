@@ -22,10 +22,10 @@ public final class AuthorizationActionMappingResponse {
         this.original = original;
     }
 
-    public Optional<String> getDesired() {
+    public Optional<String> desired() {
         return Optional.ofNullable(this.desired);
     }
-    public Optional<String> getOriginal() {
+    public Optional<String> original() {
         return Optional.ofNullable(this.original);
     }
 

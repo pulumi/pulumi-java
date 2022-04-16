@@ -99,77 +99,77 @@ public final class GetEnvironmentResult {
      * The display name of the Azure Resource Manager template that produced the environment.
      * 
     */
-    public Optional<String> getArmTemplateDisplayName() {
+    public Optional<String> armTemplateDisplayName() {
         return Optional.ofNullable(this.armTemplateDisplayName);
     }
     /**
      * The creator of the environment.
      * 
     */
-    public String getCreatedByUser() {
+    public String createdByUser() {
         return this.createdByUser;
     }
     /**
      * The deployment properties of the environment.
      * 
     */
-    public Optional<EnvironmentDeploymentPropertiesResponse> getDeploymentProperties() {
+    public Optional<EnvironmentDeploymentPropertiesResponse> deploymentProperties() {
         return Optional.ofNullable(this.deploymentProperties);
     }
     /**
      * The identifier of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The location of the resource.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning status of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The identifier of the resource group containing the environment's resources.
      * 
     */
-    public String getResourceGroupId() {
+    public String resourceGroupId() {
         return this.resourceGroupId;
     }
     /**
      * The tags of the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
      * 
     */
-    public String getUniqueIdentifier() {
+    public String uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
 

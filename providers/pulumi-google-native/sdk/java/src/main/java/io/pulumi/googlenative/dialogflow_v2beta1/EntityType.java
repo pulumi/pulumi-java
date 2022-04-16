@@ -33,7 +33,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @return Optional. Indicates whether the entity type can be automatically expanded.
      * 
      */
-    public Output<String> getAutoExpansionMode() {
+    public Output<String> autoExpansionMode() {
         return this.autoExpansionMode;
     }
     /**
@@ -47,7 +47,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @return The name of the entity type.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -61,7 +61,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @return Optional. Enables fuzzy entity extraction during classification.
      * 
      */
-    public Output<Boolean> getEnableFuzzyExtraction() {
+    public Output<Boolean> enableFuzzyExtraction() {
         return this.enableFuzzyExtraction;
     }
     /**
@@ -75,7 +75,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @return Optional. The collection of entity entries associated with the entity type.
      * 
      */
-    public Output<List<GoogleCloudDialogflowV2beta1EntityTypeEntityResponse>> getEntities() {
+    public Output<List<GoogleCloudDialogflowV2beta1EntityTypeEntityResponse>> entities() {
         return this.entities;
     }
     /**
@@ -89,7 +89,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @return Indicates the kind of entity type.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -103,7 +103,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @return The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType and EntityTypes.BatchUpdateEntityTypes methods. Supported formats: - `projects//agent/entityTypes/` - `projects//locations//agent/entityTypes/`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

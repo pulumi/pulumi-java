@@ -29,7 +29,7 @@ public final class ResponsePlanIncidentTemplateArgs extends io.pulumi.resources.
     @Import(name="dedupeString")
       private final @Nullable Output<String> dedupeString;
 
-    public Output<String> getDedupeString() {
+    public Output<String> dedupeString() {
         return this.dedupeString == null ? Codegen.empty() : this.dedupeString;
     }
 
@@ -40,7 +40,7 @@ public final class ResponsePlanIncidentTemplateArgs extends io.pulumi.resources.
     @Import(name="impact", required=true)
       private final Output<Integer> impact;
 
-    public Output<Integer> getImpact() {
+    public Output<Integer> impact() {
         return this.impact;
     }
 
@@ -51,7 +51,7 @@ public final class ResponsePlanIncidentTemplateArgs extends io.pulumi.resources.
     @Import(name="notificationTargets")
       private final @Nullable Output<List<ResponsePlanNotificationTargetItemArgs>> notificationTargets;
 
-    public Output<List<ResponsePlanNotificationTargetItemArgs>> getNotificationTargets() {
+    public Output<List<ResponsePlanNotificationTargetItemArgs>> notificationTargets() {
         return this.notificationTargets == null ? Codegen.empty() : this.notificationTargets;
     }
 
@@ -62,7 +62,7 @@ public final class ResponsePlanIncidentTemplateArgs extends io.pulumi.resources.
     @Import(name="summary")
       private final @Nullable Output<String> summary;
 
-    public Output<String> getSummary() {
+    public Output<String> summary() {
         return this.summary == null ? Codegen.empty() : this.summary;
     }
 
@@ -73,7 +73,7 @@ public final class ResponsePlanIncidentTemplateArgs extends io.pulumi.resources.
     @Import(name="title", required=true)
       private final Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 

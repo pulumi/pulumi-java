@@ -26,7 +26,7 @@ public final class ParameterValueResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="reference")
       private final @Nullable SecretValueReferenceResponse reference;
 
-    public Optional<SecretValueReferenceResponse> getReference() {
+    public Optional<SecretValueReferenceResponse> reference() {
         return this.reference == null ? Optional.empty() : Optional.ofNullable(this.reference);
     }
 
@@ -37,7 +37,7 @@ public final class ParameterValueResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="value")
       private final @Nullable Object value;
 
-    public Optional<Object> getValue() {
+    public Optional<Object> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

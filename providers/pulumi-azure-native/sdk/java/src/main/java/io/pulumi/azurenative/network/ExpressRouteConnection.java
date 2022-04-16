@@ -46,7 +46,7 @@ public class ExpressRouteConnection extends io.pulumi.resources.CustomResource {
      * @return Authorization key to establish the connection.
      * 
      */
-    public Output</* @Nullable */ String> getAuthorizationKey() {
+    public Output</* @Nullable */ String> authorizationKey() {
         return this.authorizationKey;
     }
     /**
@@ -60,7 +60,7 @@ public class ExpressRouteConnection extends io.pulumi.resources.CustomResource {
      * @return Enable internet security.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableInternetSecurity() {
+    public Output</* @Nullable */ Boolean> enableInternetSecurity() {
         return this.enableInternetSecurity;
     }
     /**
@@ -74,7 +74,7 @@ public class ExpressRouteConnection extends io.pulumi.resources.CustomResource {
      * @return The ExpressRoute circuit peering.
      * 
      */
-    public Output<ExpressRouteCircuitPeeringIdResponse> getExpressRouteCircuitPeering() {
+    public Output<ExpressRouteCircuitPeeringIdResponse> expressRouteCircuitPeering() {
         return this.expressRouteCircuitPeering;
     }
     /**
@@ -88,7 +88,7 @@ public class ExpressRouteConnection extends io.pulumi.resources.CustomResource {
      * @return Enable FastPath to vWan Firewall hub.
      * 
      */
-    public Output</* @Nullable */ Boolean> getExpressRouteGatewayBypass() {
+    public Output</* @Nullable */ Boolean> expressRouteGatewayBypass() {
         return this.expressRouteGatewayBypass;
     }
     /**
@@ -102,7 +102,7 @@ public class ExpressRouteConnection extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -116,7 +116,7 @@ public class ExpressRouteConnection extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the express route connection resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -130,7 +130,7 @@ public class ExpressRouteConnection extends io.pulumi.resources.CustomResource {
      * @return The Routing Configuration indicating the associated and propagated route tables on this connection.
      * 
      */
-    public Output</* @Nullable */ RoutingConfigurationResponse> getRoutingConfiguration() {
+    public Output</* @Nullable */ RoutingConfigurationResponse> routingConfiguration() {
         return this.routingConfiguration;
     }
     /**
@@ -144,7 +144,7 @@ public class ExpressRouteConnection extends io.pulumi.resources.CustomResource {
      * @return The routing weight associated to the connection.
      * 
      */
-    public Output</* @Nullable */ Integer> getRoutingWeight() {
+    public Output</* @Nullable */ Integer> routingWeight() {
         return this.routingWeight;
     }
 

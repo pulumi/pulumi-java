@@ -51,7 +51,7 @@ public class Taxonomy extends io.pulumi.resources.CustomResource {
      * Each value may be one of `POLICY_TYPE_UNSPECIFIED` and `FINE_GRAINED_ACCESS_CONTROL`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getActivatedPolicyTypes() {
+    public Output</* @Nullable */ List<String>> activatedPolicyTypes() {
         return this.activatedPolicyTypes;
     }
     /**
@@ -69,7 +69,7 @@ public class Taxonomy extends io.pulumi.resources.CustomResource {
      * long when encoded in UTF-8. If not set, defaults to an empty description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -89,7 +89,7 @@ public class Taxonomy extends io.pulumi.resources.CustomResource {
      * long when encoded in UTF-8.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -103,7 +103,7 @@ public class Taxonomy extends io.pulumi.resources.CustomResource {
      * @return Resource name of this taxonomy, whose format is: "projects/{project}/locations/{region}/taxonomies/{taxonomy}".
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -119,7 +119,7 @@ public class Taxonomy extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -133,7 +133,7 @@ public class Taxonomy extends io.pulumi.resources.CustomResource {
      * @return Taxonomy location region.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 

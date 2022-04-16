@@ -28,7 +28,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceL
      * this service that return in no more than threshold.
      * 
     */
-    public String getThreshold() {
+    public String threshold() {
         return this.threshold;
     }
 

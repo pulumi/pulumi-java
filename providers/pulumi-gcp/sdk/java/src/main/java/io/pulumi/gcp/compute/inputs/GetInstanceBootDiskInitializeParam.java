@@ -22,7 +22,7 @@ public final class GetInstanceBootDiskInitializeParam extends io.pulumi.resource
     @Import(name="image", required=true)
       private final String image;
 
-    public String getImage() {
+    public String image() {
         return this.image;
     }
 
@@ -33,7 +33,7 @@ public final class GetInstanceBootDiskInitializeParam extends io.pulumi.resource
     @Import(name="labels", required=true)
       private final Map<String,Object> labels;
 
-    public Map<String,Object> getLabels() {
+    public Map<String,Object> labels() {
         return this.labels;
     }
 
@@ -44,7 +44,7 @@ public final class GetInstanceBootDiskInitializeParam extends io.pulumi.resource
     @Import(name="size", required=true)
       private final Integer size;
 
-    public Integer getSize() {
+    public Integer size() {
         return this.size;
     }
 
@@ -55,7 +55,7 @@ public final class GetInstanceBootDiskInitializeParam extends io.pulumi.resource
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

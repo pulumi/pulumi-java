@@ -27,7 +27,7 @@ public final class TlsContextArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateContext")
       private final @Nullable Output<TlsCertificateContextArgs> certificateContext;
 
-    public Output<TlsCertificateContextArgs> getCertificateContext() {
+    public Output<TlsCertificateContextArgs> certificateContext() {
         return this.certificateContext == null ? Codegen.empty() : this.certificateContext;
     }
 
@@ -38,7 +38,7 @@ public final class TlsContextArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="validationContext")
       private final @Nullable Output<TlsValidationContextArgs> validationContext;
 
-    public Output<TlsValidationContextArgs> getValidationContext() {
+    public Output<TlsValidationContextArgs> validationContext() {
         return this.validationContext == null ? Codegen.empty() : this.validationContext;
     }
 

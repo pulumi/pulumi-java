@@ -28,14 +28,14 @@ public final class CustomLayerCloudwatchConfiguration {
         this.logStreams = logStreams;
     }
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * A block the specifies how an opsworks logs look like. See Log Streams.
      * 
     */
-    public List<CustomLayerCloudwatchConfigurationLogStream> getLogStreams() {
+    public List<CustomLayerCloudwatchConfigurationLogStream> logStreams() {
         return this.logStreams == null ? List.of() : this.logStreams;
     }
 

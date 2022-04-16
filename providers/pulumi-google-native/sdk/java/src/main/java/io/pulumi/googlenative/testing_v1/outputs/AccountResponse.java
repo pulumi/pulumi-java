@@ -24,7 +24,7 @@ public final class AccountResponse {
      * An automatic google login account.
      * 
     */
-    public GoogleAutoResponse getGoogleAuto() {
+    public GoogleAutoResponse googleAuto() {
         return this.googleAuto;
     }
 

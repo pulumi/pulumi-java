@@ -23,7 +23,7 @@ public final class DataCollectionEndpointResponseConfigurationAccess extends io.
     @Import(name="endpoint", required=true)
       private final String endpoint;
 
-    public String getEndpoint() {
+    public String endpoint() {
         return this.endpoint;
     }
 

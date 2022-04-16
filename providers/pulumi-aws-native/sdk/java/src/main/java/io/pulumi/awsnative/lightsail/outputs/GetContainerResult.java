@@ -74,56 +74,56 @@ public final class GetContainerResult {
         this.url = url;
     }
 
-    public Optional<String> getContainerArn() {
+    public Optional<String> containerArn() {
         return Optional.ofNullable(this.containerArn);
     }
     /**
      * Describes a container deployment configuration of an Amazon Lightsail container service.
      * 
     */
-    public Optional<ContainerServiceDeployment> getContainerServiceDeployment() {
+    public Optional<ContainerServiceDeployment> containerServiceDeployment() {
         return Optional.ofNullable(this.containerServiceDeployment);
     }
     /**
      * A Boolean value to indicate whether the container service is disabled.
      * 
     */
-    public Optional<Boolean> getIsDisabled() {
+    public Optional<Boolean> isDisabled() {
         return Optional.ofNullable(this.isDisabled);
     }
     /**
      * The power specification for the container service.
      * 
     */
-    public Optional<String> getPower() {
+    public Optional<String> power() {
         return Optional.ofNullable(this.power);
     }
     /**
      * The public domain names to use with the container service, such as example.com and www.example.com.
      * 
     */
-    public List<ContainerPublicDomainName> getPublicDomainNames() {
+    public List<ContainerPublicDomainName> publicDomainNames() {
         return this.publicDomainNames == null ? List.of() : this.publicDomainNames;
     }
     /**
      * The scale specification for the container service.
      * 
     */
-    public Optional<Integer> getScale() {
+    public Optional<Integer> scale() {
         return Optional.ofNullable(this.scale);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
     */
-    public List<ContainerTag> getTags() {
+    public List<ContainerTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The publicly accessible URL of the container service.
      * 
     */
-    public Optional<String> getUrl() {
+    public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
 

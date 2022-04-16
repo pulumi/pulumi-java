@@ -26,42 +26,42 @@ public final class BucketReplicationDestination extends io.pulumi.resources.Invo
     @Import(name="accessControlTranslation")
       private final @Nullable BucketAccessControlTranslation accessControlTranslation;
 
-    public Optional<BucketAccessControlTranslation> getAccessControlTranslation() {
+    public Optional<BucketAccessControlTranslation> accessControlTranslation() {
         return this.accessControlTranslation == null ? Optional.empty() : Optional.ofNullable(this.accessControlTranslation);
     }
 
     @Import(name="account")
       private final @Nullable String account;
 
-    public Optional<String> getAccount() {
+    public Optional<String> account() {
         return this.account == null ? Optional.empty() : Optional.ofNullable(this.account);
     }
 
     @Import(name="bucket", required=true)
       private final String bucket;
 
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
 
     @Import(name="encryptionConfiguration")
       private final @Nullable BucketEncryptionConfiguration encryptionConfiguration;
 
-    public Optional<BucketEncryptionConfiguration> getEncryptionConfiguration() {
+    public Optional<BucketEncryptionConfiguration> encryptionConfiguration() {
         return this.encryptionConfiguration == null ? Optional.empty() : Optional.ofNullable(this.encryptionConfiguration);
     }
 
     @Import(name="metrics")
       private final @Nullable BucketMetrics metrics;
 
-    public Optional<BucketMetrics> getMetrics() {
+    public Optional<BucketMetrics> metrics() {
         return this.metrics == null ? Optional.empty() : Optional.ofNullable(this.metrics);
     }
 
     @Import(name="replicationTime")
       private final @Nullable BucketReplicationTime replicationTime;
 
-    public Optional<BucketReplicationTime> getReplicationTime() {
+    public Optional<BucketReplicationTime> replicationTime() {
         return this.replicationTime == null ? Optional.empty() : Optional.ofNullable(this.replicationTime);
     }
 
@@ -72,7 +72,7 @@ public final class BucketReplicationDestination extends io.pulumi.resources.Invo
     @Import(name="storageClass")
       private final @Nullable BucketReplicationDestinationStorageClass storageClass;
 
-    public Optional<BucketReplicationDestinationStorageClass> getStorageClass() {
+    public Optional<BucketReplicationDestinationStorageClass> storageClass() {
         return this.storageClass == null ? Optional.empty() : Optional.ofNullable(this.storageClass);
     }
 

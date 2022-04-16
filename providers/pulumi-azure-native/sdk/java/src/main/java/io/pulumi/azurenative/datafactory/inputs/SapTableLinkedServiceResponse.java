@@ -33,7 +33,7 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -44,7 +44,7 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
     @Import(name="clientId")
       private final @Nullable Object clientId;
 
-    public Optional<Object> getClientId() {
+    public Optional<Object> clientId() {
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
     }
 
@@ -55,7 +55,7 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
@@ -66,7 +66,7 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -77,7 +77,7 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
@@ -88,7 +88,7 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
     @Import(name="language")
       private final @Nullable Object language;
 
-    public Optional<Object> getLanguage() {
+    public Optional<Object> language() {
         return this.language == null ? Optional.empty() : Optional.ofNullable(this.language);
     }
 
@@ -99,7 +99,7 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
     @Import(name="logonGroup")
       private final @Nullable Object logonGroup;
 
-    public Optional<Object> getLogonGroup() {
+    public Optional<Object> logonGroup() {
         return this.logonGroup == null ? Optional.empty() : Optional.ofNullable(this.logonGroup);
     }
 
@@ -110,7 +110,7 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
     @Import(name="messageServer")
       private final @Nullable Object messageServer;
 
-    public Optional<Object> getMessageServer() {
+    public Optional<Object> messageServer() {
         return this.messageServer == null ? Optional.empty() : Optional.ofNullable(this.messageServer);
     }
 
@@ -121,7 +121,7 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
     @Import(name="messageServerService")
       private final @Nullable Object messageServerService;
 
-    public Optional<Object> getMessageServerService() {
+    public Optional<Object> messageServerService() {
         return this.messageServerService == null ? Optional.empty() : Optional.ofNullable(this.messageServerService);
     }
 
@@ -132,7 +132,7 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -143,7 +143,7 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
     @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
         return this.password == null ? null : this.password;
     }
 
@@ -154,7 +154,7 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
     @Import(name="server")
       private final @Nullable Object server;
 
-    public Optional<Object> getServer() {
+    public Optional<Object> server() {
         return this.server == null ? Optional.empty() : Optional.ofNullable(this.server);
     }
 
@@ -165,7 +165,7 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
     @Import(name="sncLibraryPath")
       private final @Nullable Object sncLibraryPath;
 
-    public Optional<Object> getSncLibraryPath() {
+    public Optional<Object> sncLibraryPath() {
         return this.sncLibraryPath == null ? Optional.empty() : Optional.ofNullable(this.sncLibraryPath);
     }
 
@@ -176,7 +176,7 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
     @Import(name="sncMode")
       private final @Nullable Object sncMode;
 
-    public Optional<Object> getSncMode() {
+    public Optional<Object> sncMode() {
         return this.sncMode == null ? Optional.empty() : Optional.ofNullable(this.sncMode);
     }
 
@@ -187,7 +187,7 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
     @Import(name="sncMyName")
       private final @Nullable Object sncMyName;
 
-    public Optional<Object> getSncMyName() {
+    public Optional<Object> sncMyName() {
         return this.sncMyName == null ? Optional.empty() : Optional.ofNullable(this.sncMyName);
     }
 
@@ -198,7 +198,7 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
     @Import(name="sncPartnerName")
       private final @Nullable Object sncPartnerName;
 
-    public Optional<Object> getSncPartnerName() {
+    public Optional<Object> sncPartnerName() {
         return this.sncPartnerName == null ? Optional.empty() : Optional.ofNullable(this.sncPartnerName);
     }
 
@@ -209,7 +209,7 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
     @Import(name="sncQop")
       private final @Nullable Object sncQop;
 
-    public Optional<Object> getSncQop() {
+    public Optional<Object> sncQop() {
         return this.sncQop == null ? Optional.empty() : Optional.ofNullable(this.sncQop);
     }
 
@@ -220,7 +220,7 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
     @Import(name="systemId")
       private final @Nullable Object systemId;
 
-    public Optional<Object> getSystemId() {
+    public Optional<Object> systemId() {
         return this.systemId == null ? Optional.empty() : Optional.ofNullable(this.systemId);
     }
 
@@ -231,7 +231,7 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
     @Import(name="systemNumber")
       private final @Nullable Object systemNumber;
 
-    public Optional<Object> getSystemNumber() {
+    public Optional<Object> systemNumber() {
         return this.systemNumber == null ? Optional.empty() : Optional.ofNullable(this.systemNumber);
     }
 
@@ -243,7 +243,7 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -254,7 +254,7 @@ public final class SapTableLinkedServiceResponse extends io.pulumi.resources.Inv
     @Import(name="userName")
       private final @Nullable Object userName;
 
-    public Optional<Object> getUserName() {
+    public Optional<Object> userName() {
         return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
     }
 

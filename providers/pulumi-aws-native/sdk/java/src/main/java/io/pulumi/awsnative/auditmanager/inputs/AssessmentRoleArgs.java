@@ -23,14 +23,14 @@ public final class AssessmentRoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     @Import(name="roleType")
       private final @Nullable Output<AssessmentRoleType> roleType;
 
-    public Output<AssessmentRoleType> getRoleType() {
+    public Output<AssessmentRoleType> roleType() {
         return this.roleType == null ? Codegen.empty() : this.roleType;
     }
 

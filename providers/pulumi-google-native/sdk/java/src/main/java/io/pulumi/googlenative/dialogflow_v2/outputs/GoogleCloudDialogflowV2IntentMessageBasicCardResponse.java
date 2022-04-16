@@ -56,35 +56,35 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse {
      * Optional. The collection of card buttons.
      * 
     */
-    public List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> getButtons() {
+    public List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> buttons() {
         return this.buttons;
     }
     /**
      * Required, unless image is present. The body text of the card.
      * 
     */
-    public String getFormattedText() {
+    public String formattedText() {
         return this.formattedText;
     }
     /**
      * Optional. The image for the card.
      * 
     */
-    public GoogleCloudDialogflowV2IntentMessageImageResponse getImage() {
+    public GoogleCloudDialogflowV2IntentMessageImageResponse image() {
         return this.image;
     }
     /**
      * Optional. The subtitle of the card.
      * 
     */
-    public String getSubtitle() {
+    public String subtitle() {
         return this.subtitle;
     }
     /**
      * Optional. The title of the card.
      * 
     */
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

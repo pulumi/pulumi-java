@@ -29,7 +29,7 @@ public final class IngressResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="allowInsecure")
       private final @Nullable Boolean allowInsecure;
 
-    public Optional<Boolean> getAllowInsecure() {
+    public Optional<Boolean> allowInsecure() {
         return this.allowInsecure == null ? Optional.empty() : Optional.ofNullable(this.allowInsecure);
     }
 
@@ -40,7 +40,7 @@ public final class IngressResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="external")
       private final @Nullable Boolean external;
 
-    public Optional<Boolean> getExternal() {
+    public Optional<Boolean> external() {
         return this.external == null ? Optional.empty() : Optional.ofNullable(this.external);
     }
 
@@ -51,7 +51,7 @@ public final class IngressResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="fqdn", required=true)
       private final String fqdn;
 
-    public String getFqdn() {
+    public String fqdn() {
         return this.fqdn;
     }
 
@@ -62,14 +62,14 @@ public final class IngressResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="targetPort")
       private final @Nullable Integer targetPort;
 
-    public Optional<Integer> getTargetPort() {
+    public Optional<Integer> targetPort() {
         return this.targetPort == null ? Optional.empty() : Optional.ofNullable(this.targetPort);
     }
 
     @Import(name="traffic")
       private final @Nullable List<TrafficWeightResponse> traffic;
 
-    public List<TrafficWeightResponse> getTraffic() {
+    public List<TrafficWeightResponse> traffic() {
         return this.traffic == null ? List.of() : this.traffic;
     }
 
@@ -80,7 +80,7 @@ public final class IngressResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="transport")
       private final @Nullable String transport;
 
-    public Optional<String> getTransport() {
+    public Optional<String> transport() {
         return this.transport == null ? Optional.empty() : Optional.ofNullable(this.transport);
     }
 

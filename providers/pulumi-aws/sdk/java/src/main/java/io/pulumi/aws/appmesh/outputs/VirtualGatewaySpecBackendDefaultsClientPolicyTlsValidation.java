@@ -35,14 +35,14 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation {
      * The SANs for a virtual gateway's listener's Transport Layer Security (TLS) validation context.
      * 
     */
-    public Optional<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames> getSubjectAlternativeNames() {
+    public Optional<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames> subjectAlternativeNames() {
         return Optional.ofNullable(this.subjectAlternativeNames);
     }
     /**
      * The TLS validation context trust.
      * 
     */
-    public VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrust getTrust() {
+    public VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrust trust() {
         return this.trust;
     }
 

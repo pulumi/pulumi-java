@@ -24,7 +24,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
     @Import(name="analyzedConversationsCount", required=true)
       private final String analyzedConversationsCount;
 
-    public String getAnalyzedConversationsCount() {
+    public String analyzedConversationsCount() {
         return this.analyzedConversationsCount;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
     @Import(name="issueStats", required=true)
       private final Map<String,String> issueStats;
 
-    public Map<String,String> getIssueStats() {
+    public Map<String,String> issueStats() {
         return this.issueStats;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
     @Import(name="unclassifiedConversationsCount", required=true)
       private final String unclassifiedConversationsCount;
 
-    public String getUnclassifiedConversationsCount() {
+    public String unclassifiedConversationsCount() {
         return this.unclassifiedConversationsCount;
     }
 

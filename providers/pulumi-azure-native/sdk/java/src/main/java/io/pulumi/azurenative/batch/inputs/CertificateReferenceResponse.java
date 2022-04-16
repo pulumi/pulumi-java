@@ -18,7 +18,7 @@ public final class CertificateReferenceResponse extends io.pulumi.resources.Invo
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -29,7 +29,7 @@ public final class CertificateReferenceResponse extends io.pulumi.resources.Invo
     @Import(name="storeLocation")
       private final @Nullable String storeLocation;
 
-    public Optional<String> getStoreLocation() {
+    public Optional<String> storeLocation() {
         return this.storeLocation == null ? Optional.empty() : Optional.ofNullable(this.storeLocation);
     }
 
@@ -40,14 +40,14 @@ public final class CertificateReferenceResponse extends io.pulumi.resources.Invo
     @Import(name="storeName")
       private final @Nullable String storeName;
 
-    public Optional<String> getStoreName() {
+    public Optional<String> storeName() {
         return this.storeName == null ? Optional.empty() : Optional.ofNullable(this.storeName);
     }
 
     @Import(name="visibility")
       private final @Nullable List<String> visibility;
 
-    public List<String> getVisibility() {
+    public List<String> visibility() {
         return this.visibility == null ? List.of() : this.visibility;
     }
 

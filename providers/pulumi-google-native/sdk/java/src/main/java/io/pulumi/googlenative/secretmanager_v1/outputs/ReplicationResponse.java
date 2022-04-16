@@ -33,14 +33,14 @@ public final class ReplicationResponse {
      * The Secret will automatically be replicated without any restrictions.
      * 
     */
-    public AutomaticResponse getAutomatic() {
+    public AutomaticResponse automatic() {
         return this.automatic;
     }
     /**
      * The Secret will only be replicated into the locations specified.
      * 
     */
-    public UserManagedResponse getUserManaged() {
+    public UserManagedResponse userManaged() {
         return this.userManaged;
     }
 

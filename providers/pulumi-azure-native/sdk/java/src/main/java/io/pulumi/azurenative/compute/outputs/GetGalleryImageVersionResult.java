@@ -87,63 +87,63 @@ public final class GetGalleryImageVersionResult {
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning state, which only appears in the response.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The publishing profile of a gallery image Version.
      * 
     */
-    public Optional<GalleryImageVersionPublishingProfileResponse> getPublishingProfile() {
+    public Optional<GalleryImageVersionPublishingProfileResponse> publishingProfile() {
         return Optional.ofNullable(this.publishingProfile);
     }
     /**
      * This is the replication status of the gallery image version.
      * 
     */
-    public ReplicationStatusResponse getReplicationStatus() {
+    public ReplicationStatusResponse replicationStatus() {
         return this.replicationStatus;
     }
     /**
      * This is the storage profile of a Gallery Image Version.
      * 
     */
-    public GalleryImageVersionStorageProfileResponse getStorageProfile() {
+    public GalleryImageVersionStorageProfileResponse storageProfile() {
         return this.storageProfile;
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -24,7 +24,7 @@ public final class EventConnectionAuthParametersOauthArgs extends io.pulumi.reso
     @Import(name="authorizationEndpoint", required=true)
       private final Output<String> authorizationEndpoint;
 
-    public Output<String> getAuthorizationEndpoint() {
+    public Output<String> authorizationEndpoint() {
         return this.authorizationEndpoint;
     }
 
@@ -35,7 +35,7 @@ public final class EventConnectionAuthParametersOauthArgs extends io.pulumi.reso
     @Import(name="clientParameters")
       private final @Nullable Output<EventConnectionAuthParametersOauthClientParametersArgs> clientParameters;
 
-    public Output<EventConnectionAuthParametersOauthClientParametersArgs> getClientParameters() {
+    public Output<EventConnectionAuthParametersOauthClientParametersArgs> clientParameters() {
         return this.clientParameters == null ? Codegen.empty() : this.clientParameters;
     }
 
@@ -46,7 +46,7 @@ public final class EventConnectionAuthParametersOauthArgs extends io.pulumi.reso
     @Import(name="httpMethod", required=true)
       private final Output<String> httpMethod;
 
-    public Output<String> getHttpMethod() {
+    public Output<String> httpMethod() {
         return this.httpMethod;
     }
 
@@ -57,7 +57,7 @@ public final class EventConnectionAuthParametersOauthArgs extends io.pulumi.reso
     @Import(name="oauthHttpParameters", required=true)
       private final Output<EventConnectionAuthParametersOauthOauthHttpParametersArgs> oauthHttpParameters;
 
-    public Output<EventConnectionAuthParametersOauthOauthHttpParametersArgs> getOauthHttpParameters() {
+    public Output<EventConnectionAuthParametersOauthOauthHttpParametersArgs> oauthHttpParameters() {
         return this.oauthHttpParameters;
     }
 

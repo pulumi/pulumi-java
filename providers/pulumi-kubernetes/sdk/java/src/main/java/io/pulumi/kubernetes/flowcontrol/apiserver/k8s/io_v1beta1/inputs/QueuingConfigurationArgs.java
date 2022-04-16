@@ -26,7 +26,7 @@ public final class QueuingConfigurationArgs extends io.pulumi.resources.Resource
     @Import(name="handSize")
       private final @Nullable Output<Integer> handSize;
 
-    public Output<Integer> getHandSize() {
+    public Output<Integer> handSize() {
         return this.handSize == null ? Codegen.empty() : this.handSize;
     }
 
@@ -37,7 +37,7 @@ public final class QueuingConfigurationArgs extends io.pulumi.resources.Resource
     @Import(name="queueLengthLimit")
       private final @Nullable Output<Integer> queueLengthLimit;
 
-    public Output<Integer> getQueueLengthLimit() {
+    public Output<Integer> queueLengthLimit() {
         return this.queueLengthLimit == null ? Codegen.empty() : this.queueLengthLimit;
     }
 
@@ -48,7 +48,7 @@ public final class QueuingConfigurationArgs extends io.pulumi.resources.Resource
     @Import(name="queues")
       private final @Nullable Output<Integer> queues;
 
-    public Output<Integer> getQueues() {
+    public Output<Integer> queues() {
         return this.queues == null ? Codegen.empty() : this.queues;
     }
 

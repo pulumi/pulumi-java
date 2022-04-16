@@ -29,7 +29,7 @@ public final class ContainerRecipeEbsInstanceBlockDeviceSpecificationArgs extend
     @Import(name="deleteOnTermination")
       private final @Nullable Output<Boolean> deleteOnTermination;
 
-    public Output<Boolean> getDeleteOnTermination() {
+    public Output<Boolean> deleteOnTermination() {
         return this.deleteOnTermination == null ? Codegen.empty() : this.deleteOnTermination;
     }
 
@@ -40,7 +40,7 @@ public final class ContainerRecipeEbsInstanceBlockDeviceSpecificationArgs extend
     @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
 
-    public Output<Boolean> getEncrypted() {
+    public Output<Boolean> encrypted() {
         return this.encrypted == null ? Codegen.empty() : this.encrypted;
     }
 
@@ -51,7 +51,7 @@ public final class ContainerRecipeEbsInstanceBlockDeviceSpecificationArgs extend
     @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
-    public Output<Integer> getIops() {
+    public Output<Integer> iops() {
         return this.iops == null ? Codegen.empty() : this.iops;
     }
 
@@ -62,7 +62,7 @@ public final class ContainerRecipeEbsInstanceBlockDeviceSpecificationArgs extend
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -73,7 +73,7 @@ public final class ContainerRecipeEbsInstanceBlockDeviceSpecificationArgs extend
     @Import(name="snapshotId")
       private final @Nullable Output<String> snapshotId;
 
-    public Output<String> getSnapshotId() {
+    public Output<String> snapshotId() {
         return this.snapshotId == null ? Codegen.empty() : this.snapshotId;
     }
 
@@ -84,7 +84,7 @@ public final class ContainerRecipeEbsInstanceBlockDeviceSpecificationArgs extend
     @Import(name="throughput")
       private final @Nullable Output<Integer> throughput;
 
-    public Output<Integer> getThroughput() {
+    public Output<Integer> throughput() {
         return this.throughput == null ? Codegen.empty() : this.throughput;
     }
 
@@ -95,7 +95,7 @@ public final class ContainerRecipeEbsInstanceBlockDeviceSpecificationArgs extend
     @Import(name="volumeSize")
       private final @Nullable Output<Integer> volumeSize;
 
-    public Output<Integer> getVolumeSize() {
+    public Output<Integer> volumeSize() {
         return this.volumeSize == null ? Codegen.empty() : this.volumeSize;
     }
 
@@ -106,7 +106,7 @@ public final class ContainerRecipeEbsInstanceBlockDeviceSpecificationArgs extend
     @Import(name="volumeType")
       private final @Nullable Output<ContainerRecipeEbsInstanceBlockDeviceSpecificationVolumeType> volumeType;
 
-    public Output<ContainerRecipeEbsInstanceBlockDeviceSpecificationVolumeType> getVolumeType() {
+    public Output<ContainerRecipeEbsInstanceBlockDeviceSpecificationVolumeType> volumeType() {
         return this.volumeType == null ? Codegen.empty() : this.volumeType;
     }
 

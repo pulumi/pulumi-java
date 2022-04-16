@@ -24,7 +24,7 @@ public final class RouterNatRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action")
       private final @Nullable Output<RouterNatRuleActionArgs> action;
 
-    public Output<RouterNatRuleActionArgs> getAction() {
+    public Output<RouterNatRuleActionArgs> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -35,7 +35,7 @@ public final class RouterNatRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,7 +46,7 @@ public final class RouterNatRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="match")
       private final @Nullable Output<String> match;
 
-    public Output<String> getMatch() {
+    public Output<String> match() {
         return this.match == null ? Codegen.empty() : this.match;
     }
 
@@ -57,7 +57,7 @@ public final class RouterNatRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ruleNumber")
       private final @Nullable Output<Integer> ruleNumber;
 
-    public Output<Integer> getRuleNumber() {
+    public Output<Integer> ruleNumber() {
         return this.ruleNumber == null ? Codegen.empty() : this.ruleNumber;
     }
 

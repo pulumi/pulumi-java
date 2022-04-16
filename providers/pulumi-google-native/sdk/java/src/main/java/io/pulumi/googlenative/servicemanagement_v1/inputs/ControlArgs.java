@@ -26,7 +26,7 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="environment")
       private final @Nullable Output<String> environment;
 
-    public Output<String> getEnvironment() {
+    public Output<String> environment() {
         return this.environment == null ? Codegen.empty() : this.environment;
     }
 

@@ -33,7 +33,7 @@ public class Execution extends io.pulumi.resources.CustomResource {
      * @return Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `'{"argument":"{\"firstName\":\"FIRST\",\"lastName\":\"LAST\"}"}'`
      * 
      */
-    public Output<String> getArgument() {
+    public Output<String> argument() {
         return this.argument;
     }
     /**
@@ -47,7 +47,7 @@ public class Execution extends io.pulumi.resources.CustomResource {
      * @return The call logging level associated to this execution.
      * 
      */
-    public Output<String> getCallLogLevel() {
+    public Output<String> callLogLevel() {
         return this.callLogLevel;
     }
     /**
@@ -61,7 +61,7 @@ public class Execution extends io.pulumi.resources.CustomResource {
      * @return Marks the end of execution, successful or not.
      * 
      */
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime;
     }
     /**
@@ -75,7 +75,7 @@ public class Execution extends io.pulumi.resources.CustomResource {
      * @return The error which caused the execution to finish prematurely. The value is only present if the execution's state is `FAILED` or `CANCELLED`.
      * 
      */
-    public Output<ErrorResponse> getError() {
+    public Output<ErrorResponse> error() {
         return this.error;
     }
     /**
@@ -89,7 +89,7 @@ public class Execution extends io.pulumi.resources.CustomResource {
      * @return The resource name of the execution. Format: projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -103,7 +103,7 @@ public class Execution extends io.pulumi.resources.CustomResource {
      * @return Output of the execution represented as a JSON string. The value can only be present if the execution's state is `SUCCEEDED`.
      * 
      */
-    public Output<String> getResult() {
+    public Output<String> result() {
         return this.result;
     }
     /**
@@ -117,7 +117,7 @@ public class Execution extends io.pulumi.resources.CustomResource {
      * @return Marks the beginning of execution.
      * 
      */
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
     /**
@@ -131,7 +131,7 @@ public class Execution extends io.pulumi.resources.CustomResource {
      * @return Current state of the execution.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -145,7 +145,7 @@ public class Execution extends io.pulumi.resources.CustomResource {
      * @return Revision of the workflow this execution is using.
      * 
      */
-    public Output<String> getWorkflowRevisionId() {
+    public Output<String> workflowRevisionId() {
         return this.workflowRevisionId;
     }
 

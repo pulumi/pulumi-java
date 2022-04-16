@@ -15,7 +15,7 @@ public final class GetLaunchProfileArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="launchProfileId", required=true)
       private final String launchProfileId;
 
-    public String getLaunchProfileId() {
+    public String launchProfileId() {
         return this.launchProfileId;
     }
 
@@ -26,7 +26,7 @@ public final class GetLaunchProfileArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="studioId", required=true)
       private final String studioId;
 
-    public String getStudioId() {
+    public String studioId() {
         return this.studioId;
     }
 

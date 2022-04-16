@@ -43,29 +43,29 @@ public final class GetParameterResult {
         this.withDecryption = withDecryption;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
-    public String getValue() {
+    public String value() {
         return this.value;
     }
-    public Integer getVersion() {
+    public Integer version() {
         return this.version;
     }
-    public Optional<Boolean> getWithDecryption() {
+    public Optional<Boolean> withDecryption() {
         return Optional.ofNullable(this.withDecryption);
     }
 

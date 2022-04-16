@@ -84,7 +84,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * this field is set to false, the revision name will still autogenerate.)
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutogenerateRevisionName() {
+    public Output</* @Nullable */ Boolean> autogenerateRevisionName() {
         return this.autogenerateRevisionName;
     }
     /**
@@ -98,7 +98,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The location of the cloud run instance. eg us-central1
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -116,7 +116,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<ServiceMetadata> getMetadata() {
+    public Output<ServiceMetadata> metadata() {
         return this.metadata;
     }
     /**
@@ -130,7 +130,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Volume's name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -146,7 +146,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -160,7 +160,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The current status of the Service.
      * 
      */
-    public Output<List<ServiceStatus>> getStatuses() {
+    public Output<List<ServiceStatus>> statuses() {
         return this.statuses;
     }
     /**
@@ -192,7 +192,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ServiceTemplate> getTemplate() {
+    public Output</* @Nullable */ ServiceTemplate> template() {
         return this.template;
     }
     /**
@@ -210,7 +210,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<List<ServiceTraffic>> getTraffics() {
+    public Output<List<ServiceTraffic>> traffics() {
         return this.traffics;
     }
 

@@ -23,7 +23,7 @@ public final class FollowerDatabaseDefinitionResponse extends io.pulumi.resource
     @Import(name="attachedDatabaseConfigurationName", required=true)
       private final String attachedDatabaseConfigurationName;
 
-    public String getAttachedDatabaseConfigurationName() {
+    public String attachedDatabaseConfigurationName() {
         return this.attachedDatabaseConfigurationName;
     }
 
@@ -34,7 +34,7 @@ public final class FollowerDatabaseDefinitionResponse extends io.pulumi.resource
     @Import(name="clusterResourceId", required=true)
       private final String clusterResourceId;
 
-    public String getClusterResourceId() {
+    public String clusterResourceId() {
         return this.clusterResourceId;
     }
 
@@ -45,7 +45,7 @@ public final class FollowerDatabaseDefinitionResponse extends io.pulumi.resource
     @Import(name="databaseName", required=true)
       private final String databaseName;
 
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
 

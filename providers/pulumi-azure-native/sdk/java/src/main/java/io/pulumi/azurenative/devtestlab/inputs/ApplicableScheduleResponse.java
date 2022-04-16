@@ -27,7 +27,7 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -38,7 +38,7 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
     @Import(name="labVmsShutdown")
       private final @Nullable ScheduleResponse labVmsShutdown;
 
-    public Optional<ScheduleResponse> getLabVmsShutdown() {
+    public Optional<ScheduleResponse> labVmsShutdown() {
         return this.labVmsShutdown == null ? Optional.empty() : Optional.ofNullable(this.labVmsShutdown);
     }
 
@@ -49,7 +49,7 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
     @Import(name="labVmsStartup")
       private final @Nullable ScheduleResponse labVmsStartup;
 
-    public Optional<ScheduleResponse> getLabVmsStartup() {
+    public Optional<ScheduleResponse> labVmsStartup() {
         return this.labVmsStartup == null ? Optional.empty() : Optional.ofNullable(this.labVmsStartup);
     }
 
@@ -60,7 +60,7 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
     @Import(name="location")
       private final @Nullable String location;
 
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
@@ -71,7 +71,7 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -82,7 +82,7 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 
@@ -93,7 +93,7 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

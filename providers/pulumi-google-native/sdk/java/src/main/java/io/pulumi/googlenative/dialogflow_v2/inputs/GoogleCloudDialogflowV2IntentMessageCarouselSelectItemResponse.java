@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItemRespons
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItemRespons
     @Import(name="image", required=true)
       private final GoogleCloudDialogflowV2IntentMessageImageResponse image;
 
-    public GoogleCloudDialogflowV2IntentMessageImageResponse getImage() {
+    public GoogleCloudDialogflowV2IntentMessageImageResponse image() {
         return this.image;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItemRespons
     @Import(name="info", required=true)
       private final GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse info;
 
-    public GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse getInfo() {
+    public GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse info() {
         return this.info;
     }
 
@@ -58,7 +58,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItemRespons
     @Import(name="title", required=true)
       private final String title;
 
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

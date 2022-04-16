@@ -26,7 +26,7 @@ public final class FileSystemTokenStoreArgs extends io.pulumi.resources.Resource
     @Import(name="directory")
       private final @Nullable Output<String> directory;
 
-    public Output<String> getDirectory() {
+    public Output<String> directory() {
         return this.directory == null ? Codegen.empty() : this.directory;
     }
 

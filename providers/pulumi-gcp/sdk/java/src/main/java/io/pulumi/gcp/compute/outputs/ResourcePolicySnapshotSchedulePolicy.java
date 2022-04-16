@@ -46,14 +46,14 @@ public final class ResourcePolicySnapshotSchedulePolicy {
      * Structure is documented below.
      * 
     */
-    public Optional<ResourcePolicySnapshotSchedulePolicyRetentionPolicy> getRetentionPolicy() {
+    public Optional<ResourcePolicySnapshotSchedulePolicyRetentionPolicy> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
     /**
      * Specifies the frequency for the operation, using the unix-cron format.
      * 
     */
-    public ResourcePolicySnapshotSchedulePolicySchedule getSchedule() {
+    public ResourcePolicySnapshotSchedulePolicySchedule schedule() {
         return this.schedule;
     }
     /**
@@ -61,7 +61,7 @@ public final class ResourcePolicySnapshotSchedulePolicy {
      * Structure is documented below.
      * 
     */
-    public Optional<ResourcePolicySnapshotSchedulePolicySnapshotProperties> getSnapshotProperties() {
+    public Optional<ResourcePolicySnapshotSchedulePolicySnapshotProperties> snapshotProperties() {
         return Optional.ofNullable(this.snapshotProperties);
     }
 

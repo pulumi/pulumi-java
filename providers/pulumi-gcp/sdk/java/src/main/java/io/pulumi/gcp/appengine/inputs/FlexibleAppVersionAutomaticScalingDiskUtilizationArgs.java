@@ -22,7 +22,7 @@ public final class FlexibleAppVersionAutomaticScalingDiskUtilizationArgs extends
     @Import(name="targetReadBytesPerSecond")
       private final @Nullable Output<Integer> targetReadBytesPerSecond;
 
-    public Output<Integer> getTargetReadBytesPerSecond() {
+    public Output<Integer> targetReadBytesPerSecond() {
         return this.targetReadBytesPerSecond == null ? Codegen.empty() : this.targetReadBytesPerSecond;
     }
 
@@ -33,7 +33,7 @@ public final class FlexibleAppVersionAutomaticScalingDiskUtilizationArgs extends
     @Import(name="targetReadOpsPerSecond")
       private final @Nullable Output<Integer> targetReadOpsPerSecond;
 
-    public Output<Integer> getTargetReadOpsPerSecond() {
+    public Output<Integer> targetReadOpsPerSecond() {
         return this.targetReadOpsPerSecond == null ? Codegen.empty() : this.targetReadOpsPerSecond;
     }
 
@@ -44,7 +44,7 @@ public final class FlexibleAppVersionAutomaticScalingDiskUtilizationArgs extends
     @Import(name="targetWriteBytesPerSecond")
       private final @Nullable Output<Integer> targetWriteBytesPerSecond;
 
-    public Output<Integer> getTargetWriteBytesPerSecond() {
+    public Output<Integer> targetWriteBytesPerSecond() {
         return this.targetWriteBytesPerSecond == null ? Codegen.empty() : this.targetWriteBytesPerSecond;
     }
 
@@ -55,7 +55,7 @@ public final class FlexibleAppVersionAutomaticScalingDiskUtilizationArgs extends
     @Import(name="targetWriteOpsPerSecond")
       private final @Nullable Output<Integer> targetWriteOpsPerSecond;
 
-    public Output<Integer> getTargetWriteOpsPerSecond() {
+    public Output<Integer> targetWriteOpsPerSecond() {
         return this.targetWriteOpsPerSecond == null ? Codegen.empty() : this.targetWriteOpsPerSecond;
     }
 

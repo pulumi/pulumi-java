@@ -29,7 +29,7 @@ public final class SecurityPolicyRuleMatchConfig {
      * (can be used to override the default behavior).
      * 
     */
-    public List<String> getSrcIpRanges() {
+    public List<String> srcIpRanges() {
         return this.srcIpRanges;
     }
 

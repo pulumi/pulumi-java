@@ -24,7 +24,7 @@ public final class GrafeasV1beta1BuildDetailsResponse extends io.pulumi.resource
     @Import(name="provenance", required=true)
       private final BuildProvenanceResponse provenance;
 
-    public BuildProvenanceResponse getProvenance() {
+    public BuildProvenanceResponse provenance() {
         return this.provenance;
     }
 
@@ -35,7 +35,7 @@ public final class GrafeasV1beta1BuildDetailsResponse extends io.pulumi.resource
     @Import(name="provenanceBytes", required=true)
       private final String provenanceBytes;
 
-    public String getProvenanceBytes() {
+    public String provenanceBytes() {
         return this.provenanceBytes;
     }
 

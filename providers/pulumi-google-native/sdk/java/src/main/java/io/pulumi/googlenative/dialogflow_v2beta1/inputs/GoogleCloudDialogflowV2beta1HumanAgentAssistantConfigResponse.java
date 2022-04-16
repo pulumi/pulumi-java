@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse
     @Import(name="endUserSuggestionConfig", required=true)
       private final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse endUserSuggestionConfig;
 
-    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse getEndUserSuggestionConfig() {
+    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse endUserSuggestionConfig() {
         return this.endUserSuggestionConfig;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse
     @Import(name="humanAgentSuggestionConfig", required=true)
       private final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse humanAgentSuggestionConfig;
 
-    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse getHumanAgentSuggestionConfig() {
+    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse humanAgentSuggestionConfig() {
         return this.humanAgentSuggestionConfig;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse
     @Import(name="messageAnalysisConfig", required=true)
       private final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse messageAnalysisConfig;
 
-    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse getMessageAnalysisConfig() {
+    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse messageAnalysisConfig() {
         return this.messageAnalysisConfig;
     }
 
@@ -58,7 +58,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse
     @Import(name="notificationConfig", required=true)
       private final GoogleCloudDialogflowV2beta1NotificationConfigResponse notificationConfig;
 
-    public GoogleCloudDialogflowV2beta1NotificationConfigResponse getNotificationConfig() {
+    public GoogleCloudDialogflowV2beta1NotificationConfigResponse notificationConfig() {
         return this.notificationConfig;
     }
 

@@ -24,7 +24,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleArgs extends io.pulu
     @Import(name="action", required=true)
       private final Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
 
@@ -35,7 +35,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleArgs extends io.pulu
     @Import(name="header", required=true)
       private final Output<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs> header;
 
-    public Output<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs> getHeader() {
+    public Output<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs> header() {
         return this.header;
     }
 
@@ -46,7 +46,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleArgs extends io.pulu
     @Import(name="ruleOptions", required=true)
       private final Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs>> ruleOptions;
 
-    public Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs>> getRuleOptions() {
+    public Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs>> ruleOptions() {
         return this.ruleOptions;
     }
 

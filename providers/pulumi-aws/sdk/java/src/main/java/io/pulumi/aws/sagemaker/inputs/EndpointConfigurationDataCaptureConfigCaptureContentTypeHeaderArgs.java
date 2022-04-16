@@ -23,7 +23,7 @@ public final class EndpointConfigurationDataCaptureConfigCaptureContentTypeHeade
     @Import(name="csvContentTypes")
       private final @Nullable Output<List<String>> csvContentTypes;
 
-    public Output<List<String>> getCsvContentTypes() {
+    public Output<List<String>> csvContentTypes() {
         return this.csvContentTypes == null ? Codegen.empty() : this.csvContentTypes;
     }
 
@@ -34,7 +34,7 @@ public final class EndpointConfigurationDataCaptureConfigCaptureContentTypeHeade
     @Import(name="jsonContentTypes")
       private final @Nullable Output<List<String>> jsonContentTypes;
 
-    public Output<List<String>> getJsonContentTypes() {
+    public Output<List<String>> jsonContentTypes() {
         return this.jsonContentTypes == null ? Codegen.empty() : this.jsonContentTypes;
     }
 

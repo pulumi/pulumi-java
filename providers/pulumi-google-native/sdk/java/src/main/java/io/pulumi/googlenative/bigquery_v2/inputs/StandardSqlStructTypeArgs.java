@@ -19,7 +19,7 @@ public final class StandardSqlStructTypeArgs extends io.pulumi.resources.Resourc
     @Import(name="fields")
       private final @Nullable Output<List<StandardSqlFieldArgs>> fields;
 
-    public Output<List<StandardSqlFieldArgs>> getFields() {
+    public Output<List<StandardSqlFieldArgs>> fields() {
         return this.fields == null ? Codegen.empty() : this.fields;
     }
 

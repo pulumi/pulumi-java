@@ -26,7 +26,7 @@ public final class FunctionOutputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataType")
       private final @Nullable Output<String> dataType;
 
-    public Output<String> getDataType() {
+    public Output<String> dataType() {
         return this.dataType == null ? Codegen.empty() : this.dataType;
     }
 

@@ -26,7 +26,7 @@ public final class VirtualMachineScaleSetVMProtectionPolicyArgs extends io.pulum
     @Import(name="protectFromScaleIn")
       private final @Nullable Output<Boolean> protectFromScaleIn;
 
-    public Output<Boolean> getProtectFromScaleIn() {
+    public Output<Boolean> protectFromScaleIn() {
         return this.protectFromScaleIn == null ? Codegen.empty() : this.protectFromScaleIn;
     }
 
@@ -37,7 +37,7 @@ public final class VirtualMachineScaleSetVMProtectionPolicyArgs extends io.pulum
     @Import(name="protectFromScaleSetActions")
       private final @Nullable Output<Boolean> protectFromScaleSetActions;
 
-    public Output<Boolean> getProtectFromScaleSetActions() {
+    public Output<Boolean> protectFromScaleSetActions() {
         return this.protectFromScaleSetActions == null ? Codegen.empty() : this.protectFromScaleSetActions;
     }
 

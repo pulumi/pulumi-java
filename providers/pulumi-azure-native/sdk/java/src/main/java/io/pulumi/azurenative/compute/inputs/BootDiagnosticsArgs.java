@@ -27,7 +27,7 @@ public final class BootDiagnosticsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -38,7 +38,7 @@ public final class BootDiagnosticsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="storageUri")
       private final @Nullable Output<String> storageUri;
 
-    public Output<String> getStorageUri() {
+    public Output<String> storageUri() {
         return this.storageUri == null ? Codegen.empty() : this.storageUri;
     }
 

@@ -55,35 +55,35 @@ public final class GetLabelingJobResult {
      * The resource URL of the entity (not URL encoded).
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource entity.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Definition of a labeling job.
      * 
     */
-    public LabelingJobPropertiesResponse getProperties() {
+    public LabelingJobPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The resource provider and type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

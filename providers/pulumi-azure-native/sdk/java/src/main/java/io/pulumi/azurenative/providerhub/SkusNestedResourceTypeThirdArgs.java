@@ -23,7 +23,7 @@ public final class SkusNestedResourceTypeThirdArgs extends io.pulumi.resources.R
     @Import(name="nestedResourceTypeFirst", required=true)
       private final Output<String> nestedResourceTypeFirst;
 
-    public Output<String> getNestedResourceTypeFirst() {
+    public Output<String> nestedResourceTypeFirst() {
         return this.nestedResourceTypeFirst;
     }
 
@@ -34,7 +34,7 @@ public final class SkusNestedResourceTypeThirdArgs extends io.pulumi.resources.R
     @Import(name="nestedResourceTypeSecond", required=true)
       private final Output<String> nestedResourceTypeSecond;
 
-    public Output<String> getNestedResourceTypeSecond() {
+    public Output<String> nestedResourceTypeSecond() {
         return this.nestedResourceTypeSecond;
     }
 
@@ -45,14 +45,14 @@ public final class SkusNestedResourceTypeThirdArgs extends io.pulumi.resources.R
     @Import(name="nestedResourceTypeThird", required=true)
       private final Output<String> nestedResourceTypeThird;
 
-    public Output<String> getNestedResourceTypeThird() {
+    public Output<String> nestedResourceTypeThird() {
         return this.nestedResourceTypeThird;
     }
 
     @Import(name="properties")
       private final @Nullable Output<SkuResourcePropertiesArgs> properties;
 
-    public Output<SkuResourcePropertiesArgs> getProperties() {
+    public Output<SkuResourcePropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -63,7 +63,7 @@ public final class SkusNestedResourceTypeThirdArgs extends io.pulumi.resources.R
     @Import(name="providerNamespace", required=true)
       private final Output<String> providerNamespace;
 
-    public Output<String> getProviderNamespace() {
+    public Output<String> providerNamespace() {
         return this.providerNamespace;
     }
 
@@ -74,7 +74,7 @@ public final class SkusNestedResourceTypeThirdArgs extends io.pulumi.resources.R
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
 
@@ -85,7 +85,7 @@ public final class SkusNestedResourceTypeThirdArgs extends io.pulumi.resources.R
     @Import(name="sku")
       private final @Nullable Output<String> sku;
 
-    public Output<String> getSku() {
+    public Output<String> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 

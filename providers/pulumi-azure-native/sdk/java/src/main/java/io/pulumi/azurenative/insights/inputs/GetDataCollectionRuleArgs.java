@@ -19,7 +19,7 @@ public final class GetDataCollectionRuleArgs extends io.pulumi.resources.InvokeA
     @Import(name="dataCollectionRuleName", required=true)
       private final String dataCollectionRuleName;
 
-    public String getDataCollectionRuleName() {
+    public String dataCollectionRuleName() {
         return this.dataCollectionRuleName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDataCollectionRuleArgs extends io.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

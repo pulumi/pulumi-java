@@ -19,7 +19,7 @@ public final class LicenseValidityDateFormat extends io.pulumi.resources.InvokeA
     @Import(name="begin", required=true)
       private final String begin;
 
-    public String getBegin() {
+    public String begin() {
         return this.begin;
     }
 
@@ -30,7 +30,7 @@ public final class LicenseValidityDateFormat extends io.pulumi.resources.InvokeA
     @Import(name="end", required=true)
       private final String end;
 
-    public String getEnd() {
+    public String end() {
         return this.end;
     }
 

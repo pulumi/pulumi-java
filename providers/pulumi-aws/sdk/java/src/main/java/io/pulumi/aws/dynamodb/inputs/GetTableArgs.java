@@ -23,21 +23,21 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
     @Import(name="serverSideEncryption")
       private final @Nullable GetTableServerSideEncryption serverSideEncryption;
 
-    public Optional<GetTableServerSideEncryption> getServerSideEncryption() {
+    public Optional<GetTableServerSideEncryption> serverSideEncryption() {
         return this.serverSideEncryption == null ? Optional.empty() : Optional.ofNullable(this.serverSideEncryption);
     }
 
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

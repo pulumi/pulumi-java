@@ -23,7 +23,7 @@ public final class StreamingConfigResponse extends io.pulumi.resources.InvokeArg
     @Import(name="filter", required=true)
       private final String filter;
 
-    public String getFilter() {
+    public String filter() {
         return this.filter;
     }
 

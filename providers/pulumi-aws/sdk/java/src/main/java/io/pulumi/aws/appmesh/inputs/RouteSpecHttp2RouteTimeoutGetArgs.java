@@ -23,7 +23,7 @@ public final class RouteSpecHttp2RouteTimeoutGetArgs extends io.pulumi.resources
     @Import(name="idle")
       private final @Nullable Output<RouteSpecHttp2RouteTimeoutIdleGetArgs> idle;
 
-    public Output<RouteSpecHttp2RouteTimeoutIdleGetArgs> getIdle() {
+    public Output<RouteSpecHttp2RouteTimeoutIdleGetArgs> idle() {
         return this.idle == null ? Codegen.empty() : this.idle;
     }
 
@@ -34,7 +34,7 @@ public final class RouteSpecHttp2RouteTimeoutGetArgs extends io.pulumi.resources
     @Import(name="perRequest")
       private final @Nullable Output<RouteSpecHttp2RouteTimeoutPerRequestGetArgs> perRequest;
 
-    public Output<RouteSpecHttp2RouteTimeoutPerRequestGetArgs> getPerRequest() {
+    public Output<RouteSpecHttp2RouteTimeoutPerRequestGetArgs> perRequest() {
         return this.perRequest == null ? Codegen.empty() : this.perRequest;
     }
 

@@ -33,19 +33,19 @@ public final class GetBackupPlanResult {
         this.versionId = versionId;
     }
 
-    public Optional<BackupPlanResourceType> getBackupPlan() {
+    public Optional<BackupPlanResourceType> backupPlan() {
         return Optional.ofNullable(this.backupPlan);
     }
-    public Optional<String> getBackupPlanArn() {
+    public Optional<String> backupPlanArn() {
         return Optional.ofNullable(this.backupPlanArn);
     }
-    public Optional<String> getBackupPlanId() {
+    public Optional<String> backupPlanId() {
         return Optional.ofNullable(this.backupPlanId);
     }
-    public Optional<Object> getBackupPlanTags() {
+    public Optional<Object> backupPlanTags() {
         return Optional.ofNullable(this.backupPlanTags);
     }
-    public Optional<String> getVersionId() {
+    public Optional<String> versionId() {
         return Optional.ofNullable(this.versionId);
     }
 

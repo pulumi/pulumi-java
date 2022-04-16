@@ -24,7 +24,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
     @Import(name="allowedValues", required=true)
       private final List<String> allowedValues;
 
-    public List<String> getAllowedValues() {
+    public List<String> allowedValues() {
         return this.allowedValues;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
     @Import(name="policy", required=true)
       private final String policy;
 
-    public String getPolicy() {
+    public String policy() {
         return this.policy;
     }
 

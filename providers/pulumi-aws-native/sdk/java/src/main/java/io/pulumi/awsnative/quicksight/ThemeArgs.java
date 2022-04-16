@@ -22,7 +22,7 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="awsAccountId", required=true)
       private final Output<String> awsAccountId;
 
-    public Output<String> getAwsAccountId() {
+    public Output<String> awsAccountId() {
         return this.awsAccountId;
     }
 
@@ -36,14 +36,14 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="baseThemeId")
       private final @Nullable Output<String> baseThemeId;
 
-    public Output<String> getBaseThemeId() {
+    public Output<String> baseThemeId() {
         return this.baseThemeId == null ? Codegen.empty() : this.baseThemeId;
     }
 
     @Import(name="configuration")
       private final @Nullable Output<ThemeConfigurationArgs> configuration;
 
-    public Output<ThemeConfigurationArgs> getConfiguration() {
+    public Output<ThemeConfigurationArgs> configuration() {
         return this.configuration == null ? Codegen.empty() : this.configuration;
     }
 
@@ -54,7 +54,7 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -66,7 +66,7 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="permissions")
       private final @Nullable Output<List<ThemeResourcePermissionArgs>> permissions;
 
-    public Output<List<ThemeResourcePermissionArgs>> getPermissions() {
+    public Output<List<ThemeResourcePermissionArgs>> permissions() {
         return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
@@ -78,14 +78,14 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<ThemeTagArgs>> tags;
 
-    public Output<List<ThemeTagArgs>> getTags() {
+    public Output<List<ThemeTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="themeId", required=true)
       private final Output<String> themeId;
 
-    public Output<String> getThemeId() {
+    public Output<String> themeId() {
         return this.themeId;
     }
 
@@ -99,7 +99,7 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="versionDescription")
       private final @Nullable Output<String> versionDescription;
 
-    public Output<String> getVersionDescription() {
+    public Output<String> versionDescription() {
         return this.versionDescription == null ? Codegen.empty() : this.versionDescription;
     }
 

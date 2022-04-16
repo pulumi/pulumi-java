@@ -24,7 +24,7 @@ public final class ExecActionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="command", required=true)
       private final List<String> command;
 
-    public List<String> getCommand() {
+    public List<String> command() {
         return this.command;
     }
 

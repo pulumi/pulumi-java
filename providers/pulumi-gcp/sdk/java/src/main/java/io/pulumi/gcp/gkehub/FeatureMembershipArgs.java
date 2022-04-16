@@ -23,7 +23,7 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
     @Import(name="configmanagement", required=true)
       private final Output<FeatureMembershipConfigmanagementArgs> configmanagement;
 
-    public Output<FeatureMembershipConfigmanagementArgs> getConfigmanagement() {
+    public Output<FeatureMembershipConfigmanagementArgs> configmanagement() {
         return this.configmanagement;
     }
 
@@ -34,7 +34,7 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
     @Import(name="feature", required=true)
       private final Output<String> feature;
 
-    public Output<String> getFeature() {
+    public Output<String> feature() {
         return this.feature;
     }
 
@@ -45,7 +45,7 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -56,7 +56,7 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
     @Import(name="membership", required=true)
       private final Output<String> membership;
 
-    public Output<String> getMembership() {
+    public Output<String> membership() {
         return this.membership;
     }
 
@@ -67,7 +67,7 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

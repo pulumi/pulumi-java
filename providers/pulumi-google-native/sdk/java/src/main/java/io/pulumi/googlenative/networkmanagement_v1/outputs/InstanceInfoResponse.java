@@ -75,56 +75,56 @@ public final class InstanceInfoResponse {
      * Name of a Compute Engine instance.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * External IP address of the network interface.
      * 
     */
-    public String getExternalIp() {
+    public String externalIp() {
         return this.externalIp;
     }
     /**
      * Name of the network interface of a Compute Engine instance.
      * 
     */
-    public String getInterface_() {
+    public String interface_() {
         return this.interface_;
     }
     /**
      * Internal IP address of the network interface.
      * 
     */
-    public String getInternalIp() {
+    public String internalIp() {
         return this.internalIp;
     }
     /**
      * Network tags configured on the instance.
      * 
     */
-    public List<String> getNetworkTags() {
+    public List<String> networkTags() {
         return this.networkTags;
     }
     /**
      * URI of a Compute Engine network.
      * 
     */
-    public String getNetworkUri() {
+    public String networkUri() {
         return this.networkUri;
     }
     /**
      * Service account authorized for the instance.
      * 
     */
-    public String getServiceAccount() {
+    public String serviceAccount() {
         return this.serviceAccount;
     }
     /**
      * URI of a Compute Engine instance.
      * 
     */
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

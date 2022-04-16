@@ -28,7 +28,7 @@ public final class GooglePrivacyDlpV2KAnonymityConfigArgs extends io.pulumi.reso
     @Import(name="entityId")
       private final @Nullable Output<GooglePrivacyDlpV2EntityIdArgs> entityId;
 
-    public Output<GooglePrivacyDlpV2EntityIdArgs> getEntityId() {
+    public Output<GooglePrivacyDlpV2EntityIdArgs> entityId() {
         return this.entityId == null ? Codegen.empty() : this.entityId;
     }
 
@@ -39,7 +39,7 @@ public final class GooglePrivacyDlpV2KAnonymityConfigArgs extends io.pulumi.reso
     @Import(name="quasiIds")
       private final @Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds;
 
-    public Output<List<GooglePrivacyDlpV2FieldIdArgs>> getQuasiIds() {
+    public Output<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds() {
         return this.quasiIds == null ? Codegen.empty() : this.quasiIds;
     }
 

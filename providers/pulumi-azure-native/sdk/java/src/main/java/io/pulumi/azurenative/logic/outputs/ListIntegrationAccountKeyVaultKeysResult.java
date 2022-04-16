@@ -36,14 +36,14 @@ public final class ListIntegrationAccountKeyVaultKeysResult {
      * The skip token.
      * 
     */
-    public Optional<String> getSkipToken() {
+    public Optional<String> skipToken() {
         return Optional.ofNullable(this.skipToken);
     }
     /**
      * The key vault keys.
      * 
     */
-    public List<KeyVaultKeyResponse> getValue() {
+    public List<KeyVaultKeyResponse> value() {
         return this.value == null ? List.of() : this.value;
     }
 

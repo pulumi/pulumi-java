@@ -25,7 +25,7 @@ public final class PerformanceThresholdResponse extends io.pulumi.resources.Invo
     @Import(name="basicSliPerformance", required=true)
       private final BasicSliResponse basicSliPerformance;
 
-    public BasicSliResponse getBasicSliPerformance() {
+    public BasicSliResponse basicSliPerformance() {
         return this.basicSliPerformance;
     }
 
@@ -36,7 +36,7 @@ public final class PerformanceThresholdResponse extends io.pulumi.resources.Invo
     @Import(name="performance", required=true)
       private final RequestBasedSliResponse performance;
 
-    public RequestBasedSliResponse getPerformance() {
+    public RequestBasedSliResponse performance() {
         return this.performance;
     }
 
@@ -47,7 +47,7 @@ public final class PerformanceThresholdResponse extends io.pulumi.resources.Invo
     @Import(name="threshold", required=true)
       private final Double threshold;
 
-    public Double getThreshold() {
+    public Double threshold() {
         return this.threshold;
     }
 

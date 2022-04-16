@@ -28,7 +28,7 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="basicAuth")
       private final @Nullable Output<BasicAuthArgs> basicAuth;
 
-    public Output<BasicAuthArgs> getBasicAuth() {
+    public Output<BasicAuthArgs> basicAuth() {
         return this.basicAuth == null ? Codegen.empty() : this.basicAuth;
     }
 
@@ -39,7 +39,7 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccount")
       private final @Nullable Output<ServiceAccountArgs> serviceAccount;
 
-    public Output<ServiceAccountArgs> getServiceAccount() {
+    public Output<ServiceAccountArgs> serviceAccount() {
         return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
@@ -50,7 +50,7 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="useProjectDefault")
       private final @Nullable Output<Boolean> useProjectDefault;
 
-    public Output<Boolean> getUseProjectDefault() {
+    public Output<Boolean> useProjectDefault() {
         return this.useProjectDefault == null ? Codegen.empty() : this.useProjectDefault;
     }
 

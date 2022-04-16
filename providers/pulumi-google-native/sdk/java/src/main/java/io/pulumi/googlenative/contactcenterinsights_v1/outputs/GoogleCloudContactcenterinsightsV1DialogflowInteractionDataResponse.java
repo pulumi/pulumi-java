@@ -33,14 +33,14 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowInteractionDataRe
      * The confidence of the match ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
      * 
     */
-    public Double getConfidence() {
+    public Double confidence() {
         return this.confidence;
     }
     /**
      * The Dialogflow intent resource path. Format: projects/{project}/agent/{agent}/intents/{intent}
      * 
     */
-    public String getDialogflowIntentId() {
+    public String dialogflowIntentId() {
         return this.dialogflowIntentId;
     }
 

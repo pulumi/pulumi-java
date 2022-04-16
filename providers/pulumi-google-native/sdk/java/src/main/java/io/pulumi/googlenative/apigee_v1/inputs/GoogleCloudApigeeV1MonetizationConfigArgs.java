@@ -26,7 +26,7 @@ public final class GoogleCloudApigeeV1MonetizationConfigArgs extends io.pulumi.r
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 

@@ -19,14 +19,14 @@ public final class QuickConnectQueueQuickConnectConfig extends io.pulumi.resourc
     @Import(name="contactFlowArn", required=true)
       private final String contactFlowArn;
 
-    public String getContactFlowArn() {
+    public String contactFlowArn() {
         return this.contactFlowArn;
     }
 
     @Import(name="queueArn", required=true)
       private final String queueArn;
 
-    public String getQueueArn() {
+    public String queueArn() {
         return this.queueArn;
     }
 

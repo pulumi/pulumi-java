@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigArgs extends io.pul
     @Import(name="bucketSize", required=true)
       private final Output<Double> bucketSize;
 
-    public Output<Double> getBucketSize() {
+    public Output<Double> bucketSize() {
         return this.bucketSize;
     }
 
@@ -37,7 +37,7 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigArgs extends io.pul
     @Import(name="lowerBound", required=true)
       private final Output<GooglePrivacyDlpV2ValueArgs> lowerBound;
 
-    public Output<GooglePrivacyDlpV2ValueArgs> getLowerBound() {
+    public Output<GooglePrivacyDlpV2ValueArgs> lowerBound() {
         return this.lowerBound;
     }
 
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigArgs extends io.pul
     @Import(name="upperBound", required=true)
       private final Output<GooglePrivacyDlpV2ValueArgs> upperBound;
 
-    public Output<GooglePrivacyDlpV2ValueArgs> getUpperBound() {
+    public Output<GooglePrivacyDlpV2ValueArgs> upperBound() {
         return this.upperBound;
     }
 

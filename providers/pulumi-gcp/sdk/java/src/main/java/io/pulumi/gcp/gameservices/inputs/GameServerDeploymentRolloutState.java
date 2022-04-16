@@ -26,7 +26,7 @@ public final class GameServerDeploymentRolloutState extends io.pulumi.resources.
     @Import(name="defaultGameServerConfig")
       private final @Nullable Output<String> defaultGameServerConfig;
 
-    public Output<String> getDefaultGameServerConfig() {
+    public Output<String> defaultGameServerConfig() {
         return this.defaultGameServerConfig == null ? Codegen.empty() : this.defaultGameServerConfig;
     }
 
@@ -37,7 +37,7 @@ public final class GameServerDeploymentRolloutState extends io.pulumi.resources.
     @Import(name="deploymentId")
       private final @Nullable Output<String> deploymentId;
 
-    public Output<String> getDeploymentId() {
+    public Output<String> deploymentId() {
         return this.deploymentId == null ? Codegen.empty() : this.deploymentId;
     }
 
@@ -52,7 +52,7 @@ public final class GameServerDeploymentRolloutState extends io.pulumi.resources.
     @Import(name="gameServerConfigOverrides")
       private final @Nullable Output<List<GameServerDeploymentRolloutGameServerConfigOverrideGetArgs>> gameServerConfigOverrides;
 
-    public Output<List<GameServerDeploymentRolloutGameServerConfigOverrideGetArgs>> getGameServerConfigOverrides() {
+    public Output<List<GameServerDeploymentRolloutGameServerConfigOverrideGetArgs>> gameServerConfigOverrides() {
         return this.gameServerConfigOverrides == null ? Codegen.empty() : this.gameServerConfigOverrides;
     }
 
@@ -64,7 +64,7 @@ public final class GameServerDeploymentRolloutState extends io.pulumi.resources.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -76,7 +76,7 @@ public final class GameServerDeploymentRolloutState extends io.pulumi.resources.
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

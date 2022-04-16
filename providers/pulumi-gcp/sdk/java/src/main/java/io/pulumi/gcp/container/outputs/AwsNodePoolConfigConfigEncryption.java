@@ -24,7 +24,7 @@ public final class AwsNodePoolConfigConfigEncryption {
      * Optional. The Amazon Resource Name (ARN) of the Customer Managed Key (CMK) used to encrypt AWS EBS volumes. If not specified, the default Amazon managed key associated to the AWS region where this cluster runs will be used.
      * 
     */
-    public String getKmsKeyArn() {
+    public String kmsKeyArn() {
         return this.kmsKeyArn;
     }
 

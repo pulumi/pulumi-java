@@ -43,7 +43,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return ARN of the access point.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +57,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return ARN of the file system.
      * 
      */
-    public Output<String> getFileSystemArn() {
+    public Output<String> fileSystemArn() {
         return this.fileSystemArn;
     }
     /**
@@ -71,13 +71,13 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return ID of the file system for which the access point is intended.
      * 
      */
-    public Output<String> getFileSystemId() {
+    public Output<String> fileSystemId() {
         return this.fileSystemId;
     }
     @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -91,7 +91,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return Operating system user and group applied to all file system requests made using the access point. Detailed below.
      * 
      */
-    public Output</* @Nullable */ AccessPointPosixUser> getPosixUser() {
+    public Output</* @Nullable */ AccessPointPosixUser> posixUser() {
         return this.posixUser;
     }
     /**
@@ -105,7 +105,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return Directory on the Amazon EFS file system that the access point provides access to. Detailed below.
      * 
      */
-    public Output<AccessPointRootDirectory> getRootDirectory() {
+    public Output<AccessPointRootDirectory> rootDirectory() {
         return this.rootDirectory;
     }
     /**
@@ -119,13 +119,13 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

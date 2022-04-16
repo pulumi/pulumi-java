@@ -18,7 +18,7 @@ public final class ApplicationInstanceManifestOverridesPayload {
         this.payloadData = payloadData;
     }
 
-    public Optional<String> getPayloadData() {
+    public Optional<String> payloadData() {
         return Optional.ofNullable(this.payloadData);
     }
 

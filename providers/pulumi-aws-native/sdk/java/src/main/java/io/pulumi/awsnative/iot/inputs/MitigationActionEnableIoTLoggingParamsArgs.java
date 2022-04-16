@@ -26,7 +26,7 @@ public final class MitigationActionEnableIoTLoggingParamsArgs extends io.pulumi.
     @Import(name="logLevel", required=true)
       private final Output<MitigationActionEnableIoTLoggingParamsLogLevel> logLevel;
 
-    public Output<MitigationActionEnableIoTLoggingParamsLogLevel> getLogLevel() {
+    public Output<MitigationActionEnableIoTLoggingParamsLogLevel> logLevel() {
         return this.logLevel;
     }
 
@@ -37,7 +37,7 @@ public final class MitigationActionEnableIoTLoggingParamsArgs extends io.pulumi.
     @Import(name="roleArnForLogging", required=true)
       private final Output<String> roleArnForLogging;
 
-    public Output<String> getRoleArnForLogging() {
+    public Output<String> roleArnForLogging() {
         return this.roleArnForLogging;
     }
 

@@ -68,7 +68,7 @@ public final class RouterBgp {
      * Possible values are `DEFAULT` and `CUSTOM`.
      * 
     */
-    public Optional<String> getAdvertiseMode() {
+    public Optional<String> advertiseMode() {
         return Optional.ofNullable(this.advertiseMode);
     }
     /**
@@ -80,7 +80,7 @@ public final class RouterBgp {
      * This enum field has the one valid value: ALL_SUBNETS
      * 
     */
-    public List<String> getAdvertisedGroups() {
+    public List<String> advertisedGroups() {
         return this.advertisedGroups == null ? List.of() : this.advertisedGroups;
     }
     /**
@@ -92,7 +92,7 @@ public final class RouterBgp {
      * Structure is documented below.
      * 
     */
-    public List<RouterBgpAdvertisedIpRange> getAdvertisedIpRanges() {
+    public List<RouterBgpAdvertisedIpRange> advertisedIpRanges() {
         return this.advertisedIpRanges == null ? List.of() : this.advertisedIpRanges;
     }
     /**
@@ -102,7 +102,7 @@ public final class RouterBgp {
      * will have the same local ASN.
      * 
     */
-    public Integer getAsn() {
+    public Integer asn() {
         return this.asn;
     }
 

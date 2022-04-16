@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
     @Import(name="bucketSize", required=true)
       private final String bucketSize;
 
-    public String getBucketSize() {
+    public String bucketSize() {
         return this.bucketSize;
     }
 
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
     @Import(name="bucketValueCount", required=true)
       private final String bucketValueCount;
 
-    public String getBucketValueCount() {
+    public String bucketValueCount() {
         return this.bucketValueCount;
     }
 
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
     @Import(name="bucketValues", required=true)
       private final List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> bucketValues;
 
-    public List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> getBucketValues() {
+    public List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> bucketValues() {
         return this.bucketValues;
     }
 
@@ -58,7 +58,7 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
     @Import(name="maxAnonymity", required=true)
       private final String maxAnonymity;
 
-    public String getMaxAnonymity() {
+    public String maxAnonymity() {
         return this.maxAnonymity;
     }
 
@@ -69,7 +69,7 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
     @Import(name="minAnonymity", required=true)
       private final String minAnonymity;
 
-    public String getMinAnonymity() {
+    public String minAnonymity() {
         return this.minAnonymity;
     }
 

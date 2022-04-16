@@ -24,7 +24,7 @@ public final class SecurityProfileBehavior extends io.pulumi.resources.InvokeArg
     @Import(name="criteria")
       private final @Nullable SecurityProfileBehaviorCriteria criteria;
 
-    public Optional<SecurityProfileBehaviorCriteria> getCriteria() {
+    public Optional<SecurityProfileBehaviorCriteria> criteria() {
         return this.criteria == null ? Optional.empty() : Optional.ofNullable(this.criteria);
     }
 
@@ -35,14 +35,14 @@ public final class SecurityProfileBehavior extends io.pulumi.resources.InvokeArg
     @Import(name="metric")
       private final @Nullable String metric;
 
-    public Optional<String> getMetric() {
+    public Optional<String> metric() {
         return this.metric == null ? Optional.empty() : Optional.ofNullable(this.metric);
     }
 
     @Import(name="metricDimension")
       private final @Nullable SecurityProfileMetricDimension metricDimension;
 
-    public Optional<SecurityProfileMetricDimension> getMetricDimension() {
+    public Optional<SecurityProfileMetricDimension> metricDimension() {
         return this.metricDimension == null ? Optional.empty() : Optional.ofNullable(this.metricDimension);
     }
 
@@ -53,7 +53,7 @@ public final class SecurityProfileBehavior extends io.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -64,7 +64,7 @@ public final class SecurityProfileBehavior extends io.pulumi.resources.InvokeArg
     @Import(name="suppressAlerts")
       private final @Nullable Boolean suppressAlerts;
 
-    public Optional<Boolean> getSuppressAlerts() {
+    public Optional<Boolean> suppressAlerts() {
         return this.suppressAlerts == null ? Optional.empty() : Optional.ofNullable(this.suppressAlerts);
     }
 

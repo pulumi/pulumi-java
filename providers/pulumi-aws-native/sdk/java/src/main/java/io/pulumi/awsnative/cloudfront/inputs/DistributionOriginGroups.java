@@ -19,14 +19,14 @@ public final class DistributionOriginGroups extends io.pulumi.resources.InvokeAr
     @Import(name="items")
       private final @Nullable List<DistributionOriginGroup> items;
 
-    public List<DistributionOriginGroup> getItems() {
+    public List<DistributionOriginGroup> items() {
         return this.items == null ? List.of() : this.items;
     }
 
     @Import(name="quantity", required=true)
       private final Integer quantity;
 
-    public Integer getQuantity() {
+    public Integer quantity() {
         return this.quantity;
     }
 

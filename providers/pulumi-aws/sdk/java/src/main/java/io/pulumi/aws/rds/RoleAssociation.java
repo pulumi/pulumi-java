@@ -45,7 +45,7 @@ public class RoleAssociation extends io.pulumi.resources.CustomResource {
      * @return DB Instance Identifier to associate with the IAM Role.
      * 
      */
-    public Output<String> getDbInstanceIdentifier() {
+    public Output<String> dbInstanceIdentifier() {
         return this.dbInstanceIdentifier;
     }
     /**
@@ -59,7 +59,7 @@ public class RoleAssociation extends io.pulumi.resources.CustomResource {
      * @return Name of the feature for association. This can be found in the AWS documentation relevant to the integration or a full list is available in the `SupportedFeatureNames` list returned by [AWS CLI rds describe-db-engine-versions](https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-engine-versions.html).
      * 
      */
-    public Output<String> getFeatureName() {
+    public Output<String> featureName() {
         return this.featureName;
     }
     /**
@@ -73,7 +73,7 @@ public class RoleAssociation extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the IAM Role to associate with the DB Instance.
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 

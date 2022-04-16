@@ -45,7 +45,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * @return Reasons why App Service Certificate is not renewable at the current moment.
      * 
      */
-    public Output<List<String>> getAppServiceCertificateNotRenewableReasons() {
+    public Output<List<String>> appServiceCertificateNotRenewableReasons() {
         return this.appServiceCertificateNotRenewableReasons;
     }
     /**
@@ -59,7 +59,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * @return <code>true</code> if the certificate should be automatically renewed when it expires; otherwise, <code>false</code>.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoRenew() {
+    public Output</* @Nullable */ Boolean> autoRenew() {
         return this.autoRenew;
     }
     /**
@@ -73,7 +73,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * @return State of the Key Vault secret.
      * 
      */
-    public Output</* @Nullable */ Map<String,AppServiceCertificateResponse>> getCertificates() {
+    public Output</* @Nullable */ Map<String,AppServiceCertificateResponse>> certificates() {
         return this.certificates;
     }
     /**
@@ -87,7 +87,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * @return Last CSR that was created for this order.
      * 
      */
-    public Output</* @Nullable */ String> getCsr() {
+    public Output</* @Nullable */ String> csr() {
         return this.csr;
     }
     /**
@@ -101,7 +101,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * @return Certificate distinguished name.
      * 
      */
-    public Output</* @Nullable */ String> getDistinguishedName() {
+    public Output</* @Nullable */ String> distinguishedName() {
         return this.distinguishedName;
     }
     /**
@@ -115,7 +115,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * @return Domain verification token.
      * 
      */
-    public Output<String> getDomainVerificationToken() {
+    public Output<String> domainVerificationToken() {
         return this.domainVerificationToken;
     }
     /**
@@ -129,7 +129,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * @return Certificate expiration time.
      * 
      */
-    public Output<String> getExpirationTime() {
+    public Output<String> expirationTime() {
         return this.expirationTime;
     }
     /**
@@ -143,7 +143,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * @return Intermediate certificate.
      * 
      */
-    public Output<CertificateDetailsResponse> getIntermediate() {
+    public Output<CertificateDetailsResponse> intermediate() {
         return this.intermediate;
     }
     /**
@@ -157,7 +157,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * @return <code>true</code> if private key is external; otherwise, <code>false</code>.
      * 
      */
-    public Output<Boolean> getIsPrivateKeyExternal() {
+    public Output<Boolean> isPrivateKeyExternal() {
         return this.isPrivateKeyExternal;
     }
     /**
@@ -171,7 +171,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * @return Certificate key size.
      * 
      */
-    public Output</* @Nullable */ Integer> getKeySize() {
+    public Output</* @Nullable */ Integer> keySize() {
         return this.keySize;
     }
     /**
@@ -185,7 +185,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -199,7 +199,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * @return Certificate last issuance time.
      * 
      */
-    public Output<String> getLastCertificateIssuanceTime() {
+    public Output<String> lastCertificateIssuanceTime() {
         return this.lastCertificateIssuanceTime;
     }
     /**
@@ -213,7 +213,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * @return Resource Location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -227,7 +227,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -241,7 +241,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * @return Time stamp when the certificate would be auto renewed next
      * 
      */
-    public Output<String> getNextAutoRenewalTimeStamp() {
+    public Output<String> nextAutoRenewalTimeStamp() {
         return this.nextAutoRenewalTimeStamp;
     }
     /**
@@ -255,7 +255,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * @return Certificate product type.
      * 
      */
-    public Output<String> getProductType() {
+    public Output<String> productType() {
         return this.productType;
     }
     /**
@@ -269,7 +269,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * @return Status of certificate order.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -283,7 +283,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * @return Root certificate.
      * 
      */
-    public Output<CertificateDetailsResponse> getRoot() {
+    public Output<CertificateDetailsResponse> root() {
         return this.root;
     }
     /**
@@ -297,7 +297,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * @return Current serial number of the certificate.
      * 
      */
-    public Output<String> getSerialNumber() {
+    public Output<String> serialNumber() {
         return this.serialNumber;
     }
     /**
@@ -311,7 +311,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * @return Signed certificate.
      * 
      */
-    public Output<CertificateDetailsResponse> getSignedCertificate() {
+    public Output<CertificateDetailsResponse> signedCertificate() {
         return this.signedCertificate;
     }
     /**
@@ -325,7 +325,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * @return Current order status.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -339,7 +339,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * @return The system metadata relating to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -353,7 +353,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -367,7 +367,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -381,7 +381,7 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
      * @return Duration in years (must be between 1 and 3).
      * 
      */
-    public Output</* @Nullable */ Integer> getValidityInYears() {
+    public Output</* @Nullable */ Integer> validityInYears() {
         return this.validityInYears;
     }
 

@@ -23,7 +23,7 @@ public final class AssetModelTransformArgs extends io.pulumi.resources.ResourceA
     @Import(name="expression", required=true)
       private final Output<String> expression;
 
-    public Output<String> getExpression() {
+    public Output<String> expression() {
         return this.expression;
     }
 
@@ -34,7 +34,7 @@ public final class AssetModelTransformArgs extends io.pulumi.resources.ResourceA
     @Import(name="variables", required=true)
       private final Output<List<AssetModelExpressionVariableArgs>> variables;
 
-    public Output<List<AssetModelExpressionVariableArgs>> getVariables() {
+    public Output<List<AssetModelExpressionVariableArgs>> variables() {
         return this.variables;
     }
 

@@ -24,7 +24,7 @@ public final class MetadataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="services", required=true)
       private final List<String> services;
 
-    public List<String> getServices() {
+    public List<String> services() {
         return this.services;
     }
 

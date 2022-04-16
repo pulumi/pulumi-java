@@ -31,7 +31,7 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="address")
       private final @Nullable Output<AddressableArgs> address;
 
-    public Output<AddressableArgs> getAddress() {
+    public Output<AddressableArgs> address() {
         return this.address == null ? Codegen.empty() : this.address;
     }
 
@@ -42,7 +42,7 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conditions")
       private final @Nullable Output<List<GoogleCloudRunV1ConditionArgs>> conditions;
 
-    public Output<List<GoogleCloudRunV1ConditionArgs>> getConditions() {
+    public Output<List<GoogleCloudRunV1ConditionArgs>> conditions() {
         return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
@@ -53,7 +53,7 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="latestCreatedRevisionName")
       private final @Nullable Output<String> latestCreatedRevisionName;
 
-    public Output<String> getLatestCreatedRevisionName() {
+    public Output<String> latestCreatedRevisionName() {
         return this.latestCreatedRevisionName == null ? Codegen.empty() : this.latestCreatedRevisionName;
     }
 
@@ -64,7 +64,7 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="latestReadyRevisionName")
       private final @Nullable Output<String> latestReadyRevisionName;
 
-    public Output<String> getLatestReadyRevisionName() {
+    public Output<String> latestReadyRevisionName() {
         return this.latestReadyRevisionName == null ? Codegen.empty() : this.latestReadyRevisionName;
     }
 
@@ -75,7 +75,7 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;
 
-    public Output<Integer> getObservedGeneration() {
+    public Output<Integer> observedGeneration() {
         return this.observedGeneration == null ? Codegen.empty() : this.observedGeneration;
     }
 
@@ -86,7 +86,7 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="traffic")
       private final @Nullable Output<List<TrafficTargetArgs>> traffic;
 
-    public Output<List<TrafficTargetArgs>> getTraffic() {
+    public Output<List<TrafficTargetArgs>> traffic() {
         return this.traffic == null ? Codegen.empty() : this.traffic;
     }
 
@@ -97,7 +97,7 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 

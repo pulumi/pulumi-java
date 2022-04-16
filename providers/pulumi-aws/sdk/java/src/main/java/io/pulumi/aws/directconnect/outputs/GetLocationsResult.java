@@ -33,14 +33,14 @@ public final class GetLocationsResult {
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The code for the locations.
      * 
     */
-    public List<String> getLocationCodes() {
+    public List<String> locationCodes() {
         return this.locationCodes;
     }
 

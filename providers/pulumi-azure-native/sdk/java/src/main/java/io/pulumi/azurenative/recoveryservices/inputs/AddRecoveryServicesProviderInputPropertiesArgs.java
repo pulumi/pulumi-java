@@ -27,7 +27,7 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
     @Import(name="authenticationIdentityInput", required=true)
       private final Output<IdentityProviderInputArgs> authenticationIdentityInput;
 
-    public Output<IdentityProviderInputArgs> getAuthenticationIdentityInput() {
+    public Output<IdentityProviderInputArgs> authenticationIdentityInput() {
         return this.authenticationIdentityInput;
     }
 
@@ -38,7 +38,7 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
     @Import(name="dataPlaneAuthenticationIdentityInput")
       private final @Nullable Output<IdentityProviderInputArgs> dataPlaneAuthenticationIdentityInput;
 
-    public Output<IdentityProviderInputArgs> getDataPlaneAuthenticationIdentityInput() {
+    public Output<IdentityProviderInputArgs> dataPlaneAuthenticationIdentityInput() {
         return this.dataPlaneAuthenticationIdentityInput == null ? Codegen.empty() : this.dataPlaneAuthenticationIdentityInput;
     }
 
@@ -49,7 +49,7 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
     @Import(name="machineId")
       private final @Nullable Output<String> machineId;
 
-    public Output<String> getMachineId() {
+    public Output<String> machineId() {
         return this.machineId == null ? Codegen.empty() : this.machineId;
     }
 
@@ -60,7 +60,7 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
     @Import(name="machineName", required=true)
       private final Output<String> machineName;
 
-    public Output<String> getMachineName() {
+    public Output<String> machineName() {
         return this.machineName;
     }
 
@@ -71,7 +71,7 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
     @Import(name="resourceAccessIdentityInput", required=true)
       private final Output<IdentityProviderInputArgs> resourceAccessIdentityInput;
 
-    public Output<IdentityProviderInputArgs> getResourceAccessIdentityInput() {
+    public Output<IdentityProviderInputArgs> resourceAccessIdentityInput() {
         return this.resourceAccessIdentityInput;
     }
 

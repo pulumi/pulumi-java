@@ -28,7 +28,7 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
     @Import(name="destinations", required=true)
       private final Output<List<String>> destinations;
 
-    public Output<List<String>> getDestinations() {
+    public Output<List<String>> destinations() {
         return this.destinations;
     }
 
@@ -39,7 +39,7 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
     @Import(name="disable")
       private final @Nullable Output<Boolean> disable;
 
-    public Output<Boolean> getDisable() {
+    public Output<Boolean> disable() {
         return this.disable == null ? Codegen.empty() : this.disable;
     }
 
@@ -50,7 +50,7 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -61,7 +61,7 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
     @Import(name="sources", required=true)
       private final Output<List<String>> sources;
 
-    public Output<List<String>> getSources() {
+    public Output<List<String>> sources() {
         return this.sources;
     }
 
@@ -72,7 +72,7 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
     @Import(name="testConfigurations", required=true)
       private final Output<List<String>> testConfigurations;
 
-    public Output<List<String>> getTestConfigurations() {
+    public Output<List<String>> testConfigurations() {
         return this.testConfigurations;
     }
 

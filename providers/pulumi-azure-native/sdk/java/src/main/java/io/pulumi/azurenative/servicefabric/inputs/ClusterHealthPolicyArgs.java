@@ -29,7 +29,7 @@ public final class ClusterHealthPolicyArgs extends io.pulumi.resources.ResourceA
     @Import(name="applicationHealthPolicies")
       private final @Nullable Output<Map<String,ApplicationHealthPolicyArgs>> applicationHealthPolicies;
 
-    public Output<Map<String,ApplicationHealthPolicyArgs>> getApplicationHealthPolicies() {
+    public Output<Map<String,ApplicationHealthPolicyArgs>> applicationHealthPolicies() {
         return this.applicationHealthPolicies == null ? Codegen.empty() : this.applicationHealthPolicies;
     }
 
@@ -45,7 +45,7 @@ public final class ClusterHealthPolicyArgs extends io.pulumi.resources.ResourceA
     @Import(name="maxPercentUnhealthyApplications")
       private final @Nullable Output<Integer> maxPercentUnhealthyApplications;
 
-    public Output<Integer> getMaxPercentUnhealthyApplications() {
+    public Output<Integer> maxPercentUnhealthyApplications() {
         return this.maxPercentUnhealthyApplications == null ? Codegen.empty() : this.maxPercentUnhealthyApplications;
     }
 
@@ -63,7 +63,7 @@ public final class ClusterHealthPolicyArgs extends io.pulumi.resources.ResourceA
     @Import(name="maxPercentUnhealthyNodes")
       private final @Nullable Output<Integer> maxPercentUnhealthyNodes;
 
-    public Output<Integer> getMaxPercentUnhealthyNodes() {
+    public Output<Integer> maxPercentUnhealthyNodes() {
         return this.maxPercentUnhealthyNodes == null ? Codegen.empty() : this.maxPercentUnhealthyNodes;
     }
 

@@ -120,84 +120,84 @@ public final class TumblingWindowTriggerResponse {
      * List of tags that can be used for describing the trigger.
      * 
     */
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * Specifies how long the trigger waits past due time before triggering new run. It doesn't alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
     */
-    public Optional<Object> getDelay() {
+    public Optional<Object> delay() {
         return Optional.ofNullable(this.delay);
     }
     /**
      * Triggers that this trigger depends on. Only tumbling window triggers are supported.
      * 
     */
-    public List<Object> getDependsOn() {
+    public List<Object> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Trigger description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The end time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.
      * 
     */
-    public Optional<String> getEndTime() {
+    public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
      * The frequency of the time windows.
      * 
     */
-    public String getFrequency() {
+    public String frequency() {
         return this.frequency;
     }
     /**
      * The interval of the time windows. The minimum interval allowed is 15 Minutes.
      * 
     */
-    public Integer getInterval() {
+    public Integer interval() {
         return this.interval;
     }
     /**
      * The max number of parallel time windows (ready for execution) for which a new run is triggered.
      * 
     */
-    public Integer getMaxConcurrency() {
+    public Integer maxConcurrency() {
         return this.maxConcurrency;
     }
     /**
      * Pipeline for which runs are created when an event is fired for trigger window that is ready.
      * 
     */
-    public TriggerPipelineReferenceResponse getPipeline() {
+    public TriggerPipelineReferenceResponse pipeline() {
         return this.pipeline;
     }
     /**
      * Retry policy that will be applied for failed pipeline runs.
      * 
     */
-    public Optional<RetryPolicyResponse> getRetryPolicy() {
+    public Optional<RetryPolicyResponse> retryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
     /**
      * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
      * 
     */
-    public String getRuntimeState() {
+    public String runtimeState() {
         return this.runtimeState;
     }
     /**
      * The start time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
     /**
@@ -205,7 +205,7 @@ public final class TumblingWindowTriggerResponse {
      * Expected value is 'TumblingWindowTrigger'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

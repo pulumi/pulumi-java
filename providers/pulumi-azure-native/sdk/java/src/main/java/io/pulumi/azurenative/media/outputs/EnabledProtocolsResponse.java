@@ -46,28 +46,28 @@ public final class EnabledProtocolsResponse {
      * Enable DASH protocol or not
      * 
     */
-    public Boolean getDash() {
+    public Boolean dash() {
         return this.dash;
     }
     /**
      * Enable Download protocol or not
      * 
     */
-    public Boolean getDownload() {
+    public Boolean download() {
         return this.download;
     }
     /**
      * Enable HLS protocol or not
      * 
     */
-    public Boolean getHls() {
+    public Boolean hls() {
         return this.hls;
     }
     /**
      * Enable SmoothStreaming protocol or not
      * 
     */
-    public Boolean getSmoothStreaming() {
+    public Boolean smoothStreaming() {
         return this.smoothStreaming;
     }
 

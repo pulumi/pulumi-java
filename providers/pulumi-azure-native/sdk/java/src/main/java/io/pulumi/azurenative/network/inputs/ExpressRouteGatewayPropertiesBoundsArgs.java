@@ -26,7 +26,7 @@ public final class ExpressRouteGatewayPropertiesBoundsArgs extends io.pulumi.res
     @Import(name="max")
       private final @Nullable Output<Integer> max;
 
-    public Output<Integer> getMax() {
+    public Output<Integer> max() {
         return this.max == null ? Codegen.empty() : this.max;
     }
 
@@ -37,7 +37,7 @@ public final class ExpressRouteGatewayPropertiesBoundsArgs extends io.pulumi.res
     @Import(name="min")
       private final @Nullable Output<Integer> min;
 
-    public Output<Integer> getMin() {
+    public Output<Integer> min() {
         return this.min == null ? Codegen.empty() : this.min;
     }
 

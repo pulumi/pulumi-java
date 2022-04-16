@@ -16,21 +16,21 @@ public final class GetAcceleratorAttribute extends io.pulumi.resources.InvokeArg
     @Import(name="flowLogsEnabled", required=true)
       private final Boolean flowLogsEnabled;
 
-    public Boolean getFlowLogsEnabled() {
+    public Boolean flowLogsEnabled() {
         return this.flowLogsEnabled;
     }
 
     @Import(name="flowLogsS3Bucket", required=true)
       private final String flowLogsS3Bucket;
 
-    public String getFlowLogsS3Bucket() {
+    public String flowLogsS3Bucket() {
         return this.flowLogsS3Bucket;
     }
 
     @Import(name="flowLogsS3Prefix", required=true)
       private final String flowLogsS3Prefix;
 
-    public String getFlowLogsS3Prefix() {
+    public String flowLogsS3Prefix() {
         return this.flowLogsS3Prefix;
     }
 

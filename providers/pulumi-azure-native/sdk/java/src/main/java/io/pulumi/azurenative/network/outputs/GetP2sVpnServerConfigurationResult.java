@@ -118,91 +118,91 @@ public final class GetP2sVpnServerConfigurationResult {
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the P2SVpnServerConfiguration that is unique within a VirtualWan in a resource group. This name can be used to access the resource along with Paren VirtualWan resource name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * List of references to P2SVpnGateways.
      * 
     */
-    public List<SubResourceResponse> getP2SVpnGateways() {
+    public List<SubResourceResponse> p2SVpnGateways() {
         return this.p2SVpnGateways;
     }
     /**
      * Radius client root certificate of P2SVpnServerConfiguration.
      * 
     */
-    public List<P2SVpnServerConfigRadiusClientRootCertificateResponse> getP2SVpnServerConfigRadiusClientRootCertificates() {
+    public List<P2SVpnServerConfigRadiusClientRootCertificateResponse> p2SVpnServerConfigRadiusClientRootCertificates() {
         return this.p2SVpnServerConfigRadiusClientRootCertificates == null ? List.of() : this.p2SVpnServerConfigRadiusClientRootCertificates;
     }
     /**
      * Radius Server root certificate of P2SVpnServerConfiguration.
      * 
     */
-    public List<P2SVpnServerConfigRadiusServerRootCertificateResponse> getP2SVpnServerConfigRadiusServerRootCertificates() {
+    public List<P2SVpnServerConfigRadiusServerRootCertificateResponse> p2SVpnServerConfigRadiusServerRootCertificates() {
         return this.p2SVpnServerConfigRadiusServerRootCertificates == null ? List.of() : this.p2SVpnServerConfigRadiusServerRootCertificates;
     }
     /**
      * VPN client revoked certificate of P2SVpnServerConfiguration.
      * 
     */
-    public List<P2SVpnServerConfigVpnClientRevokedCertificateResponse> getP2SVpnServerConfigVpnClientRevokedCertificates() {
+    public List<P2SVpnServerConfigVpnClientRevokedCertificateResponse> p2SVpnServerConfigVpnClientRevokedCertificates() {
         return this.p2SVpnServerConfigVpnClientRevokedCertificates == null ? List.of() : this.p2SVpnServerConfigVpnClientRevokedCertificates;
     }
     /**
      * VPN client root certificate of P2SVpnServerConfiguration.
      * 
     */
-    public List<P2SVpnServerConfigVpnClientRootCertificateResponse> getP2SVpnServerConfigVpnClientRootCertificates() {
+    public List<P2SVpnServerConfigVpnClientRootCertificateResponse> p2SVpnServerConfigVpnClientRootCertificates() {
         return this.p2SVpnServerConfigVpnClientRootCertificates == null ? List.of() : this.p2SVpnServerConfigVpnClientRootCertificates;
     }
     /**
      * The provisioning state of the P2S VPN server configuration resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The radius server address property of the P2SVpnServerConfiguration resource for point to site client connection.
      * 
     */
-    public Optional<String> getRadiusServerAddress() {
+    public Optional<String> radiusServerAddress() {
         return Optional.ofNullable(this.radiusServerAddress);
     }
     /**
      * The radius secret property of the P2SVpnServerConfiguration resource for point to site client connection.
      * 
     */
-    public Optional<String> getRadiusServerSecret() {
+    public Optional<String> radiusServerSecret() {
         return Optional.ofNullable(this.radiusServerSecret);
     }
     /**
      * VpnClientIpsecPolicies for P2SVpnServerConfiguration.
      * 
     */
-    public List<IpsecPolicyResponse> getVpnClientIpsecPolicies() {
+    public List<IpsecPolicyResponse> vpnClientIpsecPolicies() {
         return this.vpnClientIpsecPolicies == null ? List.of() : this.vpnClientIpsecPolicies;
     }
     /**
      * VPN protocols for the P2SVpnServerConfiguration.
      * 
     */
-    public List<String> getVpnProtocols() {
+    public List<String> vpnProtocols() {
         return this.vpnProtocols == null ? List.of() : this.vpnProtocols;
     }
 

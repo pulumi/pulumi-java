@@ -22,28 +22,28 @@ public final class GlobalTableGlobalSecondaryIndexArgs extends io.pulumi.resourc
     @Import(name="indexName", required=true)
       private final Output<String> indexName;
 
-    public Output<String> getIndexName() {
+    public Output<String> indexName() {
         return this.indexName;
     }
 
     @Import(name="keySchema", required=true)
       private final Output<List<GlobalTableKeySchemaArgs>> keySchema;
 
-    public Output<List<GlobalTableKeySchemaArgs>> getKeySchema() {
+    public Output<List<GlobalTableKeySchemaArgs>> keySchema() {
         return this.keySchema;
     }
 
     @Import(name="projection", required=true)
       private final Output<GlobalTableProjectionArgs> projection;
 
-    public Output<GlobalTableProjectionArgs> getProjection() {
+    public Output<GlobalTableProjectionArgs> projection() {
         return this.projection;
     }
 
     @Import(name="writeProvisionedThroughputSettings")
       private final @Nullable Output<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings;
 
-    public Output<GlobalTableWriteProvisionedThroughputSettingsArgs> getWriteProvisionedThroughputSettings() {
+    public Output<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings() {
         return this.writeProvisionedThroughputSettings == null ? Codegen.empty() : this.writeProvisionedThroughputSettings;
     }
 

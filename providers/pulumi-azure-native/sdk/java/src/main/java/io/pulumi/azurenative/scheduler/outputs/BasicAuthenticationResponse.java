@@ -42,7 +42,7 @@ public final class BasicAuthenticationResponse {
      * Gets or sets the password, return value will always be empty.
      * 
     */
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
@@ -50,14 +50,14 @@ public final class BasicAuthenticationResponse {
      * Expected value is 'Basic'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Gets or sets the username.
      * 
     */
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
 

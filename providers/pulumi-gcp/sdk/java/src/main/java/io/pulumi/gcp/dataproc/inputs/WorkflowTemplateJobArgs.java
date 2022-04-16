@@ -33,7 +33,7 @@ public final class WorkflowTemplateJobArgs extends io.pulumi.resources.ResourceA
     @Import(name="hadoopJob")
       private final @Nullable Output<WorkflowTemplateJobHadoopJobArgs> hadoopJob;
 
-    public Output<WorkflowTemplateJobHadoopJobArgs> getHadoopJob() {
+    public Output<WorkflowTemplateJobHadoopJobArgs> hadoopJob() {
         return this.hadoopJob == null ? Codegen.empty() : this.hadoopJob;
     }
 
@@ -44,7 +44,7 @@ public final class WorkflowTemplateJobArgs extends io.pulumi.resources.ResourceA
     @Import(name="hiveJob")
       private final @Nullable Output<WorkflowTemplateJobHiveJobArgs> hiveJob;
 
-    public Output<WorkflowTemplateJobHiveJobArgs> getHiveJob() {
+    public Output<WorkflowTemplateJobHiveJobArgs> hiveJob() {
         return this.hiveJob == null ? Codegen.empty() : this.hiveJob;
     }
 
@@ -55,7 +55,7 @@ public final class WorkflowTemplateJobArgs extends io.pulumi.resources.ResourceA
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -66,7 +66,7 @@ public final class WorkflowTemplateJobArgs extends io.pulumi.resources.ResourceA
     @Import(name="pigJob")
       private final @Nullable Output<WorkflowTemplateJobPigJobArgs> pigJob;
 
-    public Output<WorkflowTemplateJobPigJobArgs> getPigJob() {
+    public Output<WorkflowTemplateJobPigJobArgs> pigJob() {
         return this.pigJob == null ? Codegen.empty() : this.pigJob;
     }
 
@@ -77,7 +77,7 @@ public final class WorkflowTemplateJobArgs extends io.pulumi.resources.ResourceA
     @Import(name="prerequisiteStepIds")
       private final @Nullable Output<List<String>> prerequisiteStepIds;
 
-    public Output<List<String>> getPrerequisiteStepIds() {
+    public Output<List<String>> prerequisiteStepIds() {
         return this.prerequisiteStepIds == null ? Codegen.empty() : this.prerequisiteStepIds;
     }
 
@@ -88,7 +88,7 @@ public final class WorkflowTemplateJobArgs extends io.pulumi.resources.ResourceA
     @Import(name="prestoJob")
       private final @Nullable Output<WorkflowTemplateJobPrestoJobArgs> prestoJob;
 
-    public Output<WorkflowTemplateJobPrestoJobArgs> getPrestoJob() {
+    public Output<WorkflowTemplateJobPrestoJobArgs> prestoJob() {
         return this.prestoJob == null ? Codegen.empty() : this.prestoJob;
     }
 
@@ -99,7 +99,7 @@ public final class WorkflowTemplateJobArgs extends io.pulumi.resources.ResourceA
     @Import(name="pysparkJob")
       private final @Nullable Output<WorkflowTemplateJobPysparkJobArgs> pysparkJob;
 
-    public Output<WorkflowTemplateJobPysparkJobArgs> getPysparkJob() {
+    public Output<WorkflowTemplateJobPysparkJobArgs> pysparkJob() {
         return this.pysparkJob == null ? Codegen.empty() : this.pysparkJob;
     }
 
@@ -110,7 +110,7 @@ public final class WorkflowTemplateJobArgs extends io.pulumi.resources.ResourceA
     @Import(name="scheduling")
       private final @Nullable Output<WorkflowTemplateJobSchedulingArgs> scheduling;
 
-    public Output<WorkflowTemplateJobSchedulingArgs> getScheduling() {
+    public Output<WorkflowTemplateJobSchedulingArgs> scheduling() {
         return this.scheduling == null ? Codegen.empty() : this.scheduling;
     }
 
@@ -121,7 +121,7 @@ public final class WorkflowTemplateJobArgs extends io.pulumi.resources.ResourceA
     @Import(name="sparkJob")
       private final @Nullable Output<WorkflowTemplateJobSparkJobArgs> sparkJob;
 
-    public Output<WorkflowTemplateJobSparkJobArgs> getSparkJob() {
+    public Output<WorkflowTemplateJobSparkJobArgs> sparkJob() {
         return this.sparkJob == null ? Codegen.empty() : this.sparkJob;
     }
 
@@ -132,7 +132,7 @@ public final class WorkflowTemplateJobArgs extends io.pulumi.resources.ResourceA
     @Import(name="sparkRJob")
       private final @Nullable Output<WorkflowTemplateJobSparkRJobArgs> sparkRJob;
 
-    public Output<WorkflowTemplateJobSparkRJobArgs> getSparkRJob() {
+    public Output<WorkflowTemplateJobSparkRJobArgs> sparkRJob() {
         return this.sparkRJob == null ? Codegen.empty() : this.sparkRJob;
     }
 
@@ -143,7 +143,7 @@ public final class WorkflowTemplateJobArgs extends io.pulumi.resources.ResourceA
     @Import(name="sparkSqlJob")
       private final @Nullable Output<WorkflowTemplateJobSparkSqlJobArgs> sparkSqlJob;
 
-    public Output<WorkflowTemplateJobSparkSqlJobArgs> getSparkSqlJob() {
+    public Output<WorkflowTemplateJobSparkSqlJobArgs> sparkSqlJob() {
         return this.sparkSqlJob == null ? Codegen.empty() : this.sparkSqlJob;
     }
 
@@ -154,7 +154,7 @@ public final class WorkflowTemplateJobArgs extends io.pulumi.resources.ResourceA
     @Import(name="stepId", required=true)
       private final Output<String> stepId;
 
-    public Output<String> getStepId() {
+    public Output<String> stepId() {
         return this.stepId;
     }
 

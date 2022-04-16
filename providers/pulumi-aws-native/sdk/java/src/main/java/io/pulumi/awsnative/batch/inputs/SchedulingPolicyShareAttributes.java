@@ -18,14 +18,14 @@ public final class SchedulingPolicyShareAttributes extends io.pulumi.resources.I
     @Import(name="shareIdentifier")
       private final @Nullable String shareIdentifier;
 
-    public Optional<String> getShareIdentifier() {
+    public Optional<String> shareIdentifier() {
         return this.shareIdentifier == null ? Optional.empty() : Optional.ofNullable(this.shareIdentifier);
     }
 
     @Import(name="weightFactor")
       private final @Nullable Double weightFactor;
 
-    public Optional<Double> getWeightFactor() {
+    public Optional<Double> weightFactor() {
         return this.weightFactor == null ? Optional.empty() : Optional.ofNullable(this.weightFactor);
     }
 

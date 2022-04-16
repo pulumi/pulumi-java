@@ -24,7 +24,7 @@ public final class AnomalyDetectorConfig {
      * Frequency of anomaly detection
      * 
     */
-    public AnomalyDetectorFrequency getAnomalyDetectorFrequency() {
+    public AnomalyDetectorFrequency anomalyDetectorFrequency() {
         return this.anomalyDetectorFrequency;
     }
 

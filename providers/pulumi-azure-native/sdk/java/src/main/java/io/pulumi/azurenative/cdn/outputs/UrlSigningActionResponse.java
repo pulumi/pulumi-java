@@ -35,14 +35,14 @@ public final class UrlSigningActionResponse {
      * Expected value is 'UrlSigning'.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Defines the parameters for the action.
      * 
     */
-    public UrlSigningActionParametersResponse getParameters() {
+    public UrlSigningActionParametersResponse parameters() {
         return this.parameters;
     }
 

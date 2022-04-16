@@ -22,7 +22,7 @@ public final class RegisteredPrefixArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="peeringName", required=true)
       private final Output<String> peeringName;
 
-    public Output<String> getPeeringName() {
+    public Output<String> peeringName() {
         return this.peeringName;
     }
 
@@ -33,7 +33,7 @@ public final class RegisteredPrefixArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
@@ -44,7 +44,7 @@ public final class RegisteredPrefixArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="registeredPrefixName")
       private final @Nullable Output<String> registeredPrefixName;
 
-    public Output<String> getRegisteredPrefixName() {
+    public Output<String> registeredPrefixName() {
         return this.registeredPrefixName == null ? Codegen.empty() : this.registeredPrefixName;
     }
 
@@ -55,7 +55,7 @@ public final class RegisteredPrefixArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -24,7 +24,7 @@ public final class UserLoginProfileArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="passwordLength")
       private final @Nullable Output<Integer> passwordLength;
 
-    public Output<Integer> getPasswordLength() {
+    public Output<Integer> passwordLength() {
         return this.passwordLength == null ? Codegen.empty() : this.passwordLength;
     }
 
@@ -35,7 +35,7 @@ public final class UserLoginProfileArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="passwordResetRequired")
       private final @Nullable Output<Boolean> passwordResetRequired;
 
-    public Output<Boolean> getPasswordResetRequired() {
+    public Output<Boolean> passwordResetRequired() {
         return this.passwordResetRequired == null ? Codegen.empty() : this.passwordResetRequired;
     }
 
@@ -46,7 +46,7 @@ public final class UserLoginProfileArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="pgpKey", required=true)
       private final Output<String> pgpKey;
 
-    public Output<String> getPgpKey() {
+    public Output<String> pgpKey() {
         return this.pgpKey;
     }
 
@@ -57,7 +57,7 @@ public final class UserLoginProfileArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="user", required=true)
       private final Output<String> user;
 
-    public Output<String> getUser() {
+    public Output<String> user() {
         return this.user;
     }
 

@@ -27,7 +27,7 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupResponse extends i
     @Import(name="ruleGroupName", required=true)
       private final String ruleGroupName;
 
-    public String getRuleGroupName() {
+    public String ruleGroupName() {
         return this.ruleGroupName;
     }
 
@@ -38,7 +38,7 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupResponse extends i
     @Import(name="rules")
       private final @Nullable List<Integer> rules;
 
-    public List<Integer> getRules() {
+    public List<Integer> rules() {
         return this.rules == null ? List.of() : this.rules;
     }
 

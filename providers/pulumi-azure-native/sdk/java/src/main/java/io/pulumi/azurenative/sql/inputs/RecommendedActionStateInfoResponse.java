@@ -23,7 +23,7 @@ public final class RecommendedActionStateInfoResponse extends io.pulumi.resource
     @Import(name="actionInitiatedBy", required=true)
       private final String actionInitiatedBy;
 
-    public String getActionInitiatedBy() {
+    public String actionInitiatedBy() {
         return this.actionInitiatedBy;
     }
 
@@ -34,7 +34,7 @@ public final class RecommendedActionStateInfoResponse extends io.pulumi.resource
     @Import(name="currentValue", required=true)
       private final String currentValue;
 
-    public String getCurrentValue() {
+    public String currentValue() {
         return this.currentValue;
     }
 
@@ -45,7 +45,7 @@ public final class RecommendedActionStateInfoResponse extends io.pulumi.resource
     @Import(name="lastModified", required=true)
       private final String lastModified;
 
-    public String getLastModified() {
+    public String lastModified() {
         return this.lastModified;
     }
 

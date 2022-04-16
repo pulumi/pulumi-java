@@ -97,28 +97,28 @@ public final class GetBlobDataSetResult {
      * Container that has the file path.
      * 
     */
-    public String getContainerName() {
+    public String containerName() {
         return this.containerName;
     }
     /**
      * Unique id for identifying a data set resource
      * 
     */
-    public String getDataSetId() {
+    public String dataSetId() {
         return this.dataSetId;
     }
     /**
      * File path within the source data set
      * 
     */
-    public String getFilePath() {
+    public String filePath() {
         return this.filePath;
     }
     /**
      * The resource id of the azure resource
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -126,49 +126,49 @@ public final class GetBlobDataSetResult {
      * Expected value is 'Blob'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Name of the azure resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource group of storage account
      * 
     */
-    public String getResourceGroup() {
+    public String resourceGroup() {
         return this.resourceGroup;
     }
     /**
      * Storage account name of the source data set
      * 
     */
-    public String getStorageAccountName() {
+    public String storageAccountName() {
         return this.storageAccountName;
     }
     /**
      * Subscription id of storage account
      * 
     */
-    public String getSubscriptionId() {
+    public String subscriptionId() {
         return this.subscriptionId;
     }
     /**
      * System Data of the Azure resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Type of the azure resource
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

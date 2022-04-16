@@ -23,7 +23,7 @@ public final class IdentitySelectorResponse extends io.pulumi.resources.InvokeAr
     @Import(name="identity", required=true)
       private final String identity;
 
-    public String getIdentity() {
+    public String identity() {
         return this.identity;
     }
 

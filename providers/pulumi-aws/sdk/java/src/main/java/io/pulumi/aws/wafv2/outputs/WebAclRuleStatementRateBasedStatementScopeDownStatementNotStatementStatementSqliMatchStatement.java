@@ -36,14 +36,14 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
      * The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
      * 
     */
-    public Optional<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementSqliMatchStatementFieldToMatch> getFieldToMatch() {
+    public Optional<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementSqliMatchStatementFieldToMatch> fieldToMatch() {
         return Optional.ofNullable(this.fieldToMatch);
     }
     /**
      * Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
      * 
     */
-    public List<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementSqliMatchStatementTextTransformation> getTextTransformations() {
+    public List<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementSqliMatchStatementTextTransformation> textTransformations() {
         return this.textTransformations;
     }
 

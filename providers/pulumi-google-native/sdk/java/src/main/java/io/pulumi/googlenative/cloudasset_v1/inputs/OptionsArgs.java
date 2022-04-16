@@ -26,7 +26,7 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="analyzeServiceAccountImpersonation")
       private final @Nullable Output<Boolean> analyzeServiceAccountImpersonation;
 
-    public Output<Boolean> getAnalyzeServiceAccountImpersonation() {
+    public Output<Boolean> analyzeServiceAccountImpersonation() {
         return this.analyzeServiceAccountImpersonation == null ? Codegen.empty() : this.analyzeServiceAccountImpersonation;
     }
 
@@ -37,7 +37,7 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expandGroups")
       private final @Nullable Output<Boolean> expandGroups;
 
-    public Output<Boolean> getExpandGroups() {
+    public Output<Boolean> expandGroups() {
         return this.expandGroups == null ? Codegen.empty() : this.expandGroups;
     }
 
@@ -48,7 +48,7 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expandResources")
       private final @Nullable Output<Boolean> expandResources;
 
-    public Output<Boolean> getExpandResources() {
+    public Output<Boolean> expandResources() {
         return this.expandResources == null ? Codegen.empty() : this.expandResources;
     }
 
@@ -59,7 +59,7 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expandRoles")
       private final @Nullable Output<Boolean> expandRoles;
 
-    public Output<Boolean> getExpandRoles() {
+    public Output<Boolean> expandRoles() {
         return this.expandRoles == null ? Codegen.empty() : this.expandRoles;
     }
 
@@ -70,7 +70,7 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputGroupEdges")
       private final @Nullable Output<Boolean> outputGroupEdges;
 
-    public Output<Boolean> getOutputGroupEdges() {
+    public Output<Boolean> outputGroupEdges() {
         return this.outputGroupEdges == null ? Codegen.empty() : this.outputGroupEdges;
     }
 
@@ -81,7 +81,7 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputResourceEdges")
       private final @Nullable Output<Boolean> outputResourceEdges;
 
-    public Output<Boolean> getOutputResourceEdges() {
+    public Output<Boolean> outputResourceEdges() {
         return this.outputResourceEdges == null ? Codegen.empty() : this.outputResourceEdges;
     }
 

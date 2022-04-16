@@ -27,7 +27,7 @@ public final class ScopeSelectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="matchExpressions")
       private final @Nullable Output<List<ScopedResourceSelectorRequirementArgs>> matchExpressions;
 
-    public Output<List<ScopedResourceSelectorRequirementArgs>> getMatchExpressions() {
+    public Output<List<ScopedResourceSelectorRequirementArgs>> matchExpressions() {
         return this.matchExpressions == null ? Codegen.empty() : this.matchExpressions;
     }
 

@@ -34,14 +34,14 @@ public final class TlsValidationOptionsResponse {
      * When set to 'true' causes the certificate subject name validation to be skipped. Default is 'false'.
      * 
     */
-    public Optional<String> getIgnoreHostname() {
+    public Optional<String> ignoreHostname() {
         return Optional.ofNullable(this.ignoreHostname);
     }
     /**
      * When set to 'true' causes the certificate chain trust validation to be skipped. Default is 'false'.
      * 
     */
-    public Optional<String> getIgnoreSignature() {
+    public Optional<String> ignoreSignature() {
         return Optional.ofNullable(this.ignoreSignature);
     }
 

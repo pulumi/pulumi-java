@@ -28,7 +28,7 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
     @Import(name="cpu")
       private final @Nullable Output<Double> cpu;
 
-    public Output<Double> getCpu() {
+    public Output<Double> cpu() {
         return this.cpu == null ? Codegen.empty() : this.cpu;
     }
 
@@ -40,7 +40,7 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
     @Import(name="cpuLimit")
       private final @Nullable Output<Double> cpuLimit;
 
-    public Output<Double> getCpuLimit() {
+    public Output<Double> cpuLimit() {
         return this.cpuLimit == null ? Codegen.empty() : this.cpuLimit;
     }
 
@@ -51,7 +51,7 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
     @Import(name="fpga")
       private final @Nullable Output<Integer> fpga;
 
-    public Output<Integer> getFpga() {
+    public Output<Integer> fpga() {
         return this.fpga == null ? Codegen.empty() : this.fpga;
     }
 
@@ -62,7 +62,7 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
     @Import(name="gpu")
       private final @Nullable Output<Integer> gpu;
 
-    public Output<Integer> getGpu() {
+    public Output<Integer> gpu() {
         return this.gpu == null ? Codegen.empty() : this.gpu;
     }
 
@@ -74,7 +74,7 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
     @Import(name="memoryInGB")
       private final @Nullable Output<Double> memoryInGB;
 
-    public Output<Double> getMemoryInGB() {
+    public Output<Double> memoryInGB() {
         return this.memoryInGB == null ? Codegen.empty() : this.memoryInGB;
     }
 
@@ -86,7 +86,7 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
     @Import(name="memoryInGBLimit")
       private final @Nullable Output<Double> memoryInGBLimit;
 
-    public Output<Double> getMemoryInGBLimit() {
+    public Output<Double> memoryInGBLimit() {
         return this.memoryInGBLimit == null ? Codegen.empty() : this.memoryInGBLimit;
     }
 

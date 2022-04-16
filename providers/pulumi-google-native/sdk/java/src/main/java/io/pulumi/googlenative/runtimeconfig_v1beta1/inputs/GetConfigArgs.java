@@ -17,14 +17,14 @@ public final class GetConfigArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="configId", required=true)
       private final String configId;
 
-    public String getConfigId() {
+    public String configId() {
         return this.configId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

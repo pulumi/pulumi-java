@@ -51,14 +51,14 @@ public final class RouteSpecHttpRouteMatch {
      * The client request headers to match on.
      * 
     */
-    public List<RouteSpecHttpRouteMatchHeader> getHeaders() {
+    public List<RouteSpecHttpRouteMatchHeader> headers() {
         return this.headers == null ? List.of() : this.headers;
     }
     /**
      * The client request header method to match on. Valid values: `GET`, `HEAD`, `POST`, `PUT`, `DELETE`, `CONNECT`, `OPTIONS`, `TRACE`, `PATCH`.
      * 
     */
-    public Optional<String> getMethod() {
+    public Optional<String> method() {
         return Optional.ofNullable(this.method);
     }
     /**
@@ -66,14 +66,14 @@ public final class RouteSpecHttpRouteMatch {
      * This parameter must always start with /, which by itself matches all requests to the virtual router service name.
      * 
     */
-    public String getPrefix() {
+    public String prefix() {
         return this.prefix;
     }
     /**
      * The client request header scheme to match on. Valid values: `http`, `https`.
      * 
     */
-    public Optional<String> getScheme() {
+    public Optional<String> scheme() {
         return Optional.ofNullable(this.scheme);
     }
 

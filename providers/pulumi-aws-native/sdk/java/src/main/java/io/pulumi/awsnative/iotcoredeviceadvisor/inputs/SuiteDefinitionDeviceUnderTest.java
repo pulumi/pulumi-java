@@ -17,14 +17,14 @@ public final class SuiteDefinitionDeviceUnderTest extends io.pulumi.resources.In
     @Import(name="certificateArn")
       private final @Nullable String certificateArn;
 
-    public Optional<String> getCertificateArn() {
+    public Optional<String> certificateArn() {
         return this.certificateArn == null ? Optional.empty() : Optional.ofNullable(this.certificateArn);
     }
 
     @Import(name="thingArn")
       private final @Nullable String thingArn;
 
-    public Optional<String> getThingArn() {
+    public Optional<String> thingArn() {
         return this.thingArn == null ? Optional.empty() : Optional.ofNullable(this.thingArn);
     }
 

@@ -24,13 +24,13 @@ public final class WebACLVisibilityConfig {
         this.sampledRequestsEnabled = sampledRequestsEnabled;
     }
 
-    public Boolean getCloudWatchMetricsEnabled() {
+    public Boolean cloudWatchMetricsEnabled() {
         return this.cloudWatchMetricsEnabled;
     }
-    public String getMetricName() {
+    public String metricName() {
         return this.metricName;
     }
-    public Boolean getSampledRequestsEnabled() {
+    public Boolean sampledRequestsEnabled() {
         return this.sampledRequestsEnabled;
     }
 

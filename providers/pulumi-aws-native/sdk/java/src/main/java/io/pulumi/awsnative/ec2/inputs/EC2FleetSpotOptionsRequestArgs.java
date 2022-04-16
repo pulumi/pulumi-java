@@ -23,56 +23,56 @@ public final class EC2FleetSpotOptionsRequestArgs extends io.pulumi.resources.Re
     @Import(name="allocationStrategy")
       private final @Nullable Output<EC2FleetSpotOptionsRequestAllocationStrategy> allocationStrategy;
 
-    public Output<EC2FleetSpotOptionsRequestAllocationStrategy> getAllocationStrategy() {
+    public Output<EC2FleetSpotOptionsRequestAllocationStrategy> allocationStrategy() {
         return this.allocationStrategy == null ? Codegen.empty() : this.allocationStrategy;
     }
 
     @Import(name="instanceInterruptionBehavior")
       private final @Nullable Output<EC2FleetSpotOptionsRequestInstanceInterruptionBehavior> instanceInterruptionBehavior;
 
-    public Output<EC2FleetSpotOptionsRequestInstanceInterruptionBehavior> getInstanceInterruptionBehavior() {
+    public Output<EC2FleetSpotOptionsRequestInstanceInterruptionBehavior> instanceInterruptionBehavior() {
         return this.instanceInterruptionBehavior == null ? Codegen.empty() : this.instanceInterruptionBehavior;
     }
 
     @Import(name="instancePoolsToUseCount")
       private final @Nullable Output<Integer> instancePoolsToUseCount;
 
-    public Output<Integer> getInstancePoolsToUseCount() {
+    public Output<Integer> instancePoolsToUseCount() {
         return this.instancePoolsToUseCount == null ? Codegen.empty() : this.instancePoolsToUseCount;
     }
 
     @Import(name="maintenanceStrategies")
       private final @Nullable Output<EC2FleetMaintenanceStrategiesArgs> maintenanceStrategies;
 
-    public Output<EC2FleetMaintenanceStrategiesArgs> getMaintenanceStrategies() {
+    public Output<EC2FleetMaintenanceStrategiesArgs> maintenanceStrategies() {
         return this.maintenanceStrategies == null ? Codegen.empty() : this.maintenanceStrategies;
     }
 
     @Import(name="maxTotalPrice")
       private final @Nullable Output<String> maxTotalPrice;
 
-    public Output<String> getMaxTotalPrice() {
+    public Output<String> maxTotalPrice() {
         return this.maxTotalPrice == null ? Codegen.empty() : this.maxTotalPrice;
     }
 
     @Import(name="minTargetCapacity")
       private final @Nullable Output<Integer> minTargetCapacity;
 
-    public Output<Integer> getMinTargetCapacity() {
+    public Output<Integer> minTargetCapacity() {
         return this.minTargetCapacity == null ? Codegen.empty() : this.minTargetCapacity;
     }
 
     @Import(name="singleAvailabilityZone")
       private final @Nullable Output<Boolean> singleAvailabilityZone;
 
-    public Output<Boolean> getSingleAvailabilityZone() {
+    public Output<Boolean> singleAvailabilityZone() {
         return this.singleAvailabilityZone == null ? Codegen.empty() : this.singleAvailabilityZone;
     }
 
     @Import(name="singleInstanceType")
       private final @Nullable Output<Boolean> singleInstanceType;
 
-    public Output<Boolean> getSingleInstanceType() {
+    public Output<Boolean> singleInstanceType() {
         return this.singleInstanceType == null ? Codegen.empty() : this.singleInstanceType;
     }
 

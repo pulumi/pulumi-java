@@ -22,7 +22,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<SkuDefinition> name;
 
-    public Output<SkuDefinition> getName() {
+    public Output<SkuDefinition> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

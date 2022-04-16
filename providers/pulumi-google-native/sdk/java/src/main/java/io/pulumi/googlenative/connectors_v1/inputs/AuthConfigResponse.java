@@ -28,7 +28,7 @@ public final class AuthConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="additionalVariables", required=true)
       private final List<ConfigVariableResponse> additionalVariables;
 
-    public List<ConfigVariableResponse> getAdditionalVariables() {
+    public List<ConfigVariableResponse> additionalVariables() {
         return this.additionalVariables;
     }
 
@@ -39,7 +39,7 @@ public final class AuthConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="authType", required=true)
       private final String authType;
 
-    public String getAuthType() {
+    public String authType() {
         return this.authType;
     }
 
@@ -50,7 +50,7 @@ public final class AuthConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="oauth2ClientCredentials", required=true)
       private final Oauth2ClientCredentialsResponse oauth2ClientCredentials;
 
-    public Oauth2ClientCredentialsResponse getOauth2ClientCredentials() {
+    public Oauth2ClientCredentialsResponse oauth2ClientCredentials() {
         return this.oauth2ClientCredentials;
     }
 
@@ -61,7 +61,7 @@ public final class AuthConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="oauth2JwtBearer", required=true)
       private final Oauth2JwtBearerResponse oauth2JwtBearer;
 
-    public Oauth2JwtBearerResponse getOauth2JwtBearer() {
+    public Oauth2JwtBearerResponse oauth2JwtBearer() {
         return this.oauth2JwtBearer;
     }
 
@@ -72,7 +72,7 @@ public final class AuthConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="userPassword", required=true)
       private final UserPasswordResponse userPassword;
 
-    public UserPasswordResponse getUserPassword() {
+    public UserPasswordResponse userPassword() {
         return this.userPassword;
     }
 

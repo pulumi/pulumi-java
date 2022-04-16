@@ -22,7 +22,7 @@ public final class WebAclLoggingConfigurationRedactedFieldsGetArgs extends io.pu
     @Import(name="fieldToMatches", required=true)
       private final Output<List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs>> fieldToMatches;
 
-    public Output<List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs>> getFieldToMatches() {
+    public Output<List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs>> fieldToMatches() {
         return this.fieldToMatches;
     }
 

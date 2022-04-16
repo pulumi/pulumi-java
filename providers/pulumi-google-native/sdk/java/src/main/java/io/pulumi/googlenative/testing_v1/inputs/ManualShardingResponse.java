@@ -24,7 +24,7 @@ public final class ManualShardingResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="testTargetsForShard", required=true)
       private final List<TestTargetsForShardResponse> testTargetsForShard;
 
-    public List<TestTargetsForShardResponse> getTestTargetsForShard() {
+    public List<TestTargetsForShardResponse> testTargetsForShard() {
         return this.testTargetsForShard;
     }
 

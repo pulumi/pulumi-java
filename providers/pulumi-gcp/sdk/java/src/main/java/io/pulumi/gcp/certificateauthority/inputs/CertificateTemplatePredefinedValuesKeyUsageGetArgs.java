@@ -25,7 +25,7 @@ public final class CertificateTemplatePredefinedValuesKeyUsageGetArgs extends io
     @Import(name="baseKeyUsage")
       private final @Nullable Output<CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageGetArgs> baseKeyUsage;
 
-    public Output<CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageGetArgs> getBaseKeyUsage() {
+    public Output<CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageGetArgs> baseKeyUsage() {
         return this.baseKeyUsage == null ? Codegen.empty() : this.baseKeyUsage;
     }
 
@@ -36,7 +36,7 @@ public final class CertificateTemplatePredefinedValuesKeyUsageGetArgs extends io
     @Import(name="extendedKeyUsage")
       private final @Nullable Output<CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsage;
 
-    public Output<CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageGetArgs> getExtendedKeyUsage() {
+    public Output<CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsage() {
         return this.extendedKeyUsage == null ? Codegen.empty() : this.extendedKeyUsage;
     }
 
@@ -47,7 +47,7 @@ public final class CertificateTemplatePredefinedValuesKeyUsageGetArgs extends io
     @Import(name="unknownExtendedKeyUsages")
       private final @Nullable Output<List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages;
 
-    public Output<List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageGetArgs>> getUnknownExtendedKeyUsages() {
+    public Output<List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages == null ? Codegen.empty() : this.unknownExtendedKeyUsages;
     }
 

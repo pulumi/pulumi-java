@@ -27,7 +27,7 @@ public final class AuthenticationSettingsContractArgs extends io.pulumi.resource
     @Import(name="oAuth2")
       private final @Nullable Output<OAuth2AuthenticationSettingsContractArgs> oAuth2;
 
-    public Output<OAuth2AuthenticationSettingsContractArgs> getOAuth2() {
+    public Output<OAuth2AuthenticationSettingsContractArgs> oAuth2() {
         return this.oAuth2 == null ? Codegen.empty() : this.oAuth2;
     }
 
@@ -38,7 +38,7 @@ public final class AuthenticationSettingsContractArgs extends io.pulumi.resource
     @Import(name="openid")
       private final @Nullable Output<OpenIdAuthenticationSettingsContractArgs> openid;
 
-    public Output<OpenIdAuthenticationSettingsContractArgs> getOpenid() {
+    public Output<OpenIdAuthenticationSettingsContractArgs> openid() {
         return this.openid == null ? Codegen.empty() : this.openid;
     }
 

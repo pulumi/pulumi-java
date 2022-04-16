@@ -26,7 +26,7 @@ public final class ScanRunWarningTraceArgs extends io.pulumi.resources.ResourceA
     @Import(name="code")
       private final @Nullable Output<ScanRunWarningTraceCode> code;
 
-    public Output<ScanRunWarningTraceCode> getCode() {
+    public Output<ScanRunWarningTraceCode> code() {
         return this.code == null ? Codegen.empty() : this.code;
     }
 

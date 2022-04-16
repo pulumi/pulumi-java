@@ -31,7 +31,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -42,7 +42,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backupId")
       private final @Nullable Output<String> backupId;
 
-    public Output<String> getBackupId() {
+    public Output<String> backupId() {
         return this.backupId == null ? Codegen.empty() : this.backupId;
     }
 
@@ -53,7 +53,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="creationToken", required=true)
       private final Output<String> creationToken;
 
-    public Output<String> getCreationToken() {
+    public Output<String> creationToken() {
         return this.creationToken;
     }
 
@@ -64,7 +64,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataProtection")
       private final @Nullable Output<VolumePropertiesDataProtectionArgs> dataProtection;
 
-    public Output<VolumePropertiesDataProtectionArgs> getDataProtection() {
+    public Output<VolumePropertiesDataProtectionArgs> dataProtection() {
         return this.dataProtection == null ? Codegen.empty() : this.dataProtection;
     }
 
@@ -75,7 +75,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptionKeySource")
       private final @Nullable Output<String> encryptionKeySource;
 
-    public Output<String> getEncryptionKeySource() {
+    public Output<String> encryptionKeySource() {
         return this.encryptionKeySource == null ? Codegen.empty() : this.encryptionKeySource;
     }
 
@@ -86,7 +86,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="exportPolicy")
       private final @Nullable Output<VolumePropertiesExportPolicyArgs> exportPolicy;
 
-    public Output<VolumePropertiesExportPolicyArgs> getExportPolicy() {
+    public Output<VolumePropertiesExportPolicyArgs> exportPolicy() {
         return this.exportPolicy == null ? Codegen.empty() : this.exportPolicy;
     }
 
@@ -97,7 +97,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isRestoring")
       private final @Nullable Output<Boolean> isRestoring;
 
-    public Output<Boolean> getIsRestoring() {
+    public Output<Boolean> isRestoring() {
         return this.isRestoring == null ? Codegen.empty() : this.isRestoring;
     }
 
@@ -108,7 +108,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kerberosEnabled")
       private final @Nullable Output<Boolean> kerberosEnabled;
 
-    public Output<Boolean> getKerberosEnabled() {
+    public Output<Boolean> kerberosEnabled() {
         return this.kerberosEnabled == null ? Codegen.empty() : this.kerberosEnabled;
     }
 
@@ -119,7 +119,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ldapEnabled")
       private final @Nullable Output<Boolean> ldapEnabled;
 
-    public Output<Boolean> getLdapEnabled() {
+    public Output<Boolean> ldapEnabled() {
         return this.ldapEnabled == null ? Codegen.empty() : this.ldapEnabled;
     }
 
@@ -130,7 +130,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -141,7 +141,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="poolName", required=true)
       private final Output<String> poolName;
 
-    public Output<String> getPoolName() {
+    public Output<String> poolName() {
         return this.poolName;
     }
 
@@ -152,7 +152,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="protocolTypes")
       private final @Nullable Output<List<String>> protocolTypes;
 
-    public Output<List<String>> getProtocolTypes() {
+    public Output<List<String>> protocolTypes() {
         return this.protocolTypes == null ? Codegen.empty() : this.protocolTypes;
     }
 
@@ -163,7 +163,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -174,7 +174,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="securityStyle")
       private final @Nullable Output<Either<String,SecurityStyle>> securityStyle;
 
-    public Output<Either<String,SecurityStyle>> getSecurityStyle() {
+    public Output<Either<String,SecurityStyle>> securityStyle() {
         return this.securityStyle == null ? Codegen.empty() : this.securityStyle;
     }
 
@@ -185,7 +185,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceLevel")
       private final @Nullable Output<Either<String,ServiceLevel>> serviceLevel;
 
-    public Output<Either<String,ServiceLevel>> getServiceLevel() {
+    public Output<Either<String,ServiceLevel>> serviceLevel() {
         return this.serviceLevel == null ? Codegen.empty() : this.serviceLevel;
     }
 
@@ -196,7 +196,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="smbContinuouslyAvailable")
       private final @Nullable Output<Boolean> smbContinuouslyAvailable;
 
-    public Output<Boolean> getSmbContinuouslyAvailable() {
+    public Output<Boolean> smbContinuouslyAvailable() {
         return this.smbContinuouslyAvailable == null ? Codegen.empty() : this.smbContinuouslyAvailable;
     }
 
@@ -207,7 +207,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="smbEncryption")
       private final @Nullable Output<Boolean> smbEncryption;
 
-    public Output<Boolean> getSmbEncryption() {
+    public Output<Boolean> smbEncryption() {
         return this.smbEncryption == null ? Codegen.empty() : this.smbEncryption;
     }
 
@@ -218,7 +218,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="snapshotDirectoryVisible")
       private final @Nullable Output<Boolean> snapshotDirectoryVisible;
 
-    public Output<Boolean> getSnapshotDirectoryVisible() {
+    public Output<Boolean> snapshotDirectoryVisible() {
         return this.snapshotDirectoryVisible == null ? Codegen.empty() : this.snapshotDirectoryVisible;
     }
 
@@ -229,7 +229,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="snapshotId")
       private final @Nullable Output<String> snapshotId;
 
-    public Output<String> getSnapshotId() {
+    public Output<String> snapshotId() {
         return this.snapshotId == null ? Codegen.empty() : this.snapshotId;
     }
 
@@ -240,7 +240,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 
@@ -251,14 +251,14 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="throughputMibps")
       private final @Nullable Output<Double> throughputMibps;
 
-    public Output<Double> getThroughputMibps() {
+    public Output<Double> throughputMibps() {
         return this.throughputMibps == null ? Codegen.empty() : this.throughputMibps;
     }
 
@@ -269,7 +269,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="usageThreshold", required=true)
       private final Output<Double> usageThreshold;
 
-    public Output<Double> getUsageThreshold() {
+    public Output<Double> usageThreshold() {
         return this.usageThreshold;
     }
 
@@ -280,7 +280,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumeName")
       private final @Nullable Output<String> volumeName;
 
-    public Output<String> getVolumeName() {
+    public Output<String> volumeName() {
         return this.volumeName == null ? Codegen.empty() : this.volumeName;
     }
 
@@ -291,7 +291,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;
 
-    public Output<String> getVolumeType() {
+    public Output<String> volumeType() {
         return this.volumeType == null ? Codegen.empty() : this.volumeType;
     }
 

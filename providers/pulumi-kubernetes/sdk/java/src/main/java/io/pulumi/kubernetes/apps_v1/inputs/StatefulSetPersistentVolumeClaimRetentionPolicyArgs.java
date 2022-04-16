@@ -26,7 +26,7 @@ public final class StatefulSetPersistentVolumeClaimRetentionPolicyArgs extends i
     @Import(name="whenDeleted")
       private final @Nullable Output<String> whenDeleted;
 
-    public Output<String> getWhenDeleted() {
+    public Output<String> whenDeleted() {
         return this.whenDeleted == null ? Codegen.empty() : this.whenDeleted;
     }
 
@@ -37,7 +37,7 @@ public final class StatefulSetPersistentVolumeClaimRetentionPolicyArgs extends i
     @Import(name="whenScaled")
       private final @Nullable Output<String> whenScaled;
 
-    public Output<String> getWhenScaled() {
+    public Output<String> whenScaled() {
         return this.whenScaled == null ? Codegen.empty() : this.whenScaled;
     }
 

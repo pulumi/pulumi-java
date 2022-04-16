@@ -23,7 +23,7 @@ public final class ResolverFirewallRuleState extends io.pulumi.resources.Resourc
     @Import(name="action")
       private final @Nullable Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -34,7 +34,7 @@ public final class ResolverFirewallRuleState extends io.pulumi.resources.Resourc
     @Import(name="blockOverrideDnsType")
       private final @Nullable Output<String> blockOverrideDnsType;
 
-    public Output<String> getBlockOverrideDnsType() {
+    public Output<String> blockOverrideDnsType() {
         return this.blockOverrideDnsType == null ? Codegen.empty() : this.blockOverrideDnsType;
     }
 
@@ -45,7 +45,7 @@ public final class ResolverFirewallRuleState extends io.pulumi.resources.Resourc
     @Import(name="blockOverrideDomain")
       private final @Nullable Output<String> blockOverrideDomain;
 
-    public Output<String> getBlockOverrideDomain() {
+    public Output<String> blockOverrideDomain() {
         return this.blockOverrideDomain == null ? Codegen.empty() : this.blockOverrideDomain;
     }
 
@@ -56,7 +56,7 @@ public final class ResolverFirewallRuleState extends io.pulumi.resources.Resourc
     @Import(name="blockOverrideTtl")
       private final @Nullable Output<Integer> blockOverrideTtl;
 
-    public Output<Integer> getBlockOverrideTtl() {
+    public Output<Integer> blockOverrideTtl() {
         return this.blockOverrideTtl == null ? Codegen.empty() : this.blockOverrideTtl;
     }
 
@@ -67,7 +67,7 @@ public final class ResolverFirewallRuleState extends io.pulumi.resources.Resourc
     @Import(name="blockResponse")
       private final @Nullable Output<String> blockResponse;
 
-    public Output<String> getBlockResponse() {
+    public Output<String> blockResponse() {
         return this.blockResponse == null ? Codegen.empty() : this.blockResponse;
     }
 
@@ -78,7 +78,7 @@ public final class ResolverFirewallRuleState extends io.pulumi.resources.Resourc
     @Import(name="firewallDomainListId")
       private final @Nullable Output<String> firewallDomainListId;
 
-    public Output<String> getFirewallDomainListId() {
+    public Output<String> firewallDomainListId() {
         return this.firewallDomainListId == null ? Codegen.empty() : this.firewallDomainListId;
     }
 
@@ -89,7 +89,7 @@ public final class ResolverFirewallRuleState extends io.pulumi.resources.Resourc
     @Import(name="firewallRuleGroupId")
       private final @Nullable Output<String> firewallRuleGroupId;
 
-    public Output<String> getFirewallRuleGroupId() {
+    public Output<String> firewallRuleGroupId() {
         return this.firewallRuleGroupId == null ? Codegen.empty() : this.firewallRuleGroupId;
     }
 
@@ -100,7 +100,7 @@ public final class ResolverFirewallRuleState extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -111,7 +111,7 @@ public final class ResolverFirewallRuleState extends io.pulumi.resources.Resourc
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 

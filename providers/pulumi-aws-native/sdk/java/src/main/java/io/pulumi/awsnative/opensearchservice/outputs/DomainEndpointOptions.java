@@ -32,19 +32,19 @@ public final class DomainEndpointOptions {
         this.tLSSecurityPolicy = tLSSecurityPolicy;
     }
 
-    public Optional<String> getCustomEndpoint() {
+    public Optional<String> customEndpoint() {
         return Optional.ofNullable(this.customEndpoint);
     }
-    public Optional<String> getCustomEndpointCertificateArn() {
+    public Optional<String> customEndpointCertificateArn() {
         return Optional.ofNullable(this.customEndpointCertificateArn);
     }
-    public Optional<Boolean> getCustomEndpointEnabled() {
+    public Optional<Boolean> customEndpointEnabled() {
         return Optional.ofNullable(this.customEndpointEnabled);
     }
-    public Optional<Boolean> getEnforceHTTPS() {
+    public Optional<Boolean> enforceHTTPS() {
         return Optional.ofNullable(this.enforceHTTPS);
     }
-    public Optional<String> getTLSSecurityPolicy() {
+    public Optional<String> tLSSecurityPolicy() {
         return Optional.ofNullable(this.tLSSecurityPolicy);
     }
 

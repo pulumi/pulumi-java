@@ -23,7 +23,7 @@ public final class UrlRewriteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="hostRewrite", required=true)
       private final String hostRewrite;
 
-    public String getHostRewrite() {
+    public String hostRewrite() {
         return this.hostRewrite;
     }
 
@@ -34,7 +34,7 @@ public final class UrlRewriteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="pathPrefixRewrite", required=true)
       private final String pathPrefixRewrite;
 
-    public String getPathPrefixRewrite() {
+    public String pathPrefixRewrite() {
         return this.pathPrefixRewrite;
     }
 

@@ -19,7 +19,7 @@ public final class GetWebPubSubHubArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="hubName", required=true)
       private final String hubName;
 
-    public String getHubName() {
+    public String hubName() {
         return this.hubName;
     }
 
@@ -30,7 +30,7 @@ public final class GetWebPubSubHubArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetWebPubSubHubArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceName", required=true)
       private final String resourceName;
 
-    public String getPropResourceName() {
+    public String resourceName() {
         return this.resourceName;
     }
 

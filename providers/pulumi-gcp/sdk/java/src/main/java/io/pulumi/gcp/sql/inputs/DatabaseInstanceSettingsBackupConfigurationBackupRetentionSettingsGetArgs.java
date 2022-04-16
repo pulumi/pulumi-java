@@ -24,7 +24,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
     @Import(name="retainedBackups", required=true)
       private final Output<Integer> retainedBackups;
 
-    public Output<Integer> getRetainedBackups() {
+    public Output<Integer> retainedBackups() {
         return this.retainedBackups;
     }
 
@@ -35,7 +35,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
     @Import(name="retentionUnit")
       private final @Nullable Output<String> retentionUnit;
 
-    public Output<String> getRetentionUnit() {
+    public Output<String> retentionUnit() {
         return this.retentionUnit == null ? Codegen.empty() : this.retentionUnit;
     }
 

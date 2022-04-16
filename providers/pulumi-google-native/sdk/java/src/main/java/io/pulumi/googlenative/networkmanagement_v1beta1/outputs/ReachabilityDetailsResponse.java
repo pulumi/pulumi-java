@@ -49,28 +49,28 @@ public final class ReachabilityDetailsResponse {
      * The details of a failure or a cancellation of reachability analysis.
      * 
     */
-    public StatusResponse getError() {
+    public StatusResponse error() {
         return this.error;
     }
     /**
      * The overall result of the test's configuration analysis.
      * 
     */
-    public String getResult() {
+    public String result() {
         return this.result;
     }
     /**
      * Result may contain a list of traces if a test has multiple possible paths in the network, such as when destination endpoint is a load balancer with multiple backends.
      * 
     */
-    public List<TraceResponse> getTraces() {
+    public List<TraceResponse> traces() {
         return this.traces;
     }
     /**
      * The time of the configuration analysis.
      * 
     */
-    public String getVerifyTime() {
+    public String verifyTime() {
         return this.verifyTime;
     }
 

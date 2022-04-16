@@ -28,7 +28,7 @@ public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.Inv
     @Import(name="dcAccessSecurityCode", required=true)
       private final DcAccessSecurityCodeResponse dcAccessSecurityCode;
 
-    public DcAccessSecurityCodeResponse getDcAccessSecurityCode() {
+    public DcAccessSecurityCodeResponse dcAccessSecurityCode() {
         return this.dcAccessSecurityCode;
     }
 
@@ -39,7 +39,7 @@ public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.Inv
     @Import(name="diskSecrets", required=true)
       private final List<DiskSecretResponse> diskSecrets;
 
-    public List<DiskSecretResponse> getDiskSecrets() {
+    public List<DiskSecretResponse> diskSecrets() {
         return this.diskSecrets;
     }
 
@@ -50,7 +50,7 @@ public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.Inv
     @Import(name="error", required=true)
       private final CloudErrorResponse error;
 
-    public CloudErrorResponse getError() {
+    public CloudErrorResponse error() {
         return this.error;
     }
 
@@ -61,7 +61,7 @@ public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.Inv
     @Import(name="isPasskeyUserDefined", required=true)
       private final Boolean isPasskeyUserDefined;
 
-    public Boolean getIsPasskeyUserDefined() {
+    public Boolean isPasskeyUserDefined() {
         return this.isPasskeyUserDefined;
     }
 
@@ -73,7 +73,7 @@ public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.Inv
     @Import(name="jobSecretsType", required=true)
       private final String jobSecretsType;
 
-    public String getJobSecretsType() {
+    public String jobSecretsType() {
         return this.jobSecretsType;
     }
 
@@ -84,7 +84,7 @@ public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.Inv
     @Import(name="passKey", required=true)
       private final String passKey;
 
-    public String getPassKey() {
+    public String passKey() {
         return this.passKey;
     }
 

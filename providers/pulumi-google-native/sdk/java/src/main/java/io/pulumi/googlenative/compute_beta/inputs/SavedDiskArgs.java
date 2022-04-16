@@ -26,7 +26,7 @@ public final class SavedDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceDisk")
       private final @Nullable Output<String> sourceDisk;
 
-    public Output<String> getSourceDisk() {
+    public Output<String> sourceDisk() {
         return this.sourceDisk == null ? Codegen.empty() : this.sourceDisk;
     }
 

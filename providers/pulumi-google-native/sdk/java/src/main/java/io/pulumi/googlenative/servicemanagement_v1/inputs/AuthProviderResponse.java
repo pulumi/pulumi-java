@@ -25,7 +25,7 @@ public final class AuthProviderResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="audiences", required=true)
       private final String audiences;
 
-    public String getAudiences() {
+    public String audiences() {
         return this.audiences;
     }
 
@@ -36,7 +36,7 @@ public final class AuthProviderResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="authorizationUrl", required=true)
       private final String authorizationUrl;
 
-    public String getAuthorizationUrl() {
+    public String authorizationUrl() {
         return this.authorizationUrl;
     }
 
@@ -47,7 +47,7 @@ public final class AuthProviderResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="issuer", required=true)
       private final String issuer;
 
-    public String getIssuer() {
+    public String issuer() {
         return this.issuer;
     }
 
@@ -58,7 +58,7 @@ public final class AuthProviderResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="jwksUri", required=true)
       private final String jwksUri;
 
-    public String getJwksUri() {
+    public String jwksUri() {
         return this.jwksUri;
     }
 
@@ -69,7 +69,7 @@ public final class AuthProviderResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="jwtLocations", required=true)
       private final List<JwtLocationResponse> jwtLocations;
 
-    public List<JwtLocationResponse> getJwtLocations() {
+    public List<JwtLocationResponse> jwtLocations() {
         return this.jwtLocations;
     }
 

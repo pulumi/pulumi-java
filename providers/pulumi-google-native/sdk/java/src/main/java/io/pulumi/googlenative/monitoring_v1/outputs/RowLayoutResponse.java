@@ -25,7 +25,7 @@ public final class RowLayoutResponse {
      * The rows of content to display.
      * 
     */
-    public List<RowResponse> getRows() {
+    public List<RowResponse> rows() {
         return this.rows;
     }
 

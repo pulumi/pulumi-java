@@ -24,7 +24,7 @@ public final class ApplicationLogPattern extends io.pulumi.resources.InvokeArgs 
     @Import(name="pattern", required=true)
       private final String pattern;
 
-    public String getPattern() {
+    public String pattern() {
         return this.pattern;
     }
 
@@ -35,7 +35,7 @@ public final class ApplicationLogPattern extends io.pulumi.resources.InvokeArgs 
     @Import(name="patternName", required=true)
       private final String patternName;
 
-    public String getPatternName() {
+    public String patternName() {
         return this.patternName;
     }
 
@@ -46,7 +46,7 @@ public final class ApplicationLogPattern extends io.pulumi.resources.InvokeArgs 
     @Import(name="rank", required=true)
       private final Integer rank;
 
-    public Integer getRank() {
+    public Integer rank() {
         return this.rank;
     }
 

@@ -23,7 +23,7 @@ public final class GitSourceContextResponse extends io.pulumi.resources.InvokeAr
     @Import(name="revisionId", required=true)
       private final String revisionId;
 
-    public String getRevisionId() {
+    public String revisionId() {
         return this.revisionId;
     }
 
@@ -34,7 +34,7 @@ public final class GitSourceContextResponse extends io.pulumi.resources.InvokeAr
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

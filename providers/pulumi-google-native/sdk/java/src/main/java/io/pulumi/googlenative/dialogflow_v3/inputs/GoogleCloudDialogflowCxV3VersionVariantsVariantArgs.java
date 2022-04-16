@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariantArgs extends i
     @Import(name="isControlGroup")
       private final @Nullable Output<Boolean> isControlGroup;
 
-    public Output<Boolean> getIsControlGroup() {
+    public Output<Boolean> isControlGroup() {
         return this.isControlGroup == null ? Codegen.empty() : this.isControlGroup;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariantArgs extends i
     @Import(name="trafficAllocation")
       private final @Nullable Output<Double> trafficAllocation;
 
-    public Output<Double> getTrafficAllocation() {
+    public Output<Double> trafficAllocation() {
         return this.trafficAllocation == null ? Codegen.empty() : this.trafficAllocation;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariantArgs extends i
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

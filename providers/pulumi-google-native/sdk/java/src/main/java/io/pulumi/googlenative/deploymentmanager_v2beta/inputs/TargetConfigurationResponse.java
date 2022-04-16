@@ -21,7 +21,7 @@ public final class TargetConfigurationResponse extends io.pulumi.resources.Invok
     @Import(name="config", required=true)
       private final ConfigFileResponse config;
 
-    public ConfigFileResponse getConfig() {
+    public ConfigFileResponse config() {
         return this.config;
     }
 
@@ -32,7 +32,7 @@ public final class TargetConfigurationResponse extends io.pulumi.resources.Invok
     @Import(name="imports", required=true)
       private final List<ImportFileResponse> imports;
 
-    public List<ImportFileResponse> getImports() {
+    public List<ImportFileResponse> imports() {
         return this.imports;
     }
 

@@ -23,7 +23,7 @@ public final class ClusterClusterAutoscalingResourceLimitGetArgs extends io.pulu
     @Import(name="maximum")
       private final @Nullable Output<Integer> maximum;
 
-    public Output<Integer> getMaximum() {
+    public Output<Integer> maximum() {
         return this.maximum == null ? Codegen.empty() : this.maximum;
     }
 
@@ -34,7 +34,7 @@ public final class ClusterClusterAutoscalingResourceLimitGetArgs extends io.pulu
     @Import(name="minimum")
       private final @Nullable Output<Integer> minimum;
 
-    public Output<Integer> getMinimum() {
+    public Output<Integer> minimum() {
         return this.minimum == null ? Codegen.empty() : this.minimum;
     }
 
@@ -47,7 +47,7 @@ public final class ClusterClusterAutoscalingResourceLimitGetArgs extends io.pulu
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
 

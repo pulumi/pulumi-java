@@ -27,7 +27,7 @@ public final class EdgeCacheServiceState extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -38,7 +38,7 @@ public final class EdgeCacheServiceState extends io.pulumi.resources.ResourceArg
     @Import(name="disableQuic")
       private final @Nullable Output<Boolean> disableQuic;
 
-    public Output<Boolean> getDisableQuic() {
+    public Output<Boolean> disableQuic() {
         return this.disableQuic == null ? Codegen.empty() : this.disableQuic;
     }
 
@@ -49,7 +49,7 @@ public final class EdgeCacheServiceState extends io.pulumi.resources.ResourceArg
     @Import(name="edgeSecurityPolicy")
       private final @Nullable Output<String> edgeSecurityPolicy;
 
-    public Output<String> getEdgeSecurityPolicy() {
+    public Output<String> edgeSecurityPolicy() {
         return this.edgeSecurityPolicy == null ? Codegen.empty() : this.edgeSecurityPolicy;
     }
 
@@ -61,7 +61,7 @@ public final class EdgeCacheServiceState extends io.pulumi.resources.ResourceArg
     @Import(name="edgeSslCertificates")
       private final @Nullable Output<List<String>> edgeSslCertificates;
 
-    public Output<List<String>> getEdgeSslCertificates() {
+    public Output<List<String>> edgeSslCertificates() {
         return this.edgeSslCertificates == null ? Codegen.empty() : this.edgeSslCertificates;
     }
 
@@ -72,7 +72,7 @@ public final class EdgeCacheServiceState extends io.pulumi.resources.ResourceArg
     @Import(name="ipv4Addresses")
       private final @Nullable Output<List<String>> ipv4Addresses;
 
-    public Output<List<String>> getIpv4Addresses() {
+    public Output<List<String>> ipv4Addresses() {
         return this.ipv4Addresses == null ? Codegen.empty() : this.ipv4Addresses;
     }
 
@@ -83,7 +83,7 @@ public final class EdgeCacheServiceState extends io.pulumi.resources.ResourceArg
     @Import(name="ipv6Addresses")
       private final @Nullable Output<List<String>> ipv6Addresses;
 
-    public Output<List<String>> getIpv6Addresses() {
+    public Output<List<String>> ipv6Addresses() {
         return this.ipv6Addresses == null ? Codegen.empty() : this.ipv6Addresses;
     }
 
@@ -94,7 +94,7 @@ public final class EdgeCacheServiceState extends io.pulumi.resources.ResourceArg
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -106,7 +106,7 @@ public final class EdgeCacheServiceState extends io.pulumi.resources.ResourceArg
     @Import(name="logConfig")
       private final @Nullable Output<EdgeCacheServiceLogConfigGetArgs> logConfig;
 
-    public Output<EdgeCacheServiceLogConfigGetArgs> getLogConfig() {
+    public Output<EdgeCacheServiceLogConfigGetArgs> logConfig() {
         return this.logConfig == null ? Codegen.empty() : this.logConfig;
     }
 
@@ -117,7 +117,7 @@ public final class EdgeCacheServiceState extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -129,7 +129,7 @@ public final class EdgeCacheServiceState extends io.pulumi.resources.ResourceArg
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -142,7 +142,7 @@ public final class EdgeCacheServiceState extends io.pulumi.resources.ResourceArg
     @Import(name="requireTls")
       private final @Nullable Output<Boolean> requireTls;
 
-    public Output<Boolean> getRequireTls() {
+    public Output<Boolean> requireTls() {
         return this.requireTls == null ? Codegen.empty() : this.requireTls;
     }
 
@@ -154,7 +154,7 @@ public final class EdgeCacheServiceState extends io.pulumi.resources.ResourceArg
     @Import(name="routing")
       private final @Nullable Output<EdgeCacheServiceRoutingGetArgs> routing;
 
-    public Output<EdgeCacheServiceRoutingGetArgs> getRouting() {
+    public Output<EdgeCacheServiceRoutingGetArgs> routing() {
         return this.routing == null ? Codegen.empty() : this.routing;
     }
 
@@ -166,7 +166,7 @@ public final class EdgeCacheServiceState extends io.pulumi.resources.ResourceArg
     @Import(name="sslPolicy")
       private final @Nullable Output<String> sslPolicy;
 
-    public Output<String> getSslPolicy() {
+    public Output<String> sslPolicy() {
         return this.sslPolicy == null ? Codegen.empty() : this.sslPolicy;
     }
 

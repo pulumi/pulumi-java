@@ -26,13 +26,13 @@ public final class NodePoolNetworkConfig {
         this.podRange = podRange;
     }
 
-    public Optional<Boolean> getCreatePodRange() {
+    public Optional<Boolean> createPodRange() {
         return Optional.ofNullable(this.createPodRange);
     }
-    public Optional<String> getPodIpv4CidrBlock() {
+    public Optional<String> podIpv4CidrBlock() {
         return Optional.ofNullable(this.podIpv4CidrBlock);
     }
-    public String getPodRange() {
+    public String podRange() {
         return this.podRange;
     }
 

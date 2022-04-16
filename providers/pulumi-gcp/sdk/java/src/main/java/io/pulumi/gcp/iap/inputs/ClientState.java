@@ -24,7 +24,7 @@ public final class ClientState extends io.pulumi.resources.ResourceArgs {
     @Import(name="brand")
       private final @Nullable Output<String> brand;
 
-    public Output<String> getBrand() {
+    public Output<String> brand() {
         return this.brand == null ? Codegen.empty() : this.brand;
     }
 
@@ -35,7 +35,7 @@ public final class ClientState extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
@@ -46,7 +46,7 @@ public final class ClientState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -57,7 +57,7 @@ public final class ClientState extends io.pulumi.resources.ResourceArgs {
     @Import(name="secret")
       private final @Nullable Output<String> secret;
 
-    public Output<String> getSecret() {
+    public Output<String> secret() {
         return this.secret == null ? Codegen.empty() : this.secret;
     }
 

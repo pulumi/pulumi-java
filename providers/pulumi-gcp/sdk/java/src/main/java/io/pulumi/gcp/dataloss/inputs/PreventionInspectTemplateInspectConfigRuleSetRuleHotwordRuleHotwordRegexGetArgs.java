@@ -24,7 +24,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleH
     @Import(name="groupIndexes")
       private final @Nullable Output<List<Integer>> groupIndexes;
 
-    public Output<List<Integer>> getGroupIndexes() {
+    public Output<List<Integer>> groupIndexes() {
         return this.groupIndexes == null ? Codegen.empty() : this.groupIndexes;
     }
 
@@ -36,7 +36,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleH
     @Import(name="pattern", required=true)
       private final Output<String> pattern;
 
-    public Output<String> getPattern() {
+    public Output<String> pattern() {
         return this.pattern;
     }
 

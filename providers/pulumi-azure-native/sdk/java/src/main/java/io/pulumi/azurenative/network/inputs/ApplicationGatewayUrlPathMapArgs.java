@@ -29,7 +29,7 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
     @Import(name="defaultBackendAddressPool")
       private final @Nullable Output<SubResourceArgs> defaultBackendAddressPool;
 
-    public Output<SubResourceArgs> getDefaultBackendAddressPool() {
+    public Output<SubResourceArgs> defaultBackendAddressPool() {
         return this.defaultBackendAddressPool == null ? Codegen.empty() : this.defaultBackendAddressPool;
     }
 
@@ -40,7 +40,7 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
     @Import(name="defaultBackendHttpSettings")
       private final @Nullable Output<SubResourceArgs> defaultBackendHttpSettings;
 
-    public Output<SubResourceArgs> getDefaultBackendHttpSettings() {
+    public Output<SubResourceArgs> defaultBackendHttpSettings() {
         return this.defaultBackendHttpSettings == null ? Codegen.empty() : this.defaultBackendHttpSettings;
     }
 
@@ -51,7 +51,7 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
     @Import(name="defaultRedirectConfiguration")
       private final @Nullable Output<SubResourceArgs> defaultRedirectConfiguration;
 
-    public Output<SubResourceArgs> getDefaultRedirectConfiguration() {
+    public Output<SubResourceArgs> defaultRedirectConfiguration() {
         return this.defaultRedirectConfiguration == null ? Codegen.empty() : this.defaultRedirectConfiguration;
     }
 
@@ -62,7 +62,7 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
     @Import(name="defaultRewriteRuleSet")
       private final @Nullable Output<SubResourceArgs> defaultRewriteRuleSet;
 
-    public Output<SubResourceArgs> getDefaultRewriteRuleSet() {
+    public Output<SubResourceArgs> defaultRewriteRuleSet() {
         return this.defaultRewriteRuleSet == null ? Codegen.empty() : this.defaultRewriteRuleSet;
     }
 
@@ -73,7 +73,7 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -84,7 +84,7 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -95,7 +95,7 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
     @Import(name="pathRules")
       private final @Nullable Output<List<ApplicationGatewayPathRuleArgs>> pathRules;
 
-    public Output<List<ApplicationGatewayPathRuleArgs>> getPathRules() {
+    public Output<List<ApplicationGatewayPathRuleArgs>> pathRules() {
         return this.pathRules == null ? Codegen.empty() : this.pathRules;
     }
 

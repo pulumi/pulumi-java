@@ -24,7 +24,7 @@ public final class UpdateHistoryPropertyResponse extends io.pulumi.resources.Inv
     @Import(name="immutabilityPeriodSinceCreationInDays", required=true)
       private final Integer immutabilityPeriodSinceCreationInDays;
 
-    public Integer getImmutabilityPeriodSinceCreationInDays() {
+    public Integer immutabilityPeriodSinceCreationInDays() {
         return this.immutabilityPeriodSinceCreationInDays;
     }
 
@@ -35,7 +35,7 @@ public final class UpdateHistoryPropertyResponse extends io.pulumi.resources.Inv
     @Import(name="objectIdentifier", required=true)
       private final String objectIdentifier;
 
-    public String getObjectIdentifier() {
+    public String objectIdentifier() {
         return this.objectIdentifier;
     }
 
@@ -46,7 +46,7 @@ public final class UpdateHistoryPropertyResponse extends io.pulumi.resources.Inv
     @Import(name="tenantId", required=true)
       private final String tenantId;
 
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
 
@@ -57,7 +57,7 @@ public final class UpdateHistoryPropertyResponse extends io.pulumi.resources.Inv
     @Import(name="timestamp", required=true)
       private final String timestamp;
 
-    public String getTimestamp() {
+    public String timestamp() {
         return this.timestamp;
     }
 
@@ -68,7 +68,7 @@ public final class UpdateHistoryPropertyResponse extends io.pulumi.resources.Inv
     @Import(name="update", required=true)
       private final String update;
 
-    public String getUpdate() {
+    public String update() {
         return this.update;
     }
 
@@ -79,7 +79,7 @@ public final class UpdateHistoryPropertyResponse extends io.pulumi.resources.Inv
     @Import(name="upn", required=true)
       private final String upn;
 
-    public String getUpn() {
+    public String upn() {
         return this.upn;
     }
 

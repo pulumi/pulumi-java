@@ -16,7 +16,7 @@ public final class AddressableResponse {
         this.url = url;
     }
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

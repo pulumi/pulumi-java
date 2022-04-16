@@ -24,7 +24,7 @@ public final class WorkflowTemplatePlacementResponse extends io.pulumi.resources
     @Import(name="clusterSelector", required=true)
       private final ClusterSelectorResponse clusterSelector;
 
-    public ClusterSelectorResponse getClusterSelector() {
+    public ClusterSelectorResponse clusterSelector() {
         return this.clusterSelector;
     }
 
@@ -35,7 +35,7 @@ public final class WorkflowTemplatePlacementResponse extends io.pulumi.resources
     @Import(name="managedCluster", required=true)
       private final ManagedClusterResponse managedCluster;
 
-    public ManagedClusterResponse getManagedCluster() {
+    public ManagedClusterResponse managedCluster() {
         return this.managedCluster;
     }
 

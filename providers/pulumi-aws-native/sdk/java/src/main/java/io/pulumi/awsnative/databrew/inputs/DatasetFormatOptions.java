@@ -23,21 +23,21 @@ public final class DatasetFormatOptions extends io.pulumi.resources.InvokeArgs {
     @Import(name="csv")
       private final @Nullable DatasetCsvOptions csv;
 
-    public Optional<DatasetCsvOptions> getCsv() {
+    public Optional<DatasetCsvOptions> csv() {
         return this.csv == null ? Optional.empty() : Optional.ofNullable(this.csv);
     }
 
     @Import(name="excel")
       private final @Nullable DatasetExcelOptions excel;
 
-    public Optional<DatasetExcelOptions> getExcel() {
+    public Optional<DatasetExcelOptions> excel() {
         return this.excel == null ? Optional.empty() : Optional.ofNullable(this.excel);
     }
 
     @Import(name="json")
       private final @Nullable DatasetJsonOptions json;
 
-    public Optional<DatasetJsonOptions> getJson() {
+    public Optional<DatasetJsonOptions> json() {
         return this.json == null ? Optional.empty() : Optional.ofNullable(this.json);
     }
 

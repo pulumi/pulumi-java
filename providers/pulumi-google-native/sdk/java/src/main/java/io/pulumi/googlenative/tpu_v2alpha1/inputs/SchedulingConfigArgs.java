@@ -26,7 +26,7 @@ public final class SchedulingConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="preemptible")
       private final @Nullable Output<Boolean> preemptible;
 
-    public Output<Boolean> getPreemptible() {
+    public Output<Boolean> preemptible() {
         return this.preemptible == null ? Codegen.empty() : this.preemptible;
     }
 
@@ -37,7 +37,7 @@ public final class SchedulingConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="reserved")
       private final @Nullable Output<Boolean> reserved;
 
-    public Output<Boolean> getReserved() {
+    public Output<Boolean> reserved() {
         return this.reserved == null ? Codegen.empty() : this.reserved;
     }
 

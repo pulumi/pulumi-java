@@ -41,7 +41,7 @@ public class WebAppAzureStorageAccountsSlot extends io.pulumi.resources.CustomRe
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -55,7 +55,7 @@ public class WebAppAzureStorageAccountsSlot extends io.pulumi.resources.CustomRe
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -69,7 +69,7 @@ public class WebAppAzureStorageAccountsSlot extends io.pulumi.resources.CustomRe
      * @return Azure storage accounts.
      * 
      */
-    public Output<Map<String,AzureStorageInfoValueResponse>> getProperties() {
+    public Output<Map<String,AzureStorageInfoValueResponse>> properties() {
         return this.properties;
     }
     /**
@@ -83,7 +83,7 @@ public class WebAppAzureStorageAccountsSlot extends io.pulumi.resources.CustomRe
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

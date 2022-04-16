@@ -26,7 +26,7 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -37,7 +37,7 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="ipConfigName")
       private final @Nullable Output<String> ipConfigName;
 
-    public Output<String> getIpConfigName() {
+    public Output<String> ipConfigName() {
         return this.ipConfigName == null ? Codegen.empty() : this.ipConfigName;
     }
 
@@ -48,7 +48,7 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -59,7 +59,7 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="privateIPAddress")
       private final @Nullable Output<String> privateIPAddress;
 
-    public Output<String> getPrivateIPAddress() {
+    public Output<String> privateIPAddress() {
         return this.privateIPAddress == null ? Codegen.empty() : this.privateIPAddress;
     }
 
@@ -70,7 +70,7 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="privateIPAllocationMethod")
       private final @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
-    public Output<Either<String,IPAllocationMethod>> getPrivateIPAllocationMethod() {
+    public Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod() {
         return this.privateIPAllocationMethod == null ? Codegen.empty() : this.privateIPAllocationMethod;
     }
 
@@ -81,7 +81,7 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="publicIPAddress")
       private final @Nullable Output<PublicIPAddressArgs> publicIPAddress;
 
-    public Output<PublicIPAddressArgs> getPublicIPAddress() {
+    public Output<PublicIPAddressArgs> publicIPAddress() {
         return this.publicIPAddress == null ? Codegen.empty() : this.publicIPAddress;
     }
 
@@ -92,7 +92,7 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -103,7 +103,7 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="subnet")
       private final @Nullable Output<SubnetArgs> subnet;
 
-    public Output<SubnetArgs> getSubnet() {
+    public Output<SubnetArgs> subnet() {
         return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 
@@ -114,7 +114,7 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="virtualHubName", required=true)
       private final Output<String> virtualHubName;
 
-    public Output<String> getVirtualHubName() {
+    public Output<String> virtualHubName() {
         return this.virtualHubName;
     }
 

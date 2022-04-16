@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextR
     @Import(name="allowPlaybackInterruption", required=true)
       private final Boolean allowPlaybackInterruption;
 
-    public Boolean getAllowPlaybackInterruption() {
+    public Boolean allowPlaybackInterruption() {
         return this.allowPlaybackInterruption;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextR
     @Import(name="ssml", required=true)
       private final String ssml;
 
-    public String getSsml() {
+    public String ssml() {
         return this.ssml;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextR
     @Import(name="text", required=true)
       private final String text;
 
-    public String getText() {
+    public String text() {
         return this.text;
     }
 

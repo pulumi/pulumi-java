@@ -29,7 +29,7 @@ public final class ServerConfigurationsManagementSettingsArgs extends io.pulumi.
     @Import(name="additionalFeaturesServerConfigurations")
       private final @Nullable Output<AdditionalFeaturesServerConfigurationsArgs> additionalFeaturesServerConfigurations;
 
-    public Output<AdditionalFeaturesServerConfigurationsArgs> getAdditionalFeaturesServerConfigurations() {
+    public Output<AdditionalFeaturesServerConfigurationsArgs> additionalFeaturesServerConfigurations() {
         return this.additionalFeaturesServerConfigurations == null ? Codegen.empty() : this.additionalFeaturesServerConfigurations;
     }
 
@@ -40,7 +40,7 @@ public final class ServerConfigurationsManagementSettingsArgs extends io.pulumi.
     @Import(name="sqlConnectivityUpdateSettings")
       private final @Nullable Output<SqlConnectivityUpdateSettingsArgs> sqlConnectivityUpdateSettings;
 
-    public Output<SqlConnectivityUpdateSettingsArgs> getSqlConnectivityUpdateSettings() {
+    public Output<SqlConnectivityUpdateSettingsArgs> sqlConnectivityUpdateSettings() {
         return this.sqlConnectivityUpdateSettings == null ? Codegen.empty() : this.sqlConnectivityUpdateSettings;
     }
 
@@ -51,7 +51,7 @@ public final class ServerConfigurationsManagementSettingsArgs extends io.pulumi.
     @Import(name="sqlStorageUpdateSettings")
       private final @Nullable Output<SqlStorageUpdateSettingsArgs> sqlStorageUpdateSettings;
 
-    public Output<SqlStorageUpdateSettingsArgs> getSqlStorageUpdateSettings() {
+    public Output<SqlStorageUpdateSettingsArgs> sqlStorageUpdateSettings() {
         return this.sqlStorageUpdateSettings == null ? Codegen.empty() : this.sqlStorageUpdateSettings;
     }
 
@@ -62,7 +62,7 @@ public final class ServerConfigurationsManagementSettingsArgs extends io.pulumi.
     @Import(name="sqlWorkloadTypeUpdateSettings")
       private final @Nullable Output<SqlWorkloadTypeUpdateSettingsArgs> sqlWorkloadTypeUpdateSettings;
 
-    public Output<SqlWorkloadTypeUpdateSettingsArgs> getSqlWorkloadTypeUpdateSettings() {
+    public Output<SqlWorkloadTypeUpdateSettingsArgs> sqlWorkloadTypeUpdateSettings() {
         return this.sqlWorkloadTypeUpdateSettings == null ? Codegen.empty() : this.sqlWorkloadTypeUpdateSettings;
     }
 

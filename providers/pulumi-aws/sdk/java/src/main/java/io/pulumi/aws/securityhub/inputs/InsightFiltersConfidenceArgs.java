@@ -22,7 +22,7 @@ public final class InsightFiltersConfidenceArgs extends io.pulumi.resources.Reso
     @Import(name="eq")
       private final @Nullable Output<String> eq;
 
-    public Output<String> getEq() {
+    public Output<String> eq() {
         return this.eq == null ? Codegen.empty() : this.eq;
     }
 
@@ -33,7 +33,7 @@ public final class InsightFiltersConfidenceArgs extends io.pulumi.resources.Reso
     @Import(name="gte")
       private final @Nullable Output<String> gte;
 
-    public Output<String> getGte() {
+    public Output<String> gte() {
         return this.gte == null ? Codegen.empty() : this.gte;
     }
 
@@ -44,7 +44,7 @@ public final class InsightFiltersConfidenceArgs extends io.pulumi.resources.Reso
     @Import(name="lte")
       private final @Nullable Output<String> lte;
 
-    public Output<String> getLte() {
+    public Output<String> lte() {
         return this.lte == null ? Codegen.empty() : this.lte;
     }
 

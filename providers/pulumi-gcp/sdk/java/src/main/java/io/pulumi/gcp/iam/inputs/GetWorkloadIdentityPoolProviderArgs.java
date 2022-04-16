@@ -22,7 +22,7 @@ public final class GetWorkloadIdentityPoolProviderArgs extends io.pulumi.resourc
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
@@ -34,7 +34,7 @@ public final class GetWorkloadIdentityPoolProviderArgs extends io.pulumi.resourc
     @Import(name="workloadIdentityPoolId", required=true)
       private final String workloadIdentityPoolId;
 
-    public String getWorkloadIdentityPoolId() {
+    public String workloadIdentityPoolId() {
         return this.workloadIdentityPoolId;
     }
 
@@ -46,7 +46,7 @@ public final class GetWorkloadIdentityPoolProviderArgs extends io.pulumi.resourc
     @Import(name="workloadIdentityPoolProviderId", required=true)
       private final String workloadIdentityPoolProviderId;
 
-    public String getWorkloadIdentityPoolProviderId() {
+    public String workloadIdentityPoolProviderId() {
         return this.workloadIdentityPoolProviderId;
     }
 

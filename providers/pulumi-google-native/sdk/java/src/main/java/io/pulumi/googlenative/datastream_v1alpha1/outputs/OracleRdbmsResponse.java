@@ -25,7 +25,7 @@ public final class OracleRdbmsResponse {
      * Oracle schemas/databases in the database server.
      * 
     */
-    public List<OracleSchemaResponse> getOracleSchemas() {
+    public List<OracleSchemaResponse> oracleSchemas() {
         return this.oracleSchemas;
     }
 

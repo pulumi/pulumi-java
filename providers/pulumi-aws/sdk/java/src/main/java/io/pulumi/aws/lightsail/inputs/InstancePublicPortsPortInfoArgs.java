@@ -24,7 +24,7 @@ public final class InstancePublicPortsPortInfoArgs extends io.pulumi.resources.R
     @Import(name="cidrs")
       private final @Nullable Output<List<String>> cidrs;
 
-    public Output<List<String>> getCidrs() {
+    public Output<List<String>> cidrs() {
         return this.cidrs == null ? Codegen.empty() : this.cidrs;
     }
 
@@ -35,7 +35,7 @@ public final class InstancePublicPortsPortInfoArgs extends io.pulumi.resources.R
     @Import(name="fromPort", required=true)
       private final Output<Integer> fromPort;
 
-    public Output<Integer> getFromPort() {
+    public Output<Integer> fromPort() {
         return this.fromPort;
     }
 
@@ -46,7 +46,7 @@ public final class InstancePublicPortsPortInfoArgs extends io.pulumi.resources.R
     @Import(name="protocol", required=true)
       private final Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol;
     }
 
@@ -57,7 +57,7 @@ public final class InstancePublicPortsPortInfoArgs extends io.pulumi.resources.R
     @Import(name="toPort", required=true)
       private final Output<Integer> toPort;
 
-    public Output<Integer> getToPort() {
+    public Output<Integer> toPort() {
         return this.toPort;
     }
 

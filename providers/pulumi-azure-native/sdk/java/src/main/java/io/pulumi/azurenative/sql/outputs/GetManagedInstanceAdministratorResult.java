@@ -69,49 +69,49 @@ public final class GetManagedInstanceAdministratorResult {
      * Type of the managed instance administrator.
      * 
     */
-    public String getAdministratorType() {
+    public String administratorType() {
         return this.administratorType;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Login name of the managed instance administrator.
      * 
     */
-    public String getLogin() {
+    public String login() {
         return this.login;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * SID (object ID) of the managed instance administrator.
      * 
     */
-    public String getSid() {
+    public String sid() {
         return this.sid;
     }
     /**
      * Tenant ID of the managed instance administrator.
      * 
     */
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

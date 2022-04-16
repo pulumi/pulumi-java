@@ -25,7 +25,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessLogSettings")
       private final @Nullable Output<StageAccessLogSettingsGetArgs> accessLogSettings;
 
-    public Output<StageAccessLogSettingsGetArgs> getAccessLogSettings() {
+    public Output<StageAccessLogSettingsGetArgs> accessLogSettings() {
         return this.accessLogSettings == null ? Codegen.empty() : this.accessLogSettings;
     }
 
@@ -36,7 +36,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -47,7 +47,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="cacheClusterEnabled")
       private final @Nullable Output<Boolean> cacheClusterEnabled;
 
-    public Output<Boolean> getCacheClusterEnabled() {
+    public Output<Boolean> cacheClusterEnabled() {
         return this.cacheClusterEnabled == null ? Codegen.empty() : this.cacheClusterEnabled;
     }
 
@@ -58,7 +58,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="cacheClusterSize")
       private final @Nullable Output<String> cacheClusterSize;
 
-    public Output<String> getCacheClusterSize() {
+    public Output<String> cacheClusterSize() {
         return this.cacheClusterSize == null ? Codegen.empty() : this.cacheClusterSize;
     }
 
@@ -69,7 +69,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientCertificateId")
       private final @Nullable Output<String> clientCertificateId;
 
-    public Output<String> getClientCertificateId() {
+    public Output<String> clientCertificateId() {
         return this.clientCertificateId == null ? Codegen.empty() : this.clientCertificateId;
     }
 
@@ -80,7 +80,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="deployment")
       private final @Nullable Output<String> deployment;
 
-    public Output<String> getDeployment() {
+    public Output<String> deployment() {
         return this.deployment == null ? Codegen.empty() : this.deployment;
     }
 
@@ -91,7 +91,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -102,7 +102,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="documentationVersion")
       private final @Nullable Output<String> documentationVersion;
 
-    public Output<String> getDocumentationVersion() {
+    public Output<String> documentationVersion() {
         return this.documentationVersion == null ? Codegen.empty() : this.documentationVersion;
     }
 
@@ -115,7 +115,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="executionArn")
       private final @Nullable Output<String> executionArn;
 
-    public Output<String> getExecutionArn() {
+    public Output<String> executionArn() {
         return this.executionArn == null ? Codegen.empty() : this.executionArn;
     }
 
@@ -127,7 +127,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="invokeUrl")
       private final @Nullable Output<String> invokeUrl;
 
-    public Output<String> getInvokeUrl() {
+    public Output<String> invokeUrl() {
         return this.invokeUrl == null ? Codegen.empty() : this.invokeUrl;
     }
 
@@ -138,7 +138,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="restApi")
       private final @Nullable Output<String> restApi;
 
-    public Output<String> getRestApi() {
+    public Output<String> restApi() {
         return this.restApi == null ? Codegen.empty() : this.restApi;
     }
 
@@ -149,7 +149,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="stageName")
       private final @Nullable Output<String> stageName;
 
-    public Output<String> getStageName() {
+    public Output<String> stageName() {
         return this.stageName == null ? Codegen.empty() : this.stageName;
     }
 
@@ -160,7 +160,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -171,7 +171,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -182,7 +182,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="variables")
       private final @Nullable Output<Map<String,String>> variables;
 
-    public Output<Map<String,String>> getVariables() {
+    public Output<Map<String,String>> variables() {
         return this.variables == null ? Codegen.empty() : this.variables;
     }
 
@@ -193,7 +193,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="webAclArn")
       private final @Nullable Output<String> webAclArn;
 
-    public Output<String> getWebAclArn() {
+    public Output<String> webAclArn() {
         return this.webAclArn == null ? Codegen.empty() : this.webAclArn;
     }
 
@@ -204,7 +204,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="xrayTracingEnabled")
       private final @Nullable Output<Boolean> xrayTracingEnabled;
 
-    public Output<Boolean> getXrayTracingEnabled() {
+    public Output<Boolean> xrayTracingEnabled() {
         return this.xrayTracingEnabled == null ? Codegen.empty() : this.xrayTracingEnabled;
     }
 

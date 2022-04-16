@@ -25,7 +25,7 @@ public final class ConsentLinkDefinitionResponse extends io.pulumi.resources.Inv
     @Import(name="displayName")
       private final @Nullable String displayName;
 
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
@@ -36,7 +36,7 @@ public final class ConsentLinkDefinitionResponse extends io.pulumi.resources.Inv
     @Import(name="firstPartyLoginUri")
       private final @Nullable String firstPartyLoginUri;
 
-    public Optional<String> getFirstPartyLoginUri() {
+    public Optional<String> firstPartyLoginUri() {
         return this.firstPartyLoginUri == null ? Optional.empty() : Optional.ofNullable(this.firstPartyLoginUri);
     }
 
@@ -47,7 +47,7 @@ public final class ConsentLinkDefinitionResponse extends io.pulumi.resources.Inv
     @Import(name="link")
       private final @Nullable String link;
 
-    public Optional<String> getLink() {
+    public Optional<String> link() {
         return this.link == null ? Optional.empty() : Optional.ofNullable(this.link);
     }
 
@@ -58,7 +58,7 @@ public final class ConsentLinkDefinitionResponse extends io.pulumi.resources.Inv
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 

@@ -27,7 +27,7 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="collectionOverrides")
       private final @Nullable Output<List<CollectionOverrideArgs>> collectionOverrides;
 
-    public Output<List<CollectionOverrideArgs>> getCollectionOverrides() {
+    public Output<List<CollectionOverrideArgs>> collectionOverrides() {
         return this.collectionOverrides == null ? Codegen.empty() : this.collectionOverrides;
     }
 
@@ -38,7 +38,7 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="credential")
       private final @Nullable Output<CredentialArgs> credential;
 
-    public Output<CredentialArgs> getCredential() {
+    public Output<CredentialArgs> credential() {
         return this.credential == null ? Codegen.empty() : this.credential;
     }
 
@@ -49,7 +49,7 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customCertificateAuthorityRoots")
       private final @Nullable Output<List<String>> customCertificateAuthorityRoots;
 
-    public Output<List<String>> getCustomCertificateAuthorityRoots() {
+    public Output<List<String>> customCertificateAuthorityRoots() {
         return this.customCertificateAuthorityRoots == null ? Codegen.empty() : this.customCertificateAuthorityRoots;
     }
 
@@ -60,7 +60,7 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -71,7 +71,7 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="descriptorUrl")
       private final @Nullable Output<String> descriptorUrl;
 
-    public Output<String> getDescriptorUrl() {
+    public Output<String> descriptorUrl() {
         return this.descriptorUrl == null ? Codegen.empty() : this.descriptorUrl;
     }
 
@@ -82,7 +82,7 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<List<TypeProviderLabelEntryArgs>> labels;
 
-    public Output<List<TypeProviderLabelEntryArgs>> getLabels() {
+    public Output<List<TypeProviderLabelEntryArgs>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -93,7 +93,7 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -104,14 +104,14 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="options")
       private final @Nullable Output<OptionsArgs> options;
 
-    public Output<OptionsArgs> getOptions() {
+    public Output<OptionsArgs> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

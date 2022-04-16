@@ -24,7 +24,7 @@ public final class FileSourceInfoResponse {
      * File share ID.
      * 
     */
-    public String getShareId() {
+    public String shareId() {
         return this.shareId;
     }
 

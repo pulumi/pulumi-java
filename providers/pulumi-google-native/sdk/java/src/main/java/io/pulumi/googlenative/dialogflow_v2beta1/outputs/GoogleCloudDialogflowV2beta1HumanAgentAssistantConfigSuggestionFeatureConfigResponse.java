@@ -65,42 +65,42 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * Configs of custom conversation model.
      * 
     */
-    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigResponse getConversationModelConfig() {
+    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigResponse conversationModelConfig() {
         return this.conversationModelConfig;
     }
     /**
      * Configs for processing conversation.
      * 
     */
-    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse getConversationProcessConfig() {
+    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse conversationProcessConfig() {
         return this.conversationProcessConfig;
     }
     /**
      * Automatically iterates all participants and tries to compile suggestions. Supported features: ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST.
      * 
     */
-    public Boolean getEnableEventBasedSuggestion() {
+    public Boolean enableEventBasedSuggestion() {
         return this.enableEventBasedSuggestion;
     }
     /**
      * Configs of query.
      * 
     */
-    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigResponse getQueryConfig() {
+    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigResponse queryConfig() {
         return this.queryConfig;
     }
     /**
      * The suggestion feature.
      * 
     */
-    public GoogleCloudDialogflowV2beta1SuggestionFeatureResponse getSuggestionFeature() {
+    public GoogleCloudDialogflowV2beta1SuggestionFeatureResponse suggestionFeature() {
         return this.suggestionFeature;
     }
     /**
      * Settings of suggestion trigger. Currently, only ARTICLE_SUGGESTION, FAQ, and DIALOGFLOW_ASSIST will use this field.
      * 
     */
-    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsResponse getSuggestionTriggerSettings() {
+    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsResponse suggestionTriggerSettings() {
         return this.suggestionTriggerSettings;
     }
 

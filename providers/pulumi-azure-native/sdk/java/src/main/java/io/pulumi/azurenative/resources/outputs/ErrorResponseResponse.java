@@ -55,35 +55,35 @@ public final class ErrorResponseResponse {
      * The error additional info.
      * 
     */
-    public List<ErrorAdditionalInfoResponse> getAdditionalInfo() {
+    public List<ErrorAdditionalInfoResponse> additionalInfo() {
         return this.additionalInfo;
     }
     /**
      * The error code.
      * 
     */
-    public String getCode() {
+    public String code() {
         return this.code;
     }
     /**
      * The error details.
      * 
     */
-    public List<ErrorResponseResponse> getDetails() {
+    public List<ErrorResponseResponse> details() {
         return this.details;
     }
     /**
      * The error message.
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
     /**
      * The error target.
      * 
     */
-    public String getTarget() {
+    public String target() {
         return this.target;
     }
 

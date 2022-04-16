@@ -24,21 +24,21 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="awsAccountId", required=true)
       private final Output<String> awsAccountId;
 
-    public Output<String> getAwsAccountId() {
+    public Output<String> awsAccountId() {
         return this.awsAccountId;
     }
 
     @Import(name="dashboardId", required=true)
       private final Output<String> dashboardId;
 
-    public Output<String> getDashboardId() {
+    public Output<String> dashboardId() {
         return this.dashboardId;
     }
 
     @Import(name="dashboardPublishOptions")
       private final @Nullable Output<DashboardPublishOptionsArgs> dashboardPublishOptions;
 
-    public Output<DashboardPublishOptionsArgs> getDashboardPublishOptions() {
+    public Output<DashboardPublishOptionsArgs> dashboardPublishOptions() {
         return this.dashboardPublishOptions == null ? Codegen.empty() : this.dashboardPublishOptions;
     }
 
@@ -49,14 +49,14 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="parameters")
       private final @Nullable Output<DashboardParametersArgs> parameters;
 
-    public Output<DashboardParametersArgs> getParameters() {
+    public Output<DashboardParametersArgs> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -71,14 +71,14 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="permissions")
       private final @Nullable Output<List<DashboardResourcePermissionArgs>> permissions;
 
-    public Output<List<DashboardResourcePermissionArgs>> getPermissions() {
+    public Output<List<DashboardResourcePermissionArgs>> permissions() {
         return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
     @Import(name="sourceEntity", required=true)
       private final Output<DashboardSourceEntityArgs> sourceEntity;
 
-    public Output<DashboardSourceEntityArgs> getSourceEntity() {
+    public Output<DashboardSourceEntityArgs> sourceEntity() {
         return this.sourceEntity;
     }
 
@@ -90,7 +90,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DashboardTagArgs>> tags;
 
-    public Output<List<DashboardTagArgs>> getTags() {
+    public Output<List<DashboardTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -104,7 +104,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="themeArn")
       private final @Nullable Output<String> themeArn;
 
-    public Output<String> getThemeArn() {
+    public Output<String> themeArn() {
         return this.themeArn == null ? Codegen.empty() : this.themeArn;
     }
 
@@ -115,7 +115,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="versionDescription")
       private final @Nullable Output<String> versionDescription;
 
-    public Output<String> getVersionDescription() {
+    public Output<String> versionDescription() {
         return this.versionDescription == null ? Codegen.empty() : this.versionDescription;
     }
 

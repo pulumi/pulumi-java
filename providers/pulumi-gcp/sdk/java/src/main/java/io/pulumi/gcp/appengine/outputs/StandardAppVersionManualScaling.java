@@ -28,7 +28,7 @@ public final class StandardAppVersionManualScaling {
      * Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manual_scaling"[0].instances]` to prevent drift detection.
      * 
     */
-    public Integer getInstances() {
+    public Integer instances() {
         return this.instances;
     }
 

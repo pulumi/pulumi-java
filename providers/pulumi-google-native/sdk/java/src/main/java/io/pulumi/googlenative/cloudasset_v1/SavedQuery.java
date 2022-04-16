@@ -32,7 +32,7 @@ public class SavedQuery extends io.pulumi.resources.CustomResource {
      * @return The query content.
      * 
      */
-    public Output<QueryContentResponse> getContent() {
+    public Output<QueryContentResponse> content() {
         return this.content;
     }
     /**
@@ -46,7 +46,7 @@ public class SavedQuery extends io.pulumi.resources.CustomResource {
      * @return The create time of this saved query.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -60,7 +60,7 @@ public class SavedQuery extends io.pulumi.resources.CustomResource {
      * @return The account's email address who has created this saved query.
      * 
      */
-    public Output<String> getCreator() {
+    public Output<String> creator() {
         return this.creator;
     }
     /**
@@ -74,7 +74,7 @@ public class SavedQuery extends io.pulumi.resources.CustomResource {
      * @return The description of this saved query. This value should be fewer than 255 characters.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -88,7 +88,7 @@ public class SavedQuery extends io.pulumi.resources.CustomResource {
      * @return Labels applied on the resource. This value should not contain more than 10 entries. The key and value of each entry must be non-empty and fewer than 64 characters.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -102,7 +102,7 @@ public class SavedQuery extends io.pulumi.resources.CustomResource {
      * @return The last update time of this saved query.
      * 
      */
-    public Output<String> getLastUpdateTime() {
+    public Output<String> lastUpdateTime() {
         return this.lastUpdateTime;
     }
     /**
@@ -116,7 +116,7 @@ public class SavedQuery extends io.pulumi.resources.CustomResource {
      * @return The account's email address who has updated this saved query most recently.
      * 
      */
-    public Output<String> getLastUpdater() {
+    public Output<String> lastUpdater() {
         return this.lastUpdater;
     }
     /**
@@ -130,7 +130,7 @@ public class SavedQuery extends io.pulumi.resources.CustomResource {
      * @return The resource name of the saved query. The format must be: * projects/project_number/savedQueries/saved_query_id * folders/folder_number/savedQueries/saved_query_id * organizations/organization_number/savedQueries/saved_query_id
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

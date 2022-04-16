@@ -24,19 +24,19 @@ public class RegistryPolicy extends io.pulumi.resources.CustomResource {
     @Export(name="policy", type=Object.class, parameters={})
     private Output<Object> policy;
 
-    public Output<Object> getPolicy() {
+    public Output<Object> policy() {
         return this.policy;
     }
     @Export(name="registryName", type=String.class, parameters={})
     private Output<String> registryName;
 
-    public Output<String> getRegistryName() {
+    public Output<String> registryName() {
         return this.registryName;
     }
     @Export(name="revisionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> revisionId;
 
-    public Output</* @Nullable */ String> getRevisionId() {
+    public Output</* @Nullable */ String> revisionId() {
         return this.revisionId;
     }
 

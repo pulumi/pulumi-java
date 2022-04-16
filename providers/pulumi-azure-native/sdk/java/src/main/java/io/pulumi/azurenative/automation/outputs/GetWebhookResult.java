@@ -121,98 +121,98 @@ public final class GetWebhookResult {
      * Gets or sets the creation time.
      * 
     */
-    public Optional<String> getCreationTime() {
+    public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * Gets or sets the description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Gets or sets the expiry time.
      * 
     */
-    public Optional<String> getExpiryTime() {
+    public Optional<String> expiryTime() {
         return Optional.ofNullable(this.expiryTime);
     }
     /**
      * Fully qualified resource Id for the resource
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Gets or sets the value of the enabled flag of the webhook.
      * 
     */
-    public Optional<Boolean> getIsEnabled() {
+    public Optional<Boolean> isEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
     /**
      * Gets or sets the last invoked time.
      * 
     */
-    public Optional<String> getLastInvokedTime() {
+    public Optional<String> lastInvokedTime() {
         return Optional.ofNullable(this.lastInvokedTime);
     }
     /**
      * Details of the user who last modified the Webhook
      * 
     */
-    public Optional<String> getLastModifiedBy() {
+    public Optional<String> lastModifiedBy() {
         return Optional.ofNullable(this.lastModifiedBy);
     }
     /**
      * Gets or sets the last modified time.
      * 
     */
-    public Optional<String> getLastModifiedTime() {
+    public Optional<String> lastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Gets or sets the parameters of the job that is created when the webhook calls the runbook it is associated with.
      * 
     */
-    public Map<String,String> getParameters() {
+    public Map<String,String> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Gets or sets the name of the hybrid worker group the webhook job will run on.
      * 
     */
-    public Optional<String> getRunOn() {
+    public Optional<String> runOn() {
         return Optional.ofNullable(this.runOn);
     }
     /**
      * Gets or sets the runbook the webhook is associated with.
      * 
     */
-    public Optional<RunbookAssociationPropertyResponse> getRunbook() {
+    public Optional<RunbookAssociationPropertyResponse> runbook() {
         return Optional.ofNullable(this.runbook);
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Gets or sets the webhook uri.
      * 
     */
-    public Optional<String> getUri() {
+    public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }
 

@@ -17,42 +17,42 @@ public final class ListenerRedirectConfig extends io.pulumi.resources.InvokeArgs
     @Import(name="host")
       private final @Nullable String host;
 
-    public Optional<String> getHost() {
+    public Optional<String> host() {
         return this.host == null ? Optional.empty() : Optional.ofNullable(this.host);
     }
 
     @Import(name="path")
       private final @Nullable String path;
 
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
     @Import(name="port")
       private final @Nullable String port;
 
-    public Optional<String> getPort() {
+    public Optional<String> port() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
     @Import(name="protocol")
       private final @Nullable String protocol;
 
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
     @Import(name="query")
       private final @Nullable String query;
 
-    public Optional<String> getQuery() {
+    public Optional<String> query() {
         return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
     }
 
     @Import(name="statusCode", required=true)
       private final String statusCode;
 
-    public String getStatusCode() {
+    public String statusCode() {
         return this.statusCode;
     }
 

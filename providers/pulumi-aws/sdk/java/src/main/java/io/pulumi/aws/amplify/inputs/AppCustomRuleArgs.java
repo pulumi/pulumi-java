@@ -22,7 +22,7 @@ public final class AppCustomRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="condition")
       private final @Nullable Output<String> condition;
 
-    public Output<String> getCondition() {
+    public Output<String> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -33,7 +33,7 @@ public final class AppCustomRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="source", required=true)
       private final Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source;
     }
 
@@ -44,7 +44,7 @@ public final class AppCustomRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -55,7 +55,7 @@ public final class AppCustomRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="target", required=true)
       private final Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target;
     }
 

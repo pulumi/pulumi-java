@@ -27,7 +27,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action")
       private final @Nullable Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -38,7 +38,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
+    public Output<String> apiVersion() {
         return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
@@ -49,7 +49,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="count")
       private final @Nullable Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count == null ? Codegen.empty() : this.count;
     }
 
@@ -60,7 +60,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventTime")
       private final @Nullable Output<String> eventTime;
 
-    public Output<String> getEventTime() {
+    public Output<String> eventTime() {
         return this.eventTime == null ? Codegen.empty() : this.eventTime;
     }
 
@@ -71,7 +71,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="firstTimestamp")
       private final @Nullable Output<String> firstTimestamp;
 
-    public Output<String> getFirstTimestamp() {
+    public Output<String> firstTimestamp() {
         return this.firstTimestamp == null ? Codegen.empty() : this.firstTimestamp;
     }
 
@@ -82,7 +82,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="involvedObject", required=true)
       private final Output<ObjectReferenceArgs> involvedObject;
 
-    public Output<ObjectReferenceArgs> getInvolvedObject() {
+    public Output<ObjectReferenceArgs> involvedObject() {
         return this.involvedObject;
     }
 
@@ -93,7 +93,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -104,7 +104,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastTimestamp")
       private final @Nullable Output<String> lastTimestamp;
 
-    public Output<String> getLastTimestamp() {
+    public Output<String> lastTimestamp() {
         return this.lastTimestamp == null ? Codegen.empty() : this.lastTimestamp;
     }
 
@@ -115,7 +115,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message == null ? Codegen.empty() : this.message;
     }
 
@@ -126,7 +126,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata", required=true)
       private final Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> getMetadata() {
+    public Output<ObjectMetaArgs> metadata() {
         return this.metadata;
     }
 
@@ -137,7 +137,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reason")
       private final @Nullable Output<String> reason;
 
-    public Output<String> getReason() {
+    public Output<String> reason() {
         return this.reason == null ? Codegen.empty() : this.reason;
     }
 
@@ -148,7 +148,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="related")
       private final @Nullable Output<ObjectReferenceArgs> related;
 
-    public Output<ObjectReferenceArgs> getRelated() {
+    public Output<ObjectReferenceArgs> related() {
         return this.related == null ? Codegen.empty() : this.related;
     }
 
@@ -159,7 +159,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reportingComponent")
       private final @Nullable Output<String> reportingComponent;
 
-    public Output<String> getReportingComponent() {
+    public Output<String> reportingComponent() {
         return this.reportingComponent == null ? Codegen.empty() : this.reportingComponent;
     }
 
@@ -170,7 +170,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reportingInstance")
       private final @Nullable Output<String> reportingInstance;
 
-    public Output<String> getReportingInstance() {
+    public Output<String> reportingInstance() {
         return this.reportingInstance == null ? Codegen.empty() : this.reportingInstance;
     }
 
@@ -181,7 +181,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="series")
       private final @Nullable Output<EventSeriesArgs> series;
 
-    public Output<EventSeriesArgs> getSeries() {
+    public Output<EventSeriesArgs> series() {
         return this.series == null ? Codegen.empty() : this.series;
     }
 
@@ -192,7 +192,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="source")
       private final @Nullable Output<EventSourceArgs> source;
 
-    public Output<EventSourceArgs> getSource() {
+    public Output<EventSourceArgs> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 
@@ -203,7 +203,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -27,7 +27,7 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instancePoolName")
       private final @Nullable Output<String> instancePoolName;
 
-    public Output<String> getInstancePoolName() {
+    public Output<String> instancePoolName() {
         return this.instancePoolName == null ? Codegen.empty() : this.instancePoolName;
     }
 
@@ -38,7 +38,7 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="licenseType", required=true)
       private final Output<Either<String,InstancePoolLicenseType>> licenseType;
 
-    public Output<Either<String,InstancePoolLicenseType>> getLicenseType() {
+    public Output<Either<String,InstancePoolLicenseType>> licenseType() {
         return this.licenseType;
     }
 
@@ -49,7 +49,7 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -60,7 +60,7 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -71,7 +71,7 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -82,7 +82,7 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 
@@ -93,7 +93,7 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -104,7 +104,7 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vCores", required=true)
       private final Output<Integer> vCores;
 
-    public Output<Integer> getVCores() {
+    public Output<Integer> vCores() {
         return this.vCores;
     }
 

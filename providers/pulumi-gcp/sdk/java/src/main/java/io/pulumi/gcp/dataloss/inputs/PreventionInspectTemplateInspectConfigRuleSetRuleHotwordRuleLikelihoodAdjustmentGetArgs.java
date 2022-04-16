@@ -24,7 +24,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleL
     @Import(name="fixedLikelihood")
       private final @Nullable Output<String> fixedLikelihood;
 
-    public Output<String> getFixedLikelihood() {
+    public Output<String> fixedLikelihood() {
         return this.fixedLikelihood == null ? Codegen.empty() : this.fixedLikelihood;
     }
 
@@ -40,7 +40,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleL
     @Import(name="relativeLikelihood")
       private final @Nullable Output<Integer> relativeLikelihood;
 
-    public Output<Integer> getRelativeLikelihood() {
+    public Output<Integer> relativeLikelihood() {
         return this.relativeLikelihood == null ? Codegen.empty() : this.relativeLikelihood;
     }
 

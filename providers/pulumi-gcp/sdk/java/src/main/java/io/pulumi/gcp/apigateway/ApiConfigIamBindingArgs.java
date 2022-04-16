@@ -25,28 +25,28 @@ public final class ApiConfigIamBindingArgs extends io.pulumi.resources.ResourceA
     @Import(name="api", required=true)
       private final Output<String> api;
 
-    public Output<String> getApi() {
+    public Output<String> api() {
         return this.api;
     }
 
     @Import(name="apiConfig", required=true)
       private final Output<String> apiConfig;
 
-    public Output<String> getApiConfig() {
+    public Output<String> apiConfig() {
         return this.apiConfig;
     }
 
     @Import(name="condition")
       private final @Nullable Output<ApiConfigIamBindingConditionArgs> condition;
 
-    public Output<ApiConfigIamBindingConditionArgs> getCondition() {
+    public Output<ApiConfigIamBindingConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
@@ -58,7 +58,7 @@ public final class ApiConfigIamBindingArgs extends io.pulumi.resources.ResourceA
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -71,7 +71,7 @@ public final class ApiConfigIamBindingArgs extends io.pulumi.resources.ResourceA
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

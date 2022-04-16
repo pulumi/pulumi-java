@@ -18,7 +18,7 @@ public final class TaskDefinitionEphemeralStorageArgs extends io.pulumi.resource
     @Import(name="sizeInGiB")
       private final @Nullable Output<Integer> sizeInGiB;
 
-    public Output<Integer> getSizeInGiB() {
+    public Output<Integer> sizeInGiB() {
         return this.sizeInGiB == null ? Codegen.empty() : this.sizeInGiB;
     }
 

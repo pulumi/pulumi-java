@@ -24,7 +24,7 @@ public final class CloudServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudServiceName")
       private final @Nullable Output<String> cloudServiceName;
 
-    public Output<String> getCloudServiceName() {
+    public Output<String> cloudServiceName() {
         return this.cloudServiceName == null ? Codegen.empty() : this.cloudServiceName;
     }
 
@@ -35,7 +35,7 @@ public final class CloudServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -46,7 +46,7 @@ public final class CloudServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<CloudServicePropertiesArgs> properties;
 
-    public Output<CloudServicePropertiesArgs> getProperties() {
+    public Output<CloudServicePropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -57,7 +57,7 @@ public final class CloudServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,7 +68,7 @@ public final class CloudServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -27,7 +27,7 @@ public final class PeripheralsConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="metastoreService")
       private final @Nullable Output<String> metastoreService;
 
-    public Output<String> getMetastoreService() {
+    public Output<String> metastoreService() {
         return this.metastoreService == null ? Codegen.empty() : this.metastoreService;
     }
 
@@ -38,7 +38,7 @@ public final class PeripheralsConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="sparkHistoryServerConfig")
       private final @Nullable Output<SparkHistoryServerConfigArgs> sparkHistoryServerConfig;
 
-    public Output<SparkHistoryServerConfigArgs> getSparkHistoryServerConfig() {
+    public Output<SparkHistoryServerConfigArgs> sparkHistoryServerConfig() {
         return this.sparkHistoryServerConfig == null ? Codegen.empty() : this.sparkHistoryServerConfig;
     }
 

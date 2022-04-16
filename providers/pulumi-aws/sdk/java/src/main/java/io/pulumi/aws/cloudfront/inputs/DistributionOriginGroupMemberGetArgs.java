@@ -21,7 +21,7 @@ public final class DistributionOriginGroupMemberGetArgs extends io.pulumi.resour
     @Import(name="originId", required=true)
       private final Output<String> originId;
 
-    public Output<String> getOriginId() {
+    public Output<String> originId() {
         return this.originId;
     }
 

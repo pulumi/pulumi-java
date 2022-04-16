@@ -23,7 +23,7 @@ public final class DocumentationPartState extends io.pulumi.resources.ResourceAr
     @Import(name="location")
       private final @Nullable Output<DocumentationPartLocationGetArgs> location;
 
-    public Output<DocumentationPartLocationGetArgs> getLocation() {
+    public Output<DocumentationPartLocationGetArgs> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -34,7 +34,7 @@ public final class DocumentationPartState extends io.pulumi.resources.ResourceAr
     @Import(name="properties")
       private final @Nullable Output<String> properties;
 
-    public Output<String> getProperties() {
+    public Output<String> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -45,7 +45,7 @@ public final class DocumentationPartState extends io.pulumi.resources.ResourceAr
     @Import(name="restApiId")
       private final @Nullable Output<String> restApiId;
 
-    public Output<String> getRestApiId() {
+    public Output<String> restApiId() {
         return this.restApiId == null ? Codegen.empty() : this.restApiId;
     }
 

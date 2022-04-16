@@ -31,7 +31,7 @@ public class ResolverQueryLoggingConfigAssociation extends io.pulumi.resources.C
      * @return Rfc3339TimeString
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -45,7 +45,7 @@ public class ResolverQueryLoggingConfigAssociation extends io.pulumi.resources.C
      * @return ResolverQueryLogConfigAssociationError
      * 
      */
-    public Output<ResolverQueryLoggingConfigAssociationError> getError() {
+    public Output<ResolverQueryLoggingConfigAssociationError> error() {
         return this.error;
     }
     /**
@@ -59,7 +59,7 @@ public class ResolverQueryLoggingConfigAssociation extends io.pulumi.resources.C
      * @return ResolverQueryLogConfigAssociationErrorMessage
      * 
      */
-    public Output<String> getErrorMessage() {
+    public Output<String> errorMessage() {
         return this.errorMessage;
     }
     /**
@@ -73,7 +73,7 @@ public class ResolverQueryLoggingConfigAssociation extends io.pulumi.resources.C
      * @return ResolverQueryLogConfigId
      * 
      */
-    public Output</* @Nullable */ String> getResolverQueryLogConfigId() {
+    public Output</* @Nullable */ String> resolverQueryLogConfigId() {
         return this.resolverQueryLogConfigId;
     }
     /**
@@ -87,7 +87,7 @@ public class ResolverQueryLoggingConfigAssociation extends io.pulumi.resources.C
      * @return ResourceId
      * 
      */
-    public Output</* @Nullable */ String> getResourceId() {
+    public Output</* @Nullable */ String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -101,7 +101,7 @@ public class ResolverQueryLoggingConfigAssociation extends io.pulumi.resources.C
      * @return ResolverQueryLogConfigAssociationStatus
      * 
      */
-    public Output<ResolverQueryLoggingConfigAssociationStatus> getStatus() {
+    public Output<ResolverQueryLoggingConfigAssociationStatus> status() {
         return this.status;
     }
 

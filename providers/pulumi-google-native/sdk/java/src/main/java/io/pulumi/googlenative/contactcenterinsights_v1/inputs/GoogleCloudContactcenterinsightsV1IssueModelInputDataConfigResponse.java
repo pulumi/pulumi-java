@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigRe
     @Import(name="filter", required=true)
       private final String filter;
 
-    public String getFilter() {
+    public String filter() {
         return this.filter;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigRe
     @Import(name="medium", required=true)
       private final String medium;
 
-    public String getMedium() {
+    public String medium() {
         return this.medium;
     }
 
@@ -45,7 +45,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigRe
     @Import(name="trainingConversationsCount", required=true)
       private final String trainingConversationsCount;
 
-    public String getTrainingConversationsCount() {
+    public String trainingConversationsCount() {
         return this.trainingConversationsCount;
     }
 

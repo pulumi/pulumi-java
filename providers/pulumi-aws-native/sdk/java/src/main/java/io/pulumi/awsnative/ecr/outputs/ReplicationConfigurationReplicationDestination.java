@@ -20,10 +20,10 @@ public final class ReplicationConfigurationReplicationDestination {
         this.registryId = registryId;
     }
 
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
-    public String getRegistryId() {
+    public String registryId() {
         return this.registryId;
     }
 

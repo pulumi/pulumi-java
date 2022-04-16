@@ -22,7 +22,7 @@ public final class RoutineReferenceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="datasetId")
       private final @Nullable Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId == null ? Codegen.empty() : this.datasetId;
     }
 
@@ -33,7 +33,7 @@ public final class RoutineReferenceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -44,7 +44,7 @@ public final class RoutineReferenceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="routineId")
       private final @Nullable Output<String> routineId;
 
-    public Output<String> getRoutineId() {
+    public Output<String> routineId() {
         return this.routineId == null ? Codegen.empty() : this.routineId;
     }
 

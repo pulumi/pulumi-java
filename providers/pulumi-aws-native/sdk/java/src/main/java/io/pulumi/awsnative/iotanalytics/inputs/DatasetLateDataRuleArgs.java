@@ -19,14 +19,14 @@ public final class DatasetLateDataRuleArgs extends io.pulumi.resources.ResourceA
     @Import(name="ruleConfiguration", required=true)
       private final Output<DatasetLateDataRuleConfigurationArgs> ruleConfiguration;
 
-    public Output<DatasetLateDataRuleConfigurationArgs> getRuleConfiguration() {
+    public Output<DatasetLateDataRuleConfigurationArgs> ruleConfiguration() {
         return this.ruleConfiguration;
     }
 
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
-    public Output<String> getRuleName() {
+    public Output<String> ruleName() {
         return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 

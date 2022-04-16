@@ -25,7 +25,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
     @Import(name="cacheDataEncrypted")
       private final @Nullable Output<Boolean> cacheDataEncrypted;
 
-    public Output<Boolean> getCacheDataEncrypted() {
+    public Output<Boolean> cacheDataEncrypted() {
         return this.cacheDataEncrypted == null ? Codegen.empty() : this.cacheDataEncrypted;
     }
 
@@ -36,7 +36,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
     @Import(name="cacheTtlInSeconds")
       private final @Nullable Output<Integer> cacheTtlInSeconds;
 
-    public Output<Integer> getCacheTtlInSeconds() {
+    public Output<Integer> cacheTtlInSeconds() {
         return this.cacheTtlInSeconds == null ? Codegen.empty() : this.cacheTtlInSeconds;
     }
 
@@ -47,7 +47,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
     @Import(name="cachingEnabled")
       private final @Nullable Output<Boolean> cachingEnabled;
 
-    public Output<Boolean> getCachingEnabled() {
+    public Output<Boolean> cachingEnabled() {
         return this.cachingEnabled == null ? Codegen.empty() : this.cachingEnabled;
     }
 
@@ -58,7 +58,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
     @Import(name="dataTraceEnabled")
       private final @Nullable Output<Boolean> dataTraceEnabled;
 
-    public Output<Boolean> getDataTraceEnabled() {
+    public Output<Boolean> dataTraceEnabled() {
         return this.dataTraceEnabled == null ? Codegen.empty() : this.dataTraceEnabled;
     }
 
@@ -69,7 +69,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
     @Import(name="httpMethod")
       private final @Nullable Output<String> httpMethod;
 
-    public Output<String> getHttpMethod() {
+    public Output<String> httpMethod() {
         return this.httpMethod == null ? Codegen.empty() : this.httpMethod;
     }
 
@@ -80,7 +80,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
     @Import(name="loggingLevel")
       private final @Nullable Output<String> loggingLevel;
 
-    public Output<String> getLoggingLevel() {
+    public Output<String> loggingLevel() {
         return this.loggingLevel == null ? Codegen.empty() : this.loggingLevel;
     }
 
@@ -91,7 +91,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
     @Import(name="metricsEnabled")
       private final @Nullable Output<Boolean> metricsEnabled;
 
-    public Output<Boolean> getMetricsEnabled() {
+    public Output<Boolean> metricsEnabled() {
         return this.metricsEnabled == null ? Codegen.empty() : this.metricsEnabled;
     }
 
@@ -102,7 +102,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
     @Import(name="resourcePath")
       private final @Nullable Output<String> resourcePath;
 
-    public Output<String> getResourcePath() {
+    public Output<String> resourcePath() {
         return this.resourcePath == null ? Codegen.empty() : this.resourcePath;
     }
 
@@ -113,7 +113,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
     @Import(name="throttlingBurstLimit")
       private final @Nullable Output<Integer> throttlingBurstLimit;
 
-    public Output<Integer> getThrottlingBurstLimit() {
+    public Output<Integer> throttlingBurstLimit() {
         return this.throttlingBurstLimit == null ? Codegen.empty() : this.throttlingBurstLimit;
     }
 
@@ -124,7 +124,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
     @Import(name="throttlingRateLimit")
       private final @Nullable Output<Double> throttlingRateLimit;
 
-    public Output<Double> getThrottlingRateLimit() {
+    public Output<Double> throttlingRateLimit() {
         return this.throttlingRateLimit == null ? Codegen.empty() : this.throttlingRateLimit;
     }
 

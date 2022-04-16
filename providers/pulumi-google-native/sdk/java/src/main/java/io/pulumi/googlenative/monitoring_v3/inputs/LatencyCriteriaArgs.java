@@ -26,7 +26,7 @@ public final class LatencyCriteriaArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="threshold")
       private final @Nullable Output<String> threshold;
 
-    public Output<String> getThreshold() {
+    public Output<String> threshold() {
         return this.threshold == null ? Codegen.empty() : this.threshold;
     }
 

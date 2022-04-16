@@ -27,7 +27,7 @@ public final class InfrastructureConfigurationInstanceMetadataOptionsArgs extend
     @Import(name="httpPutResponseHopLimit")
       private final @Nullable Output<Integer> httpPutResponseHopLimit;
 
-    public Output<Integer> getHttpPutResponseHopLimit() {
+    public Output<Integer> httpPutResponseHopLimit() {
         return this.httpPutResponseHopLimit == null ? Codegen.empty() : this.httpPutResponseHopLimit;
     }
 
@@ -38,7 +38,7 @@ public final class InfrastructureConfigurationInstanceMetadataOptionsArgs extend
     @Import(name="httpTokens")
       private final @Nullable Output<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens> httpTokens;
 
-    public Output<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens> getHttpTokens() {
+    public Output<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens> httpTokens() {
         return this.httpTokens == null ? Codegen.empty() : this.httpTokens;
     }
 

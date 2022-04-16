@@ -61,7 +61,7 @@ public class ProjectLocation extends io.pulumi.resources.CustomResource {
      * resource locations.
      * 
      */
-    public Output<String> getLocationId() {
+    public Output<String> locationId() {
         return this.locationId;
     }
     /**
@@ -77,7 +77,7 @@ public class ProjectLocation extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 

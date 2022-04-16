@@ -27,7 +27,7 @@ public final class ServersProjectSummaryResponse extends io.pulumi.resources.Inv
     @Import(name="assessedCount")
       private final @Nullable Integer assessedCount;
 
-    public Optional<Integer> getAssessedCount() {
+    public Optional<Integer> assessedCount() {
         return this.assessedCount == null ? Optional.empty() : Optional.ofNullable(this.assessedCount);
     }
 
@@ -38,7 +38,7 @@ public final class ServersProjectSummaryResponse extends io.pulumi.resources.Inv
     @Import(name="discoveredCount")
       private final @Nullable Integer discoveredCount;
 
-    public Optional<Integer> getDiscoveredCount() {
+    public Optional<Integer> discoveredCount() {
         return this.discoveredCount == null ? Optional.empty() : Optional.ofNullable(this.discoveredCount);
     }
 
@@ -49,7 +49,7 @@ public final class ServersProjectSummaryResponse extends io.pulumi.resources.Inv
     @Import(name="extendedSummary")
       private final @Nullable Map<String,String> extendedSummary;
 
-    public Map<String,String> getExtendedSummary() {
+    public Map<String,String> extendedSummary() {
         return this.extendedSummary == null ? Map.of() : this.extendedSummary;
     }
 
@@ -61,7 +61,7 @@ public final class ServersProjectSummaryResponse extends io.pulumi.resources.Inv
     @Import(name="instanceType", required=true)
       private final String instanceType;
 
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
 
@@ -72,7 +72,7 @@ public final class ServersProjectSummaryResponse extends io.pulumi.resources.Inv
     @Import(name="lastSummaryRefreshedTime")
       private final @Nullable String lastSummaryRefreshedTime;
 
-    public Optional<String> getLastSummaryRefreshedTime() {
+    public Optional<String> lastSummaryRefreshedTime() {
         return this.lastSummaryRefreshedTime == null ? Optional.empty() : Optional.ofNullable(this.lastSummaryRefreshedTime);
     }
 
@@ -83,7 +83,7 @@ public final class ServersProjectSummaryResponse extends io.pulumi.resources.Inv
     @Import(name="migratedCount")
       private final @Nullable Integer migratedCount;
 
-    public Optional<Integer> getMigratedCount() {
+    public Optional<Integer> migratedCount() {
         return this.migratedCount == null ? Optional.empty() : Optional.ofNullable(this.migratedCount);
     }
 
@@ -94,7 +94,7 @@ public final class ServersProjectSummaryResponse extends io.pulumi.resources.Inv
     @Import(name="refreshSummaryState")
       private final @Nullable String refreshSummaryState;
 
-    public Optional<String> getRefreshSummaryState() {
+    public Optional<String> refreshSummaryState() {
         return this.refreshSummaryState == null ? Optional.empty() : Optional.ofNullable(this.refreshSummaryState);
     }
 
@@ -105,7 +105,7 @@ public final class ServersProjectSummaryResponse extends io.pulumi.resources.Inv
     @Import(name="replicatingCount")
       private final @Nullable Integer replicatingCount;
 
-    public Optional<Integer> getReplicatingCount() {
+    public Optional<Integer> replicatingCount() {
         return this.replicatingCount == null ? Optional.empty() : Optional.ofNullable(this.replicatingCount);
     }
 
@@ -116,7 +116,7 @@ public final class ServersProjectSummaryResponse extends io.pulumi.resources.Inv
     @Import(name="testMigratedCount")
       private final @Nullable Integer testMigratedCount;
 
-    public Optional<Integer> getTestMigratedCount() {
+    public Optional<Integer> testMigratedCount() {
         return this.testMigratedCount == null ? Optional.empty() : Optional.ofNullable(this.testMigratedCount);
     }
 

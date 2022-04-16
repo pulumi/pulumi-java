@@ -38,7 +38,7 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaResponse {
      * the list of multiple metric criteria for this 'all of' operation.
      * 
     */
-    public List<Either<DynamicMetricCriteriaResponse,MetricCriteriaResponse>> getAllOf() {
+    public List<Either<DynamicMetricCriteriaResponse,MetricCriteriaResponse>> allOf() {
         return this.allOf == null ? List.of() : this.allOf;
     }
     /**
@@ -46,7 +46,7 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaResponse {
      * Expected value is 'Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

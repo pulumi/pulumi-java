@@ -25,7 +25,7 @@ public final class AiFeatureStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> getForceDestroy() {
+    public Output<Boolean> forceDestroy() {
         return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
     }
 
@@ -36,7 +36,7 @@ public final class AiFeatureStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -47,7 +47,7 @@ public final class AiFeatureStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -59,7 +59,7 @@ public final class AiFeatureStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="onlineServingConfig")
       private final @Nullable Output<AiFeatureStoreOnlineServingConfigArgs> onlineServingConfig;
 
-    public Output<AiFeatureStoreOnlineServingConfigArgs> getOnlineServingConfig() {
+    public Output<AiFeatureStoreOnlineServingConfigArgs> onlineServingConfig() {
         return this.onlineServingConfig == null ? Codegen.empty() : this.onlineServingConfig;
     }
 
@@ -71,7 +71,7 @@ public final class AiFeatureStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -82,7 +82,7 @@ public final class AiFeatureStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 

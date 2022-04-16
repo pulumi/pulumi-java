@@ -24,7 +24,7 @@ public final class SourceContextResponse {
      * The path-qualified name of the .proto file that contained the associated protobuf element. For example: `"google/protobuf/source_context.proto"`.
      * 
     */
-    public String getFileName() {
+    public String fileName() {
         return this.fileName;
     }
 

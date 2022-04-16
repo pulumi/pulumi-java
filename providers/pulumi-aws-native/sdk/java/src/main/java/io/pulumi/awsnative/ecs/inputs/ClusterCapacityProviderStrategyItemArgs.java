@@ -23,21 +23,21 @@ public final class ClusterCapacityProviderStrategyItemArgs extends io.pulumi.res
     @Import(name="base")
       private final @Nullable Output<Integer> base;
 
-    public Output<Integer> getBase() {
+    public Output<Integer> base() {
         return this.base == null ? Codegen.empty() : this.base;
     }
 
     @Import(name="capacityProvider")
       private final @Nullable Output<String> capacityProvider;
 
-    public Output<String> getCapacityProvider() {
+    public Output<String> capacityProvider() {
         return this.capacityProvider == null ? Codegen.empty() : this.capacityProvider;
     }
 
     @Import(name="weight")
       private final @Nullable Output<Integer> weight;
 
-    public Output<Integer> getWeight() {
+    public Output<Integer> weight() {
         return this.weight == null ? Codegen.empty() : this.weight;
     }
 

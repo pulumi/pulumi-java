@@ -18,7 +18,7 @@ public final class ListListUpgradableVersionPostResult {
         this.supportedPath = supportedPath;
     }
 
-    public List<String> getSupportedPath() {
+    public List<String> supportedPath() {
         return this.supportedPath == null ? List.of() : this.supportedPath;
     }
 

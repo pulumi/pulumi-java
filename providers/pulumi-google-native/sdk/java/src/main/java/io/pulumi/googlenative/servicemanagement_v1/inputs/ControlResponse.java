@@ -23,7 +23,7 @@ public final class ControlResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="environment", required=true)
       private final String environment;
 
-    public String getEnvironment() {
+    public String environment() {
         return this.environment;
     }
 

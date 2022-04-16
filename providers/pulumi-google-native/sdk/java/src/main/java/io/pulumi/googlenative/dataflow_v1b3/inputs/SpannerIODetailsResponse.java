@@ -23,7 +23,7 @@ public final class SpannerIODetailsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="databaseId", required=true)
       private final String databaseId;
 
-    public String getDatabaseId() {
+    public String databaseId() {
         return this.databaseId;
     }
 
@@ -34,7 +34,7 @@ public final class SpannerIODetailsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="instanceId", required=true)
       private final String instanceId;
 
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
 
@@ -45,7 +45,7 @@ public final class SpannerIODetailsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="project", required=true)
       private final String project;
 
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 

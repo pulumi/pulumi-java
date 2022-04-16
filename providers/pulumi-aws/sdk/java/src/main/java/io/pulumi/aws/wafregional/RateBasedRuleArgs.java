@@ -26,7 +26,7 @@ public final class RateBasedRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
@@ -37,7 +37,7 @@ public final class RateBasedRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -48,7 +48,7 @@ public final class RateBasedRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="predicates")
       private final @Nullable Output<List<RateBasedRulePredicateArgs>> predicates;
 
-    public Output<List<RateBasedRulePredicateArgs>> getPredicates() {
+    public Output<List<RateBasedRulePredicateArgs>> predicates() {
         return this.predicates == null ? Codegen.empty() : this.predicates;
     }
 
@@ -59,7 +59,7 @@ public final class RateBasedRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rateKey", required=true)
       private final Output<String> rateKey;
 
-    public Output<String> getRateKey() {
+    public Output<String> rateKey() {
         return this.rateKey;
     }
 
@@ -70,7 +70,7 @@ public final class RateBasedRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rateLimit", required=true)
       private final Output<Integer> rateLimit;
 
-    public Output<Integer> getRateLimit() {
+    public Output<Integer> rateLimit() {
         return this.rateLimit;
     }
 
@@ -81,7 +81,7 @@ public final class RateBasedRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

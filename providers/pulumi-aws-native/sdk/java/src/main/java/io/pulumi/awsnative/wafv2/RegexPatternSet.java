@@ -32,7 +32,7 @@ public class RegexPatternSet extends io.pulumi.resources.CustomResource {
      * @return ARN of the WAF entity.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -46,7 +46,7 @@ public class RegexPatternSet extends io.pulumi.resources.CustomResource {
      * @return Description of the entity.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -60,13 +60,13 @@ public class RegexPatternSet extends io.pulumi.resources.CustomResource {
      * @return Name of the RegexPatternSet.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     @Export(name="regularExpressionList", type=List.class, parameters={String.class})
     private Output<List<String>> regularExpressionList;
 
-    public Output<List<String>> getRegularExpressionList() {
+    public Output<List<String>> regularExpressionList() {
         return this.regularExpressionList;
     }
     /**
@@ -80,13 +80,13 @@ public class RegexPatternSet extends io.pulumi.resources.CustomResource {
      * @return Use CLOUDFRONT for CloudFront RegexPatternSet, use REGIONAL for Application Load Balancer and API Gateway.
      * 
      */
-    public Output<RegexPatternSetScope> getScope() {
+    public Output<RegexPatternSetScope> scope() {
         return this.scope;
     }
     @Export(name="tags", type=List.class, parameters={RegexPatternSetTag.class})
     private Output</* @Nullable */ List<RegexPatternSetTag>> tags;
 
-    public Output</* @Nullable */ List<RegexPatternSetTag>> getTags() {
+    public Output</* @Nullable */ List<RegexPatternSetTag>> tags() {
         return this.tags;
     }
 

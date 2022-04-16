@@ -28,7 +28,7 @@ public final class RegionHealthCheckLogConfig {
      * which means no health check logging will be done.
      * 
     */
-    public Optional<Boolean> getEnable() {
+    public Optional<Boolean> enable() {
         return Optional.ofNullable(this.enable);
     }
 

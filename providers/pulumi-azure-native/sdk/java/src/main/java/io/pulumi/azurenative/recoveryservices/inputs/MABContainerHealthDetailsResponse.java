@@ -27,7 +27,7 @@ public final class MABContainerHealthDetailsResponse extends io.pulumi.resources
     @Import(name="code")
       private final @Nullable Integer code;
 
-    public Optional<Integer> getCode() {
+    public Optional<Integer> code() {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
     }
 
@@ -38,7 +38,7 @@ public final class MABContainerHealthDetailsResponse extends io.pulumi.resources
     @Import(name="message")
       private final @Nullable String message;
 
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
@@ -49,7 +49,7 @@ public final class MABContainerHealthDetailsResponse extends io.pulumi.resources
     @Import(name="recommendations")
       private final @Nullable List<String> recommendations;
 
-    public List<String> getRecommendations() {
+    public List<String> recommendations() {
         return this.recommendations == null ? List.of() : this.recommendations;
     }
 
@@ -60,7 +60,7 @@ public final class MABContainerHealthDetailsResponse extends io.pulumi.resources
     @Import(name="title")
       private final @Nullable String title;
 
-    public Optional<String> getTitle() {
+    public Optional<String> title() {
         return this.title == null ? Optional.empty() : Optional.ofNullable(this.title);
     }
 

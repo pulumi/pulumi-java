@@ -53,38 +53,38 @@ public final class GetInstanceResult {
         this.state = state;
     }
 
-    public Optional<String> getConfig() {
+    public Optional<String> config() {
         return Optional.ofNullable(this.config);
     }
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
-    public Boolean getForceDestroy() {
+    public Boolean forceDestroy() {
         return this.forceDestroy;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Integer getNumNodes() {
+    public Integer numNodes() {
         return this.numNodes;
     }
-    public Integer getProcessingUnits() {
+    public Integer processingUnits() {
         return this.processingUnits;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

@@ -95,70 +95,70 @@ public final class GetStreamingPolicyResult {
      * Configuration of CommonEncryptionCbcs
      * 
     */
-    public Optional<CommonEncryptionCbcsResponse> getCommonEncryptionCbcs() {
+    public Optional<CommonEncryptionCbcsResponse> commonEncryptionCbcs() {
         return Optional.ofNullable(this.commonEncryptionCbcs);
     }
     /**
      * Configuration of CommonEncryptionCenc
      * 
     */
-    public Optional<CommonEncryptionCencResponse> getCommonEncryptionCenc() {
+    public Optional<CommonEncryptionCencResponse> commonEncryptionCenc() {
         return Optional.ofNullable(this.commonEncryptionCenc);
     }
     /**
      * Creation time of Streaming Policy
      * 
     */
-    public String getCreated() {
+    public String created() {
         return this.created;
     }
     /**
      * Default ContentKey used by current Streaming Policy
      * 
     */
-    public Optional<String> getDefaultContentKeyPolicyName() {
+    public Optional<String> defaultContentKeyPolicyName() {
         return Optional.ofNullable(this.defaultContentKeyPolicyName);
     }
     /**
      * Configuration of EnvelopeEncryption
      * 
     */
-    public Optional<EnvelopeEncryptionResponse> getEnvelopeEncryption() {
+    public Optional<EnvelopeEncryptionResponse> envelopeEncryption() {
         return Optional.ofNullable(this.envelopeEncryption);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Configurations of NoEncryption
      * 
     */
-    public Optional<NoEncryptionResponse> getNoEncryption() {
+    public Optional<NoEncryptionResponse> noEncryption() {
         return Optional.ofNullable(this.noEncryption);
     }
     /**
      * The system metadata relating to this resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

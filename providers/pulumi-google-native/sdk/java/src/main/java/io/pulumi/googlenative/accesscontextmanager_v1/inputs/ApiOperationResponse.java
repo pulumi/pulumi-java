@@ -25,7 +25,7 @@ public final class ApiOperationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="methodSelectors", required=true)
       private final List<MethodSelectorResponse> methodSelectors;
 
-    public List<MethodSelectorResponse> getMethodSelectors() {
+    public List<MethodSelectorResponse> methodSelectors() {
         return this.methodSelectors;
     }
 
@@ -36,7 +36,7 @@ public final class ApiOperationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="serviceName", required=true)
       private final String serviceName;
 
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 

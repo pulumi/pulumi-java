@@ -21,7 +21,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cisBenchmark")
       private final @Nullable Output<CisBenchmarkArgs> cisBenchmark;
 
-    public Output<CisBenchmarkArgs> getCisBenchmark() {
+    public Output<CisBenchmarkArgs> cisBenchmark() {
         return this.cisBenchmark == null ? Codegen.empty() : this.cisBenchmark;
     }
 
@@ -32,7 +32,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -43,7 +43,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rationale")
       private final @Nullable Output<String> rationale;
 
-    public Output<String> getRationale() {
+    public Output<String> rationale() {
         return this.rationale == null ? Codegen.empty() : this.rationale;
     }
 
@@ -54,7 +54,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="remediation")
       private final @Nullable Output<String> remediation;
 
-    public Output<String> getRemediation() {
+    public Output<String> remediation() {
         return this.remediation == null ? Codegen.empty() : this.remediation;
     }
 
@@ -65,7 +65,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scanInstructions")
       private final @Nullable Output<String> scanInstructions;
 
-    public Output<String> getScanInstructions() {
+    public Output<String> scanInstructions() {
         return this.scanInstructions == null ? Codegen.empty() : this.scanInstructions;
     }
 
@@ -76,7 +76,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 
@@ -87,7 +87,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<List<ComplianceVersionArgs>> version;
 
-    public Output<List<ComplianceVersionArgs>> getVersion() {
+    public Output<List<ComplianceVersionArgs>> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

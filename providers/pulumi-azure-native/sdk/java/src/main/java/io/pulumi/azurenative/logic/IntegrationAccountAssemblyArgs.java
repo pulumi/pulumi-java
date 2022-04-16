@@ -24,7 +24,7 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
     @Import(name="assemblyArtifactName")
       private final @Nullable Output<String> assemblyArtifactName;
 
-    public Output<String> getAssemblyArtifactName() {
+    public Output<String> assemblyArtifactName() {
         return this.assemblyArtifactName == null ? Codegen.empty() : this.assemblyArtifactName;
     }
 
@@ -35,7 +35,7 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
     @Import(name="integrationAccountName", required=true)
       private final Output<String> integrationAccountName;
 
-    public Output<String> getIntegrationAccountName() {
+    public Output<String> integrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -46,7 +46,7 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -57,7 +57,7 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
     @Import(name="properties", required=true)
       private final Output<AssemblyPropertiesArgs> properties;
 
-    public Output<AssemblyPropertiesArgs> getProperties() {
+    public Output<AssemblyPropertiesArgs> properties() {
         return this.properties;
     }
 
@@ -68,7 +68,7 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -79,7 +79,7 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -31,7 +31,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
     @Import(name="categoricalStatsResult", required=true)
       private final GooglePrivacyDlpV2CategoricalStatsResultResponse categoricalStatsResult;
 
-    public GooglePrivacyDlpV2CategoricalStatsResultResponse getCategoricalStatsResult() {
+    public GooglePrivacyDlpV2CategoricalStatsResultResponse categoricalStatsResult() {
         return this.categoricalStatsResult;
     }
 
@@ -42,7 +42,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
     @Import(name="deltaPresenceEstimationResult", required=true)
       private final GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse deltaPresenceEstimationResult;
 
-    public GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse getDeltaPresenceEstimationResult() {
+    public GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse deltaPresenceEstimationResult() {
         return this.deltaPresenceEstimationResult;
     }
 
@@ -53,7 +53,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
     @Import(name="kAnonymityResult", required=true)
       private final GooglePrivacyDlpV2KAnonymityResultResponse kAnonymityResult;
 
-    public GooglePrivacyDlpV2KAnonymityResultResponse getKAnonymityResult() {
+    public GooglePrivacyDlpV2KAnonymityResultResponse kAnonymityResult() {
         return this.kAnonymityResult;
     }
 
@@ -64,7 +64,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
     @Import(name="kMapEstimationResult", required=true)
       private final GooglePrivacyDlpV2KMapEstimationResultResponse kMapEstimationResult;
 
-    public GooglePrivacyDlpV2KMapEstimationResultResponse getKMapEstimationResult() {
+    public GooglePrivacyDlpV2KMapEstimationResultResponse kMapEstimationResult() {
         return this.kMapEstimationResult;
     }
 
@@ -75,7 +75,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
     @Import(name="lDiversityResult", required=true)
       private final GooglePrivacyDlpV2LDiversityResultResponse lDiversityResult;
 
-    public GooglePrivacyDlpV2LDiversityResultResponse getLDiversityResult() {
+    public GooglePrivacyDlpV2LDiversityResultResponse lDiversityResult() {
         return this.lDiversityResult;
     }
 
@@ -86,7 +86,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
     @Import(name="numericalStatsResult", required=true)
       private final GooglePrivacyDlpV2NumericalStatsResultResponse numericalStatsResult;
 
-    public GooglePrivacyDlpV2NumericalStatsResultResponse getNumericalStatsResult() {
+    public GooglePrivacyDlpV2NumericalStatsResultResponse numericalStatsResult() {
         return this.numericalStatsResult;
     }
 
@@ -97,7 +97,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
     @Import(name="requestedOptions", required=true)
       private final GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse requestedOptions;
 
-    public GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse getRequestedOptions() {
+    public GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse requestedOptions() {
         return this.requestedOptions;
     }
 
@@ -108,7 +108,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
     @Import(name="requestedPrivacyMetric", required=true)
       private final GooglePrivacyDlpV2PrivacyMetricResponse requestedPrivacyMetric;
 
-    public GooglePrivacyDlpV2PrivacyMetricResponse getRequestedPrivacyMetric() {
+    public GooglePrivacyDlpV2PrivacyMetricResponse requestedPrivacyMetric() {
         return this.requestedPrivacyMetric;
     }
 
@@ -119,7 +119,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
     @Import(name="requestedSourceTable", required=true)
       private final GooglePrivacyDlpV2BigQueryTableResponse requestedSourceTable;
 
-    public GooglePrivacyDlpV2BigQueryTableResponse getRequestedSourceTable() {
+    public GooglePrivacyDlpV2BigQueryTableResponse requestedSourceTable() {
         return this.requestedSourceTable;
     }
 

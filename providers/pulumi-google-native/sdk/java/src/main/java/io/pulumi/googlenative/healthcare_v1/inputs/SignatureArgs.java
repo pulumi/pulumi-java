@@ -28,7 +28,7 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="image")
       private final @Nullable Output<ImageArgs> image;
 
-    public Output<ImageArgs> getImage() {
+    public Output<ImageArgs> image() {
         return this.image == null ? Codegen.empty() : this.image;
     }
 
@@ -39,7 +39,7 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -50,7 +50,7 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="signatureTime")
       private final @Nullable Output<String> signatureTime;
 
-    public Output<String> getSignatureTime() {
+    public Output<String> signatureTime() {
         return this.signatureTime == null ? Codegen.empty() : this.signatureTime;
     }
 
@@ -61,7 +61,7 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userId", required=true)
       private final Output<String> userId;
 
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId;
     }
 

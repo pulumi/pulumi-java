@@ -27,7 +27,7 @@ public final class ServiceAccountTokenProjectionArgs extends io.pulumi.resources
     @Import(name="audience")
       private final @Nullable Output<String> audience;
 
-    public Output<String> getAudience() {
+    public Output<String> audience() {
         return this.audience == null ? Codegen.empty() : this.audience;
     }
 
@@ -38,7 +38,7 @@ public final class ServiceAccountTokenProjectionArgs extends io.pulumi.resources
     @Import(name="expirationSeconds")
       private final @Nullable Output<Integer> expirationSeconds;
 
-    public Output<Integer> getExpirationSeconds() {
+    public Output<Integer> expirationSeconds() {
         return this.expirationSeconds == null ? Codegen.empty() : this.expirationSeconds;
     }
 
@@ -49,7 +49,7 @@ public final class ServiceAccountTokenProjectionArgs extends io.pulumi.resources
     @Import(name="path", required=true)
       private final Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
 

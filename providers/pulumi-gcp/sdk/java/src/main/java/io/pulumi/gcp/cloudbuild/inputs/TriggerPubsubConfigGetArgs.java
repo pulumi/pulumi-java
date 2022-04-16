@@ -22,7 +22,7 @@ public final class TriggerPubsubConfigGetArgs extends io.pulumi.resources.Resour
     @Import(name="serviceAccountEmail")
       private final @Nullable Output<String> serviceAccountEmail;
 
-    public Output<String> getServiceAccountEmail() {
+    public Output<String> serviceAccountEmail() {
         return this.serviceAccountEmail == null ? Codegen.empty() : this.serviceAccountEmail;
     }
 
@@ -35,7 +35,7 @@ public final class TriggerPubsubConfigGetArgs extends io.pulumi.resources.Resour
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -47,7 +47,7 @@ public final class TriggerPubsubConfigGetArgs extends io.pulumi.resources.Resour
     @Import(name="subscription")
       private final @Nullable Output<String> subscription;
 
-    public Output<String> getSubscription() {
+    public Output<String> subscription() {
         return this.subscription == null ? Codegen.empty() : this.subscription;
     }
 
@@ -58,7 +58,7 @@ public final class TriggerPubsubConfigGetArgs extends io.pulumi.resources.Resour
     @Import(name="topic", required=true)
       private final Output<String> topic;
 
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic;
     }
 

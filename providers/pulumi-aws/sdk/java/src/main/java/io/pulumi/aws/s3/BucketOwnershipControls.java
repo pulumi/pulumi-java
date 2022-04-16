@@ -41,7 +41,7 @@ public class BucketOwnershipControls extends io.pulumi.resources.CustomResource 
      * @return The name of the bucket that you want to associate this access point with.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -55,7 +55,7 @@ public class BucketOwnershipControls extends io.pulumi.resources.CustomResource 
      * @return Configuration block(s) with Ownership Controls rules. Detailed below.
      * 
      */
-    public Output<BucketOwnershipControlsRule> getRule() {
+    public Output<BucketOwnershipControlsRule> rule() {
         return this.rule;
     }
 

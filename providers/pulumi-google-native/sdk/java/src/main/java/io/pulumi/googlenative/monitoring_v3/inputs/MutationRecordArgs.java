@@ -26,7 +26,7 @@ public final class MutationRecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mutateTime")
       private final @Nullable Output<String> mutateTime;
 
-    public Output<String> getMutateTime() {
+    public Output<String> mutateTime() {
         return this.mutateTime == null ? Codegen.empty() : this.mutateTime;
     }
 
@@ -37,7 +37,7 @@ public final class MutationRecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mutatedBy")
       private final @Nullable Output<String> mutatedBy;
 
-    public Output<String> getMutatedBy() {
+    public Output<String> mutatedBy() {
         return this.mutatedBy == null ? Codegen.empty() : this.mutatedBy;
     }
 

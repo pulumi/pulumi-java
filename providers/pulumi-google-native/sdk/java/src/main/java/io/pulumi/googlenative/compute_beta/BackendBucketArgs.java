@@ -26,7 +26,7 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bucketName")
       private final @Nullable Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName == null ? Codegen.empty() : this.bucketName;
     }
 
@@ -37,7 +37,7 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cdnPolicy")
       private final @Nullable Output<BackendBucketCdnPolicyArgs> cdnPolicy;
 
-    public Output<BackendBucketCdnPolicyArgs> getCdnPolicy() {
+    public Output<BackendBucketCdnPolicyArgs> cdnPolicy() {
         return this.cdnPolicy == null ? Codegen.empty() : this.cdnPolicy;
     }
 
@@ -48,7 +48,7 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="compressionMode")
       private final @Nullable Output<BackendBucketCompressionMode> compressionMode;
 
-    public Output<BackendBucketCompressionMode> getCompressionMode() {
+    public Output<BackendBucketCompressionMode> compressionMode() {
         return this.compressionMode == null ? Codegen.empty() : this.compressionMode;
     }
 
@@ -59,7 +59,7 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customResponseHeaders")
       private final @Nullable Output<List<String>> customResponseHeaders;
 
-    public Output<List<String>> getCustomResponseHeaders() {
+    public Output<List<String>> customResponseHeaders() {
         return this.customResponseHeaders == null ? Codegen.empty() : this.customResponseHeaders;
     }
 
@@ -70,7 +70,7 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -81,7 +81,7 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableCdn")
       private final @Nullable Output<Boolean> enableCdn;
 
-    public Output<Boolean> getEnableCdn() {
+    public Output<Boolean> enableCdn() {
         return this.enableCdn == null ? Codegen.empty() : this.enableCdn;
     }
 
@@ -92,7 +92,7 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -103,21 +103,21 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 

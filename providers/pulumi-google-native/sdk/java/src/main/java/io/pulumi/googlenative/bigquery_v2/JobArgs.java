@@ -25,7 +25,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configuration")
       private final @Nullable Output<JobConfigurationArgs> configuration;
 
-    public Output<JobConfigurationArgs> getConfiguration() {
+    public Output<JobConfigurationArgs> configuration() {
         return this.configuration == null ? Codegen.empty() : this.configuration;
     }
 
@@ -36,21 +36,21 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobReference")
       private final @Nullable Output<JobReferenceArgs> jobReference;
 
-    public Output<JobReferenceArgs> getJobReference() {
+    public Output<JobReferenceArgs> jobReference() {
         return this.jobReference == null ? Codegen.empty() : this.jobReference;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="source")
       private final @Nullable Output<AssetOrArchive> source;
 
-    public Output<AssetOrArchive> getSource() {
+    public Output<AssetOrArchive> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 

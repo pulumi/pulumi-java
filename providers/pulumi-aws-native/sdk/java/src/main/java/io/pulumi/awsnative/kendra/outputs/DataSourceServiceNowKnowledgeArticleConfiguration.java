@@ -40,25 +40,25 @@ public final class DataSourceServiceNowKnowledgeArticleConfiguration {
         this.includeAttachmentFilePatterns = includeAttachmentFilePatterns;
     }
 
-    public Optional<Boolean> getCrawlAttachments() {
+    public Optional<Boolean> crawlAttachments() {
         return Optional.ofNullable(this.crawlAttachments);
     }
-    public String getDocumentDataFieldName() {
+    public String documentDataFieldName() {
         return this.documentDataFieldName;
     }
-    public Optional<String> getDocumentTitleFieldName() {
+    public Optional<String> documentTitleFieldName() {
         return Optional.ofNullable(this.documentTitleFieldName);
     }
-    public List<String> getExcludeAttachmentFilePatterns() {
+    public List<String> excludeAttachmentFilePatterns() {
         return this.excludeAttachmentFilePatterns == null ? List.of() : this.excludeAttachmentFilePatterns;
     }
-    public List<DataSourceToIndexFieldMapping> getFieldMappings() {
+    public List<DataSourceToIndexFieldMapping> fieldMappings() {
         return this.fieldMappings == null ? List.of() : this.fieldMappings;
     }
-    public Optional<String> getFilterQuery() {
+    public Optional<String> filterQuery() {
         return Optional.ofNullable(this.filterQuery);
     }
-    public List<String> getIncludeAttachmentFilePatterns() {
+    public List<String> includeAttachmentFilePatterns() {
         return this.includeAttachmentFilePatterns == null ? List.of() : this.includeAttachmentFilePatterns;
     }
 

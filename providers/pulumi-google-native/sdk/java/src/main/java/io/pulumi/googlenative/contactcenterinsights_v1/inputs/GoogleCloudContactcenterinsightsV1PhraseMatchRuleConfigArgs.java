@@ -26,7 +26,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs e
     @Import(name="exactMatchConfig")
       private final @Nullable Output<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> exactMatchConfig;
 
-    public Output<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> getExactMatchConfig() {
+    public Output<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> exactMatchConfig() {
         return this.exactMatchConfig == null ? Codegen.empty() : this.exactMatchConfig;
     }
 

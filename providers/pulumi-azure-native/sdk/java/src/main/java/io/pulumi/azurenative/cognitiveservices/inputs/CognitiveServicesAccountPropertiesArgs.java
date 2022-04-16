@@ -34,7 +34,7 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
     @Import(name="apiProperties")
       private final @Nullable Output<CognitiveServicesAccountApiPropertiesArgs> apiProperties;
 
-    public Output<CognitiveServicesAccountApiPropertiesArgs> getApiProperties() {
+    public Output<CognitiveServicesAccountApiPropertiesArgs> apiProperties() {
         return this.apiProperties == null ? Codegen.empty() : this.apiProperties;
     }
 
@@ -45,7 +45,7 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
     @Import(name="customSubDomainName")
       private final @Nullable Output<String> customSubDomainName;
 
-    public Output<String> getCustomSubDomainName() {
+    public Output<String> customSubDomainName() {
         return this.customSubDomainName == null ? Codegen.empty() : this.customSubDomainName;
     }
 
@@ -56,7 +56,7 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
     @Import(name="encryption")
       private final @Nullable Output<EncryptionArgs> encryption;
 
-    public Output<EncryptionArgs> getEncryption() {
+    public Output<EncryptionArgs> encryption() {
         return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
@@ -67,7 +67,7 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
     @Import(name="networkAcls")
       private final @Nullable Output<NetworkRuleSetArgs> networkAcls;
 
-    public Output<NetworkRuleSetArgs> getNetworkAcls() {
+    public Output<NetworkRuleSetArgs> networkAcls() {
         return this.networkAcls == null ? Codegen.empty() : this.networkAcls;
     }
 
@@ -78,7 +78,7 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
     @Import(name="privateEndpointConnections")
       private final @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
-    public Output<List<PrivateEndpointConnectionArgs>> getPrivateEndpointConnections() {
+    public Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections() {
         return this.privateEndpointConnections == null ? Codegen.empty() : this.privateEndpointConnections;
     }
 
@@ -89,7 +89,7 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
-    public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
+    public Output<Either<String,PublicNetworkAccess>> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
@@ -100,7 +100,7 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
     @Import(name="userOwnedStorage")
       private final @Nullable Output<List<UserOwnedStorageArgs>> userOwnedStorage;
 
-    public Output<List<UserOwnedStorageArgs>> getUserOwnedStorage() {
+    public Output<List<UserOwnedStorageArgs>> userOwnedStorage() {
         return this.userOwnedStorage == null ? Codegen.empty() : this.userOwnedStorage;
     }
 

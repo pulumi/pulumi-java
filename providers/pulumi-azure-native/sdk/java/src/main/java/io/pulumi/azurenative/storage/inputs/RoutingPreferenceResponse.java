@@ -26,7 +26,7 @@ public final class RoutingPreferenceResponse extends io.pulumi.resources.InvokeA
     @Import(name="publishInternetEndpoints")
       private final @Nullable Boolean publishInternetEndpoints;
 
-    public Optional<Boolean> getPublishInternetEndpoints() {
+    public Optional<Boolean> publishInternetEndpoints() {
         return this.publishInternetEndpoints == null ? Optional.empty() : Optional.ofNullable(this.publishInternetEndpoints);
     }
 
@@ -37,7 +37,7 @@ public final class RoutingPreferenceResponse extends io.pulumi.resources.InvokeA
     @Import(name="publishMicrosoftEndpoints")
       private final @Nullable Boolean publishMicrosoftEndpoints;
 
-    public Optional<Boolean> getPublishMicrosoftEndpoints() {
+    public Optional<Boolean> publishMicrosoftEndpoints() {
         return this.publishMicrosoftEndpoints == null ? Optional.empty() : Optional.ofNullable(this.publishMicrosoftEndpoints);
     }
 
@@ -48,7 +48,7 @@ public final class RoutingPreferenceResponse extends io.pulumi.resources.InvokeA
     @Import(name="routingChoice")
       private final @Nullable String routingChoice;
 
-    public Optional<String> getRoutingChoice() {
+    public Optional<String> routingChoice() {
         return this.routingChoice == null ? Optional.empty() : Optional.ofNullable(this.routingChoice);
     }
 

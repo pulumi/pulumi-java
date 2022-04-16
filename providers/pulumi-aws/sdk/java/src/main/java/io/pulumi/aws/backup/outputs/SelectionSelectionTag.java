@@ -39,21 +39,21 @@ public final class SelectionSelectionTag {
      * The key in a key-value pair.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * An operation, such as `StringEquals`, that is applied to a key-value pair used to filter resources in a selection.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The value in a key-value pair.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

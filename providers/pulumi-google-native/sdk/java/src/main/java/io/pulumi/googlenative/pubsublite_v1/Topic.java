@@ -32,7 +32,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return The name of the topic. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -46,7 +46,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return The settings for this topic's partitions.
      * 
      */
-    public Output<PartitionConfigResponse> getPartitionConfig() {
+    public Output<PartitionConfigResponse> partitionConfig() {
         return this.partitionConfig;
     }
     /**
@@ -60,7 +60,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return The settings for this topic's Reservation usage.
      * 
      */
-    public Output<ReservationConfigResponse> getReservationConfig() {
+    public Output<ReservationConfigResponse> reservationConfig() {
         return this.reservationConfig;
     }
     /**
@@ -74,7 +74,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return The settings for this topic's message retention.
      * 
      */
-    public Output<RetentionConfigResponse> getRetentionConfig() {
+    public Output<RetentionConfigResponse> retentionConfig() {
         return this.retentionConfig;
     }
 

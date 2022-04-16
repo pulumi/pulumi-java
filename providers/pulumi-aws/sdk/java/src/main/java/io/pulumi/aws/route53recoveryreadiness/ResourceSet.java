@@ -43,7 +43,7 @@ public class ResourceSet extends io.pulumi.resources.CustomResource {
      * @return NLB resource ARN.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +57,7 @@ public class ResourceSet extends io.pulumi.resources.CustomResource {
      * @return Unique name describing the resource set.
      * 
      */
-    public Output<String> getResourceSetName() {
+    public Output<String> resourceSetName() {
         return this.resourceSetName;
     }
     /**
@@ -71,7 +71,7 @@ public class ResourceSet extends io.pulumi.resources.CustomResource {
      * @return Type of the resources in the resource set.
      * 
      */
-    public Output<String> getResourceSetType() {
+    public Output<String> resourceSetType() {
         return this.resourceSetType;
     }
     /**
@@ -85,7 +85,7 @@ public class ResourceSet extends io.pulumi.resources.CustomResource {
      * @return List of resources to add to this resource set. See below.
      * 
      */
-    public Output<List<ResourceSetResource>> getResources() {
+    public Output<List<ResourceSetResource>> resources() {
         return this.resources;
     }
     /**
@@ -99,7 +99,7 @@ public class ResourceSet extends io.pulumi.resources.CustomResource {
      * @return Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -113,7 +113,7 @@ public class ResourceSet extends io.pulumi.resources.CustomResource {
      * @return Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

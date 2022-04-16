@@ -24,7 +24,7 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigResponse extends io.pul
     @Import(name="sampler", required=true)
       private final String sampler;
 
-    public String getSampler() {
+    public String sampler() {
         return this.sampler;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigResponse extends io.pul
     @Import(name="samplingRate", required=true)
       private final Double samplingRate;
 
-    public Double getSamplingRate() {
+    public Double samplingRate() {
         return this.samplingRate;
     }
 

@@ -18,7 +18,7 @@ public final class CertificateCertificateDescriptionSubjectKeyId {
         this.keyId = keyId;
     }
 
-    public Optional<String> getKeyId() {
+    public Optional<String> keyId() {
         return Optional.ofNullable(this.keyId);
     }
 

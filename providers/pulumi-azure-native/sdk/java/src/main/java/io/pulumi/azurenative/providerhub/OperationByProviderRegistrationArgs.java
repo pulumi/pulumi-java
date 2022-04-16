@@ -19,7 +19,7 @@ public final class OperationByProviderRegistrationArgs extends io.pulumi.resourc
     @Import(name="contents", required=true)
       private final Output<List<OperationsDefinitionArgs>> contents;
 
-    public Output<List<OperationsDefinitionArgs>> getContents() {
+    public Output<List<OperationsDefinitionArgs>> contents() {
         return this.contents;
     }
 
@@ -30,7 +30,7 @@ public final class OperationByProviderRegistrationArgs extends io.pulumi.resourc
     @Import(name="providerNamespace", required=true)
       private final Output<String> providerNamespace;
 
-    public Output<String> getProviderNamespace() {
+    public Output<String> providerNamespace() {
         return this.providerNamespace;
     }
 

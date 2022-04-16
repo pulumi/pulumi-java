@@ -26,7 +26,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action")
       private final @Nullable Output<ActionArgs> action;
 
-    public Output<ActionArgs> getAction() {
+    public Output<ActionArgs> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -37,7 +37,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="correlationFilter")
       private final @Nullable Output<CorrelationFilterArgs> correlationFilter;
 
-    public Output<CorrelationFilterArgs> getCorrelationFilter() {
+    public Output<CorrelationFilterArgs> correlationFilter() {
         return this.correlationFilter == null ? Codegen.empty() : this.correlationFilter;
     }
 
@@ -48,7 +48,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filterType")
       private final @Nullable Output<FilterType> filterType;
 
-    public Output<FilterType> getFilterType() {
+    public Output<FilterType> filterType() {
         return this.filterType == null ? Codegen.empty() : this.filterType;
     }
 
@@ -59,7 +59,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
-    public Output<String> getNamespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -70,7 +70,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -81,7 +81,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
-    public Output<String> getRuleName() {
+    public Output<String> ruleName() {
         return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 
@@ -92,7 +92,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sqlFilter")
       private final @Nullable Output<SqlFilterArgs> sqlFilter;
 
-    public Output<SqlFilterArgs> getSqlFilter() {
+    public Output<SqlFilterArgs> sqlFilter() {
         return this.sqlFilter == null ? Codegen.empty() : this.sqlFilter;
     }
 
@@ -103,7 +103,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subscriptionName", required=true)
       private final Output<String> subscriptionName;
 
-    public Output<String> getSubscriptionName() {
+    public Output<String> subscriptionName() {
         return this.subscriptionName;
     }
 
@@ -114,7 +114,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="topicName", required=true)
       private final Output<String> topicName;
 
-    public Output<String> getTopicName() {
+    public Output<String> topicName() {
         return this.topicName;
     }
 

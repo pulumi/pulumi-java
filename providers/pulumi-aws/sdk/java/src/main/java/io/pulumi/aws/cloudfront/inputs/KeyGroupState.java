@@ -23,7 +23,7 @@ public final class KeyGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 
@@ -34,7 +34,7 @@ public final class KeyGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -45,7 +45,7 @@ public final class KeyGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="items")
       private final @Nullable Output<List<String>> items;
 
-    public Output<List<String>> getItems() {
+    public Output<List<String>> items() {
         return this.items == null ? Codegen.empty() : this.items;
     }
 
@@ -56,7 +56,7 @@ public final class KeyGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

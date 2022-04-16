@@ -20,7 +20,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
     @Import(name="cdcDeleteCounter", required=true)
       private final String cdcDeleteCounter;
 
-    public String getCdcDeleteCounter() {
+    public String cdcDeleteCounter() {
         return this.cdcDeleteCounter;
     }
 
@@ -31,7 +31,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
     @Import(name="cdcInsertCounter", required=true)
       private final String cdcInsertCounter;
 
-    public String getCdcInsertCounter() {
+    public String cdcInsertCounter() {
         return this.cdcInsertCounter;
     }
 
@@ -42,7 +42,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
     @Import(name="cdcUpdateCounter", required=true)
       private final String cdcUpdateCounter;
 
-    public String getCdcUpdateCounter() {
+    public String cdcUpdateCounter() {
         return this.cdcUpdateCounter;
     }
 
@@ -53,7 +53,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
     @Import(name="dataErrorsCounter", required=true)
       private final Double dataErrorsCounter;
 
-    public Double getDataErrorsCounter() {
+    public Double dataErrorsCounter() {
         return this.dataErrorsCounter;
     }
 
@@ -64,7 +64,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
     @Import(name="databaseName", required=true)
       private final String databaseName;
 
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
 
@@ -75,7 +75,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
     @Import(name="fullLoadEndedOn", required=true)
       private final String fullLoadEndedOn;
 
-    public String getFullLoadEndedOn() {
+    public String fullLoadEndedOn() {
         return this.fullLoadEndedOn;
     }
 
@@ -86,7 +86,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
     @Import(name="fullLoadEstFinishTime", required=true)
       private final String fullLoadEstFinishTime;
 
-    public String getFullLoadEstFinishTime() {
+    public String fullLoadEstFinishTime() {
         return this.fullLoadEstFinishTime;
     }
 
@@ -97,7 +97,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
     @Import(name="fullLoadStartedOn", required=true)
       private final String fullLoadStartedOn;
 
-    public String getFullLoadStartedOn() {
+    public String fullLoadStartedOn() {
         return this.fullLoadStartedOn;
     }
 
@@ -108,7 +108,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
     @Import(name="fullLoadTotalRows", required=true)
       private final Double fullLoadTotalRows;
 
-    public Double getFullLoadTotalRows() {
+    public Double fullLoadTotalRows() {
         return this.fullLoadTotalRows;
     }
 
@@ -119,7 +119,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -130,7 +130,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
     @Import(name="lastModifiedTime", required=true)
       private final String lastModifiedTime;
 
-    public String getLastModifiedTime() {
+    public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
 
@@ -142,7 +142,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
     @Import(name="resultType", required=true)
       private final String resultType;
 
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
 
@@ -153,7 +153,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 
@@ -164,7 +164,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
     @Import(name="tableName", required=true)
       private final String tableName;
 
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
 
@@ -175,7 +175,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
     @Import(name="totalChangesApplied", required=true)
       private final Double totalChangesApplied;
 
-    public Double getTotalChangesApplied() {
+    public Double totalChangesApplied() {
         return this.totalChangesApplied;
     }
 

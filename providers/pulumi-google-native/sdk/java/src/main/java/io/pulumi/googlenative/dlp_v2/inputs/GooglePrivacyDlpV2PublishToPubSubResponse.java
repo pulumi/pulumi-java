@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2PublishToPubSubResponse extends io.pulumi.r
     @Import(name="topic", required=true)
       private final String topic;
 
-    public String getTopic() {
+    public String topic() {
         return this.topic;
     }
 

@@ -24,14 +24,14 @@ public final class SchedulingPolicyFairsharePolicyArgs extends io.pulumi.resourc
     @Import(name="computeReservation")
       private final @Nullable Output<Double> computeReservation;
 
-    public Output<Double> getComputeReservation() {
+    public Output<Double> computeReservation() {
         return this.computeReservation == null ? Codegen.empty() : this.computeReservation;
     }
 
     @Import(name="shareDecaySeconds")
       private final @Nullable Output<Double> shareDecaySeconds;
 
-    public Output<Double> getShareDecaySeconds() {
+    public Output<Double> shareDecaySeconds() {
         return this.shareDecaySeconds == null ? Codegen.empty() : this.shareDecaySeconds;
     }
 
@@ -42,7 +42,7 @@ public final class SchedulingPolicyFairsharePolicyArgs extends io.pulumi.resourc
     @Import(name="shareDistribution")
       private final @Nullable Output<List<SchedulingPolicyShareAttributesArgs>> shareDistribution;
 
-    public Output<List<SchedulingPolicyShareAttributesArgs>> getShareDistribution() {
+    public Output<List<SchedulingPolicyShareAttributesArgs>> shareDistribution() {
         return this.shareDistribution == null ? Codegen.empty() : this.shareDistribution;
     }
 

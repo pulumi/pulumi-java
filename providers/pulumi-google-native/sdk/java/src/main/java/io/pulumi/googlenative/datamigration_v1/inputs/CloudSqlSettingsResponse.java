@@ -26,7 +26,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="activationPolicy", required=true)
       private final String activationPolicy;
 
-    public String getActivationPolicy() {
+    public String activationPolicy() {
         return this.activationPolicy;
     }
 
@@ -37,7 +37,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="autoStorageIncrease", required=true)
       private final Boolean autoStorageIncrease;
 
-    public Boolean getAutoStorageIncrease() {
+    public Boolean autoStorageIncrease() {
         return this.autoStorageIncrease;
     }
 
@@ -48,7 +48,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="cmekKeyName", required=true)
       private final String cmekKeyName;
 
-    public String getCmekKeyName() {
+    public String cmekKeyName() {
         return this.cmekKeyName;
     }
 
@@ -59,7 +59,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="collation", required=true)
       private final String collation;
 
-    public String getCollation() {
+    public String collation() {
         return this.collation;
     }
 
@@ -70,7 +70,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="dataDiskSizeGb", required=true)
       private final String dataDiskSizeGb;
 
-    public String getDataDiskSizeGb() {
+    public String dataDiskSizeGb() {
         return this.dataDiskSizeGb;
     }
 
@@ -81,7 +81,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="dataDiskType", required=true)
       private final String dataDiskType;
 
-    public String getDataDiskType() {
+    public String dataDiskType() {
         return this.dataDiskType;
     }
 
@@ -92,7 +92,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="databaseFlags", required=true)
       private final Map<String,String> databaseFlags;
 
-    public Map<String,String> getDatabaseFlags() {
+    public Map<String,String> databaseFlags() {
         return this.databaseFlags;
     }
 
@@ -103,7 +103,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="databaseVersion", required=true)
       private final String databaseVersion;
 
-    public String getDatabaseVersion() {
+    public String databaseVersion() {
         return this.databaseVersion;
     }
 
@@ -114,7 +114,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="ipConfig", required=true)
       private final SqlIpConfigResponse ipConfig;
 
-    public SqlIpConfigResponse getIpConfig() {
+    public SqlIpConfigResponse ipConfig() {
         return this.ipConfig;
     }
 
@@ -125,7 +125,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="rootPassword", required=true)
       private final String rootPassword;
 
-    public String getRootPassword() {
+    public String rootPassword() {
         return this.rootPassword;
     }
 
@@ -136,7 +136,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="rootPasswordSet", required=true)
       private final Boolean rootPasswordSet;
 
-    public Boolean getRootPasswordSet() {
+    public Boolean rootPasswordSet() {
         return this.rootPasswordSet;
     }
 
@@ -147,7 +147,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="sourceId", required=true)
       private final String sourceId;
 
-    public String getSourceId() {
+    public String sourceId() {
         return this.sourceId;
     }
 
@@ -158,7 +158,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="storageAutoResizeLimit", required=true)
       private final String storageAutoResizeLimit;
 
-    public String getStorageAutoResizeLimit() {
+    public String storageAutoResizeLimit() {
         return this.storageAutoResizeLimit;
     }
 
@@ -169,7 +169,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="tier", required=true)
       private final String tier;
 
-    public String getTier() {
+    public String tier() {
         return this.tier;
     }
 
@@ -180,7 +180,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="userLabels", required=true)
       private final Map<String,String> userLabels;
 
-    public Map<String,String> getUserLabels() {
+    public Map<String,String> userLabels() {
         return this.userLabels;
     }
 
@@ -191,7 +191,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="zone", required=true)
       private final String zone;
 
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

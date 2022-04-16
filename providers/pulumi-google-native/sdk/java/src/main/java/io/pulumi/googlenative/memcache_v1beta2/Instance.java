@@ -37,7 +37,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The full name of the Google Compute Engine [network](https://cloud.google.com/vpc/docs/vpc) to which the instance is connected. If left unspecified, the `default` network will be used.
      * 
      */
-    public Output<String> getAuthorizedNetwork() {
+    public Output<String> authorizedNetwork() {
         return this.authorizedNetwork;
     }
     /**
@@ -51,7 +51,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The time the instance was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -65,7 +65,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Endpoint for the Discovery API.
      * 
      */
-    public Output<String> getDiscoveryEndpoint() {
+    public Output<String> discoveryEndpoint() {
         return this.discoveryEndpoint;
     }
     /**
@@ -79,7 +79,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return User provided name for the instance, which is only used for display purposes. Cannot be more than 80 characters.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -93,7 +93,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return List of messages that describe the current state of the Memcached instance.
      * 
      */
-    public Output<List<InstanceMessageResponse>> getInstanceMessages() {
+    public Output<List<InstanceMessageResponse>> instanceMessages() {
         return this.instanceMessages;
     }
     /**
@@ -107,7 +107,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -121,7 +121,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The full version of memcached server running on this instance. System automatically determines the full memcached version for an instance based on the input MemcacheVersion. The full version format will be "memcached-1.5.16".
      * 
      */
-    public Output<String> getMemcacheFullVersion() {
+    public Output<String> memcacheFullVersion() {
         return this.memcacheFullVersion;
     }
     /**
@@ -135,7 +135,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return List of Memcached nodes. Refer to Node message for more details.
      * 
      */
-    public Output<List<NodeResponse>> getMemcacheNodes() {
+    public Output<List<NodeResponse>> memcacheNodes() {
         return this.memcacheNodes;
     }
     /**
@@ -149,7 +149,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The major version of Memcached software. If not provided, latest supported version will be used. Currently the latest supported major version is `MEMCACHE_1_5`. The minor version will be automatically determined by our system based on the latest supported minor version.
      * 
      */
-    public Output<String> getMemcacheVersion() {
+    public Output<String> memcacheVersion() {
         return this.memcacheVersion;
     }
     /**
@@ -163,7 +163,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Unique name of the resource in this scope including project and location using the form: `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Memcached instances are managed and addressed at the regional level so `location_id` here refers to a Google Cloud region; however, users may choose which zones Memcached nodes should be provisioned in within an instance. Refer to zones field for more details.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -177,7 +177,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Configuration for Memcached nodes.
      * 
      */
-    public Output<NodeConfigResponse> getNodeConfig() {
+    public Output<NodeConfigResponse> nodeConfig() {
         return this.nodeConfig;
     }
     /**
@@ -191,7 +191,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Number of nodes in the Memcached instance.
      * 
      */
-    public Output<Integer> getNodeCount() {
+    public Output<Integer> nodeCount() {
         return this.nodeCount;
     }
     /**
@@ -205,7 +205,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return User defined parameters to apply to the memcached process on each node.
      * 
      */
-    public Output<MemcacheParametersResponse> getParameters() {
+    public Output<MemcacheParametersResponse> parameters() {
         return this.parameters;
     }
     /**
@@ -219,7 +219,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The state of this Memcached instance.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -233,7 +233,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Returns true if there is an update waiting to be applied
      * 
      */
-    public Output<Boolean> getUpdateAvailable() {
+    public Output<Boolean> updateAvailable() {
         return this.updateAvailable;
     }
     /**
@@ -247,7 +247,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The time the instance was updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
     /**
@@ -261,7 +261,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Zones in which Memcached nodes should be provisioned. Memcached nodes will be equally distributed across these zones. If not provided, the service will by default create nodes in all zones in the region for the instance.
      * 
      */
-    public Output<List<String>> getZones() {
+    public Output<List<String>> zones() {
         return this.zones;
     }
 

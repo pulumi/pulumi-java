@@ -26,7 +26,7 @@ public final class ManagementPolicySchemaArgs extends io.pulumi.resources.Resour
     @Import(name="rules", required=true)
       private final Output<List<ManagementPolicyRuleArgs>> rules;
 
-    public Output<List<ManagementPolicyRuleArgs>> getRules() {
+    public Output<List<ManagementPolicyRuleArgs>> rules() {
         return this.rules;
     }
 

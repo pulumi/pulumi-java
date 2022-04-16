@@ -27,7 +27,7 @@ public final class BackupRetentionSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="retainedBackups")
       private final @Nullable Output<Integer> retainedBackups;
 
-    public Output<Integer> getRetainedBackups() {
+    public Output<Integer> retainedBackups() {
         return this.retainedBackups == null ? Codegen.empty() : this.retainedBackups;
     }
 
@@ -38,7 +38,7 @@ public final class BackupRetentionSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="retentionUnit")
       private final @Nullable Output<BackupRetentionSettingsRetentionUnit> retentionUnit;
 
-    public Output<BackupRetentionSettingsRetentionUnit> getRetentionUnit() {
+    public Output<BackupRetentionSettingsRetentionUnit> retentionUnit() {
         return this.retentionUnit == null ? Codegen.empty() : this.retentionUnit;
     }
 

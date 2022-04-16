@@ -21,7 +21,7 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="endpointType")
       private final @Nullable String endpointType;
 
-    public Optional<String> getEndpointType() {
+    public Optional<String> endpointType() {
         return this.endpointType == null ? Optional.empty() : Optional.ofNullable(this.endpointType);
     }
 

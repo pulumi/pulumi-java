@@ -26,7 +26,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
     @Import(name="bucketName")
       private final @Nullable Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName == null ? Codegen.empty() : this.bucketName;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
     @Import(name="datasetName")
       private final @Nullable Output<String> datasetName;
 
-    public Output<String> getDatasetName() {
+    public Output<String> datasetName() {
         return this.datasetName == null ? Codegen.empty() : this.datasetName;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -59,7 +59,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
     @Import(name="project", required=true)
       private final Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
@@ -70,7 +70,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
     @Import(name="tablePrefix")
       private final @Nullable Output<String> tablePrefix;
 
-    public Output<String> getTablePrefix() {
+    public Output<String> tablePrefix() {
         return this.tablePrefix == null ? Codegen.empty() : this.tablePrefix;
     }
 

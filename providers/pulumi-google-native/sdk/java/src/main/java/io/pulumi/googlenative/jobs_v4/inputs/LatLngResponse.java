@@ -23,7 +23,7 @@ public final class LatLngResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="latitude", required=true)
       private final Double latitude;
 
-    public Double getLatitude() {
+    public Double latitude() {
         return this.latitude;
     }
 
@@ -34,7 +34,7 @@ public final class LatLngResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="longitude", required=true)
       private final Double longitude;
 
-    public Double getLongitude() {
+    public Double longitude() {
         return this.longitude;
     }
 

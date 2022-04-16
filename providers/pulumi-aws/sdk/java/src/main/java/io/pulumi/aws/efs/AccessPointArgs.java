@@ -25,7 +25,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileSystemId", required=true)
       private final Output<String> fileSystemId;
 
-    public Output<String> getFileSystemId() {
+    public Output<String> fileSystemId() {
         return this.fileSystemId;
     }
 
@@ -36,7 +36,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="posixUser")
       private final @Nullable Output<AccessPointPosixUserArgs> posixUser;
 
-    public Output<AccessPointPosixUserArgs> getPosixUser() {
+    public Output<AccessPointPosixUserArgs> posixUser() {
         return this.posixUser == null ? Codegen.empty() : this.posixUser;
     }
 
@@ -47,7 +47,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rootDirectory")
       private final @Nullable Output<AccessPointRootDirectoryArgs> rootDirectory;
 
-    public Output<AccessPointRootDirectoryArgs> getRootDirectory() {
+    public Output<AccessPointRootDirectoryArgs> rootDirectory() {
         return this.rootDirectory == null ? Codegen.empty() : this.rootDirectory;
     }
 
@@ -58,7 +58,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

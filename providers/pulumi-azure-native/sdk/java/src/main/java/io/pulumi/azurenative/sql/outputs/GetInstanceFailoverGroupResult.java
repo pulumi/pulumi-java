@@ -88,63 +88,63 @@ public final class GetInstanceFailoverGroupResult {
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * List of managed instance pairs in the failover group.
      * 
     */
-    public List<ManagedInstancePairInfoResponse> getManagedInstancePairs() {
+    public List<ManagedInstancePairInfoResponse> managedInstancePairs() {
         return this.managedInstancePairs;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Partner region information for the failover group.
      * 
     */
-    public List<PartnerRegionInfoResponse> getPartnerRegions() {
+    public List<PartnerRegionInfoResponse> partnerRegions() {
         return this.partnerRegions;
     }
     /**
      * Read-only endpoint of the failover group instance.
      * 
     */
-    public Optional<InstanceFailoverGroupReadOnlyEndpointResponse> getReadOnlyEndpoint() {
+    public Optional<InstanceFailoverGroupReadOnlyEndpointResponse> readOnlyEndpoint() {
         return Optional.ofNullable(this.readOnlyEndpoint);
     }
     /**
      * Read-write endpoint of the failover group instance.
      * 
     */
-    public InstanceFailoverGroupReadWriteEndpointResponse getReadWriteEndpoint() {
+    public InstanceFailoverGroupReadWriteEndpointResponse readWriteEndpoint() {
         return this.readWriteEndpoint;
     }
     /**
      * Local replication role of the failover group instance.
      * 
     */
-    public String getReplicationRole() {
+    public String replicationRole() {
         return this.replicationRole;
     }
     /**
      * Replication state of the failover group instance.
      * 
     */
-    public String getReplicationState() {
+    public String replicationState() {
         return this.replicationState;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

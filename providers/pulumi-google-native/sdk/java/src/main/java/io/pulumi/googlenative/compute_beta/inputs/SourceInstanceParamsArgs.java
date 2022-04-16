@@ -27,7 +27,7 @@ public final class SourceInstanceParamsArgs extends io.pulumi.resources.Resource
     @Import(name="diskConfigs")
       private final @Nullable Output<List<DiskInstantiationConfigArgs>> diskConfigs;
 
-    public Output<List<DiskInstantiationConfigArgs>> getDiskConfigs() {
+    public Output<List<DiskInstantiationConfigArgs>> diskConfigs() {
         return this.diskConfigs == null ? Codegen.empty() : this.diskConfigs;
     }
 

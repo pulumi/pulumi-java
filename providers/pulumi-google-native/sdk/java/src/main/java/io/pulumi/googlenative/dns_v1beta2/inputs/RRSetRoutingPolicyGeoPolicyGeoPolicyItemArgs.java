@@ -23,7 +23,7 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs extends io.pulum
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -34,14 +34,14 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs extends io.pulum
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="rrdatas")
       private final @Nullable Output<List<String>> rrdatas;
 
-    public Output<List<String>> getRrdatas() {
+    public Output<List<String>> rrdatas() {
         return this.rrdatas == null ? Codegen.empty() : this.rrdatas;
     }
 
@@ -52,7 +52,7 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs extends io.pulum
     @Import(name="signatureRrdatas")
       private final @Nullable Output<List<String>> signatureRrdatas;
 
-    public Output<List<String>> getSignatureRrdatas() {
+    public Output<List<String>> signatureRrdatas() {
         return this.signatureRrdatas == null ? Codegen.empty() : this.signatureRrdatas;
     }
 

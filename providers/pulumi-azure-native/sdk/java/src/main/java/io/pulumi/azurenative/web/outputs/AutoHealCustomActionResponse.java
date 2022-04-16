@@ -34,14 +34,14 @@ public final class AutoHealCustomActionResponse {
      * Executable to be run.
      * 
     */
-    public Optional<String> getExe() {
+    public Optional<String> exe() {
         return Optional.ofNullable(this.exe);
     }
     /**
      * Parameters for the executable.
      * 
     */
-    public Optional<String> getParameters() {
+    public Optional<String> parameters() {
         return Optional.ofNullable(this.parameters);
     }
 

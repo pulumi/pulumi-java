@@ -44,7 +44,7 @@ public class PolicyExemption extends io.pulumi.resources.CustomResource {
      * @return The description of the policy exemption.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -58,7 +58,7 @@ public class PolicyExemption extends io.pulumi.resources.CustomResource {
      * @return The display name of the policy exemption.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -72,7 +72,7 @@ public class PolicyExemption extends io.pulumi.resources.CustomResource {
      * @return The policy exemption category. Possible values are Waiver and Mitigated.
      * 
      */
-    public Output<String> getExemptionCategory() {
+    public Output<String> exemptionCategory() {
         return this.exemptionCategory;
     }
     /**
@@ -86,7 +86,7 @@ public class PolicyExemption extends io.pulumi.resources.CustomResource {
      * @return The expiration date and time (in UTC ISO 8601 format yyyy-MM-ddTHH:mm:ssZ) of the policy exemption.
      * 
      */
-    public Output</* @Nullable */ String> getExpiresOn() {
+    public Output</* @Nullable */ String> expiresOn() {
         return this.expiresOn;
     }
     /**
@@ -100,7 +100,7 @@ public class PolicyExemption extends io.pulumi.resources.CustomResource {
      * @return The policy exemption metadata. Metadata is an open ended object and is typically a collection of key value pairs.
      * 
      */
-    public Output</* @Nullable */ Object> getMetadata() {
+    public Output</* @Nullable */ Object> metadata() {
         return this.metadata;
     }
     /**
@@ -114,7 +114,7 @@ public class PolicyExemption extends io.pulumi.resources.CustomResource {
      * @return The name of the policy exemption.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -128,7 +128,7 @@ public class PolicyExemption extends io.pulumi.resources.CustomResource {
      * @return The ID of the policy assignment that is being exempted.
      * 
      */
-    public Output<String> getPolicyAssignmentId() {
+    public Output<String> policyAssignmentId() {
         return this.policyAssignmentId;
     }
     /**
@@ -142,7 +142,7 @@ public class PolicyExemption extends io.pulumi.resources.CustomResource {
      * @return The policy definition reference ID list when the associated policy assignment is an assignment of a policy set definition.
      * 
      */
-    public Output</* @Nullable */ List<String>> getPolicyDefinitionReferenceIds() {
+    public Output</* @Nullable */ List<String>> policyDefinitionReferenceIds() {
         return this.policyDefinitionReferenceIds;
     }
     /**
@@ -156,7 +156,7 @@ public class PolicyExemption extends io.pulumi.resources.CustomResource {
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -170,7 +170,7 @@ public class PolicyExemption extends io.pulumi.resources.CustomResource {
      * @return The type of the resource (Microsoft.Authorization/policyExemptions).
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

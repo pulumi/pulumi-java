@@ -64,42 +64,42 @@ public final class ParameterContractResponse {
      * Default parameter value.
      * 
     */
-    public Optional<String> getDefaultValue() {
+    public Optional<String> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
     /**
      * Parameter description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Parameter name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Specifies whether parameter is required or not.
      * 
     */
-    public Optional<Boolean> getRequired() {
+    public Optional<Boolean> required() {
         return Optional.ofNullable(this.required);
     }
     /**
      * Parameter type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Parameter values.
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }
 

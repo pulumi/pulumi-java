@@ -27,7 +27,7 @@ public final class AliasContextArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<AliasContextKind> kind;
 
-    public Output<AliasContextKind> getKind() {
+    public Output<AliasContextKind> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -38,7 +38,7 @@ public final class AliasContextArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

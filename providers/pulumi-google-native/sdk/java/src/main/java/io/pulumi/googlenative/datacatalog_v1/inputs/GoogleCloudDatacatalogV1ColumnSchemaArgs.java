@@ -27,7 +27,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaArgs extends io.pulumi.re
     @Import(name="column", required=true)
       private final Output<String> column;
 
-    public Output<String> getColumn() {
+    public Output<String> column() {
         return this.column;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaArgs extends io.pulumi.re
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaArgs extends io.pulumi.re
     @Import(name="mode")
       private final @Nullable Output<String> mode;
 
-    public Output<String> getMode() {
+    public Output<String> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -60,7 +60,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaArgs extends io.pulumi.re
     @Import(name="subcolumns")
       private final @Nullable Output<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> subcolumns;
 
-    public Output<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> getSubcolumns() {
+    public Output<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> subcolumns() {
         return this.subcolumns == null ? Codegen.empty() : this.subcolumns;
     }
 
@@ -71,7 +71,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaArgs extends io.pulumi.re
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

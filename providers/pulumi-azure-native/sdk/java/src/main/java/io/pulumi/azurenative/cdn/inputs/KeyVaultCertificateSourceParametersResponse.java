@@ -25,14 +25,14 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
     @Import(name="deleteRule", required=true)
       private final String deleteRule;
 
-    public String getDeleteRule() {
+    public String deleteRule() {
         return this.deleteRule;
     }
 
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -43,7 +43,7 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,7 +54,7 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
     @Import(name="secretName", required=true)
       private final String secretName;
 
-    public String getSecretName() {
+    public String secretName() {
         return this.secretName;
     }
 
@@ -65,7 +65,7 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
     @Import(name="secretVersion")
       private final @Nullable String secretVersion;
 
-    public Optional<String> getSecretVersion() {
+    public Optional<String> secretVersion() {
         return this.secretVersion == null ? Optional.empty() : Optional.ofNullable(this.secretVersion);
     }
 
@@ -76,7 +76,7 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
     @Import(name="subscriptionId", required=true)
       private final String subscriptionId;
 
-    public String getSubscriptionId() {
+    public String subscriptionId() {
         return this.subscriptionId;
     }
 
@@ -87,7 +87,7 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
     @Import(name="updateRule", required=true)
       private final String updateRule;
 
-    public String getUpdateRule() {
+    public String updateRule() {
         return this.updateRule;
     }
 
@@ -98,7 +98,7 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
     @Import(name="vaultName", required=true)
       private final String vaultName;
 
-    public String getVaultName() {
+    public String vaultName() {
         return this.vaultName;
     }
 

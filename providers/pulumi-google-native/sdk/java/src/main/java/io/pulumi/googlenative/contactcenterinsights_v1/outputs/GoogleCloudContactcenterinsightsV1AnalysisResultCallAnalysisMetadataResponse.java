@@ -65,42 +65,42 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
      * A list of call annotations that apply to this call.
      * 
     */
-    public List<GoogleCloudContactcenterinsightsV1CallAnnotationResponse> getAnnotations() {
+    public List<GoogleCloudContactcenterinsightsV1CallAnnotationResponse> annotations() {
         return this.annotations;
     }
     /**
      * All the entities in the call.
      * 
     */
-    public Map<String,String> getEntities() {
+    public Map<String,String> entities() {
         return this.entities;
     }
     /**
      * All the matched intents in the call.
      * 
     */
-    public Map<String,String> getIntents() {
+    public Map<String,String> intents() {
         return this.intents;
     }
     /**
      * Overall conversation-level issue modeling result.
      * 
     */
-    public GoogleCloudContactcenterinsightsV1IssueModelResultResponse getIssueModelResult() {
+    public GoogleCloudContactcenterinsightsV1IssueModelResultResponse issueModelResult() {
         return this.issueModelResult;
     }
     /**
      * All the matched phrase matchers in the call.
      * 
     */
-    public Map<String,String> getPhraseMatchers() {
+    public Map<String,String> phraseMatchers() {
         return this.phraseMatchers;
     }
     /**
      * Overall conversation-level sentiment for each channel of the call.
      * 
     */
-    public List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> getSentiments() {
+    public List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> sentiments() {
         return this.sentiments;
     }
 

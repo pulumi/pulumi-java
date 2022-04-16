@@ -26,7 +26,7 @@ public final class SqlActiveDirectoryConfigArgs extends io.pulumi.resources.Reso
     @Import(name="domain")
       private final @Nullable Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain == null ? Codegen.empty() : this.domain;
     }
 
@@ -37,7 +37,7 @@ public final class SqlActiveDirectoryConfigArgs extends io.pulumi.resources.Reso
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 

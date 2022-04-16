@@ -35,14 +35,14 @@ public final class TaskFilterRule {
      * The type of filter rule to apply. AWS DataSync only supports the SIMPLE_PATTERN rule type.
      * 
     */
-    public Optional<TaskFilterRuleFilterType> getFilterType() {
+    public Optional<TaskFilterRuleFilterType> filterType() {
         return Optional.ofNullable(this.filterType);
     }
     /**
      * A single filter string that consists of the patterns to include or exclude. The patterns are delimited by "|".
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

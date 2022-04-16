@@ -22,7 +22,7 @@ public final class ListDeviceFailoverTarsArgs extends io.pulumi.resources.Invoke
     @Import(name="managerName", required=true)
       private final String managerName;
 
-    public String getManagerName() {
+    public String managerName() {
         return this.managerName;
     }
 
@@ -33,7 +33,7 @@ public final class ListDeviceFailoverTarsArgs extends io.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -44,7 +44,7 @@ public final class ListDeviceFailoverTarsArgs extends io.pulumi.resources.Invoke
     @Import(name="sourceDeviceName", required=true)
       private final String sourceDeviceName;
 
-    public String getSourceDeviceName() {
+    public String sourceDeviceName() {
         return this.sourceDeviceName;
     }
 
@@ -55,7 +55,7 @@ public final class ListDeviceFailoverTarsArgs extends io.pulumi.resources.Invoke
     @Import(name="volumeContainers")
       private final @Nullable List<String> volumeContainers;
 
-    public List<String> getVolumeContainers() {
+    public List<String> volumeContainers() {
         return this.volumeContainers == null ? List.of() : this.volumeContainers;
     }
 

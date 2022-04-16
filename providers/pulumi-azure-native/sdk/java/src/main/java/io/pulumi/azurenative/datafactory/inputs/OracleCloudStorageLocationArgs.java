@@ -27,7 +27,7 @@ public final class OracleCloudStorageLocationArgs extends io.pulumi.resources.Re
     @Import(name="bucketName")
       private final @Nullable Output<Object> bucketName;
 
-    public Output<Object> getBucketName() {
+    public Output<Object> bucketName() {
         return this.bucketName == null ? Codegen.empty() : this.bucketName;
     }
 
@@ -38,7 +38,7 @@ public final class OracleCloudStorageLocationArgs extends io.pulumi.resources.Re
     @Import(name="fileName")
       private final @Nullable Output<Object> fileName;
 
-    public Output<Object> getFileName() {
+    public Output<Object> fileName() {
         return this.fileName == null ? Codegen.empty() : this.fileName;
     }
 
@@ -49,7 +49,7 @@ public final class OracleCloudStorageLocationArgs extends io.pulumi.resources.Re
     @Import(name="folderPath")
       private final @Nullable Output<Object> folderPath;
 
-    public Output<Object> getFolderPath() {
+    public Output<Object> folderPath() {
         return this.folderPath == null ? Codegen.empty() : this.folderPath;
     }
 
@@ -61,7 +61,7 @@ public final class OracleCloudStorageLocationArgs extends io.pulumi.resources.Re
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -72,7 +72,7 @@ public final class OracleCloudStorageLocationArgs extends io.pulumi.resources.Re
     @Import(name="version")
       private final @Nullable Output<Object> version;
 
-    public Output<Object> getVersion() {
+    public Output<Object> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

@@ -22,7 +22,7 @@ public final class AzureNodePoolConfigRootVolumeArgs extends io.pulumi.resources
     @Import(name="sizeGib")
       private final @Nullable Output<Integer> sizeGib;
 
-    public Output<Integer> getSizeGib() {
+    public Output<Integer> sizeGib() {
         return this.sizeGib == null ? Codegen.empty() : this.sizeGib;
     }
 

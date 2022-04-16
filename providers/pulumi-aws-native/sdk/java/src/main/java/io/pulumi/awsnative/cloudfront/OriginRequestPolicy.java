@@ -22,13 +22,13 @@ public class OriginRequestPolicy extends io.pulumi.resources.CustomResource {
     @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
-    public Output<String> getLastModifiedTime() {
+    public Output<String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     @Export(name="originRequestPolicyConfig", type=OriginRequestPolicyConfig.class, parameters={})
     private Output<OriginRequestPolicyConfig> originRequestPolicyConfig;
 
-    public Output<OriginRequestPolicyConfig> getOriginRequestPolicyConfig() {
+    public Output<OriginRequestPolicyConfig> originRequestPolicyConfig() {
         return this.originRequestPolicyConfig;
     }
 

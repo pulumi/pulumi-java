@@ -47,28 +47,28 @@ public final class GremlinDatabaseGetPropertiesResponseResource {
      * A system generated property representing the resource etag required for optimistic concurrency control.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Name of the Cosmos DB Gremlin database
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * A system generated property. A unique identifier.
      * 
     */
-    public String getRid() {
+    public String rid() {
         return this.rid;
     }
     /**
      * A system generated property that denotes the last updated timestamp of the resource.
      * 
     */
-    public Double getTs() {
+    public Double ts() {
         return this.ts;
     }
 

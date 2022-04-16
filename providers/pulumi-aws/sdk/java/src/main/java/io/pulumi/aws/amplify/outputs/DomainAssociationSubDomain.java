@@ -49,28 +49,28 @@ public final class DomainAssociationSubDomain {
      * The branch name setting for the subdomain.
      * 
     */
-    public String getBranchName() {
+    public String branchName() {
         return this.branchName;
     }
     /**
      * The DNS record for the subdomain.
      * 
     */
-    public Optional<String> getDnsRecord() {
+    public Optional<String> dnsRecord() {
         return Optional.ofNullable(this.dnsRecord);
     }
     /**
      * The prefix setting for the subdomain.
      * 
     */
-    public String getPrefix() {
+    public String prefix() {
         return this.prefix;
     }
     /**
      * The verified status of the subdomain.
      * 
     */
-    public Optional<Boolean> getVerified() {
+    public Optional<Boolean> verified() {
         return Optional.ofNullable(this.verified);
     }
 

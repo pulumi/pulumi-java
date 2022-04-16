@@ -30,7 +30,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultCustomBlockResponseBody")
       private final @Nullable Output<String> defaultCustomBlockResponseBody;
 
-    public Output<String> getDefaultCustomBlockResponseBody() {
+    public Output<String> defaultCustomBlockResponseBody() {
         return this.defaultCustomBlockResponseBody == null ? Codegen.empty() : this.defaultCustomBlockResponseBody;
     }
 
@@ -41,7 +41,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultCustomBlockResponseStatusCode")
       private final @Nullable Output<Integer> defaultCustomBlockResponseStatusCode;
 
-    public Output<Integer> getDefaultCustomBlockResponseStatusCode() {
+    public Output<Integer> defaultCustomBlockResponseStatusCode() {
         return this.defaultCustomBlockResponseStatusCode == null ? Codegen.empty() : this.defaultCustomBlockResponseStatusCode;
     }
 
@@ -52,7 +52,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultRedirectUrl")
       private final @Nullable Output<String> defaultRedirectUrl;
 
-    public Output<String> getDefaultRedirectUrl() {
+    public Output<String> defaultRedirectUrl() {
         return this.defaultRedirectUrl == null ? Codegen.empty() : this.defaultRedirectUrl;
     }
 
@@ -63,7 +63,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabledState")
       private final @Nullable Output<Either<String,PolicyEnabledState>> enabledState;
 
-    public Output<Either<String,PolicyEnabledState>> getEnabledState() {
+    public Output<Either<String,PolicyEnabledState>> enabledState() {
         return this.enabledState == null ? Codegen.empty() : this.enabledState;
     }
 
@@ -74,7 +74,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mode")
       private final @Nullable Output<Either<String,PolicyMode>> mode;
 
-    public Output<Either<String,PolicyMode>> getMode() {
+    public Output<Either<String,PolicyMode>> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 

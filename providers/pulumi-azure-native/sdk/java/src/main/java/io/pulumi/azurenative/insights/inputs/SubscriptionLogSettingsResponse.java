@@ -26,7 +26,7 @@ public final class SubscriptionLogSettingsResponse extends io.pulumi.resources.I
     @Import(name="category")
       private final @Nullable String category;
 
-    public Optional<String> getCategory() {
+    public Optional<String> category() {
         return this.category == null ? Optional.empty() : Optional.ofNullable(this.category);
     }
 
@@ -37,7 +37,7 @@ public final class SubscriptionLogSettingsResponse extends io.pulumi.resources.I
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

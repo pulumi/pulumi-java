@@ -51,28 +51,28 @@ public final class ObjectLambdaAccessPointConfiguration {
      * Allowed features. Valid values: `GetObject-Range`, `GetObject-PartNumber`.
      * 
     */
-    public List<String> getAllowedFeatures() {
+    public List<String> allowedFeatures() {
         return this.allowedFeatures == null ? List.of() : this.allowedFeatures;
     }
     /**
      * Whether or not the CloudWatch metrics configuration is enabled.
      * 
     */
-    public Optional<Boolean> getCloudWatchMetricsEnabled() {
+    public Optional<Boolean> cloudWatchMetricsEnabled() {
         return Optional.ofNullable(this.cloudWatchMetricsEnabled);
     }
     /**
      * Standard access point associated with the Object Lambda Access Point.
      * 
     */
-    public String getSupportingAccessPoint() {
+    public String supportingAccessPoint() {
         return this.supportingAccessPoint;
     }
     /**
      * List of transformation configurations for the Object Lambda Access Point. See Transformation Configuration below for more details.
      * 
     */
-    public List<ObjectLambdaAccessPointConfigurationTransformationConfiguration> getTransformationConfigurations() {
+    public List<ObjectLambdaAccessPointConfigurationTransformationConfiguration> transformationConfigurations() {
         return this.transformationConfigurations;
     }
 

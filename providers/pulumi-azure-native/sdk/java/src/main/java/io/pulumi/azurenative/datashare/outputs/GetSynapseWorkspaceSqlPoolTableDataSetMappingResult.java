@@ -83,21 +83,21 @@ public final class GetSynapseWorkspaceSqlPoolTableDataSetMappingResult {
      * The id of the source data set.
      * 
     */
-    public String getDataSetId() {
+    public String dataSetId() {
         return this.dataSetId;
     }
     /**
      * Gets the status of the data set mapping.
      * 
     */
-    public String getDataSetMappingStatus() {
+    public String dataSetMappingStatus() {
         return this.dataSetMappingStatus;
     }
     /**
      * The resource id of the azure resource
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -105,42 +105,42 @@ public final class GetSynapseWorkspaceSqlPoolTableDataSetMappingResult {
      * Expected value is 'SynapseWorkspaceSqlPoolTable'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Name of the azure resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Provisioning state of the data set mapping.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource id of the Synapse Workspace SQL Pool Table
      * 
     */
-    public String getSynapseWorkspaceSqlPoolTableResourceId() {
+    public String synapseWorkspaceSqlPoolTableResourceId() {
         return this.synapseWorkspaceSqlPoolTableResourceId;
     }
     /**
      * System Data of the Azure resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Type of the azure resource
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

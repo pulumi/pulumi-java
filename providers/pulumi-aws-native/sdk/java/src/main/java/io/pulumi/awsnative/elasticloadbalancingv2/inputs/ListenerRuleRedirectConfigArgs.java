@@ -18,42 +18,42 @@ public final class ListenerRuleRedirectConfigArgs extends io.pulumi.resources.Re
     @Import(name="host")
       private final @Nullable Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host == null ? Codegen.empty() : this.host;
     }
 
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
     @Import(name="port")
       private final @Nullable Output<String> port;
 
-    public Output<String> getPort() {
+    public Output<String> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     @Import(name="query")
       private final @Nullable Output<String> query;
 
-    public Output<String> getQuery() {
+    public Output<String> query() {
         return this.query == null ? Codegen.empty() : this.query;
     }
 
     @Import(name="statusCode", required=true)
       private final Output<String> statusCode;
 
-    public Output<String> getStatusCode() {
+    public Output<String> statusCode() {
         return this.statusCode;
     }
 

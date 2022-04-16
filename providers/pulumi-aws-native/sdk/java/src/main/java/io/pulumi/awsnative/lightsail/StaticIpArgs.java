@@ -22,7 +22,7 @@ public final class StaticIpArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attachedTo")
       private final @Nullable Output<String> attachedTo;
 
-    public Output<String> getAttachedTo() {
+    public Output<String> attachedTo() {
         return this.attachedTo == null ? Codegen.empty() : this.attachedTo;
     }
 
@@ -33,7 +33,7 @@ public final class StaticIpArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="staticIpName")
       private final @Nullable Output<String> staticIpName;
 
-    public Output<String> getStaticIpName() {
+    public Output<String> staticIpName() {
         return this.staticIpName == null ? Codegen.empty() : this.staticIpName;
     }
 

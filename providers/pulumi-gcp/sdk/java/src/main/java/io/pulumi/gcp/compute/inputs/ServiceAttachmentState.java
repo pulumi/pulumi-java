@@ -26,7 +26,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
     @Import(name="connectedEndpoints")
       private final @Nullable Output<List<ServiceAttachmentConnectedEndpointGetArgs>> connectedEndpoints;
 
-    public Output<List<ServiceAttachmentConnectedEndpointGetArgs>> getConnectedEndpoints() {
+    public Output<List<ServiceAttachmentConnectedEndpointGetArgs>> connectedEndpoints() {
         return this.connectedEndpoints == null ? Codegen.empty() : this.connectedEndpoints;
     }
 
@@ -38,7 +38,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
     @Import(name="connectionPreference")
       private final @Nullable Output<String> connectionPreference;
 
-    public Output<String> getConnectionPreference() {
+    public Output<String> connectionPreference() {
         return this.connectionPreference == null ? Codegen.empty() : this.connectionPreference;
     }
 
@@ -51,7 +51,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
     @Import(name="consumerAcceptLists")
       private final @Nullable Output<List<ServiceAttachmentConsumerAcceptListGetArgs>> consumerAcceptLists;
 
-    public Output<List<ServiceAttachmentConsumerAcceptListGetArgs>> getConsumerAcceptLists() {
+    public Output<List<ServiceAttachmentConsumerAcceptListGetArgs>> consumerAcceptLists() {
         return this.consumerAcceptLists == null ? Codegen.empty() : this.consumerAcceptLists;
     }
 
@@ -63,7 +63,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
     @Import(name="consumerRejectLists")
       private final @Nullable Output<List<String>> consumerRejectLists;
 
-    public Output<List<String>> getConsumerRejectLists() {
+    public Output<List<String>> consumerRejectLists() {
         return this.consumerRejectLists == null ? Codegen.empty() : this.consumerRejectLists;
     }
 
@@ -74,7 +74,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -87,7 +87,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
     @Import(name="enableProxyProtocol")
       private final @Nullable Output<Boolean> enableProxyProtocol;
 
-    public Output<Boolean> getEnableProxyProtocol() {
+    public Output<Boolean> enableProxyProtocol() {
         return this.enableProxyProtocol == null ? Codegen.empty() : this.enableProxyProtocol;
     }
 
@@ -98,7 +98,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
     @Import(name="fingerprint")
       private final @Nullable Output<String> fingerprint;
 
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
     }
 
@@ -114,7 +114,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -125,7 +125,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
     @Import(name="natSubnets")
       private final @Nullable Output<List<String>> natSubnets;
 
-    public Output<List<String>> getNatSubnets() {
+    public Output<List<String>> natSubnets() {
         return this.natSubnets == null ? Codegen.empty() : this.natSubnets;
     }
 
@@ -137,7 +137,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -148,7 +148,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -159,7 +159,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
@@ -171,7 +171,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
     @Import(name="targetService")
       private final @Nullable Output<String> targetService;
 
-    public Output<String> getTargetService() {
+    public Output<String> targetService() {
         return this.targetService == null ? Codegen.empty() : this.targetService;
     }
 

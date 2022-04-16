@@ -19,7 +19,7 @@ public final class GetBandwidthSettingArgs extends io.pulumi.resources.InvokeArg
     @Import(name="bandwidthSettingName", required=true)
       private final String bandwidthSettingName;
 
-    public String getBandwidthSettingName() {
+    public String bandwidthSettingName() {
         return this.bandwidthSettingName;
     }
 
@@ -30,7 +30,7 @@ public final class GetBandwidthSettingArgs extends io.pulumi.resources.InvokeArg
     @Import(name="managerName", required=true)
       private final String managerName;
 
-    public String getManagerName() {
+    public String managerName() {
         return this.managerName;
     }
 
@@ -41,7 +41,7 @@ public final class GetBandwidthSettingArgs extends io.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

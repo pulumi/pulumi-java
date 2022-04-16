@@ -46,28 +46,28 @@ public final class StorageAccountInternetEndpointsResponse {
      * Gets the blob endpoint.
      * 
     */
-    public String getBlob() {
+    public String blob() {
         return this.blob;
     }
     /**
      * Gets the dfs endpoint.
      * 
     */
-    public String getDfs() {
+    public String dfs() {
         return this.dfs;
     }
     /**
      * Gets the file endpoint.
      * 
     */
-    public String getFile() {
+    public String file() {
         return this.file;
     }
     /**
      * Gets the web endpoint.
      * 
     */
-    public String getWeb() {
+    public String web() {
         return this.web;
     }
 

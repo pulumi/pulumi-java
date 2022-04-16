@@ -23,7 +23,7 @@ public final class ApigatewayApiConfigFileResponse extends io.pulumi.resources.I
     @Import(name="contents", required=true)
       private final String contents;
 
-    public String getContents() {
+    public String contents() {
         return this.contents;
     }
 
@@ -34,7 +34,7 @@ public final class ApigatewayApiConfigFileResponse extends io.pulumi.resources.I
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 

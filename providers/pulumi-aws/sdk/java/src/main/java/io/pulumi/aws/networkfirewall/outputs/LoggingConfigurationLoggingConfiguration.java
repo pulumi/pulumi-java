@@ -25,7 +25,7 @@ public final class LoggingConfigurationLoggingConfiguration {
      * Set of configuration blocks describing the logging details for a firewall. See Log Destination Config below for details. At most, only two blocks can be specified; one for `FLOW` logs and one for `ALERT` logs.
      * 
     */
-    public List<LoggingConfigurationLoggingConfigurationLogDestinationConfig> getLogDestinationConfigs() {
+    public List<LoggingConfigurationLoggingConfigurationLogDestinationConfig> logDestinationConfigs() {
         return this.logDestinationConfigs;
     }
 

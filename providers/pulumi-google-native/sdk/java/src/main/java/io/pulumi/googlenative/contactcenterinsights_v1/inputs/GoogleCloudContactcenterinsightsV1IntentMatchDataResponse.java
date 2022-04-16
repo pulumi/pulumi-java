@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1IntentMatchDataResponse ext
     @Import(name="intentUniqueId", required=true)
       private final String intentUniqueId;
 
-    public String getIntentUniqueId() {
+    public String intentUniqueId() {
         return this.intentUniqueId;
     }
 

@@ -34,14 +34,14 @@ public final class NetworkPropertiesResponse {
      * Indicates whether or not private link is enabled.
      * 
     */
-    public Optional<String> getPrivateLink() {
+    public Optional<String> privateLink() {
         return Optional.ofNullable(this.privateLink);
     }
     /**
      * The direction for the resource provider connection.
      * 
     */
-    public Optional<String> getResourceProviderConnection() {
+    public Optional<String> resourceProviderConnection() {
         return Optional.ofNullable(this.resourceProviderConnection);
     }
 

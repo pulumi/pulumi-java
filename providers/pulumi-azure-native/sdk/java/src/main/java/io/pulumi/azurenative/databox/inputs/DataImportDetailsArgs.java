@@ -27,7 +27,7 @@ public final class DataImportDetailsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="accountDetails", required=true)
       private final Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails;
 
-    public Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> getAccountDetails() {
+    public Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails() {
         return this.accountDetails;
     }
 

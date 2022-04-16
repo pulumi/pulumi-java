@@ -28,7 +28,7 @@ public final class MasterAuthorizedNetworksConfigArgs extends io.pulumi.resource
     @Import(name="cidrBlocks")
       private final @Nullable Output<List<CidrBlockArgs>> cidrBlocks;
 
-    public Output<List<CidrBlockArgs>> getCidrBlocks() {
+    public Output<List<CidrBlockArgs>> cidrBlocks() {
         return this.cidrBlocks == null ? Codegen.empty() : this.cidrBlocks;
     }
 
@@ -39,7 +39,7 @@ public final class MasterAuthorizedNetworksConfigArgs extends io.pulumi.resource
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 

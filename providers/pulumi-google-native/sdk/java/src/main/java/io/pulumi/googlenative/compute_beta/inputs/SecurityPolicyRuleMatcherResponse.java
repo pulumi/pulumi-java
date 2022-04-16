@@ -25,7 +25,7 @@ public final class SecurityPolicyRuleMatcherResponse extends io.pulumi.resources
     @Import(name="config", required=true)
       private final SecurityPolicyRuleMatcherConfigResponse config;
 
-    public SecurityPolicyRuleMatcherConfigResponse getConfig() {
+    public SecurityPolicyRuleMatcherConfigResponse config() {
         return this.config;
     }
 
@@ -36,7 +36,7 @@ public final class SecurityPolicyRuleMatcherResponse extends io.pulumi.resources
     @Import(name="expr", required=true)
       private final ExprResponse expr;
 
-    public ExprResponse getExpr() {
+    public ExprResponse expr() {
         return this.expr;
     }
 
@@ -47,7 +47,7 @@ public final class SecurityPolicyRuleMatcherResponse extends io.pulumi.resources
     @Import(name="versionedExpr", required=true)
       private final String versionedExpr;
 
-    public String getVersionedExpr() {
+    public String versionedExpr() {
         return this.versionedExpr;
     }
 

@@ -23,7 +23,7 @@ public final class StudioLifecycleConfigState extends io.pulumi.resources.Resour
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class StudioLifecycleConfigState extends io.pulumi.resources.Resour
     @Import(name="studioLifecycleConfigAppType")
       private final @Nullable Output<String> studioLifecycleConfigAppType;
 
-    public Output<String> getStudioLifecycleConfigAppType() {
+    public Output<String> studioLifecycleConfigAppType() {
         return this.studioLifecycleConfigAppType == null ? Codegen.empty() : this.studioLifecycleConfigAppType;
     }
 
@@ -45,7 +45,7 @@ public final class StudioLifecycleConfigState extends io.pulumi.resources.Resour
     @Import(name="studioLifecycleConfigContent")
       private final @Nullable Output<String> studioLifecycleConfigContent;
 
-    public Output<String> getStudioLifecycleConfigContent() {
+    public Output<String> studioLifecycleConfigContent() {
         return this.studioLifecycleConfigContent == null ? Codegen.empty() : this.studioLifecycleConfigContent;
     }
 
@@ -56,7 +56,7 @@ public final class StudioLifecycleConfigState extends io.pulumi.resources.Resour
     @Import(name="studioLifecycleConfigName")
       private final @Nullable Output<String> studioLifecycleConfigName;
 
-    public Output<String> getStudioLifecycleConfigName() {
+    public Output<String> studioLifecycleConfigName() {
         return this.studioLifecycleConfigName == null ? Codegen.empty() : this.studioLifecycleConfigName;
     }
 
@@ -67,7 +67,7 @@ public final class StudioLifecycleConfigState extends io.pulumi.resources.Resour
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -78,7 +78,7 @@ public final class StudioLifecycleConfigState extends io.pulumi.resources.Resour
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

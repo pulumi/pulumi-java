@@ -41,7 +41,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The backend type. `SECOND_GEN`: Cloud SQL database instance. `EXTERNAL`: A database server that is not managed by Google. This property is read-only; use the `tier` property in the `settings` object to determine the database type.
      * 
      */
-    public Output<String> getBackendType() {
+    public Output<String> backendType() {
         return this.backendType;
     }
     /**
@@ -55,7 +55,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Connection name of the Cloud SQL instance used in connection strings.
      * 
      */
-    public Output<String> getConnectionName() {
+    public Output<String> connectionName() {
         return this.connectionName;
     }
     /**
@@ -69,7 +69,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The time when the instance was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -83,7 +83,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The current disk usage of the instance in bytes. This property has been deprecated. Use the "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud Monitoring API instead. Please see [this announcement](https://groups.google.com/d/msg/google-cloud-sql-announce/I_7-F9EBhT0/BtvFtdFeAgAJ) for details.
      * 
      */
-    public Output<String> getCurrentDiskSize() {
+    public Output<String> currentDiskSize() {
         return this.currentDiskSize;
     }
     /**
@@ -97,7 +97,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Stores the current database version running on the instance including minor version such as `MYSQL_8_0_18`.
      * 
      */
-    public Output<String> getDatabaseInstalledVersion() {
+    public Output<String> databaseInstalledVersion() {
         return this.databaseInstalledVersion;
     }
     /**
@@ -111,7 +111,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The database engine type and version. The `databaseVersion` field cannot be changed after instance creation.
      * 
      */
-    public Output<String> getDatabaseVersion() {
+    public Output<String> databaseVersion() {
         return this.databaseVersion;
     }
     /**
@@ -125,7 +125,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Disk encryption configuration specific to an instance.
      * 
      */
-    public Output<DiskEncryptionConfigurationResponse> getDiskEncryptionConfiguration() {
+    public Output<DiskEncryptionConfigurationResponse> diskEncryptionConfiguration() {
         return this.diskEncryptionConfiguration;
     }
     /**
@@ -139,7 +139,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Disk encryption status specific to an instance.
      * 
      */
-    public Output<DiskEncryptionStatusResponse> getDiskEncryptionStatus() {
+    public Output<DiskEncryptionStatusResponse> diskEncryptionStatus() {
         return this.diskEncryptionStatus;
     }
     /**
@@ -153,7 +153,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The name and status of the failover replica.
      * 
      */
-    public Output<InstanceFailoverReplicaResponse> getFailoverReplica() {
+    public Output<InstanceFailoverReplicaResponse> failoverReplica() {
         return this.failoverReplica;
     }
     /**
@@ -167,7 +167,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The Compute Engine zone that the instance is currently serving from. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary zone. WARNING: Changing this might restart the instance.
      * 
      */
-    public Output<String> getGceZone() {
+    public Output<String> gceZone() {
         return this.gceZone;
     }
     /**
@@ -181,7 +181,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The instance type.
      * 
      */
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
     /**
@@ -195,7 +195,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The assigned IP addresses for the instance.
      * 
      */
-    public Output<List<IpMappingResponse>> getIpAddresses() {
+    public Output<List<IpMappingResponse>> ipAddresses() {
         return this.ipAddresses;
     }
     /**
@@ -209,7 +209,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return This is always `sql#instance`.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -223,7 +223,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The name of the instance which will act as primary in the replication setup.
      * 
      */
-    public Output<String> getMasterInstanceName() {
+    public Output<String> masterInstanceName() {
         return this.masterInstanceName;
     }
     /**
@@ -237,7 +237,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The maximum disk size of the instance in bytes.
      * 
      */
-    public Output<String> getMaxDiskSize() {
+    public Output<String> maxDiskSize() {
         return this.maxDiskSize;
     }
     /**
@@ -251,7 +251,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Name of the Cloud SQL instance. This does not include the project ID.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -265,7 +265,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Configuration specific to on-premises instances.
      * 
      */
-    public Output<OnPremisesConfigurationResponse> getOnPremisesConfiguration() {
+    public Output<OnPremisesConfigurationResponse> onPremisesConfiguration() {
         return this.onPremisesConfiguration;
     }
     /**
@@ -279,7 +279,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return This field represents the report generated by the proactive database wellness job for OutOfDisk issues. * Writers: * the proactive database wellness job for OOD. * Readers: * the proactive database wellness job
      * 
      */
-    public Output<SqlOutOfDiskReportResponse> getOutOfDiskReport() {
+    public Output<SqlOutOfDiskReportResponse> outOfDiskReport() {
         return this.outOfDiskReport;
     }
     /**
@@ -293,7 +293,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The project ID of the project containing the Cloud SQL instance. The Google apps domain is prefixed if applicable.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -307,7 +307,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The geographical region. Can be: * `us-central` (`FIRST_GEN` instances only) * `us-central1` (`SECOND_GEN` instances only) * `asia-east1` or `europe-west1`. Defaults to `us-central` or `us-central1` depending on the instance type. The region cannot be changed after instance creation.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -321,7 +321,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Configuration specific to failover replicas and read replicas.
      * 
      */
-    public Output<ReplicaConfigurationResponse> getReplicaConfiguration() {
+    public Output<ReplicaConfigurationResponse> replicaConfiguration() {
         return this.replicaConfiguration;
     }
     /**
@@ -335,7 +335,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The replicas of the instance.
      * 
      */
-    public Output<List<String>> getReplicaNames() {
+    public Output<List<String>> replicaNames() {
         return this.replicaNames;
     }
     /**
@@ -349,7 +349,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Initial root password. Use only on creation.
      * 
      */
-    public Output<String> getRootPassword() {
+    public Output<String> rootPassword() {
         return this.rootPassword;
     }
     /**
@@ -363,7 +363,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The status indicating if instance satisfiesPzs. Reserved for future use.
      * 
      */
-    public Output<Boolean> getSatisfiesPzs() {
+    public Output<Boolean> satisfiesPzs() {
         return this.satisfiesPzs;
     }
     /**
@@ -377,7 +377,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The start time of any upcoming scheduled maintenance for this instance.
      * 
      */
-    public Output<SqlScheduledMaintenanceResponse> getScheduledMaintenance() {
+    public Output<SqlScheduledMaintenanceResponse> scheduledMaintenance() {
         return this.scheduledMaintenance;
     }
     /**
@@ -391,7 +391,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The Compute Engine zone that the failover instance is currently serving from for a regional instance. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary/failover zone. Reserved for future use.
      * 
      */
-    public Output<String> getSecondaryGceZone() {
+    public Output<String> secondaryGceZone() {
         return this.secondaryGceZone;
     }
     /**
@@ -405,7 +405,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The URI of this resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -419,7 +419,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return SSL configuration.
      * 
      */
-    public Output<SslCertResponse> getServerCaCert() {
+    public Output<SslCertResponse> serverCaCert() {
         return this.serverCaCert;
     }
     /**
@@ -433,7 +433,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The service account email address assigned to the instance. \This property is read-only.
      * 
      */
-    public Output<String> getServiceAccountEmailAddress() {
+    public Output<String> serviceAccountEmailAddress() {
         return this.serviceAccountEmailAddress;
     }
     /**
@@ -447,7 +447,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The user settings.
      * 
      */
-    public Output<SettingsResponse> getSettings() {
+    public Output<SettingsResponse> settings() {
         return this.settings;
     }
     /**
@@ -461,7 +461,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The current serving state of the Cloud SQL instance.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -475,7 +475,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return If the instance state is SUSPENDED, the reason for the suspension.
      * 
      */
-    public Output<List<String>> getSuspensionReason() {
+    public Output<List<String>> suspensionReason() {
         return this.suspensionReason;
     }
 

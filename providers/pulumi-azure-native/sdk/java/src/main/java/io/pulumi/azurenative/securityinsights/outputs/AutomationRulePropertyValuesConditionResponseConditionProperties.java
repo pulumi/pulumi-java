@@ -42,21 +42,21 @@ public final class AutomationRulePropertyValuesConditionResponseConditionPropert
      * The operator to use for evaluation the condition
      * 
     */
-    public Optional<String> getOperator() {
+    public Optional<String> operator() {
         return Optional.ofNullable(this.operator);
     }
     /**
      * The property to evaluate
      * 
     */
-    public Optional<String> getPropertyName() {
+    public Optional<String> propertyName() {
         return Optional.ofNullable(this.propertyName);
     }
     /**
      * The values to use for evaluating the condition
      * 
     */
-    public List<String> getPropertyValues() {
+    public List<String> propertyValues() {
         return this.propertyValues == null ? List.of() : this.propertyValues;
     }
 

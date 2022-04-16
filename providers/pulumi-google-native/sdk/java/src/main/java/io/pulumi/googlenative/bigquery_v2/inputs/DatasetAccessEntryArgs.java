@@ -24,14 +24,14 @@ public final class DatasetAccessEntryArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dataset")
       private final @Nullable Output<DatasetReferenceArgs> dataset;
 
-    public Output<DatasetReferenceArgs> getDataset() {
+    public Output<DatasetReferenceArgs> dataset() {
         return this.dataset == null ? Codegen.empty() : this.dataset;
     }
 
     @Import(name="targetTypes")
       private final @Nullable Output<List<DatasetAccessEntryTargetTypesItem>> targetTypes;
 
-    public Output<List<DatasetAccessEntryTargetTypesItem>> getTargetTypes() {
+    public Output<List<DatasetAccessEntryTargetTypesItem>> targetTypes() {
         return this.targetTypes == null ? Codegen.empty() : this.targetTypes;
     }
 

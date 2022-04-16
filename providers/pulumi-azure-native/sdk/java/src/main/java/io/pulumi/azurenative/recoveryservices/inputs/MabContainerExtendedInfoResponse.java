@@ -26,7 +26,7 @@ public final class MabContainerExtendedInfoResponse extends io.pulumi.resources.
     @Import(name="backupItemType")
       private final @Nullable String backupItemType;
 
-    public Optional<String> getBackupItemType() {
+    public Optional<String> backupItemType() {
         return this.backupItemType == null ? Optional.empty() : Optional.ofNullable(this.backupItemType);
     }
 
@@ -37,7 +37,7 @@ public final class MabContainerExtendedInfoResponse extends io.pulumi.resources.
     @Import(name="backupItems")
       private final @Nullable List<String> backupItems;
 
-    public List<String> getBackupItems() {
+    public List<String> backupItems() {
         return this.backupItems == null ? List.of() : this.backupItems;
     }
 
@@ -48,7 +48,7 @@ public final class MabContainerExtendedInfoResponse extends io.pulumi.resources.
     @Import(name="lastBackupStatus")
       private final @Nullable String lastBackupStatus;
 
-    public Optional<String> getLastBackupStatus() {
+    public Optional<String> lastBackupStatus() {
         return this.lastBackupStatus == null ? Optional.empty() : Optional.ofNullable(this.lastBackupStatus);
     }
 
@@ -59,7 +59,7 @@ public final class MabContainerExtendedInfoResponse extends io.pulumi.resources.
     @Import(name="lastRefreshedAt")
       private final @Nullable String lastRefreshedAt;
 
-    public Optional<String> getLastRefreshedAt() {
+    public Optional<String> lastRefreshedAt() {
         return this.lastRefreshedAt == null ? Optional.empty() : Optional.ofNullable(this.lastRefreshedAt);
     }
 
@@ -70,7 +70,7 @@ public final class MabContainerExtendedInfoResponse extends io.pulumi.resources.
     @Import(name="policyName")
       private final @Nullable String policyName;
 
-    public Optional<String> getPolicyName() {
+    public Optional<String> policyName() {
         return this.policyName == null ? Optional.empty() : Optional.ofNullable(this.policyName);
     }
 

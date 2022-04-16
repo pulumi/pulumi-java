@@ -15,7 +15,7 @@ public final class ResourceTypeEndpointResponseFeaturesRule extends io.pulumi.re
     @Import(name="requiredFeaturesPolicy", required=true)
       private final String requiredFeaturesPolicy;
 
-    public String getRequiredFeaturesPolicy() {
+    public String requiredFeaturesPolicy() {
         return this.requiredFeaturesPolicy;
     }
 

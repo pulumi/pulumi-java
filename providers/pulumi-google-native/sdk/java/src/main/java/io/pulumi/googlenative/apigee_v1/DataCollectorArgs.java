@@ -19,7 +19,7 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataCollectorId")
       private final @Nullable Output<String> dataCollectorId;
 
-    public Output<String> getDataCollectorId() {
+    public Output<String> dataCollectorId() {
         return this.dataCollectorId == null ? Codegen.empty() : this.dataCollectorId;
     }
 
@@ -30,7 +30,7 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -41,14 +41,14 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -59,7 +59,7 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<DataCollectorType> type;
 
-    public Output<DataCollectorType> getType() {
+    public Output<DataCollectorType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

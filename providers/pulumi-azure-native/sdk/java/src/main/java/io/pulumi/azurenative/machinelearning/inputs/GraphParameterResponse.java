@@ -27,7 +27,7 @@ public final class GraphParameterResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -38,7 +38,7 @@ public final class GraphParameterResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="links", required=true)
       private final List<GraphParameterLinkResponse> links;
 
-    public List<GraphParameterLinkResponse> getLinks() {
+    public List<GraphParameterLinkResponse> links() {
         return this.links;
     }
 
@@ -49,7 +49,7 @@ public final class GraphParameterResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

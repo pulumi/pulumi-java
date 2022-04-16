@@ -27,7 +27,7 @@ public final class ManagedServiceIdentityResponse extends io.pulumi.resources.In
     @Import(name="principalId")
       private final @Nullable String principalId;
 
-    public Optional<String> getPrincipalId() {
+    public Optional<String> principalId() {
         return this.principalId == null ? Optional.empty() : Optional.ofNullable(this.principalId);
     }
 
@@ -38,7 +38,7 @@ public final class ManagedServiceIdentityResponse extends io.pulumi.resources.In
     @Import(name="tenantId")
       private final @Nullable String tenantId;
 
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
     }
 
@@ -49,7 +49,7 @@ public final class ManagedServiceIdentityResponse extends io.pulumi.resources.In
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -60,7 +60,7 @@ public final class ManagedServiceIdentityResponse extends io.pulumi.resources.In
     @Import(name="userAssignedIdentities")
       private final @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;
 
-    public Map<String,UserAssignedIdentityResponse> getUserAssignedIdentities() {
+    public Map<String,UserAssignedIdentityResponse> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }
 

@@ -49,7 +49,7 @@ public final class NodeSelectorRequirement {
      * The label key that the selector applies to.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
@@ -64,14 +64,14 @@ public final class NodeSelectorRequirement {
      *  - `"NotIn"`
      * 
     */
-    public String getOperator() {
+    public String operator() {
         return this.operator;
     }
     /**
      * An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch.
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }
 

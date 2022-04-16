@@ -26,14 +26,14 @@ public final class GetInstanceTemplateReservationAffinity {
         this.type = type;
     }
 
-    public List<GetInstanceTemplateReservationAffinitySpecificReservation> getSpecificReservations() {
+    public List<GetInstanceTemplateReservationAffinitySpecificReservation> specificReservations() {
         return this.specificReservations;
     }
     /**
      * The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

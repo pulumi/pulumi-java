@@ -57,7 +57,7 @@ public final class TriggerGithub {
      * Each named volume must be used by at least two build steps.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
@@ -65,7 +65,7 @@ public final class TriggerGithub {
      * https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
      * 
     */
-    public Optional<String> getOwner() {
+    public Optional<String> owner() {
         return Optional.ofNullable(this.owner);
     }
     /**
@@ -73,7 +73,7 @@ public final class TriggerGithub {
      * Structure is documented below.
      * 
     */
-    public Optional<TriggerGithubPullRequest> getPullRequest() {
+    public Optional<TriggerGithubPullRequest> pullRequest() {
         return Optional.ofNullable(this.pullRequest);
     }
     /**
@@ -81,7 +81,7 @@ public final class TriggerGithub {
      * Structure is documented below.
      * 
     */
-    public Optional<TriggerGithubPush> getPush() {
+    public Optional<TriggerGithubPush> push() {
         return Optional.ofNullable(this.push);
     }
 

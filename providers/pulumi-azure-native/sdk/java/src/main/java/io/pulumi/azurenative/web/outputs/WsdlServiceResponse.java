@@ -34,14 +34,14 @@ public final class WsdlServiceResponse {
      * List of the endpoints' qualified names
      * 
     */
-    public List<String> getEndpointQualifiedNames() {
+    public List<String> endpointQualifiedNames() {
         return this.endpointQualifiedNames == null ? List.of() : this.endpointQualifiedNames;
     }
     /**
      * The service's qualified name
      * 
     */
-    public String getQualifiedName() {
+    public String qualifiedName() {
         return this.qualifiedName;
     }
 

@@ -32,7 +32,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * @return Unique alias ID
      * 
      */
-    public Output<String> getAliasId() {
+    public Output<String> aliasId() {
         return this.aliasId;
     }
     /**
@@ -46,7 +46,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * @return A human-readable description of the alias.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -60,7 +60,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * @return A descriptive label that is associated with an alias. Alias names do not need to be unique.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -74,7 +74,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * @return A routing configuration that specifies where traffic is directed for this alias, such as to a fleet or to a message.
      * 
      */
-    public Output<AliasRoutingStrategy> getRoutingStrategy() {
+    public Output<AliasRoutingStrategy> routingStrategy() {
         return this.routingStrategy;
     }
 

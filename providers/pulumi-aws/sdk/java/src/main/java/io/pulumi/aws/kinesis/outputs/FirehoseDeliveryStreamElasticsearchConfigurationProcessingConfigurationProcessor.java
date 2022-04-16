@@ -35,14 +35,14 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationProcessingCon
      * Array of processor parameters. More details are given below
      * 
     */
-    public List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameter> getParameters() {
+    public List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameter> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
      * The type of processor. Valid Values: `Lambda`
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

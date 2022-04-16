@@ -24,7 +24,7 @@ public final class GoogleCloudDatacatalogV1PersonalDetailsResponse extends io.pu
     @Import(name="starTime", required=true)
       private final String starTime;
 
-    public String getStarTime() {
+    public String starTime() {
         return this.starTime;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDatacatalogV1PersonalDetailsResponse extends io.pu
     @Import(name="starred", required=true)
       private final Boolean starred;
 
-    public Boolean getStarred() {
+    public Boolean starred() {
         return this.starred;
     }
 

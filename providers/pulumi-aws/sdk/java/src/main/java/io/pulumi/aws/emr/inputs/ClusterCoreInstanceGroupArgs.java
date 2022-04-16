@@ -25,7 +25,7 @@ public final class ClusterCoreInstanceGroupArgs extends io.pulumi.resources.Reso
     @Import(name="autoscalingPolicy")
       private final @Nullable Output<String> autoscalingPolicy;
 
-    public Output<String> getAutoscalingPolicy() {
+    public Output<String> autoscalingPolicy() {
         return this.autoscalingPolicy == null ? Codegen.empty() : this.autoscalingPolicy;
     }
 
@@ -36,7 +36,7 @@ public final class ClusterCoreInstanceGroupArgs extends io.pulumi.resources.Reso
     @Import(name="bidPrice")
       private final @Nullable Output<String> bidPrice;
 
-    public Output<String> getBidPrice() {
+    public Output<String> bidPrice() {
         return this.bidPrice == null ? Codegen.empty() : this.bidPrice;
     }
 
@@ -47,7 +47,7 @@ public final class ClusterCoreInstanceGroupArgs extends io.pulumi.resources.Reso
     @Import(name="ebsConfigs")
       private final @Nullable Output<List<ClusterCoreInstanceGroupEbsConfigArgs>> ebsConfigs;
 
-    public Output<List<ClusterCoreInstanceGroupEbsConfigArgs>> getEbsConfigs() {
+    public Output<List<ClusterCoreInstanceGroupEbsConfigArgs>> ebsConfigs() {
         return this.ebsConfigs == null ? Codegen.empty() : this.ebsConfigs;
     }
 
@@ -58,7 +58,7 @@ public final class ClusterCoreInstanceGroupArgs extends io.pulumi.resources.Reso
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -69,7 +69,7 @@ public final class ClusterCoreInstanceGroupArgs extends io.pulumi.resources.Reso
     @Import(name="instanceCount")
       private final @Nullable Output<Integer> instanceCount;
 
-    public Output<Integer> getInstanceCount() {
+    public Output<Integer> instanceCount() {
         return this.instanceCount == null ? Codegen.empty() : this.instanceCount;
     }
 
@@ -80,7 +80,7 @@ public final class ClusterCoreInstanceGroupArgs extends io.pulumi.resources.Reso
     @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
 
@@ -91,7 +91,7 @@ public final class ClusterCoreInstanceGroupArgs extends io.pulumi.resources.Reso
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

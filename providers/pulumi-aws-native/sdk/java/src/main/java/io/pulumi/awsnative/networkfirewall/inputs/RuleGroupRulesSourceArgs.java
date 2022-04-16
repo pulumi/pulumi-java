@@ -22,28 +22,28 @@ public final class RuleGroupRulesSourceArgs extends io.pulumi.resources.Resource
     @Import(name="rulesSourceList")
       private final @Nullable Output<RuleGroupRulesSourceListArgs> rulesSourceList;
 
-    public Output<RuleGroupRulesSourceListArgs> getRulesSourceList() {
+    public Output<RuleGroupRulesSourceListArgs> rulesSourceList() {
         return this.rulesSourceList == null ? Codegen.empty() : this.rulesSourceList;
     }
 
     @Import(name="rulesString")
       private final @Nullable Output<String> rulesString;
 
-    public Output<String> getRulesString() {
+    public Output<String> rulesString() {
         return this.rulesString == null ? Codegen.empty() : this.rulesString;
     }
 
     @Import(name="statefulRules")
       private final @Nullable Output<List<RuleGroupStatefulRuleArgs>> statefulRules;
 
-    public Output<List<RuleGroupStatefulRuleArgs>> getStatefulRules() {
+    public Output<List<RuleGroupStatefulRuleArgs>> statefulRules() {
         return this.statefulRules == null ? Codegen.empty() : this.statefulRules;
     }
 
     @Import(name="statelessRulesAndCustomActions")
       private final @Nullable Output<RuleGroupStatelessRulesAndCustomActionsArgs> statelessRulesAndCustomActions;
 
-    public Output<RuleGroupStatelessRulesAndCustomActionsArgs> getStatelessRulesAndCustomActions() {
+    public Output<RuleGroupStatelessRulesAndCustomActionsArgs> statelessRulesAndCustomActions() {
         return this.statelessRulesAndCustomActions == null ? Codegen.empty() : this.statelessRulesAndCustomActions;
     }
 

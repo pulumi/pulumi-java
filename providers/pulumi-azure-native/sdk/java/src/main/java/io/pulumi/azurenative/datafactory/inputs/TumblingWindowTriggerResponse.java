@@ -33,7 +33,7 @@ public final class TumblingWindowTriggerResponse extends io.pulumi.resources.Inv
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -44,7 +44,7 @@ public final class TumblingWindowTriggerResponse extends io.pulumi.resources.Inv
     @Import(name="delay")
       private final @Nullable Object delay;
 
-    public Optional<Object> getDelay() {
+    public Optional<Object> delay() {
         return this.delay == null ? Optional.empty() : Optional.ofNullable(this.delay);
     }
 
@@ -55,7 +55,7 @@ public final class TumblingWindowTriggerResponse extends io.pulumi.resources.Inv
     @Import(name="dependsOn")
       private final @Nullable List<Object> dependsOn;
 
-    public List<Object> getDependsOn() {
+    public List<Object> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
@@ -66,7 +66,7 @@ public final class TumblingWindowTriggerResponse extends io.pulumi.resources.Inv
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -77,7 +77,7 @@ public final class TumblingWindowTriggerResponse extends io.pulumi.resources.Inv
     @Import(name="endTime")
       private final @Nullable String endTime;
 
-    public Optional<String> getEndTime() {
+    public Optional<String> endTime() {
         return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
     }
 
@@ -88,7 +88,7 @@ public final class TumblingWindowTriggerResponse extends io.pulumi.resources.Inv
     @Import(name="frequency", required=true)
       private final String frequency;
 
-    public String getFrequency() {
+    public String frequency() {
         return this.frequency;
     }
 
@@ -99,7 +99,7 @@ public final class TumblingWindowTriggerResponse extends io.pulumi.resources.Inv
     @Import(name="interval", required=true)
       private final Integer interval;
 
-    public Integer getInterval() {
+    public Integer interval() {
         return this.interval;
     }
 
@@ -110,7 +110,7 @@ public final class TumblingWindowTriggerResponse extends io.pulumi.resources.Inv
     @Import(name="maxConcurrency", required=true)
       private final Integer maxConcurrency;
 
-    public Integer getMaxConcurrency() {
+    public Integer maxConcurrency() {
         return this.maxConcurrency;
     }
 
@@ -121,7 +121,7 @@ public final class TumblingWindowTriggerResponse extends io.pulumi.resources.Inv
     @Import(name="pipeline", required=true)
       private final TriggerPipelineReferenceResponse pipeline;
 
-    public TriggerPipelineReferenceResponse getPipeline() {
+    public TriggerPipelineReferenceResponse pipeline() {
         return this.pipeline;
     }
 
@@ -132,7 +132,7 @@ public final class TumblingWindowTriggerResponse extends io.pulumi.resources.Inv
     @Import(name="retryPolicy")
       private final @Nullable RetryPolicyResponse retryPolicy;
 
-    public Optional<RetryPolicyResponse> getRetryPolicy() {
+    public Optional<RetryPolicyResponse> retryPolicy() {
         return this.retryPolicy == null ? Optional.empty() : Optional.ofNullable(this.retryPolicy);
     }
 
@@ -143,7 +143,7 @@ public final class TumblingWindowTriggerResponse extends io.pulumi.resources.Inv
     @Import(name="runtimeState", required=true)
       private final String runtimeState;
 
-    public String getRuntimeState() {
+    public String runtimeState() {
         return this.runtimeState;
     }
 
@@ -154,7 +154,7 @@ public final class TumblingWindowTriggerResponse extends io.pulumi.resources.Inv
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
@@ -166,7 +166,7 @@ public final class TumblingWindowTriggerResponse extends io.pulumi.resources.Inv
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

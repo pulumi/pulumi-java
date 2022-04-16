@@ -32,14 +32,14 @@ public final class DeploymentOutputEntryResponse {
      * Key of the output
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * Value of the label
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

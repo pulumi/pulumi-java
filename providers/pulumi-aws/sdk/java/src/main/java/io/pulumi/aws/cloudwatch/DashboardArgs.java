@@ -21,7 +21,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dashboardBody", required=true)
       private final Output<String> dashboardBody;
 
-    public Output<String> getDashboardBody() {
+    public Output<String> dashboardBody() {
         return this.dashboardBody;
     }
 
@@ -32,7 +32,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dashboardName", required=true)
       private final Output<String> dashboardName;
 
-    public Output<String> getDashboardName() {
+    public Output<String> dashboardName() {
         return this.dashboardName;
     }
 

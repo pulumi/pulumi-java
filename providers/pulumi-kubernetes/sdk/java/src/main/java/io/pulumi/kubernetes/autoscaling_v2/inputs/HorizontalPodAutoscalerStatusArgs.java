@@ -30,7 +30,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
     @Import(name="conditions")
       private final @Nullable Output<List<HorizontalPodAutoscalerConditionArgs>> conditions;
 
-    public Output<List<HorizontalPodAutoscalerConditionArgs>> getConditions() {
+    public Output<List<HorizontalPodAutoscalerConditionArgs>> conditions() {
         return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
@@ -41,7 +41,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
     @Import(name="currentMetrics")
       private final @Nullable Output<List<MetricStatusArgs>> currentMetrics;
 
-    public Output<List<MetricStatusArgs>> getCurrentMetrics() {
+    public Output<List<MetricStatusArgs>> currentMetrics() {
         return this.currentMetrics == null ? Codegen.empty() : this.currentMetrics;
     }
 
@@ -52,7 +52,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
     @Import(name="currentReplicas")
       private final @Nullable Output<Integer> currentReplicas;
 
-    public Output<Integer> getCurrentReplicas() {
+    public Output<Integer> currentReplicas() {
         return this.currentReplicas == null ? Codegen.empty() : this.currentReplicas;
     }
 
@@ -63,7 +63,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
     @Import(name="desiredReplicas", required=true)
       private final Output<Integer> desiredReplicas;
 
-    public Output<Integer> getDesiredReplicas() {
+    public Output<Integer> desiredReplicas() {
         return this.desiredReplicas;
     }
 
@@ -74,7 +74,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
     @Import(name="lastScaleTime")
       private final @Nullable Output<String> lastScaleTime;
 
-    public Output<String> getLastScaleTime() {
+    public Output<String> lastScaleTime() {
         return this.lastScaleTime == null ? Codegen.empty() : this.lastScaleTime;
     }
 
@@ -85,7 +85,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
     @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;
 
-    public Output<Integer> getObservedGeneration() {
+    public Output<Integer> observedGeneration() {
         return this.observedGeneration == null ? Codegen.empty() : this.observedGeneration;
     }
 

@@ -26,7 +26,7 @@ public final class HTTPIngressRuleValueArgs extends io.pulumi.resources.Resource
     @Import(name="paths", required=true)
       private final Output<List<HTTPIngressPathArgs>> paths;
 
-    public Output<List<HTTPIngressPathArgs>> getPaths() {
+    public Output<List<HTTPIngressPathArgs>> paths() {
         return this.paths;
     }
 

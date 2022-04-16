@@ -23,7 +23,7 @@ public final class SourceRepositoryResponse extends io.pulumi.resources.InvokeAr
     @Import(name="deployedUrl", required=true)
       private final String deployedUrl;
 
-    public String getDeployedUrl() {
+    public String deployedUrl() {
         return this.deployedUrl;
     }
 
@@ -34,7 +34,7 @@ public final class SourceRepositoryResponse extends io.pulumi.resources.InvokeAr
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

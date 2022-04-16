@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardRespo
     @Import(name="cardContents", required=true)
       private final List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse> cardContents;
 
-    public List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse> getCardContents() {
+    public List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse> cardContents() {
         return this.cardContents;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardRespo
     @Import(name="cardWidth", required=true)
       private final String cardWidth;
 
-    public String getCardWidth() {
+    public String cardWidth() {
         return this.cardWidth;
     }
 

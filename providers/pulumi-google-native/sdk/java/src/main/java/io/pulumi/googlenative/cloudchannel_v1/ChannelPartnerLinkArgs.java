@@ -18,7 +18,7 @@ public final class ChannelPartnerLinkArgs extends io.pulumi.resources.ResourceAr
     @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
 
@@ -29,7 +29,7 @@ public final class ChannelPartnerLinkArgs extends io.pulumi.resources.ResourceAr
     @Import(name="linkState", required=true)
       private final Output<ChannelPartnerLinkLinkState> linkState;
 
-    public Output<ChannelPartnerLinkLinkState> getLinkState() {
+    public Output<ChannelPartnerLinkLinkState> linkState() {
         return this.linkState;
     }
 
@@ -40,7 +40,7 @@ public final class ChannelPartnerLinkArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resellerCloudIdentityId", required=true)
       private final Output<String> resellerCloudIdentityId;
 
-    public Output<String> getResellerCloudIdentityId() {
+    public Output<String> resellerCloudIdentityId() {
         return this.resellerCloudIdentityId;
     }
 

@@ -45,7 +45,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * @return API endpoint URL of the hub.
      * 
      */
-    public Output<String> getApiEndpoint() {
+    public Output<String> apiEndpoint() {
         return this.apiEndpoint;
     }
     /**
@@ -59,7 +59,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * @return Billing settings of the hub.
      * 
      */
-    public Output</* @Nullable */ HubBillingInfoFormatResponse> getHubBillingInfo() {
+    public Output</* @Nullable */ HubBillingInfoFormatResponse> hubBillingInfo() {
         return this.hubBillingInfo;
     }
     /**
@@ -73,7 +73,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -87,7 +87,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +101,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * @return Provisioning state of the hub.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -115,7 +115,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -129,7 +129,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * @return The bit flags for enabled hub features. Bit 0 is set to 1 indicates graph is enabled, or disabled if set to 0. Bit 1 is set to 1 indicates the hub is disabled, or enabled if set to 0.
      * 
      */
-    public Output</* @Nullable */ Integer> getTenantFeatures() {
+    public Output</* @Nullable */ Integer> tenantFeatures() {
         return this.tenantFeatures;
     }
     /**
@@ -143,7 +143,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -157,7 +157,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * @return Web endpoint URL of the hub.
      * 
      */
-    public Output<String> getWebEndpoint() {
+    public Output<String> webEndpoint() {
         return this.webEndpoint;
     }
 

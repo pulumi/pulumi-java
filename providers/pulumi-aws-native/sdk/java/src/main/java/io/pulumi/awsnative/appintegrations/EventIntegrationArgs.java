@@ -25,7 +25,7 @@ public final class EventIntegrationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -36,7 +36,7 @@ public final class EventIntegrationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="eventBridgeBus", required=true)
       private final Output<String> eventBridgeBus;
 
-    public Output<String> getEventBridgeBus() {
+    public Output<String> eventBridgeBus() {
         return this.eventBridgeBus;
     }
 
@@ -47,7 +47,7 @@ public final class EventIntegrationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="eventFilter", required=true)
       private final Output<EventIntegrationEventFilterArgs> eventFilter;
 
-    public Output<EventIntegrationEventFilterArgs> getEventFilter() {
+    public Output<EventIntegrationEventFilterArgs> eventFilter() {
         return this.eventFilter;
     }
 
@@ -58,7 +58,7 @@ public final class EventIntegrationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -69,7 +69,7 @@ public final class EventIntegrationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<List<EventIntegrationTagArgs>> tags;
 
-    public Output<List<EventIntegrationTagArgs>> getTags() {
+    public Output<List<EventIntegrationTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

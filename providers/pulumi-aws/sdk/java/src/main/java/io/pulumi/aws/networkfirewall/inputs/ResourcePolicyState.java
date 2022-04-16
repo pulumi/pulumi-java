@@ -18,7 +18,7 @@ public final class ResourcePolicyState extends io.pulumi.resources.ResourceArgs 
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -29,7 +29,7 @@ public final class ResourcePolicyState extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceArn")
       private final @Nullable Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn == null ? Codegen.empty() : this.resourceArn;
     }
 

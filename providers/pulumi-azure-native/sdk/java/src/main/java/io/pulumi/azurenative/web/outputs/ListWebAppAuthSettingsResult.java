@@ -369,7 +369,7 @@ public final class ListWebAppAuthSettingsResult {
      * Gets a JSON string containing the Azure AD Acl settings.
      * 
     */
-    public Optional<String> getAadClaimsAuthorization() {
+    public Optional<String> aadClaimsAuthorization() {
         return Optional.ofNullable(this.aadClaimsAuthorization);
     }
     /**
@@ -377,7 +377,7 @@ public final class ListWebAppAuthSettingsResult {
      * a user logs in. Each parameter must be in the form "key=value".
      * 
     */
-    public List<String> getAdditionalLoginParams() {
+    public List<String> additionalLoginParams() {
         return this.additionalLoginParams == null ? List.of() : this.additionalLoginParams;
     }
     /**
@@ -386,7 +386,7 @@ public final class ListWebAppAuthSettingsResult {
      * allowed audience, regardless of this setting.
      * 
     */
-    public List<String> getAllowedAudiences() {
+    public List<String> allowedAudiences() {
         return this.allowedAudiences == null ? List.of() : this.allowedAudiences;
     }
     /**
@@ -395,7 +395,7 @@ public final class ListWebAppAuthSettingsResult {
      * Note that URLs within the current domain are always implicitly allowed.
      * 
     */
-    public List<String> getAllowedExternalRedirectUrls() {
+    public List<String> allowedExternalRedirectUrls() {
         return this.allowedExternalRedirectUrls == null ? List.of() : this.allowedExternalRedirectUrls;
     }
     /**
@@ -403,7 +403,7 @@ public final class ListWebAppAuthSettingsResult {
      * If the path is relative, base will the site's root directory.
      * 
     */
-    public Optional<String> getAuthFilePath() {
+    public Optional<String> authFilePath() {
         return Optional.ofNullable(this.authFilePath);
     }
     /**
@@ -413,7 +413,7 @@ public final class ListWebAppAuthSettingsResult {
      * More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html
      * 
     */
-    public Optional<String> getClientId() {
+    public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
@@ -423,7 +423,7 @@ public final class ListWebAppAuthSettingsResult {
      * More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html
      * 
     */
-    public Optional<String> getClientSecret() {
+    public Optional<String> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
     /**
@@ -431,14 +431,14 @@ public final class ListWebAppAuthSettingsResult {
      * a replacement for the Client Secret. It is also optional.
      * 
     */
-    public Optional<String> getClientSecretCertificateThumbprint() {
+    public Optional<String> clientSecretCertificateThumbprint() {
         return Optional.ofNullable(this.clientSecretCertificateThumbprint);
     }
     /**
      * The app setting name that contains the client secret of the relying party application.
      * 
     */
-    public Optional<String> getClientSecretSettingName() {
+    public Optional<String> clientSecretSettingName() {
         return Optional.ofNullable(this.clientSecretSettingName);
     }
     /**
@@ -446,7 +446,7 @@ public final class ListWebAppAuthSettingsResult {
      * The setting in this value can control the behavior of the control plane for Authentication / Authorization.
      * 
     */
-    public Optional<String> getConfigVersion() {
+    public Optional<String> configVersion() {
         return Optional.ofNullable(this.configVersion);
     }
     /**
@@ -455,14 +455,14 @@ public final class ListWebAppAuthSettingsResult {
      * action is set to "RedirectToLoginPage".
      * 
     */
-    public Optional<String> getDefaultProvider() {
+    public Optional<String> defaultProvider() {
         return Optional.ofNullable(this.defaultProvider);
     }
     /**
      * <code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
@@ -471,7 +471,7 @@ public final class ListWebAppAuthSettingsResult {
      * Facebook Login documentation: https://developers.facebook.com/docs/facebook-login
      * 
     */
-    public Optional<String> getFacebookAppId() {
+    public Optional<String> facebookAppId() {
         return Optional.ofNullable(this.facebookAppId);
     }
     /**
@@ -480,14 +480,14 @@ public final class ListWebAppAuthSettingsResult {
      * Facebook Login documentation: https://developers.facebook.com/docs/facebook-login
      * 
     */
-    public Optional<String> getFacebookAppSecret() {
+    public Optional<String> facebookAppSecret() {
         return Optional.ofNullable(this.facebookAppSecret);
     }
     /**
      * The app setting name that contains the app secret used for Facebook Login.
      * 
     */
-    public Optional<String> getFacebookAppSecretSettingName() {
+    public Optional<String> facebookAppSecretSettingName() {
         return Optional.ofNullable(this.facebookAppSecretSettingName);
     }
     /**
@@ -496,7 +496,7 @@ public final class ListWebAppAuthSettingsResult {
      * Facebook Login documentation: https://developers.facebook.com/docs/facebook-login
      * 
     */
-    public List<String> getFacebookOAuthScopes() {
+    public List<String> facebookOAuthScopes() {
         return this.facebookOAuthScopes == null ? List.of() : this.facebookOAuthScopes;
     }
     /**
@@ -504,7 +504,7 @@ public final class ListWebAppAuthSettingsResult {
      * This setting is required for enabling Github login
      * 
     */
-    public Optional<String> getGitHubClientId() {
+    public Optional<String> gitHubClientId() {
         return Optional.ofNullable(this.gitHubClientId);
     }
     /**
@@ -512,7 +512,7 @@ public final class ListWebAppAuthSettingsResult {
      * This setting is required for enabling Github login.
      * 
     */
-    public Optional<String> getGitHubClientSecret() {
+    public Optional<String> gitHubClientSecret() {
         return Optional.ofNullable(this.gitHubClientSecret);
     }
     /**
@@ -520,7 +520,7 @@ public final class ListWebAppAuthSettingsResult {
      * app used for GitHub Login.
      * 
     */
-    public Optional<String> getGitHubClientSecretSettingName() {
+    public Optional<String> gitHubClientSecretSettingName() {
         return Optional.ofNullable(this.gitHubClientSecretSettingName);
     }
     /**
@@ -528,7 +528,7 @@ public final class ListWebAppAuthSettingsResult {
      * This setting is optional
      * 
     */
-    public List<String> getGitHubOAuthScopes() {
+    public List<String> gitHubOAuthScopes() {
         return this.gitHubOAuthScopes == null ? List.of() : this.gitHubOAuthScopes;
     }
     /**
@@ -537,7 +537,7 @@ public final class ListWebAppAuthSettingsResult {
      * Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/
      * 
     */
-    public Optional<String> getGoogleClientId() {
+    public Optional<String> googleClientId() {
         return Optional.ofNullable(this.googleClientId);
     }
     /**
@@ -546,7 +546,7 @@ public final class ListWebAppAuthSettingsResult {
      * Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/
      * 
     */
-    public Optional<String> getGoogleClientSecret() {
+    public Optional<String> googleClientSecret() {
         return Optional.ofNullable(this.googleClientSecret);
     }
     /**
@@ -554,7 +554,7 @@ public final class ListWebAppAuthSettingsResult {
      * the Google web application.
      * 
     */
-    public Optional<String> getGoogleClientSecretSettingName() {
+    public Optional<String> googleClientSecretSettingName() {
         return Optional.ofNullable(this.googleClientSecretSettingName);
     }
     /**
@@ -563,14 +563,14 @@ public final class ListWebAppAuthSettingsResult {
      * Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/
      * 
     */
-    public List<String> getGoogleOAuthScopes() {
+    public List<String> googleOAuthScopes() {
         return this.googleOAuthScopes == null ? List.of() : this.googleOAuthScopes;
     }
     /**
      * Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -578,7 +578,7 @@ public final class ListWebAppAuthSettingsResult {
      * "false" otherwise
      * 
     */
-    public Optional<String> getIsAuthFromFile() {
+    public Optional<String> isAuthFromFile() {
         return Optional.ofNullable(this.isAuthFromFile);
     }
     /**
@@ -588,14 +588,14 @@ public final class ListWebAppAuthSettingsResult {
      * More information on OpenID Connect Discovery: http://openid.net/specs/openid-connect-discovery-1_0.html
      * 
     */
-    public Optional<String> getIssuer() {
+    public Optional<String> issuer() {
         return Optional.ofNullable(this.issuer);
     }
     /**
      * Kind of resource.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
@@ -604,7 +604,7 @@ public final class ListWebAppAuthSettingsResult {
      * Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm
      * 
     */
-    public Optional<String> getMicrosoftAccountClientId() {
+    public Optional<String> microsoftAccountClientId() {
         return Optional.ofNullable(this.microsoftAccountClientId);
     }
     /**
@@ -613,7 +613,7 @@ public final class ListWebAppAuthSettingsResult {
      * Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm
      * 
     */
-    public Optional<String> getMicrosoftAccountClientSecret() {
+    public Optional<String> microsoftAccountClientSecret() {
         return Optional.ofNullable(this.microsoftAccountClientSecret);
     }
     /**
@@ -621,7 +621,7 @@ public final class ListWebAppAuthSettingsResult {
      * app used for authentication.
      * 
     */
-    public Optional<String> getMicrosoftAccountClientSecretSettingName() {
+    public Optional<String> microsoftAccountClientSecretSettingName() {
         return Optional.ofNullable(this.microsoftAccountClientSecretSettingName);
     }
     /**
@@ -630,14 +630,14 @@ public final class ListWebAppAuthSettingsResult {
      * Microsoft Account Scopes and permissions documentation: https://msdn.microsoft.com/en-us/library/dn631845.aspx
      * 
     */
-    public List<String> getMicrosoftAccountOAuthScopes() {
+    public List<String> microsoftAccountOAuthScopes() {
         return this.microsoftAccountOAuthScopes == null ? List.of() : this.microsoftAccountOAuthScopes;
     }
     /**
      * Resource Name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -645,7 +645,7 @@ public final class ListWebAppAuthSettingsResult {
      * The setting in this value can control the behavior of certain features in the Authentication / Authorization module.
      * 
     */
-    public Optional<String> getRuntimeVersion() {
+    public Optional<String> runtimeVersion() {
         return Optional.ofNullable(this.runtimeVersion);
     }
     /**
@@ -653,7 +653,7 @@ public final class ListWebAppAuthSettingsResult {
      * call the token refresh API. The default is 72 hours.
      * 
     */
-    public Optional<Double> getTokenRefreshExtensionHours() {
+    public Optional<Double> tokenRefreshExtensionHours() {
         return Optional.ofNullable(this.tokenRefreshExtensionHours);
     }
     /**
@@ -661,7 +661,7 @@ public final class ListWebAppAuthSettingsResult {
      *  The default is <code>false</code>.
      * 
     */
-    public Optional<Boolean> getTokenStoreEnabled() {
+    public Optional<Boolean> tokenStoreEnabled() {
         return Optional.ofNullable(this.tokenStoreEnabled);
     }
     /**
@@ -670,7 +670,7 @@ public final class ListWebAppAuthSettingsResult {
      * Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
      * 
     */
-    public Optional<String> getTwitterConsumerKey() {
+    public Optional<String> twitterConsumerKey() {
         return Optional.ofNullable(this.twitterConsumerKey);
     }
     /**
@@ -679,7 +679,7 @@ public final class ListWebAppAuthSettingsResult {
      * Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
      * 
     */
-    public Optional<String> getTwitterConsumerSecret() {
+    public Optional<String> twitterConsumerSecret() {
         return Optional.ofNullable(this.twitterConsumerSecret);
     }
     /**
@@ -687,28 +687,28 @@ public final class ListWebAppAuthSettingsResult {
      * application used for sign-in.
      * 
     */
-    public Optional<String> getTwitterConsumerSecretSettingName() {
+    public Optional<String> twitterConsumerSecretSettingName() {
         return Optional.ofNullable(this.twitterConsumerSecretSettingName);
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The action to take when an unauthenticated client attempts to access the app.
      * 
     */
-    public Optional<String> getUnauthenticatedClientAction() {
+    public Optional<String> unauthenticatedClientAction() {
         return Optional.ofNullable(this.unauthenticatedClientAction);
     }
     /**
      * Gets a value indicating whether the issuer should be a valid HTTPS url and be validated as such.
      * 
     */
-    public Optional<Boolean> getValidateIssuer() {
+    public Optional<Boolean> validateIssuer() {
         return Optional.ofNullable(this.validateIssuer);
     }
 

@@ -19,7 +19,7 @@ public final class InstanceGroupManagerAllInstancesConfigResponse extends io.pul
     @Import(name="properties", required=true)
       private final InstancePropertiesPatchResponse properties;
 
-    public InstancePropertiesPatchResponse getProperties() {
+    public InstancePropertiesPatchResponse properties() {
         return this.properties;
     }
 

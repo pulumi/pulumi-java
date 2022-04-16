@@ -22,7 +22,7 @@ public final class SubResourceWithColocationStatusResponse extends io.pulumi.res
     @Import(name="colocationStatus")
       private final @Nullable InstanceViewStatusResponse colocationStatus;
 
-    public Optional<InstanceViewStatusResponse> getColocationStatus() {
+    public Optional<InstanceViewStatusResponse> colocationStatus() {
         return this.colocationStatus == null ? Optional.empty() : Optional.ofNullable(this.colocationStatus);
     }
 
@@ -33,7 +33,7 @@ public final class SubResourceWithColocationStatusResponse extends io.pulumi.res
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 

@@ -42,21 +42,21 @@ public final class ResourceMetricSource {
      * name is the name of the resource in question.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.
      * 
     */
-    public Optional<Integer> getTargetAverageUtilization() {
+    public Optional<Integer> targetAverageUtilization() {
         return Optional.ofNullable(this.targetAverageUtilization);
     }
     /**
      * targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type.
      * 
     */
-    public Optional<String> getTargetAverageValue() {
+    public Optional<String> targetAverageValue() {
         return Optional.ofNullable(this.targetAverageValue);
     }
 

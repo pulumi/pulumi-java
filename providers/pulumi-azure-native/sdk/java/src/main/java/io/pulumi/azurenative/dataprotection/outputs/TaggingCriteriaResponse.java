@@ -51,28 +51,28 @@ public final class TaggingCriteriaResponse {
      * Criteria which decides whether the tag can be applied to a triggered backup.
      * 
     */
-    public List<ScheduleBasedBackupCriteriaResponse> getCriteria() {
+    public List<ScheduleBasedBackupCriteriaResponse> criteria() {
         return this.criteria == null ? List.of() : this.criteria;
     }
     /**
      * Specifies if tag is default.
      * 
     */
-    public Boolean getIsDefault() {
+    public Boolean isDefault() {
         return this.isDefault;
     }
     /**
      * Retention tag information
      * 
     */
-    public RetentionTagResponse getTagInfo() {
+    public RetentionTagResponse tagInfo() {
         return this.tagInfo;
     }
     /**
      * Retention Tag priority.
      * 
     */
-    public Double getTaggingPriority() {
+    public Double taggingPriority() {
         return this.taggingPriority;
     }
 

@@ -28,7 +28,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isCompression")
       private final @Nullable Output<Boolean> isCompression;
 
-    public Output<Boolean> getIsCompression() {
+    public Output<Boolean> isCompression() {
         return this.isCompression == null ? Codegen.empty() : this.isCompression;
     }
 
@@ -39,7 +39,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="issqlcompression")
       private final @Nullable Output<Boolean> issqlcompression;
 
-    public Output<Boolean> getIssqlcompression() {
+    public Output<Boolean> issqlcompression() {
         return this.issqlcompression == null ? Codegen.empty() : this.issqlcompression;
     }
 
@@ -50,7 +50,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 

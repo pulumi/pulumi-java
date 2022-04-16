@@ -39,7 +39,7 @@ public final class TwitterRegistrationResponse {
      * Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
      * 
     */
-    public Optional<String> getConsumerKey() {
+    public Optional<String> consumerKey() {
         return Optional.ofNullable(this.consumerKey);
     }
     /**
@@ -47,7 +47,7 @@ public final class TwitterRegistrationResponse {
      * application used for sign-in.
      * 
     */
-    public Optional<String> getConsumerSecretSettingName() {
+    public Optional<String> consumerSecretSettingName() {
         return Optional.ofNullable(this.consumerSecretSettingName);
     }
 

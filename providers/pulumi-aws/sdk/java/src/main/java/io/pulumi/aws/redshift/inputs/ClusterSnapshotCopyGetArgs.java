@@ -23,7 +23,7 @@ public final class ClusterSnapshotCopyGetArgs extends io.pulumi.resources.Resour
     @Import(name="destinationRegion", required=true)
       private final Output<String> destinationRegion;
 
-    public Output<String> getDestinationRegion() {
+    public Output<String> destinationRegion() {
         return this.destinationRegion;
     }
 
@@ -34,7 +34,7 @@ public final class ClusterSnapshotCopyGetArgs extends io.pulumi.resources.Resour
     @Import(name="grantName")
       private final @Nullable Output<String> grantName;
 
-    public Output<String> getGrantName() {
+    public Output<String> grantName() {
         return this.grantName == null ? Codegen.empty() : this.grantName;
     }
 
@@ -45,7 +45,7 @@ public final class ClusterSnapshotCopyGetArgs extends io.pulumi.resources.Resour
     @Import(name="retentionPeriod")
       private final @Nullable Output<Integer> retentionPeriod;
 
-    public Output<Integer> getRetentionPeriod() {
+    public Output<Integer> retentionPeriod() {
         return this.retentionPeriod == null ? Codegen.empty() : this.retentionPeriod;
     }
 

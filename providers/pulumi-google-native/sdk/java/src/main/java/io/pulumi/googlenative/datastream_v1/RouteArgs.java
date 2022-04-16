@@ -24,7 +24,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinationAddress", required=true)
       private final Output<String> destinationAddress;
 
-    public Output<String> getDestinationAddress() {
+    public Output<String> destinationAddress() {
         return this.destinationAddress;
     }
 
@@ -35,7 +35,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinationPort")
       private final @Nullable Output<Integer> destinationPort;
 
-    public Output<Integer> getDestinationPort() {
+    public Output<Integer> destinationPort() {
         return this.destinationPort == null ? Codegen.empty() : this.destinationPort;
     }
 
@@ -46,7 +46,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -57,42 +57,42 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="privateConnectionId", required=true)
       private final Output<String> privateConnectionId;
 
-    public Output<String> getPrivateConnectionId() {
+    public Output<String> privateConnectionId() {
         return this.privateConnectionId;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     @Import(name="routeId", required=true)
       private final Output<String> routeId;
 
-    public Output<String> getRouteId() {
+    public Output<String> routeId() {
         return this.routeId;
     }
 

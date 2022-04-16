@@ -85,63 +85,63 @@ public final class RecurringScheduleResponse {
      * Optional. The end time at which a recurring patch deployment schedule is no longer active.
      * 
     */
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
     /**
      * The frequency unit of this recurring schedule.
      * 
     */
-    public String getFrequency() {
+    public String frequency() {
         return this.frequency;
     }
     /**
      * The time the last patch job ran successfully.
      * 
     */
-    public String getLastExecuteTime() {
+    public String lastExecuteTime() {
         return this.lastExecuteTime;
     }
     /**
      * Schedule with monthly executions.
      * 
     */
-    public MonthlyScheduleResponse getMonthly() {
+    public MonthlyScheduleResponse monthly() {
         return this.monthly;
     }
     /**
      * The time the next patch job is scheduled to run.
      * 
     */
-    public String getNextExecuteTime() {
+    public String nextExecuteTime() {
         return this.nextExecuteTime;
     }
     /**
      * Optional. The time that the recurring schedule becomes effective. Defaults to `create_time` of the patch deployment.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
     /**
      * Time of the day to run a recurring deployment.
      * 
     */
-    public TimeOfDayResponse getTimeOfDay() {
+    public TimeOfDayResponse timeOfDay() {
         return this.timeOfDay;
     }
     /**
      * Defines the time zone that `time_of_day` is relative to. The rules for daylight saving time are determined by the chosen time zone.
      * 
     */
-    public TimeZoneResponse getTimeZone() {
+    public TimeZoneResponse timeZone() {
         return this.timeZone;
     }
     /**
      * Schedule with weekly executions.
      * 
     */
-    public WeeklyScheduleResponse getWeekly() {
+    public WeeklyScheduleResponse weekly() {
         return this.weekly;
     }
 

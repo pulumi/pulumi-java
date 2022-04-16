@@ -57,14 +57,14 @@ public final class LoadBalancerHealthCheck {
      * The number of checks before the instance is declared healthy.
      * 
     */
-    public Integer getHealthyThreshold() {
+    public Integer healthyThreshold() {
         return this.healthyThreshold;
     }
     /**
      * The interval between checks.
      * 
     */
-    public Integer getInterval() {
+    public Integer interval() {
         return this.interval;
     }
     /**
@@ -74,21 +74,21 @@ public final class LoadBalancerHealthCheck {
      * * `TCP`, `SSL` - PORT is required, PATH is not supported
      * 
     */
-    public String getTarget() {
+    public String target() {
         return this.target;
     }
     /**
      * The length of time before the check times out.
      * 
     */
-    public Integer getTimeout() {
+    public Integer timeout() {
         return this.timeout;
     }
     /**
      * The number of checks before the instance is declared unhealthy.
      * 
     */
-    public Integer getUnhealthyThreshold() {
+    public Integer unhealthyThreshold() {
         return this.unhealthyThreshold;
     }
 

@@ -27,7 +27,7 @@ public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.
     @Import(name="disks")
       private final @Nullable Output<Map<String,String>> disks;
 
-    public Output<Map<String,String>> getDisks() {
+    public Output<Map<String,String>> disks() {
         return this.disks == null ? Codegen.empty() : this.disks;
     }
 
@@ -38,7 +38,7 @@ public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.
     @Import(name="externalIPs")
       private final @Nullable Output<Map<String,String>> externalIPs;
 
-    public Output<Map<String,String>> getExternalIPs() {
+    public Output<Map<String,String>> externalIPs() {
         return this.externalIPs == null ? Codegen.empty() : this.externalIPs;
     }
 
@@ -49,7 +49,7 @@ public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.
     @Import(name="internalIPs")
       private final @Nullable Output<Map<String,String>> internalIPs;
 
-    public Output<Map<String,String>> getInternalIPs() {
+    public Output<Map<String,String>> internalIPs() {
         return this.internalIPs == null ? Codegen.empty() : this.internalIPs;
     }
 

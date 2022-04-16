@@ -21,7 +21,7 @@ public final class SettingsPropertiesResponseCache extends io.pulumi.resources.I
     @Import(name="channel", required=true)
       private final String channel;
 
-    public String getChannel() {
+    public String channel() {
         return this.channel;
     }
 
@@ -32,7 +32,7 @@ public final class SettingsPropertiesResponseCache extends io.pulumi.resources.I
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -43,7 +43,7 @@ public final class SettingsPropertiesResponseCache extends io.pulumi.resources.I
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -54,7 +54,7 @@ public final class SettingsPropertiesResponseCache extends io.pulumi.resources.I
     @Import(name="parent")
       private final @Nullable String parent;
 
-    public Optional<String> getParent() {
+    public Optional<String> parent() {
         return this.parent == null ? Optional.empty() : Optional.ofNullable(this.parent);
     }
 
@@ -65,7 +65,7 @@ public final class SettingsPropertiesResponseCache extends io.pulumi.resources.I
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
@@ -76,7 +76,7 @@ public final class SettingsPropertiesResponseCache extends io.pulumi.resources.I
     @Import(name="subchannel", required=true)
       private final String subchannel;
 
-    public String getSubchannel() {
+    public String subchannel() {
         return this.subchannel;
     }
 

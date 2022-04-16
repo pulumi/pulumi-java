@@ -17,14 +17,14 @@ public final class GetServiceTemplateSpecContainerEnvFromSecretRef extends io.pu
     @Import(name="localObjectReferences", required=true)
       private final List<GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference> localObjectReferences;
 
-    public List<GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference> getLocalObjectReferences() {
+    public List<GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference> localObjectReferences() {
         return this.localObjectReferences;
     }
 
     @Import(name="optional", required=true)
       private final Boolean optional;
 
-    public Boolean getOptional() {
+    public Boolean optional() {
         return this.optional;
     }
 

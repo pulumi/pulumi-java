@@ -27,7 +27,7 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -38,7 +38,7 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
     @Import(name="migrationId", required=true)
       private final String migrationId;
 
-    public String getMigrationId() {
+    public String migrationId() {
         return this.migrationId;
     }
 
@@ -50,7 +50,7 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
     @Import(name="resultType", required=true)
       private final String resultType;
 
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
 
@@ -61,7 +61,7 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
@@ -72,7 +72,7 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
     @Import(name="summaryResults")
       private final @Nullable Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults;
 
-    public Map<String,MigrationValidationDatabaseSummaryResultResponse> getSummaryResults() {
+    public Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults() {
         return this.summaryResults == null ? Map.of() : this.summaryResults;
     }
 

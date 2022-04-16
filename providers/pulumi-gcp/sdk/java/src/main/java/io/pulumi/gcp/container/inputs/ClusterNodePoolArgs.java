@@ -25,7 +25,7 @@ public final class ClusterNodePoolArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="autoscaling")
       private final @Nullable Output<ClusterNodePoolAutoscalingArgs> autoscaling;
 
-    public Output<ClusterNodePoolAutoscalingArgs> getAutoscaling() {
+    public Output<ClusterNodePoolAutoscalingArgs> autoscaling() {
         return this.autoscaling == null ? Codegen.empty() : this.autoscaling;
     }
 
@@ -41,35 +41,35 @@ public final class ClusterNodePoolArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="initialNodeCount")
       private final @Nullable Output<Integer> initialNodeCount;
 
-    public Output<Integer> getInitialNodeCount() {
+    public Output<Integer> initialNodeCount() {
         return this.initialNodeCount == null ? Codegen.empty() : this.initialNodeCount;
     }
 
     @Import(name="instanceGroupUrls")
       private final @Nullable Output<List<String>> instanceGroupUrls;
 
-    public Output<List<String>> getInstanceGroupUrls() {
+    public Output<List<String>> instanceGroupUrls() {
         return this.instanceGroupUrls == null ? Codegen.empty() : this.instanceGroupUrls;
     }
 
     @Import(name="managedInstanceGroupUrls")
       private final @Nullable Output<List<String>> managedInstanceGroupUrls;
 
-    public Output<List<String>> getManagedInstanceGroupUrls() {
+    public Output<List<String>> managedInstanceGroupUrls() {
         return this.managedInstanceGroupUrls == null ? Codegen.empty() : this.managedInstanceGroupUrls;
     }
 
     @Import(name="management")
       private final @Nullable Output<ClusterNodePoolManagementArgs> management;
 
-    public Output<ClusterNodePoolManagementArgs> getManagement() {
+    public Output<ClusterNodePoolManagementArgs> management() {
         return this.management == null ? Codegen.empty() : this.management;
     }
 
     @Import(name="maxPodsPerNode")
       private final @Nullable Output<Integer> maxPodsPerNode;
 
-    public Output<Integer> getMaxPodsPerNode() {
+    public Output<Integer> maxPodsPerNode() {
         return this.maxPodsPerNode == null ? Codegen.empty() : this.maxPodsPerNode;
     }
 
@@ -81,14 +81,14 @@ public final class ClusterNodePoolArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -100,7 +100,7 @@ public final class ClusterNodePoolArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="networkConfig")
       private final @Nullable Output<ClusterNodePoolNetworkConfigArgs> networkConfig;
 
-    public Output<ClusterNodePoolNetworkConfigArgs> getNetworkConfig() {
+    public Output<ClusterNodePoolNetworkConfigArgs> networkConfig() {
         return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
     }
 
@@ -115,14 +115,14 @@ public final class ClusterNodePoolArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="nodeConfig")
       private final @Nullable Output<ClusterNodePoolNodeConfigArgs> nodeConfig;
 
-    public Output<ClusterNodePoolNodeConfigArgs> getNodeConfig() {
+    public Output<ClusterNodePoolNodeConfigArgs> nodeConfig() {
         return this.nodeConfig == null ? Codegen.empty() : this.nodeConfig;
     }
 
     @Import(name="nodeCount")
       private final @Nullable Output<Integer> nodeCount;
 
-    public Output<Integer> getNodeCount() {
+    public Output<Integer> nodeCount() {
         return this.nodeCount == null ? Codegen.empty() : this.nodeCount;
     }
 
@@ -136,21 +136,21 @@ public final class ClusterNodePoolArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="nodeLocations")
       private final @Nullable Output<List<String>> nodeLocations;
 
-    public Output<List<String>> getNodeLocations() {
+    public Output<List<String>> nodeLocations() {
         return this.nodeLocations == null ? Codegen.empty() : this.nodeLocations;
     }
 
     @Import(name="upgradeSettings")
       private final @Nullable Output<ClusterNodePoolUpgradeSettingsArgs> upgradeSettings;
 
-    public Output<ClusterNodePoolUpgradeSettingsArgs> getUpgradeSettings() {
+    public Output<ClusterNodePoolUpgradeSettingsArgs> upgradeSettings() {
         return this.upgradeSettings == null ? Codegen.empty() : this.upgradeSettings;
     }
 
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

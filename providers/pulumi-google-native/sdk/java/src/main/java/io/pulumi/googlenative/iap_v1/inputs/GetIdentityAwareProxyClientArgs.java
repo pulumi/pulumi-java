@@ -17,21 +17,21 @@ public final class GetIdentityAwareProxyClientArgs extends io.pulumi.resources.I
     @Import(name="brandId", required=true)
       private final String brandId;
 
-    public String getBrandId() {
+    public String brandId() {
         return this.brandId;
     }
 
     @Import(name="identityAwareProxyClientId", required=true)
       private final String identityAwareProxyClientId;
 
-    public String getIdentityAwareProxyClientId() {
+    public String identityAwareProxyClientId() {
         return this.identityAwareProxyClientId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

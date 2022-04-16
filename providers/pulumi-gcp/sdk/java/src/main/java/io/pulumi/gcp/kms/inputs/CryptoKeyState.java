@@ -26,7 +26,7 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="destroyScheduledDuration")
       private final @Nullable Output<String> destroyScheduledDuration;
 
-    public Output<String> getDestroyScheduledDuration() {
+    public Output<String> destroyScheduledDuration() {
         return this.destroyScheduledDuration == null ? Codegen.empty() : this.destroyScheduledDuration;
     }
 
@@ -37,7 +37,7 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="importOnly")
       private final @Nullable Output<Boolean> importOnly;
 
-    public Output<Boolean> getImportOnly() {
+    public Output<Boolean> importOnly() {
         return this.importOnly == null ? Codegen.empty() : this.importOnly;
     }
 
@@ -49,7 +49,7 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyRing")
       private final @Nullable Output<String> keyRing;
 
-    public Output<String> getKeyRing() {
+    public Output<String> keyRing() {
         return this.keyRing == null ? Codegen.empty() : this.keyRing;
     }
 
@@ -60,7 +60,7 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -71,7 +71,7 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -86,7 +86,7 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="purpose")
       private final @Nullable Output<String> purpose;
 
-    public Output<String> getPurpose() {
+    public Output<String> purpose() {
         return this.purpose == null ? Codegen.empty() : this.purpose;
     }
 
@@ -100,7 +100,7 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="rotationPeriod")
       private final @Nullable Output<String> rotationPeriod;
 
-    public Output<String> getRotationPeriod() {
+    public Output<String> rotationPeriod() {
         return this.rotationPeriod == null ? Codegen.empty() : this.rotationPeriod;
     }
 
@@ -112,7 +112,7 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="skipInitialVersionCreation")
       private final @Nullable Output<Boolean> skipInitialVersionCreation;
 
-    public Output<Boolean> getSkipInitialVersionCreation() {
+    public Output<Boolean> skipInitialVersionCreation() {
         return this.skipInitialVersionCreation == null ? Codegen.empty() : this.skipInitialVersionCreation;
     }
 
@@ -124,7 +124,7 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="versionTemplate")
       private final @Nullable Output<CryptoKeyVersionTemplateGetArgs> versionTemplate;
 
-    public Output<CryptoKeyVersionTemplateGetArgs> getVersionTemplate() {
+    public Output<CryptoKeyVersionTemplateGetArgs> versionTemplate() {
         return this.versionTemplate == null ? Codegen.empty() : this.versionTemplate;
     }
 

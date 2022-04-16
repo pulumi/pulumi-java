@@ -65,7 +65,7 @@ public final class GatewaySmbActiveDirectorySettings {
         this.username = username;
     }
 
-    public Optional<String> getActiveDirectoryStatus() {
+    public Optional<String> activeDirectoryStatus() {
         return Optional.ofNullable(this.activeDirectoryStatus);
     }
     /**
@@ -73,14 +73,14 @@ public final class GatewaySmbActiveDirectorySettings {
      * If you need to specify the port number include it after the colon (“:”). For example, `mydc.mydomain.com:389`.
      * 
     */
-    public List<String> getDomainControllers() {
+    public List<String> domainControllers() {
         return this.domainControllers == null ? List.of() : this.domainControllers;
     }
     /**
      * The name of the domain that you want the gateway to join.
      * 
     */
-    public String getDomainName() {
+    public String domainName() {
         return this.domainName;
     }
     /**
@@ -88,28 +88,28 @@ public final class GatewaySmbActiveDirectorySettings {
      * computers, and other OUs and this parameter specifies the OU that the gateway will join within the AD domain.
      * 
     */
-    public Optional<String> getOrganizationalUnit() {
+    public Optional<String> organizationalUnit() {
         return Optional.ofNullable(this.organizationalUnit);
     }
     /**
      * The password of the user who has permission to add the gateway to the Active Directory domain.
      * 
     */
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
     /**
      * Specifies the time in seconds, in which the JoinDomain operation must complete. The default is `20` seconds.
      * 
     */
-    public Optional<Integer> getTimeoutInSeconds() {
+    public Optional<Integer> timeoutInSeconds() {
         return Optional.ofNullable(this.timeoutInSeconds);
     }
     /**
      * The user name of user who has permission to add the gateway to the Active Directory domain.
      * 
     */
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

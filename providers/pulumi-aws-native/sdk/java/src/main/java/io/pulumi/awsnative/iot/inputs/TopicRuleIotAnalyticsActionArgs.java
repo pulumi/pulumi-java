@@ -19,21 +19,21 @@ public final class TopicRuleIotAnalyticsActionArgs extends io.pulumi.resources.R
     @Import(name="batchMode")
       private final @Nullable Output<Boolean> batchMode;
 
-    public Output<Boolean> getBatchMode() {
+    public Output<Boolean> batchMode() {
         return this.batchMode == null ? Codegen.empty() : this.batchMode;
     }
 
     @Import(name="channelName", required=true)
       private final Output<String> channelName;
 
-    public Output<String> getChannelName() {
+    public Output<String> channelName() {
         return this.channelName;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 

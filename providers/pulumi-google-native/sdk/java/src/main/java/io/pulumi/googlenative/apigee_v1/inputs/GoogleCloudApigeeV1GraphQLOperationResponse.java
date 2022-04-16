@@ -24,7 +24,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationResponse extends io.pulumi
     @Import(name="operation", required=true)
       private final String operation;
 
-    public String getOperation() {
+    public String operation() {
         return this.operation;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationResponse extends io.pulumi
     @Import(name="operationTypes", required=true)
       private final List<String> operationTypes;
 
-    public List<String> getOperationTypes() {
+    public List<String> operationTypes() {
         return this.operationTypes;
     }
 

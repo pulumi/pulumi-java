@@ -24,7 +24,7 @@ public final class BudgetNotificationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="comparisonOperator", required=true)
       private final Output<String> comparisonOperator;
 
-    public Output<String> getComparisonOperator() {
+    public Output<String> comparisonOperator() {
         return this.comparisonOperator;
     }
 
@@ -35,7 +35,7 @@ public final class BudgetNotificationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="notificationType", required=true)
       private final Output<String> notificationType;
 
-    public Output<String> getNotificationType() {
+    public Output<String> notificationType() {
         return this.notificationType;
     }
 
@@ -46,7 +46,7 @@ public final class BudgetNotificationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="subscriberEmailAddresses")
       private final @Nullable Output<List<String>> subscriberEmailAddresses;
 
-    public Output<List<String>> getSubscriberEmailAddresses() {
+    public Output<List<String>> subscriberEmailAddresses() {
         return this.subscriberEmailAddresses == null ? Codegen.empty() : this.subscriberEmailAddresses;
     }
 
@@ -57,7 +57,7 @@ public final class BudgetNotificationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="subscriberSnsTopicArns")
       private final @Nullable Output<List<String>> subscriberSnsTopicArns;
 
-    public Output<List<String>> getSubscriberSnsTopicArns() {
+    public Output<List<String>> subscriberSnsTopicArns() {
         return this.subscriberSnsTopicArns == null ? Codegen.empty() : this.subscriberSnsTopicArns;
     }
 
@@ -68,7 +68,7 @@ public final class BudgetNotificationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="threshold", required=true)
       private final Output<Double> threshold;
 
-    public Output<Double> getThreshold() {
+    public Output<Double> threshold() {
         return this.threshold;
     }
 
@@ -79,7 +79,7 @@ public final class BudgetNotificationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="thresholdType", required=true)
       private final Output<String> thresholdType;
 
-    public Output<String> getThresholdType() {
+    public Output<String> thresholdType() {
         return this.thresholdType;
     }
 

@@ -46,7 +46,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * @return Set of interface VPC endpoint (interface endpoint) objects. Maximum of 4. See below.
      * 
      */
-    public Output</* @Nullable */ List<ImageBuilderAccessEndpoint>> getAccessEndpoints() {
+    public Output</* @Nullable */ List<ImageBuilderAccessEndpoint>> accessEndpoints() {
         return this.accessEndpoints;
     }
     /**
@@ -60,7 +60,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * @return The version of the AppStream 2.0 agent to use for this image builder.
      * 
      */
-    public Output<String> getAppstreamAgentVersion() {
+    public Output<String> appstreamAgentVersion() {
         return this.appstreamAgentVersion;
     }
     /**
@@ -74,7 +74,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * @return ARN of the appstream image builder.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -88,7 +88,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * @return Date and time, in UTC and extended RFC 3339 format, when the image builder was created.
      * 
      */
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     /**
@@ -102,7 +102,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * @return Description to display.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -116,7 +116,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * @return Human-readable friendly name for the AppStream image builder.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -130,7 +130,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * @return Configuration block for the name of the directory and organizational unit (OU) to use to join the image builder to a Microsoft Active Directory domain. See below.
      * 
      */
-    public Output<ImageBuilderDomainJoinInfo> getDomainJoinInfo() {
+    public Output<ImageBuilderDomainJoinInfo> domainJoinInfo() {
         return this.domainJoinInfo;
     }
     /**
@@ -144,7 +144,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * @return Enables or disables default internet access for the image builder.
      * 
      */
-    public Output<Boolean> getEnableDefaultInternetAccess() {
+    public Output<Boolean> enableDefaultInternetAccess() {
         return this.enableDefaultInternetAccess;
     }
     /**
@@ -158,7 +158,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * @return ARN of the IAM role to apply to the image builder.
      * 
      */
-    public Output<String> getIamRoleArn() {
+    public Output<String> iamRoleArn() {
         return this.iamRoleArn;
     }
     /**
@@ -172,7 +172,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * @return ARN of the public, private, or shared image to use.
      * 
      */
-    public Output<String> getImageArn() {
+    public Output<String> imageArn() {
         return this.imageArn;
     }
     /**
@@ -186,7 +186,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * @return Name of the image used to create the image builder.
      * 
      */
-    public Output<String> getImageName() {
+    public Output<String> imageName() {
         return this.imageName;
     }
     /**
@@ -200,7 +200,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * @return The instance type to use when launching the image builder.
      * 
      */
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
     /**
@@ -214,7 +214,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * @return Unique name for the image builder.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -228,7 +228,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * @return State of the image builder. Can be: `PENDING`, `UPDATING_AGENT`, `RUNNING`, `STOPPING`, `STOPPED`, `REBOOTING`, `SNAPSHOTTING`, `DELETING`, `FAILED`, `UPDATING`, `PENDING_QUALIFICATION`
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -242,7 +242,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the instance. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -256,7 +256,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -270,7 +270,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * @return Configuration block for the VPC configuration for the image builder. See below.
      * 
      */
-    public Output<ImageBuilderVpcConfig> getVpcConfig() {
+    public Output<ImageBuilderVpcConfig> vpcConfig() {
         return this.vpcConfig;
     }
 

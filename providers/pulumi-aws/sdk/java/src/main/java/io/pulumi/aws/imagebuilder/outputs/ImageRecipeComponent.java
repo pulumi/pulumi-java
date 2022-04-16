@@ -24,7 +24,7 @@ public final class ImageRecipeComponent {
      * Amazon Resource Name (ARN) of the Image Builder Component to associate.
      * 
     */
-    public String getComponentArn() {
+    public String componentArn() {
         return this.componentArn;
     }
 

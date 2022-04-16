@@ -80,63 +80,63 @@ public final class ApiConnectionDefinitionResponseProperties {
         this.testLinks = testLinks;
     }
 
-    public Optional<ApiReferenceResponse> getApi() {
+    public Optional<ApiReferenceResponse> api() {
         return Optional.ofNullable(this.api);
     }
     /**
      * Timestamp of last connection change
      * 
     */
-    public Optional<String> getChangedTime() {
+    public Optional<String> changedTime() {
         return Optional.ofNullable(this.changedTime);
     }
     /**
      * Timestamp of the connection creation
      * 
     */
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * Dictionary of custom parameter values
      * 
     */
-    public Map<String,String> getCustomParameterValues() {
+    public Map<String,String> customParameterValues() {
         return this.customParameterValues == null ? Map.of() : this.customParameterValues;
     }
     /**
      * Display name
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Dictionary of nonsecret parameter values
      * 
     */
-    public Map<String,String> getNonSecretParameterValues() {
+    public Map<String,String> nonSecretParameterValues() {
         return this.nonSecretParameterValues == null ? Map.of() : this.nonSecretParameterValues;
     }
     /**
      * Dictionary of parameter values
      * 
     */
-    public Map<String,String> getParameterValues() {
+    public Map<String,String> parameterValues() {
         return this.parameterValues == null ? Map.of() : this.parameterValues;
     }
     /**
      * Status of the connection
      * 
     */
-    public List<ConnectionStatusDefinitionResponse> getStatuses() {
+    public List<ConnectionStatusDefinitionResponse> statuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
     /**
      * Links to test the API connection
      * 
     */
-    public List<ApiConnectionTestLinkResponse> getTestLinks() {
+    public List<ApiConnectionTestLinkResponse> testLinks() {
         return this.testLinks == null ? List.of() : this.testLinks;
     }
 

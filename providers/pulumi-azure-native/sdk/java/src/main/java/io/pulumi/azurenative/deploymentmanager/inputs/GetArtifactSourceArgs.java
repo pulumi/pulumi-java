@@ -19,7 +19,7 @@ public final class GetArtifactSourceArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="artifactSourceName", required=true)
       private final String artifactSourceName;
 
-    public String getArtifactSourceName() {
+    public String artifactSourceName() {
         return this.artifactSourceName;
     }
 
@@ -30,7 +30,7 @@ public final class GetArtifactSourceArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

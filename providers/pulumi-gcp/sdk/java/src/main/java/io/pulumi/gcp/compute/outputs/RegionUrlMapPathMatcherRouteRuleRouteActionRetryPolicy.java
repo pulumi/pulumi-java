@@ -65,7 +65,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicy {
      * Specifies the allowed number retries. This number must be > 0.
      * 
     */
-    public Integer getNumRetries() {
+    public Integer numRetries() {
         return this.numRetries;
     }
     /**
@@ -73,7 +73,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicy {
      * Structure is documented below.
      * 
     */
-    public Optional<RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeout> getPerTryTimeout() {
+    public Optional<RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeout> perTryTimeout() {
         return Optional.ofNullable(this.perTryTimeout);
     }
     /**
@@ -100,7 +100,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicy {
      *   the gRPC status code in the response header is set to unavailable
      * 
     */
-    public List<String> getRetryConditions() {
+    public List<String> retryConditions() {
         return this.retryConditions == null ? List.of() : this.retryConditions;
     }
 

@@ -23,7 +23,7 @@ public final class AwsClusterControlPlaneMainVolumeArgs extends io.pulumi.resour
     @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
-    public Output<Integer> getIops() {
+    public Output<Integer> iops() {
         return this.iops == null ? Codegen.empty() : this.iops;
     }
 
@@ -34,7 +34,7 @@ public final class AwsClusterControlPlaneMainVolumeArgs extends io.pulumi.resour
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
+    public Output<String> kmsKeyArn() {
         return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
@@ -45,7 +45,7 @@ public final class AwsClusterControlPlaneMainVolumeArgs extends io.pulumi.resour
     @Import(name="sizeGib")
       private final @Nullable Output<Integer> sizeGib;
 
-    public Output<Integer> getSizeGib() {
+    public Output<Integer> sizeGib() {
         return this.sizeGib == null ? Codegen.empty() : this.sizeGib;
     }
 
@@ -56,7 +56,7 @@ public final class AwsClusterControlPlaneMainVolumeArgs extends io.pulumi.resour
     @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;
 
-    public Output<String> getVolumeType() {
+    public Output<String> volumeType() {
         return this.volumeType == null ? Codegen.empty() : this.volumeType;
     }
 

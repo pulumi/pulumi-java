@@ -42,7 +42,7 @@ public class RouteResponse extends io.pulumi.resources.CustomResource {
      * @return The API identifier.
      * 
      */
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
     /**
@@ -56,7 +56,7 @@ public class RouteResponse extends io.pulumi.resources.CustomResource {
      * @return The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route response.
      * 
      */
-    public Output</* @Nullable */ String> getModelSelectionExpression() {
+    public Output</* @Nullable */ String> modelSelectionExpression() {
         return this.modelSelectionExpression;
     }
     /**
@@ -70,7 +70,7 @@ public class RouteResponse extends io.pulumi.resources.CustomResource {
      * @return The response models for the route response.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getResponseModels() {
+    public Output</* @Nullable */ Map<String,String>> responseModels() {
         return this.responseModels;
     }
     /**
@@ -84,7 +84,7 @@ public class RouteResponse extends io.pulumi.resources.CustomResource {
      * @return The identifier of the `aws.apigatewayv2.Route`.
      * 
      */
-    public Output<String> getRouteId() {
+    public Output<String> routeId() {
         return this.routeId;
     }
     /**
@@ -98,7 +98,7 @@ public class RouteResponse extends io.pulumi.resources.CustomResource {
      * @return The route response key.
      * 
      */
-    public Output<String> getRouteResponseKey() {
+    public Output<String> routeResponseKey() {
         return this.routeResponseKey;
     }
 

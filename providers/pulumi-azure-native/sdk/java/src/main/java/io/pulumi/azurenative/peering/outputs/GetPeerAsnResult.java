@@ -79,56 +79,56 @@ public final class GetPeerAsnResult {
      * The error message for the validation state
      * 
     */
-    public String getErrorMessage() {
+    public String errorMessage() {
         return this.errorMessage;
     }
     /**
      * The ID of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The Autonomous System Number (ASN) of the peer.
      * 
     */
-    public Optional<Integer> getPeerAsn() {
+    public Optional<Integer> peerAsn() {
         return Optional.ofNullable(this.peerAsn);
     }
     /**
      * The contact details of the peer.
      * 
     */
-    public List<ContactDetailResponse> getPeerContactDetail() {
+    public List<ContactDetailResponse> peerContactDetail() {
         return this.peerContactDetail == null ? List.of() : this.peerContactDetail;
     }
     /**
      * The name of the peer.
      * 
     */
-    public Optional<String> getPeerName() {
+    public Optional<String> peerName() {
         return Optional.ofNullable(this.peerName);
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The validation state of the ASN associated with the peer.
      * 
     */
-    public Optional<String> getValidationState() {
+    public Optional<String> validationState() {
         return Optional.ofNullable(this.validationState);
     }
 

@@ -55,35 +55,35 @@ public final class ConfigMapNodeConfigSource {
      * KubeletConfigKey declares which key of the referenced ConfigMap corresponds to the KubeletConfiguration structure This field is required in all cases.
      * 
     */
-    public String getKubeletConfigKey() {
+    public String kubeletConfigKey() {
         return this.kubeletConfigKey;
     }
     /**
      * Name is the metadata.name of the referenced ConfigMap. This field is required in all cases.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Namespace is the metadata.namespace of the referenced ConfigMap. This field is required in all cases.
      * 
     */
-    public String getNamespace() {
+    public String namespace() {
         return this.namespace;
     }
     /**
      * ResourceVersion is the metadata.ResourceVersion of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.
      * 
     */
-    public Optional<String> getResourceVersion() {
+    public Optional<String> resourceVersion() {
         return Optional.ofNullable(this.resourceVersion);
     }
     /**
      * UID is the metadata.UID of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.
      * 
     */
-    public Optional<String> getUid() {
+    public Optional<String> uid() {
         return Optional.ofNullable(this.uid);
     }
 

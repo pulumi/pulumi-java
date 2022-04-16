@@ -23,7 +23,7 @@ public final class ListenerDefaultActionForwardTargetGroupArgs extends io.pulumi
     @Import(name="arn", required=true)
       private final Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class ListenerDefaultActionForwardTargetGroupArgs extends io.pulumi
     @Import(name="weight")
       private final @Nullable Output<Integer> weight;
 
-    public Output<Integer> getWeight() {
+    public Output<Integer> weight() {
         return this.weight == null ? Codegen.empty() : this.weight;
     }
 

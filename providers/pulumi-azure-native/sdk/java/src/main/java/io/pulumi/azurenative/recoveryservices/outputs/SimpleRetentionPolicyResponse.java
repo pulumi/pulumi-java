@@ -36,7 +36,7 @@ public final class SimpleRetentionPolicyResponse {
      * Retention duration of the protection policy.
      * 
     */
-    public Optional<RetentionDurationResponse> getRetentionDuration() {
+    public Optional<RetentionDurationResponse> retentionDuration() {
         return Optional.ofNullable(this.retentionDuration);
     }
     /**
@@ -44,7 +44,7 @@ public final class SimpleRetentionPolicyResponse {
      * Expected value is 'SimpleRetentionPolicy'.
      * 
     */
-    public String getRetentionPolicyType() {
+    public String retentionPolicyType() {
         return this.retentionPolicyType;
     }
 
