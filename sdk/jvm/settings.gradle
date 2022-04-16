@@ -7,5 +7,5 @@ pluginManagement {
     }
 }
 
-rootProject.name = "pulumi"
+rootProject.name = "com.pulumi"
 include("pulumi")
