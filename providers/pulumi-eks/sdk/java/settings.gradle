@@ -9,5 +9,5 @@ pluginManagement {
   }
 }
 
-rootProject.name = "io.pulumi.eks"
+rootProject.name = "com.pulumi.eks"
 include("lib")

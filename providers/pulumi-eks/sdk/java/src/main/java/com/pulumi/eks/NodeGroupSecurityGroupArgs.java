@@ -25,7 +25,7 @@ public final class NodeGroupSecurityGroupArgs extends com.pulumi.resources.Resou
     @Import(name="clusterSecurityGroup", required=true)
       private final Output<SecurityGroup> clusterSecurityGroup;
 
-    public Output<SecurityGroup> getClusterSecurityGroup() {
+    public Output<SecurityGroup> clusterSecurityGroup() {
         return this.clusterSecurityGroup;
     }
 
@@ -36,7 +36,7 @@ public final class NodeGroupSecurityGroupArgs extends com.pulumi.resources.Resou
     @Import(name="eksCluster", required=true)
       private final Output<Cluster> eksCluster;
 
-    public Output<Cluster> getEksCluster() {
+    public Output<Cluster> eksCluster() {
         return this.eksCluster;
     }
 
@@ -47,7 +47,7 @@ public final class NodeGroupSecurityGroupArgs extends com.pulumi.resources.Resou
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -58,7 +58,7 @@ public final class NodeGroupSecurityGroupArgs extends com.pulumi.resources.Resou
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

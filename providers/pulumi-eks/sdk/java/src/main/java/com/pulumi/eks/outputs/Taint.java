@@ -32,14 +32,14 @@ public final class Taint {
      * The effect of the taint.
      * 
     */
-    public String getEffect() {
+    public String effect() {
         return this.effect;
     }
     /**
      * The value of the taint.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

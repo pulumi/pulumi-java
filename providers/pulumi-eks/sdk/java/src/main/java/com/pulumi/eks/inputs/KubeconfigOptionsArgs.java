@@ -43,7 +43,7 @@ public final class KubeconfigOptionsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="profileName")
       private final @Nullable Output<String> profileName;
 
-    public Output<String> getProfileName() {
+    public Output<String> profileName() {
         return this.profileName == null ? Codegen.empty() : this.profileName;
     }
 
@@ -56,7 +56,7 @@ public final class KubeconfigOptionsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
