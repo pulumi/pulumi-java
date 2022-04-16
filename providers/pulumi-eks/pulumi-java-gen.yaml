@@ -2,7 +2,7 @@ artifactID: eks
 version: 0.37.1
 schema: https://raw.githubusercontent.com/pulumi/pulumi-eks/v0.37.1/provider/cmd/pulumi-resource-eks/schema.json
 out: sdk/java
-versionFile: src/main/resources/io/pulumi/eks/version.txt
-pluginFile: src/main/resources/io/pulumi/eks/plugin.json
+versionFile: src/main/resources/com/pulumi/eks/version.txt
+pluginFile: src/main/resources/com/pulumi/eks/plugin.json
 overlays:
   - "./build-templates"
