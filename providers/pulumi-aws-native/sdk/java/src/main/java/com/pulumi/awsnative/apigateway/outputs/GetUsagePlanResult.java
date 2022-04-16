@@ -74,49 +74,49 @@ public final class GetUsagePlanResult {
      * The API stages to associate with this usage plan.
      * 
     */
-    public List<UsagePlanApiStage> getApiStages() {
+    public List<UsagePlanApiStage> apiStages() {
         return this.apiStages == null ? List.of() : this.apiStages;
     }
     /**
      * A description of the usage plan.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Configures the number of requests that users can make within a given interval.
      * 
     */
-    public Optional<UsagePlanQuotaSettings> getQuota() {
+    public Optional<UsagePlanQuotaSettings> quota() {
         return Optional.ofNullable(this.quota);
     }
     /**
      * An array of arbitrary tags (key-value pairs) to associate with the usage plan.
      * 
     */
-    public List<UsagePlanTag> getTags() {
+    public List<UsagePlanTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * Configures the overall request rate (average requests per second) and burst capacity.
      * 
     */
-    public Optional<UsagePlanThrottleSettings> getThrottle() {
+    public Optional<UsagePlanThrottleSettings> throttle() {
         return Optional.ofNullable(this.throttle);
     }
     /**
      * A name for the usage plan.
      * 
     */
-    public Optional<String> getUsagePlanName() {
+    public Optional<String> usagePlanName() {
         return Optional.ofNullable(this.usagePlanName);
     }
 

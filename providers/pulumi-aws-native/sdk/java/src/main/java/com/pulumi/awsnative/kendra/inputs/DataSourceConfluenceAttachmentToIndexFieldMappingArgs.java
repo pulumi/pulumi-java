@@ -19,21 +19,21 @@ public final class DataSourceConfluenceAttachmentToIndexFieldMappingArgs extends
     @Import(name="dataSourceFieldName", required=true)
       private final Output<DataSourceConfluenceAttachmentFieldName> dataSourceFieldName;
 
-    public Output<DataSourceConfluenceAttachmentFieldName> getDataSourceFieldName() {
+    public Output<DataSourceConfluenceAttachmentFieldName> dataSourceFieldName() {
         return this.dataSourceFieldName;
     }
 
     @Import(name="dateFieldFormat")
       private final @Nullable Output<String> dateFieldFormat;
 
-    public Output<String> getDateFieldFormat() {
+    public Output<String> dateFieldFormat() {
         return this.dateFieldFormat == null ? Codegen.empty() : this.dateFieldFormat;
     }
 
     @Import(name="indexFieldName", required=true)
       private final Output<String> indexFieldName;
 
-    public Output<String> getIndexFieldName() {
+    public Output<String> indexFieldName() {
         return this.indexFieldName;
     }
 

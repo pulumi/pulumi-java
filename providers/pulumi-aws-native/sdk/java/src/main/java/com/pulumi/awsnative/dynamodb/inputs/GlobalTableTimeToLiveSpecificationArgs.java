@@ -19,14 +19,14 @@ public final class GlobalTableTimeToLiveSpecificationArgs extends com.pulumi.res
     @Import(name="attributeName")
       private final @Nullable Output<String> attributeName;
 
-    public Output<String> getAttributeName() {
+    public Output<String> attributeName() {
         return this.attributeName == null ? Codegen.empty() : this.attributeName;
     }
 
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 

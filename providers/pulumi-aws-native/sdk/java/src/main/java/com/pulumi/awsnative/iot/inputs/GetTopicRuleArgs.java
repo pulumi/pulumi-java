@@ -15,7 +15,7 @@ public final class GetTopicRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="ruleName", required=true)
       private final String ruleName;
 
-    public String getRuleName() {
+    public String ruleName() {
         return this.ruleName;
     }
 

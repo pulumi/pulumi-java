@@ -31,73 +31,73 @@ public class StateMachine extends com.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="definition", type=StateMachineDefinition.class, parameters={})
     private Output</* @Nullable */ StateMachineDefinition> definition;
 
-    public Output</* @Nullable */ StateMachineDefinition> getDefinition() {
+    public Output</* @Nullable */ StateMachineDefinition> definition() {
         return this.definition;
     }
     @Export(name="definitionS3Location", type=StateMachineS3Location.class, parameters={})
     private Output</* @Nullable */ StateMachineS3Location> definitionS3Location;
 
-    public Output</* @Nullable */ StateMachineS3Location> getDefinitionS3Location() {
+    public Output</* @Nullable */ StateMachineS3Location> definitionS3Location() {
         return this.definitionS3Location;
     }
     @Export(name="definitionString", type=String.class, parameters={})
     private Output</* @Nullable */ String> definitionString;
 
-    public Output</* @Nullable */ String> getDefinitionString() {
+    public Output</* @Nullable */ String> definitionString() {
         return this.definitionString;
     }
     @Export(name="definitionSubstitutions", type=StateMachineDefinitionSubstitutions.class, parameters={})
     private Output</* @Nullable */ StateMachineDefinitionSubstitutions> definitionSubstitutions;
 
-    public Output</* @Nullable */ StateMachineDefinitionSubstitutions> getDefinitionSubstitutions() {
+    public Output</* @Nullable */ StateMachineDefinitionSubstitutions> definitionSubstitutions() {
         return this.definitionSubstitutions;
     }
     @Export(name="loggingConfiguration", type=StateMachineLoggingConfiguration.class, parameters={})
     private Output</* @Nullable */ StateMachineLoggingConfiguration> loggingConfiguration;
 
-    public Output</* @Nullable */ StateMachineLoggingConfiguration> getLoggingConfiguration() {
+    public Output</* @Nullable */ StateMachineLoggingConfiguration> loggingConfiguration() {
         return this.loggingConfiguration;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     @Export(name="stateMachineName", type=String.class, parameters={})
     private Output</* @Nullable */ String> stateMachineName;
 
-    public Output</* @Nullable */ String> getStateMachineName() {
+    public Output</* @Nullable */ String> stateMachineName() {
         return this.stateMachineName;
     }
     @Export(name="stateMachineType", type=StateMachineType.class, parameters={})
     private Output</* @Nullable */ StateMachineType> stateMachineType;
 
-    public Output</* @Nullable */ StateMachineType> getStateMachineType() {
+    public Output</* @Nullable */ StateMachineType> stateMachineType() {
         return this.stateMachineType;
     }
     @Export(name="tags", type=List.class, parameters={StateMachineTagsEntry.class})
     private Output</* @Nullable */ List<StateMachineTagsEntry>> tags;
 
-    public Output</* @Nullable */ List<StateMachineTagsEntry>> getTags() {
+    public Output</* @Nullable */ List<StateMachineTagsEntry>> tags() {
         return this.tags;
     }
     @Export(name="tracingConfiguration", type=StateMachineTracingConfiguration.class, parameters={})
     private Output</* @Nullable */ StateMachineTracingConfiguration> tracingConfiguration;
 
-    public Output</* @Nullable */ StateMachineTracingConfiguration> getTracingConfiguration() {
+    public Output</* @Nullable */ StateMachineTracingConfiguration> tracingConfiguration() {
         return this.tracingConfiguration;
     }
 

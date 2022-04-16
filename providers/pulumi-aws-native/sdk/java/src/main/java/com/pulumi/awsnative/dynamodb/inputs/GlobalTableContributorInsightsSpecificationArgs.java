@@ -17,7 +17,7 @@ public final class GlobalTableContributorInsightsSpecificationArgs extends com.p
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 

@@ -29,7 +29,7 @@ public final class ResponsePlanSsmAutomationArgs extends com.pulumi.resources.Re
     @Import(name="documentName", required=true)
       private final Output<String> documentName;
 
-    public Output<String> getDocumentName() {
+    public Output<String> documentName() {
         return this.documentName;
     }
 
@@ -40,7 +40,7 @@ public final class ResponsePlanSsmAutomationArgs extends com.pulumi.resources.Re
     @Import(name="documentVersion")
       private final @Nullable Output<String> documentVersion;
 
-    public Output<String> getDocumentVersion() {
+    public Output<String> documentVersion() {
         return this.documentVersion == null ? Codegen.empty() : this.documentVersion;
     }
 
@@ -51,7 +51,7 @@ public final class ResponsePlanSsmAutomationArgs extends com.pulumi.resources.Re
     @Import(name="parameters")
       private final @Nullable Output<List<ResponsePlanSsmParameterArgs>> parameters;
 
-    public Output<List<ResponsePlanSsmParameterArgs>> getParameters() {
+    public Output<List<ResponsePlanSsmParameterArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -62,7 +62,7 @@ public final class ResponsePlanSsmAutomationArgs extends com.pulumi.resources.Re
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -73,7 +73,7 @@ public final class ResponsePlanSsmAutomationArgs extends com.pulumi.resources.Re
     @Import(name="targetAccount")
       private final @Nullable Output<ResponsePlanSsmAutomationTargetAccount> targetAccount;
 
-    public Output<ResponsePlanSsmAutomationTargetAccount> getTargetAccount() {
+    public Output<ResponsePlanSsmAutomationTargetAccount> targetAccount() {
         return this.targetAccount == null ? Codegen.empty() : this.targetAccount;
     }
 

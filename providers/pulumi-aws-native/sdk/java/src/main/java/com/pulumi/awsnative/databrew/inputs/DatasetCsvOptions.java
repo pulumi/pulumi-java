@@ -22,14 +22,14 @@ public final class DatasetCsvOptions extends com.pulumi.resources.InvokeArgs {
     @Import(name="delimiter")
       private final @Nullable String delimiter;
 
-    public Optional<String> getDelimiter() {
+    public Optional<String> delimiter() {
         return this.delimiter == null ? Optional.empty() : Optional.ofNullable(this.delimiter);
     }
 
     @Import(name="headerRow")
       private final @Nullable Boolean headerRow;
 
-    public Optional<Boolean> getHeaderRow() {
+    public Optional<Boolean> headerRow() {
         return this.headerRow == null ? Optional.empty() : Optional.ofNullable(this.headerRow);
     }
 

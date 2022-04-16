@@ -20,14 +20,14 @@ public final class ReplicationConfigurationRepositoryFilter extends com.pulumi.r
     @Import(name="filter", required=true)
       private final String filter;
 
-    public String getFilter() {
+    public String filter() {
         return this.filter;
     }
 
     @Import(name="filterType", required=true)
       private final ReplicationConfigurationFilterType filterType;
 
-    public ReplicationConfigurationFilterType getFilterType() {
+    public ReplicationConfigurationFilterType filterType() {
         return this.filterType;
     }
 

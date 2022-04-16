@@ -48,28 +48,28 @@ public final class GetDatasetResult {
         this.versioningConfiguration = versioningConfiguration;
     }
 
-    public List<DatasetAction> getActions() {
+    public List<DatasetAction> actions() {
         return this.actions == null ? List.of() : this.actions;
     }
-    public List<DatasetContentDeliveryRule> getContentDeliveryRules() {
+    public List<DatasetContentDeliveryRule> contentDeliveryRules() {
         return this.contentDeliveryRules == null ? List.of() : this.contentDeliveryRules;
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public List<DatasetLateDataRule> getLateDataRules() {
+    public List<DatasetLateDataRule> lateDataRules() {
         return this.lateDataRules == null ? List.of() : this.lateDataRules;
     }
-    public Optional<DatasetRetentionPeriod> getRetentionPeriod() {
+    public Optional<DatasetRetentionPeriod> retentionPeriod() {
         return Optional.ofNullable(this.retentionPeriod);
     }
-    public List<DatasetTag> getTags() {
+    public List<DatasetTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
-    public List<DatasetTrigger> getTriggers() {
+    public List<DatasetTrigger> triggers() {
         return this.triggers == null ? List.of() : this.triggers;
     }
-    public Optional<DatasetVersioningConfiguration> getVersioningConfiguration() {
+    public Optional<DatasetVersioningConfiguration> versioningConfiguration() {
         return Optional.ofNullable(this.versioningConfiguration);
     }
 

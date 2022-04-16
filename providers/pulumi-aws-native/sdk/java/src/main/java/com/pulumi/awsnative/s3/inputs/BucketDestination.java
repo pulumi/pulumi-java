@@ -26,7 +26,7 @@ public final class BucketDestination extends com.pulumi.resources.InvokeArgs {
     @Import(name="bucketAccountId")
       private final @Nullable String bucketAccountId;
 
-    public Optional<String> getBucketAccountId() {
+    public Optional<String> bucketAccountId() {
         return this.bucketAccountId == null ? Optional.empty() : Optional.ofNullable(this.bucketAccountId);
     }
 
@@ -37,7 +37,7 @@ public final class BucketDestination extends com.pulumi.resources.InvokeArgs {
     @Import(name="bucketArn", required=true)
       private final String bucketArn;
 
-    public String getBucketArn() {
+    public String bucketArn() {
         return this.bucketArn;
     }
 
@@ -48,7 +48,7 @@ public final class BucketDestination extends com.pulumi.resources.InvokeArgs {
     @Import(name="format", required=true)
       private final BucketDestinationFormat format;
 
-    public BucketDestinationFormat getFormat() {
+    public BucketDestinationFormat format() {
         return this.format;
     }
 
@@ -59,7 +59,7 @@ public final class BucketDestination extends com.pulumi.resources.InvokeArgs {
     @Import(name="prefix")
       private final @Nullable String prefix;
 
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
     }
 

@@ -17,7 +17,7 @@ public final class BucketReplicationTimeValueArgs extends com.pulumi.resources.R
     @Import(name="minutes", required=true)
       private final Output<Integer> minutes;
 
-    public Output<Integer> getMinutes() {
+    public Output<Integer> minutes() {
         return this.minutes;
     }
 

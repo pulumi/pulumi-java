@@ -18,7 +18,7 @@ public final class DomainZoneAwarenessConfig {
         this.availabilityZoneCount = availabilityZoneCount;
     }
 
-    public Optional<Integer> getAvailabilityZoneCount() {
+    public Optional<Integer> availabilityZoneCount() {
         return Optional.ofNullable(this.availabilityZoneCount);
     }
 

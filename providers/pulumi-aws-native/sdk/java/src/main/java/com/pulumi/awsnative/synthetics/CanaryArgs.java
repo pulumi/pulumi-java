@@ -32,7 +32,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="artifactConfig")
       private final @Nullable Output<CanaryArtifactConfigArgs> artifactConfig;
 
-    public Output<CanaryArtifactConfigArgs> getArtifactConfig() {
+    public Output<CanaryArtifactConfigArgs> artifactConfig() {
         return this.artifactConfig == null ? Codegen.empty() : this.artifactConfig;
     }
 
@@ -43,7 +43,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="artifactS3Location", required=true)
       private final Output<String> artifactS3Location;
 
-    public Output<String> getArtifactS3Location() {
+    public Output<String> artifactS3Location() {
         return this.artifactS3Location;
     }
 
@@ -54,7 +54,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="code", required=true)
       private final Output<CanaryCodeArgs> code;
 
-    public Output<CanaryCodeArgs> getCode() {
+    public Output<CanaryCodeArgs> code() {
         return this.code;
     }
 
@@ -65,7 +65,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="executionRoleArn", required=true)
       private final Output<String> executionRoleArn;
 
-    public Output<String> getExecutionRoleArn() {
+    public Output<String> executionRoleArn() {
         return this.executionRoleArn;
     }
 
@@ -76,7 +76,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="failureRetentionPeriod")
       private final @Nullable Output<Integer> failureRetentionPeriod;
 
-    public Output<Integer> getFailureRetentionPeriod() {
+    public Output<Integer> failureRetentionPeriod() {
         return this.failureRetentionPeriod == null ? Codegen.empty() : this.failureRetentionPeriod;
     }
 
@@ -87,7 +87,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -98,7 +98,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="runConfig")
       private final @Nullable Output<CanaryRunConfigArgs> runConfig;
 
-    public Output<CanaryRunConfigArgs> getRunConfig() {
+    public Output<CanaryRunConfigArgs> runConfig() {
         return this.runConfig == null ? Codegen.empty() : this.runConfig;
     }
 
@@ -109,7 +109,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="runtimeVersion", required=true)
       private final Output<String> runtimeVersion;
 
-    public Output<String> getRuntimeVersion() {
+    public Output<String> runtimeVersion() {
         return this.runtimeVersion;
     }
 
@@ -120,7 +120,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schedule", required=true)
       private final Output<CanaryScheduleArgs> schedule;
 
-    public Output<CanaryScheduleArgs> getSchedule() {
+    public Output<CanaryScheduleArgs> schedule() {
         return this.schedule;
     }
 
@@ -131,7 +131,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startCanaryAfterCreation", required=true)
       private final Output<Boolean> startCanaryAfterCreation;
 
-    public Output<Boolean> getStartCanaryAfterCreation() {
+    public Output<Boolean> startCanaryAfterCreation() {
         return this.startCanaryAfterCreation;
     }
 
@@ -142,14 +142,14 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="successRetentionPeriod")
       private final @Nullable Output<Integer> successRetentionPeriod;
 
-    public Output<Integer> getSuccessRetentionPeriod() {
+    public Output<Integer> successRetentionPeriod() {
         return this.successRetentionPeriod == null ? Codegen.empty() : this.successRetentionPeriod;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<CanaryTagArgs>> tags;
 
-    public Output<List<CanaryTagArgs>> getTags() {
+    public Output<List<CanaryTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -160,7 +160,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vPCConfig")
       private final @Nullable Output<CanaryVPCConfigArgs> vPCConfig;
 
-    public Output<CanaryVPCConfigArgs> getVPCConfig() {
+    public Output<CanaryVPCConfigArgs> vPCConfig() {
         return this.vPCConfig == null ? Codegen.empty() : this.vPCConfig;
     }
 
@@ -171,7 +171,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="visualReference")
       private final @Nullable Output<CanaryVisualReferenceArgs> visualReference;
 
-    public Output<CanaryVisualReferenceArgs> getVisualReference() {
+    public Output<CanaryVisualReferenceArgs> visualReference() {
         return this.visualReference == null ? Codegen.empty() : this.visualReference;
     }
 

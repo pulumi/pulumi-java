@@ -33,31 +33,31 @@ public class ModelPackageGroup extends com.pulumi.resources.CustomResource {
      * @return The time at which the model package group was created.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     @Export(name="modelPackageGroupArn", type=String.class, parameters={})
     private Output<String> modelPackageGroupArn;
 
-    public Output<String> getModelPackageGroupArn() {
+    public Output<String> modelPackageGroupArn() {
         return this.modelPackageGroupArn;
     }
     @Export(name="modelPackageGroupDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> modelPackageGroupDescription;
 
-    public Output</* @Nullable */ String> getModelPackageGroupDescription() {
+    public Output</* @Nullable */ String> modelPackageGroupDescription() {
         return this.modelPackageGroupDescription;
     }
     @Export(name="modelPackageGroupName", type=String.class, parameters={})
     private Output<String> modelPackageGroupName;
 
-    public Output<String> getModelPackageGroupName() {
+    public Output<String> modelPackageGroupName() {
         return this.modelPackageGroupName;
     }
     @Export(name="modelPackageGroupPolicy", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> modelPackageGroupPolicy;
 
-    public Output</* @Nullable */ Object> getModelPackageGroupPolicy() {
+    public Output</* @Nullable */ Object> modelPackageGroupPolicy() {
         return this.modelPackageGroupPolicy;
     }
     /**
@@ -71,7 +71,7 @@ public class ModelPackageGroup extends com.pulumi.resources.CustomResource {
      * @return The status of a modelpackage group job.
      * 
      */
-    public Output<ModelPackageGroupStatus> getModelPackageGroupStatus() {
+    public Output<ModelPackageGroupStatus> modelPackageGroupStatus() {
         return this.modelPackageGroupStatus;
     }
     /**
@@ -85,7 +85,7 @@ public class ModelPackageGroup extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<ModelPackageGroupTag>> getTags() {
+    public Output</* @Nullable */ List<ModelPackageGroupTag>> tags() {
         return this.tags;
     }
 

@@ -18,14 +18,14 @@ public final class TaskDefinitionPlacementConstraintArgs extends com.pulumi.reso
     @Import(name="expression")
       private final @Nullable Output<String> expression;
 
-    public Output<String> getExpression() {
+    public Output<String> expression() {
         return this.expression == null ? Codegen.empty() : this.expression;
     }
 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

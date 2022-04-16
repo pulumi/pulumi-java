@@ -21,21 +21,21 @@ public final class TopicRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
-    public Output<String> getRuleName() {
+    public Output<String> ruleName() {
         return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<TopicRuleTagArgs>> tags;
 
-    public Output<List<TopicRuleTagArgs>> getTags() {
+    public Output<List<TopicRuleTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="topicRulePayload", required=true)
       private final Output<TopicRulePayloadArgs> topicRulePayload;
 
-    public Output<TopicRulePayloadArgs> getTopicRulePayload() {
+    public Output<TopicRulePayloadArgs> topicRulePayload() {
         return this.topicRulePayload;
     }
 

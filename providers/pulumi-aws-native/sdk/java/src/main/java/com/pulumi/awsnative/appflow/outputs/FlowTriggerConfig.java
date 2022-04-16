@@ -35,14 +35,14 @@ public final class FlowTriggerConfig {
      * Details required based on the type of trigger
      * 
     */
-    public Optional<FlowScheduledTriggerProperties> getTriggerProperties() {
+    public Optional<FlowScheduledTriggerProperties> triggerProperties() {
         return Optional.ofNullable(this.triggerProperties);
     }
     /**
      * Trigger type of the flow
      * 
     */
-    public FlowTriggerType getTriggerType() {
+    public FlowTriggerType triggerType() {
         return this.triggerType;
     }
 

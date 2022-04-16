@@ -23,10 +23,10 @@ public final class TemplateSourceEntity {
         this.sourceTemplate = sourceTemplate;
     }
 
-    public Optional<TemplateSourceAnalysis> getSourceAnalysis() {
+    public Optional<TemplateSourceAnalysis> sourceAnalysis() {
         return Optional.ofNullable(this.sourceAnalysis);
     }
-    public Optional<TemplateSourceTemplate> getSourceTemplate() {
+    public Optional<TemplateSourceTemplate> sourceTemplate() {
         return Optional.ofNullable(this.sourceTemplate);
     }
 

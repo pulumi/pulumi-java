@@ -27,13 +27,13 @@ public final class BudgetsActionDefinition {
         this.ssmActionDefinition = ssmActionDefinition;
     }
 
-    public Optional<BudgetsActionIamActionDefinition> getIamActionDefinition() {
+    public Optional<BudgetsActionIamActionDefinition> iamActionDefinition() {
         return Optional.ofNullable(this.iamActionDefinition);
     }
-    public Optional<BudgetsActionScpActionDefinition> getScpActionDefinition() {
+    public Optional<BudgetsActionScpActionDefinition> scpActionDefinition() {
         return Optional.ofNullable(this.scpActionDefinition);
     }
-    public Optional<BudgetsActionSsmActionDefinition> getSsmActionDefinition() {
+    public Optional<BudgetsActionSsmActionDefinition> ssmActionDefinition() {
         return Optional.ofNullable(this.ssmActionDefinition);
     }
 

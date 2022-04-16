@@ -16,7 +16,7 @@ public final class RuleGroupNotStatement {
         this.statement = statement;
     }
 
-    public RuleGroupStatement getStatement() {
+    public RuleGroupStatement statement() {
         return this.statement;
     }
 

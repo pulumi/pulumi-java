@@ -22,7 +22,7 @@ public final class BotAliasLocaleSettingsItemArgs extends com.pulumi.resources.R
     @Import(name="botAliasLocaleSetting", required=true)
       private final Output<BotAliasLocaleSettingsArgs> botAliasLocaleSetting;
 
-    public Output<BotAliasLocaleSettingsArgs> getBotAliasLocaleSetting() {
+    public Output<BotAliasLocaleSettingsArgs> botAliasLocaleSetting() {
         return this.botAliasLocaleSetting;
     }
 
@@ -33,7 +33,7 @@ public final class BotAliasLocaleSettingsItemArgs extends com.pulumi.resources.R
     @Import(name="localeId", required=true)
       private final Output<String> localeId;
 
-    public Output<String> getLocaleId() {
+    public Output<String> localeId() {
         return this.localeId;
     }
 

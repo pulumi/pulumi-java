@@ -38,23 +38,23 @@ public final class GetTransitGatewayVpcAttachmentResult {
         this.tags = tags;
     }
 
-    public List<String> getAddSubnetIds() {
+    public List<String> addSubnetIds() {
         return this.addSubnetIds == null ? List.of() : this.addSubnetIds;
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The options for the transit gateway vpc attachment.
      * 
     */
-    public Optional<OptionsProperties> getOptions() {
+    public Optional<OptionsProperties> options() {
         return Optional.ofNullable(this.options);
     }
-    public List<String> getRemoveSubnetIds() {
+    public List<String> removeSubnetIds() {
         return this.removeSubnetIds == null ? List.of() : this.removeSubnetIds;
     }
-    public List<TransitGatewayVpcAttachmentTag> getTags() {
+    public List<TransitGatewayVpcAttachmentTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

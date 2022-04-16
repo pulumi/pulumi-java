@@ -21,7 +21,7 @@ public final class EgressOnlyInternetGatewayArgs extends com.pulumi.resources.Re
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

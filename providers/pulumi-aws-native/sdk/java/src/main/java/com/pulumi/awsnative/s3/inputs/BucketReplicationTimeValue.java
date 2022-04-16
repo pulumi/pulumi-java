@@ -15,7 +15,7 @@ public final class BucketReplicationTimeValue extends com.pulumi.resources.Invok
     @Import(name="minutes", required=true)
       private final Integer minutes;
 
-    public Integer getMinutes() {
+    public Integer minutes() {
         return this.minutes;
     }
 

@@ -19,7 +19,7 @@ public final class OriginEndpointMssEncryption extends com.pulumi.resources.Invo
     @Import(name="spekeKeyProvider", required=true)
       private final OriginEndpointSpekeKeyProvider spekeKeyProvider;
 
-    public OriginEndpointSpekeKeyProvider getSpekeKeyProvider() {
+    public OriginEndpointSpekeKeyProvider spekeKeyProvider() {
         return this.spekeKeyProvider;
     }
 

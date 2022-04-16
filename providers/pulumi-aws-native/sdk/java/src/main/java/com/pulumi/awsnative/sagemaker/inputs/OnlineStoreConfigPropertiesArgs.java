@@ -19,14 +19,14 @@ public final class OnlineStoreConfigPropertiesArgs extends com.pulumi.resources.
     @Import(name="enableOnlineStore")
       private final @Nullable Output<Boolean> enableOnlineStore;
 
-    public Output<Boolean> getEnableOnlineStore() {
+    public Output<Boolean> enableOnlineStore() {
         return this.enableOnlineStore == null ? Codegen.empty() : this.enableOnlineStore;
     }
 
     @Import(name="securityConfig")
       private final @Nullable Output<FeatureGroupOnlineStoreSecurityConfigArgs> securityConfig;
 
-    public Output<FeatureGroupOnlineStoreSecurityConfigArgs> getSecurityConfig() {
+    public Output<FeatureGroupOnlineStoreSecurityConfigArgs> securityConfig() {
         return this.securityConfig == null ? Codegen.empty() : this.securityConfig;
     }
 

@@ -20,42 +20,42 @@ public final class InAppTemplateDefaultButtonConfigurationArgs extends com.pulum
     @Import(name="backgroundColor")
       private final @Nullable Output<String> backgroundColor;
 
-    public Output<String> getBackgroundColor() {
+    public Output<String> backgroundColor() {
         return this.backgroundColor == null ? Codegen.empty() : this.backgroundColor;
     }
 
     @Import(name="borderRadius")
       private final @Nullable Output<Integer> borderRadius;
 
-    public Output<Integer> getBorderRadius() {
+    public Output<Integer> borderRadius() {
         return this.borderRadius == null ? Codegen.empty() : this.borderRadius;
     }
 
     @Import(name="buttonAction")
       private final @Nullable Output<InAppTemplateButtonAction> buttonAction;
 
-    public Output<InAppTemplateButtonAction> getButtonAction() {
+    public Output<InAppTemplateButtonAction> buttonAction() {
         return this.buttonAction == null ? Codegen.empty() : this.buttonAction;
     }
 
     @Import(name="link")
       private final @Nullable Output<String> link;
 
-    public Output<String> getLink() {
+    public Output<String> link() {
         return this.link == null ? Codegen.empty() : this.link;
     }
 
     @Import(name="text")
       private final @Nullable Output<String> text;
 
-    public Output<String> getText() {
+    public Output<String> text() {
         return this.text == null ? Codegen.empty() : this.text;
     }
 
     @Import(name="textColor")
       private final @Nullable Output<String> textColor;
 
-    public Output<String> getTextColor() {
+    public Output<String> textColor() {
         return this.textColor == null ? Codegen.empty() : this.textColor;
     }
 

@@ -18,7 +18,7 @@ public final class FlowLookoutMetricsDestinationPropertiesArgs extends com.pulum
     @Import(name="object")
       private final @Nullable Output<String> object;
 
-    public Output<String> getObject() {
+    public Output<String> object() {
         return this.object == null ? Codegen.empty() : this.object;
     }
 

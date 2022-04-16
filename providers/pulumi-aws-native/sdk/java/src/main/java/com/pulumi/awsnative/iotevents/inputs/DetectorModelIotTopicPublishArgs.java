@@ -27,14 +27,14 @@ public final class DetectorModelIotTopicPublishArgs extends com.pulumi.resources
     @Import(name="mqttTopic", required=true)
       private final Output<String> mqttTopic;
 
-    public Output<String> getMqttTopic() {
+    public Output<String> mqttTopic() {
         return this.mqttTopic;
     }
 
     @Import(name="payload")
       private final @Nullable Output<DetectorModelPayloadArgs> payload;
 
-    public Output<DetectorModelPayloadArgs> getPayload() {
+    public Output<DetectorModelPayloadArgs> payload() {
         return this.payload == null ? Codegen.empty() : this.payload;
     }
 

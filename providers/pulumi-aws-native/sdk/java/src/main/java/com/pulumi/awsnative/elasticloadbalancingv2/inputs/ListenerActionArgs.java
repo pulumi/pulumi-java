@@ -24,56 +24,56 @@ public final class ListenerActionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="authenticateCognitoConfig")
       private final @Nullable Output<ListenerAuthenticateCognitoConfigArgs> authenticateCognitoConfig;
 
-    public Output<ListenerAuthenticateCognitoConfigArgs> getAuthenticateCognitoConfig() {
+    public Output<ListenerAuthenticateCognitoConfigArgs> authenticateCognitoConfig() {
         return this.authenticateCognitoConfig == null ? Codegen.empty() : this.authenticateCognitoConfig;
     }
 
     @Import(name="authenticateOidcConfig")
       private final @Nullable Output<ListenerAuthenticateOidcConfigArgs> authenticateOidcConfig;
 
-    public Output<ListenerAuthenticateOidcConfigArgs> getAuthenticateOidcConfig() {
+    public Output<ListenerAuthenticateOidcConfigArgs> authenticateOidcConfig() {
         return this.authenticateOidcConfig == null ? Codegen.empty() : this.authenticateOidcConfig;
     }
 
     @Import(name="fixedResponseConfig")
       private final @Nullable Output<ListenerFixedResponseConfigArgs> fixedResponseConfig;
 
-    public Output<ListenerFixedResponseConfigArgs> getFixedResponseConfig() {
+    public Output<ListenerFixedResponseConfigArgs> fixedResponseConfig() {
         return this.fixedResponseConfig == null ? Codegen.empty() : this.fixedResponseConfig;
     }
 
     @Import(name="forwardConfig")
       private final @Nullable Output<ListenerForwardConfigArgs> forwardConfig;
 
-    public Output<ListenerForwardConfigArgs> getForwardConfig() {
+    public Output<ListenerForwardConfigArgs> forwardConfig() {
         return this.forwardConfig == null ? Codegen.empty() : this.forwardConfig;
     }
 
     @Import(name="order")
       private final @Nullable Output<Integer> order;
 
-    public Output<Integer> getOrder() {
+    public Output<Integer> order() {
         return this.order == null ? Codegen.empty() : this.order;
     }
 
     @Import(name="redirectConfig")
       private final @Nullable Output<ListenerRedirectConfigArgs> redirectConfig;
 
-    public Output<ListenerRedirectConfigArgs> getRedirectConfig() {
+    public Output<ListenerRedirectConfigArgs> redirectConfig() {
         return this.redirectConfig == null ? Codegen.empty() : this.redirectConfig;
     }
 
     @Import(name="targetGroupArn")
       private final @Nullable Output<String> targetGroupArn;
 
-    public Output<String> getTargetGroupArn() {
+    public Output<String> targetGroupArn() {
         return this.targetGroupArn == null ? Codegen.empty() : this.targetGroupArn;
     }
 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

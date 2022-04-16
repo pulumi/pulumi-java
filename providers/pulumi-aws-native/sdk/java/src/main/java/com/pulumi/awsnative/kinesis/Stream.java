@@ -34,7 +34,7 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return The Amazon resource name (ARN) of the Kinesis stream
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -48,7 +48,7 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return The name of the Kinesis stream.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -62,7 +62,7 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return The number of hours for the data records that are stored in shards to remain accessible.
      * 
      */
-    public Output</* @Nullable */ Integer> getRetentionPeriodHours() {
+    public Output</* @Nullable */ Integer> retentionPeriodHours() {
         return this.retentionPeriodHours;
     }
     /**
@@ -76,7 +76,7 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return The number of shards that the stream uses. Required when StreamMode = PROVISIONED is passed.
      * 
      */
-    public Output</* @Nullable */ Integer> getShardCount() {
+    public Output</* @Nullable */ Integer> shardCount() {
         return this.shardCount;
     }
     /**
@@ -90,7 +90,7 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return When specified, enables or updates server-side encryption using an AWS KMS key for a specified stream.
      * 
      */
-    public Output</* @Nullable */ StreamEncryption> getStreamEncryption() {
+    public Output</* @Nullable */ StreamEncryption> streamEncryption() {
         return this.streamEncryption;
     }
     /**
@@ -104,7 +104,7 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return The mode in which the stream is running.
      * 
      */
-    public Output</* @Nullable */ StreamModeDetails> getStreamModeDetails() {
+    public Output</* @Nullable */ StreamModeDetails> streamModeDetails() {
         return this.streamModeDetails;
     }
     /**
@@ -118,7 +118,7 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return An arbitrary set of tags (key–value pairs) to associate with the Kinesis stream.
      * 
      */
-    public Output</* @Nullable */ List<StreamTag>> getTags() {
+    public Output</* @Nullable */ List<StreamTag>> tags() {
         return this.tags;
     }
 

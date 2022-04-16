@@ -23,14 +23,14 @@ public final class AccessPolicyResourceArgs extends com.pulumi.resources.Resourc
     @Import(name="portal")
       private final @Nullable Output<AccessPolicyPortalArgs> portal;
 
-    public Output<AccessPolicyPortalArgs> getPortal() {
+    public Output<AccessPolicyPortalArgs> portal() {
         return this.portal == null ? Codegen.empty() : this.portal;
     }
 
     @Import(name="project")
       private final @Nullable Output<AccessPolicyProjectArgs> project;
 
-    public Output<AccessPolicyProjectArgs> getProject() {
+    public Output<AccessPolicyProjectArgs> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

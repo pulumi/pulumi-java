@@ -19,21 +19,21 @@ public final class BranchBasicAuthConfigArgs extends com.pulumi.resources.Resour
     @Import(name="enableBasicAuth")
       private final @Nullable Output<Boolean> enableBasicAuth;
 
-    public Output<Boolean> getEnableBasicAuth() {
+    public Output<Boolean> enableBasicAuth() {
         return this.enableBasicAuth == null ? Codegen.empty() : this.enableBasicAuth;
     }
 
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 

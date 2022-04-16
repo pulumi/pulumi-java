@@ -41,7 +41,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Provide artifact configuration
      * 
      */
-    public Output</* @Nullable */ CanaryArtifactConfig> getArtifactConfig() {
+    public Output</* @Nullable */ CanaryArtifactConfig> artifactConfig() {
         return this.artifactConfig;
     }
     /**
@@ -55,7 +55,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Provide the s3 bucket output location for test results
      * 
      */
-    public Output<String> getArtifactS3Location() {
+    public Output<String> artifactS3Location() {
         return this.artifactS3Location;
     }
     /**
@@ -69,7 +69,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Provide the canary script source
      * 
      */
-    public Output<CanaryCode> getCode() {
+    public Output<CanaryCode> code() {
         return this.code;
     }
     /**
@@ -83,7 +83,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Lambda Execution role used to run your canaries
      * 
      */
-    public Output<String> getExecutionRoleArn() {
+    public Output<String> executionRoleArn() {
         return this.executionRoleArn;
     }
     /**
@@ -97,7 +97,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Retention period of failed canary runs represented in number of days
      * 
      */
-    public Output</* @Nullable */ Integer> getFailureRetentionPeriod() {
+    public Output</* @Nullable */ Integer> failureRetentionPeriod() {
         return this.failureRetentionPeriod;
     }
     /**
@@ -111,7 +111,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Name of the canary.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -125,7 +125,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Provide canary run configuration
      * 
      */
-    public Output</* @Nullable */ CanaryRunConfig> getRunConfig() {
+    public Output</* @Nullable */ CanaryRunConfig> runConfig() {
         return this.runConfig;
     }
     /**
@@ -139,7 +139,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Runtime version of Synthetics Library
      * 
      */
-    public Output<String> getRuntimeVersion() {
+    public Output<String> runtimeVersion() {
         return this.runtimeVersion;
     }
     /**
@@ -153,7 +153,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Frequency to run your canaries
      * 
      */
-    public Output<CanarySchedule> getSchedule() {
+    public Output<CanarySchedule> schedule() {
         return this.schedule;
     }
     /**
@@ -167,7 +167,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Runs canary if set to True. Default is False
      * 
      */
-    public Output<Boolean> getStartCanaryAfterCreation() {
+    public Output<Boolean> startCanaryAfterCreation() {
         return this.startCanaryAfterCreation;
     }
     /**
@@ -181,7 +181,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return State of the canary
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -195,13 +195,13 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Retention period of successful canary runs represented in number of days
      * 
      */
-    public Output</* @Nullable */ Integer> getSuccessRetentionPeriod() {
+    public Output</* @Nullable */ Integer> successRetentionPeriod() {
         return this.successRetentionPeriod;
     }
     @Export(name="tags", type=List.class, parameters={CanaryTag.class})
     private Output</* @Nullable */ List<CanaryTag>> tags;
 
-    public Output</* @Nullable */ List<CanaryTag>> getTags() {
+    public Output</* @Nullable */ List<CanaryTag>> tags() {
         return this.tags;
     }
     /**
@@ -215,7 +215,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Provide VPC Configuration if enabled.
      * 
      */
-    public Output</* @Nullable */ CanaryVPCConfig> getVPCConfig() {
+    public Output</* @Nullable */ CanaryVPCConfig> vPCConfig() {
         return this.vPCConfig;
     }
     /**
@@ -229,7 +229,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Visual reference configuration for visual testing
      * 
      */
-    public Output</* @Nullable */ CanaryVisualReference> getVisualReference() {
+    public Output</* @Nullable */ CanaryVisualReference> visualReference() {
         return this.visualReference;
     }
 

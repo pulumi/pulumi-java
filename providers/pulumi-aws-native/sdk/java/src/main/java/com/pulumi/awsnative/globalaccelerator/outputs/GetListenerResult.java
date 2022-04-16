@@ -48,24 +48,24 @@ public final class GetListenerResult {
      * Client affinity lets you direct all requests from a user to the same endpoint.
      * 
     */
-    public Optional<ListenerClientAffinity> getClientAffinity() {
+    public Optional<ListenerClientAffinity> clientAffinity() {
         return Optional.ofNullable(this.clientAffinity);
     }
     /**
      * The Amazon Resource Name (ARN) of the listener.
      * 
     */
-    public Optional<String> getListenerArn() {
+    public Optional<String> listenerArn() {
         return Optional.ofNullable(this.listenerArn);
     }
-    public List<ListenerPortRange> getPortRanges() {
+    public List<ListenerPortRange> portRanges() {
         return this.portRanges == null ? List.of() : this.portRanges;
     }
     /**
      * The protocol for the listener.
      * 
     */
-    public Optional<ListenerProtocol> getProtocol() {
+    public Optional<ListenerProtocol> protocol() {
         return Optional.ofNullable(this.protocol);
     }
 

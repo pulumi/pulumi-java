@@ -36,22 +36,22 @@ public final class GetVPCEConfigurationResult {
         this.vpceServiceName = vpceServiceName;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getServiceDnsName() {
+    public Optional<String> serviceDnsName() {
         return Optional.ofNullable(this.serviceDnsName);
     }
-    public List<VPCEConfigurationTag> getTags() {
+    public List<VPCEConfigurationTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
-    public Optional<String> getVpceConfigurationDescription() {
+    public Optional<String> vpceConfigurationDescription() {
         return Optional.ofNullable(this.vpceConfigurationDescription);
     }
-    public Optional<String> getVpceConfigurationName() {
+    public Optional<String> vpceConfigurationName() {
         return Optional.ofNullable(this.vpceConfigurationName);
     }
-    public Optional<String> getVpceServiceName() {
+    public Optional<String> vpceServiceName() {
         return Optional.ofNullable(this.vpceServiceName);
     }
 

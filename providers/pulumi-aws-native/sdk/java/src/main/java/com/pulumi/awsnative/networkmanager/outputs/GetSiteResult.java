@@ -58,35 +58,35 @@ public final class GetSiteResult {
      * The description of the site.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The location of the site.
      * 
     */
-    public Optional<SiteLocation> getLocation() {
+    public Optional<SiteLocation> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The Amazon Resource Name (ARN) of the site.
      * 
     */
-    public Optional<String> getSiteArn() {
+    public Optional<String> siteArn() {
         return Optional.ofNullable(this.siteArn);
     }
     /**
      * The ID of the site.
      * 
     */
-    public Optional<String> getSiteId() {
+    public Optional<String> siteId() {
         return Optional.ofNullable(this.siteId);
     }
     /**
      * The tags for the site.
      * 
     */
-    public List<SiteTag> getTags() {
+    public List<SiteTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

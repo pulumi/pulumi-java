@@ -19,7 +19,7 @@ public final class PackagingConfigurationCmafEncryption extends com.pulumi.resou
     @Import(name="spekeKeyProvider", required=true)
       private final PackagingConfigurationSpekeKeyProvider spekeKeyProvider;
 
-    public PackagingConfigurationSpekeKeyProvider getSpekeKeyProvider() {
+    public PackagingConfigurationSpekeKeyProvider spekeKeyProvider() {
         return this.spekeKeyProvider;
     }
 

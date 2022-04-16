@@ -26,28 +26,28 @@ public final class DatasetParameterArgs extends com.pulumi.resources.ResourceArg
     @Import(name="createColumn")
       private final @Nullable Output<Boolean> createColumn;
 
-    public Output<Boolean> getCreateColumn() {
+    public Output<Boolean> createColumn() {
         return this.createColumn == null ? Codegen.empty() : this.createColumn;
     }
 
     @Import(name="datetimeOptions")
       private final @Nullable Output<DatasetDatetimeOptionsArgs> datetimeOptions;
 
-    public Output<DatasetDatetimeOptionsArgs> getDatetimeOptions() {
+    public Output<DatasetDatetimeOptionsArgs> datetimeOptions() {
         return this.datetimeOptions == null ? Codegen.empty() : this.datetimeOptions;
     }
 
     @Import(name="filter")
       private final @Nullable Output<DatasetFilterExpressionArgs> filter;
 
-    public Output<DatasetFilterExpressionArgs> getFilter() {
+    public Output<DatasetFilterExpressionArgs> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -58,7 +58,7 @@ public final class DatasetParameterArgs extends com.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
       private final Output<DatasetParameterType> type;
 
-    public Output<DatasetParameterType> getType() {
+    public Output<DatasetParameterType> type() {
         return this.type;
     }
 

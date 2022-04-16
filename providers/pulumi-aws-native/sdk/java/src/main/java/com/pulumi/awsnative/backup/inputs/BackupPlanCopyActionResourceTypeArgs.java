@@ -19,14 +19,14 @@ public final class BackupPlanCopyActionResourceTypeArgs extends com.pulumi.resou
     @Import(name="destinationBackupVaultArn", required=true)
       private final Output<String> destinationBackupVaultArn;
 
-    public Output<String> getDestinationBackupVaultArn() {
+    public Output<String> destinationBackupVaultArn() {
         return this.destinationBackupVaultArn;
     }
 
     @Import(name="lifecycle")
       private final @Nullable Output<BackupPlanLifecycleResourceTypeArgs> lifecycle;
 
-    public Output<BackupPlanLifecycleResourceTypeArgs> getLifecycle() {
+    public Output<BackupPlanLifecycleResourceTypeArgs> lifecycle() {
         return this.lifecycle == null ? Codegen.empty() : this.lifecycle;
     }
 

@@ -18,14 +18,14 @@ public final class ExperimentTreatmentToWeightArgs extends com.pulumi.resources.
     @Import(name="splitWeight", required=true)
       private final Output<Integer> splitWeight;
 
-    public Output<Integer> getSplitWeight() {
+    public Output<Integer> splitWeight() {
         return this.splitWeight;
     }
 
     @Import(name="treatment", required=true)
       private final Output<String> treatment;
 
-    public Output<String> getTreatment() {
+    public Output<String> treatment() {
         return this.treatment;
     }
 

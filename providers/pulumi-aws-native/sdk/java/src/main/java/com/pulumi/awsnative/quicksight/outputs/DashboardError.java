@@ -31,10 +31,10 @@ public final class DashboardError {
      * <p>Message.</p>
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
-    public Optional<DashboardErrorType> getType() {
+    public Optional<DashboardErrorType> type() {
         return Optional.ofNullable(this.type);
     }
 

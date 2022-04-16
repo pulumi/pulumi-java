@@ -23,7 +23,7 @@ public final class ProjectSampleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="size")
       private final @Nullable Output<Integer> size;
 
-    public Output<Integer> getSize() {
+    public Output<Integer> size() {
         return this.size == null ? Codegen.empty() : this.size;
     }
 
@@ -34,7 +34,7 @@ public final class ProjectSampleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<ProjectSampleType> type;
 
-    public Output<ProjectSampleType> getType() {
+    public Output<ProjectSampleType> type() {
         return this.type;
     }
 

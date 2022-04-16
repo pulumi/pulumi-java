@@ -35,7 +35,7 @@ public class PackagingConfiguration extends com.pulumi.resources.CustomResource 
      * @return The ARN of the PackagingConfiguration.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -49,7 +49,7 @@ public class PackagingConfiguration extends com.pulumi.resources.CustomResource 
      * @return A CMAF packaging configuration.
      * 
      */
-    public Output</* @Nullable */ PackagingConfigurationCmafPackage> getCmafPackage() {
+    public Output</* @Nullable */ PackagingConfigurationCmafPackage> cmafPackage() {
         return this.cmafPackage;
     }
     /**
@@ -63,7 +63,7 @@ public class PackagingConfiguration extends com.pulumi.resources.CustomResource 
      * @return A Dynamic Adaptive Streaming over HTTP (DASH) packaging configuration.
      * 
      */
-    public Output</* @Nullable */ PackagingConfigurationDashPackage> getDashPackage() {
+    public Output</* @Nullable */ PackagingConfigurationDashPackage> dashPackage() {
         return this.dashPackage;
     }
     /**
@@ -77,7 +77,7 @@ public class PackagingConfiguration extends com.pulumi.resources.CustomResource 
      * @return An HTTP Live Streaming (HLS) packaging configuration.
      * 
      */
-    public Output</* @Nullable */ PackagingConfigurationHlsPackage> getHlsPackage() {
+    public Output</* @Nullable */ PackagingConfigurationHlsPackage> hlsPackage() {
         return this.hlsPackage;
     }
     /**
@@ -91,7 +91,7 @@ public class PackagingConfiguration extends com.pulumi.resources.CustomResource 
      * @return A Microsoft Smooth Streaming (MSS) PackagingConfiguration.
      * 
      */
-    public Output</* @Nullable */ PackagingConfigurationMssPackage> getMssPackage() {
+    public Output</* @Nullable */ PackagingConfigurationMssPackage> mssPackage() {
         return this.mssPackage;
     }
     /**
@@ -105,7 +105,7 @@ public class PackagingConfiguration extends com.pulumi.resources.CustomResource 
      * @return The ID of a PackagingGroup.
      * 
      */
-    public Output<String> getPackagingGroupId() {
+    public Output<String> packagingGroupId() {
         return this.packagingGroupId;
     }
     /**
@@ -119,7 +119,7 @@ public class PackagingConfiguration extends com.pulumi.resources.CustomResource 
      * @return A collection of tags associated with a resource
      * 
      */
-    public Output</* @Nullable */ List<PackagingConfigurationTag>> getTags() {
+    public Output</* @Nullable */ List<PackagingConfigurationTag>> tags() {
         return this.tags;
     }
 

@@ -29,16 +29,16 @@ public final class GetRegistryPolicyResult {
         this.revisionId = revisionId;
     }
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<Object> getPolicy() {
+    public Optional<Object> policy() {
         return Optional.ofNullable(this.policy);
     }
-    public Optional<String> getRegistryName() {
+    public Optional<String> registryName() {
         return Optional.ofNullable(this.registryName);
     }
-    public Optional<String> getRevisionId() {
+    public Optional<String> revisionId() {
         return Optional.ofNullable(this.revisionId);
     }
 

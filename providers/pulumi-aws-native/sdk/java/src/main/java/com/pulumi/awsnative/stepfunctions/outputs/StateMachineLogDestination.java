@@ -18,7 +18,7 @@ public final class StateMachineLogDestination {
         this.cloudWatchLogsLogGroup = cloudWatchLogsLogGroup;
     }
 
-    public Optional<StateMachineCloudWatchLogsLogGroup> getCloudWatchLogsLogGroup() {
+    public Optional<StateMachineCloudWatchLogsLogGroup> cloudWatchLogsLogGroup() {
         return Optional.ofNullable(this.cloudWatchLogsLogGroup);
     }
 

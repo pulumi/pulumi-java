@@ -28,7 +28,7 @@ public final class TaskSetAwsVpcConfigurationArgs extends com.pulumi.resources.R
     @Import(name="assignPublicIp")
       private final @Nullable Output<TaskSetAwsVpcConfigurationAssignPublicIp> assignPublicIp;
 
-    public Output<TaskSetAwsVpcConfigurationAssignPublicIp> getAssignPublicIp() {
+    public Output<TaskSetAwsVpcConfigurationAssignPublicIp> assignPublicIp() {
         return this.assignPublicIp == null ? Codegen.empty() : this.assignPublicIp;
     }
 
@@ -39,7 +39,7 @@ public final class TaskSetAwsVpcConfigurationArgs extends com.pulumi.resources.R
     @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> getSecurityGroups() {
+    public Output<List<String>> securityGroups() {
         return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
@@ -50,7 +50,7 @@ public final class TaskSetAwsVpcConfigurationArgs extends com.pulumi.resources.R
     @Import(name="subnets", required=true)
       private final Output<List<String>> subnets;
 
-    public Output<List<String>> getSubnets() {
+    public Output<List<String>> subnets() {
         return this.subnets;
     }
 

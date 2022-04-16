@@ -20,10 +20,10 @@ public final class ConformancePackInputParameter {
         this.parameterValue = parameterValue;
     }
 
-    public String getParameterName() {
+    public String parameterName() {
         return this.parameterName;
     }
-    public String getParameterValue() {
+    public String parameterValue() {
         return this.parameterValue;
     }
 

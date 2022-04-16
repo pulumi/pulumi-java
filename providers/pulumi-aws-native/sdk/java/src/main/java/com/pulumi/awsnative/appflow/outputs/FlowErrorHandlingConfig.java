@@ -26,13 +26,13 @@ public final class FlowErrorHandlingConfig {
         this.failOnFirstError = failOnFirstError;
     }
 
-    public Optional<String> getBucketName() {
+    public Optional<String> bucketName() {
         return Optional.ofNullable(this.bucketName);
     }
-    public Optional<String> getBucketPrefix() {
+    public Optional<String> bucketPrefix() {
         return Optional.ofNullable(this.bucketPrefix);
     }
-    public Optional<Boolean> getFailOnFirstError() {
+    public Optional<Boolean> failOnFirstError() {
         return Optional.ofNullable(this.failOnFirstError);
     }
 

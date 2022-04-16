@@ -18,21 +18,21 @@ public final class DestinationOptionsPropertiesArgs extends com.pulumi.resources
     @Import(name="fileFormat", required=true)
       private final Output<FlowLogDestinationOptionsPropertiesFileFormat> fileFormat;
 
-    public Output<FlowLogDestinationOptionsPropertiesFileFormat> getFileFormat() {
+    public Output<FlowLogDestinationOptionsPropertiesFileFormat> fileFormat() {
         return this.fileFormat;
     }
 
     @Import(name="hiveCompatiblePartitions", required=true)
       private final Output<Boolean> hiveCompatiblePartitions;
 
-    public Output<Boolean> getHiveCompatiblePartitions() {
+    public Output<Boolean> hiveCompatiblePartitions() {
         return this.hiveCompatiblePartitions;
     }
 
     @Import(name="perHourPartition", required=true)
       private final Output<Boolean> perHourPartition;
 
-    public Output<Boolean> getPerHourPartition() {
+    public Output<Boolean> perHourPartition() {
         return this.perHourPartition;
     }
 

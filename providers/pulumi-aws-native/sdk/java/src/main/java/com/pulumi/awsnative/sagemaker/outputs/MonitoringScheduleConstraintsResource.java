@@ -26,7 +26,7 @@ public final class MonitoringScheduleConstraintsResource {
      * The Amazon S3 URI for baseline constraint file in Amazon S3 that the current monitoring job should validated against.
      * 
     */
-    public Optional<String> getS3Uri() {
+    public Optional<String> s3Uri() {
         return Optional.ofNullable(this.s3Uri);
     }
 

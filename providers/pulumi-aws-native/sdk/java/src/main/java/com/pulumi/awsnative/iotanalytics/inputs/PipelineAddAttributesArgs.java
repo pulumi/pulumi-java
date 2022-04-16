@@ -19,21 +19,21 @@ public final class PipelineAddAttributesArgs extends com.pulumi.resources.Resour
     @Import(name="attributes", required=true)
       private final Output<Object> attributes;
 
-    public Output<Object> getAttributes() {
+    public Output<Object> attributes() {
         return this.attributes;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="next")
       private final @Nullable Output<String> next;
 
-    public Output<String> getNext() {
+    public Output<String> next() {
         return this.next == null ? Codegen.empty() : this.next;
     }
 

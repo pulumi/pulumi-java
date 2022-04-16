@@ -22,10 +22,10 @@ public final class SpotFleetNetworkInterfaceCountRequest {
         this.min = min;
     }
 
-    public Optional<Integer> getMax() {
+    public Optional<Integer> max() {
         return Optional.ofNullable(this.max);
     }
-    public Optional<Integer> getMin() {
+    public Optional<Integer> min() {
         return Optional.ofNullable(this.min);
     }
 

@@ -34,14 +34,14 @@ public final class TransitGatewayPeeringAttachmentTag {
      * The key of the tag. Constraints: Tag keys are case-sensitive and accept a maximum of 127 Unicode characters. May not begin with aws:.
      * 
     */
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
      * The value of the tag. Constraints: Tag values are case-sensitive and accept a maximum of 255 Unicode characters.
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

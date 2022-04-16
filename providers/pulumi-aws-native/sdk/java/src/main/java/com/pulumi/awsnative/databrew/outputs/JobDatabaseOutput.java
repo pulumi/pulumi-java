@@ -35,21 +35,21 @@ public final class JobDatabaseOutput {
         this.glueConnectionName = glueConnectionName;
     }
 
-    public JobDatabaseTableOutputOptions getDatabaseOptions() {
+    public JobDatabaseTableOutputOptions databaseOptions() {
         return this.databaseOptions;
     }
     /**
      * Database table name
      * 
     */
-    public Optional<JobDatabaseOutputDatabaseOutputMode> getDatabaseOutputMode() {
+    public Optional<JobDatabaseOutputDatabaseOutputMode> databaseOutputMode() {
         return Optional.ofNullable(this.databaseOutputMode);
     }
     /**
      * Glue connection name
      * 
     */
-    public String getGlueConnectionName() {
+    public String glueConnectionName() {
         return this.glueConnectionName;
     }
 

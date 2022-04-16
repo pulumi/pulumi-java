@@ -23,7 +23,7 @@ public final class SentimentAnalysisSettingsProperties extends com.pulumi.resour
     @Import(name="detectSentiment", required=true)
       private final Boolean detectSentiment;
 
-    public Boolean getDetectSentiment() {
+    public Boolean detectSentiment() {
         return this.detectSentiment;
     }
 

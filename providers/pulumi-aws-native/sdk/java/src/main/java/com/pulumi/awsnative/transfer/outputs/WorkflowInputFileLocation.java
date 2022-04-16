@@ -18,7 +18,7 @@ public final class WorkflowInputFileLocation {
         this.s3FileLocation = s3FileLocation;
     }
 
-    public Optional<WorkflowS3InputFileLocation> getS3FileLocation() {
+    public Optional<WorkflowS3InputFileLocation> s3FileLocation() {
         return Optional.ofNullable(this.s3FileLocation);
     }
 

@@ -20,10 +20,10 @@ public final class DomainSubDomainSetting {
         this.prefix = prefix;
     }
 
-    public String getBranchName() {
+    public String branchName() {
         return this.branchName;
     }
-    public String getPrefix() {
+    public String prefix() {
         return this.prefix;
     }
 

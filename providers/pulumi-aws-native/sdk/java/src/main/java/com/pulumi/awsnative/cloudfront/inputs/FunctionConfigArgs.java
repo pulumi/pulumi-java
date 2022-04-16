@@ -17,14 +17,14 @@ public final class FunctionConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="comment", required=true)
       private final Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment;
     }
 
     @Import(name="runtime", required=true)
       private final Output<String> runtime;
 
-    public Output<String> getRuntime() {
+    public Output<String> runtime() {
         return this.runtime;
     }
 

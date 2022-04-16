@@ -15,14 +15,14 @@ public final class DatasetIotEventsDestinationConfiguration extends com.pulumi.r
     @Import(name="inputName", required=true)
       private final String inputName;
 
-    public String getInputName() {
+    public String inputName() {
         return this.inputName;
     }
 
     @Import(name="roleArn", required=true)
       private final String roleArn;
 
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 

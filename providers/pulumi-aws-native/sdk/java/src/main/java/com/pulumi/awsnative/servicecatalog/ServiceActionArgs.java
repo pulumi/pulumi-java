@@ -22,35 +22,35 @@ public final class ServiceActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="acceptLanguage")
       private final @Nullable Output<ServiceActionAcceptLanguage> acceptLanguage;
 
-    public Output<ServiceActionAcceptLanguage> getAcceptLanguage() {
+    public Output<ServiceActionAcceptLanguage> acceptLanguage() {
         return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
     }
 
     @Import(name="definition", required=true)
       private final Output<List<ServiceActionDefinitionParameterArgs>> definition;
 
-    public Output<List<ServiceActionDefinitionParameterArgs>> getDefinition() {
+    public Output<List<ServiceActionDefinitionParameterArgs>> definition() {
         return this.definition;
     }
 
     @Import(name="definitionType", required=true)
       private final Output<ServiceActionDefinitionType> definitionType;
 
-    public Output<ServiceActionDefinitionType> getDefinitionType() {
+    public Output<ServiceActionDefinitionType> definitionType() {
         return this.definitionType;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

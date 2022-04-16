@@ -27,14 +27,14 @@ public final class RuleGroupJsonMatchPattern extends com.pulumi.resources.Invoke
     @Import(name="all")
       private final @Nullable Object all;
 
-    public Optional<Object> getAll() {
+    public Optional<Object> all() {
         return this.all == null ? Optional.empty() : Optional.ofNullable(this.all);
     }
 
     @Import(name="includedPaths")
       private final @Nullable List<String> includedPaths;
 
-    public List<String> getIncludedPaths() {
+    public List<String> includedPaths() {
         return this.includedPaths == null ? List.of() : this.includedPaths;
     }
 

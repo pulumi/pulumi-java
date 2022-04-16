@@ -24,7 +24,7 @@ public final class DetectorModelDynamoDBv2 extends com.pulumi.resources.InvokeAr
     @Import(name="payload")
       private final @Nullable DetectorModelPayload payload;
 
-    public Optional<DetectorModelPayload> getPayload() {
+    public Optional<DetectorModelPayload> payload() {
         return this.payload == null ? Optional.empty() : Optional.ofNullable(this.payload);
     }
 
@@ -35,7 +35,7 @@ public final class DetectorModelDynamoDBv2 extends com.pulumi.resources.InvokeAr
     @Import(name="tableName", required=true)
       private final String tableName;
 
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
 

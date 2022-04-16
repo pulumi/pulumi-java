@@ -28,7 +28,7 @@ public final class TaskDefinitionHealthCheckArgs extends com.pulumi.resources.Re
     @Import(name="command")
       private final @Nullable Output<List<String>> command;
 
-    public Output<List<String>> getCommand() {
+    public Output<List<String>> command() {
         return this.command == null ? Codegen.empty() : this.command;
     }
 
@@ -39,7 +39,7 @@ public final class TaskDefinitionHealthCheckArgs extends com.pulumi.resources.Re
     @Import(name="interval")
       private final @Nullable Output<Integer> interval;
 
-    public Output<Integer> getInterval() {
+    public Output<Integer> interval() {
         return this.interval == null ? Codegen.empty() : this.interval;
     }
 
@@ -50,7 +50,7 @@ public final class TaskDefinitionHealthCheckArgs extends com.pulumi.resources.Re
     @Import(name="retries")
       private final @Nullable Output<Integer> retries;
 
-    public Output<Integer> getRetries() {
+    public Output<Integer> retries() {
         return this.retries == null ? Codegen.empty() : this.retries;
     }
 
@@ -61,7 +61,7 @@ public final class TaskDefinitionHealthCheckArgs extends com.pulumi.resources.Re
     @Import(name="startPeriod")
       private final @Nullable Output<Integer> startPeriod;
 
-    public Output<Integer> getStartPeriod() {
+    public Output<Integer> startPeriod() {
         return this.startPeriod == null ? Codegen.empty() : this.startPeriod;
     }
 
@@ -72,7 +72,7 @@ public final class TaskDefinitionHealthCheckArgs extends com.pulumi.resources.Re
     @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;
 
-    public Output<Integer> getTimeout() {
+    public Output<Integer> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 

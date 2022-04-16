@@ -23,10 +23,10 @@ public final class BucketMetrics {
         this.status = status;
     }
 
-    public Optional<BucketReplicationTimeValue> getEventThreshold() {
+    public Optional<BucketReplicationTimeValue> eventThreshold() {
         return Optional.ofNullable(this.eventThreshold);
     }
-    public BucketMetricsStatus getStatus() {
+    public BucketMetricsStatus status() {
         return this.status;
     }
 

@@ -26,13 +26,13 @@ public final class TaskDefinitionDevice {
         this.permissions = permissions;
     }
 
-    public Optional<String> getContainerPath() {
+    public Optional<String> containerPath() {
         return Optional.ofNullable(this.containerPath);
     }
-    public Optional<String> getHostPath() {
+    public Optional<String> hostPath() {
         return Optional.ofNullable(this.hostPath);
     }
-    public List<String> getPermissions() {
+    public List<String> permissions() {
         return this.permissions == null ? List.of() : this.permissions;
     }
 

@@ -16,7 +16,7 @@ public final class LicenseProvisionalConfiguration {
         this.maxTimeToLiveInMinutes = maxTimeToLiveInMinutes;
     }
 
-    public Integer getMaxTimeToLiveInMinutes() {
+    public Integer maxTimeToLiveInMinutes() {
         return this.maxTimeToLiveInMinutes;
     }
 

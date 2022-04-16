@@ -25,13 +25,13 @@ public final class AssessmentAWSAccount {
         this.name = name;
     }
 
-    public Optional<String> getEmailAddress() {
+    public Optional<String> emailAddress() {
         return Optional.ofNullable(this.emailAddress);
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

@@ -22,7 +22,7 @@ public final class WebACLCaptchaActionArgs extends com.pulumi.resources.Resource
     @Import(name="customRequestHandling")
       private final @Nullable Output<WebACLCustomRequestHandlingArgs> customRequestHandling;
 
-    public Output<WebACLCustomRequestHandlingArgs> getCustomRequestHandling() {
+    public Output<WebACLCustomRequestHandlingArgs> customRequestHandling() {
         return this.customRequestHandling == null ? Codegen.empty() : this.customRequestHandling;
     }
 

@@ -16,7 +16,7 @@ public final class FleetCertificateConfiguration {
         this.certificateType = certificateType;
     }
 
-    public FleetCertificateConfigurationCertificateType getCertificateType() {
+    public FleetCertificateConfigurationCertificateType certificateType() {
         return this.certificateType;
     }
 

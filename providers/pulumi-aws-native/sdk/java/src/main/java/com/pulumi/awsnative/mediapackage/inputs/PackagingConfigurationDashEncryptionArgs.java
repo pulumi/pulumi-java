@@ -21,7 +21,7 @@ public final class PackagingConfigurationDashEncryptionArgs extends com.pulumi.r
     @Import(name="spekeKeyProvider", required=true)
       private final Output<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider;
 
-    public Output<PackagingConfigurationSpekeKeyProviderArgs> getSpekeKeyProvider() {
+    public Output<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider() {
         return this.spekeKeyProvider;
     }
 

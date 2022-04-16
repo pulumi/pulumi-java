@@ -29,16 +29,16 @@ public final class PipelineLambda {
         this.next = next;
     }
 
-    public Integer getBatchSize() {
+    public Integer batchSize() {
         return this.batchSize;
     }
-    public String getLambdaName() {
+    public String lambdaName() {
         return this.lambdaName;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getNext() {
+    public Optional<String> next() {
         return Optional.ofNullable(this.next);
     }
 

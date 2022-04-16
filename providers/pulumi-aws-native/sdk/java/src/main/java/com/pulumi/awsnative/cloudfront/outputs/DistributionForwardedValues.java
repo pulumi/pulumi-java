@@ -31,16 +31,16 @@ public final class DistributionForwardedValues {
         this.queryStringCacheKeys = queryStringCacheKeys;
     }
 
-    public Optional<DistributionCookies> getCookies() {
+    public Optional<DistributionCookies> cookies() {
         return Optional.ofNullable(this.cookies);
     }
-    public List<String> getHeaders() {
+    public List<String> headers() {
         return this.headers == null ? List.of() : this.headers;
     }
-    public Boolean getQueryString() {
+    public Boolean queryString() {
         return this.queryString;
     }
-    public List<String> getQueryStringCacheKeys() {
+    public List<String> queryStringCacheKeys() {
         return this.queryStringCacheKeys == null ? List.of() : this.queryStringCacheKeys;
     }
 

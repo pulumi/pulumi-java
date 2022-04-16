@@ -41,21 +41,21 @@ public final class TemplateColumnSchema {
      * <p>The data type of the column schema.</p>
      * 
     */
-    public Optional<String> getDataType() {
+    public Optional<String> dataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
      * <p>The geographic role of the column schema.</p>
      * 
     */
-    public Optional<String> getGeographicRole() {
+    public Optional<String> geographicRole() {
         return Optional.ofNullable(this.geographicRole);
     }
     /**
      * <p>The name of the column schema.</p>
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

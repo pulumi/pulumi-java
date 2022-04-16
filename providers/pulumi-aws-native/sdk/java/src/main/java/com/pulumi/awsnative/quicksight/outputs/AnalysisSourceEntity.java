@@ -18,7 +18,7 @@ public final class AnalysisSourceEntity {
         this.sourceTemplate = sourceTemplate;
     }
 
-    public Optional<AnalysisSourceTemplate> getSourceTemplate() {
+    public Optional<AnalysisSourceTemplate> sourceTemplate() {
         return Optional.ofNullable(this.sourceTemplate);
     }
 

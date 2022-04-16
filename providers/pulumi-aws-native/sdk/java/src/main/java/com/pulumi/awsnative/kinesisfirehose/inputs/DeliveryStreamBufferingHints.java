@@ -17,14 +17,14 @@ public final class DeliveryStreamBufferingHints extends com.pulumi.resources.Inv
     @Import(name="intervalInSeconds")
       private final @Nullable Integer intervalInSeconds;
 
-    public Optional<Integer> getIntervalInSeconds() {
+    public Optional<Integer> intervalInSeconds() {
         return this.intervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.intervalInSeconds);
     }
 
     @Import(name="sizeInMBs")
       private final @Nullable Integer sizeInMBs;
 
-    public Optional<Integer> getSizeInMBs() {
+    public Optional<Integer> sizeInMBs() {
         return this.sizeInMBs == null ? Optional.empty() : Optional.ofNullable(this.sizeInMBs);
     }
 

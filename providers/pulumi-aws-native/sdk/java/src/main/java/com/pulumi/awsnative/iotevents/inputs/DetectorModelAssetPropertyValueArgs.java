@@ -28,21 +28,21 @@ public final class DetectorModelAssetPropertyValueArgs extends com.pulumi.resour
     @Import(name="quality")
       private final @Nullable Output<String> quality;
 
-    public Output<String> getQuality() {
+    public Output<String> quality() {
         return this.quality == null ? Codegen.empty() : this.quality;
     }
 
     @Import(name="timestamp")
       private final @Nullable Output<DetectorModelAssetPropertyTimestampArgs> timestamp;
 
-    public Output<DetectorModelAssetPropertyTimestampArgs> getTimestamp() {
+    public Output<DetectorModelAssetPropertyTimestampArgs> timestamp() {
         return this.timestamp == null ? Codegen.empty() : this.timestamp;
     }
 
     @Import(name="value", required=true)
       private final Output<DetectorModelAssetPropertyVariantArgs> value;
 
-    public Output<DetectorModelAssetPropertyVariantArgs> getValue() {
+    public Output<DetectorModelAssetPropertyVariantArgs> value() {
         return this.value;
     }
 

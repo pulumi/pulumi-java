@@ -25,7 +25,7 @@ public final class TrailEventSelector extends com.pulumi.resources.InvokeArgs {
     @Import(name="dataResources")
       private final @Nullable List<TrailDataResource> dataResources;
 
-    public List<TrailDataResource> getDataResources() {
+    public List<TrailDataResource> dataResources() {
         return this.dataResources == null ? List.of() : this.dataResources;
     }
 
@@ -36,7 +36,7 @@ public final class TrailEventSelector extends com.pulumi.resources.InvokeArgs {
     @Import(name="excludeManagementEventSources")
       private final @Nullable List<String> excludeManagementEventSources;
 
-    public List<String> getExcludeManagementEventSources() {
+    public List<String> excludeManagementEventSources() {
         return this.excludeManagementEventSources == null ? List.of() : this.excludeManagementEventSources;
     }
 
@@ -47,7 +47,7 @@ public final class TrailEventSelector extends com.pulumi.resources.InvokeArgs {
     @Import(name="includeManagementEvents")
       private final @Nullable Boolean includeManagementEvents;
 
-    public Optional<Boolean> getIncludeManagementEvents() {
+    public Optional<Boolean> includeManagementEvents() {
         return this.includeManagementEvents == null ? Optional.empty() : Optional.ofNullable(this.includeManagementEvents);
     }
 
@@ -58,7 +58,7 @@ public final class TrailEventSelector extends com.pulumi.resources.InvokeArgs {
     @Import(name="readWriteType")
       private final @Nullable TrailEventSelectorReadWriteType readWriteType;
 
-    public Optional<TrailEventSelectorReadWriteType> getReadWriteType() {
+    public Optional<TrailEventSelectorReadWriteType> readWriteType() {
         return this.readWriteType == null ? Optional.empty() : Optional.ofNullable(this.readWriteType);
     }
 

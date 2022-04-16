@@ -16,7 +16,7 @@ public final class MonitoringScheduleMonitoringResources {
         this.clusterConfig = clusterConfig;
     }
 
-    public MonitoringScheduleClusterConfig getClusterConfig() {
+    public MonitoringScheduleClusterConfig clusterConfig() {
         return this.clusterConfig;
     }
 

@@ -19,21 +19,21 @@ public final class TaskDefinitionPortMappingArgs extends com.pulumi.resources.Re
     @Import(name="containerPort")
       private final @Nullable Output<Integer> containerPort;
 
-    public Output<Integer> getContainerPort() {
+    public Output<Integer> containerPort() {
         return this.containerPort == null ? Codegen.empty() : this.containerPort;
     }
 
     @Import(name="hostPort")
       private final @Nullable Output<Integer> hostPort;
 
-    public Output<Integer> getHostPort() {
+    public Output<Integer> hostPort() {
         return this.hostPort == null ? Codegen.empty() : this.hostPort;
     }
 
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 

@@ -30,16 +30,16 @@ public final class GetArchiveResult {
         this.retentionDays = retentionDays;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<Object> getEventPattern() {
+    public Optional<Object> eventPattern() {
         return Optional.ofNullable(this.eventPattern);
     }
-    public Optional<Integer> getRetentionDays() {
+    public Optional<Integer> retentionDays() {
         return Optional.ofNullable(this.retentionDays);
     }
 

@@ -23,49 +23,49 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="statefulDefaultActions")
       private final @Nullable Output<List<String>> statefulDefaultActions;
 
-    public Output<List<String>> getStatefulDefaultActions() {
+    public Output<List<String>> statefulDefaultActions() {
         return this.statefulDefaultActions == null ? Codegen.empty() : this.statefulDefaultActions;
     }
 
     @Import(name="statefulEngineOptions")
       private final @Nullable Output<FirewallPolicyStatefulEngineOptionsArgs> statefulEngineOptions;
 
-    public Output<FirewallPolicyStatefulEngineOptionsArgs> getStatefulEngineOptions() {
+    public Output<FirewallPolicyStatefulEngineOptionsArgs> statefulEngineOptions() {
         return this.statefulEngineOptions == null ? Codegen.empty() : this.statefulEngineOptions;
     }
 
     @Import(name="statefulRuleGroupReferences")
       private final @Nullable Output<List<FirewallPolicyStatefulRuleGroupReferenceArgs>> statefulRuleGroupReferences;
 
-    public Output<List<FirewallPolicyStatefulRuleGroupReferenceArgs>> getStatefulRuleGroupReferences() {
+    public Output<List<FirewallPolicyStatefulRuleGroupReferenceArgs>> statefulRuleGroupReferences() {
         return this.statefulRuleGroupReferences == null ? Codegen.empty() : this.statefulRuleGroupReferences;
     }
 
     @Import(name="statelessCustomActions")
       private final @Nullable Output<List<FirewallPolicyCustomActionArgs>> statelessCustomActions;
 
-    public Output<List<FirewallPolicyCustomActionArgs>> getStatelessCustomActions() {
+    public Output<List<FirewallPolicyCustomActionArgs>> statelessCustomActions() {
         return this.statelessCustomActions == null ? Codegen.empty() : this.statelessCustomActions;
     }
 
     @Import(name="statelessDefaultActions", required=true)
       private final Output<List<String>> statelessDefaultActions;
 
-    public Output<List<String>> getStatelessDefaultActions() {
+    public Output<List<String>> statelessDefaultActions() {
         return this.statelessDefaultActions;
     }
 
     @Import(name="statelessFragmentDefaultActions", required=true)
       private final Output<List<String>> statelessFragmentDefaultActions;
 
-    public Output<List<String>> getStatelessFragmentDefaultActions() {
+    public Output<List<String>> statelessFragmentDefaultActions() {
         return this.statelessFragmentDefaultActions;
     }
 
     @Import(name="statelessRuleGroupReferences")
       private final @Nullable Output<List<FirewallPolicyStatelessRuleGroupReferenceArgs>> statelessRuleGroupReferences;
 
-    public Output<List<FirewallPolicyStatelessRuleGroupReferenceArgs>> getStatelessRuleGroupReferences() {
+    public Output<List<FirewallPolicyStatelessRuleGroupReferenceArgs>> statelessRuleGroupReferences() {
         return this.statelessRuleGroupReferences == null ? Codegen.empty() : this.statelessRuleGroupReferences;
     }
 

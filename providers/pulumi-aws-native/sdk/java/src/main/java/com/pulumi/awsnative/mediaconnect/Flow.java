@@ -31,7 +31,7 @@ public class Flow extends com.pulumi.resources.CustomResource {
      * @return The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones within the current AWS.
      * 
      */
-    public Output</* @Nullable */ String> getAvailabilityZone() {
+    public Output</* @Nullable */ String> availabilityZone() {
         return this.availabilityZone;
     }
     /**
@@ -45,7 +45,7 @@ public class Flow extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
      * 
      */
-    public Output<String> getFlowArn() {
+    public Output<String> flowArn() {
         return this.flowArn;
     }
     /**
@@ -59,7 +59,7 @@ public class Flow extends com.pulumi.resources.CustomResource {
      * @return The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones within the current AWS.(ReadOnly)
      * 
      */
-    public Output<String> getFlowAvailabilityZone() {
+    public Output<String> flowAvailabilityZone() {
         return this.flowAvailabilityZone;
     }
     /**
@@ -73,7 +73,7 @@ public class Flow extends com.pulumi.resources.CustomResource {
      * @return The name of the flow.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +87,7 @@ public class Flow extends com.pulumi.resources.CustomResource {
      * @return The source of the flow.
      * 
      */
-    public Output<FlowSource> getSource() {
+    public Output<FlowSource> source() {
         return this.source;
     }
     /**
@@ -101,7 +101,7 @@ public class Flow extends com.pulumi.resources.CustomResource {
      * @return The source failover config of the flow.
      * 
      */
-    public Output</* @Nullable */ FlowFailoverConfig> getSourceFailoverConfig() {
+    public Output</* @Nullable */ FlowFailoverConfig> sourceFailoverConfig() {
         return this.sourceFailoverConfig;
     }
 

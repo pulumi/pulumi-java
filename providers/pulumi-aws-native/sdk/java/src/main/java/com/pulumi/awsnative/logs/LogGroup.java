@@ -32,7 +32,7 @@ public class LogGroup extends com.pulumi.resources.CustomResource {
      * @return The CloudWatch log group ARN.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -46,7 +46,7 @@ public class LogGroup extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the CMK to use when encrypting log data.
      * 
      */
-    public Output</* @Nullable */ String> getKmsKeyId() {
+    public Output</* @Nullable */ String> kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
@@ -60,7 +60,7 @@ public class LogGroup extends com.pulumi.resources.CustomResource {
      * @return The name of the log group. If you don't specify a name, AWS CloudFormation generates a unique ID for the log group.
      * 
      */
-    public Output</* @Nullable */ String> getLogGroupName() {
+    public Output</* @Nullable */ String> logGroupName() {
         return this.logGroupName;
     }
     /**
@@ -74,7 +74,7 @@ public class LogGroup extends com.pulumi.resources.CustomResource {
      * @return The number of days to retain the log events in the specified log group. Possible values are: 1, 3, 5, 7, 14, 30, 60, 90, 120, 150, 180, 365, 400, 545, 731, 1827, and 3653.
      * 
      */
-    public Output</* @Nullable */ Integer> getRetentionInDays() {
+    public Output</* @Nullable */ Integer> retentionInDays() {
         return this.retentionInDays;
     }
     /**
@@ -88,7 +88,7 @@ public class LogGroup extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<LogGroupTag>> getTags() {
+    public Output</* @Nullable */ List<LogGroupTag>> tags() {
         return this.tags;
     }
 

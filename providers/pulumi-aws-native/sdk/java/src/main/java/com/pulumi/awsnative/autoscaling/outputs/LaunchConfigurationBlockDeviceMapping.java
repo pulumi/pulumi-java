@@ -50,28 +50,28 @@ public final class LaunchConfigurationBlockDeviceMapping {
      * The device name exposed to the EC2 instance (for example, /dev/sdh or xvdh).
      * 
     */
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
     /**
      * Parameters used to automatically set up EBS volumes when an instance is launched.
      * 
     */
-    public Optional<LaunchConfigurationBlockDevice> getEbs() {
+    public Optional<LaunchConfigurationBlockDevice> ebs() {
         return Optional.ofNullable(this.ebs);
     }
     /**
      * Setting this value to true suppresses the specified device included in the block device mapping of the AMI.
      * 
     */
-    public Optional<Boolean> getNoDevice() {
+    public Optional<Boolean> noDevice() {
         return Optional.ofNullable(this.noDevice);
     }
     /**
      * The name of the virtual device.
      * 
     */
-    public Optional<String> getVirtualName() {
+    public Optional<String> virtualName() {
         return Optional.ofNullable(this.virtualName);
     }
 

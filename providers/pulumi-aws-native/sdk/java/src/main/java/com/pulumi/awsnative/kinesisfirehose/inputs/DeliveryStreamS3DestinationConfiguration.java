@@ -21,56 +21,56 @@ public final class DeliveryStreamS3DestinationConfiguration extends com.pulumi.r
     @Import(name="bucketARN", required=true)
       private final String bucketARN;
 
-    public String getBucketARN() {
+    public String bucketARN() {
         return this.bucketARN;
     }
 
     @Import(name="bufferingHints")
       private final @Nullable DeliveryStreamBufferingHints bufferingHints;
 
-    public Optional<DeliveryStreamBufferingHints> getBufferingHints() {
+    public Optional<DeliveryStreamBufferingHints> bufferingHints() {
         return this.bufferingHints == null ? Optional.empty() : Optional.ofNullable(this.bufferingHints);
     }
 
     @Import(name="cloudWatchLoggingOptions")
       private final @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions;
 
-    public Optional<DeliveryStreamCloudWatchLoggingOptions> getCloudWatchLoggingOptions() {
+    public Optional<DeliveryStreamCloudWatchLoggingOptions> cloudWatchLoggingOptions() {
         return this.cloudWatchLoggingOptions == null ? Optional.empty() : Optional.ofNullable(this.cloudWatchLoggingOptions);
     }
 
     @Import(name="compressionFormat")
       private final @Nullable DeliveryStreamS3DestinationConfigurationCompressionFormat compressionFormat;
 
-    public Optional<DeliveryStreamS3DestinationConfigurationCompressionFormat> getCompressionFormat() {
+    public Optional<DeliveryStreamS3DestinationConfigurationCompressionFormat> compressionFormat() {
         return this.compressionFormat == null ? Optional.empty() : Optional.ofNullable(this.compressionFormat);
     }
 
     @Import(name="encryptionConfiguration")
       private final @Nullable DeliveryStreamEncryptionConfiguration encryptionConfiguration;
 
-    public Optional<DeliveryStreamEncryptionConfiguration> getEncryptionConfiguration() {
+    public Optional<DeliveryStreamEncryptionConfiguration> encryptionConfiguration() {
         return this.encryptionConfiguration == null ? Optional.empty() : Optional.ofNullable(this.encryptionConfiguration);
     }
 
     @Import(name="errorOutputPrefix")
       private final @Nullable String errorOutputPrefix;
 
-    public Optional<String> getErrorOutputPrefix() {
+    public Optional<String> errorOutputPrefix() {
         return this.errorOutputPrefix == null ? Optional.empty() : Optional.ofNullable(this.errorOutputPrefix);
     }
 
     @Import(name="prefix")
       private final @Nullable String prefix;
 
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
     }
 
     @Import(name="roleARN", required=true)
       private final String roleARN;
 
-    public String getRoleARN() {
+    public String roleARN() {
         return this.roleARN;
     }
 

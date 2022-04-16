@@ -18,14 +18,14 @@ public final class DatastorePartitionArgs extends com.pulumi.resources.ResourceA
     @Import(name="partition")
       private final @Nullable Output<DatastorePartitionArgs> partition;
 
-    public Output<DatastorePartitionArgs> getPartition() {
+    public Output<DatastorePartitionArgs> partition() {
         return this.partition == null ? Codegen.empty() : this.partition;
     }
 
     @Import(name="timestampPartition")
       private final @Nullable Output<DatastoreTimestampPartitionArgs> timestampPartition;
 
-    public Output<DatastoreTimestampPartitionArgs> getTimestampPartition() {
+    public Output<DatastoreTimestampPartitionArgs> timestampPartition() {
         return this.timestampPartition == null ? Codegen.empty() : this.timestampPartition;
     }
 

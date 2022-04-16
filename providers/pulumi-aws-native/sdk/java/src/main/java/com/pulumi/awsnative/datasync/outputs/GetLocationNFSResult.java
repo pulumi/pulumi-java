@@ -51,27 +51,27 @@ public final class GetLocationNFSResult {
      * The Amazon Resource Name (ARN) of the NFS location.
      * 
     */
-    public Optional<String> getLocationArn() {
+    public Optional<String> locationArn() {
         return Optional.ofNullable(this.locationArn);
     }
     /**
      * The URL of the NFS location that was described.
      * 
     */
-    public Optional<String> getLocationUri() {
+    public Optional<String> locationUri() {
         return Optional.ofNullable(this.locationUri);
     }
-    public Optional<LocationNFSMountOptions> getMountOptions() {
+    public Optional<LocationNFSMountOptions> mountOptions() {
         return Optional.ofNullable(this.mountOptions);
     }
-    public Optional<LocationNFSOnPremConfig> getOnPremConfig() {
+    public Optional<LocationNFSOnPremConfig> onPremConfig() {
         return Optional.ofNullable(this.onPremConfig);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
     */
-    public List<LocationNFSTag> getTags() {
+    public List<LocationNFSTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

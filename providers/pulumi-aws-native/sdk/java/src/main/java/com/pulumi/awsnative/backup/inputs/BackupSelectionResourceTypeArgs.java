@@ -21,42 +21,42 @@ public final class BackupSelectionResourceTypeArgs extends com.pulumi.resources.
     @Import(name="conditions")
       private final @Nullable Output<BackupSelectionResourceTypeConditionsPropertiesArgs> conditions;
 
-    public Output<BackupSelectionResourceTypeConditionsPropertiesArgs> getConditions() {
+    public Output<BackupSelectionResourceTypeConditionsPropertiesArgs> conditions() {
         return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     @Import(name="iamRoleArn", required=true)
       private final Output<String> iamRoleArn;
 
-    public Output<String> getIamRoleArn() {
+    public Output<String> iamRoleArn() {
         return this.iamRoleArn;
     }
 
     @Import(name="listOfTags")
       private final @Nullable Output<List<BackupSelectionConditionResourceTypeArgs>> listOfTags;
 
-    public Output<List<BackupSelectionConditionResourceTypeArgs>> getListOfTags() {
+    public Output<List<BackupSelectionConditionResourceTypeArgs>> listOfTags() {
         return this.listOfTags == null ? Codegen.empty() : this.listOfTags;
     }
 
     @Import(name="notResources")
       private final @Nullable Output<List<String>> notResources;
 
-    public Output<List<String>> getNotResources() {
+    public Output<List<String>> notResources() {
         return this.notResources == null ? Codegen.empty() : this.notResources;
     }
 
     @Import(name="resources")
       private final @Nullable Output<List<String>> resources;
 
-    public Output<List<String>> getResources() {
+    public Output<List<String>> resources() {
         return this.resources == null ? Codegen.empty() : this.resources;
     }
 
     @Import(name="selectionName", required=true)
       private final Output<String> selectionName;
 
-    public Output<String> getSelectionName() {
+    public Output<String> selectionName() {
         return this.selectionName;
     }
 

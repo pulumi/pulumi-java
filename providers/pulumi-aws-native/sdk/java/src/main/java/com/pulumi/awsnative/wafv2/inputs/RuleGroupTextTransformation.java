@@ -20,14 +20,14 @@ public final class RuleGroupTextTransformation extends com.pulumi.resources.Invo
     @Import(name="priority", required=true)
       private final Integer priority;
 
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
 
     @Import(name="type", required=true)
       private final RuleGroupTextTransformationType type;
 
-    public RuleGroupTextTransformationType getType() {
+    public RuleGroupTextTransformationType type() {
         return this.type;
     }
 

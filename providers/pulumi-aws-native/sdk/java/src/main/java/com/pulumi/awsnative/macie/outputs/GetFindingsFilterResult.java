@@ -81,56 +81,56 @@ public final class GetFindingsFilterResult {
      * Findings filter action.
      * 
     */
-    public Optional<FindingsFilterFindingFilterAction> getAction() {
+    public Optional<FindingsFilterFindingFilterAction> action() {
         return Optional.ofNullable(this.action);
     }
     /**
      * Findings filter ARN.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Findings filter description
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Findings filter criteria.
      * 
     */
-    public Optional<FindingsFilterFindingCriteria> getFindingCriteria() {
+    public Optional<FindingsFilterFindingCriteria> findingCriteria() {
         return Optional.ofNullable(this.findingCriteria);
     }
     /**
      * Findings filters list.
      * 
     */
-    public List<FindingsFilterListItem> getFindingsFilterListItems() {
+    public List<FindingsFilterListItem> findingsFilterListItems() {
         return this.findingsFilterListItems == null ? List.of() : this.findingsFilterListItems;
     }
     /**
      * Findings filter ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Findings filter name
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Findings filter position.
      * 
     */
-    public Optional<Integer> getPosition() {
+    public Optional<Integer> position() {
         return Optional.ofNullable(this.position);
     }
 

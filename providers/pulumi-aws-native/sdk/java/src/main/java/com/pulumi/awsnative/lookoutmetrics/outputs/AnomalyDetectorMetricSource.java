@@ -35,19 +35,19 @@ public final class AnomalyDetectorMetricSource {
         this.s3SourceConfig = s3SourceConfig;
     }
 
-    public Optional<AnomalyDetectorAppFlowConfig> getAppFlowConfig() {
+    public Optional<AnomalyDetectorAppFlowConfig> appFlowConfig() {
         return Optional.ofNullable(this.appFlowConfig);
     }
-    public Optional<AnomalyDetectorCloudwatchConfig> getCloudwatchConfig() {
+    public Optional<AnomalyDetectorCloudwatchConfig> cloudwatchConfig() {
         return Optional.ofNullable(this.cloudwatchConfig);
     }
-    public Optional<AnomalyDetectorRDSSourceConfig> getRDSSourceConfig() {
+    public Optional<AnomalyDetectorRDSSourceConfig> rDSSourceConfig() {
         return Optional.ofNullable(this.rDSSourceConfig);
     }
-    public Optional<AnomalyDetectorRedshiftSourceConfig> getRedshiftSourceConfig() {
+    public Optional<AnomalyDetectorRedshiftSourceConfig> redshiftSourceConfig() {
         return Optional.ofNullable(this.redshiftSourceConfig);
     }
-    public Optional<AnomalyDetectorS3SourceConfig> getS3SourceConfig() {
+    public Optional<AnomalyDetectorS3SourceConfig> s3SourceConfig() {
         return Optional.ofNullable(this.s3SourceConfig);
     }
 

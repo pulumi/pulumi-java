@@ -50,28 +50,28 @@ public final class GetRuleGroupsNamespaceResult {
      * The RuleGroupsNamespace ARN.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The RuleGroupsNamespace data.
      * 
     */
-    public Optional<String> getData() {
+    public Optional<String> data() {
         return Optional.ofNullable(this.data);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
     */
-    public List<RuleGroupsNamespaceTag> getTags() {
+    public List<RuleGroupsNamespaceTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * Required to identify a specific APS Workspace associated with this RuleGroupsNamespace.
      * 
     */
-    public Optional<String> getWorkspace() {
+    public Optional<String> workspace() {
         return Optional.ofNullable(this.workspace);
     }
 

@@ -27,7 +27,7 @@ public final class InstanceStateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="code")
       private final @Nullable Output<Integer> code;
 
-    public Output<Integer> getCode() {
+    public Output<Integer> code() {
         return this.code == null ? Codegen.empty() : this.code;
     }
 
@@ -38,7 +38,7 @@ public final class InstanceStateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

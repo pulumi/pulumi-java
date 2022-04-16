@@ -23,7 +23,7 @@ public final class GlobalReplicationGroupMemberArgs extends com.pulumi.resources
     @Import(name="replicationGroupId")
       private final @Nullable Output<String> replicationGroupId;
 
-    public Output<String> getReplicationGroupId() {
+    public Output<String> replicationGroupId() {
         return this.replicationGroupId == null ? Codegen.empty() : this.replicationGroupId;
     }
 
@@ -34,7 +34,7 @@ public final class GlobalReplicationGroupMemberArgs extends com.pulumi.resources
     @Import(name="replicationGroupRegion")
       private final @Nullable Output<String> replicationGroupRegion;
 
-    public Output<String> getReplicationGroupRegion() {
+    public Output<String> replicationGroupRegion() {
         return this.replicationGroupRegion == null ? Codegen.empty() : this.replicationGroupRegion;
     }
 
@@ -45,7 +45,7 @@ public final class GlobalReplicationGroupMemberArgs extends com.pulumi.resources
     @Import(name="role")
       private final @Nullable Output<GlobalReplicationGroupMemberRole> role;
 
-    public Output<GlobalReplicationGroupMemberRole> getRole() {
+    public Output<GlobalReplicationGroupMemberRole> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 

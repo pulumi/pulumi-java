@@ -18,7 +18,7 @@ public final class DataSourceConfluencePageConfiguration {
         this.pageFieldMappings = pageFieldMappings;
     }
 
-    public List<DataSourceConfluencePageToIndexFieldMapping> getPageFieldMappings() {
+    public List<DataSourceConfluencePageToIndexFieldMapping> pageFieldMappings() {
         return this.pageFieldMappings == null ? List.of() : this.pageFieldMappings;
     }
 

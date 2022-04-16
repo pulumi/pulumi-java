@@ -40,25 +40,25 @@ public final class CloudFormationProvisionedProductProvisioningPreferences {
         this.stackSetRegions = stackSetRegions;
     }
 
-    public List<String> getStackSetAccounts() {
+    public List<String> stackSetAccounts() {
         return this.stackSetAccounts == null ? List.of() : this.stackSetAccounts;
     }
-    public Optional<Integer> getStackSetFailureToleranceCount() {
+    public Optional<Integer> stackSetFailureToleranceCount() {
         return Optional.ofNullable(this.stackSetFailureToleranceCount);
     }
-    public Optional<Integer> getStackSetFailureTolerancePercentage() {
+    public Optional<Integer> stackSetFailureTolerancePercentage() {
         return Optional.ofNullable(this.stackSetFailureTolerancePercentage);
     }
-    public Optional<Integer> getStackSetMaxConcurrencyCount() {
+    public Optional<Integer> stackSetMaxConcurrencyCount() {
         return Optional.ofNullable(this.stackSetMaxConcurrencyCount);
     }
-    public Optional<Integer> getStackSetMaxConcurrencyPercentage() {
+    public Optional<Integer> stackSetMaxConcurrencyPercentage() {
         return Optional.ofNullable(this.stackSetMaxConcurrencyPercentage);
     }
-    public Optional<CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType> getStackSetOperationType() {
+    public Optional<CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType> stackSetOperationType() {
         return Optional.ofNullable(this.stackSetOperationType);
     }
-    public List<String> getStackSetRegions() {
+    public List<String> stackSetRegions() {
         return this.stackSetRegions == null ? List.of() : this.stackSetRegions;
     }
 

@@ -24,7 +24,7 @@ public final class DBProxyAuthFormatArgs extends com.pulumi.resources.ResourceAr
     @Import(name="authScheme")
       private final @Nullable Output<DBProxyAuthFormatAuthScheme> authScheme;
 
-    public Output<DBProxyAuthFormatAuthScheme> getAuthScheme() {
+    public Output<DBProxyAuthFormatAuthScheme> authScheme() {
         return this.authScheme == null ? Codegen.empty() : this.authScheme;
     }
 
@@ -35,7 +35,7 @@ public final class DBProxyAuthFormatArgs extends com.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,7 +46,7 @@ public final class DBProxyAuthFormatArgs extends com.pulumi.resources.ResourceAr
     @Import(name="iAMAuth")
       private final @Nullable Output<DBProxyAuthFormatIAMAuth> iAMAuth;
 
-    public Output<DBProxyAuthFormatIAMAuth> getIAMAuth() {
+    public Output<DBProxyAuthFormatIAMAuth> iAMAuth() {
         return this.iAMAuth == null ? Codegen.empty() : this.iAMAuth;
     }
 
@@ -57,7 +57,7 @@ public final class DBProxyAuthFormatArgs extends com.pulumi.resources.ResourceAr
     @Import(name="secretArn")
       private final @Nullable Output<String> secretArn;
 
-    public Output<String> getSecretArn() {
+    public Output<String> secretArn() {
         return this.secretArn == null ? Codegen.empty() : this.secretArn;
     }
 
@@ -68,7 +68,7 @@ public final class DBProxyAuthFormatArgs extends com.pulumi.resources.ResourceAr
     @Import(name="userName")
       private final @Nullable Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName == null ? Codegen.empty() : this.userName;
     }
 

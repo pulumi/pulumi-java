@@ -25,7 +25,7 @@ public final class DataIntegrationArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -36,7 +36,7 @@ public final class DataIntegrationArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="kmsKey", required=true)
       private final Output<String> kmsKey;
 
-    public Output<String> getKmsKey() {
+    public Output<String> kmsKey() {
         return this.kmsKey;
     }
 
@@ -47,7 +47,7 @@ public final class DataIntegrationArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -58,7 +58,7 @@ public final class DataIntegrationArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="scheduleConfig", required=true)
       private final Output<DataIntegrationScheduleConfigArgs> scheduleConfig;
 
-    public Output<DataIntegrationScheduleConfigArgs> getScheduleConfig() {
+    public Output<DataIntegrationScheduleConfigArgs> scheduleConfig() {
         return this.scheduleConfig;
     }
 
@@ -69,7 +69,7 @@ public final class DataIntegrationArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sourceURI", required=true)
       private final Output<String> sourceURI;
 
-    public Output<String> getSourceURI() {
+    public Output<String> sourceURI() {
         return this.sourceURI;
     }
 
@@ -80,7 +80,7 @@ public final class DataIntegrationArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<List<DataIntegrationTagArgs>> tags;
 
-    public Output<List<DataIntegrationTagArgs>> getTags() {
+    public Output<List<DataIntegrationTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

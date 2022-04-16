@@ -20,10 +20,10 @@ public final class IndexJsonTokenTypeConfiguration {
         this.userNameAttributeField = userNameAttributeField;
     }
 
-    public String getGroupAttributeField() {
+    public String groupAttributeField() {
         return this.groupAttributeField;
     }
-    public String getUserNameAttributeField() {
+    public String userNameAttributeField() {
         return this.userNameAttributeField;
     }
 

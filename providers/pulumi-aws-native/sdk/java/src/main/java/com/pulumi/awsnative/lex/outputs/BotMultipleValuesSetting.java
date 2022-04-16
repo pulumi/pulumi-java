@@ -18,7 +18,7 @@ public final class BotMultipleValuesSetting {
         this.allowMultipleValues = allowMultipleValues;
     }
 
-    public Optional<Boolean> getAllowMultipleValues() {
+    public Optional<Boolean> allowMultipleValues() {
         return Optional.ofNullable(this.allowMultipleValues);
     }
 

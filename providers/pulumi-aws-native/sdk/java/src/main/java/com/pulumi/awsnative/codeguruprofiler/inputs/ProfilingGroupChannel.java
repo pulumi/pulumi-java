@@ -21,14 +21,14 @@ public final class ProfilingGroupChannel extends com.pulumi.resources.InvokeArgs
     @Import(name="channelId")
       private final @Nullable String channelId;
 
-    public Optional<String> getChannelId() {
+    public Optional<String> channelId() {
         return this.channelId == null ? Optional.empty() : Optional.ofNullable(this.channelId);
     }
 
     @Import(name="channelUri", required=true)
       private final String channelUri;
 
-    public String getChannelUri() {
+    public String channelUri() {
         return this.channelUri;
     }
 

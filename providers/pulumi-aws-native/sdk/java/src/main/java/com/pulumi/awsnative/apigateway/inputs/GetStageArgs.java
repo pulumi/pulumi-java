@@ -19,7 +19,7 @@ public final class GetStageArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="restApiId", required=true)
       private final String restApiId;
 
-    public String getRestApiId() {
+    public String restApiId() {
         return this.restApiId;
     }
 
@@ -30,7 +30,7 @@ public final class GetStageArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="stageName", required=true)
       private final String stageName;
 
-    public String getStageName() {
+    public String stageName() {
         return this.stageName;
     }
 

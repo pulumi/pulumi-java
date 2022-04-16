@@ -32,7 +32,7 @@ public class ContactList extends com.pulumi.resources.CustomResource {
      * @return The name of the contact list.
      * 
      */
-    public Output</* @Nullable */ String> getContactListName() {
+    public Output</* @Nullable */ String> contactListName() {
         return this.contactListName;
     }
     /**
@@ -46,7 +46,7 @@ public class ContactList extends com.pulumi.resources.CustomResource {
      * @return The description of the contact list.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -60,7 +60,7 @@ public class ContactList extends com.pulumi.resources.CustomResource {
      * @return The tags (keys and values) associated with the contact list.
      * 
      */
-    public Output</* @Nullable */ List<ContactListTag>> getTags() {
+    public Output</* @Nullable */ List<ContactListTag>> tags() {
         return this.tags;
     }
     /**
@@ -74,7 +74,7 @@ public class ContactList extends com.pulumi.resources.CustomResource {
      * @return The topics associated with the contact list.
      * 
      */
-    public Output</* @Nullable */ List<ContactListTopic>> getTopics() {
+    public Output</* @Nullable */ List<ContactListTopic>> topics() {
         return this.topics;
     }
 

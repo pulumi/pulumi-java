@@ -22,7 +22,7 @@ public final class DashboardSourceEntityArgs extends com.pulumi.resources.Resour
     @Import(name="sourceTemplate")
       private final @Nullable Output<DashboardSourceTemplateArgs> sourceTemplate;
 
-    public Output<DashboardSourceTemplateArgs> getSourceTemplate() {
+    public Output<DashboardSourceTemplateArgs> sourceTemplate() {
         return this.sourceTemplate == null ? Codegen.empty() : this.sourceTemplate;
     }
 

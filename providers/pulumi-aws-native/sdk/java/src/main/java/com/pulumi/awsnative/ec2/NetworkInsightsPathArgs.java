@@ -22,49 +22,49 @@ public final class NetworkInsightsPathArgs extends com.pulumi.resources.Resource
     @Import(name="destination", required=true)
       private final Output<String> destination;
 
-    public Output<String> getDestination() {
+    public Output<String> destination() {
         return this.destination;
     }
 
     @Import(name="destinationIp")
       private final @Nullable Output<String> destinationIp;
 
-    public Output<String> getDestinationIp() {
+    public Output<String> destinationIp() {
         return this.destinationIp == null ? Codegen.empty() : this.destinationIp;
     }
 
     @Import(name="destinationPort")
       private final @Nullable Output<Integer> destinationPort;
 
-    public Output<Integer> getDestinationPort() {
+    public Output<Integer> destinationPort() {
         return this.destinationPort == null ? Codegen.empty() : this.destinationPort;
     }
 
     @Import(name="protocol", required=true)
       private final Output<NetworkInsightsPathProtocol> protocol;
 
-    public Output<NetworkInsightsPathProtocol> getProtocol() {
+    public Output<NetworkInsightsPathProtocol> protocol() {
         return this.protocol;
     }
 
     @Import(name="source", required=true)
       private final Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source;
     }
 
     @Import(name="sourceIp")
       private final @Nullable Output<String> sourceIp;
 
-    public Output<String> getSourceIp() {
+    public Output<String> sourceIp() {
         return this.sourceIp == null ? Codegen.empty() : this.sourceIp;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<NetworkInsightsPathTagArgs>> tags;
 
-    public Output<List<NetworkInsightsPathTagArgs>> getTags() {
+    public Output<List<NetworkInsightsPathTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -29,37 +29,37 @@ public class Datastore extends com.pulumi.resources.CustomResource {
     @Export(name="datastoreName", type=String.class, parameters={})
     private Output</* @Nullable */ String> datastoreName;
 
-    public Output</* @Nullable */ String> getDatastoreName() {
+    public Output</* @Nullable */ String> datastoreName() {
         return this.datastoreName;
     }
     @Export(name="datastorePartitions", type=DatastorePartitions.class, parameters={})
     private Output</* @Nullable */ DatastorePartitions> datastorePartitions;
 
-    public Output</* @Nullable */ DatastorePartitions> getDatastorePartitions() {
+    public Output</* @Nullable */ DatastorePartitions> datastorePartitions() {
         return this.datastorePartitions;
     }
     @Export(name="datastoreStorage", type=DatastoreStorage.class, parameters={})
     private Output</* @Nullable */ DatastoreStorage> datastoreStorage;
 
-    public Output</* @Nullable */ DatastoreStorage> getDatastoreStorage() {
+    public Output</* @Nullable */ DatastoreStorage> datastoreStorage() {
         return this.datastoreStorage;
     }
     @Export(name="fileFormatConfiguration", type=DatastoreFileFormatConfiguration.class, parameters={})
     private Output</* @Nullable */ DatastoreFileFormatConfiguration> fileFormatConfiguration;
 
-    public Output</* @Nullable */ DatastoreFileFormatConfiguration> getFileFormatConfiguration() {
+    public Output</* @Nullable */ DatastoreFileFormatConfiguration> fileFormatConfiguration() {
         return this.fileFormatConfiguration;
     }
     @Export(name="retentionPeriod", type=DatastoreRetentionPeriod.class, parameters={})
     private Output</* @Nullable */ DatastoreRetentionPeriod> retentionPeriod;
 
-    public Output</* @Nullable */ DatastoreRetentionPeriod> getRetentionPeriod() {
+    public Output</* @Nullable */ DatastoreRetentionPeriod> retentionPeriod() {
         return this.retentionPeriod;
     }
     @Export(name="tags", type=List.class, parameters={DatastoreTag.class})
     private Output</* @Nullable */ List<DatastoreTag>> tags;
 
-    public Output</* @Nullable */ List<DatastoreTag>> getTags() {
+    public Output</* @Nullable */ List<DatastoreTag>> tags() {
         return this.tags;
     }
 

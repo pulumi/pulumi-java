@@ -17,14 +17,14 @@ public final class FilterNumberFilter extends com.pulumi.resources.InvokeArgs {
     @Import(name="lowerInclusive")
       private final @Nullable Double lowerInclusive;
 
-    public Optional<Double> getLowerInclusive() {
+    public Optional<Double> lowerInclusive() {
         return this.lowerInclusive == null ? Optional.empty() : Optional.ofNullable(this.lowerInclusive);
     }
 
     @Import(name="upperInclusive")
       private final @Nullable Double upperInclusive;
 
-    public Optional<Double> getUpperInclusive() {
+    public Optional<Double> upperInclusive() {
         return this.upperInclusive == null ? Optional.empty() : Optional.ofNullable(this.upperInclusive);
     }
 

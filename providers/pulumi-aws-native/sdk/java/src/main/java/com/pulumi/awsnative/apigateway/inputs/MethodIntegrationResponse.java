@@ -23,7 +23,7 @@ public final class MethodIntegrationResponse extends com.pulumi.resources.Invoke
     @Import(name="contentHandling")
       private final @Nullable MethodIntegrationResponseContentHandling contentHandling;
 
-    public Optional<MethodIntegrationResponseContentHandling> getContentHandling() {
+    public Optional<MethodIntegrationResponseContentHandling> contentHandling() {
         return this.contentHandling == null ? Optional.empty() : Optional.ofNullable(this.contentHandling);
     }
 
@@ -34,7 +34,7 @@ public final class MethodIntegrationResponse extends com.pulumi.resources.Invoke
     @Import(name="responseParameters")
       private final @Nullable Object responseParameters;
 
-    public Optional<Object> getResponseParameters() {
+    public Optional<Object> responseParameters() {
         return this.responseParameters == null ? Optional.empty() : Optional.ofNullable(this.responseParameters);
     }
 
@@ -45,7 +45,7 @@ public final class MethodIntegrationResponse extends com.pulumi.resources.Invoke
     @Import(name="responseTemplates")
       private final @Nullable Object responseTemplates;
 
-    public Optional<Object> getResponseTemplates() {
+    public Optional<Object> responseTemplates() {
         return this.responseTemplates == null ? Optional.empty() : Optional.ofNullable(this.responseTemplates);
     }
 
@@ -56,7 +56,7 @@ public final class MethodIntegrationResponse extends com.pulumi.resources.Invoke
     @Import(name="selectionPattern")
       private final @Nullable String selectionPattern;
 
-    public Optional<String> getSelectionPattern() {
+    public Optional<String> selectionPattern() {
         return this.selectionPattern == null ? Optional.empty() : Optional.ofNullable(this.selectionPattern);
     }
 
@@ -67,7 +67,7 @@ public final class MethodIntegrationResponse extends com.pulumi.resources.Invoke
     @Import(name="statusCode", required=true)
       private final String statusCode;
 
-    public String getStatusCode() {
+    public String statusCode() {
         return this.statusCode;
     }
 

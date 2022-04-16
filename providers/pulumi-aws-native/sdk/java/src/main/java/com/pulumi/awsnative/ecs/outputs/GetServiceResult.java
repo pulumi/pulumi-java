@@ -56,37 +56,37 @@ public final class GetServiceResult {
         this.taskDefinition = taskDefinition;
     }
 
-    public List<ServiceCapacityProviderStrategyItem> getCapacityProviderStrategy() {
+    public List<ServiceCapacityProviderStrategyItem> capacityProviderStrategy() {
         return this.capacityProviderStrategy == null ? List.of() : this.capacityProviderStrategy;
     }
-    public Optional<ServiceDeploymentConfiguration> getDeploymentConfiguration() {
+    public Optional<ServiceDeploymentConfiguration> deploymentConfiguration() {
         return Optional.ofNullable(this.deploymentConfiguration);
     }
-    public Optional<Integer> getDesiredCount() {
+    public Optional<Integer> desiredCount() {
         return Optional.ofNullable(this.desiredCount);
     }
-    public Optional<Boolean> getEnableExecuteCommand() {
+    public Optional<Boolean> enableExecuteCommand() {
         return Optional.ofNullable(this.enableExecuteCommand);
     }
-    public Optional<Integer> getHealthCheckGracePeriodSeconds() {
+    public Optional<Integer> healthCheckGracePeriodSeconds() {
         return Optional.ofNullable(this.healthCheckGracePeriodSeconds);
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public Optional<ServiceNetworkConfiguration> getNetworkConfiguration() {
+    public Optional<ServiceNetworkConfiguration> networkConfiguration() {
         return Optional.ofNullable(this.networkConfiguration);
     }
-    public Optional<String> getPlatformVersion() {
+    public Optional<String> platformVersion() {
         return Optional.ofNullable(this.platformVersion);
     }
-    public Optional<String> getServiceArn() {
+    public Optional<String> serviceArn() {
         return Optional.ofNullable(this.serviceArn);
     }
-    public List<ServiceTag> getTags() {
+    public List<ServiceTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
-    public Optional<String> getTaskDefinition() {
+    public Optional<String> taskDefinition() {
         return Optional.ofNullable(this.taskDefinition);
     }
 

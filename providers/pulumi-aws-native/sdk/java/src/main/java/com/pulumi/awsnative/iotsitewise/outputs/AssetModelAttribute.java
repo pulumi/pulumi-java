@@ -18,7 +18,7 @@ public final class AssetModelAttribute {
         this.defaultValue = defaultValue;
     }
 
-    public Optional<String> getDefaultValue() {
+    public Optional<String> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
 

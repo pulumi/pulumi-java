@@ -20,21 +20,21 @@ public final class ComponentVersionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="inlineRecipe")
       private final @Nullable Output<String> inlineRecipe;
 
-    public Output<String> getInlineRecipe() {
+    public Output<String> inlineRecipe() {
         return this.inlineRecipe == null ? Codegen.empty() : this.inlineRecipe;
     }
 
     @Import(name="lambdaFunction")
       private final @Nullable Output<ComponentVersionLambdaFunctionRecipeSourceArgs> lambdaFunction;
 
-    public Output<ComponentVersionLambdaFunctionRecipeSourceArgs> getLambdaFunction() {
+    public Output<ComponentVersionLambdaFunctionRecipeSourceArgs> lambdaFunction() {
         return this.lambdaFunction == null ? Codegen.empty() : this.lambdaFunction;
     }
 
     @Import(name="tags")
       private final @Nullable Output<Object> tags;
 
-    public Output<Object> getTags() {
+    public Output<Object> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

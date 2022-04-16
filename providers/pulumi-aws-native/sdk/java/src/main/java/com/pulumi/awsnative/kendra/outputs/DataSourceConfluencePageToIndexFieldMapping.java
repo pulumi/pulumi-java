@@ -26,13 +26,13 @@ public final class DataSourceConfluencePageToIndexFieldMapping {
         this.indexFieldName = indexFieldName;
     }
 
-    public DataSourceConfluencePageFieldName getDataSourceFieldName() {
+    public DataSourceConfluencePageFieldName dataSourceFieldName() {
         return this.dataSourceFieldName;
     }
-    public Optional<String> getDateFieldFormat() {
+    public Optional<String> dateFieldFormat() {
         return Optional.ofNullable(this.dateFieldFormat);
     }
-    public String getIndexFieldName() {
+    public String indexFieldName() {
         return this.indexFieldName;
     }
 

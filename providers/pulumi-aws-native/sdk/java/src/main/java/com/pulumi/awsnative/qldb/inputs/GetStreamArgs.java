@@ -15,14 +15,14 @@ public final class GetStreamArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
     @Import(name="ledgerName", required=true)
       private final String ledgerName;
 
-    public String getLedgerName() {
+    public String ledgerName() {
         return this.ledgerName;
     }
 

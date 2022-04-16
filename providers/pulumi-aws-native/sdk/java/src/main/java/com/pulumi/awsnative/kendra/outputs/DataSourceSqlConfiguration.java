@@ -18,7 +18,7 @@ public final class DataSourceSqlConfiguration {
         this.queryIdentifiersEnclosingOption = queryIdentifiersEnclosingOption;
     }
 
-    public Optional<DataSourceQueryIdentifiersEnclosingOption> getQueryIdentifiersEnclosingOption() {
+    public Optional<DataSourceQueryIdentifiersEnclosingOption> queryIdentifiersEnclosingOption() {
         return Optional.ofNullable(this.queryIdentifiersEnclosingOption);
     }
 

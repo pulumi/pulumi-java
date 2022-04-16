@@ -26,7 +26,7 @@ public final class InstanceMonthlyTransferArgs extends com.pulumi.resources.Reso
     @Import(name="gbPerMonthAllocated")
       private final @Nullable Output<String> gbPerMonthAllocated;
 
-    public Output<String> getGbPerMonthAllocated() {
+    public Output<String> gbPerMonthAllocated() {
         return this.gbPerMonthAllocated == null ? Codegen.empty() : this.gbPerMonthAllocated;
     }
 

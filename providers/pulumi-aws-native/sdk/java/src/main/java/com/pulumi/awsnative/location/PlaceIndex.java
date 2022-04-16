@@ -23,55 +23,55 @@ public class PlaceIndex extends com.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     @Export(name="dataSource", type=String.class, parameters={})
     private Output<String> dataSource;
 
-    public Output<String> getDataSource() {
+    public Output<String> dataSource() {
         return this.dataSource;
     }
     @Export(name="dataSourceConfiguration", type=PlaceIndexDataSourceConfiguration.class, parameters={})
     private Output</* @Nullable */ PlaceIndexDataSourceConfiguration> dataSourceConfiguration;
 
-    public Output</* @Nullable */ PlaceIndexDataSourceConfiguration> getDataSourceConfiguration() {
+    public Output</* @Nullable */ PlaceIndexDataSourceConfiguration> dataSourceConfiguration() {
         return this.dataSourceConfiguration;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="indexArn", type=String.class, parameters={})
     private Output<String> indexArn;
 
-    public Output<String> getIndexArn() {
+    public Output<String> indexArn() {
         return this.indexArn;
     }
     @Export(name="indexName", type=String.class, parameters={})
     private Output<String> indexName;
 
-    public Output<String> getIndexName() {
+    public Output<String> indexName() {
         return this.indexName;
     }
     @Export(name="pricingPlan", type=PlaceIndexPricingPlan.class, parameters={})
     private Output</* @Nullable */ PlaceIndexPricingPlan> pricingPlan;
 
-    public Output</* @Nullable */ PlaceIndexPricingPlan> getPricingPlan() {
+    public Output</* @Nullable */ PlaceIndexPricingPlan> pricingPlan() {
         return this.pricingPlan;
     }
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

@@ -19,14 +19,14 @@ public final class ReplicationConfigurationReplicationDestination extends com.pu
     @Import(name="region", required=true)
       private final String region;
 
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 
     @Import(name="registryId", required=true)
       private final String registryId;
 
-    public String getRegistryId() {
+    public String registryId() {
         return this.registryId;
     }
 

@@ -31,7 +31,7 @@ public class ResolverConfig extends com.pulumi.resources.CustomResource {
      * @return ResolverAutodefinedReverseStatus, possible values are ENABLING, ENABLED, DISABLING AND DISABLED.
      * 
      */
-    public Output<ResolverConfigAutodefinedReverse> getAutodefinedReverse() {
+    public Output<ResolverConfigAutodefinedReverse> autodefinedReverse() {
         return this.autodefinedReverse;
     }
     /**
@@ -45,7 +45,7 @@ public class ResolverConfig extends com.pulumi.resources.CustomResource {
      * @return Represents the desired status of AutodefinedReverse. The only supported value on creation is DISABLE. Deletion of this resource will return AutodefinedReverse to its default value (ENABLED).
      * 
      */
-    public Output<ResolverConfigAutodefinedReverseFlag> getAutodefinedReverseFlag() {
+    public Output<ResolverConfigAutodefinedReverseFlag> autodefinedReverseFlag() {
         return this.autodefinedReverseFlag;
     }
     /**
@@ -59,7 +59,7 @@ public class ResolverConfig extends com.pulumi.resources.CustomResource {
      * @return AccountId
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -73,7 +73,7 @@ public class ResolverConfig extends com.pulumi.resources.CustomResource {
      * @return ResourceId
      * 
      */
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 

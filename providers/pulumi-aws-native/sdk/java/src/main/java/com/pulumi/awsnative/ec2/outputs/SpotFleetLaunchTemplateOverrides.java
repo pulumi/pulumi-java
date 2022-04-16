@@ -36,22 +36,22 @@ public final class SpotFleetLaunchTemplateOverrides {
         this.weightedCapacity = weightedCapacity;
     }
 
-    public Optional<String> getAvailabilityZone() {
+    public Optional<String> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
-    public Optional<SpotFleetInstanceRequirementsRequest> getInstanceRequirements() {
+    public Optional<SpotFleetInstanceRequirementsRequest> instanceRequirements() {
         return Optional.ofNullable(this.instanceRequirements);
     }
-    public Optional<String> getInstanceType() {
+    public Optional<String> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
-    public Optional<String> getSpotPrice() {
+    public Optional<String> spotPrice() {
         return Optional.ofNullable(this.spotPrice);
     }
-    public Optional<String> getSubnetId() {
+    public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
-    public Optional<Double> getWeightedCapacity() {
+    public Optional<Double> weightedCapacity() {
         return Optional.ofNullable(this.weightedCapacity);
     }
 

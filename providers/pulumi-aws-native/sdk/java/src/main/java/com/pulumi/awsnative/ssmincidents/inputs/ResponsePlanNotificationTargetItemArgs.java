@@ -22,7 +22,7 @@ public final class ResponsePlanNotificationTargetItemArgs extends com.pulumi.res
     @Import(name="snsTopicArn")
       private final @Nullable Output<String> snsTopicArn;
 
-    public Output<String> getSnsTopicArn() {
+    public Output<String> snsTopicArn() {
         return this.snsTopicArn == null ? Codegen.empty() : this.snsTopicArn;
     }
 

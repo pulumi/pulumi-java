@@ -21,7 +21,7 @@ public final class ResponsePlanNotificationTargetItem extends com.pulumi.resourc
     @Import(name="snsTopicArn")
       private final @Nullable String snsTopicArn;
 
-    public Optional<String> getSnsTopicArn() {
+    public Optional<String> snsTopicArn() {
         return this.snsTopicArn == null ? Optional.empty() : Optional.ofNullable(this.snsTopicArn);
     }
 

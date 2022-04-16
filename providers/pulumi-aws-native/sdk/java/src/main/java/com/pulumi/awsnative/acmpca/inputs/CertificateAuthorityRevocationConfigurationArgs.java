@@ -23,14 +23,14 @@ public final class CertificateAuthorityRevocationConfigurationArgs extends com.p
     @Import(name="crlConfiguration")
       private final @Nullable Output<CertificateAuthorityCrlConfigurationArgs> crlConfiguration;
 
-    public Output<CertificateAuthorityCrlConfigurationArgs> getCrlConfiguration() {
+    public Output<CertificateAuthorityCrlConfigurationArgs> crlConfiguration() {
         return this.crlConfiguration == null ? Codegen.empty() : this.crlConfiguration;
     }
 
     @Import(name="ocspConfiguration")
       private final @Nullable Output<CertificateAuthorityOcspConfigurationArgs> ocspConfiguration;
 
-    public Output<CertificateAuthorityOcspConfigurationArgs> getOcspConfiguration() {
+    public Output<CertificateAuthorityOcspConfigurationArgs> ocspConfiguration() {
         return this.ocspConfiguration == null ? Codegen.empty() : this.ocspConfiguration;
     }
 

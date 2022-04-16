@@ -25,7 +25,7 @@ public final class IPAMIpamOperatingRegionArgs extends com.pulumi.resources.Reso
     @Import(name="regionName", required=true)
       private final Output<String> regionName;
 
-    public Output<String> getRegionName() {
+    public Output<String> regionName() {
         return this.regionName;
     }
 

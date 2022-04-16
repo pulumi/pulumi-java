@@ -16,7 +16,7 @@ public final class GlobalTableStreamSpecification {
         this.streamViewType = streamViewType;
     }
 
-    public String getStreamViewType() {
+    public String streamViewType() {
         return this.streamViewType;
     }
 

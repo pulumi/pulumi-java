@@ -15,7 +15,7 @@ public final class GetAttributeGroupAssociationArgs extends com.pulumi.resources
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

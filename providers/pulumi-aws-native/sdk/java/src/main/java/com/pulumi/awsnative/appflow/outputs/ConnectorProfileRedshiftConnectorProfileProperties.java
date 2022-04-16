@@ -48,28 +48,28 @@ public final class ConnectorProfileRedshiftConnectorProfileProperties {
      * The name of the Amazon S3 bucket associated with Redshift.
      * 
     */
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
     /**
      * The object key for the destination bucket in which Amazon AppFlow will place the ﬁles.
      * 
     */
-    public Optional<String> getBucketPrefix() {
+    public Optional<String> bucketPrefix() {
         return Optional.ofNullable(this.bucketPrefix);
     }
     /**
      * The JDBC URL of the Amazon Redshift cluster.
      * 
     */
-    public String getDatabaseUrl() {
+    public String databaseUrl() {
         return this.databaseUrl;
     }
     /**
      * The Amazon Resource Name (ARN) of the IAM role.
      * 
     */
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 

@@ -21,7 +21,7 @@ public final class BotAliasAudioLogDestination extends com.pulumi.resources.Invo
     @Import(name="s3Bucket")
       private final @Nullable BotAliasS3BucketLogDestination s3Bucket;
 
-    public Optional<BotAliasS3BucketLogDestination> getS3Bucket() {
+    public Optional<BotAliasS3BucketLogDestination> s3Bucket() {
         return this.s3Bucket == null ? Optional.empty() : Optional.ofNullable(this.s3Bucket);
     }
 

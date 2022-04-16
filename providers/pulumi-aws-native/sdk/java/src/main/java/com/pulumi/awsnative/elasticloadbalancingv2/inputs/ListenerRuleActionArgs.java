@@ -24,56 +24,56 @@ public final class ListenerRuleActionArgs extends com.pulumi.resources.ResourceA
     @Import(name="authenticateCognitoConfig")
       private final @Nullable Output<ListenerRuleAuthenticateCognitoConfigArgs> authenticateCognitoConfig;
 
-    public Output<ListenerRuleAuthenticateCognitoConfigArgs> getAuthenticateCognitoConfig() {
+    public Output<ListenerRuleAuthenticateCognitoConfigArgs> authenticateCognitoConfig() {
         return this.authenticateCognitoConfig == null ? Codegen.empty() : this.authenticateCognitoConfig;
     }
 
     @Import(name="authenticateOidcConfig")
       private final @Nullable Output<ListenerRuleAuthenticateOidcConfigArgs> authenticateOidcConfig;
 
-    public Output<ListenerRuleAuthenticateOidcConfigArgs> getAuthenticateOidcConfig() {
+    public Output<ListenerRuleAuthenticateOidcConfigArgs> authenticateOidcConfig() {
         return this.authenticateOidcConfig == null ? Codegen.empty() : this.authenticateOidcConfig;
     }
 
     @Import(name="fixedResponseConfig")
       private final @Nullable Output<ListenerRuleFixedResponseConfigArgs> fixedResponseConfig;
 
-    public Output<ListenerRuleFixedResponseConfigArgs> getFixedResponseConfig() {
+    public Output<ListenerRuleFixedResponseConfigArgs> fixedResponseConfig() {
         return this.fixedResponseConfig == null ? Codegen.empty() : this.fixedResponseConfig;
     }
 
     @Import(name="forwardConfig")
       private final @Nullable Output<ListenerRuleForwardConfigArgs> forwardConfig;
 
-    public Output<ListenerRuleForwardConfigArgs> getForwardConfig() {
+    public Output<ListenerRuleForwardConfigArgs> forwardConfig() {
         return this.forwardConfig == null ? Codegen.empty() : this.forwardConfig;
     }
 
     @Import(name="order")
       private final @Nullable Output<Integer> order;
 
-    public Output<Integer> getOrder() {
+    public Output<Integer> order() {
         return this.order == null ? Codegen.empty() : this.order;
     }
 
     @Import(name="redirectConfig")
       private final @Nullable Output<ListenerRuleRedirectConfigArgs> redirectConfig;
 
-    public Output<ListenerRuleRedirectConfigArgs> getRedirectConfig() {
+    public Output<ListenerRuleRedirectConfigArgs> redirectConfig() {
         return this.redirectConfig == null ? Codegen.empty() : this.redirectConfig;
     }
 
     @Import(name="targetGroupArn")
       private final @Nullable Output<String> targetGroupArn;
 
-    public Output<String> getTargetGroupArn() {
+    public Output<String> targetGroupArn() {
         return this.targetGroupArn == null ? Codegen.empty() : this.targetGroupArn;
     }
 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

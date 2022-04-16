@@ -24,7 +24,7 @@ public final class AuthenticationModePropertiesArgs extends com.pulumi.resources
     @Import(name="passwords")
       private final @Nullable Output<List<String>> passwords;
 
-    public Output<List<String>> getPasswords() {
+    public Output<List<String>> passwords() {
         return this.passwords == null ? Codegen.empty() : this.passwords;
     }
 
@@ -35,7 +35,7 @@ public final class AuthenticationModePropertiesArgs extends com.pulumi.resources
     @Import(name="type")
       private final @Nullable Output<UserAuthenticationModePropertiesType> type;
 
-    public Output<UserAuthenticationModePropertiesType> getType() {
+    public Output<UserAuthenticationModePropertiesType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

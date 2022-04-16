@@ -16,7 +16,7 @@ public final class VirtualClusterContainerInfo {
         this.eksInfo = eksInfo;
     }
 
-    public VirtualClusterEksInfo getEksInfo() {
+    public VirtualClusterEksInfo eksInfo() {
         return this.eksInfo;
     }
 

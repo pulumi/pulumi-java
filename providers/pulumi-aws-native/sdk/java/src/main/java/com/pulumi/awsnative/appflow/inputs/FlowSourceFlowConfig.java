@@ -28,7 +28,7 @@ public final class FlowSourceFlowConfig extends com.pulumi.resources.InvokeArgs 
     @Import(name="connectorProfileName")
       private final @Nullable String connectorProfileName;
 
-    public Optional<String> getConnectorProfileName() {
+    public Optional<String> connectorProfileName() {
         return this.connectorProfileName == null ? Optional.empty() : Optional.ofNullable(this.connectorProfileName);
     }
 
@@ -39,7 +39,7 @@ public final class FlowSourceFlowConfig extends com.pulumi.resources.InvokeArgs 
     @Import(name="connectorType", required=true)
       private final FlowConnectorType connectorType;
 
-    public FlowConnectorType getConnectorType() {
+    public FlowConnectorType connectorType() {
         return this.connectorType;
     }
 
@@ -50,7 +50,7 @@ public final class FlowSourceFlowConfig extends com.pulumi.resources.InvokeArgs 
     @Import(name="incrementalPullConfig")
       private final @Nullable FlowIncrementalPullConfig incrementalPullConfig;
 
-    public Optional<FlowIncrementalPullConfig> getIncrementalPullConfig() {
+    public Optional<FlowIncrementalPullConfig> incrementalPullConfig() {
         return this.incrementalPullConfig == null ? Optional.empty() : Optional.ofNullable(this.incrementalPullConfig);
     }
 
@@ -61,7 +61,7 @@ public final class FlowSourceFlowConfig extends com.pulumi.resources.InvokeArgs 
     @Import(name="sourceConnectorProperties", required=true)
       private final FlowSourceConnectorProperties sourceConnectorProperties;
 
-    public FlowSourceConnectorProperties getSourceConnectorProperties() {
+    public FlowSourceConnectorProperties sourceConnectorProperties() {
         return this.sourceConnectorProperties;
     }
 

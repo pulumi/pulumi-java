@@ -51,27 +51,27 @@ public final class GetModelPackageGroupResult {
      * The time at which the model package group was created.
      * 
     */
-    public Optional<String> getCreationTime() {
+    public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
-    public Optional<String> getModelPackageGroupArn() {
+    public Optional<String> modelPackageGroupArn() {
         return Optional.ofNullable(this.modelPackageGroupArn);
     }
-    public Optional<Object> getModelPackageGroupPolicy() {
+    public Optional<Object> modelPackageGroupPolicy() {
         return Optional.ofNullable(this.modelPackageGroupPolicy);
     }
     /**
      * The status of a modelpackage group job.
      * 
     */
-    public Optional<ModelPackageGroupStatus> getModelPackageGroupStatus() {
+    public Optional<ModelPackageGroupStatus> modelPackageGroupStatus() {
         return Optional.ofNullable(this.modelPackageGroupStatus);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
     */
-    public List<ModelPackageGroupTag> getTags() {
+    public List<ModelPackageGroupTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

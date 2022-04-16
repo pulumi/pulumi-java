@@ -23,147 +23,147 @@ public final class ServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="associatePublicIpAddress")
       private final @Nullable Output<Boolean> associatePublicIpAddress;
 
-    public Output<Boolean> getAssociatePublicIpAddress() {
+    public Output<Boolean> associatePublicIpAddress() {
         return this.associatePublicIpAddress == null ? Codegen.empty() : this.associatePublicIpAddress;
     }
 
     @Import(name="backupId")
       private final @Nullable Output<String> backupId;
 
-    public Output<String> getBackupId() {
+    public Output<String> backupId() {
         return this.backupId == null ? Codegen.empty() : this.backupId;
     }
 
     @Import(name="backupRetentionCount")
       private final @Nullable Output<Integer> backupRetentionCount;
 
-    public Output<Integer> getBackupRetentionCount() {
+    public Output<Integer> backupRetentionCount() {
         return this.backupRetentionCount == null ? Codegen.empty() : this.backupRetentionCount;
     }
 
     @Import(name="customCertificate")
       private final @Nullable Output<String> customCertificate;
 
-    public Output<String> getCustomCertificate() {
+    public Output<String> customCertificate() {
         return this.customCertificate == null ? Codegen.empty() : this.customCertificate;
     }
 
     @Import(name="customDomain")
       private final @Nullable Output<String> customDomain;
 
-    public Output<String> getCustomDomain() {
+    public Output<String> customDomain() {
         return this.customDomain == null ? Codegen.empty() : this.customDomain;
     }
 
     @Import(name="customPrivateKey")
       private final @Nullable Output<String> customPrivateKey;
 
-    public Output<String> getCustomPrivateKey() {
+    public Output<String> customPrivateKey() {
         return this.customPrivateKey == null ? Codegen.empty() : this.customPrivateKey;
     }
 
     @Import(name="disableAutomatedBackup")
       private final @Nullable Output<Boolean> disableAutomatedBackup;
 
-    public Output<Boolean> getDisableAutomatedBackup() {
+    public Output<Boolean> disableAutomatedBackup() {
         return this.disableAutomatedBackup == null ? Codegen.empty() : this.disableAutomatedBackup;
     }
 
     @Import(name="engine")
       private final @Nullable Output<String> engine;
 
-    public Output<String> getEngine() {
+    public Output<String> engine() {
         return this.engine == null ? Codegen.empty() : this.engine;
     }
 
     @Import(name="engineAttributes")
       private final @Nullable Output<List<ServerEngineAttributeArgs>> engineAttributes;
 
-    public Output<List<ServerEngineAttributeArgs>> getEngineAttributes() {
+    public Output<List<ServerEngineAttributeArgs>> engineAttributes() {
         return this.engineAttributes == null ? Codegen.empty() : this.engineAttributes;
     }
 
     @Import(name="engineModel")
       private final @Nullable Output<String> engineModel;
 
-    public Output<String> getEngineModel() {
+    public Output<String> engineModel() {
         return this.engineModel == null ? Codegen.empty() : this.engineModel;
     }
 
     @Import(name="engineVersion")
       private final @Nullable Output<String> engineVersion;
 
-    public Output<String> getEngineVersion() {
+    public Output<String> engineVersion() {
         return this.engineVersion == null ? Codegen.empty() : this.engineVersion;
     }
 
     @Import(name="instanceProfileArn", required=true)
       private final Output<String> instanceProfileArn;
 
-    public Output<String> getInstanceProfileArn() {
+    public Output<String> instanceProfileArn() {
         return this.instanceProfileArn;
     }
 
     @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
 
     @Import(name="keyPair")
       private final @Nullable Output<String> keyPair;
 
-    public Output<String> getKeyPair() {
+    public Output<String> keyPair() {
         return this.keyPair == null ? Codegen.empty() : this.keyPair;
     }
 
     @Import(name="preferredBackupWindow")
       private final @Nullable Output<String> preferredBackupWindow;
 
-    public Output<String> getPreferredBackupWindow() {
+    public Output<String> preferredBackupWindow() {
         return this.preferredBackupWindow == null ? Codegen.empty() : this.preferredBackupWindow;
     }
 
     @Import(name="preferredMaintenanceWindow")
       private final @Nullable Output<String> preferredMaintenanceWindow;
 
-    public Output<String> getPreferredMaintenanceWindow() {
+    public Output<String> preferredMaintenanceWindow() {
         return this.preferredMaintenanceWindow == null ? Codegen.empty() : this.preferredMaintenanceWindow;
     }
 
     @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
     }
 
     @Import(name="serverName")
       private final @Nullable Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName == null ? Codegen.empty() : this.serverName;
     }
 
     @Import(name="serviceRoleArn", required=true)
       private final Output<String> serviceRoleArn;
 
-    public Output<String> getServiceRoleArn() {
+    public Output<String> serviceRoleArn() {
         return this.serviceRoleArn;
     }
 
     @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<ServerTagArgs>> tags;
 
-    public Output<List<ServerTagArgs>> getTags() {
+    public Output<List<ServerTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -42,21 +42,21 @@ public final class DomainResourceSpec {
      * The instance type that the image version runs on.
      * 
     */
-    public Optional<DomainResourceSpecInstanceType> getInstanceType() {
+    public Optional<DomainResourceSpecInstanceType> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
     /**
      * The ARN of the SageMaker image that the image version belongs to.
      * 
     */
-    public Optional<String> getSageMakerImageArn() {
+    public Optional<String> sageMakerImageArn() {
         return Optional.ofNullable(this.sageMakerImageArn);
     }
     /**
      * The ARN of the image version created on the instance.
      * 
     */
-    public Optional<String> getSageMakerImageVersionArn() {
+    public Optional<String> sageMakerImageVersionArn() {
         return Optional.ofNullable(this.sageMakerImageVersionArn);
     }
 

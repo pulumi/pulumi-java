@@ -16,14 +16,14 @@ public final class RuleGroupForwardedIPConfiguration extends com.pulumi.resource
     @Import(name="fallbackBehavior", required=true)
       private final RuleGroupForwardedIPConfigurationFallbackBehavior fallbackBehavior;
 
-    public RuleGroupForwardedIPConfigurationFallbackBehavior getFallbackBehavior() {
+    public RuleGroupForwardedIPConfigurationFallbackBehavior fallbackBehavior() {
         return this.fallbackBehavior;
     }
 
     @Import(name="headerName", required=true)
       private final String headerName;
 
-    public String getHeaderName() {
+    public String headerName() {
         return this.headerName;
     }
 

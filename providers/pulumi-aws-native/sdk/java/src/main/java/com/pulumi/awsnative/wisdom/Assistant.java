@@ -25,43 +25,43 @@ public class Assistant extends com.pulumi.resources.CustomResource {
     @Export(name="assistantArn", type=String.class, parameters={})
     private Output<String> assistantArn;
 
-    public Output<String> getAssistantArn() {
+    public Output<String> assistantArn() {
         return this.assistantArn;
     }
     @Export(name="assistantId", type=String.class, parameters={})
     private Output<String> assistantId;
 
-    public Output<String> getAssistantId() {
+    public Output<String> assistantId() {
         return this.assistantId;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="serverSideEncryptionConfiguration", type=AssistantServerSideEncryptionConfiguration.class, parameters={})
     private Output</* @Nullable */ AssistantServerSideEncryptionConfiguration> serverSideEncryptionConfiguration;
 
-    public Output</* @Nullable */ AssistantServerSideEncryptionConfiguration> getServerSideEncryptionConfiguration() {
+    public Output</* @Nullable */ AssistantServerSideEncryptionConfiguration> serverSideEncryptionConfiguration() {
         return this.serverSideEncryptionConfiguration;
     }
     @Export(name="tags", type=List.class, parameters={AssistantTag.class})
     private Output</* @Nullable */ List<AssistantTag>> tags;
 
-    public Output</* @Nullable */ List<AssistantTag>> getTags() {
+    public Output</* @Nullable */ List<AssistantTag>> tags() {
         return this.tags;
     }
     @Export(name="type", type=AssistantType.class, parameters={})
     private Output<AssistantType> type;
 
-    public Output<AssistantType> getType() {
+    public Output<AssistantType> type() {
         return this.type;
     }
 

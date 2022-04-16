@@ -42,28 +42,28 @@ public final class GetThemeResult {
         this.values = values;
     }
 
-    public Optional<String> getAppId() {
+    public Optional<String> appId() {
         return Optional.ofNullable(this.appId);
     }
-    public Optional<String> getCreatedAt() {
+    public Optional<String> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
-    public Optional<String> getEnvironmentName() {
+    public Optional<String> environmentName() {
         return Optional.ofNullable(this.environmentName);
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<String> getModifiedAt() {
+    public Optional<String> modifiedAt() {
         return Optional.ofNullable(this.modifiedAt);
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public List<ThemeValues> getOverrides() {
+    public List<ThemeValues> overrides() {
         return this.overrides == null ? List.of() : this.overrides;
     }
-    public List<ThemeValues> getValues() {
+    public List<ThemeValues> values() {
         return this.values == null ? List.of() : this.values;
     }
 

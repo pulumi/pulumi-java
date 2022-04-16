@@ -33,19 +33,19 @@ public final class GetEntitlementResult {
         this.lastModifiedTime = lastModifiedTime;
     }
 
-    public Optional<String> getAppVisibility() {
+    public Optional<String> appVisibility() {
         return Optional.ofNullable(this.appVisibility);
     }
-    public List<EntitlementAttribute> getAttributes() {
+    public List<EntitlementAttribute> attributes() {
         return this.attributes == null ? List.of() : this.attributes;
     }
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<String> getLastModifiedTime() {
+    public Optional<String> lastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
 

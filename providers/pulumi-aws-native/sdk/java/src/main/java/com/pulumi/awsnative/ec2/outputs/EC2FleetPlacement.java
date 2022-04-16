@@ -41,28 +41,28 @@ public final class EC2FleetPlacement {
         this.tenancy = tenancy;
     }
 
-    public Optional<String> getAffinity() {
+    public Optional<String> affinity() {
         return Optional.ofNullable(this.affinity);
     }
-    public Optional<String> getAvailabilityZone() {
+    public Optional<String> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
-    public Optional<String> getGroupName() {
+    public Optional<String> groupName() {
         return Optional.ofNullable(this.groupName);
     }
-    public Optional<String> getHostId() {
+    public Optional<String> hostId() {
         return Optional.ofNullable(this.hostId);
     }
-    public Optional<String> getHostResourceGroupArn() {
+    public Optional<String> hostResourceGroupArn() {
         return Optional.ofNullable(this.hostResourceGroupArn);
     }
-    public Optional<Integer> getPartitionNumber() {
+    public Optional<Integer> partitionNumber() {
         return Optional.ofNullable(this.partitionNumber);
     }
-    public Optional<String> getSpreadDomain() {
+    public Optional<String> spreadDomain() {
         return Optional.ofNullable(this.spreadDomain);
     }
-    public Optional<String> getTenancy() {
+    public Optional<String> tenancy() {
         return Optional.ofNullable(this.tenancy);
     }
 

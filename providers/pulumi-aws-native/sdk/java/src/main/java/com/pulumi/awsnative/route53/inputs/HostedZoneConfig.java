@@ -27,7 +27,7 @@ public final class HostedZoneConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="comment")
       private final @Nullable String comment;
 
-    public Optional<String> getComment() {
+    public Optional<String> comment() {
         return this.comment == null ? Optional.empty() : Optional.ofNullable(this.comment);
     }
 

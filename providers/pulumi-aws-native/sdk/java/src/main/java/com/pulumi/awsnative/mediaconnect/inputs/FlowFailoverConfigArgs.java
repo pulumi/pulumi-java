@@ -27,14 +27,14 @@ public final class FlowFailoverConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="recoveryWindow")
       private final @Nullable Output<Integer> recoveryWindow;
 
-    public Output<Integer> getRecoveryWindow() {
+    public Output<Integer> recoveryWindow() {
         return this.recoveryWindow == null ? Codegen.empty() : this.recoveryWindow;
     }
 
     @Import(name="state")
       private final @Nullable Output<FlowFailoverConfigState> state;
 
-    public Output<FlowFailoverConfigState> getState() {
+    public Output<FlowFailoverConfigState> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

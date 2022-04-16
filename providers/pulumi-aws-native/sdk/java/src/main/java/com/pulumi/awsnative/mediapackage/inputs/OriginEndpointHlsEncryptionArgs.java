@@ -30,7 +30,7 @@ public final class OriginEndpointHlsEncryptionArgs extends com.pulumi.resources.
     @Import(name="constantInitializationVector")
       private final @Nullable Output<String> constantInitializationVector;
 
-    public Output<String> getConstantInitializationVector() {
+    public Output<String> constantInitializationVector() {
         return this.constantInitializationVector == null ? Codegen.empty() : this.constantInitializationVector;
     }
 
@@ -41,7 +41,7 @@ public final class OriginEndpointHlsEncryptionArgs extends com.pulumi.resources.
     @Import(name="encryptionMethod")
       private final @Nullable Output<OriginEndpointHlsEncryptionEncryptionMethod> encryptionMethod;
 
-    public Output<OriginEndpointHlsEncryptionEncryptionMethod> getEncryptionMethod() {
+    public Output<OriginEndpointHlsEncryptionEncryptionMethod> encryptionMethod() {
         return this.encryptionMethod == null ? Codegen.empty() : this.encryptionMethod;
     }
 
@@ -52,7 +52,7 @@ public final class OriginEndpointHlsEncryptionArgs extends com.pulumi.resources.
     @Import(name="keyRotationIntervalSeconds")
       private final @Nullable Output<Integer> keyRotationIntervalSeconds;
 
-    public Output<Integer> getKeyRotationIntervalSeconds() {
+    public Output<Integer> keyRotationIntervalSeconds() {
         return this.keyRotationIntervalSeconds == null ? Codegen.empty() : this.keyRotationIntervalSeconds;
     }
 
@@ -63,14 +63,14 @@ public final class OriginEndpointHlsEncryptionArgs extends com.pulumi.resources.
     @Import(name="repeatExtXKey")
       private final @Nullable Output<Boolean> repeatExtXKey;
 
-    public Output<Boolean> getRepeatExtXKey() {
+    public Output<Boolean> repeatExtXKey() {
         return this.repeatExtXKey == null ? Codegen.empty() : this.repeatExtXKey;
     }
 
     @Import(name="spekeKeyProvider", required=true)
       private final Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider;
 
-    public Output<OriginEndpointSpekeKeyProviderArgs> getSpekeKeyProvider() {
+    public Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider() {
         return this.spekeKeyProvider;
     }
 

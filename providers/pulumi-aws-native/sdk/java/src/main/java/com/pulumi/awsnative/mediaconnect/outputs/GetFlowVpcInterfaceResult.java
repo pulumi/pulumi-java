@@ -49,28 +49,28 @@ public final class GetFlowVpcInterfaceResult {
      * IDs of the network interfaces created in customer's account by MediaConnect.
      * 
     */
-    public List<String> getNetworkInterfaceIds() {
+    public List<String> networkInterfaceIds() {
         return this.networkInterfaceIds == null ? List.of() : this.networkInterfaceIds;
     }
     /**
      * Role Arn MediaConnect can assumes to create ENIs in customer's account.
      * 
     */
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
     /**
      * Security Group IDs to be used on ENI.
      * 
     */
-    public List<String> getSecurityGroupIds() {
+    public List<String> securityGroupIds() {
         return this.securityGroupIds == null ? List.of() : this.securityGroupIds;
     }
     /**
      * Subnet must be in the AZ of the Flow
      * 
     */
-    public Optional<String> getSubnetId() {
+    public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
 

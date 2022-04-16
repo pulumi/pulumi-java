@@ -21,7 +21,7 @@ public final class DataQualityJobDefinitionMonitoringOutputArgs extends com.pulu
     @Import(name="s3Output", required=true)
       private final Output<DataQualityJobDefinitionS3OutputArgs> s3Output;
 
-    public Output<DataQualityJobDefinitionS3OutputArgs> getS3Output() {
+    public Output<DataQualityJobDefinitionS3OutputArgs> s3Output() {
         return this.s3Output;
     }
 

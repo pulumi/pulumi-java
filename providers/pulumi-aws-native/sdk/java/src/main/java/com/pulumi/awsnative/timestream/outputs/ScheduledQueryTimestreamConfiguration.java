@@ -41,25 +41,25 @@ public final class ScheduledQueryTimestreamConfiguration {
         this.timeColumn = timeColumn;
     }
 
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
-    public List<ScheduledQueryDimensionMapping> getDimensionMappings() {
+    public List<ScheduledQueryDimensionMapping> dimensionMappings() {
         return this.dimensionMappings;
     }
-    public Optional<String> getMeasureNameColumn() {
+    public Optional<String> measureNameColumn() {
         return Optional.ofNullable(this.measureNameColumn);
     }
-    public List<ScheduledQueryMixedMeasureMapping> getMixedMeasureMappings() {
+    public List<ScheduledQueryMixedMeasureMapping> mixedMeasureMappings() {
         return this.mixedMeasureMappings == null ? List.of() : this.mixedMeasureMappings;
     }
-    public Optional<ScheduledQueryMultiMeasureMappings> getMultiMeasureMappings() {
+    public Optional<ScheduledQueryMultiMeasureMappings> multiMeasureMappings() {
         return Optional.ofNullable(this.multiMeasureMappings);
     }
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
-    public String getTimeColumn() {
+    public String timeColumn() {
         return this.timeColumn;
     }
 

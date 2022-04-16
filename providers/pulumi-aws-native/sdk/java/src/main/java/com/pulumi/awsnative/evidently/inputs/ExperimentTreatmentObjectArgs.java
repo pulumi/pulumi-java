@@ -18,28 +18,28 @@ public final class ExperimentTreatmentObjectArgs extends com.pulumi.resources.Re
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="feature", required=true)
       private final Output<String> feature;
 
-    public Output<String> getFeature() {
+    public Output<String> feature() {
         return this.feature;
     }
 
     @Import(name="treatmentName", required=true)
       private final Output<String> treatmentName;
 
-    public Output<String> getTreatmentName() {
+    public Output<String> treatmentName() {
         return this.treatmentName;
     }
 
     @Import(name="variation", required=true)
       private final Output<String> variation;
 
-    public Output<String> getVariation() {
+    public Output<String> variation() {
         return this.variation;
     }
 

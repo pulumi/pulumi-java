@@ -22,7 +22,7 @@ public final class PackagingGroupLogConfigurationArgs extends com.pulumi.resourc
     @Import(name="logGroupName")
       private final @Nullable Output<String> logGroupName;
 
-    public Output<String> getLogGroupName() {
+    public Output<String> logGroupName() {
         return this.logGroupName == null ? Codegen.empty() : this.logGroupName;
     }
 

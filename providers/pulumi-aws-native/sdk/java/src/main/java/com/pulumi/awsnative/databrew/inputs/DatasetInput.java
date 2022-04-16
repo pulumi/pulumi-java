@@ -24,28 +24,28 @@ public final class DatasetInput extends com.pulumi.resources.InvokeArgs {
     @Import(name="dataCatalogInputDefinition")
       private final @Nullable DatasetDataCatalogInputDefinition dataCatalogInputDefinition;
 
-    public Optional<DatasetDataCatalogInputDefinition> getDataCatalogInputDefinition() {
+    public Optional<DatasetDataCatalogInputDefinition> dataCatalogInputDefinition() {
         return this.dataCatalogInputDefinition == null ? Optional.empty() : Optional.ofNullable(this.dataCatalogInputDefinition);
     }
 
     @Import(name="databaseInputDefinition")
       private final @Nullable DatasetDatabaseInputDefinition databaseInputDefinition;
 
-    public Optional<DatasetDatabaseInputDefinition> getDatabaseInputDefinition() {
+    public Optional<DatasetDatabaseInputDefinition> databaseInputDefinition() {
         return this.databaseInputDefinition == null ? Optional.empty() : Optional.ofNullable(this.databaseInputDefinition);
     }
 
     @Import(name="metadata")
       private final @Nullable DatasetMetadata metadata;
 
-    public Optional<DatasetMetadata> getMetadata() {
+    public Optional<DatasetMetadata> metadata() {
         return this.metadata == null ? Optional.empty() : Optional.ofNullable(this.metadata);
     }
 
     @Import(name="s3InputDefinition")
       private final @Nullable DatasetS3Location s3InputDefinition;
 
-    public Optional<DatasetS3Location> getS3InputDefinition() {
+    public Optional<DatasetS3Location> s3InputDefinition() {
         return this.s3InputDefinition == null ? Optional.empty() : Optional.ofNullable(this.s3InputDefinition);
     }
 

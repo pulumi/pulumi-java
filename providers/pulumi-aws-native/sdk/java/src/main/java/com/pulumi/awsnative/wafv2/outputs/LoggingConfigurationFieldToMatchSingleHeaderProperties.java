@@ -24,7 +24,7 @@ public final class LoggingConfigurationFieldToMatchSingleHeaderProperties {
      * The name of the query header to inspect.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

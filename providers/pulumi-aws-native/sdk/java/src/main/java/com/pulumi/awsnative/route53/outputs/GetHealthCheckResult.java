@@ -40,17 +40,17 @@ public final class GetHealthCheckResult {
      * A complex type that contains information about the health check.
      * 
     */
-    public Optional<HealthCheckConfigProperties> getHealthCheckConfig() {
+    public Optional<HealthCheckConfigProperties> healthCheckConfig() {
         return Optional.ofNullable(this.healthCheckConfig);
     }
-    public Optional<String> getHealthCheckId() {
+    public Optional<String> healthCheckId() {
         return Optional.ofNullable(this.healthCheckId);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
     */
-    public List<HealthCheckTag> getHealthCheckTags() {
+    public List<HealthCheckTag> healthCheckTags() {
         return this.healthCheckTags == null ? List.of() : this.healthCheckTags;
     }
 

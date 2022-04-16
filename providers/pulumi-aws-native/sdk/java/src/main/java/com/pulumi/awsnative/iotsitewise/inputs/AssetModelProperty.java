@@ -28,7 +28,7 @@ public final class AssetModelProperty extends com.pulumi.resources.InvokeArgs {
     @Import(name="dataType", required=true)
       private final AssetModelDataType dataType;
 
-    public AssetModelDataType getDataType() {
+    public AssetModelDataType dataType() {
         return this.dataType;
     }
 
@@ -39,7 +39,7 @@ public final class AssetModelProperty extends com.pulumi.resources.InvokeArgs {
     @Import(name="dataTypeSpec")
       private final @Nullable AssetModelDataTypeSpec dataTypeSpec;
 
-    public Optional<AssetModelDataTypeSpec> getDataTypeSpec() {
+    public Optional<AssetModelDataTypeSpec> dataTypeSpec() {
         return this.dataTypeSpec == null ? Optional.empty() : Optional.ofNullable(this.dataTypeSpec);
     }
 
@@ -50,7 +50,7 @@ public final class AssetModelProperty extends com.pulumi.resources.InvokeArgs {
     @Import(name="logicalId", required=true)
       private final String logicalId;
 
-    public String getLogicalId() {
+    public String logicalId() {
         return this.logicalId;
     }
 
@@ -61,7 +61,7 @@ public final class AssetModelProperty extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -72,7 +72,7 @@ public final class AssetModelProperty extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final AssetModelPropertyType type;
 
-    public AssetModelPropertyType getType() {
+    public AssetModelPropertyType type() {
         return this.type;
     }
 
@@ -83,7 +83,7 @@ public final class AssetModelProperty extends com.pulumi.resources.InvokeArgs {
     @Import(name="unit")
       private final @Nullable String unit;
 
-    public Optional<String> getUnit() {
+    public Optional<String> unit() {
         return this.unit == null ? Optional.empty() : Optional.ofNullable(this.unit);
     }
 

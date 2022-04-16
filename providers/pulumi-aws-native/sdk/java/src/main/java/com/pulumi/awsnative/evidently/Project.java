@@ -24,25 +24,25 @@ public class Project extends com.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="dataDelivery", type=ProjectDataDeliveryObject.class, parameters={})
     private Output</* @Nullable */ ProjectDataDeliveryObject> dataDelivery;
 
-    public Output</* @Nullable */ ProjectDataDeliveryObject> getDataDelivery() {
+    public Output</* @Nullable */ ProjectDataDeliveryObject> dataDelivery() {
         return this.dataDelivery;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -56,7 +56,7 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<ProjectTag>> getTags() {
+    public Output</* @Nullable */ List<ProjectTag>> tags() {
         return this.tags;
     }
 

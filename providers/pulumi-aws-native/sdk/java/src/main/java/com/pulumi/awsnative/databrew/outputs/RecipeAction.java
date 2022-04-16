@@ -33,10 +33,10 @@ public final class RecipeAction {
      * Step action operation
      * 
     */
-    public String getOperation() {
+    public String operation() {
         return this.operation;
     }
-    public Optional<Either<RecipeParameters,RecipeParameterMap>> getParameters() {
+    public Optional<Either<RecipeParameters,RecipeParameterMap>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
 

@@ -56,34 +56,34 @@ public final class GetDeliveryStreamResult {
         this.tags = tags;
     }
 
-    public Optional<DeliveryStreamAmazonopensearchserviceDestinationConfiguration> getAmazonopensearchserviceDestinationConfiguration() {
+    public Optional<DeliveryStreamAmazonopensearchserviceDestinationConfiguration> amazonopensearchserviceDestinationConfiguration() {
         return Optional.ofNullable(this.amazonopensearchserviceDestinationConfiguration);
     }
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<DeliveryStreamEncryptionConfigurationInput> getDeliveryStreamEncryptionConfigurationInput() {
+    public Optional<DeliveryStreamEncryptionConfigurationInput> deliveryStreamEncryptionConfigurationInput() {
         return Optional.ofNullable(this.deliveryStreamEncryptionConfigurationInput);
     }
-    public Optional<DeliveryStreamElasticsearchDestinationConfiguration> getElasticsearchDestinationConfiguration() {
+    public Optional<DeliveryStreamElasticsearchDestinationConfiguration> elasticsearchDestinationConfiguration() {
         return Optional.ofNullable(this.elasticsearchDestinationConfiguration);
     }
-    public Optional<DeliveryStreamExtendedS3DestinationConfiguration> getExtendedS3DestinationConfiguration() {
+    public Optional<DeliveryStreamExtendedS3DestinationConfiguration> extendedS3DestinationConfiguration() {
         return Optional.ofNullable(this.extendedS3DestinationConfiguration);
     }
-    public Optional<DeliveryStreamHttpEndpointDestinationConfiguration> getHttpEndpointDestinationConfiguration() {
+    public Optional<DeliveryStreamHttpEndpointDestinationConfiguration> httpEndpointDestinationConfiguration() {
         return Optional.ofNullable(this.httpEndpointDestinationConfiguration);
     }
-    public Optional<DeliveryStreamRedshiftDestinationConfiguration> getRedshiftDestinationConfiguration() {
+    public Optional<DeliveryStreamRedshiftDestinationConfiguration> redshiftDestinationConfiguration() {
         return Optional.ofNullable(this.redshiftDestinationConfiguration);
     }
-    public Optional<DeliveryStreamS3DestinationConfiguration> getS3DestinationConfiguration() {
+    public Optional<DeliveryStreamS3DestinationConfiguration> s3DestinationConfiguration() {
         return Optional.ofNullable(this.s3DestinationConfiguration);
     }
-    public Optional<DeliveryStreamSplunkDestinationConfiguration> getSplunkDestinationConfiguration() {
+    public Optional<DeliveryStreamSplunkDestinationConfiguration> splunkDestinationConfiguration() {
         return Optional.ofNullable(this.splunkDestinationConfiguration);
     }
-    public List<DeliveryStreamTag> getTags() {
+    public List<DeliveryStreamTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

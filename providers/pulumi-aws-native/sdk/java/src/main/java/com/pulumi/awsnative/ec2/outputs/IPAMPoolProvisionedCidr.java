@@ -16,7 +16,7 @@ public final class IPAMPoolProvisionedCidr {
         this.cidr = cidr;
     }
 
-    public String getCidr() {
+    public String cidr() {
         return this.cidr;
     }
 

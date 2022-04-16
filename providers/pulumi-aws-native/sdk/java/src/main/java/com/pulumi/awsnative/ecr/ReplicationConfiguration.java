@@ -31,13 +31,13 @@ public class ReplicationConfiguration extends com.pulumi.resources.CustomResourc
      * @return The RegistryId associated with the aws account.
      * 
      */
-    public Output<String> getRegistryId() {
+    public Output<String> registryId() {
         return this.registryId;
     }
     @Export(name="replicationConfiguration", type=com.pulumi.awsnative.ecr.outputs.ReplicationConfiguration.class, parameters={})
     private Output<com.pulumi.awsnative.ecr.outputs.ReplicationConfiguration> replicationConfiguration;
 
-    public Output<com.pulumi.awsnative.ecr.outputs.ReplicationConfiguration> getReplicationConfiguration() {
+    public Output<com.pulumi.awsnative.ecr.outputs.ReplicationConfiguration> replicationConfiguration() {
         return this.replicationConfiguration;
     }
 

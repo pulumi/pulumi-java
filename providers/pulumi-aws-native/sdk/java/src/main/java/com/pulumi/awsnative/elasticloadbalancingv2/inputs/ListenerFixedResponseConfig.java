@@ -17,21 +17,21 @@ public final class ListenerFixedResponseConfig extends com.pulumi.resources.Invo
     @Import(name="contentType")
       private final @Nullable String contentType;
 
-    public Optional<String> getContentType() {
+    public Optional<String> contentType() {
         return this.contentType == null ? Optional.empty() : Optional.ofNullable(this.contentType);
     }
 
     @Import(name="messageBody")
       private final @Nullable String messageBody;
 
-    public Optional<String> getMessageBody() {
+    public Optional<String> messageBody() {
         return this.messageBody == null ? Optional.empty() : Optional.ofNullable(this.messageBody);
     }
 
     @Import(name="statusCode", required=true)
       private final String statusCode;
 
-    public String getStatusCode() {
+    public String statusCode() {
         return this.statusCode;
     }
 

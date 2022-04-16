@@ -18,7 +18,7 @@ public final class TaskDefinitionRepositoryCredentialsArgs extends com.pulumi.re
     @Import(name="credentialsParameter")
       private final @Nullable Output<String> credentialsParameter;
 
-    public Output<String> getCredentialsParameter() {
+    public Output<String> credentialsParameter() {
         return this.credentialsParameter == null ? Codegen.empty() : this.credentialsParameter;
     }
 

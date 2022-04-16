@@ -15,14 +15,14 @@ public final class ApplicationS3Location extends com.pulumi.resources.InvokeArgs
     @Import(name="s3Bucket", required=true)
       private final String s3Bucket;
 
-    public String getS3Bucket() {
+    public String s3Bucket() {
         return this.s3Bucket;
     }
 
     @Import(name="s3Key", required=true)
       private final String s3Key;
 
-    public String getS3Key() {
+    public String s3Key() {
         return this.s3Key;
     }
 

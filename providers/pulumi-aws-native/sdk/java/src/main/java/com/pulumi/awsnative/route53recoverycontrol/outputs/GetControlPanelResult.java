@@ -58,35 +58,35 @@ public final class GetControlPanelResult {
      * The Amazon Resource Name (ARN) of the cluster.
      * 
     */
-    public Optional<String> getControlPanelArn() {
+    public Optional<String> controlPanelArn() {
         return Optional.ofNullable(this.controlPanelArn);
     }
     /**
      * A flag that Amazon Route 53 Application Recovery Controller sets to true to designate the default control panel for a cluster. When you create a cluster, Amazon Route 53 Application Recovery Controller creates a control panel, and sets this flag for that control panel. If you create a control panel yourself, this flag is set to false.
      * 
     */
-    public Optional<Boolean> getDefaultControlPanel() {
+    public Optional<Boolean> defaultControlPanel() {
         return Optional.ofNullable(this.defaultControlPanel);
     }
     /**
      * The name of the control panel. You can use any non-white space character in the name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Count of associated routing controls
      * 
     */
-    public Optional<Integer> getRoutingControlCount() {
+    public Optional<Integer> routingControlCount() {
         return Optional.ofNullable(this.routingControlCount);
     }
     /**
      * The deployment status of control panel. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
      * 
     */
-    public Optional<ControlPanelStatus> getStatus() {
+    public Optional<ControlPanelStatus> status() {
         return Optional.ofNullable(this.status);
     }
 

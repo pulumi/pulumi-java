@@ -24,25 +24,25 @@ public class TopicRule extends com.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="ruleName", type=String.class, parameters={})
     private Output</* @Nullable */ String> ruleName;
 
-    public Output</* @Nullable */ String> getRuleName() {
+    public Output</* @Nullable */ String> ruleName() {
         return this.ruleName;
     }
     @Export(name="tags", type=List.class, parameters={TopicRuleTag.class})
     private Output</* @Nullable */ List<TopicRuleTag>> tags;
 
-    public Output</* @Nullable */ List<TopicRuleTag>> getTags() {
+    public Output</* @Nullable */ List<TopicRuleTag>> tags() {
         return this.tags;
     }
     @Export(name="topicRulePayload", type=TopicRulePayload.class, parameters={})
     private Output<TopicRulePayload> topicRulePayload;
 
-    public Output<TopicRulePayload> getTopicRulePayload() {
+    public Output<TopicRulePayload> topicRulePayload() {
         return this.topicRulePayload;
     }
 

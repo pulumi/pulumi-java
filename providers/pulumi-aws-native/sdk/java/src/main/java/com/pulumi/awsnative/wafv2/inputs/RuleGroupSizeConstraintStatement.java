@@ -23,28 +23,28 @@ public final class RuleGroupSizeConstraintStatement extends com.pulumi.resources
     @Import(name="comparisonOperator", required=true)
       private final RuleGroupSizeConstraintStatementComparisonOperator comparisonOperator;
 
-    public RuleGroupSizeConstraintStatementComparisonOperator getComparisonOperator() {
+    public RuleGroupSizeConstraintStatementComparisonOperator comparisonOperator() {
         return this.comparisonOperator;
     }
 
     @Import(name="fieldToMatch", required=true)
       private final RuleGroupFieldToMatch fieldToMatch;
 
-    public RuleGroupFieldToMatch getFieldToMatch() {
+    public RuleGroupFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
 
     @Import(name="size", required=true)
       private final Double size;
 
-    public Double getSize() {
+    public Double size() {
         return this.size;
     }
 
     @Import(name="textTransformations", required=true)
       private final List<RuleGroupTextTransformation> textTransformations;
 
-    public List<RuleGroupTextTransformation> getTextTransformations() {
+    public List<RuleGroupTextTransformation> textTransformations() {
         return this.textTransformations;
     }
 

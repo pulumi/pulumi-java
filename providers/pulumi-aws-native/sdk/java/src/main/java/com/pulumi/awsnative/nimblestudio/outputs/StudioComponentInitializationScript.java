@@ -42,20 +42,20 @@ public final class StudioComponentInitializationScript {
      * <p>The version number of the protocol that is used by the launch profile. The only valid version is "2021-03-31".</p>
      * 
     */
-    public Optional<String> getLaunchProfileProtocolVersion() {
+    public Optional<String> launchProfileProtocolVersion() {
         return Optional.ofNullable(this.launchProfileProtocolVersion);
     }
-    public Optional<StudioComponentLaunchProfilePlatform> getPlatform() {
+    public Optional<StudioComponentLaunchProfilePlatform> platform() {
         return Optional.ofNullable(this.platform);
     }
-    public Optional<StudioComponentInitializationScriptRunContext> getRunContext() {
+    public Optional<StudioComponentInitializationScriptRunContext> runContext() {
         return Optional.ofNullable(this.runContext);
     }
     /**
      * <p>The initialization script.</p>
      * 
     */
-    public Optional<String> getScript() {
+    public Optional<String> script() {
         return Optional.ofNullable(this.script);
     }
 

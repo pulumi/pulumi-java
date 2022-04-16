@@ -42,21 +42,21 @@ public final class LaunchConfigurationMetadataOptions {
      * This parameter enables or disables the HTTP metadata endpoint on your instances.
      * 
     */
-    public Optional<String> getHttpEndpoint() {
+    public Optional<String> httpEndpoint() {
         return Optional.ofNullable(this.httpEndpoint);
     }
     /**
      * The desired HTTP PUT response hop limit for instance metadata requests.
      * 
     */
-    public Optional<Integer> getHttpPutResponseHopLimit() {
+    public Optional<Integer> httpPutResponseHopLimit() {
         return Optional.ofNullable(this.httpPutResponseHopLimit);
     }
     /**
      * The state of token usage for your instance metadata requests.
      * 
     */
-    public Optional<String> getHttpTokens() {
+    public Optional<String> httpTokens() {
         return Optional.ofNullable(this.httpTokens);
     }
 

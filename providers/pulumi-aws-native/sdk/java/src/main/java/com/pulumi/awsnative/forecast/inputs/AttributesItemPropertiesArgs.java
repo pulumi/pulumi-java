@@ -23,7 +23,7 @@ public final class AttributesItemPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="attributeName")
       private final @Nullable Output<String> attributeName;
 
-    public Output<String> getAttributeName() {
+    public Output<String> attributeName() {
         return this.attributeName == null ? Codegen.empty() : this.attributeName;
     }
 
@@ -34,7 +34,7 @@ public final class AttributesItemPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="attributeType")
       private final @Nullable Output<DatasetAttributesItemPropertiesAttributeType> attributeType;
 
-    public Output<DatasetAttributesItemPropertiesAttributeType> getAttributeType() {
+    public Output<DatasetAttributesItemPropertiesAttributeType> attributeType() {
         return this.attributeType == null ? Codegen.empty() : this.attributeType;
     }
 

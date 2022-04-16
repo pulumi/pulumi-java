@@ -21,10 +21,10 @@ public final class LaunchGroupToWeight {
         this.splitWeight = splitWeight;
     }
 
-    public String getGroupName() {
+    public String groupName() {
         return this.groupName;
     }
-    public Integer getSplitWeight() {
+    public Integer splitWeight() {
         return this.splitWeight;
     }
 

@@ -25,31 +25,31 @@ public class ConnectionAlias extends com.pulumi.resources.CustomResource {
     @Export(name="aliasId", type=String.class, parameters={})
     private Output<String> aliasId;
 
-    public Output<String> getAliasId() {
+    public Output<String> aliasId() {
         return this.aliasId;
     }
     @Export(name="associations", type=List.class, parameters={ConnectionAliasAssociation.class})
     private Output<List<ConnectionAliasAssociation>> associations;
 
-    public Output<List<ConnectionAliasAssociation>> getAssociations() {
+    public Output<List<ConnectionAliasAssociation>> associations() {
         return this.associations;
     }
     @Export(name="connectionAliasState", type=ConnectionAliasState.class, parameters={})
     private Output<ConnectionAliasState> connectionAliasState;
 
-    public Output<ConnectionAliasState> getConnectionAliasState() {
+    public Output<ConnectionAliasState> connectionAliasState() {
         return this.connectionAliasState;
     }
     @Export(name="connectionString", type=String.class, parameters={})
     private Output<String> connectionString;
 
-    public Output<String> getConnectionString() {
+    public Output<String> connectionString() {
         return this.connectionString;
     }
     @Export(name="tags", type=List.class, parameters={ConnectionAliasTag.class})
     private Output</* @Nullable */ List<ConnectionAliasTag>> tags;
 
-    public Output</* @Nullable */ List<ConnectionAliasTag>> getTags() {
+    public Output</* @Nullable */ List<ConnectionAliasTag>> tags() {
         return this.tags;
     }
 

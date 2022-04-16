@@ -26,13 +26,13 @@ public final class AppBasicAuthConfig {
         this.username = username;
     }
 
-    public Optional<Boolean> getEnableBasicAuth() {
+    public Optional<Boolean> enableBasicAuth() {
         return Optional.ofNullable(this.enableBasicAuth);
     }
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
 

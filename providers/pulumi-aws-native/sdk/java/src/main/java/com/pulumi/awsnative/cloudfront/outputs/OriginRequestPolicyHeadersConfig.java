@@ -22,10 +22,10 @@ public final class OriginRequestPolicyHeadersConfig {
         this.headers = headers;
     }
 
-    public String getHeaderBehavior() {
+    public String headerBehavior() {
         return this.headerBehavior;
     }
-    public List<String> getHeaders() {
+    public List<String> headers() {
         return this.headers == null ? List.of() : this.headers;
     }
 

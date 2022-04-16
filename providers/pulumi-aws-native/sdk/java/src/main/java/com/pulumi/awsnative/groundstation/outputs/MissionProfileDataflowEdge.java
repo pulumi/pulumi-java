@@ -22,10 +22,10 @@ public final class MissionProfileDataflowEdge {
         this.source = source;
     }
 
-    public Optional<String> getDestination() {
+    public Optional<String> destination() {
         return Optional.ofNullable(this.destination);
     }
-    public Optional<String> getSource() {
+    public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
 

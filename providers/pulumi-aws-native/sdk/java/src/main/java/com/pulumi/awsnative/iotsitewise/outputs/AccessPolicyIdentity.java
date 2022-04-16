@@ -27,13 +27,13 @@ public final class AccessPolicyIdentity {
         this.user = user;
     }
 
-    public Optional<AccessPolicyIamRole> getIamRole() {
+    public Optional<AccessPolicyIamRole> iamRole() {
         return Optional.ofNullable(this.iamRole);
     }
-    public Optional<AccessPolicyIamUser> getIamUser() {
+    public Optional<AccessPolicyIamUser> iamUser() {
         return Optional.ofNullable(this.iamUser);
     }
-    public Optional<AccessPolicyUser> getUser() {
+    public Optional<AccessPolicyUser> user() {
         return Optional.ofNullable(this.user);
     }
 

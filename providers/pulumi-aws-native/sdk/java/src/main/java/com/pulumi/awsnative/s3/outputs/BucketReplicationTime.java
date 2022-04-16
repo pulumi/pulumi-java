@@ -21,10 +21,10 @@ public final class BucketReplicationTime {
         this.time = time;
     }
 
-    public BucketReplicationTimeStatus getStatus() {
+    public BucketReplicationTimeStatus status() {
         return this.status;
     }
-    public BucketReplicationTimeValue getTime() {
+    public BucketReplicationTimeValue time() {
         return this.time;
     }
 

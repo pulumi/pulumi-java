@@ -15,7 +15,7 @@ public final class GetHealthCheckArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="healthCheckId", required=true)
       private final String healthCheckId;
 
-    public String getHealthCheckId() {
+    public String healthCheckId() {
         return this.healthCheckId;
     }
 

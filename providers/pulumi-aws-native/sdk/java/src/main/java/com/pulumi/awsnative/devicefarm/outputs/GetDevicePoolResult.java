@@ -38,22 +38,22 @@ public final class GetDevicePoolResult {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<Integer> getMaxDevices() {
+    public Optional<Integer> maxDevices() {
         return Optional.ofNullable(this.maxDevices);
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public List<DevicePoolRule> getRules() {
+    public List<DevicePoolRule> rules() {
         return this.rules == null ? List.of() : this.rules;
     }
-    public List<DevicePoolTag> getTags() {
+    public List<DevicePoolTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

@@ -24,7 +24,7 @@ public final class ReplicationConfiguration extends com.pulumi.resources.InvokeA
     @Import(name="rules", required=true)
       private final List<ReplicationConfigurationReplicationRule> rules;
 
-    public List<ReplicationConfigurationReplicationRule> getRules() {
+    public List<ReplicationConfigurationReplicationRule> rules() {
         return this.rules;
     }
 

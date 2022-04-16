@@ -18,7 +18,7 @@ public final class DatastorePartitions {
         this.partitions = partitions;
     }
 
-    public List<DatastorePartition> getPartitions() {
+    public List<DatastorePartition> partitions() {
         return this.partitions == null ? List.of() : this.partitions;
     }
 

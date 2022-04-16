@@ -32,14 +32,14 @@ public final class ConnectorProfileServiceNowConnectorProfileCredentials {
      * The password that corresponds to the username.
      * 
     */
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
     /**
      * The name of the user.
      * 
     */
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

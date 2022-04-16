@@ -26,13 +26,13 @@ public final class ScheduledQueryMultiMeasureAttributeMapping {
         this.targetMultiMeasureAttributeName = targetMultiMeasureAttributeName;
     }
 
-    public ScheduledQueryMultiMeasureAttributeMappingMeasureValueType getMeasureValueType() {
+    public ScheduledQueryMultiMeasureAttributeMappingMeasureValueType measureValueType() {
         return this.measureValueType;
     }
-    public String getSourceColumn() {
+    public String sourceColumn() {
         return this.sourceColumn;
     }
-    public Optional<String> getTargetMultiMeasureAttributeName() {
+    public Optional<String> targetMultiMeasureAttributeName() {
         return Optional.ofNullable(this.targetMultiMeasureAttributeName);
     }
 

@@ -21,14 +21,14 @@ public final class BucketLoggingConfiguration extends com.pulumi.resources.Invok
     @Import(name="destinationBucketName")
       private final @Nullable String destinationBucketName;
 
-    public Optional<String> getDestinationBucketName() {
+    public Optional<String> destinationBucketName() {
         return this.destinationBucketName == null ? Optional.empty() : Optional.ofNullable(this.destinationBucketName);
     }
 
     @Import(name="logFilePrefix")
       private final @Nullable String logFilePrefix;
 
-    public Optional<String> getLogFilePrefix() {
+    public Optional<String> logFilePrefix() {
         return this.logFilePrefix == null ? Optional.empty() : Optional.ofNullable(this.logFilePrefix);
     }
 

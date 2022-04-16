@@ -20,14 +20,14 @@ public final class ObjectTypeKeyMapArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="objectTypeKeyList")
       private final @Nullable Output<List<ObjectTypeKeyArgs>> objectTypeKeyList;
 
-    public Output<List<ObjectTypeKeyArgs>> getObjectTypeKeyList() {
+    public Output<List<ObjectTypeKeyArgs>> objectTypeKeyList() {
         return this.objectTypeKeyList == null ? Codegen.empty() : this.objectTypeKeyList;
     }
 

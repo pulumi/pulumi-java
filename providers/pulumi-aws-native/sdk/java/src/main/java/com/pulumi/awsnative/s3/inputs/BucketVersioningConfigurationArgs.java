@@ -25,7 +25,7 @@ public final class BucketVersioningConfigurationArgs extends com.pulumi.resource
     @Import(name="status", required=true)
       private final Output<BucketVersioningConfigurationStatus> status;
 
-    public Output<BucketVersioningConfigurationStatus> getStatus() {
+    public Output<BucketVersioningConfigurationStatus> status() {
         return this.status;
     }
 

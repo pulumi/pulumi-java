@@ -59,21 +59,21 @@ public final class ApplicationHANAPrometheusExporter {
      * A flag which indicates agreeing to install SAP HANA DB client.
      * 
     */
-    public Boolean getAgreeToInstallHANADBClient() {
+    public Boolean agreeToInstallHANADBClient() {
         return this.agreeToInstallHANADBClient;
     }
     /**
      * The HANA DB port.
      * 
     */
-    public String getHANAPort() {
+    public String hANAPort() {
         return this.hANAPort;
     }
     /**
      * HANA DB SID.
      * 
     */
-    public String getHANASID() {
+    public String hANASID() {
         return this.hANASID;
     }
     /**
@@ -83,14 +83,14 @@ public final class ApplicationHANAPrometheusExporter {
      * }.
      * 
     */
-    public String getHANASecretName() {
+    public String hANASecretName() {
         return this.hANASecretName;
     }
     /**
      * Prometheus exporter port.
      * 
     */
-    public Optional<String> getPrometheusPort() {
+    public Optional<String> prometheusPort() {
         return Optional.ofNullable(this.prometheusPort);
     }
 

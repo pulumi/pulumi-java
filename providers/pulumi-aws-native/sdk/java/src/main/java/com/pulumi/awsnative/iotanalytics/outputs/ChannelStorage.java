@@ -23,10 +23,10 @@ public final class ChannelStorage {
         this.serviceManagedS3 = serviceManagedS3;
     }
 
-    public Optional<ChannelCustomerManagedS3> getCustomerManagedS3() {
+    public Optional<ChannelCustomerManagedS3> customerManagedS3() {
         return Optional.ofNullable(this.customerManagedS3);
     }
-    public Optional<ChannelServiceManagedS3> getServiceManagedS3() {
+    public Optional<ChannelServiceManagedS3> serviceManagedS3() {
         return Optional.ofNullable(this.serviceManagedS3);
     }
 

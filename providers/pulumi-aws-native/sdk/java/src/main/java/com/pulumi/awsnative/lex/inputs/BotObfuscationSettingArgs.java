@@ -25,7 +25,7 @@ public final class BotObfuscationSettingArgs extends com.pulumi.resources.Resour
     @Import(name="obfuscationSettingType", required=true)
       private final Output<BotObfuscationSettingObfuscationSettingType> obfuscationSettingType;
 
-    public Output<BotObfuscationSettingObfuscationSettingType> getObfuscationSettingType() {
+    public Output<BotObfuscationSettingObfuscationSettingType> obfuscationSettingType() {
         return this.obfuscationSettingType;
     }
 

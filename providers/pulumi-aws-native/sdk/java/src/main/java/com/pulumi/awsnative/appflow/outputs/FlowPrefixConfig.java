@@ -23,10 +23,10 @@ public final class FlowPrefixConfig {
         this.prefixType = prefixType;
     }
 
-    public Optional<FlowPrefixFormat> getPrefixFormat() {
+    public Optional<FlowPrefixFormat> prefixFormat() {
         return Optional.ofNullable(this.prefixFormat);
     }
-    public Optional<FlowPrefixType> getPrefixType() {
+    public Optional<FlowPrefixType> prefixType() {
         return Optional.ofNullable(this.prefixType);
     }
 

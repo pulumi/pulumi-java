@@ -20,7 +20,7 @@ public final class ReplicationSetArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="deletionProtected")
       private final @Nullable Output<Boolean> deletionProtected;
 
-    public Output<Boolean> getDeletionProtected() {
+    public Output<Boolean> deletionProtected() {
         return this.deletionProtected == null ? Codegen.empty() : this.deletionProtected;
     }
 
@@ -31,7 +31,7 @@ public final class ReplicationSetArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="regions", required=true)
       private final Output<List<ReplicationSetReplicationRegionArgs>> regions;
 
-    public Output<List<ReplicationSetReplicationRegionArgs>> getRegions() {
+    public Output<List<ReplicationSetReplicationRegionArgs>> regions() {
         return this.regions;
     }
 

@@ -19,14 +19,14 @@ public final class ListenerRuleHttpHeaderConfigArgs extends com.pulumi.resources
     @Import(name="httpHeaderName")
       private final @Nullable Output<String> httpHeaderName;
 
-    public Output<String> getHttpHeaderName() {
+    public Output<String> httpHeaderName() {
         return this.httpHeaderName == null ? Codegen.empty() : this.httpHeaderName;
     }
 
     @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values == null ? Codegen.empty() : this.values;
     }
 

@@ -18,7 +18,7 @@ public final class IntegrationIncrementalPullConfigArgs extends com.pulumi.resou
     @Import(name="datetimeTypeFieldName")
       private final @Nullable Output<String> datetimeTypeFieldName;
 
-    public Output<String> getDatetimeTypeFieldName() {
+    public Output<String> datetimeTypeFieldName() {
         return this.datetimeTypeFieldName == null ? Codegen.empty() : this.datetimeTypeFieldName;
     }
 

@@ -15,14 +15,14 @@ public final class GetDataSourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="awsAccountId", required=true)
       private final String awsAccountId;
 
-    public String getAwsAccountId() {
+    public String awsAccountId() {
         return this.awsAccountId;
     }
 
     @Import(name="dataSourceId", required=true)
       private final String dataSourceId;
 
-    public String getDataSourceId() {
+    public String dataSourceId() {
         return this.dataSourceId;
     }
 

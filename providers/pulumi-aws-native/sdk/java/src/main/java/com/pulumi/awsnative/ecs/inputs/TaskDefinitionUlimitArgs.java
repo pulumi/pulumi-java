@@ -18,21 +18,21 @@ public final class TaskDefinitionUlimitArgs extends com.pulumi.resources.Resourc
     @Import(name="hardLimit", required=true)
       private final Output<Integer> hardLimit;
 
-    public Output<Integer> getHardLimit() {
+    public Output<Integer> hardLimit() {
         return this.hardLimit;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="softLimit", required=true)
       private final Output<Integer> softLimit;
 
-    public Output<Integer> getSoftLimit() {
+    public Output<Integer> softLimit() {
         return this.softLimit;
     }
 

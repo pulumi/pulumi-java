@@ -64,41 +64,41 @@ public final class GetPermissionSetResult {
      * The permission set description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The inline policy to put in permission set.
      * 
     */
-    public Optional<Object> getInlinePolicy() {
+    public Optional<Object> inlinePolicy() {
         return Optional.ofNullable(this.inlinePolicy);
     }
-    public List<String> getManagedPolicies() {
+    public List<String> managedPolicies() {
         return this.managedPolicies == null ? List.of() : this.managedPolicies;
     }
     /**
      * The permission set that the policy will be attached to
      * 
     */
-    public Optional<String> getPermissionSetArn() {
+    public Optional<String> permissionSetArn() {
         return Optional.ofNullable(this.permissionSetArn);
     }
     /**
      * The relay state URL that redirect links to any service in the AWS Management Console.
      * 
     */
-    public Optional<String> getRelayStateType() {
+    public Optional<String> relayStateType() {
         return Optional.ofNullable(this.relayStateType);
     }
     /**
      * The length of time that a user can be signed in to an AWS account.
      * 
     */
-    public Optional<String> getSessionDuration() {
+    public Optional<String> sessionDuration() {
         return Optional.ofNullable(this.sessionDuration);
     }
-    public List<PermissionSetTag> getTags() {
+    public List<PermissionSetTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

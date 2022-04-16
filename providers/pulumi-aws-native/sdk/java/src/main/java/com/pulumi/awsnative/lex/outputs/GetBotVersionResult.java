@@ -22,10 +22,10 @@ public final class GetBotVersionResult {
         this.description = description;
     }
 
-    public Optional<String> getBotVersion() {
+    public Optional<String> botVersion() {
         return Optional.ofNullable(this.botVersion);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
 

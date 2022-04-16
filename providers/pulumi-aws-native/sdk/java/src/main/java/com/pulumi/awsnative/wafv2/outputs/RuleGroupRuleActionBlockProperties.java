@@ -18,7 +18,7 @@ public final class RuleGroupRuleActionBlockProperties {
         this.customResponse = customResponse;
     }
 
-    public Optional<RuleGroupCustomResponse> getCustomResponse() {
+    public Optional<RuleGroupCustomResponse> customResponse() {
         return Optional.ofNullable(this.customResponse);
     }
 

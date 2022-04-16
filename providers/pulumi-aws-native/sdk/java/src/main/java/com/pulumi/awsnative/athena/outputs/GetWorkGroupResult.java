@@ -75,49 +75,49 @@ public final class GetWorkGroupResult {
      * The date and time the workgroup was created.
      * 
     */
-    public Optional<String> getCreationTime() {
+    public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * The workgroup description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The option to delete the workgroup and its contents even if the workgroup contains any named queries.
      * 
     */
-    public Optional<Boolean> getRecursiveDeleteOption() {
+    public Optional<Boolean> recursiveDeleteOption() {
         return Optional.ofNullable(this.recursiveDeleteOption);
     }
     /**
      * The state of the workgroup: ENABLED or DISABLED.
      * 
     */
-    public Optional<WorkGroupState> getState() {
+    public Optional<WorkGroupState> state() {
         return Optional.ofNullable(this.state);
     }
     /**
      * One or more tags, separated by commas, that you want to attach to the workgroup as you create it
      * 
     */
-    public List<WorkGroupTag> getTags() {
+    public List<WorkGroupTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The workgroup configuration
      * 
     */
-    public Optional<WorkGroupConfiguration> getWorkGroupConfiguration() {
+    public Optional<WorkGroupConfiguration> workGroupConfiguration() {
         return Optional.ofNullable(this.workGroupConfiguration);
     }
     /**
      * The workgroup configuration update object
      * 
     */
-    public Optional<WorkGroupConfigurationUpdates> getWorkGroupConfigurationUpdates() {
+    public Optional<WorkGroupConfigurationUpdates> workGroupConfigurationUpdates() {
         return Optional.ofNullable(this.workGroupConfigurationUpdates);
     }
 

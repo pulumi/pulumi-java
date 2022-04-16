@@ -21,10 +21,10 @@ public final class DataSourceVpcConfiguration {
         this.subnetIds = subnetIds;
     }
 
-    public List<String> getSecurityGroupIds() {
+    public List<String> securityGroupIds() {
         return this.securityGroupIds;
     }
-    public List<String> getSubnetIds() {
+    public List<String> subnetIds() {
         return this.subnetIds;
     }
 

@@ -31,16 +31,16 @@ public final class DeliveryStreamDataFormatConversionConfiguration {
         this.schemaConfiguration = schemaConfiguration;
     }
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
-    public Optional<DeliveryStreamInputFormatConfiguration> getInputFormatConfiguration() {
+    public Optional<DeliveryStreamInputFormatConfiguration> inputFormatConfiguration() {
         return Optional.ofNullable(this.inputFormatConfiguration);
     }
-    public Optional<DeliveryStreamOutputFormatConfiguration> getOutputFormatConfiguration() {
+    public Optional<DeliveryStreamOutputFormatConfiguration> outputFormatConfiguration() {
         return Optional.ofNullable(this.outputFormatConfiguration);
     }
-    public Optional<DeliveryStreamSchemaConfiguration> getSchemaConfiguration() {
+    public Optional<DeliveryStreamSchemaConfiguration> schemaConfiguration() {
         return Optional.ofNullable(this.schemaConfiguration);
     }
 

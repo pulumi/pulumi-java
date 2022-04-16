@@ -27,13 +27,13 @@ public final class RuleGroupJsonBody {
         this.matchScope = matchScope;
     }
 
-    public Optional<RuleGroupBodyParsingFallbackBehavior> getInvalidFallbackBehavior() {
+    public Optional<RuleGroupBodyParsingFallbackBehavior> invalidFallbackBehavior() {
         return Optional.ofNullable(this.invalidFallbackBehavior);
     }
-    public RuleGroupJsonMatchPattern getMatchPattern() {
+    public RuleGroupJsonMatchPattern matchPattern() {
         return this.matchPattern;
     }
-    public RuleGroupJsonMatchScope getMatchScope() {
+    public RuleGroupJsonMatchScope matchScope() {
         return this.matchScope;
     }
 

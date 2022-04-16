@@ -32,14 +32,14 @@ public final class BotAliasCloudWatchLogGroupLogDestination {
      * A string used to identify this tag
      * 
     */
-    public String getCloudWatchLogGroupArn() {
+    public String cloudWatchLogGroupArn() {
         return this.cloudWatchLogGroupArn;
     }
     /**
      * A string containing the value for the tag
      * 
     */
-    public String getLogPrefix() {
+    public String logPrefix() {
         return this.logPrefix;
     }
 

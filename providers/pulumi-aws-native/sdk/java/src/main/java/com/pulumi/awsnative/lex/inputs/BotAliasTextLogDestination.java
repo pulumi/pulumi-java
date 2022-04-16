@@ -21,7 +21,7 @@ public final class BotAliasTextLogDestination extends com.pulumi.resources.Invok
     @Import(name="cloudWatch")
       private final @Nullable BotAliasCloudWatchLogGroupLogDestination cloudWatch;
 
-    public Optional<BotAliasCloudWatchLogGroupLogDestination> getCloudWatch() {
+    public Optional<BotAliasCloudWatchLogGroupLogDestination> cloudWatch() {
         return this.cloudWatch == null ? Optional.empty() : Optional.ofNullable(this.cloudWatch);
     }
 

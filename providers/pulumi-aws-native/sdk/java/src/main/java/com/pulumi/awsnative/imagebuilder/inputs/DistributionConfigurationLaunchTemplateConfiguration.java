@@ -26,7 +26,7 @@ public final class DistributionConfigurationLaunchTemplateConfiguration extends 
     @Import(name="accountId")
       private final @Nullable String accountId;
 
-    public Optional<String> getAccountId() {
+    public Optional<String> accountId() {
         return this.accountId == null ? Optional.empty() : Optional.ofNullable(this.accountId);
     }
 
@@ -37,7 +37,7 @@ public final class DistributionConfigurationLaunchTemplateConfiguration extends 
     @Import(name="launchTemplateId")
       private final @Nullable String launchTemplateId;
 
-    public Optional<String> getLaunchTemplateId() {
+    public Optional<String> launchTemplateId() {
         return this.launchTemplateId == null ? Optional.empty() : Optional.ofNullable(this.launchTemplateId);
     }
 
@@ -48,7 +48,7 @@ public final class DistributionConfigurationLaunchTemplateConfiguration extends 
     @Import(name="setDefaultVersion")
       private final @Nullable Boolean setDefaultVersion;
 
-    public Optional<Boolean> getSetDefaultVersion() {
+    public Optional<Boolean> setDefaultVersion() {
         return this.setDefaultVersion == null ? Optional.empty() : Optional.ofNullable(this.setDefaultVersion);
     }
 

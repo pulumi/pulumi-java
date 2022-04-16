@@ -22,7 +22,7 @@ public final class AccountAuditConfigurationAuditNotificationTarget extends com.
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
@@ -33,7 +33,7 @@ public final class AccountAuditConfigurationAuditNotificationTarget extends com.
     @Import(name="roleArn")
       private final @Nullable String roleArn;
 
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return this.roleArn == null ? Optional.empty() : Optional.ofNullable(this.roleArn);
     }
 
@@ -44,7 +44,7 @@ public final class AccountAuditConfigurationAuditNotificationTarget extends com.
     @Import(name="targetArn")
       private final @Nullable String targetArn;
 
-    public Optional<String> getTargetArn() {
+    public Optional<String> targetArn() {
         return this.targetArn == null ? Optional.empty() : Optional.ofNullable(this.targetArn);
     }
 

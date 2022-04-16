@@ -26,7 +26,7 @@ public final class RobotApplicationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="currentRevisionId")
       private final @Nullable Output<String> currentRevisionId;
 
-    public Output<String> getCurrentRevisionId() {
+    public Output<String> currentRevisionId() {
         return this.currentRevisionId == null ? Codegen.empty() : this.currentRevisionId;
     }
 
@@ -37,7 +37,7 @@ public final class RobotApplicationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="environment")
       private final @Nullable Output<String> environment;
 
-    public Output<String> getEnvironment() {
+    public Output<String> environment() {
         return this.environment == null ? Codegen.empty() : this.environment;
     }
 
@@ -48,14 +48,14 @@ public final class RobotApplicationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="robotSoftwareSuite", required=true)
       private final Output<RobotApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite;
 
-    public Output<RobotApplicationRobotSoftwareSuiteArgs> getRobotSoftwareSuite() {
+    public Output<RobotApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite() {
         return this.robotSoftwareSuite;
     }
 
@@ -66,14 +66,14 @@ public final class RobotApplicationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="sources")
       private final @Nullable Output<List<RobotApplicationSourceConfigArgs>> sources;
 
-    public Output<List<RobotApplicationSourceConfigArgs>> getSources() {
+    public Output<List<RobotApplicationSourceConfigArgs>> sources() {
         return this.sources == null ? Codegen.empty() : this.sources;
     }
 
     @Import(name="tags")
       private final @Nullable Output<RobotApplicationTagsArgs> tags;
 
-    public Output<RobotApplicationTagsArgs> getTags() {
+    public Output<RobotApplicationTagsArgs> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

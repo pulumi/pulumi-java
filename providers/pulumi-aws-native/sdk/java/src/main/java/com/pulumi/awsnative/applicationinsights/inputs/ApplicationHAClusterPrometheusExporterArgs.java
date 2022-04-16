@@ -26,7 +26,7 @@ public final class ApplicationHAClusterPrometheusExporterArgs extends com.pulumi
     @Import(name="prometheusPort")
       private final @Nullable Output<String> prometheusPort;
 
-    public Output<String> getPrometheusPort() {
+    public Output<String> prometheusPort() {
         return this.prometheusPort == null ? Codegen.empty() : this.prometheusPort;
     }
 

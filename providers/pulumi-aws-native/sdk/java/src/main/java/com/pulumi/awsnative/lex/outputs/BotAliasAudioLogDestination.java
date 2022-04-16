@@ -18,7 +18,7 @@ public final class BotAliasAudioLogDestination {
         this.s3Bucket = s3Bucket;
     }
 
-    public Optional<BotAliasS3BucketLogDestination> getS3Bucket() {
+    public Optional<BotAliasS3BucketLogDestination> s3Bucket() {
         return Optional.ofNullable(this.s3Bucket);
     }
 

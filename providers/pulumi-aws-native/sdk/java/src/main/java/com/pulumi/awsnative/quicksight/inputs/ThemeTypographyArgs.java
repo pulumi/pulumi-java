@@ -23,7 +23,7 @@ public final class ThemeTypographyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="fontFamilies")
       private final @Nullable Output<List<ThemeFontArgs>> fontFamilies;
 
-    public Output<List<ThemeFontArgs>> getFontFamilies() {
+    public Output<List<ThemeFontArgs>> fontFamilies() {
         return this.fontFamilies == null ? Codegen.empty() : this.fontFamilies;
     }
 

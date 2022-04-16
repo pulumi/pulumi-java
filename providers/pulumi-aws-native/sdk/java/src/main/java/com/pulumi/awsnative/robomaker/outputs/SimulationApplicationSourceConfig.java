@@ -40,21 +40,21 @@ public final class SimulationApplicationSourceConfig {
      * The target processor architecture for the application.
      * 
     */
-    public SimulationApplicationSourceConfigArchitecture getArchitecture() {
+    public SimulationApplicationSourceConfigArchitecture architecture() {
         return this.architecture;
     }
     /**
      * The Amazon S3 bucket name.
      * 
     */
-    public String getS3Bucket() {
+    public String s3Bucket() {
         return this.s3Bucket;
     }
     /**
      * The s3 object key.
      * 
     */
-    public String getS3Key() {
+    public String s3Key() {
         return this.s3Key;
     }
 

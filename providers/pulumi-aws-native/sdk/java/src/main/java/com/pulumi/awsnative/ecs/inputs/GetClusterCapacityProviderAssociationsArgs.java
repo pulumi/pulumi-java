@@ -15,7 +15,7 @@ public final class GetClusterCapacityProviderAssociationsArgs extends com.pulumi
     @Import(name="cluster", required=true)
       private final String cluster;
 
-    public String getCluster() {
+    public String cluster() {
         return this.cluster;
     }
 

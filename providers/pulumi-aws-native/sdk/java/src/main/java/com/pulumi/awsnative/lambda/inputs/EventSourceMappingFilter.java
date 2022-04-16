@@ -25,7 +25,7 @@ public final class EventSourceMappingFilter extends com.pulumi.resources.InvokeA
     @Import(name="pattern")
       private final @Nullable String pattern;
 
-    public Optional<String> getPattern() {
+    public Optional<String> pattern() {
         return this.pattern == null ? Optional.empty() : Optional.ofNullable(this.pattern);
     }
 

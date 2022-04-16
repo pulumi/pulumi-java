@@ -21,10 +21,10 @@ public final class RealtimeLogConfigEndPoint {
         this.streamType = streamType;
     }
 
-    public RealtimeLogConfigKinesisStreamConfig getKinesisStreamConfig() {
+    public RealtimeLogConfigKinesisStreamConfig kinesisStreamConfig() {
         return this.kinesisStreamConfig;
     }
-    public String getStreamType() {
+    public String streamType() {
         return this.streamType;
     }
 

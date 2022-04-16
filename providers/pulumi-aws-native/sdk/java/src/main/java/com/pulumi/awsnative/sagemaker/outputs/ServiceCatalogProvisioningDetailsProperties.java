@@ -34,20 +34,20 @@ public final class ServiceCatalogProvisioningDetailsProperties {
         this.provisioningParameters = provisioningParameters;
     }
 
-    public Optional<String> getPathId() {
+    public Optional<String> pathId() {
         return Optional.ofNullable(this.pathId);
     }
-    public String getProductId() {
+    public String productId() {
         return this.productId;
     }
-    public Optional<String> getProvisioningArtifactId() {
+    public Optional<String> provisioningArtifactId() {
         return Optional.ofNullable(this.provisioningArtifactId);
     }
     /**
      * Parameters specified by the administrator that are required for provisioning the product.
      * 
     */
-    public List<ProjectProvisioningParameter> getProvisioningParameters() {
+    public List<ProjectProvisioningParameter> provisioningParameters() {
         return this.provisioningParameters == null ? List.of() : this.provisioningParameters;
     }
 

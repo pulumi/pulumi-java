@@ -16,7 +16,7 @@ public final class EndpointNetworkInterface {
         this.networkInterfaceId = networkInterfaceId;
     }
 
-    public String getNetworkInterfaceId() {
+    public String networkInterfaceId() {
         return this.networkInterfaceId;
     }
 

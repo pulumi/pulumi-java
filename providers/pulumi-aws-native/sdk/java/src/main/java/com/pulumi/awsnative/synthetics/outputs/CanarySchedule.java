@@ -22,10 +22,10 @@ public final class CanarySchedule {
         this.expression = expression;
     }
 
-    public Optional<String> getDurationInSeconds() {
+    public Optional<String> durationInSeconds() {
         return Optional.ofNullable(this.durationInSeconds);
     }
-    public String getExpression() {
+    public String expression() {
         return this.expression;
     }
 

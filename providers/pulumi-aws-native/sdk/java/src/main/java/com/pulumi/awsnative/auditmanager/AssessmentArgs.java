@@ -25,35 +25,35 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assessmentReportsDestination")
       private final @Nullable Output<AssessmentReportsDestinationArgs> assessmentReportsDestination;
 
-    public Output<AssessmentReportsDestinationArgs> getAssessmentReportsDestination() {
+    public Output<AssessmentReportsDestinationArgs> assessmentReportsDestination() {
         return this.assessmentReportsDestination == null ? Codegen.empty() : this.assessmentReportsDestination;
     }
 
     @Import(name="awsAccount")
       private final @Nullable Output<AssessmentAWSAccountArgs> awsAccount;
 
-    public Output<AssessmentAWSAccountArgs> getAwsAccount() {
+    public Output<AssessmentAWSAccountArgs> awsAccount() {
         return this.awsAccount == null ? Codegen.empty() : this.awsAccount;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="frameworkId")
       private final @Nullable Output<String> frameworkId;
 
-    public Output<String> getFrameworkId() {
+    public Output<String> frameworkId() {
         return this.frameworkId == null ? Codegen.empty() : this.frameworkId;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -64,21 +64,21 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roles")
       private final @Nullable Output<List<AssessmentRoleArgs>> roles;
 
-    public Output<List<AssessmentRoleArgs>> getRoles() {
+    public Output<List<AssessmentRoleArgs>> roles() {
         return this.roles == null ? Codegen.empty() : this.roles;
     }
 
     @Import(name="scope")
       private final @Nullable Output<AssessmentScopeArgs> scope;
 
-    public Output<AssessmentScopeArgs> getScope() {
+    public Output<AssessmentScopeArgs> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     @Import(name="status")
       private final @Nullable Output<AssessmentStatus> status;
 
-    public Output<AssessmentStatus> getStatus() {
+    public Output<AssessmentStatus> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -89,7 +89,7 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<AssessmentTagArgs>> tags;
 
-    public Output<List<AssessmentTagArgs>> getTags() {
+    public Output<List<AssessmentTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

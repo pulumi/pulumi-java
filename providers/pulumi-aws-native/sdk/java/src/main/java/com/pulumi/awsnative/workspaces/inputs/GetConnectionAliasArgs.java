@@ -15,7 +15,7 @@ public final class GetConnectionAliasArgs extends com.pulumi.resources.InvokeArg
     @Import(name="aliasId", required=true)
       private final String aliasId;
 
-    public String getAliasId() {
+    public String aliasId() {
         return this.aliasId;
     }
 

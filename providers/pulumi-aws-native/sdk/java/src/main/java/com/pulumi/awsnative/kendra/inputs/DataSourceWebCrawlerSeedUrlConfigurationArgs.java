@@ -20,14 +20,14 @@ public final class DataSourceWebCrawlerSeedUrlConfigurationArgs extends com.pulu
     @Import(name="seedUrls", required=true)
       private final Output<List<String>> seedUrls;
 
-    public Output<List<String>> getSeedUrls() {
+    public Output<List<String>> seedUrls() {
         return this.seedUrls;
     }
 
     @Import(name="webCrawlerMode")
       private final @Nullable Output<DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode> webCrawlerMode;
 
-    public Output<DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode> getWebCrawlerMode() {
+    public Output<DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode> webCrawlerMode() {
         return this.webCrawlerMode == null ? Codegen.empty() : this.webCrawlerMode;
     }
 

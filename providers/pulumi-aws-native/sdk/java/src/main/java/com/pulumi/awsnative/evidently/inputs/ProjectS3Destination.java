@@ -17,14 +17,14 @@ public final class ProjectS3Destination extends com.pulumi.resources.InvokeArgs 
     @Import(name="bucketName", required=true)
       private final String bucketName;
 
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
 
     @Import(name="prefix")
       private final @Nullable String prefix;
 
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
     }
 

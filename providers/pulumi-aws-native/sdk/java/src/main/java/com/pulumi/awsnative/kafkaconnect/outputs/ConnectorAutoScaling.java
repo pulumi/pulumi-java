@@ -47,27 +47,27 @@ public final class ConnectorAutoScaling {
      * The maximum number of workers for a connector.
      * 
     */
-    public Integer getMaxWorkerCount() {
+    public Integer maxWorkerCount() {
         return this.maxWorkerCount;
     }
     /**
      * Specifies how many MSK Connect Units (MCU) as the minimum scaling unit.
      * 
     */
-    public Integer getMcuCount() {
+    public Integer mcuCount() {
         return this.mcuCount;
     }
     /**
      * The minimum number of workers for a connector.
      * 
     */
-    public Integer getMinWorkerCount() {
+    public Integer minWorkerCount() {
         return this.minWorkerCount;
     }
-    public ConnectorScaleInPolicy getScaleInPolicy() {
+    public ConnectorScaleInPolicy scaleInPolicy() {
         return this.scaleInPolicy;
     }
-    public ConnectorScaleOutPolicy getScaleOutPolicy() {
+    public ConnectorScaleOutPolicy scaleOutPolicy() {
         return this.scaleOutPolicy;
     }
 

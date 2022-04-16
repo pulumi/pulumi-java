@@ -23,10 +23,10 @@ public final class ProjectDataDeliveryObject {
         this.s3 = s3;
     }
 
-    public Optional<String> getLogGroup() {
+    public Optional<String> logGroup() {
         return Optional.ofNullable(this.logGroup);
     }
-    public Optional<ProjectS3Destination> getS3() {
+    public Optional<ProjectS3Destination> s3() {
         return Optional.ofNullable(this.s3);
     }
 

@@ -23,21 +23,21 @@ public final class WebACLJsonBody extends com.pulumi.resources.InvokeArgs {
     @Import(name="invalidFallbackBehavior")
       private final @Nullable WebACLBodyParsingFallbackBehavior invalidFallbackBehavior;
 
-    public Optional<WebACLBodyParsingFallbackBehavior> getInvalidFallbackBehavior() {
+    public Optional<WebACLBodyParsingFallbackBehavior> invalidFallbackBehavior() {
         return this.invalidFallbackBehavior == null ? Optional.empty() : Optional.ofNullable(this.invalidFallbackBehavior);
     }
 
     @Import(name="matchPattern", required=true)
       private final WebACLJsonMatchPattern matchPattern;
 
-    public WebACLJsonMatchPattern getMatchPattern() {
+    public WebACLJsonMatchPattern matchPattern() {
         return this.matchPattern;
     }
 
     @Import(name="matchScope", required=true)
       private final WebACLJsonMatchScope matchScope;
 
-    public WebACLJsonMatchScope getMatchScope() {
+    public WebACLJsonMatchScope matchScope() {
         return this.matchScope;
     }
 

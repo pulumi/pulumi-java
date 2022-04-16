@@ -24,7 +24,7 @@ public final class LoggingConfigurationFilterArgs extends com.pulumi.resources.R
     @Import(name="behavior", required=true)
       private final Output<LoggingConfigurationFilterBehavior> behavior;
 
-    public Output<LoggingConfigurationFilterBehavior> getBehavior() {
+    public Output<LoggingConfigurationFilterBehavior> behavior() {
         return this.behavior;
     }
 
@@ -35,7 +35,7 @@ public final class LoggingConfigurationFilterArgs extends com.pulumi.resources.R
     @Import(name="conditions", required=true)
       private final Output<List<LoggingConfigurationConditionArgs>> conditions;
 
-    public Output<List<LoggingConfigurationConditionArgs>> getConditions() {
+    public Output<List<LoggingConfigurationConditionArgs>> conditions() {
         return this.conditions;
     }
 
@@ -46,7 +46,7 @@ public final class LoggingConfigurationFilterArgs extends com.pulumi.resources.R
     @Import(name="requirement", required=true)
       private final Output<LoggingConfigurationFilterRequirement> requirement;
 
-    public Output<LoggingConfigurationFilterRequirement> getRequirement() {
+    public Output<LoggingConfigurationFilterRequirement> requirement() {
         return this.requirement;
     }
 

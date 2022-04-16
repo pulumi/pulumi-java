@@ -41,21 +41,21 @@ public final class DatasetDatetimeOptions {
      * Date/time format of a date parameter
      * 
     */
-    public String getFormat() {
+    public String format() {
         return this.format;
     }
     /**
      * Locale code for a date parameter
      * 
     */
-    public Optional<String> getLocaleCode() {
+    public Optional<String> localeCode() {
         return Optional.ofNullable(this.localeCode);
     }
     /**
      * Timezone offset
      * 
     */
-    public Optional<String> getTimezoneOffset() {
+    public Optional<String> timezoneOffset() {
         return Optional.ofNullable(this.timezoneOffset);
     }
 

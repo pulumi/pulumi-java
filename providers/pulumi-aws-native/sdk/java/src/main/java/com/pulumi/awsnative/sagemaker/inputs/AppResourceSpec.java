@@ -22,7 +22,7 @@ public final class AppResourceSpec extends com.pulumi.resources.InvokeArgs {
     @Import(name="instanceType")
       private final @Nullable AppResourceSpecInstanceType instanceType;
 
-    public Optional<AppResourceSpecInstanceType> getInstanceType() {
+    public Optional<AppResourceSpecInstanceType> instanceType() {
         return this.instanceType == null ? Optional.empty() : Optional.ofNullable(this.instanceType);
     }
 
@@ -33,7 +33,7 @@ public final class AppResourceSpec extends com.pulumi.resources.InvokeArgs {
     @Import(name="sageMakerImageArn")
       private final @Nullable String sageMakerImageArn;
 
-    public Optional<String> getSageMakerImageArn() {
+    public Optional<String> sageMakerImageArn() {
         return this.sageMakerImageArn == null ? Optional.empty() : Optional.ofNullable(this.sageMakerImageArn);
     }
 
@@ -44,7 +44,7 @@ public final class AppResourceSpec extends com.pulumi.resources.InvokeArgs {
     @Import(name="sageMakerImageVersionArn")
       private final @Nullable String sageMakerImageVersionArn;
 
-    public Optional<String> getSageMakerImageVersionArn() {
+    public Optional<String> sageMakerImageVersionArn() {
         return this.sageMakerImageVersionArn == null ? Optional.empty() : Optional.ofNullable(this.sageMakerImageVersionArn);
     }
 

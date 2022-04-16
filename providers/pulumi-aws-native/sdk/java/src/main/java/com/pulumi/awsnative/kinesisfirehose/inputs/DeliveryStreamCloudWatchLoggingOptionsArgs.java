@@ -19,21 +19,21 @@ public final class DeliveryStreamCloudWatchLoggingOptionsArgs extends com.pulumi
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="logGroupName")
       private final @Nullable Output<String> logGroupName;
 
-    public Output<String> getLogGroupName() {
+    public Output<String> logGroupName() {
         return this.logGroupName == null ? Codegen.empty() : this.logGroupName;
     }
 
     @Import(name="logStreamName")
       private final @Nullable Output<String> logStreamName;
 
-    public Output<String> getLogStreamName() {
+    public Output<String> logStreamName() {
         return this.logStreamName == null ? Codegen.empty() : this.logStreamName;
     }
 

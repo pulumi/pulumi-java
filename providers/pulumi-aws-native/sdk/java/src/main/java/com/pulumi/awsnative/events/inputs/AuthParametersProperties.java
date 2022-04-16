@@ -20,28 +20,28 @@ public final class AuthParametersProperties extends com.pulumi.resources.InvokeA
     @Import(name="apiKeyAuthParameters")
       private final @Nullable ConnectionApiKeyAuthParameters apiKeyAuthParameters;
 
-    public Optional<ConnectionApiKeyAuthParameters> getApiKeyAuthParameters() {
+    public Optional<ConnectionApiKeyAuthParameters> apiKeyAuthParameters() {
         return this.apiKeyAuthParameters == null ? Optional.empty() : Optional.ofNullable(this.apiKeyAuthParameters);
     }
 
     @Import(name="basicAuthParameters")
       private final @Nullable ConnectionBasicAuthParameters basicAuthParameters;
 
-    public Optional<ConnectionBasicAuthParameters> getBasicAuthParameters() {
+    public Optional<ConnectionBasicAuthParameters> basicAuthParameters() {
         return this.basicAuthParameters == null ? Optional.empty() : Optional.ofNullable(this.basicAuthParameters);
     }
 
     @Import(name="invocationHttpParameters")
       private final @Nullable ConnectionHttpParameters invocationHttpParameters;
 
-    public Optional<ConnectionHttpParameters> getInvocationHttpParameters() {
+    public Optional<ConnectionHttpParameters> invocationHttpParameters() {
         return this.invocationHttpParameters == null ? Optional.empty() : Optional.ofNullable(this.invocationHttpParameters);
     }
 
     @Import(name="oAuthParameters")
       private final @Nullable ConnectionOAuthParameters oAuthParameters;
 
-    public Optional<ConnectionOAuthParameters> getOAuthParameters() {
+    public Optional<ConnectionOAuthParameters> oAuthParameters() {
         return this.oAuthParameters == null ? Optional.empty() : Optional.ofNullable(this.oAuthParameters);
     }
 

@@ -18,21 +18,21 @@ public final class TopicRuleSnsActionArgs extends com.pulumi.resources.ResourceA
     @Import(name="messageFormat")
       private final @Nullable Output<String> messageFormat;
 
-    public Output<String> getMessageFormat() {
+    public Output<String> messageFormat() {
         return this.messageFormat == null ? Codegen.empty() : this.messageFormat;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="targetArn", required=true)
       private final Output<String> targetArn;
 
-    public Output<String> getTargetArn() {
+    public Output<String> targetArn() {
         return this.targetArn;
     }
 

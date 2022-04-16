@@ -19,7 +19,7 @@ public final class GetIPAMPoolArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="ipamPoolId", required=true)
       private final String ipamPoolId;
 
-    public String getIpamPoolId() {
+    public String ipamPoolId() {
         return this.ipamPoolId;
     }
 

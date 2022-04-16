@@ -40,21 +40,21 @@ public final class RobotApplicationSourceConfig {
      * The architecture of robot application.
      * 
     */
-    public RobotApplicationSourceConfigArchitecture getArchitecture() {
+    public RobotApplicationSourceConfigArchitecture architecture() {
         return this.architecture;
     }
     /**
      * The Arn of the S3Bucket that stores the robot application source.
      * 
     */
-    public String getS3Bucket() {
+    public String s3Bucket() {
         return this.s3Bucket;
     }
     /**
      * The s3 key of robot application source.
      * 
     */
-    public String getS3Key() {
+    public String s3Key() {
         return this.s3Key;
     }
 

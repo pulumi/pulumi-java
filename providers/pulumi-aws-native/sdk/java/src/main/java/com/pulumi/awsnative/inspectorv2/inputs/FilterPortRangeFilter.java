@@ -17,14 +17,14 @@ public final class FilterPortRangeFilter extends com.pulumi.resources.InvokeArgs
     @Import(name="beginInclusive")
       private final @Nullable Integer beginInclusive;
 
-    public Optional<Integer> getBeginInclusive() {
+    public Optional<Integer> beginInclusive() {
         return this.beginInclusive == null ? Optional.empty() : Optional.ofNullable(this.beginInclusive);
     }
 
     @Import(name="endInclusive")
       private final @Nullable Integer endInclusive;
 
-    public Optional<Integer> getEndInclusive() {
+    public Optional<Integer> endInclusive() {
         return this.endInclusive == null ? Optional.empty() : Optional.ofNullable(this.endInclusive);
     }
 

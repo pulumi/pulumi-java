@@ -18,14 +18,14 @@ public final class GroupConfigurationParameter extends com.pulumi.resources.Invo
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
     @Import(name="values")
       private final @Nullable List<String> values;
 
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }
 

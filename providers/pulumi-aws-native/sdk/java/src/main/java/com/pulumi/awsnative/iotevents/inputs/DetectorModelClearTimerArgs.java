@@ -21,7 +21,7 @@ public final class DetectorModelClearTimerArgs extends com.pulumi.resources.Reso
     @Import(name="timerName", required=true)
       private final Output<String> timerName;
 
-    public Output<String> getTimerName() {
+    public Output<String> timerName() {
         return this.timerName;
     }
 

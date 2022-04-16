@@ -27,7 +27,7 @@ public final class ServiceHealthCheckConfiguration extends com.pulumi.resources.
     @Import(name="healthyThreshold")
       private final @Nullable Integer healthyThreshold;
 
-    public Optional<Integer> getHealthyThreshold() {
+    public Optional<Integer> healthyThreshold() {
         return this.healthyThreshold == null ? Optional.empty() : Optional.ofNullable(this.healthyThreshold);
     }
 
@@ -38,7 +38,7 @@ public final class ServiceHealthCheckConfiguration extends com.pulumi.resources.
     @Import(name="interval")
       private final @Nullable Integer interval;
 
-    public Optional<Integer> getInterval() {
+    public Optional<Integer> interval() {
         return this.interval == null ? Optional.empty() : Optional.ofNullable(this.interval);
     }
 
@@ -49,7 +49,7 @@ public final class ServiceHealthCheckConfiguration extends com.pulumi.resources.
     @Import(name="path")
       private final @Nullable String path;
 
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
@@ -60,7 +60,7 @@ public final class ServiceHealthCheckConfiguration extends com.pulumi.resources.
     @Import(name="protocol")
       private final @Nullable ServiceHealthCheckConfigurationProtocol protocol;
 
-    public Optional<ServiceHealthCheckConfigurationProtocol> getProtocol() {
+    public Optional<ServiceHealthCheckConfigurationProtocol> protocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
@@ -71,7 +71,7 @@ public final class ServiceHealthCheckConfiguration extends com.pulumi.resources.
     @Import(name="timeout")
       private final @Nullable Integer timeout;
 
-    public Optional<Integer> getTimeout() {
+    public Optional<Integer> timeout() {
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
     }
 
@@ -82,7 +82,7 @@ public final class ServiceHealthCheckConfiguration extends com.pulumi.resources.
     @Import(name="unhealthyThreshold")
       private final @Nullable Integer unhealthyThreshold;
 
-    public Optional<Integer> getUnhealthyThreshold() {
+    public Optional<Integer> unhealthyThreshold() {
         return this.unhealthyThreshold == null ? Optional.empty() : Optional.ofNullable(this.unhealthyThreshold);
     }
 

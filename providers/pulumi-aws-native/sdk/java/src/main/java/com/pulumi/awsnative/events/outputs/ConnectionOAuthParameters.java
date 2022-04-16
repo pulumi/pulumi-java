@@ -31,16 +31,16 @@ public final class ConnectionOAuthParameters {
         this.oAuthHttpParameters = oAuthHttpParameters;
     }
 
-    public String getAuthorizationEndpoint() {
+    public String authorizationEndpoint() {
         return this.authorizationEndpoint;
     }
-    public ConnectionClientParameters getClientParameters() {
+    public ConnectionClientParameters clientParameters() {
         return this.clientParameters;
     }
-    public ConnectionOAuthParametersHttpMethod getHttpMethod() {
+    public ConnectionOAuthParametersHttpMethod httpMethod() {
         return this.httpMethod;
     }
-    public Optional<ConnectionHttpParameters> getOAuthHttpParameters() {
+    public Optional<ConnectionHttpParameters> oAuthHttpParameters() {
         return Optional.ofNullable(this.oAuthHttpParameters);
     }
 

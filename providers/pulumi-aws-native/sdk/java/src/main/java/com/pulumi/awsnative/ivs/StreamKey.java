@@ -31,7 +31,7 @@ public class StreamKey extends com.pulumi.resources.CustomResource {
      * @return Stream Key ARN is automatically generated on creation and assigned as the unique identifier.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -45,7 +45,7 @@ public class StreamKey extends com.pulumi.resources.CustomResource {
      * @return Channel ARN for the stream.
      * 
      */
-    public Output<String> getChannelArn() {
+    public Output<String> channelArn() {
         return this.channelArn;
     }
     /**
@@ -59,7 +59,7 @@ public class StreamKey extends com.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the asset model.
      * 
      */
-    public Output</* @Nullable */ List<StreamKeyTag>> getTags() {
+    public Output</* @Nullable */ List<StreamKeyTag>> tags() {
         return this.tags;
     }
     /**
@@ -73,7 +73,7 @@ public class StreamKey extends com.pulumi.resources.CustomResource {
      * @return Stream-key value.
      * 
      */
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

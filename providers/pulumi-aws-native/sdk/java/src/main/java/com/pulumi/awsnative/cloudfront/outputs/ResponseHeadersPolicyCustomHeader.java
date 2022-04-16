@@ -24,13 +24,13 @@ public final class ResponseHeadersPolicyCustomHeader {
         this.value = value;
     }
 
-    public String getHeader() {
+    public String header() {
         return this.header;
     }
-    public Boolean getOverride() {
+    public Boolean override() {
         return this.override;
     }
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

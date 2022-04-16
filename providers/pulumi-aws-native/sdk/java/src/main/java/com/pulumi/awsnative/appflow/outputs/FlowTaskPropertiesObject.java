@@ -21,10 +21,10 @@ public final class FlowTaskPropertiesObject {
         this.value = value;
     }
 
-    public FlowOperatorPropertiesKeys getKey() {
+    public FlowOperatorPropertiesKeys key() {
         return this.key;
     }
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

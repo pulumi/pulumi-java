@@ -15,35 +15,35 @@ public final class TopicRuleOpenSearchAction extends com.pulumi.resources.Invoke
     @Import(name="endpoint", required=true)
       private final String endpoint;
 
-    public String getEndpoint() {
+    public String endpoint() {
         return this.endpoint;
     }
 
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
     @Import(name="index", required=true)
       private final String index;
 
-    public String getIndex() {
+    public String index() {
         return this.index;
     }
 
     @Import(name="roleArn", required=true)
       private final String roleArn;
 
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

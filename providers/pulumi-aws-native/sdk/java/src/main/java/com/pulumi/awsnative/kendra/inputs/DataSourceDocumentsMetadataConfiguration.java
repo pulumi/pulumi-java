@@ -17,7 +17,7 @@ public final class DataSourceDocumentsMetadataConfiguration extends com.pulumi.r
     @Import(name="s3Prefix")
       private final @Nullable String s3Prefix;
 
-    public Optional<String> getS3Prefix() {
+    public Optional<String> s3Prefix() {
         return this.s3Prefix == null ? Optional.empty() : Optional.ofNullable(this.s3Prefix);
     }
 

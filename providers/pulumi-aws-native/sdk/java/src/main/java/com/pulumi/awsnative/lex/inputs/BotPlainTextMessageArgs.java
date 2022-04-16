@@ -25,7 +25,7 @@ public final class BotPlainTextMessageArgs extends com.pulumi.resources.Resource
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

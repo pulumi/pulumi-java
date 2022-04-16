@@ -20,14 +20,14 @@ public final class BotAliasAudioLogSetting extends com.pulumi.resources.InvokeAr
     @Import(name="destination", required=true)
       private final BotAliasAudioLogDestination destination;
 
-    public BotAliasAudioLogDestination getDestination() {
+    public BotAliasAudioLogDestination destination() {
         return this.destination;
     }
 
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

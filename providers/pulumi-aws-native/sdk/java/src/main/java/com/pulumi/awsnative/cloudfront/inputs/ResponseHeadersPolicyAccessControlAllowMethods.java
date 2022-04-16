@@ -16,7 +16,7 @@ public final class ResponseHeadersPolicyAccessControlAllowMethods extends com.pu
     @Import(name="items", required=true)
       private final List<String> items;
 
-    public List<String> getItems() {
+    public List<String> items() {
         return this.items;
     }
 

@@ -24,42 +24,42 @@ public final class DataSourceS3DataSourceConfiguration extends com.pulumi.resour
     @Import(name="accessControlListConfiguration")
       private final @Nullable DataSourceAccessControlListConfiguration accessControlListConfiguration;
 
-    public Optional<DataSourceAccessControlListConfiguration> getAccessControlListConfiguration() {
+    public Optional<DataSourceAccessControlListConfiguration> accessControlListConfiguration() {
         return this.accessControlListConfiguration == null ? Optional.empty() : Optional.ofNullable(this.accessControlListConfiguration);
     }
 
     @Import(name="bucketName", required=true)
       private final String bucketName;
 
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
 
     @Import(name="documentsMetadataConfiguration")
       private final @Nullable DataSourceDocumentsMetadataConfiguration documentsMetadataConfiguration;
 
-    public Optional<DataSourceDocumentsMetadataConfiguration> getDocumentsMetadataConfiguration() {
+    public Optional<DataSourceDocumentsMetadataConfiguration> documentsMetadataConfiguration() {
         return this.documentsMetadataConfiguration == null ? Optional.empty() : Optional.ofNullable(this.documentsMetadataConfiguration);
     }
 
     @Import(name="exclusionPatterns")
       private final @Nullable List<String> exclusionPatterns;
 
-    public List<String> getExclusionPatterns() {
+    public List<String> exclusionPatterns() {
         return this.exclusionPatterns == null ? List.of() : this.exclusionPatterns;
     }
 
     @Import(name="inclusionPatterns")
       private final @Nullable List<String> inclusionPatterns;
 
-    public List<String> getInclusionPatterns() {
+    public List<String> inclusionPatterns() {
         return this.inclusionPatterns == null ? List.of() : this.inclusionPatterns;
     }
 
     @Import(name="inclusionPrefixes")
       private final @Nullable List<String> inclusionPrefixes;
 
-    public List<String> getInclusionPrefixes() {
+    public List<String> inclusionPrefixes() {
         return this.inclusionPrefixes == null ? List.of() : this.inclusionPrefixes;
     }
 

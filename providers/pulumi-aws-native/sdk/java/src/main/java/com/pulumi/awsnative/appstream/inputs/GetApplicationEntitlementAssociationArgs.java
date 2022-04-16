@@ -15,21 +15,21 @@ public final class GetApplicationEntitlementAssociationArgs extends com.pulumi.r
     @Import(name="applicationIdentifier", required=true)
       private final String applicationIdentifier;
 
-    public String getApplicationIdentifier() {
+    public String applicationIdentifier() {
         return this.applicationIdentifier;
     }
 
     @Import(name="entitlementName", required=true)
       private final String entitlementName;
 
-    public String getEntitlementName() {
+    public String entitlementName() {
         return this.entitlementName;
     }
 
     @Import(name="stackName", required=true)
       private final String stackName;
 
-    public String getStackName() {
+    public String stackName() {
         return this.stackName;
     }
 

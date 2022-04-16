@@ -34,14 +34,14 @@ public final class GetCertificateResult {
      * The ARN of the issued certificate.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The issued certificate in base 64 PEM-encoded format.
      * 
     */
-    public Optional<String> getCertificate() {
+    public Optional<String> certificate() {
         return Optional.ofNullable(this.certificate);
     }
 

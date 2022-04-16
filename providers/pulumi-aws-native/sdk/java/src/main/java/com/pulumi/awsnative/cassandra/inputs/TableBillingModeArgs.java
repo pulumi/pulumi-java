@@ -19,14 +19,14 @@ public final class TableBillingModeArgs extends com.pulumi.resources.ResourceArg
     @Import(name="mode", required=true)
       private final Output<TableMode> mode;
 
-    public Output<TableMode> getMode() {
+    public Output<TableMode> mode() {
         return this.mode;
     }
 
     @Import(name="provisionedThroughput")
       private final @Nullable Output<TableProvisionedThroughputArgs> provisionedThroughput;
 
-    public Output<TableProvisionedThroughputArgs> getProvisionedThroughput() {
+    public Output<TableProvisionedThroughputArgs> provisionedThroughput() {
         return this.provisionedThroughput == null ? Codegen.empty() : this.provisionedThroughput;
     }
 

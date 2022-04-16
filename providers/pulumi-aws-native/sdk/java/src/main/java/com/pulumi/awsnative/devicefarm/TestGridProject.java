@@ -24,31 +24,31 @@ public class TestGridProject extends com.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="tags", type=List.class, parameters={TestGridProjectTag.class})
     private Output</* @Nullable */ List<TestGridProjectTag>> tags;
 
-    public Output</* @Nullable */ List<TestGridProjectTag>> getTags() {
+    public Output</* @Nullable */ List<TestGridProjectTag>> tags() {
         return this.tags;
     }
     @Export(name="vpcConfig", type=TestGridProjectVpcConfig.class, parameters={})
     private Output</* @Nullable */ TestGridProjectVpcConfig> vpcConfig;
 
-    public Output</* @Nullable */ TestGridProjectVpcConfig> getVpcConfig() {
+    public Output</* @Nullable */ TestGridProjectVpcConfig> vpcConfig() {
         return this.vpcConfig;
     }
 

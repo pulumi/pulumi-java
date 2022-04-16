@@ -24,7 +24,7 @@ public final class PlaybackKeyPairArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -35,7 +35,7 @@ public final class PlaybackKeyPairArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="publicKeyMaterial", required=true)
       private final Output<String> publicKeyMaterial;
 
-    public Output<String> getPublicKeyMaterial() {
+    public Output<String> publicKeyMaterial() {
         return this.publicKeyMaterial;
     }
 
@@ -46,7 +46,7 @@ public final class PlaybackKeyPairArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<List<PlaybackKeyPairTagArgs>> tags;
 
-    public Output<List<PlaybackKeyPairTagArgs>> getTags() {
+    public Output<List<PlaybackKeyPairTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

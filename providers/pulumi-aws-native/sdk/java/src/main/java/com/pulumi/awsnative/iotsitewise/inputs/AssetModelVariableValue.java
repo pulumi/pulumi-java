@@ -17,14 +17,14 @@ public final class AssetModelVariableValue extends com.pulumi.resources.InvokeAr
     @Import(name="hierarchyLogicalId")
       private final @Nullable String hierarchyLogicalId;
 
-    public Optional<String> getHierarchyLogicalId() {
+    public Optional<String> hierarchyLogicalId() {
         return this.hierarchyLogicalId == null ? Optional.empty() : Optional.ofNullable(this.hierarchyLogicalId);
     }
 
     @Import(name="propertyLogicalId", required=true)
       private final String propertyLogicalId;
 
-    public String getPropertyLogicalId() {
+    public String propertyLogicalId() {
         return this.propertyLogicalId;
     }
 

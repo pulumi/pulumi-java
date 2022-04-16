@@ -16,7 +16,7 @@ public final class RuleGroupAddress {
         this.addressDefinition = addressDefinition;
     }
 
-    public String getAddressDefinition() {
+    public String addressDefinition() {
         return this.addressDefinition;
     }
 

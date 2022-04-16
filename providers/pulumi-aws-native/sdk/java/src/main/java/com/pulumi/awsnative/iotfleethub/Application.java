@@ -32,7 +32,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The ARN of the application.
      * 
      */
-    public Output<String> getApplicationArn() {
+    public Output<String> applicationArn() {
         return this.applicationArn;
     }
     /**
@@ -46,7 +46,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return When the Application was created
      * 
      */
-    public Output<Integer> getApplicationCreationDate() {
+    public Output<Integer> applicationCreationDate() {
         return this.applicationCreationDate;
     }
     /**
@@ -60,7 +60,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Application Description, should be between 1 and 2048 characters.
      * 
      */
-    public Output</* @Nullable */ String> getApplicationDescription() {
+    public Output</* @Nullable */ String> applicationDescription() {
         return this.applicationDescription;
     }
     /**
@@ -74,7 +74,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The ID of the application.
      * 
      */
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
     /**
@@ -88,7 +88,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return When the Application was last updated
      * 
      */
-    public Output<Integer> getApplicationLastUpdateDate() {
+    public Output<Integer> applicationLastUpdateDate() {
         return this.applicationLastUpdateDate;
     }
     /**
@@ -102,7 +102,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Application Name, should be between 1 and 256 characters.
      * 
      */
-    public Output<String> getApplicationName() {
+    public Output<String> applicationName() {
         return this.applicationName;
     }
     /**
@@ -116,7 +116,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The current state of the application.
      * 
      */
-    public Output<String> getApplicationState() {
+    public Output<String> applicationState() {
         return this.applicationState;
     }
     /**
@@ -130,7 +130,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The URL of the application.
      * 
      */
-    public Output<String> getApplicationUrl() {
+    public Output<String> applicationUrl() {
         return this.applicationUrl;
     }
     /**
@@ -144,7 +144,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return A message indicating why Create or Delete Application failed.
      * 
      */
-    public Output<String> getErrorMessage() {
+    public Output<String> errorMessage() {
         return this.errorMessage;
     }
     /**
@@ -158,7 +158,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The ARN of the role that the web application assumes when it interacts with AWS IoT Core. For more info on configuring this attribute, see https://docs.aws.amazon.com/iot/latest/apireference/API_iotfleethub_CreateApplication.html#API_iotfleethub_CreateApplication_RequestSyntax
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     /**
@@ -172,7 +172,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The AWS SSO application generated client ID (used with AWS SSO APIs).
      * 
      */
-    public Output<String> getSsoClientId() {
+    public Output<String> ssoClientId() {
         return this.ssoClientId;
     }
     /**
@@ -186,7 +186,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the application.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationTag>> getTags() {
+    public Output</* @Nullable */ List<ApplicationTag>> tags() {
         return this.tags;
     }
 

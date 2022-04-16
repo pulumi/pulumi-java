@@ -51,30 +51,30 @@ public final class GetResourceAssociationResult {
      * The name or the Id of the Application.
      * 
     */
-    public Optional<String> getApplication() {
+    public Optional<String> application() {
         return Optional.ofNullable(this.application);
     }
-    public Optional<String> getApplicationArn() {
+    public Optional<String> applicationArn() {
         return Optional.ofNullable(this.applicationArn);
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name or the Id of the Resource.
      * 
     */
-    public Optional<String> getResource() {
+    public Optional<String> resource() {
         return Optional.ofNullable(this.resource);
     }
-    public Optional<String> getResourceArn() {
+    public Optional<String> resourceArn() {
         return Optional.ofNullable(this.resourceArn);
     }
     /**
      * The type of the CFN Resource for now it's enum CFN_STACK.
      * 
     */
-    public Optional<ResourceAssociationResourceType> getPropResourceType() {
+    public Optional<ResourceAssociationResourceType> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
 

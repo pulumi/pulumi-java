@@ -107,84 +107,84 @@ public final class GetApplicationResult {
      * The ARN of the application.
      * 
     */
-    public Optional<String> getApplicationArn() {
+    public Optional<String> applicationArn() {
         return Optional.ofNullable(this.applicationArn);
     }
     /**
      * When the Application was created
      * 
     */
-    public Optional<Integer> getApplicationCreationDate() {
+    public Optional<Integer> applicationCreationDate() {
         return Optional.ofNullable(this.applicationCreationDate);
     }
     /**
      * Application Description, should be between 1 and 2048 characters.
      * 
     */
-    public Optional<String> getApplicationDescription() {
+    public Optional<String> applicationDescription() {
         return Optional.ofNullable(this.applicationDescription);
     }
     /**
      * The ID of the application.
      * 
     */
-    public Optional<String> getApplicationId() {
+    public Optional<String> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
     /**
      * When the Application was last updated
      * 
     */
-    public Optional<Integer> getApplicationLastUpdateDate() {
+    public Optional<Integer> applicationLastUpdateDate() {
         return Optional.ofNullable(this.applicationLastUpdateDate);
     }
     /**
      * Application Name, should be between 1 and 256 characters.
      * 
     */
-    public Optional<String> getApplicationName() {
+    public Optional<String> applicationName() {
         return Optional.ofNullable(this.applicationName);
     }
     /**
      * The current state of the application.
      * 
     */
-    public Optional<String> getApplicationState() {
+    public Optional<String> applicationState() {
         return Optional.ofNullable(this.applicationState);
     }
     /**
      * The URL of the application.
      * 
     */
-    public Optional<String> getApplicationUrl() {
+    public Optional<String> applicationUrl() {
         return Optional.ofNullable(this.applicationUrl);
     }
     /**
      * A message indicating why Create or Delete Application failed.
      * 
     */
-    public Optional<String> getErrorMessage() {
+    public Optional<String> errorMessage() {
         return Optional.ofNullable(this.errorMessage);
     }
     /**
      * The ARN of the role that the web application assumes when it interacts with AWS IoT Core. For more info on configuring this attribute, see https://docs.aws.amazon.com/iot/latest/apireference/API_iotfleethub_CreateApplication.html#API_iotfleethub_CreateApplication_RequestSyntax
      * 
     */
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
     /**
      * The AWS SSO application generated client ID (used with AWS SSO APIs).
      * 
     */
-    public Optional<String> getSsoClientId() {
+    public Optional<String> ssoClientId() {
         return Optional.ofNullable(this.ssoClientId);
     }
     /**
      * A list of key-value pairs that contain metadata for the application.
      * 
     */
-    public List<ApplicationTag> getTags() {
+    public List<ApplicationTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

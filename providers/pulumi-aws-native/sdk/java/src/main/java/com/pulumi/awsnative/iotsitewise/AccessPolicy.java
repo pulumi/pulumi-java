@@ -31,7 +31,7 @@ public class AccessPolicy extends com.pulumi.resources.CustomResource {
      * @return The ARN of the access policy.
      * 
      */
-    public Output<String> getAccessPolicyArn() {
+    public Output<String> accessPolicyArn() {
         return this.accessPolicyArn;
     }
     /**
@@ -45,7 +45,7 @@ public class AccessPolicy extends com.pulumi.resources.CustomResource {
      * @return The ID of the access policy.
      * 
      */
-    public Output<String> getAccessPolicyId() {
+    public Output<String> accessPolicyId() {
         return this.accessPolicyId;
     }
     /**
@@ -59,7 +59,7 @@ public class AccessPolicy extends com.pulumi.resources.CustomResource {
      * @return The identity for this access policy. Choose either a user or a group but not both.
      * 
      */
-    public Output<AccessPolicyIdentity> getAccessPolicyIdentity() {
+    public Output<AccessPolicyIdentity> accessPolicyIdentity() {
         return this.accessPolicyIdentity;
     }
     /**
@@ -73,7 +73,7 @@ public class AccessPolicy extends com.pulumi.resources.CustomResource {
      * @return The permission level for this access policy. Valid values are ADMINISTRATOR or VIEWER.
      * 
      */
-    public Output<String> getAccessPolicyPermission() {
+    public Output<String> accessPolicyPermission() {
         return this.accessPolicyPermission;
     }
     /**
@@ -87,7 +87,7 @@ public class AccessPolicy extends com.pulumi.resources.CustomResource {
      * @return The AWS IoT SiteWise Monitor resource for this access policy. Choose either portal or project but not both.
      * 
      */
-    public Output<AccessPolicyResource> getAccessPolicyResource() {
+    public Output<AccessPolicyResource> accessPolicyResource() {
         return this.accessPolicyResource;
     }
 

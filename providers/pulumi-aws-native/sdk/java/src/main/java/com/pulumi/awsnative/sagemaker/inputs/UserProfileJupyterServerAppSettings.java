@@ -21,7 +21,7 @@ public final class UserProfileJupyterServerAppSettings extends com.pulumi.resour
     @Import(name="defaultResourceSpec")
       private final @Nullable UserProfileResourceSpec defaultResourceSpec;
 
-    public Optional<UserProfileResourceSpec> getDefaultResourceSpec() {
+    public Optional<UserProfileResourceSpec> defaultResourceSpec() {
         return this.defaultResourceSpec == null ? Optional.empty() : Optional.ofNullable(this.defaultResourceSpec);
     }
 

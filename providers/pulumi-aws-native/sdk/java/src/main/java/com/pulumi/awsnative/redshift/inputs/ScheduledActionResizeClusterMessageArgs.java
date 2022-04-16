@@ -24,35 +24,35 @@ public final class ScheduledActionResizeClusterMessageArgs extends com.pulumi.re
     @Import(name="classic")
       private final @Nullable Output<Boolean> classic;
 
-    public Output<Boolean> getClassic() {
+    public Output<Boolean> classic() {
         return this.classic == null ? Codegen.empty() : this.classic;
     }
 
     @Import(name="clusterIdentifier", required=true)
       private final Output<String> clusterIdentifier;
 
-    public Output<String> getClusterIdentifier() {
+    public Output<String> clusterIdentifier() {
         return this.clusterIdentifier;
     }
 
     @Import(name="clusterType")
       private final @Nullable Output<String> clusterType;
 
-    public Output<String> getClusterType() {
+    public Output<String> clusterType() {
         return this.clusterType == null ? Codegen.empty() : this.clusterType;
     }
 
     @Import(name="nodeType")
       private final @Nullable Output<String> nodeType;
 
-    public Output<String> getNodeType() {
+    public Output<String> nodeType() {
         return this.nodeType == null ? Codegen.empty() : this.nodeType;
     }
 
     @Import(name="numberOfNodes")
       private final @Nullable Output<Integer> numberOfNodes;
 
-    public Output<Integer> getNumberOfNodes() {
+    public Output<Integer> numberOfNodes() {
         return this.numberOfNodes == null ? Codegen.empty() : this.numberOfNodes;
     }
 

@@ -27,7 +27,7 @@ public final class ImageRecipeAdditionalInstanceConfigurationArgs extends com.pu
     @Import(name="systemsManagerAgent")
       private final @Nullable Output<ImageRecipeSystemsManagerAgentArgs> systemsManagerAgent;
 
-    public Output<ImageRecipeSystemsManagerAgentArgs> getSystemsManagerAgent() {
+    public Output<ImageRecipeSystemsManagerAgentArgs> systemsManagerAgent() {
         return this.systemsManagerAgent == null ? Codegen.empty() : this.systemsManagerAgent;
     }
 
@@ -38,7 +38,7 @@ public final class ImageRecipeAdditionalInstanceConfigurationArgs extends com.pu
     @Import(name="userDataOverride")
       private final @Nullable Output<String> userDataOverride;
 
-    public Output<String> getUserDataOverride() {
+    public Output<String> userDataOverride() {
         return this.userDataOverride == null ? Codegen.empty() : this.userDataOverride;
     }
 

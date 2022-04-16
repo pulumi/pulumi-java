@@ -65,42 +65,42 @@ public final class GetDomainResult {
      * The time of this integration got created
      * 
     */
-    public Optional<String> getCreatedAt() {
+    public Optional<String> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
     /**
      * The URL of the SQS dead letter queue
      * 
     */
-    public Optional<String> getDeadLetterQueueUrl() {
+    public Optional<String> deadLetterQueueUrl() {
         return Optional.ofNullable(this.deadLetterQueueUrl);
     }
     /**
      * The default encryption key
      * 
     */
-    public Optional<String> getDefaultEncryptionKey() {
+    public Optional<String> defaultEncryptionKey() {
         return Optional.ofNullable(this.defaultEncryptionKey);
     }
     /**
      * The default number of days until the data within the domain expires.
      * 
     */
-    public Optional<Integer> getDefaultExpirationDays() {
+    public Optional<Integer> defaultExpirationDays() {
         return Optional.ofNullable(this.defaultExpirationDays);
     }
     /**
      * The time of this integration got last updated at
      * 
     */
-    public Optional<String> getLastUpdatedAt() {
+    public Optional<String> lastUpdatedAt() {
         return Optional.ofNullable(this.lastUpdatedAt);
     }
     /**
      * The tags (keys and values) associated with the domain
      * 
     */
-    public List<DomainTag> getTags() {
+    public List<DomainTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

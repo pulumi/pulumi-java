@@ -18,7 +18,7 @@ public final class ThemeFont {
         this.fontFamily = fontFamily;
     }
 
-    public Optional<String> getFontFamily() {
+    public Optional<String> fontFamily() {
         return Optional.ofNullable(this.fontFamily);
     }
 

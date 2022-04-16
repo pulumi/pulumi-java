@@ -25,7 +25,7 @@ public final class FHIRDatastorePreloadDataConfigArgs extends com.pulumi.resourc
     @Import(name="preloadDataType", required=true)
       private final Output<FHIRDatastorePreloadDataConfigPreloadDataType> preloadDataType;
 
-    public Output<FHIRDatastorePreloadDataConfigPreloadDataType> getPreloadDataType() {
+    public Output<FHIRDatastorePreloadDataConfigPreloadDataType> preloadDataType() {
         return this.preloadDataType;
     }
 

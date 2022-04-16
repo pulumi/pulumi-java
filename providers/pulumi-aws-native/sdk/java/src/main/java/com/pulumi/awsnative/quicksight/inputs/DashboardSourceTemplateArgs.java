@@ -27,7 +27,7 @@ public final class DashboardSourceTemplateArgs extends com.pulumi.resources.Reso
     @Import(name="arn", required=true)
       private final Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
@@ -38,7 +38,7 @@ public final class DashboardSourceTemplateArgs extends com.pulumi.resources.Reso
     @Import(name="dataSetReferences", required=true)
       private final Output<List<DashboardDataSetReferenceArgs>> dataSetReferences;
 
-    public Output<List<DashboardDataSetReferenceArgs>> getDataSetReferences() {
+    public Output<List<DashboardDataSetReferenceArgs>> dataSetReferences() {
         return this.dataSetReferences;
     }
 

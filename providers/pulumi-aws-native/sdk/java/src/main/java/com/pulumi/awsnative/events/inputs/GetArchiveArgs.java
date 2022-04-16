@@ -15,7 +15,7 @@ public final class GetArchiveArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="archiveName", required=true)
       private final String archiveName;
 
-    public String getArchiveName() {
+    public String archiveName() {
         return this.archiveName;
     }
 

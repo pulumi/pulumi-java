@@ -70,47 +70,47 @@ public final class BotIntent {
         this.slots = slots;
     }
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<BotDialogCodeHookSetting> getDialogCodeHook() {
+    public Optional<BotDialogCodeHookSetting> dialogCodeHook() {
         return Optional.ofNullable(this.dialogCodeHook);
     }
-    public Optional<BotFulfillmentCodeHookSetting> getFulfillmentCodeHook() {
+    public Optional<BotFulfillmentCodeHookSetting> fulfillmentCodeHook() {
         return Optional.ofNullable(this.fulfillmentCodeHook);
     }
-    public List<BotInputContext> getInputContexts() {
+    public List<BotInputContext> inputContexts() {
         return this.inputContexts == null ? List.of() : this.inputContexts;
     }
-    public Optional<BotIntentClosingSetting> getIntentClosingSetting() {
+    public Optional<BotIntentClosingSetting> intentClosingSetting() {
         return Optional.ofNullable(this.intentClosingSetting);
     }
-    public Optional<BotIntentConfirmationSetting> getIntentConfirmationSetting() {
+    public Optional<BotIntentConfirmationSetting> intentConfirmationSetting() {
         return Optional.ofNullable(this.intentConfirmationSetting);
     }
-    public Optional<BotKendraConfiguration> getKendraConfiguration() {
+    public Optional<BotKendraConfiguration> kendraConfiguration() {
         return Optional.ofNullable(this.kendraConfiguration);
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public List<BotOutputContext> getOutputContexts() {
+    public List<BotOutputContext> outputContexts() {
         return this.outputContexts == null ? List.of() : this.outputContexts;
     }
-    public Optional<String> getParentIntentSignature() {
+    public Optional<String> parentIntentSignature() {
         return Optional.ofNullable(this.parentIntentSignature);
     }
-    public List<BotSampleUtterance> getSampleUtterances() {
+    public List<BotSampleUtterance> sampleUtterances() {
         return this.sampleUtterances == null ? List.of() : this.sampleUtterances;
     }
-    public List<BotSlotPriority> getSlotPriorities() {
+    public List<BotSlotPriority> slotPriorities() {
         return this.slotPriorities == null ? List.of() : this.slotPriorities;
     }
     /**
      * List of slots
      * 
     */
-    public List<BotSlot> getSlots() {
+    public List<BotSlot> slots() {
         return this.slots == null ? List.of() : this.slots;
     }
 

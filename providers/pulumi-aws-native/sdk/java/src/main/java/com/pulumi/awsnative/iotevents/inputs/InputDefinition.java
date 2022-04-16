@@ -24,7 +24,7 @@ public final class InputDefinition extends com.pulumi.resources.InvokeArgs {
     @Import(name="attributes", required=true)
       private final List<InputAttribute> attributes;
 
-    public List<InputAttribute> getAttributes() {
+    public List<InputAttribute> attributes() {
         return this.attributes;
     }
 

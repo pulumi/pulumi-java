@@ -23,63 +23,63 @@ public final class DeliveryStreamSplunkDestinationConfiguration extends com.pulu
     @Import(name="cloudWatchLoggingOptions")
       private final @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions;
 
-    public Optional<DeliveryStreamCloudWatchLoggingOptions> getCloudWatchLoggingOptions() {
+    public Optional<DeliveryStreamCloudWatchLoggingOptions> cloudWatchLoggingOptions() {
         return this.cloudWatchLoggingOptions == null ? Optional.empty() : Optional.ofNullable(this.cloudWatchLoggingOptions);
     }
 
     @Import(name="hECAcknowledgmentTimeoutInSeconds")
       private final @Nullable Integer hECAcknowledgmentTimeoutInSeconds;
 
-    public Optional<Integer> getHECAcknowledgmentTimeoutInSeconds() {
+    public Optional<Integer> hECAcknowledgmentTimeoutInSeconds() {
         return this.hECAcknowledgmentTimeoutInSeconds == null ? Optional.empty() : Optional.ofNullable(this.hECAcknowledgmentTimeoutInSeconds);
     }
 
     @Import(name="hECEndpoint", required=true)
       private final String hECEndpoint;
 
-    public String getHECEndpoint() {
+    public String hECEndpoint() {
         return this.hECEndpoint;
     }
 
     @Import(name="hECEndpointType", required=true)
       private final DeliveryStreamSplunkDestinationConfigurationHECEndpointType hECEndpointType;
 
-    public DeliveryStreamSplunkDestinationConfigurationHECEndpointType getHECEndpointType() {
+    public DeliveryStreamSplunkDestinationConfigurationHECEndpointType hECEndpointType() {
         return this.hECEndpointType;
     }
 
     @Import(name="hECToken", required=true)
       private final String hECToken;
 
-    public String getHECToken() {
+    public String hECToken() {
         return this.hECToken;
     }
 
     @Import(name="processingConfiguration")
       private final @Nullable DeliveryStreamProcessingConfiguration processingConfiguration;
 
-    public Optional<DeliveryStreamProcessingConfiguration> getProcessingConfiguration() {
+    public Optional<DeliveryStreamProcessingConfiguration> processingConfiguration() {
         return this.processingConfiguration == null ? Optional.empty() : Optional.ofNullable(this.processingConfiguration);
     }
 
     @Import(name="retryOptions")
       private final @Nullable DeliveryStreamSplunkRetryOptions retryOptions;
 
-    public Optional<DeliveryStreamSplunkRetryOptions> getRetryOptions() {
+    public Optional<DeliveryStreamSplunkRetryOptions> retryOptions() {
         return this.retryOptions == null ? Optional.empty() : Optional.ofNullable(this.retryOptions);
     }
 
     @Import(name="s3BackupMode")
       private final @Nullable String s3BackupMode;
 
-    public Optional<String> getS3BackupMode() {
+    public Optional<String> s3BackupMode() {
         return this.s3BackupMode == null ? Optional.empty() : Optional.ofNullable(this.s3BackupMode);
     }
 
     @Import(name="s3Configuration", required=true)
       private final DeliveryStreamS3DestinationConfiguration s3Configuration;
 
-    public DeliveryStreamS3DestinationConfiguration getS3Configuration() {
+    public DeliveryStreamS3DestinationConfiguration s3Configuration() {
         return this.s3Configuration;
     }
 

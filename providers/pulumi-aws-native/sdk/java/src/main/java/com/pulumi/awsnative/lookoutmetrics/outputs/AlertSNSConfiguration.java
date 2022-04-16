@@ -32,14 +32,14 @@ public final class AlertSNSConfiguration {
      * ARN of an IAM role that LookoutMetrics should assume to access the SNS topic.
      * 
     */
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
     /**
      * ARN of an SNS topic to send alert notifications to.
      * 
     */
-    public String getSnsTopicArn() {
+    public String snsTopicArn() {
         return this.snsTopicArn;
     }
 

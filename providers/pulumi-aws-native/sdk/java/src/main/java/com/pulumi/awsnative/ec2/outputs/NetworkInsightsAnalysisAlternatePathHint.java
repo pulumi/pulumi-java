@@ -22,10 +22,10 @@ public final class NetworkInsightsAnalysisAlternatePathHint {
         this.componentId = componentId;
     }
 
-    public Optional<String> getComponentArn() {
+    public Optional<String> componentArn() {
         return Optional.ofNullable(this.componentArn);
     }
-    public Optional<String> getComponentId() {
+    public Optional<String> componentId() {
         return Optional.ofNullable(this.componentId);
     }
 

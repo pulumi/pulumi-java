@@ -26,13 +26,13 @@ public final class RuleGroupRegexMatchStatement {
         this.textTransformations = textTransformations;
     }
 
-    public RuleGroupFieldToMatch getFieldToMatch() {
+    public RuleGroupFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
-    public String getRegexString() {
+    public String regexString() {
         return this.regexString;
     }
-    public List<RuleGroupTextTransformation> getTextTransformations() {
+    public List<RuleGroupTextTransformation> textTransformations() {
         return this.textTransformations;
     }
 

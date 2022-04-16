@@ -19,21 +19,21 @@ public final class AppBasicAuthConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="enableBasicAuth")
       private final @Nullable Output<Boolean> enableBasicAuth;
 
-    public Output<Boolean> getEnableBasicAuth() {
+    public Output<Boolean> enableBasicAuth() {
         return this.enableBasicAuth == null ? Codegen.empty() : this.enableBasicAuth;
     }
 
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 

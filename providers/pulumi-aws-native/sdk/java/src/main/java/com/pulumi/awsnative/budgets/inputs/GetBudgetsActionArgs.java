@@ -15,14 +15,14 @@ public final class GetBudgetsActionArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="actionId", required=true)
       private final String actionId;
 
-    public String getActionId() {
+    public String actionId() {
         return this.actionId;
     }
 
     @Import(name="budgetName", required=true)
       private final String budgetName;
 
-    public String getBudgetName() {
+    public String budgetName() {
         return this.budgetName;
     }
 

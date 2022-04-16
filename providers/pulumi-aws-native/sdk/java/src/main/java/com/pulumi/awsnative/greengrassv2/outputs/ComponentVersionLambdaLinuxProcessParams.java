@@ -23,10 +23,10 @@ public final class ComponentVersionLambdaLinuxProcessParams {
         this.isolationMode = isolationMode;
     }
 
-    public Optional<ComponentVersionLambdaContainerParams> getContainerParams() {
+    public Optional<ComponentVersionLambdaContainerParams> containerParams() {
         return Optional.ofNullable(this.containerParams);
     }
-    public Optional<ComponentVersionLambdaLinuxProcessParamsIsolationMode> getIsolationMode() {
+    public Optional<ComponentVersionLambdaLinuxProcessParamsIsolationMode> isolationMode() {
         return Optional.ofNullable(this.isolationMode);
     }
 

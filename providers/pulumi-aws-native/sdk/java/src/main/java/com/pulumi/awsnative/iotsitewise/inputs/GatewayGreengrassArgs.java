@@ -25,7 +25,7 @@ public final class GatewayGreengrassArgs extends com.pulumi.resources.ResourceAr
     @Import(name="groupArn", required=true)
       private final Output<String> groupArn;
 
-    public Output<String> getGroupArn() {
+    public Output<String> groupArn() {
         return this.groupArn;
     }
 

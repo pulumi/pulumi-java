@@ -79,56 +79,56 @@ public final class ProviderAssumeRoleArgs {
      * Number of seconds to restrict the assume role session duration.
      * 
     */
-    public @Nullable Output<Integer> getDurationSeconds() {
+    public @Nullable Output<Integer> durationSeconds() {
         return this.durationSeconds;
     }
     /**
      * External identifier to use when assuming the role.
      * 
     */
-    public @Nullable Output<String> getExternalId() {
+    public @Nullable Output<String> externalId() {
         return this.externalId;
     }
     /**
      * IAM Policy JSON describing further restricting permissions for the IAM Role being assumed.
      * 
     */
-    public @Nullable Output<String> getPolicy() {
+    public @Nullable Output<String> policy() {
         return this.policy;
     }
     /**
      * Set of Amazon Resource Names (ARNs) of IAM Policies describing further restricting permissions for the role.
      * 
     */
-    public @Nullable Output<List<String>> getPolicyArns() {
+    public @Nullable Output<List<String>> policyArns() {
         return this.policyArns;
     }
     /**
      * Amazon Resource Name (ARN) of the IAM Role to assume.
      * 
     */
-    public @Nullable Output<String> getRoleArn() {
+    public @Nullable Output<String> roleArn() {
         return this.roleArn;
     }
     /**
      * Session name to use when assuming the role.
      * 
     */
-    public @Nullable Output<String> getSessionName() {
+    public @Nullable Output<String> sessionName() {
         return this.sessionName;
     }
     /**
      * Map of assume role session tags.
      * 
     */
-    public @Nullable Output<Map<String,String>> getTags() {
+    public @Nullable Output<Map<String,String>> tags() {
         return this.tags;
     }
     /**
      * A list of keys for session tags that you want to set as transitive. If you set a tag key as transitive, the corresponding key and value passes to subsequent sessions in a role chain.
      * 
     */
-    public @Nullable Output<List<String>> getTransitiveTagKeys() {
+    public @Nullable Output<List<String>> transitiveTagKeys() {
         return this.transitiveTagKeys;
     }
 

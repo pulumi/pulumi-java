@@ -35,13 +35,13 @@ public final class GetServerCertificateResult {
      * Amazon Resource Name (ARN) of the server certificate
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
-    public List<ServerCertificateTag> getTags() {
+    public List<ServerCertificateTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

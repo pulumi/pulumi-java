@@ -26,7 +26,7 @@ public final class FlowTaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectorOperator")
       private final @Nullable Output<FlowConnectorOperatorArgs> connectorOperator;
 
-    public Output<FlowConnectorOperatorArgs> getConnectorOperator() {
+    public Output<FlowConnectorOperatorArgs> connectorOperator() {
         return this.connectorOperator == null ? Codegen.empty() : this.connectorOperator;
     }
 
@@ -37,7 +37,7 @@ public final class FlowTaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationField")
       private final @Nullable Output<String> destinationField;
 
-    public Output<String> getDestinationField() {
+    public Output<String> destinationField() {
         return this.destinationField == null ? Codegen.empty() : this.destinationField;
     }
 
@@ -48,7 +48,7 @@ public final class FlowTaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceFields", required=true)
       private final Output<List<String>> sourceFields;
 
-    public Output<List<String>> getSourceFields() {
+    public Output<List<String>> sourceFields() {
         return this.sourceFields;
     }
 
@@ -59,7 +59,7 @@ public final class FlowTaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="taskProperties")
       private final @Nullable Output<List<FlowTaskPropertiesObjectArgs>> taskProperties;
 
-    public Output<List<FlowTaskPropertiesObjectArgs>> getTaskProperties() {
+    public Output<List<FlowTaskPropertiesObjectArgs>> taskProperties() {
         return this.taskProperties == null ? Codegen.empty() : this.taskProperties;
     }
 
@@ -70,7 +70,7 @@ public final class FlowTaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="taskType", required=true)
       private final Output<FlowTaskType> taskType;
 
-    public Output<FlowTaskType> getTaskType() {
+    public Output<FlowTaskType> taskType() {
         return this.taskType;
     }
 

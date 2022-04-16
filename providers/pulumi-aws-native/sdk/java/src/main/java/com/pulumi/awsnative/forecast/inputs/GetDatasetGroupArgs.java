@@ -19,7 +19,7 @@ public final class GetDatasetGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="datasetGroupArn", required=true)
       private final String datasetGroupArn;
 
-    public String getDatasetGroupArn() {
+    public String datasetGroupArn() {
         return this.datasetGroupArn;
     }
 

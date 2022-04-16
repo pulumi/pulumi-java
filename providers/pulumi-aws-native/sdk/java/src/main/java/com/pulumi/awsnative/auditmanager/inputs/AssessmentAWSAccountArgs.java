@@ -22,21 +22,21 @@ public final class AssessmentAWSAccountArgs extends com.pulumi.resources.Resourc
     @Import(name="emailAddress")
       private final @Nullable Output<String> emailAddress;
 
-    public Output<String> getEmailAddress() {
+    public Output<String> emailAddress() {
         return this.emailAddress == null ? Codegen.empty() : this.emailAddress;
     }
 
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

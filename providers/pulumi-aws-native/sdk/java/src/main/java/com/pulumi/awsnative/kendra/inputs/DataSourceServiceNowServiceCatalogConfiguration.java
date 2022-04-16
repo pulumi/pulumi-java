@@ -20,42 +20,42 @@ public final class DataSourceServiceNowServiceCatalogConfiguration extends com.p
     @Import(name="crawlAttachments")
       private final @Nullable Boolean crawlAttachments;
 
-    public Optional<Boolean> getCrawlAttachments() {
+    public Optional<Boolean> crawlAttachments() {
         return this.crawlAttachments == null ? Optional.empty() : Optional.ofNullable(this.crawlAttachments);
     }
 
     @Import(name="documentDataFieldName", required=true)
       private final String documentDataFieldName;
 
-    public String getDocumentDataFieldName() {
+    public String documentDataFieldName() {
         return this.documentDataFieldName;
     }
 
     @Import(name="documentTitleFieldName")
       private final @Nullable String documentTitleFieldName;
 
-    public Optional<String> getDocumentTitleFieldName() {
+    public Optional<String> documentTitleFieldName() {
         return this.documentTitleFieldName == null ? Optional.empty() : Optional.ofNullable(this.documentTitleFieldName);
     }
 
     @Import(name="excludeAttachmentFilePatterns")
       private final @Nullable List<String> excludeAttachmentFilePatterns;
 
-    public List<String> getExcludeAttachmentFilePatterns() {
+    public List<String> excludeAttachmentFilePatterns() {
         return this.excludeAttachmentFilePatterns == null ? List.of() : this.excludeAttachmentFilePatterns;
     }
 
     @Import(name="fieldMappings")
       private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
 
-    public List<DataSourceToIndexFieldMapping> getFieldMappings() {
+    public List<DataSourceToIndexFieldMapping> fieldMappings() {
         return this.fieldMappings == null ? List.of() : this.fieldMappings;
     }
 
     @Import(name="includeAttachmentFilePatterns")
       private final @Nullable List<String> includeAttachmentFilePatterns;
 
-    public List<String> getIncludeAttachmentFilePatterns() {
+    public List<String> includeAttachmentFilePatterns() {
         return this.includeAttachmentFilePatterns == null ? List.of() : this.includeAttachmentFilePatterns;
     }
 

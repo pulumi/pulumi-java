@@ -17,7 +17,7 @@ public final class DatasetLateDataRuleConfiguration extends com.pulumi.resources
     @Import(name="deltaTimeSessionWindowConfiguration")
       private final @Nullable DatasetDeltaTimeSessionWindowConfiguration deltaTimeSessionWindowConfiguration;
 
-    public Optional<DatasetDeltaTimeSessionWindowConfiguration> getDeltaTimeSessionWindowConfiguration() {
+    public Optional<DatasetDeltaTimeSessionWindowConfiguration> deltaTimeSessionWindowConfiguration() {
         return this.deltaTimeSessionWindowConfiguration == null ? Optional.empty() : Optional.ofNullable(this.deltaTimeSessionWindowConfiguration);
     }
 

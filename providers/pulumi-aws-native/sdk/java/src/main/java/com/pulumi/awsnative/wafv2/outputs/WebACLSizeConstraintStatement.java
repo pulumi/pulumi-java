@@ -30,16 +30,16 @@ public final class WebACLSizeConstraintStatement {
         this.textTransformations = textTransformations;
     }
 
-    public WebACLSizeConstraintStatementComparisonOperator getComparisonOperator() {
+    public WebACLSizeConstraintStatementComparisonOperator comparisonOperator() {
         return this.comparisonOperator;
     }
-    public WebACLFieldToMatch getFieldToMatch() {
+    public WebACLFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
-    public Double getSize() {
+    public Double size() {
         return this.size;
     }
-    public List<WebACLTextTransformation> getTextTransformations() {
+    public List<WebACLTextTransformation> textTransformations() {
         return this.textTransformations;
     }
 

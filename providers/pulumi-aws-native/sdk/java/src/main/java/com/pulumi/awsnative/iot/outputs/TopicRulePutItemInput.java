@@ -16,7 +16,7 @@ public final class TopicRulePutItemInput {
         this.tableName = tableName;
     }
 
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
 

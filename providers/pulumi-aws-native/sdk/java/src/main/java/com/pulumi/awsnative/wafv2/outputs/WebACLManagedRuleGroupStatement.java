@@ -34,19 +34,19 @@ public final class WebACLManagedRuleGroupStatement {
         this.version = version;
     }
 
-    public List<WebACLExcludedRule> getExcludedRules() {
+    public List<WebACLExcludedRule> excludedRules() {
         return this.excludedRules == null ? List.of() : this.excludedRules;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<WebACLStatement> getScopeDownStatement() {
+    public Optional<WebACLStatement> scopeDownStatement() {
         return Optional.ofNullable(this.scopeDownStatement);
     }
-    public String getVendorName() {
+    public String vendorName() {
         return this.vendorName;
     }
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

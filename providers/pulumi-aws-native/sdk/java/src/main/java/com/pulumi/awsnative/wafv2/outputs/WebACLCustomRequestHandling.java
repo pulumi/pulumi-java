@@ -25,7 +25,7 @@ public final class WebACLCustomRequestHandling {
      * Collection of HTTP headers.
      * 
     */
-    public List<WebACLCustomHTTPHeader> getInsertHeaders() {
+    public List<WebACLCustomHTTPHeader> insertHeaders() {
         return this.insertHeaders;
     }
 

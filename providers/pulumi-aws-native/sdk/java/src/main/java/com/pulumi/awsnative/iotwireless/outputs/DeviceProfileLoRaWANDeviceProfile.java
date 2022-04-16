@@ -60,46 +60,46 @@ public final class DeviceProfileLoRaWANDeviceProfile {
         this.supportsJoin = supportsJoin;
     }
 
-    public Optional<Integer> getClassBTimeout() {
+    public Optional<Integer> classBTimeout() {
         return Optional.ofNullable(this.classBTimeout);
     }
-    public Optional<Integer> getClassCTimeout() {
+    public Optional<Integer> classCTimeout() {
         return Optional.ofNullable(this.classCTimeout);
     }
-    public Optional<String> getMacVersion() {
+    public Optional<String> macVersion() {
         return Optional.ofNullable(this.macVersion);
     }
-    public Optional<Integer> getMaxDutyCycle() {
+    public Optional<Integer> maxDutyCycle() {
         return Optional.ofNullable(this.maxDutyCycle);
     }
-    public Optional<Integer> getMaxEirp() {
+    public Optional<Integer> maxEirp() {
         return Optional.ofNullable(this.maxEirp);
     }
-    public Optional<Integer> getPingSlotDr() {
+    public Optional<Integer> pingSlotDr() {
         return Optional.ofNullable(this.pingSlotDr);
     }
-    public Optional<Integer> getPingSlotFreq() {
+    public Optional<Integer> pingSlotFreq() {
         return Optional.ofNullable(this.pingSlotFreq);
     }
-    public Optional<Integer> getPingSlotPeriod() {
+    public Optional<Integer> pingSlotPeriod() {
         return Optional.ofNullable(this.pingSlotPeriod);
     }
-    public Optional<String> getRegParamsRevision() {
+    public Optional<String> regParamsRevision() {
         return Optional.ofNullable(this.regParamsRevision);
     }
-    public Optional<String> getRfRegion() {
+    public Optional<String> rfRegion() {
         return Optional.ofNullable(this.rfRegion);
     }
-    public Optional<Boolean> getSupports32BitFCnt() {
+    public Optional<Boolean> supports32BitFCnt() {
         return Optional.ofNullable(this.supports32BitFCnt);
     }
-    public Optional<Boolean> getSupportsClassB() {
+    public Optional<Boolean> supportsClassB() {
         return Optional.ofNullable(this.supportsClassB);
     }
-    public Optional<Boolean> getSupportsClassC() {
+    public Optional<Boolean> supportsClassC() {
         return Optional.ofNullable(this.supportsClassC);
     }
-    public Optional<Boolean> getSupportsJoin() {
+    public Optional<Boolean> supportsJoin() {
         return Optional.ofNullable(this.supportsJoin);
     }
 

@@ -15,7 +15,7 @@ public final class GetMapArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="mapName", required=true)
       private final String mapName;
 
-    public String getMapName() {
+    public String mapName() {
         return this.mapName;
     }
 

@@ -24,7 +24,7 @@ public class ResourceCollection extends com.pulumi.resources.CustomResource {
     @Export(name="resourceCollectionFilter", type=ResourceCollectionFilter.class, parameters={})
     private Output<ResourceCollectionFilter> resourceCollectionFilter;
 
-    public Output<ResourceCollectionFilter> getResourceCollectionFilter() {
+    public Output<ResourceCollectionFilter> resourceCollectionFilter() {
         return this.resourceCollectionFilter;
     }
     /**
@@ -38,7 +38,7 @@ public class ResourceCollection extends com.pulumi.resources.CustomResource {
      * @return The type of ResourceCollection
      * 
      */
-    public Output<ResourceCollectionType> getResourceCollectionType() {
+    public Output<ResourceCollectionType> resourceCollectionType() {
         return this.resourceCollectionType;
     }
 

@@ -22,10 +22,10 @@ public final class DeliveryStreamAmazonopensearchserviceBufferingHints {
         this.sizeInMBs = sizeInMBs;
     }
 
-    public Optional<Integer> getIntervalInSeconds() {
+    public Optional<Integer> intervalInSeconds() {
         return Optional.ofNullable(this.intervalInSeconds);
     }
-    public Optional<Integer> getSizeInMBs() {
+    public Optional<Integer> sizeInMBs() {
         return Optional.ofNullable(this.sizeInMBs);
     }
 

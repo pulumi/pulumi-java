@@ -26,7 +26,7 @@ public final class RuleGroupCustomRequestHandlingArgs extends com.pulumi.resourc
     @Import(name="insertHeaders", required=true)
       private final Output<List<RuleGroupCustomHTTPHeaderArgs>> insertHeaders;
 
-    public Output<List<RuleGroupCustomHTTPHeaderArgs>> getInsertHeaders() {
+    public Output<List<RuleGroupCustomHTTPHeaderArgs>> insertHeaders() {
         return this.insertHeaders;
     }
 

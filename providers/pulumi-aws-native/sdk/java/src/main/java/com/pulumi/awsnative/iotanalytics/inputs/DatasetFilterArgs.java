@@ -18,7 +18,7 @@ public final class DatasetFilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deltaTime")
       private final @Nullable Output<DatasetDeltaTimeArgs> deltaTime;
 
-    public Output<DatasetDeltaTimeArgs> getDeltaTime() {
+    public Output<DatasetDeltaTimeArgs> deltaTime() {
         return this.deltaTime == null ? Codegen.empty() : this.deltaTime;
     }
 

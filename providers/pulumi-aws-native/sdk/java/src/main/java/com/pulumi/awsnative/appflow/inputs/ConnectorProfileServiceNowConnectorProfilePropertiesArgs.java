@@ -21,7 +21,7 @@ public final class ConnectorProfileServiceNowConnectorProfilePropertiesArgs exte
     @Import(name="instanceUrl", required=true)
       private final Output<String> instanceUrl;
 
-    public Output<String> getInstanceUrl() {
+    public Output<String> instanceUrl() {
         return this.instanceUrl;
     }
 

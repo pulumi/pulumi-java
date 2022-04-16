@@ -25,7 +25,7 @@ public final class HostedZoneVPCArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vPCId", required=true)
       private final Output<String> vPCId;
 
-    public Output<String> getVPCId() {
+    public Output<String> vPCId() {
         return this.vPCId;
     }
 
@@ -36,7 +36,7 @@ public final class HostedZoneVPCArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vPCRegion", required=true)
       private final Output<String> vPCRegion;
 
-    public Output<String> getVPCRegion() {
+    public Output<String> vPCRegion() {
         return this.vPCRegion;
     }
 

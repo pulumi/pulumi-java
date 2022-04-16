@@ -32,7 +32,7 @@ public class Contact extends com.pulumi.resources.CustomResource {
      * @return Alias of the contact. String value with 20 to 256 characters. Only alphabetical, numeric characters, dash, or underscore allowed.
      * 
      */
-    public Output<String> getAlias() {
+    public Output<String> alias() {
         return this.alias;
     }
     /**
@@ -46,7 +46,7 @@ public class Contact extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the contact.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -60,7 +60,7 @@ public class Contact extends com.pulumi.resources.CustomResource {
      * @return Name of the contact. String value with 3 to 256 characters. Only alphabetical, space, numeric characters, dash, or underscore allowed.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -74,7 +74,7 @@ public class Contact extends com.pulumi.resources.CustomResource {
      * @return The stages that an escalation plan or engagement plan engages contacts and contact methods in.
      * 
      */
-    public Output<List<ContactStage>> getPlan() {
+    public Output<List<ContactStage>> plan() {
         return this.plan;
     }
     /**
@@ -88,7 +88,7 @@ public class Contact extends com.pulumi.resources.CustomResource {
      * @return Contact type, which specify type of contact. Currently supported values: “PERSONAL”, “SHARED”, “OTHER“.
      * 
      */
-    public Output<ContactType> getType() {
+    public Output<ContactType> type() {
         return this.type;
     }
 

@@ -16,7 +16,7 @@ public final class SpotFleetTargetGroupsConfig extends com.pulumi.resources.Invo
     @Import(name="targetGroups", required=true)
       private final List<SpotFleetTargetGroup> targetGroups;
 
-    public List<SpotFleetTargetGroup> getTargetGroups() {
+    public List<SpotFleetTargetGroup> targetGroups() {
         return this.targetGroups;
     }
 

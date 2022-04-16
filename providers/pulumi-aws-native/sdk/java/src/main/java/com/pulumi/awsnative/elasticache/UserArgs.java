@@ -25,7 +25,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessString")
       private final @Nullable Output<String> accessString;
 
-    public Output<String> getAccessString() {
+    public Output<String> accessString() {
         return this.accessString == null ? Codegen.empty() : this.accessString;
     }
 
@@ -36,7 +36,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="engine", required=true)
       private final Output<UserEngine> engine;
 
-    public Output<UserEngine> getEngine() {
+    public Output<UserEngine> engine() {
         return this.engine;
     }
 
@@ -47,7 +47,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="noPasswordRequired")
       private final @Nullable Output<Boolean> noPasswordRequired;
 
-    public Output<Boolean> getNoPasswordRequired() {
+    public Output<Boolean> noPasswordRequired() {
         return this.noPasswordRequired == null ? Codegen.empty() : this.noPasswordRequired;
     }
 
@@ -58,7 +58,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="passwords")
       private final @Nullable Output<List<String>> passwords;
 
-    public Output<List<String>> getPasswords() {
+    public Output<List<String>> passwords() {
         return this.passwords == null ? Codegen.empty() : this.passwords;
     }
 
@@ -69,7 +69,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userId", required=true)
       private final Output<String> userId;
 
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId;
     }
 
@@ -80,7 +80,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userName")
       private final @Nullable Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName == null ? Codegen.empty() : this.userName;
     }
 

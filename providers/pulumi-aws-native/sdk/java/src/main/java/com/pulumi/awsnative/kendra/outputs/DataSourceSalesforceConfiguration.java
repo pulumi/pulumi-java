@@ -49,31 +49,31 @@ public final class DataSourceSalesforceConfiguration {
         this.standardObjectConfigurations = standardObjectConfigurations;
     }
 
-    public Optional<DataSourceSalesforceChatterFeedConfiguration> getChatterFeedConfiguration() {
+    public Optional<DataSourceSalesforceChatterFeedConfiguration> chatterFeedConfiguration() {
         return Optional.ofNullable(this.chatterFeedConfiguration);
     }
-    public Optional<Boolean> getCrawlAttachments() {
+    public Optional<Boolean> crawlAttachments() {
         return Optional.ofNullable(this.crawlAttachments);
     }
-    public List<String> getExcludeAttachmentFilePatterns() {
+    public List<String> excludeAttachmentFilePatterns() {
         return this.excludeAttachmentFilePatterns == null ? List.of() : this.excludeAttachmentFilePatterns;
     }
-    public List<String> getIncludeAttachmentFilePatterns() {
+    public List<String> includeAttachmentFilePatterns() {
         return this.includeAttachmentFilePatterns == null ? List.of() : this.includeAttachmentFilePatterns;
     }
-    public Optional<DataSourceSalesforceKnowledgeArticleConfiguration> getKnowledgeArticleConfiguration() {
+    public Optional<DataSourceSalesforceKnowledgeArticleConfiguration> knowledgeArticleConfiguration() {
         return Optional.ofNullable(this.knowledgeArticleConfiguration);
     }
-    public String getSecretArn() {
+    public String secretArn() {
         return this.secretArn;
     }
-    public String getServerUrl() {
+    public String serverUrl() {
         return this.serverUrl;
     }
-    public Optional<DataSourceSalesforceStandardObjectAttachmentConfiguration> getStandardObjectAttachmentConfiguration() {
+    public Optional<DataSourceSalesforceStandardObjectAttachmentConfiguration> standardObjectAttachmentConfiguration() {
         return Optional.ofNullable(this.standardObjectAttachmentConfiguration);
     }
-    public List<DataSourceSalesforceStandardObjectConfiguration> getStandardObjectConfigurations() {
+    public List<DataSourceSalesforceStandardObjectConfiguration> standardObjectConfigurations() {
         return this.standardObjectConfigurations == null ? List.of() : this.standardObjectConfigurations;
     }
 

@@ -21,13 +21,13 @@ public class TrackerConsumer extends com.pulumi.resources.CustomResource {
     @Export(name="consumerArn", type=String.class, parameters={})
     private Output<String> consumerArn;
 
-    public Output<String> getConsumerArn() {
+    public Output<String> consumerArn() {
         return this.consumerArn;
     }
     @Export(name="trackerName", type=String.class, parameters={})
     private Output<String> trackerName;
 
-    public Output<String> getTrackerName() {
+    public Output<String> trackerName() {
         return this.trackerName;
     }
 

@@ -25,13 +25,13 @@ public final class DeliveryStreamHttpEndpointConfiguration {
         this.url = url;
     }
 
-    public Optional<String> getAccessKey() {
+    public Optional<String> accessKey() {
         return Optional.ofNullable(this.accessKey);
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

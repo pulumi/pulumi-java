@@ -23,10 +23,10 @@ public final class ComponentVariant {
         this.variantValues = variantValues;
     }
 
-    public Optional<ComponentOverrides> getOverrides() {
+    public Optional<ComponentOverrides> overrides() {
         return Optional.ofNullable(this.overrides);
     }
-    public Optional<ComponentVariantValues> getVariantValues() {
+    public Optional<ComponentVariantValues> variantValues() {
         return Optional.ofNullable(this.variantValues);
     }
 

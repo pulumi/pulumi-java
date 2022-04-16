@@ -26,7 +26,7 @@ public final class StudioComponentLicenseServiceConfigurationArgs extends com.pu
     @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 

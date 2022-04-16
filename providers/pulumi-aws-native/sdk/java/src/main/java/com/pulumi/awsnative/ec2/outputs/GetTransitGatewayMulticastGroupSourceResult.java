@@ -77,56 +77,56 @@ public final class GetTransitGatewayMulticastGroupSourceResult {
      * Indicates that the resource is a transit gateway multicast group member.
      * 
     */
-    public Optional<Boolean> getGroupMember() {
+    public Optional<Boolean> groupMember() {
         return Optional.ofNullable(this.groupMember);
     }
     /**
      * Indicates that the resource is a transit gateway multicast group member.
      * 
     */
-    public Optional<Boolean> getGroupSource() {
+    public Optional<Boolean> groupSource() {
         return Optional.ofNullable(this.groupSource);
     }
     /**
      * The member type (for example, static).
      * 
     */
-    public Optional<String> getMemberType() {
+    public Optional<String> memberType() {
         return Optional.ofNullable(this.memberType);
     }
     /**
      * The ID of the resource.
      * 
     */
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
      * The type of resource, for example a VPC attachment.
      * 
     */
-    public Optional<String> getPropResourceType() {
+    public Optional<String> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
     /**
      * The source type.
      * 
     */
-    public Optional<String> getSourceType() {
+    public Optional<String> sourceType() {
         return Optional.ofNullable(this.sourceType);
     }
     /**
      * The ID of the subnet.
      * 
     */
-    public Optional<String> getSubnetId() {
+    public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
     /**
      * The ID of the transit gateway attachment.
      * 
     */
-    public Optional<String> getTransitGatewayAttachmentId() {
+    public Optional<String> transitGatewayAttachmentId() {
         return Optional.ofNullable(this.transitGatewayAttachmentId);
     }
 

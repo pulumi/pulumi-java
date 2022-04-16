@@ -27,14 +27,14 @@ public final class OriginEndpointDashEncryptionArgs extends com.pulumi.resources
     @Import(name="keyRotationIntervalSeconds")
       private final @Nullable Output<Integer> keyRotationIntervalSeconds;
 
-    public Output<Integer> getKeyRotationIntervalSeconds() {
+    public Output<Integer> keyRotationIntervalSeconds() {
         return this.keyRotationIntervalSeconds == null ? Codegen.empty() : this.keyRotationIntervalSeconds;
     }
 
     @Import(name="spekeKeyProvider", required=true)
       private final Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider;
 
-    public Output<OriginEndpointSpekeKeyProviderArgs> getSpekeKeyProvider() {
+    public Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider() {
         return this.spekeKeyProvider;
     }
 

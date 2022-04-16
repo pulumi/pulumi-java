@@ -65,42 +65,42 @@ public final class GetDestinationResult {
      * Destination arn. Returned after successful create.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Destination description
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Destination expression
      * 
     */
-    public Optional<String> getExpression() {
+    public Optional<String> expression() {
         return Optional.ofNullable(this.expression);
     }
     /**
      * Must be RuleName
      * 
     */
-    public Optional<DestinationExpressionType> getExpressionType() {
+    public Optional<DestinationExpressionType> expressionType() {
         return Optional.ofNullable(this.expressionType);
     }
     /**
      * AWS role ARN that grants access
      * 
     */
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
     /**
      * A list of key-value pairs that contain metadata for the destination.
      * 
     */
-    public List<DestinationTag> getTags() {
+    public List<DestinationTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

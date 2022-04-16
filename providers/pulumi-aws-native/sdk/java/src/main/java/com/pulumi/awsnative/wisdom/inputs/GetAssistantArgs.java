@@ -15,7 +15,7 @@ public final class GetAssistantArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="assistantId", required=true)
       private final String assistantId;
 
-    public String getAssistantId() {
+    public String assistantId() {
         return this.assistantId;
     }
 

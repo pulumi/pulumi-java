@@ -31,7 +31,7 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="autoScalingPolicy")
       private final @Nullable Output<GameServerGroupAutoScalingPolicyArgs> autoScalingPolicy;
 
-    public Output<GameServerGroupAutoScalingPolicyArgs> getAutoScalingPolicy() {
+    public Output<GameServerGroupAutoScalingPolicyArgs> autoScalingPolicy() {
         return this.autoScalingPolicy == null ? Codegen.empty() : this.autoScalingPolicy;
     }
 
@@ -42,7 +42,7 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="balancingStrategy")
       private final @Nullable Output<GameServerGroupBalancingStrategy> balancingStrategy;
 
-    public Output<GameServerGroupBalancingStrategy> getBalancingStrategy() {
+    public Output<GameServerGroupBalancingStrategy> balancingStrategy() {
         return this.balancingStrategy == null ? Codegen.empty() : this.balancingStrategy;
     }
 
@@ -53,7 +53,7 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="deleteOption")
       private final @Nullable Output<GameServerGroupDeleteOption> deleteOption;
 
-    public Output<GameServerGroupDeleteOption> getDeleteOption() {
+    public Output<GameServerGroupDeleteOption> deleteOption() {
         return this.deleteOption == null ? Codegen.empty() : this.deleteOption;
     }
 
@@ -64,7 +64,7 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="gameServerGroupName")
       private final @Nullable Output<String> gameServerGroupName;
 
-    public Output<String> getGameServerGroupName() {
+    public Output<String> gameServerGroupName() {
         return this.gameServerGroupName == null ? Codegen.empty() : this.gameServerGroupName;
     }
 
@@ -75,7 +75,7 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="gameServerProtectionPolicy")
       private final @Nullable Output<GameServerGroupGameServerProtectionPolicy> gameServerProtectionPolicy;
 
-    public Output<GameServerGroupGameServerProtectionPolicy> getGameServerProtectionPolicy() {
+    public Output<GameServerGroupGameServerProtectionPolicy> gameServerProtectionPolicy() {
         return this.gameServerProtectionPolicy == null ? Codegen.empty() : this.gameServerProtectionPolicy;
     }
 
@@ -86,7 +86,7 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="instanceDefinitions", required=true)
       private final Output<List<GameServerGroupInstanceDefinitionArgs>> instanceDefinitions;
 
-    public Output<List<GameServerGroupInstanceDefinitionArgs>> getInstanceDefinitions() {
+    public Output<List<GameServerGroupInstanceDefinitionArgs>> instanceDefinitions() {
         return this.instanceDefinitions;
     }
 
@@ -97,7 +97,7 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="launchTemplate", required=true)
       private final Output<GameServerGroupLaunchTemplateArgs> launchTemplate;
 
-    public Output<GameServerGroupLaunchTemplateArgs> getLaunchTemplate() {
+    public Output<GameServerGroupLaunchTemplateArgs> launchTemplate() {
         return this.launchTemplate;
     }
 
@@ -108,7 +108,7 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="maxSize")
       private final @Nullable Output<Double> maxSize;
 
-    public Output<Double> getMaxSize() {
+    public Output<Double> maxSize() {
         return this.maxSize == null ? Codegen.empty() : this.maxSize;
     }
 
@@ -119,7 +119,7 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="minSize")
       private final @Nullable Output<Double> minSize;
 
-    public Output<Double> getMinSize() {
+    public Output<Double> minSize() {
         return this.minSize == null ? Codegen.empty() : this.minSize;
     }
 
@@ -130,7 +130,7 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -141,7 +141,7 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<List<GameServerGroupTagArgs>> tags;
 
-    public Output<List<GameServerGroupTagArgs>> getTags() {
+    public Output<List<GameServerGroupTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -152,7 +152,7 @@ public final class GameServerGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="vpcSubnets")
       private final @Nullable Output<List<String>> vpcSubnets;
 
-    public Output<List<String>> getVpcSubnets() {
+    public Output<List<String>> vpcSubnets() {
         return this.vpcSubnets == null ? Codegen.empty() : this.vpcSubnets;
     }
 

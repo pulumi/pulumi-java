@@ -29,16 +29,16 @@ public final class ServiceRegistry {
         this.registryArn = registryArn;
     }
 
-    public Optional<String> getContainerName() {
+    public Optional<String> containerName() {
         return Optional.ofNullable(this.containerName);
     }
-    public Optional<Integer> getContainerPort() {
+    public Optional<Integer> containerPort() {
         return Optional.ofNullable(this.containerPort);
     }
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
-    public Optional<String> getRegistryArn() {
+    public Optional<String> registryArn() {
         return Optional.ofNullable(this.registryArn);
     }
 

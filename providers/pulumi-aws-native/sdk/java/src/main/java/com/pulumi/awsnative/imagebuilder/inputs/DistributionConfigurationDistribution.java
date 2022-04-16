@@ -29,7 +29,7 @@ public final class DistributionConfigurationDistribution extends com.pulumi.reso
     @Import(name="amiDistributionConfiguration")
       private final @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationProperties amiDistributionConfiguration;
 
-    public Optional<DistributionConfigurationDistributionAmiDistributionConfigurationProperties> getAmiDistributionConfiguration() {
+    public Optional<DistributionConfigurationDistributionAmiDistributionConfigurationProperties> amiDistributionConfiguration() {
         return this.amiDistributionConfiguration == null ? Optional.empty() : Optional.ofNullable(this.amiDistributionConfiguration);
     }
 
@@ -40,7 +40,7 @@ public final class DistributionConfigurationDistribution extends com.pulumi.reso
     @Import(name="containerDistributionConfiguration")
       private final @Nullable DistributionConfigurationDistributionContainerDistributionConfigurationProperties containerDistributionConfiguration;
 
-    public Optional<DistributionConfigurationDistributionContainerDistributionConfigurationProperties> getContainerDistributionConfiguration() {
+    public Optional<DistributionConfigurationDistributionContainerDistributionConfigurationProperties> containerDistributionConfiguration() {
         return this.containerDistributionConfiguration == null ? Optional.empty() : Optional.ofNullable(this.containerDistributionConfiguration);
     }
 
@@ -51,7 +51,7 @@ public final class DistributionConfigurationDistribution extends com.pulumi.reso
     @Import(name="launchTemplateConfigurations")
       private final @Nullable List<DistributionConfigurationLaunchTemplateConfiguration> launchTemplateConfigurations;
 
-    public List<DistributionConfigurationLaunchTemplateConfiguration> getLaunchTemplateConfigurations() {
+    public List<DistributionConfigurationLaunchTemplateConfiguration> launchTemplateConfigurations() {
         return this.launchTemplateConfigurations == null ? List.of() : this.launchTemplateConfigurations;
     }
 
@@ -62,7 +62,7 @@ public final class DistributionConfigurationDistribution extends com.pulumi.reso
     @Import(name="licenseConfigurationArns")
       private final @Nullable List<String> licenseConfigurationArns;
 
-    public List<String> getLicenseConfigurationArns() {
+    public List<String> licenseConfigurationArns() {
         return this.licenseConfigurationArns == null ? List.of() : this.licenseConfigurationArns;
     }
 
@@ -73,7 +73,7 @@ public final class DistributionConfigurationDistribution extends com.pulumi.reso
     @Import(name="region", required=true)
       private final String region;
 
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 

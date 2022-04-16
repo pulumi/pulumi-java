@@ -26,7 +26,7 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayCapabilitySummaries")
       private final @Nullable Output<List<GatewayCapabilitySummaryArgs>> gatewayCapabilitySummaries;
 
-    public Output<List<GatewayCapabilitySummaryArgs>> getGatewayCapabilitySummaries() {
+    public Output<List<GatewayCapabilitySummaryArgs>> gatewayCapabilitySummaries() {
         return this.gatewayCapabilitySummaries == null ? Codegen.empty() : this.gatewayCapabilitySummaries;
     }
 
@@ -37,7 +37,7 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayName")
       private final @Nullable Output<String> gatewayName;
 
-    public Output<String> getGatewayName() {
+    public Output<String> gatewayName() {
         return this.gatewayName == null ? Codegen.empty() : this.gatewayName;
     }
 
@@ -48,7 +48,7 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayPlatform", required=true)
       private final Output<GatewayPlatformArgs> gatewayPlatform;
 
-    public Output<GatewayPlatformArgs> getGatewayPlatform() {
+    public Output<GatewayPlatformArgs> gatewayPlatform() {
         return this.gatewayPlatform;
     }
 
@@ -59,7 +59,7 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<GatewayTagArgs>> tags;
 
-    public Output<List<GatewayTagArgs>> getTags() {
+    public Output<List<GatewayTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

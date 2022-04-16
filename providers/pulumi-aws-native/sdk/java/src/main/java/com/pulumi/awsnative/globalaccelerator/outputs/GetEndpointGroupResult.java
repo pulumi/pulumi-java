@@ -81,55 +81,55 @@ public final class GetEndpointGroupResult {
      * The list of endpoint objects.
      * 
     */
-    public List<EndpointGroupEndpointConfiguration> getEndpointConfigurations() {
+    public List<EndpointGroupEndpointConfiguration> endpointConfigurations() {
         return this.endpointConfigurations == null ? List.of() : this.endpointConfigurations;
     }
     /**
      * The Amazon Resource Name (ARN) of the endpoint group
      * 
     */
-    public Optional<String> getEndpointGroupArn() {
+    public Optional<String> endpointGroupArn() {
         return Optional.ofNullable(this.endpointGroupArn);
     }
     /**
      * The time in seconds between each health check for an endpoint. Must be a value of 10 or 30
      * 
     */
-    public Optional<Integer> getHealthCheckIntervalSeconds() {
+    public Optional<Integer> healthCheckIntervalSeconds() {
         return Optional.ofNullable(this.healthCheckIntervalSeconds);
     }
-    public Optional<String> getHealthCheckPath() {
+    public Optional<String> healthCheckPath() {
         return Optional.ofNullable(this.healthCheckPath);
     }
     /**
      * The port that AWS Global Accelerator uses to check the health of endpoints in this endpoint group.
      * 
     */
-    public Optional<Integer> getHealthCheckPort() {
+    public Optional<Integer> healthCheckPort() {
         return Optional.ofNullable(this.healthCheckPort);
     }
     /**
      * The protocol that AWS Global Accelerator uses to check the health of endpoints in this endpoint group.
      * 
     */
-    public Optional<EndpointGroupHealthCheckProtocol> getHealthCheckProtocol() {
+    public Optional<EndpointGroupHealthCheckProtocol> healthCheckProtocol() {
         return Optional.ofNullable(this.healthCheckProtocol);
     }
-    public List<EndpointGroupPortOverride> getPortOverrides() {
+    public List<EndpointGroupPortOverride> portOverrides() {
         return this.portOverrides == null ? List.of() : this.portOverrides;
     }
     /**
      * The number of consecutive health checks required to set the state of the endpoint to unhealthy.
      * 
     */
-    public Optional<Integer> getThresholdCount() {
+    public Optional<Integer> thresholdCount() {
         return Optional.ofNullable(this.thresholdCount);
     }
     /**
      * The percentage of traffic to sent to an AWS Region
      * 
     */
-    public Optional<Double> getTrafficDialPercentage() {
+    public Optional<Double> trafficDialPercentage() {
         return Optional.ofNullable(this.trafficDialPercentage);
     }
 

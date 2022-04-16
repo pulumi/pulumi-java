@@ -20,14 +20,14 @@ public final class ConnectionAliasArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="connectionString", required=true)
       private final Output<String> connectionString;
 
-    public Output<String> getConnectionString() {
+    public Output<String> connectionString() {
         return this.connectionString;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<ConnectionAliasTagArgs>> tags;
 
-    public Output<List<ConnectionAliasTagArgs>> getTags() {
+    public Output<List<ConnectionAliasTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

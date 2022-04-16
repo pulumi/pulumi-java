@@ -26,7 +26,7 @@ public final class DataSourceAthenaParametersArgs extends com.pulumi.resources.R
     @Import(name="workGroup")
       private final @Nullable Output<String> workGroup;
 
-    public Output<String> getWorkGroup() {
+    public Output<String> workGroup() {
         return this.workGroup == null ? Codegen.empty() : this.workGroup;
     }
 

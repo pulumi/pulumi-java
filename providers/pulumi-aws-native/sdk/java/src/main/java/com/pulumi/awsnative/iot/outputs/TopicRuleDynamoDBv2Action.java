@@ -23,10 +23,10 @@ public final class TopicRuleDynamoDBv2Action {
         this.roleArn = roleArn;
     }
 
-    public Optional<TopicRulePutItemInput> getPutItem() {
+    public Optional<TopicRulePutItemInput> putItem() {
         return Optional.ofNullable(this.putItem);
     }
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
 

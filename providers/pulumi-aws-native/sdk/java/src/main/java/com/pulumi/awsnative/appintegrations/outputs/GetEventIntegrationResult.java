@@ -51,28 +51,28 @@ public final class GetEventIntegrationResult {
      * The associations with the event integration.
      * 
     */
-    public List<EventIntegrationAssociation> getAssociations() {
+    public List<EventIntegrationAssociation> associations() {
         return this.associations == null ? List.of() : this.associations;
     }
     /**
      * The event integration description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The Amazon Resource Name (ARN) of the event integration.
      * 
     */
-    public Optional<String> getEventIntegrationArn() {
+    public Optional<String> eventIntegrationArn() {
         return Optional.ofNullable(this.eventIntegrationArn);
     }
     /**
      * The tags (keys and values) associated with the event integration.
      * 
     */
-    public List<EventIntegrationTag> getTags() {
+    public List<EventIntegrationTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

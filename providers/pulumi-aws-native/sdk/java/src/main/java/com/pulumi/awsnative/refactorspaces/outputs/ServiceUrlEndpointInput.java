@@ -22,10 +22,10 @@ public final class ServiceUrlEndpointInput {
         this.url = url;
     }
 
-    public Optional<String> getHealthUrl() {
+    public Optional<String> healthUrl() {
         return Optional.ofNullable(this.healthUrl);
     }
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

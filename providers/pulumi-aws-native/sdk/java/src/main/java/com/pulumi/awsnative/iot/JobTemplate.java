@@ -36,13 +36,13 @@ public class JobTemplate extends com.pulumi.resources.CustomResource {
      * @return The criteria that determine when and how a job abort takes place.
      * 
      */
-    public Output</* @Nullable */ AbortConfigProperties> getAbortConfig() {
+    public Output</* @Nullable */ AbortConfigProperties> abortConfig() {
         return this.abortConfig;
     }
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +56,7 @@ public class JobTemplate extends com.pulumi.resources.CustomResource {
      * @return A description of the Job Template.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -70,7 +70,7 @@ public class JobTemplate extends com.pulumi.resources.CustomResource {
      * @return The job document. Required if you don't specify a value for documentSource.
      * 
      */
-    public Output</* @Nullable */ String> getDocument() {
+    public Output</* @Nullable */ String> document() {
         return this.document;
     }
     /**
@@ -84,7 +84,7 @@ public class JobTemplate extends com.pulumi.resources.CustomResource {
      * @return An S3 link to the job document to use in the template. Required if you don't specify a value for document.
      * 
      */
-    public Output</* @Nullable */ String> getDocumentSource() {
+    public Output</* @Nullable */ String> documentSource() {
         return this.documentSource;
     }
     /**
@@ -98,13 +98,13 @@ public class JobTemplate extends com.pulumi.resources.CustomResource {
      * @return Optional for copying a JobTemplate from a pre-existing Job configuration.
      * 
      */
-    public Output</* @Nullable */ String> getJobArn() {
+    public Output</* @Nullable */ String> jobArn() {
         return this.jobArn;
     }
     @Export(name="jobExecutionsRetryConfig", type=JobExecutionsRetryConfigProperties.class, parameters={})
     private Output</* @Nullable */ JobExecutionsRetryConfigProperties> jobExecutionsRetryConfig;
 
-    public Output</* @Nullable */ JobExecutionsRetryConfigProperties> getJobExecutionsRetryConfig() {
+    public Output</* @Nullable */ JobExecutionsRetryConfigProperties> jobExecutionsRetryConfig() {
         return this.jobExecutionsRetryConfig;
     }
     /**
@@ -118,13 +118,13 @@ public class JobTemplate extends com.pulumi.resources.CustomResource {
      * @return Allows you to create a staged rollout of a job.
      * 
      */
-    public Output</* @Nullable */ JobExecutionsRolloutConfigProperties> getJobExecutionsRolloutConfig() {
+    public Output</* @Nullable */ JobExecutionsRolloutConfigProperties> jobExecutionsRolloutConfig() {
         return this.jobExecutionsRolloutConfig;
     }
     @Export(name="jobTemplateId", type=String.class, parameters={})
     private Output<String> jobTemplateId;
 
-    public Output<String> getJobTemplateId() {
+    public Output<String> jobTemplateId() {
         return this.jobTemplateId;
     }
     /**
@@ -138,7 +138,7 @@ public class JobTemplate extends com.pulumi.resources.CustomResource {
      * @return Configuration for pre-signed S3 URLs.
      * 
      */
-    public Output</* @Nullable */ PresignedUrlConfigProperties> getPresignedUrlConfig() {
+    public Output</* @Nullable */ PresignedUrlConfigProperties> presignedUrlConfig() {
         return this.presignedUrlConfig;
     }
     /**
@@ -152,7 +152,7 @@ public class JobTemplate extends com.pulumi.resources.CustomResource {
      * @return Metadata that can be used to manage the JobTemplate.
      * 
      */
-    public Output</* @Nullable */ List<JobTemplateTag>> getTags() {
+    public Output</* @Nullable */ List<JobTemplateTag>> tags() {
         return this.tags;
     }
     /**
@@ -166,7 +166,7 @@ public class JobTemplate extends com.pulumi.resources.CustomResource {
      * @return Specifies the amount of time each device has to finish its execution of the job.
      * 
      */
-    public Output</* @Nullable */ TimeoutConfigProperties> getTimeoutConfig() {
+    public Output</* @Nullable */ TimeoutConfigProperties> timeoutConfig() {
         return this.timeoutConfig;
     }
 

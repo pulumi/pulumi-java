@@ -16,14 +16,14 @@ public final class DataSourceVpcConfiguration extends com.pulumi.resources.Invok
     @Import(name="securityGroupIds", required=true)
       private final List<String> securityGroupIds;
 
-    public List<String> getSecurityGroupIds() {
+    public List<String> securityGroupIds() {
         return this.securityGroupIds;
     }
 
     @Import(name="subnetIds", required=true)
       private final List<String> subnetIds;
 
-    public List<String> getSubnetIds() {
+    public List<String> subnetIds() {
         return this.subnetIds;
     }
 

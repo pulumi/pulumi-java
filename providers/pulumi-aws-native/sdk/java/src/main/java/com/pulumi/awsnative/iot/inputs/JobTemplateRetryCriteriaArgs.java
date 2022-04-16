@@ -23,14 +23,14 @@ public final class JobTemplateRetryCriteriaArgs extends com.pulumi.resources.Res
     @Import(name="failureType")
       private final @Nullable Output<JobTemplateJobRetryFailureType> failureType;
 
-    public Output<JobTemplateJobRetryFailureType> getFailureType() {
+    public Output<JobTemplateJobRetryFailureType> failureType() {
         return this.failureType == null ? Codegen.empty() : this.failureType;
     }
 
     @Import(name="numberOfRetries")
       private final @Nullable Output<Integer> numberOfRetries;
 
-    public Output<Integer> getNumberOfRetries() {
+    public Output<Integer> numberOfRetries() {
         return this.numberOfRetries == null ? Codegen.empty() : this.numberOfRetries;
     }
 

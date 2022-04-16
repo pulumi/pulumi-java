@@ -28,7 +28,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoConfigurationEnabled")
       private final @Nullable Output<Boolean> autoConfigurationEnabled;
 
-    public Output<Boolean> getAutoConfigurationEnabled() {
+    public Output<Boolean> autoConfigurationEnabled() {
         return this.autoConfigurationEnabled == null ? Codegen.empty() : this.autoConfigurationEnabled;
     }
 
@@ -39,7 +39,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cWEMonitorEnabled")
       private final @Nullable Output<Boolean> cWEMonitorEnabled;
 
-    public Output<Boolean> getCWEMonitorEnabled() {
+    public Output<Boolean> cWEMonitorEnabled() {
         return this.cWEMonitorEnabled == null ? Codegen.empty() : this.cWEMonitorEnabled;
     }
 
@@ -50,7 +50,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="componentMonitoringSettings")
       private final @Nullable Output<List<ApplicationComponentMonitoringSettingArgs>> componentMonitoringSettings;
 
-    public Output<List<ApplicationComponentMonitoringSettingArgs>> getComponentMonitoringSettings() {
+    public Output<List<ApplicationComponentMonitoringSettingArgs>> componentMonitoringSettings() {
         return this.componentMonitoringSettings == null ? Codegen.empty() : this.componentMonitoringSettings;
     }
 
@@ -61,7 +61,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customComponents")
       private final @Nullable Output<List<ApplicationCustomComponentArgs>> customComponents;
 
-    public Output<List<ApplicationCustomComponentArgs>> getCustomComponents() {
+    public Output<List<ApplicationCustomComponentArgs>> customComponents() {
         return this.customComponents == null ? Codegen.empty() : this.customComponents;
     }
 
@@ -72,7 +72,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logPatternSets")
       private final @Nullable Output<List<ApplicationLogPatternSetArgs>> logPatternSets;
 
-    public Output<List<ApplicationLogPatternSetArgs>> getLogPatternSets() {
+    public Output<List<ApplicationLogPatternSetArgs>> logPatternSets() {
         return this.logPatternSets == null ? Codegen.empty() : this.logPatternSets;
     }
 
@@ -83,7 +83,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="opsCenterEnabled")
       private final @Nullable Output<Boolean> opsCenterEnabled;
 
-    public Output<Boolean> getOpsCenterEnabled() {
+    public Output<Boolean> opsCenterEnabled() {
         return this.opsCenterEnabled == null ? Codegen.empty() : this.opsCenterEnabled;
     }
 
@@ -94,7 +94,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="opsItemSNSTopicArn")
       private final @Nullable Output<String> opsItemSNSTopicArn;
 
-    public Output<String> getOpsItemSNSTopicArn() {
+    public Output<String> opsItemSNSTopicArn() {
         return this.opsItemSNSTopicArn == null ? Codegen.empty() : this.opsItemSNSTopicArn;
     }
 
@@ -105,7 +105,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -116,7 +116,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<ApplicationTagArgs>> tags;
 
-    public Output<List<ApplicationTagArgs>> getTags() {
+    public Output<List<ApplicationTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

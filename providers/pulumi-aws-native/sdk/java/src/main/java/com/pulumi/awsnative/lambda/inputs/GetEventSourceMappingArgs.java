@@ -19,7 +19,7 @@ public final class GetEventSourceMappingArgs extends com.pulumi.resources.Invoke
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

@@ -18,63 +18,63 @@ public final class TopicRuleDynamoDBActionArgs extends com.pulumi.resources.Reso
     @Import(name="hashKeyField", required=true)
       private final Output<String> hashKeyField;
 
-    public Output<String> getHashKeyField() {
+    public Output<String> hashKeyField() {
         return this.hashKeyField;
     }
 
     @Import(name="hashKeyType")
       private final @Nullable Output<String> hashKeyType;
 
-    public Output<String> getHashKeyType() {
+    public Output<String> hashKeyType() {
         return this.hashKeyType == null ? Codegen.empty() : this.hashKeyType;
     }
 
     @Import(name="hashKeyValue", required=true)
       private final Output<String> hashKeyValue;
 
-    public Output<String> getHashKeyValue() {
+    public Output<String> hashKeyValue() {
         return this.hashKeyValue;
     }
 
     @Import(name="payloadField")
       private final @Nullable Output<String> payloadField;
 
-    public Output<String> getPayloadField() {
+    public Output<String> payloadField() {
         return this.payloadField == null ? Codegen.empty() : this.payloadField;
     }
 
     @Import(name="rangeKeyField")
       private final @Nullable Output<String> rangeKeyField;
 
-    public Output<String> getRangeKeyField() {
+    public Output<String> rangeKeyField() {
         return this.rangeKeyField == null ? Codegen.empty() : this.rangeKeyField;
     }
 
     @Import(name="rangeKeyType")
       private final @Nullable Output<String> rangeKeyType;
 
-    public Output<String> getRangeKeyType() {
+    public Output<String> rangeKeyType() {
         return this.rangeKeyType == null ? Codegen.empty() : this.rangeKeyType;
     }
 
     @Import(name="rangeKeyValue")
       private final @Nullable Output<String> rangeKeyValue;
 
-    public Output<String> getRangeKeyValue() {
+    public Output<String> rangeKeyValue() {
         return this.rangeKeyValue == null ? Codegen.empty() : this.rangeKeyValue;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 

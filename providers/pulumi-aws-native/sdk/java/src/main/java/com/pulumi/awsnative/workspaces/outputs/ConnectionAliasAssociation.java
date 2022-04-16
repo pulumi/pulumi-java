@@ -29,16 +29,16 @@ public final class ConnectionAliasAssociation {
         this.resourceId = resourceId;
     }
 
-    public Optional<String> getAssociatedAccountId() {
+    public Optional<String> associatedAccountId() {
         return Optional.ofNullable(this.associatedAccountId);
     }
-    public Optional<ConnectionAliasAssociationAssociationStatus> getAssociationStatus() {
+    public Optional<ConnectionAliasAssociationAssociationStatus> associationStatus() {
         return Optional.ofNullable(this.associationStatus);
     }
-    public Optional<String> getConnectionIdentifier() {
+    public Optional<String> connectionIdentifier() {
         return Optional.ofNullable(this.connectionIdentifier);
     }
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
 

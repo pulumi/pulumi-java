@@ -19,14 +19,14 @@ public final class DatasetTriggerArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="schedule")
       private final @Nullable Output<DatasetScheduleArgs> schedule;
 
-    public Output<DatasetScheduleArgs> getSchedule() {
+    public Output<DatasetScheduleArgs> schedule() {
         return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
     @Import(name="triggeringDataset")
       private final @Nullable Output<DatasetTriggeringDatasetArgs> triggeringDataset;
 
-    public Output<DatasetTriggeringDatasetArgs> getTriggeringDataset() {
+    public Output<DatasetTriggeringDatasetArgs> triggeringDataset() {
         return this.triggeringDataset == null ? Codegen.empty() : this.triggeringDataset;
     }
 

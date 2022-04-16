@@ -31,10 +31,10 @@ public final class GetReplicationConfigurationResult {
      * The RegistryId associated with the aws account.
      * 
     */
-    public Optional<String> getRegistryId() {
+    public Optional<String> registryId() {
         return Optional.ofNullable(this.registryId);
     }
-    public Optional<ReplicationConfiguration> getReplicationConfiguration() {
+    public Optional<ReplicationConfiguration> replicationConfiguration() {
         return Optional.ofNullable(this.replicationConfiguration);
     }
 

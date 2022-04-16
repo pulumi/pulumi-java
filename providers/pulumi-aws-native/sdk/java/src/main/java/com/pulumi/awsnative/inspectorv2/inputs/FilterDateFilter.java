@@ -17,14 +17,14 @@ public final class FilterDateFilter extends com.pulumi.resources.InvokeArgs {
     @Import(name="endInclusive")
       private final @Nullable Integer endInclusive;
 
-    public Optional<Integer> getEndInclusive() {
+    public Optional<Integer> endInclusive() {
         return this.endInclusive == null ? Optional.empty() : Optional.ofNullable(this.endInclusive);
     }
 
     @Import(name="startInclusive")
       private final @Nullable Integer startInclusive;
 
-    public Optional<Integer> getStartInclusive() {
+    public Optional<Integer> startInclusive() {
         return this.startInclusive == null ? Optional.empty() : Optional.ofNullable(this.startInclusive);
     }
 

@@ -22,10 +22,10 @@ public final class NetworkInsightsAccessScopeAnalysisTag {
         this.value = value;
     }
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

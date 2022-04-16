@@ -20,35 +20,35 @@ public final class PlaceIndexArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataSource", required=true)
       private final Output<String> dataSource;
 
-    public Output<String> getDataSource() {
+    public Output<String> dataSource() {
         return this.dataSource;
     }
 
     @Import(name="dataSourceConfiguration")
       private final @Nullable Output<PlaceIndexDataSourceConfigurationArgs> dataSourceConfiguration;
 
-    public Output<PlaceIndexDataSourceConfigurationArgs> getDataSourceConfiguration() {
+    public Output<PlaceIndexDataSourceConfigurationArgs> dataSourceConfiguration() {
         return this.dataSourceConfiguration == null ? Codegen.empty() : this.dataSourceConfiguration;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="indexName", required=true)
       private final Output<String> indexName;
 
-    public Output<String> getIndexName() {
+    public Output<String> indexName() {
         return this.indexName;
     }
 
     @Import(name="pricingPlan")
       private final @Nullable Output<PlaceIndexPricingPlan> pricingPlan;
 
-    public Output<PlaceIndexPricingPlan> getPricingPlan() {
+    public Output<PlaceIndexPricingPlan> pricingPlan() {
         return this.pricingPlan == null ? Codegen.empty() : this.pricingPlan;
     }
 

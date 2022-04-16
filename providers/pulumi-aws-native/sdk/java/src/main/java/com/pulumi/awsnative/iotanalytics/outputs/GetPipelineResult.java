@@ -28,13 +28,13 @@ public final class GetPipelineResult {
         this.tags = tags;
     }
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public List<PipelineActivity> getPipelineActivities() {
+    public List<PipelineActivity> pipelineActivities() {
         return this.pipelineActivities == null ? List.of() : this.pipelineActivities;
     }
-    public List<PipelineTag> getTags() {
+    public List<PipelineTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

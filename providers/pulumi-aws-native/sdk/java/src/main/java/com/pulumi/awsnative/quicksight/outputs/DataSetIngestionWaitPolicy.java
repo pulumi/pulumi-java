@@ -38,7 +38,7 @@ public final class DataSetIngestionWaitPolicy {
      *  Applicable only when DataSetImportMode mode is set to SPICE and WaitForSpiceIngestion is set to true.</p>
      * 
     */
-    public Optional<Double> getIngestionWaitTimeInHours() {
+    public Optional<Double> ingestionWaitTimeInHours() {
         return Optional.ofNullable(this.ingestionWaitTimeInHours);
     }
     /**
@@ -46,7 +46,7 @@ public final class DataSetIngestionWaitPolicy {
      *   Applicable only when DataSetImportMode mode is set to SPICE.</p>
      * 
     */
-    public Optional<Boolean> getWaitForSpiceIngestion() {
+    public Optional<Boolean> waitForSpiceIngestion() {
         return Optional.ofNullable(this.waitForSpiceIngestion);
     }
 

@@ -16,7 +16,7 @@ public final class ResponseHeadersPolicyContentTypeOptions {
         this.override = override;
     }
 
-    public Boolean getOverride() {
+    public Boolean override() {
         return this.override;
     }
 

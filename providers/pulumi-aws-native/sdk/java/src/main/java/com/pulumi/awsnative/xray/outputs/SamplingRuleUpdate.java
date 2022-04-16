@@ -99,76 +99,76 @@ public final class SamplingRuleUpdate {
      * Matches attributes derived from the request.
      * 
     */
-    public Optional<Object> getAttributes() {
+    public Optional<Object> attributes() {
         return Optional.ofNullable(this.attributes);
     }
     /**
      * The percentage of matching requests to instrument, after the reservoir is exhausted.
      * 
     */
-    public Optional<Double> getFixedRate() {
+    public Optional<Double> fixedRate() {
         return Optional.ofNullable(this.fixedRate);
     }
     /**
      * Matches the HTTP method from a request URL.
      * 
     */
-    public Optional<String> getHTTPMethod() {
+    public Optional<String> hTTPMethod() {
         return Optional.ofNullable(this.hTTPMethod);
     }
     /**
      * Matches the hostname from a request URL.
      * 
     */
-    public Optional<String> getHost() {
+    public Optional<String> host() {
         return Optional.ofNullable(this.host);
     }
     /**
      * The priority of the sampling rule.
      * 
     */
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
      * 
     */
-    public Optional<Integer> getReservoirSize() {
+    public Optional<Integer> reservoirSize() {
         return Optional.ofNullable(this.reservoirSize);
     }
     /**
      * Matches the ARN of the AWS resource on which the service runs.
      * 
     */
-    public Optional<String> getResourceARN() {
+    public Optional<String> resourceARN() {
         return Optional.ofNullable(this.resourceARN);
     }
-    public Optional<String> getRuleARN() {
+    public Optional<String> ruleARN() {
         return Optional.ofNullable(this.ruleARN);
     }
-    public Optional<String> getRuleName() {
+    public Optional<String> ruleName() {
         return Optional.ofNullable(this.ruleName);
     }
     /**
      * Matches the name that the service uses to identify itself in segments.
      * 
     */
-    public Optional<String> getServiceName() {
+    public Optional<String> serviceName() {
         return Optional.ofNullable(this.serviceName);
     }
     /**
      * Matches the origin that the service uses to identify its type in segments.
      * 
     */
-    public Optional<String> getServiceType() {
+    public Optional<String> serviceType() {
         return Optional.ofNullable(this.serviceType);
     }
     /**
      * Matches the path from a request URL.
      * 
     */
-    public Optional<String> getURLPath() {
+    public Optional<String> uRLPath() {
         return Optional.ofNullable(this.uRLPath);
     }
 

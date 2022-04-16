@@ -20,14 +20,14 @@ public final class BucketReplicationRuleAndOperatorArgs extends com.pulumi.resou
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     @Import(name="tagFilters")
       private final @Nullable Output<List<BucketTagFilterArgs>> tagFilters;
 
-    public Output<List<BucketTagFilterArgs>> getTagFilters() {
+    public Output<List<BucketTagFilterArgs>> tagFilters() {
         return this.tagFilters == null ? Codegen.empty() : this.tagFilters;
     }
 

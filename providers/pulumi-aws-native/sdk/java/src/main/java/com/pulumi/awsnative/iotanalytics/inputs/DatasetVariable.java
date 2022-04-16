@@ -20,35 +20,35 @@ public final class DatasetVariable extends com.pulumi.resources.InvokeArgs {
     @Import(name="datasetContentVersionValue")
       private final @Nullable DatasetContentVersionValue datasetContentVersionValue;
 
-    public Optional<DatasetContentVersionValue> getDatasetContentVersionValue() {
+    public Optional<DatasetContentVersionValue> datasetContentVersionValue() {
         return this.datasetContentVersionValue == null ? Optional.empty() : Optional.ofNullable(this.datasetContentVersionValue);
     }
 
     @Import(name="doubleValue")
       private final @Nullable Double doubleValue;
 
-    public Optional<Double> getDoubleValue() {
+    public Optional<Double> doubleValue() {
         return this.doubleValue == null ? Optional.empty() : Optional.ofNullable(this.doubleValue);
     }
 
     @Import(name="outputFileUriValue")
       private final @Nullable DatasetOutputFileUriValue outputFileUriValue;
 
-    public Optional<DatasetOutputFileUriValue> getOutputFileUriValue() {
+    public Optional<DatasetOutputFileUriValue> outputFileUriValue() {
         return this.outputFileUriValue == null ? Optional.empty() : Optional.ofNullable(this.outputFileUriValue);
     }
 
     @Import(name="stringValue")
       private final @Nullable String stringValue;
 
-    public Optional<String> getStringValue() {
+    public Optional<String> stringValue() {
         return this.stringValue == null ? Optional.empty() : Optional.ofNullable(this.stringValue);
     }
 
     @Import(name="variableName", required=true)
       private final String variableName;
 
-    public String getVariableName() {
+    public String variableName() {
         return this.variableName;
     }
 

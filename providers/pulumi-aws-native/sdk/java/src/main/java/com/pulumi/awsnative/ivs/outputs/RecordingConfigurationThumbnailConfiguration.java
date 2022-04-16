@@ -35,14 +35,14 @@ public final class RecordingConfigurationThumbnailConfiguration {
      * Thumbnail Recording Mode, which determines whether thumbnails are recorded at an interval or are disabled.
      * 
     */
-    public RecordingConfigurationThumbnailConfigurationRecordingMode getRecordingMode() {
+    public RecordingConfigurationThumbnailConfigurationRecordingMode recordingMode() {
         return this.recordingMode;
     }
     /**
      * Thumbnail recording Target Interval Seconds defines the interval at which thumbnails are recorded. This field is required if RecordingMode is INTERVAL.
      * 
     */
-    public Optional<Integer> getTargetIntervalSeconds() {
+    public Optional<Integer> targetIntervalSeconds() {
         return Optional.ofNullable(this.targetIntervalSeconds);
     }
 

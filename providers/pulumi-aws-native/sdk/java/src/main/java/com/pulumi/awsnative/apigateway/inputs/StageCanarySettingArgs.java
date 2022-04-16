@@ -29,7 +29,7 @@ public final class StageCanarySettingArgs extends com.pulumi.resources.ResourceA
     @Import(name="deploymentId")
       private final @Nullable Output<String> deploymentId;
 
-    public Output<String> getDeploymentId() {
+    public Output<String> deploymentId() {
         return this.deploymentId == null ? Codegen.empty() : this.deploymentId;
     }
 
@@ -40,7 +40,7 @@ public final class StageCanarySettingArgs extends com.pulumi.resources.ResourceA
     @Import(name="percentTraffic")
       private final @Nullable Output<Double> percentTraffic;
 
-    public Output<Double> getPercentTraffic() {
+    public Output<Double> percentTraffic() {
         return this.percentTraffic == null ? Codegen.empty() : this.percentTraffic;
     }
 
@@ -51,7 +51,7 @@ public final class StageCanarySettingArgs extends com.pulumi.resources.ResourceA
     @Import(name="stageVariableOverrides")
       private final @Nullable Output<Object> stageVariableOverrides;
 
-    public Output<Object> getStageVariableOverrides() {
+    public Output<Object> stageVariableOverrides() {
         return this.stageVariableOverrides == null ? Codegen.empty() : this.stageVariableOverrides;
     }
 
@@ -62,7 +62,7 @@ public final class StageCanarySettingArgs extends com.pulumi.resources.ResourceA
     @Import(name="useStageCache")
       private final @Nullable Output<Boolean> useStageCache;
 
-    public Output<Boolean> getUseStageCache() {
+    public Output<Boolean> useStageCache() {
         return this.useStageCache == null ? Codegen.empty() : this.useStageCache;
     }
 

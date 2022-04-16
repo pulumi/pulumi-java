@@ -18,7 +18,7 @@ public final class ResponsePlanChatChannel {
         this.chatbotSns = chatbotSns;
     }
 
-    public List<String> getChatbotSns() {
+    public List<String> chatbotSns() {
         return this.chatbotSns == null ? List.of() : this.chatbotSns;
     }
 

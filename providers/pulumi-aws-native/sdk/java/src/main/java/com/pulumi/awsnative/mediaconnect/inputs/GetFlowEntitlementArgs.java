@@ -19,7 +19,7 @@ public final class GetFlowEntitlementArgs extends com.pulumi.resources.InvokeArg
     @Import(name="entitlementArn", required=true)
       private final String entitlementArn;
 
-    public String getEntitlementArn() {
+    public String entitlementArn() {
         return this.entitlementArn;
     }
 

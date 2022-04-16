@@ -17,7 +17,7 @@ public final class VirtualClusterEksInfoArgs extends com.pulumi.resources.Resour
     @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 

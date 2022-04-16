@@ -24,7 +24,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
@@ -35,7 +35,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -46,7 +46,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DatabaseTagArgs>> tags;
 
-    public Output<List<DatabaseTagArgs>> getTags() {
+    public Output<List<DatabaseTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

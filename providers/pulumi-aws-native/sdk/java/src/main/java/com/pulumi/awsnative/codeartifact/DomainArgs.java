@@ -25,7 +25,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
@@ -36,7 +36,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="permissionsPolicyDocument")
       private final @Nullable Output<Object> permissionsPolicyDocument;
 
-    public Output<Object> getPermissionsPolicyDocument() {
+    public Output<Object> permissionsPolicyDocument() {
         return this.permissionsPolicyDocument == null ? Codegen.empty() : this.permissionsPolicyDocument;
     }
 
@@ -47,7 +47,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DomainTagArgs>> tags;
 
-    public Output<List<DomainTagArgs>> getTags() {
+    public Output<List<DomainTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -23,10 +23,10 @@ public final class FleetLocationConfiguration {
         this.locationCapacity = locationCapacity;
     }
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
-    public Optional<FleetLocationCapacity> getLocationCapacity() {
+    public Optional<FleetLocationCapacity> locationCapacity() {
         return Optional.ofNullable(this.locationCapacity);
     }
 

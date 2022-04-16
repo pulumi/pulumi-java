@@ -15,7 +15,7 @@ public final class GetTrailArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="trailName", required=true)
       private final String trailName;
 
-    public String getTrailName() {
+    public String trailName() {
         return this.trailName;
     }
 

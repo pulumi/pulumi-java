@@ -26,7 +26,7 @@ public final class ApplicationJMXPrometheusExporterArgs extends com.pulumi.resou
     @Import(name="hostPort")
       private final @Nullable Output<String> hostPort;
 
-    public Output<String> getHostPort() {
+    public Output<String> hostPort() {
         return this.hostPort == null ? Codegen.empty() : this.hostPort;
     }
 
@@ -37,7 +37,7 @@ public final class ApplicationJMXPrometheusExporterArgs extends com.pulumi.resou
     @Import(name="jMXURL")
       private final @Nullable Output<String> jMXURL;
 
-    public Output<String> getJMXURL() {
+    public Output<String> jMXURL() {
         return this.jMXURL == null ? Codegen.empty() : this.jMXURL;
     }
 
@@ -48,7 +48,7 @@ public final class ApplicationJMXPrometheusExporterArgs extends com.pulumi.resou
     @Import(name="prometheusPort")
       private final @Nullable Output<String> prometheusPort;
 
-    public Output<String> getPrometheusPort() {
+    public Output<String> prometheusPort() {
         return this.prometheusPort == null ? Codegen.empty() : this.prometheusPort;
     }
 

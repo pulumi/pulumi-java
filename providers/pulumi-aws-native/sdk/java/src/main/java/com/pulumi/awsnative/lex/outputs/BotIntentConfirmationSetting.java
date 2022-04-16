@@ -27,13 +27,13 @@ public final class BotIntentConfirmationSetting {
         this.promptSpecification = promptSpecification;
     }
 
-    public BotResponseSpecification getDeclinationResponse() {
+    public BotResponseSpecification declinationResponse() {
         return this.declinationResponse;
     }
-    public Optional<Boolean> getIsActive() {
+    public Optional<Boolean> isActive() {
         return Optional.ofNullable(this.isActive);
     }
-    public BotPromptSpecification getPromptSpecification() {
+    public BotPromptSpecification promptSpecification() {
         return this.promptSpecification;
     }
 

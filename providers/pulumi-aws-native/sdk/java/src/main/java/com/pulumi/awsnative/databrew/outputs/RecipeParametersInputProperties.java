@@ -23,10 +23,10 @@ public final class RecipeParametersInputProperties {
         this.s3InputDefinition = s3InputDefinition;
     }
 
-    public Optional<RecipeDataCatalogInputDefinition> getDataCatalogInputDefinition() {
+    public Optional<RecipeDataCatalogInputDefinition> dataCatalogInputDefinition() {
         return Optional.ofNullable(this.dataCatalogInputDefinition);
     }
-    public Optional<RecipeS3Location> getS3InputDefinition() {
+    public Optional<RecipeS3Location> s3InputDefinition() {
         return Optional.ofNullable(this.s3InputDefinition);
     }
 

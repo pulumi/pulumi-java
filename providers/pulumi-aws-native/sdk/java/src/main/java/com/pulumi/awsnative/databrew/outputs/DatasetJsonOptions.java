@@ -18,7 +18,7 @@ public final class DatasetJsonOptions {
         this.multiLine = multiLine;
     }
 
-    public Optional<Boolean> getMultiLine() {
+    public Optional<Boolean> multiLine() {
         return Optional.ofNullable(this.multiLine);
     }
 

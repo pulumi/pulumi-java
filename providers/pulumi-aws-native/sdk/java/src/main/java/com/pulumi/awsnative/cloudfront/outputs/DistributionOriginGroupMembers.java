@@ -22,10 +22,10 @@ public final class DistributionOriginGroupMembers {
         this.quantity = quantity;
     }
 
-    public List<DistributionOriginGroupMember> getItems() {
+    public List<DistributionOriginGroupMember> items() {
         return this.items;
     }
-    public Integer getQuantity() {
+    public Integer quantity() {
         return this.quantity;
     }
 

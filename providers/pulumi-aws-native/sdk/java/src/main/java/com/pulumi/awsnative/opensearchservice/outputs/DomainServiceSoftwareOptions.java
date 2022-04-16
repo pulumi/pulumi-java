@@ -41,28 +41,28 @@ public final class DomainServiceSoftwareOptions {
         this.updateStatus = updateStatus;
     }
 
-    public Optional<String> getAutomatedUpdateDate() {
+    public Optional<String> automatedUpdateDate() {
         return Optional.ofNullable(this.automatedUpdateDate);
     }
-    public Optional<Boolean> getCancellable() {
+    public Optional<Boolean> cancellable() {
         return Optional.ofNullable(this.cancellable);
     }
-    public Optional<String> getCurrentVersion() {
+    public Optional<String> currentVersion() {
         return Optional.ofNullable(this.currentVersion);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<String> getNewVersion() {
+    public Optional<String> newVersion() {
         return Optional.ofNullable(this.newVersion);
     }
-    public Optional<Boolean> getOptionalDeployment() {
+    public Optional<Boolean> optionalDeployment() {
         return Optional.ofNullable(this.optionalDeployment);
     }
-    public Optional<Boolean> getUpdateAvailable() {
+    public Optional<Boolean> updateAvailable() {
         return Optional.ofNullable(this.updateAvailable);
     }
-    public Optional<String> getUpdateStatus() {
+    public Optional<String> updateStatus() {
         return Optional.ofNullable(this.updateStatus);
     }
 

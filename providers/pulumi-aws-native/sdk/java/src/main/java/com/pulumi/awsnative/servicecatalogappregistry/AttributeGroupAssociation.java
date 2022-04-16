@@ -29,13 +29,13 @@ public class AttributeGroupAssociation extends com.pulumi.resources.CustomResour
      * @return The name or the Id of the Application.
      * 
      */
-    public Output<String> getApplication() {
+    public Output<String> application() {
         return this.application;
     }
     @Export(name="applicationArn", type=String.class, parameters={})
     private Output<String> applicationArn;
 
-    public Output<String> getApplicationArn() {
+    public Output<String> applicationArn() {
         return this.applicationArn;
     }
     /**
@@ -49,13 +49,13 @@ public class AttributeGroupAssociation extends com.pulumi.resources.CustomResour
      * @return The name or the Id of the AttributeGroup.
      * 
      */
-    public Output<String> getAttributeGroup() {
+    public Output<String> attributeGroup() {
         return this.attributeGroup;
     }
     @Export(name="attributeGroupArn", type=String.class, parameters={})
     private Output<String> attributeGroupArn;
 
-    public Output<String> getAttributeGroupArn() {
+    public Output<String> attributeGroupArn() {
         return this.attributeGroupArn;
     }
 

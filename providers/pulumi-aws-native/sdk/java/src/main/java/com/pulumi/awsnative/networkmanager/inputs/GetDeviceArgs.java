@@ -19,7 +19,7 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="deviceId", required=true)
       private final String deviceId;
 
-    public String getDeviceId() {
+    public String deviceId() {
         return this.deviceId;
     }
 
@@ -30,7 +30,7 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="globalNetworkId", required=true)
       private final String globalNetworkId;
 
-    public String getGlobalNetworkId() {
+    public String globalNetworkId() {
         return this.globalNetworkId;
     }
 

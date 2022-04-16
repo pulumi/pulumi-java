@@ -16,7 +16,7 @@ public final class BotVersionLocaleDetails {
         this.sourceBotVersion = sourceBotVersion;
     }
 
-    public String getSourceBotVersion() {
+    public String sourceBotVersion() {
         return this.sourceBotVersion;
     }
 

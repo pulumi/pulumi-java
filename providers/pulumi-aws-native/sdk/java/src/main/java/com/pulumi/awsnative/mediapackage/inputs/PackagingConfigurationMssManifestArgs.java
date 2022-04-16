@@ -23,14 +23,14 @@ public final class PackagingConfigurationMssManifestArgs extends com.pulumi.reso
     @Import(name="manifestName")
       private final @Nullable Output<String> manifestName;
 
-    public Output<String> getManifestName() {
+    public Output<String> manifestName() {
         return this.manifestName == null ? Codegen.empty() : this.manifestName;
     }
 
     @Import(name="streamSelection")
       private final @Nullable Output<PackagingConfigurationStreamSelectionArgs> streamSelection;
 
-    public Output<PackagingConfigurationStreamSelectionArgs> getStreamSelection() {
+    public Output<PackagingConfigurationStreamSelectionArgs> streamSelection() {
         return this.streamSelection == null ? Codegen.empty() : this.streamSelection;
     }
 

@@ -19,7 +19,7 @@ public final class GetEnclaveCertificateIamRoleAssociationArgs extends com.pulum
     @Import(name="certificateArn", required=true)
       private final String certificateArn;
 
-    public String getCertificateArn() {
+    public String certificateArn() {
         return this.certificateArn;
     }
 
@@ -30,7 +30,7 @@ public final class GetEnclaveCertificateIamRoleAssociationArgs extends com.pulum
     @Import(name="roleArn", required=true)
       private final String roleArn;
 
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 

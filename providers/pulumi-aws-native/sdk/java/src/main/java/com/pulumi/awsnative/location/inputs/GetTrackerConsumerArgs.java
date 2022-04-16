@@ -15,14 +15,14 @@ public final class GetTrackerConsumerArgs extends com.pulumi.resources.InvokeArg
     @Import(name="consumerArn", required=true)
       private final String consumerArn;
 
-    public String getConsumerArn() {
+    public String consumerArn() {
         return this.consumerArn;
     }
 
     @Import(name="trackerName", required=true)
       private final String trackerName;
 
-    public String getTrackerName() {
+    public String trackerName() {
         return this.trackerName;
     }
 

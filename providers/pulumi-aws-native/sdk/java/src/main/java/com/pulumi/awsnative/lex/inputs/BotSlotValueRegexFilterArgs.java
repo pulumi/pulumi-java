@@ -25,7 +25,7 @@ public final class BotSlotValueRegexFilterArgs extends com.pulumi.resources.Reso
     @Import(name="pattern", required=true)
       private final Output<String> pattern;
 
-    public Output<String> getPattern() {
+    public Output<String> pattern() {
         return this.pattern;
     }
 

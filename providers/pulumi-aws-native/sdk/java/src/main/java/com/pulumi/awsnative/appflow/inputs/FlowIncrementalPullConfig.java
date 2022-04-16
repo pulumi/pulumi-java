@@ -21,7 +21,7 @@ public final class FlowIncrementalPullConfig extends com.pulumi.resources.Invoke
     @Import(name="datetimeTypeFieldName")
       private final @Nullable String datetimeTypeFieldName;
 
-    public Optional<String> getDatetimeTypeFieldName() {
+    public Optional<String> datetimeTypeFieldName() {
         return this.datetimeTypeFieldName == null ? Optional.empty() : Optional.ofNullable(this.datetimeTypeFieldName);
     }
 

@@ -26,7 +26,7 @@ public final class RobotApplicationRobotSoftwareSuite extends com.pulumi.resourc
     @Import(name="name", required=true)
       private final RobotApplicationRobotSoftwareSuiteName name;
 
-    public RobotApplicationRobotSoftwareSuiteName getName() {
+    public RobotApplicationRobotSoftwareSuiteName name() {
         return this.name;
     }
 
@@ -37,7 +37,7 @@ public final class RobotApplicationRobotSoftwareSuite extends com.pulumi.resourc
     @Import(name="version")
       private final @Nullable RobotApplicationRobotSoftwareSuiteVersion version;
 
-    public Optional<RobotApplicationRobotSoftwareSuiteVersion> getVersion() {
+    public Optional<RobotApplicationRobotSoftwareSuiteVersion> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

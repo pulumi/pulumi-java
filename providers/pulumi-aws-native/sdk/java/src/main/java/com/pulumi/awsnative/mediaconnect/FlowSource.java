@@ -32,7 +32,7 @@ public class FlowSource extends com.pulumi.resources.CustomResource {
      * @return The type of encryption that is used on the content ingested from this source.
      * 
      */
-    public Output</* @Nullable */ FlowSourceEncryption> getDecryption() {
+    public Output</* @Nullable */ FlowSourceEncryption> decryption() {
         return this.decryption;
     }
     /**
@@ -46,7 +46,7 @@ public class FlowSource extends com.pulumi.resources.CustomResource {
      * @return A description for the source. This value is not used or seen outside of the current AWS Elemental MediaConnect account.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -60,7 +60,7 @@ public class FlowSource extends com.pulumi.resources.CustomResource {
      * @return The ARN of the entitlement that allows you to subscribe to content that comes from another AWS account. The entitlement is set by the content originator and the ARN is generated as part of the originator's flow.
      * 
      */
-    public Output</* @Nullable */ String> getEntitlementArn() {
+    public Output</* @Nullable */ String> entitlementArn() {
         return this.entitlementArn;
     }
     /**
@@ -74,7 +74,7 @@ public class FlowSource extends com.pulumi.resources.CustomResource {
      * @return The ARN of the flow.
      * 
      */
-    public Output</* @Nullable */ String> getFlowArn() {
+    public Output</* @Nullable */ String> flowArn() {
         return this.flowArn;
     }
     /**
@@ -88,7 +88,7 @@ public class FlowSource extends com.pulumi.resources.CustomResource {
      * @return The IP address that the flow will be listening on for incoming content.
      * 
      */
-    public Output<String> getIngestIp() {
+    public Output<String> ingestIp() {
         return this.ingestIp;
     }
     /**
@@ -102,7 +102,7 @@ public class FlowSource extends com.pulumi.resources.CustomResource {
      * @return The port that the flow will be listening on for incoming content.
      * 
      */
-    public Output</* @Nullable */ Integer> getIngestPort() {
+    public Output</* @Nullable */ Integer> ingestPort() {
         return this.ingestPort;
     }
     /**
@@ -116,7 +116,7 @@ public class FlowSource extends com.pulumi.resources.CustomResource {
      * @return The smoothing max bitrate for RIST, RTP, and RTP-FEC streams.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxBitrate() {
+    public Output</* @Nullable */ Integer> maxBitrate() {
         return this.maxBitrate;
     }
     /**
@@ -130,7 +130,7 @@ public class FlowSource extends com.pulumi.resources.CustomResource {
      * @return The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxLatency() {
+    public Output</* @Nullable */ Integer> maxLatency() {
         return this.maxLatency;
     }
     /**
@@ -144,7 +144,7 @@ public class FlowSource extends com.pulumi.resources.CustomResource {
      * @return The name of the source.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -158,7 +158,7 @@ public class FlowSource extends com.pulumi.resources.CustomResource {
      * @return The protocol that is used by the source.
      * 
      */
-    public Output</* @Nullable */ FlowSourceProtocol> getProtocol() {
+    public Output</* @Nullable */ FlowSourceProtocol> protocol() {
         return this.protocol;
     }
     /**
@@ -172,7 +172,7 @@ public class FlowSource extends com.pulumi.resources.CustomResource {
      * @return The ARN of the source.
      * 
      */
-    public Output<String> getSourceArn() {
+    public Output<String> sourceArn() {
         return this.sourceArn;
     }
     /**
@@ -186,7 +186,7 @@ public class FlowSource extends com.pulumi.resources.CustomResource {
      * @return The port that the flow will be listening on for incoming content.(ReadOnly)
      * 
      */
-    public Output<String> getSourceIngestPort() {
+    public Output<String> sourceIngestPort() {
         return this.sourceIngestPort;
     }
     /**
@@ -200,7 +200,7 @@ public class FlowSource extends com.pulumi.resources.CustomResource {
      * @return The stream ID that you want to use for this transport. This parameter applies only to Zixi-based streams.
      * 
      */
-    public Output</* @Nullable */ String> getStreamId() {
+    public Output</* @Nullable */ String> streamId() {
         return this.streamId;
     }
     /**
@@ -214,7 +214,7 @@ public class FlowSource extends com.pulumi.resources.CustomResource {
      * @return The name of the VPC Interface this Source is configured with.
      * 
      */
-    public Output</* @Nullable */ String> getVpcInterfaceName() {
+    public Output</* @Nullable */ String> vpcInterfaceName() {
         return this.vpcInterfaceName;
     }
     /**
@@ -228,7 +228,7 @@ public class FlowSource extends com.pulumi.resources.CustomResource {
      * @return The range of IP addresses that should be allowed to contribute content to your source. These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block; for example, 10.0.0.0/16.
      * 
      */
-    public Output</* @Nullable */ String> getWhitelistCidr() {
+    public Output</* @Nullable */ String> whitelistCidr() {
         return this.whitelistCidr;
     }
 

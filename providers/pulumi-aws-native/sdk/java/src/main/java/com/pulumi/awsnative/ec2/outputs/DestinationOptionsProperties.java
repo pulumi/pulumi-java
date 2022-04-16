@@ -24,13 +24,13 @@ public final class DestinationOptionsProperties {
         this.perHourPartition = perHourPartition;
     }
 
-    public FlowLogDestinationOptionsPropertiesFileFormat getFileFormat() {
+    public FlowLogDestinationOptionsPropertiesFileFormat fileFormat() {
         return this.fileFormat;
     }
-    public Boolean getHiveCompatiblePartitions() {
+    public Boolean hiveCompatiblePartitions() {
         return this.hiveCompatiblePartitions;
     }
-    public Boolean getPerHourPartition() {
+    public Boolean perHourPartition() {
         return this.perHourPartition;
     }
 

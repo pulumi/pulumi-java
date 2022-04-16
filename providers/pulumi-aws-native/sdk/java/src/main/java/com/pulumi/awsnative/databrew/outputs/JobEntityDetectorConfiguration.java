@@ -24,10 +24,10 @@ public final class JobEntityDetectorConfiguration {
         this.entityTypes = entityTypes;
     }
 
-    public Optional<JobAllowedStatistics> getAllowedStatistics() {
+    public Optional<JobAllowedStatistics> allowedStatistics() {
         return Optional.ofNullable(this.allowedStatistics);
     }
-    public List<String> getEntityTypes() {
+    public List<String> entityTypes() {
         return this.entityTypes;
     }
 

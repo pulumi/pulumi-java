@@ -32,7 +32,7 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="administrationRoleARN")
       private final @Nullable Output<String> administrationRoleARN;
 
-    public Output<String> getAdministrationRoleARN() {
+    public Output<String> administrationRoleARN() {
         return this.administrationRoleARN == null ? Codegen.empty() : this.administrationRoleARN;
     }
 
@@ -43,7 +43,7 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoDeployment")
       private final @Nullable Output<StackSetAutoDeploymentArgs> autoDeployment;
 
-    public Output<StackSetAutoDeploymentArgs> getAutoDeployment() {
+    public Output<StackSetAutoDeploymentArgs> autoDeployment() {
         return this.autoDeployment == null ? Codegen.empty() : this.autoDeployment;
     }
 
@@ -54,7 +54,7 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="callAs")
       private final @Nullable Output<StackSetCallAs> callAs;
 
-    public Output<StackSetCallAs> getCallAs() {
+    public Output<StackSetCallAs> callAs() {
         return this.callAs == null ? Codegen.empty() : this.callAs;
     }
 
@@ -65,7 +65,7 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capabilities")
       private final @Nullable Output<List<StackSetCapability>> capabilities;
 
-    public Output<List<StackSetCapability>> getCapabilities() {
+    public Output<List<StackSetCapability>> capabilities() {
         return this.capabilities == null ? Codegen.empty() : this.capabilities;
     }
 
@@ -76,7 +76,7 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -87,7 +87,7 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="executionRoleName")
       private final @Nullable Output<String> executionRoleName;
 
-    public Output<String> getExecutionRoleName() {
+    public Output<String> executionRoleName() {
         return this.executionRoleName == null ? Codegen.empty() : this.executionRoleName;
     }
 
@@ -98,14 +98,14 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedExecution")
       private final @Nullable Output<ManagedExecutionPropertiesArgs> managedExecution;
 
-    public Output<ManagedExecutionPropertiesArgs> getManagedExecution() {
+    public Output<ManagedExecutionPropertiesArgs> managedExecution() {
         return this.managedExecution == null ? Codegen.empty() : this.managedExecution;
     }
 
     @Import(name="operationPreferences")
       private final @Nullable Output<StackSetOperationPreferencesArgs> operationPreferences;
 
-    public Output<StackSetOperationPreferencesArgs> getOperationPreferences() {
+    public Output<StackSetOperationPreferencesArgs> operationPreferences() {
         return this.operationPreferences == null ? Codegen.empty() : this.operationPreferences;
     }
 
@@ -116,7 +116,7 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<List<StackSetParameterArgs>> parameters;
 
-    public Output<List<StackSetParameterArgs>> getParameters() {
+    public Output<List<StackSetParameterArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -127,7 +127,7 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="permissionModel", required=true)
       private final Output<StackSetPermissionModel> permissionModel;
 
-    public Output<StackSetPermissionModel> getPermissionModel() {
+    public Output<StackSetPermissionModel> permissionModel() {
         return this.permissionModel;
     }
 
@@ -138,7 +138,7 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stackInstancesGroup")
       private final @Nullable Output<List<StackSetStackInstancesArgs>> stackInstancesGroup;
 
-    public Output<List<StackSetStackInstancesArgs>> getStackInstancesGroup() {
+    public Output<List<StackSetStackInstancesArgs>> stackInstancesGroup() {
         return this.stackInstancesGroup == null ? Codegen.empty() : this.stackInstancesGroup;
     }
 
@@ -149,7 +149,7 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stackSetName")
       private final @Nullable Output<String> stackSetName;
 
-    public Output<String> getStackSetName() {
+    public Output<String> stackSetName() {
         return this.stackSetName == null ? Codegen.empty() : this.stackSetName;
     }
 
@@ -160,7 +160,7 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<StackSetTagArgs>> tags;
 
-    public Output<List<StackSetTagArgs>> getTags() {
+    public Output<List<StackSetTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -171,7 +171,7 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="templateBody")
       private final @Nullable Output<String> templateBody;
 
-    public Output<String> getTemplateBody() {
+    public Output<String> templateBody() {
         return this.templateBody == null ? Codegen.empty() : this.templateBody;
     }
 
@@ -182,7 +182,7 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="templateURL")
       private final @Nullable Output<String> templateURL;
 
-    public Output<String> getTemplateURL() {
+    public Output<String> templateURL() {
         return this.templateURL == null ? Codegen.empty() : this.templateURL;
     }
 

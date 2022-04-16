@@ -30,16 +30,16 @@ public final class NetworkInsightsAnalysisAnalysisLoadBalancerTarget {
         this.port = port;
     }
 
-    public Optional<String> getAddress() {
+    public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
-    public Optional<String> getAvailabilityZone() {
+    public Optional<String> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisComponent> getInstance() {
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> instance() {
         return Optional.ofNullable(this.instance);
     }
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
 

@@ -21,7 +21,7 @@ public final class CertificateQualifierArgs extends com.pulumi.resources.Resourc
     @Import(name="cpsUri", required=true)
       private final Output<String> cpsUri;
 
-    public Output<String> getCpsUri() {
+    public Output<String> cpsUri() {
         return this.cpsUri;
     }
 

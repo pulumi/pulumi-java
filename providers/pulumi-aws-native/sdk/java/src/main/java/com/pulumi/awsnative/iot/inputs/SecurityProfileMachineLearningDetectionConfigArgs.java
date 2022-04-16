@@ -26,7 +26,7 @@ public final class SecurityProfileMachineLearningDetectionConfigArgs extends com
     @Import(name="confidenceLevel")
       private final @Nullable Output<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> confidenceLevel;
 
-    public Output<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> getConfidenceLevel() {
+    public Output<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> confidenceLevel() {
         return this.confidenceLevel == null ? Codegen.empty() : this.confidenceLevel;
     }
 

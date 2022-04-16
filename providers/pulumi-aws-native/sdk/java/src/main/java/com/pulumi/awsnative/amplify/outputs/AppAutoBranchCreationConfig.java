@@ -51,34 +51,34 @@ public final class AppAutoBranchCreationConfig {
         this.stage = stage;
     }
 
-    public List<String> getAutoBranchCreationPatterns() {
+    public List<String> autoBranchCreationPatterns() {
         return this.autoBranchCreationPatterns == null ? List.of() : this.autoBranchCreationPatterns;
     }
-    public Optional<AppBasicAuthConfig> getBasicAuthConfig() {
+    public Optional<AppBasicAuthConfig> basicAuthConfig() {
         return Optional.ofNullable(this.basicAuthConfig);
     }
-    public Optional<String> getBuildSpec() {
+    public Optional<String> buildSpec() {
         return Optional.ofNullable(this.buildSpec);
     }
-    public Optional<Boolean> getEnableAutoBranchCreation() {
+    public Optional<Boolean> enableAutoBranchCreation() {
         return Optional.ofNullable(this.enableAutoBranchCreation);
     }
-    public Optional<Boolean> getEnableAutoBuild() {
+    public Optional<Boolean> enableAutoBuild() {
         return Optional.ofNullable(this.enableAutoBuild);
     }
-    public Optional<Boolean> getEnablePerformanceMode() {
+    public Optional<Boolean> enablePerformanceMode() {
         return Optional.ofNullable(this.enablePerformanceMode);
     }
-    public Optional<Boolean> getEnablePullRequestPreview() {
+    public Optional<Boolean> enablePullRequestPreview() {
         return Optional.ofNullable(this.enablePullRequestPreview);
     }
-    public List<AppEnvironmentVariable> getEnvironmentVariables() {
+    public List<AppEnvironmentVariable> environmentVariables() {
         return this.environmentVariables == null ? List.of() : this.environmentVariables;
     }
-    public Optional<String> getPullRequestEnvironmentName() {
+    public Optional<String> pullRequestEnvironmentName() {
         return Optional.ofNullable(this.pullRequestEnvironmentName);
     }
-    public Optional<AppAutoBranchCreationConfigStage> getStage() {
+    public Optional<AppAutoBranchCreationConfigStage> stage() {
         return Optional.ofNullable(this.stage);
     }
 

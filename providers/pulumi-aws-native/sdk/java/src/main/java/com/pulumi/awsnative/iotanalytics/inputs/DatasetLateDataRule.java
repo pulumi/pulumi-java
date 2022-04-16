@@ -18,14 +18,14 @@ public final class DatasetLateDataRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="ruleConfiguration", required=true)
       private final DatasetLateDataRuleConfiguration ruleConfiguration;
 
-    public DatasetLateDataRuleConfiguration getRuleConfiguration() {
+    public DatasetLateDataRuleConfiguration ruleConfiguration() {
         return this.ruleConfiguration;
     }
 
     @Import(name="ruleName")
       private final @Nullable String ruleName;
 
-    public Optional<String> getRuleName() {
+    public Optional<String> ruleName() {
         return this.ruleName == null ? Optional.empty() : Optional.ofNullable(this.ruleName);
     }
 

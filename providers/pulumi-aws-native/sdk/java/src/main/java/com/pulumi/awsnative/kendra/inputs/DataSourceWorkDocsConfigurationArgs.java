@@ -21,42 +21,42 @@ public final class DataSourceWorkDocsConfigurationArgs extends com.pulumi.resour
     @Import(name="crawlComments")
       private final @Nullable Output<Boolean> crawlComments;
 
-    public Output<Boolean> getCrawlComments() {
+    public Output<Boolean> crawlComments() {
         return this.crawlComments == null ? Codegen.empty() : this.crawlComments;
     }
 
     @Import(name="exclusionPatterns")
       private final @Nullable Output<List<String>> exclusionPatterns;
 
-    public Output<List<String>> getExclusionPatterns() {
+    public Output<List<String>> exclusionPatterns() {
         return this.exclusionPatterns == null ? Codegen.empty() : this.exclusionPatterns;
     }
 
     @Import(name="fieldMappings")
       private final @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
-    public Output<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
+    public Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings() {
         return this.fieldMappings == null ? Codegen.empty() : this.fieldMappings;
     }
 
     @Import(name="inclusionPatterns")
       private final @Nullable Output<List<String>> inclusionPatterns;
 
-    public Output<List<String>> getInclusionPatterns() {
+    public Output<List<String>> inclusionPatterns() {
         return this.inclusionPatterns == null ? Codegen.empty() : this.inclusionPatterns;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
     @Import(name="useChangeLog")
       private final @Nullable Output<Boolean> useChangeLog;
 
-    public Output<Boolean> getUseChangeLog() {
+    public Output<Boolean> useChangeLog() {
         return this.useChangeLog == null ? Codegen.empty() : this.useChangeLog;
     }
 

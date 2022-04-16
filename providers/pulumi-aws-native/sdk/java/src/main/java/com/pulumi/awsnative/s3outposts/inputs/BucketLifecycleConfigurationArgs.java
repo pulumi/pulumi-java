@@ -22,7 +22,7 @@ public final class BucketLifecycleConfigurationArgs extends com.pulumi.resources
     @Import(name="rules", required=true)
       private final Output<List<BucketRuleArgs>> rules;
 
-    public Output<List<BucketRuleArgs>> getRules() {
+    public Output<List<BucketRuleArgs>> rules() {
         return this.rules;
     }
 

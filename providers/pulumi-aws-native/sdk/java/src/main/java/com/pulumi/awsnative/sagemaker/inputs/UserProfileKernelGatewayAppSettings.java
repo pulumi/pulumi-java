@@ -27,7 +27,7 @@ public final class UserProfileKernelGatewayAppSettings extends com.pulumi.resour
     @Import(name="customImages")
       private final @Nullable List<UserProfileCustomImage> customImages;
 
-    public List<UserProfileCustomImage> getCustomImages() {
+    public List<UserProfileCustomImage> customImages() {
         return this.customImages == null ? List.of() : this.customImages;
     }
 
@@ -38,7 +38,7 @@ public final class UserProfileKernelGatewayAppSettings extends com.pulumi.resour
     @Import(name="defaultResourceSpec")
       private final @Nullable UserProfileResourceSpec defaultResourceSpec;
 
-    public Optional<UserProfileResourceSpec> getDefaultResourceSpec() {
+    public Optional<UserProfileResourceSpec> defaultResourceSpec() {
         return this.defaultResourceSpec == null ? Optional.empty() : Optional.ofNullable(this.defaultResourceSpec);
     }
 

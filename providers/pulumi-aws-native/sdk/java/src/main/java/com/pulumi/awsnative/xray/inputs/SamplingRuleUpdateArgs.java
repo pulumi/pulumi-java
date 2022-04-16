@@ -25,7 +25,7 @@ public final class SamplingRuleUpdateArgs extends com.pulumi.resources.ResourceA
     @Import(name="attributes")
       private final @Nullable Output<Object> attributes;
 
-    public Output<Object> getAttributes() {
+    public Output<Object> attributes() {
         return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
@@ -36,7 +36,7 @@ public final class SamplingRuleUpdateArgs extends com.pulumi.resources.ResourceA
     @Import(name="fixedRate")
       private final @Nullable Output<Double> fixedRate;
 
-    public Output<Double> getFixedRate() {
+    public Output<Double> fixedRate() {
         return this.fixedRate == null ? Codegen.empty() : this.fixedRate;
     }
 
@@ -47,7 +47,7 @@ public final class SamplingRuleUpdateArgs extends com.pulumi.resources.ResourceA
     @Import(name="hTTPMethod")
       private final @Nullable Output<String> hTTPMethod;
 
-    public Output<String> getHTTPMethod() {
+    public Output<String> hTTPMethod() {
         return this.hTTPMethod == null ? Codegen.empty() : this.hTTPMethod;
     }
 
@@ -58,7 +58,7 @@ public final class SamplingRuleUpdateArgs extends com.pulumi.resources.ResourceA
     @Import(name="host")
       private final @Nullable Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host == null ? Codegen.empty() : this.host;
     }
 
@@ -69,7 +69,7 @@ public final class SamplingRuleUpdateArgs extends com.pulumi.resources.ResourceA
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -80,7 +80,7 @@ public final class SamplingRuleUpdateArgs extends com.pulumi.resources.ResourceA
     @Import(name="reservoirSize")
       private final @Nullable Output<Integer> reservoirSize;
 
-    public Output<Integer> getReservoirSize() {
+    public Output<Integer> reservoirSize() {
         return this.reservoirSize == null ? Codegen.empty() : this.reservoirSize;
     }
 
@@ -91,21 +91,21 @@ public final class SamplingRuleUpdateArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceARN")
       private final @Nullable Output<String> resourceARN;
 
-    public Output<String> getResourceARN() {
+    public Output<String> resourceARN() {
         return this.resourceARN == null ? Codegen.empty() : this.resourceARN;
     }
 
     @Import(name="ruleARN")
       private final @Nullable Output<String> ruleARN;
 
-    public Output<String> getRuleARN() {
+    public Output<String> ruleARN() {
         return this.ruleARN == null ? Codegen.empty() : this.ruleARN;
     }
 
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
-    public Output<String> getRuleName() {
+    public Output<String> ruleName() {
         return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 
@@ -116,7 +116,7 @@ public final class SamplingRuleUpdateArgs extends com.pulumi.resources.ResourceA
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
@@ -127,7 +127,7 @@ public final class SamplingRuleUpdateArgs extends com.pulumi.resources.ResourceA
     @Import(name="serviceType")
       private final @Nullable Output<String> serviceType;
 
-    public Output<String> getServiceType() {
+    public Output<String> serviceType() {
         return this.serviceType == null ? Codegen.empty() : this.serviceType;
     }
 
@@ -138,7 +138,7 @@ public final class SamplingRuleUpdateArgs extends com.pulumi.resources.ResourceA
     @Import(name="uRLPath")
       private final @Nullable Output<String> uRLPath;
 
-    public Output<String> getURLPath() {
+    public Output<String> uRLPath() {
         return this.uRLPath == null ? Codegen.empty() : this.uRLPath;
     }
 

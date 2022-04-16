@@ -27,7 +27,7 @@ public final class DataSourceSslPropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="disableSsl")
       private final @Nullable Output<Boolean> disableSsl;
 
-    public Output<Boolean> getDisableSsl() {
+    public Output<Boolean> disableSsl() {
         return this.disableSsl == null ? Codegen.empty() : this.disableSsl;
     }
 

@@ -17,14 +17,14 @@ public final class LaunchStepConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="groupWeights", required=true)
       private final List<LaunchGroupToWeight> groupWeights;
 
-    public List<LaunchGroupToWeight> getGroupWeights() {
+    public List<LaunchGroupToWeight> groupWeights() {
         return this.groupWeights;
     }
 
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

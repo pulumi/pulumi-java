@@ -17,14 +17,14 @@ public final class RuleGroupRuleDefinition extends com.pulumi.resources.InvokeAr
     @Import(name="actions", required=true)
       private final List<String> actions;
 
-    public List<String> getActions() {
+    public List<String> actions() {
         return this.actions;
     }
 
     @Import(name="matchAttributes", required=true)
       private final RuleGroupMatchAttributes matchAttributes;
 
-    public RuleGroupMatchAttributes getMatchAttributes() {
+    public RuleGroupMatchAttributes matchAttributes() {
         return this.matchAttributes;
     }
 

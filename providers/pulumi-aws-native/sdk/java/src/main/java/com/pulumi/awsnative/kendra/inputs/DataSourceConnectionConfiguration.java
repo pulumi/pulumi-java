@@ -16,35 +16,35 @@ public final class DataSourceConnectionConfiguration extends com.pulumi.resource
     @Import(name="databaseHost", required=true)
       private final String databaseHost;
 
-    public String getDatabaseHost() {
+    public String databaseHost() {
         return this.databaseHost;
     }
 
     @Import(name="databaseName", required=true)
       private final String databaseName;
 
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
 
     @Import(name="databasePort", required=true)
       private final Integer databasePort;
 
-    public Integer getDatabasePort() {
+    public Integer databasePort() {
         return this.databasePort;
     }
 
     @Import(name="secretArn", required=true)
       private final String secretArn;
 
-    public String getSecretArn() {
+    public String secretArn() {
         return this.secretArn;
     }
 
     @Import(name="tableName", required=true)
       private final String tableName;
 
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
 

@@ -17,7 +17,7 @@ public final class RuleGroupNotStatementArgs extends com.pulumi.resources.Resour
     @Import(name="statement", required=true)
       private final Output<RuleGroupStatementArgs> statement;
 
-    public Output<RuleGroupStatementArgs> getStatement() {
+    public Output<RuleGroupStatementArgs> statement() {
         return this.statement;
     }
 

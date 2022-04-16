@@ -21,10 +21,10 @@ public final class RuleGroupTextTransformation {
         this.type = type;
     }
 
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
-    public RuleGroupTextTransformationType getType() {
+    public RuleGroupTextTransformationType type() {
         return this.type;
     }
 

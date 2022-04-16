@@ -27,28 +27,28 @@ public final class EventTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="entityTypes", required=true)
       private final Output<List<EventTypeEntityTypeArgs>> entityTypes;
 
-    public Output<List<EventTypeEntityTypeArgs>> getEntityTypes() {
+    public Output<List<EventTypeEntityTypeArgs>> entityTypes() {
         return this.entityTypes;
     }
 
     @Import(name="eventVariables", required=true)
       private final Output<List<EventTypeEventVariableArgs>> eventVariables;
 
-    public Output<List<EventTypeEventVariableArgs>> getEventVariables() {
+    public Output<List<EventTypeEventVariableArgs>> eventVariables() {
         return this.eventVariables;
     }
 
     @Import(name="labels", required=true)
       private final Output<List<EventTypeLabelArgs>> labels;
 
-    public Output<List<EventTypeLabelArgs>> getLabels() {
+    public Output<List<EventTypeLabelArgs>> labels() {
         return this.labels;
     }
 
@@ -59,7 +59,7 @@ public final class EventTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -70,7 +70,7 @@ public final class EventTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<EventTypeTagArgs>> tags;
 
-    public Output<List<EventTypeTagArgs>> getTags() {
+    public Output<List<EventTypeTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

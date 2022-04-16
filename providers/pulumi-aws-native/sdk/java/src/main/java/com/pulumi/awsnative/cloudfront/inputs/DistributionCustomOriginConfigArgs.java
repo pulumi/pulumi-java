@@ -20,42 +20,42 @@ public final class DistributionCustomOriginConfigArgs extends com.pulumi.resourc
     @Import(name="hTTPPort")
       private final @Nullable Output<Integer> hTTPPort;
 
-    public Output<Integer> getHTTPPort() {
+    public Output<Integer> hTTPPort() {
         return this.hTTPPort == null ? Codegen.empty() : this.hTTPPort;
     }
 
     @Import(name="hTTPSPort")
       private final @Nullable Output<Integer> hTTPSPort;
 
-    public Output<Integer> getHTTPSPort() {
+    public Output<Integer> hTTPSPort() {
         return this.hTTPSPort == null ? Codegen.empty() : this.hTTPSPort;
     }
 
     @Import(name="originKeepaliveTimeout")
       private final @Nullable Output<Integer> originKeepaliveTimeout;
 
-    public Output<Integer> getOriginKeepaliveTimeout() {
+    public Output<Integer> originKeepaliveTimeout() {
         return this.originKeepaliveTimeout == null ? Codegen.empty() : this.originKeepaliveTimeout;
     }
 
     @Import(name="originProtocolPolicy", required=true)
       private final Output<String> originProtocolPolicy;
 
-    public Output<String> getOriginProtocolPolicy() {
+    public Output<String> originProtocolPolicy() {
         return this.originProtocolPolicy;
     }
 
     @Import(name="originReadTimeout")
       private final @Nullable Output<Integer> originReadTimeout;
 
-    public Output<Integer> getOriginReadTimeout() {
+    public Output<Integer> originReadTimeout() {
         return this.originReadTimeout == null ? Codegen.empty() : this.originReadTimeout;
     }
 
     @Import(name="originSSLProtocols")
       private final @Nullable Output<List<String>> originSSLProtocols;
 
-    public Output<List<String>> getOriginSSLProtocols() {
+    public Output<List<String>> originSSLProtocols() {
         return this.originSSLProtocols == null ? Codegen.empty() : this.originSSLProtocols;
     }
 

@@ -23,7 +23,7 @@ public final class DetectorModelResetTimer extends com.pulumi.resources.InvokeAr
     @Import(name="timerName", required=true)
       private final String timerName;
 
-    public String getTimerName() {
+    public String timerName() {
         return this.timerName;
     }
 

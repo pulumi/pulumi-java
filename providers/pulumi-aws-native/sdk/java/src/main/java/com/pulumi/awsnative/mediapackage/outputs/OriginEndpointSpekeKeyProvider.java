@@ -56,35 +56,35 @@ public final class OriginEndpointSpekeKeyProvider {
      * An Amazon Resource Name (ARN) of a Certificate Manager certificate that MediaPackage will use for enforcing secure end-to-end data transfer with the key provider service.
      * 
     */
-    public Optional<String> getCertificateArn() {
+    public Optional<String> certificateArn() {
         return Optional.ofNullable(this.certificateArn);
     }
     /**
      * The resource ID to include in key requests.
      * 
     */
-    public String getResourceId() {
+    public String resourceId() {
         return this.resourceId;
     }
     /**
      * An Amazon Resource Name (ARN) of an IAM role that AWS Elemental MediaPackage will assume when accessing the key provider service.
      * 
     */
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
     /**
      * The system IDs to include in key requests.
      * 
     */
-    public List<String> getSystemIds() {
+    public List<String> systemIds() {
         return this.systemIds;
     }
     /**
      * The URL of the external key provider service.
      * 
     */
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

@@ -29,7 +29,7 @@ public class CustomerGatewayAssociation extends com.pulumi.resources.CustomResou
      * @return The Amazon Resource Name (ARN) of the customer gateway.
      * 
      */
-    public Output<String> getCustomerGatewayArn() {
+    public Output<String> customerGatewayArn() {
         return this.customerGatewayArn;
     }
     /**
@@ -43,7 +43,7 @@ public class CustomerGatewayAssociation extends com.pulumi.resources.CustomResou
      * @return The ID of the device
      * 
      */
-    public Output<String> getDeviceId() {
+    public Output<String> deviceId() {
         return this.deviceId;
     }
     /**
@@ -57,7 +57,7 @@ public class CustomerGatewayAssociation extends com.pulumi.resources.CustomResou
      * @return The ID of the global network.
      * 
      */
-    public Output<String> getGlobalNetworkId() {
+    public Output<String> globalNetworkId() {
         return this.globalNetworkId;
     }
     /**
@@ -71,7 +71,7 @@ public class CustomerGatewayAssociation extends com.pulumi.resources.CustomResou
      * @return The ID of the link
      * 
      */
-    public Output</* @Nullable */ String> getLinkId() {
+    public Output</* @Nullable */ String> linkId() {
         return this.linkId;
     }
 

@@ -16,7 +16,7 @@ public final class WebACLAndStatement extends com.pulumi.resources.InvokeArgs {
     @Import(name="statements", required=true)
       private final List<WebACLStatement> statements;
 
-    public List<WebACLStatement> getStatements() {
+    public List<WebACLStatement> statements() {
         return this.statements;
     }
 

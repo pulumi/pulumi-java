@@ -19,14 +19,14 @@ public final class IndexUserTokenConfigurationArgs extends com.pulumi.resources.
     @Import(name="jsonTokenTypeConfiguration")
       private final @Nullable Output<IndexJsonTokenTypeConfigurationArgs> jsonTokenTypeConfiguration;
 
-    public Output<IndexJsonTokenTypeConfigurationArgs> getJsonTokenTypeConfiguration() {
+    public Output<IndexJsonTokenTypeConfigurationArgs> jsonTokenTypeConfiguration() {
         return this.jsonTokenTypeConfiguration == null ? Codegen.empty() : this.jsonTokenTypeConfiguration;
     }
 
     @Import(name="jwtTokenTypeConfiguration")
       private final @Nullable Output<IndexJwtTokenTypeConfigurationArgs> jwtTokenTypeConfiguration;
 
-    public Output<IndexJwtTokenTypeConfigurationArgs> getJwtTokenTypeConfiguration() {
+    public Output<IndexJwtTokenTypeConfigurationArgs> jwtTokenTypeConfiguration() {
         return this.jwtTokenTypeConfiguration == null ? Codegen.empty() : this.jwtTokenTypeConfiguration;
     }
 

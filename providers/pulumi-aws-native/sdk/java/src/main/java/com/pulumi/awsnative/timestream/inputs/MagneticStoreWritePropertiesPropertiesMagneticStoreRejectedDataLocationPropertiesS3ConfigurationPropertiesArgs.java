@@ -26,7 +26,7 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
@@ -37,7 +37,7 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
     @Import(name="encryptionOption", required=true)
       private final Output<String> encryptionOption;
 
-    public Output<String> getEncryptionOption() {
+    public Output<String> encryptionOption() {
         return this.encryptionOption;
     }
 
@@ -48,7 +48,7 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -59,7 +59,7 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
     @Import(name="objectKeyPrefix")
       private final @Nullable Output<String> objectKeyPrefix;
 
-    public Output<String> getObjectKeyPrefix() {
+    public Output<String> objectKeyPrefix() {
         return this.objectKeyPrefix == null ? Codegen.empty() : this.objectKeyPrefix;
     }
 

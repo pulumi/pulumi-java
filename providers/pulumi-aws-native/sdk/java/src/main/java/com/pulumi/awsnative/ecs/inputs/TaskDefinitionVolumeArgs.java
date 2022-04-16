@@ -21,28 +21,28 @@ public final class TaskDefinitionVolumeArgs extends com.pulumi.resources.Resourc
     @Import(name="dockerVolumeConfiguration")
       private final @Nullable Output<TaskDefinitionDockerVolumeConfigurationArgs> dockerVolumeConfiguration;
 
-    public Output<TaskDefinitionDockerVolumeConfigurationArgs> getDockerVolumeConfiguration() {
+    public Output<TaskDefinitionDockerVolumeConfigurationArgs> dockerVolumeConfiguration() {
         return this.dockerVolumeConfiguration == null ? Codegen.empty() : this.dockerVolumeConfiguration;
     }
 
     @Import(name="eFSVolumeConfiguration")
       private final @Nullable Output<TaskDefinitionEFSVolumeConfigurationArgs> eFSVolumeConfiguration;
 
-    public Output<TaskDefinitionEFSVolumeConfigurationArgs> getEFSVolumeConfiguration() {
+    public Output<TaskDefinitionEFSVolumeConfigurationArgs> eFSVolumeConfiguration() {
         return this.eFSVolumeConfiguration == null ? Codegen.empty() : this.eFSVolumeConfiguration;
     }
 
     @Import(name="host")
       private final @Nullable Output<TaskDefinitionHostVolumePropertiesArgs> host;
 
-    public Output<TaskDefinitionHostVolumePropertiesArgs> getHost() {
+    public Output<TaskDefinitionHostVolumePropertiesArgs> host() {
         return this.host == null ? Codegen.empty() : this.host;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

@@ -27,14 +27,14 @@ public final class GetResourceCollectionResult {
         this.resourceCollectionType = resourceCollectionType;
     }
 
-    public Optional<ResourceCollectionFilter> getResourceCollectionFilter() {
+    public Optional<ResourceCollectionFilter> resourceCollectionFilter() {
         return Optional.ofNullable(this.resourceCollectionFilter);
     }
     /**
      * The type of ResourceCollection
      * 
     */
-    public Optional<ResourceCollectionType> getResourceCollectionType() {
+    public Optional<ResourceCollectionType> resourceCollectionType() {
         return Optional.ofNullable(this.resourceCollectionType);
     }
 

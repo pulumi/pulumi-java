@@ -24,7 +24,7 @@ public final class AssetModelMetricArgs extends com.pulumi.resources.ResourceArg
     @Import(name="expression", required=true)
       private final Output<String> expression;
 
-    public Output<String> getExpression() {
+    public Output<String> expression() {
         return this.expression;
     }
 
@@ -35,7 +35,7 @@ public final class AssetModelMetricArgs extends com.pulumi.resources.ResourceArg
     @Import(name="variables", required=true)
       private final Output<List<AssetModelExpressionVariableArgs>> variables;
 
-    public Output<List<AssetModelExpressionVariableArgs>> getVariables() {
+    public Output<List<AssetModelExpressionVariableArgs>> variables() {
         return this.variables;
     }
 
@@ -46,7 +46,7 @@ public final class AssetModelMetricArgs extends com.pulumi.resources.ResourceArg
     @Import(name="window", required=true)
       private final Output<AssetModelMetricWindowArgs> window;
 
-    public Output<AssetModelMetricWindowArgs> getWindow() {
+    public Output<AssetModelMetricWindowArgs> window() {
         return this.window;
     }
 

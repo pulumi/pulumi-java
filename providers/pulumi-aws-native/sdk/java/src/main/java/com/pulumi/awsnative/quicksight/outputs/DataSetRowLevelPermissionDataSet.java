@@ -42,20 +42,20 @@ public final class DataSetRowLevelPermissionDataSet {
      * <p>The Amazon Resource Name (ARN) of the permission dataset.</p>
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public Optional<DataSetRowLevelPermissionFormatVersion> getFormatVersion() {
+    public Optional<DataSetRowLevelPermissionFormatVersion> formatVersion() {
         return Optional.ofNullable(this.formatVersion);
     }
     /**
      * <p>The namespace associated with the row-level permissions dataset.</p>
      * 
     */
-    public Optional<String> getNamespace() {
+    public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
-    public DataSetRowLevelPermissionPolicy getPermissionPolicy() {
+    public DataSetRowLevelPermissionPolicy permissionPolicy() {
         return this.permissionPolicy;
     }
 

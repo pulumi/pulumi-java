@@ -26,7 +26,7 @@ public final class ImageRecipeComponentParameterArgs extends com.pulumi.resource
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -37,7 +37,7 @@ public final class ImageRecipeComponentParameterArgs extends com.pulumi.resource
     @Import(name="value", required=true)
       private final Output<List<String>> value;
 
-    public Output<List<String>> getValue() {
+    public Output<List<String>> value() {
         return this.value;
     }
 

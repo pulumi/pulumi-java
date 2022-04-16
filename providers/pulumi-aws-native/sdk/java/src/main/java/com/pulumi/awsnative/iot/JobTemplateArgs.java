@@ -29,7 +29,7 @@ public final class JobTemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="abortConfig")
       private final @Nullable Output<AbortConfigPropertiesArgs> abortConfig;
 
-    public Output<AbortConfigPropertiesArgs> getAbortConfig() {
+    public Output<AbortConfigPropertiesArgs> abortConfig() {
         return this.abortConfig == null ? Codegen.empty() : this.abortConfig;
     }
 
@@ -40,7 +40,7 @@ public final class JobTemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description", required=true)
       private final Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
 
@@ -51,7 +51,7 @@ public final class JobTemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="document")
       private final @Nullable Output<String> document;
 
-    public Output<String> getDocument() {
+    public Output<String> document() {
         return this.document == null ? Codegen.empty() : this.document;
     }
 
@@ -62,7 +62,7 @@ public final class JobTemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="documentSource")
       private final @Nullable Output<String> documentSource;
 
-    public Output<String> getDocumentSource() {
+    public Output<String> documentSource() {
         return this.documentSource == null ? Codegen.empty() : this.documentSource;
     }
 
@@ -73,14 +73,14 @@ public final class JobTemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobArn")
       private final @Nullable Output<String> jobArn;
 
-    public Output<String> getJobArn() {
+    public Output<String> jobArn() {
         return this.jobArn == null ? Codegen.empty() : this.jobArn;
     }
 
     @Import(name="jobExecutionsRetryConfig")
       private final @Nullable Output<JobExecutionsRetryConfigPropertiesArgs> jobExecutionsRetryConfig;
 
-    public Output<JobExecutionsRetryConfigPropertiesArgs> getJobExecutionsRetryConfig() {
+    public Output<JobExecutionsRetryConfigPropertiesArgs> jobExecutionsRetryConfig() {
         return this.jobExecutionsRetryConfig == null ? Codegen.empty() : this.jobExecutionsRetryConfig;
     }
 
@@ -91,14 +91,14 @@ public final class JobTemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobExecutionsRolloutConfig")
       private final @Nullable Output<JobExecutionsRolloutConfigPropertiesArgs> jobExecutionsRolloutConfig;
 
-    public Output<JobExecutionsRolloutConfigPropertiesArgs> getJobExecutionsRolloutConfig() {
+    public Output<JobExecutionsRolloutConfigPropertiesArgs> jobExecutionsRolloutConfig() {
         return this.jobExecutionsRolloutConfig == null ? Codegen.empty() : this.jobExecutionsRolloutConfig;
     }
 
     @Import(name="jobTemplateId", required=true)
       private final Output<String> jobTemplateId;
 
-    public Output<String> getJobTemplateId() {
+    public Output<String> jobTemplateId() {
         return this.jobTemplateId;
     }
 
@@ -109,7 +109,7 @@ public final class JobTemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="presignedUrlConfig")
       private final @Nullable Output<PresignedUrlConfigPropertiesArgs> presignedUrlConfig;
 
-    public Output<PresignedUrlConfigPropertiesArgs> getPresignedUrlConfig() {
+    public Output<PresignedUrlConfigPropertiesArgs> presignedUrlConfig() {
         return this.presignedUrlConfig == null ? Codegen.empty() : this.presignedUrlConfig;
     }
 
@@ -120,7 +120,7 @@ public final class JobTemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<JobTemplateTagArgs>> tags;
 
-    public Output<List<JobTemplateTagArgs>> getTags() {
+    public Output<List<JobTemplateTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -131,7 +131,7 @@ public final class JobTemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeoutConfig")
       private final @Nullable Output<TimeoutConfigPropertiesArgs> timeoutConfig;
 
-    public Output<TimeoutConfigPropertiesArgs> getTimeoutConfig() {
+    public Output<TimeoutConfigPropertiesArgs> timeoutConfig() {
         return this.timeoutConfig == null ? Codegen.empty() : this.timeoutConfig;
     }
 

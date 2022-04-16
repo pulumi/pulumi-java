@@ -22,10 +22,10 @@ public final class ContainerEnvironmentVariable {
         this.variable = variable;
     }
 
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
-    public Optional<String> getVariable() {
+    public Optional<String> variable() {
         return Optional.ofNullable(this.variable);
     }
 

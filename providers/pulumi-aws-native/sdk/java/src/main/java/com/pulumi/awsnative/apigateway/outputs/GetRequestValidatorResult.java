@@ -42,21 +42,21 @@ public final class GetRequestValidatorResult {
      * ID of the request validator.
      * 
     */
-    public Optional<String> getRequestValidatorId() {
+    public Optional<String> requestValidatorId() {
         return Optional.ofNullable(this.requestValidatorId);
     }
     /**
      * Indicates whether to validate the request body according to the configured schema for the targeted API and method.
      * 
     */
-    public Optional<Boolean> getValidateRequestBody() {
+    public Optional<Boolean> validateRequestBody() {
         return Optional.ofNullable(this.validateRequestBody);
     }
     /**
      * Indicates whether to validate request parameters.
      * 
     */
-    public Optional<Boolean> getValidateRequestParameters() {
+    public Optional<Boolean> validateRequestParameters() {
         return Optional.ofNullable(this.validateRequestParameters);
     }
 

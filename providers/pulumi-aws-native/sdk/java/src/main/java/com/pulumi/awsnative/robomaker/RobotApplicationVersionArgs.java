@@ -18,7 +18,7 @@ public final class RobotApplicationVersionArgs extends com.pulumi.resources.Reso
     @Import(name="application", required=true)
       private final Output<String> application;
 
-    public Output<String> getApplication() {
+    public Output<String> application() {
         return this.application;
     }
 
@@ -29,7 +29,7 @@ public final class RobotApplicationVersionArgs extends com.pulumi.resources.Reso
     @Import(name="currentRevisionId")
       private final @Nullable Output<String> currentRevisionId;
 
-    public Output<String> getCurrentRevisionId() {
+    public Output<String> currentRevisionId() {
         return this.currentRevisionId == null ? Codegen.empty() : this.currentRevisionId;
     }
 

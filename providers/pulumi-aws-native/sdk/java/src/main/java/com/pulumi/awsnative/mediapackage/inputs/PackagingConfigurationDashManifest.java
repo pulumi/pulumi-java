@@ -29,14 +29,14 @@ public final class PackagingConfigurationDashManifest extends com.pulumi.resourc
     @Import(name="manifestLayout")
       private final @Nullable PackagingConfigurationDashManifestManifestLayout manifestLayout;
 
-    public Optional<PackagingConfigurationDashManifestManifestLayout> getManifestLayout() {
+    public Optional<PackagingConfigurationDashManifestManifestLayout> manifestLayout() {
         return this.manifestLayout == null ? Optional.empty() : Optional.ofNullable(this.manifestLayout);
     }
 
     @Import(name="manifestName")
       private final @Nullable String manifestName;
 
-    public Optional<String> getManifestName() {
+    public Optional<String> manifestName() {
         return this.manifestName == null ? Optional.empty() : Optional.ofNullable(this.manifestName);
     }
 
@@ -47,7 +47,7 @@ public final class PackagingConfigurationDashManifest extends com.pulumi.resourc
     @Import(name="minBufferTimeSeconds")
       private final @Nullable Integer minBufferTimeSeconds;
 
-    public Optional<Integer> getMinBufferTimeSeconds() {
+    public Optional<Integer> minBufferTimeSeconds() {
         return this.minBufferTimeSeconds == null ? Optional.empty() : Optional.ofNullable(this.minBufferTimeSeconds);
     }
 
@@ -58,14 +58,14 @@ public final class PackagingConfigurationDashManifest extends com.pulumi.resourc
     @Import(name="profile")
       private final @Nullable PackagingConfigurationDashManifestProfile profile;
 
-    public Optional<PackagingConfigurationDashManifestProfile> getProfile() {
+    public Optional<PackagingConfigurationDashManifestProfile> profile() {
         return this.profile == null ? Optional.empty() : Optional.ofNullable(this.profile);
     }
 
     @Import(name="streamSelection")
       private final @Nullable PackagingConfigurationStreamSelection streamSelection;
 
-    public Optional<PackagingConfigurationStreamSelection> getStreamSelection() {
+    public Optional<PackagingConfigurationStreamSelection> streamSelection() {
         return this.streamSelection == null ? Optional.empty() : Optional.ofNullable(this.streamSelection);
     }
 

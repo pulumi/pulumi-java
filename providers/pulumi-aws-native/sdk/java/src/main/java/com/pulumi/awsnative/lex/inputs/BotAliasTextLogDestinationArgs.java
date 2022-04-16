@@ -22,7 +22,7 @@ public final class BotAliasTextLogDestinationArgs extends com.pulumi.resources.R
     @Import(name="cloudWatch")
       private final @Nullable Output<BotAliasCloudWatchLogGroupLogDestinationArgs> cloudWatch;
 
-    public Output<BotAliasCloudWatchLogGroupLogDestinationArgs> getCloudWatch() {
+    public Output<BotAliasCloudWatchLogGroupLogDestinationArgs> cloudWatch() {
         return this.cloudWatch == null ? Codegen.empty() : this.cloudWatch;
     }
 

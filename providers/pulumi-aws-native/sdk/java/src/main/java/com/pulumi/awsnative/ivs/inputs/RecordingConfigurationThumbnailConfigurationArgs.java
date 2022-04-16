@@ -27,7 +27,7 @@ public final class RecordingConfigurationThumbnailConfigurationArgs extends com.
     @Import(name="recordingMode", required=true)
       private final Output<RecordingConfigurationThumbnailConfigurationRecordingMode> recordingMode;
 
-    public Output<RecordingConfigurationThumbnailConfigurationRecordingMode> getRecordingMode() {
+    public Output<RecordingConfigurationThumbnailConfigurationRecordingMode> recordingMode() {
         return this.recordingMode;
     }
 
@@ -38,7 +38,7 @@ public final class RecordingConfigurationThumbnailConfigurationArgs extends com.
     @Import(name="targetIntervalSeconds")
       private final @Nullable Output<Integer> targetIntervalSeconds;
 
-    public Output<Integer> getTargetIntervalSeconds() {
+    public Output<Integer> targetIntervalSeconds() {
         return this.targetIntervalSeconds == null ? Codegen.empty() : this.targetIntervalSeconds;
     }
 

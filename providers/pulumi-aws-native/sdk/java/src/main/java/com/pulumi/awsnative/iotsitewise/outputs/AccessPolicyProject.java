@@ -26,7 +26,7 @@ public final class AccessPolicyProject {
      * The ID of the project.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 

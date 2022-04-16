@@ -19,7 +19,7 @@ public final class GetCertificateAuthorityArgs extends com.pulumi.resources.Invo
     @Import(name="arn", required=true)
       private final String arn;
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
 

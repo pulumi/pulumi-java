@@ -17,35 +17,35 @@ public final class PipelineDeviceRegistryEnrich extends com.pulumi.resources.Inv
     @Import(name="attribute", required=true)
       private final String attribute;
 
-    public String getAttribute() {
+    public String attribute() {
         return this.attribute;
     }
 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
     @Import(name="next")
       private final @Nullable String next;
 
-    public Optional<String> getNext() {
+    public Optional<String> next() {
         return this.next == null ? Optional.empty() : Optional.ofNullable(this.next);
     }
 
     @Import(name="roleArn", required=true)
       private final String roleArn;
 
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 
     @Import(name="thingName", required=true)
       private final String thingName;
 
-    public String getThingName() {
+    public String thingName() {
         return this.thingName;
     }
 

@@ -15,7 +15,7 @@ public final class DistributionRestrictions extends com.pulumi.resources.InvokeA
     @Import(name="geoRestriction", required=true)
       private final DistributionGeoRestriction geoRestriction;
 
-    public DistributionGeoRestriction getGeoRestriction() {
+    public DistributionGeoRestriction geoRestriction() {
         return this.geoRestriction;
     }
 

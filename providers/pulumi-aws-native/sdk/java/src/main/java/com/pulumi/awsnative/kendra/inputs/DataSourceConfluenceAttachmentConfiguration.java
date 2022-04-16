@@ -19,14 +19,14 @@ public final class DataSourceConfluenceAttachmentConfiguration extends com.pulum
     @Import(name="attachmentFieldMappings")
       private final @Nullable List<DataSourceConfluenceAttachmentToIndexFieldMapping> attachmentFieldMappings;
 
-    public List<DataSourceConfluenceAttachmentToIndexFieldMapping> getAttachmentFieldMappings() {
+    public List<DataSourceConfluenceAttachmentToIndexFieldMapping> attachmentFieldMappings() {
         return this.attachmentFieldMappings == null ? List.of() : this.attachmentFieldMappings;
     }
 
     @Import(name="crawlAttachments")
       private final @Nullable Boolean crawlAttachments;
 
-    public Optional<Boolean> getCrawlAttachments() {
+    public Optional<Boolean> crawlAttachments() {
         return this.crawlAttachments == null ? Optional.empty() : Optional.ofNullable(this.crawlAttachments);
     }
 

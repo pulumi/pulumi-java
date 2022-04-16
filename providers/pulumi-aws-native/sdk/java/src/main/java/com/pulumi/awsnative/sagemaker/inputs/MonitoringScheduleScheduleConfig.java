@@ -23,7 +23,7 @@ public final class MonitoringScheduleScheduleConfig extends com.pulumi.resources
     @Import(name="scheduleExpression", required=true)
       private final String scheduleExpression;
 
-    public String getScheduleExpression() {
+    public String scheduleExpression() {
         return this.scheduleExpression;
     }
 

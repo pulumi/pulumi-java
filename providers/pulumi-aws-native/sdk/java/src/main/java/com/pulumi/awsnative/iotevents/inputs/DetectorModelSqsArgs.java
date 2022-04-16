@@ -20,7 +20,7 @@ public final class DetectorModelSqsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="payload")
       private final @Nullable Output<DetectorModelPayloadArgs> payload;
 
-    public Output<DetectorModelPayloadArgs> getPayload() {
+    public Output<DetectorModelPayloadArgs> payload() {
         return this.payload == null ? Codegen.empty() : this.payload;
     }
 
@@ -31,7 +31,7 @@ public final class DetectorModelSqsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="queueUrl", required=true)
       private final Output<String> queueUrl;
 
-    public Output<String> getQueueUrl() {
+    public Output<String> queueUrl() {
         return this.queueUrl;
     }
 
@@ -42,7 +42,7 @@ public final class DetectorModelSqsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="useBase64")
       private final @Nullable Output<Boolean> useBase64;
 
-    public Output<Boolean> getUseBase64() {
+    public Output<Boolean> useBase64() {
         return this.useBase64 == null ? Codegen.empty() : this.useBase64;
     }
 

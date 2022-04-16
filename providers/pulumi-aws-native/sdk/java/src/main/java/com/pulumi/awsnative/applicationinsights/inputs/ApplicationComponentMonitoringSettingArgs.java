@@ -28,7 +28,7 @@ public final class ApplicationComponentMonitoringSettingArgs extends com.pulumi.
     @Import(name="componentARN")
       private final @Nullable Output<String> componentARN;
 
-    public Output<String> getComponentARN() {
+    public Output<String> componentARN() {
         return this.componentARN == null ? Codegen.empty() : this.componentARN;
     }
 
@@ -39,7 +39,7 @@ public final class ApplicationComponentMonitoringSettingArgs extends com.pulumi.
     @Import(name="componentConfigurationMode", required=true)
       private final Output<ApplicationComponentMonitoringSettingComponentConfigurationMode> componentConfigurationMode;
 
-    public Output<ApplicationComponentMonitoringSettingComponentConfigurationMode> getComponentConfigurationMode() {
+    public Output<ApplicationComponentMonitoringSettingComponentConfigurationMode> componentConfigurationMode() {
         return this.componentConfigurationMode;
     }
 
@@ -50,7 +50,7 @@ public final class ApplicationComponentMonitoringSettingArgs extends com.pulumi.
     @Import(name="componentName")
       private final @Nullable Output<String> componentName;
 
-    public Output<String> getComponentName() {
+    public Output<String> componentName() {
         return this.componentName == null ? Codegen.empty() : this.componentName;
     }
 
@@ -61,7 +61,7 @@ public final class ApplicationComponentMonitoringSettingArgs extends com.pulumi.
     @Import(name="customComponentConfiguration")
       private final @Nullable Output<ApplicationComponentConfigurationArgs> customComponentConfiguration;
 
-    public Output<ApplicationComponentConfigurationArgs> getCustomComponentConfiguration() {
+    public Output<ApplicationComponentConfigurationArgs> customComponentConfiguration() {
         return this.customComponentConfiguration == null ? Codegen.empty() : this.customComponentConfiguration;
     }
 
@@ -72,7 +72,7 @@ public final class ApplicationComponentMonitoringSettingArgs extends com.pulumi.
     @Import(name="defaultOverwriteComponentConfiguration")
       private final @Nullable Output<ApplicationComponentConfigurationArgs> defaultOverwriteComponentConfiguration;
 
-    public Output<ApplicationComponentConfigurationArgs> getDefaultOverwriteComponentConfiguration() {
+    public Output<ApplicationComponentConfigurationArgs> defaultOverwriteComponentConfiguration() {
         return this.defaultOverwriteComponentConfiguration == null ? Codegen.empty() : this.defaultOverwriteComponentConfiguration;
     }
 
@@ -83,7 +83,7 @@ public final class ApplicationComponentMonitoringSettingArgs extends com.pulumi.
     @Import(name="tier", required=true)
       private final Output<String> tier;
 
-    public Output<String> getTier() {
+    public Output<String> tier() {
         return this.tier;
     }
 

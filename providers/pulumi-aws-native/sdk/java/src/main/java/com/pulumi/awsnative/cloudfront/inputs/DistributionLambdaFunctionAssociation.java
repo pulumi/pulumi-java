@@ -18,21 +18,21 @@ public final class DistributionLambdaFunctionAssociation extends com.pulumi.reso
     @Import(name="eventType")
       private final @Nullable String eventType;
 
-    public Optional<String> getEventType() {
+    public Optional<String> eventType() {
         return this.eventType == null ? Optional.empty() : Optional.ofNullable(this.eventType);
     }
 
     @Import(name="includeBody")
       private final @Nullable Boolean includeBody;
 
-    public Optional<Boolean> getIncludeBody() {
+    public Optional<Boolean> includeBody() {
         return this.includeBody == null ? Optional.empty() : Optional.ofNullable(this.includeBody);
     }
 
     @Import(name="lambdaFunctionARN")
       private final @Nullable String lambdaFunctionARN;
 
-    public Optional<String> getLambdaFunctionARN() {
+    public Optional<String> lambdaFunctionARN() {
         return this.lambdaFunctionARN == null ? Optional.empty() : Optional.ofNullable(this.lambdaFunctionARN);
     }
 

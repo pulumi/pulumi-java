@@ -50,34 +50,34 @@ public final class GetRobotApplicationResult {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The revision ID of robot application.
      * 
     */
-    public Optional<String> getCurrentRevisionId() {
+    public Optional<String> currentRevisionId() {
         return Optional.ofNullable(this.currentRevisionId);
     }
     /**
      * The URI of the Docker image for the robot application.
      * 
     */
-    public Optional<String> getEnvironment() {
+    public Optional<String> environment() {
         return Optional.ofNullable(this.environment);
     }
-    public Optional<RobotApplicationRobotSoftwareSuite> getRobotSoftwareSuite() {
+    public Optional<RobotApplicationRobotSoftwareSuite> robotSoftwareSuite() {
         return Optional.ofNullable(this.robotSoftwareSuite);
     }
     /**
      * The sources of the robot application.
      * 
     */
-    public List<RobotApplicationSourceConfig> getSources() {
+    public List<RobotApplicationSourceConfig> sources() {
         return this.sources == null ? List.of() : this.sources;
     }
-    public Optional<RobotApplicationTags> getTags() {
+    public Optional<RobotApplicationTags> tags() {
         return Optional.ofNullable(this.tags);
     }
 

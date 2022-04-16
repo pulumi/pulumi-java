@@ -15,7 +15,7 @@ public final class GetIPAMAllocationArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="cidr", required=true)
       private final String cidr;
 
-    public String getCidr() {
+    public String cidr() {
         return this.cidr;
     }
 
@@ -26,7 +26,7 @@ public final class GetIPAMAllocationArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="ipamPoolAllocationId", required=true)
       private final String ipamPoolAllocationId;
 
-    public String getIpamPoolAllocationId() {
+    public String ipamPoolAllocationId() {
         return this.ipamPoolAllocationId;
     }
 
@@ -37,7 +37,7 @@ public final class GetIPAMAllocationArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="ipamPoolId", required=true)
       private final String ipamPoolId;
 
-    public String getIpamPoolId() {
+    public String ipamPoolId() {
         return this.ipamPoolId;
     }
 

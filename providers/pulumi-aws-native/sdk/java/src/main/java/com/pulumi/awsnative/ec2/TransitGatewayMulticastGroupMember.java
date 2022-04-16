@@ -30,7 +30,7 @@ public class TransitGatewayMulticastGroupMember extends com.pulumi.resources.Cus
      * @return The IP address assigned to the transit gateway multicast group.
      * 
      */
-    public Output<String> getGroupIpAddress() {
+    public Output<String> groupIpAddress() {
         return this.groupIpAddress;
     }
     /**
@@ -44,7 +44,7 @@ public class TransitGatewayMulticastGroupMember extends com.pulumi.resources.Cus
      * @return Indicates that the resource is a transit gateway multicast group member.
      * 
      */
-    public Output<Boolean> getGroupMember() {
+    public Output<Boolean> groupMember() {
         return this.groupMember;
     }
     /**
@@ -58,7 +58,7 @@ public class TransitGatewayMulticastGroupMember extends com.pulumi.resources.Cus
      * @return Indicates that the resource is a transit gateway multicast group member.
      * 
      */
-    public Output<Boolean> getGroupSource() {
+    public Output<Boolean> groupSource() {
         return this.groupSource;
     }
     /**
@@ -72,7 +72,7 @@ public class TransitGatewayMulticastGroupMember extends com.pulumi.resources.Cus
      * @return The member type (for example, static).
      * 
      */
-    public Output<String> getMemberType() {
+    public Output<String> memberType() {
         return this.memberType;
     }
     /**
@@ -86,7 +86,7 @@ public class TransitGatewayMulticastGroupMember extends com.pulumi.resources.Cus
      * @return The ID of the transit gateway attachment.
      * 
      */
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
     }
     /**
@@ -100,7 +100,7 @@ public class TransitGatewayMulticastGroupMember extends com.pulumi.resources.Cus
      * @return The ID of the resource.
      * 
      */
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -114,7 +114,7 @@ public class TransitGatewayMulticastGroupMember extends com.pulumi.resources.Cus
      * @return The type of resource, for example a VPC attachment.
      * 
      */
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
     /**
@@ -128,7 +128,7 @@ public class TransitGatewayMulticastGroupMember extends com.pulumi.resources.Cus
      * @return The source type.
      * 
      */
-    public Output<String> getSourceType() {
+    public Output<String> sourceType() {
         return this.sourceType;
     }
     /**
@@ -142,7 +142,7 @@ public class TransitGatewayMulticastGroupMember extends com.pulumi.resources.Cus
      * @return The ID of the subnet.
      * 
      */
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
     /**
@@ -156,7 +156,7 @@ public class TransitGatewayMulticastGroupMember extends com.pulumi.resources.Cus
      * @return The ID of the transit gateway attachment.
      * 
      */
-    public Output<String> getTransitGatewayAttachmentId() {
+    public Output<String> transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
     /**
@@ -170,7 +170,7 @@ public class TransitGatewayMulticastGroupMember extends com.pulumi.resources.Cus
      * @return The ID of the transit gateway multicast domain.
      * 
      */
-    public Output<String> getTransitGatewayMulticastDomainId() {
+    public Output<String> transitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;
     }
 

@@ -58,35 +58,35 @@ public final class GetDeviceProfileResult {
      * Service profile Arn. Returned after successful create.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Service profile Id. Returned after successful create.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * LoRaWANDeviceProfile supports all LoRa specific attributes for service profile for CreateDeviceProfile operation
      * 
     */
-    public Optional<DeviceProfileLoRaWANDeviceProfile> getLoRaWAN() {
+    public Optional<DeviceProfileLoRaWANDeviceProfile> loRaWAN() {
         return Optional.ofNullable(this.loRaWAN);
     }
     /**
      * Name of service profile
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * A list of key-value pairs that contain metadata for the device profile.
      * 
     */
-    public List<DeviceProfileTag> getTags() {
+    public List<DeviceProfileTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

@@ -29,7 +29,7 @@ public class Index extends com.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -43,7 +43,7 @@ public class Index extends com.pulumi.resources.CustomResource {
      * @return Capacity units
      * 
      */
-    public Output</* @Nullable */ IndexCapacityUnitsConfiguration> getCapacityUnits() {
+    public Output</* @Nullable */ IndexCapacityUnitsConfiguration> capacityUnits() {
         return this.capacityUnits;
     }
     /**
@@ -57,7 +57,7 @@ public class Index extends com.pulumi.resources.CustomResource {
      * @return A description for the index
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -71,25 +71,25 @@ public class Index extends com.pulumi.resources.CustomResource {
      * @return Document metadata configurations
      * 
      */
-    public Output</* @Nullable */ List<IndexDocumentMetadataConfiguration>> getDocumentMetadataConfigurations() {
+    public Output</* @Nullable */ List<IndexDocumentMetadataConfiguration>> documentMetadataConfigurations() {
         return this.documentMetadataConfigurations;
     }
     @Export(name="edition", type=IndexEdition.class, parameters={})
     private Output<IndexEdition> edition;
 
-    public Output<IndexEdition> getEdition() {
+    public Output<IndexEdition> edition() {
         return this.edition;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     /**
@@ -103,7 +103,7 @@ public class Index extends com.pulumi.resources.CustomResource {
      * @return Server side encryption configuration
      * 
      */
-    public Output</* @Nullable */ IndexServerSideEncryptionConfiguration> getServerSideEncryptionConfiguration() {
+    public Output</* @Nullable */ IndexServerSideEncryptionConfiguration> serverSideEncryptionConfiguration() {
         return this.serverSideEncryptionConfiguration;
     }
     /**
@@ -117,19 +117,19 @@ public class Index extends com.pulumi.resources.CustomResource {
      * @return Tags for labeling the index
      * 
      */
-    public Output</* @Nullable */ List<IndexTag>> getTags() {
+    public Output</* @Nullable */ List<IndexTag>> tags() {
         return this.tags;
     }
     @Export(name="userContextPolicy", type=IndexUserContextPolicy.class, parameters={})
     private Output</* @Nullable */ IndexUserContextPolicy> userContextPolicy;
 
-    public Output</* @Nullable */ IndexUserContextPolicy> getUserContextPolicy() {
+    public Output</* @Nullable */ IndexUserContextPolicy> userContextPolicy() {
         return this.userContextPolicy;
     }
     @Export(name="userTokenConfigurations", type=List.class, parameters={IndexUserTokenConfiguration.class})
     private Output</* @Nullable */ List<IndexUserTokenConfiguration>> userTokenConfigurations;
 
-    public Output</* @Nullable */ List<IndexUserTokenConfiguration>> getUserTokenConfigurations() {
+    public Output</* @Nullable */ List<IndexUserTokenConfiguration>> userTokenConfigurations() {
         return this.userTokenConfigurations;
     }
 

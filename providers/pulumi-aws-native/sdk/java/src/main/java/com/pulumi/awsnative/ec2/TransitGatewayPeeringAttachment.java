@@ -33,7 +33,7 @@ public class TransitGatewayPeeringAttachment extends com.pulumi.resources.Custom
      * @return The time the transit gateway peering attachment was created.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -47,7 +47,7 @@ public class TransitGatewayPeeringAttachment extends com.pulumi.resources.Custom
      * @return Options for transit gateway peering attachment
      * 
      */
-    public Output</* @Nullable */ TransitGatewayPeeringAttachmentOptions> getOptions() {
+    public Output</* @Nullable */ TransitGatewayPeeringAttachmentOptions> options() {
         return this.options;
     }
     /**
@@ -61,7 +61,7 @@ public class TransitGatewayPeeringAttachment extends com.pulumi.resources.Custom
      * @return The ID of the peer account
      * 
      */
-    public Output<String> getPeerAccountId() {
+    public Output<String> peerAccountId() {
         return this.peerAccountId;
     }
     /**
@@ -75,7 +75,7 @@ public class TransitGatewayPeeringAttachment extends com.pulumi.resources.Custom
      * @return Peer Region
      * 
      */
-    public Output<String> getPeerRegion() {
+    public Output<String> peerRegion() {
         return this.peerRegion;
     }
     /**
@@ -89,7 +89,7 @@ public class TransitGatewayPeeringAttachment extends com.pulumi.resources.Custom
      * @return The ID of the peer transit gateway.
      * 
      */
-    public Output<String> getPeerTransitGatewayId() {
+    public Output<String> peerTransitGatewayId() {
         return this.peerTransitGatewayId;
     }
     /**
@@ -103,7 +103,7 @@ public class TransitGatewayPeeringAttachment extends com.pulumi.resources.Custom
      * @return The state of the transit gateway peering attachment. Note that the initiating state has been deprecated.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -117,7 +117,7 @@ public class TransitGatewayPeeringAttachment extends com.pulumi.resources.Custom
      * @return The status of the transit gateway peering attachment.
      * 
      */
-    public Output<TransitGatewayPeeringAttachmentPeeringAttachmentStatus> getStatus() {
+    public Output<TransitGatewayPeeringAttachmentPeeringAttachmentStatus> status() {
         return this.status;
     }
     /**
@@ -131,7 +131,7 @@ public class TransitGatewayPeeringAttachment extends com.pulumi.resources.Custom
      * @return The tags for the transit gateway peering attachment.
      * 
      */
-    public Output</* @Nullable */ List<TransitGatewayPeeringAttachmentTag>> getTags() {
+    public Output</* @Nullable */ List<TransitGatewayPeeringAttachmentTag>> tags() {
         return this.tags;
     }
     /**
@@ -145,7 +145,7 @@ public class TransitGatewayPeeringAttachment extends com.pulumi.resources.Custom
      * @return The ID of the transit gateway peering attachment.
      * 
      */
-    public Output<String> getTransitGatewayAttachmentId() {
+    public Output<String> transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
     /**
@@ -159,7 +159,7 @@ public class TransitGatewayPeeringAttachment extends com.pulumi.resources.Custom
      * @return The ID of the transit gateway.
      * 
      */
-    public Output<String> getTransitGatewayId() {
+    public Output<String> transitGatewayId() {
         return this.transitGatewayId;
     }
 

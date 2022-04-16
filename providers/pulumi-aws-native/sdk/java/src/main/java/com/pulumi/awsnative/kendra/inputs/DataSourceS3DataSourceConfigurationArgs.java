@@ -25,42 +25,42 @@ public final class DataSourceS3DataSourceConfigurationArgs extends com.pulumi.re
     @Import(name="accessControlListConfiguration")
       private final @Nullable Output<DataSourceAccessControlListConfigurationArgs> accessControlListConfiguration;
 
-    public Output<DataSourceAccessControlListConfigurationArgs> getAccessControlListConfiguration() {
+    public Output<DataSourceAccessControlListConfigurationArgs> accessControlListConfiguration() {
         return this.accessControlListConfiguration == null ? Codegen.empty() : this.accessControlListConfiguration;
     }
 
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
     @Import(name="documentsMetadataConfiguration")
       private final @Nullable Output<DataSourceDocumentsMetadataConfigurationArgs> documentsMetadataConfiguration;
 
-    public Output<DataSourceDocumentsMetadataConfigurationArgs> getDocumentsMetadataConfiguration() {
+    public Output<DataSourceDocumentsMetadataConfigurationArgs> documentsMetadataConfiguration() {
         return this.documentsMetadataConfiguration == null ? Codegen.empty() : this.documentsMetadataConfiguration;
     }
 
     @Import(name="exclusionPatterns")
       private final @Nullable Output<List<String>> exclusionPatterns;
 
-    public Output<List<String>> getExclusionPatterns() {
+    public Output<List<String>> exclusionPatterns() {
         return this.exclusionPatterns == null ? Codegen.empty() : this.exclusionPatterns;
     }
 
     @Import(name="inclusionPatterns")
       private final @Nullable Output<List<String>> inclusionPatterns;
 
-    public Output<List<String>> getInclusionPatterns() {
+    public Output<List<String>> inclusionPatterns() {
         return this.inclusionPatterns == null ? Codegen.empty() : this.inclusionPatterns;
     }
 
     @Import(name="inclusionPrefixes")
       private final @Nullable Output<List<String>> inclusionPrefixes;
 
-    public Output<List<String>> getInclusionPrefixes() {
+    public Output<List<String>> inclusionPrefixes() {
         return this.inclusionPrefixes == null ? Codegen.empty() : this.inclusionPrefixes;
     }
 

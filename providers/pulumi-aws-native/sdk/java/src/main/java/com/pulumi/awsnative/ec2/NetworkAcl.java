@@ -31,7 +31,7 @@ public class NetworkAcl extends com.pulumi.resources.CustomResource {
      * @return The tags to assign to the network ACL.
      * 
      */
-    public Output</* @Nullable */ List<NetworkAclTag>> getTags() {
+    public Output</* @Nullable */ List<NetworkAclTag>> tags() {
         return this.tags;
     }
     /**
@@ -45,7 +45,7 @@ public class NetworkAcl extends com.pulumi.resources.CustomResource {
      * @return The ID of the VPC.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

@@ -34,14 +34,14 @@ public final class GetDeploymentResult {
      * Primary Id for this resource
      * 
     */
-    public Optional<String> getDeploymentId() {
+    public Optional<String> deploymentId() {
         return Optional.ofNullable(this.deploymentId);
     }
     /**
      * A description of the purpose of the API Gateway deployment.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
 

@@ -20,10 +20,10 @@ public final class TaskDefinitionResourceRequirement {
         this.value = value;
     }
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

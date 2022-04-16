@@ -30,7 +30,7 @@ public class PublicTypeVersion extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Number (ARN) of the extension.
      * 
      */
-    public Output</* @Nullable */ String> getArn() {
+    public Output</* @Nullable */ String> arn() {
         return this.arn;
     }
     /**
@@ -44,7 +44,7 @@ public class PublicTypeVersion extends com.pulumi.resources.CustomResource {
      * @return A url to the S3 bucket where logs for the testType run will be available
      * 
      */
-    public Output</* @Nullable */ String> getLogDeliveryBucket() {
+    public Output</* @Nullable */ String> logDeliveryBucket() {
         return this.logDeliveryBucket;
     }
     /**
@@ -58,7 +58,7 @@ public class PublicTypeVersion extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Number (ARN) assigned to the public extension upon publication
      * 
      */
-    public Output<String> getPublicTypeArn() {
+    public Output<String> publicTypeArn() {
         return this.publicTypeArn;
     }
     /**
@@ -72,7 +72,7 @@ public class PublicTypeVersion extends com.pulumi.resources.CustomResource {
      * @return The version number of a public third-party extension
      * 
      */
-    public Output</* @Nullable */ String> getPublicVersionNumber() {
+    public Output</* @Nullable */ String> publicVersionNumber() {
         return this.publicVersionNumber;
     }
     /**
@@ -86,7 +86,7 @@ public class PublicTypeVersion extends com.pulumi.resources.CustomResource {
      * @return The publisher id assigned by CloudFormation for publishing in this region.
      * 
      */
-    public Output<String> getPublisherId() {
+    public Output<String> publisherId() {
         return this.publisherId;
     }
     /**
@@ -100,7 +100,7 @@ public class PublicTypeVersion extends com.pulumi.resources.CustomResource {
      * @return The kind of extension
      * 
      */
-    public Output</* @Nullable */ PublicTypeVersionType> getType() {
+    public Output</* @Nullable */ PublicTypeVersionType> type() {
         return this.type;
     }
     /**
@@ -118,7 +118,7 @@ public class PublicTypeVersion extends com.pulumi.resources.CustomResource {
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
      * 
      */
-    public Output</* @Nullable */ String> getTypeName() {
+    public Output</* @Nullable */ String> typeName() {
         return this.typeName;
     }
     /**
@@ -132,7 +132,7 @@ public class PublicTypeVersion extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Number (ARN) of the extension with the versionId.
      * 
      */
-    public Output<String> getTypeVersionArn() {
+    public Output<String> typeVersionArn() {
         return this.typeVersionArn;
     }
 

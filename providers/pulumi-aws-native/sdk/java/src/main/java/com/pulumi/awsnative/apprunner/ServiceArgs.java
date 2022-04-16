@@ -28,28 +28,28 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoScalingConfigurationArn")
       private final @Nullable Output<String> autoScalingConfigurationArn;
 
-    public Output<String> getAutoScalingConfigurationArn() {
+    public Output<String> autoScalingConfigurationArn() {
         return this.autoScalingConfigurationArn == null ? Codegen.empty() : this.autoScalingConfigurationArn;
     }
 
     @Import(name="encryptionConfiguration")
       private final @Nullable Output<ServiceEncryptionConfigurationArgs> encryptionConfiguration;
 
-    public Output<ServiceEncryptionConfigurationArgs> getEncryptionConfiguration() {
+    public Output<ServiceEncryptionConfigurationArgs> encryptionConfiguration() {
         return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
     }
 
     @Import(name="healthCheckConfiguration")
       private final @Nullable Output<ServiceHealthCheckConfigurationArgs> healthCheckConfiguration;
 
-    public Output<ServiceHealthCheckConfigurationArgs> getHealthCheckConfiguration() {
+    public Output<ServiceHealthCheckConfigurationArgs> healthCheckConfiguration() {
         return this.healthCheckConfiguration == null ? Codegen.empty() : this.healthCheckConfiguration;
     }
 
     @Import(name="instanceConfiguration")
       private final @Nullable Output<ServiceInstanceConfigurationArgs> instanceConfiguration;
 
-    public Output<ServiceInstanceConfigurationArgs> getInstanceConfiguration() {
+    public Output<ServiceInstanceConfigurationArgs> instanceConfiguration() {
         return this.instanceConfiguration == null ? Codegen.empty() : this.instanceConfiguration;
     }
 
@@ -60,21 +60,21 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
     @Import(name="sourceConfiguration", required=true)
       private final Output<ServiceSourceConfigurationArgs> sourceConfiguration;
 
-    public Output<ServiceSourceConfigurationArgs> getSourceConfiguration() {
+    public Output<ServiceSourceConfigurationArgs> sourceConfiguration() {
         return this.sourceConfiguration;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<ServiceTagArgs>> tags;
 
-    public Output<List<ServiceTagArgs>> getTags() {
+    public Output<List<ServiceTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

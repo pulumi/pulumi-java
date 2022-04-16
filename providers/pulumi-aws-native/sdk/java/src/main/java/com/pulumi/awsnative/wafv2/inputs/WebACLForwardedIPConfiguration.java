@@ -16,14 +16,14 @@ public final class WebACLForwardedIPConfiguration extends com.pulumi.resources.I
     @Import(name="fallbackBehavior", required=true)
       private final WebACLForwardedIPConfigurationFallbackBehavior fallbackBehavior;
 
-    public WebACLForwardedIPConfigurationFallbackBehavior getFallbackBehavior() {
+    public WebACLForwardedIPConfigurationFallbackBehavior fallbackBehavior() {
         return this.fallbackBehavior;
     }
 
     @Import(name="headerName", required=true)
       private final String headerName;
 
-    public String getHeaderName() {
+    public String headerName() {
         return this.headerName;
     }
 

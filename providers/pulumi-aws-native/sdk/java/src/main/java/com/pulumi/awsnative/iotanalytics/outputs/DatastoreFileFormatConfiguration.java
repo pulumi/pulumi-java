@@ -23,10 +23,10 @@ public final class DatastoreFileFormatConfiguration {
         this.parquetConfiguration = parquetConfiguration;
     }
 
-    public Optional<DatastoreJsonConfiguration> getJsonConfiguration() {
+    public Optional<DatastoreJsonConfiguration> jsonConfiguration() {
         return Optional.ofNullable(this.jsonConfiguration);
     }
-    public Optional<DatastoreParquetConfiguration> getParquetConfiguration() {
+    public Optional<DatastoreParquetConfiguration> parquetConfiguration() {
         return Optional.ofNullable(this.parquetConfiguration);
     }
 

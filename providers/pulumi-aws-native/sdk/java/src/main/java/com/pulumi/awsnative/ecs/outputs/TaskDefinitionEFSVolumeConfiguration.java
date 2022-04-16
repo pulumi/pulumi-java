@@ -34,19 +34,19 @@ public final class TaskDefinitionEFSVolumeConfiguration {
         this.transitEncryptionPort = transitEncryptionPort;
     }
 
-    public Optional<TaskDefinitionAuthorizationConfig> getAuthorizationConfig() {
+    public Optional<TaskDefinitionAuthorizationConfig> authorizationConfig() {
         return Optional.ofNullable(this.authorizationConfig);
     }
-    public String getFilesystemId() {
+    public String filesystemId() {
         return this.filesystemId;
     }
-    public Optional<String> getRootDirectory() {
+    public Optional<String> rootDirectory() {
         return Optional.ofNullable(this.rootDirectory);
     }
-    public Optional<TaskDefinitionEFSVolumeConfigurationTransitEncryption> getTransitEncryption() {
+    public Optional<TaskDefinitionEFSVolumeConfigurationTransitEncryption> transitEncryption() {
         return Optional.ofNullable(this.transitEncryption);
     }
-    public Optional<Integer> getTransitEncryptionPort() {
+    public Optional<Integer> transitEncryptionPort() {
         return Optional.ofNullable(this.transitEncryptionPort);
     }
 

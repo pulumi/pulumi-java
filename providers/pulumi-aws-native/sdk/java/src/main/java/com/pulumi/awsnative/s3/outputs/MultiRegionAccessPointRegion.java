@@ -16,7 +16,7 @@ public final class MultiRegionAccessPointRegion {
         this.bucket = bucket;
     }
 
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
 

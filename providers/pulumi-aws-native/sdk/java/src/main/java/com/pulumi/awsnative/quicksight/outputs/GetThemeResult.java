@@ -75,28 +75,28 @@ public final class GetThemeResult {
      * <p>The Amazon Resource Name (ARN) of the theme.</p>
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * <p>The date and time that the theme was created.</p>
      * 
     */
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * <p>The date and time that the theme was last updated.</p>
      * 
     */
-    public Optional<String> getLastUpdatedTime() {
+    public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     /**
      * <p>A display name for the theme.</p>
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
@@ -104,7 +104,7 @@ public final class GetThemeResult {
      * 			</p>
      * 
     */
-    public List<ThemeResourcePermission> getPermissions() {
+    public List<ThemeResourcePermission> permissions() {
         return this.permissions == null ? List.of() : this.permissions;
     }
     /**
@@ -112,13 +112,13 @@ public final class GetThemeResult {
      * 			resource.</p>
      * 
     */
-    public List<ThemeTag> getTags() {
+    public List<ThemeTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
-    public Optional<ThemeType> getType() {
+    public Optional<ThemeType> type() {
         return Optional.ofNullable(this.type);
     }
-    public Optional<ThemeVersion> getVersion() {
+    public Optional<ThemeVersion> version() {
         return Optional.ofNullable(this.version);
     }
 

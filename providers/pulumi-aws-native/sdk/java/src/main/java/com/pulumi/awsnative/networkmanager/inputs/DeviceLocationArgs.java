@@ -26,7 +26,7 @@ public final class DeviceLocationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="address")
       private final @Nullable Output<String> address;
 
-    public Output<String> getAddress() {
+    public Output<String> address() {
         return this.address == null ? Codegen.empty() : this.address;
     }
 
@@ -37,7 +37,7 @@ public final class DeviceLocationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="latitude")
       private final @Nullable Output<String> latitude;
 
-    public Output<String> getLatitude() {
+    public Output<String> latitude() {
         return this.latitude == null ? Codegen.empty() : this.latitude;
     }
 
@@ -48,7 +48,7 @@ public final class DeviceLocationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="longitude")
       private final @Nullable Output<String> longitude;
 
-    public Output<String> getLongitude() {
+    public Output<String> longitude() {
         return this.longitude == null ? Codegen.empty() : this.longitude;
     }
 

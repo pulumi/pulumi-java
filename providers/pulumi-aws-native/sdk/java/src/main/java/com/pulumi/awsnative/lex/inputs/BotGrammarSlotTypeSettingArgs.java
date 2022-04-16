@@ -22,7 +22,7 @@ public final class BotGrammarSlotTypeSettingArgs extends com.pulumi.resources.Re
     @Import(name="source")
       private final @Nullable Output<BotGrammarSlotTypeSourceArgs> source;
 
-    public Output<BotGrammarSlotTypeSourceArgs> getSource() {
+    public Output<BotGrammarSlotTypeSourceArgs> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 

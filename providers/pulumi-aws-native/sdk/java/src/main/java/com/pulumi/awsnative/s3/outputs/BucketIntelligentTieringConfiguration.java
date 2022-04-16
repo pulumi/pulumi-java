@@ -59,35 +59,35 @@ public final class BucketIntelligentTieringConfiguration {
      * The ID used to identify the S3 Intelligent-Tiering configuration.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * An object key name prefix that identifies the subset of objects to which the rule applies.
      * 
     */
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
      * Specifies the status of the configuration.
      * 
     */
-    public BucketIntelligentTieringConfigurationStatus getStatus() {
+    public BucketIntelligentTieringConfigurationStatus status() {
         return this.status;
     }
     /**
      * A container for a key-value pair.
      * 
     */
-    public List<BucketTagFilter> getTagFilters() {
+    public List<BucketTagFilter> tagFilters() {
         return this.tagFilters == null ? List.of() : this.tagFilters;
     }
     /**
      * Specifies a list of S3 Intelligent-Tiering storage class tiers in the configuration. At least one tier must be defined in the list. At most, you can specify two tiers in the list, one for each available AccessTier: ARCHIVE_ACCESS and DEEP_ARCHIVE_ACCESS.
      * 
     */
-    public List<BucketTiering> getTierings() {
+    public List<BucketTiering> tierings() {
         return this.tierings;
     }
 

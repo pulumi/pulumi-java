@@ -22,14 +22,14 @@ public final class CertificateAuthorityAccessMethodArgs extends com.pulumi.resou
     @Import(name="accessMethodType")
       private final @Nullable Output<String> accessMethodType;
 
-    public Output<String> getAccessMethodType() {
+    public Output<String> accessMethodType() {
         return this.accessMethodType == null ? Codegen.empty() : this.accessMethodType;
     }
 
     @Import(name="customObjectIdentifier")
       private final @Nullable Output<String> customObjectIdentifier;
 
-    public Output<String> getCustomObjectIdentifier() {
+    public Output<String> customObjectIdentifier() {
         return this.customObjectIdentifier == null ? Codegen.empty() : this.customObjectIdentifier;
     }
 

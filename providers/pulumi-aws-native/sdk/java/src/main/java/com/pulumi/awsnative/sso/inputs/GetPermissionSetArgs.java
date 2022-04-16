@@ -19,7 +19,7 @@ public final class GetPermissionSetArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="instanceArn", required=true)
       private final String instanceArn;
 
-    public String getInstanceArn() {
+    public String instanceArn() {
         return this.instanceArn;
     }
 
@@ -30,7 +30,7 @@ public final class GetPermissionSetArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="permissionSetArn", required=true)
       private final String permissionSetArn;
 
-    public String getPermissionSetArn() {
+    public String permissionSetArn() {
         return this.permissionSetArn;
     }
 

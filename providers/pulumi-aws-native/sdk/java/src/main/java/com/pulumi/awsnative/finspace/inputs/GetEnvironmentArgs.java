@@ -19,7 +19,7 @@ public final class GetEnvironmentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="environmentId", required=true)
       private final String environmentId;
 
-    public String getEnvironmentId() {
+    public String environmentId() {
         return this.environmentId;
     }
 

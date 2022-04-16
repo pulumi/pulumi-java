@@ -26,7 +26,7 @@ public final class MonitoringScheduleS3Output extends com.pulumi.resources.Invok
     @Import(name="localPath", required=true)
       private final String localPath;
 
-    public String getLocalPath() {
+    public String localPath() {
         return this.localPath;
     }
 
@@ -37,7 +37,7 @@ public final class MonitoringScheduleS3Output extends com.pulumi.resources.Invok
     @Import(name="s3UploadMode")
       private final @Nullable MonitoringScheduleS3OutputS3UploadMode s3UploadMode;
 
-    public Optional<MonitoringScheduleS3OutputS3UploadMode> getS3UploadMode() {
+    public Optional<MonitoringScheduleS3OutputS3UploadMode> s3UploadMode() {
         return this.s3UploadMode == null ? Optional.empty() : Optional.ofNullable(this.s3UploadMode);
     }
 
@@ -48,7 +48,7 @@ public final class MonitoringScheduleS3Output extends com.pulumi.resources.Invok
     @Import(name="s3Uri", required=true)
       private final String s3Uri;
 
-    public String getS3Uri() {
+    public String s3Uri() {
         return this.s3Uri;
     }
 

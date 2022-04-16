@@ -19,28 +19,28 @@ public final class ServiceRegistryArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="containerName")
       private final @Nullable Output<String> containerName;
 
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName == null ? Codegen.empty() : this.containerName;
     }
 
     @Import(name="containerPort")
       private final @Nullable Output<Integer> containerPort;
 
-    public Output<Integer> getContainerPort() {
+    public Output<Integer> containerPort() {
         return this.containerPort == null ? Codegen.empty() : this.containerPort;
     }
 
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
     @Import(name="registryArn")
       private final @Nullable Output<String> registryArn;
 
-    public Output<String> getRegistryArn() {
+    public Output<String> registryArn() {
         return this.registryArn == null ? Codegen.empty() : this.registryArn;
     }
 

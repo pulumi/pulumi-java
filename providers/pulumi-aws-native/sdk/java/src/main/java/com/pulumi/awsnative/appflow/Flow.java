@@ -37,7 +37,7 @@ public class Flow extends com.pulumi.resources.CustomResource {
      * @return Description of the flow.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -51,7 +51,7 @@ public class Flow extends com.pulumi.resources.CustomResource {
      * @return List of Destination connectors of the flow.
      * 
      */
-    public Output<List<FlowDestinationFlowConfig>> getDestinationFlowConfigList() {
+    public Output<List<FlowDestinationFlowConfig>> destinationFlowConfigList() {
         return this.destinationFlowConfigList;
     }
     /**
@@ -65,7 +65,7 @@ public class Flow extends com.pulumi.resources.CustomResource {
      * @return ARN identifier of the flow.
      * 
      */
-    public Output<String> getFlowArn() {
+    public Output<String> flowArn() {
         return this.flowArn;
     }
     /**
@@ -79,7 +79,7 @@ public class Flow extends com.pulumi.resources.CustomResource {
      * @return Name of the flow.
      * 
      */
-    public Output<String> getFlowName() {
+    public Output<String> flowName() {
         return this.flowName;
     }
     /**
@@ -93,7 +93,7 @@ public class Flow extends com.pulumi.resources.CustomResource {
      * @return The ARN of the AWS Key Management Service (AWS KMS) key that's used to encrypt your function's environment variables. If it's not provided, AWS Lambda uses a default service key.
      * 
      */
-    public Output</* @Nullable */ String> getKMSArn() {
+    public Output</* @Nullable */ String> kMSArn() {
         return this.kMSArn;
     }
     /**
@@ -107,7 +107,7 @@ public class Flow extends com.pulumi.resources.CustomResource {
      * @return Configurations of Source connector of the flow.
      * 
      */
-    public Output<FlowSourceFlowConfig> getSourceFlowConfig() {
+    public Output<FlowSourceFlowConfig> sourceFlowConfig() {
         return this.sourceFlowConfig;
     }
     /**
@@ -121,7 +121,7 @@ public class Flow extends com.pulumi.resources.CustomResource {
      * @return List of Tags.
      * 
      */
-    public Output</* @Nullable */ List<FlowTag>> getTags() {
+    public Output</* @Nullable */ List<FlowTag>> tags() {
         return this.tags;
     }
     /**
@@ -135,7 +135,7 @@ public class Flow extends com.pulumi.resources.CustomResource {
      * @return List of tasks for the flow.
      * 
      */
-    public Output<List<FlowTask>> getTasks() {
+    public Output<List<FlowTask>> tasks() {
         return this.tasks;
     }
     /**
@@ -149,7 +149,7 @@ public class Flow extends com.pulumi.resources.CustomResource {
      * @return Trigger settings of the flow.
      * 
      */
-    public Output<FlowTriggerConfig> getTriggerConfig() {
+    public Output<FlowTriggerConfig> triggerConfig() {
         return this.triggerConfig;
     }
 

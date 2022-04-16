@@ -26,7 +26,7 @@ public final class ImageRecipeSystemsManagerAgentArgs extends com.pulumi.resourc
     @Import(name="uninstallAfterBuild")
       private final @Nullable Output<Boolean> uninstallAfterBuild;
 
-    public Output<Boolean> getUninstallAfterBuild() {
+    public Output<Boolean> uninstallAfterBuild() {
         return this.uninstallAfterBuild == null ? Codegen.empty() : this.uninstallAfterBuild;
     }
 

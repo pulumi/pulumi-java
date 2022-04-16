@@ -26,7 +26,7 @@ public final class WorkflowStepDeleteStepDetailsProperties {
      * The name of the step, used as an identifier.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

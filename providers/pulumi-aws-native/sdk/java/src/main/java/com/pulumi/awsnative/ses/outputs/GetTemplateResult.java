@@ -23,10 +23,10 @@ public final class GetTemplateResult {
         this.template = template;
     }
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<Template> getTemplate() {
+    public Optional<Template> template() {
         return Optional.ofNullable(this.template);
     }
 

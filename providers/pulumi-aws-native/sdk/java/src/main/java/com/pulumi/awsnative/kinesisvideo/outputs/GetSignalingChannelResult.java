@@ -52,28 +52,28 @@ public final class GetSignalingChannelResult {
      * The Amazon Resource Name (ARN) of the Kinesis Video Signaling Channel.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The period of time a signaling channel retains undelivered messages before they are discarded.
      * 
     */
-    public Optional<Integer> getMessageTtlSeconds() {
+    public Optional<Integer> messageTtlSeconds() {
         return Optional.ofNullable(this.messageTtlSeconds);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
     */
-    public List<SignalingChannelTag> getTags() {
+    public List<SignalingChannelTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The type of the Kinesis Video Signaling Channel to create. Currently, SINGLE_MASTER is the only supported channel type.
      * 
     */
-    public Optional<SignalingChannelType> getType() {
+    public Optional<SignalingChannelType> type() {
         return Optional.ofNullable(this.type);
     }
 

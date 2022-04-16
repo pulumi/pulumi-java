@@ -25,7 +25,7 @@ public final class ConnectorAutoScaling extends com.pulumi.resources.InvokeArgs 
     @Import(name="maxWorkerCount", required=true)
       private final Integer maxWorkerCount;
 
-    public Integer getMaxWorkerCount() {
+    public Integer maxWorkerCount() {
         return this.maxWorkerCount;
     }
 
@@ -36,7 +36,7 @@ public final class ConnectorAutoScaling extends com.pulumi.resources.InvokeArgs 
     @Import(name="mcuCount", required=true)
       private final Integer mcuCount;
 
-    public Integer getMcuCount() {
+    public Integer mcuCount() {
         return this.mcuCount;
     }
 
@@ -47,21 +47,21 @@ public final class ConnectorAutoScaling extends com.pulumi.resources.InvokeArgs 
     @Import(name="minWorkerCount", required=true)
       private final Integer minWorkerCount;
 
-    public Integer getMinWorkerCount() {
+    public Integer minWorkerCount() {
         return this.minWorkerCount;
     }
 
     @Import(name="scaleInPolicy", required=true)
       private final ConnectorScaleInPolicy scaleInPolicy;
 
-    public ConnectorScaleInPolicy getScaleInPolicy() {
+    public ConnectorScaleInPolicy scaleInPolicy() {
         return this.scaleInPolicy;
     }
 
     @Import(name="scaleOutPolicy", required=true)
       private final ConnectorScaleOutPolicy scaleOutPolicy;
 
-    public ConnectorScaleOutPolicy getScaleOutPolicy() {
+    public ConnectorScaleOutPolicy scaleOutPolicy() {
         return this.scaleOutPolicy;
     }
 

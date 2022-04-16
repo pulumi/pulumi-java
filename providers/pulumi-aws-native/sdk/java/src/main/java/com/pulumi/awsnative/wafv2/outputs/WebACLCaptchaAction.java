@@ -18,7 +18,7 @@ public final class WebACLCaptchaAction {
         this.customRequestHandling = customRequestHandling;
     }
 
-    public Optional<WebACLCustomRequestHandling> getCustomRequestHandling() {
+    public Optional<WebACLCustomRequestHandling> customRequestHandling() {
         return Optional.ofNullable(this.customRequestHandling);
     }
 

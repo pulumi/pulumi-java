@@ -24,7 +24,7 @@ public final class AlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="action", required=true)
       private final Output<AlertActionArgs> action;
 
-    public Output<AlertActionArgs> getAction() {
+    public Output<AlertActionArgs> action() {
         return this.action;
     }
 
@@ -35,7 +35,7 @@ public final class AlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="alertDescription")
       private final @Nullable Output<String> alertDescription;
 
-    public Output<String> getAlertDescription() {
+    public Output<String> alertDescription() {
         return this.alertDescription == null ? Codegen.empty() : this.alertDescription;
     }
 
@@ -46,7 +46,7 @@ public final class AlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="alertName")
       private final @Nullable Output<String> alertName;
 
-    public Output<String> getAlertName() {
+    public Output<String> alertName() {
         return this.alertName == null ? Codegen.empty() : this.alertName;
     }
 
@@ -57,7 +57,7 @@ public final class AlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="alertSensitivityThreshold", required=true)
       private final Output<Integer> alertSensitivityThreshold;
 
-    public Output<Integer> getAlertSensitivityThreshold() {
+    public Output<Integer> alertSensitivityThreshold() {
         return this.alertSensitivityThreshold;
     }
 
@@ -68,7 +68,7 @@ public final class AlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="anomalyDetectorArn", required=true)
       private final Output<String> anomalyDetectorArn;
 
-    public Output<String> getAnomalyDetectorArn() {
+    public Output<String> anomalyDetectorArn() {
         return this.anomalyDetectorArn;
     }
 

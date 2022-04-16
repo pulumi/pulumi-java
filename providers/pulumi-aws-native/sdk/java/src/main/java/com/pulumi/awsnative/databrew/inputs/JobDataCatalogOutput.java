@@ -20,42 +20,42 @@ public final class JobDataCatalogOutput extends com.pulumi.resources.InvokeArgs 
     @Import(name="catalogId")
       private final @Nullable String catalogId;
 
-    public Optional<String> getCatalogId() {
+    public Optional<String> catalogId() {
         return this.catalogId == null ? Optional.empty() : Optional.ofNullable(this.catalogId);
     }
 
     @Import(name="databaseName", required=true)
       private final String databaseName;
 
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
 
     @Import(name="databaseOptions")
       private final @Nullable JobDatabaseTableOutputOptions databaseOptions;
 
-    public Optional<JobDatabaseTableOutputOptions> getDatabaseOptions() {
+    public Optional<JobDatabaseTableOutputOptions> databaseOptions() {
         return this.databaseOptions == null ? Optional.empty() : Optional.ofNullable(this.databaseOptions);
     }
 
     @Import(name="overwrite")
       private final @Nullable Boolean overwrite;
 
-    public Optional<Boolean> getOverwrite() {
+    public Optional<Boolean> overwrite() {
         return this.overwrite == null ? Optional.empty() : Optional.ofNullable(this.overwrite);
     }
 
     @Import(name="s3Options")
       private final @Nullable JobS3TableOutputOptions s3Options;
 
-    public Optional<JobS3TableOutputOptions> getS3Options() {
+    public Optional<JobS3TableOutputOptions> s3Options() {
         return this.s3Options == null ? Optional.empty() : Optional.ofNullable(this.s3Options);
     }
 
     @Import(name="tableName", required=true)
       private final String tableName;
 
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
 

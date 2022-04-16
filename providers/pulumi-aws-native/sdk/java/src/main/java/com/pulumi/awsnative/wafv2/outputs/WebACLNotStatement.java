@@ -16,7 +16,7 @@ public final class WebACLNotStatement {
         this.statement = statement;
     }
 
-    public WebACLStatement getStatement() {
+    public WebACLStatement statement() {
         return this.statement;
     }
 

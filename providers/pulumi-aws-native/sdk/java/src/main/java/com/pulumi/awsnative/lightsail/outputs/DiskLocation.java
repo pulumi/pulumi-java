@@ -34,14 +34,14 @@ public final class DiskLocation {
      * The Availability Zone in which to create your disk. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.
      * 
     */
-    public Optional<String> getAvailabilityZone() {
+    public Optional<String> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
     /**
      * The Region Name in which to create your disk.
      * 
     */
-    public Optional<String> getRegionName() {
+    public Optional<String> regionName() {
         return Optional.ofNullable(this.regionName);
     }
 

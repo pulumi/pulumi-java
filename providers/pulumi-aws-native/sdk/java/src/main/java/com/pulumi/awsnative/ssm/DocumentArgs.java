@@ -29,7 +29,7 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="attachments")
       private final @Nullable Output<List<DocumentAttachmentsSourceArgs>> attachments;
 
-    public Output<List<DocumentAttachmentsSourceArgs>> getAttachments() {
+    public Output<List<DocumentAttachmentsSourceArgs>> attachments() {
         return this.attachments == null ? Codegen.empty() : this.attachments;
     }
 
@@ -40,7 +40,7 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="content", required=true)
       private final Output<Object> content;
 
-    public Output<Object> getContent() {
+    public Output<Object> content() {
         return this.content;
     }
 
@@ -51,7 +51,7 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="documentFormat")
       private final @Nullable Output<DocumentFormat> documentFormat;
 
-    public Output<DocumentFormat> getDocumentFormat() {
+    public Output<DocumentFormat> documentFormat() {
         return this.documentFormat == null ? Codegen.empty() : this.documentFormat;
     }
 
@@ -62,7 +62,7 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="documentType")
       private final @Nullable Output<DocumentType> documentType;
 
-    public Output<DocumentType> getDocumentType() {
+    public Output<DocumentType> documentType() {
         return this.documentType == null ? Codegen.empty() : this.documentType;
     }
 
@@ -73,7 +73,7 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -84,7 +84,7 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requires")
       private final @Nullable Output<List<DocumentRequiresArgs>> requires;
 
-    public Output<List<DocumentRequiresArgs>> getRequires() {
+    public Output<List<DocumentRequiresArgs>> requires() {
         return this.requires == null ? Codegen.empty() : this.requires;
     }
 
@@ -95,7 +95,7 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DocumentTagArgs>> tags;
 
-    public Output<List<DocumentTagArgs>> getTags() {
+    public Output<List<DocumentTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -106,7 +106,7 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetType")
       private final @Nullable Output<String> targetType;
 
-    public Output<String> getTargetType() {
+    public Output<String> targetType() {
         return this.targetType == null ? Codegen.empty() : this.targetType;
     }
 
@@ -117,7 +117,7 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="versionName")
       private final @Nullable Output<String> versionName;
 
-    public Output<String> getVersionName() {
+    public Output<String> versionName() {
         return this.versionName == null ? Codegen.empty() : this.versionName;
     }
 

@@ -21,28 +21,28 @@ public final class GlobalTableGlobalSecondaryIndex extends com.pulumi.resources.
     @Import(name="indexName", required=true)
       private final String indexName;
 
-    public String getIndexName() {
+    public String indexName() {
         return this.indexName;
     }
 
     @Import(name="keySchema", required=true)
       private final List<GlobalTableKeySchema> keySchema;
 
-    public List<GlobalTableKeySchema> getKeySchema() {
+    public List<GlobalTableKeySchema> keySchema() {
         return this.keySchema;
     }
 
     @Import(name="projection", required=true)
       private final GlobalTableProjection projection;
 
-    public GlobalTableProjection getProjection() {
+    public GlobalTableProjection projection() {
         return this.projection;
     }
 
     @Import(name="writeProvisionedThroughputSettings")
       private final @Nullable GlobalTableWriteProvisionedThroughputSettings writeProvisionedThroughputSettings;
 
-    public Optional<GlobalTableWriteProvisionedThroughputSettings> getWriteProvisionedThroughputSettings() {
+    public Optional<GlobalTableWriteProvisionedThroughputSettings> writeProvisionedThroughputSettings() {
         return this.writeProvisionedThroughputSettings == null ? Optional.empty() : Optional.ofNullable(this.writeProvisionedThroughputSettings);
     }
 

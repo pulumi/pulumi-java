@@ -18,7 +18,7 @@ public final class DeliveryStreamAmazonopensearchserviceRetryOptionsArgs extends
     @Import(name="durationInSeconds")
       private final @Nullable Output<Integer> durationInSeconds;
 
-    public Output<Integer> getDurationInSeconds() {
+    public Output<Integer> durationInSeconds() {
         return this.durationInSeconds == null ? Codegen.empty() : this.durationInSeconds;
     }
 

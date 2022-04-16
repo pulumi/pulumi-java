@@ -18,7 +18,7 @@ public final class ApplicationInstanceManifestPayloadArgs extends com.pulumi.res
     @Import(name="payloadData")
       private final @Nullable Output<String> payloadData;
 
-    public Output<String> getPayloadData() {
+    public Output<String> payloadData() {
         return this.payloadData == null ? Codegen.empty() : this.payloadData;
     }
 

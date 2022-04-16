@@ -27,7 +27,7 @@ public final class ApplicationComponentMonitoringSetting extends com.pulumi.reso
     @Import(name="componentARN")
       private final @Nullable String componentARN;
 
-    public Optional<String> getComponentARN() {
+    public Optional<String> componentARN() {
         return this.componentARN == null ? Optional.empty() : Optional.ofNullable(this.componentARN);
     }
 
@@ -38,7 +38,7 @@ public final class ApplicationComponentMonitoringSetting extends com.pulumi.reso
     @Import(name="componentConfigurationMode", required=true)
       private final ApplicationComponentMonitoringSettingComponentConfigurationMode componentConfigurationMode;
 
-    public ApplicationComponentMonitoringSettingComponentConfigurationMode getComponentConfigurationMode() {
+    public ApplicationComponentMonitoringSettingComponentConfigurationMode componentConfigurationMode() {
         return this.componentConfigurationMode;
     }
 
@@ -49,7 +49,7 @@ public final class ApplicationComponentMonitoringSetting extends com.pulumi.reso
     @Import(name="componentName")
       private final @Nullable String componentName;
 
-    public Optional<String> getComponentName() {
+    public Optional<String> componentName() {
         return this.componentName == null ? Optional.empty() : Optional.ofNullable(this.componentName);
     }
 
@@ -60,7 +60,7 @@ public final class ApplicationComponentMonitoringSetting extends com.pulumi.reso
     @Import(name="customComponentConfiguration")
       private final @Nullable ApplicationComponentConfiguration customComponentConfiguration;
 
-    public Optional<ApplicationComponentConfiguration> getCustomComponentConfiguration() {
+    public Optional<ApplicationComponentConfiguration> customComponentConfiguration() {
         return this.customComponentConfiguration == null ? Optional.empty() : Optional.ofNullable(this.customComponentConfiguration);
     }
 
@@ -71,7 +71,7 @@ public final class ApplicationComponentMonitoringSetting extends com.pulumi.reso
     @Import(name="defaultOverwriteComponentConfiguration")
       private final @Nullable ApplicationComponentConfiguration defaultOverwriteComponentConfiguration;
 
-    public Optional<ApplicationComponentConfiguration> getDefaultOverwriteComponentConfiguration() {
+    public Optional<ApplicationComponentConfiguration> defaultOverwriteComponentConfiguration() {
         return this.defaultOverwriteComponentConfiguration == null ? Optional.empty() : Optional.ofNullable(this.defaultOverwriteComponentConfiguration);
     }
 
@@ -82,7 +82,7 @@ public final class ApplicationComponentMonitoringSetting extends com.pulumi.reso
     @Import(name="tier", required=true)
       private final String tier;
 
-    public String getTier() {
+    public String tier() {
         return this.tier;
     }
 

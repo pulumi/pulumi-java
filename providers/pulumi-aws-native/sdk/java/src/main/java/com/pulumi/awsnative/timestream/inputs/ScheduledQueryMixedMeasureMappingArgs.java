@@ -25,35 +25,35 @@ public final class ScheduledQueryMixedMeasureMappingArgs extends com.pulumi.reso
     @Import(name="measureName")
       private final @Nullable Output<String> measureName;
 
-    public Output<String> getMeasureName() {
+    public Output<String> measureName() {
         return this.measureName == null ? Codegen.empty() : this.measureName;
     }
 
     @Import(name="measureValueType", required=true)
       private final Output<ScheduledQueryMixedMeasureMappingMeasureValueType> measureValueType;
 
-    public Output<ScheduledQueryMixedMeasureMappingMeasureValueType> getMeasureValueType() {
+    public Output<ScheduledQueryMixedMeasureMappingMeasureValueType> measureValueType() {
         return this.measureValueType;
     }
 
     @Import(name="multiMeasureAttributeMappings")
       private final @Nullable Output<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> multiMeasureAttributeMappings;
 
-    public Output<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> getMultiMeasureAttributeMappings() {
+    public Output<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> multiMeasureAttributeMappings() {
         return this.multiMeasureAttributeMappings == null ? Codegen.empty() : this.multiMeasureAttributeMappings;
     }
 
     @Import(name="sourceColumn")
       private final @Nullable Output<String> sourceColumn;
 
-    public Output<String> getSourceColumn() {
+    public Output<String> sourceColumn() {
         return this.sourceColumn == null ? Codegen.empty() : this.sourceColumn;
     }
 
     @Import(name="targetMeasureName")
       private final @Nullable Output<String> targetMeasureName;
 
-    public Output<String> getTargetMeasureName() {
+    public Output<String> targetMeasureName() {
         return this.targetMeasureName == null ? Codegen.empty() : this.targetMeasureName;
     }
 

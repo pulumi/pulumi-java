@@ -16,7 +16,7 @@ public final class DatasetSchedule {
         this.scheduleExpression = scheduleExpression;
     }
 
-    public String getScheduleExpression() {
+    public String scheduleExpression() {
         return this.scheduleExpression;
     }
 

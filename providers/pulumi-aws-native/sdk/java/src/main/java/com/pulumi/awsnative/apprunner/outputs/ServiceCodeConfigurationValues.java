@@ -54,31 +54,31 @@ public final class ServiceCodeConfigurationValues {
      * Build Command
      * 
     */
-    public Optional<String> getBuildCommand() {
+    public Optional<String> buildCommand() {
         return Optional.ofNullable(this.buildCommand);
     }
     /**
      * Port
      * 
     */
-    public Optional<String> getPort() {
+    public Optional<String> port() {
         return Optional.ofNullable(this.port);
     }
     /**
      * Runtime
      * 
     */
-    public ServiceCodeConfigurationValuesRuntime getRuntime() {
+    public ServiceCodeConfigurationValuesRuntime runtime() {
         return this.runtime;
     }
-    public List<ServiceKeyValuePair> getRuntimeEnvironmentVariables() {
+    public List<ServiceKeyValuePair> runtimeEnvironmentVariables() {
         return this.runtimeEnvironmentVariables == null ? List.of() : this.runtimeEnvironmentVariables;
     }
     /**
      * Start Command
      * 
     */
-    public Optional<String> getStartCommand() {
+    public Optional<String> startCommand() {
         return Optional.ofNullable(this.startCommand);
     }
 

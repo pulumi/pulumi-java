@@ -63,40 +63,40 @@ public final class ConnectorProfileProperties {
         this.zendesk = zendesk;
     }
 
-    public Optional<ConnectorProfileDatadogConnectorProfileProperties> getDatadog() {
+    public Optional<ConnectorProfileDatadogConnectorProfileProperties> datadog() {
         return Optional.ofNullable(this.datadog);
     }
-    public Optional<ConnectorProfileDynatraceConnectorProfileProperties> getDynatrace() {
+    public Optional<ConnectorProfileDynatraceConnectorProfileProperties> dynatrace() {
         return Optional.ofNullable(this.dynatrace);
     }
-    public Optional<ConnectorProfileInforNexusConnectorProfileProperties> getInforNexus() {
+    public Optional<ConnectorProfileInforNexusConnectorProfileProperties> inforNexus() {
         return Optional.ofNullable(this.inforNexus);
     }
-    public Optional<ConnectorProfileMarketoConnectorProfileProperties> getMarketo() {
+    public Optional<ConnectorProfileMarketoConnectorProfileProperties> marketo() {
         return Optional.ofNullable(this.marketo);
     }
-    public Optional<ConnectorProfileRedshiftConnectorProfileProperties> getRedshift() {
+    public Optional<ConnectorProfileRedshiftConnectorProfileProperties> redshift() {
         return Optional.ofNullable(this.redshift);
     }
-    public Optional<ConnectorProfileSAPODataConnectorProfileProperties> getSAPOData() {
+    public Optional<ConnectorProfileSAPODataConnectorProfileProperties> sAPOData() {
         return Optional.ofNullable(this.sAPOData);
     }
-    public Optional<ConnectorProfileSalesforceConnectorProfileProperties> getSalesforce() {
+    public Optional<ConnectorProfileSalesforceConnectorProfileProperties> salesforce() {
         return Optional.ofNullable(this.salesforce);
     }
-    public Optional<ConnectorProfileServiceNowConnectorProfileProperties> getServiceNow() {
+    public Optional<ConnectorProfileServiceNowConnectorProfileProperties> serviceNow() {
         return Optional.ofNullable(this.serviceNow);
     }
-    public Optional<ConnectorProfileSlackConnectorProfileProperties> getSlack() {
+    public Optional<ConnectorProfileSlackConnectorProfileProperties> slack() {
         return Optional.ofNullable(this.slack);
     }
-    public Optional<ConnectorProfileSnowflakeConnectorProfileProperties> getSnowflake() {
+    public Optional<ConnectorProfileSnowflakeConnectorProfileProperties> snowflake() {
         return Optional.ofNullable(this.snowflake);
     }
-    public Optional<ConnectorProfileVeevaConnectorProfileProperties> getVeeva() {
+    public Optional<ConnectorProfileVeevaConnectorProfileProperties> veeva() {
         return Optional.ofNullable(this.veeva);
     }
-    public Optional<ConnectorProfileZendeskConnectorProfileProperties> getZendesk() {
+    public Optional<ConnectorProfileZendeskConnectorProfileProperties> zendesk() {
         return Optional.ofNullable(this.zendesk);
     }
 

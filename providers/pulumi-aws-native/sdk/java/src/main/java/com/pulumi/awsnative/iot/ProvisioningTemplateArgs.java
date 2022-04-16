@@ -22,49 +22,49 @@ public final class ProvisioningTemplateArgs extends com.pulumi.resources.Resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="preProvisioningHook")
       private final @Nullable Output<ProvisioningTemplateProvisioningHookArgs> preProvisioningHook;
 
-    public Output<ProvisioningTemplateProvisioningHookArgs> getPreProvisioningHook() {
+    public Output<ProvisioningTemplateProvisioningHookArgs> preProvisioningHook() {
         return this.preProvisioningHook == null ? Codegen.empty() : this.preProvisioningHook;
     }
 
     @Import(name="provisioningRoleArn", required=true)
       private final Output<String> provisioningRoleArn;
 
-    public Output<String> getProvisioningRoleArn() {
+    public Output<String> provisioningRoleArn() {
         return this.provisioningRoleArn;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<ProvisioningTemplateTagArgs>> tags;
 
-    public Output<List<ProvisioningTemplateTagArgs>> getTags() {
+    public Output<List<ProvisioningTemplateTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="templateBody", required=true)
       private final Output<String> templateBody;
 
-    public Output<String> getTemplateBody() {
+    public Output<String> templateBody() {
         return this.templateBody;
     }
 
     @Import(name="templateName")
       private final @Nullable Output<String> templateName;
 
-    public Output<String> getTemplateName() {
+    public Output<String> templateName() {
         return this.templateName == null ? Codegen.empty() : this.templateName;
     }
 

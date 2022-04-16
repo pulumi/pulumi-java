@@ -25,7 +25,7 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -36,7 +36,7 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="externalConnections")
       private final @Nullable Output<List<String>> externalConnections;
 
-    public Output<List<String>> getExternalConnections() {
+    public Output<List<String>> externalConnections() {
         return this.externalConnections == null ? Codegen.empty() : this.externalConnections;
     }
 
@@ -47,7 +47,7 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="permissionsPolicyDocument")
       private final @Nullable Output<Object> permissionsPolicyDocument;
 
-    public Output<Object> getPermissionsPolicyDocument() {
+    public Output<Object> permissionsPolicyDocument() {
         return this.permissionsPolicyDocument == null ? Codegen.empty() : this.permissionsPolicyDocument;
     }
 
@@ -58,7 +58,7 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="repositoryName")
       private final @Nullable Output<String> repositoryName;
 
-    public Output<String> getRepositoryName() {
+    public Output<String> repositoryName() {
         return this.repositoryName == null ? Codegen.empty() : this.repositoryName;
     }
 
@@ -69,7 +69,7 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<RepositoryTagArgs>> tags;
 
-    public Output<List<RepositoryTagArgs>> getTags() {
+    public Output<List<RepositoryTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -80,7 +80,7 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="upstreams")
       private final @Nullable Output<List<String>> upstreams;
 
-    public Output<List<String>> getUpstreams() {
+    public Output<List<String>> upstreams() {
         return this.upstreams == null ? Codegen.empty() : this.upstreams;
     }
 

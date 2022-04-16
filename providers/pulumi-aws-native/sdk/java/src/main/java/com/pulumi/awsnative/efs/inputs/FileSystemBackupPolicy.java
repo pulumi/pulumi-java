@@ -15,7 +15,7 @@ public final class FileSystemBackupPolicy extends com.pulumi.resources.InvokeArg
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

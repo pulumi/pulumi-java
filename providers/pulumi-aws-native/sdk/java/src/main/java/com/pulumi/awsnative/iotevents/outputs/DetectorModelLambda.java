@@ -31,10 +31,10 @@ public final class DetectorModelLambda {
      * The ARN of the Lambda function that is executed.
      * 
     */
-    public String getFunctionArn() {
+    public String functionArn() {
         return this.functionArn;
     }
-    public Optional<DetectorModelPayload> getPayload() {
+    public Optional<DetectorModelPayload> payload() {
         return Optional.ofNullable(this.payload);
     }
 

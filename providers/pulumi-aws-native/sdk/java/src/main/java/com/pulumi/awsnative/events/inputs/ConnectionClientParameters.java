@@ -15,14 +15,14 @@ public final class ConnectionClientParameters extends com.pulumi.resources.Invok
     @Import(name="clientID", required=true)
       private final String clientID;
 
-    public String getClientID() {
+    public String clientID() {
         return this.clientID;
     }
 
     @Import(name="clientSecret", required=true)
       private final String clientSecret;
 
-    public String getClientSecret() {
+    public String clientSecret() {
         return this.clientSecret;
     }
 

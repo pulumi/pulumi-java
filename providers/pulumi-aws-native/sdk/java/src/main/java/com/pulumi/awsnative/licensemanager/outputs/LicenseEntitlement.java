@@ -36,22 +36,22 @@ public final class LicenseEntitlement {
         this.value = value;
     }
 
-    public Optional<Boolean> getAllowCheckIn() {
+    public Optional<Boolean> allowCheckIn() {
         return Optional.ofNullable(this.allowCheckIn);
     }
-    public Optional<Integer> getMaxCount() {
+    public Optional<Integer> maxCount() {
         return Optional.ofNullable(this.maxCount);
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<Boolean> getOverage() {
+    public Optional<Boolean> overage() {
         return Optional.ofNullable(this.overage);
     }
-    public String getUnit() {
+    public String unit() {
         return this.unit;
     }
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

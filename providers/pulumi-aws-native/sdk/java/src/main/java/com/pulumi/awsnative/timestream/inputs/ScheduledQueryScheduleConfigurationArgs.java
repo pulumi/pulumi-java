@@ -21,7 +21,7 @@ public final class ScheduledQueryScheduleConfigurationArgs extends com.pulumi.re
     @Import(name="scheduleExpression", required=true)
       private final Output<String> scheduleExpression;
 
-    public Output<String> getScheduleExpression() {
+    public Output<String> scheduleExpression() {
         return this.scheduleExpression;
     }
 

@@ -20,10 +20,10 @@ public final class GlobalTableKeySchema {
         this.keyType = keyType;
     }
 
-    public String getAttributeName() {
+    public String attributeName() {
         return this.attributeName;
     }
-    public String getKeyType() {
+    public String keyType() {
         return this.keyType;
     }
 

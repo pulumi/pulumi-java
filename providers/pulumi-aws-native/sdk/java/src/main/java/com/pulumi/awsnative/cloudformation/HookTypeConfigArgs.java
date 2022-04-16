@@ -23,7 +23,7 @@ public final class HookTypeConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="configuration")
       private final @Nullable Output<String> configuration;
 
-    public Output<String> getConfiguration() {
+    public Output<String> configuration() {
         return this.configuration == null ? Codegen.empty() : this.configuration;
     }
 
@@ -34,7 +34,7 @@ public final class HookTypeConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="configurationAlias")
       private final @Nullable Output<HookTypeConfigConfigurationAlias> configurationAlias;
 
-    public Output<HookTypeConfigConfigurationAlias> getConfigurationAlias() {
+    public Output<HookTypeConfigConfigurationAlias> configurationAlias() {
         return this.configurationAlias == null ? Codegen.empty() : this.configurationAlias;
     }
 
@@ -45,7 +45,7 @@ public final class HookTypeConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="typeArn")
       private final @Nullable Output<String> typeArn;
 
-    public Output<String> getTypeArn() {
+    public Output<String> typeArn() {
         return this.typeArn == null ? Codegen.empty() : this.typeArn;
     }
 
@@ -58,7 +58,7 @@ public final class HookTypeConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="typeName")
       private final @Nullable Output<String> typeName;
 
-    public Output<String> getTypeName() {
+    public Output<String> typeName() {
         return this.typeName == null ? Codegen.empty() : this.typeName;
     }
 

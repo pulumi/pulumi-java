@@ -25,56 +25,56 @@ public final class BudgetsActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="actionThreshold", required=true)
       private final Output<BudgetsActionActionThresholdArgs> actionThreshold;
 
-    public Output<BudgetsActionActionThresholdArgs> getActionThreshold() {
+    public Output<BudgetsActionActionThresholdArgs> actionThreshold() {
         return this.actionThreshold;
     }
 
     @Import(name="actionType", required=true)
       private final Output<BudgetsActionActionType> actionType;
 
-    public Output<BudgetsActionActionType> getActionType() {
+    public Output<BudgetsActionActionType> actionType() {
         return this.actionType;
     }
 
     @Import(name="approvalModel")
       private final @Nullable Output<BudgetsActionApprovalModel> approvalModel;
 
-    public Output<BudgetsActionApprovalModel> getApprovalModel() {
+    public Output<BudgetsActionApprovalModel> approvalModel() {
         return this.approvalModel == null ? Codegen.empty() : this.approvalModel;
     }
 
     @Import(name="budgetName", required=true)
       private final Output<String> budgetName;
 
-    public Output<String> getBudgetName() {
+    public Output<String> budgetName() {
         return this.budgetName;
     }
 
     @Import(name="definition", required=true)
       private final Output<BudgetsActionDefinitionArgs> definition;
 
-    public Output<BudgetsActionDefinitionArgs> getDefinition() {
+    public Output<BudgetsActionDefinitionArgs> definition() {
         return this.definition;
     }
 
     @Import(name="executionRoleArn", required=true)
       private final Output<String> executionRoleArn;
 
-    public Output<String> getExecutionRoleArn() {
+    public Output<String> executionRoleArn() {
         return this.executionRoleArn;
     }
 
     @Import(name="notificationType", required=true)
       private final Output<BudgetsActionNotificationType> notificationType;
 
-    public Output<BudgetsActionNotificationType> getNotificationType() {
+    public Output<BudgetsActionNotificationType> notificationType() {
         return this.notificationType;
     }
 
     @Import(name="subscribers", required=true)
       private final Output<List<BudgetsActionSubscriberArgs>> subscribers;
 
-    public Output<List<BudgetsActionSubscriberArgs>> getSubscribers() {
+    public Output<List<BudgetsActionSubscriberArgs>> subscribers() {
         return this.subscribers;
     }
 

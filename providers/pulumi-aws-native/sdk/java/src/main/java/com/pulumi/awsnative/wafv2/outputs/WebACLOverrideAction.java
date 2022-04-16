@@ -34,14 +34,14 @@ public final class WebACLOverrideAction {
      * Count traffic towards application.
      * 
     */
-    public Optional<Object> getCount() {
+    public Optional<Object> count() {
         return Optional.ofNullable(this.count);
     }
     /**
      * Keep the RuleGroup or ManagedRuleGroup behavior as is.
      * 
     */
-    public Optional<Object> getNone() {
+    public Optional<Object> none() {
         return Optional.ofNullable(this.none);
     }
 

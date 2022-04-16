@@ -25,43 +25,43 @@ public class DataSource extends com.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="dataSourceConfiguration", type=DataSourceConfiguration.class, parameters={})
     private Output</* @Nullable */ DataSourceConfiguration> dataSourceConfiguration;
 
-    public Output</* @Nullable */ DataSourceConfiguration> getDataSourceConfiguration() {
+    public Output</* @Nullable */ DataSourceConfiguration> dataSourceConfiguration() {
         return this.dataSourceConfiguration;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="indexId", type=String.class, parameters={})
     private Output<String> indexId;
 
-    public Output<String> getIndexId() {
+    public Output<String> indexId() {
         return this.indexId;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="roleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> roleArn;
 
-    public Output</* @Nullable */ String> getRoleArn() {
+    public Output</* @Nullable */ String> roleArn() {
         return this.roleArn;
     }
     @Export(name="schedule", type=String.class, parameters={})
     private Output</* @Nullable */ String> schedule;
 
-    public Output</* @Nullable */ String> getSchedule() {
+    public Output</* @Nullable */ String> schedule() {
         return this.schedule;
     }
     /**
@@ -75,13 +75,13 @@ public class DataSource extends com.pulumi.resources.CustomResource {
      * @return Tags for labeling the data source
      * 
      */
-    public Output</* @Nullable */ List<DataSourceTag>> getTags() {
+    public Output</* @Nullable */ List<DataSourceTag>> tags() {
         return this.tags;
     }
     @Export(name="type", type=DataSourceType.class, parameters={})
     private Output<DataSourceType> type;
 
-    public Output<DataSourceType> getType() {
+    public Output<DataSourceType> type() {
         return this.type;
     }
 

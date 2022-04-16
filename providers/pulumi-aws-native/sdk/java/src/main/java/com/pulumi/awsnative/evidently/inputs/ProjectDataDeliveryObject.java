@@ -22,14 +22,14 @@ public final class ProjectDataDeliveryObject extends com.pulumi.resources.Invoke
     @Import(name="logGroup")
       private final @Nullable String logGroup;
 
-    public Optional<String> getLogGroup() {
+    public Optional<String> logGroup() {
         return this.logGroup == null ? Optional.empty() : Optional.ofNullable(this.logGroup);
     }
 
     @Import(name="s3")
       private final @Nullable ProjectS3Destination s3;
 
-    public Optional<ProjectS3Destination> getS3() {
+    public Optional<ProjectS3Destination> s3() {
         return this.s3 == null ? Optional.empty() : Optional.ofNullable(this.s3);
     }
 

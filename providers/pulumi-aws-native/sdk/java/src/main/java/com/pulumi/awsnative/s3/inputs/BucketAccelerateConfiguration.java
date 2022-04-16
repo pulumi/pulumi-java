@@ -19,7 +19,7 @@ public final class BucketAccelerateConfiguration extends com.pulumi.resources.In
     @Import(name="accelerationStatus", required=true)
       private final BucketAccelerateConfigurationAccelerationStatus accelerationStatus;
 
-    public BucketAccelerateConfigurationAccelerationStatus getAccelerationStatus() {
+    public BucketAccelerateConfigurationAccelerationStatus accelerationStatus() {
         return this.accelerationStatus;
     }
 

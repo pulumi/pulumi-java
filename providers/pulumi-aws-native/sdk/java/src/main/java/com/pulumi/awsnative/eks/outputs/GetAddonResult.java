@@ -50,28 +50,28 @@ public final class GetAddonResult {
      * Version of Addon
      * 
     */
-    public Optional<String> getAddonVersion() {
+    public Optional<String> addonVersion() {
         return Optional.ofNullable(this.addonVersion);
     }
     /**
      * Amazon Resource Name (ARN) of the add-on
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * IAM role to bind to the add-on's service account
      * 
     */
-    public Optional<String> getServiceAccountRoleArn() {
+    public Optional<String> serviceAccountRoleArn() {
         return Optional.ofNullable(this.serviceAccountRoleArn);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
     */
-    public List<AddonTag> getTags() {
+    public List<AddonTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

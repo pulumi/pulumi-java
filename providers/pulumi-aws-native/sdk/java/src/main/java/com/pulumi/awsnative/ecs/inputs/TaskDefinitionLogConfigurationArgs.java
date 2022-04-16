@@ -21,21 +21,21 @@ public final class TaskDefinitionLogConfigurationArgs extends com.pulumi.resourc
     @Import(name="logDriver", required=true)
       private final Output<String> logDriver;
 
-    public Output<String> getLogDriver() {
+    public Output<String> logDriver() {
         return this.logDriver;
     }
 
     @Import(name="options")
       private final @Nullable Output<Object> options;
 
-    public Output<Object> getOptions() {
+    public Output<Object> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 
     @Import(name="secretOptions")
       private final @Nullable Output<List<TaskDefinitionSecretArgs>> secretOptions;
 
-    public Output<List<TaskDefinitionSecretArgs>> getSecretOptions() {
+    public Output<List<TaskDefinitionSecretArgs>> secretOptions() {
         return this.secretOptions == null ? Codegen.empty() : this.secretOptions;
     }
 

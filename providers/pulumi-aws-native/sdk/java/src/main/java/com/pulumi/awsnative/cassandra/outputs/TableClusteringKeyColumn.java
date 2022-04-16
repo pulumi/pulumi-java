@@ -23,10 +23,10 @@ public final class TableClusteringKeyColumn {
         this.orderBy = orderBy;
     }
 
-    public TableColumn getColumn() {
+    public TableColumn column() {
         return this.column;
     }
-    public Optional<TableClusteringKeyColumnOrderBy> getOrderBy() {
+    public Optional<TableClusteringKeyColumnOrderBy> orderBy() {
         return Optional.ofNullable(this.orderBy);
     }
 

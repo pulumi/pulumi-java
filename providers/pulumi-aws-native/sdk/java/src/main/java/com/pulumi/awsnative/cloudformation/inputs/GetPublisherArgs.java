@@ -19,7 +19,7 @@ public final class GetPublisherArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="publisherId", required=true)
       private final String publisherId;
 
-    public String getPublisherId() {
+    public String publisherId() {
         return this.publisherId;
     }
 

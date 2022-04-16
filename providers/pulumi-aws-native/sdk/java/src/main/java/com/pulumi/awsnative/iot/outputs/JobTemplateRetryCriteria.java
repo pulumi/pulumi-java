@@ -23,10 +23,10 @@ public final class JobTemplateRetryCriteria {
         this.numberOfRetries = numberOfRetries;
     }
 
-    public Optional<JobTemplateJobRetryFailureType> getFailureType() {
+    public Optional<JobTemplateJobRetryFailureType> failureType() {
         return Optional.ofNullable(this.failureType);
     }
-    public Optional<Integer> getNumberOfRetries() {
+    public Optional<Integer> numberOfRetries() {
         return Optional.ofNullable(this.numberOfRetries);
     }
 

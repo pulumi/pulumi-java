@@ -18,14 +18,14 @@ public final class AssetModelVariableValueArgs extends com.pulumi.resources.Reso
     @Import(name="hierarchyLogicalId")
       private final @Nullable Output<String> hierarchyLogicalId;
 
-    public Output<String> getHierarchyLogicalId() {
+    public Output<String> hierarchyLogicalId() {
         return this.hierarchyLogicalId == null ? Codegen.empty() : this.hierarchyLogicalId;
     }
 
     @Import(name="propertyLogicalId", required=true)
       private final Output<String> propertyLogicalId;
 
-    public Output<String> getPropertyLogicalId() {
+    public Output<String> propertyLogicalId() {
         return this.propertyLogicalId;
     }
 

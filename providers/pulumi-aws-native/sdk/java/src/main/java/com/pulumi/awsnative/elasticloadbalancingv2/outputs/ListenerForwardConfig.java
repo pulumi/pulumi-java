@@ -24,10 +24,10 @@ public final class ListenerForwardConfig {
         this.targetGroups = targetGroups;
     }
 
-    public Optional<ListenerTargetGroupStickinessConfig> getTargetGroupStickinessConfig() {
+    public Optional<ListenerTargetGroupStickinessConfig> targetGroupStickinessConfig() {
         return Optional.ofNullable(this.targetGroupStickinessConfig);
     }
-    public List<ListenerTargetGroupTuple> getTargetGroups() {
+    public List<ListenerTargetGroupTuple> targetGroups() {
         return this.targetGroups == null ? List.of() : this.targetGroups;
     }
 

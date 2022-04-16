@@ -20,28 +20,28 @@ public final class TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs extends com.
     @Import(name="currentVersion")
       private final @Nullable Output<TaskDefinitionLoRaWANGatewayVersionArgs> currentVersion;
 
-    public Output<TaskDefinitionLoRaWANGatewayVersionArgs> getCurrentVersion() {
+    public Output<TaskDefinitionLoRaWANGatewayVersionArgs> currentVersion() {
         return this.currentVersion == null ? Codegen.empty() : this.currentVersion;
     }
 
     @Import(name="sigKeyCrc")
       private final @Nullable Output<Integer> sigKeyCrc;
 
-    public Output<Integer> getSigKeyCrc() {
+    public Output<Integer> sigKeyCrc() {
         return this.sigKeyCrc == null ? Codegen.empty() : this.sigKeyCrc;
     }
 
     @Import(name="updateSignature")
       private final @Nullable Output<String> updateSignature;
 
-    public Output<String> getUpdateSignature() {
+    public Output<String> updateSignature() {
         return this.updateSignature == null ? Codegen.empty() : this.updateSignature;
     }
 
     @Import(name="updateVersion")
       private final @Nullable Output<TaskDefinitionLoRaWANGatewayVersionArgs> updateVersion;
 
-    public Output<TaskDefinitionLoRaWANGatewayVersionArgs> getUpdateVersion() {
+    public Output<TaskDefinitionLoRaWANGatewayVersionArgs> updateVersion() {
         return this.updateVersion == null ? Codegen.empty() : this.updateVersion;
     }
 

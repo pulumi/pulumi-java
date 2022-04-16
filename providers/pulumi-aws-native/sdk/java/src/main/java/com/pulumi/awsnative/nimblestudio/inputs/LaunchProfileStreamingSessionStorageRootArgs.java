@@ -27,7 +27,7 @@ public final class LaunchProfileStreamingSessionStorageRootArgs extends com.pulu
     @Import(name="linux")
       private final @Nullable Output<String> linux;
 
-    public Output<String> getLinux() {
+    public Output<String> linux() {
         return this.linux == null ? Codegen.empty() : this.linux;
     }
 
@@ -38,7 +38,7 @@ public final class LaunchProfileStreamingSessionStorageRootArgs extends com.pulu
     @Import(name="windows")
       private final @Nullable Output<String> windows;
 
-    public Output<String> getWindows() {
+    public Output<String> windows() {
         return this.windows == null ? Codegen.empty() : this.windows;
     }
 

@@ -40,25 +40,25 @@ public final class GetSubnetResult {
         this.tags = tags;
     }
 
-    public Optional<Boolean> getAssignIpv6AddressOnCreation() {
+    public Optional<Boolean> assignIpv6AddressOnCreation() {
         return Optional.ofNullable(this.assignIpv6AddressOnCreation);
     }
-    public Optional<String> getIpv6CidrBlock() {
+    public Optional<String> ipv6CidrBlock() {
         return Optional.ofNullable(this.ipv6CidrBlock);
     }
-    public List<String> getIpv6CidrBlocks() {
+    public List<String> ipv6CidrBlocks() {
         return this.ipv6CidrBlocks == null ? List.of() : this.ipv6CidrBlocks;
     }
-    public Optional<Boolean> getMapPublicIpOnLaunch() {
+    public Optional<Boolean> mapPublicIpOnLaunch() {
         return Optional.ofNullable(this.mapPublicIpOnLaunch);
     }
-    public Optional<String> getNetworkAclAssociationId() {
+    public Optional<String> networkAclAssociationId() {
         return Optional.ofNullable(this.networkAclAssociationId);
     }
-    public Optional<String> getSubnetId() {
+    public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
-    public List<SubnetTag> getTags() {
+    public List<SubnetTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

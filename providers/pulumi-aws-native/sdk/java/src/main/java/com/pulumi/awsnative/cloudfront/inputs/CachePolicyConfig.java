@@ -19,42 +19,42 @@ public final class CachePolicyConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="comment")
       private final @Nullable String comment;
 
-    public Optional<String> getComment() {
+    public Optional<String> comment() {
         return this.comment == null ? Optional.empty() : Optional.ofNullable(this.comment);
     }
 
     @Import(name="defaultTTL", required=true)
       private final Double defaultTTL;
 
-    public Double getDefaultTTL() {
+    public Double defaultTTL() {
         return this.defaultTTL;
     }
 
     @Import(name="maxTTL", required=true)
       private final Double maxTTL;
 
-    public Double getMaxTTL() {
+    public Double maxTTL() {
         return this.maxTTL;
     }
 
     @Import(name="minTTL", required=true)
       private final Double minTTL;
 
-    public Double getMinTTL() {
+    public Double minTTL() {
         return this.minTTL;
     }
 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
     @Import(name="parametersInCacheKeyAndForwardedToOrigin", required=true)
       private final CachePolicyParametersInCacheKeyAndForwardedToOrigin parametersInCacheKeyAndForwardedToOrigin;
 
-    public CachePolicyParametersInCacheKeyAndForwardedToOrigin getParametersInCacheKeyAndForwardedToOrigin() {
+    public CachePolicyParametersInCacheKeyAndForwardedToOrigin parametersInCacheKeyAndForwardedToOrigin() {
         return this.parametersInCacheKeyAndForwardedToOrigin;
     }
 

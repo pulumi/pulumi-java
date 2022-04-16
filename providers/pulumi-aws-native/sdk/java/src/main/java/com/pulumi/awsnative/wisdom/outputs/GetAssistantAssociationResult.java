@@ -25,13 +25,13 @@ public final class GetAssistantAssociationResult {
         this.assistantAssociationId = assistantAssociationId;
     }
 
-    public Optional<String> getAssistantArn() {
+    public Optional<String> assistantArn() {
         return Optional.ofNullable(this.assistantArn);
     }
-    public Optional<String> getAssistantAssociationArn() {
+    public Optional<String> assistantAssociationArn() {
         return Optional.ofNullable(this.assistantAssociationArn);
     }
-    public Optional<String> getAssistantAssociationId() {
+    public Optional<String> assistantAssociationId() {
         return Optional.ofNullable(this.assistantAssociationId);
     }
 

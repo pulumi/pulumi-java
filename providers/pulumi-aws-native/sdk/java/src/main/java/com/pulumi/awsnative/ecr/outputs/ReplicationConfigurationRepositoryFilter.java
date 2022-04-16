@@ -21,10 +21,10 @@ public final class ReplicationConfigurationRepositoryFilter {
         this.filterType = filterType;
     }
 
-    public String getFilter() {
+    public String filter() {
         return this.filter;
     }
-    public ReplicationConfigurationFilterType getFilterType() {
+    public ReplicationConfigurationFilterType filterType() {
         return this.filterType;
     }
 

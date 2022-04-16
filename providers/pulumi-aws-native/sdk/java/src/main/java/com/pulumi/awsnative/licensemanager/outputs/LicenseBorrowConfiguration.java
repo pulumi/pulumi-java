@@ -21,10 +21,10 @@ public final class LicenseBorrowConfiguration {
         this.maxTimeToLiveInMinutes = maxTimeToLiveInMinutes;
     }
 
-    public Boolean getAllowEarlyCheckIn() {
+    public Boolean allowEarlyCheckIn() {
         return this.allowEarlyCheckIn;
     }
-    public Integer getMaxTimeToLiveInMinutes() {
+    public Integer maxTimeToLiveInMinutes() {
         return this.maxTimeToLiveInMinutes;
     }
 

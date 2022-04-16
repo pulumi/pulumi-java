@@ -21,35 +21,35 @@ public final class EnvironmentLoggingConfiguration extends com.pulumi.resources.
     @Import(name="dagProcessingLogs")
       private final @Nullable EnvironmentModuleLoggingConfiguration dagProcessingLogs;
 
-    public Optional<EnvironmentModuleLoggingConfiguration> getDagProcessingLogs() {
+    public Optional<EnvironmentModuleLoggingConfiguration> dagProcessingLogs() {
         return this.dagProcessingLogs == null ? Optional.empty() : Optional.ofNullable(this.dagProcessingLogs);
     }
 
     @Import(name="schedulerLogs")
       private final @Nullable EnvironmentModuleLoggingConfiguration schedulerLogs;
 
-    public Optional<EnvironmentModuleLoggingConfiguration> getSchedulerLogs() {
+    public Optional<EnvironmentModuleLoggingConfiguration> schedulerLogs() {
         return this.schedulerLogs == null ? Optional.empty() : Optional.ofNullable(this.schedulerLogs);
     }
 
     @Import(name="taskLogs")
       private final @Nullable EnvironmentModuleLoggingConfiguration taskLogs;
 
-    public Optional<EnvironmentModuleLoggingConfiguration> getTaskLogs() {
+    public Optional<EnvironmentModuleLoggingConfiguration> taskLogs() {
         return this.taskLogs == null ? Optional.empty() : Optional.ofNullable(this.taskLogs);
     }
 
     @Import(name="webserverLogs")
       private final @Nullable EnvironmentModuleLoggingConfiguration webserverLogs;
 
-    public Optional<EnvironmentModuleLoggingConfiguration> getWebserverLogs() {
+    public Optional<EnvironmentModuleLoggingConfiguration> webserverLogs() {
         return this.webserverLogs == null ? Optional.empty() : Optional.ofNullable(this.webserverLogs);
     }
 
     @Import(name="workerLogs")
       private final @Nullable EnvironmentModuleLoggingConfiguration workerLogs;
 
-    public Optional<EnvironmentModuleLoggingConfiguration> getWorkerLogs() {
+    public Optional<EnvironmentModuleLoggingConfiguration> workerLogs() {
         return this.workerLogs == null ? Optional.empty() : Optional.ofNullable(this.workerLogs);
     }
 

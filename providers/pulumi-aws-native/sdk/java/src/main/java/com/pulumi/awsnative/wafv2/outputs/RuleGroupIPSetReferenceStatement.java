@@ -23,10 +23,10 @@ public final class RuleGroupIPSetReferenceStatement {
         this.iPSetForwardedIPConfig = iPSetForwardedIPConfig;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public Optional<RuleGroupIPSetForwardedIPConfiguration> getIPSetForwardedIPConfig() {
+    public Optional<RuleGroupIPSetForwardedIPConfiguration> iPSetForwardedIPConfig() {
         return Optional.ofNullable(this.iPSetForwardedIPConfig);
     }
 

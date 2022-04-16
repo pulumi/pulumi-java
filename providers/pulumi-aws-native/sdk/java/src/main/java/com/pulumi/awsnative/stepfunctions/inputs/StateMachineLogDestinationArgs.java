@@ -18,7 +18,7 @@ public final class StateMachineLogDestinationArgs extends com.pulumi.resources.R
     @Import(name="cloudWatchLogsLogGroup")
       private final @Nullable Output<StateMachineCloudWatchLogsLogGroupArgs> cloudWatchLogsLogGroup;
 
-    public Output<StateMachineCloudWatchLogsLogGroupArgs> getCloudWatchLogsLogGroup() {
+    public Output<StateMachineCloudWatchLogsLogGroupArgs> cloudWatchLogsLogGroup() {
         return this.cloudWatchLogsLogGroup == null ? Codegen.empty() : this.cloudWatchLogsLogGroup;
     }
 

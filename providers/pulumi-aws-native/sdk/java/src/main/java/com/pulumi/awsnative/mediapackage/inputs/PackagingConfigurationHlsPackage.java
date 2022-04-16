@@ -25,7 +25,7 @@ public final class PackagingConfigurationHlsPackage extends com.pulumi.resources
     @Import(name="encryption")
       private final @Nullable PackagingConfigurationHlsEncryption encryption;
 
-    public Optional<PackagingConfigurationHlsEncryption> getEncryption() {
+    public Optional<PackagingConfigurationHlsEncryption> encryption() {
         return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
     }
 
@@ -36,14 +36,14 @@ public final class PackagingConfigurationHlsPackage extends com.pulumi.resources
     @Import(name="hlsManifests", required=true)
       private final List<PackagingConfigurationHlsManifest> hlsManifests;
 
-    public List<PackagingConfigurationHlsManifest> getHlsManifests() {
+    public List<PackagingConfigurationHlsManifest> hlsManifests() {
         return this.hlsManifests;
     }
 
     @Import(name="segmentDurationSeconds")
       private final @Nullable Integer segmentDurationSeconds;
 
-    public Optional<Integer> getSegmentDurationSeconds() {
+    public Optional<Integer> segmentDurationSeconds() {
         return this.segmentDurationSeconds == null ? Optional.empty() : Optional.ofNullable(this.segmentDurationSeconds);
     }
 
@@ -54,7 +54,7 @@ public final class PackagingConfigurationHlsPackage extends com.pulumi.resources
     @Import(name="useAudioRenditionGroup")
       private final @Nullable Boolean useAudioRenditionGroup;
 
-    public Optional<Boolean> getUseAudioRenditionGroup() {
+    public Optional<Boolean> useAudioRenditionGroup() {
         return this.useAudioRenditionGroup == null ? Optional.empty() : Optional.ofNullable(this.useAudioRenditionGroup);
     }
 

@@ -21,13 +21,13 @@ public class ApplicationFleetAssociation extends com.pulumi.resources.CustomReso
     @Export(name="applicationArn", type=String.class, parameters={})
     private Output<String> applicationArn;
 
-    public Output<String> getApplicationArn() {
+    public Output<String> applicationArn() {
         return this.applicationArn;
     }
     @Export(name="fleetName", type=String.class, parameters={})
     private Output<String> fleetName;
 
-    public Output<String> getFleetName() {
+    public Output<String> fleetName() {
         return this.fleetName;
     }
 

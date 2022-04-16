@@ -34,13 +34,13 @@ public class SuiteDefinition extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource name for the suite definition.
      * 
      */
-    public Output<String> getSuiteDefinitionArn() {
+    public Output<String> suiteDefinitionArn() {
         return this.suiteDefinitionArn;
     }
     @Export(name="suiteDefinitionConfiguration", type=SuiteDefinitionConfigurationProperties.class, parameters={})
     private Output<SuiteDefinitionConfigurationProperties> suiteDefinitionConfiguration;
 
-    public Output<SuiteDefinitionConfigurationProperties> getSuiteDefinitionConfiguration() {
+    public Output<SuiteDefinitionConfigurationProperties> suiteDefinitionConfiguration() {
         return this.suiteDefinitionConfiguration;
     }
     /**
@@ -54,7 +54,7 @@ public class SuiteDefinition extends com.pulumi.resources.CustomResource {
      * @return The unique identifier for the suite definition.
      * 
      */
-    public Output<String> getSuiteDefinitionId() {
+    public Output<String> suiteDefinitionId() {
         return this.suiteDefinitionId;
     }
     /**
@@ -68,7 +68,7 @@ public class SuiteDefinition extends com.pulumi.resources.CustomResource {
      * @return The suite definition version of a test suite.
      * 
      */
-    public Output<String> getSuiteDefinitionVersion() {
+    public Output<String> suiteDefinitionVersion() {
         return this.suiteDefinitionVersion;
     }
     /**
@@ -82,7 +82,7 @@ public class SuiteDefinition extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<SuiteDefinitionTag>> getTags() {
+    public Output</* @Nullable */ List<SuiteDefinitionTag>> tags() {
         return this.tags;
     }
 

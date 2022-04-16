@@ -22,7 +22,7 @@ public final class LoggingConfigurationCondition extends com.pulumi.resources.In
     @Import(name="actionCondition")
       private final @Nullable LoggingConfigurationConditionActionConditionProperties actionCondition;
 
-    public Optional<LoggingConfigurationConditionActionConditionProperties> getActionCondition() {
+    public Optional<LoggingConfigurationConditionActionConditionProperties> actionCondition() {
         return this.actionCondition == null ? Optional.empty() : Optional.ofNullable(this.actionCondition);
     }
 
@@ -33,7 +33,7 @@ public final class LoggingConfigurationCondition extends com.pulumi.resources.In
     @Import(name="labelNameCondition")
       private final @Nullable LoggingConfigurationConditionLabelNameConditionProperties labelNameCondition;
 
-    public Optional<LoggingConfigurationConditionLabelNameConditionProperties> getLabelNameCondition() {
+    public Optional<LoggingConfigurationConditionLabelNameConditionProperties> labelNameCondition() {
         return this.labelNameCondition == null ? Optional.empty() : Optional.ofNullable(this.labelNameCondition);
     }
 

@@ -18,7 +18,7 @@ public final class ServiceDeploymentController {
         this.type = type;
     }
 
-    public Optional<ServiceDeploymentControllerType> getType() {
+    public Optional<ServiceDeploymentControllerType> type() {
         return Optional.ofNullable(this.type);
     }
 

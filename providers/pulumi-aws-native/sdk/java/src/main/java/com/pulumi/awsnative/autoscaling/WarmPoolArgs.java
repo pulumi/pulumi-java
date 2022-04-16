@@ -20,35 +20,35 @@ public final class WarmPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoScalingGroupName", required=true)
       private final Output<String> autoScalingGroupName;
 
-    public Output<String> getAutoScalingGroupName() {
+    public Output<String> autoScalingGroupName() {
         return this.autoScalingGroupName;
     }
 
     @Import(name="instanceReusePolicy")
       private final @Nullable Output<WarmPoolInstanceReusePolicyArgs> instanceReusePolicy;
 
-    public Output<WarmPoolInstanceReusePolicyArgs> getInstanceReusePolicy() {
+    public Output<WarmPoolInstanceReusePolicyArgs> instanceReusePolicy() {
         return this.instanceReusePolicy == null ? Codegen.empty() : this.instanceReusePolicy;
     }
 
     @Import(name="maxGroupPreparedCapacity")
       private final @Nullable Output<Integer> maxGroupPreparedCapacity;
 
-    public Output<Integer> getMaxGroupPreparedCapacity() {
+    public Output<Integer> maxGroupPreparedCapacity() {
         return this.maxGroupPreparedCapacity == null ? Codegen.empty() : this.maxGroupPreparedCapacity;
     }
 
     @Import(name="minSize")
       private final @Nullable Output<Integer> minSize;
 
-    public Output<Integer> getMinSize() {
+    public Output<Integer> minSize() {
         return this.minSize == null ? Codegen.empty() : this.minSize;
     }
 
     @Import(name="poolState")
       private final @Nullable Output<String> poolState;
 
-    public Output<String> getPoolState() {
+    public Output<String> poolState() {
         return this.poolState == null ? Codegen.empty() : this.poolState;
     }
 

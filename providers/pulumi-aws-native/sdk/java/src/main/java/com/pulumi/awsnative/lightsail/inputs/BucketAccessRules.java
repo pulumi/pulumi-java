@@ -26,7 +26,7 @@ public final class BucketAccessRules extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowPublicOverrides")
       private final @Nullable Boolean allowPublicOverrides;
 
-    public Optional<Boolean> getAllowPublicOverrides() {
+    public Optional<Boolean> allowPublicOverrides() {
         return this.allowPublicOverrides == null ? Optional.empty() : Optional.ofNullable(this.allowPublicOverrides);
     }
 
@@ -37,7 +37,7 @@ public final class BucketAccessRules extends com.pulumi.resources.InvokeArgs {
     @Import(name="getObject")
       private final @Nullable String getObject;
 
-    public Optional<String> getGetObject() {
+    public Optional<String> getObject() {
         return this.getObject == null ? Optional.empty() : Optional.ofNullable(this.getObject);
     }
 

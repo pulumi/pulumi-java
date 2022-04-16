@@ -88,7 +88,7 @@ public final class TemplateVersion {
      * <p>The time that this template version was created.</p>
      * 
     */
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
@@ -97,28 +97,28 @@ public final class TemplateVersion {
      *             API operation.</p>
      * 
     */
-    public List<TemplateDataSetConfiguration> getDataSetConfigurations() {
+    public List<TemplateDataSetConfiguration> dataSetConfigurations() {
         return this.dataSetConfigurations == null ? List.of() : this.dataSetConfigurations;
     }
     /**
      * <p>The description of the template.</p>
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * <p>Errors associated with this template version.</p>
      * 
     */
-    public List<TemplateError> getErrors() {
+    public List<TemplateError> errors() {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
      * <p>A list of the associated sheets with the unique identifier and name of each sheet.</p>
      * 
     */
-    public List<TemplateSheet> getSheets() {
+    public List<TemplateSheet> sheets() {
         return this.sheets == null ? List.of() : this.sheets;
     }
     /**
@@ -126,24 +126,24 @@ public final class TemplateVersion {
      *             template.</p>
      * 
     */
-    public Optional<String> getSourceEntityArn() {
+    public Optional<String> sourceEntityArn() {
         return Optional.ofNullable(this.sourceEntityArn);
     }
-    public Optional<TemplateResourceStatus> getStatus() {
+    public Optional<TemplateResourceStatus> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * <p>The ARN of the theme associated with this version of the template.</p>
      * 
     */
-    public Optional<String> getThemeArn() {
+    public Optional<String> themeArn() {
         return Optional.ofNullable(this.themeArn);
     }
     /**
      * <p>The version number of the template version.</p>
      * 
     */
-    public Optional<Double> getVersionNumber() {
+    public Optional<Double> versionNumber() {
         return Optional.ofNullable(this.versionNumber);
     }
 

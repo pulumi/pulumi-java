@@ -25,7 +25,7 @@ public final class StudioComponentLicenseServiceConfiguration extends com.pulumi
     @Import(name="endpoint")
       private final @Nullable String endpoint;
 
-    public Optional<String> getEndpoint() {
+    public Optional<String> endpoint() {
         return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
     }
 

@@ -31,7 +31,7 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      * @return The ARN of the dashboard.
      * 
      */
-    public Output<String> getDashboardArn() {
+    public Output<String> dashboardArn() {
         return this.dashboardArn;
     }
     /**
@@ -45,7 +45,7 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      * @return The dashboard definition specified in a JSON literal.
      * 
      */
-    public Output<String> getDashboardDefinition() {
+    public Output<String> dashboardDefinition() {
         return this.dashboardDefinition;
     }
     /**
@@ -59,7 +59,7 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      * @return A description for the dashboard.
      * 
      */
-    public Output<String> getDashboardDescription() {
+    public Output<String> dashboardDescription() {
         return this.dashboardDescription;
     }
     /**
@@ -73,7 +73,7 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      * @return The ID of the dashboard.
      * 
      */
-    public Output<String> getDashboardId() {
+    public Output<String> dashboardId() {
         return this.dashboardId;
     }
     /**
@@ -87,7 +87,7 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      * @return A friendly name for the dashboard.
      * 
      */
-    public Output<String> getDashboardName() {
+    public Output<String> dashboardName() {
         return this.dashboardName;
     }
     /**
@@ -101,7 +101,7 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      * @return The ID of the project in which to create the dashboard.
      * 
      */
-    public Output</* @Nullable */ String> getProjectId() {
+    public Output</* @Nullable */ String> projectId() {
         return this.projectId;
     }
     /**
@@ -115,7 +115,7 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the dashboard.
      * 
      */
-    public Output</* @Nullable */ List<DashboardTag>> getTags() {
+    public Output</* @Nullable */ List<DashboardTag>> tags() {
         return this.tags;
     }
 

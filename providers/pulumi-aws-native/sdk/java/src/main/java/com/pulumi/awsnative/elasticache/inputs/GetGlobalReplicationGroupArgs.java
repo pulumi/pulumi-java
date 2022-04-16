@@ -19,7 +19,7 @@ public final class GetGlobalReplicationGroupArgs extends com.pulumi.resources.In
     @Import(name="globalReplicationGroupId", required=true)
       private final String globalReplicationGroupId;
 
-    public String getGlobalReplicationGroupId() {
+    public String globalReplicationGroupId() {
         return this.globalReplicationGroupId;
     }
 

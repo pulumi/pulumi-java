@@ -32,14 +32,14 @@ public final class ProjectProvisioningParameter {
      * The parameter key.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * The parameter value.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

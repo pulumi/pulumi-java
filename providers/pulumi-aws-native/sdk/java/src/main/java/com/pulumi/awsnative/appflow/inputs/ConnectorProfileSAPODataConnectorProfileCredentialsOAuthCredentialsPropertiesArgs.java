@@ -19,35 +19,35 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCrede
     @Import(name="accessToken")
       private final @Nullable Output<String> accessToken;
 
-    public Output<String> getAccessToken() {
+    public Output<String> accessToken() {
         return this.accessToken == null ? Codegen.empty() : this.accessToken;
     }
 
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
     @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
+    public Output<String> clientSecret() {
         return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
     @Import(name="connectorOAuthRequest")
       private final @Nullable Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest;
 
-    public Output<ConnectorProfileConnectorOAuthRequestArgs> getConnectorOAuthRequest() {
+    public Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest() {
         return this.connectorOAuthRequest == null ? Codegen.empty() : this.connectorOAuthRequest;
     }
 
     @Import(name="refreshToken")
       private final @Nullable Output<String> refreshToken;
 
-    public Output<String> getRefreshToken() {
+    public Output<String> refreshToken() {
         return this.refreshToken == null ? Codegen.empty() : this.refreshToken;
     }
 

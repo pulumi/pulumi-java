@@ -22,7 +22,7 @@ public final class AnalysisSourceEntityArgs extends com.pulumi.resources.Resourc
     @Import(name="sourceTemplate")
       private final @Nullable Output<AnalysisSourceTemplateArgs> sourceTemplate;
 
-    public Output<AnalysisSourceTemplateArgs> getSourceTemplate() {
+    public Output<AnalysisSourceTemplateArgs> sourceTemplate() {
         return this.sourceTemplate == null ? Codegen.empty() : this.sourceTemplate;
     }
 

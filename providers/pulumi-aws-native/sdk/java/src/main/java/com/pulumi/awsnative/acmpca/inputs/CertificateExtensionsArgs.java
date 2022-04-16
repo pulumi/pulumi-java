@@ -26,28 +26,28 @@ public final class CertificateExtensionsArgs extends com.pulumi.resources.Resour
     @Import(name="certificatePolicies")
       private final @Nullable Output<List<CertificatePolicyInformationArgs>> certificatePolicies;
 
-    public Output<List<CertificatePolicyInformationArgs>> getCertificatePolicies() {
+    public Output<List<CertificatePolicyInformationArgs>> certificatePolicies() {
         return this.certificatePolicies == null ? Codegen.empty() : this.certificatePolicies;
     }
 
     @Import(name="extendedKeyUsage")
       private final @Nullable Output<List<CertificateExtendedKeyUsageArgs>> extendedKeyUsage;
 
-    public Output<List<CertificateExtendedKeyUsageArgs>> getExtendedKeyUsage() {
+    public Output<List<CertificateExtendedKeyUsageArgs>> extendedKeyUsage() {
         return this.extendedKeyUsage == null ? Codegen.empty() : this.extendedKeyUsage;
     }
 
     @Import(name="keyUsage")
       private final @Nullable Output<CertificateKeyUsageArgs> keyUsage;
 
-    public Output<CertificateKeyUsageArgs> getKeyUsage() {
+    public Output<CertificateKeyUsageArgs> keyUsage() {
         return this.keyUsage == null ? Codegen.empty() : this.keyUsage;
     }
 
     @Import(name="subjectAlternativeNames")
       private final @Nullable Output<List<CertificateGeneralNameArgs>> subjectAlternativeNames;
 
-    public Output<List<CertificateGeneralNameArgs>> getSubjectAlternativeNames() {
+    public Output<List<CertificateGeneralNameArgs>> subjectAlternativeNames() {
         return this.subjectAlternativeNames == null ? Codegen.empty() : this.subjectAlternativeNames;
     }
 

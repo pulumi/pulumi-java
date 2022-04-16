@@ -32,7 +32,7 @@ public class ServiceProfile extends com.pulumi.resources.CustomResource {
      * @return Service profile Arn. Returned after successful create.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -46,7 +46,7 @@ public class ServiceProfile extends com.pulumi.resources.CustomResource {
      * @return LoRaWAN supports all LoRa specific attributes for service profile for CreateServiceProfile operation
      * 
      */
-    public Output</* @Nullable */ ServiceProfileLoRaWANServiceProfile> getLoRaWAN() {
+    public Output</* @Nullable */ ServiceProfileLoRaWANServiceProfile> loRaWAN() {
         return this.loRaWAN;
     }
     /**
@@ -60,7 +60,7 @@ public class ServiceProfile extends com.pulumi.resources.CustomResource {
      * @return Name of service profile
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -74,7 +74,7 @@ public class ServiceProfile extends com.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the service profile.
      * 
      */
-    public Output</* @Nullable */ List<ServiceProfileTag>> getTags() {
+    public Output</* @Nullable */ List<ServiceProfileTag>> tags() {
         return this.tags;
     }
 

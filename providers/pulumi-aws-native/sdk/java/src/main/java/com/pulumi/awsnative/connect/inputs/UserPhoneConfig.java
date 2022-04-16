@@ -24,28 +24,28 @@ public final class UserPhoneConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="afterContactWorkTimeLimit")
       private final @Nullable Integer afterContactWorkTimeLimit;
 
-    public Optional<Integer> getAfterContactWorkTimeLimit() {
+    public Optional<Integer> afterContactWorkTimeLimit() {
         return this.afterContactWorkTimeLimit == null ? Optional.empty() : Optional.ofNullable(this.afterContactWorkTimeLimit);
     }
 
     @Import(name="autoAccept")
       private final @Nullable Boolean autoAccept;
 
-    public Optional<Boolean> getAutoAccept() {
+    public Optional<Boolean> autoAccept() {
         return this.autoAccept == null ? Optional.empty() : Optional.ofNullable(this.autoAccept);
     }
 
     @Import(name="deskPhoneNumber")
       private final @Nullable String deskPhoneNumber;
 
-    public Optional<String> getDeskPhoneNumber() {
+    public Optional<String> deskPhoneNumber() {
         return this.deskPhoneNumber == null ? Optional.empty() : Optional.ofNullable(this.deskPhoneNumber);
     }
 
     @Import(name="phoneType", required=true)
       private final UserPhoneType phoneType;
 
-    public UserPhoneType getPhoneType() {
+    public UserPhoneType phoneType() {
         return this.phoneType;
     }
 

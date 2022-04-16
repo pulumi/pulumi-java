@@ -46,31 +46,31 @@ public final class GetAccessPointResult {
         this.publicAccessBlockConfiguration = publicAccessBlockConfiguration;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The date and time when the Object lambda Access Point was created.
      * 
     */
-    public Optional<String> getCreationDate() {
+    public Optional<String> creationDate() {
         return Optional.ofNullable(this.creationDate);
     }
     /**
      * The Object lambda Access Point Configuration that configures transformations to be applied on the objects on specified S3 Actions
      * 
     */
-    public Optional<AccessPointObjectLambdaConfiguration> getObjectLambdaConfiguration() {
+    public Optional<AccessPointObjectLambdaConfiguration> objectLambdaConfiguration() {
         return Optional.ofNullable(this.objectLambdaConfiguration);
     }
-    public Optional<PolicyStatusProperties> getPolicyStatus() {
+    public Optional<PolicyStatusProperties> policyStatus() {
         return Optional.ofNullable(this.policyStatus);
     }
     /**
      * The PublicAccessBlock configuration that you want to apply to this Access Point. You can enable the configuration options in any combination. For more information about when Amazon S3 considers a bucket or object public, see https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status 'The Meaning of Public' in the Amazon Simple Storage Service Developer Guide.
      * 
     */
-    public Optional<AccessPointPublicAccessBlockConfiguration> getPublicAccessBlockConfiguration() {
+    public Optional<AccessPointPublicAccessBlockConfiguration> publicAccessBlockConfiguration() {
         return Optional.ofNullable(this.publicAccessBlockConfiguration);
     }
 

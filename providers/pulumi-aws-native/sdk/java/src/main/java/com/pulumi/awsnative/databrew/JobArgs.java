@@ -32,14 +32,14 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataCatalogOutputs")
       private final @Nullable Output<List<JobDataCatalogOutputArgs>> dataCatalogOutputs;
 
-    public Output<List<JobDataCatalogOutputArgs>> getDataCatalogOutputs() {
+    public Output<List<JobDataCatalogOutputArgs>> dataCatalogOutputs() {
         return this.dataCatalogOutputs == null ? Codegen.empty() : this.dataCatalogOutputs;
     }
 
     @Import(name="databaseOutputs")
       private final @Nullable Output<List<JobDatabaseOutputArgs>> databaseOutputs;
 
-    public Output<List<JobDatabaseOutputArgs>> getDatabaseOutputs() {
+    public Output<List<JobDatabaseOutputArgs>> databaseOutputs() {
         return this.databaseOutputs == null ? Codegen.empty() : this.databaseOutputs;
     }
 
@@ -50,7 +50,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="datasetName")
       private final @Nullable Output<String> datasetName;
 
-    public Output<String> getDatasetName() {
+    public Output<String> datasetName() {
         return this.datasetName == null ? Codegen.empty() : this.datasetName;
     }
 
@@ -61,7 +61,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionKeyArn")
       private final @Nullable Output<String> encryptionKeyArn;
 
-    public Output<String> getEncryptionKeyArn() {
+    public Output<String> encryptionKeyArn() {
         return this.encryptionKeyArn == null ? Codegen.empty() : this.encryptionKeyArn;
     }
 
@@ -72,7 +72,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionMode")
       private final @Nullable Output<JobEncryptionMode> encryptionMode;
 
-    public Output<JobEncryptionMode> getEncryptionMode() {
+    public Output<JobEncryptionMode> encryptionMode() {
         return this.encryptionMode == null ? Codegen.empty() : this.encryptionMode;
     }
 
@@ -83,7 +83,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobSample")
       private final @Nullable Output<JobSampleArgs> jobSample;
 
-    public Output<JobSampleArgs> getJobSample() {
+    public Output<JobSampleArgs> jobSample() {
         return this.jobSample == null ? Codegen.empty() : this.jobSample;
     }
 
@@ -94,7 +94,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logSubscription")
       private final @Nullable Output<JobLogSubscription> logSubscription;
 
-    public Output<JobLogSubscription> getLogSubscription() {
+    public Output<JobLogSubscription> logSubscription() {
         return this.logSubscription == null ? Codegen.empty() : this.logSubscription;
     }
 
@@ -105,7 +105,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxCapacity")
       private final @Nullable Output<Integer> maxCapacity;
 
-    public Output<Integer> getMaxCapacity() {
+    public Output<Integer> maxCapacity() {
         return this.maxCapacity == null ? Codegen.empty() : this.maxCapacity;
     }
 
@@ -116,7 +116,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxRetries")
       private final @Nullable Output<Integer> maxRetries;
 
-    public Output<Integer> getMaxRetries() {
+    public Output<Integer> maxRetries() {
         return this.maxRetries == null ? Codegen.empty() : this.maxRetries;
     }
 
@@ -127,7 +127,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -138,14 +138,14 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="outputLocation")
       private final @Nullable Output<JobOutputLocationArgs> outputLocation;
 
-    public Output<JobOutputLocationArgs> getOutputLocation() {
+    public Output<JobOutputLocationArgs> outputLocation() {
         return this.outputLocation == null ? Codegen.empty() : this.outputLocation;
     }
 
     @Import(name="outputs")
       private final @Nullable Output<List<JobOutputArgs>> outputs;
 
-    public Output<List<JobOutputArgs>> getOutputs() {
+    public Output<List<JobOutputArgs>> outputs() {
         return this.outputs == null ? Codegen.empty() : this.outputs;
     }
 
@@ -156,7 +156,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="profileConfiguration")
       private final @Nullable Output<JobProfileConfigurationArgs> profileConfiguration;
 
-    public Output<JobProfileConfigurationArgs> getProfileConfiguration() {
+    public Output<JobProfileConfigurationArgs> profileConfiguration() {
         return this.profileConfiguration == null ? Codegen.empty() : this.profileConfiguration;
     }
 
@@ -167,14 +167,14 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="projectName")
       private final @Nullable Output<String> projectName;
 
-    public Output<String> getProjectName() {
+    public Output<String> projectName() {
         return this.projectName == null ? Codegen.empty() : this.projectName;
     }
 
     @Import(name="recipe")
       private final @Nullable Output<JobRecipeArgs> recipe;
 
-    public Output<JobRecipeArgs> getRecipe() {
+    public Output<JobRecipeArgs> recipe() {
         return this.recipe == null ? Codegen.empty() : this.recipe;
     }
 
@@ -185,14 +185,14 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<JobTagArgs>> tags;
 
-    public Output<List<JobTagArgs>> getTags() {
+    public Output<List<JobTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -203,7 +203,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;
 
-    public Output<Integer> getTimeout() {
+    public Output<Integer> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
@@ -214,7 +214,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<JobType> type;
 
-    public Output<JobType> getType() {
+    public Output<JobType> type() {
         return this.type;
     }
 
@@ -225,7 +225,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="validationConfigurations")
       private final @Nullable Output<List<JobValidationConfigurationArgs>> validationConfigurations;
 
-    public Output<List<JobValidationConfigurationArgs>> getValidationConfigurations() {
+    public Output<List<JobValidationConfigurationArgs>> validationConfigurations() {
         return this.validationConfigurations == null ? Codegen.empty() : this.validationConfigurations;
     }
 

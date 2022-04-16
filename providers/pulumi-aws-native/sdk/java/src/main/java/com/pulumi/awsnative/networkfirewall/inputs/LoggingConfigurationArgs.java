@@ -18,7 +18,7 @@ public final class LoggingConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="logDestinationConfigs", required=true)
       private final Output<List<LoggingConfigurationLogDestinationConfigArgs>> logDestinationConfigs;
 
-    public Output<List<LoggingConfigurationLogDestinationConfigArgs>> getLogDestinationConfigs() {
+    public Output<List<LoggingConfigurationLogDestinationConfigArgs>> logDestinationConfigs() {
         return this.logDestinationConfigs;
     }
 

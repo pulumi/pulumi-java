@@ -110,84 +110,84 @@ public final class GetFirewallRuleGroupResult {
      * Arn
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Rfc3339TimeString
      * 
     */
-    public Optional<String> getCreationTime() {
+    public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * The id of the creator request.
      * 
     */
-    public Optional<String> getCreatorRequestId() {
+    public Optional<String> creatorRequestId() {
         return Optional.ofNullable(this.creatorRequestId);
     }
     /**
      * FirewallRules
      * 
     */
-    public List<FirewallRuleGroupFirewallRule> getFirewallRules() {
+    public List<FirewallRuleGroupFirewallRule> firewallRules() {
         return this.firewallRules == null ? List.of() : this.firewallRules;
     }
     /**
      * ResourceId
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Rfc3339TimeString
      * 
     */
-    public Optional<String> getModificationTime() {
+    public Optional<String> modificationTime() {
         return Optional.ofNullable(this.modificationTime);
     }
     /**
      * AccountId
      * 
     */
-    public Optional<String> getOwnerId() {
+    public Optional<String> ownerId() {
         return Optional.ofNullable(this.ownerId);
     }
     /**
      * Count
      * 
     */
-    public Optional<Integer> getRuleCount() {
+    public Optional<Integer> ruleCount() {
         return Optional.ofNullable(this.ruleCount);
     }
     /**
      * ShareStatus, possible values are NOT_SHARED, SHARED_WITH_ME, SHARED_BY_ME.
      * 
     */
-    public Optional<FirewallRuleGroupShareStatus> getShareStatus() {
+    public Optional<FirewallRuleGroupShareStatus> shareStatus() {
         return Optional.ofNullable(this.shareStatus);
     }
     /**
      * ResolverFirewallRuleGroupAssociation, possible values are COMPLETE, DELETING, UPDATING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
      * 
     */
-    public Optional<FirewallRuleGroupStatus> getStatus() {
+    public Optional<FirewallRuleGroupStatus> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * FirewallRuleGroupStatus
      * 
     */
-    public Optional<String> getStatusMessage() {
+    public Optional<String> statusMessage() {
         return Optional.ofNullable(this.statusMessage);
     }
     /**
      * Tags
      * 
     */
-    public List<FirewallRuleGroupTag> getTags() {
+    public List<FirewallRuleGroupTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

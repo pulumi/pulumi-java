@@ -25,7 +25,7 @@ public final class ServiceEncryptionConfigurationArgs extends com.pulumi.resourc
     @Import(name="kmsKey", required=true)
       private final Output<String> kmsKey;
 
-    public Output<String> getKmsKey() {
+    public Output<String> kmsKey() {
         return this.kmsKey;
     }
 

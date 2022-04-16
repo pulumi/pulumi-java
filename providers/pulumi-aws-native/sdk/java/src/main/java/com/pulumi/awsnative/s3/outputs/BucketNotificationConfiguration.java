@@ -32,16 +32,16 @@ public final class BucketNotificationConfiguration {
         this.topicConfigurations = topicConfigurations;
     }
 
-    public Optional<BucketEventBridgeConfiguration> getEventBridgeConfiguration() {
+    public Optional<BucketEventBridgeConfiguration> eventBridgeConfiguration() {
         return Optional.ofNullable(this.eventBridgeConfiguration);
     }
-    public List<BucketLambdaConfiguration> getLambdaConfigurations() {
+    public List<BucketLambdaConfiguration> lambdaConfigurations() {
         return this.lambdaConfigurations == null ? List.of() : this.lambdaConfigurations;
     }
-    public List<BucketQueueConfiguration> getQueueConfigurations() {
+    public List<BucketQueueConfiguration> queueConfigurations() {
         return this.queueConfigurations == null ? List.of() : this.queueConfigurations;
     }
-    public List<BucketTopicConfiguration> getTopicConfigurations() {
+    public List<BucketTopicConfiguration> topicConfigurations() {
         return this.topicConfigurations == null ? List.of() : this.topicConfigurations;
     }
 

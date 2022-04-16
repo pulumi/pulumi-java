@@ -55,40 +55,40 @@ public final class GetNetworkProfileResult {
         this.uplinkLossPercent = uplinkLossPercent;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<Integer> getDownlinkBandwidthBits() {
+    public Optional<Integer> downlinkBandwidthBits() {
         return Optional.ofNullable(this.downlinkBandwidthBits);
     }
-    public Optional<Integer> getDownlinkDelayMs() {
+    public Optional<Integer> downlinkDelayMs() {
         return Optional.ofNullable(this.downlinkDelayMs);
     }
-    public Optional<Integer> getDownlinkJitterMs() {
+    public Optional<Integer> downlinkJitterMs() {
         return Optional.ofNullable(this.downlinkJitterMs);
     }
-    public Optional<Integer> getDownlinkLossPercent() {
+    public Optional<Integer> downlinkLossPercent() {
         return Optional.ofNullable(this.downlinkLossPercent);
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public List<NetworkProfileTag> getTags() {
+    public List<NetworkProfileTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
-    public Optional<Integer> getUplinkBandwidthBits() {
+    public Optional<Integer> uplinkBandwidthBits() {
         return Optional.ofNullable(this.uplinkBandwidthBits);
     }
-    public Optional<Integer> getUplinkDelayMs() {
+    public Optional<Integer> uplinkDelayMs() {
         return Optional.ofNullable(this.uplinkDelayMs);
     }
-    public Optional<Integer> getUplinkJitterMs() {
+    public Optional<Integer> uplinkJitterMs() {
         return Optional.ofNullable(this.uplinkJitterMs);
     }
-    public Optional<Integer> getUplinkLossPercent() {
+    public Optional<Integer> uplinkLossPercent() {
         return Optional.ofNullable(this.uplinkLossPercent);
     }
 

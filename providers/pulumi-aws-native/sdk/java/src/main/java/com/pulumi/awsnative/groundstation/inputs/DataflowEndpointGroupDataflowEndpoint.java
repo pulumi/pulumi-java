@@ -19,21 +19,21 @@ public final class DataflowEndpointGroupDataflowEndpoint extends com.pulumi.reso
     @Import(name="address")
       private final @Nullable DataflowEndpointGroupSocketAddress address;
 
-    public Optional<DataflowEndpointGroupSocketAddress> getAddress() {
+    public Optional<DataflowEndpointGroupSocketAddress> address() {
         return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
     }
 
     @Import(name="mtu")
       private final @Nullable Integer mtu;
 
-    public Optional<Integer> getMtu() {
+    public Optional<Integer> mtu() {
         return this.mtu == null ? Optional.empty() : Optional.ofNullable(this.mtu);
     }
 
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 

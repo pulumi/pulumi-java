@@ -26,7 +26,7 @@ public final class ContainerRecipeComponentConfigurationArgs extends com.pulumi.
     @Import(name="componentArn")
       private final @Nullable Output<String> componentArn;
 
-    public Output<String> getComponentArn() {
+    public Output<String> componentArn() {
         return this.componentArn == null ? Codegen.empty() : this.componentArn;
     }
 

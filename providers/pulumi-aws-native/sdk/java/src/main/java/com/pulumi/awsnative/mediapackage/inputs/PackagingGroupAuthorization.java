@@ -19,7 +19,7 @@ public final class PackagingGroupAuthorization extends com.pulumi.resources.Invo
     @Import(name="cdnIdentifierSecret", required=true)
       private final String cdnIdentifierSecret;
 
-    public String getCdnIdentifierSecret() {
+    public String cdnIdentifierSecret() {
         return this.cdnIdentifierSecret;
     }
 
@@ -30,7 +30,7 @@ public final class PackagingGroupAuthorization extends com.pulumi.resources.Invo
     @Import(name="secretsRoleArn", required=true)
       private final String secretsRoleArn;
 
-    public String getSecretsRoleArn() {
+    public String secretsRoleArn() {
         return this.secretsRoleArn;
     }
 

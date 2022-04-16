@@ -26,35 +26,35 @@ public final class RuleGroupByteMatchStatementArgs extends com.pulumi.resources.
     @Import(name="fieldToMatch", required=true)
       private final Output<RuleGroupFieldToMatchArgs> fieldToMatch;
 
-    public Output<RuleGroupFieldToMatchArgs> getFieldToMatch() {
+    public Output<RuleGroupFieldToMatchArgs> fieldToMatch() {
         return this.fieldToMatch;
     }
 
     @Import(name="positionalConstraint", required=true)
       private final Output<RuleGroupPositionalConstraint> positionalConstraint;
 
-    public Output<RuleGroupPositionalConstraint> getPositionalConstraint() {
+    public Output<RuleGroupPositionalConstraint> positionalConstraint() {
         return this.positionalConstraint;
     }
 
     @Import(name="searchString")
       private final @Nullable Output<String> searchString;
 
-    public Output<String> getSearchString() {
+    public Output<String> searchString() {
         return this.searchString == null ? Codegen.empty() : this.searchString;
     }
 
     @Import(name="searchStringBase64")
       private final @Nullable Output<String> searchStringBase64;
 
-    public Output<String> getSearchStringBase64() {
+    public Output<String> searchStringBase64() {
         return this.searchStringBase64 == null ? Codegen.empty() : this.searchStringBase64;
     }
 
     @Import(name="textTransformations", required=true)
       private final Output<List<RuleGroupTextTransformationArgs>> textTransformations;
 
-    public Output<List<RuleGroupTextTransformationArgs>> getTextTransformations() {
+    public Output<List<RuleGroupTextTransformationArgs>> textTransformations() {
         return this.textTransformations;
     }
 

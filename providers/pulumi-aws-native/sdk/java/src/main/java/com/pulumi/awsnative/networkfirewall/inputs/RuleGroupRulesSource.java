@@ -21,28 +21,28 @@ public final class RuleGroupRulesSource extends com.pulumi.resources.InvokeArgs 
     @Import(name="rulesSourceList")
       private final @Nullable RuleGroupRulesSourceList rulesSourceList;
 
-    public Optional<RuleGroupRulesSourceList> getRulesSourceList() {
+    public Optional<RuleGroupRulesSourceList> rulesSourceList() {
         return this.rulesSourceList == null ? Optional.empty() : Optional.ofNullable(this.rulesSourceList);
     }
 
     @Import(name="rulesString")
       private final @Nullable String rulesString;
 
-    public Optional<String> getRulesString() {
+    public Optional<String> rulesString() {
         return this.rulesString == null ? Optional.empty() : Optional.ofNullable(this.rulesString);
     }
 
     @Import(name="statefulRules")
       private final @Nullable List<RuleGroupStatefulRule> statefulRules;
 
-    public List<RuleGroupStatefulRule> getStatefulRules() {
+    public List<RuleGroupStatefulRule> statefulRules() {
         return this.statefulRules == null ? List.of() : this.statefulRules;
     }
 
     @Import(name="statelessRulesAndCustomActions")
       private final @Nullable RuleGroupStatelessRulesAndCustomActions statelessRulesAndCustomActions;
 
-    public Optional<RuleGroupStatelessRulesAndCustomActions> getStatelessRulesAndCustomActions() {
+    public Optional<RuleGroupStatelessRulesAndCustomActions> statelessRulesAndCustomActions() {
         return this.statelessRulesAndCustomActions == null ? Optional.empty() : Optional.ofNullable(this.statelessRulesAndCustomActions);
     }
 

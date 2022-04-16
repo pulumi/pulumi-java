@@ -26,13 +26,13 @@ public final class ConnectionParameter {
         this.value = value;
     }
 
-    public Optional<Boolean> getIsValueSecret() {
+    public Optional<Boolean> isValueSecret() {
         return Optional.ofNullable(this.isValueSecret);
     }
-    public String getKey() {
+    public String key() {
         return this.key;
     }
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

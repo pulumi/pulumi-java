@@ -34,14 +34,14 @@ public final class BucketNoncurrentVersionExpiration {
      * Specified the number of newer noncurrent and current versions that must exists before performing the associated action
      * 
     */
-    public Optional<Integer> getNewerNoncurrentVersions() {
+    public Optional<Integer> newerNoncurrentVersions() {
         return Optional.ofNullable(this.newerNoncurrentVersions);
     }
     /**
      * Specified the number of days an object is noncurrent before Amazon S3 can perform the associated action
      * 
     */
-    public Integer getNoncurrentDays() {
+    public Integer noncurrentDays() {
         return this.noncurrentDays;
     }
 

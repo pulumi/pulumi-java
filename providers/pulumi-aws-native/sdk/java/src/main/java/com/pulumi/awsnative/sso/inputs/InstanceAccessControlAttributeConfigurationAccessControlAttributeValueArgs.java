@@ -18,7 +18,7 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
     @Import(name="source", required=true)
       private final Output<List<String>> source;
 
-    public Output<List<String>> getSource() {
+    public Output<List<String>> source() {
         return this.source;
     }
 

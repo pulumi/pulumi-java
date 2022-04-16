@@ -23,10 +23,10 @@ public final class ConnectorCapacity {
         this.provisionedCapacity = provisionedCapacity;
     }
 
-    public Optional<ConnectorAutoScaling> getAutoScaling() {
+    public Optional<ConnectorAutoScaling> autoScaling() {
         return Optional.ofNullable(this.autoScaling);
     }
-    public Optional<ConnectorProvisionedCapacity> getProvisionedCapacity() {
+    public Optional<ConnectorProvisionedCapacity> provisionedCapacity() {
         return Optional.ofNullable(this.provisionedCapacity);
     }
 

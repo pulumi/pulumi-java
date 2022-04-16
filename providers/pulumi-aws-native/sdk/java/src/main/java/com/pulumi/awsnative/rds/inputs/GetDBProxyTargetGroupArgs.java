@@ -19,7 +19,7 @@ public final class GetDBProxyTargetGroupArgs extends com.pulumi.resources.Invoke
     @Import(name="targetGroupArn", required=true)
       private final String targetGroupArn;
 
-    public String getTargetGroupArn() {
+    public String targetGroupArn() {
         return this.targetGroupArn;
     }
 

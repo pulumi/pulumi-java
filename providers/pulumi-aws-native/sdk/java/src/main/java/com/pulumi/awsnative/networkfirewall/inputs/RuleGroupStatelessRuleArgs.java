@@ -18,14 +18,14 @@ public final class RuleGroupStatelessRuleArgs extends com.pulumi.resources.Resou
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 
     @Import(name="ruleDefinition", required=true)
       private final Output<RuleGroupRuleDefinitionArgs> ruleDefinition;
 
-    public Output<RuleGroupRuleDefinitionArgs> getRuleDefinition() {
+    public Output<RuleGroupRuleDefinitionArgs> ruleDefinition() {
         return this.ruleDefinition;
     }
 

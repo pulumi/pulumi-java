@@ -18,28 +18,28 @@ public final class FlowSnowflakeDestinationProperties extends com.pulumi.resourc
     @Import(name="bucketPrefix")
       private final @Nullable String bucketPrefix;
 
-    public Optional<String> getBucketPrefix() {
+    public Optional<String> bucketPrefix() {
         return this.bucketPrefix == null ? Optional.empty() : Optional.ofNullable(this.bucketPrefix);
     }
 
     @Import(name="errorHandlingConfig")
       private final @Nullable FlowErrorHandlingConfig errorHandlingConfig;
 
-    public Optional<FlowErrorHandlingConfig> getErrorHandlingConfig() {
+    public Optional<FlowErrorHandlingConfig> errorHandlingConfig() {
         return this.errorHandlingConfig == null ? Optional.empty() : Optional.ofNullable(this.errorHandlingConfig);
     }
 
     @Import(name="intermediateBucketName", required=true)
       private final String intermediateBucketName;
 
-    public String getIntermediateBucketName() {
+    public String intermediateBucketName() {
         return this.intermediateBucketName;
     }
 
     @Import(name="object", required=true)
       private final String object;
 
-    public String getObject() {
+    public String object() {
         return this.object;
     }
 

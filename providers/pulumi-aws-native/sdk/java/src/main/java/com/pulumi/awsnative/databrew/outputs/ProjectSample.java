@@ -35,14 +35,14 @@ public final class ProjectSample {
      * Sample size
      * 
     */
-    public Optional<Integer> getSize() {
+    public Optional<Integer> size() {
         return Optional.ofNullable(this.size);
     }
     /**
      * Sample type
      * 
     */
-    public ProjectSampleType getType() {
+    public ProjectSampleType type() {
         return this.type;
     }
 

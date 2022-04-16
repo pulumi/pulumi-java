@@ -35,7 +35,7 @@ public class TaskDefinition extends com.pulumi.resources.CustomResource {
      * @return TaskDefinition arn. Returned after successful create.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -49,7 +49,7 @@ public class TaskDefinition extends com.pulumi.resources.CustomResource {
      * @return Whether to automatically create tasks using this task definition for all gateways with the specified current version. If false, the task must me created by calling CreateWirelessGatewayTask.
      * 
      */
-    public Output<Boolean> getAutoCreateTasks() {
+    public Output<Boolean> autoCreateTasks() {
         return this.autoCreateTasks;
     }
     /**
@@ -63,7 +63,7 @@ public class TaskDefinition extends com.pulumi.resources.CustomResource {
      * @return The list of task definitions.
      * 
      */
-    public Output</* @Nullable */ TaskDefinitionLoRaWANUpdateGatewayTaskEntry> getLoRaWANUpdateGatewayTaskEntry() {
+    public Output</* @Nullable */ TaskDefinitionLoRaWANUpdateGatewayTaskEntry> loRaWANUpdateGatewayTaskEntry() {
         return this.loRaWANUpdateGatewayTaskEntry;
     }
     /**
@@ -77,7 +77,7 @@ public class TaskDefinition extends com.pulumi.resources.CustomResource {
      * @return The name of the new resource.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -91,7 +91,7 @@ public class TaskDefinition extends com.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the destination.
      * 
      */
-    public Output</* @Nullable */ List<TaskDefinitionTag>> getTags() {
+    public Output</* @Nullable */ List<TaskDefinitionTag>> tags() {
         return this.tags;
     }
     /**
@@ -105,7 +105,7 @@ public class TaskDefinition extends com.pulumi.resources.CustomResource {
      * @return A filter to list only the wireless gateway task definitions that use this task definition type
      * 
      */
-    public Output</* @Nullable */ TaskDefinitionType> getTaskDefinitionType() {
+    public Output</* @Nullable */ TaskDefinitionType> taskDefinitionType() {
         return this.taskDefinitionType;
     }
     /**
@@ -119,7 +119,7 @@ public class TaskDefinition extends com.pulumi.resources.CustomResource {
      * @return Information about the gateways to update.
      * 
      */
-    public Output</* @Nullable */ TaskDefinitionUpdateWirelessGatewayTaskCreate> getUpdate() {
+    public Output</* @Nullable */ TaskDefinitionUpdateWirelessGatewayTaskCreate> update() {
         return this.update;
     }
 

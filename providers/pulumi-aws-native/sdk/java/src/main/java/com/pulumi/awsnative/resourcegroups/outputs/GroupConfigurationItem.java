@@ -24,10 +24,10 @@ public final class GroupConfigurationItem {
         this.type = type;
     }
 
-    public List<GroupConfigurationParameter> getParameters() {
+    public List<GroupConfigurationParameter> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

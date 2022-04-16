@@ -21,10 +21,10 @@ public final class ResponseHeadersPolicyFrameOptions {
         this.override = override;
     }
 
-    public String getFrameOption() {
+    public String frameOption() {
         return this.frameOption;
     }
-    public Boolean getOverride() {
+    public Boolean override() {
         return this.override;
     }
 

@@ -18,14 +18,14 @@ public final class TaskDefinitionInferenceAcceleratorArgs extends com.pulumi.res
     @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
     @Import(name="deviceType")
       private final @Nullable Output<String> deviceType;
 
-    public Output<String> getDeviceType() {
+    public Output<String> deviceType() {
         return this.deviceType == null ? Codegen.empty() : this.deviceType;
     }
 

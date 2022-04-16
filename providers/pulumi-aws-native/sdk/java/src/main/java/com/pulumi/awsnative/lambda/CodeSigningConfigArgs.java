@@ -24,7 +24,7 @@ public final class CodeSigningConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="allowedPublishers", required=true)
       private final Output<CodeSigningConfigAllowedPublishersArgs> allowedPublishers;
 
-    public Output<CodeSigningConfigAllowedPublishersArgs> getAllowedPublishers() {
+    public Output<CodeSigningConfigAllowedPublishersArgs> allowedPublishers() {
         return this.allowedPublishers;
     }
 
@@ -35,7 +35,7 @@ public final class CodeSigningConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="codeSigningPolicies")
       private final @Nullable Output<CodeSigningConfigCodeSigningPoliciesArgs> codeSigningPolicies;
 
-    public Output<CodeSigningConfigCodeSigningPoliciesArgs> getCodeSigningPolicies() {
+    public Output<CodeSigningConfigCodeSigningPoliciesArgs> codeSigningPolicies() {
         return this.codeSigningPolicies == null ? Codegen.empty() : this.codeSigningPolicies;
     }
 
@@ -46,7 +46,7 @@ public final class CodeSigningConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 

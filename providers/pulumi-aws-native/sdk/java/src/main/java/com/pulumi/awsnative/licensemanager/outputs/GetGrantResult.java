@@ -58,38 +58,38 @@ public final class GetGrantResult {
      * Arn of the grant.
      * 
     */
-    public Optional<String> getGrantArn() {
+    public Optional<String> grantArn() {
         return Optional.ofNullable(this.grantArn);
     }
     /**
      * Name for the created Grant.
      * 
     */
-    public Optional<String> getGrantName() {
+    public Optional<String> grantName() {
         return Optional.ofNullable(this.grantName);
     }
     /**
      * Home region for the created grant.
      * 
     */
-    public Optional<String> getHomeRegion() {
+    public Optional<String> homeRegion() {
         return Optional.ofNullable(this.homeRegion);
     }
     /**
      * License Arn for the grant.
      * 
     */
-    public Optional<String> getLicenseArn() {
+    public Optional<String> licenseArn() {
         return Optional.ofNullable(this.licenseArn);
     }
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The version of the grant.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

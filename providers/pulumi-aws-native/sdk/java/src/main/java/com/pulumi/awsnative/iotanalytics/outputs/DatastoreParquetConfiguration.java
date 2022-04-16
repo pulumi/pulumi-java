@@ -18,7 +18,7 @@ public final class DatastoreParquetConfiguration {
         this.schemaDefinition = schemaDefinition;
     }
 
-    public Optional<DatastoreSchemaDefinition> getSchemaDefinition() {
+    public Optional<DatastoreSchemaDefinition> schemaDefinition() {
         return Optional.ofNullable(this.schemaDefinition);
     }
 

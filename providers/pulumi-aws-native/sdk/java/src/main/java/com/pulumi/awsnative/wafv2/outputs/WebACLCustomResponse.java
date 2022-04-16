@@ -40,17 +40,17 @@ public final class WebACLCustomResponse {
      * Custom response body key.
      * 
     */
-    public Optional<String> getCustomResponseBodyKey() {
+    public Optional<String> customResponseBodyKey() {
         return Optional.ofNullable(this.customResponseBodyKey);
     }
-    public Integer getResponseCode() {
+    public Integer responseCode() {
         return this.responseCode;
     }
     /**
      * Collection of HTTP headers.
      * 
     */
-    public List<WebACLCustomHTTPHeader> getResponseHeaders() {
+    public List<WebACLCustomHTTPHeader> responseHeaders() {
         return this.responseHeaders == null ? List.of() : this.responseHeaders;
     }
 

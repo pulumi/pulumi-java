@@ -33,19 +33,19 @@ public final class DistributionLegacyCustomOrigin {
         this.originSSLProtocols = originSSLProtocols;
     }
 
-    public String getDNSName() {
+    public String dNSName() {
         return this.dNSName;
     }
-    public Optional<Integer> getHTTPPort() {
+    public Optional<Integer> hTTPPort() {
         return Optional.ofNullable(this.hTTPPort);
     }
-    public Optional<Integer> getHTTPSPort() {
+    public Optional<Integer> hTTPSPort() {
         return Optional.ofNullable(this.hTTPSPort);
     }
-    public String getOriginProtocolPolicy() {
+    public String originProtocolPolicy() {
         return this.originProtocolPolicy;
     }
-    public List<String> getOriginSSLProtocols() {
+    public List<String> originSSLProtocols() {
         return this.originSSLProtocols;
     }
 

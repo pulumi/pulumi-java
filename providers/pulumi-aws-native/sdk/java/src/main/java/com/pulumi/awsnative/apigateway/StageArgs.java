@@ -29,7 +29,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessLogSetting")
       private final @Nullable Output<StageAccessLogSettingArgs> accessLogSetting;
 
-    public Output<StageAccessLogSettingArgs> getAccessLogSetting() {
+    public Output<StageAccessLogSettingArgs> accessLogSetting() {
         return this.accessLogSetting == null ? Codegen.empty() : this.accessLogSetting;
     }
 
@@ -40,7 +40,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cacheClusterEnabled")
       private final @Nullable Output<Boolean> cacheClusterEnabled;
 
-    public Output<Boolean> getCacheClusterEnabled() {
+    public Output<Boolean> cacheClusterEnabled() {
         return this.cacheClusterEnabled == null ? Codegen.empty() : this.cacheClusterEnabled;
     }
 
@@ -51,7 +51,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cacheClusterSize")
       private final @Nullable Output<String> cacheClusterSize;
 
-    public Output<String> getCacheClusterSize() {
+    public Output<String> cacheClusterSize() {
         return this.cacheClusterSize == null ? Codegen.empty() : this.cacheClusterSize;
     }
 
@@ -62,7 +62,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="canarySetting")
       private final @Nullable Output<StageCanarySettingArgs> canarySetting;
 
-    public Output<StageCanarySettingArgs> getCanarySetting() {
+    public Output<StageCanarySettingArgs> canarySetting() {
         return this.canarySetting == null ? Codegen.empty() : this.canarySetting;
     }
 
@@ -73,7 +73,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientCertificateId")
       private final @Nullable Output<String> clientCertificateId;
 
-    public Output<String> getClientCertificateId() {
+    public Output<String> clientCertificateId() {
         return this.clientCertificateId == null ? Codegen.empty() : this.clientCertificateId;
     }
 
@@ -84,7 +84,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deploymentId")
       private final @Nullable Output<String> deploymentId;
 
-    public Output<String> getDeploymentId() {
+    public Output<String> deploymentId() {
         return this.deploymentId == null ? Codegen.empty() : this.deploymentId;
     }
 
@@ -95,7 +95,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -106,7 +106,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="documentationVersion")
       private final @Nullable Output<String> documentationVersion;
 
-    public Output<String> getDocumentationVersion() {
+    public Output<String> documentationVersion() {
         return this.documentationVersion == null ? Codegen.empty() : this.documentationVersion;
     }
 
@@ -117,7 +117,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="methodSettings")
       private final @Nullable Output<List<StageMethodSettingArgs>> methodSettings;
 
-    public Output<List<StageMethodSettingArgs>> getMethodSettings() {
+    public Output<List<StageMethodSettingArgs>> methodSettings() {
         return this.methodSettings == null ? Codegen.empty() : this.methodSettings;
     }
 
@@ -128,7 +128,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="restApiId", required=true)
       private final Output<String> restApiId;
 
-    public Output<String> getRestApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
 
@@ -139,7 +139,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stageName")
       private final @Nullable Output<String> stageName;
 
-    public Output<String> getStageName() {
+    public Output<String> stageName() {
         return this.stageName == null ? Codegen.empty() : this.stageName;
     }
 
@@ -150,7 +150,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<StageTagArgs>> tags;
 
-    public Output<List<StageTagArgs>> getTags() {
+    public Output<List<StageTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -161,7 +161,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tracingEnabled")
       private final @Nullable Output<Boolean> tracingEnabled;
 
-    public Output<Boolean> getTracingEnabled() {
+    public Output<Boolean> tracingEnabled() {
         return this.tracingEnabled == null ? Codegen.empty() : this.tracingEnabled;
     }
 
@@ -172,7 +172,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="variables")
       private final @Nullable Output<Object> variables;
 
-    public Output<Object> getVariables() {
+    public Output<Object> variables() {
         return this.variables == null ? Codegen.empty() : this.variables;
     }
 

@@ -34,22 +34,22 @@ public final class ListenerRedirectConfig {
         this.statusCode = statusCode;
     }
 
-    public Optional<String> getHost() {
+    public Optional<String> host() {
         return Optional.ofNullable(this.host);
     }
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
-    public Optional<String> getPort() {
+    public Optional<String> port() {
         return Optional.ofNullable(this.port);
     }
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
-    public Optional<String> getQuery() {
+    public Optional<String> query() {
         return Optional.ofNullable(this.query);
     }
-    public String getStatusCode() {
+    public String statusCode() {
         return this.statusCode;
     }
 

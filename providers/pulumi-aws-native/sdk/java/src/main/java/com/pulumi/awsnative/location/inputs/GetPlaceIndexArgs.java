@@ -15,7 +15,7 @@ public final class GetPlaceIndexArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="indexName", required=true)
       private final String indexName;
 
-    public String getIndexName() {
+    public String indexName() {
         return this.indexName;
     }
 

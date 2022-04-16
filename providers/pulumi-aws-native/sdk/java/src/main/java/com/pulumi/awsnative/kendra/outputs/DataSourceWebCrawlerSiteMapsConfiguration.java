@@ -17,7 +17,7 @@ public final class DataSourceWebCrawlerSiteMapsConfiguration {
         this.siteMaps = siteMaps;
     }
 
-    public List<String> getSiteMaps() {
+    public List<String> siteMaps() {
         return this.siteMaps;
     }
 

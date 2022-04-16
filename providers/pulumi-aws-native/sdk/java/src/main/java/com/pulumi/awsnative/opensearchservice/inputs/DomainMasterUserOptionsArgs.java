@@ -18,21 +18,21 @@ public final class DomainMasterUserOptionsArgs extends com.pulumi.resources.Reso
     @Import(name="masterUserARN")
       private final @Nullable Output<String> masterUserARN;
 
-    public Output<String> getMasterUserARN() {
+    public Output<String> masterUserARN() {
         return this.masterUserARN == null ? Codegen.empty() : this.masterUserARN;
     }
 
     @Import(name="masterUserName")
       private final @Nullable Output<String> masterUserName;
 
-    public Output<String> getMasterUserName() {
+    public Output<String> masterUserName() {
         return this.masterUserName == null ? Codegen.empty() : this.masterUserName;
     }
 
     @Import(name="masterUserPassword")
       private final @Nullable Output<String> masterUserPassword;
 
-    public Output<String> getMasterUserPassword() {
+    public Output<String> masterUserPassword() {
         return this.masterUserPassword == null ? Codegen.empty() : this.masterUserPassword;
     }
 

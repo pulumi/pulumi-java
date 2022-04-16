@@ -26,7 +26,7 @@ public final class ConnectorVpcArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityGroups", required=true)
       private final Output<List<String>> securityGroups;
 
-    public Output<List<String>> getSecurityGroups() {
+    public Output<List<String>> securityGroups() {
         return this.securityGroups;
     }
 
@@ -37,7 +37,7 @@ public final class ConnectorVpcArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnets", required=true)
       private final Output<List<String>> subnets;
 
-    public Output<List<String>> getSubnets() {
+    public Output<List<String>> subnets() {
         return this.subnets;
     }
 

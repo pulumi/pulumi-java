@@ -21,10 +21,10 @@ public final class RecoveryGroupTag {
         this.value = value;
     }
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
-    public List<String> getValue() {
+    public List<String> value() {
         return this.value;
     }
 

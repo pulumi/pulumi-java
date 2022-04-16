@@ -19,21 +19,21 @@ public final class ScheduledActionType extends com.pulumi.resources.InvokeArgs {
     @Import(name="pauseCluster")
       private final @Nullable ScheduledActionPauseClusterMessage pauseCluster;
 
-    public Optional<ScheduledActionPauseClusterMessage> getPauseCluster() {
+    public Optional<ScheduledActionPauseClusterMessage> pauseCluster() {
         return this.pauseCluster == null ? Optional.empty() : Optional.ofNullable(this.pauseCluster);
     }
 
     @Import(name="resizeCluster")
       private final @Nullable ScheduledActionResizeClusterMessage resizeCluster;
 
-    public Optional<ScheduledActionResizeClusterMessage> getResizeCluster() {
+    public Optional<ScheduledActionResizeClusterMessage> resizeCluster() {
         return this.resizeCluster == null ? Optional.empty() : Optional.ofNullable(this.resizeCluster);
     }
 
     @Import(name="resumeCluster")
       private final @Nullable ScheduledActionResumeClusterMessage resumeCluster;
 
-    public Optional<ScheduledActionResumeClusterMessage> getResumeCluster() {
+    public Optional<ScheduledActionResumeClusterMessage> resumeCluster() {
         return this.resumeCluster == null ? Optional.empty() : Optional.ofNullable(this.resumeCluster);
     }
 

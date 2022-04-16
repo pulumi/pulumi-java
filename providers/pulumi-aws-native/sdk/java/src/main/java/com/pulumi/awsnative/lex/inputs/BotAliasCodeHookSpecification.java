@@ -19,7 +19,7 @@ public final class BotAliasCodeHookSpecification extends com.pulumi.resources.In
     @Import(name="lambdaCodeHook", required=true)
       private final BotAliasLambdaCodeHook lambdaCodeHook;
 
-    public BotAliasLambdaCodeHook getLambdaCodeHook() {
+    public BotAliasLambdaCodeHook lambdaCodeHook() {
         return this.lambdaCodeHook;
     }
 

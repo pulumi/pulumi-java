@@ -33,7 +33,7 @@ public class ReportPlan extends com.pulumi.resources.CustomResource {
      * @return A structure that contains information about where and how to deliver your reports, specifically your Amazon S3 bucket name, S3 key prefix, and the formats of your reports.
      * 
      */
-    public Output<ReportDeliveryChannelProperties> getReportDeliveryChannel() {
+    public Output<ReportDeliveryChannelProperties> reportDeliveryChannel() {
         return this.reportDeliveryChannel;
     }
     /**
@@ -47,7 +47,7 @@ public class ReportPlan extends com.pulumi.resources.CustomResource {
      * @return An Amazon Resource Name (ARN) that uniquely identifies a resource. The format of the ARN depends on the resource type.
      * 
      */
-    public Output<String> getReportPlanArn() {
+    public Output<String> reportPlanArn() {
         return this.reportPlanArn;
     }
     /**
@@ -61,7 +61,7 @@ public class ReportPlan extends com.pulumi.resources.CustomResource {
      * @return An optional description of the report plan with a maximum of 1,024 characters.
      * 
      */
-    public Output</* @Nullable */ String> getReportPlanDescription() {
+    public Output</* @Nullable */ String> reportPlanDescription() {
         return this.reportPlanDescription;
     }
     /**
@@ -75,7 +75,7 @@ public class ReportPlan extends com.pulumi.resources.CustomResource {
      * @return The unique name of the report plan. The name must be between 1 and 256 characters, starting with a letter, and consisting of letters (a-z, A-Z), numbers (0-9), and underscores (_).
      * 
      */
-    public Output</* @Nullable */ String> getReportPlanName() {
+    public Output</* @Nullable */ String> reportPlanName() {
         return this.reportPlanName;
     }
     /**
@@ -89,7 +89,7 @@ public class ReportPlan extends com.pulumi.resources.CustomResource {
      * @return Metadata that you can assign to help organize the report plans that you create. Each tag is a key-value pair.
      * 
      */
-    public Output</* @Nullable */ List<ReportPlanTag>> getReportPlanTags() {
+    public Output</* @Nullable */ List<ReportPlanTag>> reportPlanTags() {
         return this.reportPlanTags;
     }
     /**
@@ -103,7 +103,7 @@ public class ReportPlan extends com.pulumi.resources.CustomResource {
      * @return Identifies the report template for the report. Reports are built using a report template.
      * 
      */
-    public Output<ReportSettingProperties> getReportSetting() {
+    public Output<ReportSettingProperties> reportSetting() {
         return this.reportSetting;
     }
 

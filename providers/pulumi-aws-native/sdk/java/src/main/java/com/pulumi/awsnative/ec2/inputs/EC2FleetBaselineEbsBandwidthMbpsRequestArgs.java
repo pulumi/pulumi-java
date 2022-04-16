@@ -18,14 +18,14 @@ public final class EC2FleetBaselineEbsBandwidthMbpsRequestArgs extends com.pulum
     @Import(name="max")
       private final @Nullable Output<Integer> max;
 
-    public Output<Integer> getMax() {
+    public Output<Integer> max() {
         return this.max == null ? Codegen.empty() : this.max;
     }
 
     @Import(name="min")
       private final @Nullable Output<Integer> min;
 
-    public Output<Integer> getMin() {
+    public Output<Integer> min() {
         return this.min == null ? Codegen.empty() : this.min;
     }
 

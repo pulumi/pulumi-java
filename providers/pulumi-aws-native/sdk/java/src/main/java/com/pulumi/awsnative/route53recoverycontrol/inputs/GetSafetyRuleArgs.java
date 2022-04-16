@@ -19,7 +19,7 @@ public final class GetSafetyRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="safetyRuleArn", required=true)
       private final String safetyRuleArn;
 
-    public String getSafetyRuleArn() {
+    public String safetyRuleArn() {
         return this.safetyRuleArn;
     }
 

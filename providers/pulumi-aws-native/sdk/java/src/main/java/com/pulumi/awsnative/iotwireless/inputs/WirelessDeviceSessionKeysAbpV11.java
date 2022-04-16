@@ -15,28 +15,28 @@ public final class WirelessDeviceSessionKeysAbpV11 extends com.pulumi.resources.
     @Import(name="appSKey", required=true)
       private final String appSKey;
 
-    public String getAppSKey() {
+    public String appSKey() {
         return this.appSKey;
     }
 
     @Import(name="fNwkSIntKey", required=true)
       private final String fNwkSIntKey;
 
-    public String getFNwkSIntKey() {
+    public String fNwkSIntKey() {
         return this.fNwkSIntKey;
     }
 
     @Import(name="nwkSEncKey", required=true)
       private final String nwkSEncKey;
 
-    public String getNwkSEncKey() {
+    public String nwkSEncKey() {
         return this.nwkSEncKey;
     }
 
     @Import(name="sNwkSIntKey", required=true)
       private final String sNwkSIntKey;
 
-    public String getSNwkSIntKey() {
+    public String sNwkSIntKey() {
         return this.sNwkSIntKey;
     }
 

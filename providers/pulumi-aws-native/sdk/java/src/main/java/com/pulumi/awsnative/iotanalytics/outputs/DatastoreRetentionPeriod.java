@@ -23,10 +23,10 @@ public final class DatastoreRetentionPeriod {
         this.unlimited = unlimited;
     }
 
-    public Optional<Integer> getNumberOfDays() {
+    public Optional<Integer> numberOfDays() {
         return Optional.ofNullable(this.numberOfDays);
     }
-    public Optional<Boolean> getUnlimited() {
+    public Optional<Boolean> unlimited() {
         return Optional.ofNullable(this.unlimited);
     }
 

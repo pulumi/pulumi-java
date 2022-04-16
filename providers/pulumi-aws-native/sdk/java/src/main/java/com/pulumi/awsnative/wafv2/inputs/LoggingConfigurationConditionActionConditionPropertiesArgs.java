@@ -25,7 +25,7 @@ public final class LoggingConfigurationConditionActionConditionPropertiesArgs ex
     @Import(name="action", required=true)
       private final Output<LoggingConfigurationConditionActionConditionPropertiesAction> action;
 
-    public Output<LoggingConfigurationConditionActionConditionPropertiesAction> getAction() {
+    public Output<LoggingConfigurationConditionActionConditionPropertiesAction> action() {
         return this.action;
     }
 

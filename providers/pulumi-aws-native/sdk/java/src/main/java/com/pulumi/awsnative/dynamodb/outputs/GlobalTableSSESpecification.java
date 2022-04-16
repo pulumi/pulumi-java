@@ -23,10 +23,10 @@ public final class GlobalTableSSESpecification {
         this.sSEType = sSEType;
     }
 
-    public Boolean getSSEEnabled() {
+    public Boolean sSEEnabled() {
         return this.sSEEnabled;
     }
-    public Optional<String> getSSEType() {
+    public Optional<String> sSEType() {
         return Optional.ofNullable(this.sSEType);
     }
 

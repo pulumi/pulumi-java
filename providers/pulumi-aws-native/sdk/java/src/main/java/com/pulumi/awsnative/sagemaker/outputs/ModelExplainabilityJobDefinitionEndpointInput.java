@@ -63,49 +63,49 @@ public final class ModelExplainabilityJobDefinitionEndpointInput {
         this.s3InputMode = s3InputMode;
     }
 
-    public String getEndpointName() {
+    public String endpointName() {
         return this.endpointName;
     }
     /**
      * JSONpath to locate features in JSONlines dataset
      * 
     */
-    public Optional<String> getFeaturesAttribute() {
+    public Optional<String> featuresAttribute() {
         return Optional.ofNullable(this.featuresAttribute);
     }
     /**
      * Index or JSONpath to locate predicted label(s)
      * 
     */
-    public Optional<String> getInferenceAttribute() {
+    public Optional<String> inferenceAttribute() {
         return Optional.ofNullable(this.inferenceAttribute);
     }
     /**
      * Path to the filesystem where the endpoint data is available to the container.
      * 
     */
-    public String getLocalPath() {
+    public String localPath() {
         return this.localPath;
     }
     /**
      * Index or JSONpath to locate probabilities
      * 
     */
-    public Optional<String> getProbabilityAttribute() {
+    public Optional<String> probabilityAttribute() {
         return Optional.ofNullable(this.probabilityAttribute);
     }
     /**
      * Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key. Defauts to FullyReplicated
      * 
     */
-    public Optional<ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType> getS3DataDistributionType() {
+    public Optional<ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType() {
         return Optional.ofNullable(this.s3DataDistributionType);
     }
     /**
      * Whether the Pipe or File is used as the input mode for transfering data for the monitoring job. Pipe mode is recommended for large datasets. File mode is useful for small files that fit in memory. Defaults to File.
      * 
     */
-    public Optional<ModelExplainabilityJobDefinitionEndpointInputS3InputMode> getS3InputMode() {
+    public Optional<ModelExplainabilityJobDefinitionEndpointInputS3InputMode> s3InputMode() {
         return Optional.ofNullable(this.s3InputMode);
     }
 

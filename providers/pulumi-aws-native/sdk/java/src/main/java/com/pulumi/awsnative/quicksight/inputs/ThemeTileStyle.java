@@ -21,7 +21,7 @@ public final class ThemeTileStyle extends com.pulumi.resources.InvokeArgs {
     @Import(name="border")
       private final @Nullable ThemeBorderStyle border;
 
-    public Optional<ThemeBorderStyle> getBorder() {
+    public Optional<ThemeBorderStyle> border() {
         return this.border == null ? Optional.empty() : Optional.ofNullable(this.border);
     }
 

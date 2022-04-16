@@ -18,7 +18,7 @@ public final class FunctionMetadataArgs extends com.pulumi.resources.ResourceArg
     @Import(name="functionARN")
       private final @Nullable Output<String> functionARN;
 
-    public Output<String> getFunctionARN() {
+    public Output<String> functionARN() {
         return this.functionARN == null ? Codegen.empty() : this.functionARN;
     }
 

@@ -20,10 +20,10 @@ public final class TopicRuleTimestreamTimestamp {
         this.value = value;
     }
 
-    public String getUnit() {
+    public String unit() {
         return this.unit;
     }
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

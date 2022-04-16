@@ -26,13 +26,13 @@ public final class IntegrationSalesforceSourceProperties {
         this.object = object;
     }
 
-    public Optional<Boolean> getEnableDynamicFieldUpdate() {
+    public Optional<Boolean> enableDynamicFieldUpdate() {
         return Optional.ofNullable(this.enableDynamicFieldUpdate);
     }
-    public Optional<Boolean> getIncludeDeletedRecords() {
+    public Optional<Boolean> includeDeletedRecords() {
         return Optional.ofNullable(this.includeDeletedRecords);
     }
-    public String getObject() {
+    public String object() {
         return this.object;
     }
 

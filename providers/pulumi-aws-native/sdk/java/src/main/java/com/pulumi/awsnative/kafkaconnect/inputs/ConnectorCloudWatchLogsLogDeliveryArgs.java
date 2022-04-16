@@ -27,7 +27,7 @@ public final class ConnectorCloudWatchLogsLogDeliveryArgs extends com.pulumi.res
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -38,7 +38,7 @@ public final class ConnectorCloudWatchLogsLogDeliveryArgs extends com.pulumi.res
     @Import(name="logGroup")
       private final @Nullable Output<String> logGroup;
 
-    public Output<String> getLogGroup() {
+    public Output<String> logGroup() {
         return this.logGroup == null ? Codegen.empty() : this.logGroup;
     }
 

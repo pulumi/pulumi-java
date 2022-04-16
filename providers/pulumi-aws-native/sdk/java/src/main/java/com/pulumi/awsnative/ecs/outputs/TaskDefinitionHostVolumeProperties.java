@@ -18,7 +18,7 @@ public final class TaskDefinitionHostVolumeProperties {
         this.sourcePath = sourcePath;
     }
 
-    public Optional<String> getSourcePath() {
+    public Optional<String> sourcePath() {
         return Optional.ofNullable(this.sourcePath);
     }
 

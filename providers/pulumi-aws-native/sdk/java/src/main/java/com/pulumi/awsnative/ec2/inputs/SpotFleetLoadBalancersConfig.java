@@ -18,14 +18,14 @@ public final class SpotFleetLoadBalancersConfig extends com.pulumi.resources.Inv
     @Import(name="classicLoadBalancersConfig")
       private final @Nullable SpotFleetClassicLoadBalancersConfig classicLoadBalancersConfig;
 
-    public Optional<SpotFleetClassicLoadBalancersConfig> getClassicLoadBalancersConfig() {
+    public Optional<SpotFleetClassicLoadBalancersConfig> classicLoadBalancersConfig() {
         return this.classicLoadBalancersConfig == null ? Optional.empty() : Optional.ofNullable(this.classicLoadBalancersConfig);
     }
 
     @Import(name="targetGroupsConfig")
       private final @Nullable SpotFleetTargetGroupsConfig targetGroupsConfig;
 
-    public Optional<SpotFleetTargetGroupsConfig> getTargetGroupsConfig() {
+    public Optional<SpotFleetTargetGroupsConfig> targetGroupsConfig() {
         return this.targetGroupsConfig == null ? Optional.empty() : Optional.ofNullable(this.targetGroupsConfig);
     }
 

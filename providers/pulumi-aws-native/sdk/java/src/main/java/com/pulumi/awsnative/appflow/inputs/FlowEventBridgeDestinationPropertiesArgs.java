@@ -19,14 +19,14 @@ public final class FlowEventBridgeDestinationPropertiesArgs extends com.pulumi.r
     @Import(name="errorHandlingConfig")
       private final @Nullable Output<FlowErrorHandlingConfigArgs> errorHandlingConfig;
 
-    public Output<FlowErrorHandlingConfigArgs> getErrorHandlingConfig() {
+    public Output<FlowErrorHandlingConfigArgs> errorHandlingConfig() {
         return this.errorHandlingConfig == null ? Codegen.empty() : this.errorHandlingConfig;
     }
 
     @Import(name="object", required=true)
       private final Output<String> object;
 
-    public Output<String> getObject() {
+    public Output<String> object() {
         return this.object;
     }
 

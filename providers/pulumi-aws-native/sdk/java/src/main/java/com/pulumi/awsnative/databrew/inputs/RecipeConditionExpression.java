@@ -25,7 +25,7 @@ public final class RecipeConditionExpression extends com.pulumi.resources.Invoke
     @Import(name="condition", required=true)
       private final String condition;
 
-    public String getCondition() {
+    public String condition() {
         return this.condition;
     }
 
@@ -36,7 +36,7 @@ public final class RecipeConditionExpression extends com.pulumi.resources.Invoke
     @Import(name="targetColumn", required=true)
       private final String targetColumn;
 
-    public String getTargetColumn() {
+    public String targetColumn() {
         return this.targetColumn;
     }
 
@@ -47,7 +47,7 @@ public final class RecipeConditionExpression extends com.pulumi.resources.Invoke
     @Import(name="value")
       private final @Nullable String value;
 
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

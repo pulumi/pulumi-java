@@ -21,14 +21,14 @@ public final class GameServerGroupInstanceDefinition extends com.pulumi.resource
     @Import(name="instanceType", required=true)
       private final String instanceType;
 
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
 
     @Import(name="weightedCapacity")
       private final @Nullable String weightedCapacity;
 
-    public Optional<String> getWeightedCapacity() {
+    public Optional<String> weightedCapacity() {
         return this.weightedCapacity == null ? Optional.empty() : Optional.ofNullable(this.weightedCapacity);
     }
 

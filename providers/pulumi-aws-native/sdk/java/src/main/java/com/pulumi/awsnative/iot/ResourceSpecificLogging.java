@@ -31,7 +31,7 @@ public class ResourceSpecificLogging extends com.pulumi.resources.CustomResource
      * @return The log level for a specific target. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
      * 
      */
-    public Output<ResourceSpecificLoggingLogLevel> getLogLevel() {
+    public Output<ResourceSpecificLoggingLogLevel> logLevel() {
         return this.logLevel;
     }
     /**
@@ -45,7 +45,7 @@ public class ResourceSpecificLogging extends com.pulumi.resources.CustomResource
      * @return Unique Id for a Target (TargetType:TargetName), this will be internally built to serve as primary identifier for a log target.
      * 
      */
-    public Output<String> getTargetId() {
+    public Output<String> targetId() {
         return this.targetId;
     }
     /**
@@ -59,7 +59,7 @@ public class ResourceSpecificLogging extends com.pulumi.resources.CustomResource
      * @return The target name.
      * 
      */
-    public Output<String> getTargetName() {
+    public Output<String> targetName() {
         return this.targetName;
     }
     /**
@@ -73,7 +73,7 @@ public class ResourceSpecificLogging extends com.pulumi.resources.CustomResource
      * @return The target type. Value must be THING_GROUP.
      * 
      */
-    public Output<ResourceSpecificLoggingTargetType> getTargetType() {
+    public Output<ResourceSpecificLoggingTargetType> targetType() {
         return this.targetType;
     }
 

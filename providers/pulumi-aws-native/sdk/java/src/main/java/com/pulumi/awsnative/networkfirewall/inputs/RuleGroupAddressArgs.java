@@ -17,7 +17,7 @@ public final class RuleGroupAddressArgs extends com.pulumi.resources.ResourceArg
     @Import(name="addressDefinition", required=true)
       private final Output<String> addressDefinition;
 
-    public Output<String> getAddressDefinition() {
+    public Output<String> addressDefinition() {
         return this.addressDefinition;
     }
 

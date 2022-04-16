@@ -15,7 +15,7 @@ public final class GetServerCertificateArgs extends com.pulumi.resources.InvokeA
     @Import(name="serverCertificateName", required=true)
       private final String serverCertificateName;
 
-    public String getServerCertificateName() {
+    public String serverCertificateName() {
         return this.serverCertificateName;
     }
 

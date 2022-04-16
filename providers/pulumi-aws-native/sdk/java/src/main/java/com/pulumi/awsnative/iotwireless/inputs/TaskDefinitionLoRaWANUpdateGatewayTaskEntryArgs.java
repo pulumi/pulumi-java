@@ -18,14 +18,14 @@ public final class TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs extends com.p
     @Import(name="currentVersion")
       private final @Nullable Output<TaskDefinitionLoRaWANGatewayVersionArgs> currentVersion;
 
-    public Output<TaskDefinitionLoRaWANGatewayVersionArgs> getCurrentVersion() {
+    public Output<TaskDefinitionLoRaWANGatewayVersionArgs> currentVersion() {
         return this.currentVersion == null ? Codegen.empty() : this.currentVersion;
     }
 
     @Import(name="updateVersion")
       private final @Nullable Output<TaskDefinitionLoRaWANGatewayVersionArgs> updateVersion;
 
-    public Output<TaskDefinitionLoRaWANGatewayVersionArgs> getUpdateVersion() {
+    public Output<TaskDefinitionLoRaWANGatewayVersionArgs> updateVersion() {
         return this.updateVersion == null ? Codegen.empty() : this.updateVersion;
     }
 

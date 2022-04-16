@@ -30,7 +30,7 @@ public class LifecycleHook extends com.pulumi.resources.CustomResource {
      * @return The name of the Auto Scaling group for the lifecycle hook.
      * 
      */
-    public Output<String> getAutoScalingGroupName() {
+    public Output<String> autoScalingGroupName() {
         return this.autoScalingGroupName;
     }
     /**
@@ -44,7 +44,7 @@ public class LifecycleHook extends com.pulumi.resources.CustomResource {
      * @return The action the Auto Scaling group takes when the lifecycle hook timeout elapses or if an unexpected failure occurs. The valid values are CONTINUE and ABANDON (default).
      * 
      */
-    public Output</* @Nullable */ String> getDefaultResult() {
+    public Output</* @Nullable */ String> defaultResult() {
         return this.defaultResult;
     }
     /**
@@ -58,7 +58,7 @@ public class LifecycleHook extends com.pulumi.resources.CustomResource {
      * @return The maximum time, in seconds, that can elapse before the lifecycle hook times out. The range is from 30 to 7200 seconds. The default value is 3600 seconds (1 hour). If the lifecycle hook times out, Amazon EC2 Auto Scaling performs the action that you specified in the DefaultResult property.
      * 
      */
-    public Output</* @Nullable */ Integer> getHeartbeatTimeout() {
+    public Output</* @Nullable */ Integer> heartbeatTimeout() {
         return this.heartbeatTimeout;
     }
     /**
@@ -72,7 +72,7 @@ public class LifecycleHook extends com.pulumi.resources.CustomResource {
      * @return The name of the lifecycle hook.
      * 
      */
-    public Output</* @Nullable */ String> getLifecycleHookName() {
+    public Output</* @Nullable */ String> lifecycleHookName() {
         return this.lifecycleHookName;
     }
     /**
@@ -86,7 +86,7 @@ public class LifecycleHook extends com.pulumi.resources.CustomResource {
      * @return The instance state to which you want to attach the lifecycle hook.
      * 
      */
-    public Output<String> getLifecycleTransition() {
+    public Output<String> lifecycleTransition() {
         return this.lifecycleTransition;
     }
     /**
@@ -100,7 +100,7 @@ public class LifecycleHook extends com.pulumi.resources.CustomResource {
      * @return Additional information that is included any time Amazon EC2 Auto Scaling sends a message to the notification target.
      * 
      */
-    public Output</* @Nullable */ String> getNotificationMetadata() {
+    public Output</* @Nullable */ String> notificationMetadata() {
         return this.notificationMetadata;
     }
     /**
@@ -114,7 +114,7 @@ public class LifecycleHook extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the notification target that Amazon EC2 Auto Scaling uses to notify you when an instance is in the transition state for the lifecycle hook. You can specify an Amazon SQS queue or an Amazon SNS topic. The notification message includes the following information: lifecycle action token, user account ID, Auto Scaling group name, lifecycle hook name, instance ID, lifecycle transition, and notification metadata.
      * 
      */
-    public Output</* @Nullable */ String> getNotificationTargetARN() {
+    public Output</* @Nullable */ String> notificationTargetARN() {
         return this.notificationTargetARN;
     }
     /**
@@ -128,7 +128,7 @@ public class LifecycleHook extends com.pulumi.resources.CustomResource {
      * @return The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target, for example, an Amazon SNS topic or an Amazon SQS queue.
      * 
      */
-    public Output</* @Nullable */ String> getRoleARN() {
+    public Output</* @Nullable */ String> roleARN() {
         return this.roleARN;
     }
 

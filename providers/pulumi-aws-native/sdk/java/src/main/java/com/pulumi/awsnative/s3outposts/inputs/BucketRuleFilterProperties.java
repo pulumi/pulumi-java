@@ -27,7 +27,7 @@ public final class BucketRuleFilterProperties extends com.pulumi.resources.Invok
     @Import(name="andOperator")
       private final @Nullable BucketFilterAndOperator andOperator;
 
-    public Optional<BucketFilterAndOperator> getAndOperator() {
+    public Optional<BucketFilterAndOperator> andOperator() {
         return this.andOperator == null ? Optional.empty() : Optional.ofNullable(this.andOperator);
     }
 
@@ -38,7 +38,7 @@ public final class BucketRuleFilterProperties extends com.pulumi.resources.Invok
     @Import(name="prefix")
       private final @Nullable String prefix;
 
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
     }
 
@@ -49,7 +49,7 @@ public final class BucketRuleFilterProperties extends com.pulumi.resources.Invok
     @Import(name="tag")
       private final @Nullable BucketFilterTag tag;
 
-    public Optional<BucketFilterTag> getTag() {
+    public Optional<BucketFilterTag> tag() {
         return this.tag == null ? Optional.empty() : Optional.ofNullable(this.tag);
     }
 

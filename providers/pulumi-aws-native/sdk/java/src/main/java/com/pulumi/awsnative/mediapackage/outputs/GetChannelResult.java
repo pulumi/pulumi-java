@@ -57,35 +57,35 @@ public final class GetChannelResult {
      * The Amazon Resource Name (ARN) assigned to the Channel.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * A short text description of the Channel.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The configuration parameters for egress access logging.
      * 
     */
-    public Optional<ChannelLogConfiguration> getEgressAccessLogs() {
+    public Optional<ChannelLogConfiguration> egressAccessLogs() {
         return Optional.ofNullable(this.egressAccessLogs);
     }
     /**
      * A short text description of the Channel.
      * 
     */
-    public Optional<ChannelHlsIngest> getHlsIngest() {
+    public Optional<ChannelHlsIngest> hlsIngest() {
         return Optional.ofNullable(this.hlsIngest);
     }
     /**
      * The configuration parameters for egress access logging.
      * 
     */
-    public Optional<ChannelLogConfiguration> getIngressAccessLogs() {
+    public Optional<ChannelLogConfiguration> ingressAccessLogs() {
         return Optional.ofNullable(this.ingressAccessLogs);
     }
 

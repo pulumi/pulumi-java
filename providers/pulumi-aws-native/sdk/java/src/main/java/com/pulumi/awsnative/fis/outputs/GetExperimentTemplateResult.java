@@ -38,22 +38,22 @@ public final class GetExperimentTemplateResult {
         this.targets = targets;
     }
 
-    public Optional<ExperimentTemplateActionMap> getActions() {
+    public Optional<ExperimentTemplateActionMap> actions() {
         return Optional.ofNullable(this.actions);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
-    public List<ExperimentTemplateStopCondition> getStopConditions() {
+    public List<ExperimentTemplateStopCondition> stopConditions() {
         return this.stopConditions == null ? List.of() : this.stopConditions;
     }
-    public Optional<ExperimentTemplateTargetMap> getTargets() {
+    public Optional<ExperimentTemplateTargetMap> targets() {
         return Optional.ofNullable(this.targets);
     }
 

@@ -41,28 +41,28 @@ public final class ListenerAuthenticateCognitoConfig {
         this.userPoolDomain = userPoolDomain;
     }
 
-    public Optional<Object> getAuthenticationRequestExtraParams() {
+    public Optional<Object> authenticationRequestExtraParams() {
         return Optional.ofNullable(this.authenticationRequestExtraParams);
     }
-    public Optional<String> getOnUnauthenticatedRequest() {
+    public Optional<String> onUnauthenticatedRequest() {
         return Optional.ofNullable(this.onUnauthenticatedRequest);
     }
-    public Optional<String> getScope() {
+    public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }
-    public Optional<String> getSessionCookieName() {
+    public Optional<String> sessionCookieName() {
         return Optional.ofNullable(this.sessionCookieName);
     }
-    public Optional<String> getSessionTimeout() {
+    public Optional<String> sessionTimeout() {
         return Optional.ofNullable(this.sessionTimeout);
     }
-    public String getUserPoolArn() {
+    public String userPoolArn() {
         return this.userPoolArn;
     }
-    public String getUserPoolClientId() {
+    public String userPoolClientId() {
         return this.userPoolClientId;
     }
-    public String getUserPoolDomain() {
+    public String userPoolDomain() {
         return this.userPoolDomain;
     }
 

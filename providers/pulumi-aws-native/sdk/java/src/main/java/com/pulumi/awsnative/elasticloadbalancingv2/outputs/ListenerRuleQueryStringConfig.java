@@ -18,7 +18,7 @@ public final class ListenerRuleQueryStringConfig {
         this.values = values;
     }
 
-    public List<ListenerRuleQueryStringKeyValue> getValues() {
+    public List<ListenerRuleQueryStringKeyValue> values() {
         return this.values == null ? List.of() : this.values;
     }
 

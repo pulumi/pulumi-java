@@ -26,19 +26,19 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
     @Export(name="pipelineActivities", type=List.class, parameters={PipelineActivity.class})
     private Output<List<PipelineActivity>> pipelineActivities;
 
-    public Output<List<PipelineActivity>> getPipelineActivities() {
+    public Output<List<PipelineActivity>> pipelineActivities() {
         return this.pipelineActivities;
     }
     @Export(name="pipelineName", type=String.class, parameters={})
     private Output</* @Nullable */ String> pipelineName;
 
-    public Output</* @Nullable */ String> getPipelineName() {
+    public Output</* @Nullable */ String> pipelineName() {
         return this.pipelineName;
     }
     @Export(name="tags", type=List.class, parameters={PipelineTag.class})
     private Output</* @Nullable */ List<PipelineTag>> tags;
 
-    public Output</* @Nullable */ List<PipelineTag>> getTags() {
+    public Output</* @Nullable */ List<PipelineTag>> tags() {
         return this.tags;
     }
 

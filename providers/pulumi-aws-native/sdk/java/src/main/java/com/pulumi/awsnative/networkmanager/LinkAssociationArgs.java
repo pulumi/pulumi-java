@@ -21,7 +21,7 @@ public final class LinkAssociationArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="deviceId", required=true)
       private final Output<String> deviceId;
 
-    public Output<String> getDeviceId() {
+    public Output<String> deviceId() {
         return this.deviceId;
     }
 
@@ -32,7 +32,7 @@ public final class LinkAssociationArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="globalNetworkId", required=true)
       private final Output<String> globalNetworkId;
 
-    public Output<String> getGlobalNetworkId() {
+    public Output<String> globalNetworkId() {
         return this.globalNetworkId;
     }
 
@@ -43,7 +43,7 @@ public final class LinkAssociationArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="linkId", required=true)
       private final Output<String> linkId;
 
-    public Output<String> getLinkId() {
+    public Output<String> linkId() {
         return this.linkId;
     }
 

@@ -15,7 +15,7 @@ public final class GetResourceDataSyncArgs extends com.pulumi.resources.InvokeAr
     @Import(name="syncName", required=true)
       private final String syncName;
 
-    public String getSyncName() {
+    public String syncName() {
         return this.syncName;
     }
 

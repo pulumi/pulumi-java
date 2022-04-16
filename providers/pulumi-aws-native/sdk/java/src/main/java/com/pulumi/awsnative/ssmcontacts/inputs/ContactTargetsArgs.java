@@ -23,14 +23,14 @@ public final class ContactTargetsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="channelTargetInfo")
       private final @Nullable Output<ContactChannelTargetInfoArgs> channelTargetInfo;
 
-    public Output<ContactChannelTargetInfoArgs> getChannelTargetInfo() {
+    public Output<ContactChannelTargetInfoArgs> channelTargetInfo() {
         return this.channelTargetInfo == null ? Codegen.empty() : this.channelTargetInfo;
     }
 
     @Import(name="contactTargetInfo")
       private final @Nullable Output<ContactTargetInfoArgs> contactTargetInfo;
 
-    public Output<ContactTargetInfoArgs> getContactTargetInfo() {
+    public Output<ContactTargetInfoArgs> contactTargetInfo() {
         return this.contactTargetInfo == null ? Codegen.empty() : this.contactTargetInfo;
     }
 

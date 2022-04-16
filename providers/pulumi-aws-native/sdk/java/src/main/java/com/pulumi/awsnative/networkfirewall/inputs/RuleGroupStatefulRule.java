@@ -18,21 +18,21 @@ public final class RuleGroupStatefulRule extends com.pulumi.resources.InvokeArgs
     @Import(name="action", required=true)
       private final RuleGroupStatefulRuleAction action;
 
-    public RuleGroupStatefulRuleAction getAction() {
+    public RuleGroupStatefulRuleAction action() {
         return this.action;
     }
 
     @Import(name="header", required=true)
       private final RuleGroupHeader header;
 
-    public RuleGroupHeader getHeader() {
+    public RuleGroupHeader header() {
         return this.header;
     }
 
     @Import(name="ruleOptions", required=true)
       private final List<RuleGroupRuleOption> ruleOptions;
 
-    public List<RuleGroupRuleOption> getRuleOptions() {
+    public List<RuleGroupRuleOption> ruleOptions() {
         return this.ruleOptions;
     }
 

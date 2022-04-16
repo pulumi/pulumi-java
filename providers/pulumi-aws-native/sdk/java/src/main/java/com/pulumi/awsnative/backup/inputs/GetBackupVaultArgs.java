@@ -15,7 +15,7 @@ public final class GetBackupVaultArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="backupVaultName", required=true)
       private final String backupVaultName;
 
-    public String getBackupVaultName() {
+    public String backupVaultName() {
         return this.backupVaultName;
     }
 

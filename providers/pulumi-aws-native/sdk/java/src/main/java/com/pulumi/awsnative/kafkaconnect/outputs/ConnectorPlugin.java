@@ -16,7 +16,7 @@ public final class ConnectorPlugin {
         this.customPlugin = customPlugin;
     }
 
-    public ConnectorCustomPlugin getCustomPlugin() {
+    public ConnectorCustomPlugin customPlugin() {
         return this.customPlugin;
     }
 

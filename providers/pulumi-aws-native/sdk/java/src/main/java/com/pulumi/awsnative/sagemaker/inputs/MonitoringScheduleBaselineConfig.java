@@ -22,14 +22,14 @@ public final class MonitoringScheduleBaselineConfig extends com.pulumi.resources
     @Import(name="constraintsResource")
       private final @Nullable MonitoringScheduleConstraintsResource constraintsResource;
 
-    public Optional<MonitoringScheduleConstraintsResource> getConstraintsResource() {
+    public Optional<MonitoringScheduleConstraintsResource> constraintsResource() {
         return this.constraintsResource == null ? Optional.empty() : Optional.ofNullable(this.constraintsResource);
     }
 
     @Import(name="statisticsResource")
       private final @Nullable MonitoringScheduleStatisticsResource statisticsResource;
 
-    public Optional<MonitoringScheduleStatisticsResource> getStatisticsResource() {
+    public Optional<MonitoringScheduleStatisticsResource> statisticsResource() {
         return this.statisticsResource == null ? Optional.empty() : Optional.ofNullable(this.statisticsResource);
     }
 

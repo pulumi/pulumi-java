@@ -21,7 +21,7 @@ public final class DomainJupyterServerAppSettings extends com.pulumi.resources.I
     @Import(name="defaultResourceSpec")
       private final @Nullable DomainResourceSpec defaultResourceSpec;
 
-    public Optional<DomainResourceSpec> getDefaultResourceSpec() {
+    public Optional<DomainResourceSpec> defaultResourceSpec() {
         return this.defaultResourceSpec == null ? Optional.empty() : Optional.ofNullable(this.defaultResourceSpec);
     }
 

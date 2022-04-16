@@ -20,35 +20,35 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cACertificatePem")
       private final @Nullable Output<String> cACertificatePem;
 
-    public Output<String> getCACertificatePem() {
+    public Output<String> cACertificatePem() {
         return this.cACertificatePem == null ? Codegen.empty() : this.cACertificatePem;
     }
 
     @Import(name="certificateMode")
       private final @Nullable Output<CertificateMode> certificateMode;
 
-    public Output<CertificateMode> getCertificateMode() {
+    public Output<CertificateMode> certificateMode() {
         return this.certificateMode == null ? Codegen.empty() : this.certificateMode;
     }
 
     @Import(name="certificatePem")
       private final @Nullable Output<String> certificatePem;
 
-    public Output<String> getCertificatePem() {
+    public Output<String> certificatePem() {
         return this.certificatePem == null ? Codegen.empty() : this.certificatePem;
     }
 
     @Import(name="certificateSigningRequest")
       private final @Nullable Output<String> certificateSigningRequest;
 
-    public Output<String> getCertificateSigningRequest() {
+    public Output<String> certificateSigningRequest() {
         return this.certificateSigningRequest == null ? Codegen.empty() : this.certificateSigningRequest;
     }
 
     @Import(name="status", required=true)
       private final Output<CertificateStatus> status;
 
-    public Output<CertificateStatus> getStatus() {
+    public Output<CertificateStatus> status() {
         return this.status;
     }
 

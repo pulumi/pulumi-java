@@ -27,91 +27,91 @@ public final class DeliveryStreamExtendedS3DestinationConfigurationArgs extends 
     @Import(name="bucketARN", required=true)
       private final Output<String> bucketARN;
 
-    public Output<String> getBucketARN() {
+    public Output<String> bucketARN() {
         return this.bucketARN;
     }
 
     @Import(name="bufferingHints")
       private final @Nullable Output<DeliveryStreamBufferingHintsArgs> bufferingHints;
 
-    public Output<DeliveryStreamBufferingHintsArgs> getBufferingHints() {
+    public Output<DeliveryStreamBufferingHintsArgs> bufferingHints() {
         return this.bufferingHints == null ? Codegen.empty() : this.bufferingHints;
     }
 
     @Import(name="cloudWatchLoggingOptions")
       private final @Nullable Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions;
 
-    public Output<DeliveryStreamCloudWatchLoggingOptionsArgs> getCloudWatchLoggingOptions() {
+    public Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions() {
         return this.cloudWatchLoggingOptions == null ? Codegen.empty() : this.cloudWatchLoggingOptions;
     }
 
     @Import(name="compressionFormat")
       private final @Nullable Output<DeliveryStreamExtendedS3DestinationConfigurationCompressionFormat> compressionFormat;
 
-    public Output<DeliveryStreamExtendedS3DestinationConfigurationCompressionFormat> getCompressionFormat() {
+    public Output<DeliveryStreamExtendedS3DestinationConfigurationCompressionFormat> compressionFormat() {
         return this.compressionFormat == null ? Codegen.empty() : this.compressionFormat;
     }
 
     @Import(name="dataFormatConversionConfiguration")
       private final @Nullable Output<DeliveryStreamDataFormatConversionConfigurationArgs> dataFormatConversionConfiguration;
 
-    public Output<DeliveryStreamDataFormatConversionConfigurationArgs> getDataFormatConversionConfiguration() {
+    public Output<DeliveryStreamDataFormatConversionConfigurationArgs> dataFormatConversionConfiguration() {
         return this.dataFormatConversionConfiguration == null ? Codegen.empty() : this.dataFormatConversionConfiguration;
     }
 
     @Import(name="dynamicPartitioningConfiguration")
       private final @Nullable Output<DeliveryStreamDynamicPartitioningConfigurationArgs> dynamicPartitioningConfiguration;
 
-    public Output<DeliveryStreamDynamicPartitioningConfigurationArgs> getDynamicPartitioningConfiguration() {
+    public Output<DeliveryStreamDynamicPartitioningConfigurationArgs> dynamicPartitioningConfiguration() {
         return this.dynamicPartitioningConfiguration == null ? Codegen.empty() : this.dynamicPartitioningConfiguration;
     }
 
     @Import(name="encryptionConfiguration")
       private final @Nullable Output<DeliveryStreamEncryptionConfigurationArgs> encryptionConfiguration;
 
-    public Output<DeliveryStreamEncryptionConfigurationArgs> getEncryptionConfiguration() {
+    public Output<DeliveryStreamEncryptionConfigurationArgs> encryptionConfiguration() {
         return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
     }
 
     @Import(name="errorOutputPrefix")
       private final @Nullable Output<String> errorOutputPrefix;
 
-    public Output<String> getErrorOutputPrefix() {
+    public Output<String> errorOutputPrefix() {
         return this.errorOutputPrefix == null ? Codegen.empty() : this.errorOutputPrefix;
     }
 
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     @Import(name="processingConfiguration")
       private final @Nullable Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration;
 
-    public Output<DeliveryStreamProcessingConfigurationArgs> getProcessingConfiguration() {
+    public Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration() {
         return this.processingConfiguration == null ? Codegen.empty() : this.processingConfiguration;
     }
 
     @Import(name="roleARN", required=true)
       private final Output<String> roleARN;
 
-    public Output<String> getRoleARN() {
+    public Output<String> roleARN() {
         return this.roleARN;
     }
 
     @Import(name="s3BackupConfiguration")
       private final @Nullable Output<DeliveryStreamS3DestinationConfigurationArgs> s3BackupConfiguration;
 
-    public Output<DeliveryStreamS3DestinationConfigurationArgs> getS3BackupConfiguration() {
+    public Output<DeliveryStreamS3DestinationConfigurationArgs> s3BackupConfiguration() {
         return this.s3BackupConfiguration == null ? Codegen.empty() : this.s3BackupConfiguration;
     }
 
     @Import(name="s3BackupMode")
       private final @Nullable Output<DeliveryStreamExtendedS3DestinationConfigurationS3BackupMode> s3BackupMode;
 
-    public Output<DeliveryStreamExtendedS3DestinationConfigurationS3BackupMode> getS3BackupMode() {
+    public Output<DeliveryStreamExtendedS3DestinationConfigurationS3BackupMode> s3BackupMode() {
         return this.s3BackupMode == null ? Codegen.empty() : this.s3BackupMode;
     }
 

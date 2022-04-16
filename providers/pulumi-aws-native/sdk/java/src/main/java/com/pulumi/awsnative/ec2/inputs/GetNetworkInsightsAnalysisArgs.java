@@ -15,7 +15,7 @@ public final class GetNetworkInsightsAnalysisArgs extends com.pulumi.resources.I
     @Import(name="networkInsightsAnalysisId", required=true)
       private final String networkInsightsAnalysisId;
 
-    public String getNetworkInsightsAnalysisId() {
+    public String networkInsightsAnalysisId() {
         return this.networkInsightsAnalysisId;
     }
 

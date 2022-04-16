@@ -17,7 +17,7 @@ public final class FirewallPolicyActionDefinition extends com.pulumi.resources.I
     @Import(name="publishMetricAction")
       private final @Nullable FirewallPolicyPublishMetricAction publishMetricAction;
 
-    public Optional<FirewallPolicyPublishMetricAction> getPublishMetricAction() {
+    public Optional<FirewallPolicyPublishMetricAction> publishMetricAction() {
         return this.publishMetricAction == null ? Optional.empty() : Optional.ofNullable(this.publishMetricAction);
     }
 

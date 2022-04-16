@@ -26,7 +26,7 @@ public final class EventSourceMappingFilter {
      * The filter pattern that defines which events should be passed for invocations.
      * 
     */
-    public Optional<String> getPattern() {
+    public Optional<String> pattern() {
         return Optional.ofNullable(this.pattern);
     }
 

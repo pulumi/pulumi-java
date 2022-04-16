@@ -18,7 +18,7 @@ public final class StateMachineCloudWatchLogsLogGroup {
         this.logGroupArn = logGroupArn;
     }
 
-    public Optional<String> getLogGroupArn() {
+    public Optional<String> logGroupArn() {
         return Optional.ofNullable(this.logGroupArn);
     }
 

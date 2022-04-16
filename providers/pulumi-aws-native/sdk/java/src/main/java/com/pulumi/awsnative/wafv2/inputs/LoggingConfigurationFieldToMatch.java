@@ -27,7 +27,7 @@ public final class LoggingConfigurationFieldToMatch extends com.pulumi.resources
     @Import(name="jsonBody")
       private final @Nullable LoggingConfigurationFieldToMatchJsonBodyProperties jsonBody;
 
-    public Optional<LoggingConfigurationFieldToMatchJsonBodyProperties> getJsonBody() {
+    public Optional<LoggingConfigurationFieldToMatchJsonBodyProperties> jsonBody() {
         return this.jsonBody == null ? Optional.empty() : Optional.ofNullable(this.jsonBody);
     }
 
@@ -38,7 +38,7 @@ public final class LoggingConfigurationFieldToMatch extends com.pulumi.resources
     @Import(name="method")
       private final @Nullable Object method;
 
-    public Optional<Object> getMethod() {
+    public Optional<Object> method() {
         return this.method == null ? Optional.empty() : Optional.ofNullable(this.method);
     }
 
@@ -49,7 +49,7 @@ public final class LoggingConfigurationFieldToMatch extends com.pulumi.resources
     @Import(name="queryString")
       private final @Nullable Object queryString;
 
-    public Optional<Object> getQueryString() {
+    public Optional<Object> queryString() {
         return this.queryString == null ? Optional.empty() : Optional.ofNullable(this.queryString);
     }
 
@@ -60,7 +60,7 @@ public final class LoggingConfigurationFieldToMatch extends com.pulumi.resources
     @Import(name="singleHeader")
       private final @Nullable LoggingConfigurationFieldToMatchSingleHeaderProperties singleHeader;
 
-    public Optional<LoggingConfigurationFieldToMatchSingleHeaderProperties> getSingleHeader() {
+    public Optional<LoggingConfigurationFieldToMatchSingleHeaderProperties> singleHeader() {
         return this.singleHeader == null ? Optional.empty() : Optional.ofNullable(this.singleHeader);
     }
 
@@ -71,7 +71,7 @@ public final class LoggingConfigurationFieldToMatch extends com.pulumi.resources
     @Import(name="uriPath")
       private final @Nullable Object uriPath;
 
-    public Optional<Object> getUriPath() {
+    public Optional<Object> uriPath() {
         return this.uriPath == null ? Optional.empty() : Optional.ofNullable(this.uriPath);
     }
 

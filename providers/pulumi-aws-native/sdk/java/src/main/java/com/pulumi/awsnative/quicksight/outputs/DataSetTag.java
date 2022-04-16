@@ -32,14 +32,14 @@ public final class DataSetTag {
      * <p>Tag key.</p>
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * <p>Tag value.</p>
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

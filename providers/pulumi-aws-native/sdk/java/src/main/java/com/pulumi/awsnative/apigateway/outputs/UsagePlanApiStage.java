@@ -42,21 +42,21 @@ public final class UsagePlanApiStage {
      * The ID of an API that is in the specified Stage property that you want to associate with the usage plan.
      * 
     */
-    public Optional<String> getApiId() {
+    public Optional<String> apiId() {
         return Optional.ofNullable(this.apiId);
     }
     /**
      * The name of the stage to associate with the usage plan.
      * 
     */
-    public Optional<String> getStage() {
+    public Optional<String> stage() {
         return Optional.ofNullable(this.stage);
     }
     /**
      * Map containing method-level throttling information for an API stage in a usage plan. The key for the map is the path and method for which to configure custom throttling, for example, '/pets/GET'. Duplicates are not allowed.
      * 
     */
-    public Optional<Object> getThrottle() {
+    public Optional<Object> throttle() {
         return Optional.ofNullable(this.throttle);
     }
 

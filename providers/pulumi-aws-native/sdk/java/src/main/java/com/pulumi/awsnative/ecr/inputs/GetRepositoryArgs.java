@@ -19,7 +19,7 @@ public final class GetRepositoryArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="repositoryName", required=true)
       private final String repositoryName;
 
-    public String getRepositoryName() {
+    public String repositoryName() {
         return this.repositoryName;
     }
 

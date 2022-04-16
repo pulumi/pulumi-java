@@ -26,13 +26,13 @@ public final class InAppTemplateBodyConfig {
         this.textColor = textColor;
     }
 
-    public Optional<InAppTemplateAlignment> getAlignment() {
+    public Optional<InAppTemplateAlignment> alignment() {
         return Optional.ofNullable(this.alignment);
     }
-    public Optional<String> getBody() {
+    public Optional<String> body() {
         return Optional.ofNullable(this.body);
     }
-    public Optional<String> getTextColor() {
+    public Optional<String> textColor() {
         return Optional.ofNullable(this.textColor);
     }
 

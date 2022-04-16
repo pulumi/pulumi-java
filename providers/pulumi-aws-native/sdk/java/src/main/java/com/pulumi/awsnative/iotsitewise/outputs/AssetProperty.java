@@ -42,21 +42,21 @@ public final class AssetProperty {
      * The property alias that identifies the property.
      * 
     */
-    public Optional<String> getAlias() {
+    public Optional<String> alias() {
         return Optional.ofNullable(this.alias);
     }
     /**
      * Customer provided ID for property.
      * 
     */
-    public String getLogicalId() {
+    public String logicalId() {
         return this.logicalId;
     }
     /**
      * The MQTT notification state (ENABLED or DISABLED) for this asset property.
      * 
     */
-    public Optional<AssetPropertyNotificationState> getNotificationState() {
+    public Optional<AssetPropertyNotificationState> notificationState() {
         return Optional.ofNullable(this.notificationState);
     }
 

@@ -21,31 +21,31 @@ public class ProfilePermission extends com.pulumi.resources.CustomResource {
     @Export(name="action", type=String.class, parameters={})
     private Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
     @Export(name="principal", type=String.class, parameters={})
     private Output<String> principal;
 
-    public Output<String> getPrincipal() {
+    public Output<String> principal() {
         return this.principal;
     }
     @Export(name="profileName", type=String.class, parameters={})
     private Output<String> profileName;
 
-    public Output<String> getProfileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
     @Export(name="profileVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> profileVersion;
 
-    public Output</* @Nullable */ String> getProfileVersion() {
+    public Output</* @Nullable */ String> profileVersion() {
         return this.profileVersion;
     }
     @Export(name="statementId", type=String.class, parameters={})
     private Output<String> statementId;
 
-    public Output<String> getStatementId() {
+    public Output<String> statementId() {
         return this.statementId;
     }
 

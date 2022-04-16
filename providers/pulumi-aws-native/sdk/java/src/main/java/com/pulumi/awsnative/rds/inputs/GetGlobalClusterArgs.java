@@ -19,7 +19,7 @@ public final class GetGlobalClusterArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="globalClusterIdentifier", required=true)
       private final String globalClusterIdentifier;
 
-    public String getGlobalClusterIdentifier() {
+    public String globalClusterIdentifier() {
         return this.globalClusterIdentifier;
     }
 

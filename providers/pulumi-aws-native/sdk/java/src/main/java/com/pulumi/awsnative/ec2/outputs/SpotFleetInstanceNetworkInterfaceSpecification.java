@@ -54,37 +54,37 @@ public final class SpotFleetInstanceNetworkInterfaceSpecification {
         this.subnetId = subnetId;
     }
 
-    public Optional<Boolean> getAssociatePublicIpAddress() {
+    public Optional<Boolean> associatePublicIpAddress() {
         return Optional.ofNullable(this.associatePublicIpAddress);
     }
-    public Optional<Boolean> getDeleteOnTermination() {
+    public Optional<Boolean> deleteOnTermination() {
         return Optional.ofNullable(this.deleteOnTermination);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<Integer> getDeviceIndex() {
+    public Optional<Integer> deviceIndex() {
         return Optional.ofNullable(this.deviceIndex);
     }
-    public List<String> getGroups() {
+    public List<String> groups() {
         return this.groups == null ? List.of() : this.groups;
     }
-    public Optional<Integer> getIpv6AddressCount() {
+    public Optional<Integer> ipv6AddressCount() {
         return Optional.ofNullable(this.ipv6AddressCount);
     }
-    public List<SpotFleetInstanceIpv6Address> getIpv6Addresses() {
+    public List<SpotFleetInstanceIpv6Address> ipv6Addresses() {
         return this.ipv6Addresses == null ? List.of() : this.ipv6Addresses;
     }
-    public Optional<String> getNetworkInterfaceId() {
+    public Optional<String> networkInterfaceId() {
         return Optional.ofNullable(this.networkInterfaceId);
     }
-    public List<SpotFleetPrivateIpAddressSpecification> getPrivateIpAddresses() {
+    public List<SpotFleetPrivateIpAddressSpecification> privateIpAddresses() {
         return this.privateIpAddresses == null ? List.of() : this.privateIpAddresses;
     }
-    public Optional<Integer> getSecondaryPrivateIpAddressCount() {
+    public Optional<Integer> secondaryPrivateIpAddressCount() {
         return Optional.ofNullable(this.secondaryPrivateIpAddressCount);
     }
-    public Optional<String> getSubnetId() {
+    public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
 

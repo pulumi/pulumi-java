@@ -19,14 +19,14 @@ public final class EC2FleetCapacityRebalanceArgs extends com.pulumi.resources.Re
     @Import(name="replacementStrategy")
       private final @Nullable Output<EC2FleetCapacityRebalanceReplacementStrategy> replacementStrategy;
 
-    public Output<EC2FleetCapacityRebalanceReplacementStrategy> getReplacementStrategy() {
+    public Output<EC2FleetCapacityRebalanceReplacementStrategy> replacementStrategy() {
         return this.replacementStrategy == null ? Codegen.empty() : this.replacementStrategy;
     }
 
     @Import(name="terminationDelay")
       private final @Nullable Output<Integer> terminationDelay;
 
-    public Output<Integer> getTerminationDelay() {
+    public Output<Integer> terminationDelay() {
         return this.terminationDelay == null ? Codegen.empty() : this.terminationDelay;
     }
 

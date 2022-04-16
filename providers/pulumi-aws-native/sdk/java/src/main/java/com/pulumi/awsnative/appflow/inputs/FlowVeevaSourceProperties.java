@@ -18,35 +18,35 @@ public final class FlowVeevaSourceProperties extends com.pulumi.resources.Invoke
     @Import(name="documentType")
       private final @Nullable String documentType;
 
-    public Optional<String> getDocumentType() {
+    public Optional<String> documentType() {
         return this.documentType == null ? Optional.empty() : Optional.ofNullable(this.documentType);
     }
 
     @Import(name="includeAllVersions")
       private final @Nullable Boolean includeAllVersions;
 
-    public Optional<Boolean> getIncludeAllVersions() {
+    public Optional<Boolean> includeAllVersions() {
         return this.includeAllVersions == null ? Optional.empty() : Optional.ofNullable(this.includeAllVersions);
     }
 
     @Import(name="includeRenditions")
       private final @Nullable Boolean includeRenditions;
 
-    public Optional<Boolean> getIncludeRenditions() {
+    public Optional<Boolean> includeRenditions() {
         return this.includeRenditions == null ? Optional.empty() : Optional.ofNullable(this.includeRenditions);
     }
 
     @Import(name="includeSourceFiles")
       private final @Nullable Boolean includeSourceFiles;
 
-    public Optional<Boolean> getIncludeSourceFiles() {
+    public Optional<Boolean> includeSourceFiles() {
         return this.includeSourceFiles == null ? Optional.empty() : Optional.ofNullable(this.includeSourceFiles);
     }
 
     @Import(name="object", required=true)
       private final String object;
 
-    public String getObject() {
+    public String object() {
         return this.object;
     }
 

@@ -22,7 +22,7 @@ public final class MultiRegionAccessPointPolicyArgs extends com.pulumi.resources
     @Import(name="mrapName", required=true)
       private final Output<String> mrapName;
 
-    public Output<String> getMrapName() {
+    public Output<String> mrapName() {
         return this.mrapName;
     }
 
@@ -33,7 +33,7 @@ public final class MultiRegionAccessPointPolicyArgs extends com.pulumi.resources
     @Import(name="policy", required=true)
       private final Output<Object> policy;
 
-    public Output<Object> getPolicy() {
+    public Output<Object> policy() {
         return this.policy;
     }
 

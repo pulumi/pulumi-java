@@ -21,19 +21,19 @@ public class ApplicationEntitlementAssociation extends com.pulumi.resources.Cust
     @Export(name="applicationIdentifier", type=String.class, parameters={})
     private Output<String> applicationIdentifier;
 
-    public Output<String> getApplicationIdentifier() {
+    public Output<String> applicationIdentifier() {
         return this.applicationIdentifier;
     }
     @Export(name="entitlementName", type=String.class, parameters={})
     private Output<String> entitlementName;
 
-    public Output<String> getEntitlementName() {
+    public Output<String> entitlementName() {
         return this.entitlementName;
     }
     @Export(name="stackName", type=String.class, parameters={})
     private Output<String> stackName;
 
-    public Output<String> getStackName() {
+    public Output<String> stackName() {
         return this.stackName;
     }
 

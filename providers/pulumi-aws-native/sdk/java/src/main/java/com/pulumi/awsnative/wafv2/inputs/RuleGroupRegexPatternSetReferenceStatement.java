@@ -18,21 +18,21 @@ public final class RuleGroupRegexPatternSetReferenceStatement extends com.pulumi
     @Import(name="arn", required=true)
       private final String arn;
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
 
     @Import(name="fieldToMatch", required=true)
       private final RuleGroupFieldToMatch fieldToMatch;
 
-    public RuleGroupFieldToMatch getFieldToMatch() {
+    public RuleGroupFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
 
     @Import(name="textTransformations", required=true)
       private final List<RuleGroupTextTransformation> textTransformations;
 
-    public List<RuleGroupTextTransformation> getTextTransformations() {
+    public List<RuleGroupTextTransformation> textTransformations() {
         return this.textTransformations;
     }
 

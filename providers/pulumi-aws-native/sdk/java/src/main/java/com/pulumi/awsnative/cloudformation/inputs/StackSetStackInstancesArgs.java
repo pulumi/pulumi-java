@@ -25,7 +25,7 @@ public final class StackSetStackInstancesArgs extends com.pulumi.resources.Resou
     @Import(name="deploymentTargets", required=true)
       private final Output<StackSetDeploymentTargetsArgs> deploymentTargets;
 
-    public Output<StackSetDeploymentTargetsArgs> getDeploymentTargets() {
+    public Output<StackSetDeploymentTargetsArgs> deploymentTargets() {
         return this.deploymentTargets;
     }
 
@@ -36,7 +36,7 @@ public final class StackSetStackInstancesArgs extends com.pulumi.resources.Resou
     @Import(name="parameterOverrides")
       private final @Nullable Output<List<StackSetParameterArgs>> parameterOverrides;
 
-    public Output<List<StackSetParameterArgs>> getParameterOverrides() {
+    public Output<List<StackSetParameterArgs>> parameterOverrides() {
         return this.parameterOverrides == null ? Codegen.empty() : this.parameterOverrides;
     }
 
@@ -47,7 +47,7 @@ public final class StackSetStackInstancesArgs extends com.pulumi.resources.Resou
     @Import(name="regions", required=true)
       private final Output<List<String>> regions;
 
-    public Output<List<String>> getRegions() {
+    public Output<List<String>> regions() {
         return this.regions;
     }
 

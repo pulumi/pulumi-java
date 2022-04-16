@@ -18,7 +18,7 @@ public final class DataSourceWebCrawlerSiteMapsConfigurationArgs extends com.pul
     @Import(name="siteMaps", required=true)
       private final Output<List<String>> siteMaps;
 
-    public Output<List<String>> getSiteMaps() {
+    public Output<List<String>> siteMaps() {
         return this.siteMaps;
     }
 

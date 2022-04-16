@@ -20,21 +20,21 @@ public final class LicenseConsumptionConfigurationArgs extends com.pulumi.resour
     @Import(name="borrowConfiguration")
       private final @Nullable Output<LicenseBorrowConfigurationArgs> borrowConfiguration;
 
-    public Output<LicenseBorrowConfigurationArgs> getBorrowConfiguration() {
+    public Output<LicenseBorrowConfigurationArgs> borrowConfiguration() {
         return this.borrowConfiguration == null ? Codegen.empty() : this.borrowConfiguration;
     }
 
     @Import(name="provisionalConfiguration")
       private final @Nullable Output<LicenseProvisionalConfigurationArgs> provisionalConfiguration;
 
-    public Output<LicenseProvisionalConfigurationArgs> getProvisionalConfiguration() {
+    public Output<LicenseProvisionalConfigurationArgs> provisionalConfiguration() {
         return this.provisionalConfiguration == null ? Codegen.empty() : this.provisionalConfiguration;
     }
 
     @Import(name="renewType")
       private final @Nullable Output<String> renewType;
 
-    public Output<String> getRenewType() {
+    public Output<String> renewType() {
         return this.renewType == null ? Codegen.empty() : this.renewType;
     }
 

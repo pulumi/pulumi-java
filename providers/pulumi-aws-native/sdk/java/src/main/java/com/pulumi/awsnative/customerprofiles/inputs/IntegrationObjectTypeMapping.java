@@ -15,14 +15,14 @@ public final class IntegrationObjectTypeMapping extends com.pulumi.resources.Inv
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

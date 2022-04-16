@@ -17,21 +17,21 @@ public final class AssociationS3OutputLocation extends com.pulumi.resources.Invo
     @Import(name="outputS3BucketName")
       private final @Nullable String outputS3BucketName;
 
-    public Optional<String> getOutputS3BucketName() {
+    public Optional<String> outputS3BucketName() {
         return this.outputS3BucketName == null ? Optional.empty() : Optional.ofNullable(this.outputS3BucketName);
     }
 
     @Import(name="outputS3KeyPrefix")
       private final @Nullable String outputS3KeyPrefix;
 
-    public Optional<String> getOutputS3KeyPrefix() {
+    public Optional<String> outputS3KeyPrefix() {
         return this.outputS3KeyPrefix == null ? Optional.empty() : Optional.ofNullable(this.outputS3KeyPrefix);
     }
 
     @Import(name="outputS3Region")
       private final @Nullable String outputS3Region;
 
-    public Optional<String> getOutputS3Region() {
+    public Optional<String> outputS3Region() {
         return this.outputS3Region == null ? Optional.empty() : Optional.ofNullable(this.outputS3Region);
     }
 

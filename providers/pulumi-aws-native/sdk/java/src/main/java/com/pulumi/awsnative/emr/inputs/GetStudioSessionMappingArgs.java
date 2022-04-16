@@ -20,7 +20,7 @@ public final class GetStudioSessionMappingArgs extends com.pulumi.resources.Invo
     @Import(name="identityName", required=true)
       private final String identityName;
 
-    public String getIdentityName() {
+    public String identityName() {
         return this.identityName;
     }
 
@@ -31,7 +31,7 @@ public final class GetStudioSessionMappingArgs extends com.pulumi.resources.Invo
     @Import(name="identityType", required=true)
       private final StudioSessionMappingIdentityType identityType;
 
-    public StudioSessionMappingIdentityType getIdentityType() {
+    public StudioSessionMappingIdentityType identityType() {
         return this.identityType;
     }
 
@@ -42,7 +42,7 @@ public final class GetStudioSessionMappingArgs extends com.pulumi.resources.Invo
     @Import(name="studioId", required=true)
       private final String studioId;
 
-    public String getStudioId() {
+    public String studioId() {
         return this.studioId;
     }
 

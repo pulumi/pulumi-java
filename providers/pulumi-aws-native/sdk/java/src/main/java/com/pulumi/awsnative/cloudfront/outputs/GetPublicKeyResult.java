@@ -26,13 +26,13 @@ public final class GetPublicKeyResult {
         this.publicKeyConfig = publicKeyConfig;
     }
 
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<PublicKeyConfig> getPublicKeyConfig() {
+    public Optional<PublicKeyConfig> publicKeyConfig() {
         return Optional.ofNullable(this.publicKeyConfig);
     }
 

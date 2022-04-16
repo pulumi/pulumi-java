@@ -25,19 +25,19 @@ public class Activity extends com.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="tags", type=List.class, parameters={ActivityTagsEntry.class})
     private Output</* @Nullable */ List<ActivityTagsEntry>> tags;
 
-    public Output</* @Nullable */ List<ActivityTagsEntry>> getTags() {
+    public Output</* @Nullable */ List<ActivityTagsEntry>> tags() {
         return this.tags;
     }
 

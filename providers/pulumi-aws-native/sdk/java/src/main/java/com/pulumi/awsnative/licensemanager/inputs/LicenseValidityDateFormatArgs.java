@@ -21,7 +21,7 @@ public final class LicenseValidityDateFormatArgs extends com.pulumi.resources.Re
     @Import(name="begin", required=true)
       private final Output<String> begin;
 
-    public Output<String> getBegin() {
+    public Output<String> begin() {
         return this.begin;
     }
 
@@ -32,7 +32,7 @@ public final class LicenseValidityDateFormatArgs extends com.pulumi.resources.Re
     @Import(name="end", required=true)
       private final Output<String> end;
 
-    public Output<String> getEnd() {
+    public Output<String> end() {
         return this.end;
     }
 

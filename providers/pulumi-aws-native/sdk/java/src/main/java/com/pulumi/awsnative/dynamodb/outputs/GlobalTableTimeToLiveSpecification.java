@@ -23,10 +23,10 @@ public final class GlobalTableTimeToLiveSpecification {
         this.enabled = enabled;
     }
 
-    public Optional<String> getAttributeName() {
+    public Optional<String> attributeName() {
         return Optional.ofNullable(this.attributeName);
     }
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

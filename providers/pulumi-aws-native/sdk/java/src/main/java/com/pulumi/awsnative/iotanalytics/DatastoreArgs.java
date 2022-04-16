@@ -24,42 +24,42 @@ public final class DatastoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="datastoreName")
       private final @Nullable Output<String> datastoreName;
 
-    public Output<String> getDatastoreName() {
+    public Output<String> datastoreName() {
         return this.datastoreName == null ? Codegen.empty() : this.datastoreName;
     }
 
     @Import(name="datastorePartitions")
       private final @Nullable Output<DatastorePartitionsArgs> datastorePartitions;
 
-    public Output<DatastorePartitionsArgs> getDatastorePartitions() {
+    public Output<DatastorePartitionsArgs> datastorePartitions() {
         return this.datastorePartitions == null ? Codegen.empty() : this.datastorePartitions;
     }
 
     @Import(name="datastoreStorage")
       private final @Nullable Output<DatastoreStorageArgs> datastoreStorage;
 
-    public Output<DatastoreStorageArgs> getDatastoreStorage() {
+    public Output<DatastoreStorageArgs> datastoreStorage() {
         return this.datastoreStorage == null ? Codegen.empty() : this.datastoreStorage;
     }
 
     @Import(name="fileFormatConfiguration")
       private final @Nullable Output<DatastoreFileFormatConfigurationArgs> fileFormatConfiguration;
 
-    public Output<DatastoreFileFormatConfigurationArgs> getFileFormatConfiguration() {
+    public Output<DatastoreFileFormatConfigurationArgs> fileFormatConfiguration() {
         return this.fileFormatConfiguration == null ? Codegen.empty() : this.fileFormatConfiguration;
     }
 
     @Import(name="retentionPeriod")
       private final @Nullable Output<DatastoreRetentionPeriodArgs> retentionPeriod;
 
-    public Output<DatastoreRetentionPeriodArgs> getRetentionPeriod() {
+    public Output<DatastoreRetentionPeriodArgs> retentionPeriod() {
         return this.retentionPeriod == null ? Codegen.empty() : this.retentionPeriod;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<DatastoreTagArgs>> tags;
 
-    public Output<List<DatastoreTagArgs>> getTags() {
+    public Output<List<DatastoreTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

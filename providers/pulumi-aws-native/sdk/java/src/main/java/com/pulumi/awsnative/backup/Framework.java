@@ -33,7 +33,7 @@ public class Framework extends com.pulumi.resources.CustomResource {
      * @return The date and time that a framework is created, in Unix format and Coordinated Universal Time (UTC). The value of `CreationTime` is accurate to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.
      * 
      */
-    public Output<Double> getCreationTime() {
+    public Output<Double> creationTime() {
         return this.creationTime;
     }
     /**
@@ -47,7 +47,7 @@ public class Framework extends com.pulumi.resources.CustomResource {
      * @return The deployment status of a framework. The statuses are: `CREATE_IN_PROGRESS | UPDATE_IN_PROGRESS | DELETE_IN_PROGRESS | COMPLETED | FAILED`
      * 
      */
-    public Output<String> getDeploymentStatus() {
+    public Output<String> deploymentStatus() {
         return this.deploymentStatus;
     }
     /**
@@ -61,7 +61,7 @@ public class Framework extends com.pulumi.resources.CustomResource {
      * @return An Amazon Resource Name (ARN) that uniquely identifies Framework as a resource
      * 
      */
-    public Output<String> getFrameworkArn() {
+    public Output<String> frameworkArn() {
         return this.frameworkArn;
     }
     /**
@@ -75,7 +75,7 @@ public class Framework extends com.pulumi.resources.CustomResource {
      * @return Contains detailed information about all of the controls of a framework. Each framework must contain at least one control.
      * 
      */
-    public Output<List<FrameworkControl>> getFrameworkControls() {
+    public Output<List<FrameworkControl>> frameworkControls() {
         return this.frameworkControls;
     }
     /**
@@ -89,7 +89,7 @@ public class Framework extends com.pulumi.resources.CustomResource {
      * @return An optional description of the framework with a maximum 1,024 characters.
      * 
      */
-    public Output</* @Nullable */ String> getFrameworkDescription() {
+    public Output</* @Nullable */ String> frameworkDescription() {
         return this.frameworkDescription;
     }
     /**
@@ -103,7 +103,7 @@ public class Framework extends com.pulumi.resources.CustomResource {
      * @return The unique name of a framework. This name is between 1 and 256 characters, starting with a letter, and consisting of letters (a-z, A-Z), numbers (0-9), and underscores (_).
      * 
      */
-    public Output</* @Nullable */ String> getFrameworkName() {
+    public Output</* @Nullable */ String> frameworkName() {
         return this.frameworkName;
     }
     /**
@@ -133,7 +133,7 @@ public class Framework extends com.pulumi.resources.CustomResource {
      * `UNAVAILABLE` when AWS Backup is unable to validate recording status at this time.
      * 
      */
-    public Output<String> getFrameworkStatus() {
+    public Output<String> frameworkStatus() {
         return this.frameworkStatus;
     }
     /**
@@ -147,7 +147,7 @@ public class Framework extends com.pulumi.resources.CustomResource {
      * @return Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
      * 
      */
-    public Output</* @Nullable */ List<FrameworkTag>> getFrameworkTags() {
+    public Output</* @Nullable */ List<FrameworkTag>> frameworkTags() {
         return this.frameworkTags;
     }
 

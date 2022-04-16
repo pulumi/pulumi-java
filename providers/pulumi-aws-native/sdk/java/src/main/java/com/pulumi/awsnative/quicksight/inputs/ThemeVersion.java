@@ -30,7 +30,7 @@ public final class ThemeVersion extends com.pulumi.resources.InvokeArgs {
     @Import(name="arn")
       private final @Nullable String arn;
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
     }
 
@@ -42,14 +42,14 @@ public final class ThemeVersion extends com.pulumi.resources.InvokeArgs {
     @Import(name="baseThemeId")
       private final @Nullable String baseThemeId;
 
-    public Optional<String> getBaseThemeId() {
+    public Optional<String> baseThemeId() {
         return this.baseThemeId == null ? Optional.empty() : Optional.ofNullable(this.baseThemeId);
     }
 
     @Import(name="configuration")
       private final @Nullable ThemeConfiguration configuration;
 
-    public Optional<ThemeConfiguration> getConfiguration() {
+    public Optional<ThemeConfiguration> configuration() {
         return this.configuration == null ? Optional.empty() : Optional.ofNullable(this.configuration);
     }
 
@@ -60,7 +60,7 @@ public final class ThemeVersion extends com.pulumi.resources.InvokeArgs {
     @Import(name="createdTime")
       private final @Nullable String createdTime;
 
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return this.createdTime == null ? Optional.empty() : Optional.ofNullable(this.createdTime);
     }
 
@@ -71,7 +71,7 @@ public final class ThemeVersion extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -82,14 +82,14 @@ public final class ThemeVersion extends com.pulumi.resources.InvokeArgs {
     @Import(name="errors")
       private final @Nullable List<ThemeError> errors;
 
-    public List<ThemeError> getErrors() {
+    public List<ThemeError> errors() {
         return this.errors == null ? List.of() : this.errors;
     }
 
     @Import(name="status")
       private final @Nullable ThemeResourceStatus status;
 
-    public Optional<ThemeResourceStatus> getStatus() {
+    public Optional<ThemeResourceStatus> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
@@ -100,7 +100,7 @@ public final class ThemeVersion extends com.pulumi.resources.InvokeArgs {
     @Import(name="versionNumber")
       private final @Nullable Double versionNumber;
 
-    public Optional<Double> getVersionNumber() {
+    public Optional<Double> versionNumber() {
         return this.versionNumber == null ? Optional.empty() : Optional.ofNullable(this.versionNumber);
     }
 

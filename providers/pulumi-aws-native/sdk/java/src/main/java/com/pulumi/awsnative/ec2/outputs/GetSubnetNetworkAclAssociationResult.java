@@ -18,7 +18,7 @@ public final class GetSubnetNetworkAclAssociationResult {
         this.associationId = associationId;
     }
 
-    public Optional<String> getAssociationId() {
+    public Optional<String> associationId() {
         return Optional.ofNullable(this.associationId);
     }
 

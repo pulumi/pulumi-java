@@ -26,7 +26,7 @@ public final class BucketSourceSelectionCriteria extends com.pulumi.resources.In
     @Import(name="replicaModifications")
       private final @Nullable BucketReplicaModifications replicaModifications;
 
-    public Optional<BucketReplicaModifications> getReplicaModifications() {
+    public Optional<BucketReplicaModifications> replicaModifications() {
         return this.replicaModifications == null ? Optional.empty() : Optional.ofNullable(this.replicaModifications);
     }
 
@@ -37,7 +37,7 @@ public final class BucketSourceSelectionCriteria extends com.pulumi.resources.In
     @Import(name="sseKmsEncryptedObjects")
       private final @Nullable BucketSseKmsEncryptedObjects sseKmsEncryptedObjects;
 
-    public Optional<BucketSseKmsEncryptedObjects> getSseKmsEncryptedObjects() {
+    public Optional<BucketSseKmsEncryptedObjects> sseKmsEncryptedObjects() {
         return this.sseKmsEncryptedObjects == null ? Optional.empty() : Optional.ofNullable(this.sseKmsEncryptedObjects);
     }
 

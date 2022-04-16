@@ -26,7 +26,7 @@ public final class TypeActivationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="autoUpdate")
       private final @Nullable Output<Boolean> autoUpdate;
 
-    public Output<Boolean> getAutoUpdate() {
+    public Output<Boolean> autoUpdate() {
         return this.autoUpdate == null ? Codegen.empty() : this.autoUpdate;
     }
 
@@ -37,7 +37,7 @@ public final class TypeActivationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="executionRoleArn")
       private final @Nullable Output<String> executionRoleArn;
 
-    public Output<String> getExecutionRoleArn() {
+    public Output<String> executionRoleArn() {
         return this.executionRoleArn == null ? Codegen.empty() : this.executionRoleArn;
     }
 
@@ -48,7 +48,7 @@ public final class TypeActivationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="loggingConfig")
       private final @Nullable Output<TypeActivationLoggingConfigArgs> loggingConfig;
 
-    public Output<TypeActivationLoggingConfigArgs> getLoggingConfig() {
+    public Output<TypeActivationLoggingConfigArgs> loggingConfig() {
         return this.loggingConfig == null ? Codegen.empty() : this.loggingConfig;
     }
 
@@ -59,7 +59,7 @@ public final class TypeActivationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="majorVersion")
       private final @Nullable Output<String> majorVersion;
 
-    public Output<String> getMajorVersion() {
+    public Output<String> majorVersion() {
         return this.majorVersion == null ? Codegen.empty() : this.majorVersion;
     }
 
@@ -70,7 +70,7 @@ public final class TypeActivationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="publicTypeArn")
       private final @Nullable Output<String> publicTypeArn;
 
-    public Output<String> getPublicTypeArn() {
+    public Output<String> publicTypeArn() {
         return this.publicTypeArn == null ? Codegen.empty() : this.publicTypeArn;
     }
 
@@ -81,7 +81,7 @@ public final class TypeActivationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="publisherId")
       private final @Nullable Output<String> publisherId;
 
-    public Output<String> getPublisherId() {
+    public Output<String> publisherId() {
         return this.publisherId == null ? Codegen.empty() : this.publisherId;
     }
 
@@ -92,7 +92,7 @@ public final class TypeActivationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="type")
       private final @Nullable Output<TypeActivationType> type;
 
-    public Output<TypeActivationType> getType() {
+    public Output<TypeActivationType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -105,7 +105,7 @@ public final class TypeActivationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="typeName")
       private final @Nullable Output<String> typeName;
 
-    public Output<String> getTypeName() {
+    public Output<String> typeName() {
         return this.typeName == null ? Codegen.empty() : this.typeName;
     }
 
@@ -116,7 +116,7 @@ public final class TypeActivationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="typeNameAlias")
       private final @Nullable Output<String> typeNameAlias;
 
-    public Output<String> getTypeNameAlias() {
+    public Output<String> typeNameAlias() {
         return this.typeNameAlias == null ? Codegen.empty() : this.typeNameAlias;
     }
 
@@ -127,7 +127,7 @@ public final class TypeActivationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="versionBump")
       private final @Nullable Output<TypeActivationVersionBump> versionBump;
 
-    public Output<TypeActivationVersionBump> getVersionBump() {
+    public Output<TypeActivationVersionBump> versionBump() {
         return this.versionBump == null ? Codegen.empty() : this.versionBump;
     }
 

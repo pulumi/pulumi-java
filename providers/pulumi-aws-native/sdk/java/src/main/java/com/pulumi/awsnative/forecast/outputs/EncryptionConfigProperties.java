@@ -22,10 +22,10 @@ public final class EncryptionConfigProperties {
         this.roleArn = roleArn;
     }
 
-    public Optional<String> getKmsKeyArn() {
+    public Optional<String> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
 

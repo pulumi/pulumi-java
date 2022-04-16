@@ -19,7 +19,7 @@ public final class GetResourceSetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceSetName", required=true)
       private final String resourceSetName;
 
-    public String getResourceSetName() {
+    public String resourceSetName() {
         return this.resourceSetName;
     }
 

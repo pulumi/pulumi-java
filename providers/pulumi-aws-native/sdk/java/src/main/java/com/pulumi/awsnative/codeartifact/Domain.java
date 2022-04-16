@@ -34,7 +34,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return The ARN of the domain.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -48,7 +48,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return The name of the domain.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -62,7 +62,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return The ARN of an AWS Key Management Service (AWS KMS) key associated with a domain.
      * 
      */
-    public Output<String> getEncryptionKey() {
+    public Output<String> encryptionKey() {
         return this.encryptionKey;
     }
     /**
@@ -76,7 +76,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return The name of the domain. This field is used for GetAtt
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -90,7 +90,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return The 12-digit account ID of the AWS account that owns the domain. This field is used for GetAtt
      * 
      */
-    public Output<String> getOwner() {
+    public Output<String> owner() {
         return this.owner;
     }
     /**
@@ -104,7 +104,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return The access control resource policy on the provided domain.
      * 
      */
-    public Output</* @Nullable */ Object> getPermissionsPolicyDocument() {
+    public Output</* @Nullable */ Object> permissionsPolicyDocument() {
         return this.permissionsPolicyDocument;
     }
     /**
@@ -118,7 +118,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<DomainTag>> getTags() {
+    public Output</* @Nullable */ List<DomainTag>> tags() {
         return this.tags;
     }
 

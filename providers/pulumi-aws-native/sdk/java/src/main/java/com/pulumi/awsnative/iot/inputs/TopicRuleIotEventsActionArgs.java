@@ -19,28 +19,28 @@ public final class TopicRuleIotEventsActionArgs extends com.pulumi.resources.Res
     @Import(name="batchMode")
       private final @Nullable Output<Boolean> batchMode;
 
-    public Output<Boolean> getBatchMode() {
+    public Output<Boolean> batchMode() {
         return this.batchMode == null ? Codegen.empty() : this.batchMode;
     }
 
     @Import(name="inputName", required=true)
       private final Output<String> inputName;
 
-    public Output<String> getInputName() {
+    public Output<String> inputName() {
         return this.inputName;
     }
 
     @Import(name="messageId")
       private final @Nullable Output<String> messageId;
 
-    public Output<String> getMessageId() {
+    public Output<String> messageId() {
         return this.messageId == null ? Codegen.empty() : this.messageId;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 

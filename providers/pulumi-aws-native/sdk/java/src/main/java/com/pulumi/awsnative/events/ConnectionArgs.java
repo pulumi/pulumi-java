@@ -20,14 +20,14 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authParameters", required=true)
       private final Output<AuthParametersPropertiesArgs> authParameters;
 
-    public Output<AuthParametersPropertiesArgs> getAuthParameters() {
+    public Output<AuthParametersPropertiesArgs> authParameters() {
         return this.authParameters;
     }
 
     @Import(name="authorizationType", required=true)
       private final Output<ConnectionAuthorizationType> authorizationType;
 
-    public Output<ConnectionAuthorizationType> getAuthorizationType() {
+    public Output<ConnectionAuthorizationType> authorizationType() {
         return this.authorizationType;
     }
 
@@ -38,7 +38,7 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -49,7 +49,7 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

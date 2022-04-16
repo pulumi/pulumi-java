@@ -26,7 +26,7 @@ public final class PackagingGroupLogConfiguration {
      * Sets a custom AWS CloudWatch log group name for egress logs. If a log group name isn't specified, the default name is used: /aws/MediaPackage/VodEgressAccessLogs.
      * 
     */
-    public Optional<String> getLogGroupName() {
+    public Optional<String> logGroupName() {
         return Optional.ofNullable(this.logGroupName);
     }
 

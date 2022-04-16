@@ -24,7 +24,7 @@ public final class BucketReplicaModifications {
      * Specifies whether Amazon S3 replicates modifications on replicas.
      * 
     */
-    public BucketReplicaModificationsStatus getStatus() {
+    public BucketReplicaModificationsStatus status() {
         return this.status;
     }
 

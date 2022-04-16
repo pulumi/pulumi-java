@@ -32,7 +32,7 @@ public class TransitGatewayMulticastDomain extends com.pulumi.resources.CustomRe
      * @return The time the transit gateway multicast domain was created.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -46,7 +46,7 @@ public class TransitGatewayMulticastDomain extends com.pulumi.resources.CustomRe
      * @return The options for the transit gateway multicast domain.
      * 
      */
-    public Output</* @Nullable */ OptionsProperties> getOptions() {
+    public Output</* @Nullable */ OptionsProperties> options() {
         return this.options;
     }
     /**
@@ -60,7 +60,7 @@ public class TransitGatewayMulticastDomain extends com.pulumi.resources.CustomRe
      * @return The state of the transit gateway multicast domain.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -74,7 +74,7 @@ public class TransitGatewayMulticastDomain extends com.pulumi.resources.CustomRe
      * @return The tags for the transit gateway multicast domain.
      * 
      */
-    public Output</* @Nullable */ List<TransitGatewayMulticastDomainTag>> getTags() {
+    public Output</* @Nullable */ List<TransitGatewayMulticastDomainTag>> tags() {
         return this.tags;
     }
     /**
@@ -88,7 +88,7 @@ public class TransitGatewayMulticastDomain extends com.pulumi.resources.CustomRe
      * @return The ID of the transit gateway.
      * 
      */
-    public Output<String> getTransitGatewayId() {
+    public Output<String> transitGatewayId() {
         return this.transitGatewayId;
     }
     /**
@@ -102,7 +102,7 @@ public class TransitGatewayMulticastDomain extends com.pulumi.resources.CustomRe
      * @return The Amazon Resource Name (ARN) of the transit gateway multicast domain.
      * 
      */
-    public Output<String> getTransitGatewayMulticastDomainArn() {
+    public Output<String> transitGatewayMulticastDomainArn() {
         return this.transitGatewayMulticastDomainArn;
     }
     /**
@@ -116,7 +116,7 @@ public class TransitGatewayMulticastDomain extends com.pulumi.resources.CustomRe
      * @return The ID of the transit gateway multicast domain.
      * 
      */
-    public Output<String> getTransitGatewayMulticastDomainId() {
+    public Output<String> transitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;
     }
 

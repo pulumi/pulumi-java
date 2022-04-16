@@ -18,21 +18,21 @@ public final class TaskDefinitionLoRaWANGatewayVersionArgs extends com.pulumi.re
     @Import(name="model")
       private final @Nullable Output<String> model;
 
-    public Output<String> getModel() {
+    public Output<String> model() {
         return this.model == null ? Codegen.empty() : this.model;
     }
 
     @Import(name="packageVersion")
       private final @Nullable Output<String> packageVersion;
 
-    public Output<String> getPackageVersion() {
+    public Output<String> packageVersion() {
         return this.packageVersion == null ? Codegen.empty() : this.packageVersion;
     }
 
     @Import(name="station")
       private final @Nullable Output<String> station;
 
-    public Output<String> getStation() {
+    public Output<String> station() {
         return this.station == null ? Codegen.empty() : this.station;
     }
 

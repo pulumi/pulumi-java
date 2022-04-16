@@ -27,14 +27,14 @@ public final class StudioEncryptionConfigurationArgs extends com.pulumi.resource
     @Import(name="keyArn")
       private final @Nullable Output<String> keyArn;
 
-    public Output<String> getKeyArn() {
+    public Output<String> keyArn() {
         return this.keyArn == null ? Codegen.empty() : this.keyArn;
     }
 
     @Import(name="keyType", required=true)
       private final Output<StudioEncryptionConfigurationKeyType> keyType;
 
-    public Output<StudioEncryptionConfigurationKeyType> getKeyType() {
+    public Output<StudioEncryptionConfigurationKeyType> keyType() {
         return this.keyType;
     }
 

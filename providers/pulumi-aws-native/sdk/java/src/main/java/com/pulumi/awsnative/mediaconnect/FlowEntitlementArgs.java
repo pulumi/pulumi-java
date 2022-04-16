@@ -26,7 +26,7 @@ public final class FlowEntitlementArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="dataTransferSubscriberFeePercent")
       private final @Nullable Output<Integer> dataTransferSubscriberFeePercent;
 
-    public Output<Integer> getDataTransferSubscriberFeePercent() {
+    public Output<Integer> dataTransferSubscriberFeePercent() {
         return this.dataTransferSubscriberFeePercent == null ? Codegen.empty() : this.dataTransferSubscriberFeePercent;
     }
 
@@ -37,7 +37,7 @@ public final class FlowEntitlementArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description", required=true)
       private final Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
 
@@ -48,7 +48,7 @@ public final class FlowEntitlementArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="encryption")
       private final @Nullable Output<FlowEntitlementEncryptionArgs> encryption;
 
-    public Output<FlowEntitlementEncryptionArgs> getEncryption() {
+    public Output<FlowEntitlementEncryptionArgs> encryption() {
         return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
@@ -59,7 +59,7 @@ public final class FlowEntitlementArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="entitlementStatus")
       private final @Nullable Output<FlowEntitlementEntitlementStatus> entitlementStatus;
 
-    public Output<FlowEntitlementEntitlementStatus> getEntitlementStatus() {
+    public Output<FlowEntitlementEntitlementStatus> entitlementStatus() {
         return this.entitlementStatus == null ? Codegen.empty() : this.entitlementStatus;
     }
 
@@ -70,7 +70,7 @@ public final class FlowEntitlementArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="flowArn", required=true)
       private final Output<String> flowArn;
 
-    public Output<String> getFlowArn() {
+    public Output<String> flowArn() {
         return this.flowArn;
     }
 
@@ -81,7 +81,7 @@ public final class FlowEntitlementArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -92,7 +92,7 @@ public final class FlowEntitlementArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="subscribers", required=true)
       private final Output<List<String>> subscribers;
 
-    public Output<List<String>> getSubscribers() {
+    public Output<List<String>> subscribers() {
         return this.subscribers;
     }
 

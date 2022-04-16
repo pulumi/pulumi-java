@@ -108,64 +108,64 @@ public final class GetDataSourceResult {
      *             are automatically allowed.</p>
      * 
     */
-    public List<DataSourceParameters> getAlternateDataSourceParameters() {
+    public List<DataSourceParameters> alternateDataSourceParameters() {
         return this.alternateDataSourceParameters == null ? List.of() : this.alternateDataSourceParameters;
     }
     /**
      * <p>The Amazon Resource Name (ARN) of the data source.</p>
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * <p>The time that this data source was created.</p>
      * 
     */
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
-    public Optional<DataSourceParameters> getDataSourceParameters() {
+    public Optional<DataSourceParameters> dataSourceParameters() {
         return Optional.ofNullable(this.dataSourceParameters);
     }
-    public Optional<DataSourceErrorInfo> getErrorInfo() {
+    public Optional<DataSourceErrorInfo> errorInfo() {
         return Optional.ofNullable(this.errorInfo);
     }
     /**
      * <p>The last time that this data source was updated.</p>
      * 
     */
-    public Optional<String> getLastUpdatedTime() {
+    public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     /**
      * <p>A display name for the data source.</p>
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * <p>A list of resource permissions on the data source.</p>
      * 
     */
-    public List<DataSourceResourcePermission> getPermissions() {
+    public List<DataSourceResourcePermission> permissions() {
         return this.permissions == null ? List.of() : this.permissions;
     }
-    public Optional<DataSourceSslProperties> getSslProperties() {
+    public Optional<DataSourceSslProperties> sslProperties() {
         return Optional.ofNullable(this.sslProperties);
     }
-    public Optional<DataSourceResourceStatus> getStatus() {
+    public Optional<DataSourceResourceStatus> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the data source.</p>
      * 
     */
-    public List<DataSourceTag> getTags() {
+    public List<DataSourceTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
-    public Optional<DataSourceVpcConnectionProperties> getVpcConnectionProperties() {
+    public Optional<DataSourceVpcConnectionProperties> vpcConnectionProperties() {
         return Optional.ofNullable(this.vpcConnectionProperties);
     }
 

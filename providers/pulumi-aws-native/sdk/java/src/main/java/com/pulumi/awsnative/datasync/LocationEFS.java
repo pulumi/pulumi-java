@@ -26,7 +26,7 @@ public class LocationEFS extends com.pulumi.resources.CustomResource {
     @Export(name="ec2Config", type=LocationEFSEc2Config.class, parameters={})
     private Output<LocationEFSEc2Config> ec2Config;
 
-    public Output<LocationEFSEc2Config> getEc2Config() {
+    public Output<LocationEFSEc2Config> ec2Config() {
         return this.ec2Config;
     }
     /**
@@ -40,7 +40,7 @@ public class LocationEFS extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the Amazon EFS file system.
      * 
      */
-    public Output<String> getEfsFilesystemArn() {
+    public Output<String> efsFilesystemArn() {
         return this.efsFilesystemArn;
     }
     /**
@@ -54,7 +54,7 @@ public class LocationEFS extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Amazon EFS file system location that is created.
      * 
      */
-    public Output<String> getLocationArn() {
+    public Output<String> locationArn() {
         return this.locationArn;
     }
     /**
@@ -68,7 +68,7 @@ public class LocationEFS extends com.pulumi.resources.CustomResource {
      * @return The URL of the EFS location that was described.
      * 
      */
-    public Output<String> getLocationUri() {
+    public Output<String> locationUri() {
         return this.locationUri;
     }
     /**
@@ -82,7 +82,7 @@ public class LocationEFS extends com.pulumi.resources.CustomResource {
      * @return A subdirectory in the location's path. This subdirectory in the EFS file system is used to read data from the EFS source location or write data to the EFS destination.
      * 
      */
-    public Output</* @Nullable */ String> getSubdirectory() {
+    public Output</* @Nullable */ String> subdirectory() {
         return this.subdirectory;
     }
     /**
@@ -96,7 +96,7 @@ public class LocationEFS extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<LocationEFSTag>> getTags() {
+    public Output</* @Nullable */ List<LocationEFSTag>> tags() {
         return this.tags;
     }
 

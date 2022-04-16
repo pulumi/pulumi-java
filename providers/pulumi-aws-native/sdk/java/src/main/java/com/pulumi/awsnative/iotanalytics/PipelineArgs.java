@@ -21,21 +21,21 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pipelineActivities", required=true)
       private final Output<List<PipelineActivityArgs>> pipelineActivities;
 
-    public Output<List<PipelineActivityArgs>> getPipelineActivities() {
+    public Output<List<PipelineActivityArgs>> pipelineActivities() {
         return this.pipelineActivities;
     }
 
     @Import(name="pipelineName")
       private final @Nullable Output<String> pipelineName;
 
-    public Output<String> getPipelineName() {
+    public Output<String> pipelineName() {
         return this.pipelineName == null ? Codegen.empty() : this.pipelineName;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<PipelineTagArgs>> tags;
 
-    public Output<List<PipelineTagArgs>> getTags() {
+    public Output<List<PipelineTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

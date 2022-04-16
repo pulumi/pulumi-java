@@ -28,7 +28,7 @@ public final class SecurityProfileMetricValue extends com.pulumi.resources.Invok
     @Import(name="cidrs")
       private final @Nullable List<String> cidrs;
 
-    public List<String> getCidrs() {
+    public List<String> cidrs() {
         return this.cidrs == null ? List.of() : this.cidrs;
     }
 
@@ -39,7 +39,7 @@ public final class SecurityProfileMetricValue extends com.pulumi.resources.Invok
     @Import(name="count")
       private final @Nullable String count;
 
-    public Optional<String> getCount() {
+    public Optional<String> count() {
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
     }
 
@@ -50,7 +50,7 @@ public final class SecurityProfileMetricValue extends com.pulumi.resources.Invok
     @Import(name="number")
       private final @Nullable Double number;
 
-    public Optional<Double> getNumber() {
+    public Optional<Double> number() {
         return this.number == null ? Optional.empty() : Optional.ofNullable(this.number);
     }
 
@@ -61,7 +61,7 @@ public final class SecurityProfileMetricValue extends com.pulumi.resources.Invok
     @Import(name="numbers")
       private final @Nullable List<Double> numbers;
 
-    public List<Double> getNumbers() {
+    public List<Double> numbers() {
         return this.numbers == null ? List.of() : this.numbers;
     }
 
@@ -72,7 +72,7 @@ public final class SecurityProfileMetricValue extends com.pulumi.resources.Invok
     @Import(name="ports")
       private final @Nullable List<Integer> ports;
 
-    public List<Integer> getPorts() {
+    public List<Integer> ports() {
         return this.ports == null ? List.of() : this.ports;
     }
 
@@ -83,7 +83,7 @@ public final class SecurityProfileMetricValue extends com.pulumi.resources.Invok
     @Import(name="strings")
       private final @Nullable List<String> strings;
 
-    public List<String> getStrings() {
+    public List<String> strings() {
         return this.strings == null ? List.of() : this.strings;
     }
 

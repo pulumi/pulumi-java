@@ -22,7 +22,7 @@ public class SchemaVersion extends com.pulumi.resources.CustomResource {
     @Export(name="schema", type=SchemaVersionSchema.class, parameters={})
     private Output<SchemaVersionSchema> schema;
 
-    public Output<SchemaVersionSchema> getSchema() {
+    public Output<SchemaVersionSchema> schema() {
         return this.schema;
     }
     /**
@@ -36,7 +36,7 @@ public class SchemaVersion extends com.pulumi.resources.CustomResource {
      * @return Complete definition of the schema in plain-text.
      * 
      */
-    public Output<String> getSchemaDefinition() {
+    public Output<String> schemaDefinition() {
         return this.schemaDefinition;
     }
     /**
@@ -50,7 +50,7 @@ public class SchemaVersion extends com.pulumi.resources.CustomResource {
      * @return Represents the version ID associated with the schema version.
      * 
      */
-    public Output<String> getVersionId() {
+    public Output<String> versionId() {
         return this.versionId;
     }
 

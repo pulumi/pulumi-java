@@ -119,91 +119,91 @@ public final class GetGameServerGroupResult {
      * A generated unique ID for the EC2 Auto Scaling group that is associated with this game server group.
      * 
     */
-    public Optional<String> getAutoScalingGroupArn() {
+    public Optional<String> autoScalingGroupArn() {
         return Optional.ofNullable(this.autoScalingGroupArn);
     }
     /**
      * Configuration settings to define a scaling policy for the Auto Scaling group that is optimized for game hosting
      * 
     */
-    public Optional<GameServerGroupAutoScalingPolicy> getAutoScalingPolicy() {
+    public Optional<GameServerGroupAutoScalingPolicy> autoScalingPolicy() {
         return Optional.ofNullable(this.autoScalingPolicy);
     }
     /**
      * The fallback balancing method to use for the game server group when Spot Instances in a Region become unavailable or are not viable for game hosting.
      * 
     */
-    public Optional<GameServerGroupBalancingStrategy> getBalancingStrategy() {
+    public Optional<GameServerGroupBalancingStrategy> balancingStrategy() {
         return Optional.ofNullable(this.balancingStrategy);
     }
     /**
      * A generated unique ID for the game server group.
      * 
     */
-    public Optional<String> getGameServerGroupArn() {
+    public Optional<String> gameServerGroupArn() {
         return Optional.ofNullable(this.gameServerGroupArn);
     }
     /**
      * An identifier for the new game server group.
      * 
     */
-    public Optional<String> getGameServerGroupName() {
+    public Optional<String> gameServerGroupName() {
         return Optional.ofNullable(this.gameServerGroupName);
     }
     /**
      * A flag that indicates whether instances in the game server group are protected from early termination.
      * 
     */
-    public Optional<GameServerGroupGameServerProtectionPolicy> getGameServerProtectionPolicy() {
+    public Optional<GameServerGroupGameServerProtectionPolicy> gameServerProtectionPolicy() {
         return Optional.ofNullable(this.gameServerProtectionPolicy);
     }
     /**
      * A set of EC2 instance types to use when creating instances in the group.
      * 
     */
-    public List<GameServerGroupInstanceDefinition> getInstanceDefinitions() {
+    public List<GameServerGroupInstanceDefinition> instanceDefinitions() {
         return this.instanceDefinitions == null ? List.of() : this.instanceDefinitions;
     }
     /**
      * The EC2 launch template that contains configuration settings and game server code to be deployed to all instances in the game server group.
      * 
     */
-    public Optional<GameServerGroupLaunchTemplate> getLaunchTemplate() {
+    public Optional<GameServerGroupLaunchTemplate> launchTemplate() {
         return Optional.ofNullable(this.launchTemplate);
     }
     /**
      * The maximum number of instances allowed in the EC2 Auto Scaling group.
      * 
     */
-    public Optional<Double> getMaxSize() {
+    public Optional<Double> maxSize() {
         return Optional.ofNullable(this.maxSize);
     }
     /**
      * The minimum number of instances allowed in the EC2 Auto Scaling group.
      * 
     */
-    public Optional<Double> getMinSize() {
+    public Optional<Double> minSize() {
         return Optional.ofNullable(this.minSize);
     }
     /**
      * The Amazon Resource Name (ARN) for an IAM role that allows Amazon GameLift to access your EC2 Auto Scaling groups.
      * 
     */
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
     /**
      * A list of labels to assign to the new game server group resource.
      * 
     */
-    public List<GameServerGroupTag> getTags() {
+    public List<GameServerGroupTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * A list of virtual private cloud (VPC) subnets to use with instances in the game server group.
      * 
     */
-    public List<String> getVpcSubnets() {
+    public List<String> vpcSubnets() {
         return this.vpcSubnets == null ? List.of() : this.vpcSubnets;
     }
 

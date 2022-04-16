@@ -18,21 +18,21 @@ public final class FlowUpsolverDestinationProperties extends com.pulumi.resource
     @Import(name="bucketName", required=true)
       private final String bucketName;
 
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
 
     @Import(name="bucketPrefix")
       private final @Nullable String bucketPrefix;
 
-    public Optional<String> getBucketPrefix() {
+    public Optional<String> bucketPrefix() {
         return this.bucketPrefix == null ? Optional.empty() : Optional.ofNullable(this.bucketPrefix);
     }
 
     @Import(name="s3OutputFormatConfig", required=true)
       private final FlowUpsolverS3OutputFormatConfig s3OutputFormatConfig;
 
-    public FlowUpsolverS3OutputFormatConfig getS3OutputFormatConfig() {
+    public FlowUpsolverS3OutputFormatConfig s3OutputFormatConfig() {
         return this.s3OutputFormatConfig;
     }
 

@@ -32,7 +32,7 @@ public class TopicRuleDestination extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN).
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -46,7 +46,7 @@ public class TopicRuleDestination extends com.pulumi.resources.CustomResource {
      * @return HTTP URL destination properties.
      * 
      */
-    public Output</* @Nullable */ TopicRuleDestinationHttpUrlDestinationSummary> getHttpUrlProperties() {
+    public Output</* @Nullable */ TopicRuleDestinationHttpUrlDestinationSummary> httpUrlProperties() {
         return this.httpUrlProperties;
     }
     /**
@@ -60,7 +60,7 @@ public class TopicRuleDestination extends com.pulumi.resources.CustomResource {
      * @return The status of the TopicRuleDestination.
      * 
      */
-    public Output</* @Nullable */ TopicRuleDestinationStatus> getStatus() {
+    public Output</* @Nullable */ TopicRuleDestinationStatus> status() {
         return this.status;
     }
     /**
@@ -74,7 +74,7 @@ public class TopicRuleDestination extends com.pulumi.resources.CustomResource {
      * @return The reasoning for the current status of the TopicRuleDestination.
      * 
      */
-    public Output<String> getStatusReason() {
+    public Output<String> statusReason() {
         return this.statusReason;
     }
     /**
@@ -88,7 +88,7 @@ public class TopicRuleDestination extends com.pulumi.resources.CustomResource {
      * @return VPC destination properties.
      * 
      */
-    public Output</* @Nullable */ TopicRuleDestinationVpcDestinationProperties> getVpcProperties() {
+    public Output</* @Nullable */ TopicRuleDestinationVpcDestinationProperties> vpcProperties() {
         return this.vpcProperties;
     }
 

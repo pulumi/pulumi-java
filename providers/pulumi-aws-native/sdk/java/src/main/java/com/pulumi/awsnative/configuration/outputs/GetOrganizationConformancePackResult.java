@@ -50,28 +50,28 @@ public final class GetOrganizationConformancePackResult {
      * A list of ConformancePackInputParameter objects.
      * 
     */
-    public List<OrganizationConformancePackConformancePackInputParameter> getConformancePackInputParameters() {
+    public List<OrganizationConformancePackConformancePackInputParameter> conformancePackInputParameters() {
         return this.conformancePackInputParameters == null ? List.of() : this.conformancePackInputParameters;
     }
     /**
      * AWS Config stores intermediate files while processing conformance pack template.
      * 
     */
-    public Optional<String> getDeliveryS3Bucket() {
+    public Optional<String> deliveryS3Bucket() {
         return Optional.ofNullable(this.deliveryS3Bucket);
     }
     /**
      * The prefix for the delivery S3 bucket.
      * 
     */
-    public Optional<String> getDeliveryS3KeyPrefix() {
+    public Optional<String> deliveryS3KeyPrefix() {
         return Optional.ofNullable(this.deliveryS3KeyPrefix);
     }
     /**
      * A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.
      * 
     */
-    public List<String> getExcludedAccounts() {
+    public List<String> excludedAccounts() {
         return this.excludedAccounts == null ? List.of() : this.excludedAccounts;
     }
 

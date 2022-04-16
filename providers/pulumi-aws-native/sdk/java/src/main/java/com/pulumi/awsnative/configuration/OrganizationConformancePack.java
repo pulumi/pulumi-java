@@ -33,7 +33,7 @@ public class OrganizationConformancePack extends com.pulumi.resources.CustomReso
      * @return A list of ConformancePackInputParameter objects.
      * 
      */
-    public Output</* @Nullable */ List<OrganizationConformancePackConformancePackInputParameter>> getConformancePackInputParameters() {
+    public Output</* @Nullable */ List<OrganizationConformancePackConformancePackInputParameter>> conformancePackInputParameters() {
         return this.conformancePackInputParameters;
     }
     /**
@@ -47,7 +47,7 @@ public class OrganizationConformancePack extends com.pulumi.resources.CustomReso
      * @return AWS Config stores intermediate files while processing conformance pack template.
      * 
      */
-    public Output</* @Nullable */ String> getDeliveryS3Bucket() {
+    public Output</* @Nullable */ String> deliveryS3Bucket() {
         return this.deliveryS3Bucket;
     }
     /**
@@ -61,7 +61,7 @@ public class OrganizationConformancePack extends com.pulumi.resources.CustomReso
      * @return The prefix for the delivery S3 bucket.
      * 
      */
-    public Output</* @Nullable */ String> getDeliveryS3KeyPrefix() {
+    public Output</* @Nullable */ String> deliveryS3KeyPrefix() {
         return this.deliveryS3KeyPrefix;
     }
     /**
@@ -75,7 +75,7 @@ public class OrganizationConformancePack extends com.pulumi.resources.CustomReso
      * @return A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.
      * 
      */
-    public Output</* @Nullable */ List<String>> getExcludedAccounts() {
+    public Output</* @Nullable */ List<String>> excludedAccounts() {
         return this.excludedAccounts;
     }
     /**
@@ -89,7 +89,7 @@ public class OrganizationConformancePack extends com.pulumi.resources.CustomReso
      * @return The name of the organization conformance pack.
      * 
      */
-    public Output<String> getOrganizationConformancePackName() {
+    public Output<String> organizationConformancePackName() {
         return this.organizationConformancePackName;
     }
     /**
@@ -103,7 +103,7 @@ public class OrganizationConformancePack extends com.pulumi.resources.CustomReso
      * @return A string containing full conformance pack template body.
      * 
      */
-    public Output</* @Nullable */ String> getTemplateBody() {
+    public Output</* @Nullable */ String> templateBody() {
         return this.templateBody;
     }
     /**
@@ -117,7 +117,7 @@ public class OrganizationConformancePack extends com.pulumi.resources.CustomReso
      * @return Location of file containing the template body.
      * 
      */
-    public Output</* @Nullable */ String> getTemplateS3Uri() {
+    public Output</* @Nullable */ String> templateS3Uri() {
         return this.templateS3Uri;
     }
 

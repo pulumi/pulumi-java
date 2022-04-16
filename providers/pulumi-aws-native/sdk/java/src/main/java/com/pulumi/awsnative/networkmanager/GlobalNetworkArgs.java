@@ -24,7 +24,7 @@ public final class GlobalNetworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -35,7 +35,7 @@ public final class GlobalNetworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<GlobalNetworkTagArgs>> tags;
 
-    public Output<List<GlobalNetworkTagArgs>> getTags() {
+    public Output<List<GlobalNetworkTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

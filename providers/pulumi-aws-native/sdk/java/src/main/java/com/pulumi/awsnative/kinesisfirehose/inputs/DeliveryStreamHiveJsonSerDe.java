@@ -18,7 +18,7 @@ public final class DeliveryStreamHiveJsonSerDe extends com.pulumi.resources.Invo
     @Import(name="timestampFormats")
       private final @Nullable List<String> timestampFormats;
 
-    public List<String> getTimestampFormats() {
+    public List<String> timestampFormats() {
         return this.timestampFormats == null ? List.of() : this.timestampFormats;
     }
 

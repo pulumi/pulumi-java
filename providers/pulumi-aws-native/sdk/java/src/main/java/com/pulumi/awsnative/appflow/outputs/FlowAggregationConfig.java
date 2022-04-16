@@ -18,7 +18,7 @@ public final class FlowAggregationConfig {
         this.aggregationType = aggregationType;
     }
 
-    public Optional<FlowAggregationType> getAggregationType() {
+    public Optional<FlowAggregationType> aggregationType() {
         return Optional.ofNullable(this.aggregationType);
     }
 

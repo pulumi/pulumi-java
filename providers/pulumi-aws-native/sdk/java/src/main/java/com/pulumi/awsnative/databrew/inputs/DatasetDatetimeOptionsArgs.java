@@ -22,7 +22,7 @@ public final class DatasetDatetimeOptionsArgs extends com.pulumi.resources.Resou
     @Import(name="format", required=true)
       private final Output<String> format;
 
-    public Output<String> getFormat() {
+    public Output<String> format() {
         return this.format;
     }
 
@@ -33,7 +33,7 @@ public final class DatasetDatetimeOptionsArgs extends com.pulumi.resources.Resou
     @Import(name="localeCode")
       private final @Nullable Output<String> localeCode;
 
-    public Output<String> getLocaleCode() {
+    public Output<String> localeCode() {
         return this.localeCode == null ? Codegen.empty() : this.localeCode;
     }
 
@@ -44,7 +44,7 @@ public final class DatasetDatetimeOptionsArgs extends com.pulumi.resources.Resou
     @Import(name="timezoneOffset")
       private final @Nullable Output<String> timezoneOffset;
 
-    public Output<String> getTimezoneOffset() {
+    public Output<String> timezoneOffset() {
         return this.timezoneOffset == null ? Codegen.empty() : this.timezoneOffset;
     }
 

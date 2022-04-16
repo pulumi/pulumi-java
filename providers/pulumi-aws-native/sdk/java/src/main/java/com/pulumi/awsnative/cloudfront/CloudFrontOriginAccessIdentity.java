@@ -24,13 +24,13 @@ public class CloudFrontOriginAccessIdentity extends com.pulumi.resources.CustomR
     @Export(name="cloudFrontOriginAccessIdentityConfig", type=CloudFrontOriginAccessIdentityConfig.class, parameters={})
     private Output<CloudFrontOriginAccessIdentityConfig> cloudFrontOriginAccessIdentityConfig;
 
-    public Output<CloudFrontOriginAccessIdentityConfig> getCloudFrontOriginAccessIdentityConfig() {
+    public Output<CloudFrontOriginAccessIdentityConfig> cloudFrontOriginAccessIdentityConfig() {
         return this.cloudFrontOriginAccessIdentityConfig;
     }
     @Export(name="s3CanonicalUserId", type=String.class, parameters={})
     private Output<String> s3CanonicalUserId;
 
-    public Output<String> getS3CanonicalUserId() {
+    public Output<String> s3CanonicalUserId() {
         return this.s3CanonicalUserId;
     }
 

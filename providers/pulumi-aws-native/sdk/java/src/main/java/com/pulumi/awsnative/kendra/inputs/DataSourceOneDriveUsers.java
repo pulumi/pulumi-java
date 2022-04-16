@@ -19,14 +19,14 @@ public final class DataSourceOneDriveUsers extends com.pulumi.resources.InvokeAr
     @Import(name="oneDriveUserList")
       private final @Nullable List<String> oneDriveUserList;
 
-    public List<String> getOneDriveUserList() {
+    public List<String> oneDriveUserList() {
         return this.oneDriveUserList == null ? List.of() : this.oneDriveUserList;
     }
 
     @Import(name="oneDriveUserS3Path")
       private final @Nullable DataSourceS3Path oneDriveUserS3Path;
 
-    public Optional<DataSourceS3Path> getOneDriveUserS3Path() {
+    public Optional<DataSourceS3Path> oneDriveUserS3Path() {
         return this.oneDriveUserS3Path == null ? Optional.empty() : Optional.ofNullable(this.oneDriveUserS3Path);
     }
 

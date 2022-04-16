@@ -18,14 +18,14 @@ public final class DistributionStatusCodesArgs extends com.pulumi.resources.Reso
     @Import(name="items", required=true)
       private final Output<List<Integer>> items;
 
-    public Output<List<Integer>> getItems() {
+    public Output<List<Integer>> items() {
         return this.items;
     }
 
     @Import(name="quantity", required=true)
       private final Output<Integer> quantity;
 
-    public Output<Integer> getQuantity() {
+    public Output<Integer> quantity() {
         return this.quantity;
     }
 

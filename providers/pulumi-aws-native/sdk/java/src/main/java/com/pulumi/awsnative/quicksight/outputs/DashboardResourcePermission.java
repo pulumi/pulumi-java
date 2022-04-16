@@ -47,7 +47,7 @@ public final class DashboardResourcePermission {
      * <p>The IAM action to grant or revoke permissions on.</p>
      * 
     */
-    public List<String> getActions() {
+    public List<String> actions() {
         return this.actions;
     }
     /**
@@ -68,7 +68,7 @@ public final class DashboardResourcePermission {
      *          </ul>
      * 
     */
-    public String getPrincipal() {
+    public String principal() {
         return this.principal;
     }
 

@@ -24,7 +24,7 @@ public final class DataSourceAmazonOpenSearchParameters {
      * <p>The Amazon OpenSearch Service domain.</p>
      * 
     */
-    public String getDomain() {
+    public String domain() {
         return this.domain;
     }
 

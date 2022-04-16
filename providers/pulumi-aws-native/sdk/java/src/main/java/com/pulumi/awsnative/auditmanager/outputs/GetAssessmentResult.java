@@ -63,43 +63,43 @@ public final class GetAssessmentResult {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getAssessmentId() {
+    public Optional<String> assessmentId() {
         return Optional.ofNullable(this.assessmentId);
     }
-    public Optional<AssessmentReportsDestination> getAssessmentReportsDestination() {
+    public Optional<AssessmentReportsDestination> assessmentReportsDestination() {
         return Optional.ofNullable(this.assessmentReportsDestination);
     }
-    public Optional<Double> getCreationTime() {
+    public Optional<Double> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * The list of delegations.
      * 
     */
-    public List<AssessmentDelegation> getDelegations() {
+    public List<AssessmentDelegation> delegations() {
         return this.delegations == null ? List.of() : this.delegations;
     }
     /**
      * The list of roles for the specified assessment.
      * 
     */
-    public List<AssessmentRole> getRoles() {
+    public List<AssessmentRole> roles() {
         return this.roles == null ? List.of() : this.roles;
     }
-    public Optional<AssessmentScope> getScope() {
+    public Optional<AssessmentScope> scope() {
         return Optional.ofNullable(this.scope);
     }
-    public Optional<AssessmentStatus> getStatus() {
+    public Optional<AssessmentStatus> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The tags associated with the assessment.
      * 
     */
-    public List<AssessmentTag> getTags() {
+    public List<AssessmentTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

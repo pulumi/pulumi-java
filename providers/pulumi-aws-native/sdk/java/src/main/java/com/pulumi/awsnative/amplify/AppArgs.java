@@ -25,98 +25,98 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessToken")
       private final @Nullable Output<String> accessToken;
 
-    public Output<String> getAccessToken() {
+    public Output<String> accessToken() {
         return this.accessToken == null ? Codegen.empty() : this.accessToken;
     }
 
     @Import(name="autoBranchCreationConfig")
       private final @Nullable Output<AppAutoBranchCreationConfigArgs> autoBranchCreationConfig;
 
-    public Output<AppAutoBranchCreationConfigArgs> getAutoBranchCreationConfig() {
+    public Output<AppAutoBranchCreationConfigArgs> autoBranchCreationConfig() {
         return this.autoBranchCreationConfig == null ? Codegen.empty() : this.autoBranchCreationConfig;
     }
 
     @Import(name="basicAuthConfig")
       private final @Nullable Output<AppBasicAuthConfigArgs> basicAuthConfig;
 
-    public Output<AppBasicAuthConfigArgs> getBasicAuthConfig() {
+    public Output<AppBasicAuthConfigArgs> basicAuthConfig() {
         return this.basicAuthConfig == null ? Codegen.empty() : this.basicAuthConfig;
     }
 
     @Import(name="buildSpec")
       private final @Nullable Output<String> buildSpec;
 
-    public Output<String> getBuildSpec() {
+    public Output<String> buildSpec() {
         return this.buildSpec == null ? Codegen.empty() : this.buildSpec;
     }
 
     @Import(name="customHeaders")
       private final @Nullable Output<String> customHeaders;
 
-    public Output<String> getCustomHeaders() {
+    public Output<String> customHeaders() {
         return this.customHeaders == null ? Codegen.empty() : this.customHeaders;
     }
 
     @Import(name="customRules")
       private final @Nullable Output<List<AppCustomRuleArgs>> customRules;
 
-    public Output<List<AppCustomRuleArgs>> getCustomRules() {
+    public Output<List<AppCustomRuleArgs>> customRules() {
         return this.customRules == null ? Codegen.empty() : this.customRules;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="enableBranchAutoDeletion")
       private final @Nullable Output<Boolean> enableBranchAutoDeletion;
 
-    public Output<Boolean> getEnableBranchAutoDeletion() {
+    public Output<Boolean> enableBranchAutoDeletion() {
         return this.enableBranchAutoDeletion == null ? Codegen.empty() : this.enableBranchAutoDeletion;
     }
 
     @Import(name="environmentVariables")
       private final @Nullable Output<List<AppEnvironmentVariableArgs>> environmentVariables;
 
-    public Output<List<AppEnvironmentVariableArgs>> getEnvironmentVariables() {
+    public Output<List<AppEnvironmentVariableArgs>> environmentVariables() {
         return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
     @Import(name="iAMServiceRole")
       private final @Nullable Output<String> iAMServiceRole;
 
-    public Output<String> getIAMServiceRole() {
+    public Output<String> iAMServiceRole() {
         return this.iAMServiceRole == null ? Codegen.empty() : this.iAMServiceRole;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="oauthToken")
       private final @Nullable Output<String> oauthToken;
 
-    public Output<String> getOauthToken() {
+    public Output<String> oauthToken() {
         return this.oauthToken == null ? Codegen.empty() : this.oauthToken;
     }
 
     @Import(name="repository")
       private final @Nullable Output<String> repository;
 
-    public Output<String> getRepository() {
+    public Output<String> repository() {
         return this.repository == null ? Codegen.empty() : this.repository;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<AppTagArgs>> tags;
 
-    public Output<List<AppTagArgs>> getTags() {
+    public Output<List<AppTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

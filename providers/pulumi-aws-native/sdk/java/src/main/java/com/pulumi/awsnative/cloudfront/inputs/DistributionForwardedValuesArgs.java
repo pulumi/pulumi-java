@@ -21,28 +21,28 @@ public final class DistributionForwardedValuesArgs extends com.pulumi.resources.
     @Import(name="cookies")
       private final @Nullable Output<DistributionCookiesArgs> cookies;
 
-    public Output<DistributionCookiesArgs> getCookies() {
+    public Output<DistributionCookiesArgs> cookies() {
         return this.cookies == null ? Codegen.empty() : this.cookies;
     }
 
     @Import(name="headers")
       private final @Nullable Output<List<String>> headers;
 
-    public Output<List<String>> getHeaders() {
+    public Output<List<String>> headers() {
         return this.headers == null ? Codegen.empty() : this.headers;
     }
 
     @Import(name="queryString", required=true)
       private final Output<Boolean> queryString;
 
-    public Output<Boolean> getQueryString() {
+    public Output<Boolean> queryString() {
         return this.queryString;
     }
 
     @Import(name="queryStringCacheKeys")
       private final @Nullable Output<List<String>> queryStringCacheKeys;
 
-    public Output<List<String>> getQueryStringCacheKeys() {
+    public Output<List<String>> queryStringCacheKeys() {
         return this.queryStringCacheKeys == null ? Codegen.empty() : this.queryStringCacheKeys;
     }
 

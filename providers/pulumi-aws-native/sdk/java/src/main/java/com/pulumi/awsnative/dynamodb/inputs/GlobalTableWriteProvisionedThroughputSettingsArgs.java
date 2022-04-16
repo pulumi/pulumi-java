@@ -18,7 +18,7 @@ public final class GlobalTableWriteProvisionedThroughputSettingsArgs extends com
     @Import(name="writeCapacityAutoScalingSettings")
       private final @Nullable Output<GlobalTableCapacityAutoScalingSettingsArgs> writeCapacityAutoScalingSettings;
 
-    public Output<GlobalTableCapacityAutoScalingSettingsArgs> getWriteCapacityAutoScalingSettings() {
+    public Output<GlobalTableCapacityAutoScalingSettingsArgs> writeCapacityAutoScalingSettings() {
         return this.writeCapacityAutoScalingSettings == null ? Codegen.empty() : this.writeCapacityAutoScalingSettings;
     }
 

@@ -31,10 +31,10 @@ public final class TemplateError {
      * <p>Description of the error type.</p>
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
-    public Optional<TemplateErrorType> getType() {
+    public Optional<TemplateErrorType> type() {
         return Optional.ofNullable(this.type);
     }
 

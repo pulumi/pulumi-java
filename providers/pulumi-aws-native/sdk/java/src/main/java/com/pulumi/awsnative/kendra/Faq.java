@@ -25,7 +25,7 @@ public class Faq extends com.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -39,7 +39,7 @@ public class Faq extends com.pulumi.resources.CustomResource {
      * @return FAQ description
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -53,7 +53,7 @@ public class Faq extends com.pulumi.resources.CustomResource {
      * @return FAQ file format
      * 
      */
-    public Output</* @Nullable */ FaqFileFormat> getFileFormat() {
+    public Output</* @Nullable */ FaqFileFormat> fileFormat() {
         return this.fileFormat;
     }
     /**
@@ -67,7 +67,7 @@ public class Faq extends com.pulumi.resources.CustomResource {
      * @return Index ID
      * 
      */
-    public Output<String> getIndexId() {
+    public Output<String> indexId() {
         return this.indexId;
     }
     /**
@@ -81,7 +81,7 @@ public class Faq extends com.pulumi.resources.CustomResource {
      * @return FAQ name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -95,7 +95,7 @@ public class Faq extends com.pulumi.resources.CustomResource {
      * @return FAQ role ARN
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     /**
@@ -109,7 +109,7 @@ public class Faq extends com.pulumi.resources.CustomResource {
      * @return FAQ S3 path
      * 
      */
-    public Output<FaqS3Path> getS3Path() {
+    public Output<FaqS3Path> s3Path() {
         return this.s3Path;
     }
     /**
@@ -123,7 +123,7 @@ public class Faq extends com.pulumi.resources.CustomResource {
      * @return Tags for labeling the FAQ
      * 
      */
-    public Output</* @Nullable */ List<FaqTag>> getTags() {
+    public Output</* @Nullable */ List<FaqTag>> tags() {
         return this.tags;
     }
 

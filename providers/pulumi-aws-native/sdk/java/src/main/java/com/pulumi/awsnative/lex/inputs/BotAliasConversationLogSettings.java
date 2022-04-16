@@ -23,14 +23,14 @@ public final class BotAliasConversationLogSettings extends com.pulumi.resources.
     @Import(name="audioLogSettings")
       private final @Nullable List<BotAliasAudioLogSetting> audioLogSettings;
 
-    public List<BotAliasAudioLogSetting> getAudioLogSettings() {
+    public List<BotAliasAudioLogSetting> audioLogSettings() {
         return this.audioLogSettings == null ? List.of() : this.audioLogSettings;
     }
 
     @Import(name="textLogSettings")
       private final @Nullable List<BotAliasTextLogSetting> textLogSettings;
 
-    public List<BotAliasTextLogSetting> getTextLogSettings() {
+    public List<BotAliasTextLogSetting> textLogSettings() {
         return this.textLogSettings == null ? List.of() : this.textLogSettings;
     }
 

@@ -24,7 +24,7 @@ public final class GlobalClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deletionProtection")
       private final @Nullable Output<Boolean> deletionProtection;
 
-    public Output<Boolean> getDeletionProtection() {
+    public Output<Boolean> deletionProtection() {
         return this.deletionProtection == null ? Codegen.empty() : this.deletionProtection;
     }
 
@@ -36,7 +36,7 @@ public final class GlobalClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="engine")
       private final @Nullable Output<GlobalClusterEngine> engine;
 
-    public Output<GlobalClusterEngine> getEngine() {
+    public Output<GlobalClusterEngine> engine() {
         return this.engine == null ? Codegen.empty() : this.engine;
     }
 
@@ -47,7 +47,7 @@ public final class GlobalClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="engineVersion")
       private final @Nullable Output<String> engineVersion;
 
-    public Output<String> getEngineVersion() {
+    public Output<String> engineVersion() {
         return this.engineVersion == null ? Codegen.empty() : this.engineVersion;
     }
 
@@ -58,7 +58,7 @@ public final class GlobalClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="globalClusterIdentifier")
       private final @Nullable Output<String> globalClusterIdentifier;
 
-    public Output<String> getGlobalClusterIdentifier() {
+    public Output<String> globalClusterIdentifier() {
         return this.globalClusterIdentifier == null ? Codegen.empty() : this.globalClusterIdentifier;
     }
 
@@ -69,7 +69,7 @@ public final class GlobalClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceDBClusterIdentifier")
       private final @Nullable Output<String> sourceDBClusterIdentifier;
 
-    public Output<String> getSourceDBClusterIdentifier() {
+    public Output<String> sourceDBClusterIdentifier() {
         return this.sourceDBClusterIdentifier == null ? Codegen.empty() : this.sourceDBClusterIdentifier;
     }
 
@@ -81,7 +81,7 @@ public final class GlobalClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageEncrypted")
       private final @Nullable Output<Boolean> storageEncrypted;
 
-    public Output<Boolean> getStorageEncrypted() {
+    public Output<Boolean> storageEncrypted() {
         return this.storageEncrypted == null ? Codegen.empty() : this.storageEncrypted;
     }
 

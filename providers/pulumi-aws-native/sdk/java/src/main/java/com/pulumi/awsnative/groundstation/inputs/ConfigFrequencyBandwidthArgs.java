@@ -19,14 +19,14 @@ public final class ConfigFrequencyBandwidthArgs extends com.pulumi.resources.Res
     @Import(name="units")
       private final @Nullable Output<ConfigBandwidthUnits> units;
 
-    public Output<ConfigBandwidthUnits> getUnits() {
+    public Output<ConfigBandwidthUnits> units() {
         return this.units == null ? Codegen.empty() : this.units;
     }
 
     @Import(name="value")
       private final @Nullable Output<Double> value;
 
-    public Output<Double> getValue() {
+    public Output<Double> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

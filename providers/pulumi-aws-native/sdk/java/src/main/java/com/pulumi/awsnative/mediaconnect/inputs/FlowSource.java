@@ -28,7 +28,7 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
     @Import(name="decryption")
       private final @Nullable FlowEncryption decryption;
 
-    public Optional<FlowEncryption> getDecryption() {
+    public Optional<FlowEncryption> decryption() {
         return this.decryption == null ? Optional.empty() : Optional.ofNullable(this.decryption);
     }
 
@@ -39,7 +39,7 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -50,7 +50,7 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
     @Import(name="entitlementArn")
       private final @Nullable String entitlementArn;
 
-    public Optional<String> getEntitlementArn() {
+    public Optional<String> entitlementArn() {
         return this.entitlementArn == null ? Optional.empty() : Optional.ofNullable(this.entitlementArn);
     }
 
@@ -61,7 +61,7 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
     @Import(name="ingestIp")
       private final @Nullable String ingestIp;
 
-    public Optional<String> getIngestIp() {
+    public Optional<String> ingestIp() {
         return this.ingestIp == null ? Optional.empty() : Optional.ofNullable(this.ingestIp);
     }
 
@@ -72,7 +72,7 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
     @Import(name="ingestPort")
       private final @Nullable Integer ingestPort;
 
-    public Optional<Integer> getIngestPort() {
+    public Optional<Integer> ingestPort() {
         return this.ingestPort == null ? Optional.empty() : Optional.ofNullable(this.ingestPort);
     }
 
@@ -83,7 +83,7 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxBitrate")
       private final @Nullable Integer maxBitrate;
 
-    public Optional<Integer> getMaxBitrate() {
+    public Optional<Integer> maxBitrate() {
         return this.maxBitrate == null ? Optional.empty() : Optional.ofNullable(this.maxBitrate);
     }
 
@@ -94,7 +94,7 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxLatency")
       private final @Nullable Integer maxLatency;
 
-    public Optional<Integer> getMaxLatency() {
+    public Optional<Integer> maxLatency() {
         return this.maxLatency == null ? Optional.empty() : Optional.ofNullable(this.maxLatency);
     }
 
@@ -105,7 +105,7 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
     @Import(name="minLatency")
       private final @Nullable Integer minLatency;
 
-    public Optional<Integer> getMinLatency() {
+    public Optional<Integer> minLatency() {
         return this.minLatency == null ? Optional.empty() : Optional.ofNullable(this.minLatency);
     }
 
@@ -116,7 +116,7 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -127,7 +127,7 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
     @Import(name="protocol")
       private final @Nullable FlowSourceProtocol protocol;
 
-    public Optional<FlowSourceProtocol> getProtocol() {
+    public Optional<FlowSourceProtocol> protocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
@@ -138,7 +138,7 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourceArn")
       private final @Nullable String sourceArn;
 
-    public Optional<String> getSourceArn() {
+    public Optional<String> sourceArn() {
         return this.sourceArn == null ? Optional.empty() : Optional.ofNullable(this.sourceArn);
     }
 
@@ -149,7 +149,7 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourceIngestPort")
       private final @Nullable String sourceIngestPort;
 
-    public Optional<String> getSourceIngestPort() {
+    public Optional<String> sourceIngestPort() {
         return this.sourceIngestPort == null ? Optional.empty() : Optional.ofNullable(this.sourceIngestPort);
     }
 
@@ -160,7 +160,7 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
     @Import(name="streamId")
       private final @Nullable String streamId;
 
-    public Optional<String> getStreamId() {
+    public Optional<String> streamId() {
         return this.streamId == null ? Optional.empty() : Optional.ofNullable(this.streamId);
     }
 
@@ -171,7 +171,7 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
     @Import(name="vpcInterfaceName")
       private final @Nullable String vpcInterfaceName;
 
-    public Optional<String> getVpcInterfaceName() {
+    public Optional<String> vpcInterfaceName() {
         return this.vpcInterfaceName == null ? Optional.empty() : Optional.ofNullable(this.vpcInterfaceName);
     }
 
@@ -182,7 +182,7 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
     @Import(name="whitelistCidr")
       private final @Nullable String whitelistCidr;
 
-    public Optional<String> getWhitelistCidr() {
+    public Optional<String> whitelistCidr() {
         return this.whitelistCidr == null ? Optional.empty() : Optional.ofNullable(this.whitelistCidr);
     }
 

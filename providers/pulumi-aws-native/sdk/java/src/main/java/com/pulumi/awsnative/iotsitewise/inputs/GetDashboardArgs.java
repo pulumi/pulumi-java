@@ -19,7 +19,7 @@ public final class GetDashboardArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="dashboardId", required=true)
       private final String dashboardId;
 
-    public String getDashboardId() {
+    public String dashboardId() {
         return this.dashboardId;
     }
 

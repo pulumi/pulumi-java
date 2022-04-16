@@ -26,7 +26,7 @@ public final class BotS3LocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3Bucket", required=true)
       private final Output<String> s3Bucket;
 
-    public Output<String> getS3Bucket() {
+    public Output<String> s3Bucket() {
         return this.s3Bucket;
     }
 
@@ -37,7 +37,7 @@ public final class BotS3LocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3ObjectKey", required=true)
       private final Output<String> s3ObjectKey;
 
-    public Output<String> getS3ObjectKey() {
+    public Output<String> s3ObjectKey() {
         return this.s3ObjectKey;
     }
 
@@ -48,7 +48,7 @@ public final class BotS3LocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3ObjectVersion")
       private final @Nullable Output<String> s3ObjectVersion;
 
-    public Output<String> getS3ObjectVersion() {
+    public Output<String> s3ObjectVersion() {
         return this.s3ObjectVersion == null ? Codegen.empty() : this.s3ObjectVersion;
     }
 

@@ -63,28 +63,28 @@ public final class GetHookVersionResult {
      * The Amazon Resource Name (ARN) of the type, here the HookVersion. This is used to uniquely identify a HookVersion resource
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Indicates if this type version is the current default version
      * 
     */
-    public Optional<Boolean> getIsDefaultVersion() {
+    public Optional<Boolean> isDefaultVersion() {
         return Optional.ofNullable(this.isDefaultVersion);
     }
     /**
      * The Amazon Resource Name (ARN) of the type without the versionID.
      * 
     */
-    public Optional<String> getTypeArn() {
+    public Optional<String> typeArn() {
         return Optional.ofNullable(this.typeArn);
     }
     /**
      * The ID of the version of the type represented by this hook instance.
      * 
     */
-    public Optional<String> getVersionId() {
+    public Optional<String> versionId() {
         return Optional.ofNullable(this.versionId);
     }
     /**
@@ -97,7 +97,7 @@ public final class GetHookVersionResult {
      * PUBLIC: The type is publically visible and usable within any Amazon account.
      * 
     */
-    public Optional<HookVersionVisibility> getVisibility() {
+    public Optional<HookVersionVisibility> visibility() {
         return Optional.ofNullable(this.visibility);
     }
 

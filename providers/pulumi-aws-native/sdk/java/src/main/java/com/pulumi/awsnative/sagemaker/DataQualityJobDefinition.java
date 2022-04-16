@@ -38,31 +38,31 @@ public class DataQualityJobDefinition extends com.pulumi.resources.CustomResourc
      * @return The time at which the job definition was created.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     @Export(name="dataQualityAppSpecification", type=DataQualityJobDefinitionDataQualityAppSpecification.class, parameters={})
     private Output<DataQualityJobDefinitionDataQualityAppSpecification> dataQualityAppSpecification;
 
-    public Output<DataQualityJobDefinitionDataQualityAppSpecification> getDataQualityAppSpecification() {
+    public Output<DataQualityJobDefinitionDataQualityAppSpecification> dataQualityAppSpecification() {
         return this.dataQualityAppSpecification;
     }
     @Export(name="dataQualityBaselineConfig", type=DataQualityJobDefinitionDataQualityBaselineConfig.class, parameters={})
     private Output</* @Nullable */ DataQualityJobDefinitionDataQualityBaselineConfig> dataQualityBaselineConfig;
 
-    public Output</* @Nullable */ DataQualityJobDefinitionDataQualityBaselineConfig> getDataQualityBaselineConfig() {
+    public Output</* @Nullable */ DataQualityJobDefinitionDataQualityBaselineConfig> dataQualityBaselineConfig() {
         return this.dataQualityBaselineConfig;
     }
     @Export(name="dataQualityJobInput", type=DataQualityJobDefinitionDataQualityJobInput.class, parameters={})
     private Output<DataQualityJobDefinitionDataQualityJobInput> dataQualityJobInput;
 
-    public Output<DataQualityJobDefinitionDataQualityJobInput> getDataQualityJobInput() {
+    public Output<DataQualityJobDefinitionDataQualityJobInput> dataQualityJobInput() {
         return this.dataQualityJobInput;
     }
     @Export(name="dataQualityJobOutputConfig", type=DataQualityJobDefinitionMonitoringOutputConfig.class, parameters={})
     private Output<DataQualityJobDefinitionMonitoringOutputConfig> dataQualityJobOutputConfig;
 
-    public Output<DataQualityJobDefinitionMonitoringOutputConfig> getDataQualityJobOutputConfig() {
+    public Output<DataQualityJobDefinitionMonitoringOutputConfig> dataQualityJobOutputConfig() {
         return this.dataQualityJobOutputConfig;
     }
     /**
@@ -76,25 +76,25 @@ public class DataQualityJobDefinition extends com.pulumi.resources.CustomResourc
      * @return The Amazon Resource Name (ARN) of job definition.
      * 
      */
-    public Output<String> getJobDefinitionArn() {
+    public Output<String> jobDefinitionArn() {
         return this.jobDefinitionArn;
     }
     @Export(name="jobDefinitionName", type=String.class, parameters={})
     private Output</* @Nullable */ String> jobDefinitionName;
 
-    public Output</* @Nullable */ String> getJobDefinitionName() {
+    public Output</* @Nullable */ String> jobDefinitionName() {
         return this.jobDefinitionName;
     }
     @Export(name="jobResources", type=DataQualityJobDefinitionMonitoringResources.class, parameters={})
     private Output<DataQualityJobDefinitionMonitoringResources> jobResources;
 
-    public Output<DataQualityJobDefinitionMonitoringResources> getJobResources() {
+    public Output<DataQualityJobDefinitionMonitoringResources> jobResources() {
         return this.jobResources;
     }
     @Export(name="networkConfig", type=DataQualityJobDefinitionNetworkConfig.class, parameters={})
     private Output</* @Nullable */ DataQualityJobDefinitionNetworkConfig> networkConfig;
 
-    public Output</* @Nullable */ DataQualityJobDefinitionNetworkConfig> getNetworkConfig() {
+    public Output</* @Nullable */ DataQualityJobDefinitionNetworkConfig> networkConfig() {
         return this.networkConfig;
     }
     /**
@@ -108,13 +108,13 @@ public class DataQualityJobDefinition extends com.pulumi.resources.CustomResourc
      * @return The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     @Export(name="stoppingCondition", type=DataQualityJobDefinitionStoppingCondition.class, parameters={})
     private Output</* @Nullable */ DataQualityJobDefinitionStoppingCondition> stoppingCondition;
 
-    public Output</* @Nullable */ DataQualityJobDefinitionStoppingCondition> getStoppingCondition() {
+    public Output</* @Nullable */ DataQualityJobDefinitionStoppingCondition> stoppingCondition() {
         return this.stoppingCondition;
     }
     /**
@@ -128,7 +128,7 @@ public class DataQualityJobDefinition extends com.pulumi.resources.CustomResourc
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<DataQualityJobDefinitionTag>> getTags() {
+    public Output</* @Nullable */ List<DataQualityJobDefinitionTag>> tags() {
         return this.tags;
     }
 

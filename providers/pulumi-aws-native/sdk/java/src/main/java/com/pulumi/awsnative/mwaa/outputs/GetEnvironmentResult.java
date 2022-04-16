@@ -109,68 +109,68 @@ public final class GetEnvironmentResult {
      *     "core.dags_folder": "{AIRFLOW_HOME}/dags"
      * 
     */
-    public Optional<Object> getAirflowConfigurationOptions() {
+    public Optional<Object> airflowConfigurationOptions() {
         return Optional.ofNullable(this.airflowConfigurationOptions);
     }
-    public Optional<String> getAirflowVersion() {
+    public Optional<String> airflowVersion() {
         return Optional.ofNullable(this.airflowVersion);
     }
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getDagS3Path() {
+    public Optional<String> dagS3Path() {
         return Optional.ofNullable(this.dagS3Path);
     }
-    public Optional<String> getEnvironmentClass() {
+    public Optional<String> environmentClass() {
         return Optional.ofNullable(this.environmentClass);
     }
-    public Optional<String> getExecutionRoleArn() {
+    public Optional<String> executionRoleArn() {
         return Optional.ofNullable(this.executionRoleArn);
     }
-    public Optional<EnvironmentLoggingConfiguration> getLoggingConfiguration() {
+    public Optional<EnvironmentLoggingConfiguration> loggingConfiguration() {
         return Optional.ofNullable(this.loggingConfiguration);
     }
-    public Optional<Integer> getMaxWorkers() {
+    public Optional<Integer> maxWorkers() {
         return Optional.ofNullable(this.maxWorkers);
     }
-    public Optional<Integer> getMinWorkers() {
+    public Optional<Integer> minWorkers() {
         return Optional.ofNullable(this.minWorkers);
     }
-    public Optional<EnvironmentNetworkConfiguration> getNetworkConfiguration() {
+    public Optional<EnvironmentNetworkConfiguration> networkConfiguration() {
         return Optional.ofNullable(this.networkConfiguration);
     }
-    public Optional<String> getPluginsS3ObjectVersion() {
+    public Optional<String> pluginsS3ObjectVersion() {
         return Optional.ofNullable(this.pluginsS3ObjectVersion);
     }
-    public Optional<String> getPluginsS3Path() {
+    public Optional<String> pluginsS3Path() {
         return Optional.ofNullable(this.pluginsS3Path);
     }
-    public Optional<String> getRequirementsS3ObjectVersion() {
+    public Optional<String> requirementsS3ObjectVersion() {
         return Optional.ofNullable(this.requirementsS3ObjectVersion);
     }
-    public Optional<String> getRequirementsS3Path() {
+    public Optional<String> requirementsS3Path() {
         return Optional.ofNullable(this.requirementsS3Path);
     }
-    public Optional<Integer> getSchedulers() {
+    public Optional<Integer> schedulers() {
         return Optional.ofNullable(this.schedulers);
     }
-    public Optional<String> getSourceBucketArn() {
+    public Optional<String> sourceBucketArn() {
         return Optional.ofNullable(this.sourceBucketArn);
     }
     /**
      * A map of tags for the environment.
      * 
     */
-    public Optional<Object> getTags() {
+    public Optional<Object> tags() {
         return Optional.ofNullable(this.tags);
     }
-    public Optional<EnvironmentWebserverAccessMode> getWebserverAccessMode() {
+    public Optional<EnvironmentWebserverAccessMode> webserverAccessMode() {
         return Optional.ofNullable(this.webserverAccessMode);
     }
-    public Optional<String> getWebserverUrl() {
+    public Optional<String> webserverUrl() {
         return Optional.ofNullable(this.webserverUrl);
     }
-    public Optional<String> getWeeklyMaintenanceWindowStart() {
+    public Optional<String> weeklyMaintenanceWindowStart() {
         return Optional.ofNullable(this.weeklyMaintenanceWindowStart);
     }
 

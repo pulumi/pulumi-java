@@ -80,58 +80,58 @@ public final class InstancePort {
      * Access Direction for Protocol of the Instance(inbound/outbound).
      * 
     */
-    public Optional<String> getAccessDirection() {
+    public Optional<String> accessDirection() {
         return Optional.ofNullable(this.accessDirection);
     }
     /**
      * Access From Protocol of the Instance.
      * 
     */
-    public Optional<String> getAccessFrom() {
+    public Optional<String> accessFrom() {
         return Optional.ofNullable(this.accessFrom);
     }
     /**
      * Access Type Protocol of the Instance.
      * 
     */
-    public Optional<String> getAccessType() {
+    public Optional<String> accessType() {
         return Optional.ofNullable(this.accessType);
     }
-    public List<String> getCidrListAliases() {
+    public List<String> cidrListAliases() {
         return this.cidrListAliases == null ? List.of() : this.cidrListAliases;
     }
-    public List<String> getCidrs() {
+    public List<String> cidrs() {
         return this.cidrs == null ? List.of() : this.cidrs;
     }
     /**
      * CommonName for Protocol of the Instance.
      * 
     */
-    public Optional<String> getCommonName() {
+    public Optional<String> commonName() {
         return Optional.ofNullable(this.commonName);
     }
     /**
      * From Port of the Instance.
      * 
     */
-    public Optional<Integer> getFromPort() {
+    public Optional<Integer> fromPort() {
         return Optional.ofNullable(this.fromPort);
     }
-    public List<String> getIpv6Cidrs() {
+    public List<String> ipv6Cidrs() {
         return this.ipv6Cidrs == null ? List.of() : this.ipv6Cidrs;
     }
     /**
      * Port Protocol of the Instance.
      * 
     */
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
      * To Port of the Instance.
      * 
     */
-    public Optional<Integer> getToPort() {
+    public Optional<Integer> toPort() {
         return Optional.ofNullable(this.toPort);
     }
 

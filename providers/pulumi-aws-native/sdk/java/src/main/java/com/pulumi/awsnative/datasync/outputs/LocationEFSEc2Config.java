@@ -33,14 +33,14 @@ public final class LocationEFSEc2Config {
      * The Amazon Resource Names (ARNs) of the security groups that are configured for the Amazon EC2 resource.
      * 
     */
-    public List<String> getSecurityGroupArns() {
+    public List<String> securityGroupArns() {
         return this.securityGroupArns;
     }
     /**
      * The ARN of the subnet that DataSync uses to access the target EFS file system.
      * 
     */
-    public String getSubnetArn() {
+    public String subnetArn() {
         return this.subnetArn;
     }
 

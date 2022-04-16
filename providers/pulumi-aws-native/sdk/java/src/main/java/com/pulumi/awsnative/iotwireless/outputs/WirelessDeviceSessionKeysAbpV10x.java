@@ -20,10 +20,10 @@ public final class WirelessDeviceSessionKeysAbpV10x {
         this.nwkSKey = nwkSKey;
     }
 
-    public String getAppSKey() {
+    public String appSKey() {
         return this.appSKey;
     }
-    public String getNwkSKey() {
+    public String nwkSKey() {
         return this.nwkSKey;
     }
 

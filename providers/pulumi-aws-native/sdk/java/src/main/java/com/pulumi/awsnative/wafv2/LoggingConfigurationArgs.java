@@ -25,7 +25,7 @@ public final class LoggingConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="logDestinationConfigs", required=true)
       private final Output<List<String>> logDestinationConfigs;
 
-    public Output<List<String>> getLogDestinationConfigs() {
+    public Output<List<String>> logDestinationConfigs() {
         return this.logDestinationConfigs;
     }
 
@@ -36,7 +36,7 @@ public final class LoggingConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="loggingFilter")
       private final @Nullable Output<LoggingFilterPropertiesArgs> loggingFilter;
 
-    public Output<LoggingFilterPropertiesArgs> getLoggingFilter() {
+    public Output<LoggingFilterPropertiesArgs> loggingFilter() {
         return this.loggingFilter == null ? Codegen.empty() : this.loggingFilter;
     }
 
@@ -47,7 +47,7 @@ public final class LoggingConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="redactedFields")
       private final @Nullable Output<List<LoggingConfigurationFieldToMatchArgs>> redactedFields;
 
-    public Output<List<LoggingConfigurationFieldToMatchArgs>> getRedactedFields() {
+    public Output<List<LoggingConfigurationFieldToMatchArgs>> redactedFields() {
         return this.redactedFields == null ? Codegen.empty() : this.redactedFields;
     }
 
@@ -58,7 +58,7 @@ public final class LoggingConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="resourceArn", required=true)
       private final Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
 

@@ -22,21 +22,21 @@ public final class BotPostFulfillmentStatusSpecificationArgs extends com.pulumi.
     @Import(name="failureResponse")
       private final @Nullable Output<BotResponseSpecificationArgs> failureResponse;
 
-    public Output<BotResponseSpecificationArgs> getFailureResponse() {
+    public Output<BotResponseSpecificationArgs> failureResponse() {
         return this.failureResponse == null ? Codegen.empty() : this.failureResponse;
     }
 
     @Import(name="successResponse")
       private final @Nullable Output<BotResponseSpecificationArgs> successResponse;
 
-    public Output<BotResponseSpecificationArgs> getSuccessResponse() {
+    public Output<BotResponseSpecificationArgs> successResponse() {
         return this.successResponse == null ? Codegen.empty() : this.successResponse;
     }
 
     @Import(name="timeoutResponse")
       private final @Nullable Output<BotResponseSpecificationArgs> timeoutResponse;
 
-    public Output<BotResponseSpecificationArgs> getTimeoutResponse() {
+    public Output<BotResponseSpecificationArgs> timeoutResponse() {
         return this.timeoutResponse == null ? Codegen.empty() : this.timeoutResponse;
     }
 

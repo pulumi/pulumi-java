@@ -30,7 +30,7 @@ public class QueryDefinition extends com.pulumi.resources.CustomResource {
      * @return Optionally define specific log groups as part of your query definition
      * 
      */
-    public Output</* @Nullable */ List<String>> getLogGroupNames() {
+    public Output</* @Nullable */ List<String>> logGroupNames() {
         return this.logGroupNames;
     }
     /**
@@ -44,7 +44,7 @@ public class QueryDefinition extends com.pulumi.resources.CustomResource {
      * @return A name for the saved query definition
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -58,7 +58,7 @@ public class QueryDefinition extends com.pulumi.resources.CustomResource {
      * @return Unique identifier of a query definition
      * 
      */
-    public Output<String> getQueryDefinitionId() {
+    public Output<String> queryDefinitionId() {
         return this.queryDefinitionId;
     }
     /**
@@ -72,7 +72,7 @@ public class QueryDefinition extends com.pulumi.resources.CustomResource {
      * @return The query string to use for this definition
      * 
      */
-    public Output<String> getQueryString() {
+    public Output<String> queryString() {
         return this.queryString;
     }
 

@@ -35,21 +35,21 @@ public final class ServiceImageRepository {
         this.imageRepositoryType = imageRepositoryType;
     }
 
-    public Optional<ServiceImageConfiguration> getImageConfiguration() {
+    public Optional<ServiceImageConfiguration> imageConfiguration() {
         return Optional.ofNullable(this.imageConfiguration);
     }
     /**
      * Image Identifier
      * 
     */
-    public String getImageIdentifier() {
+    public String imageIdentifier() {
         return this.imageIdentifier;
     }
     /**
      * Image Repository Type
      * 
     */
-    public ServiceImageRepositoryImageRepositoryType getImageRepositoryType() {
+    public ServiceImageRepositoryImageRepositoryType imageRepositoryType() {
         return this.imageRepositoryType;
     }
 

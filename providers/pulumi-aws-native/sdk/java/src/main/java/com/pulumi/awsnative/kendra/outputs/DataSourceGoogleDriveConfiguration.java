@@ -38,25 +38,25 @@ public final class DataSourceGoogleDriveConfiguration {
         this.secretArn = secretArn;
     }
 
-    public List<String> getExcludeMimeTypes() {
+    public List<String> excludeMimeTypes() {
         return this.excludeMimeTypes == null ? List.of() : this.excludeMimeTypes;
     }
-    public List<String> getExcludeSharedDrives() {
+    public List<String> excludeSharedDrives() {
         return this.excludeSharedDrives == null ? List.of() : this.excludeSharedDrives;
     }
-    public List<String> getExcludeUserAccounts() {
+    public List<String> excludeUserAccounts() {
         return this.excludeUserAccounts == null ? List.of() : this.excludeUserAccounts;
     }
-    public List<String> getExclusionPatterns() {
+    public List<String> exclusionPatterns() {
         return this.exclusionPatterns == null ? List.of() : this.exclusionPatterns;
     }
-    public List<DataSourceToIndexFieldMapping> getFieldMappings() {
+    public List<DataSourceToIndexFieldMapping> fieldMappings() {
         return this.fieldMappings == null ? List.of() : this.fieldMappings;
     }
-    public List<String> getInclusionPatterns() {
+    public List<String> inclusionPatterns() {
         return this.inclusionPatterns == null ? List.of() : this.inclusionPatterns;
     }
-    public String getSecretArn() {
+    public String secretArn() {
         return this.secretArn;
     }
 

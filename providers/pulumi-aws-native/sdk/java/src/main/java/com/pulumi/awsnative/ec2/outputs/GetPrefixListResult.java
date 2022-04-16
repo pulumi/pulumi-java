@@ -88,63 +88,63 @@ public final class GetPrefixListResult {
      * Ip Version of Prefix List.
      * 
     */
-    public Optional<PrefixListAddressFamily> getAddressFamily() {
+    public Optional<PrefixListAddressFamily> addressFamily() {
         return Optional.ofNullable(this.addressFamily);
     }
     /**
      * The Amazon Resource Name (ARN) of the Prefix List.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Entries of Prefix List.
      * 
     */
-    public List<PrefixListEntry> getEntries() {
+    public List<PrefixListEntry> entries() {
         return this.entries == null ? List.of() : this.entries;
     }
     /**
      * Max Entries of Prefix List.
      * 
     */
-    public Optional<Integer> getMaxEntries() {
+    public Optional<Integer> maxEntries() {
         return Optional.ofNullable(this.maxEntries);
     }
     /**
      * Owner Id of Prefix List.
      * 
     */
-    public Optional<String> getOwnerId() {
+    public Optional<String> ownerId() {
         return Optional.ofNullable(this.ownerId);
     }
     /**
      * Id of Prefix List.
      * 
     */
-    public Optional<String> getPrefixListId() {
+    public Optional<String> prefixListId() {
         return Optional.ofNullable(this.prefixListId);
     }
     /**
      * Name of Prefix List.
      * 
     */
-    public Optional<String> getPrefixListName() {
+    public Optional<String> prefixListName() {
         return Optional.ofNullable(this.prefixListName);
     }
     /**
      * Tags for Prefix List
      * 
     */
-    public List<PrefixListTag> getTags() {
+    public List<PrefixListTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * Version of Prefix List.
      * 
     */
-    public Optional<Integer> getVersion() {
+    public Optional<Integer> version() {
         return Optional.ofNullable(this.version);
     }
 

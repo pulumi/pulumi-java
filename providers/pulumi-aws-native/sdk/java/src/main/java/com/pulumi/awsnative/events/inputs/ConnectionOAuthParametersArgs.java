@@ -21,28 +21,28 @@ public final class ConnectionOAuthParametersArgs extends com.pulumi.resources.Re
     @Import(name="authorizationEndpoint", required=true)
       private final Output<String> authorizationEndpoint;
 
-    public Output<String> getAuthorizationEndpoint() {
+    public Output<String> authorizationEndpoint() {
         return this.authorizationEndpoint;
     }
 
     @Import(name="clientParameters", required=true)
       private final Output<ConnectionClientParametersArgs> clientParameters;
 
-    public Output<ConnectionClientParametersArgs> getClientParameters() {
+    public Output<ConnectionClientParametersArgs> clientParameters() {
         return this.clientParameters;
     }
 
     @Import(name="httpMethod", required=true)
       private final Output<ConnectionOAuthParametersHttpMethod> httpMethod;
 
-    public Output<ConnectionOAuthParametersHttpMethod> getHttpMethod() {
+    public Output<ConnectionOAuthParametersHttpMethod> httpMethod() {
         return this.httpMethod;
     }
 
     @Import(name="oAuthHttpParameters")
       private final @Nullable Output<ConnectionHttpParametersArgs> oAuthHttpParameters;
 
-    public Output<ConnectionHttpParametersArgs> getOAuthHttpParameters() {
+    public Output<ConnectionHttpParametersArgs> oAuthHttpParameters() {
         return this.oAuthHttpParameters == null ? Codegen.empty() : this.oAuthHttpParameters;
     }
 

@@ -19,77 +19,77 @@ public final class ListenerAuthenticateOidcConfigArgs extends com.pulumi.resourc
     @Import(name="authenticationRequestExtraParams")
       private final @Nullable Output<Object> authenticationRequestExtraParams;
 
-    public Output<Object> getAuthenticationRequestExtraParams() {
+    public Output<Object> authenticationRequestExtraParams() {
         return this.authenticationRequestExtraParams == null ? Codegen.empty() : this.authenticationRequestExtraParams;
     }
 
     @Import(name="authorizationEndpoint", required=true)
       private final Output<String> authorizationEndpoint;
 
-    public Output<String> getAuthorizationEndpoint() {
+    public Output<String> authorizationEndpoint() {
         return this.authorizationEndpoint;
     }
 
     @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
 
     @Import(name="clientSecret", required=true)
       private final Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
+    public Output<String> clientSecret() {
         return this.clientSecret;
     }
 
     @Import(name="issuer", required=true)
       private final Output<String> issuer;
 
-    public Output<String> getIssuer() {
+    public Output<String> issuer() {
         return this.issuer;
     }
 
     @Import(name="onUnauthenticatedRequest")
       private final @Nullable Output<String> onUnauthenticatedRequest;
 
-    public Output<String> getOnUnauthenticatedRequest() {
+    public Output<String> onUnauthenticatedRequest() {
         return this.onUnauthenticatedRequest == null ? Codegen.empty() : this.onUnauthenticatedRequest;
     }
 
     @Import(name="scope")
       private final @Nullable Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     @Import(name="sessionCookieName")
       private final @Nullable Output<String> sessionCookieName;
 
-    public Output<String> getSessionCookieName() {
+    public Output<String> sessionCookieName() {
         return this.sessionCookieName == null ? Codegen.empty() : this.sessionCookieName;
     }
 
     @Import(name="sessionTimeout")
       private final @Nullable Output<String> sessionTimeout;
 
-    public Output<String> getSessionTimeout() {
+    public Output<String> sessionTimeout() {
         return this.sessionTimeout == null ? Codegen.empty() : this.sessionTimeout;
     }
 
     @Import(name="tokenEndpoint", required=true)
       private final Output<String> tokenEndpoint;
 
-    public Output<String> getTokenEndpoint() {
+    public Output<String> tokenEndpoint() {
         return this.tokenEndpoint;
     }
 
     @Import(name="userInfoEndpoint", required=true)
       private final Output<String> userInfoEndpoint;
 
-    public Output<String> getUserInfoEndpoint() {
+    public Output<String> userInfoEndpoint() {
         return this.userInfoEndpoint;
     }
 

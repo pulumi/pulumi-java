@@ -18,14 +18,14 @@ public final class DeliveryStreamSerializer extends com.pulumi.resources.InvokeA
     @Import(name="orcSerDe")
       private final @Nullable DeliveryStreamOrcSerDe orcSerDe;
 
-    public Optional<DeliveryStreamOrcSerDe> getOrcSerDe() {
+    public Optional<DeliveryStreamOrcSerDe> orcSerDe() {
         return this.orcSerDe == null ? Optional.empty() : Optional.ofNullable(this.orcSerDe);
     }
 
     @Import(name="parquetSerDe")
       private final @Nullable DeliveryStreamParquetSerDe parquetSerDe;
 
-    public Optional<DeliveryStreamParquetSerDe> getParquetSerDe() {
+    public Optional<DeliveryStreamParquetSerDe> parquetSerDe() {
         return this.parquetSerDe == null ? Optional.empty() : Optional.ofNullable(this.parquetSerDe);
     }
 

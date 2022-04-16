@@ -15,7 +15,7 @@ public final class GetInstanceProfileArgs extends com.pulumi.resources.InvokeArg
     @Import(name="arn", required=true)
       private final String arn;
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
 

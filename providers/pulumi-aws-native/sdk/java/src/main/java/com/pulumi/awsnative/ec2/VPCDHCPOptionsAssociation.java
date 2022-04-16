@@ -29,7 +29,7 @@ public class VPCDHCPOptionsAssociation extends com.pulumi.resources.CustomResour
      * @return The ID of the DHCP options set, or default to associate no DHCP options with the VPC.
      * 
      */
-    public Output<String> getDhcpOptionsId() {
+    public Output<String> dhcpOptionsId() {
         return this.dhcpOptionsId;
     }
     /**
@@ -43,7 +43,7 @@ public class VPCDHCPOptionsAssociation extends com.pulumi.resources.CustomResour
      * @return The ID of the VPC.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

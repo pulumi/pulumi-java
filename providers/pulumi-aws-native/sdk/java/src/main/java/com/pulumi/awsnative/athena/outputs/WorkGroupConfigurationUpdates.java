@@ -40,25 +40,25 @@ public final class WorkGroupConfigurationUpdates {
         this.resultConfigurationUpdates = resultConfigurationUpdates;
     }
 
-    public Optional<Integer> getBytesScannedCutoffPerQuery() {
+    public Optional<Integer> bytesScannedCutoffPerQuery() {
         return Optional.ofNullable(this.bytesScannedCutoffPerQuery);
     }
-    public Optional<Boolean> getEnforceWorkGroupConfiguration() {
+    public Optional<Boolean> enforceWorkGroupConfiguration() {
         return Optional.ofNullable(this.enforceWorkGroupConfiguration);
     }
-    public Optional<WorkGroupEngineVersion> getEngineVersion() {
+    public Optional<WorkGroupEngineVersion> engineVersion() {
         return Optional.ofNullable(this.engineVersion);
     }
-    public Optional<Boolean> getPublishCloudWatchMetricsEnabled() {
+    public Optional<Boolean> publishCloudWatchMetricsEnabled() {
         return Optional.ofNullable(this.publishCloudWatchMetricsEnabled);
     }
-    public Optional<Boolean> getRemoveBytesScannedCutoffPerQuery() {
+    public Optional<Boolean> removeBytesScannedCutoffPerQuery() {
         return Optional.ofNullable(this.removeBytesScannedCutoffPerQuery);
     }
-    public Optional<Boolean> getRequesterPaysEnabled() {
+    public Optional<Boolean> requesterPaysEnabled() {
         return Optional.ofNullable(this.requesterPaysEnabled);
     }
-    public Optional<WorkGroupResultConfigurationUpdates> getResultConfigurationUpdates() {
+    public Optional<WorkGroupResultConfigurationUpdates> resultConfigurationUpdates() {
         return Optional.ofNullable(this.resultConfigurationUpdates);
     }
 

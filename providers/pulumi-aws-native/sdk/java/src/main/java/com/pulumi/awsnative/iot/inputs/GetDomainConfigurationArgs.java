@@ -15,7 +15,7 @@ public final class GetDomainConfigurationArgs extends com.pulumi.resources.Invok
     @Import(name="domainConfigurationName", required=true)
       private final String domainConfigurationName;
 
-    public String getDomainConfigurationName() {
+    public String domainConfigurationName() {
         return this.domainConfigurationName;
     }
 

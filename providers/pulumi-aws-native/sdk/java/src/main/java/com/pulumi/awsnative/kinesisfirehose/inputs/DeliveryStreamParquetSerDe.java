@@ -19,42 +19,42 @@ public final class DeliveryStreamParquetSerDe extends com.pulumi.resources.Invok
     @Import(name="blockSizeBytes")
       private final @Nullable Integer blockSizeBytes;
 
-    public Optional<Integer> getBlockSizeBytes() {
+    public Optional<Integer> blockSizeBytes() {
         return this.blockSizeBytes == null ? Optional.empty() : Optional.ofNullable(this.blockSizeBytes);
     }
 
     @Import(name="compression")
       private final @Nullable String compression;
 
-    public Optional<String> getCompression() {
+    public Optional<String> compression() {
         return this.compression == null ? Optional.empty() : Optional.ofNullable(this.compression);
     }
 
     @Import(name="enableDictionaryCompression")
       private final @Nullable Boolean enableDictionaryCompression;
 
-    public Optional<Boolean> getEnableDictionaryCompression() {
+    public Optional<Boolean> enableDictionaryCompression() {
         return this.enableDictionaryCompression == null ? Optional.empty() : Optional.ofNullable(this.enableDictionaryCompression);
     }
 
     @Import(name="maxPaddingBytes")
       private final @Nullable Integer maxPaddingBytes;
 
-    public Optional<Integer> getMaxPaddingBytes() {
+    public Optional<Integer> maxPaddingBytes() {
         return this.maxPaddingBytes == null ? Optional.empty() : Optional.ofNullable(this.maxPaddingBytes);
     }
 
     @Import(name="pageSizeBytes")
       private final @Nullable Integer pageSizeBytes;
 
-    public Optional<Integer> getPageSizeBytes() {
+    public Optional<Integer> pageSizeBytes() {
         return this.pageSizeBytes == null ? Optional.empty() : Optional.ofNullable(this.pageSizeBytes);
     }
 
     @Import(name="writerVersion")
       private final @Nullable String writerVersion;
 
-    public Optional<String> getWriterVersion() {
+    public Optional<String> writerVersion() {
         return this.writerVersion == null ? Optional.empty() : Optional.ofNullable(this.writerVersion);
     }
 

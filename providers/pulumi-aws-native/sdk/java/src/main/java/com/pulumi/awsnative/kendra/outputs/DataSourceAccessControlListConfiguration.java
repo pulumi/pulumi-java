@@ -18,7 +18,7 @@ public final class DataSourceAccessControlListConfiguration {
         this.keyPath = keyPath;
     }
 
-    public Optional<String> getKeyPath() {
+    public Optional<String> keyPath() {
         return Optional.ofNullable(this.keyPath);
     }
 

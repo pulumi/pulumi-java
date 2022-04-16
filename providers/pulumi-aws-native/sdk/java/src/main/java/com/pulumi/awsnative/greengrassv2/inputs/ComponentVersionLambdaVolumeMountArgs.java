@@ -20,28 +20,28 @@ public final class ComponentVersionLambdaVolumeMountArgs extends com.pulumi.reso
     @Import(name="addGroupOwner")
       private final @Nullable Output<Boolean> addGroupOwner;
 
-    public Output<Boolean> getAddGroupOwner() {
+    public Output<Boolean> addGroupOwner() {
         return this.addGroupOwner == null ? Codegen.empty() : this.addGroupOwner;
     }
 
     @Import(name="destinationPath")
       private final @Nullable Output<String> destinationPath;
 
-    public Output<String> getDestinationPath() {
+    public Output<String> destinationPath() {
         return this.destinationPath == null ? Codegen.empty() : this.destinationPath;
     }
 
     @Import(name="permission")
       private final @Nullable Output<ComponentVersionLambdaFilesystemPermission> permission;
 
-    public Output<ComponentVersionLambdaFilesystemPermission> getPermission() {
+    public Output<ComponentVersionLambdaFilesystemPermission> permission() {
         return this.permission == null ? Codegen.empty() : this.permission;
     }
 
     @Import(name="sourcePath")
       private final @Nullable Output<String> sourcePath;
 
-    public Output<String> getSourcePath() {
+    public Output<String> sourcePath() {
         return this.sourcePath == null ? Codegen.empty() : this.sourcePath;
     }
 

@@ -19,14 +19,14 @@ public final class EndpointGroupPortOverride extends com.pulumi.resources.Invoke
     @Import(name="endpointPort", required=true)
       private final Integer endpointPort;
 
-    public Integer getEndpointPort() {
+    public Integer endpointPort() {
         return this.endpointPort;
     }
 
     @Import(name="listenerPort", required=true)
       private final Integer listenerPort;
 
-    public Integer getListenerPort() {
+    public Integer listenerPort() {
         return this.listenerPort;
     }
 

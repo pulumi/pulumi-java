@@ -25,7 +25,7 @@ public final class TemplateSourceTemplateArgs extends com.pulumi.resources.Resou
     @Import(name="arn", required=true)
       private final Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
 

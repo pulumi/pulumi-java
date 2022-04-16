@@ -18,14 +18,14 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateArn", required=true)
       private final Output<String> certificateArn;
 
-    public Output<String> getCertificateArn() {
+    public Output<String> certificateArn() {
         return this.certificateArn;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 

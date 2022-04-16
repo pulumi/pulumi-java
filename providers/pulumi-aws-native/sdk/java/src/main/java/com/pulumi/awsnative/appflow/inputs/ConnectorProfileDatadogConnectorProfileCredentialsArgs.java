@@ -21,7 +21,7 @@ public final class ConnectorProfileDatadogConnectorProfileCredentialsArgs extend
     @Import(name="apiKey", required=true)
       private final Output<String> apiKey;
 
-    public Output<String> getApiKey() {
+    public Output<String> apiKey() {
         return this.apiKey;
     }
 
@@ -32,7 +32,7 @@ public final class ConnectorProfileDatadogConnectorProfileCredentialsArgs extend
     @Import(name="applicationKey", required=true)
       private final Output<String> applicationKey;
 
-    public Output<String> getApplicationKey() {
+    public Output<String> applicationKey() {
         return this.applicationKey;
     }
 

@@ -19,21 +19,21 @@ public final class ConnectionHttpParametersArgs extends com.pulumi.resources.Res
     @Import(name="bodyParameters")
       private final @Nullable Output<List<ConnectionParameterArgs>> bodyParameters;
 
-    public Output<List<ConnectionParameterArgs>> getBodyParameters() {
+    public Output<List<ConnectionParameterArgs>> bodyParameters() {
         return this.bodyParameters == null ? Codegen.empty() : this.bodyParameters;
     }
 
     @Import(name="headerParameters")
       private final @Nullable Output<List<ConnectionParameterArgs>> headerParameters;
 
-    public Output<List<ConnectionParameterArgs>> getHeaderParameters() {
+    public Output<List<ConnectionParameterArgs>> headerParameters() {
         return this.headerParameters == null ? Codegen.empty() : this.headerParameters;
     }
 
     @Import(name="queryStringParameters")
       private final @Nullable Output<List<ConnectionParameterArgs>> queryStringParameters;
 
-    public Output<List<ConnectionParameterArgs>> getQueryStringParameters() {
+    public Output<List<ConnectionParameterArgs>> queryStringParameters() {
         return this.queryStringParameters == null ? Codegen.empty() : this.queryStringParameters;
     }
 

@@ -26,13 +26,13 @@ public final class ClusterExecuteCommandConfiguration {
         this.logging = logging;
     }
 
-    public Optional<String> getKmsKeyId() {
+    public Optional<String> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
-    public Optional<ClusterExecuteCommandLogConfiguration> getLogConfiguration() {
+    public Optional<ClusterExecuteCommandLogConfiguration> logConfiguration() {
         return Optional.ofNullable(this.logConfiguration);
     }
-    public Optional<String> getLogging() {
+    public Optional<String> logging() {
         return Optional.ofNullable(this.logging);
     }
 

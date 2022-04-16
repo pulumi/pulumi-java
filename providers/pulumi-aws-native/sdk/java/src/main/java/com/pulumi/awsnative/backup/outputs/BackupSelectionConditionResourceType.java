@@ -23,13 +23,13 @@ public final class BackupSelectionConditionResourceType {
         this.conditionValue = conditionValue;
     }
 
-    public String getConditionKey() {
+    public String conditionKey() {
         return this.conditionKey;
     }
-    public String getConditionType() {
+    public String conditionType() {
         return this.conditionType;
     }
-    public String getConditionValue() {
+    public String conditionValue() {
         return this.conditionValue;
     }
 

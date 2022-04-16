@@ -24,10 +24,10 @@ public final class DataSourceOneDriveUsers {
         this.oneDriveUserS3Path = oneDriveUserS3Path;
     }
 
-    public List<String> getOneDriveUserList() {
+    public List<String> oneDriveUserList() {
         return this.oneDriveUserList == null ? List.of() : this.oneDriveUserList;
     }
-    public Optional<DataSourceS3Path> getOneDriveUserS3Path() {
+    public Optional<DataSourceS3Path> oneDriveUserS3Path() {
         return Optional.ofNullable(this.oneDriveUserS3Path);
     }
 

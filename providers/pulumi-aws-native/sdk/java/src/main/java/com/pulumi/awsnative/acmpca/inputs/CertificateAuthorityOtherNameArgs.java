@@ -21,14 +21,14 @@ public final class CertificateAuthorityOtherNameArgs extends com.pulumi.resource
     @Import(name="typeId", required=true)
       private final Output<String> typeId;
 
-    public Output<String> getTypeId() {
+    public Output<String> typeId() {
         return this.typeId;
     }
 
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

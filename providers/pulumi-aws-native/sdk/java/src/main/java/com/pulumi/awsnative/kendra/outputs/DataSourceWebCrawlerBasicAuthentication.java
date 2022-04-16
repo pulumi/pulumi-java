@@ -24,13 +24,13 @@ public final class DataSourceWebCrawlerBasicAuthentication {
         this.port = port;
     }
 
-    public String getCredentials() {
+    public String credentials() {
         return this.credentials;
     }
-    public String getHost() {
+    public String host() {
         return this.host;
     }
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 

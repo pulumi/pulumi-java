@@ -26,7 +26,7 @@ public final class BucketQueueConfiguration extends com.pulumi.resources.InvokeA
     @Import(name="event", required=true)
       private final String event;
 
-    public String getEvent() {
+    public String event() {
         return this.event;
     }
 
@@ -37,7 +37,7 @@ public final class BucketQueueConfiguration extends com.pulumi.resources.InvokeA
     @Import(name="filter")
       private final @Nullable BucketNotificationFilter filter;
 
-    public Optional<BucketNotificationFilter> getFilter() {
+    public Optional<BucketNotificationFilter> filter() {
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
     }
 
@@ -48,7 +48,7 @@ public final class BucketQueueConfiguration extends com.pulumi.resources.InvokeA
     @Import(name="queue", required=true)
       private final String queue;
 
-    public String getQueue() {
+    public String queue() {
         return this.queue;
     }
 

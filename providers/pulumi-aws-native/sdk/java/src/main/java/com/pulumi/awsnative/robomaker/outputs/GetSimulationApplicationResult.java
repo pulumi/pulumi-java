@@ -70,52 +70,52 @@ public final class GetSimulationApplicationResult {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The current revision id.
      * 
     */
-    public Optional<String> getCurrentRevisionId() {
+    public Optional<String> currentRevisionId() {
         return Optional.ofNullable(this.currentRevisionId);
     }
     /**
      * The URI of the Docker image for the robot application.
      * 
     */
-    public Optional<String> getEnvironment() {
+    public Optional<String> environment() {
         return Optional.ofNullable(this.environment);
     }
     /**
      * The rendering engine for the simulation application.
      * 
     */
-    public Optional<SimulationApplicationRenderingEngine> getRenderingEngine() {
+    public Optional<SimulationApplicationRenderingEngine> renderingEngine() {
         return Optional.ofNullable(this.renderingEngine);
     }
     /**
      * The robot software suite used by the simulation application.
      * 
     */
-    public Optional<SimulationApplicationRobotSoftwareSuite> getRobotSoftwareSuite() {
+    public Optional<SimulationApplicationRobotSoftwareSuite> robotSoftwareSuite() {
         return Optional.ofNullable(this.robotSoftwareSuite);
     }
     /**
      * The simulation software suite used by the simulation application.
      * 
     */
-    public Optional<SimulationApplicationSimulationSoftwareSuite> getSimulationSoftwareSuite() {
+    public Optional<SimulationApplicationSimulationSoftwareSuite> simulationSoftwareSuite() {
         return Optional.ofNullable(this.simulationSoftwareSuite);
     }
     /**
      * The sources of the simulation application.
      * 
     */
-    public List<SimulationApplicationSourceConfig> getSources() {
+    public List<SimulationApplicationSourceConfig> sources() {
         return this.sources == null ? List.of() : this.sources;
     }
-    public Optional<SimulationApplicationTags> getTags() {
+    public Optional<SimulationApplicationTags> tags() {
         return Optional.ofNullable(this.tags);
     }
 

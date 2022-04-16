@@ -23,7 +23,7 @@ public final class BotAliasLambdaCodeHook extends com.pulumi.resources.InvokeArg
     @Import(name="codeHookInterfaceVersion", required=true)
       private final String codeHookInterfaceVersion;
 
-    public String getCodeHookInterfaceVersion() {
+    public String codeHookInterfaceVersion() {
         return this.codeHookInterfaceVersion;
     }
 
@@ -34,7 +34,7 @@ public final class BotAliasLambdaCodeHook extends com.pulumi.resources.InvokeArg
     @Import(name="lambdaArn", required=true)
       private final String lambdaArn;
 
-    public String getLambdaArn() {
+    public String lambdaArn() {
         return this.lambdaArn;
     }
 

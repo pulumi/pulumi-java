@@ -22,49 +22,49 @@ public class RouteCalculator extends com.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="calculatorArn", type=String.class, parameters={})
     private Output<String> calculatorArn;
 
-    public Output<String> getCalculatorArn() {
+    public Output<String> calculatorArn() {
         return this.calculatorArn;
     }
     @Export(name="calculatorName", type=String.class, parameters={})
     private Output<String> calculatorName;
 
-    public Output<String> getCalculatorName() {
+    public Output<String> calculatorName() {
         return this.calculatorName;
     }
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     @Export(name="dataSource", type=String.class, parameters={})
     private Output<String> dataSource;
 
-    public Output<String> getDataSource() {
+    public Output<String> dataSource() {
         return this.dataSource;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="pricingPlan", type=RouteCalculatorPricingPlan.class, parameters={})
     private Output</* @Nullable */ RouteCalculatorPricingPlan> pricingPlan;
 
-    public Output</* @Nullable */ RouteCalculatorPricingPlan> getPricingPlan() {
+    public Output</* @Nullable */ RouteCalculatorPricingPlan> pricingPlan() {
         return this.pricingPlan;
     }
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

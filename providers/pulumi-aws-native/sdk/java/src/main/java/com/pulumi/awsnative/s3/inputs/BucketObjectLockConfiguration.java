@@ -18,14 +18,14 @@ public final class BucketObjectLockConfiguration extends com.pulumi.resources.In
     @Import(name="objectLockEnabled")
       private final @Nullable String objectLockEnabled;
 
-    public Optional<String> getObjectLockEnabled() {
+    public Optional<String> objectLockEnabled() {
         return this.objectLockEnabled == null ? Optional.empty() : Optional.ofNullable(this.objectLockEnabled);
     }
 
     @Import(name="rule")
       private final @Nullable BucketObjectLockRule rule;
 
-    public Optional<BucketObjectLockRule> getRule() {
+    public Optional<BucketObjectLockRule> rule() {
         return this.rule == null ? Optional.empty() : Optional.ofNullable(this.rule);
     }
 

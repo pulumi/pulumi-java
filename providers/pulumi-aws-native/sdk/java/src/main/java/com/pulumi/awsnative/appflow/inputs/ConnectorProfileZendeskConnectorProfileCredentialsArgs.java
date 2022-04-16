@@ -23,7 +23,7 @@ public final class ConnectorProfileZendeskConnectorProfileCredentialsArgs extend
     @Import(name="accessToken")
       private final @Nullable Output<String> accessToken;
 
-    public Output<String> getAccessToken() {
+    public Output<String> accessToken() {
         return this.accessToken == null ? Codegen.empty() : this.accessToken;
     }
 
@@ -34,7 +34,7 @@ public final class ConnectorProfileZendeskConnectorProfileCredentialsArgs extend
     @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
 
@@ -45,7 +45,7 @@ public final class ConnectorProfileZendeskConnectorProfileCredentialsArgs extend
     @Import(name="clientSecret", required=true)
       private final Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
+    public Output<String> clientSecret() {
         return this.clientSecret;
     }
 
@@ -56,7 +56,7 @@ public final class ConnectorProfileZendeskConnectorProfileCredentialsArgs extend
     @Import(name="connectorOAuthRequest")
       private final @Nullable Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest;
 
-    public Output<ConnectorProfileConnectorOAuthRequestArgs> getConnectorOAuthRequest() {
+    public Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest() {
         return this.connectorOAuthRequest == null ? Codegen.empty() : this.connectorOAuthRequest;
     }
 

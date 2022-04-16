@@ -17,14 +17,14 @@ public final class GlobalTableAttributeDefinitionArgs extends com.pulumi.resourc
     @Import(name="attributeName", required=true)
       private final Output<String> attributeName;
 
-    public Output<String> getAttributeName() {
+    public Output<String> attributeName() {
         return this.attributeName;
     }
 
     @Import(name="attributeType", required=true)
       private final Output<String> attributeType;
 
-    public Output<String> getAttributeType() {
+    public Output<String> attributeType() {
         return this.attributeType;
     }
 

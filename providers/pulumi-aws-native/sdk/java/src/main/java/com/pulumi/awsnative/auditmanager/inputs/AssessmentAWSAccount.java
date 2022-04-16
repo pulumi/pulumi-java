@@ -21,21 +21,21 @@ public final class AssessmentAWSAccount extends com.pulumi.resources.InvokeArgs 
     @Import(name="emailAddress")
       private final @Nullable String emailAddress;
 
-    public Optional<String> getEmailAddress() {
+    public Optional<String> emailAddress() {
         return this.emailAddress == null ? Optional.empty() : Optional.ofNullable(this.emailAddress);
     }
 
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 

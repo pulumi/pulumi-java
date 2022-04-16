@@ -26,7 +26,7 @@ public final class BucketRedirectRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="hostName")
       private final @Nullable String hostName;
 
-    public Optional<String> getHostName() {
+    public Optional<String> hostName() {
         return this.hostName == null ? Optional.empty() : Optional.ofNullable(this.hostName);
     }
 
@@ -37,7 +37,7 @@ public final class BucketRedirectRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="httpRedirectCode")
       private final @Nullable String httpRedirectCode;
 
-    public Optional<String> getHttpRedirectCode() {
+    public Optional<String> httpRedirectCode() {
         return this.httpRedirectCode == null ? Optional.empty() : Optional.ofNullable(this.httpRedirectCode);
     }
 
@@ -48,7 +48,7 @@ public final class BucketRedirectRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="protocol")
       private final @Nullable BucketRedirectRuleProtocol protocol;
 
-    public Optional<BucketRedirectRuleProtocol> getProtocol() {
+    public Optional<BucketRedirectRuleProtocol> protocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
@@ -59,7 +59,7 @@ public final class BucketRedirectRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="replaceKeyPrefixWith")
       private final @Nullable String replaceKeyPrefixWith;
 
-    public Optional<String> getReplaceKeyPrefixWith() {
+    public Optional<String> replaceKeyPrefixWith() {
         return this.replaceKeyPrefixWith == null ? Optional.empty() : Optional.ofNullable(this.replaceKeyPrefixWith);
     }
 
@@ -70,7 +70,7 @@ public final class BucketRedirectRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="replaceKeyWith")
       private final @Nullable String replaceKeyWith;
 
-    public Optional<String> getReplaceKeyWith() {
+    public Optional<String> replaceKeyWith() {
         return this.replaceKeyWith == null ? Optional.empty() : Optional.ofNullable(this.replaceKeyWith);
     }
 

@@ -18,7 +18,7 @@ public final class GlobalTableWriteProvisionedThroughputSettings {
         this.writeCapacityAutoScalingSettings = writeCapacityAutoScalingSettings;
     }
 
-    public Optional<GlobalTableCapacityAutoScalingSettings> getWriteCapacityAutoScalingSettings() {
+    public Optional<GlobalTableCapacityAutoScalingSettings> writeCapacityAutoScalingSettings() {
         return Optional.ofNullable(this.writeCapacityAutoScalingSettings);
     }
 

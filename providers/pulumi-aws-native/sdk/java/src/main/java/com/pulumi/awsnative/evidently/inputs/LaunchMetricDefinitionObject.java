@@ -21,7 +21,7 @@ public final class LaunchMetricDefinitionObject extends com.pulumi.resources.Inv
     @Import(name="entityIdKey", required=true)
       private final String entityIdKey;
 
-    public String getEntityIdKey() {
+    public String entityIdKey() {
         return this.entityIdKey;
     }
 
@@ -32,21 +32,21 @@ public final class LaunchMetricDefinitionObject extends com.pulumi.resources.Inv
     @Import(name="eventPattern", required=true)
       private final String eventPattern;
 
-    public String getEventPattern() {
+    public String eventPattern() {
         return this.eventPattern;
     }
 
     @Import(name="metricName", required=true)
       private final String metricName;
 
-    public String getMetricName() {
+    public String metricName() {
         return this.metricName;
     }
 
     @Import(name="unitLabel")
       private final @Nullable String unitLabel;
 
-    public Optional<String> getUnitLabel() {
+    public Optional<String> unitLabel() {
         return this.unitLabel == null ? Optional.empty() : Optional.ofNullable(this.unitLabel);
     }
 
@@ -57,7 +57,7 @@ public final class LaunchMetricDefinitionObject extends com.pulumi.resources.Inv
     @Import(name="valueKey", required=true)
       private final String valueKey;
 
-    public String getValueKey() {
+    public String valueKey() {
         return this.valueKey;
     }
 

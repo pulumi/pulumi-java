@@ -28,7 +28,7 @@ public final class MitigationActionAddThingsToThingGroupParamsArgs extends com.p
     @Import(name="overrideDynamicGroups")
       private final @Nullable Output<Boolean> overrideDynamicGroups;
 
-    public Output<Boolean> getOverrideDynamicGroups() {
+    public Output<Boolean> overrideDynamicGroups() {
         return this.overrideDynamicGroups == null ? Codegen.empty() : this.overrideDynamicGroups;
     }
 
@@ -39,7 +39,7 @@ public final class MitigationActionAddThingsToThingGroupParamsArgs extends com.p
     @Import(name="thingGroupNames", required=true)
       private final Output<List<String>> thingGroupNames;
 
-    public Output<List<String>> getThingGroupNames() {
+    public Output<List<String>> thingGroupNames() {
         return this.thingGroupNames;
     }
 

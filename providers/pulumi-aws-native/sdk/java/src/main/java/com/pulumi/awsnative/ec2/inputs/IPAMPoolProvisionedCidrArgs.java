@@ -21,7 +21,7 @@ public final class IPAMPoolProvisionedCidrArgs extends com.pulumi.resources.Reso
     @Import(name="cidr", required=true)
       private final Output<String> cidr;
 
-    public Output<String> getCidr() {
+    public Output<String> cidr() {
         return this.cidr;
     }
 

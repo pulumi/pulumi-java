@@ -17,21 +17,21 @@ public final class TopicRuleKinesisAction extends com.pulumi.resources.InvokeArg
     @Import(name="partitionKey")
       private final @Nullable String partitionKey;
 
-    public Optional<String> getPartitionKey() {
+    public Optional<String> partitionKey() {
         return this.partitionKey == null ? Optional.empty() : Optional.ofNullable(this.partitionKey);
     }
 
     @Import(name="roleArn", required=true)
       private final String roleArn;
 
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 
     @Import(name="streamName", required=true)
       private final String streamName;
 
-    public String getStreamName() {
+    public String streamName() {
         return this.streamName;
     }
 

@@ -20,42 +20,42 @@ public final class ServerCertificateArgs extends com.pulumi.resources.ResourceAr
     @Import(name="certificateBody")
       private final @Nullable Output<String> certificateBody;
 
-    public Output<String> getCertificateBody() {
+    public Output<String> certificateBody() {
         return this.certificateBody == null ? Codegen.empty() : this.certificateBody;
     }
 
     @Import(name="certificateChain")
       private final @Nullable Output<String> certificateChain;
 
-    public Output<String> getCertificateChain() {
+    public Output<String> certificateChain() {
         return this.certificateChain == null ? Codegen.empty() : this.certificateChain;
     }
 
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
     @Import(name="privateKey")
       private final @Nullable Output<String> privateKey;
 
-    public Output<String> getPrivateKey() {
+    public Output<String> privateKey() {
         return this.privateKey == null ? Codegen.empty() : this.privateKey;
     }
 
     @Import(name="serverCertificateName")
       private final @Nullable Output<String> serverCertificateName;
 
-    public Output<String> getServerCertificateName() {
+    public Output<String> serverCertificateName() {
         return this.serverCertificateName == null ? Codegen.empty() : this.serverCertificateName;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<ServerCertificateTagArgs>> tags;
 
-    public Output<List<ServerCertificateTagArgs>> getTags() {
+    public Output<List<ServerCertificateTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -18,14 +18,14 @@ public final class ConfigUplinkEchoConfig extends com.pulumi.resources.InvokeArg
     @Import(name="antennaUplinkConfigArn")
       private final @Nullable String antennaUplinkConfigArn;
 
-    public Optional<String> getAntennaUplinkConfigArn() {
+    public Optional<String> antennaUplinkConfigArn() {
         return this.antennaUplinkConfigArn == null ? Optional.empty() : Optional.ofNullable(this.antennaUplinkConfigArn);
     }
 
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 

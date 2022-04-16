@@ -20,35 +20,35 @@ public final class ResponseHeadersPolicyConfig extends com.pulumi.resources.Invo
     @Import(name="comment")
       private final @Nullable String comment;
 
-    public Optional<String> getComment() {
+    public Optional<String> comment() {
         return this.comment == null ? Optional.empty() : Optional.ofNullable(this.comment);
     }
 
     @Import(name="corsConfig")
       private final @Nullable ResponseHeadersPolicyCorsConfig corsConfig;
 
-    public Optional<ResponseHeadersPolicyCorsConfig> getCorsConfig() {
+    public Optional<ResponseHeadersPolicyCorsConfig> corsConfig() {
         return this.corsConfig == null ? Optional.empty() : Optional.ofNullable(this.corsConfig);
     }
 
     @Import(name="customHeadersConfig")
       private final @Nullable ResponseHeadersPolicyCustomHeadersConfig customHeadersConfig;
 
-    public Optional<ResponseHeadersPolicyCustomHeadersConfig> getCustomHeadersConfig() {
+    public Optional<ResponseHeadersPolicyCustomHeadersConfig> customHeadersConfig() {
         return this.customHeadersConfig == null ? Optional.empty() : Optional.ofNullable(this.customHeadersConfig);
     }
 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
     @Import(name="securityHeadersConfig")
       private final @Nullable ResponseHeadersPolicySecurityHeadersConfig securityHeadersConfig;
 
-    public Optional<ResponseHeadersPolicySecurityHeadersConfig> getSecurityHeadersConfig() {
+    public Optional<ResponseHeadersPolicySecurityHeadersConfig> securityHeadersConfig() {
         return this.securityHeadersConfig == null ? Optional.empty() : Optional.ofNullable(this.securityHeadersConfig);
     }
 

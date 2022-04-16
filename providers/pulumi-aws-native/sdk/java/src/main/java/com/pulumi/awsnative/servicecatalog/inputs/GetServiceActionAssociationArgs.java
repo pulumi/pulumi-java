@@ -15,21 +15,21 @@ public final class GetServiceActionAssociationArgs extends com.pulumi.resources.
     @Import(name="productId", required=true)
       private final String productId;
 
-    public String getProductId() {
+    public String productId() {
         return this.productId;
     }
 
     @Import(name="provisioningArtifactId", required=true)
       private final String provisioningArtifactId;
 
-    public String getProvisioningArtifactId() {
+    public String provisioningArtifactId() {
         return this.provisioningArtifactId;
     }
 
     @Import(name="serviceActionId", required=true)
       private final String serviceActionId;
 
-    public String getServiceActionId() {
+    public String serviceActionId() {
         return this.serviceActionId;
     }
 

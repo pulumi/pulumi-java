@@ -19,7 +19,7 @@ public final class GetMitigationActionArgs extends com.pulumi.resources.InvokeAr
     @Import(name="actionName", required=true)
       private final String actionName;
 
-    public String getActionName() {
+    public String actionName() {
         return this.actionName;
     }
 

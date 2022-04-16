@@ -24,10 +24,10 @@ public final class ObjectTypeKeyMap {
         this.objectTypeKeyList = objectTypeKeyList;
     }
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public List<ObjectTypeKey> getObjectTypeKeyList() {
+    public List<ObjectTypeKey> objectTypeKeyList() {
         return this.objectTypeKeyList == null ? List.of() : this.objectTypeKeyList;
     }
 

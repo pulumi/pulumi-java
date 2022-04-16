@@ -75,49 +75,49 @@ public final class FlowConnectorOperator {
         this.zendesk = zendesk;
     }
 
-    public Optional<FlowAmplitudeConnectorOperator> getAmplitude() {
+    public Optional<FlowAmplitudeConnectorOperator> amplitude() {
         return Optional.ofNullable(this.amplitude);
     }
-    public Optional<FlowDatadogConnectorOperator> getDatadog() {
+    public Optional<FlowDatadogConnectorOperator> datadog() {
         return Optional.ofNullable(this.datadog);
     }
-    public Optional<FlowDynatraceConnectorOperator> getDynatrace() {
+    public Optional<FlowDynatraceConnectorOperator> dynatrace() {
         return Optional.ofNullable(this.dynatrace);
     }
-    public Optional<FlowGoogleAnalyticsConnectorOperator> getGoogleAnalytics() {
+    public Optional<FlowGoogleAnalyticsConnectorOperator> googleAnalytics() {
         return Optional.ofNullable(this.googleAnalytics);
     }
-    public Optional<FlowInforNexusConnectorOperator> getInforNexus() {
+    public Optional<FlowInforNexusConnectorOperator> inforNexus() {
         return Optional.ofNullable(this.inforNexus);
     }
-    public Optional<FlowMarketoConnectorOperator> getMarketo() {
+    public Optional<FlowMarketoConnectorOperator> marketo() {
         return Optional.ofNullable(this.marketo);
     }
-    public Optional<FlowS3ConnectorOperator> getS3() {
+    public Optional<FlowS3ConnectorOperator> s3() {
         return Optional.ofNullable(this.s3);
     }
-    public Optional<FlowSAPODataConnectorOperator> getSAPOData() {
+    public Optional<FlowSAPODataConnectorOperator> sAPOData() {
         return Optional.ofNullable(this.sAPOData);
     }
-    public Optional<FlowSalesforceConnectorOperator> getSalesforce() {
+    public Optional<FlowSalesforceConnectorOperator> salesforce() {
         return Optional.ofNullable(this.salesforce);
     }
-    public Optional<FlowServiceNowConnectorOperator> getServiceNow() {
+    public Optional<FlowServiceNowConnectorOperator> serviceNow() {
         return Optional.ofNullable(this.serviceNow);
     }
-    public Optional<FlowSingularConnectorOperator> getSingular() {
+    public Optional<FlowSingularConnectorOperator> singular() {
         return Optional.ofNullable(this.singular);
     }
-    public Optional<FlowSlackConnectorOperator> getSlack() {
+    public Optional<FlowSlackConnectorOperator> slack() {
         return Optional.ofNullable(this.slack);
     }
-    public Optional<FlowTrendmicroConnectorOperator> getTrendmicro() {
+    public Optional<FlowTrendmicroConnectorOperator> trendmicro() {
         return Optional.ofNullable(this.trendmicro);
     }
-    public Optional<FlowVeevaConnectorOperator> getVeeva() {
+    public Optional<FlowVeevaConnectorOperator> veeva() {
         return Optional.ofNullable(this.veeva);
     }
-    public Optional<FlowZendeskConnectorOperator> getZendesk() {
+    public Optional<FlowZendeskConnectorOperator> zendesk() {
         return Optional.ofNullable(this.zendesk);
     }
 

@@ -18,14 +18,14 @@ public final class DeliveryStreamElasticsearchBufferingHintsArgs extends com.pul
     @Import(name="intervalInSeconds")
       private final @Nullable Output<Integer> intervalInSeconds;
 
-    public Output<Integer> getIntervalInSeconds() {
+    public Output<Integer> intervalInSeconds() {
         return this.intervalInSeconds == null ? Codegen.empty() : this.intervalInSeconds;
     }
 
     @Import(name="sizeInMBs")
       private final @Nullable Output<Integer> sizeInMBs;
 
-    public Output<Integer> getSizeInMBs() {
+    public Output<Integer> sizeInMBs() {
         return this.sizeInMBs == null ? Codegen.empty() : this.sizeInMBs;
     }
 

@@ -21,21 +21,21 @@ public final class GameServerGroupLaunchTemplate extends com.pulumi.resources.In
     @Import(name="launchTemplateId")
       private final @Nullable String launchTemplateId;
 
-    public Optional<String> getLaunchTemplateId() {
+    public Optional<String> launchTemplateId() {
         return this.launchTemplateId == null ? Optional.empty() : Optional.ofNullable(this.launchTemplateId);
     }
 
     @Import(name="launchTemplateName")
       private final @Nullable String launchTemplateName;
 
-    public Optional<String> getLaunchTemplateName() {
+    public Optional<String> launchTemplateName() {
         return this.launchTemplateName == null ? Optional.empty() : Optional.ofNullable(this.launchTemplateName);
     }
 
     @Import(name="version")
       private final @Nullable String version;
 
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

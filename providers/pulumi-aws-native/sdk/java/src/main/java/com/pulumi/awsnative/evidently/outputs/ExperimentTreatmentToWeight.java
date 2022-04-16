@@ -21,10 +21,10 @@ public final class ExperimentTreatmentToWeight {
         this.treatment = treatment;
     }
 
-    public Integer getSplitWeight() {
+    public Integer splitWeight() {
         return this.splitWeight;
     }
-    public String getTreatment() {
+    public String treatment() {
         return this.treatment;
     }
 

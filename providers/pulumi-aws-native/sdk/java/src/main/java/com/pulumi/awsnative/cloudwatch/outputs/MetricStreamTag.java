@@ -34,14 +34,14 @@ public final class MetricStreamTag {
      * A unique identifier for the tag.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * An optional string, which you can use to describe or define the tag.
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

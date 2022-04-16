@@ -90,64 +90,64 @@ public final class GetLicenseResult {
      * Beneficiary of the license.
      * 
     */
-    public Optional<String> getBeneficiary() {
+    public Optional<String> beneficiary() {
         return Optional.ofNullable(this.beneficiary);
     }
-    public Optional<LicenseConsumptionConfiguration> getConsumptionConfiguration() {
+    public Optional<LicenseConsumptionConfiguration> consumptionConfiguration() {
         return Optional.ofNullable(this.consumptionConfiguration);
     }
-    public List<LicenseEntitlement> getEntitlements() {
+    public List<LicenseEntitlement> entitlements() {
         return this.entitlements == null ? List.of() : this.entitlements;
     }
     /**
      * Home region for the created license.
      * 
     */
-    public Optional<String> getHomeRegion() {
+    public Optional<String> homeRegion() {
         return Optional.ofNullable(this.homeRegion);
     }
-    public Optional<LicenseIssuerData> getIssuer() {
+    public Optional<LicenseIssuerData> issuer() {
         return Optional.ofNullable(this.issuer);
     }
     /**
      * Amazon Resource Name is a unique name for each resource.
      * 
     */
-    public Optional<String> getLicenseArn() {
+    public Optional<String> licenseArn() {
         return Optional.ofNullable(this.licenseArn);
     }
-    public List<LicenseMetadata> getLicenseMetadata() {
+    public List<LicenseMetadata> licenseMetadata() {
         return this.licenseMetadata == null ? List.of() : this.licenseMetadata;
     }
     /**
      * Name for the created license.
      * 
     */
-    public Optional<String> getLicenseName() {
+    public Optional<String> licenseName() {
         return Optional.ofNullable(this.licenseName);
     }
     /**
      * Product name for the created license.
      * 
     */
-    public Optional<String> getProductName() {
+    public Optional<String> productName() {
         return Optional.ofNullable(this.productName);
     }
     /**
      * ProductSKU of the license.
      * 
     */
-    public Optional<String> getProductSKU() {
+    public Optional<String> productSKU() {
         return Optional.ofNullable(this.productSKU);
     }
-    public Optional<LicenseValidityDateFormat> getValidity() {
+    public Optional<LicenseValidityDateFormat> validity() {
         return Optional.ofNullable(this.validity);
     }
     /**
      * The version of the license.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

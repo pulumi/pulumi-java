@@ -28,7 +28,7 @@ public final class ObjectTypeKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fieldNames")
       private final @Nullable Output<List<String>> fieldNames;
 
-    public Output<List<String>> getFieldNames() {
+    public Output<List<String>> fieldNames() {
         return this.fieldNames == null ? Codegen.empty() : this.fieldNames;
     }
 
@@ -39,7 +39,7 @@ public final class ObjectTypeKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="standardIdentifiers")
       private final @Nullable Output<List<ObjectTypeKeyStandardIdentifiersItem>> standardIdentifiers;
 
-    public Output<List<ObjectTypeKeyStandardIdentifiersItem>> getStandardIdentifiers() {
+    public Output<List<ObjectTypeKeyStandardIdentifiersItem>> standardIdentifiers() {
         return this.standardIdentifiers == null ? Codegen.empty() : this.standardIdentifiers;
     }
 

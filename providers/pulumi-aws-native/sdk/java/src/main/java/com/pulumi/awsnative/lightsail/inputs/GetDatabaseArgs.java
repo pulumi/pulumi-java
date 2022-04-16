@@ -19,7 +19,7 @@ public final class GetDatabaseArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="relationalDatabaseName", required=true)
       private final String relationalDatabaseName;
 
-    public String getRelationalDatabaseName() {
+    public String relationalDatabaseName() {
         return this.relationalDatabaseName;
     }
 

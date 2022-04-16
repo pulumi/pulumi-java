@@ -25,7 +25,7 @@ public final class MitigationActionPublishFindingToSnsParamsArgs extends com.pul
     @Import(name="topicArn", required=true)
       private final Output<String> topicArn;
 
-    public Output<String> getTopicArn() {
+    public Output<String> topicArn() {
         return this.topicArn;
     }
 

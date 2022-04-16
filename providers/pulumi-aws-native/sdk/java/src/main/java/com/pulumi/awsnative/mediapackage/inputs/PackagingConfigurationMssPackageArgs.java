@@ -25,7 +25,7 @@ public final class PackagingConfigurationMssPackageArgs extends com.pulumi.resou
     @Import(name="encryption")
       private final @Nullable Output<PackagingConfigurationMssEncryptionArgs> encryption;
 
-    public Output<PackagingConfigurationMssEncryptionArgs> getEncryption() {
+    public Output<PackagingConfigurationMssEncryptionArgs> encryption() {
         return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
@@ -36,14 +36,14 @@ public final class PackagingConfigurationMssPackageArgs extends com.pulumi.resou
     @Import(name="mssManifests", required=true)
       private final Output<List<PackagingConfigurationMssManifestArgs>> mssManifests;
 
-    public Output<List<PackagingConfigurationMssManifestArgs>> getMssManifests() {
+    public Output<List<PackagingConfigurationMssManifestArgs>> mssManifests() {
         return this.mssManifests;
     }
 
     @Import(name="segmentDurationSeconds")
       private final @Nullable Output<Integer> segmentDurationSeconds;
 
-    public Output<Integer> getSegmentDurationSeconds() {
+    public Output<Integer> segmentDurationSeconds() {
         return this.segmentDurationSeconds == null ? Codegen.empty() : this.segmentDurationSeconds;
     }
 

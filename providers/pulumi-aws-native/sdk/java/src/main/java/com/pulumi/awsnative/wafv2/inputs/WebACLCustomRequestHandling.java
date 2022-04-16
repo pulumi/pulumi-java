@@ -24,7 +24,7 @@ public final class WebACLCustomRequestHandling extends com.pulumi.resources.Invo
     @Import(name="insertHeaders", required=true)
       private final List<WebACLCustomHTTPHeader> insertHeaders;
 
-    public List<WebACLCustomHTTPHeader> getInsertHeaders() {
+    public List<WebACLCustomHTTPHeader> insertHeaders() {
         return this.insertHeaders;
     }
 

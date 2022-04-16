@@ -18,7 +18,7 @@ public final class FlowIncrementalPullConfig {
         this.datetimeTypeFieldName = datetimeTypeFieldName;
     }
 
-    public Optional<String> getDatetimeTypeFieldName() {
+    public Optional<String> datetimeTypeFieldName() {
         return Optional.ofNullable(this.datetimeTypeFieldName);
     }
 

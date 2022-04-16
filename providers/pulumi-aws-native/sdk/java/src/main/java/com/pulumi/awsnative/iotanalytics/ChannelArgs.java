@@ -22,28 +22,28 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="channelName")
       private final @Nullable Output<String> channelName;
 
-    public Output<String> getChannelName() {
+    public Output<String> channelName() {
         return this.channelName == null ? Codegen.empty() : this.channelName;
     }
 
     @Import(name="channelStorage")
       private final @Nullable Output<ChannelStorageArgs> channelStorage;
 
-    public Output<ChannelStorageArgs> getChannelStorage() {
+    public Output<ChannelStorageArgs> channelStorage() {
         return this.channelStorage == null ? Codegen.empty() : this.channelStorage;
     }
 
     @Import(name="retentionPeriod")
       private final @Nullable Output<ChannelRetentionPeriodArgs> retentionPeriod;
 
-    public Output<ChannelRetentionPeriodArgs> getRetentionPeriod() {
+    public Output<ChannelRetentionPeriodArgs> retentionPeriod() {
         return this.retentionPeriod == null ? Codegen.empty() : this.retentionPeriod;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<ChannelTagArgs>> tags;
 
-    public Output<List<ChannelTagArgs>> getTags() {
+    public Output<List<ChannelTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

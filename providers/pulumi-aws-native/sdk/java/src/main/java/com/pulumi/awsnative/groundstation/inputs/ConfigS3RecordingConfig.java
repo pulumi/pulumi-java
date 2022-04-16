@@ -17,21 +17,21 @@ public final class ConfigS3RecordingConfig extends com.pulumi.resources.InvokeAr
     @Import(name="bucketArn")
       private final @Nullable String bucketArn;
 
-    public Optional<String> getBucketArn() {
+    public Optional<String> bucketArn() {
         return this.bucketArn == null ? Optional.empty() : Optional.ofNullable(this.bucketArn);
     }
 
     @Import(name="prefix")
       private final @Nullable String prefix;
 
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
     }
 
     @Import(name="roleArn")
       private final @Nullable String roleArn;
 
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return this.roleArn == null ? Optional.empty() : Optional.ofNullable(this.roleArn);
     }
 

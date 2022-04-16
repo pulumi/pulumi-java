@@ -24,10 +24,10 @@ public final class GetCapacityProviderResult {
         this.tags = tags;
     }
 
-    public Optional<CapacityProviderAutoScalingGroupProvider> getAutoScalingGroupProvider() {
+    public Optional<CapacityProviderAutoScalingGroupProvider> autoScalingGroupProvider() {
         return Optional.ofNullable(this.autoScalingGroupProvider);
     }
-    public List<CapacityProviderTag> getTags() {
+    public List<CapacityProviderTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

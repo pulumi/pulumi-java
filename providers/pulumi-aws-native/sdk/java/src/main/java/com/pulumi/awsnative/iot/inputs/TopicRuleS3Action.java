@@ -18,28 +18,28 @@ public final class TopicRuleS3Action extends com.pulumi.resources.InvokeArgs {
     @Import(name="bucketName", required=true)
       private final String bucketName;
 
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
 
     @Import(name="cannedAcl")
       private final @Nullable TopicRuleCannedAccessControlList cannedAcl;
 
-    public Optional<TopicRuleCannedAccessControlList> getCannedAcl() {
+    public Optional<TopicRuleCannedAccessControlList> cannedAcl() {
         return this.cannedAcl == null ? Optional.empty() : Optional.ofNullable(this.cannedAcl);
     }
 
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 
     @Import(name="roleArn", required=true)
       private final String roleArn;
 
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 

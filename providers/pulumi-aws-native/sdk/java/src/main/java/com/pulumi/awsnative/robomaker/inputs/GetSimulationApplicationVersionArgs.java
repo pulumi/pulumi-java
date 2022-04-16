@@ -15,7 +15,7 @@ public final class GetSimulationApplicationVersionArgs extends com.pulumi.resour
     @Import(name="arn", required=true)
       private final String arn;
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
 

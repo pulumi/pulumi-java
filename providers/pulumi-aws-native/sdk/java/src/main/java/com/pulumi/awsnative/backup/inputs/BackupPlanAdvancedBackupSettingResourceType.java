@@ -16,14 +16,14 @@ public final class BackupPlanAdvancedBackupSettingResourceType extends com.pulum
     @Import(name="backupOptions", required=true)
       private final Object backupOptions;
 
-    public Object getBackupOptions() {
+    public Object backupOptions() {
         return this.backupOptions;
     }
 
     @Import(name="resourceType", required=true)
       private final String resourceType;
 
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
 

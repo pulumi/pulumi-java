@@ -27,7 +27,7 @@ public final class PrefixListArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="addressFamily", required=true)
       private final Output<PrefixListAddressFamily> addressFamily;
 
-    public Output<PrefixListAddressFamily> getAddressFamily() {
+    public Output<PrefixListAddressFamily> addressFamily() {
         return this.addressFamily;
     }
 
@@ -38,7 +38,7 @@ public final class PrefixListArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="entries")
       private final @Nullable Output<List<PrefixListEntryArgs>> entries;
 
-    public Output<List<PrefixListEntryArgs>> getEntries() {
+    public Output<List<PrefixListEntryArgs>> entries() {
         return this.entries == null ? Codegen.empty() : this.entries;
     }
 
@@ -49,7 +49,7 @@ public final class PrefixListArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxEntries", required=true)
       private final Output<Integer> maxEntries;
 
-    public Output<Integer> getMaxEntries() {
+    public Output<Integer> maxEntries() {
         return this.maxEntries;
     }
 
@@ -60,7 +60,7 @@ public final class PrefixListArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="prefixListName")
       private final @Nullable Output<String> prefixListName;
 
-    public Output<String> getPrefixListName() {
+    public Output<String> prefixListName() {
         return this.prefixListName == null ? Codegen.empty() : this.prefixListName;
     }
 
@@ -71,7 +71,7 @@ public final class PrefixListArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<PrefixListTagArgs>> tags;
 
-    public Output<List<PrefixListTagArgs>> getTags() {
+    public Output<List<PrefixListTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

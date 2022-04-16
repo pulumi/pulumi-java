@@ -16,7 +16,7 @@ public final class AssistantAssociationAssociationData {
         this.knowledgeBaseId = knowledgeBaseId;
     }
 
-    public String getKnowledgeBaseId() {
+    public String knowledgeBaseId() {
         return this.knowledgeBaseId;
     }
 

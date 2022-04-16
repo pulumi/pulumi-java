@@ -23,10 +23,10 @@ public final class JobSample {
         this.size = size;
     }
 
-    public Optional<JobSampleMode> getMode() {
+    public Optional<JobSampleMode> mode() {
         return Optional.ofNullable(this.mode);
     }
-    public Optional<Integer> getSize() {
+    public Optional<Integer> size() {
         return Optional.ofNullable(this.size);
     }
 

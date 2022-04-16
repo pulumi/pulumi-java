@@ -18,14 +18,14 @@ public final class DomainNameMutualTlsAuthenticationArgs extends com.pulumi.reso
     @Import(name="truststoreUri")
       private final @Nullable Output<String> truststoreUri;
 
-    public Output<String> getTruststoreUri() {
+    public Output<String> truststoreUri() {
         return this.truststoreUri == null ? Codegen.empty() : this.truststoreUri;
     }
 
     @Import(name="truststoreVersion")
       private final @Nullable Output<String> truststoreVersion;
 
-    public Output<String> getTruststoreVersion() {
+    public Output<String> truststoreVersion() {
         return this.truststoreVersion == null ? Codegen.empty() : this.truststoreVersion;
     }
 

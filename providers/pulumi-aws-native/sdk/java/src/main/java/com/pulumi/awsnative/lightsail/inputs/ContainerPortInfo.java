@@ -17,14 +17,14 @@ public final class ContainerPortInfo extends com.pulumi.resources.InvokeArgs {
     @Import(name="port")
       private final @Nullable String port;
 
-    public Optional<String> getPort() {
+    public Optional<String> port() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
     @Import(name="protocol")
       private final @Nullable String protocol;
 
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 

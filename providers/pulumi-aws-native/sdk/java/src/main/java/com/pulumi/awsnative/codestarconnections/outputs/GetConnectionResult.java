@@ -50,28 +50,28 @@ public final class GetConnectionResult {
      * The Amazon Resource Name (ARN) of the  connection. The ARN is used as the connection reference when the connection is shared between AWS services.
      * 
     */
-    public Optional<String> getConnectionArn() {
+    public Optional<String> connectionArn() {
         return Optional.ofNullable(this.connectionArn);
     }
     /**
      * The current status of the connection.
      * 
     */
-    public Optional<String> getConnectionStatus() {
+    public Optional<String> connectionStatus() {
         return Optional.ofNullable(this.connectionStatus);
     }
     /**
      * The name of the external provider where your third-party code repository is configured. For Bitbucket, this is the account ID of the owner of the Bitbucket repository.
      * 
     */
-    public Optional<String> getOwnerAccountId() {
+    public Optional<String> ownerAccountId() {
         return Optional.ofNullable(this.ownerAccountId);
     }
     /**
      * Specifies the tags applied to a connection.
      * 
     */
-    public List<ConnectionTag> getTags() {
+    public List<ConnectionTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

@@ -22,7 +22,7 @@ public final class BucketOwnershipControlsRuleArgs extends com.pulumi.resources.
     @Import(name="objectOwnership")
       private final @Nullable Output<BucketOwnershipControlsRuleObjectOwnership> objectOwnership;
 
-    public Output<BucketOwnershipControlsRuleObjectOwnership> getObjectOwnership() {
+    public Output<BucketOwnershipControlsRuleObjectOwnership> objectOwnership() {
         return this.objectOwnership == null ? Codegen.empty() : this.objectOwnership;
     }
 

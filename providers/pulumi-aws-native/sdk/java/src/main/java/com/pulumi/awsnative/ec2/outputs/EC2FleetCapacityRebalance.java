@@ -23,10 +23,10 @@ public final class EC2FleetCapacityRebalance {
         this.terminationDelay = terminationDelay;
     }
 
-    public Optional<EC2FleetCapacityRebalanceReplacementStrategy> getReplacementStrategy() {
+    public Optional<EC2FleetCapacityRebalanceReplacementStrategy> replacementStrategy() {
         return Optional.ofNullable(this.replacementStrategy);
     }
-    public Optional<Integer> getTerminationDelay() {
+    public Optional<Integer> terminationDelay() {
         return Optional.ofNullable(this.terminationDelay);
     }
 

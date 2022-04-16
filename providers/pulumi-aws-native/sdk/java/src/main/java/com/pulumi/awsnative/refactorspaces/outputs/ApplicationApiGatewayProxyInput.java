@@ -23,10 +23,10 @@ public final class ApplicationApiGatewayProxyInput {
         this.stageName = stageName;
     }
 
-    public Optional<ApplicationApiGatewayEndpointType> getEndpointType() {
+    public Optional<ApplicationApiGatewayEndpointType> endpointType() {
         return Optional.ofNullable(this.endpointType);
     }
-    public Optional<String> getStageName() {
+    public Optional<String> stageName() {
         return Optional.ofNullable(this.stageName);
     }
 

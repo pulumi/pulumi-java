@@ -19,21 +19,21 @@ public final class DatasetAction extends com.pulumi.resources.InvokeArgs {
     @Import(name="actionName", required=true)
       private final String actionName;
 
-    public String getActionName() {
+    public String actionName() {
         return this.actionName;
     }
 
     @Import(name="containerAction")
       private final @Nullable DatasetContainerAction containerAction;
 
-    public Optional<DatasetContainerAction> getContainerAction() {
+    public Optional<DatasetContainerAction> containerAction() {
         return this.containerAction == null ? Optional.empty() : Optional.ofNullable(this.containerAction);
     }
 
     @Import(name="queryAction")
       private final @Nullable DatasetQueryAction queryAction;
 
-    public Optional<DatasetQueryAction> getQueryAction() {
+    public Optional<DatasetQueryAction> queryAction() {
         return this.queryAction == null ? Optional.empty() : Optional.ofNullable(this.queryAction);
     }
 

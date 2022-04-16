@@ -19,21 +19,21 @@ public final class ConfigSpectrumConfig extends com.pulumi.resources.InvokeArgs 
     @Import(name="bandwidth")
       private final @Nullable ConfigFrequencyBandwidth bandwidth;
 
-    public Optional<ConfigFrequencyBandwidth> getBandwidth() {
+    public Optional<ConfigFrequencyBandwidth> bandwidth() {
         return this.bandwidth == null ? Optional.empty() : Optional.ofNullable(this.bandwidth);
     }
 
     @Import(name="centerFrequency")
       private final @Nullable ConfigFrequency centerFrequency;
 
-    public Optional<ConfigFrequency> getCenterFrequency() {
+    public Optional<ConfigFrequency> centerFrequency() {
         return this.centerFrequency == null ? Optional.empty() : Optional.ofNullable(this.centerFrequency);
     }
 
     @Import(name="polarization")
       private final @Nullable ConfigPolarization polarization;
 
-    public Optional<ConfigPolarization> getPolarization() {
+    public Optional<ConfigPolarization> polarization() {
         return this.polarization == null ? Optional.empty() : Optional.ofNullable(this.polarization);
     }
 

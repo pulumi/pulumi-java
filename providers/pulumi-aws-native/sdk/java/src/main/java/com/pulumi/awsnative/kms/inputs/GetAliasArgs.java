@@ -19,7 +19,7 @@ public final class GetAliasArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="aliasName", required=true)
       private final String aliasName;
 
-    public String getAliasName() {
+    public String aliasName() {
         return this.aliasName;
     }
 

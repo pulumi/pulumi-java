@@ -19,7 +19,7 @@ public final class GetStackSetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="stackSetId", required=true)
       private final String stackSetId;
 
-    public String getStackSetId() {
+    public String stackSetId() {
         return this.stackSetId;
     }
 

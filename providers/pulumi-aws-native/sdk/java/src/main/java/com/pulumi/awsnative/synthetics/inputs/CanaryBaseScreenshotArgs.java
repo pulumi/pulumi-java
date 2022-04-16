@@ -23,7 +23,7 @@ public final class CanaryBaseScreenshotArgs extends com.pulumi.resources.Resourc
     @Import(name="ignoreCoordinates")
       private final @Nullable Output<List<String>> ignoreCoordinates;
 
-    public Output<List<String>> getIgnoreCoordinates() {
+    public Output<List<String>> ignoreCoordinates() {
         return this.ignoreCoordinates == null ? Codegen.empty() : this.ignoreCoordinates;
     }
 
@@ -34,7 +34,7 @@ public final class CanaryBaseScreenshotArgs extends com.pulumi.resources.Resourc
     @Import(name="screenshotName", required=true)
       private final Output<String> screenshotName;
 
-    public Output<String> getScreenshotName() {
+    public Output<String> screenshotName() {
         return this.screenshotName;
     }
 

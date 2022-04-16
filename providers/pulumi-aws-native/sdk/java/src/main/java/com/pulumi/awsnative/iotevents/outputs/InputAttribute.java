@@ -28,7 +28,7 @@ public final class InputAttribute {
      * _Syntax_: `<field-name>.<field-name>...`
      * 
     */
-    public String getJsonPath() {
+    public String jsonPath() {
         return this.jsonPath;
     }
 

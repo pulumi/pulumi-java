@@ -18,14 +18,14 @@ public final class BotVersionLocaleSpecificationArgs extends com.pulumi.resource
     @Import(name="botVersionLocaleDetails", required=true)
       private final Output<BotVersionLocaleDetailsArgs> botVersionLocaleDetails;
 
-    public Output<BotVersionLocaleDetailsArgs> getBotVersionLocaleDetails() {
+    public Output<BotVersionLocaleDetailsArgs> botVersionLocaleDetails() {
         return this.botVersionLocaleDetails;
     }
 
     @Import(name="localeId", required=true)
       private final Output<String> localeId;
 
-    public Output<String> getLocaleId() {
+    public Output<String> localeId() {
         return this.localeId;
     }
 

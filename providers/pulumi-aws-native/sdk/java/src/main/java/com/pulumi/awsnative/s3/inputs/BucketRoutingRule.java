@@ -26,14 +26,14 @@ public final class BucketRoutingRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="redirectRule", required=true)
       private final BucketRedirectRule redirectRule;
 
-    public BucketRedirectRule getRedirectRule() {
+    public BucketRedirectRule redirectRule() {
         return this.redirectRule;
     }
 
     @Import(name="routingRuleCondition")
       private final @Nullable BucketRoutingRuleCondition routingRuleCondition;
 
-    public Optional<BucketRoutingRuleCondition> getRoutingRuleCondition() {
+    public Optional<BucketRoutingRuleCondition> routingRuleCondition() {
         return this.routingRuleCondition == null ? Optional.empty() : Optional.ofNullable(this.routingRuleCondition);
     }
 

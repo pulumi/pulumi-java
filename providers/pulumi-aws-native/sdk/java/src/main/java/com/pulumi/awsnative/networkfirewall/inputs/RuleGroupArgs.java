@@ -20,21 +20,21 @@ public final class RuleGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleVariables")
       private final @Nullable Output<RuleGroupRuleVariablesArgs> ruleVariables;
 
-    public Output<RuleGroupRuleVariablesArgs> getRuleVariables() {
+    public Output<RuleGroupRuleVariablesArgs> ruleVariables() {
         return this.ruleVariables == null ? Codegen.empty() : this.ruleVariables;
     }
 
     @Import(name="rulesSource", required=true)
       private final Output<RuleGroupRulesSourceArgs> rulesSource;
 
-    public Output<RuleGroupRulesSourceArgs> getRulesSource() {
+    public Output<RuleGroupRulesSourceArgs> rulesSource() {
         return this.rulesSource;
     }
 
     @Import(name="statefulRuleOptions")
       private final @Nullable Output<RuleGroupStatefulRuleOptionsArgs> statefulRuleOptions;
 
-    public Output<RuleGroupStatefulRuleOptionsArgs> getStatefulRuleOptions() {
+    public Output<RuleGroupStatefulRuleOptionsArgs> statefulRuleOptions() {
         return this.statefulRuleOptions == null ? Codegen.empty() : this.statefulRuleOptions;
     }
 

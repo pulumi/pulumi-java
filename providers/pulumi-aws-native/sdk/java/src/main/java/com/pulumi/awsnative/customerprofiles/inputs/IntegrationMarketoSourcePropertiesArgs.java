@@ -17,7 +17,7 @@ public final class IntegrationMarketoSourcePropertiesArgs extends com.pulumi.res
     @Import(name="object", required=true)
       private final Output<String> object;
 
-    public Output<String> getObject() {
+    public Output<String> object() {
         return this.object;
     }
 

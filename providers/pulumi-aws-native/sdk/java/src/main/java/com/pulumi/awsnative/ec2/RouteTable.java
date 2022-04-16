@@ -31,7 +31,7 @@ public class RouteTable extends com.pulumi.resources.CustomResource {
      * @return The route table ID.
      * 
      */
-    public Output<String> getRouteTableId() {
+    public Output<String> routeTableId() {
         return this.routeTableId;
     }
     /**
@@ -45,7 +45,7 @@ public class RouteTable extends com.pulumi.resources.CustomResource {
      * @return Any tags assigned to the route table.
      * 
      */
-    public Output</* @Nullable */ List<RouteTableTag>> getTags() {
+    public Output</* @Nullable */ List<RouteTableTag>> tags() {
         return this.tags;
     }
     /**
@@ -59,7 +59,7 @@ public class RouteTable extends com.pulumi.resources.CustomResource {
      * @return The ID of the VPC.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

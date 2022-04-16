@@ -22,7 +22,7 @@ public final class RepositoryImageScanningConfigurationArgs extends com.pulumi.r
     @Import(name="scanOnPush")
       private final @Nullable Output<Boolean> scanOnPush;
 
-    public Output<Boolean> getScanOnPush() {
+    public Output<Boolean> scanOnPush() {
         return this.scanOnPush == null ? Codegen.empty() : this.scanOnPush;
     }
 

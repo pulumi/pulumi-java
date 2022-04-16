@@ -25,7 +25,7 @@ public final class LaunchProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class LaunchProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ec2SubnetIds", required=true)
       private final Output<List<String>> ec2SubnetIds;
 
-    public Output<List<String>> getEc2SubnetIds() {
+    public Output<List<String>> ec2SubnetIds() {
         return this.ec2SubnetIds;
     }
 
@@ -49,7 +49,7 @@ public final class LaunchProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="launchProfileProtocolVersions", required=true)
       private final Output<List<String>> launchProfileProtocolVersions;
 
-    public Output<List<String>> getLaunchProfileProtocolVersions() {
+    public Output<List<String>> launchProfileProtocolVersions() {
         return this.launchProfileProtocolVersions;
     }
 
@@ -60,14 +60,14 @@ public final class LaunchProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="streamConfiguration", required=true)
       private final Output<LaunchProfileStreamConfigurationArgs> streamConfiguration;
 
-    public Output<LaunchProfileStreamConfigurationArgs> getStreamConfiguration() {
+    public Output<LaunchProfileStreamConfigurationArgs> streamConfiguration() {
         return this.streamConfiguration;
     }
 
@@ -79,7 +79,7 @@ public final class LaunchProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="studioComponentIds", required=true)
       private final Output<List<String>> studioComponentIds;
 
-    public Output<List<String>> getStudioComponentIds() {
+    public Output<List<String>> studioComponentIds() {
         return this.studioComponentIds;
     }
 
@@ -90,14 +90,14 @@ public final class LaunchProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="studioId", required=true)
       private final Output<String> studioId;
 
-    public Output<String> getStudioId() {
+    public Output<String> studioId() {
         return this.studioId;
     }
 
     @Import(name="tags")
       private final @Nullable Output<LaunchProfileTagsArgs> tags;
 
-    public Output<LaunchProfileTagsArgs> getTags() {
+    public Output<LaunchProfileTagsArgs> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

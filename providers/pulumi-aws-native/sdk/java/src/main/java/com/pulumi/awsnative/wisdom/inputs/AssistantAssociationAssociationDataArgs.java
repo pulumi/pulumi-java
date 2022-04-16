@@ -17,7 +17,7 @@ public final class AssistantAssociationAssociationDataArgs extends com.pulumi.re
     @Import(name="knowledgeBaseId", required=true)
       private final Output<String> knowledgeBaseId;
 
-    public Output<String> getKnowledgeBaseId() {
+    public Output<String> knowledgeBaseId() {
         return this.knowledgeBaseId;
     }
 

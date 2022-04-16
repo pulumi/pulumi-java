@@ -30,16 +30,16 @@ public final class RuleGroupSizeConstraintStatement {
         this.textTransformations = textTransformations;
     }
 
-    public RuleGroupSizeConstraintStatementComparisonOperator getComparisonOperator() {
+    public RuleGroupSizeConstraintStatementComparisonOperator comparisonOperator() {
         return this.comparisonOperator;
     }
-    public RuleGroupFieldToMatch getFieldToMatch() {
+    public RuleGroupFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
-    public Double getSize() {
+    public Double size() {
         return this.size;
     }
-    public List<RuleGroupTextTransformation> getTextTransformations() {
+    public List<RuleGroupTextTransformation> textTransformations() {
         return this.textTransformations;
     }
 

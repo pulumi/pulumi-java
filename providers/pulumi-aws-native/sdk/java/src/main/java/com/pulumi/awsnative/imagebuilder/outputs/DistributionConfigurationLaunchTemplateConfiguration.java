@@ -42,21 +42,21 @@ public final class DistributionConfigurationLaunchTemplateConfiguration {
      * The account ID that this configuration applies to.
      * 
     */
-    public Optional<String> getAccountId() {
+    public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
     }
     /**
      * Identifies the EC2 launch template to use.
      * 
     */
-    public Optional<String> getLaunchTemplateId() {
+    public Optional<String> launchTemplateId() {
         return Optional.ofNullable(this.launchTemplateId);
     }
     /**
      * Set the specified EC2 launch template as the default launch template for the specified account.
      * 
     */
-    public Optional<Boolean> getSetDefaultVersion() {
+    public Optional<Boolean> setDefaultVersion() {
         return Optional.ofNullable(this.setDefaultVersion);
     }
 

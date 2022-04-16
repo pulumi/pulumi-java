@@ -19,35 +19,35 @@ public final class DataSourceColumnConfiguration extends com.pulumi.resources.In
     @Import(name="changeDetectingColumns", required=true)
       private final List<String> changeDetectingColumns;
 
-    public List<String> getChangeDetectingColumns() {
+    public List<String> changeDetectingColumns() {
         return this.changeDetectingColumns;
     }
 
     @Import(name="documentDataColumnName", required=true)
       private final String documentDataColumnName;
 
-    public String getDocumentDataColumnName() {
+    public String documentDataColumnName() {
         return this.documentDataColumnName;
     }
 
     @Import(name="documentIdColumnName", required=true)
       private final String documentIdColumnName;
 
-    public String getDocumentIdColumnName() {
+    public String documentIdColumnName() {
         return this.documentIdColumnName;
     }
 
     @Import(name="documentTitleColumnName")
       private final @Nullable String documentTitleColumnName;
 
-    public Optional<String> getDocumentTitleColumnName() {
+    public Optional<String> documentTitleColumnName() {
         return this.documentTitleColumnName == null ? Optional.empty() : Optional.ofNullable(this.documentTitleColumnName);
     }
 
     @Import(name="fieldMappings")
       private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
 
-    public List<DataSourceToIndexFieldMapping> getFieldMappings() {
+    public List<DataSourceToIndexFieldMapping> fieldMappings() {
         return this.fieldMappings == null ? List.of() : this.fieldMappings;
     }
 

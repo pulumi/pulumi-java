@@ -17,14 +17,14 @@ public final class SpotFleetMemoryMiBRequest extends com.pulumi.resources.Invoke
     @Import(name="max")
       private final @Nullable Integer max;
 
-    public Optional<Integer> getMax() {
+    public Optional<Integer> max() {
         return this.max == null ? Optional.empty() : Optional.ofNullable(this.max);
     }
 
     @Import(name="min")
       private final @Nullable Integer min;
 
-    public Optional<Integer> getMin() {
+    public Optional<Integer> min() {
         return this.min == null ? Optional.empty() : Optional.ofNullable(this.min);
     }
 

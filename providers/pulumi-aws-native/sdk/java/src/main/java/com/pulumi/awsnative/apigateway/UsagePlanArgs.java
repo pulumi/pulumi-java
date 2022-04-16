@@ -27,7 +27,7 @@ public final class UsagePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiStages")
       private final @Nullable Output<List<UsagePlanApiStageArgs>> apiStages;
 
-    public Output<List<UsagePlanApiStageArgs>> getApiStages() {
+    public Output<List<UsagePlanApiStageArgs>> apiStages() {
         return this.apiStages == null ? Codegen.empty() : this.apiStages;
     }
 
@@ -38,7 +38,7 @@ public final class UsagePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -49,7 +49,7 @@ public final class UsagePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="quota")
       private final @Nullable Output<UsagePlanQuotaSettingsArgs> quota;
 
-    public Output<UsagePlanQuotaSettingsArgs> getQuota() {
+    public Output<UsagePlanQuotaSettingsArgs> quota() {
         return this.quota == null ? Codegen.empty() : this.quota;
     }
 
@@ -60,7 +60,7 @@ public final class UsagePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<UsagePlanTagArgs>> tags;
 
-    public Output<List<UsagePlanTagArgs>> getTags() {
+    public Output<List<UsagePlanTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -71,7 +71,7 @@ public final class UsagePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="throttle")
       private final @Nullable Output<UsagePlanThrottleSettingsArgs> throttle;
 
-    public Output<UsagePlanThrottleSettingsArgs> getThrottle() {
+    public Output<UsagePlanThrottleSettingsArgs> throttle() {
         return this.throttle == null ? Codegen.empty() : this.throttle;
     }
 
@@ -82,7 +82,7 @@ public final class UsagePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="usagePlanName")
       private final @Nullable Output<String> usagePlanName;
 
-    public Output<String> getUsagePlanName() {
+    public Output<String> usagePlanName() {
         return this.usagePlanName == null ? Codegen.empty() : this.usagePlanName;
     }
 

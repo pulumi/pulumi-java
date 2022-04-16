@@ -26,7 +26,7 @@ public final class ApplicationLog extends com.pulumi.resources.InvokeArgs {
     @Import(name="encoding")
       private final @Nullable ApplicationLogEncoding encoding;
 
-    public Optional<ApplicationLogEncoding> getEncoding() {
+    public Optional<ApplicationLogEncoding> encoding() {
         return this.encoding == null ? Optional.empty() : Optional.ofNullable(this.encoding);
     }
 
@@ -37,7 +37,7 @@ public final class ApplicationLog extends com.pulumi.resources.InvokeArgs {
     @Import(name="logGroupName")
       private final @Nullable String logGroupName;
 
-    public Optional<String> getLogGroupName() {
+    public Optional<String> logGroupName() {
         return this.logGroupName == null ? Optional.empty() : Optional.ofNullable(this.logGroupName);
     }
 
@@ -48,7 +48,7 @@ public final class ApplicationLog extends com.pulumi.resources.InvokeArgs {
     @Import(name="logPath")
       private final @Nullable String logPath;
 
-    public Optional<String> getLogPath() {
+    public Optional<String> logPath() {
         return this.logPath == null ? Optional.empty() : Optional.ofNullable(this.logPath);
     }
 
@@ -59,7 +59,7 @@ public final class ApplicationLog extends com.pulumi.resources.InvokeArgs {
     @Import(name="logType", required=true)
       private final String logType;
 
-    public String getLogType() {
+    public String logType() {
         return this.logType;
     }
 
@@ -70,7 +70,7 @@ public final class ApplicationLog extends com.pulumi.resources.InvokeArgs {
     @Import(name="patternSet")
       private final @Nullable String patternSet;
 
-    public Optional<String> getPatternSet() {
+    public Optional<String> patternSet() {
         return this.patternSet == null ? Optional.empty() : Optional.ofNullable(this.patternSet);
     }
 

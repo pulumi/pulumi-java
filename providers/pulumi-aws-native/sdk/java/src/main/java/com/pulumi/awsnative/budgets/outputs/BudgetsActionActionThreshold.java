@@ -21,10 +21,10 @@ public final class BudgetsActionActionThreshold {
         this.value = value;
     }
 
-    public BudgetsActionActionThresholdType getType() {
+    public BudgetsActionActionThresholdType type() {
         return this.type;
     }
-    public Double getValue() {
+    public Double value() {
         return this.value;
     }
 

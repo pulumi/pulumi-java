@@ -21,56 +21,56 @@ public final class EC2FleetFleetLaunchTemplateOverridesRequestArgs extends com.p
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     @Import(name="instanceRequirements")
       private final @Nullable Output<EC2FleetInstanceRequirementsRequestArgs> instanceRequirements;
 
-    public Output<EC2FleetInstanceRequirementsRequestArgs> getInstanceRequirements() {
+    public Output<EC2FleetInstanceRequirementsRequestArgs> instanceRequirements() {
         return this.instanceRequirements == null ? Codegen.empty() : this.instanceRequirements;
     }
 
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     @Import(name="maxPrice")
       private final @Nullable Output<String> maxPrice;
 
-    public Output<String> getMaxPrice() {
+    public Output<String> maxPrice() {
         return this.maxPrice == null ? Codegen.empty() : this.maxPrice;
     }
 
     @Import(name="placement")
       private final @Nullable Output<EC2FleetPlacementArgs> placement;
 
-    public Output<EC2FleetPlacementArgs> getPlacement() {
+    public Output<EC2FleetPlacementArgs> placement() {
         return this.placement == null ? Codegen.empty() : this.placement;
     }
 
     @Import(name="priority")
       private final @Nullable Output<Double> priority;
 
-    public Output<Double> getPriority() {
+    public Output<Double> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     @Import(name="weightedCapacity")
       private final @Nullable Output<Double> weightedCapacity;
 
-    public Output<Double> getWeightedCapacity() {
+    public Output<Double> weightedCapacity() {
         return this.weightedCapacity == null ? Codegen.empty() : this.weightedCapacity;
     }
 

@@ -22,7 +22,7 @@ public final class TaskSetScale extends com.pulumi.resources.InvokeArgs {
     @Import(name="unit")
       private final @Nullable TaskSetScaleUnit unit;
 
-    public Optional<TaskSetScaleUnit> getUnit() {
+    public Optional<TaskSetScaleUnit> unit() {
         return this.unit == null ? Optional.empty() : Optional.ofNullable(this.unit);
     }
 
@@ -33,7 +33,7 @@ public final class TaskSetScale extends com.pulumi.resources.InvokeArgs {
     @Import(name="value")
       private final @Nullable Double value;
 
-    public Optional<Double> getValue() {
+    public Optional<Double> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

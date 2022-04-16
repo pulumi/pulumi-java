@@ -35,7 +35,7 @@ public final class TemplateSourceAnalysis {
      * <p>The Amazon Resource Name (ARN) of the resource.</p>
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
@@ -43,7 +43,7 @@ public final class TemplateSourceAnalysis {
      *             in the template.</p>
      * 
     */
-    public List<TemplateDataSetReference> getDataSetReferences() {
+    public List<TemplateDataSetReference> dataSetReferences() {
         return this.dataSetReferences;
     }
 

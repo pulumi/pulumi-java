@@ -28,7 +28,7 @@ public final class Container extends com.pulumi.resources.InvokeArgs {
     @Import(name="command")
       private final @Nullable List<String> command;
 
-    public List<String> getCommand() {
+    public List<String> command() {
         return this.command == null ? List.of() : this.command;
     }
 
@@ -39,7 +39,7 @@ public final class Container extends com.pulumi.resources.InvokeArgs {
     @Import(name="containerName")
       private final @Nullable String containerName;
 
-    public Optional<String> getContainerName() {
+    public Optional<String> containerName() {
         return this.containerName == null ? Optional.empty() : Optional.ofNullable(this.containerName);
     }
 
@@ -50,7 +50,7 @@ public final class Container extends com.pulumi.resources.InvokeArgs {
     @Import(name="environment")
       private final @Nullable List<ContainerEnvironmentVariable> environment;
 
-    public List<ContainerEnvironmentVariable> getEnvironment() {
+    public List<ContainerEnvironmentVariable> environment() {
         return this.environment == null ? List.of() : this.environment;
     }
 
@@ -61,7 +61,7 @@ public final class Container extends com.pulumi.resources.InvokeArgs {
     @Import(name="image")
       private final @Nullable String image;
 
-    public Optional<String> getImage() {
+    public Optional<String> image() {
         return this.image == null ? Optional.empty() : Optional.ofNullable(this.image);
     }
 
@@ -72,7 +72,7 @@ public final class Container extends com.pulumi.resources.InvokeArgs {
     @Import(name="ports")
       private final @Nullable List<ContainerPortInfo> ports;
 
-    public List<ContainerPortInfo> getPorts() {
+    public List<ContainerPortInfo> ports() {
         return this.ports == null ? List.of() : this.ports;
     }
 

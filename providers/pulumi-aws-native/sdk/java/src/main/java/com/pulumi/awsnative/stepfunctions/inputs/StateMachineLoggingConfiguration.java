@@ -20,21 +20,21 @@ public final class StateMachineLoggingConfiguration extends com.pulumi.resources
     @Import(name="destinations")
       private final @Nullable List<StateMachineLogDestination> destinations;
 
-    public List<StateMachineLogDestination> getDestinations() {
+    public List<StateMachineLogDestination> destinations() {
         return this.destinations == null ? List.of() : this.destinations;
     }
 
     @Import(name="includeExecutionData")
       private final @Nullable Boolean includeExecutionData;
 
-    public Optional<Boolean> getIncludeExecutionData() {
+    public Optional<Boolean> includeExecutionData() {
         return this.includeExecutionData == null ? Optional.empty() : Optional.ofNullable(this.includeExecutionData);
     }
 
     @Import(name="level")
       private final @Nullable StateMachineLoggingConfigurationLevel level;
 
-    public Optional<StateMachineLoggingConfigurationLevel> getLevel() {
+    public Optional<StateMachineLoggingConfigurationLevel> level() {
         return this.level == null ? Optional.empty() : Optional.ofNullable(this.level);
     }
 

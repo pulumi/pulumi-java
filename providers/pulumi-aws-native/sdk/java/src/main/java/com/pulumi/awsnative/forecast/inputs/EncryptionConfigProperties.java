@@ -17,14 +17,14 @@ public final class EncryptionConfigProperties extends com.pulumi.resources.Invok
     @Import(name="kmsKeyArn")
       private final @Nullable String kmsKeyArn;
 
-    public Optional<String> getKmsKeyArn() {
+    public Optional<String> kmsKeyArn() {
         return this.kmsKeyArn == null ? Optional.empty() : Optional.ofNullable(this.kmsKeyArn);
     }
 
     @Import(name="roleArn")
       private final @Nullable String roleArn;
 
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return this.roleArn == null ? Optional.empty() : Optional.ofNullable(this.roleArn);
     }
 

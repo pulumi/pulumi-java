@@ -16,7 +16,7 @@ public final class QuickConnectPhoneNumberQuickConnectConfig {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getPhoneNumber() {
+    public String phoneNumber() {
         return this.phoneNumber;
     }
 

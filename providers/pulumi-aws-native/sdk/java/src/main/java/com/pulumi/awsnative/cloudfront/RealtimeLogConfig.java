@@ -24,31 +24,31 @@ public class RealtimeLogConfig extends com.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="endPoints", type=List.class, parameters={RealtimeLogConfigEndPoint.class})
     private Output<List<RealtimeLogConfigEndPoint>> endPoints;
 
-    public Output<List<RealtimeLogConfigEndPoint>> getEndPoints() {
+    public Output<List<RealtimeLogConfigEndPoint>> endPoints() {
         return this.endPoints;
     }
     @Export(name="fields", type=List.class, parameters={String.class})
     private Output<List<String>> fields;
 
-    public Output<List<String>> getFields() {
+    public Output<List<String>> fields() {
         return this.fields;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="samplingRate", type=Double.class, parameters={})
     private Output<Double> samplingRate;
 
-    public Output<Double> getSamplingRate() {
+    public Output<Double> samplingRate() {
         return this.samplingRate;
     }
 

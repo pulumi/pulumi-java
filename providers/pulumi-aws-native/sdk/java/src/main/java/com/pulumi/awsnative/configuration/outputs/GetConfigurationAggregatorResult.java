@@ -40,24 +40,24 @@ public final class GetConfigurationAggregatorResult {
         this.tags = tags;
     }
 
-    public List<ConfigurationAggregatorAccountAggregationSource> getAccountAggregationSources() {
+    public List<ConfigurationAggregatorAccountAggregationSource> accountAggregationSources() {
         return this.accountAggregationSources == null ? List.of() : this.accountAggregationSources;
     }
     /**
      * The Amazon Resource Name (ARN) of the aggregator.
      * 
     */
-    public Optional<String> getConfigurationAggregatorArn() {
+    public Optional<String> configurationAggregatorArn() {
         return Optional.ofNullable(this.configurationAggregatorArn);
     }
-    public Optional<ConfigurationAggregatorOrganizationAggregationSource> getOrganizationAggregationSource() {
+    public Optional<ConfigurationAggregatorOrganizationAggregationSource> organizationAggregationSource() {
         return Optional.ofNullable(this.organizationAggregationSource);
     }
     /**
      * The tags for the configuration aggregator.
      * 
     */
-    public List<ConfigurationAggregatorTag> getTags() {
+    public List<ConfigurationAggregatorTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

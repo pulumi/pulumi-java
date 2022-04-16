@@ -25,7 +25,7 @@ public final class InputAttribute extends com.pulumi.resources.InvokeArgs {
     @Import(name="jsonPath", required=true)
       private final String jsonPath;
 
-    public String getJsonPath() {
+    public String jsonPath() {
         return this.jsonPath;
     }
 

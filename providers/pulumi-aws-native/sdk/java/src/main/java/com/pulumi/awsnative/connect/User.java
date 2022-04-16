@@ -33,7 +33,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The identifier of the user account in the directory used for identity management.
      * 
      */
-    public Output</* @Nullable */ String> getDirectoryUserId() {
+    public Output</* @Nullable */ String> directoryUserId() {
         return this.directoryUserId;
     }
     /**
@@ -47,7 +47,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The identifier of the hierarchy group for the user.
      * 
      */
-    public Output</* @Nullable */ String> getHierarchyGroupArn() {
+    public Output</* @Nullable */ String> hierarchyGroupArn() {
         return this.hierarchyGroupArn;
     }
     /**
@@ -61,7 +61,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The information about the identity of the user.
      * 
      */
-    public Output</* @Nullable */ UserIdentityInfo> getIdentityInfo() {
+    public Output</* @Nullable */ UserIdentityInfo> identityInfo() {
         return this.identityInfo;
     }
     /**
@@ -75,7 +75,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The identifier of the Amazon Connect instance.
      * 
      */
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
     /**
@@ -89,7 +89,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The password for the user account. A password is required if you are using Amazon Connect for identity management. Otherwise, it is an error to include a password.
      * 
      */
-    public Output</* @Nullable */ String> getPassword() {
+    public Output</* @Nullable */ String> password() {
         return this.password;
     }
     /**
@@ -103,7 +103,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The phone settings for the user.
      * 
      */
-    public Output<UserPhoneConfig> getPhoneConfig() {
+    public Output<UserPhoneConfig> phoneConfig() {
         return this.phoneConfig;
     }
     /**
@@ -117,7 +117,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The identifier of the routing profile for the user.
      * 
      */
-    public Output<String> getRoutingProfileArn() {
+    public Output<String> routingProfileArn() {
         return this.routingProfileArn;
     }
     /**
@@ -131,7 +131,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return One or more security profile arns for the user
      * 
      */
-    public Output<List<String>> getSecurityProfileArns() {
+    public Output<List<String>> securityProfileArns() {
         return this.securityProfileArns;
     }
     /**
@@ -145,7 +145,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return One or more tags.
      * 
      */
-    public Output</* @Nullable */ List<UserTag>> getTags() {
+    public Output</* @Nullable */ List<UserTag>> tags() {
         return this.tags;
     }
     /**
@@ -159,7 +159,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the user.
      * 
      */
-    public Output<String> getUserArn() {
+    public Output<String> userArn() {
         return this.userArn;
     }
     /**
@@ -173,7 +173,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The user name for the account.
      * 
      */
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 

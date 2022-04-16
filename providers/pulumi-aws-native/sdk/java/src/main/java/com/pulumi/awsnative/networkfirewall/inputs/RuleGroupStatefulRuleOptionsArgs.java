@@ -18,7 +18,7 @@ public final class RuleGroupStatefulRuleOptionsArgs extends com.pulumi.resources
     @Import(name="ruleOrder")
       private final @Nullable Output<RuleGroupRuleOrder> ruleOrder;
 
-    public Output<RuleGroupRuleOrder> getRuleOrder() {
+    public Output<RuleGroupRuleOrder> ruleOrder() {
         return this.ruleOrder == null ? Codegen.empty() : this.ruleOrder;
     }
 

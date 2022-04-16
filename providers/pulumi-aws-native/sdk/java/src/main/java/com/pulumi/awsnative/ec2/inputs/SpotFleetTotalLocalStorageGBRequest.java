@@ -17,14 +17,14 @@ public final class SpotFleetTotalLocalStorageGBRequest extends com.pulumi.resour
     @Import(name="max")
       private final @Nullable Double max;
 
-    public Optional<Double> getMax() {
+    public Optional<Double> max() {
         return this.max == null ? Optional.empty() : Optional.ofNullable(this.max);
     }
 
     @Import(name="min")
       private final @Nullable Double min;
 
-    public Optional<Double> getMin() {
+    public Optional<Double> min() {
         return this.min == null ? Optional.empty() : Optional.ofNullable(this.min);
     }
 

@@ -19,7 +19,7 @@ public final class GetContactFlowModuleArgs extends com.pulumi.resources.InvokeA
     @Import(name="contactFlowModuleArn", required=true)
       private final String contactFlowModuleArn;
 
-    public String getContactFlowModuleArn() {
+    public String contactFlowModuleArn() {
         return this.contactFlowModuleArn;
     }
 

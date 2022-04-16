@@ -22,7 +22,7 @@ public final class ResponsePlanChatChannel extends com.pulumi.resources.InvokeAr
     @Import(name="chatbotSns")
       private final @Nullable List<String> chatbotSns;
 
-    public List<String> getChatbotSns() {
+    public List<String> chatbotSns() {
         return this.chatbotSns == null ? List.of() : this.chatbotSns;
     }
 

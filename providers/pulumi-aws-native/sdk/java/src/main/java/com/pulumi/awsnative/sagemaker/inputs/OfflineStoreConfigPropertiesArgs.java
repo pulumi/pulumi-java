@@ -20,21 +20,21 @@ public final class OfflineStoreConfigPropertiesArgs extends com.pulumi.resources
     @Import(name="dataCatalogConfig")
       private final @Nullable Output<FeatureGroupDataCatalogConfigArgs> dataCatalogConfig;
 
-    public Output<FeatureGroupDataCatalogConfigArgs> getDataCatalogConfig() {
+    public Output<FeatureGroupDataCatalogConfigArgs> dataCatalogConfig() {
         return this.dataCatalogConfig == null ? Codegen.empty() : this.dataCatalogConfig;
     }
 
     @Import(name="disableGlueTableCreation")
       private final @Nullable Output<Boolean> disableGlueTableCreation;
 
-    public Output<Boolean> getDisableGlueTableCreation() {
+    public Output<Boolean> disableGlueTableCreation() {
         return this.disableGlueTableCreation == null ? Codegen.empty() : this.disableGlueTableCreation;
     }
 
     @Import(name="s3StorageConfig", required=true)
       private final Output<FeatureGroupS3StorageConfigArgs> s3StorageConfig;
 
-    public Output<FeatureGroupS3StorageConfigArgs> getS3StorageConfig() {
+    public Output<FeatureGroupS3StorageConfigArgs> s3StorageConfig() {
         return this.s3StorageConfig;
     }
 

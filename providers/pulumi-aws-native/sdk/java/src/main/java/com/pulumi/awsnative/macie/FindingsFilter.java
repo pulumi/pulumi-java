@@ -34,7 +34,7 @@ public class FindingsFilter extends com.pulumi.resources.CustomResource {
      * @return Findings filter action.
      * 
      */
-    public Output</* @Nullable */ FindingsFilterFindingFilterAction> getAction() {
+    public Output</* @Nullable */ FindingsFilterFindingFilterAction> action() {
         return this.action;
     }
     /**
@@ -48,7 +48,7 @@ public class FindingsFilter extends com.pulumi.resources.CustomResource {
      * @return Findings filter ARN.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -62,7 +62,7 @@ public class FindingsFilter extends com.pulumi.resources.CustomResource {
      * @return Findings filter description
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -76,7 +76,7 @@ public class FindingsFilter extends com.pulumi.resources.CustomResource {
      * @return Findings filter criteria.
      * 
      */
-    public Output<FindingsFilterFindingCriteria> getFindingCriteria() {
+    public Output<FindingsFilterFindingCriteria> findingCriteria() {
         return this.findingCriteria;
     }
     /**
@@ -90,7 +90,7 @@ public class FindingsFilter extends com.pulumi.resources.CustomResource {
      * @return Findings filters list.
      * 
      */
-    public Output<List<FindingsFilterListItem>> getFindingsFilterListItems() {
+    public Output<List<FindingsFilterListItem>> findingsFilterListItems() {
         return this.findingsFilterListItems;
     }
     /**
@@ -104,7 +104,7 @@ public class FindingsFilter extends com.pulumi.resources.CustomResource {
      * @return Findings filter name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -118,7 +118,7 @@ public class FindingsFilter extends com.pulumi.resources.CustomResource {
      * @return Findings filter position.
      * 
      */
-    public Output</* @Nullable */ Integer> getPosition() {
+    public Output</* @Nullable */ Integer> position() {
         return this.position;
     }
 

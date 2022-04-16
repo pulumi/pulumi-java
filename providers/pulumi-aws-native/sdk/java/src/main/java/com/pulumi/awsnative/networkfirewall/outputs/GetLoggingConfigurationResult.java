@@ -18,7 +18,7 @@ public final class GetLoggingConfigurationResult {
         this.loggingConfiguration = loggingConfiguration;
     }
 
-    public Optional<LoggingConfiguration> getLoggingConfiguration() {
+    public Optional<LoggingConfiguration> loggingConfiguration() {
         return Optional.ofNullable(this.loggingConfiguration);
     }
 

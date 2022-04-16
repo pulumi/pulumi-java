@@ -28,7 +28,7 @@ public final class RuleGroupRuleAction extends com.pulumi.resources.InvokeArgs {
     @Import(name="allow")
       private final @Nullable RuleGroupRuleActionAllowProperties allow;
 
-    public Optional<RuleGroupRuleActionAllowProperties> getAllow() {
+    public Optional<RuleGroupRuleActionAllowProperties> allow() {
         return this.allow == null ? Optional.empty() : Optional.ofNullable(this.allow);
     }
 
@@ -39,7 +39,7 @@ public final class RuleGroupRuleAction extends com.pulumi.resources.InvokeArgs {
     @Import(name="block")
       private final @Nullable RuleGroupRuleActionBlockProperties block;
 
-    public Optional<RuleGroupRuleActionBlockProperties> getBlock() {
+    public Optional<RuleGroupRuleActionBlockProperties> block() {
         return this.block == null ? Optional.empty() : Optional.ofNullable(this.block);
     }
 
@@ -50,7 +50,7 @@ public final class RuleGroupRuleAction extends com.pulumi.resources.InvokeArgs {
     @Import(name="captcha")
       private final @Nullable RuleGroupRuleActionCaptchaProperties captcha;
 
-    public Optional<RuleGroupRuleActionCaptchaProperties> getCaptcha() {
+    public Optional<RuleGroupRuleActionCaptchaProperties> captcha() {
         return this.captcha == null ? Optional.empty() : Optional.ofNullable(this.captcha);
     }
 
@@ -61,7 +61,7 @@ public final class RuleGroupRuleAction extends com.pulumi.resources.InvokeArgs {
     @Import(name="count")
       private final @Nullable RuleGroupRuleActionCountProperties count;
 
-    public Optional<RuleGroupRuleActionCountProperties> getCount() {
+    public Optional<RuleGroupRuleActionCountProperties> count() {
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
     }
 

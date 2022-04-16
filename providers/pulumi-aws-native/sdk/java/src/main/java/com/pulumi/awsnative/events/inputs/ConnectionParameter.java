@@ -18,21 +18,21 @@ public final class ConnectionParameter extends com.pulumi.resources.InvokeArgs {
     @Import(name="isValueSecret")
       private final @Nullable Boolean isValueSecret;
 
-    public Optional<Boolean> getIsValueSecret() {
+    public Optional<Boolean> isValueSecret() {
         return this.isValueSecret == null ? Optional.empty() : Optional.ofNullable(this.isValueSecret);
     }
 
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

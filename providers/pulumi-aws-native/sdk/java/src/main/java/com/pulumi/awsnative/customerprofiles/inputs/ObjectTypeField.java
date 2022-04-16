@@ -26,7 +26,7 @@ public final class ObjectTypeField extends com.pulumi.resources.InvokeArgs {
     @Import(name="contentType")
       private final @Nullable ObjectTypeFieldContentType contentType;
 
-    public Optional<ObjectTypeFieldContentType> getContentType() {
+    public Optional<ObjectTypeFieldContentType> contentType() {
         return this.contentType == null ? Optional.empty() : Optional.ofNullable(this.contentType);
     }
 
@@ -37,7 +37,7 @@ public final class ObjectTypeField extends com.pulumi.resources.InvokeArgs {
     @Import(name="source")
       private final @Nullable String source;
 
-    public Optional<String> getSource() {
+    public Optional<String> source() {
         return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
     }
 
@@ -48,7 +48,7 @@ public final class ObjectTypeField extends com.pulumi.resources.InvokeArgs {
     @Import(name="target")
       private final @Nullable String target;
 
-    public Optional<String> getTarget() {
+    public Optional<String> target() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
     }
 

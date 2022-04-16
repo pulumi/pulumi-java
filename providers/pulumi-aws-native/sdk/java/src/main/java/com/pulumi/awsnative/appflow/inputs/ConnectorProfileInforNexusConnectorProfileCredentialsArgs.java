@@ -21,7 +21,7 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
     @Import(name="accessKeyId", required=true)
       private final Output<String> accessKeyId;
 
-    public Output<String> getAccessKeyId() {
+    public Output<String> accessKeyId() {
         return this.accessKeyId;
     }
 
@@ -32,7 +32,7 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
     @Import(name="datakey", required=true)
       private final Output<String> datakey;
 
-    public Output<String> getDatakey() {
+    public Output<String> datakey() {
         return this.datakey;
     }
 
@@ -43,7 +43,7 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
     @Import(name="secretAccessKey", required=true)
       private final Output<String> secretAccessKey;
 
-    public Output<String> getSecretAccessKey() {
+    public Output<String> secretAccessKey() {
         return this.secretAccessKey;
     }
 
@@ -54,7 +54,7 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
     @Import(name="userId", required=true)
       private final Output<String> userId;
 
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId;
     }
 

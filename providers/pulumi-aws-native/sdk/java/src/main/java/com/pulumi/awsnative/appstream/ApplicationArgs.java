@@ -21,84 +21,84 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="appBlockArn", required=true)
       private final Output<String> appBlockArn;
 
-    public Output<String> getAppBlockArn() {
+    public Output<String> appBlockArn() {
         return this.appBlockArn;
     }
 
     @Import(name="attributesToDelete")
       private final @Nullable Output<List<String>> attributesToDelete;
 
-    public Output<List<String>> getAttributesToDelete() {
+    public Output<List<String>> attributesToDelete() {
         return this.attributesToDelete == null ? Codegen.empty() : this.attributesToDelete;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     @Import(name="iconS3Location", required=true)
       private final Output<ApplicationS3LocationArgs> iconS3Location;
 
-    public Output<ApplicationS3LocationArgs> getIconS3Location() {
+    public Output<ApplicationS3LocationArgs> iconS3Location() {
         return this.iconS3Location;
     }
 
     @Import(name="instanceFamilies", required=true)
       private final Output<List<String>> instanceFamilies;
 
-    public Output<List<String>> getInstanceFamilies() {
+    public Output<List<String>> instanceFamilies() {
         return this.instanceFamilies;
     }
 
     @Import(name="launchParameters")
       private final @Nullable Output<String> launchParameters;
 
-    public Output<String> getLaunchParameters() {
+    public Output<String> launchParameters() {
         return this.launchParameters == null ? Codegen.empty() : this.launchParameters;
     }
 
     @Import(name="launchPath", required=true)
       private final Output<String> launchPath;
 
-    public Output<String> getLaunchPath() {
+    public Output<String> launchPath() {
         return this.launchPath;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="platforms", required=true)
       private final Output<List<String>> platforms;
 
-    public Output<List<String>> getPlatforms() {
+    public Output<List<String>> platforms() {
         return this.platforms;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<ApplicationTagArgs>> tags;
 
-    public Output<List<ApplicationTagArgs>> getTags() {
+    public Output<List<ApplicationTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="workingDirectory")
       private final @Nullable Output<String> workingDirectory;
 
-    public Output<String> getWorkingDirectory() {
+    public Output<String> workingDirectory() {
         return this.workingDirectory == null ? Codegen.empty() : this.workingDirectory;
     }
 

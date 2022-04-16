@@ -69,7 +69,7 @@ public final class LaunchProfileStreamConfiguration {
         this.streamingImageIds = streamingImageIds;
     }
 
-    public LaunchProfileStreamingClipboardMode getClipboardMode() {
+    public LaunchProfileStreamingClipboardMode clipboardMode() {
         return this.clipboardMode;
     }
     /**
@@ -77,7 +77,7 @@ public final class LaunchProfileStreamConfiguration {
      *             with this launch profile.</p>
      * 
     */
-    public List<LaunchProfileStreamingInstanceType> getEc2InstanceTypes() {
+    public List<LaunchProfileStreamingInstanceType> ec2InstanceTypes() {
         return this.ec2InstanceTypes;
     }
     /**
@@ -87,7 +87,7 @@ public final class LaunchProfileStreamConfiguration {
      *             time is 30 days.</p>
      * 
     */
-    public Optional<Double> getMaxSessionLengthInMinutes() {
+    public Optional<Double> maxSessionLengthInMinutes() {
         return Optional.ofNullable(this.maxSessionLengthInMinutes);
     }
     /**
@@ -103,10 +103,10 @@ public final class LaunchProfileStreamConfiguration {
      *             automatically be stopped by AWS (instead of terminated).</p>
      * 
     */
-    public Optional<Double> getMaxStoppedSessionLengthInMinutes() {
+    public Optional<Double> maxStoppedSessionLengthInMinutes() {
         return Optional.ofNullable(this.maxStoppedSessionLengthInMinutes);
     }
-    public Optional<LaunchProfileStreamConfigurationSessionStorage> getSessionStorage() {
+    public Optional<LaunchProfileStreamConfigurationSessionStorage> sessionStorage() {
         return Optional.ofNullable(this.sessionStorage);
     }
     /**
@@ -114,7 +114,7 @@ public final class LaunchProfileStreamConfiguration {
      *             with this launch profile.</p>
      * 
     */
-    public List<String> getStreamingImageIds() {
+    public List<String> streamingImageIds() {
         return this.streamingImageIds;
     }
 

@@ -28,7 +28,7 @@ public final class HostedZoneConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 

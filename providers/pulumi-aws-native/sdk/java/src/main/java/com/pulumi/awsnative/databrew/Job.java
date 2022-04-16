@@ -37,13 +37,13 @@ public class Job extends com.pulumi.resources.CustomResource {
     @Export(name="dataCatalogOutputs", type=List.class, parameters={JobDataCatalogOutput.class})
     private Output</* @Nullable */ List<JobDataCatalogOutput>> dataCatalogOutputs;
 
-    public Output</* @Nullable */ List<JobDataCatalogOutput>> getDataCatalogOutputs() {
+    public Output</* @Nullable */ List<JobDataCatalogOutput>> dataCatalogOutputs() {
         return this.dataCatalogOutputs;
     }
     @Export(name="databaseOutputs", type=List.class, parameters={JobDatabaseOutput.class})
     private Output</* @Nullable */ List<JobDatabaseOutput>> databaseOutputs;
 
-    public Output</* @Nullable */ List<JobDatabaseOutput>> getDatabaseOutputs() {
+    public Output</* @Nullable */ List<JobDatabaseOutput>> databaseOutputs() {
         return this.databaseOutputs;
     }
     /**
@@ -57,7 +57,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Dataset name
      * 
      */
-    public Output</* @Nullable */ String> getDatasetName() {
+    public Output</* @Nullable */ String> datasetName() {
         return this.datasetName;
     }
     /**
@@ -71,7 +71,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Encryption Key Arn
      * 
      */
-    public Output</* @Nullable */ String> getEncryptionKeyArn() {
+    public Output</* @Nullable */ String> encryptionKeyArn() {
         return this.encryptionKeyArn;
     }
     /**
@@ -85,7 +85,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Encryption mode
      * 
      */
-    public Output</* @Nullable */ JobEncryptionMode> getEncryptionMode() {
+    public Output</* @Nullable */ JobEncryptionMode> encryptionMode() {
         return this.encryptionMode;
     }
     /**
@@ -99,7 +99,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Job Sample
      * 
      */
-    public Output</* @Nullable */ JobSample> getJobSample() {
+    public Output</* @Nullable */ JobSample> jobSample() {
         return this.jobSample;
     }
     /**
@@ -113,7 +113,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Log subscription
      * 
      */
-    public Output</* @Nullable */ JobLogSubscription> getLogSubscription() {
+    public Output</* @Nullable */ JobLogSubscription> logSubscription() {
         return this.logSubscription;
     }
     /**
@@ -127,7 +127,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Max capacity
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxCapacity() {
+    public Output</* @Nullable */ Integer> maxCapacity() {
         return this.maxCapacity;
     }
     /**
@@ -141,7 +141,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Max retries
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxRetries() {
+    public Output</* @Nullable */ Integer> maxRetries() {
         return this.maxRetries;
     }
     /**
@@ -155,7 +155,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Job name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -169,13 +169,13 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Output location
      * 
      */
-    public Output</* @Nullable */ JobOutputLocation> getOutputLocation() {
+    public Output</* @Nullable */ JobOutputLocation> outputLocation() {
         return this.outputLocation;
     }
     @Export(name="outputs", type=List.class, parameters={JobOutput.class})
     private Output</* @Nullable */ List<JobOutput>> outputs;
 
-    public Output</* @Nullable */ List<JobOutput>> getOutputs() {
+    public Output</* @Nullable */ List<JobOutput>> outputs() {
         return this.outputs;
     }
     /**
@@ -189,7 +189,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Profile Job configuration
      * 
      */
-    public Output</* @Nullable */ JobProfileConfiguration> getProfileConfiguration() {
+    public Output</* @Nullable */ JobProfileConfiguration> profileConfiguration() {
         return this.profileConfiguration;
     }
     /**
@@ -203,13 +203,13 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Project name
      * 
      */
-    public Output</* @Nullable */ String> getProjectName() {
+    public Output</* @Nullable */ String> projectName() {
         return this.projectName;
     }
     @Export(name="recipe", type=JobRecipe.class, parameters={})
     private Output</* @Nullable */ JobRecipe> recipe;
 
-    public Output</* @Nullable */ JobRecipe> getRecipe() {
+    public Output</* @Nullable */ JobRecipe> recipe() {
         return this.recipe;
     }
     /**
@@ -223,13 +223,13 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Role arn
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     @Export(name="tags", type=List.class, parameters={JobTag.class})
     private Output</* @Nullable */ List<JobTag>> tags;
 
-    public Output</* @Nullable */ List<JobTag>> getTags() {
+    public Output</* @Nullable */ List<JobTag>> tags() {
         return this.tags;
     }
     /**
@@ -243,7 +243,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Timeout
      * 
      */
-    public Output</* @Nullable */ Integer> getTimeout() {
+    public Output</* @Nullable */ Integer> timeout() {
         return this.timeout;
     }
     /**
@@ -257,7 +257,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Job type
      * 
      */
-    public Output<JobType> getType() {
+    public Output<JobType> type() {
         return this.type;
     }
     /**
@@ -271,7 +271,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Data quality rules configuration
      * 
      */
-    public Output</* @Nullable */ List<JobValidationConfiguration>> getValidationConfigurations() {
+    public Output</* @Nullable */ List<JobValidationConfiguration>> validationConfigurations() {
         return this.validationConfigurations;
     }
 

@@ -24,14 +24,14 @@ public final class FirewallDomainListArgs extends com.pulumi.resources.ResourceA
     @Import(name="domainFileUrl")
       private final @Nullable Output<String> domainFileUrl;
 
-    public Output<String> getDomainFileUrl() {
+    public Output<String> domainFileUrl() {
         return this.domainFileUrl == null ? Codegen.empty() : this.domainFileUrl;
     }
 
     @Import(name="domains")
       private final @Nullable Output<List<String>> domains;
 
-    public Output<List<String>> getDomains() {
+    public Output<List<String>> domains() {
         return this.domains == null ? Codegen.empty() : this.domains;
     }
 
@@ -42,7 +42,7 @@ public final class FirewallDomainListArgs extends com.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -53,7 +53,7 @@ public final class FirewallDomainListArgs extends com.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<List<FirewallDomainListTagArgs>> tags;
 
-    public Output<List<FirewallDomainListTagArgs>> getTags() {
+    public Output<List<FirewallDomainListTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

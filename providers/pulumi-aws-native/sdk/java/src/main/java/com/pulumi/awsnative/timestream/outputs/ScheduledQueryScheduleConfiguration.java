@@ -16,7 +16,7 @@ public final class ScheduledQueryScheduleConfiguration {
         this.scheduleExpression = scheduleExpression;
     }
 
-    public String getScheduleExpression() {
+    public String scheduleExpression() {
         return this.scheduleExpression;
     }
 

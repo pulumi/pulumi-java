@@ -38,14 +38,14 @@ public final class GetInputResult {
         this.tags = tags;
     }
 
-    public Optional<InputDefinition> getInputDefinition() {
+    public Optional<InputDefinition> inputDefinition() {
         return Optional.ofNullable(this.inputDefinition);
     }
     /**
      * A brief description of the input.
      * 
     */
-    public Optional<String> getInputDescription() {
+    public Optional<String> inputDescription() {
         return Optional.ofNullable(this.inputDescription);
     }
     /**
@@ -54,7 +54,7 @@ public final class GetInputResult {
      * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
      * 
     */
-    public List<InputTag> getTags() {
+    public List<InputTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

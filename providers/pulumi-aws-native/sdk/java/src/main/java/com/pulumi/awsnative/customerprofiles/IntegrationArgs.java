@@ -26,14 +26,14 @@ public final class IntegrationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
     @Import(name="flowDefinition")
       private final @Nullable Output<IntegrationFlowDefinitionArgs> flowDefinition;
 
-    public Output<IntegrationFlowDefinitionArgs> getFlowDefinition() {
+    public Output<IntegrationFlowDefinitionArgs> flowDefinition() {
         return this.flowDefinition == null ? Codegen.empty() : this.flowDefinition;
     }
 
@@ -44,7 +44,7 @@ public final class IntegrationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="objectTypeName")
       private final @Nullable Output<String> objectTypeName;
 
-    public Output<String> getObjectTypeName() {
+    public Output<String> objectTypeName() {
         return this.objectTypeName == null ? Codegen.empty() : this.objectTypeName;
     }
 
@@ -55,7 +55,7 @@ public final class IntegrationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="objectTypeNames")
       private final @Nullable Output<List<IntegrationObjectTypeMappingArgs>> objectTypeNames;
 
-    public Output<List<IntegrationObjectTypeMappingArgs>> getObjectTypeNames() {
+    public Output<List<IntegrationObjectTypeMappingArgs>> objectTypeNames() {
         return this.objectTypeNames == null ? Codegen.empty() : this.objectTypeNames;
     }
 
@@ -66,7 +66,7 @@ public final class IntegrationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<IntegrationTagArgs>> tags;
 
-    public Output<List<IntegrationTagArgs>> getTags() {
+    public Output<List<IntegrationTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -77,7 +77,7 @@ public final class IntegrationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri == null ? Codegen.empty() : this.uri;
     }
 

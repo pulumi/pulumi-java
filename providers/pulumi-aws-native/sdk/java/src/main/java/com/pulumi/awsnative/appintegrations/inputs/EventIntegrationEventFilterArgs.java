@@ -21,7 +21,7 @@ public final class EventIntegrationEventFilterArgs extends com.pulumi.resources.
     @Import(name="source", required=true)
       private final Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source;
     }
 

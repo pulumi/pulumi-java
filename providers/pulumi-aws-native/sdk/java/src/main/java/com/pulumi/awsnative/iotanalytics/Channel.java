@@ -27,25 +27,25 @@ public class Channel extends com.pulumi.resources.CustomResource {
     @Export(name="channelName", type=String.class, parameters={})
     private Output</* @Nullable */ String> channelName;
 
-    public Output</* @Nullable */ String> getChannelName() {
+    public Output</* @Nullable */ String> channelName() {
         return this.channelName;
     }
     @Export(name="channelStorage", type=ChannelStorage.class, parameters={})
     private Output</* @Nullable */ ChannelStorage> channelStorage;
 
-    public Output</* @Nullable */ ChannelStorage> getChannelStorage() {
+    public Output</* @Nullable */ ChannelStorage> channelStorage() {
         return this.channelStorage;
     }
     @Export(name="retentionPeriod", type=ChannelRetentionPeriod.class, parameters={})
     private Output</* @Nullable */ ChannelRetentionPeriod> retentionPeriod;
 
-    public Output</* @Nullable */ ChannelRetentionPeriod> getRetentionPeriod() {
+    public Output</* @Nullable */ ChannelRetentionPeriod> retentionPeriod() {
         return this.retentionPeriod;
     }
     @Export(name="tags", type=List.class, parameters={ChannelTag.class})
     private Output</* @Nullable */ List<ChannelTag>> tags;
 
-    public Output</* @Nullable */ List<ChannelTag>> getTags() {
+    public Output</* @Nullable */ List<ChannelTag>> tags() {
         return this.tags;
     }
 

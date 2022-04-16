@@ -29,7 +29,7 @@ public final class RuleGroupFieldToMatchArgs extends com.pulumi.resources.Resour
     @Import(name="allQueryArguments")
       private final @Nullable Output<Object> allQueryArguments;
 
-    public Output<Object> getAllQueryArguments() {
+    public Output<Object> allQueryArguments() {
         return this.allQueryArguments == null ? Codegen.empty() : this.allQueryArguments;
     }
 
@@ -40,14 +40,14 @@ public final class RuleGroupFieldToMatchArgs extends com.pulumi.resources.Resour
     @Import(name="body")
       private final @Nullable Output<Object> body;
 
-    public Output<Object> getBody() {
+    public Output<Object> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
     @Import(name="jsonBody")
       private final @Nullable Output<RuleGroupJsonBodyArgs> jsonBody;
 
-    public Output<RuleGroupJsonBodyArgs> getJsonBody() {
+    public Output<RuleGroupJsonBodyArgs> jsonBody() {
         return this.jsonBody == null ? Codegen.empty() : this.jsonBody;
     }
 
@@ -58,7 +58,7 @@ public final class RuleGroupFieldToMatchArgs extends com.pulumi.resources.Resour
     @Import(name="method")
       private final @Nullable Output<Object> method;
 
-    public Output<Object> getMethod() {
+    public Output<Object> method() {
         return this.method == null ? Codegen.empty() : this.method;
     }
 
@@ -69,14 +69,14 @@ public final class RuleGroupFieldToMatchArgs extends com.pulumi.resources.Resour
     @Import(name="queryString")
       private final @Nullable Output<Object> queryString;
 
-    public Output<Object> getQueryString() {
+    public Output<Object> queryString() {
         return this.queryString == null ? Codegen.empty() : this.queryString;
     }
 
     @Import(name="singleHeader")
       private final @Nullable Output<RuleGroupFieldToMatchSingleHeaderPropertiesArgs> singleHeader;
 
-    public Output<RuleGroupFieldToMatchSingleHeaderPropertiesArgs> getSingleHeader() {
+    public Output<RuleGroupFieldToMatchSingleHeaderPropertiesArgs> singleHeader() {
         return this.singleHeader == null ? Codegen.empty() : this.singleHeader;
     }
 
@@ -87,7 +87,7 @@ public final class RuleGroupFieldToMatchArgs extends com.pulumi.resources.Resour
     @Import(name="singleQueryArgument")
       private final @Nullable Output<RuleGroupFieldToMatchSingleQueryArgumentPropertiesArgs> singleQueryArgument;
 
-    public Output<RuleGroupFieldToMatchSingleQueryArgumentPropertiesArgs> getSingleQueryArgument() {
+    public Output<RuleGroupFieldToMatchSingleQueryArgumentPropertiesArgs> singleQueryArgument() {
         return this.singleQueryArgument == null ? Codegen.empty() : this.singleQueryArgument;
     }
 
@@ -98,7 +98,7 @@ public final class RuleGroupFieldToMatchArgs extends com.pulumi.resources.Resour
     @Import(name="uriPath")
       private final @Nullable Output<Object> uriPath;
 
-    public Output<Object> getUriPath() {
+    public Output<Object> uriPath() {
         return this.uriPath == null ? Codegen.empty() : this.uriPath;
     }
 

@@ -18,14 +18,14 @@ public final class DistributionFunctionAssociationArgs extends com.pulumi.resour
     @Import(name="eventType")
       private final @Nullable Output<String> eventType;
 
-    public Output<String> getEventType() {
+    public Output<String> eventType() {
         return this.eventType == null ? Codegen.empty() : this.eventType;
     }
 
     @Import(name="functionARN")
       private final @Nullable Output<String> functionARN;
 
-    public Output<String> getFunctionARN() {
+    public Output<String> functionARN() {
         return this.functionARN == null ? Codegen.empty() : this.functionARN;
     }
 

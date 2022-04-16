@@ -19,21 +19,21 @@ public final class TaskDefinitionDeviceArgs extends com.pulumi.resources.Resourc
     @Import(name="containerPath")
       private final @Nullable Output<String> containerPath;
 
-    public Output<String> getContainerPath() {
+    public Output<String> containerPath() {
         return this.containerPath == null ? Codegen.empty() : this.containerPath;
     }
 
     @Import(name="hostPath")
       private final @Nullable Output<String> hostPath;
 
-    public Output<String> getHostPath() {
+    public Output<String> hostPath() {
         return this.hostPath == null ? Codegen.empty() : this.hostPath;
     }
 
     @Import(name="permissions")
       private final @Nullable Output<List<String>> permissions;
 
-    public Output<List<String>> getPermissions() {
+    public Output<List<String>> permissions() {
         return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 

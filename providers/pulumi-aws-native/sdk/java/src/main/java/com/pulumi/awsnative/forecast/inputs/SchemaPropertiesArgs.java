@@ -19,7 +19,7 @@ public final class SchemaPropertiesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="attributes")
       private final @Nullable Output<List<AttributesItemPropertiesArgs>> attributes;
 
-    public Output<List<AttributesItemPropertiesArgs>> getAttributes() {
+    public Output<List<AttributesItemPropertiesArgs>> attributes() {
         return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 

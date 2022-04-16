@@ -32,7 +32,7 @@ public class HookVersion extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the type, here the HookVersion. This is used to uniquely identify a HookVersion resource
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -46,7 +46,7 @@ public class HookVersion extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the IAM execution role to use to register the type. If your resource type calls AWS APIs in any of its handlers, you must create an IAM execution role that includes the necessary permissions to call those AWS APIs, and provision that execution role in your account. CloudFormation then assumes that execution role to provide your resource type with the appropriate credentials.
      * 
      */
-    public Output</* @Nullable */ String> getExecutionRoleArn() {
+    public Output</* @Nullable */ String> executionRoleArn() {
         return this.executionRoleArn;
     }
     /**
@@ -60,7 +60,7 @@ public class HookVersion extends com.pulumi.resources.CustomResource {
      * @return Indicates if this type version is the current default version
      * 
      */
-    public Output<Boolean> getIsDefaultVersion() {
+    public Output<Boolean> isDefaultVersion() {
         return this.isDefaultVersion;
     }
     /**
@@ -74,7 +74,7 @@ public class HookVersion extends com.pulumi.resources.CustomResource {
      * @return Specifies logging configuration information for a type.
      * 
      */
-    public Output</* @Nullable */ HookVersionLoggingConfig> getLoggingConfig() {
+    public Output</* @Nullable */ HookVersionLoggingConfig> loggingConfig() {
         return this.loggingConfig;
     }
     /**
@@ -92,7 +92,7 @@ public class HookVersion extends com.pulumi.resources.CustomResource {
      * For information on generating a schema handler package for the type you want to register, see submit in the CloudFormation CLI User Guide.
      * 
      */
-    public Output<String> getSchemaHandlerPackage() {
+    public Output<String> schemaHandlerPackage() {
         return this.schemaHandlerPackage;
     }
     /**
@@ -106,7 +106,7 @@ public class HookVersion extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the type without the versionID.
      * 
      */
-    public Output<String> getTypeArn() {
+    public Output<String> typeArn() {
         return this.typeArn;
     }
     /**
@@ -124,7 +124,7 @@ public class HookVersion extends com.pulumi.resources.CustomResource {
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
      * 
      */
-    public Output<String> getTypeName() {
+    public Output<String> typeName() {
         return this.typeName;
     }
     /**
@@ -138,7 +138,7 @@ public class HookVersion extends com.pulumi.resources.CustomResource {
      * @return The ID of the version of the type represented by this hook instance.
      * 
      */
-    public Output<String> getVersionId() {
+    public Output<String> versionId() {
         return this.versionId;
     }
     /**
@@ -164,7 +164,7 @@ public class HookVersion extends com.pulumi.resources.CustomResource {
      * PUBLIC: The type is publically visible and usable within any Amazon account.
      * 
      */
-    public Output<HookVersionVisibility> getVisibility() {
+    public Output<HookVersionVisibility> visibility() {
         return this.visibility;
     }
 

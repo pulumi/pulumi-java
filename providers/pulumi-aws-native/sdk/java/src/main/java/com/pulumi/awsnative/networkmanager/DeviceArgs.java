@@ -25,7 +25,7 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -36,7 +36,7 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="globalNetworkId", required=true)
       private final Output<String> globalNetworkId;
 
-    public Output<String> getGlobalNetworkId() {
+    public Output<String> globalNetworkId() {
         return this.globalNetworkId;
     }
 
@@ -47,7 +47,7 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<DeviceLocationArgs> location;
 
-    public Output<DeviceLocationArgs> getLocation() {
+    public Output<DeviceLocationArgs> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -58,7 +58,7 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="model")
       private final @Nullable Output<String> model;
 
-    public Output<String> getModel() {
+    public Output<String> model() {
         return this.model == null ? Codegen.empty() : this.model;
     }
 
@@ -69,7 +69,7 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serialNumber")
       private final @Nullable Output<String> serialNumber;
 
-    public Output<String> getSerialNumber() {
+    public Output<String> serialNumber() {
         return this.serialNumber == null ? Codegen.empty() : this.serialNumber;
     }
 
@@ -80,7 +80,7 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="siteId")
       private final @Nullable Output<String> siteId;
 
-    public Output<String> getSiteId() {
+    public Output<String> siteId() {
         return this.siteId == null ? Codegen.empty() : this.siteId;
     }
 
@@ -91,7 +91,7 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DeviceTagArgs>> tags;
 
-    public Output<List<DeviceTagArgs>> getTags() {
+    public Output<List<DeviceTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -102,7 +102,7 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -113,7 +113,7 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vendor")
       private final @Nullable Output<String> vendor;
 
-    public Output<String> getVendor() {
+    public Output<String> vendor() {
         return this.vendor == null ? Codegen.empty() : this.vendor;
     }
 

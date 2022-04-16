@@ -18,7 +18,7 @@ public final class ListenerCertificateArgs extends com.pulumi.resources.Resource
     @Import(name="certificateArn")
       private final @Nullable Output<String> certificateArn;
 
-    public Output<String> getCertificateArn() {
+    public Output<String> certificateArn() {
         return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
     }
 

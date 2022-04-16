@@ -19,7 +19,7 @@ public final class GetMonitoringScheduleArgs extends com.pulumi.resources.Invoke
     @Import(name="monitoringScheduleArn", required=true)
       private final String monitoringScheduleArn;
 
-    public String getMonitoringScheduleArn() {
+    public String monitoringScheduleArn() {
         return this.monitoringScheduleArn;
     }
 

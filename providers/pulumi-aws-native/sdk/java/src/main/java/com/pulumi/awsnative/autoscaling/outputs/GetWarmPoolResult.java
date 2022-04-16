@@ -30,16 +30,16 @@ public final class GetWarmPoolResult {
         this.poolState = poolState;
     }
 
-    public Optional<WarmPoolInstanceReusePolicy> getInstanceReusePolicy() {
+    public Optional<WarmPoolInstanceReusePolicy> instanceReusePolicy() {
         return Optional.ofNullable(this.instanceReusePolicy);
     }
-    public Optional<Integer> getMaxGroupPreparedCapacity() {
+    public Optional<Integer> maxGroupPreparedCapacity() {
         return Optional.ofNullable(this.maxGroupPreparedCapacity);
     }
-    public Optional<Integer> getMinSize() {
+    public Optional<Integer> minSize() {
         return Optional.ofNullable(this.minSize);
     }
-    public Optional<String> getPoolState() {
+    public Optional<String> poolState() {
         return Optional.ofNullable(this.poolState);
     }
 

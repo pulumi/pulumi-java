@@ -43,21 +43,21 @@ public final class StorageLensSelectionCriteria {
      * Delimiter to divide S3 key into hierarchy of prefixes.
      * 
     */
-    public Optional<String> getDelimiter() {
+    public Optional<String> delimiter() {
         return Optional.ofNullable(this.delimiter);
     }
     /**
      * Max depth of prefixes of S3 key that Amazon S3 Storage Lens will analyze.
      * 
     */
-    public Optional<Integer> getMaxDepth() {
+    public Optional<Integer> maxDepth() {
         return Optional.ofNullable(this.maxDepth);
     }
     /**
      * The minimum storage bytes threshold for the prefixes to be included in the analysis.
      * 
     */
-    public Optional<Double> getMinStorageBytesPercentage() {
+    public Optional<Double> minStorageBytesPercentage() {
         return Optional.ofNullable(this.minStorageBytesPercentage);
     }
 

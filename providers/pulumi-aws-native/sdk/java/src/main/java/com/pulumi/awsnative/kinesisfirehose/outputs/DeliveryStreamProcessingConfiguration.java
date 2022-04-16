@@ -24,10 +24,10 @@ public final class DeliveryStreamProcessingConfiguration {
         this.processors = processors;
     }
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
-    public List<DeliveryStreamProcessor> getProcessors() {
+    public List<DeliveryStreamProcessor> processors() {
         return this.processors == null ? List.of() : this.processors;
     }
 

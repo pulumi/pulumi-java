@@ -19,7 +19,7 @@ public final class GetFeatureGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="featureGroupName", required=true)
       private final String featureGroupName;
 
-    public String getFeatureGroupName() {
+    public String featureGroupName() {
         return this.featureGroupName;
     }
 

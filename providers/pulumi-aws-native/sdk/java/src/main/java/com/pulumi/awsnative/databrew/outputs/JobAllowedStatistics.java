@@ -17,7 +17,7 @@ public final class JobAllowedStatistics {
         this.statistics = statistics;
     }
 
-    public List<String> getStatistics() {
+    public List<String> statistics() {
         return this.statistics;
     }
 

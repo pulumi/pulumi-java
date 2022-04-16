@@ -24,7 +24,7 @@ public final class ACLArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="aCLName")
       private final @Nullable Output<String> aCLName;
 
-    public Output<String> getACLName() {
+    public Output<String> aCLName() {
         return this.aCLName == null ? Codegen.empty() : this.aCLName;
     }
 
@@ -35,7 +35,7 @@ public final class ACLArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<ACLTagArgs>> tags;
 
-    public Output<List<ACLTagArgs>> getTags() {
+    public Output<List<ACLTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -46,7 +46,7 @@ public final class ACLArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userNames")
       private final @Nullable Output<List<String>> userNames;
 
-    public Output<List<String>> getUserNames() {
+    public Output<List<String>> userNames() {
         return this.userNames == null ? Codegen.empty() : this.userNames;
     }
 

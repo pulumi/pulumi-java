@@ -18,7 +18,7 @@ public final class BucketDeleteMarkerReplication {
         this.status = status;
     }
 
-    public Optional<BucketDeleteMarkerReplicationStatus> getStatus() {
+    public Optional<BucketDeleteMarkerReplicationStatus> status() {
         return Optional.ofNullable(this.status);
     }
 

@@ -31,16 +31,16 @@ public final class BotMessage {
         this.sSMLMessage = sSMLMessage;
     }
 
-    public Optional<BotCustomPayload> getCustomPayload() {
+    public Optional<BotCustomPayload> customPayload() {
         return Optional.ofNullable(this.customPayload);
     }
-    public Optional<BotImageResponseCard> getImageResponseCard() {
+    public Optional<BotImageResponseCard> imageResponseCard() {
         return Optional.ofNullable(this.imageResponseCard);
     }
-    public Optional<BotPlainTextMessage> getPlainTextMessage() {
+    public Optional<BotPlainTextMessage> plainTextMessage() {
         return Optional.ofNullable(this.plainTextMessage);
     }
-    public Optional<BotSSMLMessage> getSSMLMessage() {
+    public Optional<BotSSMLMessage> sSMLMessage() {
         return Optional.ofNullable(this.sSMLMessage);
     }
 

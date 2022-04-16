@@ -24,7 +24,7 @@ public final class ServiceImageRepositoryArgs extends com.pulumi.resources.Resou
     @Import(name="imageConfiguration")
       private final @Nullable Output<ServiceImageConfigurationArgs> imageConfiguration;
 
-    public Output<ServiceImageConfigurationArgs> getImageConfiguration() {
+    public Output<ServiceImageConfigurationArgs> imageConfiguration() {
         return this.imageConfiguration == null ? Codegen.empty() : this.imageConfiguration;
     }
 
@@ -35,7 +35,7 @@ public final class ServiceImageRepositoryArgs extends com.pulumi.resources.Resou
     @Import(name="imageIdentifier", required=true)
       private final Output<String> imageIdentifier;
 
-    public Output<String> getImageIdentifier() {
+    public Output<String> imageIdentifier() {
         return this.imageIdentifier;
     }
 
@@ -46,7 +46,7 @@ public final class ServiceImageRepositoryArgs extends com.pulumi.resources.Resou
     @Import(name="imageRepositoryType", required=true)
       private final Output<ServiceImageRepositoryImageRepositoryType> imageRepositoryType;
 
-    public Output<ServiceImageRepositoryImageRepositoryType> getImageRepositoryType() {
+    public Output<ServiceImageRepositoryImageRepositoryType> imageRepositoryType() {
         return this.imageRepositoryType;
     }
 

@@ -24,7 +24,7 @@ public final class BucketInventoryConfigurationArgs extends com.pulumi.resources
     @Import(name="destination", required=true)
       private final Output<BucketDestinationArgs> destination;
 
-    public Output<BucketDestinationArgs> getDestination() {
+    public Output<BucketDestinationArgs> destination() {
         return this.destination;
     }
 
@@ -35,7 +35,7 @@ public final class BucketInventoryConfigurationArgs extends com.pulumi.resources
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -46,7 +46,7 @@ public final class BucketInventoryConfigurationArgs extends com.pulumi.resources
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -57,7 +57,7 @@ public final class BucketInventoryConfigurationArgs extends com.pulumi.resources
     @Import(name="includedObjectVersions", required=true)
       private final Output<BucketInventoryConfigurationIncludedObjectVersions> includedObjectVersions;
 
-    public Output<BucketInventoryConfigurationIncludedObjectVersions> getIncludedObjectVersions() {
+    public Output<BucketInventoryConfigurationIncludedObjectVersions> includedObjectVersions() {
         return this.includedObjectVersions;
     }
 
@@ -68,7 +68,7 @@ public final class BucketInventoryConfigurationArgs extends com.pulumi.resources
     @Import(name="optionalFields")
       private final @Nullable Output<List<BucketInventoryConfigurationOptionalFieldsItem>> optionalFields;
 
-    public Output<List<BucketInventoryConfigurationOptionalFieldsItem>> getOptionalFields() {
+    public Output<List<BucketInventoryConfigurationOptionalFieldsItem>> optionalFields() {
         return this.optionalFields == null ? Codegen.empty() : this.optionalFields;
     }
 
@@ -79,7 +79,7 @@ public final class BucketInventoryConfigurationArgs extends com.pulumi.resources
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
@@ -90,7 +90,7 @@ public final class BucketInventoryConfigurationArgs extends com.pulumi.resources
     @Import(name="scheduleFrequency", required=true)
       private final Output<BucketInventoryConfigurationScheduleFrequency> scheduleFrequency;
 
-    public Output<BucketInventoryConfigurationScheduleFrequency> getScheduleFrequency() {
+    public Output<BucketInventoryConfigurationScheduleFrequency> scheduleFrequency() {
         return this.scheduleFrequency;
     }
 

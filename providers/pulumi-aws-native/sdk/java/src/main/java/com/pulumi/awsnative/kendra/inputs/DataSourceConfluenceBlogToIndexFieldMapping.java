@@ -18,21 +18,21 @@ public final class DataSourceConfluenceBlogToIndexFieldMapping extends com.pulum
     @Import(name="dataSourceFieldName", required=true)
       private final DataSourceConfluenceBlogFieldName dataSourceFieldName;
 
-    public DataSourceConfluenceBlogFieldName getDataSourceFieldName() {
+    public DataSourceConfluenceBlogFieldName dataSourceFieldName() {
         return this.dataSourceFieldName;
     }
 
     @Import(name="dateFieldFormat")
       private final @Nullable String dateFieldFormat;
 
-    public Optional<String> getDateFieldFormat() {
+    public Optional<String> dateFieldFormat() {
         return this.dateFieldFormat == null ? Optional.empty() : Optional.ofNullable(this.dateFieldFormat);
     }
 
     @Import(name="indexFieldName", required=true)
       private final String indexFieldName;
 
-    public String getIndexFieldName() {
+    public String indexFieldName() {
         return this.indexFieldName;
     }
 

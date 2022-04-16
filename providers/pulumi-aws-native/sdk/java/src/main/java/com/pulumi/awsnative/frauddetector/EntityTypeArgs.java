@@ -24,7 +24,7 @@ public final class EntityTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -35,7 +35,7 @@ public final class EntityTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -46,7 +46,7 @@ public final class EntityTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<EntityTypeTagArgs>> tags;
 
-    public Output<List<EntityTypeTagArgs>> getTags() {
+    public Output<List<EntityTypeTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

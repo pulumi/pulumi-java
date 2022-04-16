@@ -21,10 +21,10 @@ public final class BudgetsActionSubscriber {
         this.type = type;
     }
 
-    public String getAddress() {
+    public String address() {
         return this.address;
     }
-    public BudgetsActionSubscriberType getType() {
+    public BudgetsActionSubscriberType type() {
         return this.type;
     }
 

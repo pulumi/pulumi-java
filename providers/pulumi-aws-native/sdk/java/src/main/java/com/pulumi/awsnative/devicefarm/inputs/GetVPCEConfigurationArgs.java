@@ -15,7 +15,7 @@ public final class GetVPCEConfigurationArgs extends com.pulumi.resources.InvokeA
     @Import(name="arn", required=true)
       private final String arn;
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
 

@@ -18,7 +18,7 @@ public final class FlowAggregationConfigArgs extends com.pulumi.resources.Resour
     @Import(name="aggregationType")
       private final @Nullable Output<FlowAggregationType> aggregationType;
 
-    public Output<FlowAggregationType> getAggregationType() {
+    public Output<FlowAggregationType> aggregationType() {
         return this.aggregationType == null ? Codegen.empty() : this.aggregationType;
     }
 

@@ -26,7 +26,7 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataBundles")
       private final @Nullable Output<List<String>> dataBundles;
 
-    public Output<List<String>> getDataBundles() {
+    public Output<List<String>> dataBundles() {
         return this.dataBundles == null ? Codegen.empty() : this.dataBundles;
     }
 
@@ -37,7 +37,7 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -48,14 +48,14 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="federationMode")
       private final @Nullable Output<EnvironmentFederationMode> federationMode;
 
-    public Output<EnvironmentFederationMode> getFederationMode() {
+    public Output<EnvironmentFederationMode> federationMode() {
         return this.federationMode == null ? Codegen.empty() : this.federationMode;
     }
 
     @Import(name="federationParameters")
       private final @Nullable Output<EnvironmentFederationParametersArgs> federationParameters;
 
-    public Output<EnvironmentFederationParametersArgs> getFederationParameters() {
+    public Output<EnvironmentFederationParametersArgs> federationParameters() {
         return this.federationParameters == null ? Codegen.empty() : this.federationParameters;
     }
 
@@ -66,7 +66,7 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -77,14 +77,14 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="superuserParameters")
       private final @Nullable Output<EnvironmentSuperuserParametersArgs> superuserParameters;
 
-    public Output<EnvironmentSuperuserParametersArgs> getSuperuserParameters() {
+    public Output<EnvironmentSuperuserParametersArgs> superuserParameters() {
         return this.superuserParameters == null ? Codegen.empty() : this.superuserParameters;
     }
 

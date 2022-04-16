@@ -24,63 +24,63 @@ public final class DataSourceWebCrawlerConfigurationArgs extends com.pulumi.reso
     @Import(name="authenticationConfiguration")
       private final @Nullable Output<DataSourceWebCrawlerAuthenticationConfigurationArgs> authenticationConfiguration;
 
-    public Output<DataSourceWebCrawlerAuthenticationConfigurationArgs> getAuthenticationConfiguration() {
+    public Output<DataSourceWebCrawlerAuthenticationConfigurationArgs> authenticationConfiguration() {
         return this.authenticationConfiguration == null ? Codegen.empty() : this.authenticationConfiguration;
     }
 
     @Import(name="crawlDepth")
       private final @Nullable Output<Integer> crawlDepth;
 
-    public Output<Integer> getCrawlDepth() {
+    public Output<Integer> crawlDepth() {
         return this.crawlDepth == null ? Codegen.empty() : this.crawlDepth;
     }
 
     @Import(name="maxContentSizePerPageInMegaBytes")
       private final @Nullable Output<Double> maxContentSizePerPageInMegaBytes;
 
-    public Output<Double> getMaxContentSizePerPageInMegaBytes() {
+    public Output<Double> maxContentSizePerPageInMegaBytes() {
         return this.maxContentSizePerPageInMegaBytes == null ? Codegen.empty() : this.maxContentSizePerPageInMegaBytes;
     }
 
     @Import(name="maxLinksPerPage")
       private final @Nullable Output<Integer> maxLinksPerPage;
 
-    public Output<Integer> getMaxLinksPerPage() {
+    public Output<Integer> maxLinksPerPage() {
         return this.maxLinksPerPage == null ? Codegen.empty() : this.maxLinksPerPage;
     }
 
     @Import(name="maxUrlsPerMinuteCrawlRate")
       private final @Nullable Output<Integer> maxUrlsPerMinuteCrawlRate;
 
-    public Output<Integer> getMaxUrlsPerMinuteCrawlRate() {
+    public Output<Integer> maxUrlsPerMinuteCrawlRate() {
         return this.maxUrlsPerMinuteCrawlRate == null ? Codegen.empty() : this.maxUrlsPerMinuteCrawlRate;
     }
 
     @Import(name="proxyConfiguration")
       private final @Nullable Output<DataSourceProxyConfigurationArgs> proxyConfiguration;
 
-    public Output<DataSourceProxyConfigurationArgs> getProxyConfiguration() {
+    public Output<DataSourceProxyConfigurationArgs> proxyConfiguration() {
         return this.proxyConfiguration == null ? Codegen.empty() : this.proxyConfiguration;
     }
 
     @Import(name="urlExclusionPatterns")
       private final @Nullable Output<List<String>> urlExclusionPatterns;
 
-    public Output<List<String>> getUrlExclusionPatterns() {
+    public Output<List<String>> urlExclusionPatterns() {
         return this.urlExclusionPatterns == null ? Codegen.empty() : this.urlExclusionPatterns;
     }
 
     @Import(name="urlInclusionPatterns")
       private final @Nullable Output<List<String>> urlInclusionPatterns;
 
-    public Output<List<String>> getUrlInclusionPatterns() {
+    public Output<List<String>> urlInclusionPatterns() {
         return this.urlInclusionPatterns == null ? Codegen.empty() : this.urlInclusionPatterns;
     }
 
     @Import(name="urls", required=true)
       private final Output<DataSourceWebCrawlerUrlsArgs> urls;
 
-    public Output<DataSourceWebCrawlerUrlsArgs> getUrls() {
+    public Output<DataSourceWebCrawlerUrlsArgs> urls() {
         return this.urls;
     }
 

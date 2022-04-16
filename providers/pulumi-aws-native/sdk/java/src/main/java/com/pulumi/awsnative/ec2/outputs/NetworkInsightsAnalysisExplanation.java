@@ -160,139 +160,139 @@ public final class NetworkInsightsAnalysisExplanation {
         this.vpnGateway = vpnGateway;
     }
 
-    public Optional<NetworkInsightsAnalysisAnalysisComponent> getAcl() {
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> acl() {
         return Optional.ofNullable(this.acl);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisAclRule> getAclRule() {
+    public Optional<NetworkInsightsAnalysisAnalysisAclRule> aclRule() {
         return Optional.ofNullable(this.aclRule);
     }
-    public Optional<String> getAddress() {
+    public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
-    public List<String> getAddresses() {
+    public List<String> addresses() {
         return this.addresses == null ? List.of() : this.addresses;
     }
-    public Optional<NetworkInsightsAnalysisAnalysisComponent> getAttachedTo() {
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> attachedTo() {
         return Optional.ofNullable(this.attachedTo);
     }
-    public List<String> getAvailabilityZones() {
+    public List<String> availabilityZones() {
         return this.availabilityZones == null ? List.of() : this.availabilityZones;
     }
-    public List<String> getCidrs() {
+    public List<String> cidrs() {
         return this.cidrs == null ? List.of() : this.cidrs;
     }
-    public Optional<NetworkInsightsAnalysisAnalysisLoadBalancerListener> getClassicLoadBalancerListener() {
+    public Optional<NetworkInsightsAnalysisAnalysisLoadBalancerListener> classicLoadBalancerListener() {
         return Optional.ofNullable(this.classicLoadBalancerListener);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisComponent> getComponent() {
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> component() {
         return Optional.ofNullable(this.component);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisComponent> getCustomerGateway() {
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> customerGateway() {
         return Optional.ofNullable(this.customerGateway);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisComponent> getDestination() {
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> destination() {
         return Optional.ofNullable(this.destination);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisComponent> getDestinationVpc() {
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> destinationVpc() {
         return Optional.ofNullable(this.destinationVpc);
     }
-    public Optional<String> getDirection() {
+    public Optional<String> direction() {
         return Optional.ofNullable(this.direction);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisComponent> getElasticLoadBalancerListener() {
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> elasticLoadBalancerListener() {
         return Optional.ofNullable(this.elasticLoadBalancerListener);
     }
-    public Optional<String> getExplanationCode() {
+    public Optional<String> explanationCode() {
         return Optional.ofNullable(this.explanationCode);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisComponent> getIngressRouteTable() {
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> ingressRouteTable() {
         return Optional.ofNullable(this.ingressRouteTable);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisComponent> getInternetGateway() {
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> internetGateway() {
         return Optional.ofNullable(this.internetGateway);
     }
-    public Optional<String> getLoadBalancerArn() {
+    public Optional<String> loadBalancerArn() {
         return Optional.ofNullable(this.loadBalancerArn);
     }
-    public Optional<Integer> getLoadBalancerListenerPort() {
+    public Optional<Integer> loadBalancerListenerPort() {
         return Optional.ofNullable(this.loadBalancerListenerPort);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisLoadBalancerTarget> getLoadBalancerTarget() {
+    public Optional<NetworkInsightsAnalysisAnalysisLoadBalancerTarget> loadBalancerTarget() {
         return Optional.ofNullable(this.loadBalancerTarget);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisComponent> getLoadBalancerTargetGroup() {
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> loadBalancerTargetGroup() {
         return Optional.ofNullable(this.loadBalancerTargetGroup);
     }
-    public List<NetworkInsightsAnalysisAnalysisComponent> getLoadBalancerTargetGroups() {
+    public List<NetworkInsightsAnalysisAnalysisComponent> loadBalancerTargetGroups() {
         return this.loadBalancerTargetGroups == null ? List.of() : this.loadBalancerTargetGroups;
     }
-    public Optional<Integer> getLoadBalancerTargetPort() {
+    public Optional<Integer> loadBalancerTargetPort() {
         return Optional.ofNullable(this.loadBalancerTargetPort);
     }
-    public Optional<String> getMissingComponent() {
+    public Optional<String> missingComponent() {
         return Optional.ofNullable(this.missingComponent);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisComponent> getNatGateway() {
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> natGateway() {
         return Optional.ofNullable(this.natGateway);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisComponent> getNetworkInterface() {
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> networkInterface() {
         return Optional.ofNullable(this.networkInterface);
     }
-    public Optional<String> getPacketField() {
+    public Optional<String> packetField() {
         return Optional.ofNullable(this.packetField);
     }
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
-    public List<NetworkInsightsAnalysisPortRange> getPortRanges() {
+    public List<NetworkInsightsAnalysisPortRange> portRanges() {
         return this.portRanges == null ? List.of() : this.portRanges;
     }
-    public Optional<NetworkInsightsAnalysisAnalysisComponent> getPrefixList() {
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> prefixList() {
         return Optional.ofNullable(this.prefixList);
     }
-    public List<String> getProtocols() {
+    public List<String> protocols() {
         return this.protocols == null ? List.of() : this.protocols;
     }
-    public Optional<NetworkInsightsAnalysisAnalysisComponent> getRouteTable() {
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> routeTable() {
         return Optional.ofNullable(this.routeTable);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisRouteTableRoute> getRouteTableRoute() {
+    public Optional<NetworkInsightsAnalysisAnalysisRouteTableRoute> routeTableRoute() {
         return Optional.ofNullable(this.routeTableRoute);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisComponent> getSecurityGroup() {
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> securityGroup() {
         return Optional.ofNullable(this.securityGroup);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisSecurityGroupRule> getSecurityGroupRule() {
+    public Optional<NetworkInsightsAnalysisAnalysisSecurityGroupRule> securityGroupRule() {
         return Optional.ofNullable(this.securityGroupRule);
     }
-    public List<NetworkInsightsAnalysisAnalysisComponent> getSecurityGroups() {
+    public List<NetworkInsightsAnalysisAnalysisComponent> securityGroups() {
         return this.securityGroups == null ? List.of() : this.securityGroups;
     }
-    public Optional<NetworkInsightsAnalysisAnalysisComponent> getSourceVpc() {
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> sourceVpc() {
         return Optional.ofNullable(this.sourceVpc);
     }
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisComponent> getSubnet() {
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> subnet() {
         return Optional.ofNullable(this.subnet);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisComponent> getSubnetRouteTable() {
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> subnetRouteTable() {
         return Optional.ofNullable(this.subnetRouteTable);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisComponent> getVpc() {
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> vpc() {
         return Optional.ofNullable(this.vpc);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisComponent> getVpcEndpoint() {
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> vpcEndpoint() {
         return Optional.ofNullable(this.vpcEndpoint);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisComponent> getVpcPeeringConnection() {
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> vpcPeeringConnection() {
         return Optional.ofNullable(this.vpcPeeringConnection);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisComponent> getVpnConnection() {
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> vpnConnection() {
         return Optional.ofNullable(this.vpnConnection);
     }
-    public Optional<NetworkInsightsAnalysisAnalysisComponent> getVpnGateway() {
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> vpnGateway() {
         return Optional.ofNullable(this.vpnGateway);
     }
 

@@ -31,16 +31,16 @@ public final class AccessPointObjectLambdaConfiguration {
         this.transformationConfigurations = transformationConfigurations;
     }
 
-    public List<String> getAllowedFeatures() {
+    public List<String> allowedFeatures() {
         return this.allowedFeatures == null ? List.of() : this.allowedFeatures;
     }
-    public Optional<Boolean> getCloudWatchMetricsEnabled() {
+    public Optional<Boolean> cloudWatchMetricsEnabled() {
         return Optional.ofNullable(this.cloudWatchMetricsEnabled);
     }
-    public String getSupportingAccessPoint() {
+    public String supportingAccessPoint() {
         return this.supportingAccessPoint;
     }
-    public List<AccessPointTransformationConfiguration> getTransformationConfigurations() {
+    public List<AccessPointTransformationConfiguration> transformationConfigurations() {
         return this.transformationConfigurations;
     }
 

@@ -33,19 +33,19 @@ public final class TopicRulePutAssetPropertyValueEntry {
         this.propertyValues = propertyValues;
     }
 
-    public Optional<String> getAssetId() {
+    public Optional<String> assetId() {
         return Optional.ofNullable(this.assetId);
     }
-    public Optional<String> getEntryId() {
+    public Optional<String> entryId() {
         return Optional.ofNullable(this.entryId);
     }
-    public Optional<String> getPropertyAlias() {
+    public Optional<String> propertyAlias() {
         return Optional.ofNullable(this.propertyAlias);
     }
-    public Optional<String> getPropertyId() {
+    public Optional<String> propertyId() {
         return Optional.ofNullable(this.propertyId);
     }
-    public List<TopicRuleAssetPropertyValue> getPropertyValues() {
+    public List<TopicRuleAssetPropertyValue> propertyValues() {
         return this.propertyValues;
     }
 

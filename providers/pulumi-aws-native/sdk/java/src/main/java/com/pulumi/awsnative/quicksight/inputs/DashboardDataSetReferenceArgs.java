@@ -25,7 +25,7 @@ public final class DashboardDataSetReferenceArgs extends com.pulumi.resources.Re
     @Import(name="dataSetArn", required=true)
       private final Output<String> dataSetArn;
 
-    public Output<String> getDataSetArn() {
+    public Output<String> dataSetArn() {
         return this.dataSetArn;
     }
 
@@ -36,7 +36,7 @@ public final class DashboardDataSetReferenceArgs extends com.pulumi.resources.Re
     @Import(name="dataSetPlaceholder", required=true)
       private final Output<String> dataSetPlaceholder;
 
-    public Output<String> getDataSetPlaceholder() {
+    public Output<String> dataSetPlaceholder() {
         return this.dataSetPlaceholder;
     }
 

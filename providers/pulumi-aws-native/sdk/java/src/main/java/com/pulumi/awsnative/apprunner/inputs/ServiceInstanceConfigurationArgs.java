@@ -26,7 +26,7 @@ public final class ServiceInstanceConfigurationArgs extends com.pulumi.resources
     @Import(name="cpu")
       private final @Nullable Output<String> cpu;
 
-    public Output<String> getCpu() {
+    public Output<String> cpu() {
         return this.cpu == null ? Codegen.empty() : this.cpu;
     }
 
@@ -37,7 +37,7 @@ public final class ServiceInstanceConfigurationArgs extends com.pulumi.resources
     @Import(name="instanceRoleArn")
       private final @Nullable Output<String> instanceRoleArn;
 
-    public Output<String> getInstanceRoleArn() {
+    public Output<String> instanceRoleArn() {
         return this.instanceRoleArn == null ? Codegen.empty() : this.instanceRoleArn;
     }
 
@@ -48,7 +48,7 @@ public final class ServiceInstanceConfigurationArgs extends com.pulumi.resources
     @Import(name="memory")
       private final @Nullable Output<String> memory;
 
-    public Output<String> getMemory() {
+    public Output<String> memory() {
         return this.memory == null ? Codegen.empty() : this.memory;
     }
 

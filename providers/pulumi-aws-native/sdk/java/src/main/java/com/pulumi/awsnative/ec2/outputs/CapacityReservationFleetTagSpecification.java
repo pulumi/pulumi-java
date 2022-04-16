@@ -24,10 +24,10 @@ public final class CapacityReservationFleetTagSpecification {
         this.tags = tags;
     }
 
-    public Optional<String> getPropResourceType() {
+    public Optional<String> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
-    public List<CapacityReservationFleetTag> getTags() {
+    public List<CapacityReservationFleetTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

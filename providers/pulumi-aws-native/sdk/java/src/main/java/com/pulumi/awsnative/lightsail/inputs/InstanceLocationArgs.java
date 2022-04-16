@@ -26,7 +26,7 @@ public final class InstanceLocationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
@@ -37,7 +37,7 @@ public final class InstanceLocationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="regionName")
       private final @Nullable Output<String> regionName;
 
-    public Output<String> getRegionName() {
+    public Output<String> regionName() {
         return this.regionName == null ? Codegen.empty() : this.regionName;
     }
 

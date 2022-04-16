@@ -16,21 +16,21 @@ public final class DataSourceWebCrawlerBasicAuthentication extends com.pulumi.re
     @Import(name="credentials", required=true)
       private final String credentials;
 
-    public String getCredentials() {
+    public String credentials() {
         return this.credentials;
     }
 
     @Import(name="host", required=true)
       private final String host;
 
-    public String getHost() {
+    public String host() {
         return this.host;
     }
 
     @Import(name="port", required=true)
       private final Integer port;
 
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 

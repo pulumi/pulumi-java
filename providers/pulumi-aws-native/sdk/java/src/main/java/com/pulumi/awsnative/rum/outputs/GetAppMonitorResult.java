@@ -40,24 +40,24 @@ public final class GetAppMonitorResult {
         this.tags = tags;
     }
 
-    public Optional<AppMonitorConfiguration> getAppMonitorConfiguration() {
+    public Optional<AppMonitorConfiguration> appMonitorConfiguration() {
         return Optional.ofNullable(this.appMonitorConfiguration);
     }
     /**
      * Data collected by RUM is kept by RUM for 30 days and then deleted. This parameter specifies whether RUM sends a copy of this telemetry data to CWLlong in your account. This enables you to keep the telemetry data for more than 30 days, but it does incur CWLlong charges. If you omit this parameter, the default is false
      * 
     */
-    public Optional<Boolean> getCwLogEnabled() {
+    public Optional<Boolean> cwLogEnabled() {
         return Optional.ofNullable(this.cwLogEnabled);
     }
     /**
      * The top-level internet domain name for which your application has administrative authority.
      * 
     */
-    public Optional<String> getDomain() {
+    public Optional<String> domain() {
         return Optional.ofNullable(this.domain);
     }
-    public List<AppMonitorTag> getTags() {
+    public List<AppMonitorTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

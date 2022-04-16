@@ -21,7 +21,7 @@ public final class ConnectorLogDeliveryArgs extends com.pulumi.resources.Resourc
     @Import(name="workerLogDelivery", required=true)
       private final Output<ConnectorWorkerLogDeliveryArgs> workerLogDelivery;
 
-    public Output<ConnectorWorkerLogDeliveryArgs> getWorkerLogDelivery() {
+    public Output<ConnectorWorkerLogDeliveryArgs> workerLogDelivery() {
         return this.workerLogDelivery;
     }
 

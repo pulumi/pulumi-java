@@ -16,7 +16,7 @@ public final class GlobalTableReplicaSSESpecification {
         this.kMSMasterKeyId = kMSMasterKeyId;
     }
 
-    public String getKMSMasterKeyId() {
+    public String kMSMasterKeyId() {
         return this.kMSMasterKeyId;
     }
 

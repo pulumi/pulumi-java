@@ -27,13 +27,13 @@ public final class TaskDefinitionProxyConfiguration {
         this.type = type;
     }
 
-    public String getContainerName() {
+    public String containerName() {
         return this.containerName;
     }
-    public List<TaskDefinitionKeyValuePair> getProxyConfigurationProperties() {
+    public List<TaskDefinitionKeyValuePair> proxyConfigurationProperties() {
         return this.proxyConfigurationProperties == null ? List.of() : this.proxyConfigurationProperties;
     }
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

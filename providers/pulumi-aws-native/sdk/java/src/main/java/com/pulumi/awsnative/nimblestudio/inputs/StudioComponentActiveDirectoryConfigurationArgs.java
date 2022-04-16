@@ -28,7 +28,7 @@ public final class StudioComponentActiveDirectoryConfigurationArgs extends com.p
     @Import(name="computerAttributes")
       private final @Nullable Output<List<StudioComponentActiveDirectoryComputerAttributeArgs>> computerAttributes;
 
-    public Output<List<StudioComponentActiveDirectoryComputerAttributeArgs>> getComputerAttributes() {
+    public Output<List<StudioComponentActiveDirectoryComputerAttributeArgs>> computerAttributes() {
         return this.computerAttributes == null ? Codegen.empty() : this.computerAttributes;
     }
 
@@ -39,7 +39,7 @@ public final class StudioComponentActiveDirectoryConfigurationArgs extends com.p
     @Import(name="directoryId")
       private final @Nullable Output<String> directoryId;
 
-    public Output<String> getDirectoryId() {
+    public Output<String> directoryId() {
         return this.directoryId == null ? Codegen.empty() : this.directoryId;
     }
 
@@ -50,7 +50,7 @@ public final class StudioComponentActiveDirectoryConfigurationArgs extends com.p
     @Import(name="organizationalUnitDistinguishedName")
       private final @Nullable Output<String> organizationalUnitDistinguishedName;
 
-    public Output<String> getOrganizationalUnitDistinguishedName() {
+    public Output<String> organizationalUnitDistinguishedName() {
         return this.organizationalUnitDistinguishedName == null ? Codegen.empty() : this.organizationalUnitDistinguishedName;
     }
 

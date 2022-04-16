@@ -23,7 +23,7 @@ public final class IPAMIpamOperatingRegion extends com.pulumi.resources.InvokeAr
     @Import(name="regionName", required=true)
       private final String regionName;
 
-    public String getRegionName() {
+    public String regionName() {
         return this.regionName;
     }
 

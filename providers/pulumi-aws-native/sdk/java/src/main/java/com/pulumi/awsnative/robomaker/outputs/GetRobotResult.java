@@ -23,10 +23,10 @@ public final class GetRobotResult {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<RobotTags> getTags() {
+    public Optional<RobotTags> tags() {
         return Optional.ofNullable(this.tags);
     }
 

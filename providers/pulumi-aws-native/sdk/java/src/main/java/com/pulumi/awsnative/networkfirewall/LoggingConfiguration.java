@@ -21,19 +21,19 @@ public class LoggingConfiguration extends com.pulumi.resources.CustomResource {
     @Export(name="firewallArn", type=String.class, parameters={})
     private Output<String> firewallArn;
 
-    public Output<String> getFirewallArn() {
+    public Output<String> firewallArn() {
         return this.firewallArn;
     }
     @Export(name="firewallName", type=String.class, parameters={})
     private Output</* @Nullable */ String> firewallName;
 
-    public Output</* @Nullable */ String> getFirewallName() {
+    public Output</* @Nullable */ String> firewallName() {
         return this.firewallName;
     }
     @Export(name="loggingConfiguration", type=com.pulumi.awsnative.networkfirewall.outputs.LoggingConfiguration.class, parameters={})
     private Output<com.pulumi.awsnative.networkfirewall.outputs.LoggingConfiguration> loggingConfiguration;
 
-    public Output<com.pulumi.awsnative.networkfirewall.outputs.LoggingConfiguration> getLoggingConfiguration() {
+    public Output<com.pulumi.awsnative.networkfirewall.outputs.LoggingConfiguration> loggingConfiguration() {
         return this.loggingConfiguration;
     }
 

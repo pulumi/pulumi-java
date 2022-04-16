@@ -20,42 +20,42 @@ public final class SpotFleetEbsBlockDevice extends com.pulumi.resources.InvokeAr
     @Import(name="deleteOnTermination")
       private final @Nullable Boolean deleteOnTermination;
 
-    public Optional<Boolean> getDeleteOnTermination() {
+    public Optional<Boolean> deleteOnTermination() {
         return this.deleteOnTermination == null ? Optional.empty() : Optional.ofNullable(this.deleteOnTermination);
     }
 
     @Import(name="encrypted")
       private final @Nullable Boolean encrypted;
 
-    public Optional<Boolean> getEncrypted() {
+    public Optional<Boolean> encrypted() {
         return this.encrypted == null ? Optional.empty() : Optional.ofNullable(this.encrypted);
     }
 
     @Import(name="iops")
       private final @Nullable Integer iops;
 
-    public Optional<Integer> getIops() {
+    public Optional<Integer> iops() {
         return this.iops == null ? Optional.empty() : Optional.ofNullable(this.iops);
     }
 
     @Import(name="snapshotId")
       private final @Nullable String snapshotId;
 
-    public Optional<String> getSnapshotId() {
+    public Optional<String> snapshotId() {
         return this.snapshotId == null ? Optional.empty() : Optional.ofNullable(this.snapshotId);
     }
 
     @Import(name="volumeSize")
       private final @Nullable Integer volumeSize;
 
-    public Optional<Integer> getVolumeSize() {
+    public Optional<Integer> volumeSize() {
         return this.volumeSize == null ? Optional.empty() : Optional.ofNullable(this.volumeSize);
     }
 
     @Import(name="volumeType")
       private final @Nullable SpotFleetEbsBlockDeviceVolumeType volumeType;
 
-    public Optional<SpotFleetEbsBlockDeviceVolumeType> getVolumeType() {
+    public Optional<SpotFleetEbsBlockDeviceVolumeType> volumeType() {
         return this.volumeType == null ? Optional.empty() : Optional.ofNullable(this.volumeType);
     }
 

@@ -26,14 +26,14 @@ public final class LocationS3Args extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3BucketArn", required=true)
       private final Output<String> s3BucketArn;
 
-    public Output<String> getS3BucketArn() {
+    public Output<String> s3BucketArn() {
         return this.s3BucketArn;
     }
 
     @Import(name="s3Config", required=true)
       private final Output<LocationS3S3ConfigArgs> s3Config;
 
-    public Output<LocationS3S3ConfigArgs> getS3Config() {
+    public Output<LocationS3S3ConfigArgs> s3Config() {
         return this.s3Config;
     }
 
@@ -44,7 +44,7 @@ public final class LocationS3Args extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3StorageClass")
       private final @Nullable Output<LocationS3S3StorageClass> s3StorageClass;
 
-    public Output<LocationS3S3StorageClass> getS3StorageClass() {
+    public Output<LocationS3S3StorageClass> s3StorageClass() {
         return this.s3StorageClass == null ? Codegen.empty() : this.s3StorageClass;
     }
 
@@ -55,7 +55,7 @@ public final class LocationS3Args extends com.pulumi.resources.ResourceArgs {
     @Import(name="subdirectory")
       private final @Nullable Output<String> subdirectory;
 
-    public Output<String> getSubdirectory() {
+    public Output<String> subdirectory() {
         return this.subdirectory == null ? Codegen.empty() : this.subdirectory;
     }
 
@@ -66,7 +66,7 @@ public final class LocationS3Args extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<LocationS3TagArgs>> tags;
 
-    public Output<List<LocationS3TagArgs>> getTags() {
+    public Output<List<LocationS3TagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

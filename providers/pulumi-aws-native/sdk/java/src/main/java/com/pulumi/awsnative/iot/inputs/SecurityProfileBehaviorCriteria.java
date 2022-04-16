@@ -29,7 +29,7 @@ public final class SecurityProfileBehaviorCriteria extends com.pulumi.resources.
     @Import(name="comparisonOperator")
       private final @Nullable SecurityProfileBehaviorCriteriaComparisonOperator comparisonOperator;
 
-    public Optional<SecurityProfileBehaviorCriteriaComparisonOperator> getComparisonOperator() {
+    public Optional<SecurityProfileBehaviorCriteriaComparisonOperator> comparisonOperator() {
         return this.comparisonOperator == null ? Optional.empty() : Optional.ofNullable(this.comparisonOperator);
     }
 
@@ -40,7 +40,7 @@ public final class SecurityProfileBehaviorCriteria extends com.pulumi.resources.
     @Import(name="consecutiveDatapointsToAlarm")
       private final @Nullable Integer consecutiveDatapointsToAlarm;
 
-    public Optional<Integer> getConsecutiveDatapointsToAlarm() {
+    public Optional<Integer> consecutiveDatapointsToAlarm() {
         return this.consecutiveDatapointsToAlarm == null ? Optional.empty() : Optional.ofNullable(this.consecutiveDatapointsToAlarm);
     }
 
@@ -51,7 +51,7 @@ public final class SecurityProfileBehaviorCriteria extends com.pulumi.resources.
     @Import(name="consecutiveDatapointsToClear")
       private final @Nullable Integer consecutiveDatapointsToClear;
 
-    public Optional<Integer> getConsecutiveDatapointsToClear() {
+    public Optional<Integer> consecutiveDatapointsToClear() {
         return this.consecutiveDatapointsToClear == null ? Optional.empty() : Optional.ofNullable(this.consecutiveDatapointsToClear);
     }
 
@@ -62,28 +62,28 @@ public final class SecurityProfileBehaviorCriteria extends com.pulumi.resources.
     @Import(name="durationSeconds")
       private final @Nullable Integer durationSeconds;
 
-    public Optional<Integer> getDurationSeconds() {
+    public Optional<Integer> durationSeconds() {
         return this.durationSeconds == null ? Optional.empty() : Optional.ofNullable(this.durationSeconds);
     }
 
     @Import(name="mlDetectionConfig")
       private final @Nullable SecurityProfileMachineLearningDetectionConfig mlDetectionConfig;
 
-    public Optional<SecurityProfileMachineLearningDetectionConfig> getMlDetectionConfig() {
+    public Optional<SecurityProfileMachineLearningDetectionConfig> mlDetectionConfig() {
         return this.mlDetectionConfig == null ? Optional.empty() : Optional.ofNullable(this.mlDetectionConfig);
     }
 
     @Import(name="statisticalThreshold")
       private final @Nullable SecurityProfileStatisticalThreshold statisticalThreshold;
 
-    public Optional<SecurityProfileStatisticalThreshold> getStatisticalThreshold() {
+    public Optional<SecurityProfileStatisticalThreshold> statisticalThreshold() {
         return this.statisticalThreshold == null ? Optional.empty() : Optional.ofNullable(this.statisticalThreshold);
     }
 
     @Import(name="value")
       private final @Nullable SecurityProfileMetricValue value;
 
-    public Optional<SecurityProfileMetricValue> getValue() {
+    public Optional<SecurityProfileMetricValue> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

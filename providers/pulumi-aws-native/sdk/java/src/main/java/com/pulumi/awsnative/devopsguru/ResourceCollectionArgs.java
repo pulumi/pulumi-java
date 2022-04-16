@@ -17,7 +17,7 @@ public final class ResourceCollectionArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceCollectionFilter", required=true)
       private final Output<ResourceCollectionFilterArgs> resourceCollectionFilter;
 
-    public Output<ResourceCollectionFilterArgs> getResourceCollectionFilter() {
+    public Output<ResourceCollectionFilterArgs> resourceCollectionFilter() {
         return this.resourceCollectionFilter;
     }
 

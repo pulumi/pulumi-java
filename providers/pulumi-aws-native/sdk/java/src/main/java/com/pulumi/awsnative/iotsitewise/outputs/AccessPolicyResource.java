@@ -23,10 +23,10 @@ public final class AccessPolicyResource {
         this.project = project;
     }
 
-    public Optional<AccessPolicyPortal> getPortal() {
+    public Optional<AccessPolicyPortal> portal() {
         return Optional.ofNullable(this.portal);
     }
-    public Optional<AccessPolicyProject> getProject() {
+    public Optional<AccessPolicyProject> project() {
         return Optional.ofNullable(this.project);
     }
 

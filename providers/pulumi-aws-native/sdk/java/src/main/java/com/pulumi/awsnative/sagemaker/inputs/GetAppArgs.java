@@ -20,7 +20,7 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="appName", required=true)
       private final String appName;
 
-    public String getAppName() {
+    public String appName() {
         return this.appName;
     }
 
@@ -31,7 +31,7 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="appType", required=true)
       private final AppType appType;
 
-    public AppType getAppType() {
+    public AppType appType() {
         return this.appType;
     }
 
@@ -42,7 +42,7 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="domainId", required=true)
       private final String domainId;
 
-    public String getDomainId() {
+    public String domainId() {
         return this.domainId;
     }
 
@@ -53,7 +53,7 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="userProfileName", required=true)
       private final String userProfileName;
 
-    public String getUserProfileName() {
+    public String userProfileName() {
         return this.userProfileName;
     }
 

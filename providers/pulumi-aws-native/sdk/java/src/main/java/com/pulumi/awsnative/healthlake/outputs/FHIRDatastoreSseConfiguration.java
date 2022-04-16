@@ -16,7 +16,7 @@ public final class FHIRDatastoreSseConfiguration {
         this.kmsEncryptionConfig = kmsEncryptionConfig;
     }
 
-    public FHIRDatastoreKmsEncryptionConfig getKmsEncryptionConfig() {
+    public FHIRDatastoreKmsEncryptionConfig kmsEncryptionConfig() {
         return this.kmsEncryptionConfig;
     }
 

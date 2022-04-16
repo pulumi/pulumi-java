@@ -111,84 +111,84 @@ public final class GetStageResult {
      * Specifies settings for logging access in this stage.
      * 
     */
-    public Optional<StageAccessLogSetting> getAccessLogSetting() {
+    public Optional<StageAccessLogSetting> accessLogSetting() {
         return Optional.ofNullable(this.accessLogSetting);
     }
     /**
      * Indicates whether cache clustering is enabled for the stage.
      * 
     */
-    public Optional<Boolean> getCacheClusterEnabled() {
+    public Optional<Boolean> cacheClusterEnabled() {
         return Optional.ofNullable(this.cacheClusterEnabled);
     }
     /**
      * The stage's cache cluster size.
      * 
     */
-    public Optional<String> getCacheClusterSize() {
+    public Optional<String> cacheClusterSize() {
         return Optional.ofNullable(this.cacheClusterSize);
     }
     /**
      * Specifies settings for the canary deployment in this stage.
      * 
     */
-    public Optional<StageCanarySetting> getCanarySetting() {
+    public Optional<StageCanarySetting> canarySetting() {
         return Optional.ofNullable(this.canarySetting);
     }
     /**
      * The ID of the client certificate that API Gateway uses to call your integration endpoints in the stage.
      * 
     */
-    public Optional<String> getClientCertificateId() {
+    public Optional<String> clientCertificateId() {
         return Optional.ofNullable(this.clientCertificateId);
     }
     /**
      * The ID of the deployment that the stage is associated with. This parameter is required to create a stage.
      * 
     */
-    public Optional<String> getDeploymentId() {
+    public Optional<String> deploymentId() {
         return Optional.ofNullable(this.deploymentId);
     }
     /**
      * A description of the stage.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The version ID of the API documentation snapshot.
      * 
     */
-    public Optional<String> getDocumentationVersion() {
+    public Optional<String> documentationVersion() {
         return Optional.ofNullable(this.documentationVersion);
     }
     /**
      * Settings for all methods in the stage.
      * 
     */
-    public List<StageMethodSetting> getMethodSettings() {
+    public List<StageMethodSetting> methodSettings() {
         return this.methodSettings == null ? List.of() : this.methodSettings;
     }
     /**
      * An array of arbitrary tags (key-value pairs) to associate with the stage.
      * 
     */
-    public List<StageTag> getTags() {
+    public List<StageTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * Specifies whether active X-Ray tracing is enabled for this stage.
      * 
     */
-    public Optional<Boolean> getTracingEnabled() {
+    public Optional<Boolean> tracingEnabled() {
         return Optional.ofNullable(this.tracingEnabled);
     }
     /**
      * A map (string-to-string map) that defines the stage variables, where the variable name is the key and the variable value is the value.
      * 
     */
-    public Optional<Object> getVariables() {
+    public Optional<Object> variables() {
         return Optional.ofNullable(this.variables);
     }
 

@@ -18,7 +18,7 @@ public final class ResourceCollectionFilter {
         this.cloudFormation = cloudFormation;
     }
 
-    public Optional<ResourceCollectionCloudFormationCollectionFilter> getCloudFormation() {
+    public Optional<ResourceCollectionCloudFormationCollectionFilter> cloudFormation() {
         return Optional.ofNullable(this.cloudFormation);
     }
 

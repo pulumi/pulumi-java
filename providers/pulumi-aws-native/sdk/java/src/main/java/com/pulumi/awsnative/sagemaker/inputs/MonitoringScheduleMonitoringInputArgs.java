@@ -21,7 +21,7 @@ public final class MonitoringScheduleMonitoringInputArgs extends com.pulumi.reso
     @Import(name="endpointInput", required=true)
       private final Output<MonitoringScheduleEndpointInputArgs> endpointInput;
 
-    public Output<MonitoringScheduleEndpointInputArgs> getEndpointInput() {
+    public Output<MonitoringScheduleEndpointInputArgs> endpointInput() {
         return this.endpointInput;
     }
 

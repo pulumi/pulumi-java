@@ -16,7 +16,7 @@ public final class ReplicationConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="replicationConfiguration", required=true)
       private final Output<com.pulumi.awsnative.ecr.inputs.ReplicationConfigurationArgs> replicationConfiguration;
 
-    public Output<com.pulumi.awsnative.ecr.inputs.ReplicationConfigurationArgs> getReplicationConfiguration() {
+    public Output<com.pulumi.awsnative.ecr.inputs.ReplicationConfigurationArgs> replicationConfiguration() {
         return this.replicationConfiguration;
     }
 

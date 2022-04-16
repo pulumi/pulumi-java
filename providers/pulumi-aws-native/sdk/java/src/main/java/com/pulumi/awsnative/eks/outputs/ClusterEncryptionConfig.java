@@ -36,14 +36,14 @@ public final class ClusterEncryptionConfig {
      * The encryption provider for the cluster.
      * 
     */
-    public Optional<ClusterEncryptionConfigProviderProperties> getProvider() {
+    public Optional<ClusterEncryptionConfigProviderProperties> provider() {
         return Optional.ofNullable(this.provider);
     }
     /**
      * Specifies the resources to be encrypted. The only supported value is "secrets".
      * 
     */
-    public List<String> getResources() {
+    public List<String> resources() {
         return this.resources == null ? List.of() : this.resources;
     }
 

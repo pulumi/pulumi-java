@@ -22,7 +22,7 @@ public final class HostArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoPlacement")
       private final @Nullable Output<String> autoPlacement;
 
-    public Output<String> getAutoPlacement() {
+    public Output<String> autoPlacement() {
         return this.autoPlacement == null ? Codegen.empty() : this.autoPlacement;
     }
 
@@ -33,7 +33,7 @@ public final class HostArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZone", required=true)
       private final Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone;
     }
 
@@ -44,7 +44,7 @@ public final class HostArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostRecovery")
       private final @Nullable Output<String> hostRecovery;
 
-    public Output<String> getHostRecovery() {
+    public Output<String> hostRecovery() {
         return this.hostRecovery == null ? Codegen.empty() : this.hostRecovery;
     }
 
@@ -55,7 +55,7 @@ public final class HostArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
 

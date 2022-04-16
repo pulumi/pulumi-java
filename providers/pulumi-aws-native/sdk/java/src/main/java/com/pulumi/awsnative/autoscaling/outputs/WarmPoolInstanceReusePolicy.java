@@ -18,7 +18,7 @@ public final class WarmPoolInstanceReusePolicy {
         this.reuseOnScaleIn = reuseOnScaleIn;
     }
 
-    public Optional<Boolean> getReuseOnScaleIn() {
+    public Optional<Boolean> reuseOnScaleIn() {
         return Optional.ofNullable(this.reuseOnScaleIn);
     }
 

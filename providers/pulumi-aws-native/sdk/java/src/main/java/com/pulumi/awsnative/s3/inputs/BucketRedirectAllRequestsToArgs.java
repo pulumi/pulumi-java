@@ -27,7 +27,7 @@ public final class BucketRedirectAllRequestsToArgs extends com.pulumi.resources.
     @Import(name="hostName", required=true)
       private final Output<String> hostName;
 
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName;
     }
 
@@ -38,7 +38,7 @@ public final class BucketRedirectAllRequestsToArgs extends com.pulumi.resources.
     @Import(name="protocol")
       private final @Nullable Output<BucketRedirectAllRequestsToProtocol> protocol;
 
-    public Output<BucketRedirectAllRequestsToProtocol> getProtocol() {
+    public Output<BucketRedirectAllRequestsToProtocol> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 

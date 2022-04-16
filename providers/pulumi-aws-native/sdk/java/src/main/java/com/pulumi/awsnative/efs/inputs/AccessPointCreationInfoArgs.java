@@ -21,7 +21,7 @@ public final class AccessPointCreationInfoArgs extends com.pulumi.resources.Reso
     @Import(name="ownerGid", required=true)
       private final Output<String> ownerGid;
 
-    public Output<String> getOwnerGid() {
+    public Output<String> ownerGid() {
         return this.ownerGid;
     }
 
@@ -32,7 +32,7 @@ public final class AccessPointCreationInfoArgs extends com.pulumi.resources.Reso
     @Import(name="ownerUid", required=true)
       private final Output<String> ownerUid;
 
-    public Output<String> getOwnerUid() {
+    public Output<String> ownerUid() {
         return this.ownerUid;
     }
 
@@ -43,7 +43,7 @@ public final class AccessPointCreationInfoArgs extends com.pulumi.resources.Reso
     @Import(name="permissions", required=true)
       private final Output<String> permissions;
 
-    public Output<String> getPermissions() {
+    public Output<String> permissions() {
         return this.permissions;
     }
 

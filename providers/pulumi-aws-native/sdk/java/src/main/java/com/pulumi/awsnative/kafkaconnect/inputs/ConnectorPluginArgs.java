@@ -21,7 +21,7 @@ public final class ConnectorPluginArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="customPlugin", required=true)
       private final Output<ConnectorCustomPluginArgs> customPlugin;
 
-    public Output<ConnectorCustomPluginArgs> getCustomPlugin() {
+    public Output<ConnectorCustomPluginArgs> customPlugin() {
         return this.customPlugin;
     }
 

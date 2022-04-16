@@ -38,22 +38,22 @@ public final class GetAuthorizerResult {
         this.tokenSigningPublicKeys = tokenSigningPublicKeys;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getAuthorizerFunctionArn() {
+    public Optional<String> authorizerFunctionArn() {
         return Optional.ofNullable(this.authorizerFunctionArn);
     }
-    public Optional<AuthorizerStatus> getStatus() {
+    public Optional<AuthorizerStatus> status() {
         return Optional.ofNullable(this.status);
     }
-    public List<AuthorizerTag> getTags() {
+    public List<AuthorizerTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
-    public Optional<String> getTokenKeyName() {
+    public Optional<String> tokenKeyName() {
         return Optional.ofNullable(this.tokenKeyName);
     }
-    public Optional<Object> getTokenSigningPublicKeys() {
+    public Optional<Object> tokenSigningPublicKeys() {
         return Optional.ofNullable(this.tokenSigningPublicKeys);
     }
 

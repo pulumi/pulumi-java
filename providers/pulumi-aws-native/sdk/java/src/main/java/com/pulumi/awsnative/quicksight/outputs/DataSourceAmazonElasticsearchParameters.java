@@ -24,7 +24,7 @@ public final class DataSourceAmazonElasticsearchParameters {
      * <p>The Amazon Elasticsearch Service domain.</p>
      * 
     */
-    public String getDomain() {
+    public String domain() {
         return this.domain;
     }
 

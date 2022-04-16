@@ -29,7 +29,7 @@ public final class BotFulfillmentStartResponseSpecificationArgs extends com.pulu
     @Import(name="allowInterrupt")
       private final @Nullable Output<Boolean> allowInterrupt;
 
-    public Output<Boolean> getAllowInterrupt() {
+    public Output<Boolean> allowInterrupt() {
         return this.allowInterrupt == null ? Codegen.empty() : this.allowInterrupt;
     }
 
@@ -40,14 +40,14 @@ public final class BotFulfillmentStartResponseSpecificationArgs extends com.pulu
     @Import(name="delayInSeconds", required=true)
       private final Output<Integer> delayInSeconds;
 
-    public Output<Integer> getDelayInSeconds() {
+    public Output<Integer> delayInSeconds() {
         return this.delayInSeconds;
     }
 
     @Import(name="messageGroups", required=true)
       private final Output<List<BotMessageGroupArgs>> messageGroups;
 
-    public Output<List<BotMessageGroupArgs>> getMessageGroups() {
+    public Output<List<BotMessageGroupArgs>> messageGroups() {
         return this.messageGroups;
     }
 

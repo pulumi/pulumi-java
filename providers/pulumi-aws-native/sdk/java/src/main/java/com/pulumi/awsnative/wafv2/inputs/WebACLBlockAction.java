@@ -21,7 +21,7 @@ public final class WebACLBlockAction extends com.pulumi.resources.InvokeArgs {
     @Import(name="customResponse")
       private final @Nullable WebACLCustomResponse customResponse;
 
-    public Optional<WebACLCustomResponse> getCustomResponse() {
+    public Optional<WebACLCustomResponse> customResponse() {
         return this.customResponse == null ? Optional.empty() : Optional.ofNullable(this.customResponse);
     }
 

@@ -34,14 +34,14 @@ public final class RetentionPropertiesProperties {
      * The duration for which data must be stored in the magnetic store.
      * 
     */
-    public Optional<String> getMagneticStoreRetentionPeriodInDays() {
+    public Optional<String> magneticStoreRetentionPeriodInDays() {
         return Optional.ofNullable(this.magneticStoreRetentionPeriodInDays);
     }
     /**
      * The duration for which data must be stored in the memory store.
      * 
     */
-    public Optional<String> getMemoryStoreRetentionPeriodInHours() {
+    public Optional<String> memoryStoreRetentionPeriodInHours() {
         return Optional.ofNullable(this.memoryStoreRetentionPeriodInHours);
     }
 

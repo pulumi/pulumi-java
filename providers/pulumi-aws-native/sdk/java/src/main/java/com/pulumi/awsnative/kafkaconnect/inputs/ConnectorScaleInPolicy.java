@@ -23,7 +23,7 @@ public final class ConnectorScaleInPolicy extends com.pulumi.resources.InvokeArg
     @Import(name="cpuUtilizationPercentage", required=true)
       private final Integer cpuUtilizationPercentage;
 
-    public Integer getCpuUtilizationPercentage() {
+    public Integer cpuUtilizationPercentage() {
         return this.cpuUtilizationPercentage;
     }
 

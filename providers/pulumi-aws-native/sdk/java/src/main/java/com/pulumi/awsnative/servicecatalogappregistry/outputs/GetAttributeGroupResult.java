@@ -44,30 +44,30 @@ public final class GetAttributeGroupResult {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<Object> getAttributes() {
+    public Optional<Object> attributes() {
         return Optional.ofNullable(this.attributes);
     }
     /**
      * The description of the attribute group.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the attribute group.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public Optional<AttributeGroupTags> getTags() {
+    public Optional<AttributeGroupTags> tags() {
         return Optional.ofNullable(this.tags);
     }
 

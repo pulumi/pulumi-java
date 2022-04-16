@@ -35,20 +35,20 @@ public final class ServiceSourceConfiguration {
         this.imageRepository = imageRepository;
     }
 
-    public Optional<ServiceAuthenticationConfiguration> getAuthenticationConfiguration() {
+    public Optional<ServiceAuthenticationConfiguration> authenticationConfiguration() {
         return Optional.ofNullable(this.authenticationConfiguration);
     }
     /**
      * Auto Deployment enabled
      * 
     */
-    public Optional<Boolean> getAutoDeploymentsEnabled() {
+    public Optional<Boolean> autoDeploymentsEnabled() {
         return Optional.ofNullable(this.autoDeploymentsEnabled);
     }
-    public Optional<ServiceCodeRepository> getCodeRepository() {
+    public Optional<ServiceCodeRepository> codeRepository() {
         return Optional.ofNullable(this.codeRepository);
     }
-    public Optional<ServiceImageRepository> getImageRepository() {
+    public Optional<ServiceImageRepository> imageRepository() {
         return Optional.ofNullable(this.imageRepository);
     }
 

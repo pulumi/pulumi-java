@@ -29,16 +29,16 @@ public final class TopicRuleS3Action {
         this.roleArn = roleArn;
     }
 
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
-    public Optional<TopicRuleCannedAccessControlList> getCannedAcl() {
+    public Optional<TopicRuleCannedAccessControlList> cannedAcl() {
         return Optional.ofNullable(this.cannedAcl);
     }
-    public String getKey() {
+    public String key() {
         return this.key;
     }
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 

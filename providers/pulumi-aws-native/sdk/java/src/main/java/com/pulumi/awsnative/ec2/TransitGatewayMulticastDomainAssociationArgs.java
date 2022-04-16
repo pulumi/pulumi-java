@@ -21,7 +21,7 @@ public final class TransitGatewayMulticastDomainAssociationArgs extends com.pulu
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 
@@ -32,7 +32,7 @@ public final class TransitGatewayMulticastDomainAssociationArgs extends com.pulu
     @Import(name="transitGatewayAttachmentId", required=true)
       private final Output<String> transitGatewayAttachmentId;
 
-    public Output<String> getTransitGatewayAttachmentId() {
+    public Output<String> transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
 
@@ -43,7 +43,7 @@ public final class TransitGatewayMulticastDomainAssociationArgs extends com.pulu
     @Import(name="transitGatewayMulticastDomainId", required=true)
       private final Output<String> transitGatewayMulticastDomainId;
 
-    public Output<String> getTransitGatewayMulticastDomainId() {
+    public Output<String> transitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;
     }
 

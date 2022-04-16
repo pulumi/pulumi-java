@@ -27,13 +27,13 @@ public final class DatasetFormatOptions {
         this.json = json;
     }
 
-    public Optional<DatasetCsvOptions> getCsv() {
+    public Optional<DatasetCsvOptions> csv() {
         return Optional.ofNullable(this.csv);
     }
-    public Optional<DatasetExcelOptions> getExcel() {
+    public Optional<DatasetExcelOptions> excel() {
         return Optional.ofNullable(this.excel);
     }
-    public Optional<DatasetJsonOptions> getJson() {
+    public Optional<DatasetJsonOptions> json() {
         return Optional.ofNullable(this.json);
     }
 

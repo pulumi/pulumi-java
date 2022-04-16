@@ -19,7 +19,7 @@ public final class GetInfrastructureConfigurationArgs extends com.pulumi.resourc
     @Import(name="arn", required=true)
       private final String arn;
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
 

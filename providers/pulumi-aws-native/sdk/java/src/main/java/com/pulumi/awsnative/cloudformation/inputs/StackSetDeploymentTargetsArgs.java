@@ -27,7 +27,7 @@ public final class StackSetDeploymentTargetsArgs extends com.pulumi.resources.Re
     @Import(name="accounts")
       private final @Nullable Output<List<String>> accounts;
 
-    public Output<List<String>> getAccounts() {
+    public Output<List<String>> accounts() {
         return this.accounts == null ? Codegen.empty() : this.accounts;
     }
 
@@ -38,7 +38,7 @@ public final class StackSetDeploymentTargetsArgs extends com.pulumi.resources.Re
     @Import(name="organizationalUnitIds")
       private final @Nullable Output<List<String>> organizationalUnitIds;
 
-    public Output<List<String>> getOrganizationalUnitIds() {
+    public Output<List<String>> organizationalUnitIds() {
         return this.organizationalUnitIds == null ? Codegen.empty() : this.organizationalUnitIds;
     }
 

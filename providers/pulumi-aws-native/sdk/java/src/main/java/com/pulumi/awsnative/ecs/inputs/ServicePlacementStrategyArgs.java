@@ -19,14 +19,14 @@ public final class ServicePlacementStrategyArgs extends com.pulumi.resources.Res
     @Import(name="field")
       private final @Nullable Output<String> field;
 
-    public Output<String> getField() {
+    public Output<String> field() {
         return this.field == null ? Codegen.empty() : this.field;
     }
 
     @Import(name="type", required=true)
       private final Output<ServicePlacementStrategyType> type;
 
-    public Output<ServicePlacementStrategyType> getType() {
+    public Output<ServicePlacementStrategyType> type() {
         return this.type;
     }
 

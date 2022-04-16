@@ -19,21 +19,21 @@ public final class SpotFleetSpotPlacementArgs extends com.pulumi.resources.Resou
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     @Import(name="groupName")
       private final @Nullable Output<String> groupName;
 
-    public Output<String> getGroupName() {
+    public Output<String> groupName() {
         return this.groupName == null ? Codegen.empty() : this.groupName;
     }
 
     @Import(name="tenancy")
       private final @Nullable Output<SpotFleetSpotPlacementTenancy> tenancy;
 
-    public Output<SpotFleetSpotPlacementTenancy> getTenancy() {
+    public Output<SpotFleetSpotPlacementTenancy> tenancy() {
         return this.tenancy == null ? Codegen.empty() : this.tenancy;
     }
 

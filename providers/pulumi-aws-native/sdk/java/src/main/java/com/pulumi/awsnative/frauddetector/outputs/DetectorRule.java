@@ -69,53 +69,53 @@ public final class DetectorRule {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The time when the event type was created.
      * 
     */
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * The description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<String> getDetectorId() {
+    public Optional<String> detectorId() {
         return Optional.ofNullable(this.detectorId);
     }
-    public Optional<String> getExpression() {
+    public Optional<String> expression() {
         return Optional.ofNullable(this.expression);
     }
-    public Optional<DetectorRuleLanguage> getLanguage() {
+    public Optional<DetectorRuleLanguage> language() {
         return Optional.ofNullable(this.language);
     }
     /**
      * The time when the event type was last updated.
      * 
     */
-    public Optional<String> getLastUpdatedTime() {
+    public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
-    public List<DetectorOutcome> getOutcomes() {
+    public List<DetectorOutcome> outcomes() {
         return this.outcomes == null ? List.of() : this.outcomes;
     }
-    public Optional<String> getRuleId() {
+    public Optional<String> ruleId() {
         return Optional.ofNullable(this.ruleId);
     }
-    public Optional<String> getRuleVersion() {
+    public Optional<String> ruleVersion() {
         return Optional.ofNullable(this.ruleVersion);
     }
     /**
      * Tags associated with this event type.
      * 
     */
-    public List<DetectorTag> getTags() {
+    public List<DetectorTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

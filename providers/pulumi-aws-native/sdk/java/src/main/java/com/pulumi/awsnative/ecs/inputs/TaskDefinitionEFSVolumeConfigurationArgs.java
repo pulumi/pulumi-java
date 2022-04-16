@@ -21,35 +21,35 @@ public final class TaskDefinitionEFSVolumeConfigurationArgs extends com.pulumi.r
     @Import(name="authorizationConfig")
       private final @Nullable Output<TaskDefinitionAuthorizationConfigArgs> authorizationConfig;
 
-    public Output<TaskDefinitionAuthorizationConfigArgs> getAuthorizationConfig() {
+    public Output<TaskDefinitionAuthorizationConfigArgs> authorizationConfig() {
         return this.authorizationConfig == null ? Codegen.empty() : this.authorizationConfig;
     }
 
     @Import(name="filesystemId", required=true)
       private final Output<String> filesystemId;
 
-    public Output<String> getFilesystemId() {
+    public Output<String> filesystemId() {
         return this.filesystemId;
     }
 
     @Import(name="rootDirectory")
       private final @Nullable Output<String> rootDirectory;
 
-    public Output<String> getRootDirectory() {
+    public Output<String> rootDirectory() {
         return this.rootDirectory == null ? Codegen.empty() : this.rootDirectory;
     }
 
     @Import(name="transitEncryption")
       private final @Nullable Output<TaskDefinitionEFSVolumeConfigurationTransitEncryption> transitEncryption;
 
-    public Output<TaskDefinitionEFSVolumeConfigurationTransitEncryption> getTransitEncryption() {
+    public Output<TaskDefinitionEFSVolumeConfigurationTransitEncryption> transitEncryption() {
         return this.transitEncryption == null ? Codegen.empty() : this.transitEncryption;
     }
 
     @Import(name="transitEncryptionPort")
       private final @Nullable Output<Integer> transitEncryptionPort;
 
-    public Output<Integer> getTransitEncryptionPort() {
+    public Output<Integer> transitEncryptionPort() {
         return this.transitEncryptionPort == null ? Codegen.empty() : this.transitEncryptionPort;
     }
 

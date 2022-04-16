@@ -22,7 +22,7 @@ public final class BucketObjectLockRuleArgs extends com.pulumi.resources.Resourc
     @Import(name="defaultRetention")
       private final @Nullable Output<BucketDefaultRetentionArgs> defaultRetention;
 
-    public Output<BucketDefaultRetentionArgs> getDefaultRetention() {
+    public Output<BucketDefaultRetentionArgs> defaultRetention() {
         return this.defaultRetention == null ? Codegen.empty() : this.defaultRetention;
     }
 

@@ -15,7 +15,7 @@ public final class RuleGroupAddress extends com.pulumi.resources.InvokeArgs {
     @Import(name="addressDefinition", required=true)
       private final String addressDefinition;
 
-    public String getAddressDefinition() {
+    public String addressDefinition() {
         return this.addressDefinition;
     }
 

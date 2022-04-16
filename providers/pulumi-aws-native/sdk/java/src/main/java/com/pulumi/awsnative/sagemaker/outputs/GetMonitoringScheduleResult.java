@@ -80,55 +80,55 @@ public final class GetMonitoringScheduleResult {
      * The time at which the schedule was created.
      * 
     */
-    public Optional<String> getCreationTime() {
+    public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
-    public Optional<String> getEndpointName() {
+    public Optional<String> endpointName() {
         return Optional.ofNullable(this.endpointName);
     }
     /**
      * Contains the reason a monitoring job failed, if it failed.
      * 
     */
-    public Optional<String> getFailureReason() {
+    public Optional<String> failureReason() {
         return Optional.ofNullable(this.failureReason);
     }
     /**
      * A timestamp that indicates the last time the monitoring job was modified.
      * 
     */
-    public Optional<String> getLastModifiedTime() {
+    public Optional<String> lastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
     /**
      * Describes metadata on the last execution to run, if there was one.
      * 
     */
-    public Optional<MonitoringScheduleMonitoringExecutionSummary> getLastMonitoringExecutionSummary() {
+    public Optional<MonitoringScheduleMonitoringExecutionSummary> lastMonitoringExecutionSummary() {
         return Optional.ofNullable(this.lastMonitoringExecutionSummary);
     }
     /**
      * The Amazon Resource Name (ARN) of the monitoring schedule.
      * 
     */
-    public Optional<String> getMonitoringScheduleArn() {
+    public Optional<String> monitoringScheduleArn() {
         return Optional.ofNullable(this.monitoringScheduleArn);
     }
-    public Optional<MonitoringScheduleConfig> getMonitoringScheduleConfig() {
+    public Optional<MonitoringScheduleConfig> monitoringScheduleConfig() {
         return Optional.ofNullable(this.monitoringScheduleConfig);
     }
     /**
      * The status of a schedule job.
      * 
     */
-    public Optional<MonitoringScheduleStatus> getMonitoringScheduleStatus() {
+    public Optional<MonitoringScheduleStatus> monitoringScheduleStatus() {
         return Optional.ofNullable(this.monitoringScheduleStatus);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
     */
-    public List<MonitoringScheduleTag> getTags() {
+    public List<MonitoringScheduleTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

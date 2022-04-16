@@ -23,10 +23,10 @@ public final class FlowEventBridgeDestinationProperties {
         this.object = object;
     }
 
-    public Optional<FlowErrorHandlingConfig> getErrorHandlingConfig() {
+    public Optional<FlowErrorHandlingConfig> errorHandlingConfig() {
         return Optional.ofNullable(this.errorHandlingConfig);
     }
-    public String getObject() {
+    public String object() {
         return this.object;
     }
 

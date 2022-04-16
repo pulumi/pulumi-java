@@ -40,17 +40,17 @@ public final class BotFulfillmentUpdateResponseSpecification {
      * Determines whether the user can interrupt an update message while it is playing.
      * 
     */
-    public Optional<Boolean> getAllowInterrupt() {
+    public Optional<Boolean> allowInterrupt() {
         return Optional.ofNullable(this.allowInterrupt);
     }
     /**
      * The frequency that a message is sent to the user. When the period ends, Amazon Lex chooses a message from the message groups and plays it to the user. If the fulfillment Lambda returns before the first period ends, an update message is not played to the user.
      * 
     */
-    public Integer getFrequencyInSeconds() {
+    public Integer frequencyInSeconds() {
         return this.frequencyInSeconds;
     }
-    public List<BotMessageGroup> getMessageGroups() {
+    public List<BotMessageGroup> messageGroups() {
         return this.messageGroups;
     }
 

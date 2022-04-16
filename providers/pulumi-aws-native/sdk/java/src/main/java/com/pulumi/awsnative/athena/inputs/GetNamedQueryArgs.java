@@ -19,7 +19,7 @@ public final class GetNamedQueryArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="namedQueryId", required=true)
       private final String namedQueryId;
 
-    public String getNamedQueryId() {
+    public String namedQueryId() {
         return this.namedQueryId;
     }
 

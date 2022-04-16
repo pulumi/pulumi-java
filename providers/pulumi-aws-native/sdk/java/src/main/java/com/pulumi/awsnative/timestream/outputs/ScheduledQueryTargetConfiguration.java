@@ -16,7 +16,7 @@ public final class ScheduledQueryTargetConfiguration {
         this.timestreamConfiguration = timestreamConfiguration;
     }
 
-    public ScheduledQueryTimestreamConfiguration getTimestreamConfiguration() {
+    public ScheduledQueryTimestreamConfiguration timestreamConfiguration() {
         return this.timestreamConfiguration;
     }
 

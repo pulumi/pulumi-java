@@ -16,7 +16,7 @@ public final class ReplicationSetRegionConfiguration {
         this.sseKmsKeyId = sseKmsKeyId;
     }
 
-    public String getSseKmsKeyId() {
+    public String sseKmsKeyId() {
         return this.sseKmsKeyId;
     }
 

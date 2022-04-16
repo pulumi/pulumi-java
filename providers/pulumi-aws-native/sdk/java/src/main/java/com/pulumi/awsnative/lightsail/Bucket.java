@@ -33,19 +33,19 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return Indicates whether the bundle that is currently applied to a bucket can be changed to another bundle. You can update a bucket's bundle only one time within a monthly AWS billing cycle.
      * 
      */
-    public Output<Boolean> getAbleToUpdateBundle() {
+    public Output<Boolean> ableToUpdateBundle() {
         return this.ableToUpdateBundle;
     }
     @Export(name="accessRules", type=BucketAccessRules.class, parameters={})
     private Output</* @Nullable */ BucketAccessRules> accessRules;
 
-    public Output</* @Nullable */ BucketAccessRules> getAccessRules() {
+    public Output</* @Nullable */ BucketAccessRules> accessRules() {
         return this.accessRules;
     }
     @Export(name="bucketArn", type=String.class, parameters={})
     private Output<String> bucketArn;
 
-    public Output<String> getBucketArn() {
+    public Output<String> bucketArn() {
         return this.bucketArn;
     }
     /**
@@ -59,7 +59,7 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return The name for the bucket.
      * 
      */
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
     /**
@@ -73,7 +73,7 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return The ID of the bundle to use for the bucket.
      * 
      */
-    public Output<String> getBundleId() {
+    public Output<String> bundleId() {
         return this.bundleId;
     }
     /**
@@ -87,7 +87,7 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return Specifies whether to enable or disable versioning of objects in the bucket.
      * 
      */
-    public Output</* @Nullable */ Boolean> getObjectVersioning() {
+    public Output</* @Nullable */ Boolean> objectVersioning() {
         return this.objectVersioning;
     }
     /**
@@ -101,7 +101,7 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return An array of strings to specify the AWS account IDs that can access the bucket.
      * 
      */
-    public Output</* @Nullable */ List<String>> getReadOnlyAccessAccounts() {
+    public Output</* @Nullable */ List<String>> readOnlyAccessAccounts() {
         return this.readOnlyAccessAccounts;
     }
     /**
@@ -115,7 +115,7 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return The names of the Lightsail resources for which to set bucket access.
      * 
      */
-    public Output</* @Nullable */ List<String>> getResourcesReceivingAccess() {
+    public Output</* @Nullable */ List<String>> resourcesReceivingAccess() {
         return this.resourcesReceivingAccess;
     }
     /**
@@ -129,7 +129,7 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<BucketTag>> getTags() {
+    public Output</* @Nullable */ List<BucketTag>> tags() {
         return this.tags;
     }
     /**
@@ -143,7 +143,7 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return The URL of the bucket.
      * 
      */
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 

@@ -21,7 +21,7 @@ public final class GameServerGroupTargetTrackingConfigurationArgs extends com.pu
     @Import(name="targetValue", required=true)
       private final Output<Double> targetValue;
 
-    public Output<Double> getTargetValue() {
+    public Output<Double> targetValue() {
         return this.targetValue;
     }
 

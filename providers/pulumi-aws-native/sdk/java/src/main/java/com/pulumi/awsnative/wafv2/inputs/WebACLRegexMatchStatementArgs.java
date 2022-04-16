@@ -20,21 +20,21 @@ public final class WebACLRegexMatchStatementArgs extends com.pulumi.resources.Re
     @Import(name="fieldToMatch", required=true)
       private final Output<WebACLFieldToMatchArgs> fieldToMatch;
 
-    public Output<WebACLFieldToMatchArgs> getFieldToMatch() {
+    public Output<WebACLFieldToMatchArgs> fieldToMatch() {
         return this.fieldToMatch;
     }
 
     @Import(name="regexString", required=true)
       private final Output<String> regexString;
 
-    public Output<String> getRegexString() {
+    public Output<String> regexString() {
         return this.regexString;
     }
 
     @Import(name="textTransformations", required=true)
       private final Output<List<WebACLTextTransformationArgs>> textTransformations;
 
-    public Output<List<WebACLTextTransformationArgs>> getTextTransformations() {
+    public Output<List<WebACLTextTransformationArgs>> textTransformations() {
         return this.textTransformations;
     }
 

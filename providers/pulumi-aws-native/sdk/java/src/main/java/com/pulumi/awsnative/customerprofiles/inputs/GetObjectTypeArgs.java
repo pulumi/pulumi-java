@@ -19,7 +19,7 @@ public final class GetObjectTypeArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="domainName", required=true)
       private final String domainName;
 
-    public String getDomainName() {
+    public String domainName() {
         return this.domainName;
     }
 
@@ -30,7 +30,7 @@ public final class GetObjectTypeArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="objectTypeName", required=true)
       private final String objectTypeName;
 
-    public String getObjectTypeName() {
+    public String objectTypeName() {
         return this.objectTypeName;
     }
 

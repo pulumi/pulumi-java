@@ -26,7 +26,7 @@ public final class LocationObjectStorageArgs extends com.pulumi.resources.Resour
     @Import(name="accessKey")
       private final @Nullable Output<String> accessKey;
 
-    public Output<String> getAccessKey() {
+    public Output<String> accessKey() {
         return this.accessKey == null ? Codegen.empty() : this.accessKey;
     }
 
@@ -37,7 +37,7 @@ public final class LocationObjectStorageArgs extends com.pulumi.resources.Resour
     @Import(name="agentArns", required=true)
       private final Output<List<String>> agentArns;
 
-    public Output<List<String>> getAgentArns() {
+    public Output<List<String>> agentArns() {
         return this.agentArns;
     }
 
@@ -48,7 +48,7 @@ public final class LocationObjectStorageArgs extends com.pulumi.resources.Resour
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
@@ -59,7 +59,7 @@ public final class LocationObjectStorageArgs extends com.pulumi.resources.Resour
     @Import(name="secretKey")
       private final @Nullable Output<String> secretKey;
 
-    public Output<String> getSecretKey() {
+    public Output<String> secretKey() {
         return this.secretKey == null ? Codegen.empty() : this.secretKey;
     }
 
@@ -70,7 +70,7 @@ public final class LocationObjectStorageArgs extends com.pulumi.resources.Resour
     @Import(name="serverHostname", required=true)
       private final Output<String> serverHostname;
 
-    public Output<String> getServerHostname() {
+    public Output<String> serverHostname() {
         return this.serverHostname;
     }
 
@@ -81,7 +81,7 @@ public final class LocationObjectStorageArgs extends com.pulumi.resources.Resour
     @Import(name="serverPort")
       private final @Nullable Output<Integer> serverPort;
 
-    public Output<Integer> getServerPort() {
+    public Output<Integer> serverPort() {
         return this.serverPort == null ? Codegen.empty() : this.serverPort;
     }
 
@@ -92,7 +92,7 @@ public final class LocationObjectStorageArgs extends com.pulumi.resources.Resour
     @Import(name="serverProtocol")
       private final @Nullable Output<LocationObjectStorageServerProtocol> serverProtocol;
 
-    public Output<LocationObjectStorageServerProtocol> getServerProtocol() {
+    public Output<LocationObjectStorageServerProtocol> serverProtocol() {
         return this.serverProtocol == null ? Codegen.empty() : this.serverProtocol;
     }
 
@@ -103,7 +103,7 @@ public final class LocationObjectStorageArgs extends com.pulumi.resources.Resour
     @Import(name="subdirectory")
       private final @Nullable Output<String> subdirectory;
 
-    public Output<String> getSubdirectory() {
+    public Output<String> subdirectory() {
         return this.subdirectory == null ? Codegen.empty() : this.subdirectory;
     }
 
@@ -114,7 +114,7 @@ public final class LocationObjectStorageArgs extends com.pulumi.resources.Resour
     @Import(name="tags")
       private final @Nullable Output<List<LocationObjectStorageTagArgs>> tags;
 
-    public Output<List<LocationObjectStorageTagArgs>> getTags() {
+    public Output<List<LocationObjectStorageTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

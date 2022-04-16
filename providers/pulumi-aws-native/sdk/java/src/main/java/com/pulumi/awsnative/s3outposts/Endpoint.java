@@ -33,7 +33,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The type of access for the on-premise network connectivity for the Outpost endpoint. To access endpoint from an on-premises network, you must specify the access type and provide the customer owned Ipv4 pool.
      * 
      */
-    public Output</* @Nullable */ EndpointAccessType> getAccessType() {
+    public Output</* @Nullable */ EndpointAccessType> accessType() {
         return this.accessType;
     }
     /**
@@ -47,7 +47,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the endpoint.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -61,7 +61,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The VPC CIDR committed by this endpoint.
      * 
      */
-    public Output<String> getCidrBlock() {
+    public Output<String> cidrBlock() {
         return this.cidrBlock;
     }
     /**
@@ -75,7 +75,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The time the endpoint was created.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -89,7 +89,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The ID of the customer-owned IPv4 pool for the Endpoint. IP addresses will be allocated from this pool for the endpoint.
      * 
      */
-    public Output</* @Nullable */ String> getCustomerOwnedIpv4Pool() {
+    public Output</* @Nullable */ String> customerOwnedIpv4Pool() {
         return this.customerOwnedIpv4Pool;
     }
     /**
@@ -103,7 +103,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The network interfaces of the endpoint.
      * 
      */
-    public Output<List<EndpointNetworkInterface>> getNetworkInterfaces() {
+    public Output<List<EndpointNetworkInterface>> networkInterfaces() {
         return this.networkInterfaces;
     }
     /**
@@ -117,7 +117,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The id of the customer outpost on which the bucket resides.
      * 
      */
-    public Output<String> getOutpostId() {
+    public Output<String> outpostId() {
         return this.outpostId;
     }
     /**
@@ -131,13 +131,13 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The ID of the security group to use with the endpoint.
      * 
      */
-    public Output<String> getSecurityGroupId() {
+    public Output<String> securityGroupId() {
         return this.securityGroupId;
     }
     @Export(name="status", type=EndpointStatus.class, parameters={})
     private Output<EndpointStatus> status;
 
-    public Output<EndpointStatus> getStatus() {
+    public Output<EndpointStatus> status() {
         return this.status;
     }
     /**
@@ -151,7 +151,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The ID of the subnet in the selected VPC. The subnet must belong to the Outpost.
      * 
      */
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 

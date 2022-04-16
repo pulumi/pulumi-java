@@ -22,7 +22,7 @@ public final class UsagePlanThrottleSettings extends com.pulumi.resources.Invoke
     @Import(name="burstLimit")
       private final @Nullable Integer burstLimit;
 
-    public Optional<Integer> getBurstLimit() {
+    public Optional<Integer> burstLimit() {
         return this.burstLimit == null ? Optional.empty() : Optional.ofNullable(this.burstLimit);
     }
 
@@ -33,7 +33,7 @@ public final class UsagePlanThrottleSettings extends com.pulumi.resources.Invoke
     @Import(name="rateLimit")
       private final @Nullable Double rateLimit;
 
-    public Optional<Double> getRateLimit() {
+    public Optional<Double> rateLimit() {
         return this.rateLimit == null ? Optional.empty() : Optional.ofNullable(this.rateLimit);
     }
 

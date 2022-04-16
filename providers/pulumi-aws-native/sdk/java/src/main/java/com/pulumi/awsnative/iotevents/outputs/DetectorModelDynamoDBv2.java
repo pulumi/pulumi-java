@@ -27,14 +27,14 @@ public final class DetectorModelDynamoDBv2 {
         this.tableName = tableName;
     }
 
-    public Optional<DetectorModelPayload> getPayload() {
+    public Optional<DetectorModelPayload> payload() {
         return Optional.ofNullable(this.payload);
     }
     /**
      * The name of the DynamoDB table.
      * 
     */
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
 

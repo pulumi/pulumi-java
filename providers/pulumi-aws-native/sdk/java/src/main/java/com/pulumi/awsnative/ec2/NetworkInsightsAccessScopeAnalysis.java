@@ -26,61 +26,61 @@ public class NetworkInsightsAccessScopeAnalysis extends com.pulumi.resources.Cus
     @Export(name="analyzedEniCount", type=Integer.class, parameters={})
     private Output<Integer> analyzedEniCount;
 
-    public Output<Integer> getAnalyzedEniCount() {
+    public Output<Integer> analyzedEniCount() {
         return this.analyzedEniCount;
     }
     @Export(name="endDate", type=String.class, parameters={})
     private Output<String> endDate;
 
-    public Output<String> getEndDate() {
+    public Output<String> endDate() {
         return this.endDate;
     }
     @Export(name="findingsFound", type=NetworkInsightsAccessScopeAnalysisFindingsFound.class, parameters={})
     private Output<NetworkInsightsAccessScopeAnalysisFindingsFound> findingsFound;
 
-    public Output<NetworkInsightsAccessScopeAnalysisFindingsFound> getFindingsFound() {
+    public Output<NetworkInsightsAccessScopeAnalysisFindingsFound> findingsFound() {
         return this.findingsFound;
     }
     @Export(name="networkInsightsAccessScopeAnalysisArn", type=String.class, parameters={})
     private Output<String> networkInsightsAccessScopeAnalysisArn;
 
-    public Output<String> getNetworkInsightsAccessScopeAnalysisArn() {
+    public Output<String> networkInsightsAccessScopeAnalysisArn() {
         return this.networkInsightsAccessScopeAnalysisArn;
     }
     @Export(name="networkInsightsAccessScopeAnalysisId", type=String.class, parameters={})
     private Output<String> networkInsightsAccessScopeAnalysisId;
 
-    public Output<String> getNetworkInsightsAccessScopeAnalysisId() {
+    public Output<String> networkInsightsAccessScopeAnalysisId() {
         return this.networkInsightsAccessScopeAnalysisId;
     }
     @Export(name="networkInsightsAccessScopeId", type=String.class, parameters={})
     private Output<String> networkInsightsAccessScopeId;
 
-    public Output<String> getNetworkInsightsAccessScopeId() {
+    public Output<String> networkInsightsAccessScopeId() {
         return this.networkInsightsAccessScopeId;
     }
     @Export(name="startDate", type=String.class, parameters={})
     private Output<String> startDate;
 
-    public Output<String> getStartDate() {
+    public Output<String> startDate() {
         return this.startDate;
     }
     @Export(name="status", type=NetworkInsightsAccessScopeAnalysisStatus.class, parameters={})
     private Output<NetworkInsightsAccessScopeAnalysisStatus> status;
 
-    public Output<NetworkInsightsAccessScopeAnalysisStatus> getStatus() {
+    public Output<NetworkInsightsAccessScopeAnalysisStatus> status() {
         return this.status;
     }
     @Export(name="statusMessage", type=String.class, parameters={})
     private Output<String> statusMessage;
 
-    public Output<String> getStatusMessage() {
+    public Output<String> statusMessage() {
         return this.statusMessage;
     }
     @Export(name="tags", type=List.class, parameters={NetworkInsightsAccessScopeAnalysisTag.class})
     private Output</* @Nullable */ List<NetworkInsightsAccessScopeAnalysisTag>> tags;
 
-    public Output</* @Nullable */ List<NetworkInsightsAccessScopeAnalysisTag>> getTags() {
+    public Output</* @Nullable */ List<NetworkInsightsAccessScopeAnalysisTag>> tags() {
         return this.tags;
     }
 

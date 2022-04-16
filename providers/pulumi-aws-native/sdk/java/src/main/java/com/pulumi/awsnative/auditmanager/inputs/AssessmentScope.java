@@ -27,7 +27,7 @@ public final class AssessmentScope extends com.pulumi.resources.InvokeArgs {
     @Import(name="awsAccounts")
       private final @Nullable List<AssessmentAWSAccount> awsAccounts;
 
-    public List<AssessmentAWSAccount> getAwsAccounts() {
+    public List<AssessmentAWSAccount> awsAccounts() {
         return this.awsAccounts == null ? List.of() : this.awsAccounts;
     }
 
@@ -38,7 +38,7 @@ public final class AssessmentScope extends com.pulumi.resources.InvokeArgs {
     @Import(name="awsServices")
       private final @Nullable List<AssessmentAWSService> awsServices;
 
-    public List<AssessmentAWSService> getAwsServices() {
+    public List<AssessmentAWSService> awsServices() {
         return this.awsServices == null ? List.of() : this.awsServices;
     }
 

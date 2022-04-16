@@ -25,13 +25,13 @@ public final class AssociationS3OutputLocation {
         this.outputS3Region = outputS3Region;
     }
 
-    public Optional<String> getOutputS3BucketName() {
+    public Optional<String> outputS3BucketName() {
         return Optional.ofNullable(this.outputS3BucketName);
     }
-    public Optional<String> getOutputS3KeyPrefix() {
+    public Optional<String> outputS3KeyPrefix() {
         return Optional.ofNullable(this.outputS3KeyPrefix);
     }
-    public Optional<String> getOutputS3Region() {
+    public Optional<String> outputS3Region() {
         return Optional.ofNullable(this.outputS3Region);
     }
 

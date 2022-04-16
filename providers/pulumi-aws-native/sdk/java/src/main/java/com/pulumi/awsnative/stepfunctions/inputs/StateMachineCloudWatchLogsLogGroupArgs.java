@@ -18,7 +18,7 @@ public final class StateMachineCloudWatchLogsLogGroupArgs extends com.pulumi.res
     @Import(name="logGroupArn")
       private final @Nullable Output<String> logGroupArn;
 
-    public Output<String> getLogGroupArn() {
+    public Output<String> logGroupArn() {
         return this.logGroupArn == null ? Codegen.empty() : this.logGroupArn;
     }
 

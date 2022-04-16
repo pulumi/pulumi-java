@@ -19,35 +19,35 @@ public final class TopicRuleKafkaActionArgs extends com.pulumi.resources.Resourc
     @Import(name="clientProperties", required=true)
       private final Output<Object> clientProperties;
 
-    public Output<Object> getClientProperties() {
+    public Output<Object> clientProperties() {
         return this.clientProperties;
     }
 
     @Import(name="destinationArn", required=true)
       private final Output<String> destinationArn;
 
-    public Output<String> getDestinationArn() {
+    public Output<String> destinationArn() {
         return this.destinationArn;
     }
 
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
     @Import(name="partition")
       private final @Nullable Output<String> partition;
 
-    public Output<String> getPartition() {
+    public Output<String> partition() {
         return this.partition == null ? Codegen.empty() : this.partition;
     }
 
     @Import(name="topic", required=true)
       private final Output<String> topic;
 
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic;
     }
 

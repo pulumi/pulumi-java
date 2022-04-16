@@ -24,7 +24,7 @@ public final class DatasetFilesLimitArgs extends com.pulumi.resources.ResourceAr
     @Import(name="maxFiles", required=true)
       private final Output<Integer> maxFiles;
 
-    public Output<Integer> getMaxFiles() {
+    public Output<Integer> maxFiles() {
         return this.maxFiles;
     }
 
@@ -35,7 +35,7 @@ public final class DatasetFilesLimitArgs extends com.pulumi.resources.ResourceAr
     @Import(name="order")
       private final @Nullable Output<DatasetFilesLimitOrder> order;
 
-    public Output<DatasetFilesLimitOrder> getOrder() {
+    public Output<DatasetFilesLimitOrder> order() {
         return this.order == null ? Codegen.empty() : this.order;
     }
 
@@ -46,7 +46,7 @@ public final class DatasetFilesLimitArgs extends com.pulumi.resources.ResourceAr
     @Import(name="orderedBy")
       private final @Nullable Output<DatasetFilesLimitOrderedBy> orderedBy;
 
-    public Output<DatasetFilesLimitOrderedBy> getOrderedBy() {
+    public Output<DatasetFilesLimitOrderedBy> orderedBy() {
         return this.orderedBy == null ? Codegen.empty() : this.orderedBy;
     }
 

@@ -33,7 +33,7 @@ public final class OriginEndpointHlsPackage extends com.pulumi.resources.InvokeA
     @Import(name="adMarkers")
       private final @Nullable OriginEndpointHlsPackageAdMarkers adMarkers;
 
-    public Optional<OriginEndpointHlsPackageAdMarkers> getAdMarkers() {
+    public Optional<OriginEndpointHlsPackageAdMarkers> adMarkers() {
         return this.adMarkers == null ? Optional.empty() : Optional.ofNullable(this.adMarkers);
     }
 
@@ -44,21 +44,21 @@ public final class OriginEndpointHlsPackage extends com.pulumi.resources.InvokeA
     @Import(name="adTriggers")
       private final @Nullable List<OriginEndpointHlsPackageAdTriggersItem> adTriggers;
 
-    public List<OriginEndpointHlsPackageAdTriggersItem> getAdTriggers() {
+    public List<OriginEndpointHlsPackageAdTriggersItem> adTriggers() {
         return this.adTriggers == null ? List.of() : this.adTriggers;
     }
 
     @Import(name="adsOnDeliveryRestrictions")
       private final @Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions;
 
-    public Optional<OriginEndpointAdsOnDeliveryRestrictions> getAdsOnDeliveryRestrictions() {
+    public Optional<OriginEndpointAdsOnDeliveryRestrictions> adsOnDeliveryRestrictions() {
         return this.adsOnDeliveryRestrictions == null ? Optional.empty() : Optional.ofNullable(this.adsOnDeliveryRestrictions);
     }
 
     @Import(name="encryption")
       private final @Nullable OriginEndpointHlsEncryption encryption;
 
-    public Optional<OriginEndpointHlsEncryption> getEncryption() {
+    public Optional<OriginEndpointHlsEncryption> encryption() {
         return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
     }
 
@@ -69,7 +69,7 @@ public final class OriginEndpointHlsPackage extends com.pulumi.resources.InvokeA
     @Import(name="includeIframeOnlyStream")
       private final @Nullable Boolean includeIframeOnlyStream;
 
-    public Optional<Boolean> getIncludeIframeOnlyStream() {
+    public Optional<Boolean> includeIframeOnlyStream() {
         return this.includeIframeOnlyStream == null ? Optional.empty() : Optional.ofNullable(this.includeIframeOnlyStream);
     }
 
@@ -80,7 +80,7 @@ public final class OriginEndpointHlsPackage extends com.pulumi.resources.InvokeA
     @Import(name="playlistType")
       private final @Nullable OriginEndpointHlsPackagePlaylistType playlistType;
 
-    public Optional<OriginEndpointHlsPackagePlaylistType> getPlaylistType() {
+    public Optional<OriginEndpointHlsPackagePlaylistType> playlistType() {
         return this.playlistType == null ? Optional.empty() : Optional.ofNullable(this.playlistType);
     }
 
@@ -91,7 +91,7 @@ public final class OriginEndpointHlsPackage extends com.pulumi.resources.InvokeA
     @Import(name="playlistWindowSeconds")
       private final @Nullable Integer playlistWindowSeconds;
 
-    public Optional<Integer> getPlaylistWindowSeconds() {
+    public Optional<Integer> playlistWindowSeconds() {
         return this.playlistWindowSeconds == null ? Optional.empty() : Optional.ofNullable(this.playlistWindowSeconds);
     }
 
@@ -102,7 +102,7 @@ public final class OriginEndpointHlsPackage extends com.pulumi.resources.InvokeA
     @Import(name="programDateTimeIntervalSeconds")
       private final @Nullable Integer programDateTimeIntervalSeconds;
 
-    public Optional<Integer> getProgramDateTimeIntervalSeconds() {
+    public Optional<Integer> programDateTimeIntervalSeconds() {
         return this.programDateTimeIntervalSeconds == null ? Optional.empty() : Optional.ofNullable(this.programDateTimeIntervalSeconds);
     }
 
@@ -113,14 +113,14 @@ public final class OriginEndpointHlsPackage extends com.pulumi.resources.InvokeA
     @Import(name="segmentDurationSeconds")
       private final @Nullable Integer segmentDurationSeconds;
 
-    public Optional<Integer> getSegmentDurationSeconds() {
+    public Optional<Integer> segmentDurationSeconds() {
         return this.segmentDurationSeconds == null ? Optional.empty() : Optional.ofNullable(this.segmentDurationSeconds);
     }
 
     @Import(name="streamSelection")
       private final @Nullable OriginEndpointStreamSelection streamSelection;
 
-    public Optional<OriginEndpointStreamSelection> getStreamSelection() {
+    public Optional<OriginEndpointStreamSelection> streamSelection() {
         return this.streamSelection == null ? Optional.empty() : Optional.ofNullable(this.streamSelection);
     }
 
@@ -131,7 +131,7 @@ public final class OriginEndpointHlsPackage extends com.pulumi.resources.InvokeA
     @Import(name="useAudioRenditionGroup")
       private final @Nullable Boolean useAudioRenditionGroup;
 
-    public Optional<Boolean> getUseAudioRenditionGroup() {
+    public Optional<Boolean> useAudioRenditionGroup() {
         return this.useAudioRenditionGroup == null ? Optional.empty() : Optional.ofNullable(this.useAudioRenditionGroup);
     }
 

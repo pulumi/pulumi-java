@@ -23,37 +23,37 @@ public class FirewallPolicy extends com.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="firewallPolicy", type=com.pulumi.awsnative.networkfirewall.outputs.FirewallPolicy.class, parameters={})
     private Output<com.pulumi.awsnative.networkfirewall.outputs.FirewallPolicy> firewallPolicy;
 
-    public Output<com.pulumi.awsnative.networkfirewall.outputs.FirewallPolicy> getFirewallPolicy() {
+    public Output<com.pulumi.awsnative.networkfirewall.outputs.FirewallPolicy> firewallPolicy() {
         return this.firewallPolicy;
     }
     @Export(name="firewallPolicyArn", type=String.class, parameters={})
     private Output<String> firewallPolicyArn;
 
-    public Output<String> getFirewallPolicyArn() {
+    public Output<String> firewallPolicyArn() {
         return this.firewallPolicyArn;
     }
     @Export(name="firewallPolicyId", type=String.class, parameters={})
     private Output<String> firewallPolicyId;
 
-    public Output<String> getFirewallPolicyId() {
+    public Output<String> firewallPolicyId() {
         return this.firewallPolicyId;
     }
     @Export(name="firewallPolicyName", type=String.class, parameters={})
     private Output<String> firewallPolicyName;
 
-    public Output<String> getFirewallPolicyName() {
+    public Output<String> firewallPolicyName() {
         return this.firewallPolicyName;
     }
     @Export(name="tags", type=List.class, parameters={FirewallPolicyTag.class})
     private Output</* @Nullable */ List<FirewallPolicyTag>> tags;
 
-    public Output</* @Nullable */ List<FirewallPolicyTag>> getTags() {
+    public Output</* @Nullable */ List<FirewallPolicyTag>> tags() {
         return this.tags;
     }
 

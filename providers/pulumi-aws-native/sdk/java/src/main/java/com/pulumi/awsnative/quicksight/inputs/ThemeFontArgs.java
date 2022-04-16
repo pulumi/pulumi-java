@@ -18,7 +18,7 @@ public final class ThemeFontArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fontFamily")
       private final @Nullable Output<String> fontFamily;
 
-    public Output<String> getFontFamily() {
+    public Output<String> fontFamily() {
         return this.fontFamily == null ? Codegen.empty() : this.fontFamily;
     }
 

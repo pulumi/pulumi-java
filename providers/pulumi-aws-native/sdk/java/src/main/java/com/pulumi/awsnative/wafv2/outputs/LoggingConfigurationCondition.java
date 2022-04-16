@@ -35,14 +35,14 @@ public final class LoggingConfigurationCondition {
      * A single action condition.
      * 
     */
-    public Optional<LoggingConfigurationConditionActionConditionProperties> getActionCondition() {
+    public Optional<LoggingConfigurationConditionActionConditionProperties> actionCondition() {
         return Optional.ofNullable(this.actionCondition);
     }
     /**
      * A single label name condition.
      * 
     */
-    public Optional<LoggingConfigurationConditionLabelNameConditionProperties> getLabelNameCondition() {
+    public Optional<LoggingConfigurationConditionLabelNameConditionProperties> labelNameCondition() {
         return Optional.ofNullable(this.labelNameCondition);
     }
 

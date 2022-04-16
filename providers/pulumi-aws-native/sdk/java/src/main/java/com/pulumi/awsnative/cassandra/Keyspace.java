@@ -33,13 +33,13 @@ public class Keyspace extends com.pulumi.resources.CustomResource {
      * @return Name for Cassandra keyspace
      * 
      */
-    public Output</* @Nullable */ String> getKeyspaceName() {
+    public Output</* @Nullable */ String> keyspaceName() {
         return this.keyspaceName;
     }
     @Export(name="tags", type=List.class, parameters={KeyspaceTag.class})
     private Output</* @Nullable */ List<KeyspaceTag>> tags;
 
-    public Output</* @Nullable */ List<KeyspaceTag>> getTags() {
+    public Output</* @Nullable */ List<KeyspaceTag>> tags() {
         return this.tags;
     }
 

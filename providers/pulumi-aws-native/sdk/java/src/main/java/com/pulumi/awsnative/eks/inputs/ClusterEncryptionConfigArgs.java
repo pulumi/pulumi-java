@@ -28,7 +28,7 @@ public final class ClusterEncryptionConfigArgs extends com.pulumi.resources.Reso
     @Import(name="provider")
       private final @Nullable Output<ClusterEncryptionConfigProviderPropertiesArgs> provider;
 
-    public Output<ClusterEncryptionConfigProviderPropertiesArgs> getProvider() {
+    public Output<ClusterEncryptionConfigProviderPropertiesArgs> provider() {
         return this.provider == null ? Codegen.empty() : this.provider;
     }
 
@@ -39,7 +39,7 @@ public final class ClusterEncryptionConfigArgs extends com.pulumi.resources.Reso
     @Import(name="resources")
       private final @Nullable Output<List<String>> resources;
 
-    public Output<List<String>> getResources() {
+    public Output<List<String>> resources() {
         return this.resources == null ? Codegen.empty() : this.resources;
     }
 

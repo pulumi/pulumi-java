@@ -17,7 +17,7 @@ public final class SpotFleetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="spotFleetRequestConfigData", required=true)
       private final Output<SpotFleetRequestConfigDataArgs> spotFleetRequestConfigData;
 
-    public Output<SpotFleetRequestConfigDataArgs> getSpotFleetRequestConfigData() {
+    public Output<SpotFleetRequestConfigDataArgs> spotFleetRequestConfigData() {
         return this.spotFleetRequestConfigData;
     }
 

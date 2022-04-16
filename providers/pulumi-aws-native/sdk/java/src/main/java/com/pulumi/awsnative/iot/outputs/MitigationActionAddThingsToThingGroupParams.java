@@ -36,14 +36,14 @@ public final class MitigationActionAddThingsToThingGroupParams {
      * Specifies if this mitigation action can move the things that triggered the mitigation action out of one or more dynamic thing groups.
      * 
     */
-    public Optional<Boolean> getOverrideDynamicGroups() {
+    public Optional<Boolean> overrideDynamicGroups() {
         return Optional.ofNullable(this.overrideDynamicGroups);
     }
     /**
      * The list of groups to which you want to add the things that triggered the mitigation action.
      * 
     */
-    public List<String> getThingGroupNames() {
+    public List<String> thingGroupNames() {
         return this.thingGroupNames;
     }
 

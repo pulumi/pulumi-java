@@ -27,7 +27,7 @@ public final class OriginEndpointCmafPackageArgs extends com.pulumi.resources.Re
     @Import(name="encryption")
       private final @Nullable Output<OriginEndpointCmafEncryptionArgs> encryption;
 
-    public Output<OriginEndpointCmafEncryptionArgs> getEncryption() {
+    public Output<OriginEndpointCmafEncryptionArgs> encryption() {
         return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
@@ -38,7 +38,7 @@ public final class OriginEndpointCmafPackageArgs extends com.pulumi.resources.Re
     @Import(name="hlsManifests")
       private final @Nullable Output<List<OriginEndpointHlsManifestArgs>> hlsManifests;
 
-    public Output<List<OriginEndpointHlsManifestArgs>> getHlsManifests() {
+    public Output<List<OriginEndpointHlsManifestArgs>> hlsManifests() {
         return this.hlsManifests == null ? Codegen.empty() : this.hlsManifests;
     }
 
@@ -49,7 +49,7 @@ public final class OriginEndpointCmafPackageArgs extends com.pulumi.resources.Re
     @Import(name="segmentDurationSeconds")
       private final @Nullable Output<Integer> segmentDurationSeconds;
 
-    public Output<Integer> getSegmentDurationSeconds() {
+    public Output<Integer> segmentDurationSeconds() {
         return this.segmentDurationSeconds == null ? Codegen.empty() : this.segmentDurationSeconds;
     }
 
@@ -60,14 +60,14 @@ public final class OriginEndpointCmafPackageArgs extends com.pulumi.resources.Re
     @Import(name="segmentPrefix")
       private final @Nullable Output<String> segmentPrefix;
 
-    public Output<String> getSegmentPrefix() {
+    public Output<String> segmentPrefix() {
         return this.segmentPrefix == null ? Codegen.empty() : this.segmentPrefix;
     }
 
     @Import(name="streamSelection")
       private final @Nullable Output<OriginEndpointStreamSelectionArgs> streamSelection;
 
-    public Output<OriginEndpointStreamSelectionArgs> getStreamSelection() {
+    public Output<OriginEndpointStreamSelectionArgs> streamSelection() {
         return this.streamSelection == null ? Codegen.empty() : this.streamSelection;
     }
 

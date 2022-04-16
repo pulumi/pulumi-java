@@ -16,7 +16,7 @@ public final class RuleGroupLabel {
         this.name = name;
     }
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

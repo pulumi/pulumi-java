@@ -25,7 +25,7 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="datasetName", required=true)
       private final Output<String> datasetName;
 
-    public Output<String> getDatasetName() {
+    public Output<String> datasetName() {
         return this.datasetName;
     }
 
@@ -36,7 +36,7 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -47,7 +47,7 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="recipeName", required=true)
       private final Output<String> recipeName;
 
-    public Output<String> getRecipeName() {
+    public Output<String> recipeName() {
         return this.recipeName;
     }
 
@@ -58,7 +58,7 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -69,14 +69,14 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sample")
       private final @Nullable Output<ProjectSampleArgs> sample;
 
-    public Output<ProjectSampleArgs> getSample() {
+    public Output<ProjectSampleArgs> sample() {
         return this.sample == null ? Codegen.empty() : this.sample;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<ProjectTagArgs>> tags;
 
-    public Output<List<ProjectTagArgs>> getTags() {
+    public Output<List<ProjectTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

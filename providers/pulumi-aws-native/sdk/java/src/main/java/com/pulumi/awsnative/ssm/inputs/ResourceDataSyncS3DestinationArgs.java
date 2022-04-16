@@ -18,35 +18,35 @@ public final class ResourceDataSyncS3DestinationArgs extends com.pulumi.resource
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
     @Import(name="bucketPrefix")
       private final @Nullable Output<String> bucketPrefix;
 
-    public Output<String> getBucketPrefix() {
+    public Output<String> bucketPrefix() {
         return this.bucketPrefix == null ? Codegen.empty() : this.bucketPrefix;
     }
 
     @Import(name="bucketRegion", required=true)
       private final Output<String> bucketRegion;
 
-    public Output<String> getBucketRegion() {
+    public Output<String> bucketRegion() {
         return this.bucketRegion;
     }
 
     @Import(name="kMSKeyArn")
       private final @Nullable Output<String> kMSKeyArn;
 
-    public Output<String> getKMSKeyArn() {
+    public Output<String> kMSKeyArn() {
         return this.kMSKeyArn == null ? Codegen.empty() : this.kMSKeyArn;
     }
 
     @Import(name="syncFormat", required=true)
       private final Output<String> syncFormat;
 
-    public Output<String> getSyncFormat() {
+    public Output<String> syncFormat() {
         return this.syncFormat;
     }
 

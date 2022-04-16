@@ -23,10 +23,10 @@ public final class SpotFleetPrivateIpAddressSpecification {
         this.privateIpAddress = privateIpAddress;
     }
 
-    public Optional<Boolean> getPrimary() {
+    public Optional<Boolean> primary() {
         return Optional.ofNullable(this.primary);
     }
-    public String getPrivateIpAddress() {
+    public String privateIpAddress() {
         return this.privateIpAddress;
     }
 

@@ -27,7 +27,7 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacity", required=true)
       private final Output<ConnectorCapacityArgs> capacity;
 
-    public Output<ConnectorCapacityArgs> getCapacity() {
+    public Output<ConnectorCapacityArgs> capacity() {
         return this.capacity;
     }
 
@@ -38,7 +38,7 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectorConfiguration", required=true)
       private final Output<Object> connectorConfiguration;
 
-    public Output<Object> getConnectorConfiguration() {
+    public Output<Object> connectorConfiguration() {
         return this.connectorConfiguration;
     }
 
@@ -49,7 +49,7 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectorDescription")
       private final @Nullable Output<String> connectorDescription;
 
-    public Output<String> getConnectorDescription() {
+    public Output<String> connectorDescription() {
         return this.connectorDescription == null ? Codegen.empty() : this.connectorDescription;
     }
 
@@ -60,28 +60,28 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectorName")
       private final @Nullable Output<String> connectorName;
 
-    public Output<String> getConnectorName() {
+    public Output<String> connectorName() {
         return this.connectorName == null ? Codegen.empty() : this.connectorName;
     }
 
     @Import(name="kafkaCluster", required=true)
       private final Output<ConnectorKafkaClusterArgs> kafkaCluster;
 
-    public Output<ConnectorKafkaClusterArgs> getKafkaCluster() {
+    public Output<ConnectorKafkaClusterArgs> kafkaCluster() {
         return this.kafkaCluster;
     }
 
     @Import(name="kafkaClusterClientAuthentication", required=true)
       private final Output<ConnectorKafkaClusterClientAuthenticationArgs> kafkaClusterClientAuthentication;
 
-    public Output<ConnectorKafkaClusterClientAuthenticationArgs> getKafkaClusterClientAuthentication() {
+    public Output<ConnectorKafkaClusterClientAuthenticationArgs> kafkaClusterClientAuthentication() {
         return this.kafkaClusterClientAuthentication;
     }
 
     @Import(name="kafkaClusterEncryptionInTransit", required=true)
       private final Output<ConnectorKafkaClusterEncryptionInTransitArgs> kafkaClusterEncryptionInTransit;
 
-    public Output<ConnectorKafkaClusterEncryptionInTransitArgs> getKafkaClusterEncryptionInTransit() {
+    public Output<ConnectorKafkaClusterEncryptionInTransitArgs> kafkaClusterEncryptionInTransit() {
         return this.kafkaClusterEncryptionInTransit;
     }
 
@@ -92,14 +92,14 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kafkaConnectVersion", required=true)
       private final Output<String> kafkaConnectVersion;
 
-    public Output<String> getKafkaConnectVersion() {
+    public Output<String> kafkaConnectVersion() {
         return this.kafkaConnectVersion;
     }
 
     @Import(name="logDelivery")
       private final @Nullable Output<ConnectorLogDeliveryArgs> logDelivery;
 
-    public Output<ConnectorLogDeliveryArgs> getLogDelivery() {
+    public Output<ConnectorLogDeliveryArgs> logDelivery() {
         return this.logDelivery == null ? Codegen.empty() : this.logDelivery;
     }
 
@@ -110,7 +110,7 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="plugins", required=true)
       private final Output<List<ConnectorPluginArgs>> plugins;
 
-    public Output<List<ConnectorPluginArgs>> getPlugins() {
+    public Output<List<ConnectorPluginArgs>> plugins() {
         return this.plugins;
     }
 
@@ -121,14 +121,14 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceExecutionRoleArn", required=true)
       private final Output<String> serviceExecutionRoleArn;
 
-    public Output<String> getServiceExecutionRoleArn() {
+    public Output<String> serviceExecutionRoleArn() {
         return this.serviceExecutionRoleArn;
     }
 
     @Import(name="workerConfiguration")
       private final @Nullable Output<ConnectorWorkerConfigurationArgs> workerConfiguration;
 
-    public Output<ConnectorWorkerConfigurationArgs> getWorkerConfiguration() {
+    public Output<ConnectorWorkerConfigurationArgs> workerConfiguration() {
         return this.workerConfiguration == null ? Codegen.empty() : this.workerConfiguration;
     }
 

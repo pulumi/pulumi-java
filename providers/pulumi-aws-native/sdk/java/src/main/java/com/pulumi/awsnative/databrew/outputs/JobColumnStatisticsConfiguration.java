@@ -23,10 +23,10 @@ public final class JobColumnStatisticsConfiguration {
         this.statistics = statistics;
     }
 
-    public List<JobColumnSelector> getSelectors() {
+    public List<JobColumnSelector> selectors() {
         return this.selectors == null ? List.of() : this.selectors;
     }
-    public JobStatisticsConfiguration getStatistics() {
+    public JobStatisticsConfiguration statistics() {
         return this.statistics;
     }
 

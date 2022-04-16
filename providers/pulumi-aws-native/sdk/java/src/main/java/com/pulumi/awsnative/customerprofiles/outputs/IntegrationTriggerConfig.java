@@ -23,10 +23,10 @@ public final class IntegrationTriggerConfig {
         this.triggerType = triggerType;
     }
 
-    public Optional<IntegrationTriggerProperties> getTriggerProperties() {
+    public Optional<IntegrationTriggerProperties> triggerProperties() {
         return Optional.ofNullable(this.triggerProperties);
     }
-    public IntegrationTriggerType getTriggerType() {
+    public IntegrationTriggerType triggerType() {
         return this.triggerType;
     }
 

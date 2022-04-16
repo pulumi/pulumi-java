@@ -31,13 +31,13 @@ public class Graph extends com.pulumi.resources.CustomResource {
      * @return The Detective graph ARN
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="tags", type=List.class, parameters={GraphTag.class})
     private Output</* @Nullable */ List<GraphTag>> tags;
 
-    public Output</* @Nullable */ List<GraphTag>> getTags() {
+    public Output</* @Nullable */ List<GraphTag>> tags() {
         return this.tags;
     }
 

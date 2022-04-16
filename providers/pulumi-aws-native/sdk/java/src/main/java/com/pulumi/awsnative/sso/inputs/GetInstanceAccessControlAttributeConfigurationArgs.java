@@ -19,7 +19,7 @@ public final class GetInstanceAccessControlAttributeConfigurationArgs extends co
     @Import(name="instanceArn", required=true)
       private final String instanceArn;
 
-    public String getInstanceArn() {
+    public String instanceArn() {
         return this.instanceArn;
     }
 

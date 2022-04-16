@@ -18,14 +18,14 @@ public final class FilterNumberFilterArgs extends com.pulumi.resources.ResourceA
     @Import(name="lowerInclusive")
       private final @Nullable Output<Double> lowerInclusive;
 
-    public Output<Double> getLowerInclusive() {
+    public Output<Double> lowerInclusive() {
         return this.lowerInclusive == null ? Codegen.empty() : this.lowerInclusive;
     }
 
     @Import(name="upperInclusive")
       private final @Nullable Output<Double> upperInclusive;
 
-    public Output<Double> getUpperInclusive() {
+    public Output<Double> upperInclusive() {
         return this.upperInclusive == null ? Codegen.empty() : this.upperInclusive;
     }
 

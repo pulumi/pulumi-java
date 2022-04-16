@@ -19,14 +19,14 @@ public final class RuleGroupStatelessRulesAndCustomActions extends com.pulumi.re
     @Import(name="customActions")
       private final @Nullable List<RuleGroupCustomAction> customActions;
 
-    public List<RuleGroupCustomAction> getCustomActions() {
+    public List<RuleGroupCustomAction> customActions() {
         return this.customActions == null ? List.of() : this.customActions;
     }
 
     @Import(name="statelessRules", required=true)
       private final List<RuleGroupStatelessRule> statelessRules;
 
-    public List<RuleGroupStatelessRule> getStatelessRules() {
+    public List<RuleGroupStatelessRule> statelessRules() {
         return this.statelessRules;
     }
 

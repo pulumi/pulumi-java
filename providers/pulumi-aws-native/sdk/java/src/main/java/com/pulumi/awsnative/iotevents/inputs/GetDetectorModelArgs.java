@@ -19,7 +19,7 @@ public final class GetDetectorModelArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="detectorModelName", required=true)
       private final String detectorModelName;
 
-    public String getDetectorModelName() {
+    public String detectorModelName() {
         return this.detectorModelName;
     }
 

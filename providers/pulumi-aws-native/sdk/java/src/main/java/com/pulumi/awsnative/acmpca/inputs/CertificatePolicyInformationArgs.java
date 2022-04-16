@@ -24,14 +24,14 @@ public final class CertificatePolicyInformationArgs extends com.pulumi.resources
     @Import(name="certPolicyId", required=true)
       private final Output<String> certPolicyId;
 
-    public Output<String> getCertPolicyId() {
+    public Output<String> certPolicyId() {
         return this.certPolicyId;
     }
 
     @Import(name="policyQualifiers")
       private final @Nullable Output<List<CertificatePolicyQualifierInfoArgs>> policyQualifiers;
 
-    public Output<List<CertificatePolicyQualifierInfoArgs>> getPolicyQualifiers() {
+    public Output<List<CertificatePolicyQualifierInfoArgs>> policyQualifiers() {
         return this.policyQualifiers == null ? Codegen.empty() : this.policyQualifiers;
     }
 

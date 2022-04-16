@@ -17,7 +17,7 @@ public final class ConfigTrackingConfig extends com.pulumi.resources.InvokeArgs 
     @Import(name="autotrack")
       private final @Nullable ConfigTrackingConfigAutotrack autotrack;
 
-    public Optional<ConfigTrackingConfigAutotrack> getAutotrack() {
+    public Optional<ConfigTrackingConfigAutotrack> autotrack() {
         return this.autotrack == null ? Optional.empty() : Optional.ofNullable(this.autotrack);
     }
 

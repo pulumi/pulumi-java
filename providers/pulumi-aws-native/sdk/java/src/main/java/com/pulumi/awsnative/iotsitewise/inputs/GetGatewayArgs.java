@@ -19,7 +19,7 @@ public final class GetGatewayArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="gatewayId", required=true)
       private final String gatewayId;
 
-    public String getGatewayId() {
+    public String gatewayId() {
         return this.gatewayId;
     }
 

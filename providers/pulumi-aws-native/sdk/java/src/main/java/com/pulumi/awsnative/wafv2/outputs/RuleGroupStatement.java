@@ -67,43 +67,43 @@ public final class RuleGroupStatement {
         this.xssMatchStatement = xssMatchStatement;
     }
 
-    public Optional<RuleGroupAndStatement> getAndStatement() {
+    public Optional<RuleGroupAndStatement> andStatement() {
         return Optional.ofNullable(this.andStatement);
     }
-    public Optional<RuleGroupByteMatchStatement> getByteMatchStatement() {
+    public Optional<RuleGroupByteMatchStatement> byteMatchStatement() {
         return Optional.ofNullable(this.byteMatchStatement);
     }
-    public Optional<RuleGroupGeoMatchStatement> getGeoMatchStatement() {
+    public Optional<RuleGroupGeoMatchStatement> geoMatchStatement() {
         return Optional.ofNullable(this.geoMatchStatement);
     }
-    public Optional<RuleGroupIPSetReferenceStatement> getIPSetReferenceStatement() {
+    public Optional<RuleGroupIPSetReferenceStatement> iPSetReferenceStatement() {
         return Optional.ofNullable(this.iPSetReferenceStatement);
     }
-    public Optional<RuleGroupLabelMatchStatement> getLabelMatchStatement() {
+    public Optional<RuleGroupLabelMatchStatement> labelMatchStatement() {
         return Optional.ofNullable(this.labelMatchStatement);
     }
-    public Optional<RuleGroupNotStatement> getNotStatement() {
+    public Optional<RuleGroupNotStatement> notStatement() {
         return Optional.ofNullable(this.notStatement);
     }
-    public Optional<RuleGroupOrStatement> getOrStatement() {
+    public Optional<RuleGroupOrStatement> orStatement() {
         return Optional.ofNullable(this.orStatement);
     }
-    public Optional<RuleGroupRateBasedStatement> getRateBasedStatement() {
+    public Optional<RuleGroupRateBasedStatement> rateBasedStatement() {
         return Optional.ofNullable(this.rateBasedStatement);
     }
-    public Optional<RuleGroupRegexMatchStatement> getRegexMatchStatement() {
+    public Optional<RuleGroupRegexMatchStatement> regexMatchStatement() {
         return Optional.ofNullable(this.regexMatchStatement);
     }
-    public Optional<RuleGroupRegexPatternSetReferenceStatement> getRegexPatternSetReferenceStatement() {
+    public Optional<RuleGroupRegexPatternSetReferenceStatement> regexPatternSetReferenceStatement() {
         return Optional.ofNullable(this.regexPatternSetReferenceStatement);
     }
-    public Optional<RuleGroupSizeConstraintStatement> getSizeConstraintStatement() {
+    public Optional<RuleGroupSizeConstraintStatement> sizeConstraintStatement() {
         return Optional.ofNullable(this.sizeConstraintStatement);
     }
-    public Optional<RuleGroupSqliMatchStatement> getSqliMatchStatement() {
+    public Optional<RuleGroupSqliMatchStatement> sqliMatchStatement() {
         return Optional.ofNullable(this.sqliMatchStatement);
     }
-    public Optional<RuleGroupXssMatchStatement> getXssMatchStatement() {
+    public Optional<RuleGroupXssMatchStatement> xssMatchStatement() {
         return Optional.ofNullable(this.xssMatchStatement);
     }
 

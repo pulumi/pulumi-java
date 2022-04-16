@@ -26,13 +26,13 @@ public final class DataSourceConfluenceBlogToIndexFieldMapping {
         this.indexFieldName = indexFieldName;
     }
 
-    public DataSourceConfluenceBlogFieldName getDataSourceFieldName() {
+    public DataSourceConfluenceBlogFieldName dataSourceFieldName() {
         return this.dataSourceFieldName;
     }
-    public Optional<String> getDateFieldFormat() {
+    public Optional<String> dateFieldFormat() {
         return Optional.ofNullable(this.dateFieldFormat);
     }
-    public String getIndexFieldName() {
+    public String indexFieldName() {
         return this.indexFieldName;
     }
 

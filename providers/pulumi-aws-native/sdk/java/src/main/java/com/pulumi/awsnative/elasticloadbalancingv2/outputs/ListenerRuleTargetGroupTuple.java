@@ -23,10 +23,10 @@ public final class ListenerRuleTargetGroupTuple {
         this.weight = weight;
     }
 
-    public Optional<String> getTargetGroupArn() {
+    public Optional<String> targetGroupArn() {
         return Optional.ofNullable(this.targetGroupArn);
     }
-    public Optional<Integer> getWeight() {
+    public Optional<Integer> weight() {
         return Optional.ofNullable(this.weight);
     }
 

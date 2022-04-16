@@ -22,14 +22,14 @@ public final class RecipeParametersInputProperties extends com.pulumi.resources.
     @Import(name="dataCatalogInputDefinition")
       private final @Nullable RecipeDataCatalogInputDefinition dataCatalogInputDefinition;
 
-    public Optional<RecipeDataCatalogInputDefinition> getDataCatalogInputDefinition() {
+    public Optional<RecipeDataCatalogInputDefinition> dataCatalogInputDefinition() {
         return this.dataCatalogInputDefinition == null ? Optional.empty() : Optional.ofNullable(this.dataCatalogInputDefinition);
     }
 
     @Import(name="s3InputDefinition")
       private final @Nullable RecipeS3Location s3InputDefinition;
 
-    public Optional<RecipeS3Location> getS3InputDefinition() {
+    public Optional<RecipeS3Location> s3InputDefinition() {
         return this.s3InputDefinition == null ? Optional.empty() : Optional.ofNullable(this.s3InputDefinition);
     }
 

@@ -19,21 +19,21 @@ public final class TopicRuleAssetPropertyValue extends com.pulumi.resources.Invo
     @Import(name="quality")
       private final @Nullable String quality;
 
-    public Optional<String> getQuality() {
+    public Optional<String> quality() {
         return this.quality == null ? Optional.empty() : Optional.ofNullable(this.quality);
     }
 
     @Import(name="timestamp", required=true)
       private final TopicRuleAssetPropertyTimestamp timestamp;
 
-    public TopicRuleAssetPropertyTimestamp getTimestamp() {
+    public TopicRuleAssetPropertyTimestamp timestamp() {
         return this.timestamp;
     }
 
     @Import(name="value", required=true)
       private final TopicRuleAssetPropertyVariant value;
 
-    public TopicRuleAssetPropertyVariant getValue() {
+    public TopicRuleAssetPropertyVariant value() {
         return this.value;
     }
 

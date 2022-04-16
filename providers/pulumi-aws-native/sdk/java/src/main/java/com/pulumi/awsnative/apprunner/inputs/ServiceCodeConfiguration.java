@@ -22,7 +22,7 @@ public final class ServiceCodeConfiguration extends com.pulumi.resources.InvokeA
     @Import(name="codeConfigurationValues")
       private final @Nullable ServiceCodeConfigurationValues codeConfigurationValues;
 
-    public Optional<ServiceCodeConfigurationValues> getCodeConfigurationValues() {
+    public Optional<ServiceCodeConfigurationValues> codeConfigurationValues() {
         return this.codeConfigurationValues == null ? Optional.empty() : Optional.ofNullable(this.codeConfigurationValues);
     }
 
@@ -33,7 +33,7 @@ public final class ServiceCodeConfiguration extends com.pulumi.resources.InvokeA
     @Import(name="configurationSource", required=true)
       private final ServiceCodeConfigurationConfigurationSource configurationSource;
 
-    public ServiceCodeConfigurationConfigurationSource getConfigurationSource() {
+    public ServiceCodeConfigurationConfigurationSource configurationSource() {
         return this.configurationSource;
     }
 

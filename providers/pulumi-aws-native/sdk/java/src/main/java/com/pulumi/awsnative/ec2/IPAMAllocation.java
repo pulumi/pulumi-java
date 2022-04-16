@@ -22,13 +22,13 @@ public class IPAMAllocation extends com.pulumi.resources.CustomResource {
     @Export(name="cidr", type=String.class, parameters={})
     private Output</* @Nullable */ String> cidr;
 
-    public Output</* @Nullable */ String> getCidr() {
+    public Output</* @Nullable */ String> cidr() {
         return this.cidr;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -42,7 +42,7 @@ public class IPAMAllocation extends com.pulumi.resources.CustomResource {
      * @return Id of the allocation.
      * 
      */
-    public Output<String> getIpamPoolAllocationId() {
+    public Output<String> ipamPoolAllocationId() {
         return this.ipamPoolAllocationId;
     }
     /**
@@ -56,7 +56,7 @@ public class IPAMAllocation extends com.pulumi.resources.CustomResource {
      * @return Id of the IPAM Pool.
      * 
      */
-    public Output<String> getIpamPoolId() {
+    public Output<String> ipamPoolId() {
         return this.ipamPoolId;
     }
     /**
@@ -70,7 +70,7 @@ public class IPAMAllocation extends com.pulumi.resources.CustomResource {
      * @return The desired netmask length of the allocation. If set, IPAM will choose a block of free space with this size and return the CIDR representing it.
      * 
      */
-    public Output</* @Nullable */ Integer> getNetmaskLength() {
+    public Output</* @Nullable */ Integer> netmaskLength() {
         return this.netmaskLength;
     }
 

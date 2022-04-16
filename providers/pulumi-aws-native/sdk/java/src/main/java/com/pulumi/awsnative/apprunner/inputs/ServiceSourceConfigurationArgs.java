@@ -25,7 +25,7 @@ public final class ServiceSourceConfigurationArgs extends com.pulumi.resources.R
     @Import(name="authenticationConfiguration")
       private final @Nullable Output<ServiceAuthenticationConfigurationArgs> authenticationConfiguration;
 
-    public Output<ServiceAuthenticationConfigurationArgs> getAuthenticationConfiguration() {
+    public Output<ServiceAuthenticationConfigurationArgs> authenticationConfiguration() {
         return this.authenticationConfiguration == null ? Codegen.empty() : this.authenticationConfiguration;
     }
 
@@ -36,21 +36,21 @@ public final class ServiceSourceConfigurationArgs extends com.pulumi.resources.R
     @Import(name="autoDeploymentsEnabled")
       private final @Nullable Output<Boolean> autoDeploymentsEnabled;
 
-    public Output<Boolean> getAutoDeploymentsEnabled() {
+    public Output<Boolean> autoDeploymentsEnabled() {
         return this.autoDeploymentsEnabled == null ? Codegen.empty() : this.autoDeploymentsEnabled;
     }
 
     @Import(name="codeRepository")
       private final @Nullable Output<ServiceCodeRepositoryArgs> codeRepository;
 
-    public Output<ServiceCodeRepositoryArgs> getCodeRepository() {
+    public Output<ServiceCodeRepositoryArgs> codeRepository() {
         return this.codeRepository == null ? Codegen.empty() : this.codeRepository;
     }
 
     @Import(name="imageRepository")
       private final @Nullable Output<ServiceImageRepositoryArgs> imageRepository;
 
-    public Output<ServiceImageRepositoryArgs> getImageRepository() {
+    public Output<ServiceImageRepositoryArgs> imageRepository() {
         return this.imageRepository == null ? Codegen.empty() : this.imageRepository;
     }
 

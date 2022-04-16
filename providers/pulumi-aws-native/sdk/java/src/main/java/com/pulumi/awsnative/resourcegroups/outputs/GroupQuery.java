@@ -27,13 +27,13 @@ public final class GroupQuery {
         this.tagFilters = tagFilters;
     }
 
-    public List<String> getResourceTypeFilters() {
+    public List<String> resourceTypeFilters() {
         return this.resourceTypeFilters == null ? List.of() : this.resourceTypeFilters;
     }
-    public Optional<String> getStackIdentifier() {
+    public Optional<String> stackIdentifier() {
         return Optional.ofNullable(this.stackIdentifier);
     }
-    public List<GroupTagFilter> getTagFilters() {
+    public List<GroupTagFilter> tagFilters() {
         return this.tagFilters == null ? List.of() : this.tagFilters;
     }
 

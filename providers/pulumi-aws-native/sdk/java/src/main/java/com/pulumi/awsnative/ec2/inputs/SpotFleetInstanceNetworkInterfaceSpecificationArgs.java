@@ -23,77 +23,77 @@ public final class SpotFleetInstanceNetworkInterfaceSpecificationArgs extends co
     @Import(name="associatePublicIpAddress")
       private final @Nullable Output<Boolean> associatePublicIpAddress;
 
-    public Output<Boolean> getAssociatePublicIpAddress() {
+    public Output<Boolean> associatePublicIpAddress() {
         return this.associatePublicIpAddress == null ? Codegen.empty() : this.associatePublicIpAddress;
     }
 
     @Import(name="deleteOnTermination")
       private final @Nullable Output<Boolean> deleteOnTermination;
 
-    public Output<Boolean> getDeleteOnTermination() {
+    public Output<Boolean> deleteOnTermination() {
         return this.deleteOnTermination == null ? Codegen.empty() : this.deleteOnTermination;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="deviceIndex")
       private final @Nullable Output<Integer> deviceIndex;
 
-    public Output<Integer> getDeviceIndex() {
+    public Output<Integer> deviceIndex() {
         return this.deviceIndex == null ? Codegen.empty() : this.deviceIndex;
     }
 
     @Import(name="groups")
       private final @Nullable Output<List<String>> groups;
 
-    public Output<List<String>> getGroups() {
+    public Output<List<String>> groups() {
         return this.groups == null ? Codegen.empty() : this.groups;
     }
 
     @Import(name="ipv6AddressCount")
       private final @Nullable Output<Integer> ipv6AddressCount;
 
-    public Output<Integer> getIpv6AddressCount() {
+    public Output<Integer> ipv6AddressCount() {
         return this.ipv6AddressCount == null ? Codegen.empty() : this.ipv6AddressCount;
     }
 
     @Import(name="ipv6Addresses")
       private final @Nullable Output<List<SpotFleetInstanceIpv6AddressArgs>> ipv6Addresses;
 
-    public Output<List<SpotFleetInstanceIpv6AddressArgs>> getIpv6Addresses() {
+    public Output<List<SpotFleetInstanceIpv6AddressArgs>> ipv6Addresses() {
         return this.ipv6Addresses == null ? Codegen.empty() : this.ipv6Addresses;
     }
 
     @Import(name="networkInterfaceId")
       private final @Nullable Output<String> networkInterfaceId;
 
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId == null ? Codegen.empty() : this.networkInterfaceId;
     }
 
     @Import(name="privateIpAddresses")
       private final @Nullable Output<List<SpotFleetPrivateIpAddressSpecificationArgs>> privateIpAddresses;
 
-    public Output<List<SpotFleetPrivateIpAddressSpecificationArgs>> getPrivateIpAddresses() {
+    public Output<List<SpotFleetPrivateIpAddressSpecificationArgs>> privateIpAddresses() {
         return this.privateIpAddresses == null ? Codegen.empty() : this.privateIpAddresses;
     }
 
     @Import(name="secondaryPrivateIpAddressCount")
       private final @Nullable Output<Integer> secondaryPrivateIpAddressCount;
 
-    public Output<Integer> getSecondaryPrivateIpAddressCount() {
+    public Output<Integer> secondaryPrivateIpAddressCount() {
         return this.secondaryPrivateIpAddressCount == null ? Codegen.empty() : this.secondaryPrivateIpAddressCount;
     }
 
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 

@@ -20,35 +20,35 @@ public final class AnalyzerFilterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="contains")
       private final @Nullable Output<List<String>> contains;
 
-    public Output<List<String>> getContains() {
+    public Output<List<String>> contains() {
         return this.contains == null ? Codegen.empty() : this.contains;
     }
 
     @Import(name="eq")
       private final @Nullable Output<List<String>> eq;
 
-    public Output<List<String>> getEq() {
+    public Output<List<String>> eq() {
         return this.eq == null ? Codegen.empty() : this.eq;
     }
 
     @Import(name="exists")
       private final @Nullable Output<Boolean> exists;
 
-    public Output<Boolean> getExists() {
+    public Output<Boolean> exists() {
         return this.exists == null ? Codegen.empty() : this.exists;
     }
 
     @Import(name="neq")
       private final @Nullable Output<List<String>> neq;
 
-    public Output<List<String>> getNeq() {
+    public Output<List<String>> neq() {
         return this.neq == null ? Codegen.empty() : this.neq;
     }
 
     @Import(name="property", required=true)
       private final Output<String> property;
 
-    public Output<String> getProperty() {
+    public Output<String> property() {
         return this.property;
     }
 

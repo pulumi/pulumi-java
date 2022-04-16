@@ -19,7 +19,7 @@ public final class GetGrantArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="grantArn", required=true)
       private final String grantArn;
 
-    public String getGrantArn() {
+    public String grantArn() {
         return this.grantArn;
     }
 

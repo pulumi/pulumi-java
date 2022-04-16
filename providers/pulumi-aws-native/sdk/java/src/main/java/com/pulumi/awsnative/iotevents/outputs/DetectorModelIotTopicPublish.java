@@ -31,10 +31,10 @@ public final class DetectorModelIotTopicPublish {
      * The MQTT topic of the message. You can use a string expression that includes variables (`$variable.<variable-name>`) and input values (`$input.<input-name>.<path-to-datum>`) as the topic string.
      * 
     */
-    public String getMqttTopic() {
+    public String mqttTopic() {
         return this.mqttTopic;
     }
-    public Optional<DetectorModelPayload> getPayload() {
+    public Optional<DetectorModelPayload> payload() {
         return Optional.ofNullable(this.payload);
     }
 

@@ -37,22 +37,22 @@ public final class NetworkInsightsAnalysisAnalysisAclRule {
         this.ruleNumber = ruleNumber;
     }
 
-    public Optional<String> getCidr() {
+    public Optional<String> cidr() {
         return Optional.ofNullable(this.cidr);
     }
-    public Optional<Boolean> getEgress() {
+    public Optional<Boolean> egress() {
         return Optional.ofNullable(this.egress);
     }
-    public Optional<NetworkInsightsAnalysisPortRange> getPortRange() {
+    public Optional<NetworkInsightsAnalysisPortRange> portRange() {
         return Optional.ofNullable(this.portRange);
     }
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
-    public Optional<String> getRuleAction() {
+    public Optional<String> ruleAction() {
         return Optional.ofNullable(this.ruleAction);
     }
-    public Optional<Integer> getRuleNumber() {
+    public Optional<Integer> ruleNumber() {
         return Optional.ofNullable(this.ruleNumber);
     }
 

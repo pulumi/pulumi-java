@@ -29,14 +29,14 @@ public final class WebACLCustomResponseArgs extends com.pulumi.resources.Resourc
     @Import(name="customResponseBodyKey")
       private final @Nullable Output<String> customResponseBodyKey;
 
-    public Output<String> getCustomResponseBodyKey() {
+    public Output<String> customResponseBodyKey() {
         return this.customResponseBodyKey == null ? Codegen.empty() : this.customResponseBodyKey;
     }
 
     @Import(name="responseCode", required=true)
       private final Output<Integer> responseCode;
 
-    public Output<Integer> getResponseCode() {
+    public Output<Integer> responseCode() {
         return this.responseCode;
     }
 
@@ -47,7 +47,7 @@ public final class WebACLCustomResponseArgs extends com.pulumi.resources.Resourc
     @Import(name="responseHeaders")
       private final @Nullable Output<List<WebACLCustomHTTPHeaderArgs>> responseHeaders;
 
-    public Output<List<WebACLCustomHTTPHeaderArgs>> getResponseHeaders() {
+    public Output<List<WebACLCustomHTTPHeaderArgs>> responseHeaders() {
         return this.responseHeaders == null ? Codegen.empty() : this.responseHeaders;
     }
 

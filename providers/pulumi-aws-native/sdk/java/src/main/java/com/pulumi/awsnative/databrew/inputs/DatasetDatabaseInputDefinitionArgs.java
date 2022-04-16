@@ -23,7 +23,7 @@ public final class DatasetDatabaseInputDefinitionArgs extends com.pulumi.resourc
     @Import(name="databaseTableName")
       private final @Nullable Output<String> databaseTableName;
 
-    public Output<String> getDatabaseTableName() {
+    public Output<String> databaseTableName() {
         return this.databaseTableName == null ? Codegen.empty() : this.databaseTableName;
     }
 
@@ -34,7 +34,7 @@ public final class DatasetDatabaseInputDefinitionArgs extends com.pulumi.resourc
     @Import(name="glueConnectionName", required=true)
       private final Output<String> glueConnectionName;
 
-    public Output<String> getGlueConnectionName() {
+    public Output<String> glueConnectionName() {
         return this.glueConnectionName;
     }
 
@@ -45,14 +45,14 @@ public final class DatasetDatabaseInputDefinitionArgs extends com.pulumi.resourc
     @Import(name="queryString")
       private final @Nullable Output<String> queryString;
 
-    public Output<String> getQueryString() {
+    public Output<String> queryString() {
         return this.queryString == null ? Codegen.empty() : this.queryString;
     }
 
     @Import(name="tempDirectory")
       private final @Nullable Output<DatasetS3LocationArgs> tempDirectory;
 
-    public Output<DatasetS3LocationArgs> getTempDirectory() {
+    public Output<DatasetS3LocationArgs> tempDirectory() {
         return this.tempDirectory == null ? Codegen.empty() : this.tempDirectory;
     }
 

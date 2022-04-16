@@ -23,10 +23,10 @@ public final class JobDatabaseTableOutputOptions {
         this.tempDirectory = tempDirectory;
     }
 
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
-    public Optional<JobS3Location> getTempDirectory() {
+    public Optional<JobS3Location> tempDirectory() {
         return Optional.ofNullable(this.tempDirectory);
     }
 

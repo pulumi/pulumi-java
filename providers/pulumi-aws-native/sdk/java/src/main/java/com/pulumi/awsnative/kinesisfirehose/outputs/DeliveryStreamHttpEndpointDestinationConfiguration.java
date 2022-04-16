@@ -50,31 +50,31 @@ public final class DeliveryStreamHttpEndpointDestinationConfiguration {
         this.s3Configuration = s3Configuration;
     }
 
-    public Optional<DeliveryStreamBufferingHints> getBufferingHints() {
+    public Optional<DeliveryStreamBufferingHints> bufferingHints() {
         return Optional.ofNullable(this.bufferingHints);
     }
-    public Optional<DeliveryStreamCloudWatchLoggingOptions> getCloudWatchLoggingOptions() {
+    public Optional<DeliveryStreamCloudWatchLoggingOptions> cloudWatchLoggingOptions() {
         return Optional.ofNullable(this.cloudWatchLoggingOptions);
     }
-    public DeliveryStreamHttpEndpointConfiguration getEndpointConfiguration() {
+    public DeliveryStreamHttpEndpointConfiguration endpointConfiguration() {
         return this.endpointConfiguration;
     }
-    public Optional<DeliveryStreamProcessingConfiguration> getProcessingConfiguration() {
+    public Optional<DeliveryStreamProcessingConfiguration> processingConfiguration() {
         return Optional.ofNullable(this.processingConfiguration);
     }
-    public Optional<DeliveryStreamHttpEndpointRequestConfiguration> getRequestConfiguration() {
+    public Optional<DeliveryStreamHttpEndpointRequestConfiguration> requestConfiguration() {
         return Optional.ofNullable(this.requestConfiguration);
     }
-    public Optional<DeliveryStreamRetryOptions> getRetryOptions() {
+    public Optional<DeliveryStreamRetryOptions> retryOptions() {
         return Optional.ofNullable(this.retryOptions);
     }
-    public Optional<String> getRoleARN() {
+    public Optional<String> roleARN() {
         return Optional.ofNullable(this.roleARN);
     }
-    public Optional<String> getS3BackupMode() {
+    public Optional<String> s3BackupMode() {
         return Optional.ofNullable(this.s3BackupMode);
     }
-    public DeliveryStreamS3DestinationConfiguration getS3Configuration() {
+    public DeliveryStreamS3DestinationConfiguration s3Configuration() {
         return this.s3Configuration;
     }
 

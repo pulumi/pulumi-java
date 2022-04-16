@@ -23,42 +23,42 @@ public final class FlowScheduledTriggerProperties extends com.pulumi.resources.I
     @Import(name="dataPullMode")
       private final @Nullable FlowScheduledTriggerPropertiesDataPullMode dataPullMode;
 
-    public Optional<FlowScheduledTriggerPropertiesDataPullMode> getDataPullMode() {
+    public Optional<FlowScheduledTriggerPropertiesDataPullMode> dataPullMode() {
         return this.dataPullMode == null ? Optional.empty() : Optional.ofNullable(this.dataPullMode);
     }
 
     @Import(name="scheduleEndTime")
       private final @Nullable Double scheduleEndTime;
 
-    public Optional<Double> getScheduleEndTime() {
+    public Optional<Double> scheduleEndTime() {
         return this.scheduleEndTime == null ? Optional.empty() : Optional.ofNullable(this.scheduleEndTime);
     }
 
     @Import(name="scheduleExpression", required=true)
       private final String scheduleExpression;
 
-    public String getScheduleExpression() {
+    public String scheduleExpression() {
         return this.scheduleExpression;
     }
 
     @Import(name="scheduleOffset")
       private final @Nullable Double scheduleOffset;
 
-    public Optional<Double> getScheduleOffset() {
+    public Optional<Double> scheduleOffset() {
         return this.scheduleOffset == null ? Optional.empty() : Optional.ofNullable(this.scheduleOffset);
     }
 
     @Import(name="scheduleStartTime")
       private final @Nullable Double scheduleStartTime;
 
-    public Optional<Double> getScheduleStartTime() {
+    public Optional<Double> scheduleStartTime() {
         return this.scheduleStartTime == null ? Optional.empty() : Optional.ofNullable(this.scheduleStartTime);
     }
 
     @Import(name="timeZone")
       private final @Nullable String timeZone;
 
-    public Optional<String> getTimeZone() {
+    public Optional<String> timeZone() {
         return this.timeZone == null ? Optional.empty() : Optional.ofNullable(this.timeZone);
     }
 

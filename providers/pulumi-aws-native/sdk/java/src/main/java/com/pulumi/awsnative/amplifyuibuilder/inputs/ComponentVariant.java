@@ -18,14 +18,14 @@ public final class ComponentVariant extends com.pulumi.resources.InvokeArgs {
     @Import(name="overrides")
       private final @Nullable ComponentOverrides overrides;
 
-    public Optional<ComponentOverrides> getOverrides() {
+    public Optional<ComponentOverrides> overrides() {
         return this.overrides == null ? Optional.empty() : Optional.ofNullable(this.overrides);
     }
 
     @Import(name="variantValues")
       private final @Nullable ComponentVariantValues variantValues;
 
-    public Optional<ComponentVariantValues> getVariantValues() {
+    public Optional<ComponentVariantValues> variantValues() {
         return this.variantValues == null ? Optional.empty() : Optional.ofNullable(this.variantValues);
     }
 

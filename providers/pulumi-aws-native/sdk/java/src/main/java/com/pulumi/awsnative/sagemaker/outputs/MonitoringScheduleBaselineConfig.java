@@ -23,10 +23,10 @@ public final class MonitoringScheduleBaselineConfig {
         this.statisticsResource = statisticsResource;
     }
 
-    public Optional<MonitoringScheduleConstraintsResource> getConstraintsResource() {
+    public Optional<MonitoringScheduleConstraintsResource> constraintsResource() {
         return Optional.ofNullable(this.constraintsResource);
     }
-    public Optional<MonitoringScheduleStatisticsResource> getStatisticsResource() {
+    public Optional<MonitoringScheduleStatisticsResource> statisticsResource() {
         return Optional.ofNullable(this.statisticsResource);
     }
 

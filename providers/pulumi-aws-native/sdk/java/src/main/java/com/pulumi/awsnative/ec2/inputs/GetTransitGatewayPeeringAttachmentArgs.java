@@ -19,7 +19,7 @@ public final class GetTransitGatewayPeeringAttachmentArgs extends com.pulumi.res
     @Import(name="transitGatewayAttachmentId", required=true)
       private final String transitGatewayAttachmentId;
 
-    public String getTransitGatewayAttachmentId() {
+    public String transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
 

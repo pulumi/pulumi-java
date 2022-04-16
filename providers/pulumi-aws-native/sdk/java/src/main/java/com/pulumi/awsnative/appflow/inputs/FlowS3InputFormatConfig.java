@@ -17,7 +17,7 @@ public final class FlowS3InputFormatConfig extends com.pulumi.resources.InvokeAr
     @Import(name="s3InputFileType")
       private final @Nullable FlowS3InputFormatConfigS3InputFileType s3InputFileType;
 
-    public Optional<FlowS3InputFormatConfigS3InputFileType> getS3InputFileType() {
+    public Optional<FlowS3InputFormatConfigS3InputFileType> s3InputFileType() {
         return this.s3InputFileType == null ? Optional.empty() : Optional.ofNullable(this.s3InputFileType);
     }
 

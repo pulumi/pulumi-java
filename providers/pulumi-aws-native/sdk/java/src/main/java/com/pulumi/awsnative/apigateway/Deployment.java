@@ -31,7 +31,7 @@ public class Deployment extends com.pulumi.resources.CustomResource {
      * @return Specifies settings for the canary deployment.
      * 
      */
-    public Output</* @Nullable */ DeploymentCanarySettings> getDeploymentCanarySettings() {
+    public Output</* @Nullable */ DeploymentCanarySettings> deploymentCanarySettings() {
         return this.deploymentCanarySettings;
     }
     /**
@@ -45,7 +45,7 @@ public class Deployment extends com.pulumi.resources.CustomResource {
      * @return Primary Id for this resource
      * 
      */
-    public Output<String> getDeploymentId() {
+    public Output<String> deploymentId() {
         return this.deploymentId;
     }
     /**
@@ -59,7 +59,7 @@ public class Deployment extends com.pulumi.resources.CustomResource {
      * @return A description of the purpose of the API Gateway deployment.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -73,7 +73,7 @@ public class Deployment extends com.pulumi.resources.CustomResource {
      * @return The ID of the RestApi resource to deploy.
      * 
      */
-    public Output<String> getRestApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
     /**
@@ -87,7 +87,7 @@ public class Deployment extends com.pulumi.resources.CustomResource {
      * @return Configures the stage that API Gateway creates with this deployment.
      * 
      */
-    public Output</* @Nullable */ DeploymentStageDescription> getStageDescription() {
+    public Output</* @Nullable */ DeploymentStageDescription> stageDescription() {
         return this.stageDescription;
     }
     /**
@@ -101,7 +101,7 @@ public class Deployment extends com.pulumi.resources.CustomResource {
      * @return A name for the stage that API Gateway creates with this deployment. Use only alphanumeric characters.
      * 
      */
-    public Output</* @Nullable */ String> getStageName() {
+    public Output</* @Nullable */ String> stageName() {
         return this.stageName;
     }
 

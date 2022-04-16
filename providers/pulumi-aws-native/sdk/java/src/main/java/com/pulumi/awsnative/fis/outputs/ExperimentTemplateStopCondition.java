@@ -22,10 +22,10 @@ public final class ExperimentTemplateStopCondition {
         this.value = value;
     }
 
-    public String getSource() {
+    public String source() {
         return this.source;
     }
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

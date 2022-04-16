@@ -28,21 +28,21 @@ public final class StudioComponentInitializationScriptArgs extends com.pulumi.re
     @Import(name="launchProfileProtocolVersion")
       private final @Nullable Output<String> launchProfileProtocolVersion;
 
-    public Output<String> getLaunchProfileProtocolVersion() {
+    public Output<String> launchProfileProtocolVersion() {
         return this.launchProfileProtocolVersion == null ? Codegen.empty() : this.launchProfileProtocolVersion;
     }
 
     @Import(name="platform")
       private final @Nullable Output<StudioComponentLaunchProfilePlatform> platform;
 
-    public Output<StudioComponentLaunchProfilePlatform> getPlatform() {
+    public Output<StudioComponentLaunchProfilePlatform> platform() {
         return this.platform == null ? Codegen.empty() : this.platform;
     }
 
     @Import(name="runContext")
       private final @Nullable Output<StudioComponentInitializationScriptRunContext> runContext;
 
-    public Output<StudioComponentInitializationScriptRunContext> getRunContext() {
+    public Output<StudioComponentInitializationScriptRunContext> runContext() {
         return this.runContext == null ? Codegen.empty() : this.runContext;
     }
 
@@ -53,7 +53,7 @@ public final class StudioComponentInitializationScriptArgs extends com.pulumi.re
     @Import(name="script")
       private final @Nullable Output<String> script;
 
-    public Output<String> getScript() {
+    public Output<String> script() {
         return this.script == null ? Codegen.empty() : this.script;
     }
 

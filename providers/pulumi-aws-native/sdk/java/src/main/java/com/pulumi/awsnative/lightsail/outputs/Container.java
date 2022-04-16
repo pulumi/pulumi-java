@@ -58,35 +58,35 @@ public final class Container {
      * The launch command for the container.
      * 
     */
-    public List<String> getCommand() {
+    public List<String> command() {
         return this.command == null ? List.of() : this.command;
     }
     /**
      * The name of the container.
      * 
     */
-    public Optional<String> getContainerName() {
+    public Optional<String> containerName() {
         return Optional.ofNullable(this.containerName);
     }
     /**
      * The environment variables of the container.
      * 
     */
-    public List<ContainerEnvironmentVariable> getEnvironment() {
+    public List<ContainerEnvironmentVariable> environment() {
         return this.environment == null ? List.of() : this.environment;
     }
     /**
      * The name of the image used for the container.
      * 
     */
-    public Optional<String> getImage() {
+    public Optional<String> image() {
         return Optional.ofNullable(this.image);
     }
     /**
      * The open firewall ports of the container.
      * 
     */
-    public List<ContainerPortInfo> getPorts() {
+    public List<ContainerPortInfo> ports() {
         return this.ports == null ? List.of() : this.ports;
     }
 

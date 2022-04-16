@@ -34,7 +34,7 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return Dataset name
      * 
      */
-    public Output<String> getDatasetName() {
+    public Output<String> datasetName() {
         return this.datasetName;
     }
     /**
@@ -48,7 +48,7 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return Project name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -62,7 +62,7 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return Recipe name
      * 
      */
-    public Output<String> getRecipeName() {
+    public Output<String> recipeName() {
         return this.recipeName;
     }
     /**
@@ -76,7 +76,7 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return Role arn
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     /**
@@ -90,13 +90,13 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return Sample
      * 
      */
-    public Output</* @Nullable */ ProjectSample> getSample() {
+    public Output</* @Nullable */ ProjectSample> sample() {
         return this.sample;
     }
     @Export(name="tags", type=List.class, parameters={ProjectTag.class})
     private Output</* @Nullable */ List<ProjectTag>> tags;
 
-    public Output</* @Nullable */ List<ProjectTag>> getTags() {
+    public Output</* @Nullable */ List<ProjectTag>> tags() {
         return this.tags;
     }
 

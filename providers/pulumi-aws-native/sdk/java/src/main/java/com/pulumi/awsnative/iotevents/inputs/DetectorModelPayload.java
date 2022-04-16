@@ -25,7 +25,7 @@ public final class DetectorModelPayload extends com.pulumi.resources.InvokeArgs 
     @Import(name="contentExpression", required=true)
       private final String contentExpression;
 
-    public String getContentExpression() {
+    public String contentExpression() {
         return this.contentExpression;
     }
 
@@ -36,7 +36,7 @@ public final class DetectorModelPayload extends com.pulumi.resources.InvokeArgs 
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

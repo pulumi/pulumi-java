@@ -22,10 +22,10 @@ public final class DistributionLegacyS3Origin {
         this.originAccessIdentity = originAccessIdentity;
     }
 
-    public String getDNSName() {
+    public String dNSName() {
         return this.dNSName;
     }
-    public Optional<String> getOriginAccessIdentity() {
+    public Optional<String> originAccessIdentity() {
         return Optional.ofNullable(this.originAccessIdentity);
     }
 

@@ -35,7 +35,7 @@ public final class ConnectorProfileConnectorOAuthRequest {
      * The code provided by the connector when it has been authenticated via the connected app.
      * 
     */
-    public Optional<String> getAuthCode() {
+    public Optional<String> authCode() {
         return Optional.ofNullable(this.authCode);
     }
     /**
@@ -43,7 +43,7 @@ public final class ConnectorProfileConnectorOAuthRequest {
      * granted.
      * 
     */
-    public Optional<String> getRedirectUri() {
+    public Optional<String> redirectUri() {
         return Optional.ofNullable(this.redirectUri);
     }
 

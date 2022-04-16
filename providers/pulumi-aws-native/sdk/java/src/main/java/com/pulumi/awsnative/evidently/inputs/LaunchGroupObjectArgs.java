@@ -18,28 +18,28 @@ public final class LaunchGroupObjectArgs extends com.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="feature", required=true)
       private final Output<String> feature;
 
-    public Output<String> getFeature() {
+    public Output<String> feature() {
         return this.feature;
     }
 
     @Import(name="groupName", required=true)
       private final Output<String> groupName;
 
-    public Output<String> getGroupName() {
+    public Output<String> groupName() {
         return this.groupName;
     }
 
     @Import(name="variation", required=true)
       private final Output<String> variation;
 
-    public Output<String> getVariation() {
+    public Output<String> variation() {
         return this.variation;
     }
 

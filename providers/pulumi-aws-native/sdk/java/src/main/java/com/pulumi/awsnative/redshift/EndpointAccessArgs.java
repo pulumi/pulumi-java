@@ -23,7 +23,7 @@ public final class EndpointAccessArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="clusterIdentifier")
       private final @Nullable Output<String> clusterIdentifier;
 
-    public Output<String> getClusterIdentifier() {
+    public Output<String> clusterIdentifier() {
         return this.clusterIdentifier == null ? Codegen.empty() : this.clusterIdentifier;
     }
 
@@ -34,7 +34,7 @@ public final class EndpointAccessArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="endpointName", required=true)
       private final Output<String> endpointName;
 
-    public Output<String> getEndpointName() {
+    public Output<String> endpointName() {
         return this.endpointName;
     }
 
@@ -45,7 +45,7 @@ public final class EndpointAccessArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceOwner")
       private final @Nullable Output<String> resourceOwner;
 
-    public Output<String> getResourceOwner() {
+    public Output<String> resourceOwner() {
         return this.resourceOwner == null ? Codegen.empty() : this.resourceOwner;
     }
 
@@ -56,7 +56,7 @@ public final class EndpointAccessArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="subnetGroupName")
       private final @Nullable Output<String> subnetGroupName;
 
-    public Output<String> getSubnetGroupName() {
+    public Output<String> subnetGroupName() {
         return this.subnetGroupName == null ? Codegen.empty() : this.subnetGroupName;
     }
 
@@ -67,7 +67,7 @@ public final class EndpointAccessArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="vpcSecurityGroupIds", required=true)
       private final Output<List<String>> vpcSecurityGroupIds;
 
-    public Output<List<String>> getVpcSecurityGroupIds() {
+    public Output<List<String>> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds;
     }
 

@@ -25,7 +25,7 @@ public final class AssetHierarchyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="childAssetId", required=true)
       private final Output<String> childAssetId;
 
-    public Output<String> getChildAssetId() {
+    public Output<String> childAssetId() {
         return this.childAssetId;
     }
 
@@ -36,7 +36,7 @@ public final class AssetHierarchyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="logicalId", required=true)
       private final Output<String> logicalId;
 
-    public Output<String> getLogicalId() {
+    public Output<String> logicalId() {
         return this.logicalId;
     }
 

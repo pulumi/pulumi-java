@@ -22,10 +22,10 @@ public final class GetAssistantResult {
         this.assistantId = assistantId;
     }
 
-    public Optional<String> getAssistantArn() {
+    public Optional<String> assistantArn() {
         return Optional.ofNullable(this.assistantArn);
     }
-    public Optional<String> getAssistantId() {
+    public Optional<String> assistantId() {
         return Optional.ofNullable(this.assistantId);
     }
 

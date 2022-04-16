@@ -26,13 +26,13 @@ public final class TopicRuleSqsAction {
         this.useBase64 = useBase64;
     }
 
-    public String getQueueUrl() {
+    public String queueUrl() {
         return this.queueUrl;
     }
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
-    public Optional<Boolean> getUseBase64() {
+    public Optional<Boolean> useBase64() {
         return Optional.ofNullable(this.useBase64);
     }
 

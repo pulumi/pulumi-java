@@ -22,7 +22,7 @@ public final class UserProfileJupyterServerAppSettingsArgs extends com.pulumi.re
     @Import(name="defaultResourceSpec")
       private final @Nullable Output<UserProfileResourceSpecArgs> defaultResourceSpec;
 
-    public Output<UserProfileResourceSpecArgs> getDefaultResourceSpec() {
+    public Output<UserProfileResourceSpecArgs> defaultResourceSpec() {
         return this.defaultResourceSpec == null ? Codegen.empty() : this.defaultResourceSpec;
     }
 

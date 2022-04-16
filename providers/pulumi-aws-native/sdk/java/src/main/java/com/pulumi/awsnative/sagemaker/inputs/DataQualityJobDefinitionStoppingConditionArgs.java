@@ -25,7 +25,7 @@ public final class DataQualityJobDefinitionStoppingConditionArgs extends com.pul
     @Import(name="maxRuntimeInSeconds", required=true)
       private final Output<Integer> maxRuntimeInSeconds;
 
-    public Output<Integer> getMaxRuntimeInSeconds() {
+    public Output<Integer> maxRuntimeInSeconds() {
         return this.maxRuntimeInSeconds;
     }
 

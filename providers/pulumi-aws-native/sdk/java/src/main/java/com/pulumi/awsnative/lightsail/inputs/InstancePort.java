@@ -27,7 +27,7 @@ public final class InstancePort extends com.pulumi.resources.InvokeArgs {
     @Import(name="accessDirection")
       private final @Nullable String accessDirection;
 
-    public Optional<String> getAccessDirection() {
+    public Optional<String> accessDirection() {
         return this.accessDirection == null ? Optional.empty() : Optional.ofNullable(this.accessDirection);
     }
 
@@ -38,7 +38,7 @@ public final class InstancePort extends com.pulumi.resources.InvokeArgs {
     @Import(name="accessFrom")
       private final @Nullable String accessFrom;
 
-    public Optional<String> getAccessFrom() {
+    public Optional<String> accessFrom() {
         return this.accessFrom == null ? Optional.empty() : Optional.ofNullable(this.accessFrom);
     }
 
@@ -49,21 +49,21 @@ public final class InstancePort extends com.pulumi.resources.InvokeArgs {
     @Import(name="accessType")
       private final @Nullable String accessType;
 
-    public Optional<String> getAccessType() {
+    public Optional<String> accessType() {
         return this.accessType == null ? Optional.empty() : Optional.ofNullable(this.accessType);
     }
 
     @Import(name="cidrListAliases")
       private final @Nullable List<String> cidrListAliases;
 
-    public List<String> getCidrListAliases() {
+    public List<String> cidrListAliases() {
         return this.cidrListAliases == null ? List.of() : this.cidrListAliases;
     }
 
     @Import(name="cidrs")
       private final @Nullable List<String> cidrs;
 
-    public List<String> getCidrs() {
+    public List<String> cidrs() {
         return this.cidrs == null ? List.of() : this.cidrs;
     }
 
@@ -74,7 +74,7 @@ public final class InstancePort extends com.pulumi.resources.InvokeArgs {
     @Import(name="commonName")
       private final @Nullable String commonName;
 
-    public Optional<String> getCommonName() {
+    public Optional<String> commonName() {
         return this.commonName == null ? Optional.empty() : Optional.ofNullable(this.commonName);
     }
 
@@ -85,14 +85,14 @@ public final class InstancePort extends com.pulumi.resources.InvokeArgs {
     @Import(name="fromPort")
       private final @Nullable Integer fromPort;
 
-    public Optional<Integer> getFromPort() {
+    public Optional<Integer> fromPort() {
         return this.fromPort == null ? Optional.empty() : Optional.ofNullable(this.fromPort);
     }
 
     @Import(name="ipv6Cidrs")
       private final @Nullable List<String> ipv6Cidrs;
 
-    public List<String> getIpv6Cidrs() {
+    public List<String> ipv6Cidrs() {
         return this.ipv6Cidrs == null ? List.of() : this.ipv6Cidrs;
     }
 
@@ -103,7 +103,7 @@ public final class InstancePort extends com.pulumi.resources.InvokeArgs {
     @Import(name="protocol")
       private final @Nullable String protocol;
 
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
@@ -114,7 +114,7 @@ public final class InstancePort extends com.pulumi.resources.InvokeArgs {
     @Import(name="toPort")
       private final @Nullable Integer toPort;
 
-    public Optional<Integer> getToPort() {
+    public Optional<Integer> toPort() {
         return this.toPort == null ? Optional.empty() : Optional.ofNullable(this.toPort);
     }
 

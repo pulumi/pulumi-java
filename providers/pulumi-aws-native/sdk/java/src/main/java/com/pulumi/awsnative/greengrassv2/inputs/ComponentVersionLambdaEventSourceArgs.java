@@ -19,14 +19,14 @@ public final class ComponentVersionLambdaEventSourceArgs extends com.pulumi.reso
     @Import(name="topic")
       private final @Nullable Output<String> topic;
 
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic == null ? Codegen.empty() : this.topic;
     }
 
     @Import(name="type")
       private final @Nullable Output<ComponentVersionLambdaEventSourceType> type;
 
-    public Output<ComponentVersionLambdaEventSourceType> getType() {
+    public Output<ComponentVersionLambdaEventSourceType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

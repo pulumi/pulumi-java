@@ -15,7 +15,7 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="subnetId", required=true)
       private final String subnetId;
 
-    public String getSubnetId() {
+    public String subnetId() {
         return this.subnetId;
     }
 

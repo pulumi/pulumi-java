@@ -23,42 +23,42 @@ public final class ResponseHeadersPolicySecurityHeadersConfigArgs extends com.pu
     @Import(name="contentSecurityPolicy")
       private final @Nullable Output<ResponseHeadersPolicyContentSecurityPolicyArgs> contentSecurityPolicy;
 
-    public Output<ResponseHeadersPolicyContentSecurityPolicyArgs> getContentSecurityPolicy() {
+    public Output<ResponseHeadersPolicyContentSecurityPolicyArgs> contentSecurityPolicy() {
         return this.contentSecurityPolicy == null ? Codegen.empty() : this.contentSecurityPolicy;
     }
 
     @Import(name="contentTypeOptions")
       private final @Nullable Output<ResponseHeadersPolicyContentTypeOptionsArgs> contentTypeOptions;
 
-    public Output<ResponseHeadersPolicyContentTypeOptionsArgs> getContentTypeOptions() {
+    public Output<ResponseHeadersPolicyContentTypeOptionsArgs> contentTypeOptions() {
         return this.contentTypeOptions == null ? Codegen.empty() : this.contentTypeOptions;
     }
 
     @Import(name="frameOptions")
       private final @Nullable Output<ResponseHeadersPolicyFrameOptionsArgs> frameOptions;
 
-    public Output<ResponseHeadersPolicyFrameOptionsArgs> getFrameOptions() {
+    public Output<ResponseHeadersPolicyFrameOptionsArgs> frameOptions() {
         return this.frameOptions == null ? Codegen.empty() : this.frameOptions;
     }
 
     @Import(name="referrerPolicy")
       private final @Nullable Output<ResponseHeadersPolicyReferrerPolicyArgs> referrerPolicy;
 
-    public Output<ResponseHeadersPolicyReferrerPolicyArgs> getReferrerPolicy() {
+    public Output<ResponseHeadersPolicyReferrerPolicyArgs> referrerPolicy() {
         return this.referrerPolicy == null ? Codegen.empty() : this.referrerPolicy;
     }
 
     @Import(name="strictTransportSecurity")
       private final @Nullable Output<ResponseHeadersPolicyStrictTransportSecurityArgs> strictTransportSecurity;
 
-    public Output<ResponseHeadersPolicyStrictTransportSecurityArgs> getStrictTransportSecurity() {
+    public Output<ResponseHeadersPolicyStrictTransportSecurityArgs> strictTransportSecurity() {
         return this.strictTransportSecurity == null ? Codegen.empty() : this.strictTransportSecurity;
     }
 
     @Import(name="xSSProtection")
       private final @Nullable Output<ResponseHeadersPolicyXSSProtectionArgs> xSSProtection;
 
-    public Output<ResponseHeadersPolicyXSSProtectionArgs> getXSSProtection() {
+    public Output<ResponseHeadersPolicyXSSProtectionArgs> xSSProtection() {
         return this.xSSProtection == null ? Codegen.empty() : this.xSSProtection;
     }
 

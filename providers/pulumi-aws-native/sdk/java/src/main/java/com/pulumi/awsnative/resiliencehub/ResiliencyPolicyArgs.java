@@ -26,14 +26,14 @@ public final class ResiliencyPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="dataLocationConstraint")
       private final @Nullable Output<ResiliencyPolicyDataLocationConstraint> dataLocationConstraint;
 
-    public Output<ResiliencyPolicyDataLocationConstraint> getDataLocationConstraint() {
+    public Output<ResiliencyPolicyDataLocationConstraint> dataLocationConstraint() {
         return this.dataLocationConstraint == null ? Codegen.empty() : this.dataLocationConstraint;
     }
 
     @Import(name="policy", required=true)
       private final Output<ResiliencyPolicyPolicyMapArgs> policy;
 
-    public Output<ResiliencyPolicyPolicyMapArgs> getPolicy() {
+    public Output<ResiliencyPolicyPolicyMapArgs> policy() {
         return this.policy;
     }
 
@@ -44,7 +44,7 @@ public final class ResiliencyPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="policyDescription")
       private final @Nullable Output<String> policyDescription;
 
-    public Output<String> getPolicyDescription() {
+    public Output<String> policyDescription() {
         return this.policyDescription == null ? Codegen.empty() : this.policyDescription;
     }
 
@@ -55,14 +55,14 @@ public final class ResiliencyPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="policyName", required=true)
       private final Output<String> policyName;
 
-    public Output<String> getPolicyName() {
+    public Output<String> policyName() {
         return this.policyName;
     }
 
     @Import(name="tags")
       private final @Nullable Output<ResiliencyPolicyTagMapArgs> tags;
 
-    public Output<ResiliencyPolicyTagMapArgs> getTags() {
+    public Output<ResiliencyPolicyTagMapArgs> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -73,7 +73,7 @@ public final class ResiliencyPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tier", required=true)
       private final Output<ResiliencyPolicyTier> tier;
 
-    public Output<ResiliencyPolicyTier> getTier() {
+    public Output<ResiliencyPolicyTier> tier() {
         return this.tier;
     }
 

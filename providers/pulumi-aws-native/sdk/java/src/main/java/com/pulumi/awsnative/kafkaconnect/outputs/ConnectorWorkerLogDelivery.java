@@ -27,13 +27,13 @@ public final class ConnectorWorkerLogDelivery {
         this.s3 = s3;
     }
 
-    public Optional<ConnectorCloudWatchLogsLogDelivery> getCloudWatchLogs() {
+    public Optional<ConnectorCloudWatchLogsLogDelivery> cloudWatchLogs() {
         return Optional.ofNullable(this.cloudWatchLogs);
     }
-    public Optional<ConnectorFirehoseLogDelivery> getFirehose() {
+    public Optional<ConnectorFirehoseLogDelivery> firehose() {
         return Optional.ofNullable(this.firehose);
     }
-    public Optional<ConnectorS3LogDelivery> getS3() {
+    public Optional<ConnectorS3LogDelivery> s3() {
         return Optional.ofNullable(this.s3);
     }
 

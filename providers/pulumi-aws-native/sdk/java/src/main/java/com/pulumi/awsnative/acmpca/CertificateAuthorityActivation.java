@@ -29,7 +29,7 @@ public class CertificateAuthorityActivation extends com.pulumi.resources.CustomR
      * @return Certificate Authority certificate that will be installed in the Certificate Authority.
      * 
      */
-    public Output<String> getCertificate() {
+    public Output<String> certificate() {
         return this.certificate;
     }
     /**
@@ -43,7 +43,7 @@ public class CertificateAuthorityActivation extends com.pulumi.resources.CustomR
      * @return Arn of the Certificate Authority.
      * 
      */
-    public Output<String> getCertificateAuthorityArn() {
+    public Output<String> certificateAuthorityArn() {
         return this.certificateAuthorityArn;
     }
     /**
@@ -57,7 +57,7 @@ public class CertificateAuthorityActivation extends com.pulumi.resources.CustomR
      * @return Certificate chain for the Certificate Authority certificate.
      * 
      */
-    public Output</* @Nullable */ String> getCertificateChain() {
+    public Output</* @Nullable */ String> certificateChain() {
         return this.certificateChain;
     }
     /**
@@ -71,7 +71,7 @@ public class CertificateAuthorityActivation extends com.pulumi.resources.CustomR
      * @return The complete certificate chain, including the Certificate Authority certificate.
      * 
      */
-    public Output<String> getCompleteCertificateChain() {
+    public Output<String> completeCertificateChain() {
         return this.completeCertificateChain;
     }
     /**
@@ -85,7 +85,7 @@ public class CertificateAuthorityActivation extends com.pulumi.resources.CustomR
      * @return The status of the Certificate Authority.
      * 
      */
-    public Output</* @Nullable */ String> getStatus() {
+    public Output</* @Nullable */ String> status() {
         return this.status;
     }
 

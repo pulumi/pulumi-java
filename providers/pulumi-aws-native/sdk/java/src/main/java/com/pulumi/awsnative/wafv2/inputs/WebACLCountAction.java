@@ -21,7 +21,7 @@ public final class WebACLCountAction extends com.pulumi.resources.InvokeArgs {
     @Import(name="customRequestHandling")
       private final @Nullable WebACLCustomRequestHandling customRequestHandling;
 
-    public Optional<WebACLCustomRequestHandling> getCustomRequestHandling() {
+    public Optional<WebACLCustomRequestHandling> customRequestHandling() {
         return this.customRequestHandling == null ? Optional.empty() : Optional.ofNullable(this.customRequestHandling);
     }
 

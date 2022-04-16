@@ -23,7 +23,7 @@ public final class MemberInvitationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="disableEmailNotification")
       private final @Nullable Output<Boolean> disableEmailNotification;
 
-    public Output<Boolean> getDisableEmailNotification() {
+    public Output<Boolean> disableEmailNotification() {
         return this.disableEmailNotification == null ? Codegen.empty() : this.disableEmailNotification;
     }
 
@@ -34,7 +34,7 @@ public final class MemberInvitationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="graphArn", required=true)
       private final Output<String> graphArn;
 
-    public Output<String> getGraphArn() {
+    public Output<String> graphArn() {
         return this.graphArn;
     }
 
@@ -45,7 +45,7 @@ public final class MemberInvitationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="memberEmailAddress", required=true)
       private final Output<String> memberEmailAddress;
 
-    public Output<String> getMemberEmailAddress() {
+    public Output<String> memberEmailAddress() {
         return this.memberEmailAddress;
     }
 
@@ -56,7 +56,7 @@ public final class MemberInvitationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="memberId", required=true)
       private final Output<String> memberId;
 
-    public Output<String> getMemberId() {
+    public Output<String> memberId() {
         return this.memberId;
     }
 
@@ -67,7 +67,7 @@ public final class MemberInvitationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message == null ? Codegen.empty() : this.message;
     }
 

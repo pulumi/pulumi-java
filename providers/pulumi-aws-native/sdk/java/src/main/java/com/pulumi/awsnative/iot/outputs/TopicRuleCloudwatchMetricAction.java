@@ -34,22 +34,22 @@ public final class TopicRuleCloudwatchMetricAction {
         this.roleArn = roleArn;
     }
 
-    public String getMetricName() {
+    public String metricName() {
         return this.metricName;
     }
-    public String getMetricNamespace() {
+    public String metricNamespace() {
         return this.metricNamespace;
     }
-    public Optional<String> getMetricTimestamp() {
+    public Optional<String> metricTimestamp() {
         return Optional.ofNullable(this.metricTimestamp);
     }
-    public String getMetricUnit() {
+    public String metricUnit() {
         return this.metricUnit;
     }
-    public String getMetricValue() {
+    public String metricValue() {
         return this.metricValue;
     }
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 

@@ -25,28 +25,28 @@ public final class StudioComponentConfigurationArgs extends com.pulumi.resources
     @Import(name="activeDirectoryConfiguration")
       private final @Nullable Output<StudioComponentActiveDirectoryConfigurationArgs> activeDirectoryConfiguration;
 
-    public Output<StudioComponentActiveDirectoryConfigurationArgs> getActiveDirectoryConfiguration() {
+    public Output<StudioComponentActiveDirectoryConfigurationArgs> activeDirectoryConfiguration() {
         return this.activeDirectoryConfiguration == null ? Codegen.empty() : this.activeDirectoryConfiguration;
     }
 
     @Import(name="computeFarmConfiguration")
       private final @Nullable Output<StudioComponentComputeFarmConfigurationArgs> computeFarmConfiguration;
 
-    public Output<StudioComponentComputeFarmConfigurationArgs> getComputeFarmConfiguration() {
+    public Output<StudioComponentComputeFarmConfigurationArgs> computeFarmConfiguration() {
         return this.computeFarmConfiguration == null ? Codegen.empty() : this.computeFarmConfiguration;
     }
 
     @Import(name="licenseServiceConfiguration")
       private final @Nullable Output<StudioComponentLicenseServiceConfigurationArgs> licenseServiceConfiguration;
 
-    public Output<StudioComponentLicenseServiceConfigurationArgs> getLicenseServiceConfiguration() {
+    public Output<StudioComponentLicenseServiceConfigurationArgs> licenseServiceConfiguration() {
         return this.licenseServiceConfiguration == null ? Codegen.empty() : this.licenseServiceConfiguration;
     }
 
     @Import(name="sharedFileSystemConfiguration")
       private final @Nullable Output<StudioComponentSharedFileSystemConfigurationArgs> sharedFileSystemConfiguration;
 
-    public Output<StudioComponentSharedFileSystemConfigurationArgs> getSharedFileSystemConfiguration() {
+    public Output<StudioComponentSharedFileSystemConfigurationArgs> sharedFileSystemConfiguration() {
         return this.sharedFileSystemConfiguration == null ? Codegen.empty() : this.sharedFileSystemConfiguration;
     }
 

@@ -23,10 +23,10 @@ public final class TaskDefinitionFirelensConfiguration {
         this.type = type;
     }
 
-    public Optional<Object> getOptions() {
+    public Optional<Object> options() {
         return Optional.ofNullable(this.options);
     }
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

@@ -16,7 +16,7 @@ public final class ConnectorKafkaClusterEncryptionInTransit {
         this.encryptionType = encryptionType;
     }
 
-    public ConnectorKafkaClusterEncryptionInTransitType getEncryptionType() {
+    public ConnectorKafkaClusterEncryptionInTransitType encryptionType() {
         return this.encryptionType;
     }
 

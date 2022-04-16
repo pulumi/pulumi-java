@@ -25,13 +25,13 @@ public final class DatastoreCustomerManagedS3 {
         this.roleArn = roleArn;
     }
 
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
-    public Optional<String> getKeyPrefix() {
+    public Optional<String> keyPrefix() {
         return Optional.ofNullable(this.keyPrefix);
     }
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 

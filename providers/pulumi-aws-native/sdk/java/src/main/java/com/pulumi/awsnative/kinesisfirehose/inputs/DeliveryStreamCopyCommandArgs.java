@@ -18,21 +18,21 @@ public final class DeliveryStreamCopyCommandArgs extends com.pulumi.resources.Re
     @Import(name="copyOptions")
       private final @Nullable Output<String> copyOptions;
 
-    public Output<String> getCopyOptions() {
+    public Output<String> copyOptions() {
         return this.copyOptions == null ? Codegen.empty() : this.copyOptions;
     }
 
     @Import(name="dataTableColumns")
       private final @Nullable Output<String> dataTableColumns;
 
-    public Output<String> getDataTableColumns() {
+    public Output<String> dataTableColumns() {
         return this.dataTableColumns == null ? Codegen.empty() : this.dataTableColumns;
     }
 
     @Import(name="dataTableName", required=true)
       private final Output<String> dataTableName;
 
-    public Output<String> getDataTableName() {
+    public Output<String> dataTableName() {
         return this.dataTableName;
     }
 

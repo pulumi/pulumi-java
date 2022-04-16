@@ -26,16 +26,16 @@ public final class WirelessDeviceSessionKeysAbpV11 {
         this.sNwkSIntKey = sNwkSIntKey;
     }
 
-    public String getAppSKey() {
+    public String appSKey() {
         return this.appSKey;
     }
-    public String getFNwkSIntKey() {
+    public String fNwkSIntKey() {
         return this.fNwkSIntKey;
     }
-    public String getNwkSEncKey() {
+    public String nwkSEncKey() {
         return this.nwkSEncKey;
     }
-    public String getSNwkSIntKey() {
+    public String sNwkSIntKey() {
         return this.sNwkSIntKey;
     }
 

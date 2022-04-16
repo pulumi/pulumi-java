@@ -21,10 +21,10 @@ public final class CertificateAuthorityAccessDescription {
         this.accessMethod = accessMethod;
     }
 
-    public CertificateAuthorityGeneralName getAccessLocation() {
+    public CertificateAuthorityGeneralName accessLocation() {
         return this.accessLocation;
     }
-    public CertificateAuthorityAccessMethod getAccessMethod() {
+    public CertificateAuthorityAccessMethod accessMethod() {
         return this.accessMethod;
     }
 

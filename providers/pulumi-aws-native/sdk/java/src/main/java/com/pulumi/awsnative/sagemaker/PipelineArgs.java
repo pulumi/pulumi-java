@@ -22,14 +22,14 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parallelismConfiguration")
       private final @Nullable Output<ParallelismConfigurationPropertiesArgs> parallelismConfiguration;
 
-    public Output<ParallelismConfigurationPropertiesArgs> getParallelismConfiguration() {
+    public Output<ParallelismConfigurationPropertiesArgs> parallelismConfiguration() {
         return this.parallelismConfiguration == null ? Codegen.empty() : this.parallelismConfiguration;
     }
 
     @Import(name="pipelineDefinition", required=true)
       private final Output<Object> pipelineDefinition;
 
-    public Output<Object> getPipelineDefinition() {
+    public Output<Object> pipelineDefinition() {
         return this.pipelineDefinition;
     }
 
@@ -40,7 +40,7 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pipelineDescription")
       private final @Nullable Output<String> pipelineDescription;
 
-    public Output<String> getPipelineDescription() {
+    public Output<String> pipelineDescription() {
         return this.pipelineDescription == null ? Codegen.empty() : this.pipelineDescription;
     }
 
@@ -51,7 +51,7 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pipelineDisplayName")
       private final @Nullable Output<String> pipelineDisplayName;
 
-    public Output<String> getPipelineDisplayName() {
+    public Output<String> pipelineDisplayName() {
         return this.pipelineDisplayName == null ? Codegen.empty() : this.pipelineDisplayName;
     }
 
@@ -62,7 +62,7 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pipelineName")
       private final @Nullable Output<String> pipelineName;
 
-    public Output<String> getPipelineName() {
+    public Output<String> pipelineName() {
         return this.pipelineName == null ? Codegen.empty() : this.pipelineName;
     }
 
@@ -73,14 +73,14 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<PipelineTagArgs>> tags;
 
-    public Output<List<PipelineTagArgs>> getTags() {
+    public Output<List<PipelineTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

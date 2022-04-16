@@ -33,19 +33,19 @@ public final class CertificateAuthorityCrlConfiguration {
         this.s3ObjectAcl = s3ObjectAcl;
     }
 
-    public Optional<String> getCustomCname() {
+    public Optional<String> customCname() {
         return Optional.ofNullable(this.customCname);
     }
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
-    public Optional<Integer> getExpirationInDays() {
+    public Optional<Integer> expirationInDays() {
         return Optional.ofNullable(this.expirationInDays);
     }
-    public Optional<String> getS3BucketName() {
+    public Optional<String> s3BucketName() {
         return Optional.ofNullable(this.s3BucketName);
     }
-    public Optional<String> getS3ObjectAcl() {
+    public Optional<String> s3ObjectAcl() {
         return Optional.ofNullable(this.s3ObjectAcl);
     }
 

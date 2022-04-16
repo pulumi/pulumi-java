@@ -18,7 +18,7 @@ public final class AssetModelMetricWindow {
         this.tumbling = tumbling;
     }
 
-    public Optional<AssetModelTumblingWindow> getTumbling() {
+    public Optional<AssetModelTumblingWindow> tumbling() {
         return Optional.ofNullable(this.tumbling);
     }
 

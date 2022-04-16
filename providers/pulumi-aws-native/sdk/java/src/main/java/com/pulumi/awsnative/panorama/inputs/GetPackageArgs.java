@@ -15,7 +15,7 @@ public final class GetPackageArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="packageId", required=true)
       private final String packageId;
 
-    public String getPackageId() {
+    public String packageId() {
         return this.packageId;
     }
 

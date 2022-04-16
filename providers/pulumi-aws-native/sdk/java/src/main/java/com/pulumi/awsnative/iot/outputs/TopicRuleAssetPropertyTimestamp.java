@@ -22,10 +22,10 @@ public final class TopicRuleAssetPropertyTimestamp {
         this.timeInSeconds = timeInSeconds;
     }
 
-    public Optional<String> getOffsetInNanos() {
+    public Optional<String> offsetInNanos() {
         return Optional.ofNullable(this.offsetInNanos);
     }
-    public String getTimeInSeconds() {
+    public String timeInSeconds() {
         return this.timeInSeconds;
     }
 

@@ -24,7 +24,7 @@ public final class ConnectorProfileTrendmicroConnectorProfileCredentials {
      * The Secret Access Key portion of the credentials.
      * 
     */
-    public String getApiSecretKey() {
+    public String apiSecretKey() {
         return this.apiSecretKey;
     }
 

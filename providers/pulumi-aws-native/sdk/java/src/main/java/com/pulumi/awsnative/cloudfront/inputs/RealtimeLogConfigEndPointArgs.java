@@ -18,14 +18,14 @@ public final class RealtimeLogConfigEndPointArgs extends com.pulumi.resources.Re
     @Import(name="kinesisStreamConfig", required=true)
       private final Output<RealtimeLogConfigKinesisStreamConfigArgs> kinesisStreamConfig;
 
-    public Output<RealtimeLogConfigKinesisStreamConfigArgs> getKinesisStreamConfig() {
+    public Output<RealtimeLogConfigKinesisStreamConfigArgs> kinesisStreamConfig() {
         return this.kinesisStreamConfig;
     }
 
     @Import(name="streamType", required=true)
       private final Output<String> streamType;
 
-    public Output<String> getStreamType() {
+    public Output<String> streamType() {
         return this.streamType;
     }
 

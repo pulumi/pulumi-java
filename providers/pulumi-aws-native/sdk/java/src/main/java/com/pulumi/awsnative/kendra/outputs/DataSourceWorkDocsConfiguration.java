@@ -37,22 +37,22 @@ public final class DataSourceWorkDocsConfiguration {
         this.useChangeLog = useChangeLog;
     }
 
-    public Optional<Boolean> getCrawlComments() {
+    public Optional<Boolean> crawlComments() {
         return Optional.ofNullable(this.crawlComments);
     }
-    public List<String> getExclusionPatterns() {
+    public List<String> exclusionPatterns() {
         return this.exclusionPatterns == null ? List.of() : this.exclusionPatterns;
     }
-    public List<DataSourceToIndexFieldMapping> getFieldMappings() {
+    public List<DataSourceToIndexFieldMapping> fieldMappings() {
         return this.fieldMappings == null ? List.of() : this.fieldMappings;
     }
-    public List<String> getInclusionPatterns() {
+    public List<String> inclusionPatterns() {
         return this.inclusionPatterns == null ? List.of() : this.inclusionPatterns;
     }
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
-    public Optional<Boolean> getUseChangeLog() {
+    public Optional<Boolean> useChangeLog() {
         return Optional.ofNullable(this.useChangeLog);
     }
 

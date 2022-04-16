@@ -21,14 +21,14 @@ public final class RuleGroupSqliMatchStatement extends com.pulumi.resources.Invo
     @Import(name="fieldToMatch", required=true)
       private final RuleGroupFieldToMatch fieldToMatch;
 
-    public RuleGroupFieldToMatch getFieldToMatch() {
+    public RuleGroupFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
 
     @Import(name="textTransformations", required=true)
       private final List<RuleGroupTextTransformation> textTransformations;
 
-    public List<RuleGroupTextTransformation> getTextTransformations() {
+    public List<RuleGroupTextTransformation> textTransformations() {
         return this.textTransformations;
     }
 

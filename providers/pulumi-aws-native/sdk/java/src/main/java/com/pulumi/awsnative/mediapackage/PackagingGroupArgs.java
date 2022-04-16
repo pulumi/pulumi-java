@@ -25,7 +25,7 @@ public final class PackagingGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="authorization")
       private final @Nullable Output<PackagingGroupAuthorizationArgs> authorization;
 
-    public Output<PackagingGroupAuthorizationArgs> getAuthorization() {
+    public Output<PackagingGroupAuthorizationArgs> authorization() {
         return this.authorization == null ? Codegen.empty() : this.authorization;
     }
 
@@ -36,7 +36,7 @@ public final class PackagingGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="egressAccessLogs")
       private final @Nullable Output<PackagingGroupLogConfigurationArgs> egressAccessLogs;
 
-    public Output<PackagingGroupLogConfigurationArgs> getEgressAccessLogs() {
+    public Output<PackagingGroupLogConfigurationArgs> egressAccessLogs() {
         return this.egressAccessLogs == null ? Codegen.empty() : this.egressAccessLogs;
     }
 
@@ -47,7 +47,7 @@ public final class PackagingGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<List<PackagingGroupTagArgs>> tags;
 
-    public Output<List<PackagingGroupTagArgs>> getTags() {
+    public Output<List<PackagingGroupTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

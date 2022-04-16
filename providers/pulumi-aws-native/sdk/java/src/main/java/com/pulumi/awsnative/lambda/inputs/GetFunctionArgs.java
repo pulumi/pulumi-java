@@ -19,7 +19,7 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="functionName", required=true)
       private final String functionName;
 
-    public String getFunctionName() {
+    public String functionName() {
         return this.functionName;
     }
 

@@ -32,14 +32,14 @@ public final class StackSetParameter {
      * The key associated with the parameter. If you don't specify a key and value for a particular parameter, AWS CloudFormation uses the default value that is specified in your template.
      * 
     */
-    public String getParameterKey() {
+    public String parameterKey() {
         return this.parameterKey;
     }
     /**
      * The input value associated with the parameter.
      * 
     */
-    public String getParameterValue() {
+    public String parameterValue() {
         return this.parameterValue;
     }
 

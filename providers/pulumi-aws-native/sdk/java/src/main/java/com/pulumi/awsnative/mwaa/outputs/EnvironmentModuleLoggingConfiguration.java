@@ -27,13 +27,13 @@ public final class EnvironmentModuleLoggingConfiguration {
         this.logLevel = logLevel;
     }
 
-    public Optional<String> getCloudWatchLogGroupArn() {
+    public Optional<String> cloudWatchLogGroupArn() {
         return Optional.ofNullable(this.cloudWatchLogGroupArn);
     }
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
-    public Optional<EnvironmentLoggingLevel> getLogLevel() {
+    public Optional<EnvironmentLoggingLevel> logLevel() {
         return Optional.ofNullable(this.logLevel);
     }
 

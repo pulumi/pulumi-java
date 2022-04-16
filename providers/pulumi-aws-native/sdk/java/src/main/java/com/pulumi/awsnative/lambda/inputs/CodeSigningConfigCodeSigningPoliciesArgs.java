@@ -25,7 +25,7 @@ public final class CodeSigningConfigCodeSigningPoliciesArgs extends com.pulumi.r
     @Import(name="untrustedArtifactOnDeployment", required=true)
       private final Output<CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment> untrustedArtifactOnDeployment;
 
-    public Output<CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment> getUntrustedArtifactOnDeployment() {
+    public Output<CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment> untrustedArtifactOnDeployment() {
         return this.untrustedArtifactOnDeployment;
     }
 

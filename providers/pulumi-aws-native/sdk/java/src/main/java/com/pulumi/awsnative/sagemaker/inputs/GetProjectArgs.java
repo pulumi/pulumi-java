@@ -15,7 +15,7 @@ public final class GetProjectArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="projectArn", required=true)
       private final String projectArn;
 
-    public String getProjectArn() {
+    public String projectArn() {
         return this.projectArn;
     }
 

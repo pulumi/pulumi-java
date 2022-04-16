@@ -23,7 +23,7 @@ public final class DBProxyAuthFormat extends com.pulumi.resources.InvokeArgs {
     @Import(name="authScheme")
       private final @Nullable DBProxyAuthFormatAuthScheme authScheme;
 
-    public Optional<DBProxyAuthFormatAuthScheme> getAuthScheme() {
+    public Optional<DBProxyAuthFormatAuthScheme> authScheme() {
         return this.authScheme == null ? Optional.empty() : Optional.ofNullable(this.authScheme);
     }
 
@@ -34,7 +34,7 @@ public final class DBProxyAuthFormat extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -45,7 +45,7 @@ public final class DBProxyAuthFormat extends com.pulumi.resources.InvokeArgs {
     @Import(name="iAMAuth")
       private final @Nullable DBProxyAuthFormatIAMAuth iAMAuth;
 
-    public Optional<DBProxyAuthFormatIAMAuth> getIAMAuth() {
+    public Optional<DBProxyAuthFormatIAMAuth> iAMAuth() {
         return this.iAMAuth == null ? Optional.empty() : Optional.ofNullable(this.iAMAuth);
     }
 
@@ -56,7 +56,7 @@ public final class DBProxyAuthFormat extends com.pulumi.resources.InvokeArgs {
     @Import(name="secretArn")
       private final @Nullable String secretArn;
 
-    public Optional<String> getSecretArn() {
+    public Optional<String> secretArn() {
         return this.secretArn == null ? Optional.empty() : Optional.ofNullable(this.secretArn);
     }
 
@@ -67,7 +67,7 @@ public final class DBProxyAuthFormat extends com.pulumi.resources.InvokeArgs {
     @Import(name="userName")
       private final @Nullable String userName;
 
-    public Optional<String> getUserName() {
+    public Optional<String> userName() {
         return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
     }
 

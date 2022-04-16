@@ -20,14 +20,14 @@ public final class DeliveryStreamHttpEndpointRequestConfigurationArgs extends co
     @Import(name="commonAttributes")
       private final @Nullable Output<List<DeliveryStreamHttpEndpointCommonAttributeArgs>> commonAttributes;
 
-    public Output<List<DeliveryStreamHttpEndpointCommonAttributeArgs>> getCommonAttributes() {
+    public Output<List<DeliveryStreamHttpEndpointCommonAttributeArgs>> commonAttributes() {
         return this.commonAttributes == null ? Codegen.empty() : this.commonAttributes;
     }
 
     @Import(name="contentEncoding")
       private final @Nullable Output<DeliveryStreamHttpEndpointRequestConfigurationContentEncoding> contentEncoding;
 
-    public Output<DeliveryStreamHttpEndpointRequestConfigurationContentEncoding> getContentEncoding() {
+    public Output<DeliveryStreamHttpEndpointRequestConfigurationContentEncoding> contentEncoding() {
         return this.contentEncoding == null ? Codegen.empty() : this.contentEncoding;
     }
 

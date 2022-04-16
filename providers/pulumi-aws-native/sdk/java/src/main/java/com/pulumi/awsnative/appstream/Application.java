@@ -24,85 +24,85 @@ public class Application extends com.pulumi.resources.CustomResource {
     @Export(name="appBlockArn", type=String.class, parameters={})
     private Output<String> appBlockArn;
 
-    public Output<String> getAppBlockArn() {
+    public Output<String> appBlockArn() {
         return this.appBlockArn;
     }
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="attributesToDelete", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> attributesToDelete;
 
-    public Output</* @Nullable */ List<String>> getAttributesToDelete() {
+    public Output</* @Nullable */ List<String>> attributesToDelete() {
         return this.attributesToDelete;
     }
     @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     @Export(name="iconS3Location", type=ApplicationS3Location.class, parameters={})
     private Output<ApplicationS3Location> iconS3Location;
 
-    public Output<ApplicationS3Location> getIconS3Location() {
+    public Output<ApplicationS3Location> iconS3Location() {
         return this.iconS3Location;
     }
     @Export(name="instanceFamilies", type=List.class, parameters={String.class})
     private Output<List<String>> instanceFamilies;
 
-    public Output<List<String>> getInstanceFamilies() {
+    public Output<List<String>> instanceFamilies() {
         return this.instanceFamilies;
     }
     @Export(name="launchParameters", type=String.class, parameters={})
     private Output</* @Nullable */ String> launchParameters;
 
-    public Output</* @Nullable */ String> getLaunchParameters() {
+    public Output</* @Nullable */ String> launchParameters() {
         return this.launchParameters;
     }
     @Export(name="launchPath", type=String.class, parameters={})
     private Output<String> launchPath;
 
-    public Output<String> getLaunchPath() {
+    public Output<String> launchPath() {
         return this.launchPath;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="platforms", type=List.class, parameters={String.class})
     private Output<List<String>> platforms;
 
-    public Output<List<String>> getPlatforms() {
+    public Output<List<String>> platforms() {
         return this.platforms;
     }
     @Export(name="tags", type=List.class, parameters={ApplicationTag.class})
     private Output</* @Nullable */ List<ApplicationTag>> tags;
 
-    public Output</* @Nullable */ List<ApplicationTag>> getTags() {
+    public Output</* @Nullable */ List<ApplicationTag>> tags() {
         return this.tags;
     }
     @Export(name="workingDirectory", type=String.class, parameters={})
     private Output</* @Nullable */ String> workingDirectory;
 
-    public Output</* @Nullable */ String> getWorkingDirectory() {
+    public Output</* @Nullable */ String> workingDirectory() {
         return this.workingDirectory;
     }
 

@@ -23,14 +23,14 @@ public final class DatasetCsvOptionsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="delimiter")
       private final @Nullable Output<String> delimiter;
 
-    public Output<String> getDelimiter() {
+    public Output<String> delimiter() {
         return this.delimiter == null ? Codegen.empty() : this.delimiter;
     }
 
     @Import(name="headerRow")
       private final @Nullable Output<Boolean> headerRow;
 
-    public Output<Boolean> getHeaderRow() {
+    public Output<Boolean> headerRow() {
         return this.headerRow == null ? Codegen.empty() : this.headerRow;
     }
 

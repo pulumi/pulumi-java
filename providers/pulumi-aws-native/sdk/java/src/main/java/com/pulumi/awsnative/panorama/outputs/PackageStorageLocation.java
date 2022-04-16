@@ -31,19 +31,19 @@ public final class PackageStorageLocation {
         this.repoPrefixLocation = repoPrefixLocation;
     }
 
-    public Optional<String> getBinaryPrefixLocation() {
+    public Optional<String> binaryPrefixLocation() {
         return Optional.ofNullable(this.binaryPrefixLocation);
     }
-    public Optional<String> getBucket() {
+    public Optional<String> bucket() {
         return Optional.ofNullable(this.bucket);
     }
-    public Optional<String> getGeneratedPrefixLocation() {
+    public Optional<String> generatedPrefixLocation() {
         return Optional.ofNullable(this.generatedPrefixLocation);
     }
-    public Optional<String> getManifestPrefixLocation() {
+    public Optional<String> manifestPrefixLocation() {
         return Optional.ofNullable(this.manifestPrefixLocation);
     }
-    public Optional<String> getRepoPrefixLocation() {
+    public Optional<String> repoPrefixLocation() {
         return Optional.ofNullable(this.repoPrefixLocation);
     }
 

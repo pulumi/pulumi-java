@@ -24,7 +24,7 @@ public class InstanceAccessControlAttributeConfiguration extends com.pulumi.reso
     @Export(name="accessControlAttributes", type=List.class, parameters={InstanceAccessControlAttributeConfigurationAccessControlAttribute.class})
     private Output</* @Nullable */ List<InstanceAccessControlAttributeConfigurationAccessControlAttribute>> accessControlAttributes;
 
-    public Output</* @Nullable */ List<InstanceAccessControlAttributeConfigurationAccessControlAttribute>> getAccessControlAttributes() {
+    public Output</* @Nullable */ List<InstanceAccessControlAttributeConfigurationAccessControlAttribute>> accessControlAttributes() {
         return this.accessControlAttributes;
     }
     /**
@@ -38,7 +38,7 @@ public class InstanceAccessControlAttributeConfiguration extends com.pulumi.reso
      * @return The InstanceAccessControlAttributeConfiguration property has been deprecated but is still supported for backwards compatibility purposes. We recomend that you use  AccessControlAttributes property instead.
      * 
      */
-    public Output</* @Nullable */ InstanceAccessControlAttributeConfigurationProperties> getInstanceAccessControlAttributeConfiguration() {
+    public Output</* @Nullable */ InstanceAccessControlAttributeConfigurationProperties> instanceAccessControlAttributeConfiguration() {
         return this.instanceAccessControlAttributeConfiguration;
     }
     /**
@@ -52,7 +52,7 @@ public class InstanceAccessControlAttributeConfiguration extends com.pulumi.reso
      * @return The ARN of the AWS SSO instance under which the operation will be executed.
      * 
      */
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
 

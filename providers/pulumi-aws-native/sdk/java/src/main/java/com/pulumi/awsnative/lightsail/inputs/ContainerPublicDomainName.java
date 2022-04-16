@@ -22,7 +22,7 @@ public final class ContainerPublicDomainName extends com.pulumi.resources.Invoke
     @Import(name="certificateName")
       private final @Nullable String certificateName;
 
-    public Optional<String> getCertificateName() {
+    public Optional<String> certificateName() {
         return this.certificateName == null ? Optional.empty() : Optional.ofNullable(this.certificateName);
     }
 
@@ -33,7 +33,7 @@ public final class ContainerPublicDomainName extends com.pulumi.resources.Invoke
     @Import(name="domainNames")
       private final @Nullable List<String> domainNames;
 
-    public List<String> getDomainNames() {
+    public List<String> domainNames() {
         return this.domainNames == null ? List.of() : this.domainNames;
     }
 

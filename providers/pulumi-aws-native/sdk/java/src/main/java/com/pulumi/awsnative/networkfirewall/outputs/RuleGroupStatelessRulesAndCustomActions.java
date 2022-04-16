@@ -23,10 +23,10 @@ public final class RuleGroupStatelessRulesAndCustomActions {
         this.statelessRules = statelessRules;
     }
 
-    public List<RuleGroupCustomAction> getCustomActions() {
+    public List<RuleGroupCustomAction> customActions() {
         return this.customActions == null ? List.of() : this.customActions;
     }
-    public List<RuleGroupStatelessRule> getStatelessRules() {
+    public List<RuleGroupStatelessRule> statelessRules() {
         return this.statelessRules;
     }
 

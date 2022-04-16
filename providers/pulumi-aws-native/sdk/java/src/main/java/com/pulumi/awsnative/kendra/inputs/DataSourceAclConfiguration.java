@@ -15,7 +15,7 @@ public final class DataSourceAclConfiguration extends com.pulumi.resources.Invok
     @Import(name="allowedGroupsColumnName", required=true)
       private final String allowedGroupsColumnName;
 
-    public String getAllowedGroupsColumnName() {
+    public String allowedGroupsColumnName() {
         return this.allowedGroupsColumnName;
     }
 

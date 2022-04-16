@@ -87,63 +87,63 @@ public final class GetScheduledActionResult {
      * If true, the schedule is enabled. If false, the scheduled action does not trigger.
      * 
     */
-    public Optional<Boolean> getEnable() {
+    public Optional<Boolean> enable() {
         return Optional.ofNullable(this.enable);
     }
     /**
      * The end time in UTC of the scheduled action. After this time, the scheduled action does not trigger.
      * 
     */
-    public Optional<String> getEndTime() {
+    public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
      * The IAM role to assume to run the target action.
      * 
     */
-    public Optional<String> getIamRole() {
+    public Optional<String> iamRole() {
         return Optional.ofNullable(this.iamRole);
     }
     /**
      * List of times when the scheduled action will run.
      * 
     */
-    public List<String> getNextInvocations() {
+    public List<String> nextInvocations() {
         return this.nextInvocations == null ? List.of() : this.nextInvocations;
     }
     /**
      * The schedule in `at( )` or `cron( )` format.
      * 
     */
-    public Optional<String> getSchedule() {
+    public Optional<String> schedule() {
         return Optional.ofNullable(this.schedule);
     }
     /**
      * The description of the scheduled action.
      * 
     */
-    public Optional<String> getScheduledActionDescription() {
+    public Optional<String> scheduledActionDescription() {
         return Optional.ofNullable(this.scheduledActionDescription);
     }
     /**
      * The start time in UTC of the scheduled action. Before this time, the scheduled action does not trigger.
      * 
     */
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
      * The state of the scheduled action.
      * 
     */
-    public Optional<ScheduledActionState> getState() {
+    public Optional<ScheduledActionState> state() {
         return Optional.ofNullable(this.state);
     }
     /**
      * A JSON format string of the Amazon Redshift API operation with input parameters.
      * 
     */
-    public Optional<ScheduledActionType> getTargetAction() {
+    public Optional<ScheduledActionType> targetAction() {
         return Optional.ofNullable(this.targetAction);
     }
 

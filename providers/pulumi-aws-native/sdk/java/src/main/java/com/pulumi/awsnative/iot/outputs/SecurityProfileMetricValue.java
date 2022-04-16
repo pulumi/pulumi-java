@@ -65,42 +65,42 @@ public final class SecurityProfileMetricValue {
      * If the ComparisonOperator calls for a set of CIDRs, use this to specify that set to be compared with the metric.
      * 
     */
-    public List<String> getCidrs() {
+    public List<String> cidrs() {
         return this.cidrs == null ? List.of() : this.cidrs;
     }
     /**
      * If the ComparisonOperator calls for a numeric value, use this to specify that (integer) numeric value to be compared with the metric.
      * 
     */
-    public Optional<String> getCount() {
+    public Optional<String> count() {
         return Optional.ofNullable(this.count);
     }
     /**
      * The numeral value of a metric.
      * 
     */
-    public Optional<Double> getNumber() {
+    public Optional<Double> number() {
         return Optional.ofNullable(this.number);
     }
     /**
      * The numeral values of a metric.
      * 
     */
-    public List<Double> getNumbers() {
+    public List<Double> numbers() {
         return this.numbers == null ? List.of() : this.numbers;
     }
     /**
      * If the ComparisonOperator calls for a set of ports, use this to specify that set to be compared with the metric.
      * 
     */
-    public List<Integer> getPorts() {
+    public List<Integer> ports() {
         return this.ports == null ? List.of() : this.ports;
     }
     /**
      * The string values of a metric.
      * 
     */
-    public List<String> getStrings() {
+    public List<String> strings() {
         return this.strings == null ? List.of() : this.strings;
     }
 

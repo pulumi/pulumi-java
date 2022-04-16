@@ -24,7 +24,7 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
 
-    public Output<String> getConnectionName() {
+    public Output<String> connectionName() {
         return this.connectionName == null ? Codegen.empty() : this.connectionName;
     }
 
@@ -35,7 +35,7 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostArn")
       private final @Nullable Output<String> hostArn;
 
-    public Output<String> getHostArn() {
+    public Output<String> hostArn() {
         return this.hostArn == null ? Codegen.empty() : this.hostArn;
     }
 
@@ -46,7 +46,7 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="providerType")
       private final @Nullable Output<String> providerType;
 
-    public Output<String> getProviderType() {
+    public Output<String> providerType() {
         return this.providerType == null ? Codegen.empty() : this.providerType;
     }
 
@@ -57,7 +57,7 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<ConnectionTagArgs>> tags;
 
-    public Output<List<ConnectionTagArgs>> getTags() {
+    public Output<List<ConnectionTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

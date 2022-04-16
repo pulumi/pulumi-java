@@ -21,10 +21,10 @@ public final class CertificateValidity {
         this.value = value;
     }
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
-    public Double getValue() {
+    public Double value() {
         return this.value;
     }
 

@@ -28,7 +28,7 @@ public final class EndpointGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointConfigurations")
       private final @Nullable Output<List<EndpointGroupEndpointConfigurationArgs>> endpointConfigurations;
 
-    public Output<List<EndpointGroupEndpointConfigurationArgs>> getEndpointConfigurations() {
+    public Output<List<EndpointGroupEndpointConfigurationArgs>> endpointConfigurations() {
         return this.endpointConfigurations == null ? Codegen.empty() : this.endpointConfigurations;
     }
 
@@ -39,7 +39,7 @@ public final class EndpointGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointGroupRegion", required=true)
       private final Output<String> endpointGroupRegion;
 
-    public Output<String> getEndpointGroupRegion() {
+    public Output<String> endpointGroupRegion() {
         return this.endpointGroupRegion;
     }
 
@@ -50,14 +50,14 @@ public final class EndpointGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthCheckIntervalSeconds")
       private final @Nullable Output<Integer> healthCheckIntervalSeconds;
 
-    public Output<Integer> getHealthCheckIntervalSeconds() {
+    public Output<Integer> healthCheckIntervalSeconds() {
         return this.healthCheckIntervalSeconds == null ? Codegen.empty() : this.healthCheckIntervalSeconds;
     }
 
     @Import(name="healthCheckPath")
       private final @Nullable Output<String> healthCheckPath;
 
-    public Output<String> getHealthCheckPath() {
+    public Output<String> healthCheckPath() {
         return this.healthCheckPath == null ? Codegen.empty() : this.healthCheckPath;
     }
 
@@ -68,7 +68,7 @@ public final class EndpointGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthCheckPort")
       private final @Nullable Output<Integer> healthCheckPort;
 
-    public Output<Integer> getHealthCheckPort() {
+    public Output<Integer> healthCheckPort() {
         return this.healthCheckPort == null ? Codegen.empty() : this.healthCheckPort;
     }
 
@@ -79,7 +79,7 @@ public final class EndpointGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthCheckProtocol")
       private final @Nullable Output<EndpointGroupHealthCheckProtocol> healthCheckProtocol;
 
-    public Output<EndpointGroupHealthCheckProtocol> getHealthCheckProtocol() {
+    public Output<EndpointGroupHealthCheckProtocol> healthCheckProtocol() {
         return this.healthCheckProtocol == null ? Codegen.empty() : this.healthCheckProtocol;
     }
 
@@ -90,14 +90,14 @@ public final class EndpointGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="listenerArn", required=true)
       private final Output<String> listenerArn;
 
-    public Output<String> getListenerArn() {
+    public Output<String> listenerArn() {
         return this.listenerArn;
     }
 
     @Import(name="portOverrides")
       private final @Nullable Output<List<EndpointGroupPortOverrideArgs>> portOverrides;
 
-    public Output<List<EndpointGroupPortOverrideArgs>> getPortOverrides() {
+    public Output<List<EndpointGroupPortOverrideArgs>> portOverrides() {
         return this.portOverrides == null ? Codegen.empty() : this.portOverrides;
     }
 
@@ -108,7 +108,7 @@ public final class EndpointGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="thresholdCount")
       private final @Nullable Output<Integer> thresholdCount;
 
-    public Output<Integer> getThresholdCount() {
+    public Output<Integer> thresholdCount() {
         return this.thresholdCount == null ? Codegen.empty() : this.thresholdCount;
     }
 
@@ -119,7 +119,7 @@ public final class EndpointGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="trafficDialPercentage")
       private final @Nullable Output<Double> trafficDialPercentage;
 
-    public Output<Double> getTrafficDialPercentage() {
+    public Output<Double> trafficDialPercentage() {
         return this.trafficDialPercentage == null ? Codegen.empty() : this.trafficDialPercentage;
     }
 

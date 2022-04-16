@@ -18,14 +18,14 @@ public final class ResourceDataSyncAwsOrganizationsSource extends com.pulumi.res
     @Import(name="organizationSourceType", required=true)
       private final String organizationSourceType;
 
-    public String getOrganizationSourceType() {
+    public String organizationSourceType() {
         return this.organizationSourceType;
     }
 
     @Import(name="organizationalUnits")
       private final @Nullable List<String> organizationalUnits;
 
-    public List<String> getOrganizationalUnits() {
+    public List<String> organizationalUnits() {
         return this.organizationalUnits == null ? List.of() : this.organizationalUnits;
     }
 

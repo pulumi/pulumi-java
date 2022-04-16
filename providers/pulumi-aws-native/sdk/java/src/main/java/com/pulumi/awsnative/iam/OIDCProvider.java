@@ -31,31 +31,31 @@ public class OIDCProvider extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the OIDC provider
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="clientIdList", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> clientIdList;
 
-    public Output</* @Nullable */ List<String>> getClientIdList() {
+    public Output</* @Nullable */ List<String>> clientIdList() {
         return this.clientIdList;
     }
     @Export(name="tags", type=List.class, parameters={OIDCProviderTag.class})
     private Output</* @Nullable */ List<OIDCProviderTag>> tags;
 
-    public Output</* @Nullable */ List<OIDCProviderTag>> getTags() {
+    public Output</* @Nullable */ List<OIDCProviderTag>> tags() {
         return this.tags;
     }
     @Export(name="thumbprintList", type=List.class, parameters={String.class})
     private Output<List<String>> thumbprintList;
 
-    public Output<List<String>> getThumbprintList() {
+    public Output<List<String>> thumbprintList() {
         return this.thumbprintList;
     }
     @Export(name="url", type=String.class, parameters={})
     private Output</* @Nullable */ String> url;
 
-    public Output</* @Nullable */ String> getUrl() {
+    public Output</* @Nullable */ String> url() {
         return this.url;
     }
 

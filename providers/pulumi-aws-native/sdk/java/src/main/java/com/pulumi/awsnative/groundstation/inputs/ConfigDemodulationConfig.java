@@ -17,7 +17,7 @@ public final class ConfigDemodulationConfig extends com.pulumi.resources.InvokeA
     @Import(name="unvalidatedJSON")
       private final @Nullable String unvalidatedJSON;
 
-    public Optional<String> getUnvalidatedJSON() {
+    public Optional<String> unvalidatedJSON() {
         return this.unvalidatedJSON == null ? Optional.empty() : Optional.ofNullable(this.unvalidatedJSON);
     }
 

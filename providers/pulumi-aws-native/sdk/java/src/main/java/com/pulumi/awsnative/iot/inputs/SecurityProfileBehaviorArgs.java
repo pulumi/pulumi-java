@@ -25,7 +25,7 @@ public final class SecurityProfileBehaviorArgs extends com.pulumi.resources.Reso
     @Import(name="criteria")
       private final @Nullable Output<SecurityProfileBehaviorCriteriaArgs> criteria;
 
-    public Output<SecurityProfileBehaviorCriteriaArgs> getCriteria() {
+    public Output<SecurityProfileBehaviorCriteriaArgs> criteria() {
         return this.criteria == null ? Codegen.empty() : this.criteria;
     }
 
@@ -36,14 +36,14 @@ public final class SecurityProfileBehaviorArgs extends com.pulumi.resources.Reso
     @Import(name="metric")
       private final @Nullable Output<String> metric;
 
-    public Output<String> getMetric() {
+    public Output<String> metric() {
         return this.metric == null ? Codegen.empty() : this.metric;
     }
 
     @Import(name="metricDimension")
       private final @Nullable Output<SecurityProfileMetricDimensionArgs> metricDimension;
 
-    public Output<SecurityProfileMetricDimensionArgs> getMetricDimension() {
+    public Output<SecurityProfileMetricDimensionArgs> metricDimension() {
         return this.metricDimension == null ? Codegen.empty() : this.metricDimension;
     }
 
@@ -54,7 +54,7 @@ public final class SecurityProfileBehaviorArgs extends com.pulumi.resources.Reso
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -65,7 +65,7 @@ public final class SecurityProfileBehaviorArgs extends com.pulumi.resources.Reso
     @Import(name="suppressAlerts")
       private final @Nullable Output<Boolean> suppressAlerts;
 
-    public Output<Boolean> getSuppressAlerts() {
+    public Output<Boolean> suppressAlerts() {
         return this.suppressAlerts == null ? Codegen.empty() : this.suppressAlerts;
     }
 

@@ -38,22 +38,22 @@ public final class GetFHIRDatastoreResult {
         this.tags = tags;
     }
 
-    public Optional<FHIRDatastoreCreatedAt> getCreatedAt() {
+    public Optional<FHIRDatastoreCreatedAt> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
-    public Optional<String> getDatastoreArn() {
+    public Optional<String> datastoreArn() {
         return Optional.ofNullable(this.datastoreArn);
     }
-    public Optional<String> getDatastoreEndpoint() {
+    public Optional<String> datastoreEndpoint() {
         return Optional.ofNullable(this.datastoreEndpoint);
     }
-    public Optional<String> getDatastoreId() {
+    public Optional<String> datastoreId() {
         return Optional.ofNullable(this.datastoreId);
     }
-    public Optional<FHIRDatastoreDatastoreStatus> getDatastoreStatus() {
+    public Optional<FHIRDatastoreDatastoreStatus> datastoreStatus() {
         return Optional.ofNullable(this.datastoreStatus);
     }
-    public List<FHIRDatastoreTag> getTags() {
+    public List<FHIRDatastoreTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

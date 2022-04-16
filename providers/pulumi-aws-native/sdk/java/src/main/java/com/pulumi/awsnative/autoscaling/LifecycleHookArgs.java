@@ -23,7 +23,7 @@ public final class LifecycleHookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoScalingGroupName", required=true)
       private final Output<String> autoScalingGroupName;
 
-    public Output<String> getAutoScalingGroupName() {
+    public Output<String> autoScalingGroupName() {
         return this.autoScalingGroupName;
     }
 
@@ -34,7 +34,7 @@ public final class LifecycleHookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultResult")
       private final @Nullable Output<String> defaultResult;
 
-    public Output<String> getDefaultResult() {
+    public Output<String> defaultResult() {
         return this.defaultResult == null ? Codegen.empty() : this.defaultResult;
     }
 
@@ -45,7 +45,7 @@ public final class LifecycleHookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="heartbeatTimeout")
       private final @Nullable Output<Integer> heartbeatTimeout;
 
-    public Output<Integer> getHeartbeatTimeout() {
+    public Output<Integer> heartbeatTimeout() {
         return this.heartbeatTimeout == null ? Codegen.empty() : this.heartbeatTimeout;
     }
 
@@ -56,7 +56,7 @@ public final class LifecycleHookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lifecycleHookName")
       private final @Nullable Output<String> lifecycleHookName;
 
-    public Output<String> getLifecycleHookName() {
+    public Output<String> lifecycleHookName() {
         return this.lifecycleHookName == null ? Codegen.empty() : this.lifecycleHookName;
     }
 
@@ -67,7 +67,7 @@ public final class LifecycleHookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lifecycleTransition", required=true)
       private final Output<String> lifecycleTransition;
 
-    public Output<String> getLifecycleTransition() {
+    public Output<String> lifecycleTransition() {
         return this.lifecycleTransition;
     }
 
@@ -78,7 +78,7 @@ public final class LifecycleHookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notificationMetadata")
       private final @Nullable Output<String> notificationMetadata;
 
-    public Output<String> getNotificationMetadata() {
+    public Output<String> notificationMetadata() {
         return this.notificationMetadata == null ? Codegen.empty() : this.notificationMetadata;
     }
 
@@ -89,7 +89,7 @@ public final class LifecycleHookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notificationTargetARN")
       private final @Nullable Output<String> notificationTargetARN;
 
-    public Output<String> getNotificationTargetARN() {
+    public Output<String> notificationTargetARN() {
         return this.notificationTargetARN == null ? Codegen.empty() : this.notificationTargetARN;
     }
 
@@ -100,7 +100,7 @@ public final class LifecycleHookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleARN")
       private final @Nullable Output<String> roleARN;
 
-    public Output<String> getRoleARN() {
+    public Output<String> roleARN() {
         return this.roleARN == null ? Codegen.empty() : this.roleARN;
     }
 

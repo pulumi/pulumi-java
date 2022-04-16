@@ -19,7 +19,7 @@ public final class GetDeploymentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="deploymentId", required=true)
       private final String deploymentId;
 
-    public String getDeploymentId() {
+    public String deploymentId() {
         return this.deploymentId;
     }
 
@@ -30,7 +30,7 @@ public final class GetDeploymentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="restApiId", required=true)
       private final String restApiId;
 
-    public String getRestApiId() {
+    public String restApiId() {
         return this.restApiId;
     }
 

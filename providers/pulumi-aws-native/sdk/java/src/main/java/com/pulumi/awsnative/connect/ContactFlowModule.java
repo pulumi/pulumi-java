@@ -35,7 +35,7 @@ public class ContactFlowModule extends com.pulumi.resources.CustomResource {
      * @return The identifier of the contact flow module (ARN).
      * 
      */
-    public Output<String> getContactFlowModuleArn() {
+    public Output<String> contactFlowModuleArn() {
         return this.contactFlowModuleArn;
     }
     /**
@@ -49,7 +49,7 @@ public class ContactFlowModule extends com.pulumi.resources.CustomResource {
      * @return The content of the contact flow module in JSON format.
      * 
      */
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content;
     }
     /**
@@ -63,7 +63,7 @@ public class ContactFlowModule extends com.pulumi.resources.CustomResource {
      * @return The description of the contact flow module.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -77,7 +77,7 @@ public class ContactFlowModule extends com.pulumi.resources.CustomResource {
      * @return The identifier of the Amazon Connect instance (ARN).
      * 
      */
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
     /**
@@ -91,7 +91,7 @@ public class ContactFlowModule extends com.pulumi.resources.CustomResource {
      * @return The name of the contact flow module.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -105,7 +105,7 @@ public class ContactFlowModule extends com.pulumi.resources.CustomResource {
      * @return The state of the contact flow module.
      * 
      */
-    public Output</* @Nullable */ ContactFlowModuleState> getState() {
+    public Output</* @Nullable */ ContactFlowModuleState> state() {
         return this.state;
     }
     /**
@@ -119,7 +119,7 @@ public class ContactFlowModule extends com.pulumi.resources.CustomResource {
      * @return The status of the contact flow module.
      * 
      */
-    public Output<ContactFlowModuleStatus> getStatus() {
+    public Output<ContactFlowModuleStatus> status() {
         return this.status;
     }
     /**
@@ -133,7 +133,7 @@ public class ContactFlowModule extends com.pulumi.resources.CustomResource {
      * @return One or more tags.
      * 
      */
-    public Output</* @Nullable */ List<ContactFlowModuleTag>> getTags() {
+    public Output</* @Nullable */ List<ContactFlowModuleTag>> tags() {
         return this.tags;
     }
 

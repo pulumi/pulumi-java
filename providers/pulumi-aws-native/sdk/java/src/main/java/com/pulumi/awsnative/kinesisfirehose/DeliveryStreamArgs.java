@@ -30,84 +30,84 @@ public final class DeliveryStreamArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="amazonopensearchserviceDestinationConfiguration")
       private final @Nullable Output<DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs> amazonopensearchserviceDestinationConfiguration;
 
-    public Output<DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs> getAmazonopensearchserviceDestinationConfiguration() {
+    public Output<DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs> amazonopensearchserviceDestinationConfiguration() {
         return this.amazonopensearchserviceDestinationConfiguration == null ? Codegen.empty() : this.amazonopensearchserviceDestinationConfiguration;
     }
 
     @Import(name="deliveryStreamEncryptionConfigurationInput")
       private final @Nullable Output<DeliveryStreamEncryptionConfigurationInputArgs> deliveryStreamEncryptionConfigurationInput;
 
-    public Output<DeliveryStreamEncryptionConfigurationInputArgs> getDeliveryStreamEncryptionConfigurationInput() {
+    public Output<DeliveryStreamEncryptionConfigurationInputArgs> deliveryStreamEncryptionConfigurationInput() {
         return this.deliveryStreamEncryptionConfigurationInput == null ? Codegen.empty() : this.deliveryStreamEncryptionConfigurationInput;
     }
 
     @Import(name="deliveryStreamName")
       private final @Nullable Output<String> deliveryStreamName;
 
-    public Output<String> getDeliveryStreamName() {
+    public Output<String> deliveryStreamName() {
         return this.deliveryStreamName == null ? Codegen.empty() : this.deliveryStreamName;
     }
 
     @Import(name="deliveryStreamType")
       private final @Nullable Output<DeliveryStreamType> deliveryStreamType;
 
-    public Output<DeliveryStreamType> getDeliveryStreamType() {
+    public Output<DeliveryStreamType> deliveryStreamType() {
         return this.deliveryStreamType == null ? Codegen.empty() : this.deliveryStreamType;
     }
 
     @Import(name="elasticsearchDestinationConfiguration")
       private final @Nullable Output<DeliveryStreamElasticsearchDestinationConfigurationArgs> elasticsearchDestinationConfiguration;
 
-    public Output<DeliveryStreamElasticsearchDestinationConfigurationArgs> getElasticsearchDestinationConfiguration() {
+    public Output<DeliveryStreamElasticsearchDestinationConfigurationArgs> elasticsearchDestinationConfiguration() {
         return this.elasticsearchDestinationConfiguration == null ? Codegen.empty() : this.elasticsearchDestinationConfiguration;
     }
 
     @Import(name="extendedS3DestinationConfiguration")
       private final @Nullable Output<DeliveryStreamExtendedS3DestinationConfigurationArgs> extendedS3DestinationConfiguration;
 
-    public Output<DeliveryStreamExtendedS3DestinationConfigurationArgs> getExtendedS3DestinationConfiguration() {
+    public Output<DeliveryStreamExtendedS3DestinationConfigurationArgs> extendedS3DestinationConfiguration() {
         return this.extendedS3DestinationConfiguration == null ? Codegen.empty() : this.extendedS3DestinationConfiguration;
     }
 
     @Import(name="httpEndpointDestinationConfiguration")
       private final @Nullable Output<DeliveryStreamHttpEndpointDestinationConfigurationArgs> httpEndpointDestinationConfiguration;
 
-    public Output<DeliveryStreamHttpEndpointDestinationConfigurationArgs> getHttpEndpointDestinationConfiguration() {
+    public Output<DeliveryStreamHttpEndpointDestinationConfigurationArgs> httpEndpointDestinationConfiguration() {
         return this.httpEndpointDestinationConfiguration == null ? Codegen.empty() : this.httpEndpointDestinationConfiguration;
     }
 
     @Import(name="kinesisStreamSourceConfiguration")
       private final @Nullable Output<DeliveryStreamKinesisStreamSourceConfigurationArgs> kinesisStreamSourceConfiguration;
 
-    public Output<DeliveryStreamKinesisStreamSourceConfigurationArgs> getKinesisStreamSourceConfiguration() {
+    public Output<DeliveryStreamKinesisStreamSourceConfigurationArgs> kinesisStreamSourceConfiguration() {
         return this.kinesisStreamSourceConfiguration == null ? Codegen.empty() : this.kinesisStreamSourceConfiguration;
     }
 
     @Import(name="redshiftDestinationConfiguration")
       private final @Nullable Output<DeliveryStreamRedshiftDestinationConfigurationArgs> redshiftDestinationConfiguration;
 
-    public Output<DeliveryStreamRedshiftDestinationConfigurationArgs> getRedshiftDestinationConfiguration() {
+    public Output<DeliveryStreamRedshiftDestinationConfigurationArgs> redshiftDestinationConfiguration() {
         return this.redshiftDestinationConfiguration == null ? Codegen.empty() : this.redshiftDestinationConfiguration;
     }
 
     @Import(name="s3DestinationConfiguration")
       private final @Nullable Output<DeliveryStreamS3DestinationConfigurationArgs> s3DestinationConfiguration;
 
-    public Output<DeliveryStreamS3DestinationConfigurationArgs> getS3DestinationConfiguration() {
+    public Output<DeliveryStreamS3DestinationConfigurationArgs> s3DestinationConfiguration() {
         return this.s3DestinationConfiguration == null ? Codegen.empty() : this.s3DestinationConfiguration;
     }
 
     @Import(name="splunkDestinationConfiguration")
       private final @Nullable Output<DeliveryStreamSplunkDestinationConfigurationArgs> splunkDestinationConfiguration;
 
-    public Output<DeliveryStreamSplunkDestinationConfigurationArgs> getSplunkDestinationConfiguration() {
+    public Output<DeliveryStreamSplunkDestinationConfigurationArgs> splunkDestinationConfiguration() {
         return this.splunkDestinationConfiguration == null ? Codegen.empty() : this.splunkDestinationConfiguration;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<DeliveryStreamTagArgs>> tags;
 
-    public Output<List<DeliveryStreamTagArgs>> getTags() {
+    public Output<List<DeliveryStreamTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -22,7 +22,7 @@ public final class ThemeTypography extends com.pulumi.resources.InvokeArgs {
     @Import(name="fontFamilies")
       private final @Nullable List<ThemeFont> fontFamilies;
 
-    public List<ThemeFont> getFontFamilies() {
+    public List<ThemeFont> fontFamilies() {
         return this.fontFamilies == null ? List.of() : this.fontFamilies;
     }
 

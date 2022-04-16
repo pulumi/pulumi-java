@@ -25,13 +25,13 @@ public final class DataSourceToIndexFieldMapping {
         this.indexFieldName = indexFieldName;
     }
 
-    public String getDataSourceFieldName() {
+    public String dataSourceFieldName() {
         return this.dataSourceFieldName;
     }
-    public Optional<String> getDateFieldFormat() {
+    public Optional<String> dateFieldFormat() {
         return Optional.ofNullable(this.dateFieldFormat);
     }
-    public String getIndexFieldName() {
+    public String indexFieldName() {
         return this.indexFieldName;
     }
 

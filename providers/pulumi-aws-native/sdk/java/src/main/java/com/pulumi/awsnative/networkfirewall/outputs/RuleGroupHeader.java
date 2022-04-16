@@ -34,22 +34,22 @@ public final class RuleGroupHeader {
         this.sourcePort = sourcePort;
     }
 
-    public String getDestination() {
+    public String destination() {
         return this.destination;
     }
-    public String getDestinationPort() {
+    public String destinationPort() {
         return this.destinationPort;
     }
-    public RuleGroupHeaderDirection getDirection() {
+    public RuleGroupHeaderDirection direction() {
         return this.direction;
     }
-    public RuleGroupHeaderProtocol getProtocol() {
+    public RuleGroupHeaderProtocol protocol() {
         return this.protocol;
     }
-    public String getSource() {
+    public String source() {
         return this.source;
     }
-    public String getSourcePort() {
+    public String sourcePort() {
         return this.sourcePort;
     }
 

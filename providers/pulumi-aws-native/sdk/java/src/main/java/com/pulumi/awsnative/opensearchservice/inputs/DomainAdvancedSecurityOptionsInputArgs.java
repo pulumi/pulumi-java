@@ -19,21 +19,21 @@ public final class DomainAdvancedSecurityOptionsInputArgs extends com.pulumi.res
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="internalUserDatabaseEnabled")
       private final @Nullable Output<Boolean> internalUserDatabaseEnabled;
 
-    public Output<Boolean> getInternalUserDatabaseEnabled() {
+    public Output<Boolean> internalUserDatabaseEnabled() {
         return this.internalUserDatabaseEnabled == null ? Codegen.empty() : this.internalUserDatabaseEnabled;
     }
 
     @Import(name="masterUserOptions")
       private final @Nullable Output<DomainMasterUserOptionsArgs> masterUserOptions;
 
-    public Output<DomainMasterUserOptionsArgs> getMasterUserOptions() {
+    public Output<DomainMasterUserOptionsArgs> masterUserOptions() {
         return this.masterUserOptions == null ? Codegen.empty() : this.masterUserOptions;
     }
 

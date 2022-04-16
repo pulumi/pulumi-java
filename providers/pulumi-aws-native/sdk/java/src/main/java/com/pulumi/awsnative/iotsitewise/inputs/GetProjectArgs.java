@@ -19,7 +19,7 @@ public final class GetProjectArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="projectId", required=true)
       private final String projectId;
 
-    public String getProjectId() {
+    public String projectId() {
         return this.projectId;
     }
 

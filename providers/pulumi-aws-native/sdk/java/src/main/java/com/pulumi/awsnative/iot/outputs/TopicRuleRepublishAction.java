@@ -26,13 +26,13 @@ public final class TopicRuleRepublishAction {
         this.topic = topic;
     }
 
-    public Optional<Integer> getQos() {
+    public Optional<Integer> qos() {
         return Optional.ofNullable(this.qos);
     }
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
-    public String getTopic() {
+    public String topic() {
         return this.topic;
     }
 

@@ -26,13 +26,13 @@ public final class RuleGroupRulesSourceList {
         this.targets = targets;
     }
 
-    public RuleGroupGeneratedRulesType getGeneratedRulesType() {
+    public RuleGroupGeneratedRulesType generatedRulesType() {
         return this.generatedRulesType;
     }
-    public List<RuleGroupTargetType> getTargetTypes() {
+    public List<RuleGroupTargetType> targetTypes() {
         return this.targetTypes;
     }
-    public List<String> getTargets() {
+    public List<String> targets() {
         return this.targets;
     }
 

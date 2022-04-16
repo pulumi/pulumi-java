@@ -23,7 +23,7 @@ public final class DatasetDataCatalogInputDefinitionArgs extends com.pulumi.reso
     @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
+    public Output<String> catalogId() {
         return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
@@ -34,7 +34,7 @@ public final class DatasetDataCatalogInputDefinitionArgs extends com.pulumi.reso
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
@@ -45,14 +45,14 @@ public final class DatasetDataCatalogInputDefinitionArgs extends com.pulumi.reso
     @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName == null ? Codegen.empty() : this.tableName;
     }
 
     @Import(name="tempDirectory")
       private final @Nullable Output<DatasetS3LocationArgs> tempDirectory;
 
-    public Output<DatasetS3LocationArgs> getTempDirectory() {
+    public Output<DatasetS3LocationArgs> tempDirectory() {
         return this.tempDirectory == null ? Codegen.empty() : this.tempDirectory;
     }
 

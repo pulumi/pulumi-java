@@ -24,7 +24,7 @@ public final class PackagingConfigurationMssPackage extends com.pulumi.resources
     @Import(name="encryption")
       private final @Nullable PackagingConfigurationMssEncryption encryption;
 
-    public Optional<PackagingConfigurationMssEncryption> getEncryption() {
+    public Optional<PackagingConfigurationMssEncryption> encryption() {
         return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
     }
 
@@ -35,14 +35,14 @@ public final class PackagingConfigurationMssPackage extends com.pulumi.resources
     @Import(name="mssManifests", required=true)
       private final List<PackagingConfigurationMssManifest> mssManifests;
 
-    public List<PackagingConfigurationMssManifest> getMssManifests() {
+    public List<PackagingConfigurationMssManifest> mssManifests() {
         return this.mssManifests;
     }
 
     @Import(name="segmentDurationSeconds")
       private final @Nullable Integer segmentDurationSeconds;
 
-    public Optional<Integer> getSegmentDurationSeconds() {
+    public Optional<Integer> segmentDurationSeconds() {
         return this.segmentDurationSeconds == null ? Optional.empty() : Optional.ofNullable(this.segmentDurationSeconds);
     }
 

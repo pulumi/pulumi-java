@@ -81,35 +81,35 @@ public final class GetFrameworkResult {
      * The date and time that a framework is created, in Unix format and Coordinated Universal Time (UTC). The value of `CreationTime` is accurate to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.
      * 
     */
-    public Optional<Double> getCreationTime() {
+    public Optional<Double> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * The deployment status of a framework. The statuses are: `CREATE_IN_PROGRESS | UPDATE_IN_PROGRESS | DELETE_IN_PROGRESS | COMPLETED | FAILED`
      * 
     */
-    public Optional<String> getDeploymentStatus() {
+    public Optional<String> deploymentStatus() {
         return Optional.ofNullable(this.deploymentStatus);
     }
     /**
      * An Amazon Resource Name (ARN) that uniquely identifies Framework as a resource
      * 
     */
-    public Optional<String> getFrameworkArn() {
+    public Optional<String> frameworkArn() {
         return Optional.ofNullable(this.frameworkArn);
     }
     /**
      * Contains detailed information about all of the controls of a framework. Each framework must contain at least one control.
      * 
     */
-    public List<FrameworkControl> getFrameworkControls() {
+    public List<FrameworkControl> frameworkControls() {
         return this.frameworkControls == null ? List.of() : this.frameworkControls;
     }
     /**
      * An optional description of the framework with a maximum 1,024 characters.
      * 
     */
-    public Optional<String> getFrameworkDescription() {
+    public Optional<String> frameworkDescription() {
         return Optional.ofNullable(this.frameworkDescription);
     }
     /**
@@ -124,14 +124,14 @@ public final class GetFrameworkResult {
      * `UNAVAILABLE` when AWS Backup is unable to validate recording status at this time.
      * 
     */
-    public Optional<String> getFrameworkStatus() {
+    public Optional<String> frameworkStatus() {
         return Optional.ofNullable(this.frameworkStatus);
     }
     /**
      * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
      * 
     */
-    public List<FrameworkTag> getFrameworkTags() {
+    public List<FrameworkTag> frameworkTags() {
         return this.frameworkTags == null ? List.of() : this.frameworkTags;
     }
 

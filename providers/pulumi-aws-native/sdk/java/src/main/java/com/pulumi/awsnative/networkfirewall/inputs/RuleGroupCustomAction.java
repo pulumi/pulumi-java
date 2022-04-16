@@ -16,14 +16,14 @@ public final class RuleGroupCustomAction extends com.pulumi.resources.InvokeArgs
     @Import(name="actionDefinition", required=true)
       private final RuleGroupActionDefinition actionDefinition;
 
-    public RuleGroupActionDefinition getActionDefinition() {
+    public RuleGroupActionDefinition actionDefinition() {
         return this.actionDefinition;
     }
 
     @Import(name="actionName", required=true)
       private final String actionName;
 
-    public String getActionName() {
+    public String actionName() {
         return this.actionName;
     }
 

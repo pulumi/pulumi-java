@@ -18,28 +18,28 @@ public final class DatasetS3DestinationConfiguration extends com.pulumi.resource
     @Import(name="bucket", required=true)
       private final String bucket;
 
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
 
     @Import(name="glueConfiguration")
       private final @Nullable DatasetGlueConfiguration glueConfiguration;
 
-    public Optional<DatasetGlueConfiguration> getGlueConfiguration() {
+    public Optional<DatasetGlueConfiguration> glueConfiguration() {
         return this.glueConfiguration == null ? Optional.empty() : Optional.ofNullable(this.glueConfiguration);
     }
 
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 
     @Import(name="roleArn", required=true)
       private final String roleArn;
 
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 

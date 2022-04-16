@@ -19,7 +19,7 @@ public final class GetEndpointAccessArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="endpointName", required=true)
       private final String endpointName;
 
-    public String getEndpointName() {
+    public String endpointName() {
         return this.endpointName;
     }
 

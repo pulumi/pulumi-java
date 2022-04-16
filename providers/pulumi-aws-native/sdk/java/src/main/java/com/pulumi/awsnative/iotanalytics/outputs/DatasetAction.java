@@ -27,13 +27,13 @@ public final class DatasetAction {
         this.queryAction = queryAction;
     }
 
-    public String getActionName() {
+    public String actionName() {
         return this.actionName;
     }
-    public Optional<DatasetContainerAction> getContainerAction() {
+    public Optional<DatasetContainerAction> containerAction() {
         return Optional.ofNullable(this.containerAction);
     }
-    public Optional<DatasetQueryAction> getQueryAction() {
+    public Optional<DatasetQueryAction> queryAction() {
         return Optional.ofNullable(this.queryAction);
     }
 

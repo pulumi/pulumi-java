@@ -39,25 +39,25 @@ public final class ConnectorProfileSAPODataConnectorProfileProperties {
         this.privateLinkServiceName = privateLinkServiceName;
     }
 
-    public Optional<String> getApplicationHostUrl() {
+    public Optional<String> applicationHostUrl() {
         return Optional.ofNullable(this.applicationHostUrl);
     }
-    public Optional<String> getApplicationServicePath() {
+    public Optional<String> applicationServicePath() {
         return Optional.ofNullable(this.applicationServicePath);
     }
-    public Optional<String> getClientNumber() {
+    public Optional<String> clientNumber() {
         return Optional.ofNullable(this.clientNumber);
     }
-    public Optional<String> getLogonLanguage() {
+    public Optional<String> logonLanguage() {
         return Optional.ofNullable(this.logonLanguage);
     }
-    public Optional<ConnectorProfileOAuthProperties> getOAuthProperties() {
+    public Optional<ConnectorProfileOAuthProperties> oAuthProperties() {
         return Optional.ofNullable(this.oAuthProperties);
     }
-    public Optional<Integer> getPortNumber() {
+    public Optional<Integer> portNumber() {
         return Optional.ofNullable(this.portNumber);
     }
-    public Optional<String> getPrivateLinkServiceName() {
+    public Optional<String> privateLinkServiceName() {
         return Optional.ofNullable(this.privateLinkServiceName);
     }
 

@@ -15,7 +15,7 @@ public final class GetCloudFormationProvisionedProductArgs extends com.pulumi.re
     @Import(name="provisionedProductId", required=true)
       private final String provisionedProductId;
 
-    public String getProvisionedProductId() {
+    public String provisionedProductId() {
         return this.provisionedProductId;
     }
 

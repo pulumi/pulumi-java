@@ -17,14 +17,14 @@ public final class AnomalyDetectorAppFlowConfigArgs extends com.pulumi.resources
     @Import(name="flowName", required=true)
       private final Output<String> flowName;
 
-    public Output<String> getFlowName() {
+    public Output<String> flowName() {
         return this.flowName;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 

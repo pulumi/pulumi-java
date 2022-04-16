@@ -28,7 +28,7 @@ public final class FlowDestinationFlowConfigArgs extends com.pulumi.resources.Re
     @Import(name="connectorProfileName")
       private final @Nullable Output<String> connectorProfileName;
 
-    public Output<String> getConnectorProfileName() {
+    public Output<String> connectorProfileName() {
         return this.connectorProfileName == null ? Codegen.empty() : this.connectorProfileName;
     }
 
@@ -39,7 +39,7 @@ public final class FlowDestinationFlowConfigArgs extends com.pulumi.resources.Re
     @Import(name="connectorType", required=true)
       private final Output<FlowConnectorType> connectorType;
 
-    public Output<FlowConnectorType> getConnectorType() {
+    public Output<FlowConnectorType> connectorType() {
         return this.connectorType;
     }
 
@@ -50,7 +50,7 @@ public final class FlowDestinationFlowConfigArgs extends com.pulumi.resources.Re
     @Import(name="destinationConnectorProperties", required=true)
       private final Output<FlowDestinationConnectorPropertiesArgs> destinationConnectorProperties;
 
-    public Output<FlowDestinationConnectorPropertiesArgs> getDestinationConnectorProperties() {
+    public Output<FlowDestinationConnectorPropertiesArgs> destinationConnectorProperties() {
         return this.destinationConnectorProperties;
     }
 

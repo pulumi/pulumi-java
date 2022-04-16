@@ -24,10 +24,10 @@ public final class SpotFleetLaunchTemplateConfig {
         this.overrides = overrides;
     }
 
-    public Optional<SpotFleetFleetLaunchTemplateSpecification> getLaunchTemplateSpecification() {
+    public Optional<SpotFleetFleetLaunchTemplateSpecification> launchTemplateSpecification() {
         return Optional.ofNullable(this.launchTemplateSpecification);
     }
-    public List<SpotFleetLaunchTemplateOverrides> getOverrides() {
+    public List<SpotFleetLaunchTemplateOverrides> overrides() {
         return this.overrides == null ? List.of() : this.overrides;
     }
 

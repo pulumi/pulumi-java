@@ -26,7 +26,7 @@ public final class ChannelHlsIngest {
      * A list of endpoints to which the source stream should be sent.
      * 
     */
-    public List<ChannelIngestEndpoint> getIngestEndpoints() {
+    public List<ChannelIngestEndpoint> ingestEndpoints() {
         return this.ingestEndpoints == null ? List.of() : this.ingestEndpoints;
     }
 

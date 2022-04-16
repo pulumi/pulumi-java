@@ -20,21 +20,21 @@ public final class NetworkInsightsAnalysisArgs extends com.pulumi.resources.Reso
     @Import(name="filterInArns")
       private final @Nullable Output<List<String>> filterInArns;
 
-    public Output<List<String>> getFilterInArns() {
+    public Output<List<String>> filterInArns() {
         return this.filterInArns == null ? Codegen.empty() : this.filterInArns;
     }
 
     @Import(name="networkInsightsPathId", required=true)
       private final Output<String> networkInsightsPathId;
 
-    public Output<String> getNetworkInsightsPathId() {
+    public Output<String> networkInsightsPathId() {
         return this.networkInsightsPathId;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<NetworkInsightsAnalysisTagArgs>> tags;
 
-    public Output<List<NetworkInsightsAnalysisTagArgs>> getTags() {
+    public Output<List<NetworkInsightsAnalysisTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

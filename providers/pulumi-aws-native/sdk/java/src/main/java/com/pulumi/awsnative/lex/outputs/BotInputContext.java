@@ -24,7 +24,7 @@ public final class BotInputContext {
      * The name of the context.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

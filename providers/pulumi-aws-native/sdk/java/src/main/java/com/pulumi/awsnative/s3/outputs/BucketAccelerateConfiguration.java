@@ -24,7 +24,7 @@ public final class BucketAccelerateConfiguration {
      * Configures the transfer acceleration state for an Amazon S3 bucket.
      * 
     */
-    public BucketAccelerateConfigurationAccelerationStatus getAccelerationStatus() {
+    public BucketAccelerateConfigurationAccelerationStatus accelerationStatus() {
         return this.accelerationStatus;
     }
 

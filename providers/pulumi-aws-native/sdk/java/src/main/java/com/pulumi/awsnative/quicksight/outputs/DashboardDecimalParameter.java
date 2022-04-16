@@ -34,14 +34,14 @@ public final class DashboardDecimalParameter {
      * <p>A display name for the decimal parameter.</p>
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * <p>The values for the decimal parameter.</p>
      * 
     */
-    public List<Double> getValues() {
+    public List<Double> values() {
         return this.values;
     }
 

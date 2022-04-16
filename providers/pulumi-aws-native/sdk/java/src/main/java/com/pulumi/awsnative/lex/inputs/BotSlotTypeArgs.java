@@ -26,42 +26,42 @@ public final class BotSlotTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="externalSourceSetting")
       private final @Nullable Output<BotExternalSourceSettingArgs> externalSourceSetting;
 
-    public Output<BotExternalSourceSettingArgs> getExternalSourceSetting() {
+    public Output<BotExternalSourceSettingArgs> externalSourceSetting() {
         return this.externalSourceSetting == null ? Codegen.empty() : this.externalSourceSetting;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="parentSlotTypeSignature")
       private final @Nullable Output<String> parentSlotTypeSignature;
 
-    public Output<String> getParentSlotTypeSignature() {
+    public Output<String> parentSlotTypeSignature() {
         return this.parentSlotTypeSignature == null ? Codegen.empty() : this.parentSlotTypeSignature;
     }
 
     @Import(name="slotTypeValues")
       private final @Nullable Output<List<BotSlotTypeValueArgs>> slotTypeValues;
 
-    public Output<List<BotSlotTypeValueArgs>> getSlotTypeValues() {
+    public Output<List<BotSlotTypeValueArgs>> slotTypeValues() {
         return this.slotTypeValues == null ? Codegen.empty() : this.slotTypeValues;
     }
 
     @Import(name="valueSelectionSetting")
       private final @Nullable Output<BotSlotValueSelectionSettingArgs> valueSelectionSetting;
 
-    public Output<BotSlotValueSelectionSettingArgs> getValueSelectionSetting() {
+    public Output<BotSlotValueSelectionSettingArgs> valueSelectionSetting() {
         return this.valueSelectionSetting == null ? Codegen.empty() : this.valueSelectionSetting;
     }
 

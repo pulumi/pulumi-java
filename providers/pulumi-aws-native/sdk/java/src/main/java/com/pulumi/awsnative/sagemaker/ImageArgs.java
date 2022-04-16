@@ -20,28 +20,28 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageDescription")
       private final @Nullable Output<String> imageDescription;
 
-    public Output<String> getImageDescription() {
+    public Output<String> imageDescription() {
         return this.imageDescription == null ? Codegen.empty() : this.imageDescription;
     }
 
     @Import(name="imageDisplayName")
       private final @Nullable Output<String> imageDisplayName;
 
-    public Output<String> getImageDisplayName() {
+    public Output<String> imageDisplayName() {
         return this.imageDisplayName == null ? Codegen.empty() : this.imageDisplayName;
     }
 
     @Import(name="imageName")
       private final @Nullable Output<String> imageName;
 
-    public Output<String> getImageName() {
+    public Output<String> imageName() {
         return this.imageName == null ? Codegen.empty() : this.imageName;
     }
 
     @Import(name="imageRoleArn", required=true)
       private final Output<String> imageRoleArn;
 
-    public Output<String> getImageRoleArn() {
+    public Output<String> imageRoleArn() {
         return this.imageRoleArn;
     }
 
@@ -52,7 +52,7 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<ImageTagArgs>> tags;
 
-    public Output<List<ImageTagArgs>> getTags() {
+    public Output<List<ImageTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

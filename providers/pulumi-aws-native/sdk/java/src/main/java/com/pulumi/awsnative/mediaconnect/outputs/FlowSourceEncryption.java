@@ -85,63 +85,63 @@ public final class FlowSourceEncryption {
      * The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).
      * 
     */
-    public FlowSourceEncryptionAlgorithm getAlgorithm() {
+    public FlowSourceEncryptionAlgorithm algorithm() {
         return this.algorithm;
     }
     /**
      * A 128-bit, 16-byte hex value represented by a 32-character string, to be used with the key for encrypting content. This parameter is not valid for static key encryption.
      * 
     */
-    public Optional<String> getConstantInitializationVector() {
+    public Optional<String> constantInitializationVector() {
         return Optional.ofNullable(this.constantInitializationVector);
     }
     /**
      * The value of one of the devices that you configured with your digital rights management (DRM) platform key provider. This parameter is required for SPEKE encryption and is not valid for static key encryption.
      * 
     */
-    public Optional<String> getDeviceId() {
+    public Optional<String> deviceId() {
         return Optional.ofNullable(this.deviceId);
     }
     /**
      * The type of key that is used for the encryption. If no keyType is provided, the service will use the default setting (static-key).
      * 
     */
-    public Optional<FlowSourceEncryptionKeyType> getKeyType() {
+    public Optional<FlowSourceEncryptionKeyType> keyType() {
         return Optional.ofNullable(this.keyType);
     }
     /**
      * The AWS Region that the API Gateway proxy endpoint was created in. This parameter is required for SPEKE encryption and is not valid for static key encryption.
      * 
     */
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
     /**
      * An identifier for the content. The service sends this value to the key server to identify the current endpoint. The resource ID is also known as the content ID. This parameter is required for SPEKE encryption and is not valid for static key encryption.
      * 
     */
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
      * The ARN of the role that you created during setup (when you set up AWS Elemental MediaConnect as a trusted entity).
      * 
     */
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
     /**
      *  The ARN of the secret that you created in AWS Secrets Manager to store the encryption key. This parameter is required for static key encryption and is not valid for SPEKE encryption.
      * 
     */
-    public Optional<String> getSecretArn() {
+    public Optional<String> secretArn() {
         return Optional.ofNullable(this.secretArn);
     }
     /**
      * The URL from the API Gateway proxy that you set up to talk to your key server. This parameter is required for SPEKE encryption and is not valid for static key encryption.
      * 
     */
-    public Optional<String> getUrl() {
+    public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
 

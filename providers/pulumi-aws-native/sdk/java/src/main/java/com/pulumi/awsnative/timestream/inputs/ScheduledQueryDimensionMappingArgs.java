@@ -22,14 +22,14 @@ public final class ScheduledQueryDimensionMappingArgs extends com.pulumi.resourc
     @Import(name="dimensionValueType", required=true)
       private final Output<ScheduledQueryDimensionValueType> dimensionValueType;
 
-    public Output<ScheduledQueryDimensionValueType> getDimensionValueType() {
+    public Output<ScheduledQueryDimensionValueType> dimensionValueType() {
         return this.dimensionValueType;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

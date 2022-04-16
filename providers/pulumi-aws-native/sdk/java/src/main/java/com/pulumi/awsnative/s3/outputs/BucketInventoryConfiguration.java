@@ -67,49 +67,49 @@ public final class BucketInventoryConfiguration {
         this.scheduleFrequency = scheduleFrequency;
     }
 
-    public BucketDestination getDestination() {
+    public BucketDestination destination() {
         return this.destination;
     }
     /**
      * Specifies whether the inventory is enabled or disabled.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
     /**
      * The ID used to identify the inventory configuration.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Object versions to include in the inventory list.
      * 
     */
-    public BucketInventoryConfigurationIncludedObjectVersions getIncludedObjectVersions() {
+    public BucketInventoryConfigurationIncludedObjectVersions includedObjectVersions() {
         return this.includedObjectVersions;
     }
     /**
      * Contains the optional fields that are included in the inventory results.
      * 
     */
-    public List<BucketInventoryConfigurationOptionalFieldsItem> getOptionalFields() {
+    public List<BucketInventoryConfigurationOptionalFieldsItem> optionalFields() {
         return this.optionalFields == null ? List.of() : this.optionalFields;
     }
     /**
      * The prefix that is prepended to all inventory results.
      * 
     */
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
      * Specifies the schedule for generating inventory results.
      * 
     */
-    public BucketInventoryConfigurationScheduleFrequency getScheduleFrequency() {
+    public BucketInventoryConfigurationScheduleFrequency scheduleFrequency() {
         return this.scheduleFrequency;
     }
 

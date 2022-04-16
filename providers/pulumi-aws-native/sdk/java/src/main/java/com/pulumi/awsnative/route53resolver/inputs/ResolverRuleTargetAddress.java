@@ -21,7 +21,7 @@ public final class ResolverRuleTargetAddress extends com.pulumi.resources.Invoke
     @Import(name="ip", required=true)
       private final String ip;
 
-    public String getIp() {
+    public String ip() {
         return this.ip;
     }
 
@@ -32,7 +32,7 @@ public final class ResolverRuleTargetAddress extends com.pulumi.resources.Invoke
     @Import(name="port")
       private final @Nullable String port;
 
-    public Optional<String> getPort() {
+    public Optional<String> port() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 

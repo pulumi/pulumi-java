@@ -24,7 +24,7 @@ public final class GlobalReplicationGroupRegionalConfigurationArgs extends com.p
     @Import(name="replicationGroupId")
       private final @Nullable Output<String> replicationGroupId;
 
-    public Output<String> getReplicationGroupId() {
+    public Output<String> replicationGroupId() {
         return this.replicationGroupId == null ? Codegen.empty() : this.replicationGroupId;
     }
 
@@ -35,7 +35,7 @@ public final class GlobalReplicationGroupRegionalConfigurationArgs extends com.p
     @Import(name="replicationGroupRegion")
       private final @Nullable Output<String> replicationGroupRegion;
 
-    public Output<String> getReplicationGroupRegion() {
+    public Output<String> replicationGroupRegion() {
         return this.replicationGroupRegion == null ? Codegen.empty() : this.replicationGroupRegion;
     }
 
@@ -46,7 +46,7 @@ public final class GlobalReplicationGroupRegionalConfigurationArgs extends com.p
     @Import(name="reshardingConfigurations")
       private final @Nullable Output<List<GlobalReplicationGroupReshardingConfigurationArgs>> reshardingConfigurations;
 
-    public Output<List<GlobalReplicationGroupReshardingConfigurationArgs>> getReshardingConfigurations() {
+    public Output<List<GlobalReplicationGroupReshardingConfigurationArgs>> reshardingConfigurations() {
         return this.reshardingConfigurations == null ? Codegen.empty() : this.reshardingConfigurations;
     }
 

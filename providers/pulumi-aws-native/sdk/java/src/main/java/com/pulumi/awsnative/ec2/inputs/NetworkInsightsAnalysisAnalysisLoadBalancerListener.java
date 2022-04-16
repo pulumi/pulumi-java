@@ -17,14 +17,14 @@ public final class NetworkInsightsAnalysisAnalysisLoadBalancerListener extends c
     @Import(name="instancePort")
       private final @Nullable Integer instancePort;
 
-    public Optional<Integer> getInstancePort() {
+    public Optional<Integer> instancePort() {
         return this.instancePort == null ? Optional.empty() : Optional.ofNullable(this.instancePort);
     }
 
     @Import(name="loadBalancerPort")
       private final @Nullable Integer loadBalancerPort;
 
-    public Optional<Integer> getLoadBalancerPort() {
+    public Optional<Integer> loadBalancerPort() {
         return this.loadBalancerPort == null ? Optional.empty() : Optional.ofNullable(this.loadBalancerPort);
     }
 

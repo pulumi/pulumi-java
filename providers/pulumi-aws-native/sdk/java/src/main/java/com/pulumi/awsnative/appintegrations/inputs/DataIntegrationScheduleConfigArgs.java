@@ -21,7 +21,7 @@ public final class DataIntegrationScheduleConfigArgs extends com.pulumi.resource
     @Import(name="firstExecutionFrom", required=true)
       private final Output<String> firstExecutionFrom;
 
-    public Output<String> getFirstExecutionFrom() {
+    public Output<String> firstExecutionFrom() {
         return this.firstExecutionFrom;
     }
 
@@ -32,7 +32,7 @@ public final class DataIntegrationScheduleConfigArgs extends com.pulumi.resource
     @Import(name="object", required=true)
       private final Output<String> object;
 
-    public Output<String> getObject() {
+    public Output<String> object() {
         return this.object;
     }
 
@@ -43,7 +43,7 @@ public final class DataIntegrationScheduleConfigArgs extends com.pulumi.resource
     @Import(name="scheduleExpression", required=true)
       private final Output<String> scheduleExpression;
 
-    public Output<String> getScheduleExpression() {
+    public Output<String> scheduleExpression() {
         return this.scheduleExpression;
     }
 

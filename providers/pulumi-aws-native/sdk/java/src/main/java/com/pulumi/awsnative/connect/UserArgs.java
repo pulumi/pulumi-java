@@ -26,7 +26,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="directoryUserId")
       private final @Nullable Output<String> directoryUserId;
 
-    public Output<String> getDirectoryUserId() {
+    public Output<String> directoryUserId() {
         return this.directoryUserId == null ? Codegen.empty() : this.directoryUserId;
     }
 
@@ -37,7 +37,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hierarchyGroupArn")
       private final @Nullable Output<String> hierarchyGroupArn;
 
-    public Output<String> getHierarchyGroupArn() {
+    public Output<String> hierarchyGroupArn() {
         return this.hierarchyGroupArn == null ? Codegen.empty() : this.hierarchyGroupArn;
     }
 
@@ -48,7 +48,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identityInfo")
       private final @Nullable Output<UserIdentityInfoArgs> identityInfo;
 
-    public Output<UserIdentityInfoArgs> getIdentityInfo() {
+    public Output<UserIdentityInfoArgs> identityInfo() {
         return this.identityInfo == null ? Codegen.empty() : this.identityInfo;
     }
 
@@ -59,7 +59,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceArn", required=true)
       private final Output<String> instanceArn;
 
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
 
@@ -70,7 +70,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -81,7 +81,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="phoneConfig", required=true)
       private final Output<UserPhoneConfigArgs> phoneConfig;
 
-    public Output<UserPhoneConfigArgs> getPhoneConfig() {
+    public Output<UserPhoneConfigArgs> phoneConfig() {
         return this.phoneConfig;
     }
 
@@ -92,7 +92,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="routingProfileArn", required=true)
       private final Output<String> routingProfileArn;
 
-    public Output<String> getRoutingProfileArn() {
+    public Output<String> routingProfileArn() {
         return this.routingProfileArn;
     }
 
@@ -103,7 +103,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityProfileArns", required=true)
       private final Output<List<String>> securityProfileArns;
 
-    public Output<List<String>> getSecurityProfileArns() {
+    public Output<List<String>> securityProfileArns() {
         return this.securityProfileArns;
     }
 
@@ -114,7 +114,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<UserTagArgs>> tags;
 
-    public Output<List<UserTagArgs>> getTags() {
+    public Output<List<UserTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -125,7 +125,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 

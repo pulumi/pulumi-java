@@ -19,21 +19,21 @@ public final class TopicRuleSqsActionArgs extends com.pulumi.resources.ResourceA
     @Import(name="queueUrl", required=true)
       private final Output<String> queueUrl;
 
-    public Output<String> getQueueUrl() {
+    public Output<String> queueUrl() {
         return this.queueUrl;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="useBase64")
       private final @Nullable Output<Boolean> useBase64;
 
-    public Output<Boolean> getUseBase64() {
+    public Output<Boolean> useBase64() {
         return this.useBase64 == null ? Codegen.empty() : this.useBase64;
     }
 

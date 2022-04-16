@@ -51,28 +51,28 @@ public final class RuleGroupRuleAction {
      * Allow traffic towards application.
      * 
     */
-    public Optional<RuleGroupRuleActionAllowProperties> getAllow() {
+    public Optional<RuleGroupRuleActionAllowProperties> allow() {
         return Optional.ofNullable(this.allow);
     }
     /**
      * Block traffic towards application.
      * 
     */
-    public Optional<RuleGroupRuleActionBlockProperties> getBlock() {
+    public Optional<RuleGroupRuleActionBlockProperties> block() {
         return Optional.ofNullable(this.block);
     }
     /**
      * Checks valid token exists with request.
      * 
     */
-    public Optional<RuleGroupRuleActionCaptchaProperties> getCaptcha() {
+    public Optional<RuleGroupRuleActionCaptchaProperties> captcha() {
         return Optional.ofNullable(this.captcha);
     }
     /**
      * Count traffic towards application.
      * 
     */
-    public Optional<RuleGroupRuleActionCountProperties> getCount() {
+    public Optional<RuleGroupRuleActionCountProperties> count() {
         return Optional.ofNullable(this.count);
     }
 

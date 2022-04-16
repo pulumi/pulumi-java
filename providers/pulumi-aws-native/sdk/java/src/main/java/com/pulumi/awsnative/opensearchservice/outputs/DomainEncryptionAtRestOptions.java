@@ -23,10 +23,10 @@ public final class DomainEncryptionAtRestOptions {
         this.kmsKeyId = kmsKeyId;
     }
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
-    public Optional<String> getKmsKeyId() {
+    public Optional<String> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
 

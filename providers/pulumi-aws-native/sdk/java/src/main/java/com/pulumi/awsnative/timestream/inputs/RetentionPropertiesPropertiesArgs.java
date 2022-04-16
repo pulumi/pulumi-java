@@ -26,7 +26,7 @@ public final class RetentionPropertiesPropertiesArgs extends com.pulumi.resource
     @Import(name="magneticStoreRetentionPeriodInDays")
       private final @Nullable Output<String> magneticStoreRetentionPeriodInDays;
 
-    public Output<String> getMagneticStoreRetentionPeriodInDays() {
+    public Output<String> magneticStoreRetentionPeriodInDays() {
         return this.magneticStoreRetentionPeriodInDays == null ? Codegen.empty() : this.magneticStoreRetentionPeriodInDays;
     }
 
@@ -37,7 +37,7 @@ public final class RetentionPropertiesPropertiesArgs extends com.pulumi.resource
     @Import(name="memoryStoreRetentionPeriodInHours")
       private final @Nullable Output<String> memoryStoreRetentionPeriodInHours;
 
-    public Output<String> getMemoryStoreRetentionPeriodInHours() {
+    public Output<String> memoryStoreRetentionPeriodInHours() {
         return this.memoryStoreRetentionPeriodInHours == null ? Codegen.empty() : this.memoryStoreRetentionPeriodInHours;
     }
 

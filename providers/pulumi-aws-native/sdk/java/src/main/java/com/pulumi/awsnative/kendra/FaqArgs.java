@@ -26,7 +26,7 @@ public final class FaqArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class FaqArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fileFormat")
       private final @Nullable Output<FaqFileFormat> fileFormat;
 
-    public Output<FaqFileFormat> getFileFormat() {
+    public Output<FaqFileFormat> fileFormat() {
         return this.fileFormat == null ? Codegen.empty() : this.fileFormat;
     }
 
@@ -48,7 +48,7 @@ public final class FaqArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="indexId", required=true)
       private final Output<String> indexId;
 
-    public Output<String> getIndexId() {
+    public Output<String> indexId() {
         return this.indexId;
     }
 
@@ -59,7 +59,7 @@ public final class FaqArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -70,7 +70,7 @@ public final class FaqArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -81,7 +81,7 @@ public final class FaqArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3Path", required=true)
       private final Output<FaqS3PathArgs> s3Path;
 
-    public Output<FaqS3PathArgs> getS3Path() {
+    public Output<FaqS3PathArgs> s3Path() {
         return this.s3Path;
     }
 
@@ -92,7 +92,7 @@ public final class FaqArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<FaqTagArgs>> tags;
 
-    public Output<List<FaqTagArgs>> getTags() {
+    public Output<List<FaqTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

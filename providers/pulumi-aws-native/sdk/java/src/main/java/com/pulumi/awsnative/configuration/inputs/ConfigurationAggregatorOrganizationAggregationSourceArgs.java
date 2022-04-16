@@ -20,21 +20,21 @@ public final class ConfigurationAggregatorOrganizationAggregationSourceArgs exte
     @Import(name="allAwsRegions")
       private final @Nullable Output<Boolean> allAwsRegions;
 
-    public Output<Boolean> getAllAwsRegions() {
+    public Output<Boolean> allAwsRegions() {
         return this.allAwsRegions == null ? Codegen.empty() : this.allAwsRegions;
     }
 
     @Import(name="awsRegions")
       private final @Nullable Output<List<String>> awsRegions;
 
-    public Output<List<String>> getAwsRegions() {
+    public Output<List<String>> awsRegions() {
         return this.awsRegions == null ? Codegen.empty() : this.awsRegions;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 

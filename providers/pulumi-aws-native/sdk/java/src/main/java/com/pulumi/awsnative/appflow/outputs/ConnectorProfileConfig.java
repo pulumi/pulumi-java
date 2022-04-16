@@ -23,10 +23,10 @@ public final class ConnectorProfileConfig {
         this.connectorProfileProperties = connectorProfileProperties;
     }
 
-    public ConnectorProfileCredentials getConnectorProfileCredentials() {
+    public ConnectorProfileCredentials connectorProfileCredentials() {
         return this.connectorProfileCredentials;
     }
-    public Optional<ConnectorProfileProperties> getConnectorProfileProperties() {
+    public Optional<ConnectorProfileProperties> connectorProfileProperties() {
         return Optional.ofNullable(this.connectorProfileProperties);
     }
 

@@ -28,16 +28,16 @@ public final class TopicRuleAssetPropertyVariant {
         this.stringValue = stringValue;
     }
 
-    public Optional<String> getBooleanValue() {
+    public Optional<String> booleanValue() {
         return Optional.ofNullable(this.booleanValue);
     }
-    public Optional<String> getDoubleValue() {
+    public Optional<String> doubleValue() {
         return Optional.ofNullable(this.doubleValue);
     }
-    public Optional<String> getIntegerValue() {
+    public Optional<String> integerValue() {
         return Optional.ofNullable(this.integerValue);
     }
-    public Optional<String> getStringValue() {
+    public Optional<String> stringValue() {
         return Optional.ofNullable(this.stringValue);
     }
 

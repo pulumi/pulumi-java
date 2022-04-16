@@ -26,7 +26,7 @@ public final class LocationNFSMountOptionsArgs extends com.pulumi.resources.Reso
     @Import(name="version")
       private final @Nullable Output<LocationNFSMountOptionsVersion> version;
 
-    public Output<LocationNFSMountOptionsVersion> getVersion() {
+    public Output<LocationNFSMountOptionsVersion> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

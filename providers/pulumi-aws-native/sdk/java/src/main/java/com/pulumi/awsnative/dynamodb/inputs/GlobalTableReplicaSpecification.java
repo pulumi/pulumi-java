@@ -24,49 +24,49 @@ public final class GlobalTableReplicaSpecification extends com.pulumi.resources.
     @Import(name="contributorInsightsSpecification")
       private final @Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification;
 
-    public Optional<GlobalTableContributorInsightsSpecification> getContributorInsightsSpecification() {
+    public Optional<GlobalTableContributorInsightsSpecification> contributorInsightsSpecification() {
         return this.contributorInsightsSpecification == null ? Optional.empty() : Optional.ofNullable(this.contributorInsightsSpecification);
     }
 
     @Import(name="globalSecondaryIndexes")
       private final @Nullable List<GlobalTableReplicaGlobalSecondaryIndexSpecification> globalSecondaryIndexes;
 
-    public List<GlobalTableReplicaGlobalSecondaryIndexSpecification> getGlobalSecondaryIndexes() {
+    public List<GlobalTableReplicaGlobalSecondaryIndexSpecification> globalSecondaryIndexes() {
         return this.globalSecondaryIndexes == null ? List.of() : this.globalSecondaryIndexes;
     }
 
     @Import(name="pointInTimeRecoverySpecification")
       private final @Nullable GlobalTablePointInTimeRecoverySpecification pointInTimeRecoverySpecification;
 
-    public Optional<GlobalTablePointInTimeRecoverySpecification> getPointInTimeRecoverySpecification() {
+    public Optional<GlobalTablePointInTimeRecoverySpecification> pointInTimeRecoverySpecification() {
         return this.pointInTimeRecoverySpecification == null ? Optional.empty() : Optional.ofNullable(this.pointInTimeRecoverySpecification);
     }
 
     @Import(name="readProvisionedThroughputSettings")
       private final @Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings;
 
-    public Optional<GlobalTableReadProvisionedThroughputSettings> getReadProvisionedThroughputSettings() {
+    public Optional<GlobalTableReadProvisionedThroughputSettings> readProvisionedThroughputSettings() {
         return this.readProvisionedThroughputSettings == null ? Optional.empty() : Optional.ofNullable(this.readProvisionedThroughputSettings);
     }
 
     @Import(name="region", required=true)
       private final String region;
 
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 
     @Import(name="sSESpecification")
       private final @Nullable GlobalTableReplicaSSESpecification sSESpecification;
 
-    public Optional<GlobalTableReplicaSSESpecification> getSSESpecification() {
+    public Optional<GlobalTableReplicaSSESpecification> sSESpecification() {
         return this.sSESpecification == null ? Optional.empty() : Optional.ofNullable(this.sSESpecification);
     }
 
     @Import(name="tags")
       private final @Nullable List<GlobalTableTag> tags;
 
-    public List<GlobalTableTag> getTags() {
+    public List<GlobalTableTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

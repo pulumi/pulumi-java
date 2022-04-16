@@ -23,13 +23,13 @@ public final class TopicRuleSigV4Authorization {
         this.signingRegion = signingRegion;
     }
 
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
-    public String getSigningRegion() {
+    public String signingRegion() {
         return this.signingRegion;
     }
 

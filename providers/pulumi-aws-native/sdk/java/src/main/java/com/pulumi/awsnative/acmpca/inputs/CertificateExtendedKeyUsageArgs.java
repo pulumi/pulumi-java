@@ -22,14 +22,14 @@ public final class CertificateExtendedKeyUsageArgs extends com.pulumi.resources.
     @Import(name="extendedKeyUsageObjectIdentifier")
       private final @Nullable Output<String> extendedKeyUsageObjectIdentifier;
 
-    public Output<String> getExtendedKeyUsageObjectIdentifier() {
+    public Output<String> extendedKeyUsageObjectIdentifier() {
         return this.extendedKeyUsageObjectIdentifier == null ? Codegen.empty() : this.extendedKeyUsageObjectIdentifier;
     }
 
     @Import(name="extendedKeyUsageType")
       private final @Nullable Output<String> extendedKeyUsageType;
 
-    public Output<String> getExtendedKeyUsageType() {
+    public Output<String> extendedKeyUsageType() {
         return this.extendedKeyUsageType == null ? Codegen.empty() : this.extendedKeyUsageType;
     }
 

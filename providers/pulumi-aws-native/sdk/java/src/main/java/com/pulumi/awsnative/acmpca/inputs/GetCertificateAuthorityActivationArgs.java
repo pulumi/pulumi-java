@@ -19,7 +19,7 @@ public final class GetCertificateAuthorityActivationArgs extends com.pulumi.reso
     @Import(name="certificateAuthorityArn", required=true)
       private final String certificateAuthorityArn;
 
-    public String getCertificateAuthorityArn() {
+    public String certificateAuthorityArn() {
         return this.certificateAuthorityArn;
     }
 

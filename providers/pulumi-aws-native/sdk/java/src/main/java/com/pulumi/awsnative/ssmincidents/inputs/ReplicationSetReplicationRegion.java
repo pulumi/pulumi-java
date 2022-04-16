@@ -22,14 +22,14 @@ public final class ReplicationSetReplicationRegion extends com.pulumi.resources.
     @Import(name="regionConfiguration")
       private final @Nullable ReplicationSetRegionConfiguration regionConfiguration;
 
-    public Optional<ReplicationSetRegionConfiguration> getRegionConfiguration() {
+    public Optional<ReplicationSetRegionConfiguration> regionConfiguration() {
         return this.regionConfiguration == null ? Optional.empty() : Optional.ofNullable(this.regionConfiguration);
     }
 
     @Import(name="regionName")
       private final @Nullable String regionName;
 
-    public Optional<String> getRegionName() {
+    public Optional<String> regionName() {
         return this.regionName == null ? Optional.empty() : Optional.ofNullable(this.regionName);
     }
 

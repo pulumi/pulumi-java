@@ -23,7 +23,7 @@ public final class EventTypeEventVariable extends com.pulumi.resources.InvokeArg
     @Import(name="arn")
       private final @Nullable String arn;
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
     }
 
@@ -34,28 +34,28 @@ public final class EventTypeEventVariable extends com.pulumi.resources.InvokeArg
     @Import(name="createdTime")
       private final @Nullable String createdTime;
 
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return this.createdTime == null ? Optional.empty() : Optional.ofNullable(this.createdTime);
     }
 
     @Import(name="dataSource")
       private final @Nullable EventTypeEventVariableDataSource dataSource;
 
-    public Optional<EventTypeEventVariableDataSource> getDataSource() {
+    public Optional<EventTypeEventVariableDataSource> dataSource() {
         return this.dataSource == null ? Optional.empty() : Optional.ofNullable(this.dataSource);
     }
 
     @Import(name="dataType")
       private final @Nullable EventTypeEventVariableDataType dataType;
 
-    public Optional<EventTypeEventVariableDataType> getDataType() {
+    public Optional<EventTypeEventVariableDataType> dataType() {
         return this.dataType == null ? Optional.empty() : Optional.ofNullable(this.dataType);
     }
 
     @Import(name="defaultValue")
       private final @Nullable String defaultValue;
 
-    public Optional<String> getDefaultValue() {
+    public Optional<String> defaultValue() {
         return this.defaultValue == null ? Optional.empty() : Optional.ofNullable(this.defaultValue);
     }
 
@@ -66,14 +66,14 @@ public final class EventTypeEventVariable extends com.pulumi.resources.InvokeArg
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
     @Import(name="inline")
       private final @Nullable Boolean inline;
 
-    public Optional<Boolean> getInline() {
+    public Optional<Boolean> inline() {
         return this.inline == null ? Optional.empty() : Optional.ofNullable(this.inline);
     }
 
@@ -84,14 +84,14 @@ public final class EventTypeEventVariable extends com.pulumi.resources.InvokeArg
     @Import(name="lastUpdatedTime")
       private final @Nullable String lastUpdatedTime;
 
-    public Optional<String> getLastUpdatedTime() {
+    public Optional<String> lastUpdatedTime() {
         return this.lastUpdatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastUpdatedTime);
     }
 
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -102,14 +102,14 @@ public final class EventTypeEventVariable extends com.pulumi.resources.InvokeArg
     @Import(name="tags")
       private final @Nullable List<EventTypeTag> tags;
 
-    public List<EventTypeTag> getTags() {
+    public List<EventTypeTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 
     @Import(name="variableType")
       private final @Nullable EventTypeEventVariableVariableType variableType;
 
-    public Optional<EventTypeEventVariableVariableType> getVariableType() {
+    public Optional<EventTypeEventVariableVariableType> variableType() {
         return this.variableType == null ? Optional.empty() : Optional.ofNullable(this.variableType);
     }
 

@@ -31,16 +31,16 @@ public final class GetRealtimeLogConfigResult {
         this.samplingRate = samplingRate;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public List<RealtimeLogConfigEndPoint> getEndPoints() {
+    public List<RealtimeLogConfigEndPoint> endPoints() {
         return this.endPoints == null ? List.of() : this.endPoints;
     }
-    public List<String> getFields() {
+    public List<String> fields() {
         return this.fields == null ? List.of() : this.fields;
     }
-    public Optional<Double> getSamplingRate() {
+    public Optional<Double> samplingRate() {
         return Optional.ofNullable(this.samplingRate);
     }
 

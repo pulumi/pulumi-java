@@ -18,7 +18,7 @@ public final class ServiceDeploymentControllerArgs extends com.pulumi.resources.
     @Import(name="type")
       private final @Nullable Output<ServiceDeploymentControllerType> type;
 
-    public Output<ServiceDeploymentControllerType> getType() {
+    public Output<ServiceDeploymentControllerType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

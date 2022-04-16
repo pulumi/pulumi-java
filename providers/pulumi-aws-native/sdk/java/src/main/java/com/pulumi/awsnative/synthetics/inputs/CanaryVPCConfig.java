@@ -18,21 +18,21 @@ public final class CanaryVPCConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="securityGroupIds", required=true)
       private final List<String> securityGroupIds;
 
-    public List<String> getSecurityGroupIds() {
+    public List<String> securityGroupIds() {
         return this.securityGroupIds;
     }
 
     @Import(name="subnetIds", required=true)
       private final List<String> subnetIds;
 
-    public List<String> getSubnetIds() {
+    public List<String> subnetIds() {
         return this.subnetIds;
     }
 
     @Import(name="vpcId")
       private final @Nullable String vpcId;
 
-    public Optional<String> getVpcId() {
+    public Optional<String> vpcId() {
         return this.vpcId == null ? Optional.empty() : Optional.ofNullable(this.vpcId);
     }
 

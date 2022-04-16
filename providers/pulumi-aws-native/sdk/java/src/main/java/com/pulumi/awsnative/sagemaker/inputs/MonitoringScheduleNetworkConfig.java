@@ -26,7 +26,7 @@ public final class MonitoringScheduleNetworkConfig extends com.pulumi.resources.
     @Import(name="enableInterContainerTrafficEncryption")
       private final @Nullable Boolean enableInterContainerTrafficEncryption;
 
-    public Optional<Boolean> getEnableInterContainerTrafficEncryption() {
+    public Optional<Boolean> enableInterContainerTrafficEncryption() {
         return this.enableInterContainerTrafficEncryption == null ? Optional.empty() : Optional.ofNullable(this.enableInterContainerTrafficEncryption);
     }
 
@@ -37,14 +37,14 @@ public final class MonitoringScheduleNetworkConfig extends com.pulumi.resources.
     @Import(name="enableNetworkIsolation")
       private final @Nullable Boolean enableNetworkIsolation;
 
-    public Optional<Boolean> getEnableNetworkIsolation() {
+    public Optional<Boolean> enableNetworkIsolation() {
         return this.enableNetworkIsolation == null ? Optional.empty() : Optional.ofNullable(this.enableNetworkIsolation);
     }
 
     @Import(name="vpcConfig")
       private final @Nullable MonitoringScheduleVpcConfig vpcConfig;
 
-    public Optional<MonitoringScheduleVpcConfig> getVpcConfig() {
+    public Optional<MonitoringScheduleVpcConfig> vpcConfig() {
         return this.vpcConfig == null ? Optional.empty() : Optional.ofNullable(this.vpcConfig);
     }
 

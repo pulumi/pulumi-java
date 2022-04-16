@@ -23,10 +23,10 @@ public final class GetSpotFleetResult {
         this.spotFleetRequestConfigData = spotFleetRequestConfigData;
     }
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<SpotFleetRequestConfigData> getSpotFleetRequestConfigData() {
+    public Optional<SpotFleetRequestConfigData> spotFleetRequestConfigData() {
         return Optional.ofNullable(this.spotFleetRequestConfigData);
     }
 

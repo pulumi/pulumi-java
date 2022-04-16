@@ -19,21 +19,21 @@ public final class ConfigurationAggregatorOrganizationAggregationSource extends 
     @Import(name="allAwsRegions")
       private final @Nullable Boolean allAwsRegions;
 
-    public Optional<Boolean> getAllAwsRegions() {
+    public Optional<Boolean> allAwsRegions() {
         return this.allAwsRegions == null ? Optional.empty() : Optional.ofNullable(this.allAwsRegions);
     }
 
     @Import(name="awsRegions")
       private final @Nullable List<String> awsRegions;
 
-    public List<String> getAwsRegions() {
+    public List<String> awsRegions() {
         return this.awsRegions == null ? List.of() : this.awsRegions;
     }
 
     @Import(name="roleArn", required=true)
       private final String roleArn;
 
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 

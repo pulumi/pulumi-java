@@ -26,14 +26,14 @@ public final class StudioEncryptionConfiguration extends com.pulumi.resources.In
     @Import(name="keyArn")
       private final @Nullable String keyArn;
 
-    public Optional<String> getKeyArn() {
+    public Optional<String> keyArn() {
         return this.keyArn == null ? Optional.empty() : Optional.ofNullable(this.keyArn);
     }
 
     @Import(name="keyType", required=true)
       private final StudioEncryptionConfigurationKeyType keyType;
 
-    public StudioEncryptionConfigurationKeyType getKeyType() {
+    public StudioEncryptionConfigurationKeyType keyType() {
         return this.keyType;
     }
 

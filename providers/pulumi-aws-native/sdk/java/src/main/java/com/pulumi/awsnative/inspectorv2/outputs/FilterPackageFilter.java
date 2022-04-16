@@ -35,22 +35,22 @@ public final class FilterPackageFilter {
         this.version = version;
     }
 
-    public Optional<FilterStringFilter> getArchitecture() {
+    public Optional<FilterStringFilter> architecture() {
         return Optional.ofNullable(this.architecture);
     }
-    public Optional<FilterNumberFilter> getEpoch() {
+    public Optional<FilterNumberFilter> epoch() {
         return Optional.ofNullable(this.epoch);
     }
-    public Optional<FilterStringFilter> getName() {
+    public Optional<FilterStringFilter> name() {
         return Optional.ofNullable(this.name);
     }
-    public Optional<FilterStringFilter> getRelease() {
+    public Optional<FilterStringFilter> release() {
         return Optional.ofNullable(this.release);
     }
-    public Optional<FilterStringFilter> getSourceLayerHash() {
+    public Optional<FilterStringFilter> sourceLayerHash() {
         return Optional.ofNullable(this.sourceLayerHash);
     }
-    public Optional<FilterStringFilter> getVersion() {
+    public Optional<FilterStringFilter> version() {
         return Optional.ofNullable(this.version);
     }
 

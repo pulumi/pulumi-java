@@ -28,55 +28,55 @@ public class BudgetsAction extends com.pulumi.resources.CustomResource {
     @Export(name="actionId", type=String.class, parameters={})
     private Output<String> actionId;
 
-    public Output<String> getActionId() {
+    public Output<String> actionId() {
         return this.actionId;
     }
     @Export(name="actionThreshold", type=BudgetsActionActionThreshold.class, parameters={})
     private Output<BudgetsActionActionThreshold> actionThreshold;
 
-    public Output<BudgetsActionActionThreshold> getActionThreshold() {
+    public Output<BudgetsActionActionThreshold> actionThreshold() {
         return this.actionThreshold;
     }
     @Export(name="actionType", type=BudgetsActionActionType.class, parameters={})
     private Output<BudgetsActionActionType> actionType;
 
-    public Output<BudgetsActionActionType> getActionType() {
+    public Output<BudgetsActionActionType> actionType() {
         return this.actionType;
     }
     @Export(name="approvalModel", type=BudgetsActionApprovalModel.class, parameters={})
     private Output</* @Nullable */ BudgetsActionApprovalModel> approvalModel;
 
-    public Output</* @Nullable */ BudgetsActionApprovalModel> getApprovalModel() {
+    public Output</* @Nullable */ BudgetsActionApprovalModel> approvalModel() {
         return this.approvalModel;
     }
     @Export(name="budgetName", type=String.class, parameters={})
     private Output<String> budgetName;
 
-    public Output<String> getBudgetName() {
+    public Output<String> budgetName() {
         return this.budgetName;
     }
     @Export(name="definition", type=BudgetsActionDefinition.class, parameters={})
     private Output<BudgetsActionDefinition> definition;
 
-    public Output<BudgetsActionDefinition> getDefinition() {
+    public Output<BudgetsActionDefinition> definition() {
         return this.definition;
     }
     @Export(name="executionRoleArn", type=String.class, parameters={})
     private Output<String> executionRoleArn;
 
-    public Output<String> getExecutionRoleArn() {
+    public Output<String> executionRoleArn() {
         return this.executionRoleArn;
     }
     @Export(name="notificationType", type=BudgetsActionNotificationType.class, parameters={})
     private Output<BudgetsActionNotificationType> notificationType;
 
-    public Output<BudgetsActionNotificationType> getNotificationType() {
+    public Output<BudgetsActionNotificationType> notificationType() {
         return this.notificationType;
     }
     @Export(name="subscribers", type=List.class, parameters={BudgetsActionSubscriber.class})
     private Output<List<BudgetsActionSubscriber>> subscribers;
 
-    public Output<List<BudgetsActionSubscriber>> getSubscribers() {
+    public Output<List<BudgetsActionSubscriber>> subscribers() {
         return this.subscribers;
     }
 

@@ -22,10 +22,10 @@ public final class NetworkInsightsAnalysisAnalysisLoadBalancerListener {
         this.loadBalancerPort = loadBalancerPort;
     }
 
-    public Optional<Integer> getInstancePort() {
+    public Optional<Integer> instancePort() {
         return Optional.ofNullable(this.instancePort);
     }
-    public Optional<Integer> getLoadBalancerPort() {
+    public Optional<Integer> loadBalancerPort() {
         return Optional.ofNullable(this.loadBalancerPort);
     }
 

@@ -19,7 +19,7 @@ public final class DeliveryStreamHiveJsonSerDeArgs extends com.pulumi.resources.
     @Import(name="timestampFormats")
       private final @Nullable Output<List<String>> timestampFormats;
 
-    public Output<List<String>> getTimestampFormats() {
+    public Output<List<String>> timestampFormats() {
         return this.timestampFormats == null ? Codegen.empty() : this.timestampFormats;
     }
 

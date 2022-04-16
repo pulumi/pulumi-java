@@ -15,14 +15,14 @@ public final class DeliveryStreamHttpEndpointCommonAttribute extends com.pulumi.
     @Import(name="attributeName", required=true)
       private final String attributeName;
 
-    public String getAttributeName() {
+    public String attributeName() {
         return this.attributeName;
     }
 
     @Import(name="attributeValue", required=true)
       private final String attributeValue;
 
-    public String getAttributeValue() {
+    public String attributeValue() {
         return this.attributeValue;
     }
 

@@ -19,7 +19,7 @@ public final class DataSourceWebCrawlerAuthenticationConfigurationArgs extends c
     @Import(name="basicAuthentication")
       private final @Nullable Output<List<DataSourceWebCrawlerBasicAuthenticationArgs>> basicAuthentication;
 
-    public Output<List<DataSourceWebCrawlerBasicAuthenticationArgs>> getBasicAuthentication() {
+    public Output<List<DataSourceWebCrawlerBasicAuthenticationArgs>> basicAuthentication() {
         return this.basicAuthentication == null ? Codegen.empty() : this.basicAuthentication;
     }
 

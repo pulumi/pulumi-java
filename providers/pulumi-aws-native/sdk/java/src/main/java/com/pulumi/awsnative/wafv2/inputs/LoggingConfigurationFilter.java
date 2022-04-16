@@ -22,7 +22,7 @@ public final class LoggingConfigurationFilter extends com.pulumi.resources.Invok
     @Import(name="behavior", required=true)
       private final LoggingConfigurationFilterBehavior behavior;
 
-    public LoggingConfigurationFilterBehavior getBehavior() {
+    public LoggingConfigurationFilterBehavior behavior() {
         return this.behavior;
     }
 
@@ -33,7 +33,7 @@ public final class LoggingConfigurationFilter extends com.pulumi.resources.Invok
     @Import(name="conditions", required=true)
       private final List<LoggingConfigurationCondition> conditions;
 
-    public List<LoggingConfigurationCondition> getConditions() {
+    public List<LoggingConfigurationCondition> conditions() {
         return this.conditions;
     }
 
@@ -44,7 +44,7 @@ public final class LoggingConfigurationFilter extends com.pulumi.resources.Invok
     @Import(name="requirement", required=true)
       private final LoggingConfigurationFilterRequirement requirement;
 
-    public LoggingConfigurationFilterRequirement getRequirement() {
+    public LoggingConfigurationFilterRequirement requirement() {
         return this.requirement;
     }
 

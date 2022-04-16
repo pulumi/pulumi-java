@@ -49,28 +49,28 @@ public final class DetectorModelTransitionEvent {
      * The actions to be performed.
      * 
     */
-    public List<DetectorModelAction> getActions() {
+    public List<DetectorModelAction> actions() {
         return this.actions == null ? List.of() : this.actions;
     }
     /**
      * A Boolean expression that when `TRUE` causes the `actions` to be performed and the `nextState` to be entered.
      * 
     */
-    public String getCondition() {
+    public String condition() {
         return this.condition;
     }
     /**
      * The name of the event.
      * 
     */
-    public String getEventName() {
+    public String eventName() {
         return this.eventName;
     }
     /**
      * The next state to enter.
      * 
     */
-    public String getNextState() {
+    public String nextState() {
         return this.nextState;
     }
 

@@ -25,7 +25,7 @@ public final class DBProxyEndpointArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="dBProxyEndpointName")
       private final @Nullable Output<String> dBProxyEndpointName;
 
-    public Output<String> getDBProxyEndpointName() {
+    public Output<String> dBProxyEndpointName() {
         return this.dBProxyEndpointName == null ? Codegen.empty() : this.dBProxyEndpointName;
     }
 
@@ -36,7 +36,7 @@ public final class DBProxyEndpointArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="dBProxyName", required=true)
       private final Output<String> dBProxyName;
 
-    public Output<String> getDBProxyName() {
+    public Output<String> dBProxyName() {
         return this.dBProxyName;
     }
 
@@ -47,7 +47,7 @@ public final class DBProxyEndpointArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<List<DBProxyEndpointTagFormatArgs>> tags;
 
-    public Output<List<DBProxyEndpointTagFormatArgs>> getTags() {
+    public Output<List<DBProxyEndpointTagFormatArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -58,7 +58,7 @@ public final class DBProxyEndpointArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="targetRole")
       private final @Nullable Output<DBProxyEndpointTargetRole> targetRole;
 
-    public Output<DBProxyEndpointTargetRole> getTargetRole() {
+    public Output<DBProxyEndpointTargetRole> targetRole() {
         return this.targetRole == null ? Codegen.empty() : this.targetRole;
     }
 
@@ -69,7 +69,7 @@ public final class DBProxyEndpointArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="vpcSecurityGroupIds")
       private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
-    public Output<List<String>> getVpcSecurityGroupIds() {
+    public Output<List<String>> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds == null ? Codegen.empty() : this.vpcSecurityGroupIds;
     }
 
@@ -80,7 +80,7 @@ public final class DBProxyEndpointArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="vpcSubnetIds", required=true)
       private final Output<List<String>> vpcSubnetIds;
 
-    public Output<List<String>> getVpcSubnetIds() {
+    public Output<List<String>> vpcSubnetIds() {
         return this.vpcSubnetIds;
     }
 

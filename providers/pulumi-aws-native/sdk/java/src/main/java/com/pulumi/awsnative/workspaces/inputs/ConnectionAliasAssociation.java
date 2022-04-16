@@ -18,28 +18,28 @@ public final class ConnectionAliasAssociation extends com.pulumi.resources.Invok
     @Import(name="associatedAccountId")
       private final @Nullable String associatedAccountId;
 
-    public Optional<String> getAssociatedAccountId() {
+    public Optional<String> associatedAccountId() {
         return this.associatedAccountId == null ? Optional.empty() : Optional.ofNullable(this.associatedAccountId);
     }
 
     @Import(name="associationStatus")
       private final @Nullable ConnectionAliasAssociationAssociationStatus associationStatus;
 
-    public Optional<ConnectionAliasAssociationAssociationStatus> getAssociationStatus() {
+    public Optional<ConnectionAliasAssociationAssociationStatus> associationStatus() {
         return this.associationStatus == null ? Optional.empty() : Optional.ofNullable(this.associationStatus);
     }
 
     @Import(name="connectionIdentifier")
       private final @Nullable String connectionIdentifier;
 
-    public Optional<String> getConnectionIdentifier() {
+    public Optional<String> connectionIdentifier() {
         return this.connectionIdentifier == null ? Optional.empty() : Optional.ofNullable(this.connectionIdentifier);
     }
 
     @Import(name="resourceId")
       private final @Nullable String resourceId;
 
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
     }
 

@@ -81,58 +81,58 @@ public final class SpotFleetLaunchSpecification {
         this.weightedCapacity = weightedCapacity;
     }
 
-    public List<SpotFleetBlockDeviceMapping> getBlockDeviceMappings() {
+    public List<SpotFleetBlockDeviceMapping> blockDeviceMappings() {
         return this.blockDeviceMappings == null ? List.of() : this.blockDeviceMappings;
     }
-    public Optional<Boolean> getEbsOptimized() {
+    public Optional<Boolean> ebsOptimized() {
         return Optional.ofNullable(this.ebsOptimized);
     }
-    public Optional<SpotFleetIamInstanceProfileSpecification> getIamInstanceProfile() {
+    public Optional<SpotFleetIamInstanceProfileSpecification> iamInstanceProfile() {
         return Optional.ofNullable(this.iamInstanceProfile);
     }
-    public String getImageId() {
+    public String imageId() {
         return this.imageId;
     }
-    public Optional<SpotFleetInstanceRequirementsRequest> getInstanceRequirements() {
+    public Optional<SpotFleetInstanceRequirementsRequest> instanceRequirements() {
         return Optional.ofNullable(this.instanceRequirements);
     }
-    public Optional<String> getInstanceType() {
+    public Optional<String> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
-    public Optional<String> getKernelId() {
+    public Optional<String> kernelId() {
         return Optional.ofNullable(this.kernelId);
     }
-    public Optional<String> getKeyName() {
+    public Optional<String> keyName() {
         return Optional.ofNullable(this.keyName);
     }
-    public Optional<SpotFleetMonitoring> getMonitoring() {
+    public Optional<SpotFleetMonitoring> monitoring() {
         return Optional.ofNullable(this.monitoring);
     }
-    public List<SpotFleetInstanceNetworkInterfaceSpecification> getNetworkInterfaces() {
+    public List<SpotFleetInstanceNetworkInterfaceSpecification> networkInterfaces() {
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
     }
-    public Optional<SpotFleetSpotPlacement> getPlacement() {
+    public Optional<SpotFleetSpotPlacement> placement() {
         return Optional.ofNullable(this.placement);
     }
-    public Optional<String> getRamdiskId() {
+    public Optional<String> ramdiskId() {
         return Optional.ofNullable(this.ramdiskId);
     }
-    public List<SpotFleetGroupIdentifier> getSecurityGroups() {
+    public List<SpotFleetGroupIdentifier> securityGroups() {
         return this.securityGroups == null ? List.of() : this.securityGroups;
     }
-    public Optional<String> getSpotPrice() {
+    public Optional<String> spotPrice() {
         return Optional.ofNullable(this.spotPrice);
     }
-    public Optional<String> getSubnetId() {
+    public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
-    public List<SpotFleetTagSpecification> getTagSpecifications() {
+    public List<SpotFleetTagSpecification> tagSpecifications() {
         return this.tagSpecifications == null ? List.of() : this.tagSpecifications;
     }
-    public Optional<String> getUserData() {
+    public Optional<String> userData() {
         return Optional.ofNullable(this.userData);
     }
-    public Optional<Double> getWeightedCapacity() {
+    public Optional<Double> weightedCapacity() {
         return Optional.ofNullable(this.weightedCapacity);
     }
 

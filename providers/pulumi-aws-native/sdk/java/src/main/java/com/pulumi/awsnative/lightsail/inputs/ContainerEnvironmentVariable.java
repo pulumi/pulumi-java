@@ -17,14 +17,14 @@ public final class ContainerEnvironmentVariable extends com.pulumi.resources.Inv
     @Import(name="value")
       private final @Nullable String value;
 
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 
     @Import(name="variable")
       private final @Nullable String variable;
 
-    public Optional<String> getVariable() {
+    public Optional<String> variable() {
         return this.variable == null ? Optional.empty() : Optional.ofNullable(this.variable);
     }
 

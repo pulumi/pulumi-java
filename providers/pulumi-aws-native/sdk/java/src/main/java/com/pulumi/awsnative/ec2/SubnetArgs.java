@@ -21,56 +21,56 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assignIpv6AddressOnCreation")
       private final @Nullable Output<Boolean> assignIpv6AddressOnCreation;
 
-    public Output<Boolean> getAssignIpv6AddressOnCreation() {
+    public Output<Boolean> assignIpv6AddressOnCreation() {
         return this.assignIpv6AddressOnCreation == null ? Codegen.empty() : this.assignIpv6AddressOnCreation;
     }
 
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     @Import(name="cidrBlock", required=true)
       private final Output<String> cidrBlock;
 
-    public Output<String> getCidrBlock() {
+    public Output<String> cidrBlock() {
         return this.cidrBlock;
     }
 
     @Import(name="ipv6CidrBlock")
       private final @Nullable Output<String> ipv6CidrBlock;
 
-    public Output<String> getIpv6CidrBlock() {
+    public Output<String> ipv6CidrBlock() {
         return this.ipv6CidrBlock == null ? Codegen.empty() : this.ipv6CidrBlock;
     }
 
     @Import(name="mapPublicIpOnLaunch")
       private final @Nullable Output<Boolean> mapPublicIpOnLaunch;
 
-    public Output<Boolean> getMapPublicIpOnLaunch() {
+    public Output<Boolean> mapPublicIpOnLaunch() {
         return this.mapPublicIpOnLaunch == null ? Codegen.empty() : this.mapPublicIpOnLaunch;
     }
 
     @Import(name="outpostArn")
       private final @Nullable Output<String> outpostArn;
 
-    public Output<String> getOutpostArn() {
+    public Output<String> outpostArn() {
         return this.outpostArn == null ? Codegen.empty() : this.outpostArn;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<SubnetTagArgs>> tags;
 
-    public Output<List<SubnetTagArgs>> getTags() {
+    public Output<List<SubnetTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

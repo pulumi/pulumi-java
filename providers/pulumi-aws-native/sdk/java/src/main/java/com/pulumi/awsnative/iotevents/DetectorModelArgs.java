@@ -22,7 +22,7 @@ public final class DetectorModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="detectorModelDefinition", required=true)
       private final Output<DetectorModelDefinitionArgs> detectorModelDefinition;
 
-    public Output<DetectorModelDefinitionArgs> getDetectorModelDefinition() {
+    public Output<DetectorModelDefinitionArgs> detectorModelDefinition() {
         return this.detectorModelDefinition;
     }
 
@@ -33,7 +33,7 @@ public final class DetectorModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="detectorModelDescription")
       private final @Nullable Output<String> detectorModelDescription;
 
-    public Output<String> getDetectorModelDescription() {
+    public Output<String> detectorModelDescription() {
         return this.detectorModelDescription == null ? Codegen.empty() : this.detectorModelDescription;
     }
 
@@ -44,7 +44,7 @@ public final class DetectorModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="detectorModelName")
       private final @Nullable Output<String> detectorModelName;
 
-    public Output<String> getDetectorModelName() {
+    public Output<String> detectorModelName() {
         return this.detectorModelName == null ? Codegen.empty() : this.detectorModelName;
     }
 
@@ -55,7 +55,7 @@ public final class DetectorModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="evaluationMethod")
       private final @Nullable Output<DetectorModelEvaluationMethod> evaluationMethod;
 
-    public Output<DetectorModelEvaluationMethod> getEvaluationMethod() {
+    public Output<DetectorModelEvaluationMethod> evaluationMethod() {
         return this.evaluationMethod == null ? Codegen.empty() : this.evaluationMethod;
     }
 
@@ -68,7 +68,7 @@ public final class DetectorModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
@@ -79,7 +79,7 @@ public final class DetectorModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -92,7 +92,7 @@ public final class DetectorModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DetectorModelTagArgs>> tags;
 
-    public Output<List<DetectorModelTagArgs>> getTags() {
+    public Output<List<DetectorModelTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

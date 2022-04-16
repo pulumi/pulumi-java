@@ -20,21 +20,21 @@ public final class DataSourceSalesforceKnowledgeArticleConfiguration extends com
     @Import(name="customKnowledgeArticleTypeConfigurations")
       private final @Nullable List<DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration> customKnowledgeArticleTypeConfigurations;
 
-    public List<DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration> getCustomKnowledgeArticleTypeConfigurations() {
+    public List<DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration> customKnowledgeArticleTypeConfigurations() {
         return this.customKnowledgeArticleTypeConfigurations == null ? List.of() : this.customKnowledgeArticleTypeConfigurations;
     }
 
     @Import(name="includedStates", required=true)
       private final List<DataSourceSalesforceKnowledgeArticleState> includedStates;
 
-    public List<DataSourceSalesforceKnowledgeArticleState> getIncludedStates() {
+    public List<DataSourceSalesforceKnowledgeArticleState> includedStates() {
         return this.includedStates;
     }
 
     @Import(name="standardKnowledgeArticleTypeConfiguration")
       private final @Nullable DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration standardKnowledgeArticleTypeConfiguration;
 
-    public Optional<DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration> getStandardKnowledgeArticleTypeConfiguration() {
+    public Optional<DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration> standardKnowledgeArticleTypeConfiguration() {
         return this.standardKnowledgeArticleTypeConfiguration == null ? Optional.empty() : Optional.ofNullable(this.standardKnowledgeArticleTypeConfiguration);
     }
 

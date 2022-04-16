@@ -23,10 +23,10 @@ public final class ServicePlacementStrategy {
         this.type = type;
     }
 
-    public Optional<String> getField() {
+    public Optional<String> field() {
         return Optional.ofNullable(this.field);
     }
-    public ServicePlacementStrategyType getType() {
+    public ServicePlacementStrategyType type() {
         return this.type;
     }
 

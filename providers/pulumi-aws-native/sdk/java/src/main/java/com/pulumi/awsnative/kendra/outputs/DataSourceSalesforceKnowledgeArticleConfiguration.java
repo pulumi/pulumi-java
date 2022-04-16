@@ -28,13 +28,13 @@ public final class DataSourceSalesforceKnowledgeArticleConfiguration {
         this.standardKnowledgeArticleTypeConfiguration = standardKnowledgeArticleTypeConfiguration;
     }
 
-    public List<DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration> getCustomKnowledgeArticleTypeConfigurations() {
+    public List<DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration> customKnowledgeArticleTypeConfigurations() {
         return this.customKnowledgeArticleTypeConfigurations == null ? List.of() : this.customKnowledgeArticleTypeConfigurations;
     }
-    public List<DataSourceSalesforceKnowledgeArticleState> getIncludedStates() {
+    public List<DataSourceSalesforceKnowledgeArticleState> includedStates() {
         return this.includedStates;
     }
-    public Optional<DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration> getStandardKnowledgeArticleTypeConfiguration() {
+    public Optional<DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration> standardKnowledgeArticleTypeConfiguration() {
         return Optional.ofNullable(this.standardKnowledgeArticleTypeConfiguration);
     }
 

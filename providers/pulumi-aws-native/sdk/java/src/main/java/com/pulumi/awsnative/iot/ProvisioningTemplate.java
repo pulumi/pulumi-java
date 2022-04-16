@@ -25,49 +25,49 @@ public class ProvisioningTemplate extends com.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     @Export(name="preProvisioningHook", type=ProvisioningTemplateProvisioningHook.class, parameters={})
     private Output</* @Nullable */ ProvisioningTemplateProvisioningHook> preProvisioningHook;
 
-    public Output</* @Nullable */ ProvisioningTemplateProvisioningHook> getPreProvisioningHook() {
+    public Output</* @Nullable */ ProvisioningTemplateProvisioningHook> preProvisioningHook() {
         return this.preProvisioningHook;
     }
     @Export(name="provisioningRoleArn", type=String.class, parameters={})
     private Output<String> provisioningRoleArn;
 
-    public Output<String> getProvisioningRoleArn() {
+    public Output<String> provisioningRoleArn() {
         return this.provisioningRoleArn;
     }
     @Export(name="tags", type=List.class, parameters={ProvisioningTemplateTag.class})
     private Output</* @Nullable */ List<ProvisioningTemplateTag>> tags;
 
-    public Output</* @Nullable */ List<ProvisioningTemplateTag>> getTags() {
+    public Output</* @Nullable */ List<ProvisioningTemplateTag>> tags() {
         return this.tags;
     }
     @Export(name="templateArn", type=String.class, parameters={})
     private Output<String> templateArn;
 
-    public Output<String> getTemplateArn() {
+    public Output<String> templateArn() {
         return this.templateArn;
     }
     @Export(name="templateBody", type=String.class, parameters={})
     private Output<String> templateBody;
 
-    public Output<String> getTemplateBody() {
+    public Output<String> templateBody() {
         return this.templateBody;
     }
     @Export(name="templateName", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateName;
 
-    public Output</* @Nullable */ String> getTemplateName() {
+    public Output</* @Nullable */ String> templateName() {
         return this.templateName;
     }
 

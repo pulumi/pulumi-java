@@ -19,7 +19,7 @@ public final class GetPermissionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="certificateAuthorityArn", required=true)
       private final String certificateAuthorityArn;
 
-    public String getCertificateAuthorityArn() {
+    public String certificateAuthorityArn() {
         return this.certificateAuthorityArn;
     }
 
@@ -30,7 +30,7 @@ public final class GetPermissionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="principal", required=true)
       private final String principal;
 
-    public String getPrincipal() {
+    public String principal() {
         return this.principal;
     }
 

@@ -22,10 +22,10 @@ public final class PrefixListEntry {
         this.description = description;
     }
 
-    public String getCidr() {
+    public String cidr() {
         return this.cidr;
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
 

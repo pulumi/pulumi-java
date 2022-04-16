@@ -20,14 +20,14 @@ public final class WebACLRuleGroupReferenceStatementArgs extends com.pulumi.reso
     @Import(name="arn", required=true)
       private final Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
     @Import(name="excludedRules")
       private final @Nullable Output<List<WebACLExcludedRuleArgs>> excludedRules;
 
-    public Output<List<WebACLExcludedRuleArgs>> getExcludedRules() {
+    public Output<List<WebACLExcludedRuleArgs>> excludedRules() {
         return this.excludedRules == null ? Codegen.empty() : this.excludedRules;
     }
 

@@ -30,7 +30,7 @@ public class ResolverDNSSECConfig extends com.pulumi.resources.CustomResource {
      * @return AccountId
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -44,7 +44,7 @@ public class ResolverDNSSECConfig extends com.pulumi.resources.CustomResource {
      * @return ResourceId
      * 
      */
-    public Output</* @Nullable */ String> getResourceId() {
+    public Output</* @Nullable */ String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -58,7 +58,7 @@ public class ResolverDNSSECConfig extends com.pulumi.resources.CustomResource {
      * @return ResolverDNSSECValidationStatus, possible values are ENABLING, ENABLED, DISABLING AND DISABLED.
      * 
      */
-    public Output<ResolverDNSSECConfigValidationStatus> getValidationStatus() {
+    public Output<ResolverDNSSECConfigValidationStatus> validationStatus() {
         return this.validationStatus;
     }
 

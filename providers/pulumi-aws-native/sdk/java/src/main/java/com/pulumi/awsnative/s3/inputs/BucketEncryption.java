@@ -24,7 +24,7 @@ public final class BucketEncryption extends com.pulumi.resources.InvokeArgs {
     @Import(name="serverSideEncryptionConfiguration", required=true)
       private final List<BucketServerSideEncryptionRule> serverSideEncryptionConfiguration;
 
-    public List<BucketServerSideEncryptionRule> getServerSideEncryptionConfiguration() {
+    public List<BucketServerSideEncryptionRule> serverSideEncryptionConfiguration() {
         return this.serverSideEncryptionConfiguration;
     }
 

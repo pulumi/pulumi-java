@@ -17,7 +17,7 @@ public final class VirtualClusterContainerInfoArgs extends com.pulumi.resources.
     @Import(name="eksInfo", required=true)
       private final Output<VirtualClusterEksInfoArgs> eksInfo;
 
-    public Output<VirtualClusterEksInfoArgs> getEksInfo() {
+    public Output<VirtualClusterEksInfoArgs> eksInfo() {
         return this.eksInfo;
     }
 

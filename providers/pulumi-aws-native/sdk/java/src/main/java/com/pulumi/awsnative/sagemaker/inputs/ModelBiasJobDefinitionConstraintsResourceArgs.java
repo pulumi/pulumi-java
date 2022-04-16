@@ -26,7 +26,7 @@ public final class ModelBiasJobDefinitionConstraintsResourceArgs extends com.pul
     @Import(name="s3Uri")
       private final @Nullable Output<String> s3Uri;
 
-    public Output<String> getS3Uri() {
+    public Output<String> s3Uri() {
         return this.s3Uri == null ? Codegen.empty() : this.s3Uri;
     }
 

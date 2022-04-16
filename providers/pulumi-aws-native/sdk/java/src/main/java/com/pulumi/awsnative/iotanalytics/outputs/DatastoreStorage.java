@@ -27,13 +27,13 @@ public final class DatastoreStorage {
         this.serviceManagedS3 = serviceManagedS3;
     }
 
-    public Optional<DatastoreCustomerManagedS3> getCustomerManagedS3() {
+    public Optional<DatastoreCustomerManagedS3> customerManagedS3() {
         return Optional.ofNullable(this.customerManagedS3);
     }
-    public Optional<DatastoreIotSiteWiseMultiLayerStorage> getIotSiteWiseMultiLayerStorage() {
+    public Optional<DatastoreIotSiteWiseMultiLayerStorage> iotSiteWiseMultiLayerStorage() {
         return Optional.ofNullable(this.iotSiteWiseMultiLayerStorage);
     }
-    public Optional<DatastoreServiceManagedS3> getServiceManagedS3() {
+    public Optional<DatastoreServiceManagedS3> serviceManagedS3() {
         return Optional.ofNullable(this.serviceManagedS3);
     }
 

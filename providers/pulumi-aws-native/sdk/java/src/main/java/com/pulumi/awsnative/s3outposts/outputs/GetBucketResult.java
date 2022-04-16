@@ -44,21 +44,21 @@ public final class GetBucketResult {
      * The Amazon Resource Name (ARN) of the specified bucket.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Rules that define how Amazon S3Outposts manages objects during their lifetime.
      * 
     */
-    public Optional<BucketLifecycleConfiguration> getLifecycleConfiguration() {
+    public Optional<BucketLifecycleConfiguration> lifecycleConfiguration() {
         return Optional.ofNullable(this.lifecycleConfiguration);
     }
     /**
      * An arbitrary set of tags (key-value pairs) for this S3Outposts bucket.
      * 
     */
-    public List<BucketTag> getTags() {
+    public List<BucketTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

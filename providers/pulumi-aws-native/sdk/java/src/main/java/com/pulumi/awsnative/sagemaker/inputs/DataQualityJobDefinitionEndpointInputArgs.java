@@ -24,7 +24,7 @@ public final class DataQualityJobDefinitionEndpointInputArgs extends com.pulumi.
     @Import(name="endpointName", required=true)
       private final Output<String> endpointName;
 
-    public Output<String> getEndpointName() {
+    public Output<String> endpointName() {
         return this.endpointName;
     }
 
@@ -35,7 +35,7 @@ public final class DataQualityJobDefinitionEndpointInputArgs extends com.pulumi.
     @Import(name="localPath", required=true)
       private final Output<String> localPath;
 
-    public Output<String> getLocalPath() {
+    public Output<String> localPath() {
         return this.localPath;
     }
 
@@ -46,7 +46,7 @@ public final class DataQualityJobDefinitionEndpointInputArgs extends com.pulumi.
     @Import(name="s3DataDistributionType")
       private final @Nullable Output<DataQualityJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType;
 
-    public Output<DataQualityJobDefinitionEndpointInputS3DataDistributionType> getS3DataDistributionType() {
+    public Output<DataQualityJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType() {
         return this.s3DataDistributionType == null ? Codegen.empty() : this.s3DataDistributionType;
     }
 
@@ -57,7 +57,7 @@ public final class DataQualityJobDefinitionEndpointInputArgs extends com.pulumi.
     @Import(name="s3InputMode")
       private final @Nullable Output<DataQualityJobDefinitionEndpointInputS3InputMode> s3InputMode;
 
-    public Output<DataQualityJobDefinitionEndpointInputS3InputMode> getS3InputMode() {
+    public Output<DataQualityJobDefinitionEndpointInputS3InputMode> s3InputMode() {
         return this.s3InputMode == null ? Codegen.empty() : this.s3InputMode;
     }
 

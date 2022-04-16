@@ -28,7 +28,7 @@ public final class InstanceHardwareArgs extends com.pulumi.resources.ResourceArg
     @Import(name="cpuCount")
       private final @Nullable Output<Integer> cpuCount;
 
-    public Output<Integer> getCpuCount() {
+    public Output<Integer> cpuCount() {
         return this.cpuCount == null ? Codegen.empty() : this.cpuCount;
     }
 
@@ -39,7 +39,7 @@ public final class InstanceHardwareArgs extends com.pulumi.resources.ResourceArg
     @Import(name="disks")
       private final @Nullable Output<List<InstanceDiskArgs>> disks;
 
-    public Output<List<InstanceDiskArgs>> getDisks() {
+    public Output<List<InstanceDiskArgs>> disks() {
         return this.disks == null ? Codegen.empty() : this.disks;
     }
 
@@ -50,7 +50,7 @@ public final class InstanceHardwareArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ramSizeInGb")
       private final @Nullable Output<Integer> ramSizeInGb;
 
-    public Output<Integer> getRamSizeInGb() {
+    public Output<Integer> ramSizeInGb() {
         return this.ramSizeInGb == null ? Codegen.empty() : this.ramSizeInGb;
     }
 

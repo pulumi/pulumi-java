@@ -21,14 +21,14 @@ public final class CertificateAuthorityEdiPartyNameArgs extends com.pulumi.resou
     @Import(name="nameAssigner", required=true)
       private final Output<String> nameAssigner;
 
-    public Output<String> getNameAssigner() {
+    public Output<String> nameAssigner() {
         return this.nameAssigner;
     }
 
     @Import(name="partyName", required=true)
       private final Output<String> partyName;
 
-    public Output<String> getPartyName() {
+    public Output<String> partyName() {
         return this.partyName;
     }
 

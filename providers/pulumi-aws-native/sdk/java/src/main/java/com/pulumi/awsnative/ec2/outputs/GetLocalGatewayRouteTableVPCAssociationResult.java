@@ -50,28 +50,28 @@ public final class GetLocalGatewayRouteTableVPCAssociationResult {
      * The ID of the local gateway.
      * 
     */
-    public Optional<String> getLocalGatewayId() {
+    public Optional<String> localGatewayId() {
         return Optional.ofNullable(this.localGatewayId);
     }
     /**
      * The ID of the association.
      * 
     */
-    public Optional<String> getLocalGatewayRouteTableVpcAssociationId() {
+    public Optional<String> localGatewayRouteTableVpcAssociationId() {
         return Optional.ofNullable(this.localGatewayRouteTableVpcAssociationId);
     }
     /**
      * The state of the association.
      * 
     */
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
      * The tags for the association.
      * 
     */
-    public List<LocalGatewayRouteTableVPCAssociationTag> getTags() {
+    public List<LocalGatewayRouteTableVPCAssociationTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

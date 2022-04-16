@@ -17,7 +17,7 @@ public final class TopicRuleLambdaAction extends com.pulumi.resources.InvokeArgs
     @Import(name="functionArn")
       private final @Nullable String functionArn;
 
-    public Optional<String> getFunctionArn() {
+    public Optional<String> functionArn() {
         return this.functionArn == null ? Optional.empty() : Optional.ofNullable(this.functionArn);
     }
 

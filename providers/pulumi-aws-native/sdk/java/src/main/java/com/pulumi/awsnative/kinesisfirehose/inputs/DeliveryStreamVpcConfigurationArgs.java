@@ -18,21 +18,21 @@ public final class DeliveryStreamVpcConfigurationArgs extends com.pulumi.resourc
     @Import(name="roleARN", required=true)
       private final Output<String> roleARN;
 
-    public Output<String> getRoleARN() {
+    public Output<String> roleARN() {
         return this.roleARN;
     }
 
     @Import(name="securityGroupIds", required=true)
       private final Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
 
     @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
 

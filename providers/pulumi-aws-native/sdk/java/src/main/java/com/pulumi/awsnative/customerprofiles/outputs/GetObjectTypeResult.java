@@ -96,70 +96,70 @@ public final class GetObjectTypeResult {
      * Indicates whether a profile should be created when data is received.
      * 
     */
-    public Optional<Boolean> getAllowProfileCreation() {
+    public Optional<Boolean> allowProfileCreation() {
         return Optional.ofNullable(this.allowProfileCreation);
     }
     /**
      * The time of this integration got created.
      * 
     */
-    public Optional<String> getCreatedAt() {
+    public Optional<String> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
     /**
      * Description of the profile object type.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The default encryption key
      * 
     */
-    public Optional<String> getEncryptionKey() {
+    public Optional<String> encryptionKey() {
         return Optional.ofNullable(this.encryptionKey);
     }
     /**
      * The default number of days until the data within the domain expires.
      * 
     */
-    public Optional<Integer> getExpirationDays() {
+    public Optional<Integer> expirationDays() {
         return Optional.ofNullable(this.expirationDays);
     }
     /**
      * A list of the name and ObjectType field.
      * 
     */
-    public List<ObjectTypeFieldMap> getFields() {
+    public List<ObjectTypeFieldMap> fields() {
         return this.fields == null ? List.of() : this.fields;
     }
     /**
      * A list of unique keys that can be used to map data to the profile.
      * 
     */
-    public List<ObjectTypeKeyMap> getKeys() {
+    public List<ObjectTypeKeyMap> keys() {
         return this.keys == null ? List.of() : this.keys;
     }
     /**
      * The time of this integration got last updated at.
      * 
     */
-    public Optional<String> getLastUpdatedAt() {
+    public Optional<String> lastUpdatedAt() {
         return Optional.ofNullable(this.lastUpdatedAt);
     }
     /**
      * The tags (keys and values) associated with the integration.
      * 
     */
-    public List<ObjectTypeTag> getTags() {
+    public List<ObjectTypeTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * A unique identifier for the object template.
      * 
     */
-    public Optional<String> getTemplateId() {
+    public Optional<String> templateId() {
         return Optional.ofNullable(this.templateId);
     }
 

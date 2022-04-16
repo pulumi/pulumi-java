@@ -27,70 +27,70 @@ public final class PipelineActivityArgs extends com.pulumi.resources.ResourceArg
     @Import(name="addAttributes")
       private final @Nullable Output<PipelineAddAttributesArgs> addAttributes;
 
-    public Output<PipelineAddAttributesArgs> getAddAttributes() {
+    public Output<PipelineAddAttributesArgs> addAttributes() {
         return this.addAttributes == null ? Codegen.empty() : this.addAttributes;
     }
 
     @Import(name="channel")
       private final @Nullable Output<PipelineChannelArgs> channel;
 
-    public Output<PipelineChannelArgs> getChannel() {
+    public Output<PipelineChannelArgs> channel() {
         return this.channel == null ? Codegen.empty() : this.channel;
     }
 
     @Import(name="datastore")
       private final @Nullable Output<PipelineDatastoreArgs> datastore;
 
-    public Output<PipelineDatastoreArgs> getDatastore() {
+    public Output<PipelineDatastoreArgs> datastore() {
         return this.datastore == null ? Codegen.empty() : this.datastore;
     }
 
     @Import(name="deviceRegistryEnrich")
       private final @Nullable Output<PipelineDeviceRegistryEnrichArgs> deviceRegistryEnrich;
 
-    public Output<PipelineDeviceRegistryEnrichArgs> getDeviceRegistryEnrich() {
+    public Output<PipelineDeviceRegistryEnrichArgs> deviceRegistryEnrich() {
         return this.deviceRegistryEnrich == null ? Codegen.empty() : this.deviceRegistryEnrich;
     }
 
     @Import(name="deviceShadowEnrich")
       private final @Nullable Output<PipelineDeviceShadowEnrichArgs> deviceShadowEnrich;
 
-    public Output<PipelineDeviceShadowEnrichArgs> getDeviceShadowEnrich() {
+    public Output<PipelineDeviceShadowEnrichArgs> deviceShadowEnrich() {
         return this.deviceShadowEnrich == null ? Codegen.empty() : this.deviceShadowEnrich;
     }
 
     @Import(name="filter")
       private final @Nullable Output<PipelineFilterArgs> filter;
 
-    public Output<PipelineFilterArgs> getFilter() {
+    public Output<PipelineFilterArgs> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     @Import(name="lambda")
       private final @Nullable Output<PipelineLambdaArgs> lambda;
 
-    public Output<PipelineLambdaArgs> getLambda() {
+    public Output<PipelineLambdaArgs> lambda() {
         return this.lambda == null ? Codegen.empty() : this.lambda;
     }
 
     @Import(name="math")
       private final @Nullable Output<PipelineMathArgs> math;
 
-    public Output<PipelineMathArgs> getMath() {
+    public Output<PipelineMathArgs> math() {
         return this.math == null ? Codegen.empty() : this.math;
     }
 
     @Import(name="removeAttributes")
       private final @Nullable Output<PipelineRemoveAttributesArgs> removeAttributes;
 
-    public Output<PipelineRemoveAttributesArgs> getRemoveAttributes() {
+    public Output<PipelineRemoveAttributesArgs> removeAttributes() {
         return this.removeAttributes == null ? Codegen.empty() : this.removeAttributes;
     }
 
     @Import(name="selectAttributes")
       private final @Nullable Output<PipelineSelectAttributesArgs> selectAttributes;
 
-    public Output<PipelineSelectAttributesArgs> getSelectAttributes() {
+    public Output<PipelineSelectAttributesArgs> selectAttributes() {
         return this.selectAttributes == null ? Codegen.empty() : this.selectAttributes;
     }
 

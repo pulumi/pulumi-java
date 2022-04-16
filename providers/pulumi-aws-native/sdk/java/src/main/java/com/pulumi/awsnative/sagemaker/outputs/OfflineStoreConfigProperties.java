@@ -27,13 +27,13 @@ public final class OfflineStoreConfigProperties {
         this.s3StorageConfig = s3StorageConfig;
     }
 
-    public Optional<FeatureGroupDataCatalogConfig> getDataCatalogConfig() {
+    public Optional<FeatureGroupDataCatalogConfig> dataCatalogConfig() {
         return Optional.ofNullable(this.dataCatalogConfig);
     }
-    public Optional<Boolean> getDisableGlueTableCreation() {
+    public Optional<Boolean> disableGlueTableCreation() {
         return Optional.ofNullable(this.disableGlueTableCreation);
     }
-    public FeatureGroupS3StorageConfig getS3StorageConfig() {
+    public FeatureGroupS3StorageConfig s3StorageConfig() {
         return this.s3StorageConfig;
     }
 

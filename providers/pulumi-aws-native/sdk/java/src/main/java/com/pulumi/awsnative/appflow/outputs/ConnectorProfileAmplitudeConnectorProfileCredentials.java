@@ -28,10 +28,10 @@ public final class ConnectorProfileAmplitudeConnectorProfileCredentials {
      * A unique alphanumeric identiﬁer used to authenticate a user, developer, or calling program to your API.
      * 
     */
-    public String getApiKey() {
+    public String apiKey() {
         return this.apiKey;
     }
-    public String getSecretKey() {
+    public String secretKey() {
         return this.secretKey;
     }
 

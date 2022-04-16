@@ -23,28 +23,28 @@ public final class WebACLSizeConstraintStatement extends com.pulumi.resources.In
     @Import(name="comparisonOperator", required=true)
       private final WebACLSizeConstraintStatementComparisonOperator comparisonOperator;
 
-    public WebACLSizeConstraintStatementComparisonOperator getComparisonOperator() {
+    public WebACLSizeConstraintStatementComparisonOperator comparisonOperator() {
         return this.comparisonOperator;
     }
 
     @Import(name="fieldToMatch", required=true)
       private final WebACLFieldToMatch fieldToMatch;
 
-    public WebACLFieldToMatch getFieldToMatch() {
+    public WebACLFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
 
     @Import(name="size", required=true)
       private final Double size;
 
-    public Double getSize() {
+    public Double size() {
         return this.size;
     }
 
     @Import(name="textTransformations", required=true)
       private final List<WebACLTextTransformation> textTransformations;
 
-    public List<WebACLTextTransformation> getTextTransformations() {
+    public List<WebACLTextTransformation> textTransformations() {
         return this.textTransformations;
     }
 

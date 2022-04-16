@@ -27,7 +27,7 @@ public final class ApplicationLogPatternSetArgs extends com.pulumi.resources.Res
     @Import(name="logPatterns", required=true)
       private final Output<List<ApplicationLogPatternArgs>> logPatterns;
 
-    public Output<List<ApplicationLogPatternArgs>> getLogPatterns() {
+    public Output<List<ApplicationLogPatternArgs>> logPatterns() {
         return this.logPatterns;
     }
 
@@ -38,7 +38,7 @@ public final class ApplicationLogPatternSetArgs extends com.pulumi.resources.Res
     @Import(name="patternSetName", required=true)
       private final Output<String> patternSetName;
 
-    public Output<String> getPatternSetName() {
+    public Output<String> patternSetName() {
         return this.patternSetName;
     }
 

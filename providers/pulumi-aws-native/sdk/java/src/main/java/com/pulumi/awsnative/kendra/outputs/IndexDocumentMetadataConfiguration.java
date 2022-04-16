@@ -31,16 +31,16 @@ public final class IndexDocumentMetadataConfiguration {
         this.type = type;
     }
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<IndexRelevance> getRelevance() {
+    public Optional<IndexRelevance> relevance() {
         return Optional.ofNullable(this.relevance);
     }
-    public Optional<IndexSearch> getSearch() {
+    public Optional<IndexSearch> search() {
         return Optional.ofNullable(this.search);
     }
-    public IndexDocumentAttributeValueType getType() {
+    public IndexDocumentAttributeValueType type() {
         return this.type;
     }
 

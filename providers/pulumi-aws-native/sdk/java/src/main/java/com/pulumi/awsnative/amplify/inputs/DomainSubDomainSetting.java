@@ -15,14 +15,14 @@ public final class DomainSubDomainSetting extends com.pulumi.resources.InvokeArg
     @Import(name="branchName", required=true)
       private final String branchName;
 
-    public String getBranchName() {
+    public String branchName() {
         return this.branchName;
     }
 
     @Import(name="prefix", required=true)
       private final String prefix;
 
-    public String getPrefix() {
+    public String prefix() {
         return this.prefix;
     }
 

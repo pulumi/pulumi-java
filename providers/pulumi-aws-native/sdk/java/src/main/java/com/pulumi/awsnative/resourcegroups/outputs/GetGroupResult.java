@@ -50,26 +50,26 @@ public final class GetGroupResult {
      * The Resource Group ARN.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public List<GroupConfigurationItem> getConfiguration() {
+    public List<GroupConfigurationItem> configuration() {
         return this.configuration == null ? List.of() : this.configuration;
     }
     /**
      * The description of the resource group
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<GroupResourceQuery> getResourceQuery() {
+    public Optional<GroupResourceQuery> resourceQuery() {
         return Optional.ofNullable(this.resourceQuery);
     }
-    public List<String> getResources() {
+    public List<String> resources() {
         return this.resources == null ? List.of() : this.resources;
     }
-    public List<GroupTag> getTags() {
+    public List<GroupTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

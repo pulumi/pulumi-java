@@ -27,7 +27,7 @@ public final class ModelBiasJobDefinitionModelBiasAppSpecificationArgs extends c
     @Import(name="configUri", required=true)
       private final Output<String> configUri;
 
-    public Output<String> getConfigUri() {
+    public Output<String> configUri() {
         return this.configUri;
     }
 
@@ -38,7 +38,7 @@ public final class ModelBiasJobDefinitionModelBiasAppSpecificationArgs extends c
     @Import(name="environment")
       private final @Nullable Output<Object> environment;
 
-    public Output<Object> getEnvironment() {
+    public Output<Object> environment() {
         return this.environment == null ? Codegen.empty() : this.environment;
     }
 
@@ -49,7 +49,7 @@ public final class ModelBiasJobDefinitionModelBiasAppSpecificationArgs extends c
     @Import(name="imageUri", required=true)
       private final Output<String> imageUri;
 
-    public Output<String> getImageUri() {
+    public Output<String> imageUri() {
         return this.imageUri;
     }
 

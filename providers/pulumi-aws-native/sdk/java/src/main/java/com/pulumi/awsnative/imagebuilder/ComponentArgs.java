@@ -25,7 +25,7 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="changeDescription")
       private final @Nullable Output<String> changeDescription;
 
-    public Output<String> getChangeDescription() {
+    public Output<String> changeDescription() {
         return this.changeDescription == null ? Codegen.empty() : this.changeDescription;
     }
 
@@ -36,7 +36,7 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="data")
       private final @Nullable Output<String> data;
 
-    public Output<String> getData() {
+    public Output<String> data() {
         return this.data == null ? Codegen.empty() : this.data;
     }
 
@@ -47,7 +47,7 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -58,7 +58,7 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -69,7 +69,7 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -80,7 +80,7 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="platform", required=true)
       private final Output<ComponentPlatform> platform;
 
-    public Output<ComponentPlatform> getPlatform() {
+    public Output<ComponentPlatform> platform() {
         return this.platform;
     }
 
@@ -91,7 +91,7 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="supportedOsVersions")
       private final @Nullable Output<List<String>> supportedOsVersions;
 
-    public Output<List<String>> getSupportedOsVersions() {
+    public Output<List<String>> supportedOsVersions() {
         return this.supportedOsVersions == null ? Codegen.empty() : this.supportedOsVersions;
     }
 
@@ -102,7 +102,7 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Object> tags;
 
-    public Output<Object> getTags() {
+    public Output<Object> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -113,7 +113,7 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri == null ? Codegen.empty() : this.uri;
     }
 
@@ -124,7 +124,7 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version", required=true)
       private final Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

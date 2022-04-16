@@ -20,28 +20,28 @@ public final class ArchiveArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="eventPattern")
       private final @Nullable Output<Object> eventPattern;
 
-    public Output<Object> getEventPattern() {
+    public Output<Object> eventPattern() {
         return this.eventPattern == null ? Codegen.empty() : this.eventPattern;
     }
 
     @Import(name="retentionDays")
       private final @Nullable Output<Integer> retentionDays;
 
-    public Output<Integer> getRetentionDays() {
+    public Output<Integer> retentionDays() {
         return this.retentionDays == null ? Codegen.empty() : this.retentionDays;
     }
 
     @Import(name="sourceArn", required=true)
       private final Output<String> sourceArn;
 
-    public Output<String> getSourceArn() {
+    public Output<String> sourceArn() {
         return this.sourceArn;
     }
 

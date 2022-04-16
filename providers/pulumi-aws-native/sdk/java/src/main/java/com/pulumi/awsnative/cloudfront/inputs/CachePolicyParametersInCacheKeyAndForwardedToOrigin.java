@@ -20,35 +20,35 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOrigin extends c
     @Import(name="cookiesConfig", required=true)
       private final CachePolicyCookiesConfig cookiesConfig;
 
-    public CachePolicyCookiesConfig getCookiesConfig() {
+    public CachePolicyCookiesConfig cookiesConfig() {
         return this.cookiesConfig;
     }
 
     @Import(name="enableAcceptEncodingBrotli")
       private final @Nullable Boolean enableAcceptEncodingBrotli;
 
-    public Optional<Boolean> getEnableAcceptEncodingBrotli() {
+    public Optional<Boolean> enableAcceptEncodingBrotli() {
         return this.enableAcceptEncodingBrotli == null ? Optional.empty() : Optional.ofNullable(this.enableAcceptEncodingBrotli);
     }
 
     @Import(name="enableAcceptEncodingGzip", required=true)
       private final Boolean enableAcceptEncodingGzip;
 
-    public Boolean getEnableAcceptEncodingGzip() {
+    public Boolean enableAcceptEncodingGzip() {
         return this.enableAcceptEncodingGzip;
     }
 
     @Import(name="headersConfig", required=true)
       private final CachePolicyHeadersConfig headersConfig;
 
-    public CachePolicyHeadersConfig getHeadersConfig() {
+    public CachePolicyHeadersConfig headersConfig() {
         return this.headersConfig;
     }
 
     @Import(name="queryStringsConfig", required=true)
       private final CachePolicyQueryStringsConfig queryStringsConfig;
 
-    public CachePolicyQueryStringsConfig getQueryStringsConfig() {
+    public CachePolicyQueryStringsConfig queryStringsConfig() {
         return this.queryStringsConfig;
     }
 

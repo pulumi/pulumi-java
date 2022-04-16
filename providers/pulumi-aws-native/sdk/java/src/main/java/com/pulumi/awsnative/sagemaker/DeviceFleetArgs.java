@@ -25,7 +25,7 @@ public final class DeviceFleetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -36,7 +36,7 @@ public final class DeviceFleetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceFleetName")
       private final @Nullable Output<String> deviceFleetName;
 
-    public Output<String> getDeviceFleetName() {
+    public Output<String> deviceFleetName() {
         return this.deviceFleetName == null ? Codegen.empty() : this.deviceFleetName;
     }
 
@@ -47,7 +47,7 @@ public final class DeviceFleetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="outputConfig", required=true)
       private final Output<DeviceFleetEdgeOutputConfigArgs> outputConfig;
 
-    public Output<DeviceFleetEdgeOutputConfigArgs> getOutputConfig() {
+    public Output<DeviceFleetEdgeOutputConfigArgs> outputConfig() {
         return this.outputConfig;
     }
 
@@ -58,7 +58,7 @@ public final class DeviceFleetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -69,7 +69,7 @@ public final class DeviceFleetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DeviceFleetTagArgs>> tags;
 
-    public Output<List<DeviceFleetTagArgs>> getTags() {
+    public Output<List<DeviceFleetTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -24,7 +24,7 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="readinessCheckName")
       private final @Nullable Output<String> readinessCheckName;
 
-    public Output<String> getReadinessCheckName() {
+    public Output<String> readinessCheckName() {
         return this.readinessCheckName == null ? Codegen.empty() : this.readinessCheckName;
     }
 
@@ -35,7 +35,7 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceSetName")
       private final @Nullable Output<String> resourceSetName;
 
-    public Output<String> getResourceSetName() {
+    public Output<String> resourceSetName() {
         return this.resourceSetName == null ? Codegen.empty() : this.resourceSetName;
     }
 
@@ -46,7 +46,7 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<List<ReadinessCheckTagArgs>> tags;
 
-    public Output<List<ReadinessCheckTagArgs>> getTags() {
+    public Output<List<ReadinessCheckTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

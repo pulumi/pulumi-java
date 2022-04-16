@@ -26,7 +26,7 @@ public final class DetectorModelSetTimer extends com.pulumi.resources.InvokeArgs
     @Import(name="durationExpression")
       private final @Nullable String durationExpression;
 
-    public Optional<String> getDurationExpression() {
+    public Optional<String> durationExpression() {
         return this.durationExpression == null ? Optional.empty() : Optional.ofNullable(this.durationExpression);
     }
 
@@ -37,7 +37,7 @@ public final class DetectorModelSetTimer extends com.pulumi.resources.InvokeArgs
     @Import(name="seconds")
       private final @Nullable Integer seconds;
 
-    public Optional<Integer> getSeconds() {
+    public Optional<Integer> seconds() {
         return this.seconds == null ? Optional.empty() : Optional.ofNullable(this.seconds);
     }
 
@@ -48,7 +48,7 @@ public final class DetectorModelSetTimer extends com.pulumi.resources.InvokeArgs
     @Import(name="timerName", required=true)
       private final String timerName;
 
-    public String getTimerName() {
+    public String timerName() {
         return this.timerName;
     }
 

@@ -23,10 +23,10 @@ public final class IndexUserTokenConfiguration {
         this.jwtTokenTypeConfiguration = jwtTokenTypeConfiguration;
     }
 
-    public Optional<IndexJsonTokenTypeConfiguration> getJsonTokenTypeConfiguration() {
+    public Optional<IndexJsonTokenTypeConfiguration> jsonTokenTypeConfiguration() {
         return Optional.ofNullable(this.jsonTokenTypeConfiguration);
     }
-    public Optional<IndexJwtTokenTypeConfiguration> getJwtTokenTypeConfiguration() {
+    public Optional<IndexJwtTokenTypeConfiguration> jwtTokenTypeConfiguration() {
         return Optional.ofNullable(this.jwtTokenTypeConfiguration);
     }
 

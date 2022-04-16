@@ -85,61 +85,61 @@ public final class DistributionConfig {
         this.webACLId = webACLId;
     }
 
-    public List<String> getAliases() {
+    public List<String> aliases() {
         return this.aliases == null ? List.of() : this.aliases;
     }
-    public List<String> getCNAMEs() {
+    public List<String> cNAMEs() {
         return this.cNAMEs == null ? List.of() : this.cNAMEs;
     }
-    public List<DistributionCacheBehavior> getCacheBehaviors() {
+    public List<DistributionCacheBehavior> cacheBehaviors() {
         return this.cacheBehaviors == null ? List.of() : this.cacheBehaviors;
     }
-    public Optional<String> getComment() {
+    public Optional<String> comment() {
         return Optional.ofNullable(this.comment);
     }
-    public List<DistributionCustomErrorResponse> getCustomErrorResponses() {
+    public List<DistributionCustomErrorResponse> customErrorResponses() {
         return this.customErrorResponses == null ? List.of() : this.customErrorResponses;
     }
-    public Optional<DistributionLegacyCustomOrigin> getCustomOrigin() {
+    public Optional<DistributionLegacyCustomOrigin> customOrigin() {
         return Optional.ofNullable(this.customOrigin);
     }
-    public Optional<DistributionDefaultCacheBehavior> getDefaultCacheBehavior() {
+    public Optional<DistributionDefaultCacheBehavior> defaultCacheBehavior() {
         return Optional.ofNullable(this.defaultCacheBehavior);
     }
-    public Optional<String> getDefaultRootObject() {
+    public Optional<String> defaultRootObject() {
         return Optional.ofNullable(this.defaultRootObject);
     }
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
-    public Optional<String> getHttpVersion() {
+    public Optional<String> httpVersion() {
         return Optional.ofNullable(this.httpVersion);
     }
-    public Optional<Boolean> getIPV6Enabled() {
+    public Optional<Boolean> iPV6Enabled() {
         return Optional.ofNullable(this.iPV6Enabled);
     }
-    public Optional<DistributionLogging> getLogging() {
+    public Optional<DistributionLogging> logging() {
         return Optional.ofNullable(this.logging);
     }
-    public Optional<DistributionOriginGroups> getOriginGroups() {
+    public Optional<DistributionOriginGroups> originGroups() {
         return Optional.ofNullable(this.originGroups);
     }
-    public List<DistributionOrigin> getOrigins() {
+    public List<DistributionOrigin> origins() {
         return this.origins == null ? List.of() : this.origins;
     }
-    public Optional<String> getPriceClass() {
+    public Optional<String> priceClass() {
         return Optional.ofNullable(this.priceClass);
     }
-    public Optional<DistributionRestrictions> getRestrictions() {
+    public Optional<DistributionRestrictions> restrictions() {
         return Optional.ofNullable(this.restrictions);
     }
-    public Optional<DistributionLegacyS3Origin> getS3Origin() {
+    public Optional<DistributionLegacyS3Origin> s3Origin() {
         return Optional.ofNullable(this.s3Origin);
     }
-    public Optional<DistributionViewerCertificate> getViewerCertificate() {
+    public Optional<DistributionViewerCertificate> viewerCertificate() {
         return Optional.ofNullable(this.viewerCertificate);
     }
-    public Optional<String> getWebACLId() {
+    public Optional<String> webACLId() {
         return Optional.ofNullable(this.webACLId);
     }
 

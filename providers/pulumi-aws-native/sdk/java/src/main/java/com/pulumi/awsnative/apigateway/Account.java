@@ -29,7 +29,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of an IAM role that has write access to CloudWatch Logs in your account.
      * 
      */
-    public Output</* @Nullable */ String> getCloudWatchRoleArn() {
+    public Output</* @Nullable */ String> cloudWatchRoleArn() {
         return this.cloudWatchRoleArn;
     }
 

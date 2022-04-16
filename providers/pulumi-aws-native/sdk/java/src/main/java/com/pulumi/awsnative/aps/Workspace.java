@@ -33,7 +33,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The AMP Workspace alert manager definition data
      * 
      */
-    public Output</* @Nullable */ String> getAlertManagerDefinition() {
+    public Output</* @Nullable */ String> alertManagerDefinition() {
         return this.alertManagerDefinition;
     }
     /**
@@ -47,7 +47,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return AMP Workspace alias.
      * 
      */
-    public Output</* @Nullable */ String> getAlias() {
+    public Output</* @Nullable */ String> alias() {
         return this.alias;
     }
     /**
@@ -61,7 +61,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Workspace arn.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -75,7 +75,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return AMP Workspace prometheus endpoint
      * 
      */
-    public Output<String> getPrometheusEndpoint() {
+    public Output<String> prometheusEndpoint() {
         return this.prometheusEndpoint;
     }
     /**
@@ -89,7 +89,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<WorkspaceTag>> getTags() {
+    public Output</* @Nullable */ List<WorkspaceTag>> tags() {
         return this.tags;
     }
     /**
@@ -103,7 +103,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Required to identify a specific APS Workspace.
      * 
      */
-    public Output<String> getWorkspaceId() {
+    public Output<String> workspaceId() {
         return this.workspaceId;
     }
 

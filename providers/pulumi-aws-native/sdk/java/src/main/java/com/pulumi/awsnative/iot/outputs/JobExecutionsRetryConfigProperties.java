@@ -18,7 +18,7 @@ public final class JobExecutionsRetryConfigProperties {
         this.retryCriteriaList = retryCriteriaList;
     }
 
-    public List<JobTemplateRetryCriteria> getRetryCriteriaList() {
+    public List<JobTemplateRetryCriteria> retryCriteriaList() {
         return this.retryCriteriaList == null ? List.of() : this.retryCriteriaList;
     }
 

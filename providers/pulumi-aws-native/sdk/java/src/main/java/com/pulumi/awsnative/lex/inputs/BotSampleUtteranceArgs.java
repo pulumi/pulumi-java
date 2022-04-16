@@ -21,7 +21,7 @@ public final class BotSampleUtteranceArgs extends com.pulumi.resources.ResourceA
     @Import(name="utterance", required=true)
       private final Output<String> utterance;
 
-    public Output<String> getUtterance() {
+    public Output<String> utterance() {
         return this.utterance;
     }
 

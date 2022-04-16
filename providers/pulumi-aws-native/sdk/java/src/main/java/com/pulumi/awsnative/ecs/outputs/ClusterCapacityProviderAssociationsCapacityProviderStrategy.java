@@ -26,13 +26,13 @@ public final class ClusterCapacityProviderAssociationsCapacityProviderStrategy {
         this.weight = weight;
     }
 
-    public Optional<Integer> getBase() {
+    public Optional<Integer> base() {
         return Optional.ofNullable(this.base);
     }
-    public String getCapacityProvider() {
+    public String capacityProvider() {
         return this.capacityProvider;
     }
-    public Optional<Integer> getWeight() {
+    public Optional<Integer> weight() {
         return Optional.ofNullable(this.weight);
     }
 

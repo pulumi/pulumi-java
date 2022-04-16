@@ -19,7 +19,7 @@ public final class GetSchemaVersionArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="versionId", required=true)
       private final String versionId;
 
-    public String getVersionId() {
+    public String versionId() {
         return this.versionId;
     }
 

@@ -22,7 +22,7 @@ public final class DatasetMetadataArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sourceArn")
       private final @Nullable Output<String> sourceArn;
 
-    public Output<String> getSourceArn() {
+    public Output<String> sourceArn() {
         return this.sourceArn == null ? Codegen.empty() : this.sourceArn;
     }
 

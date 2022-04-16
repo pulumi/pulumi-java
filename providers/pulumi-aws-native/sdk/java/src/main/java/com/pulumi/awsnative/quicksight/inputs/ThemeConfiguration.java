@@ -25,28 +25,28 @@ public final class ThemeConfiguration extends com.pulumi.resources.InvokeArgs {
     @Import(name="dataColorPalette")
       private final @Nullable ThemeDataColorPalette dataColorPalette;
 
-    public Optional<ThemeDataColorPalette> getDataColorPalette() {
+    public Optional<ThemeDataColorPalette> dataColorPalette() {
         return this.dataColorPalette == null ? Optional.empty() : Optional.ofNullable(this.dataColorPalette);
     }
 
     @Import(name="sheet")
       private final @Nullable ThemeSheetStyle sheet;
 
-    public Optional<ThemeSheetStyle> getSheet() {
+    public Optional<ThemeSheetStyle> sheet() {
         return this.sheet == null ? Optional.empty() : Optional.ofNullable(this.sheet);
     }
 
     @Import(name="typography")
       private final @Nullable ThemeTypography typography;
 
-    public Optional<ThemeTypography> getTypography() {
+    public Optional<ThemeTypography> typography() {
         return this.typography == null ? Optional.empty() : Optional.ofNullable(this.typography);
     }
 
     @Import(name="uIColorPalette")
       private final @Nullable ThemeUIColorPalette uIColorPalette;
 
-    public Optional<ThemeUIColorPalette> getUIColorPalette() {
+    public Optional<ThemeUIColorPalette> uIColorPalette() {
         return this.uIColorPalette == null ? Optional.empty() : Optional.ofNullable(this.uIColorPalette);
     }
 

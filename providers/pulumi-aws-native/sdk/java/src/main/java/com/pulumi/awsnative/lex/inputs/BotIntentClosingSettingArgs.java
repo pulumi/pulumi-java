@@ -23,14 +23,14 @@ public final class BotIntentClosingSettingArgs extends com.pulumi.resources.Reso
     @Import(name="closingResponse", required=true)
       private final Output<BotResponseSpecificationArgs> closingResponse;
 
-    public Output<BotResponseSpecificationArgs> getClosingResponse() {
+    public Output<BotResponseSpecificationArgs> closingResponse() {
         return this.closingResponse;
     }
 
     @Import(name="isActive")
       private final @Nullable Output<Boolean> isActive;
 
-    public Output<Boolean> getIsActive() {
+    public Output<Boolean> isActive() {
         return this.isActive == null ? Codegen.empty() : this.isActive;
     }
 

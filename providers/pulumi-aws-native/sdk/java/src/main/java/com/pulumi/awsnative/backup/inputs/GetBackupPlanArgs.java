@@ -15,7 +15,7 @@ public final class GetBackupPlanArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="backupPlanId", required=true)
       private final String backupPlanId;
 
-    public String getBackupPlanId() {
+    public String backupPlanId() {
         return this.backupPlanId;
     }
 

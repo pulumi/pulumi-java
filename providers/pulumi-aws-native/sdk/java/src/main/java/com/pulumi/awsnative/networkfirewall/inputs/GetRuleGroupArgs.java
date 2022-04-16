@@ -15,7 +15,7 @@ public final class GetRuleGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="ruleGroupArn", required=true)
       private final String ruleGroupArn;
 
-    public String getRuleGroupArn() {
+    public String ruleGroupArn() {
         return this.ruleGroupArn;
     }
 

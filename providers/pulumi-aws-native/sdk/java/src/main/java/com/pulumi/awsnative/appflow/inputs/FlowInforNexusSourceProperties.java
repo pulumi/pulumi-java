@@ -15,7 +15,7 @@ public final class FlowInforNexusSourceProperties extends com.pulumi.resources.I
     @Import(name="object", required=true)
       private final String object;
 
-    public String getObject() {
+    public String object() {
         return this.object;
     }
 

@@ -31,19 +31,19 @@ public final class GetMapResult {
         this.updateTime = updateTime;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getCreateTime() {
+    public Optional<String> createTime() {
         return Optional.ofNullable(this.createTime);
     }
-    public Optional<String> getDataSource() {
+    public Optional<String> dataSource() {
         return Optional.ofNullable(this.dataSource);
     }
-    public Optional<String> getMapArn() {
+    public Optional<String> mapArn() {
         return Optional.ofNullable(this.mapArn);
     }
-    public Optional<String> getUpdateTime() {
+    public Optional<String> updateTime() {
         return Optional.ofNullable(this.updateTime);
     }
 

@@ -27,13 +27,13 @@ public final class TaskDefinitionTmpfs {
         this.size = size;
     }
 
-    public Optional<String> getContainerPath() {
+    public Optional<String> containerPath() {
         return Optional.ofNullable(this.containerPath);
     }
-    public List<String> getMountOptions() {
+    public List<String> mountOptions() {
         return this.mountOptions == null ? List.of() : this.mountOptions;
     }
-    public Integer getSize() {
+    public Integer size() {
         return this.size;
     }
 

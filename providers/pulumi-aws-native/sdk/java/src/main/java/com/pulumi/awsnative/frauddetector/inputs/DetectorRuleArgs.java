@@ -22,7 +22,7 @@ public final class DetectorRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -33,7 +33,7 @@ public final class DetectorRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime == null ? Codegen.empty() : this.createdTime;
     }
 
@@ -44,28 +44,28 @@ public final class DetectorRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="detectorId")
       private final @Nullable Output<String> detectorId;
 
-    public Output<String> getDetectorId() {
+    public Output<String> detectorId() {
         return this.detectorId == null ? Codegen.empty() : this.detectorId;
     }
 
     @Import(name="expression")
       private final @Nullable Output<String> expression;
 
-    public Output<String> getExpression() {
+    public Output<String> expression() {
         return this.expression == null ? Codegen.empty() : this.expression;
     }
 
     @Import(name="language")
       private final @Nullable Output<DetectorRuleLanguage> language;
 
-    public Output<DetectorRuleLanguage> getLanguage() {
+    public Output<DetectorRuleLanguage> language() {
         return this.language == null ? Codegen.empty() : this.language;
     }
 
@@ -76,28 +76,28 @@ public final class DetectorRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastUpdatedTime")
       private final @Nullable Output<String> lastUpdatedTime;
 
-    public Output<String> getLastUpdatedTime() {
+    public Output<String> lastUpdatedTime() {
         return this.lastUpdatedTime == null ? Codegen.empty() : this.lastUpdatedTime;
     }
 
     @Import(name="outcomes")
       private final @Nullable Output<List<DetectorOutcomeArgs>> outcomes;
 
-    public Output<List<DetectorOutcomeArgs>> getOutcomes() {
+    public Output<List<DetectorOutcomeArgs>> outcomes() {
         return this.outcomes == null ? Codegen.empty() : this.outcomes;
     }
 
     @Import(name="ruleId")
       private final @Nullable Output<String> ruleId;
 
-    public Output<String> getRuleId() {
+    public Output<String> ruleId() {
         return this.ruleId == null ? Codegen.empty() : this.ruleId;
     }
 
     @Import(name="ruleVersion")
       private final @Nullable Output<String> ruleVersion;
 
-    public Output<String> getRuleVersion() {
+    public Output<String> ruleVersion() {
         return this.ruleVersion == null ? Codegen.empty() : this.ruleVersion;
     }
 
@@ -108,7 +108,7 @@ public final class DetectorRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DetectorTagArgs>> tags;
 
-    public Output<List<DetectorTagArgs>> getTags() {
+    public Output<List<DetectorTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

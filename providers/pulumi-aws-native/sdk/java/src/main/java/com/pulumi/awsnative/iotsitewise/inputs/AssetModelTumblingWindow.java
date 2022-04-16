@@ -21,14 +21,14 @@ public final class AssetModelTumblingWindow extends com.pulumi.resources.InvokeA
     @Import(name="interval", required=true)
       private final String interval;
 
-    public String getInterval() {
+    public String interval() {
         return this.interval;
     }
 
     @Import(name="offset")
       private final @Nullable String offset;
 
-    public Optional<String> getOffset() {
+    public Optional<String> offset() {
         return this.offset == null ? Optional.empty() : Optional.ofNullable(this.offset);
     }
 

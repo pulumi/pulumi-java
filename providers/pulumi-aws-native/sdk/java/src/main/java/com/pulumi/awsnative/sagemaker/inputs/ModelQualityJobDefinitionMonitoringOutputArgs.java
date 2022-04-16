@@ -21,7 +21,7 @@ public final class ModelQualityJobDefinitionMonitoringOutputArgs extends com.pul
     @Import(name="s3Output", required=true)
       private final Output<ModelQualityJobDefinitionS3OutputArgs> s3Output;
 
-    public Output<ModelQualityJobDefinitionS3OutputArgs> getS3Output() {
+    public Output<ModelQualityJobDefinitionS3OutputArgs> s3Output() {
         return this.s3Output;
     }
 

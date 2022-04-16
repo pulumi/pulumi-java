@@ -19,7 +19,7 @@ public final class GetGatewayRouteTableAssociationArgs extends com.pulumi.resour
     @Import(name="gatewayId", required=true)
       private final String gatewayId;
 
-    public String getGatewayId() {
+    public String gatewayId() {
         return this.gatewayId;
     }
 

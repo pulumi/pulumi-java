@@ -19,7 +19,7 @@ public final class GetConfigurationAggregatorArgs extends com.pulumi.resources.I
     @Import(name="configurationAggregatorName", required=true)
       private final String configurationAggregatorName;
 
-    public String getConfigurationAggregatorName() {
+    public String configurationAggregatorName() {
         return this.configurationAggregatorName;
     }
 

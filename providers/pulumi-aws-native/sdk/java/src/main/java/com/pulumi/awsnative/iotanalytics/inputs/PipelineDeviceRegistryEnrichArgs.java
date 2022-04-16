@@ -18,35 +18,35 @@ public final class PipelineDeviceRegistryEnrichArgs extends com.pulumi.resources
     @Import(name="attribute", required=true)
       private final Output<String> attribute;
 
-    public Output<String> getAttribute() {
+    public Output<String> attribute() {
         return this.attribute;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="next")
       private final @Nullable Output<String> next;
 
-    public Output<String> getNext() {
+    public Output<String> next() {
         return this.next == null ? Codegen.empty() : this.next;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="thingName", required=true)
       private final Output<String> thingName;
 
-    public Output<String> getThingName() {
+    public Output<String> thingName() {
         return this.thingName;
     }
 

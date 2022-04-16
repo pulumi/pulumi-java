@@ -18,14 +18,14 @@ public final class BudgetsActionScpActionDefinitionArgs extends com.pulumi.resou
     @Import(name="policyId", required=true)
       private final Output<String> policyId;
 
-    public Output<String> getPolicyId() {
+    public Output<String> policyId() {
         return this.policyId;
     }
 
     @Import(name="targetIds", required=true)
       private final Output<List<String>> targetIds;
 
-    public Output<List<String>> getTargetIds() {
+    public Output<List<String>> targetIds() {
         return this.targetIds;
     }
 

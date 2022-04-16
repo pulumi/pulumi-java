@@ -24,7 +24,7 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -35,7 +35,7 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -46,7 +46,7 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<RegistryTagArgs>> tags;
 
-    public Output<List<RegistryTagArgs>> getTags() {
+    public Output<List<RegistryTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -21,49 +21,49 @@ public final class IntegrationScheduledTriggerPropertiesArgs extends com.pulumi.
     @Import(name="dataPullMode")
       private final @Nullable Output<IntegrationScheduledTriggerPropertiesDataPullMode> dataPullMode;
 
-    public Output<IntegrationScheduledTriggerPropertiesDataPullMode> getDataPullMode() {
+    public Output<IntegrationScheduledTriggerPropertiesDataPullMode> dataPullMode() {
         return this.dataPullMode == null ? Codegen.empty() : this.dataPullMode;
     }
 
     @Import(name="firstExecutionFrom")
       private final @Nullable Output<Double> firstExecutionFrom;
 
-    public Output<Double> getFirstExecutionFrom() {
+    public Output<Double> firstExecutionFrom() {
         return this.firstExecutionFrom == null ? Codegen.empty() : this.firstExecutionFrom;
     }
 
     @Import(name="scheduleEndTime")
       private final @Nullable Output<Double> scheduleEndTime;
 
-    public Output<Double> getScheduleEndTime() {
+    public Output<Double> scheduleEndTime() {
         return this.scheduleEndTime == null ? Codegen.empty() : this.scheduleEndTime;
     }
 
     @Import(name="scheduleExpression", required=true)
       private final Output<String> scheduleExpression;
 
-    public Output<String> getScheduleExpression() {
+    public Output<String> scheduleExpression() {
         return this.scheduleExpression;
     }
 
     @Import(name="scheduleOffset")
       private final @Nullable Output<Integer> scheduleOffset;
 
-    public Output<Integer> getScheduleOffset() {
+    public Output<Integer> scheduleOffset() {
         return this.scheduleOffset == null ? Codegen.empty() : this.scheduleOffset;
     }
 
     @Import(name="scheduleStartTime")
       private final @Nullable Output<Double> scheduleStartTime;
 
-    public Output<Double> getScheduleStartTime() {
+    public Output<Double> scheduleStartTime() {
         return this.scheduleStartTime == null ? Codegen.empty() : this.scheduleStartTime;
     }
 
     @Import(name="timezone")
       private final @Nullable Output<String> timezone;
 
-    public Output<String> getTimezone() {
+    public Output<String> timezone() {
         return this.timezone == null ? Codegen.empty() : this.timezone;
     }
 

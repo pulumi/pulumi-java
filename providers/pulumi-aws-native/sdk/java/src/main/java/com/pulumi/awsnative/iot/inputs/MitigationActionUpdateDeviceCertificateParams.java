@@ -19,7 +19,7 @@ public final class MitigationActionUpdateDeviceCertificateParams extends com.pul
     @Import(name="action", required=true)
       private final MitigationActionUpdateDeviceCertificateParamsAction action;
 
-    public MitigationActionUpdateDeviceCertificateParamsAction getAction() {
+    public MitigationActionUpdateDeviceCertificateParamsAction action() {
         return this.action;
     }
 

@@ -40,22 +40,22 @@ public final class JobOutput {
         this.partitionColumns = partitionColumns;
     }
 
-    public Optional<JobOutputCompressionFormat> getCompressionFormat() {
+    public Optional<JobOutputCompressionFormat> compressionFormat() {
         return Optional.ofNullable(this.compressionFormat);
     }
-    public Optional<JobOutputFormat> getFormat() {
+    public Optional<JobOutputFormat> format() {
         return Optional.ofNullable(this.format);
     }
-    public Optional<JobOutputFormatOptions> getFormatOptions() {
+    public Optional<JobOutputFormatOptions> formatOptions() {
         return Optional.ofNullable(this.formatOptions);
     }
-    public JobS3Location getLocation() {
+    public JobS3Location location() {
         return this.location;
     }
-    public Optional<Boolean> getOverwrite() {
+    public Optional<Boolean> overwrite() {
         return Optional.ofNullable(this.overwrite);
     }
-    public List<String> getPartitionColumns() {
+    public List<String> partitionColumns() {
         return this.partitionColumns == null ? List.of() : this.partitionColumns;
     }
 

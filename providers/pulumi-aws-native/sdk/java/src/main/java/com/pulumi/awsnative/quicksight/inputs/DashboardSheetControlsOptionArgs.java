@@ -22,7 +22,7 @@ public final class DashboardSheetControlsOptionArgs extends com.pulumi.resources
     @Import(name="visibilityState")
       private final @Nullable Output<DashboardUIState> visibilityState;
 
-    public Output<DashboardUIState> getVisibilityState() {
+    public Output<DashboardUIState> visibilityState() {
         return this.visibilityState == null ? Codegen.empty() : this.visibilityState;
     }
 

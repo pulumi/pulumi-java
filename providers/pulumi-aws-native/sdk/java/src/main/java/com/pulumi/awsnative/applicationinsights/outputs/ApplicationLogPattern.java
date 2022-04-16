@@ -40,21 +40,21 @@ public final class ApplicationLogPattern {
      * The log pattern.
      * 
     */
-    public String getPattern() {
+    public String pattern() {
         return this.pattern;
     }
     /**
      * The name of the log pattern.
      * 
     */
-    public String getPatternName() {
+    public String patternName() {
         return this.patternName;
     }
     /**
      * Rank of the log pattern.
      * 
     */
-    public Integer getRank() {
+    public Integer rank() {
         return this.rank;
     }
 
