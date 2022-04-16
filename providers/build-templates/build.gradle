@@ -57,7 +57,7 @@ dependencies {
     implementation("com.google.protobuf:protobuf-java:3.12.0") // make sure we don't clash with grpc deps
     implementation("com.google.protobuf:protobuf-java-util:3.12.0") // make sure we don't clash with grpc deps
 
-    implementation("com.pulumi:pulumi:$pulumiJavaSdkVersion")
+    implementation("io.pulumi:pulumi:$pulumiJavaSdkVersion")
 
     def junitVersion = "5.7.2"
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
@@ -94,7 +94,7 @@ publishing {
         //
         // https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry
         gpr(MavenPublication) {
-            groupId = "com.pulumi"
+            groupId = "io.pulumi"
             artifactId = "{{ .ArtifactID }}"
             version = version
             from components.java

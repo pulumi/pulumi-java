@@ -9,5 +9,5 @@ pluginManagement {
   }
 }
 
-rootProject.name = "com.pulumi.{{ .ArtifactID }}"
+rootProject.name = "io.pulumi.{{ .ArtifactID }}"
 include("lib")
